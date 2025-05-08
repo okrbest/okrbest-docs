@@ -1,0 +1,641 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-07 15:09+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:2
+msgid "(Recommended) Set up an NGINX proxy"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:4
+msgid ""
+"A proxy server is a server (a computer system or an application) that "
+"acts as an intermediary for requests from clients seeking resources from "
+"other servers. Mattermost recommends using a proxy in front of Mattermost"
+" to increase security, performance and the ability to monitor and shape "
+"traffic connecting to Mattermost:"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:6
+msgid ""
+"**Security:** A proxy server can manage Secure Socket Layer (TLS/SSL) "
+"encryption and set policy on how network traffic will be routed to the "
+"Mattermost server."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:7
+msgid ""
+"**Performance:** In a High Availability configuration, the proxy server "
+"balances the network load across multiple Mattermost servers for "
+"optimized performance. A hardware proxy with dedicated devices for "
+"processing SSL encryption and decryption can also be used to increase "
+"performance."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:8
+msgid ""
+"**Monitoring**: A proxy server can monitor connection traffic and record "
+"traffic in standard audit logs that common monitoring tools like Kibana "
+"and Splunk can consume and report on. Some of the events that can be "
+"captured include file uploads and downloads, which are not tracked by the"
+" Mattermost server logging process."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:10
+msgid ""
+"Mattermost supports the `NGINX proxy <https://www.f5.com/go/product"
+"/welcome-to-nginx>`_"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:-1
+msgid "Mattermost architecture with NGINX proxy"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:16
+msgid "Install NGINX server"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:18
+msgid ""
+"NGINX is a popular web server and is responsible for hosting some of the "
+"largest and highest-traffic sites on the internet. It's more resource-"
+"friendly than Apache in most cases, and can be used as a web server or "
+"reverse proxy."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:20
+msgid ""
+"In a production setting, we recommend using a proxy server for greater "
+"security and performance of Mattermost:"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:22
+msgid "SSL termination"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:23
+msgid "HTTP to HTTPS redirect"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:24
+msgid "Port mapping ``:80`` to ``:8065``"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:25
+msgid "Standard request logs"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:28
+msgid "Install NGINX on Ubuntu Server"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:30
+msgid "Log in to the server that will host the proxy and open a terminal window."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:32
+msgid "Install NGINX."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:34
+msgid ""
+"Because NGINX is available in Ubuntu's default repositories, it's "
+"possible to install it from these repositories using the ``apt`` "
+"packaging system. First, update your local ``apt`` package index for "
+"access to the most recent package listings. Then, install ``nginx``:"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:41
+msgid ""
+"After accepting the procedure, ``apt`` will install NGINX and any "
+"required dependencies to your server."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:43
+msgid ""
+"After installing it, you already have everything you need. You can point "
+"your browser to your server IP address. You should see the default NGINX "
+"landing page:"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:45
+msgid "Example of the default NGINX landing page."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:48
+msgid ""
+"If you see this page, you've successfully installed NGINX on your web "
+"server. This page is included with NGINX to show you that the server is "
+"running correctly."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:50
+msgid "Or you can also verify it by running ``curl http://localhost``."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:52
+msgid "If NGINX is running, you see the following output:"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:68
+msgid "Manage the NGINX process"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:70
+msgid ""
+"Now that you have your web server up and running, let's review some basic"
+" management commands. These are all run in the command line interface."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:72
+msgid "To stop your web server, use: ``sudo systemctl stop nginx``"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:74
+msgid ""
+"To start the web server when it's stopped, use: ``sudo systemctl start "
+"nginx``"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:76
+msgid ""
+"To stop and then start the service again, use: ``sudo systemctl restart "
+"nginx``"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:78
+msgid ""
+"If you're simply making configuration changes, NGINX can often reload "
+"without dropping connections. To do this, use: ``sudo systemctl reload "
+"nginx``"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:80
+msgid ""
+"By default, NGINX is configured to start automatically when the server "
+"boots. If this isn't what you want, you can disable this behavior using: "
+"``sudo systemctl disable nginx``"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:82
+msgid ""
+"To re-enable the service to start up at boot, use: ``sudo systemctl "
+"enable nginx``"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:85
+msgid "What to do next"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:87
+msgid ""
+"Map a fully qualified domain name (FQDN) such as "
+"``mattermost.example.com`` on your DNS server/service, to point to the "
+"NGINX server."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:88
+msgid ""
+"Configure NGINX to proxy connections from the internet to the Mattermost "
+"server."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:91
+msgid "Configure NGINX as a proxy for Mattermost server"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:93
+#: ../../source/deploy/server/setup-nginx-proxy.rst:218
+msgid ""
+"NGINX is configured using a file in the ``/etc/nginx/sites-available`` "
+"directory. You need to create the file and then enable it. When creating "
+"the file, you need the IP address of your Mattermost server and the fully"
+" qualified domain name (FQDN) of your Mattermost website."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:95
+#: ../../source/deploy/server/setup-nginx-proxy.rst:230
+msgid "Log in to the server that hosts NGINX and open a terminal window."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:96
+msgid ""
+"Create a configuration file for Mattermost by running the following "
+"command:"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:98
+msgid "``sudo touch /etc/nginx/sites-available/mattermost`` on Ubuntu"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:100
+msgid "``sudo touch /etc/nginx/conf.d/mattermost`` on RHEL 8"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:102
+msgid ""
+"Open the file ``/etc/nginx/sites-available/mattermost`` (Ubuntu) or  "
+"``/etc/nginx/conf.d/mattermost`` (RHEL 8) as *root* user in a text editor"
+" and replace its contents, if any, with the following lines. Make sure "
+"that you use your own values for the Mattermost server IP address and "
+"FQDN for *server_name*."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:104
+msgid "SSL and HTTP/2 are enabled in the provided configuration example."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:108
+msgid ""
+"If you're going to use Let's Encrypt to manage your SSL certificate, stop"
+" at step 3 and see the :ref:`NGINX HTTP/2 and SSL product documentation "
+"<deploy/server/setup-nginx-proxy:configure nginx with ssl and http/2>` "
+"for details."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:109
+msgid ""
+"You'll need valid SSL certificates in order for NGINX to pin the "
+"certificates properly. Additionally, your browser must have permissions "
+"to accept the certificate as a valid CA-signed certificate."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:110
+msgid ""
+"Note that the IP address included in the examples in this documentation "
+"may not match your network configuration."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:111
+#: ../../source/deploy/server/setup-nginx-proxy.rst:239
+msgid ""
+"If you're running NGINX on the same machine as Mattermost, and NGINX "
+"resolves ``localhost`` to more than one IP address (IPv4 or IPv6), we "
+"recommend using ``127.0.0.1`` instead of ``localhost``."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:201
+msgid ""
+"Remove the existing default sites-enabled file by running ``sudo rm "
+"/etc/nginx/sites-enabled/default`` (Ubuntu) or ``sudo rm "
+"/etc/nginx/conf.d/default`` (RHEL 8)"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:203
+msgid ""
+"Enable the mattermost configuration by running ``sudo ln -s /etc/nginx"
+"/sites-available/mattermost /etc/nginx/sites-enabled/mattermost`` "
+"(Ubuntu) or ``sudo ln -s /etc/nginx/conf.d/mattermost "
+"/etc/nginx/conf.d/default.conf`` (RHEL 8)"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:205
+msgid "Restart NGINX by running ``sudo systemctl restart nginx``."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:207
+msgid ""
+"Verify that you can see Mattermost through the proxy by running ``curl "
+"https://localhost``. If everything is working, you will see the HTML for "
+"the Mattermost signup page."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:209
+msgid "Restrict access to port 8065."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:211
+msgid ""
+"By default, the Mattermost server accepts connections on port 8065 from "
+"every machine on the network. Use your firewall to deny connections on "
+"port 8065 to all machines except the machine that hosts NGINX and the "
+"machine that you use to administer the Mattermost server. If you're "
+"installing on Amazon Web Services, you can use Security Groups to "
+"restrict access."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:213
+msgid ""
+"Now that NGINX is installed and running, you can configure it to use SSL,"
+" which allows you to use HTTPS connections and the HTTP/2 protocol."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:216
+msgid "Configure NGINX with SSL and HTTP/2"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:220
+msgid ""
+"Using SSL gives greater security by ensuring that communications between "
+"Mattermost clients and the Mattermost server are encrypted. It also "
+"allows you to configure NGINX to use the HTTP/2 protocol."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:222
+msgid ""
+"Although you can configure HTTP/2 without SSL, both Firefox and Chrome "
+"browsers support HTTP/2 on secure connections only."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:224
+msgid ""
+"You can use any certificate that you want, but these instructions show "
+"you how to download and install certificates from `Let's Encrypt "
+"<https://letsencrypt.org/>`__, a free certificate authority."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:228
+msgid ""
+"If Let’s Encrypt is enabled, forward port 80 through a firewall, with "
+":ref:`Forward80To443 <configure/environment-configuration-"
+"settings:forward port 80 to 443>` ``config.json`` setting set to ``true``"
+" to complete the Let’s Encrypt certification. See the `Let's "
+"Encrypt/Certbot documentation <https://certbot.eff.org>`_ for additional "
+"assistance."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:232
+msgid ""
+"Open the your Mattermost ``nginx.conf`` file as *root* in a text editor, "
+"then update the ``{ip}`` address in the ``upstream backend`` to point "
+"towards Mattermost (such as ``127.0.0.1:8065``), and update the "
+"``server_name`` to be your domain for Mattermost."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:236
+msgid ""
+"On Ubuntu this file is located at ``/etc/nginx/sites-available/``. If you"
+" don't have this file, run ``sudo touch /etc/nginx/sites-"
+"available/mattermost``."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:237
+msgid ""
+"On CentOS/RHEL this file is located at ``/etc/nginx/conf.d/``. If you "
+"don't have this file, run ``sudo touch /etc/nginx/conf.d/mattermost``."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:238
+msgid ""
+"The IP address included in the examples in this documentation may not "
+"match your network configuration."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:288
+msgid ""
+"Remove the existing default sites-enabled file by running ``sudo rm "
+"/etc/nginx/sites-enabled/default`` (Ubuntu) or ``sudo rm "
+"/etc/nginx/conf.d/default`` (RHEL 8)."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:290
+msgid ""
+"Enable the Mattermost configuration by running ``sudo ln -s /etc/nginx"
+"/sites-available/mattermost /etc/nginx/sites-enabled/mattermost`` "
+"(Ubuntu) or ``sudo ln -s /etc/nginx/conf.d/mattermost "
+"/etc/nginx/conf.d/default.conf`` (RHEL 8)."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:292
+msgid ""
+"Run ``sudo nginx -t`` to ensure your configuration is done properly. If "
+"you get an error, look into the NGINX config and make the needed changes "
+"to the file under ``/etc/nginx/sites-available/mattermost``."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:294
+msgid "Restart NGINX by running ``sudo systemctl start nginx``."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:296
+msgid ""
+"Verify that you can see Mattermost through the proxy by running ``curl "
+"http://localhost``."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:298
+msgid ""
+"If everything is working, you will see the HTML for the Mattermost signup"
+" page. You will see invalid certificate when accessing through the IP or "
+"localhost. Use the full FQDN domain to verify if the SSL certificate has "
+"pinned properly and is valid."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:300
+msgid ""
+"Install and update Snap by running ``sudo snap install core; sudo snap "
+"refresh core``."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:302
+msgid ""
+"Install the Certbot package by running ``sudo snap install --classic "
+"certbot``."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:304
+msgid ""
+"Add a symbolic link to ensure Certbot can run by running ``sudo ln -s "
+"/snap/bin/certbot /usr/bin/certbot``."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:306
+msgid ""
+"Run the Let's Encrypt installer dry-run to ensure your DNS is configured "
+"properly by running ``sudo certbot certonly --dry-run``."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:308
+msgid ""
+"This will prompt you to enter your email, accept the TOS, share your "
+"email, and select the domain you're activating certbot for. This will "
+"validate that your DNS points to this server properly and you are able to"
+" successfully generate a certificate. If this finishes successfully, "
+"proceed to step 12."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:310
+msgid ""
+"Run the Let's Encrypt installer by running ``sudo certbot``. This will "
+"run certbot and will automatically edit your NGINX config file for the "
+"site(s) selected."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:312
+msgid ""
+"Ensure your SSL is configured properly by running ``curl https://{your "
+"domain here}``"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:314
+msgid ""
+"Finally, we suggest editing your config file again to increase your SSL "
+"security settings above the default Let's Encrypt. This is the same file "
+"from Step 2 above. Edit it to look like the below:"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:405
+msgid "Check that your SSL certificate is set up correctly."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:407
+msgid ""
+"Test the SSL certificate by visiting a site such as "
+"https://www.ssllabs.com/ssltest/index.html."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:408
+msgid ""
+"If there’s an error about the missing chain or certificate path, there is"
+" likely an intermediate certificate missing that needs to be included."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:411
+msgid "NGINX configuration FAQ"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:414
+msgid "Why am I seeing the error \"Too many redirects?\""
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:416
+msgid ""
+"You may see this error if you're setting Mattermost in a sub-path. To "
+"resolve this error, add the following block to the HEAD request:"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:430
+msgid "Why are Websocket connections returning a 403 error?"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:432
+msgid ""
+"This is likely due to a failing cross-origin check. A check is applied "
+"for WebSocket code to see if the ``Origin`` header is the same as the "
+"host header. If it's not, a 403 error is returned. Open the file "
+"``/etc/nginx/sites-available/mattermost`` as *root* in a text editor and "
+"make sure that the host header being set in the proxy is dynamic:"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:444
+msgid ""
+"Then in ``config.json`` set the ``AllowCorsFrom`` setting to match the "
+"domain being used by clients. You may need to add variations of the host "
+"name that clients may send. Your NGINX log will be helpful in diagnosing "
+"the problem."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:454
+msgid "How do I setup an NGINX proxy with the Mattermost Docker installation?"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:456
+msgid "Find the name of the Mattermost network and connect it to the NGINX proxy."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:464
+msgid "Restart the Mattermost Docker containers."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:473
+msgid ""
+"You don't need to run the 'web' container, since NGINX proxy accepts "
+"incoming requests."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:475
+msgid ""
+"Update your ``docker-compose.yml`` file to include a new environment "
+"variable ``VIRTUAL_HOST`` and an ``expose`` directive."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:490
+msgid "Why does NGINX fail when installing GitLab CE with Mattermost on Azure?"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:492
+msgid ""
+"You may need to update the Callback URLs for the Application entry of "
+"Mattermost inside your GitLab instance."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:494
+msgid "Log in to your GitLab instance as the admin."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:495
+msgid "Go to **Admin > Applications**."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:496
+msgid "Select **Edit** on GitLab-Mattermost."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:497
+msgid "Update the callback URLs to your new domain/URL."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:498
+msgid "Save the changes."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:499
+msgid ""
+"Update the external URL for GitLab and Mattermost in the "
+"``/etc/gitlab/gitlab.rb`` configuration file."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:502
+msgid "Why does Certbot fail the http-01 challenge?"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:515
+msgid ""
+"If you see the above errors this is typically because Certbot wasn't able"
+" to access port 80. This can be due to a firewall or other DNS "
+"configuration. Make sure that your A/AAAA records are pointing to this "
+"server and your ``server_name`` within the NGINX config doesn't have a "
+"redirect."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:518
+msgid ""
+"If you're using Cloudflare you'll need to disable ``force traffic to "
+"https``."
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:521
+msgid "Certbot rate limiting"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:523
+msgid "If you're running certbot as stand-alone you'll see this error:"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:537
+msgid "If you're running Let's Encrypt within Mattermost you'll see this error:"
+msgstr ""
+
+#: ../../source/deploy/server/setup-nginx-proxy.rst:543
+msgid ""
+"This means that you've attempted to generate a cert too many times. You "
+"can find more information `here <https://letsencrypt.org/docs/rate-"
+"limits>`_."
+msgstr ""
+

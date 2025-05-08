@@ -1,0 +1,935 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-07 15:09+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/scale/performance-monitoring-metrics.rst:2
+msgid "Performance monitoring metrics"
+msgstr ""
+
+#: ../../source/_static/badges/ent-cloud-selfhosted.rst:7
+msgid ""
+"|plans-img| Available on `Enterprise plans "
+"<https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-cloud-selfhosted.rst:9
+#: ../../source/_static/badges/ent-cloud-selfhosted.rst:9
+msgid ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
+"hosted <https://mattermost.com/download/>`__ deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:7
+msgid ""
+"Mattermost provides the following performance monitoring statistics to "
+"integrate with Prometheus and Grafana."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:10
+msgid "Custom Mattermost metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:12
+msgid ""
+"The following is a list of custom Mattermost metrics that can be used to "
+"monitor your system's performance:"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:15
+msgid "API metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:17
+msgid ""
+"``mattermost_api_time``: The total time in seconds to execute a given API"
+" handler."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:20
+msgid "Caching metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:22
+msgid ""
+"``mattermost_cache_etag_hit_total``: The total number of ETag cache hits "
+"for a specific cache."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:23
+msgid ""
+"``mattermost_cache_etag_miss_total``: The total number of ETag cache "
+"misses for an API call."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:24
+msgid ""
+"``mattermost_cache_mem_hit_total``: The total number of memory cache hits"
+" for a specific cache."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:25
+msgid ""
+"``mattermost_cache_mem_invalidation_total``: The total number of memory "
+"cache invalidations for a specific cache."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:26
+msgid ""
+"``mattermost_cache_mem_miss_total``: The total number of cache misses for"
+" a specific cache."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:28
+msgid ""
+"The above metrics can be used to calculate ETag and memory cache hit "
+"rates over time."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:-1
+msgid ""
+"Example caching metrics, including Etag hit rate and mem cache hit rate, "
+"in a self-hosted Mattermost deployment."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:34
+msgid "Cluster metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:36
+msgid ""
+"``mattermost_cluster_cluster_request_duration_seconds``: The total "
+"duration in seconds of the inter-node cluster requests."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:37
+msgid ""
+"``mattermost_cluster_cluster_health_score``: A score that gives an idea "
+"of how well it is meeting the soft-real time requirements of the gossip "
+"protocol."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:38
+msgid ""
+"``mattermost_cluster_cluster_requests_total``: The total number of inter-"
+"node requests."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:39
+msgid ""
+"``mattermost_cluster_cluster_event_type_totals``: The total number of "
+"cluster requests sent for any type."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:42
+msgid "Database metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:44
+msgid "``mattermost_db_active_users``: The total number of active users."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:45
+msgid "``mattermost_db_cache_time``: Time to execute the cache handler."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:46
+msgid ""
+"``mattermost_db_master_connections_total``: The total number of "
+"connections to the master database."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:47
+msgid ""
+"``mattermost_db_read_replica_connections_total``: The total number of "
+"connections to all the read replica databases."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:48
+msgid ""
+"``mattermost_db_search_replica_connections_total``: The total number of "
+"connections to all the search replica databases."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:49
+msgid ""
+"``mattermost_db_store_time``: The total time in seconds to execute a "
+"given database store method."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:50
+msgid ""
+"``mattermost_db_replica_lag_abs``: Absolute lag time based on binlog "
+"distance/transaction queue length."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:51
+msgid ""
+"``mattermost_db_replica_lag_time``: The time taken for the replica to "
+"catch up."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:54
+msgid "Database connection metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:56
+msgid ""
+"``go_sql_max_open_connections``: Maximum number of open connections to "
+"the database."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:57
+msgid ""
+"``go_sql_open_connections``: The number of established connections both "
+"in use and idle."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:58
+msgid "``go_sql_in_use_connections``: The number of connections currently in use."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:59
+msgid "``go_sql_idle_connections``: The number of idle connections."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:60
+msgid "``go_sql_wait_count_total``: The total number of connections waited for."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:61
+msgid ""
+"``go_sql_wait_duration_seconds_total``: The total time blocked waiting "
+"for a new connection."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:62
+msgid ""
+"``go_sql_max_idle_closed_total``: The total number of connections closed "
+"due to SetMaxIdleConns."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:63
+msgid ""
+"``go_sql_max_idle_time_closed_total``: The total number of connections "
+"closed due to SetConnMaxIdleTime."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:64
+msgid ""
+"``go_sql_max_lifetime_closed_total``: The total number of connections "
+"closed due to SetConnMaxLifetime."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:67
+msgid "HTTP metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:69
+msgid "``mattermost_http_errors_total``: The total number of http API errors."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:70
+msgid "``mattermost_http_requests_total``: The total number of http API requests."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:71
+msgid ""
+"``mattermost_http_websockets_total``: The total number of websocket "
+"connections to this server."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:74
+msgid ""
+"From Mattermost version v9.9, this value includes any potentially "
+"unauthenticated connections. Furthermore, this metric comes with an "
+"``origin_client`` label that can be used to see the distribution of "
+"connections from different client types (i.e. web, mobile, and desktop)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:-1
+msgid ""
+"Example HTTP metrics, including number of API errors per minute, number "
+"of API requests per minute, and mean request time per minute, in a self-"
+"hosted Mattermost deployment."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:81
+msgid "Login and session metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:83
+msgid "``mattermost_login_logins_fail_total``: The total number of failed logins."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:84
+msgid "``mattermost_login_logins_total``: The total number of successful logins."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:87
+msgid "Mattermost channels metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:89
+msgid ""
+"``mattermost_post_broadcasts_total``: The total number of websocket "
+"broadcasts sent because a post was created."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:90
+msgid ""
+"``mattermost_post_emails_sent_total``: The total number of emails sent "
+"because a post was created."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:91
+msgid ""
+"``mattermost_post_file_attachments_total``: The total number of file "
+"attachments created because a post was created."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:92
+msgid ""
+"``mattermost_post_pushes_sent_total``: The total number of mobile push "
+"notifications sent because a post was created."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:93
+msgid "``mattermost_post_total``: The total number of posts created."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:94
+msgid "``mattermost_post_webhooks_total``: Total number of webhook posts created."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:-1
+msgid ""
+"Example Mattermost channels metrics, including messages per minute, "
+"broadcasts per minute, emails sent per minute, mobile push notifications "
+"per minute, and number of file attachments per minute, in a self-hosted "
+"Mattermost deployment."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:100
+msgid "Process metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:102
+msgid ""
+"``mattermost_process_cpu_seconds_total``: Total user and system CPU time "
+"spent in seconds."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:103
+msgid "``mattermost_process_max_fds``: Maximum number of open file descriptors."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:104
+msgid "``mattermost_process_open_fds``: Number of open file descriptors."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:105
+msgid ""
+"``mattermost_process_resident_memory_bytes``: Resident memory size in "
+"bytes."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:106
+msgid ""
+"``mattermost_process_start_time_seconds``: Start time of the process "
+"since unix epoch in seconds."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:107
+msgid "``mattermost_process_virtual_memory_bytes``: Virtual memory size in bytes."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:108
+msgid ""
+"``mattermost_process_virtual_memory_max_bytes``: Maximum amount of "
+"virtual memory available in bytes."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:111
+msgid "Search metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:113
+msgid ""
+"``mattermost_search_posts_searches_duration_seconds``: The total duration"
+" in seconds of post searches."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:114
+msgid ""
+"``mattermost_search_channel_index_total``: The total number of channel "
+"indexes carried out."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:115
+msgid ""
+"``mattermost_search_file_index_total``: The total number of files indexes"
+" carried out."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:116
+msgid ""
+"``mattermost_search_files_searches_duration_seconds``: The total duration"
+" in seconds of file searches."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:117
+msgid ""
+"``mattermost_search_files_searches_total``: The total number of file "
+"searches carried out."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:118
+msgid ""
+"``mattermost_search_post_index_total``: The total number of posts indexes"
+" carried out."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:119
+msgid ""
+"``mattermost_search_posts_searches_total``: The total number of post "
+"searches carried out."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:120
+msgid ""
+"``mattermost_search_user_index_total``: The total number of user indexes "
+"carried out."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:123
+msgid "WebSocket metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:125
+msgid ""
+"``mattermost_websocket_broadcast_buffer_size``: Number of events in the "
+"websocket broadcasts buffer waiting to be processed."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:126
+msgid ""
+"``mattermost_websocket_broadcast_buffer_users_registered``: Number of "
+"users registered in a broadcast buffer hub."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:127
+msgid ""
+"``mattermost_websocket_broadcasts_total``: The total number of websocket "
+"broadcasts sent for any type."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:128
+msgid "``mattermost_websocket_event_total``: Total number of websocket events."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:129
+msgid ""
+"``mattermost_websocket_reconnects_total``: Total number of websocket "
+"reconnect attempts."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:132
+msgid "Logging metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:134
+msgid ""
+"``mattermost_logging_logger_queue_used``: Number of records in log target"
+" queue."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:135
+msgid ""
+"``mattermost_logging_logger_logged_total``: The total number of records "
+"logged."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:136
+msgid ""
+"``mattermost_logging_logger_error_total``: The total number of logger "
+"errors."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:137
+msgid ""
+"``mattermost_logging_logger_dropped_total``: The total number of dropped "
+"log records."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:138
+msgid ""
+"``mattermost_logging_logger_blocked_total``: The total number of log "
+"records that were blocked/delayed."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:141
+msgid "Debugging metrics - system"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:143
+msgid "``mattermost_system_server_start_time``: The time the server started."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:145
+msgid ""
+"Use ``mattermost_system_server_start_time`` to dynamically add an "
+"annotation corresponding to the event."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:-1
+msgid ""
+"Example debugging metrics, including number of messages per second, in a "
+"self-hosted Mattermost deployment."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:152
+msgid "Debugging metrics - jobs"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:154
+msgid "``mattermost_jobs_active``: Number of active jobs."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:156
+msgid "Use ``mattermost_jobs_active`` to display an active jobs chart."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:-1
+msgid ""
+"Example debugging metrics, including active jobs, in a self-hosted "
+"Mattermost deployment."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:161
+msgid ""
+"Or, use ``mattermost_jobs_active`` to dynamically add a range annotation "
+"corresponding to jobs being active."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:166
+msgid ""
+"Use annotations to streamline analysis when a job is long running, such "
+"as an LDAP synchronization job."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:169
+msgid ""
+"Jobs where the runtime is less than the Prometheus polling interval are "
+"unlikely to be visible because Grafana is performing range queries over "
+"the raw Prometheus timeseries data, and rendering an event each time the "
+"value changes."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:172
+msgid "Plugin metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:174
+msgid ""
+"``mattermost_plugin_api_time``: Time to execute plugin API handlers in "
+"seconds."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:175
+msgid ""
+"``mattermost_plugin_hook_time``: Time to execute plugin hook handler in "
+"seconds."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:176
+msgid ""
+"``mattermost_plugin_multi_hook_server_time``: Time for the server to "
+"execute multiple plugin hook handlers in seconds."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:177
+msgid ""
+"``mattermost_plugin_multi_hook_time``: Time to execute multiple plugin "
+"hook handler in seconds."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:180
+msgid "Shared metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:182
+msgid ""
+"``mattermost_shared_channels_sync_collection_duration_seconds``: Duration"
+" tasks spend collecting sync data (seconds)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:183
+msgid ""
+"``mattermost_shared_channels_sync_collection_step_duration_seconds``: "
+"Duration tasks spend in each step collecting data (seconds)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:184
+msgid ""
+"``mattermost_shared_channels_sync_count``: Count of sync events processed"
+" for each remote."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:185
+msgid ""
+"``mattermost_shared_channels_sync_send_duration_seconds``: Duration tasks"
+" spend sending sync data (seconds)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:186
+msgid ""
+"``mattermost_shared_channels_sync_send_step_duration_seconds``: Duration "
+"tasks spend in each step sending data (seconds)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:187
+msgid ""
+"``mattermost_shared_channels_task_in_queue_duration_seconds``: Duration "
+"tasks spend in queue (seconds)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:188
+msgid ""
+"``mattermost_shared_channels_task_queue_size``: Current number of tasks "
+"in queue."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:191
+msgid "Remote cluster metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:193
+msgid ""
+"``mattermost_remote_cluster_clock_skew``: An approximated value for clock"
+" skew between clusters."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:194
+msgid ""
+"``mattermost_remote_cluster_conn_state_change_total``: Total number of "
+"connection state changes."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:195
+msgid ""
+"``mattermost_remote_cluster_msg_errors_total``: Total number of message "
+"errors."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:196
+msgid ""
+"``mattermost_remote_cluster_msg_received_total``: Total number of "
+"messages received from the remote cluster."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:197
+msgid ""
+"``mattermost_remote_cluster_msg_sent_total``: Total number of messages "
+"sent to the remote cluster."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:198
+msgid ""
+"``mattermost_remote_cluster_ping_time``: The ping roundtrip times to the "
+"remote cluster."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:201
+msgid "Notification metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:203
+msgid ""
+"``mattermost_notifications_error``: Total number of errors that stop the "
+"notification flow."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:204
+msgid ""
+"``mattermost_notifications_not_sent``: Total number of notifications the "
+"system deliberately did not send."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:205
+msgid ""
+"``mattermost_notifications_success``: Total number of successfully sent "
+"notifications."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:206
+msgid "``mattermost_notifications_total``: Total number of notification events."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:207
+msgid ""
+"``mattermost_notifications_total_ack``: Total number of notification "
+"events acknowledged."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:208
+msgid ""
+"``mattermost_notifications_unsupported``: Total number of untrackable "
+"notifications due to an unsupported app version."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:211
+msgid "Mobile app metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:213
+msgid ""
+"``mattermost_mobileapp_mobile_channel_switch``: Duration of the time "
+"taken from when a user clicks on a channel name, and the full channel "
+"sreen is loaded (seconds)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:214
+msgid ""
+"``mattermost_mobileapp_mobile_load``: Duration of the time taken from "
+"when a user opens the app and the app finally loads all relevant "
+"information (seconds)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:215
+msgid ""
+"``mattermost_mobileapp_mobile_team_switch``: Duration of the time taken "
+"from when a user clicks on a team, and the full categories screen is "
+"loaded (seconds)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:218
+msgid "Web app metrics"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:220
+msgid ""
+"``mattermost_webapp_channel_switch``: Duration of the time taken from "
+"when a user clicks on a channel in the LHS to when posts in that channel "
+"become visible (seconds)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:221
+msgid ""
+"``mattermost_webapp_cumulative_layout_shift``: Measure of how much a "
+"page's content shifts unexpectedly."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:222
+msgid ""
+"``mattermost_webapp_first_contentful_paint``: Duration of how long it "
+"takes for any content to be displayed on screen to a user (seconds)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:223
+msgid ""
+"``mattermost_webapp_global_threads_load``: Duration of the time taken "
+"from when a user clicks to open Threads in the LHS until when the global "
+"threads view becomes visible (milliseconds)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:224
+msgid ""
+"``mattermost_webapp_interaction_to_next_paint``: Measure of how long it "
+"takes for a user to see the effects of clicking with a mouse, tapping "
+"with a touchscreen, or pressing a key on the keyboard (seconds)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:225
+msgid ""
+"``mattermost_webapp_largest_contentful_paint``: Duration of how long it "
+"takes for large content to be displayed on screen to a user (seconds)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:226
+msgid ""
+"``mattermost_webapp_long_tasks``: Counter of the number of times that the"
+" browser's main UI thread is blocked for more than 50ms by a single task."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:227
+msgid ""
+"``mattermost_webapp_page_load``: The amount of time from when the browser"
+" starts loading the web app until when the web app's load event has "
+"finished (seconds)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:228
+msgid ""
+"``mattermost_webapp_rhs_load``: Duration of the time taken from when a "
+"user clicks to open a thread in the RHS until when posts in that thread "
+"become visible (seconds)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:229
+msgid ""
+"``mattermost_webapp_team_switch``: Duration of the time taken from when a"
+" user clicks on a team in the LHS to when posts in that team become "
+"visible (seconds)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:230
+msgid ""
+"``mattermost_webapp_time_to_first_byte``: Duration from when a browser "
+"starts to request a page from a server until when it starts to receive "
+"data in response (seconds)."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:234
+msgid "Standard Go metrics"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-cloud-selfhosted.rst:7
+msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:239
+msgid ""
+"The performance monitoring feature provides standard Go metrics for HTTP "
+"server runtime profiling data and system monitoring, such as:"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:241
+msgid "``go_memstats_alloc_bytes`` for memory usage"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:242
+msgid "``go_goroutines`` for number of goroutines"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:243
+msgid "``go_gc_duration_seconds`` for garbage collection duration"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:244
+msgid "``go_memstats_heap_objects`` for object tracking on the heap"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:246
+msgid ""
+"To learn how to set up runtime profiling, see the `pprof package Go "
+"documentation <https://pkg.go.dev/net/http/pprof>`__. You can also visit "
+"the ``ip:port`` page for a complete list of metrics with descriptions."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:249
+msgid ""
+"A Mattermost Enterprise license is required to connect to ``/metrics`` "
+"using HTTP."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:251
+msgid "If enabled, you can run the profiler by"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:253
+msgid ""
+"``go tool pprof "
+"http://localhost:<port>/debug/pprof/profile?seconds=<duration>``"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:255
+msgid ""
+"where you can replace ``localhost`` with the server name. The profiling "
+"reports are available at ``<ip>:<port>``, which include:"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:257
+msgid "``/debug/pprof/profile?seconds=30`` for CPU profiling"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:258
+msgid "``/debug/pprof/cmdline`` for command line profiling"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:259
+msgid "``/debug/pprof/symbol`` for symbol profiling"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:260
+msgid "``/debug/pprof/trace`` for trace profiling"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:261
+msgid "``/debug/pprof/goroutine`` for Go routine profiling"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:262
+msgid "``/debug/pprof/heap`` for heap profiling"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:263
+msgid "``/debug/pprof/threadcreate`` for threads profiling"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:264
+msgid "``/debug/pprof/block`` for block profiling"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:265
+msgid "``/debug/pprof/allocs`` for past memory allocations"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:266
+msgid "``/debug/pprof/mutex`` for logs of the holders of contended mutexes"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:-1
+msgid ""
+"Example Go metrics for HTTP server runtime profiling data and system "
+"monitoring, including memory usage, Go routines, and garbage collection "
+"duration, in a self-hosted Mattermost deployment."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:272
+msgid "Frequently asked questions"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:275
+msgid "Why are chart labels difficult to distinguish?"
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:277
+msgid ""
+"The chart labels used in server filters and legends are based on the "
+"hostname of your machines. If the hostnames are similar, then it will be "
+"difficult to distinguish the labels."
+msgstr ""
+
+#: ../../source/scale/performance-monitoring-metrics.rst:279
+msgid ""
+"You can either set more descriptive hostnames for your machines or change"
+" the display name with a ``relabel_config`` in  `Prometheus configuration"
+" "
+"<https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config>`__."
+msgstr ""
+

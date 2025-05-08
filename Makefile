@@ -11,6 +11,10 @@ SPHINXOPTS      ?= -j auto
 SPHINXBUILD     ?= pipenv run sphinx-build
 SPHINXAUTOBUILD ?= pipenv run sphinx-autobuild
 AUTOBUILDOPTS   ?= -D=html_baseurl=http://127.0.0.1:8000
+LANG ?= en
+BUILDLANGDIR = $(BUILDDIR)/$(LANG)
+DOCTREESLANGDIR = $(BUILDDIR)/doctrees/$(LANG)
+SPHINXOPTS += -D language=$(LANG)
 
 # If we're not on Windows, check to see if 'mm_url_path_prefix' is included in SPHINXOPTS.
 # If it is included, extract the PR ID from the prefix and set the html_baseurl config
@@ -44,11 +48,12 @@ test:
 # Run `make livehtml` to start sphinx-autobuild.
 livehtml:
 ifeq ($(OS),Windows_NT)
-	@CMD /C IF NOT EXIST $(BUILDDIR) MD $(BUILDDIR)
-	@CMD /C $(SPHINXAUTOBUILD) "$(SOURCEDIR)" "$(BUILDDIR)/html" -d "$(BUILDDIR)/doctrees" $(SPHINXOPTS) $(AUTOBUILDOPTS) $(O)
+	@CMD /C IF NOT EXIST $(BUILDLANGDIR) MD $(BUILDLANGDIR)
+	@CMD /C $(SPHINXAUTOBUILD) "$(SOURCEDIR)" "$(BUILDLANGDIR)" -d "$(DOCTREESLANGDIR)" $(SPHINXOPTS) $(AUTOBUILDOPTS) $(O)
 else
-	@mkdir -p "$(BUILDDIR)"
-	@$(SPHINXAUTOBUILD) "$(SOURCEDIR)" "$(BUILDDIR)/html" -d "$(BUILDDIR)/doctrees" $(SPHINXOPTS) $(AUTOBUILDOPTS) $(O)
+	@mkdir -p "$(BUILDLANGDIR)"
+	@LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 
+	@$(SPHINXAUTOBUILD) "$(SOURCEDIR)" "$(BUILDLANGDIR)" -d "$(DOCTREESLANGDIR)" $(SPHINXOPTS) $(AUTOBUILDOPTS) $(O)
 endif
 
 # Run `make linkcheck` to check external links
@@ -85,3 +90,13 @@ else
 	@mkdir -p "$(BUILDDIR)"
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS2) $(O) 2>>"$(WARNINGSFILE)"
 endif
+
+gettext:
+	@mkdir -p "$(BUILDDIR)/gettext"
+	@$(SPHINXBUILD) -b gettext "$(SOURCEDIR)" "$(BUILDDIR)/gettext"
+
+update-ko-po:
+	pipenv run sphinx-intl update -p "$(BUILDDIR)/gettext" -l $(LANG)
+
+live-ko:
+	@LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 $(MAKE) livehtml LANG=ko

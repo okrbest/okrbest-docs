@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-07 15:09+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/about/faq-design-decisions.rst:2
+msgid "Design Decisions"
+msgstr ""
+
+#: ../../source/about/faq-design-decisions.rst:5
+msgid ""
+"Why does Mattermost disclose whether or not an account exists when a user"
+" enters an incorrect password?"
+msgstr ""
+
+#: ../../source/about/faq-design-decisions.rst:7
+msgid ""
+"Mattermost's core design principle is to be \"fast, obvious, forgiving\" "
+"and, telling users that they made a mistake in entering their password, "
+"is in service of our principle of prioritizing user interests."
+msgstr ""
+
+#: ../../source/about/faq-design-decisions.rst:9
+msgid ""
+"When using username-password authentication, especially with AD/LDAP, "
+"there's the possibility of usernames being email addresses, Mattermost "
+"username, AD/LDAP username and ID, or other AD/LDAP attributes and our "
+"design principle intends to help end users understand whether their login"
+" error came from having the wrong password or the wrong email/username."
+msgstr ""
+
+#: ../../source/about/faq-design-decisions.rst:11
+msgid ""
+"We believe this design increases productivity, speeds up user adoption, "
+"and reduces help desk tickets and support costs - and that these benefits"
+" outweigh the trade-offs."
+msgstr ""
+
+#: ../../source/about/faq-design-decisions.rst:13
+msgid ""
+"The trade-off with this design is that if physical security is not in "
+"effect, network security is not in effect (i.e., no VPN or a malicious "
+"user within the private network), and username-password authentication is"
+" used, an attacker may be able to enumerate email addresses or usernames "
+"by sending HTTP requests to the system, up to the maximum number of "
+"requests per second defined in Mattermost's :doc:`API rate limiting "
+"settings </configure/environment-configuration-settings>`."
+msgstr ""
+
+#: ../../source/about/faq-design-decisions.rst:15
+msgid ""
+"For organizations who choose to deploy in such a configuration, please "
+"consider the following mitigations:"
+msgstr ""
+
+#: ../../source/about/faq-design-decisions.rst:17
+msgid ""
+"Instead of username-password, use a Single Sign-On (SSO) provider in "
+"Mattermost Enterprise Edition like OneLogin, Okta, or ADFS, or use the "
+"open source GitLab SSO option available with Mattermost Team Edition."
+msgstr ""
+
+#: ../../source/about/faq-design-decisions.rst:18
+msgid ""
+"Per the recommended install instructions, use a VPN client to apply "
+"network security to your deployment."
+msgstr ""
+
+#: ../../source/about/faq-design-decisions.rst:19
+msgid ""
+"Enable monitoring and alerting from your proxy server to detect and "
+"isolate malicious behavior reaching your deployment."
+msgstr ""
+
+#: ../../source/about/faq-design-decisions.rst:21
+msgid ""
+"Above all, make sure to subscribe to the `Mattermost Security Bulletin "
+"<https://mattermost.com/security-updates/#sign-up>`__ and apply security "
+"patches as recommended."
+msgstr ""
+

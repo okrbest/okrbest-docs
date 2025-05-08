@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-07 15:09+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/configure/config-proxy-apache2.rst:7
+msgid "Configuring Apache2 as a proxy for Mattermost Server (Unofficial)"
+msgstr ""
+
+#: ../../source/configure/config-proxy-apache2.rst:9
+msgid ""
+"This unofficial guide is maintained by the Mattermost community and this "
+"deployment configuration is not yet officially supported by Mattermost, "
+"Inc. `Community testing, feedback and improvements are welcome and "
+"greatly appreciated <https://github.com/mattermost/docs/issues/1295>`_. "
+"You can `edit this page on GitHub "
+"<https://github.com/mattermost/docs/blob/master/source/configure/config-"
+"proxy-apache2.rst>`_."
+msgstr ""
+
+#: ../../source/configure/config-proxy-apache2.rst:11
+msgid ""
+"On a Debian-based operating system such as Ubuntu, Apache2 proxy "
+"configuration is done in the ``/etc/apache2/sites-available`` directory. "
+"Red Hat-based systems organize Apache configuration files `differently "
+"<https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/system_administrators_guide"
+"/ch-web_servers>`_. If you're setting up Mattermost on a subdomain, "
+"you'll want to create a new configuration file along the lines of "
+"``mysubdomain.mydomain.com.conf``."
+msgstr ""
+
+#: ../../source/configure/config-proxy-apache2.rst:13
+msgid "**To configure Apache2 as a proxy**"
+msgstr ""
+
+#: ../../source/configure/config-proxy-apache2.rst:15
+msgid "SSH into your server."
+msgstr ""
+
+#: ../../source/configure/config-proxy-apache2.rst:16
+msgid ""
+"Make sure the Apache modules ``mod_rewrite`` , ``mod_proxy``, "
+"``mod_proxy_http``, and ``mod_proxy_wstunnel`` are installed and enabled."
+" If not, follow the instructions from your Linux distribution to do so."
+msgstr ""
+
+#: ../../source/configure/config-proxy-apache2.rst:17
+msgid ""
+"Create the above mentioned configuration file. It is often helpful to "
+"start with a copy of ``000-default.conf`` or ``default-ssl.conf`` (on "
+"Ubuntu)."
+msgstr ""
+
+#: ../../source/configure/config-proxy-apache2.rst:18
+msgid "Edit your configuration using the guide below:"
+msgstr ""
+
+#: ../../source/configure/config-proxy-apache2.rst:20
+msgid ""
+"If you're not setting up a subdomain, your ``ServerName`` will simply be "
+"set to ``mydomain.com``."
+msgstr ""
+
+#: ../../source/configure/config-proxy-apache2.rst:21
+msgid ""
+"``ServerAlias`` can been added too if you want to capture "
+"``www.mydomain.com``."
+msgstr ""
+
+#: ../../source/configure/config-proxy-apache2.rst:22
+msgid "Remember to change the values to match your server's name, etc."
+msgstr ""
+
+#: ../../source/configure/config-proxy-apache2.rst:23
+msgid ""
+"If you have enabled TLS in the Mattermost settings, you must use the "
+"protocol ``wss://`` instead of ``ws://`` in the ``RewriteRule``."
+msgstr ""
+
+#: ../../source/configure/config-proxy-apache2.rst:24
+msgid ""
+"To serve requests on a different port (such as 8443), in addition to "
+"setting the port in the VirtualHost element, add ``Listen 8443`` on a "
+"separate line before the VirtualHost line."
+msgstr ""
+
+#: ../../source/configure/config-proxy-apache2.rst:51
+msgid ""
+"(Debian/Ubuntu only) Because you'll likely have not set up the subdomain "
+"before now on Apache2, run ``a2ensite mysubdomain.mydomain.com`` to "
+"enable the site (do not run ``a2ensite mysubdomain.mydomain.com.conf``)."
+msgstr ""
+
+#: ../../source/configure/config-proxy-apache2.rst:53
+msgid "Restart Apache2."
+msgstr ""
+
+#: ../../source/configure/config-proxy-apache2.rst:55
+msgid "On Ubuntu 14.04 and RHEL 6: ``sudo service apache2 restart``"
+msgstr ""
+
+#: ../../source/configure/config-proxy-apache2.rst:56
+msgid "On Ubuntu 16.04+ and RHEL 7+: ``sudo systemctl restart apache2``"
+msgstr ""
+
+#: ../../source/configure/config-proxy-apache2.rst:58
+msgid ""
+"You should be all set! Ensure that your Mattermost config file is "
+"pointing to the correct URL (which may include a port), and then ensure "
+"that your socket connection is not dropping once deployed. To prevent "
+"external access to Mattermost on port 8065, in the config file, set "
+"``ListenAddress`` to ``localhost:8065`` instead of ``:8065``."
+msgstr ""
+

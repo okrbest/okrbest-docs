@@ -1,0 +1,266 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-07 15:09+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/scale/scale-to-200-users.rst:2
+msgid "Scale Mattermost up to 200 users"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:4
+msgid ""
+"This page describes the Mattermost reference architecture designed for "
+"the load of up to 200 concurrent users. Unsure which reference "
+"architecture to use? See the :doc:`scaling for enterprise </scale"
+"/scaling-for-enterprise>` documentation for details."
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:6
+msgid "**High Availability**: Not required"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:7
+msgid "**Database Configuration**: Single"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:10
+msgid ""
+"Usage of CPU, RAM, and storage space can vary significantly based on user"
+" behavior. These hardware recommendations are based on traditional "
+"deployments and may grow or shrink depending on how active your users "
+"are."
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:13
+msgid "Requirements"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:17
+msgid "Scroll horizontally to see additional columns in the table below."
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:20
+msgid "**Resource Type**"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:20
+msgid "**Nodes**"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:20
+msgid "**vCPU/ Memory (GiB)**"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:20
+msgid "**AWS Instance**"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:20
+msgid "**Azure Instance**"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:23
+msgid "Mattermost Application"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:23
+#: ../../source/scale/scale-to-200-users.rst:25
+#: ../../source/scale/scale-to-200-users.rst:31
+msgid "1"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:23
+msgid "2/4"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:23
+msgid "c7i.large"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:23
+msgid "F2s v2"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:25
+msgid "RDS Writer"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:25
+#: ../../source/scale/scale-to-200-users.rst:27
+msgid "2/16"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:25
+#: ../../source/scale/scale-to-200-users.rst:27
+msgid "db.r7g.large"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:25
+#: ../../source/scale/scale-to-200-users.rst:27
+msgid "E2as v6"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:27
+msgid "RDS Reader"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:27
+#: ../../source/scale/scale-to-200-users.rst:29
+msgid "0"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:29
+msgid "Elasticsearch Node"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:29
+msgid "4/32"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:29
+msgid "r6g.xlarge.search"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:29
+msgid "E4ads v6"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:31
+msgid "Proxy"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:31
+msgid "16/64"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:31
+msgid "m7i.4xlarge"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:31
+msgid "D16s v6"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:35
+msgid "Lifetime storage"
+msgstr ""
+
+#: ../../source/scale/lifetime-storage.rst:5
+msgid ""
+"To forecast your own storage usage, begin with a Mattermost server "
+"approximately 600 MB to 800 MB in size including operating system and "
+"database, then add the multiplied product of:"
+msgstr ""
+
+#: ../../source/scale/lifetime-storage.rst:7
+msgid ""
+"Estimated storage per user per month (see below), multiplied by 12 months"
+" in a year"
+msgstr ""
+
+#: ../../source/scale/lifetime-storage.rst:8
+msgid "Estimated mean average number of users in a year"
+msgstr ""
+
+#: ../../source/scale/lifetime-storage.rst:9
+msgid "A 1-2x safety factor"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:41
+msgid "Estimated storage per user, per month"
+msgstr ""
+
+#: ../../source/scale/estimated-storage-per-user-per-month.rst:5
+msgid ""
+"File usage per user varies significantly across industries. The below "
+"benchmarks are recommended:"
+msgstr ""
+
+#: ../../source/scale/estimated-storage-per-user-per-month.rst:7
+msgid "**Low usage teams** (1-5 MB/user/month)"
+msgstr ""
+
+#: ../../source/scale/estimated-storage-per-user-per-month.rst:9
+msgid ""
+"Primarily using text messages and links to communicate. Examples would "
+"include software development teams that heavily use web-based document "
+"creation and management tools, and therefore rarely upload files to the "
+"server."
+msgstr ""
+
+#: ../../source/scale/estimated-storage-per-user-per-month.rst:11
+msgid "**Medium usage teams** (5-25 MB/user/month)"
+msgstr ""
+
+#: ../../source/scale/estimated-storage-per-user-per-month.rst:13
+msgid ""
+"Using a mix of text messages as well as shared documents and images to "
+"communicate. Examples might include business teams that may commonly drag"
+" and drop screenshots, PDFs and Microsoft Office documents into "
+"Mattermost for sharing and review."
+msgstr ""
+
+#: ../../source/scale/estimated-storage-per-user-per-month.rst:15
+msgid "**High usage teams** (25-100 MB/user/month)"
+msgstr ""
+
+#: ../../source/scale/estimated-storage-per-user-per-month.rst:17
+msgid ""
+"Heaviest utilization comes from teams uploading a high number of large "
+"files into Mattermost on a regular basis. Examples include creative teams"
+" who share and store artwork and media with tags and commentary in a "
+"pipeline production process."
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:47
+msgid "Example"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:49
+msgid ""
+"A 200-person team with medium usage (with a safety factor of 2x) would "
+"require between 12GB :sup:`1` and 60GB :sup:`2` of free space per annum."
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:51
+msgid ":sup:`1` 200 users * 5 MB * 12 months * 2x safety factor"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:53
+msgid ":sup:`2` 200 users * 25 MB * 12 months * 2x safety factor"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:55
+msgid ""
+"We strongly recommend that you review storage utilization at least "
+"quarterly to ensure adequate free space is available."
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:58
+msgid "Additional considerations"
+msgstr ""
+
+#: ../../source/scale/scale-to-200-users.rst:60
+msgid ""
+"Smaller deployments, or deployments using the :doc:`Mattermost Omnibus "
+"installer </deploy/server/deploy-linux>`, will need an increase in "
+"resources due to the fact the database is hosted on the same server as "
+"the Mattermost application."
+msgstr ""
+
