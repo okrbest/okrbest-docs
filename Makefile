@@ -96,7 +96,7 @@ gettext:
 	@$(SPHINXBUILD) -b gettext "$(SOURCEDIR)" "$(BUILDDIR)/gettext"
 
 update-ko-po:
-	pipenv run sphinx-intl update -p "$(BUILDDIR)/gettext" -l $(LANG)
+	pipenv run sphinx-intl update -p "$(BUILDDIR)/gettext" -l ko
 
 live-ko:
 	@LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 $(MAKE) livehtml LANG=ko

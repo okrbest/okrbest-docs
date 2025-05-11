@@ -1,14 +1,14 @@
 Out-of-Band Collaboration
 ==========================
 
-Out-of-Band (OOB) collaboration is a method of communication that occurs outside an organization’s primary business systems on a separate communications channel. 
+Out-of-Band (OOB) collaboration is a method of communication that occurs outside an organization's primary business systems on a separate communications channel. 
 
 This approach ensures teams can communicate and coordinate even when their main networks are compromised. Learn more about `key use cases <#key-use-cases>`__ below, and visit the Mattermost blog to learn how OOB collaboration helps you `maintain business continuity <https://mattermost.com/blog/out-of-band-communication-maintaining-business-continuity/>`_.
 
 Mattermost for OOB
 ------------------
 
-Organizations can use Mattermost as an OOB solution by either self-hosting their instance or leveraging Mattermost’s Cloud SaaS offering.  
+Organizations can use Mattermost as an OOB solution by either self-hosting their instance or leveraging Mattermost's Cloud SaaS offering.  
 
 Self-hosted
 ~~~~~~~~~~~~
