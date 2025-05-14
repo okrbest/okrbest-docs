@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mattermost \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 15:09+0900\n"
+"POT-Creation-Date: 2025-05-14 10:30+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ko\n"
@@ -71,20 +71,32 @@ msgstr ""
 
 #: ../../source/about/deprecated-features.rst:15
 msgid ""
-"End of support for MySQL is targeted for Mattermost v11. See `this "
-"document <https://docs.mattermost.com/deploy/postgres-migration.html>`__ "
-"for migration guidelines from MySQL to PostgreSQL."
+"End of support for MySQL is targeted for Mattermost v11. See more details"
+" in `this forum post <https://forum.mattermost.com/t/transition-to-"
+"postgresql/19551>`__."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:18
+#: ../../source/about/deprecated-features.rst:16
+msgid ""
+"Starting in Mattermost v11, the default value of the "
+"``ExperimentalStrictCSRFEnforcement`` setting will be changed to "
+"``true``. The legacy ``X-Requested-With`` header fallback will still be "
+"supported but only when explicitly disabled by setting "
+"``ExperimentalStrictCSRFEnforcement`` to ``false``. See more details in "
+"`this forum post <https://forum.mattermost.com/t/default-value-of-the-"
+"experimental-strict-csrf-enforcement-setting-to-be-changed-to-"
+"true-v11/23139>`__."
+msgstr ""
+
+#: ../../source/about/deprecated-features.rst:19
 msgid "Removed features by Mattermost version"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:21
+#: ../../source/about/deprecated-features.rst:22
 msgid "Mattermost Server v10.6.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:23
+#: ../../source/about/deprecated-features.rst:24
 msgid ""
 "Support for PostgreSQL v11 and v12 have been removed. The new minimum "
 "PostgreSQL version is v13+. See the :ref:`minimum supported PostgreSQL "
@@ -92,11 +104,11 @@ msgid ""
 "database support policy>` documentation for details."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:26
+#: ../../source/about/deprecated-features.rst:27
 msgid "Mattermost Server v10.5.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:28
+#: ../../source/about/deprecated-features.rst:29
 msgid ""
 "The Mattermost server has stopped supporting manual plugin deployment. "
 "Plugins were deployed manually when an administrator or some deployment "
@@ -107,7 +119,7 @@ msgid ""
 "/deprecation-notice-manual-plugin-deployment/21192>`__."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:29
+#: ../../source/about/deprecated-features.rst:30
 msgid ""
 "Mattermost has stopped official Mattermost server builds for the "
 "Microsoft Windows operating system. Administrators should migrate "
@@ -117,11 +129,11 @@ msgid ""
 "microsoft-windows/21498>`__."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:32
+#: ../../source/about/deprecated-features.rst:33
 msgid "Mattermost Mobile App v2.25.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:34
+#: ../../source/about/deprecated-features.rst:35
 msgid ""
 "In the Mattermost Mobile App v2.25, Mattermost has stopped supporting iOS"
 " versions 13 and 14. Users should update their iOS version to v15.1 or "
@@ -130,21 +142,21 @@ msgid ""
 "ios-13-and-14-versions/21845>`__."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:37
+#: ../../source/about/deprecated-features.rst:38
 msgid "Mattermost Server v10.4.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:39
+#: ../../source/about/deprecated-features.rst:40
 msgid ""
 "The ability to import Slack themes as Mattermost themes is no longer "
 "supported."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:42
+#: ../../source/about/deprecated-features.rst:43
 msgid "Mattermost Server v10.3.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:44
+#: ../../source/about/deprecated-features.rst:45
 msgid ""
 "The Classic Mobile App has been phased out. Please download the new v2 "
 "Mobile App from the `Apple App Store "
@@ -156,11 +168,11 @@ msgid ""
 "Mattermost forum post."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:47
+#: ../../source/about/deprecated-features.rst:48
 msgid "Mattermost Server v10.2.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:49
+#: ../../source/about/deprecated-features.rst:50
 msgid ""
 "Docker Content Trust (DCT) for signing Docker image artifacts has been "
 "replaced by Sigstore Cosign in v10.2 (November, 2024). If you rely on "
@@ -170,11 +182,11 @@ msgid ""
 "/upcoming-dct-deprecation/19275>`__ for more details."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:52
+#: ../../source/about/deprecated-features.rst:53
 msgid "Mattermost Server v10.0.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:54
+#: ../../source/about/deprecated-features.rst:55
 msgid ""
 "We no longer support new installations using MySQL starting in v10. All "
 "new customers and/or deployments will only be supported with the minimum "
@@ -182,66 +194,66 @@ msgid ""
 " targeted for Mattermost v11."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:55
+#: ../../source/about/deprecated-features.rst:56
 msgid ""
 "Apps Framework is deprecated for new installs. Please extend Mattermost "
 "using webhooks, slash commands, OAuth2 apps, and plugins."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:56
+#: ../../source/about/deprecated-features.rst:57
 msgid ""
 "Fully deprecated the ``/api/v4/image`` endpoint when the image proxy is "
 "disabled."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:57
+#: ../../source/about/deprecated-features.rst:58
 msgid ""
 "Removed deprecated ``Config.ProductSettings``, ``LdapSettings.Trace``, "
 "and ``AdvancedLoggingConfig`` configuration fields."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:58
+#: ../../source/about/deprecated-features.rst:59
 msgid "Removed deprecated ``pageSize`` query parameter from most API endpoints."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:59
+#: ../../source/about/deprecated-features.rst:60
 msgid ""
 "Deprecated the experimental Strict CSRF token enforcement. This feature "
 "will be fully removed in Mattermost v11."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:62
+#: ../../source/about/deprecated-features.rst:63
 msgid "Mattermost Server v9.9.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:64
+#: ../../source/about/deprecated-features.rst:65
 msgid ""
 "Removed support for self-serve purchases of Mattermost Subscriptions in "
 "various flows, throughout Cloud and Self Hosted environments."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:65
+#: ../../source/about/deprecated-features.rst:66
 msgid ""
 "Removed support for self-serve true up review submission in the **System "
 "Console**."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:68
+#: ../../source/about/deprecated-features.rst:69
 msgid "Mattermost Server v9.5.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:70
+#: ../../source/about/deprecated-features.rst:71
 msgid ""
 "MySQL v5.7 is at end of life. We recommend all customers to upgrade to at"
 " least 8.x. From Mattermost v9.5, which is the latest Extended Support "
 "Release, we have stopped supporting MySQL v5.7 altogether."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:73
+#: ../../source/about/deprecated-features.rst:74
 msgid "Mattermost Server v9.0.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:75
+#: ../../source/about/deprecated-features.rst:76
 msgid ""
 "Mattermost Boards and various other plugins have transitioned to being "
 "fully community supported. See this `forum post "
@@ -249,15 +261,15 @@ msgid ""
 "various-plugins/16669>`_ for more details."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:76
+#: ../../source/about/deprecated-features.rst:77
 msgid "Removed the deprecated Insights feature."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:79
+#: ../../source/about/deprecated-features.rst:80
 msgid "Mattermost Server v8.0.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:81
+#: ../../source/about/deprecated-features.rst:82
 msgid ""
 "Removed ``ExperimentalSettings.PatchPluginsReactDOM``. If this setting "
 "was previously enabled, confirm that: - All Mattermost-supported plugins "
@@ -266,37 +278,37 @@ msgid ""
 "/important-upgrade-notes>` for v7.7 for more information."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:84
+#: ../../source/about/deprecated-features.rst:85
 msgid ""
 "Deprecated Insights for all new instances and for existing servers that "
 "upgrade to Mattermost v8.0."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:85
+#: ../../source/about/deprecated-features.rst:86
 msgid "Removed deprecated ``PermissionUseSlashCommands``."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:86
+#: ../../source/about/deprecated-features.rst:87
 msgid "Removed deprecated ``model.CommandArgs.Session``."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:87
+#: ../../source/about/deprecated-features.rst:88
 msgid ""
 "Removed support for PostgreSQL v10. The new minimum PostgreSQL version is"
 " now v11."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:88
+#: ../../source/about/deprecated-features.rst:89
 msgid ""
 "Deprecated the ``AdvancedLoggingConfig`` fields, and replaced them with "
 "``AdvancedLoggingJSON`` fields which accept inline JSON or a filename."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:91
+#: ../../source/about/deprecated-features.rst:92
 msgid "Mattermost Server v6.0.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:93
+#: ../../source/about/deprecated-features.rst:94
 msgid ""
 ":doc:`Legacy Command Line Tools </manage/command-line-tools>`. Most "
 "commands have been replaced by :doc:`mmctl </manage/mmctl-command-line-"
@@ -304,14 +316,14 @@ msgid ""
 "this tool a full and robust replacement."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:94
+#: ../../source/about/deprecated-features.rst:95
 msgid ""
 "Slack Import via the web app. The Slack import tool accessible via the "
 "Team Setting menu is being replaced by the mmetl tool that is much more "
 "comprehensive for the types of data it can assist in uploading."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:95
+#: ../../source/about/deprecated-features.rst:96
 msgid ""
 "MySQL versions below 5.7.12. Minimum support will now be for 5.7.12. This"
 " version introduced a native JSON data type that lets us improve "
@@ -321,7 +333,7 @@ msgid ""
 "/eol-notice.html>`_."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:96
+#: ../../source/about/deprecated-features.rst:97
 msgid ""
 "Elasticsearch 5 and 6. `Versions 5.x reached EOL in March of 2019, and "
 "versions 6.x reached EOL in November 2020 "
@@ -329,7 +341,7 @@ msgid ""
 "with Mattermost v6.0 will be Elasticsearch version 7.0."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:97
+#: ../../source/about/deprecated-features.rst:98
 msgid ""
 "Windows 7 reached `EOL in January 2020 <https://support.microsoft.com/en-"
 "us/windows/what-does-it-mean-if-windows-isn-t-supported-"
@@ -337,19 +349,19 @@ msgid ""
 "support for the desktop app issues on Windows 7."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:98
+#: ../../source/about/deprecated-features.rst:99
 msgid ""
 ":ref:`DisableLegacyMFAEndpoint <configure/deprecated-configuration-"
 "settings:disable legacy mfa api endpoint>` configuration setting."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:99
+#: ../../source/about/deprecated-features.rst:100
 msgid ""
 ":ref:`Experimental Timezone <configure/deprecated-configuration-"
 "settings:timezone>` configuration setting."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:100
+#: ../../source/about/deprecated-features.rst:101
 msgid ""
 "All legacy channel sidebar experimental configuration settings. We "
 "encourage customers using these settings to upgrade to v5.32 or later to "
@@ -357,63 +369,63 @@ msgid ""
 "organization features. The settings being deprecated include:"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:102
+#: ../../source/about/deprecated-features.rst:103
 msgid ""
 ":ref:`EnableLegacySidebar <configure/deprecated-configuration-"
 "settings:enable legacy sidebar>`"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:103
+#: ../../source/about/deprecated-features.rst:104
 msgid ""
 ":ref:`ExperimentalTownSquareIsReadOnly <configure/deprecated-"
 "configuration-settings:town square is read-only>`"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:104
+#: ../../source/about/deprecated-features.rst:105
 msgid ""
 ":ref:`ExperimentalHideTownSquareinLHS <configure/deprecated-"
 "configuration-settings:town square is hidden in left hand sidebar>`"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:105
+#: ../../source/about/deprecated-features.rst:106
 msgid ""
 ":ref:`EnableXToLeaveChannelsFromLHS <configure/deprecated-configuration-"
 "settings:enable x to leave channels from left hand sidebar>`"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:106
+#: ../../source/about/deprecated-features.rst:107
 msgid ""
 ":ref:`CloseUnusedDirectMessages <configure/deprecated-configuration-"
 "settings:autoclose direct messages in sidebar>`"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:107
+#: ../../source/about/deprecated-features.rst:108
 msgid ""
 ":ref:`ExperimentalChannelOrganization <configure/deprecated-"
 "configuration-settings:sidebar organization>`"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:108
+#: ../../source/about/deprecated-features.rst:109
 msgid ""
 ":ref:`ExperimentalChannelSidebarOrganization <configure/deprecated-"
 "configuration-settings:experimental sidebar features>`"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:110
+#: ../../source/about/deprecated-features.rst:111
 msgid ""
 ":ref:`All configuration settings previously marked as “Deprecated” "
 "<configure/configuration-settings:deprecated configuration settings>`."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:111
+#: ../../source/about/deprecated-features.rst:112
 msgid "Changes to mattermost-server/model for naming consistency."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:114
+#: ../../source/about/deprecated-features.rst:115
 msgid "Mattermost Server v5.38.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:116
+#: ../../source/about/deprecated-features.rst:117
 msgid ""
 "In the v5.38 release (August 16, 2021), the “config watcher” (the "
 "mechanism that automatically reloads the “config.json“ file), has been "
@@ -422,11 +434,11 @@ msgid ""
 "improve configuration performance and robustness."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:119
+#: ../../source/about/deprecated-features.rst:120
 msgid "Mattermost Server v5.37.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:121
+#: ../../source/about/deprecated-features.rst:122
 msgid ""
 "The “platform“ binary and “–platform” flag have been removed. If you are "
 "using the “–platform” flag or are using the “platform“ binary directly to"
@@ -434,11 +446,11 @@ msgid ""
 "script, you will be required to use only the “mattermost“ binary."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:124
+#: ../../source/about/deprecated-features.rst:125
 msgid "Mattermost Server v5.32.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:126
+#: ../../source/about/deprecated-features.rst:127
 msgid ""
 "TLS versions 1.0 and 1.1 have been deprecated by browser vendors. "
 "Starting in Mattermost Server v5.32 (February 16), mmctl returns an error"
@@ -448,11 +460,11 @@ msgid ""
 "higher."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:129
+#: ../../source/about/deprecated-features.rst:130
 msgid "Mattermost Server v5.30.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:131
+#: ../../source/about/deprecated-features.rst:132
 msgid ""
 "PostgreSQL ended long-term support for `version 9.4 in February 2020 "
 "<https://www.postgresql.org/support/versioning>`_. From v5.26 Mattermost "
@@ -465,39 +477,39 @@ msgid ""
 "documentation <https://www.postgresql.org/support/versioning/>`_."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:134
+#: ../../source/about/deprecated-features.rst:135
 msgid "Mattermost Server v5.16.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:136
+#: ../../source/about/deprecated-features.rst:137
 msgid ""
 "Removed support for Internet Explorer (IE11) in Mattermost v5.16.0. Learn"
 " more in our `forum post <https://forum.mattermost.com/t/mattermost-is-"
 "dropping-support-for-internet-explorer-ie11-in-v5-16/7575>`__."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:139
+#: ../../source/about/deprecated-features.rst:140
 msgid "Mattermost Server v5.12.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:141
+#: ../../source/about/deprecated-features.rst:142
 msgid ""
 "ExperimentalEnablePostMetadata setting was removed. Post metadata, "
 "including post dimensions, is now stored in the database to correct "
 "scroll position and eliminate scroll jumps as content loads in a channel."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:144
+#: ../../source/about/deprecated-features.rst:145
 msgid "Mattermost Server v5.6.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:146
+#: ../../source/about/deprecated-features.rst:147
 msgid ""
 "Removed support for WebRTC in beta, and replaced it with other video and "
 "audio calling solutions."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:147
+#: ../../source/about/deprecated-features.rst:148
 msgid ""
 "Removed support for IE11 Mobile View due to low usage and instability in "
 "order to invest that effort in maintaining a high quality experience on "
@@ -506,11 +518,11 @@ msgid ""
 "Safari, Edge as well as the desktop apps."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:150
+#: ../../source/about/deprecated-features.rst:151
 msgid "Mattermost Server v5.0.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:152
+#: ../../source/about/deprecated-features.rst:153
 msgid ""
 "All API v3 endpoints removed. API v3 endpoints are no longer supported as"
 " of Mattermost v4.6 release on January 16th, 2018, and are replaced by "
@@ -518,24 +530,24 @@ msgid ""
 "`https://api.mattermost.com <https://api.mattermost.com>`_ to learn more."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:153
+#: ../../source/about/deprecated-features.rst:154
 msgid ""
 "Desktop Notification Duration in Account Settings removed due to "
 "inconsistencies on various browsers and operating systems."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:154
+#: ../../source/about/deprecated-features.rst:155
 msgid "An unused “ExtraUpdateAt” field removed from the channel model."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:155
+#: ../../source/about/deprecated-features.rst:156
 msgid ""
 "``platform`` binary renamed to mattermost for a clearer install and "
 "upgrade experience. All command line tools, including the bulk loading "
 "tool and developer tools, also renamed from platform to mattermost."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:156
+#: ../../source/about/deprecated-features.rst:157
 msgid ""
 "Slash commands configured to receive a GET request now have the payload "
 "encoded in the query string instead of receiving it in the body of the "
@@ -543,13 +555,13 @@ msgid ""
 "could break custom slash commands that use GET requests incorrectly."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:157
+#: ../../source/about/deprecated-features.rst:158
 msgid ""
 "A new ``config.json`` setting to whitelist types of protocols for auto-"
 "linking added."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:158
+#: ../../source/about/deprecated-features.rst:159
 #, python-format
 msgid ""
 "A new ``config.json`` setting to disable the `permanent APIv4 delete team"
@@ -560,11 +572,11 @@ msgid ""
 "API v4 endpoint from the ``config.json`` file."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:161
+#: ../../source/about/deprecated-features.rst:162
 msgid "Mattermost Server v4.9.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:163
+#: ../../source/about/deprecated-features.rst:164
 msgid ""
 "A number of permissions configuration settings will be migrated to roles "
 "in the database, and changing their config.json values will no longer "
@@ -573,69 +585,77 @@ msgid ""
 "releases>` for more details."
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:166
+#: ../../source/about/deprecated-features.rst:167
 msgid "Mattermost Server v4.0.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:168
+#: ../../source/about/deprecated-features.rst:169
 msgid "System Console settings in **Files > Images**, including:"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:170
+#: ../../source/about/deprecated-features.rst:171
 msgid "Image preview height and width"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:171
+#: ../../source/about/deprecated-features.rst:172
 msgid "Profile picture height and width"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:172
+#: ../../source/about/deprecated-features.rst:173
 msgid "Image thumbnail height and width"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:174
+#: ../../source/about/deprecated-features.rst:175
 msgid "Font setting in **Account Settings > Display**"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:175
+#: ../../source/about/deprecated-features.rst:176
 msgid "Teammate Name Display setting moved to the System Console"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:178
+#: ../../source/about/deprecated-features.rst:179
 msgid "Mattermost Server v3.8.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:180
+#: ../../source/about/deprecated-features.rst:181
 msgid ""
 "Old CLI tool (replaced by :doc:`an upgraded CLI tool </manage/command-"
 "line-tools>`)"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:181
+#: ../../source/about/deprecated-features.rst:182
 msgid "APIv3 endpoints:"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:183
+#: ../../source/about/deprecated-features.rst:184
 msgid "“GET at /channels/more” (replaced by “/channels/more/{offset}/{limit}”)"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:184
+#: ../../source/about/deprecated-features.rst:185
 msgid "“POST at /channels/update_last_viewed_at” (replaced by “/channels/view”)"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:185
+#: ../../source/about/deprecated-features.rst:186
 msgid "“POST at /channels/set_last_viewed_at” (replaced by “/channels/view”)"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:186
+#: ../../source/about/deprecated-features.rst:187
 msgid "“POST at /users/status/set_active_channel” (replaced by “/channels/view”)"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:189
+#: ../../source/about/deprecated-features.rst:190
 msgid "Mattermost Server v3.7.0"
 msgstr ""
 
-#: ../../source/about/deprecated-features.rst:191
+#: ../../source/about/deprecated-features.rst:192
 msgid "“ServiceSettings: SegmentDeveloperKey” setting in ``config.json``"
 msgstr ""
+
+#~ msgid ""
+#~ "End of support for MySQL is "
+#~ "targeted for Mattermost v11. See `this"
+#~ " document <https://docs.mattermost.com/deploy/postgres-"
+#~ "migration.html>`__ for migration guidelines "
+#~ "from MySQL to PostgreSQL."
+#~ msgstr ""
 
