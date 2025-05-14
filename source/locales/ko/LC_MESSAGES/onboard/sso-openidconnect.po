@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 06:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/onboard/sso-openidconnect.rst:2
+msgid "OpenID Connect Single Sign-On"
+msgstr ""
+
+#: ../../source/_static/badges/ent-pro-cloud-selfhosted.rst:7
+msgid ""
+"|plans-img| Available on `Enterprise and Professional plans "
+"<https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/ent-pro-cloud-selfhosted.rst:9
+msgid ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
+"hosted <https://mattermost.com/download/>`__ deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:7
+msgid ""
+"Mattermost provides OpenID Connect support for :doc:`GitLab </onboard"
+"/sso-gitlab>`, :doc:`Google Apps </onboard/sso-google>`, and :doc:`Entra "
+"ID </onboard/sso-entraid>`. With OpenID Connect, users can also use their"
+" login to Keycloak, Atlassian Crowd, Apple, Microsoft, Salesforce, Auth0,"
+" Ory.sh, Facebook, Okta, OneLogin, and Azure AD, as well as others, as a "
+"Single Sign-on (SSO) service for team creation, account creation, and "
+"user login."
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:9
+msgid "Follow these steps to configure a service provider using OpenID Connect."
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:12
+msgid "Step 1: Create an OpenID Connect Application"
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:14
+msgid ""
+"Follow service provider documentation for creating an OpenID Connect "
+"application. Most OpenID Connect service providers require authorization "
+"of all redirect URIs."
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:15
+#, python-brace-format
+msgid ""
+"In the appropriate field, enter ``{your-mattermost-"
+"url}/signup/openid/complete`` For example: "
+"``http://domain.com/signup/openid/complete``"
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:16
+msgid ""
+"Copy and paste values for the **Discovery Endpoint**, **Client ID**, and "
+"**Client Secret** values to a temporary location. You will enter these "
+"values when you configure Mattermost."
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:19
+msgid "Step 2: Configure Mattermost for an OpenID Connect SSO"
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:21
+msgid ""
+"Log in to Mattermost, then go to **System Console > Authentication > "
+"OpenID Connect**."
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:22
+msgid "Select **OpenID Connect (Other)** as the service provider."
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:23
+msgid "Enter the **Discovery Endpoint**."
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:24
+msgid "Enter the **Client ID**."
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:25
+msgid "Enter the **Client Secret**."
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:26
+msgid ""
+"Specify a **Button Name** and **Button Color** for the OpenID Connect "
+"option on the Mattermost login page."
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:27
+msgid "Select **Save**."
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:28
+msgid "Restart your Mattermost server to see the changes take effect."
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:31
+msgid ""
+"When Mattermost is configured to use OpenID Connect for user "
+"authentication, the following user attribute changes can't be made "
+"through the Mattermost API: first name, last name, or username. OpenID "
+"Connect must be the authoritative source for these user attributes."
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:32
+msgid ""
+"The **Discovery Endpoint** setting can be used to determine the "
+"connectivity and availability of arbitrary hosts. System admins concerned"
+" about this can use custom admin roles to limit access to modifying these"
+" settings. See the :ref:`delegated granular administration <onboard"
+"/delegated-granular-administration:edit privileges of admin roles "
+"(advanced)>` documentation for details."
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:35
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:38
+msgid "How can I use LDAP attributes or Groups with OpenID?"
+msgstr ""
+
+#: ../../source/onboard/sso-openidconnect.rst:40
+msgid ""
+"At this time, LDAP data isn't compatible with OpenID. If you currently "
+"rely on LDAP to manage your users' teams, channels, groups, or "
+"attributes, you won't be able to do this automatically with users who "
+"have logged in with OpenID. If you need LDAP synced to each user, we "
+"suggest using SAML or LDAP as the login provider. Some OpenID providers "
+"can use SAML instead, like Keycloak."
+msgstr ""
+

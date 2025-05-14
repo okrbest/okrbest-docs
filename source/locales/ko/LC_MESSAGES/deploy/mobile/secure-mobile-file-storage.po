@@ -1,0 +1,608 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 06:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:2
+msgid "Secure file storage"
+msgstr ""
+
+#: ../../source/_static/badges/ent-cloud-selfhosted.rst:7
+msgid ""
+"|plans-img| Available on `Enterprise plans "
+"<https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/ent-cloud-selfhosted.rst:9
+msgid ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
+"hosted <https://mattermost.com/download/>`__ deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:7
+msgid ""
+"This document outlines the security measures governing file storage in "
+"the Mattermost mobile app for iOS and Android. It describes how files are"
+" stored, accessed, and protected within the application container, "
+"addressing concerns related to sensitive data—including Controlled "
+"Unclassified Information (CUI) and HIPAA-regulated data—on mobile "
+"devices. The objective is to ensure that only authorized personnel can "
+"view, access, or share such data while preventing exposure to "
+"unauthorized parties and ensuring isolation from third-party "
+"applications."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:9
+msgid ""
+"Mattermost leverages robust sandboxing mechanisms on both iOS and Android"
+" to securely store files in its cache folder within the application "
+"container, ensuring isolation from unauthorized third-party apps. User-"
+"initiated actions (download, share, copy link) are controlled by server-"
+"side permissions, allowing administrators to restrict access to sensitive"
+" data like CUI or HIPAA-regulated information to authorized personnel "
+"only."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:12
+msgid "File storage and app sandbox security"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:14
+msgid ""
+"Files uploaded or accessed via the Mattermost mobile app are stored in "
+"the app’s cache folder, which resides within the app’s private storage "
+"container. This storage location is isolated by each platform’s "
+"sandboxing model:"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:17
+msgid "iOS – app sandbox"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:19
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:38
+msgid "**Sandboxing & storage:**"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:21
+msgid ""
+"iOS employs a rigorous sandboxing model that relies on containerized file"
+" systems and strict process isolation. Each app operates within its own "
+"sandbox, with its home directory randomly assigned during installation. "
+"As a result, files stored within the Mattermost app’s cache folder remain"
+" accessible only to the app unless explicitly shared by the user."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:23
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:42
+msgid "**Secure file viewing:**"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:25
+msgid ""
+"Non-image and non-video files are rendered using secure frameworks such "
+"as QLPreviewController. This controller displays file previews within the"
+" app’s sandbox, ensuring that raw file data isn’t exposed to external "
+"processes."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:26
+msgid ""
+"Supported image and video files are previewed directly within the app, "
+"with the files downloaded to the app's cache folder located within its "
+"secure sandbox. For unsupported image and video formats, the Mattermost "
+"mobile app uses the QLPreviewController framework, just as it does for "
+"other file types."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:27
+msgid ""
+"If the file format is also unsupported by QLPreviewController and "
+":ref:`mobile downloads are enabled <configure/site-configuration-"
+"settings:allow file downloads on mobile>` on the server, users can "
+"download the file to a location of their choosing. However, if mobile "
+"downloads are disabled, these files become unavailable to the user."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:29
+msgid "**Official references:**"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:31
+msgid ""
+"`Apple App Sandbox Design Guide "
+"<https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html>`_"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:32
+msgid ""
+"`Security of runtime process in iOS, iPadOS and visionOS "
+"<https://support.apple.com/en-gb/guide/security/sec15bfe098e/web>`_"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:33
+msgid ""
+"`Apple Security Guide <https://help.apple.com/pdf/security/en_GB/apple-"
+"platform-security-guide-b.pdf>`_"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:36
+msgid "Android – scoped storage"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:40
+msgid ""
+"Android employs scoped storage by assigning each app its own Linux user "
+"ID and a dedicated private directory. This model prevents other "
+"applications from accessing an app’s cache without explicit permission. "
+"As a result, the Mattermost app’s files remain inaccessible to other "
+"apps—unless the device is rooted, or the user explicitly shares the data."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:44
+msgid ""
+"When users attempt to view non-image/video files, Mattermost uses an "
+"``Intent.ACTION_VIEW`` to open the file. This intent delegates rendering "
+"to an external app only if the user explicitly triggers the action, while"
+" the file remains securely stored within Mattermost’s cache folder."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:45
+msgid ""
+"Viewing non-image/video files is available only if :ref:`mobile downloads"
+" are enabled <configure/site-configuration-settings:allow file downloads "
+"on mobile>` on the server."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:46
+msgid ""
+"Image and video files with supported formats are previewed directly "
+"within the app, with the files downloaded to the app's cache folder "
+"located within its secure sandbox. For unsupported image and video "
+"formats, the Mattermost mobile app uses ``Intent.ACTION_VIEW`` to open "
+"the file with an external application, just as it does for other file "
+"types."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:48
+msgid "**Official reference:**"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:50
+msgid ""
+"`Scoped Storage "
+"<https://developer.android.com/about/versions/10/privacy/changes#scoped-"
+"storage>`_"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:52
+msgid ""
+"Additionally, both platforms may clear cached data automatically (e.g., "
+"under low storage conditions or upon user logout), thereby reducing the "
+"risk of sensitive information like CUI remaining on the device."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:55
+msgid "Differentiating file handling to external applications"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:57
+msgid "**Previewing files:**"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:59
+msgid ""
+"File previewing follows the secure viewing practices described above in "
+"the “Secure File Viewing” sections for iOS and Android. All files prior "
+"to being previewed are stored in the cache folder of the Mattermost app "
+"sandbox. Images and videos with supported formats are previewed directly "
+"within the Mattermost mobile app. Non‑image and non‑video files are also "
+"previewed in-app in iOS but are handed off to an external application in "
+"Android while the raw data remains securely stored in the app’s cache. "
+"Previewing non-image/non-video files is possible only if :ref:`mobile "
+"downloads are enabled <configure/site-configuration-settings:allow file "
+"downloads on mobile>` on the server side."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:61
+msgid "**Downloading files:**"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:63
+msgid ""
+"When a user initiates a file download, the file is first stored in "
+"Mattermost’s private cache directory. The user is then immediately "
+"prompted to save it to another destination via platform-specific sharing "
+"methods."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:64
+msgid "On **iOS** devices:"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:66
+msgid ""
+"The built-in sandboxing ensures that the downloaded files remain "
+"inaccessible to other apps unless the user explicitly shares or saves "
+"them through the system’s file sharing mechanisms. Once downloaded, the "
+"file appears in the gallery."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:67
+msgid "If the server has the download setting enabled, the user has two options:"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:69
+msgid ""
+"Download the file: Opens the **Files** app, allowing the user to save the"
+" file to any permitted location, including iCloud."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:70
+msgid ""
+"Share the file: Launches the native share sheet, enabling the user to "
+"share the file with other compatible applications."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:72
+msgid ""
+"On **Android** devices, the app employs the system’s file picker. This "
+"allows the end-user to select a preferred storage location. Once saved, "
+"the file becomes accessible to other apps based on the chosen location "
+"and the device’s file sharing permissions."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:75
+msgid "File accessibility options"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:77
+msgid ""
+"Depending on server configuration, users may download files, share them, "
+"or copy a public link directly from the Mattermost mobile app. These "
+"actions are always user‑initiated, ensuring that sensitive data is only "
+"exposed with explicit consent."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:79
+msgid ""
+"Additionally, administrators have the option to restrict mobile file "
+"uploading and downloading to ensure that sensitive content remains within"
+" approved channels. When mobile file downloads are disabled, the app "
+"allows only image and video file previews. However, if general file "
+"sharing is enabled on the Mattermost server, file operations via mobile "
+"browsers will still be possible."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:82
+msgid "Layered defense strategies for sensitive eata"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:84
+msgid ""
+"Mattermost is designed to protect sensitive data—such as CUI and HIPAA-"
+"regulated information—by ensuring that only authorized personnel can "
+"access or share it. The platform combines secure mobile app features with"
+" powerful server-side controls, providing a layered defense that "
+"minimizes the risk of data exposure."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:87
+msgid "Core defense pillars"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:89
+msgid ""
+"**Robust authentication:** Mattermost requires user authentication "
+"through SSO (e.g., SAML, LDAP, OpenID Connect) or traditional "
+"username/password logins. This authentication is managed by server-side "
+"identity controls, ensuring that only verified users can access the app "
+"and its data. For more details, see the `Mattermost Security Overview "
+"<https://docs.mattermost.com/about/security.html#authentication-"
+"safeguards>`_."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:91
+msgid ""
+"**Server-side access controls:** Administrators can enforce policies "
+"through the System Console to restrict file downloads, sharing, and "
+"public link generation. Currently, policies are applied at the server "
+"level. For more details, see `Configuration Settings - File Sharing and "
+"Downloads <https://docs.mattermost.com/configure/site-configuration-"
+"settings.html#file-sharing-and-downloads>`_."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:93
+msgid ""
+"**Sandbox isolation:** As discussed earlier, Mattermost’s mobile apps "
+"store files in a sandboxed environment. This isolation ensures that even "
+"if a device is shared or compromised, other apps cannot access the cached"
+" files without explicit user action."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:95
+msgid ""
+"**Controlled file previews:** File previews (via QLPreviewController on "
+"**iOS** or open intent on **Android**) occur within the application’s "
+"controlled environment or delegate to OS-approved apps without "
+"duplicating sensitive data outside the sandbox."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:97
+msgid ""
+"**OS-Level encryption:** While files in the cache folder are stored "
+"unencrypted by default, they are protected at rest by OS-level encryption"
+" (iOS File Data Protection and Android Full Disk Encryption)."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:99
+msgid ""
+"By combining strict authentication, server-side controls, sandbox "
+"isolation, and secure file handling, Mattermost ensures that sensitive "
+"data remains confined to authorized users, with access and sharing "
+"tightly controlled by server policies, platform security features, and "
+"explicit user consent."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:102
+msgid "Testing procedure to validate file isolation"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:104
+msgid ""
+"The playbook below aims to test and confirm that files stored in the "
+"Mattermost app’s private cache folder—where sensitive data like CUI may "
+"reside—are not accessible by unauthorized third-party applications. The "
+"tests are designed to show that while public directories, such as "
+"Downloads/ can be accessed, the private Mattermost cache remains isolated"
+" unless a file is explicitly shared by an authorized user."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:106
+msgid "**Preparation**"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:110
+msgid "On **Android**:"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:109
+msgid "Install Adobe Acrobat Reader for PDF viewing."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:110
+msgid "Install Files by Google as a file manager."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:111
+msgid "Install Google Chrome as a system browser."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:114
+msgid "On **iOS**:"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:113
+msgid "Install Adobe Acrobat Reader (from the App Store)."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:114
+msgid "Use the built-in Files app."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:115
+msgid "Use Safari as the default browser."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:116
+msgid "Any PDF viewer, file manager, or browser can be used for these steps."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:118
+msgid "**Control test: Verify public directory accessibility**"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:123
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:136
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:146
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:157
+msgid "**Android:**"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:121
+msgid "Open Files by Google."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:122
+msgid "Navigate to a known public directory (e.g., Downloads/)."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:123
+msgid "Confirm that files in this location are visible and can be opened."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:128
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:140
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:150
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:162
+msgid "**iOS:**"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:126
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:139
+msgid "Open the Files app."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:127
+msgid ""
+"Browse to an accessible directory (e.g., iCloud Drive or “On My iPhone” "
+"public folders)."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:128
+msgid "Confirm these files are accessible."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:130
+msgid ""
+"This step demonstrates that allowed directories can be accessed, setting "
+"a baseline for comparison."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:132
+msgid "**Attempt unauthorized access to Mattermost’s private cache**"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:135
+msgid ""
+"In Files by Google, try navigating through the directory structure to "
+"identify files of the Mattermost application."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:136
+msgid ""
+"Verify that you cannot access private directories such as Mattermost "
+"app’s private cache folder."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:140
+msgid ""
+"Verify that the Mattermost app’s private cache folder does not appear "
+"under “On My iPhone/iPad.”"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:142
+msgid ""
+"**Attempt unauthorized access to a specific file in Mattermost’s private "
+"cache**"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:145
+msgid ""
+"Use the search functionality in Files by Google to search for a known "
+"file name from the Mattermost cache."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:146
+msgid "Verify that the file does not appear in search results."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:149
+msgid ""
+"Use the Files app’s search capability to look for a specific file name "
+"from the Mattermost cache."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:150
+msgid "Confirm that the file does not appear in search results."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:152
+msgid "**Attempt authorized access to downloaded file**"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:155
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:160
+msgid "Confirm that mobile downloads are enabled on the server."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:156
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:161
+msgid "Download a file using the Mattermost mobile app."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:157
+msgid ""
+"Open the Files by Google app and verify that the downloaded file is "
+"visible and opens correctly."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:162
+msgid ""
+"Open the iOS Files app and verify that the downloaded file appears and "
+"can be opened successfully."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:164
+msgid "**Repeat across multiple apps and devices**"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:166
+msgid ""
+"The steps above use the Files app of Google and iOS. Repeat these tests "
+"using each suggested app on different devices and OS versions (both "
+"Android and iOS) to ensure that the private cache folder remains "
+"inaccessible under all conditions."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:169
+msgid "Test execution & findings"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:171
+msgid ""
+"Mattermost executed the playbook above, including scanning for hidden "
+"files, both during normal operation and after forcing the app to stop or "
+"crash, and observed the following results:"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:173
+msgid "**Devices Tested**: iPhone 12, iOS 18.4, Android 11"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:174
+msgid ""
+"**Apps Used**: Adobe Reader, Google Files app, Android’s native Files "
+"app, iOS Files app, Files Media Manager, Hidden Files Finder, Hidden "
+"Files Finder & Recover"
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:175
+msgid ""
+"**Results**: Third-party file browsers and recovery tools consistently "
+"failed to access the Mattermost app’s cache folder or its contents. "
+"Access was only possible when files were explicitly downloaded or shared "
+"via Mattermost’s controlled functionality by an authorized user."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:176
+msgid ""
+"**Outcome**: Files remain isolated within the app container, adhering to "
+"platform security guidelines and protecting against unauthorized access."
+msgstr ""
+
+#: ../../source/deploy/mobile/secure-mobile-file-storage.rst:178
+msgid ""
+"The documented testing procedures confirm that the app’s file storage "
+"remains inaccessible to unauthorized third-party applications, thereby "
+"maintaining a strong security posture. Coupled with strong authentication"
+" and native OS encryption, the Mattermost mobile app provides a robust "
+"framework that keeps sensitive data on mobile devices confined to "
+"authorized users while addressing key access control and risk mitigation "
+"requirements."
+msgstr ""
+

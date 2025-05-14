@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 06:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/deploy/server/server-architecture.rst:2
+msgid "Reference Architecture for Mattermost Server"
+msgstr ""
+
+#: ../../source/deploy/server/server-architecture.rst:4
+msgid ""
+"The following diagrams detail suggested architecture configurations of "
+":ref:`high availability Mattermost deployments <scale/high-availability-"
+"cluster-based-deployment:deployment guide>` at different scales. Hardware"
+" and infrastructure requirements will vary significantly based on usage "
+"and policies. See the :doc:`scaling for enterprise </scale/scaling-for-"
+"enterprise>` documentation for reference architecture guidance at scale, "
+"including hardware and infrastructure requirements."
+msgstr ""
+
+#: ../../source/deploy/server/server-architecture.rst:6
+msgid ""
+"High availability in Mattermost consists of running redundant Mattermost "
+"application servers, redundant database servers, and redundant load "
+"balancers so that failure of any one of these components does not "
+"interrupt operation of the system. Upon failure of one component, the "
+"remaining application servers, database servers, and load balancers must "
+"be sized and configured to carry the full load of the system. If this "
+"requirement is not met, an outage of one component can result in an "
+"overload of the remaining components, causing a complete system outage."
+msgstr ""
+
+#: ../../source/deploy/server/server-architecture.rst:10
+msgid ""
+"Mattermost does not support high availability deployments spanning "
+"multiple datacenters. All nodes in a high availability cluster must "
+"reside within the same datacenter to ensure proper functionality and "
+"performance."
+msgstr ""
+
+#: ../../source/deploy/server/server-architecture.rst:12
+msgid ""
+"You can apply most configuration changes and dot release security updates"
+" without interrupting service, provided that you update the system "
+"components in the correct sequence. Changes to configuration settings "
+"that require a server restart, and server version upgrades that involve a"
+" change to the database schema, require a short period of downtime. "
+"Downtime for a server restart is around 5 seconds. For a database schema "
+"update, downtime can be up to 30 seconds."
+msgstr ""
+
+#: ../../source/deploy/server/server-architecture.rst:15
+msgid "Designed for scale"
+msgstr ""
+
+#: ../../source/deploy/server/server-architecture.rst:17
+msgid ""
+"Mattermost is designed to be able to handle a large number of concurrent "
+"users, and the architecture can be scaled up or down as needed. The "
+"architecture is also designed to be flexible, allowing for the addition "
+"of new components or services as needed. The following diagrams show the "
+"recommended architecture for Mattermost deployments at 5,000, 10,000, "
+"25,000, and 50,000 users. The diagrams are organized by user count and "
+"include a general diagram and AWS and Azure versions of each diagram. See"
+" the :doc:`scaling for enterprise </scale/scaling-for-enterprise>` "
+"documentation for more information on scaling Mattermost deployments."
+msgstr ""
+
+#: ../../source/deploy/server/server-architecture.rst:19
+msgid ""
+"Each generalized diagram represents a full High Availability deployment "
+"across all critical components. The proxy, database, file storage, and "
+"Elasticsearch layers can be replaced by cloud services."
+msgstr ""
+
+#: ../../source/deploy/server/server-architecture.rst:20
+msgid ""
+"Each AWS diagram represents a full High Availability deployment on Amazon"
+" Web Services making full use of the available services."
+msgstr ""
+
+#: ../../source/deploy/server/server-architecture.rst:21
+msgid ""
+"Each Azure diagram represents a full High Availability deployment on "
+"Microsoft Azure making full use of the available services."
+msgstr ""
+
+#: ../../source/deploy/server/server-architecture.rst:22
+msgid ""
+"Push proxy can be replaced by the Mattermost :ref:`hosted push "
+"notification service <configure/environment-configuration-settings:hosted"
+" push notifications service (hpns)>`."
+msgstr ""
+
