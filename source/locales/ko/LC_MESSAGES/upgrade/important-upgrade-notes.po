@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mattermost \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-15 06:10+0900\n"
+"POT-Creation-Date: 2025-05-16 21:31+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ko\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/about/common-esr-support-rst.rst:-1
 msgid "robots"
@@ -34,7 +34,7 @@ msgstr ""
 #: ../../source/about/common-esr-support-rst.rst:7
 msgid ""
 "Support for Mattermost Server v9.11 :ref:`Extended Support Release <about"
-"/release-policy:extended support releases>` is coming to the end of its "
+"/release-policy:extended support releases>` has come to the end of its "
 "life cycle on May 15, 2025. Upgrading to :doc:`Mattermost Server v10.5 or"
 " later </about/mattermost-server-releases>` is required."
 msgstr ""
@@ -82,10 +82,28 @@ msgid "Then..."
 msgstr ""
 
 #: ../../source/upgrade/important-upgrade-notes.rst:19
-msgid "v10.7"
+msgid "v10.8"
 msgstr ""
 
 #: ../../source/upgrade/important-upgrade-notes.rst:19
+msgid ""
+"New tables ``AccessControlPolicies`` and ``AcessControlPolicyHistory`` "
+"will be created. The migration is fully backwards-compatible, non-"
+"locking, and zero downtime is expected."
+msgstr ""
+
+#: ../../source/upgrade/important-upgrade-notes.rst:22
+msgid ""
+"Support for legacy SKUs E10 and E20 licenses was removed. If you need "
+"assistance, `talk to a Mattermost expert <https://mattermost.com/contact-"
+"sales/>`__."
+msgstr ""
+
+#: ../../source/upgrade/important-upgrade-notes.rst:24
+msgid "v10.7"
+msgstr ""
+
+#: ../../source/upgrade/important-upgrade-notes.rst:24
 msgid ""
 "Added new column ``BannerInfo`` in the ``Channels`` table for storing "
 "metadata for an upcoming licensed feature. The migration is fully "
@@ -93,25 +111,25 @@ msgid ""
 "are the SQL queries included in the schema changes:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:22
-#: ../../source/upgrade/important-upgrade-notes.rst:219
-#: ../../source/upgrade/important-upgrade-notes.rst:375
-#: ../../source/upgrade/important-upgrade-notes.rst:513
-#: ../../source/upgrade/important-upgrade-notes.rst:575
-#: ../../source/upgrade/important-upgrade-notes.rst:634
+#: ../../source/upgrade/important-upgrade-notes.rst:27
+#: ../../source/upgrade/important-upgrade-notes.rst:224
+#: ../../source/upgrade/important-upgrade-notes.rst:380
+#: ../../source/upgrade/important-upgrade-notes.rst:518
+#: ../../source/upgrade/important-upgrade-notes.rst:580
+#: ../../source/upgrade/important-upgrade-notes.rst:639
 msgid "**PostgreSQL**:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:28
-#: ../../source/upgrade/important-upgrade-notes.rst:166
-#: ../../source/upgrade/important-upgrade-notes.rst:357
-#: ../../source/upgrade/important-upgrade-notes.rst:529
-#: ../../source/upgrade/important-upgrade-notes.rst:591
-#: ../../source/upgrade/important-upgrade-notes.rst:616
+#: ../../source/upgrade/important-upgrade-notes.rst:33
+#: ../../source/upgrade/important-upgrade-notes.rst:171
+#: ../../source/upgrade/important-upgrade-notes.rst:362
+#: ../../source/upgrade/important-upgrade-notes.rst:534
+#: ../../source/upgrade/important-upgrade-notes.rst:596
+#: ../../source/upgrade/important-upgrade-notes.rst:621
 msgid "**MySQL**:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:57
+#: ../../source/upgrade/important-upgrade-notes.rst:62
 msgid ""
 "Added support for cursor-based pagination on the property architecture "
 "tables, including SQL migration to create indices. The migration is fully"
@@ -119,21 +137,21 @@ msgid ""
 "are the SQL queries included in the schema changes:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:60
-#: ../../source/upgrade/important-upgrade-notes.rst:814
+#: ../../source/upgrade/important-upgrade-notes.rst:65
+#: ../../source/upgrade/important-upgrade-notes.rst:819
 msgid "MySQL:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:96
-#: ../../source/upgrade/important-upgrade-notes.rst:820
+#: ../../source/upgrade/important-upgrade-notes.rst:101
+#: ../../source/upgrade/important-upgrade-notes.rst:825
 msgid "PostgreSQL:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:106
+#: ../../source/upgrade/important-upgrade-notes.rst:111
 msgid "v10.6"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:106
+#: ../../source/upgrade/important-upgrade-notes.rst:111
 msgid ""
 "Support for PostgreSQL v11 and v12 have been removed. The new minimum "
 "PostgreSQL version is v13+. See the :ref:`minimum supported PostgreSQL "
@@ -141,7 +159,7 @@ msgid ""
 "database support policy>` documentation for details."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:110
+#: ../../source/upgrade/important-upgrade-notes.rst:115
 msgid ""
 "Migration times: On a system with 12M posts, and 1M fileinfo entries, the"
 " migration takes 15s. This migration is non-locking. Note that there is "
@@ -149,11 +167,11 @@ msgid ""
 "applicable for PostgreSQL."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:113
+#: ../../source/upgrade/important-upgrade-notes.rst:118
 msgid "v10.5"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:113
+#: ../../source/upgrade/important-upgrade-notes.rst:118
 msgid ""
 "Mattermost versions v10.5.0 and v10.5.1 include a bundled Jira plugin "
 "(v4.2.0) that contains a bug which may cause plugin configuration "
@@ -164,7 +182,7 @@ msgid ""
 "their latest available versions."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:118
+#: ../../source/upgrade/important-upgrade-notes.rst:123
 msgid ""
 "The internal workings of the `PluginLinkComponent` in the web app have "
 "been changed to unmount link tooltips from the DOM by default, "
@@ -181,7 +199,7 @@ msgid ""
 " would be managed by useEffect with an empty dependency array."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:125
+#: ../../source/upgrade/important-upgrade-notes.rst:130
 msgid ""
 "The Mattermost server has stopped supporting manual plugin deployment. "
 "Plugins were deployed manually when an administrator or some deployment "
@@ -192,7 +210,7 @@ msgid ""
 "manual-plugin-deployment/21192>`__ for details."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:129
+#: ../../source/upgrade/important-upgrade-notes.rst:134
 msgid ""
 "Mattermost has stopped official Mattermost server builds for the "
 "Microsoft Windows operating system. Administrators should migrate "
@@ -202,7 +220,7 @@ msgid ""
 "microsoft-windows/21498>`__."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:133
+#: ../../source/upgrade/important-upgrade-notes.rst:138
 msgid ""
 "v10.5 introduces updates to the Compliance Export functionality, which "
 "will modify how exported data is structured, stored and processed. These "
@@ -211,7 +229,7 @@ msgid ""
 "<https://docs.mattermost.com/comply/compliance-export.html>`_."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:137
+#: ../../source/upgrade/important-upgrade-notes.rst:142
 msgid ""
 "Output files and directories have changed - Previously we were exporting "
 "a single zip containing all the batch directories. Now we will export a "
@@ -219,18 +237,18 @@ msgid ""
 "zip."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:140
+#: ../../source/upgrade/important-upgrade-notes.rst:145
 #, python-format
 msgid ""
 "Compliance exports performance improvements - Compliance exports should "
 "now be at least 50% faster, and possibly more."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:142
+#: ../../source/upgrade/important-upgrade-notes.rst:147
 msgid "Logic improvements - We’ve made improvements and fixed bugs that we found."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:144
+#: ../../source/upgrade/important-upgrade-notes.rst:149
 msgid ""
 "Changes specific to each Export Type - The export output formats have "
 "been changed. Some fields’ semantic meaning has been clarified, and there"
@@ -238,13 +256,13 @@ msgid ""
 "compatibility while fixing the logic bugs."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:147
+#: ../../source/upgrade/important-upgrade-notes.rst:152
 msgid ""
 "See the :doc:`compliance export </comply/compliance-export>` product "
 "documentation for details."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:149
+#: ../../source/upgrade/important-upgrade-notes.rst:154
 msgid ""
 "As part of the Property System Architecture feature, Mattermost v10.5 is "
 "going to run a set of migrations to add new tables to the schema. This "
@@ -252,20 +270,20 @@ msgid ""
 "preexisting data."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:152
+#: ../../source/upgrade/important-upgrade-notes.rst:157
 msgid ""
 "New tables ``PropertyGroups``, ``PropertyFields`` and ``PropertyValues`` "
 "are going to be created."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:154
+#: ../../source/upgrade/important-upgrade-notes.rst:159
 msgid ""
 "In the case of PostgreSQL, a new enum type ``property_field_type`` is "
 "going to be created, to be used in the ``Type`` column of the "
 "``PropertyFields`` table."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:156
+#: ../../source/upgrade/important-upgrade-notes.rst:161
 msgid ""
 "The ``PropertyFields`` and ``PropertyValues`` tables have a unique "
 "constraint that will generate an index in MySQL, and in the case of "
@@ -273,13 +291,13 @@ msgid ""
 "constraint."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:159
+#: ../../source/upgrade/important-upgrade-notes.rst:164
 msgid ""
 "A new index ``idx_propertyvalues_targetid_groupid`` will be created for "
 "the ``PropertyValues`` table."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:161
+#: ../../source/upgrade/important-upgrade-notes.rst:166
 msgid ""
 "The migration is only creating new tables with no data. The migration is "
 "backwards-compatible, and a previous version of Mattermost can run with "
@@ -288,15 +306,15 @@ msgid ""
 "upgrading to this release."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:164
+#: ../../source/upgrade/important-upgrade-notes.rst:169
 msgid "Below are the SQL queries included in the schema changes:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:278
+#: ../../source/upgrade/important-upgrade-notes.rst:283
 msgid "v10.3"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:278
+#: ../../source/upgrade/important-upgrade-notes.rst:283
 msgid ""
 "The Classic Mobile App has been phased out. Please download the new v2 "
 "Mobile App from the `Apple App Store "
@@ -308,11 +326,11 @@ msgid ""
 "Mattermost forum post."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:283
+#: ../../source/upgrade/important-upgrade-notes.rst:288
 msgid "v10.2"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:283
+#: ../../source/upgrade/important-upgrade-notes.rst:288
 msgid ""
 "Docker Content Trust (DCT) for signing Docker image artifacts has been "
 "replaced by Sigstore Cosign in v10.2 (November, 2024). If you rely on "
@@ -323,11 +341,11 @@ msgid ""
 "Mattermost forum post for more details."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:287
+#: ../../source/upgrade/important-upgrade-notes.rst:292
 msgid "v10.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:287
+#: ../../source/upgrade/important-upgrade-notes.rst:292
 msgid ""
 "We no longer support new installations using MySQL starting in v10. All "
 "new customers and/or deployments will only be supported with the minimum "
@@ -335,13 +353,13 @@ msgid ""
 " targeted for Mattermost v11."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:290
+#: ../../source/upgrade/important-upgrade-notes.rst:295
 msgid ""
 "Apps Framework is deprecated for new installs. Please extend Mattermost "
 "using webhooks, slash commands, OAuth2 apps, and plugins."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:292
+#: ../../source/upgrade/important-upgrade-notes.rst:297
 msgid ""
 "Mattermost v10 introduces Playbooks v2 for all Enterprise licensed "
 "customers. Professional SKU customers may continue to use Playbooks v1 "
@@ -352,39 +370,39 @@ msgid ""
 "mattermost-v10/20563>`_."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:296
+#: ../../source/upgrade/important-upgrade-notes.rst:301
 msgid ""
 "Renamed ``Channel Moderation`` to ``Advanced Access Control`` in the "
 "channel management section in the **System Console**."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:298
+#: ../../source/upgrade/important-upgrade-notes.rst:303
 msgid "Renamed announcement banner feature to “system-wide notifications”."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:300
+#: ../../source/upgrade/important-upgrade-notes.rst:305
 msgid ""
 "Renamed “Collapsed Reply Threads” to “Threaded Discussions” in the System"
 " Console."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:302
+#: ../../source/upgrade/important-upgrade-notes.rst:307
 msgid ""
 "Renamed “System Roles” to “Delegated Granular Administration” in the "
 "System Console."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:304
+#: ../../source/upgrade/important-upgrade-notes.rst:309
 msgid "Renamed \"Office 365\" to \"Entra ID\" for SSO logins."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:306
+#: ../../source/upgrade/important-upgrade-notes.rst:311
 msgid ""
 "Fully deprecated the ``/api/v4/image`` endpoint when the image proxy is "
 "disabled."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:308
+#: ../../source/upgrade/important-upgrade-notes.rst:313
 msgid ""
 "Pre-packaged `Calls plugin v1.0.1 <https://github.com/mattermost"
 "/mattermost-plugin-calls/releases/tag/v1.0.1>`_. This includes breaking "
@@ -394,27 +412,27 @@ msgid ""
 "represent the majority of activity."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:312
+#: ../../source/upgrade/important-upgrade-notes.rst:317
 msgid ""
 "Removed deprecated ``Config.ProductSettings``, ``LdapSettings.Trace``, "
 "and ``AdvancedLoggingConfig`` configuration fields."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:314
+#: ../../source/upgrade/important-upgrade-notes.rst:319
 msgid "Removed deprecated ``pageSize`` query parameter from most API endpoints."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:316
+#: ../../source/upgrade/important-upgrade-notes.rst:321
 msgid ""
 "Deprecated the experimental Strict CSRF token enforcement. This feature "
 "will be fully removed in Mattermost v11."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:318
+#: ../../source/upgrade/important-upgrade-notes.rst:323
 msgid "v9.11"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:318
+#: ../../source/upgrade/important-upgrade-notes.rst:323
 msgid ""
 "Added support for Elasticsearch v8. Also added Beta support for "
 "Opensearch v1.x and v2.x. A new config setting "
@@ -424,7 +442,7 @@ msgid ""
 "client only works from Elasticsearch v7.11+ versions."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:324
+#: ../../source/upgrade/important-upgrade-notes.rst:329
 msgid ""
 "For AWS customers on Opensearch, you must modify Mattermost configuration"
 " from ``elasticsearch`` to ``opensearch`` and disable compatibility mode."
@@ -433,38 +451,38 @@ msgid ""
 "details on upgrading."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:326
+#: ../../source/upgrade/important-upgrade-notes.rst:331
 msgid ""
 "After upgrading the Mattermost server, use :ref:`mmctl <manage/mmctl-"
 "command-line-tool:mmctl config set>` or edit the config manually, then "
 "restart the Mattermost server."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:328
+#: ../../source/upgrade/important-upgrade-notes.rst:333
 msgid ""
 "If you are using Opensearch, you **must** set the backend to "
 "``opensearch``. Otherwise Mattermost will not work."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:330
+#: ../../source/upgrade/important-upgrade-notes.rst:335
 msgid ""
 "If you are using Elasticsearch v8, be sure to set "
 "``action.destructive_requires_name`` to ``false`` in "
 "``elasticsearch.yml`` to allow for wildcard operations to work."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:333
+#: ../../source/upgrade/important-upgrade-notes.rst:338
 msgid "v9.5"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:333
+#: ../../source/upgrade/important-upgrade-notes.rst:338
 msgid ""
 "We have stopped supporting MySQL v5.7 since it's at the end of life. We "
 "urge customers to upgrade their MySQL instance at their earliest "
 "convenience."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:335
+#: ../../source/upgrade/important-upgrade-notes.rst:340
 msgid ""
 "Added safety limit error message in compiled Team Edition and Enterprise "
 "Edition deployments when enterprise scale and access control automation "
@@ -473,11 +491,11 @@ msgid ""
 "</manage/admin/error-codes>`."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:338
+#: ../../source/upgrade/important-upgrade-notes.rst:343
 msgid "v9.2"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:338
+#: ../../source/upgrade/important-upgrade-notes.rst:343
 msgid ""
 "Fixed data retention policies to run jobs when any custom retention "
 "policy is enabled even when the global retention policy is set to \"keep-"
@@ -491,26 +509,26 @@ msgid ""
 "them again after upgrading."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:344
+#: ../../source/upgrade/important-upgrade-notes.rst:349
 msgid "v9.1"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:344
+#: ../../source/upgrade/important-upgrade-notes.rst:349
 msgid ""
 "Minimum supported Desktop App version is now v5.3. OAuth/SAML flows were "
 "modified to include ``desktop_login`` which makes earlier versions "
 "incompatible."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:346
+#: ../../source/upgrade/important-upgrade-notes.rst:351
 msgid "v9.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:346
+#: ../../source/upgrade/important-upgrade-notes.rst:351
 msgid "Removed the deprecated Insights feature."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:348
+#: ../../source/upgrade/important-upgrade-notes.rst:353
 msgid ""
 "Mattermost Boards and various other plugins have transitioned to being "
 "fully community supported. See this `forum post "
@@ -518,45 +536,45 @@ msgid ""
 "various-plugins/16669>`_ for more details."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:351
+#: ../../source/upgrade/important-upgrade-notes.rst:356
 msgid ""
 "The ``channel_viewed`` websocket event was changed to "
 "``multiple_channels_viewed``, and is now only triggered for channels that"
 " actually have unread messages."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:353
+#: ../../source/upgrade/important-upgrade-notes.rst:358
 msgid "v8.1"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:353
+#: ../../source/upgrade/important-upgrade-notes.rst:358
 msgid ""
 "In v8.1.2, improved performance on data retention ``DeleteOrphanedRows`` "
 "queries."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:355
-#: ../../source/upgrade/important-upgrade-notes.rst:614
+#: ../../source/upgrade/important-upgrade-notes.rst:360
+#: ../../source/upgrade/important-upgrade-notes.rst:619
 msgid "New migration for a new table:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:394
-#: ../../source/upgrade/important-upgrade-notes.rst:653
+#: ../../source/upgrade/important-upgrade-notes.rst:399
+#: ../../source/upgrade/important-upgrade-notes.rst:658
 msgid ""
 "Hard deleting a user or a channel will now also clean up associated "
 "reactions."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:396
-#: ../../source/upgrade/important-upgrade-notes.rst:655
+#: ../../source/upgrade/important-upgrade-notes.rst:401
+#: ../../source/upgrade/important-upgrade-notes.rst:660
 msgid ""
 "Removed feature flag ``DataRetentionConcurrencyEnabled``. Data retention "
 "now runs without concurrency in order to avoid any performance "
 "degradation."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:398
-#: ../../source/upgrade/important-upgrade-notes.rst:657
+#: ../../source/upgrade/important-upgrade-notes.rst:403
+#: ../../source/upgrade/important-upgrade-notes.rst:662
 msgid ""
 "Added a new configuration setting "
 "``DataRetentionSettings.RetentionIdsBatchSize``, which allows admins to "
@@ -564,11 +582,11 @@ msgid ""
 " orphaned reactions. The default value is 100."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:401
+#: ../../source/upgrade/important-upgrade-notes.rst:406
 msgid "v8.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:401
+#: ../../source/upgrade/important-upgrade-notes.rst:406
 msgid ""
 "Insights has been deprecated for all new instances and for existing "
 "servers that upgrade to v8.0. See more details in `this forum post "
@@ -577,17 +595,17 @@ msgid ""
 "deprecated."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:405
+#: ../../source/upgrade/important-upgrade-notes.rst:410
 msgid ""
 "The Focalboard plugin is now disabled by default for all new instances "
 "and can be enabled in the **System Console > Plugin settings**."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:407
+#: ../../source/upgrade/important-upgrade-notes.rst:412
 msgid "The Channel Export and Apps plugins are now disabled by default."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:409
+#: ../../source/upgrade/important-upgrade-notes.rst:414
 msgid ""
 "Apps Bar is now enabled by default for on-prem servers. "
 "``ExperimentalSettings.EnableAppBar`` was also renamed to "
@@ -598,7 +616,7 @@ msgid ""
 "for details."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:413
+#: ../../source/upgrade/important-upgrade-notes.rst:418
 msgid ""
 "In the main `server package`, the Go module path has changed from "
 "``github.com/mattermost/mattermost-server/server/v8`` to "
@@ -607,7 +625,7 @@ msgid ""
 "party code to import this `server` package."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:417
+#: ../../source/upgrade/important-upgrade-notes.rst:422
 msgid ""
 "Introduced the `public "
 "<https://github.com/mattermost/mattermost/tree/master/server/public>`_ "
@@ -621,19 +639,19 @@ msgid ""
 " itself."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:422
+#: ../../source/upgrade/important-upgrade-notes.rst:427
 msgid ""
 "As part of the `public` submodule above, a ``context.Context`` is now "
 "passed to ``model.Client4`` methods."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:424
+#: ../../source/upgrade/important-upgrade-notes.rst:429
 msgid ""
 "Removed support for PostgreSQL v10. The new minimum PostgreSQL version is"
 " now v11."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:426
+#: ../../source/upgrade/important-upgrade-notes.rst:431
 msgid ""
 "The Mattermost public API for Go is now available as a distinctly "
 "versioned package. Instead of pinning a particular commit hash, use "
@@ -649,7 +667,7 @@ msgid ""
 "releasing as v1 later this year."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:432
+#: ../../source/upgrade/important-upgrade-notes.rst:437
 msgid ""
 "Three configuration fields have been added, "
 "``LogSettings.AdvancedLoggingJSON``, "
@@ -660,7 +678,7 @@ msgid ""
 "deprecated."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:436
+#: ../../source/upgrade/important-upgrade-notes.rst:441
 msgid ""
 "The Go MySQL driver has changed the ``maxAllowedPacket`` size from 4MiB "
 "to 64MiB. This is to make it consistent with the change in the server "
@@ -672,31 +690,31 @@ msgid ""
 " has a performance overhead."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:441
+#: ../../source/upgrade/important-upgrade-notes.rst:446
 msgid ""
 "Removed ``ExperimentalSettings.PatchPluginsReactDOM``. If this setting "
 "was previously enabled, confirm that:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:443
+#: ../../source/upgrade/important-upgrade-notes.rst:448
 msgid "All Mattermost-supported plugins are updated to the latest versions."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:444
+#: ../../source/upgrade/important-upgrade-notes.rst:449
 msgid ""
 "Any other plugins have been updated to support React 17. See the section "
 "for v7.7 release for more information."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:446
+#: ../../source/upgrade/important-upgrade-notes.rst:451
 msgid "Removed deprecated ``PermissionUseSlashCommands``."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:448
+#: ../../source/upgrade/important-upgrade-notes.rst:453
 msgid "Removed deprecated ``model.CommandArgs.Session``."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:450
+#: ../../source/upgrade/important-upgrade-notes.rst:455
 msgid ""
 "For servers wanting to allow websockets to connect from origins other "
 "than the origin of the site URL, please set the "
@@ -705,7 +723,7 @@ msgid ""
 " Also ensure that the ``siteURL`` is set correctly."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:454
+#: ../../source/upgrade/important-upgrade-notes.rst:459
 msgid ""
 "In v8.0 release, the following repositories are merged into one: "
 "``mattermost-server``, ``mattermost-webapp`` and ``mmctl``. Developers "
@@ -714,7 +732,7 @@ msgid ""
 "details."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:457
+#: ../../source/upgrade/important-upgrade-notes.rst:462
 msgid ""
 "Fixed an issue caused by a migration in the previous release. Query takes"
 " around 11ms on a PostgreSQL 14 DB t3.medium RDS instance. Locks on the "
@@ -722,7 +740,7 @@ msgid ""
 "the time taken is negligible."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:460
+#: ../../source/upgrade/important-upgrade-notes.rst:465
 msgid ""
 "Fixed an issue where a user would still see threads in the threads view "
 "of channels they have left. Migration execution time in PostgreSQL: "
@@ -730,13 +748,13 @@ msgid ""
 "MySQL: Query OK, 2766769 rows affected (4 min 47.57 sec)."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:463
+#: ../../source/upgrade/important-upgrade-notes.rst:468
 msgid ""
 "For servers wanting to allow websockets to connect from other origins, "
 "please set the ``ServiceSettings.AllowCorsFrom`` config setting."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:465
+#: ../../source/upgrade/important-upgrade-notes.rst:470
 msgid ""
 "The file info stats query is now optimized by denormalizing the "
 "``channelID`` column into the table itself. This will speed up the query "
@@ -744,23 +762,23 @@ msgid ""
 "Migration times:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:468
+#: ../../source/upgrade/important-upgrade-notes.rst:473
 msgid ""
 "On a PostgreSQL 12.14 DB with 1731 rows in FileInfo and 11M posts, it "
 "took around 0.27s"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:470
+#: ../../source/upgrade/important-upgrade-notes.rst:475
 msgid ""
 "On a MySQL 8.0.31 DB with 1405 rows in FileInfo and 11M posts, it took "
 "around 0.3s"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:472
+#: ../../source/upgrade/important-upgrade-notes.rst:477
 msgid "v7.10"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:472
+#: ../../source/upgrade/important-upgrade-notes.rst:477
 msgid ""
 "In v7.10.1, fixed an issue caused by a migration in the previous release."
 " Query takes around 11ms on a PostgreSQL 14 DB t3.medium RDS instance. "
@@ -768,7 +786,7 @@ msgid ""
 " delete, but the time taken is negligible."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:475
+#: ../../source/upgrade/important-upgrade-notes.rst:480
 msgid ""
 "In v7.10.1, fixed an issue where a user would still see threads in the "
 "threads view of channels they have left. Migration execution time in "
@@ -776,7 +794,7 @@ msgid ""
 "execution time in PostgreSQL: 58.11 sec, DELETE 2766690."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:478
+#: ../../source/upgrade/important-upgrade-notes.rst:483
 msgid ""
 "In v7.10.3, for servers wanting to allow websockets to connect from "
 "origins other than the origin of the site URL, please set the "
@@ -785,11 +803,11 @@ msgid ""
 " Also ensure that the ``siteURL`` is set correctly."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:483
+#: ../../source/upgrade/important-upgrade-notes.rst:488
 msgid "v7.9"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:483
+#: ../../source/upgrade/important-upgrade-notes.rst:488
 msgid ""
 "Added a new index on ``Posts(OriginalId)``. For a database with 11.8 "
 "million posts, on a machine with a i7-11800H CPU (8 cores, 16 threads), "
@@ -797,7 +815,7 @@ msgid ""
 "on PostgreSQL."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:486
+#: ../../source/upgrade/important-upgrade-notes.rst:491
 msgid ""
 "In PostgreSQL databases, the ``Posts`` table will be locked during index "
 "creation. To avoid locking this table, admins can create the index "
@@ -806,14 +824,14 @@ msgid ""
 "Posts(OriginalId);``."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:488
+#: ../../source/upgrade/important-upgrade-notes.rst:493
 msgid ""
 "Admins managing PostgreSQL deployments containing fewer posts may prefer "
 "that the migration process creates the index, and accept that ``Posts`` "
 "table will remain locked until the migration is complete."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:491
+#: ../../source/upgrade/important-upgrade-notes.rst:496
 msgid ""
 "In v7.9.4, fixed an issue where a user would still see threads in the "
 "threads view of channels they have left. Migration execution time in "
@@ -821,70 +839,70 @@ msgid ""
 "execution time in PostgreSQL: 58.11 sec, DELETE 2766690."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:494
+#: ../../source/upgrade/important-upgrade-notes.rst:499
 msgid ""
 "In v7.9.4, backported a fix related Oauth 2. Query times depend on if you"
 " have rows to delete or not."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:496
-#: ../../source/upgrade/important-upgrade-notes.rst:558
-msgid "With no rows to delete:"
-msgstr ""
-
-#: ../../source/upgrade/important-upgrade-notes.rst:498
-#: ../../source/upgrade/important-upgrade-notes.rst:560
-msgid "MySQL v5.7.12: 9ms"
-msgstr ""
-
-#: ../../source/upgrade/important-upgrade-notes.rst:499
-#: ../../source/upgrade/important-upgrade-notes.rst:561
-msgid "PostgreSQL v10: 21ms"
-msgstr ""
-
 #: ../../source/upgrade/important-upgrade-notes.rst:501
 #: ../../source/upgrade/important-upgrade-notes.rst:563
-msgid "4 rows:"
+msgid "With no rows to delete:"
 msgstr ""
 
 #: ../../source/upgrade/important-upgrade-notes.rst:503
 #: ../../source/upgrade/important-upgrade-notes.rst:565
-msgid "MySQL v5.7.12: 17.2ms"
+msgid "MySQL v5.7.12: 9ms"
 msgstr ""
 
 #: ../../source/upgrade/important-upgrade-notes.rst:504
 #: ../../source/upgrade/important-upgrade-notes.rst:566
-msgid "PostgreSQL v10: 9.9ms"
+msgid "PostgreSQL v10: 21ms"
 msgstr ""
 
 #: ../../source/upgrade/important-upgrade-notes.rst:506
 #: ../../source/upgrade/important-upgrade-notes.rst:568
-msgid "Those times are based off the following table sizes:"
+msgid "4 rows:"
 msgstr ""
 
 #: ../../source/upgrade/important-upgrade-notes.rst:508
 #: ../../source/upgrade/important-upgrade-notes.rst:570
-msgid "Preferences: 2 million records"
+msgid "MySQL v5.7.12: 17.2ms"
 msgstr ""
 
 #: ../../source/upgrade/important-upgrade-notes.rst:509
 #: ../../source/upgrade/important-upgrade-notes.rst:571
-msgid "``oauthaccessdata`` and sessions: 10 records"
+msgid "PostgreSQL v10: 9.9ms"
 msgstr ""
 
 #: ../../source/upgrade/important-upgrade-notes.rst:511
 #: ../../source/upgrade/important-upgrade-notes.rst:573
+msgid "Those times are based off the following table sizes:"
+msgstr ""
+
+#: ../../source/upgrade/important-upgrade-notes.rst:513
+#: ../../source/upgrade/important-upgrade-notes.rst:575
+msgid "Preferences: 2 million records"
+msgstr ""
+
+#: ../../source/upgrade/important-upgrade-notes.rst:514
+#: ../../source/upgrade/important-upgrade-notes.rst:576
+msgid "``oauthaccessdata`` and sessions: 10 records"
+msgstr ""
+
+#: ../../source/upgrade/important-upgrade-notes.rst:516
+#: ../../source/upgrade/important-upgrade-notes.rst:578
 msgid "You can assess the number of impacted rows by running the following:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:543
-#: ../../source/upgrade/important-upgrade-notes.rst:605
+#: ../../source/upgrade/important-upgrade-notes.rst:548
+#: ../../source/upgrade/important-upgrade-notes.rst:610
 msgid ""
 "Locks on the ``oauthaccessdata`` and sessions table will only be acquired"
 " if there are rows to delete."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:545
+#: ../../source/upgrade/important-upgrade-notes.rst:550
 msgid ""
 "In v7.9.5, for servers wanting to allow websockets to connect from "
 "origins other than the origin of the site URL, please set the "
@@ -893,11 +911,11 @@ msgid ""
 " Also ensure that the ``siteURL`` is set correctly."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:550
+#: ../../source/upgrade/important-upgrade-notes.rst:555
 msgid "v7.8"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:550
+#: ../../source/upgrade/important-upgrade-notes.rst:555
 msgid ""
 ":ref:`Message Priority & Acknowledgement <configure/site-configuration-"
 "settings:message priority>` is now enabled by default for all instances. "
@@ -905,7 +923,7 @@ msgid ""
 "Message Priority** or via the config ``PostPriority`` setting."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:553
+#: ../../source/upgrade/important-upgrade-notes.rst:558
 msgid ""
 "In v7.8.5, fixed an issue where a user would still see threads in the "
 "threads view of channels they have left. Migration execution time in "
@@ -913,13 +931,13 @@ msgid ""
 "execution time in PostgreSQL: 58.11 sec, DELETE 2766690."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:556
+#: ../../source/upgrade/important-upgrade-notes.rst:561
 msgid ""
 "In v7.8.5, backported a fix related Oauth 2. Query times depend on if you"
 " have rows to delete or not."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:607
+#: ../../source/upgrade/important-upgrade-notes.rst:612
 msgid ""
 "In v7.8.7, for servers wanting to allow websockets to connect from "
 "origins other than the origin of the site URL, please set the "
@@ -928,23 +946,23 @@ msgid ""
 " Also ensure that the ``siteURL`` is set correctly."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:612
+#: ../../source/upgrade/important-upgrade-notes.rst:617
 msgid ""
 "In v7.8.11, improved performance on data retention ``DeleteOrphanedRows``"
 " queries."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:660
+#: ../../source/upgrade/important-upgrade-notes.rst:665
 msgid "v7.7"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:660
+#: ../../source/upgrade/important-upgrade-notes.rst:665
 msgid ""
 "Plugins with a webapp component may need to be updated to work with "
 "Mattermost v7.7 release and the updated ``React v17`` dependency."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:662
+#: ../../source/upgrade/important-upgrade-notes.rst:667
 msgid ""
 "This is to avoid plugins crashing with an error about ``findDOMNode`` "
 "being called on an unmounted component. While our `starter template "
@@ -961,49 +979,49 @@ msgid ""
 "affected plugin while it's updated."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:669
+#: ../../source/upgrade/important-upgrade-notes.rst:674
 msgid ""
 "Denormalized ``Threads`` table by adding the ``ThreadTeamId`` column. "
 "Even though it denormalizes the schema, we gain performance by removing "
 "the unnessesary joins."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:672
+#: ../../source/upgrade/important-upgrade-notes.rst:677
 msgid "Test results for schema changes are outlined below:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:674
+#: ../../source/upgrade/important-upgrade-notes.rst:679
 msgid "instance: ``db.r5.large``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:676
+#: ../../source/upgrade/important-upgrade-notes.rst:681
 msgid "size of ``Threads`` table: 846313 rows"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:678
+#: ../../source/upgrade/important-upgrade-notes.rst:683
 msgid "number of posts: 12 million"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:680
+#: ../../source/upgrade/important-upgrade-notes.rst:685
 msgid "number of reactions: 2.5 million"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:682
+#: ../../source/upgrade/important-upgrade-notes.rst:687
 msgid "**MySQL:**"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:730
+#: ../../source/upgrade/important-upgrade-notes.rst:735
 msgid "**PostgreSQL:**"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:765
+#: ../../source/upgrade/important-upgrade-notes.rst:770
 msgid ""
 "Queries posted above can be run prior to upgrading Mattermost for both "
 "MySQL and PostgreSQL. After schema changes migration becomes "
 "instantaneous (0.78 sec)."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:767
+#: ../../source/upgrade/important-upgrade-notes.rst:772
 msgid ""
 "Starting with the Calls version shipping with v7.7, there's now a minimum"
 " version requirement when using the external RTCD service. This means "
@@ -1012,7 +1030,7 @@ msgid ""
 "to start."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:770
+#: ../../source/upgrade/important-upgrade-notes.rst:775
 msgid ""
 "In v7.7.2, :ref:`Message Priority & Acknowledgement <configure/site-"
 "configuration-settings:message priority>` is now enabled by default for "
@@ -1021,11 +1039,11 @@ msgid ""
 "setting."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:774
+#: ../../source/upgrade/important-upgrade-notes.rst:779
 msgid "v7.5"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:774
+#: ../../source/upgrade/important-upgrade-notes.rst:779
 msgid ""
 "Added a new schema migration to ensure ``ParentId`` column is dropped "
 "from the ``Posts`` table. Depending on the table size, if the column is "
@@ -1034,7 +1052,7 @@ msgid ""
 "migration."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:777
+#: ../../source/upgrade/important-upgrade-notes.rst:782
 msgid ""
 "For ``PluginRegistry.registerCustomRoute``, when you register a custom "
 "route component, you must specify a CSS ``grid-area`` in order for it to "
@@ -1042,11 +1060,11 @@ msgid ""
 "center``)."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:780
+#: ../../source/upgrade/important-upgrade-notes.rst:785
 msgid "v7.3"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:780
+#: ../../source/upgrade/important-upgrade-notes.rst:785
 msgid ""
 "Boards is moving from a channel-based to a role-based permissions system."
 " The migration will happen automatically, but your administrator should "
@@ -1055,82 +1073,82 @@ msgid ""
 " under the same sidebar."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:783
+#: ../../source/upgrade/important-upgrade-notes.rst:788
 msgid "v7.2"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:783
+#: ../../source/upgrade/important-upgrade-notes.rst:788
 msgid ""
 "Several schema changes impose additional database constraints to make the"
 " data more strict. All the commands listed below were tested on a 8 core,"
 " 16GB RAM machine. Here are the times recorded:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:786
+#: ../../source/upgrade/important-upgrade-notes.rst:791
 msgid "**PostgreSQL (131869 channels, 2 teams)**:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:788
+#: ../../source/upgrade/important-upgrade-notes.rst:793
 msgid ""
 "``CREATE TYPE channel_type AS ENUM ('P', 'G', 'O', 'D');`` took 14.114 "
 "milliseconds"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:789
+#: ../../source/upgrade/important-upgrade-notes.rst:794
 msgid ""
 "``ALTER TABLE channels alter column type type channel_type using "
 "type::channel_type;`` took 3856.790 milliseconds (3.857 seconds)"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:790
+#: ../../source/upgrade/important-upgrade-notes.rst:795
 msgid "``CREATE TYPE team_type AS ENUM ('I', 'O');`` took 4.191 milliseconds"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:791
+#: ../../source/upgrade/important-upgrade-notes.rst:796
 msgid ""
 "``ALTER TABLE teams alter column type type team_type using "
 "type::team_type;`` took 116.205 milliseconds"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:792
+#: ../../source/upgrade/important-upgrade-notes.rst:797
 msgid ""
 "``CREATE TYPE upload_session_type AS ENUM ('attachment', 'import');`` "
 "took 4.266 milliseconds"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:793
+#: ../../source/upgrade/important-upgrade-notes.rst:798
 msgid ""
 "``ALTER TABLE uploadsessions alter column type type upload_session_type "
 "using type::upload_session_type;`` took 37.099 milliseconds"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:795
+#: ../../source/upgrade/important-upgrade-notes.rst:800
 msgid "**MySQL (270959 channels, 2 teams)**:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:797
+#: ../../source/upgrade/important-upgrade-notes.rst:802
 msgid ""
 "``ALTER TABLE Channels MODIFY COLUMN Type ENUM(\"D\", \"O\", \"G\", "
 "\"P\");`` took 13.24 seconds"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:798
+#: ../../source/upgrade/important-upgrade-notes.rst:803
 msgid ""
 "``ALTER TABLE Teams MODIFY COLUMN Type ENUM(\"I\", \"O\");`` took 0.04 "
 "seconds"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:799
+#: ../../source/upgrade/important-upgrade-notes.rst:804
 msgid ""
 "``ALTER TABLE UploadSessions MODIFY COLUMN Type ENUM(\"attachment\", "
 "\"import\");`` took 0.03 seconds"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:801
+#: ../../source/upgrade/important-upgrade-notes.rst:806
 msgid "v7.1"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:801
+#: ../../source/upgrade/important-upgrade-notes.rst:806
 msgid ""
 "A new configuration option ``MaxImageDecoderConcurrency`` indicates how "
 "many images can be decoded concurrently at once. The default is -1, and "
@@ -1141,23 +1159,23 @@ msgid ""
 "less than the allocated memory for image decoding."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:806
+#: ../../source/upgrade/important-upgrade-notes.rst:811
 msgid ""
 "Mattermost v7.1 introduces schema changes in the form of a new column and"
 " its index. Our test results for the schema changes are included below:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:808
+#: ../../source/upgrade/important-upgrade-notes.rst:813
 msgid ""
 "MySQL 12M Posts, 2.5M Reactions - ~1min 34s (instance: PC with 8 cores, "
 "16GB RAM)"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:809
+#: ../../source/upgrade/important-upgrade-notes.rst:814
 msgid "PostgreSQL 12M Posts, 2.5M Reactions - ~1min 18s (instance: db.r5.2xlarge)"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:811
+#: ../../source/upgrade/important-upgrade-notes.rst:816
 msgid ""
 "You can run the following SQL queries before the upgrade to obtain a lock"
 " on ``Reactions`` table, so that users' reactions posted during this time"
@@ -1165,47 +1183,47 @@ msgid ""
 "This is fully backwards-compatible."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:816
+#: ../../source/upgrade/important-upgrade-notes.rst:821
 msgid ""
 "``ALTER TABLE Reactions ADD COLUMN ChannelId varchar(26) NOT NULL DEFAULT"
 " \"\";``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:817
+#: ../../source/upgrade/important-upgrade-notes.rst:822
 msgid ""
 "``UPDATE Reactions SET ChannelId = COALESCE((select ChannelId from Posts "
 "where Posts.Id = Reactions.PostId), '') WHERE ChannelId=\"\";``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:818
+#: ../../source/upgrade/important-upgrade-notes.rst:823
 msgid ""
 "``CREATE INDEX idx_reactions_channel_id ON Reactions(ChannelId) "
 "LOCK=NONE;``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:822
+#: ../../source/upgrade/important-upgrade-notes.rst:827
 msgid ""
 "``ALTER TABLE reactions ADD COLUMN IF NOT EXISTS channelid varchar(26) "
 "NOT NULL DEFAULT '';``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:823
+#: ../../source/upgrade/important-upgrade-notes.rst:828
 msgid ""
 "``UPDATE reactions SET channelid = COALESCE((select channelid from posts "
 "where posts.id = reactions.postid), '') WHERE channelid='';``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:824
+#: ../../source/upgrade/important-upgrade-notes.rst:829
 msgid ""
 "``CREATE INDEX CONCURRENTLY IF NOT EXISTS idx_reactions_channel_id on "
 "reactions (channelid);``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:826
+#: ../../source/upgrade/important-upgrade-notes.rst:831
 msgid "v7.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:826
+#: ../../source/upgrade/important-upgrade-notes.rst:831
 msgid ""
 "**IMPORTANT:** Session length configuration settings have changed from "
 "using a unit of *days* to *hours*. Instances using a config.json file or "
@@ -1214,25 +1232,25 @@ msgid ""
 "must make the following changes:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:830
+#: ../../source/upgrade/important-upgrade-notes.rst:835
 msgid ""
 "replace ``MM_SERVICESETTINGS_SESSIONLENGTHWEBINDAYS`` with "
 "``MM_SERVICESETTINGS_SESSIONLENGTHWEBINHOURS`` (x24 the value)."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:831
+#: ../../source/upgrade/important-upgrade-notes.rst:836
 msgid ""
 "replace ``MM_SERVICESETTINGS_SESSIONLENGTHMOBILEINDAYS`` with "
 "``MM_SERVICESETTINGS_SESSIONLENGTHMOBILEINHOURS`` (x24 the value)."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:832
+#: ../../source/upgrade/important-upgrade-notes.rst:837
 msgid ""
 "replace ``MM_SERVICESETTINGS_SESSIONLENGTHSSOINDAYS`` with "
 "``MM_SERVICESETTINGS_SESSIONLENGTHSSOINHOURS`` (x24 the value)."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:834
+#: ../../source/upgrade/important-upgrade-notes.rst:839
 msgid ""
 "MySQL self-hosted customers may notice the migration taking longer than "
 "usual when having a large number of rows in FileInfo table. For MySQL, it"
@@ -1242,7 +1260,7 @@ msgid ""
 "``Memory - 16 GB``."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:838
+#: ../../source/upgrade/important-upgrade-notes.rst:843
 msgid ""
 "When a new configuration setting via **System Console > Experimental > "
 "Features > Enable App Bar** is enabled, all channel header icons "
@@ -1252,7 +1270,7 @@ msgid ""
 "deployments."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:842
+#: ../../source/upgrade/important-upgrade-notes.rst:847
 msgid ""
 "The value of ``ServiceSettings.TrustedProxyIPHeader`` defaults to empty "
 "from now on. A previous bug prevented this from happening in certain "
@@ -1261,7 +1279,7 @@ msgid ""
 "<configure/environment-configuration-settings:trusted proxy ip header>`."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:846
+#: ../../source/upgrade/important-upgrade-notes.rst:851
 msgid ""
 ":doc:`Collapsed Reply Threads </collaborate/organize-conversations>` is "
 "now generally available and enabled by default for new Mattermost "
@@ -1272,30 +1290,30 @@ msgid ""
 "feature."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:851
+#: ../../source/upgrade/important-upgrade-notes.rst:856
 msgid "v6.7"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:851
+#: ../../source/upgrade/important-upgrade-notes.rst:856
 msgid ""
 "New schema changes were introduced in the form of a new index. The "
 "following summarizes the test results measuring how long it took for the "
 "database queries to run with these schema changes:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:854
+#: ../../source/upgrade/important-upgrade-notes.rst:859
 msgid "MySQL 7M Posts - ~17s (Instance: db.r5.xlarge)"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:856
+#: ../../source/upgrade/important-upgrade-notes.rst:861
 msgid "MySQL 9M Posts - 2min 12s (Instance: db.r5.large)"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:858
+#: ../../source/upgrade/important-upgrade-notes.rst:863
 msgid "Postgres 7M Posts - ~9s  (Instance: db.r5.xlarge)"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:860
+#: ../../source/upgrade/important-upgrade-notes.rst:865
 msgid ""
 "For customers wanting a zero downtime upgrade, they are encouraged to "
 "apply this index prior to doing the upgrade. This is fully backwards "
@@ -1305,19 +1323,19 @@ msgid ""
 "environments. Run the following to apply this index:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:864
+#: ../../source/upgrade/important-upgrade-notes.rst:869
 msgid ""
 "For MySQL: ``CREATE INDEX idx_posts_create_at_id on Posts(CreateAt, Id) "
 "LOCK=NONE;``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:866
+#: ../../source/upgrade/important-upgrade-notes.rst:871
 msgid ""
 "For Postgres: ``CREATE INDEX CONCURRENTLY IF NOT EXISTS "
 "idx_posts_create_at_id on posts(createat, id);``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:868
+#: ../../source/upgrade/important-upgrade-notes.rst:873
 msgid ""
 "In v6.7.1, the value of ``ServiceSettings.TrustedProxyIPHeader`` defaults"
 " to empty from now on. A previous bug prevented this from happening in "
@@ -1327,11 +1345,11 @@ msgid ""
 " header>`."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:872
+#: ../../source/upgrade/important-upgrade-notes.rst:877
 msgid "v6.6"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:872
+#: ../../source/upgrade/important-upgrade-notes.rst:877
 msgid ""
 "The Apps Framework protocol  for binding/form submissions has changed, by"
 " separating the single `call` into separate `submit`, `form`, `refresh` "
@@ -1339,7 +1357,7 @@ msgid ""
 "to be updated to the new system."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:875
+#: ../../source/upgrade/important-upgrade-notes.rst:880
 msgid ""
 "Channel admins can now configure :doc:`certain actions </collaborate"
 "/create-channels>` to be executed automatically based on trigger "
@@ -1348,7 +1366,7 @@ msgid ""
 "take advantage of the channel actions functionality."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:879
+#: ../../source/upgrade/important-upgrade-notes.rst:884
 msgid ""
 "In v6.6.2, the value of ``ServiceSettings.TrustedProxyIPHeader`` defaults"
 " to empty from now on. A previous bug prevented this from happening in "
@@ -1358,11 +1376,11 @@ msgid ""
 " header>`."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:883
+#: ../../source/upgrade/important-upgrade-notes.rst:888
 msgid "v6.5"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:883
+#: ../../source/upgrade/important-upgrade-notes.rst:888
 msgid ""
 "The ``mattermost version`` CLI command does not interact with the "
 "database anymore. Therefore the database version is not going to be "
@@ -1372,7 +1390,7 @@ msgid ""
 "administrators to trigger migrations."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:888
+#: ../../source/upgrade/important-upgrade-notes.rst:893
 msgid ""
 "In v6.5.2, the value of ``ServiceSettings.TrustedProxyIPHeader`` defaults"
 " to empty from now on. A previous bug prevented this from happening in "
@@ -1382,11 +1400,11 @@ msgid ""
 " header>`."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:892
+#: ../../source/upgrade/important-upgrade-notes.rst:897
 msgid "v6.4"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:892
+#: ../../source/upgrade/important-upgrade-notes.rst:897
 msgid ""
 "A new schema migration system has been introduced, so we strongly "
 "recommend backing up the database before updating the server to this "
@@ -1404,7 +1422,7 @@ msgid ""
 "the server logs."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:899
+#: ../../source/upgrade/important-upgrade-notes.rst:904
 msgid ""
 "On MySQL, if you encounter an error \"Failed to apply database "
 "migrations\" when upgrading to v6.4.0, it means that there is a mismatch "
@@ -1414,7 +1432,7 @@ msgid ""
 "server upgrade again and the migration will be successful."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:903
+#: ../../source/upgrade/important-upgrade-notes.rst:908
 msgid ""
 "It has been commonly observed on MySQL 8+ systems to have an error "
 "``Error 1267: Illegal mix of collations`` when upgrading due to changing "
@@ -1424,25 +1442,25 @@ msgid ""
 "<db_name> COLLATE = '<collation>'``."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:907
+#: ../../source/upgrade/important-upgrade-notes.rst:912
 msgid ""
 "The new migration system requires the MySQL database user to have "
 "additional *EXECUTE*, *CREATE ROUTINE*, *ALTER ROUTINE* and *REFERENCES* "
 "privileges to run schema migrations."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:910
+#: ../../source/upgrade/important-upgrade-notes.rst:915
 msgid "v6.3"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:910
+#: ../../source/upgrade/important-upgrade-notes.rst:915
 msgid ""
 "In v6.3.3, the default for ``ThreadAutoFollow`` has been changed to "
 "``false``. This does not affect existing configurations where this value "
 "is already set to ``true``."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:913
+#: ../../source/upgrade/important-upgrade-notes.rst:918
 msgid ""
 "In v6.3.9, the value of ``ServiceSettings.TrustedProxyIPHeader`` defaults"
 " to empty from now on. A previous bug prevented this from happening in "
@@ -1452,11 +1470,11 @@ msgid ""
 " header>`."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:917
+#: ../../source/upgrade/important-upgrade-notes.rst:922
 msgid "v6.2"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:917
+#: ../../source/upgrade/important-upgrade-notes.rst:922
 msgid ""
 "Channel results in the channel autocomplete will include private "
 "channels. Customers using :doc:`Bleve </configure/bleve-search>` or "
@@ -1466,37 +1484,37 @@ msgid ""
 "background. When this is complete, re-enable autocomplete."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:922
+#: ../../source/upgrade/important-upgrade-notes.rst:927
 msgid "Only channel members see private channel names in autocomplete results."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:924
+#: ../../source/upgrade/important-upgrade-notes.rst:929
 msgid ""
 "In v6.2.3, the default for ``ThreadAutoFollow`` has been changed to "
 "``false``. This does not affect existing configurations where this value "
 "is already set to ``true``."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:927
-#: ../../source/upgrade/important-upgrade-notes.rst:945
-#: ../../source/upgrade/important-upgrade-notes.rst:1010
+#: ../../source/upgrade/important-upgrade-notes.rst:932
+#: ../../source/upgrade/important-upgrade-notes.rst:950
+#: ../../source/upgrade/important-upgrade-notes.rst:1015
 msgid ""
 "Mattermost Boards requires ``EnableReliableWebSockets`` setting to be "
 "manually set to ``true`` for real-time updates to appear correctly."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:929
+#: ../../source/upgrade/important-upgrade-notes.rst:934
 msgid "v6.1"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:929
+#: ../../source/upgrade/important-upgrade-notes.rst:934
 msgid ""
 "Please refer to `the schema migration analysis "
 "<https://gist.github.com/streamer45/997b726a86b5d2a624ac2af435a66086>`_ "
 "when upgrading to v6.1."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:931
+#: ../../source/upgrade/important-upgrade-notes.rst:936
 msgid ""
 "The Bleve index has been updated to use the scorch index type. This new "
 "default index type features some efficiency improvements which means that"
@@ -1507,7 +1525,7 @@ msgid ""
 "fine if the purge and reindex is not run."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:935
+#: ../../source/upgrade/important-upgrade-notes.rst:940
 msgid ""
 "A composite index has been added to the jobs table for better query "
 "performance. For some customers with a large jobs table, this can take a "
@@ -1516,46 +1534,46 @@ msgid ""
 "considered as large enough to be updated prior to the upgrade."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:939
+#: ../../source/upgrade/important-upgrade-notes.rst:944
 msgid ""
 "For PostgreSQL: ``create index concurrently idx_jobs_status_type on jobs "
 "(status,type);``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:940
+#: ../../source/upgrade/important-upgrade-notes.rst:945
 msgid "For MySQL: ``create index idx_jobs_status_type on Jobs (Status,Type);``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:942
+#: ../../source/upgrade/important-upgrade-notes.rst:947
 msgid ""
 "In v6.1.3, the default for ``ThreadAutoFollow`` has been changed to "
 "``false``. This does not affect existing configurations where this value "
 "is already set to ``true``."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:947
+#: ../../source/upgrade/important-upgrade-notes.rst:952
 msgid "v6.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:947
+#: ../../source/upgrade/important-upgrade-notes.rst:952
 msgid "Longer migration times can be expected."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:949
+#: ../../source/upgrade/important-upgrade-notes.rst:954
 msgid ""
 "See `this document "
 "<https://gist.github.com/streamer45/59b3582118913d4fc5e8ff81ea78b055>`__ "
 "for the estimated upgrade times with datasets of 10+ million posts."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:950
+#: ../../source/upgrade/important-upgrade-notes.rst:955
 msgid ""
 "See `this document "
 "<https://gist.github.com/streamer45/868c451164f6e8069d8b398685a31b6e>`__ "
 "for the estimated upgrade times with datasets of 70+ million posts."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:952
+#: ../../source/upgrade/important-upgrade-notes.rst:957
 msgid ""
 "The field type of Data in ``model.ClusterMessage`` was changed to []byte "
 "from string. A v6 server is incompatible to run along with a v5 server in"
@@ -1568,7 +1586,7 @@ msgid ""
 "minimized to a large extent."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:957
+#: ../../source/upgrade/important-upgrade-notes.rst:962
 msgid ""
 "1. Low effort, long downtime - This is the usual process of starting a v6"
 " server normally. This has two implications: during the migration "
@@ -1578,7 +1596,7 @@ msgid ""
 "cluster."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:961
+#: ../../source/upgrade/important-upgrade-notes.rst:966
 msgid ""
 "2. Medium effort, medium downtime - This process will require SQL queries"
 " to be executed manually on the server. To avoid causing a table lock, a "
@@ -1589,7 +1607,7 @@ msgid ""
 " to be executed this way. Then the usual method of (1) can be followed."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:966
+#: ../../source/upgrade/important-upgrade-notes.rst:971
 msgid ""
 "3. High effort, low downtime - This process requires everything of (2), "
 "plus it tries to minimize the impact of query #11. We can do this by "
@@ -1599,7 +1617,7 @@ msgid ""
 "to only a few seconds."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:970
+#: ../../source/upgrade/important-upgrade-notes.rst:975
 msgid ""
 "It is recommended to start Mattermost directly and not through systemctl "
 "to avoid the server process getting killed during the migration. This can"
@@ -1607,7 +1625,7 @@ msgid ""
 "service file is set to one hour."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:973
+#: ../../source/upgrade/important-upgrade-notes.rst:978
 msgid ""
 "Customers using the Mattermost Kubernetes operator should be aware of the"
 " above migration information and choose the path that is most appropriate"
@@ -1616,7 +1634,7 @@ msgid ""
 "the operator to update Mattermost following the normal upgrade process."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:977
+#: ../../source/upgrade/important-upgrade-notes.rst:982
 msgid ""
 "While trying to upgrade to a Mattermost version >= 6.0.x, you might "
 "encounter the following error: ``Failed to alter column type. It is "
@@ -1624,59 +1642,59 @@ msgid ""
 "manually and run the migration again.``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:980
+#: ../../source/upgrade/important-upgrade-notes.rst:985
 msgid ""
 "This means that the particular column has some invalid JSON values which "
 "need to be fixed manually. A common fix that is known to work is to wipe "
 "out all ``\\u0000`` characters."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:983
+#: ../../source/upgrade/important-upgrade-notes.rst:988
 msgid "Please follow these steps:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:985
+#: ../../source/upgrade/important-upgrade-notes.rst:990
 msgid ""
 "Check the affected values by: ``SELECT COUNT(*) FROM <table> WHERE "
 "<column> LIKE '%\\u0000%';``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:986
+#: ../../source/upgrade/important-upgrade-notes.rst:991
 msgid ""
 "If you get a count more than 0, check those values manually, and confirm "
 "they are okay to be removed."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:987
+#: ../../source/upgrade/important-upgrade-notes.rst:992
 msgid ""
 "Remove them by ``UPDATE <table> SET <column> = regexp_replace(<column>, "
 "'\\\\u0000', '', 'g') where <column> like '%\\u0000%';``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:989
+#: ../../source/upgrade/important-upgrade-notes.rst:994
 msgid "Then try to start Mattermost again."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:991
+#: ../../source/upgrade/important-upgrade-notes.rst:996
 msgid ""
 "Please see :doc:`unsupported legacy releases </about/unsupported-legacy-"
 "releases>` documentation for a list of deprecations in this release."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:993
+#: ../../source/upgrade/important-upgrade-notes.rst:998
 msgid ""
 "Focalboard plugin has been renamed to Mattermost Boards, and v0.9.1 "
 "(released with Mattermost v6.0) is now enabled by default."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:995
+#: ../../source/upgrade/important-upgrade-notes.rst:1000
 msgid ""
 "The advanced logging configuration schema changed. This is a breaking "
 "change relative to 5.x. See updated :doc:`documentation "
 "</manage/logging>`."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:998
+#: ../../source/upgrade/important-upgrade-notes.rst:1003
 msgid ""
 "The existing theme names and colors, including \"Mattermost\", "
 "\"Organization\", \"Mattermost Dark\", and \"Windows Dark\" have been "
@@ -1690,27 +1708,27 @@ msgid ""
 "variables if desired. Custom themes are unaffected by this change."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1004
+#: ../../source/upgrade/important-upgrade-notes.rst:1009
 msgid "Some breaking changes to plugins are included:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1006
+#: ../../source/upgrade/important-upgrade-notes.rst:1011
 msgid "Support for left-hand side-specific bot icons was dropped."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1007
+#: ../../source/upgrade/important-upgrade-notes.rst:1012
 msgid "Removed a deprecated \"Backend\" field from the plugin manifest."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1008
+#: ../../source/upgrade/important-upgrade-notes.rst:1013
 msgid "Converted the \"Executables\" field in the plugin manifest to a map."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1012
+#: ../../source/upgrade/important-upgrade-notes.rst:1017
 msgid "v5.38.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1012
+#: ../../source/upgrade/important-upgrade-notes.rst:1017
 msgid ""
 "The “config watcher” (the mechanism that automatically reloads the "
 "``config.json`` file) has been removed in favor of the ``mmctl config "
@@ -1719,7 +1737,7 @@ msgid ""
 " robustness."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1015
+#: ../../source/upgrade/important-upgrade-notes.rst:1020
 msgid ""
 "v5.38 adds fixes for some of the incorrect mention counts and unreads "
 "around threads and channels since the introduction of Collapsed Reply "
@@ -1733,17 +1751,17 @@ msgid ""
 "MySQL v5.6.51."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1021
+#: ../../source/upgrade/important-upgrade-notes.rst:1026
 msgid ""
 "Focalboard v0.8.2 (released with Mattermost v5.38.0) requires Mattermost "
 "v5.37+ due to the new database connection system."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1023
+#: ../../source/upgrade/important-upgrade-notes.rst:1028
 msgid "v5.37.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1023
+#: ../../source/upgrade/important-upgrade-notes.rst:1028
 msgid ""
 "The ``platform`` binary and “--platform” flag have been removed. If you "
 "are using the “--platform” flag or are using the ``platform`` binary "
@@ -1751,7 +1769,7 @@ msgid ""
 "custom script, you will be required to use only the mattermost binary."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1026
+#: ../../source/upgrade/important-upgrade-notes.rst:1031
 msgid ""
 "`Collapsed Reply Threads <https://mattermost.com/blog/collapsed-reply-"
 "threads-beta/>`__ are available as Beta in Mattermost Server v5.37 and "
@@ -1760,7 +1778,7 @@ msgid ""
 "documented here <collaborate/organize-conversations:known issues>`."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1030
+#: ../../source/upgrade/important-upgrade-notes.rst:1035
 msgid ""
 "v5.37 adds support for emoji standard v13.0. If you have added a custom "
 "emoji in the past that uses one of the new system names, then it is going"
@@ -1768,7 +1786,7 @@ msgid ""
 "custom emoji name."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1033
+#: ../../source/upgrade/important-upgrade-notes.rst:1038
 msgid ""
 "Parts of Incident Collaboration are now available to all Mattermost "
 "editions. As part of this update, Incident Collaboration will require a "
@@ -1777,18 +1795,18 @@ msgid ""
 "<https://mattermost.com/pricing>`_."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1036
+#: ../../source/upgrade/important-upgrade-notes.rst:1041
 msgid ""
 "In v5.37.8, the default for ``ThreadAutoFollow`` has been changed to "
 "``false``. This does not affect existing configurations where this value "
 "is already set to ``true``."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1039
+#: ../../source/upgrade/important-upgrade-notes.rst:1044
 msgid "v5.36.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1039
+#: ../../source/upgrade/important-upgrade-notes.rst:1044
 msgid ""
 "Gossip clustering mode is now in General Availability and is no longer "
 "available as an option. All cluster traffic will always use the gossip "
@@ -1797,7 +1815,7 @@ msgid ""
 "has been removed from the System Console."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1045
+#: ../../source/upgrade/important-upgrade-notes.rst:1050
 msgid ""
 "For High Availability upgrades, all nodes in the cluster must use a "
 "single protocol. If an existing system is not currently using gossip, one"
@@ -1807,18 +1825,18 @@ msgid ""
 "upgrade, and then bring all nodes back up."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1049
+#: ../../source/upgrade/important-upgrade-notes.rst:1054
 msgid ""
 "To enable Focalboard, open the Marketplace from the sidebar menu, install"
 " the Focalboard plugin, then click on **Configure**, enable it, and save."
 " Update your NGINX or Apache web proxy config."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1052
+#: ../../source/upgrade/important-upgrade-notes.rst:1057
 msgid "v5.35.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1052
+#: ../../source/upgrade/important-upgrade-notes.rst:1057
 msgid ""
 "Due to the introduction of backend database architecture required for "
 "upcoming new features, Shared Channels and Collapsed Reply Threads, the "
@@ -1833,7 +1851,7 @@ msgid ""
 "are available."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1059
+#: ../../source/upgrade/important-upgrade-notes.rst:1064
 msgid ""
 "The existing password generation logic used during the bulk user import "
 "process was comparatively weak. Hence it's advised for admins to "
@@ -1842,7 +1860,7 @@ msgid ""
 "even once."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1062
+#: ../../source/upgrade/important-upgrade-notes.rst:1067
 msgid ""
 "v5.35.0 introduces a new feature to search for files. Search results for "
 "files shared in the past may be incomplete until a :ref:`content "
@@ -1854,11 +1872,11 @@ msgid ""
 "<https://mattermost.com/blog/file-search/>`_."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1067
+#: ../../source/upgrade/important-upgrade-notes.rst:1072
 msgid "v5.34.1"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1067
+#: ../../source/upgrade/important-upgrade-notes.rst:1072
 msgid ""
 "v5.34.1 fixes an issue where upgrading to v5.34.0 runs a migration that "
 "can cause timeouts on MySQL installations. Upgrading to v5.34.1 may also "
@@ -1866,38 +1884,38 @@ msgid ""
 "additions can be lengthy on very big MySQL (version 5.x) installations."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1070
+#: ../../source/upgrade/important-upgrade-notes.rst:1075
 msgid "Altering of ``Posts.FileIds`` type (PostgreSQL only)"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1071
+#: ../../source/upgrade/important-upgrade-notes.rst:1076
 msgid "Added new column ``ThreadMemberships.UnreadMentions``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1072
+#: ../../source/upgrade/important-upgrade-notes.rst:1077
 msgid "Added new column ``Channels.Shared``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1073
+#: ../../source/upgrade/important-upgrade-notes.rst:1078
 msgid "Added new column ``Reactions.UpdateAt``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1074
+#: ../../source/upgrade/important-upgrade-notes.rst:1079
 msgid "Added new column ``Reactions.DeleteAt``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1076
+#: ../../source/upgrade/important-upgrade-notes.rst:1081
 msgid "v5.33.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1076
+#: ../../source/upgrade/important-upgrade-notes.rst:1081
 msgid ""
 "Deleting a reaction is now a soft delete in the ``Reactions`` table. A "
 "schema update is required and may take up to 15 seconds on first run with"
 " large data sets."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1078
+#: ../../source/upgrade/important-upgrade-notes.rst:1083
 msgid ""
 "WebSocket handshakes done with HTTP version lower than 1.1 will result in"
 " a warning, and the server will transparently upgrade the version to 1.1 "
@@ -1908,11 +1926,11 @@ msgid ""
 "proxy configuration to correctly use the WebSocket protocol."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1082
+#: ../../source/upgrade/important-upgrade-notes.rst:1087
 msgid "v5.32.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1082
+#: ../../source/upgrade/important-upgrade-notes.rst:1087
 msgid ""
 "``ExperimentalChannelOrganization``, ``EnableXToLeaveChannelsFromLHS``, "
 "``CloseUnusedDirectMessages``, and ``ExperimentalHideTownSquareinLHS`` "
@@ -1923,7 +1941,7 @@ msgid ""
 "<https://mattermost.com/blog/custom-collapsible-channel-categories/>`_."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1087
+#: ../../source/upgrade/important-upgrade-notes.rst:1092
 msgid ""
 "Breaking changes to the Golang client API were introduced: "
 "``GetPostThread``, ``GetPostsForChannel``, ``GetPostsSince``, "
@@ -1933,7 +1951,7 @@ msgid ""
 "upgrading its dependencies."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1091
+#: ../../source/upgrade/important-upgrade-notes.rst:1096
 msgid ""
 "`A breaking change was introduced when upgrading the Go version to "
 "v1.15.5 <https://go.dev/doc/go1.15>`_ where user logins fail with AD/LDAP"
@@ -1942,7 +1960,7 @@ msgid ""
 "the SAN inside fixes this."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1095
+#: ../../source/upgrade/important-upgrade-notes.rst:1100
 msgid ""
 "TLS versions 1.0 and 1.1 have been deprecated by browser vendors. "
 "Starting in Mattermost Server v5.32 (February 16), mmctl returns an error"
@@ -1952,11 +1970,11 @@ msgid ""
 "higher."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1099
+#: ../../source/upgrade/important-upgrade-notes.rst:1104
 msgid "v5.31.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1099
+#: ../../source/upgrade/important-upgrade-notes.rst:1104
 msgid ""
 "For Mobile Apps v1.42.0+, the minimum server version is set to 5.31.3 as "
 "`5.31.3 fixed an issue <https://docs.mattermost.com/deploy/legacy-self-"
@@ -1964,11 +1982,11 @@ msgid ""
 "reported as v5.30.0."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1103
+#: ../../source/upgrade/important-upgrade-notes.rst:1108
 msgid "v5.29.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1103
+#: ../../source/upgrade/important-upgrade-notes.rst:1108
 msgid ""
 "A new configuration setting ``ThreadAutoFollow`` has been added to "
 "support `Collapsed Reply Threads "
@@ -1980,33 +1998,33 @@ msgid ""
 "appropriately scaled for the size of your user base."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1108
-#: ../../source/upgrade/important-upgrade-notes.rst:1118
-#: ../../source/upgrade/important-upgrade-notes.rst:1120
-#: ../../source/upgrade/important-upgrade-notes.rst:1149
+#: ../../source/upgrade/important-upgrade-notes.rst:1113
+#: ../../source/upgrade/important-upgrade-notes.rst:1123
+#: ../../source/upgrade/important-upgrade-notes.rst:1125
+#: ../../source/upgrade/important-upgrade-notes.rst:1154
 msgid ""
 "Disabled the xmlsec1-based SAML library in favor of the re-enabled and "
 "improved SAML library."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1110
+#: ../../source/upgrade/important-upgrade-notes.rst:1115
 msgid "v5.28.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1110
+#: ../../source/upgrade/important-upgrade-notes.rst:1115
 msgid ""
 "Now when the service crashes, it will generate a coredump instead of just"
 " dumping the stack trace to the console. This allows us to preserve the "
 "full information of the crash to help with debugging it."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1113
+#: ../../source/upgrade/important-upgrade-notes.rst:1118
 msgid ""
 "For more information about coredumps, please see: https://man7.org/linux"
 "/man-pages/man5/core.5.html."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1115
+#: ../../source/upgrade/important-upgrade-notes.rst:1120
 msgid ""
 "In-product notices have been introduced to keep system admins and end "
 "users informed of the latest product enhancements available in new server"
@@ -2014,15 +2032,15 @@ msgid ""
 "/in-product-notices>` and how to disable them in our documentation."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1120
+#: ../../source/upgrade/important-upgrade-notes.rst:1125
 msgid "v5.27.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1122
+#: ../../source/upgrade/important-upgrade-notes.rst:1127
 msgid "v5.26.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1122
+#: ../../source/upgrade/important-upgrade-notes.rst:1127
 msgid ""
 "In v5.26, Elasticsearch indexes needed to be recreated. Admins should re-"
 "index Elasticsearch using the **Purge index** and then **Index now** "
@@ -2032,7 +2050,7 @@ msgid ""
 "several hours."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1126
+#: ../../source/upgrade/important-upgrade-notes.rst:1131
 msgid ""
 "An ``EnableExperimentalGossipEncryption`` option was added under "
 "``ClusterSettings``. If this is set to ``true``, and "
@@ -2045,14 +2063,14 @@ msgid ""
 "AES-192, or AES-256."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1131
+#: ../../source/upgrade/important-upgrade-notes.rst:1136
 msgid ""
 "To update the key, one can execute: ``UPDATE Systems SET Value='<value>' "
 "WHERE Name='ClusterEncryptionKey';`` in MySQL and ``UPDATE systems SET "
 "value='<value>' WHERE name='ClusterEncryptionKey'`` for PostgreSQL."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1135
+#: ../../source/upgrade/important-upgrade-notes.rst:1140
 msgid ""
 "For any change in this config setting to take effect, the whole cluster "
 "must be shut down first. Then the config change made, and then restarted."
@@ -2060,11 +2078,11 @@ msgid ""
 "There cannot be any partial usage."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1138
+#: ../../source/upgrade/important-upgrade-notes.rst:1143
 msgid "SAML Setting \"Use Improved SAML Library (Beta)\" was forcefully disabled."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1140
+#: ../../source/upgrade/important-upgrade-notes.rst:1145
 msgid ""
 "PostgreSQL ended long-term support for `version 9.4 in February 2020 "
 "<https://www.postgresql.org/support/versioning>`_. From v5.26 Mattermost "
@@ -2077,11 +2095,11 @@ msgid ""
 "<https://www.postgresql.org/support/versioning/>`__."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1145
+#: ../../source/upgrade/important-upgrade-notes.rst:1150
 msgid "v5.25.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1145
+#: ../../source/upgrade/important-upgrade-notes.rst:1150
 msgid ""
 "Some incorrect instructions regarding SAML setup with Active Directory "
 "ADFS for setting the “Relying Party Trust Identifier” were corrected. "
@@ -2090,11 +2108,11 @@ msgid ""
 " party trust>`."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1151
+#: ../../source/upgrade/important-upgrade-notes.rst:1156
 msgid "v5.24.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1151
+#: ../../source/upgrade/important-upgrade-notes.rst:1156
 msgid ""
 "A new configuration setting, ``ExtendSessionLengthWithActivity`` "
 "automatically extends sessions to keep users logged in if they are active"
@@ -2104,7 +2122,7 @@ msgid ""
 "experience>`__."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1155
+#: ../../source/upgrade/important-upgrade-notes.rst:1160
 msgid ""
 "The ``mattermost_http_request_duration_seconds`` histogram metric (in "
 "Enterprise Edition) has been removed. This information was already "
@@ -2112,8 +2130,7 @@ msgid ""
 "name, HTTP method, and the response code."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1158
-#, python-brace-format
+#: ../../source/upgrade/important-upgrade-notes.rst:1163
 msgid ""
 "As an example, if you are using "
 "``rate(mattermost_http_request_duration_seconds_sum{server=~\"$var\"}[5m])"
@@ -2125,8 +2142,8 @@ msgid ""
 "(instance)``."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1163
-#: ../../source/upgrade/important-upgrade-notes.rst:1183
+#: ../../source/upgrade/important-upgrade-notes.rst:1168
+#: ../../source/upgrade/important-upgrade-notes.rst:1188
 msgid ""
 "Due to fixing performance issues related to emoji reactions, the "
 "performance of the upgrade has been affected in that the schema upgrade "
@@ -2138,8 +2155,8 @@ msgid ""
 " this time."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1168
-#: ../../source/upgrade/important-upgrade-notes.rst:1188
+#: ../../source/upgrade/important-upgrade-notes.rst:1173
+#: ../../source/upgrade/important-upgrade-notes.rst:1193
 msgid ""
 "The migration is a single line of SQL and can be applied directly to the "
 "database through the MySQL/PSQL command line clients if you prefer to "
@@ -2151,20 +2168,20 @@ msgid ""
 "users."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1173
-#: ../../source/upgrade/important-upgrade-notes.rst:1193
+#: ../../source/upgrade/important-upgrade-notes.rst:1178
+#: ../../source/upgrade/important-upgrade-notes.rst:1198
 msgid ""
 "MySQL: ``ALTER TABLE Reactions DROP PRIMARY KEY, ADD PRIMARY KEY (PostId,"
 " UserId, EmojiName);``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1175
+#: ../../source/upgrade/important-upgrade-notes.rst:1180
 msgid ""
 "PostgreSQL: ``ALTER TABLE reactions DROP CONSTRAINT reactions_pkey, ADD "
 "PRIMARY KEY (PostId, UserId, EmojiName);``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1177
+#: ../../source/upgrade/important-upgrade-notes.rst:1182
 msgid ""
 "On mobile apps, users will not be able to see LDAP group mentions (E20 "
 "feature) in the autocomplete dropdown. Users will still receive "
@@ -2172,9 +2189,9 @@ msgid ""
 "mention keyword will not be highlighted."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1180
-#: ../../source/upgrade/important-upgrade-notes.rst:1203
-#: ../../source/upgrade/important-upgrade-notes.rst:1209
+#: ../../source/upgrade/important-upgrade-notes.rst:1185
+#: ../../source/upgrade/important-upgrade-notes.rst:1208
+#: ../../source/upgrade/important-upgrade-notes.rst:1214
 msgid ""
 "SAML Setting \"Use Improved SAML Library (Beta)\" was forcefully "
 "disabled. Follow instructions at https://docs.mattermost.com/onboard/sso-"
@@ -2182,17 +2199,17 @@ msgid ""
 "utility."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1183
+#: ../../source/upgrade/important-upgrade-notes.rst:1188
 msgid "v5.22.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1195
+#: ../../source/upgrade/important-upgrade-notes.rst:1200
 msgid ""
 "Postgres: ``ALTER TABLE reactions DROP CONSTRAINT reactions_pkey, ADD "
 "PRIMARY KEY (PostId, UserId, EmojiName);``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1197
+#: ../../source/upgrade/important-upgrade-notes.rst:1202
 msgid ""
 "The Channel Moderation Settings feature is supported on mobile app "
 "versions v1.30 and later. In earlier versions of the mobile app, users "
@@ -2200,7 +2217,7 @@ msgid ""
 " an error."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1200
+#: ../../source/upgrade/important-upgrade-notes.rst:1205
 msgid ""
 "Direct access to the ``Props`` field in the ``model.Post`` structure has "
 "been deprecated. The available ``GetProps()`` and ``SetProps()`` methods "
@@ -2208,22 +2225,22 @@ msgid ""
 "must be avoided in favor of the provided ``Clone()`` method."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1206
+#: ../../source/upgrade/important-upgrade-notes.rst:1211
 msgid "v5.21.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1206
+#: ../../source/upgrade/important-upgrade-notes.rst:1211
 msgid ""
 "Honour key value expiry in KVCompareAndSet, KVCompareAndDelete, and "
 "KVList. We also improved handling of plugin key value race conditions and"
 " deleted keys in Postgres."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1212
+#: ../../source/upgrade/important-upgrade-notes.rst:1217
 msgid "v5.20.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1212
+#: ../../source/upgrade/important-upgrade-notes.rst:1217
 msgid ""
 "Any `pre-packaged plugin <https://developers.mattermost.com/integrate"
 "/admin-guide/admin-plugins-beta/#pre-packaged-plugins>`_ that is not "
@@ -2233,7 +2250,7 @@ msgid ""
 "beta/#plugin-marketplace>`_."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1216
+#: ../../source/upgrade/important-upgrade-notes.rst:1221
 msgid ""
 "Boolean elements from interactive dialogs are no longer serialized as "
 "strings. While we try to avoid breaking changes, this change was "
@@ -2241,22 +2258,22 @@ msgid ""
 "elements introduced with v5.16."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1219
+#: ../../source/upgrade/important-upgrade-notes.rst:1224
 msgid "v5.19.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1219
+#: ../../source/upgrade/important-upgrade-notes.rst:1224
 msgid ""
 "``LockTeammateNameDisplay`` setting was moved to Enterprise Edition E20 "
 "as it was erroneously available in Team Edition and Enterprise Edition "
 "E10."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1221
+#: ../../source/upgrade/important-upgrade-notes.rst:1226
 msgid "v5.18.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1221
+#: ../../source/upgrade/important-upgrade-notes.rst:1226
 msgid ""
 "Marking a post unread from the mobile app requires v1.26 or later. If "
 "using v5.18, but mobile is on v1.25 or earlier, marking a post unread "
@@ -2264,7 +2281,7 @@ msgid ""
 "app launches or is brought to the foreground."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1224
+#: ../../source/upgrade/important-upgrade-notes.rst:1229
 msgid ""
 "The Go module path of ``mattermost-server`` was changed to comply with "
 "the Go module version specification. Developers using Go modules with "
@@ -2274,14 +2291,13 @@ msgid ""
 "further information."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1228
+#: ../../source/upgrade/important-upgrade-notes.rst:1233
 msgid ""
 "Removed ``Team.InviteId`` from the related Websocket event and sanitized "
 "it on all team API endpoints for users without invite permissions."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1230
-#, python-brace-format
+#: ../../source/upgrade/important-upgrade-notes.rst:1235
 msgid ""
 "Removed the ability to change the type of a channel using the ``PUT "
 "/channels/{channel_id}`` API endpoint. The new ``PUT "
@@ -2289,18 +2305,18 @@ msgid ""
 "purpose."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1233
+#: ../../source/upgrade/important-upgrade-notes.rst:1238
 msgid "v5.16.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1233
+#: ../../source/upgrade/important-upgrade-notes.rst:1238
 msgid ""
 "Support for Internet Explorer (IE11) is removed. See `this forum post "
 "<https://forum.mattermost.com/t/mattermost-is-dropping-support-for-"
 "internet-explorer-ie11-in-v5-16/7575>`__ to learn more."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1236
+#: ../../source/upgrade/important-upgrade-notes.rst:1241
 msgid ""
 "The `Mattermost Desktop v4.3.0 "
 "<https://github.com/mattermost/desktop/blob/master/CHANGELOG.md>`_ "
@@ -2311,7 +2327,7 @@ msgid ""
 "notifications when using Mattermost Desktop v4.3.0 or later."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1240
+#: ../../source/upgrade/important-upgrade-notes.rst:1245
 msgid ""
 "When enabling :doc:`Guest Accounts </onboard/guest-accounts>`, all users "
 "who have the ability to invite users will be able to invite guests by "
@@ -2322,17 +2338,17 @@ msgid ""
 "5.16 due to database migration processes."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1245
+#: ../../source/upgrade/important-upgrade-notes.rst:1250
 msgid "v5.14.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1245
+#: ../../source/upgrade/important-upgrade-notes.rst:1250
 msgid ""
 "Webhooks are now only displayed if the user is the creator of the webhook"
 " or a system administrator."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1247
+#: ../../source/upgrade/important-upgrade-notes.rst:1252
 msgid ""
 "With the update from Google+ to Google People, system admins need to "
 "ensure the ``GoogleSettings.Scope`` config.json setting is set to "
@@ -2341,11 +2357,11 @@ msgid ""
 " per :doc:`updated documentation </onboard/sso-google>`."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1251
+#: ../../source/upgrade/important-upgrade-notes.rst:1256
 msgid "v5.12.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1251
+#: ../../source/upgrade/important-upgrade-notes.rst:1256
 msgid ""
 "If your plugin uses the ``DeleteEphemeralMessage`` plugin API, update it "
 "to accept a ``postId string`` parameter. See `documentation "
@@ -2353,7 +2369,7 @@ msgid ""
 " to learn more."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1254
+#: ../../source/upgrade/important-upgrade-notes.rst:1259
 msgid ""
 "Image link and YouTube previews do not display unless **System Console > "
 "Enable Link Previews** is enabled. Please ensure that your Mattermost "
@@ -2363,14 +2379,14 @@ msgid ""
 "in-v5-12-and-later/7712>`__."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1258
+#: ../../source/upgrade/important-upgrade-notes.rst:1263
 msgid ""
 "``ExperimentalEnablePostMetadata`` setting was removed. Post metadata, "
 "including post dimensions, is now stored in the database to correct "
 "scroll position and eliminate scroll jumps as content loads in a channel."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1261
+#: ../../source/upgrade/important-upgrade-notes.rst:1266
 msgid ""
 "Added the ability to enforce the administration of teams/channels with "
 "Group Sync. If Group Sync is enabled, all team and channel admin "
@@ -2381,30 +2397,29 @@ msgid ""
 "role."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1265
+#: ../../source/upgrade/important-upgrade-notes.rst:1270
 msgid "v5.11.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1265
-#, python-brace-format
+#: ../../source/upgrade/important-upgrade-notes.rst:1270
 msgid ""
 "If your integration uses ``Update.Props == nil`` to clear ``Props``, this"
 " will no longer work in 5.11+. Instead, use ``Update.Props == {}`` to "
 "clear properties."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1267
+#: ../../source/upgrade/important-upgrade-notes.rst:1272
 msgid ""
 "This change was made because ``Update.Props == nil`` unintentionally "
 "cleared all ``Props``, such as the profile picture, instead of preserving"
 " them."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1269
+#: ../../source/upgrade/important-upgrade-notes.rst:1274
 msgid "v5.10.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1269
+#: ../../source/upgrade/important-upgrade-notes.rst:1274
 msgid ""
 "``SupportedTimezonesPath`` setting in config.json and changes to "
 "timezones in the UI based on the ``timezones.json`` file was removed. "
@@ -2412,11 +2427,11 @@ msgid ""
 "</configure/configuration-in-your-database>`."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1272
+#: ../../source/upgrade/important-upgrade-notes.rst:1277
 msgid "v5.9.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1272
+#: ../../source/upgrade/important-upgrade-notes.rst:1277
 msgid ""
 "If ``DisableLegacyMfa`` setting in ``config.json`` is set to ``true`` and"
 " :doc:`multi-factor authentication </onboard/multi-factor-"
@@ -2425,20 +2440,20 @@ msgid ""
 "be able to log in successfully."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1275
+#: ../../source/upgrade/important-upgrade-notes.rst:1280
 msgid ""
 "If the setting is not defined in the ``config.json`` file, the "
 "``DisableLegacyMfa`` setting is set to ``false`` by default to ensure no "
 "breaking changes."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1277
+#: ../../source/upgrade/important-upgrade-notes.rst:1282
 msgid ""
 "We recommend setting ``DisableLegacyMfa`` to ``true`` for additional "
 "security hardening."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1279
+#: ../../source/upgrade/important-upgrade-notes.rst:1284
 msgid ""
 "The public IP of the Mattermost application server is considered a "
 "reserved IP for additional security hardening in the context of untrusted"
@@ -2448,11 +2463,11 @@ msgid ""
 "information."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1283
+#: ../../source/upgrade/important-upgrade-notes.rst:1288
 msgid "v5.8.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1283
+#: ../../source/upgrade/important-upgrade-notes.rst:1288
 msgid ""
 "The local image proxy has been added, and images displayed within the "
 "client are now affected by the ``AllowUntrustedInternalConnections`` "
@@ -2460,18 +2475,18 @@ msgid ""
 "proxy>` for more details if you have trouble loading images."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1286
+#: ../../source/upgrade/important-upgrade-notes.rst:1291
 msgid "v5.6.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1286
+#: ../../source/upgrade/important-upgrade-notes.rst:1291
 msgid ""
 "Built-in WebRTC is removed. See `here for more details "
 "<https://forum.mattermost.com/t/built-in-webrtc-video-and-audio-calls-"
 "removed-in-v5-6- in-favor-of-open-source-plugins/5998>`__."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1289
+#: ../../source/upgrade/important-upgrade-notes.rst:1294
 msgid ""
 "If ``EnablePublicChannelsMaterialization`` setting in ``config.json`` is "
 "set to ``false``, an offline migration prior to upgrade may be required "
@@ -2480,25 +2495,25 @@ msgid ""
 "autocomplete (~), and elsewhere in the UI. Use the following steps:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1293
+#: ../../source/upgrade/important-upgrade-notes.rst:1298
 msgid "Shut down your application servers."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1294
+#: ../../source/upgrade/important-upgrade-notes.rst:1299
 msgid "Connect to your Mattermost database."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1295
+#: ../../source/upgrade/important-upgrade-notes.rst:1300
 msgid "Execute the following queries:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1309
+#: ../../source/upgrade/important-upgrade-notes.rst:1314
 msgid ""
 "The queries above rebuild the materialized ``PublicChannels`` table "
 "without modifying the authoritative ``Channels`` table."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1313
+#: ../../source/upgrade/important-upgrade-notes.rst:1318
 msgid ""
 "This migration is not required if the experimental ``PublicChannels`` "
 "feature was never disabled. This feature launched in Mattermost v5.4 with"
@@ -2507,17 +2522,17 @@ msgid ""
 " this migration."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1316
+#: ../../source/upgrade/important-upgrade-notes.rst:1321
 msgid "v5.4.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1316
+#: ../../source/upgrade/important-upgrade-notes.rst:1321
 msgid ""
 "Mattermost mobile app version 1.13+ is required. File uploads will fail "
 "on earlier mobile app versions."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1318
+#: ../../source/upgrade/important-upgrade-notes.rst:1323
 msgid ""
 "In certain upgrade scenarios the new **Allow Team Administrators to edit "
 "others posts** setting under **General** then **Users and Teams** may be "
@@ -2525,49 +2540,49 @@ msgid ""
 "new 5.4+ installations is **False**."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1321
+#: ../../source/upgrade/important-upgrade-notes.rst:1326
 msgid "v5.3.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1321
+#: ../../source/upgrade/important-upgrade-notes.rst:1326
 msgid ""
 "Those servers with Elasticsearch enabled will notice that hashtag search "
 "is case-sensitive."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1323
+#: ../../source/upgrade/important-upgrade-notes.rst:1328
 msgid "v5.2.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1323
+#: ../../source/upgrade/important-upgrade-notes.rst:1328
 msgid ""
 "Those servers upgrading from v4.1 - v4.4 directly to v5.2 or later and "
 "have Jira enabled will need to re-enable the Jira plugin after an "
 "upgrade."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1325
+#: ../../source/upgrade/important-upgrade-notes.rst:1330
 msgid "v5.1.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1325
+#: ../../source/upgrade/important-upgrade-notes.rst:1330
 msgid ""
 "``mattermost export`` CLI command is renamed to ``mattermost export "
 "schedule``. Make sure to update your scripts if you use this command."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1327
+#: ../../source/upgrade/important-upgrade-notes.rst:1332
 msgid "v5.0.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1327
+#: ../../source/upgrade/important-upgrade-notes.rst:1332
 msgid ""
 "All API v3 endpoints are removed. `See documentation "
 "<https://api.mattermost.com/#tag/APIv3-Deprecation>`__ to learn how to "
 "migrate your integrations to API v4."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1329
+#: ../../source/upgrade/important-upgrade-notes.rst:1334
 msgid ""
 "``platform`` binary is renamed to ``mattermost`` for a clearer install "
 "and upgrade experience. You should point your ``systemd`` service file at"
@@ -2576,13 +2591,13 @@ msgid ""
 "``platform`` to ``mattermost``."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1332
+#: ../../source/upgrade/important-upgrade-notes.rst:1337
 msgid ""
 "A Mattermost user setting to configure desktop notification duration in "
 "**Account Settings > Notifications > Desktop Notifications** is removed."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1334
+#: ../../source/upgrade/important-upgrade-notes.rst:1339
 msgid ""
 "Slash commands configured to receive a GET request will have the payload "
 "being encoded in the query string instead of receiving it in the body of "
@@ -2590,14 +2605,14 @@ msgid ""
 "this could break custom slash commands that use GET requests incorrectly."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1337
+#: ../../source/upgrade/important-upgrade-notes.rst:1342
 msgid ""
 "A new ``config.json`` setting to whitelist types of protocols for auto-"
 "linking will be added. If you rely on custom protocols auto-linking in "
 "Mattermost, whitelist them in ``config.json`` before upgrading."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1340
+#: ../../source/upgrade/important-upgrade-notes.rst:1345
 #, python-format
 msgid ""
 "A new ``config.json`` setting to disable the `permanent APIv4 delete team"
@@ -2608,11 +2623,11 @@ msgid ""
 "APIv4 parameter, enable the setting in ``config.json`` before upgrading."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1344
+#: ../../source/upgrade/important-upgrade-notes.rst:1349
 msgid "An unused ``ExtraUpdateAt`` field will be removed from the channel modal."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1346
+#: ../../source/upgrade/important-upgrade-notes.rst:1351
 msgid ""
 "This release includes support for post messages longer than the default "
 "of 4000 characters, but may require a manual database migration. This "
@@ -2621,19 +2636,19 @@ msgid ""
 "migration will be required, or the old limit remains sufficient."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1350
+#: ../../source/upgrade/important-upgrade-notes.rst:1355
 msgid ""
 "To check your current post limit after upgrading to 5.0.0, look for a log"
 " message on startup:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1352
+#: ../../source/upgrade/important-upgrade-notes.rst:1357
 msgid ""
 "``[2018/03/27 09:08:00 EDT] [INFO] Post.Message supports at most 16383 "
 "characters (65535 bytes)``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1354
+#: ../../source/upgrade/important-upgrade-notes.rst:1359
 msgid ""
 "As of 5.0.0, the maximum post message size is 16383 (multi-byte) "
 "characters. If your logs show a number less than this limit and you want "
@@ -2643,42 +2658,42 @@ msgid ""
 "hours."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1358
+#: ../../source/upgrade/important-upgrade-notes.rst:1363
 msgid ""
 "To migrate a MySQL database, connect to your database and run the "
 "following:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1360
+#: ../../source/upgrade/important-upgrade-notes.rst:1365
 msgid "``ALTER TABLE Posts MODIFY COLUMN Message TEXT;``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1362
+#: ../../source/upgrade/important-upgrade-notes.rst:1367
 msgid ""
 "To migrate a PostgreSQL database, connect to your database and run the "
 "following:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1364
+#: ../../source/upgrade/important-upgrade-notes.rst:1369
 msgid "``ALTER TABLE Posts ALTER COLUMN Message TYPE VARCHAR(65535);``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1366
+#: ../../source/upgrade/important-upgrade-notes.rst:1371
 msgid "Restart your Mattermost instances."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1368
+#: ../../source/upgrade/important-upgrade-notes.rst:1373
 msgid ""
 "Deployments on Enterprise E20 will need to enable ``RunJobs`` in the "
 "``config.json`` and allow the permissions migration to complete before "
 "using :doc:`Team Override Schemes </onboard/advanced-permissions>`."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1371
+#: ../../source/upgrade/important-upgrade-notes.rst:1376
 msgid "v4.10.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1371
+#: ../../source/upgrade/important-upgrade-notes.rst:1376
 msgid ""
 "Old email invitation links will no longer work due to a bug fix where "
 "teams could be re-joined via the link. Team invite links copied from the "
@@ -2686,7 +2701,7 @@ msgid ""
 "links are not affected and are still valid."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1374
+#: ../../source/upgrade/important-upgrade-notes.rst:1379
 msgid ""
 "Server logs written to **System Console > Logs** and to the "
 "``mattermost.log`` file specified in **System Console > Logging > File "
@@ -2695,31 +2710,31 @@ msgid ""
 " supports the JSON format."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1377
+#: ../../source/upgrade/important-upgrade-notes.rst:1382
 msgid ""
 "Team icons with transparency will be filled with a white background in "
 "the Team sidebar."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1379
+#: ../../source/upgrade/important-upgrade-notes.rst:1384
 msgid ""
 "Those servers with SAML authentication enabled should upgrade during non-"
 "peak hours. SAML email addresses are migrated to lowercase to prevent "
 "login issues, which could result in longer than usual upgrade time."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1382
+#: ../../source/upgrade/important-upgrade-notes.rst:1387
 msgid ""
 "If you use PostgreSQL database and the password contains special "
 "characters (e.g. ``[]``), escape them in your password, e.g., xxx[]xxx "
 "will be xxx%5B%5Dxxx."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1384
+#: ../../source/upgrade/important-upgrade-notes.rst:1389
 msgid "v4.9.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1384
+#: ../../source/upgrade/important-upgrade-notes.rst:1389
 msgid ""
 "To improve the production use of Mattermost with Docker, the Docker image"
 " is now running a as non-root user and listening on port 8000. Please "
@@ -2728,7 +2743,7 @@ msgid ""
 "installations."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1387
+#: ../../source/upgrade/important-upgrade-notes.rst:1392
 msgid ""
 "Several configuration settings have been migrated to roles in the "
 "database and changing their ``config.json`` values no longer takes "
@@ -2737,59 +2752,59 @@ msgid ""
 "are:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1390
+#: ../../source/upgrade/important-upgrade-notes.rst:1395
 msgid "``RestrictPublicChannelManagement``,"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1391
+#: ../../source/upgrade/important-upgrade-notes.rst:1396
 msgid "``RestrictPrivateChannelManagement``,"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1392
+#: ../../source/upgrade/important-upgrade-notes.rst:1397
 msgid "``RestrictPublicChannelCreation``,"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1393
+#: ../../source/upgrade/important-upgrade-notes.rst:1398
 msgid "``RestrictPrivateChannelCreation``,"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1394
+#: ../../source/upgrade/important-upgrade-notes.rst:1399
 msgid "``RestrictPublicChannelDeletion``,"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1395
+#: ../../source/upgrade/important-upgrade-notes.rst:1400
 msgid "``RestrictPrivateChannelDeletion``,"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1396
+#: ../../source/upgrade/important-upgrade-notes.rst:1401
 msgid "``RestrictPrivateChannelManageMembers``,"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1397
+#: ../../source/upgrade/important-upgrade-notes.rst:1402
 msgid "``EnableTeamCreation``,"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1398
+#: ../../source/upgrade/important-upgrade-notes.rst:1403
 msgid "``EnableOnlyAdminIntegrations``,"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1399
+#: ../../source/upgrade/important-upgrade-notes.rst:1404
 msgid "``RestrictPostDelete``,"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1400
+#: ../../source/upgrade/important-upgrade-notes.rst:1405
 msgid "``AllowEditPost``,"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1401
+#: ../../source/upgrade/important-upgrade-notes.rst:1406
 msgid "``RestrictTeamInvite``,"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1402
+#: ../../source/upgrade/important-upgrade-notes.rst:1407
 msgid "``RestrictCustomEmojiCreation``."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1404
+#: ../../source/upgrade/important-upgrade-notes.rst:1409
 msgid ""
 "The behavior of the ``config.json`` setting ``PostEditTimeLimit`` has "
 "been updated to accommodate the migration to a roles based permission "
@@ -2799,7 +2814,7 @@ msgid ""
 "disabled, this setting does not apply."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1408
+#: ../../source/upgrade/important-upgrade-notes.rst:1413
 msgid ""
 "If using Let's Encrypt without a proxy server, the server will fail to "
 "start with an error message unless the :ref:`Forward80To443 <configure"
@@ -2807,7 +2822,7 @@ msgid ""
 "``config.json`` setting is set to ``true``."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1411
+#: ../../source/upgrade/important-upgrade-notes.rst:1416
 msgid ""
 "If forwarding port 80 to 443, the server will fail to start with an error"
 " message unless the :ref:`ListenAddress <configure/environment-"
@@ -2815,11 +2830,11 @@ msgid ""
 "setting is set to listen on port 443."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1414
+#: ../../source/upgrade/important-upgrade-notes.rst:1419
 msgid "v4.6.2"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1414
+#: ../../source/upgrade/important-upgrade-notes.rst:1419
 msgid ""
 "If using Let's Encrypt without a proxy server, forward port 80 through a "
 "firewall, with the :ref:`Forward80To443 <configure/environment-"
@@ -2827,29 +2842,29 @@ msgid ""
 "set to ``true`` to complete the Let's Encrypt certification."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1418
+#: ../../source/upgrade/important-upgrade-notes.rst:1423
 msgid "v4.4.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1418
+#: ../../source/upgrade/important-upgrade-notes.rst:1423
 msgid ""
 "Composite database indexes were added to the ``Posts`` table. This may "
 "lead to longer upgrade times for servers with more than one million "
 "messages."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1420
+#: ../../source/upgrade/important-upgrade-notes.rst:1425
 msgid ""
 "LDAP sync now depends on email. Make sure all users on your AD/LDAP "
 "server have an email address or that their account is deactivated in "
 "Mattermost."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1422
+#: ../../source/upgrade/important-upgrade-notes.rst:1427
 msgid "v4.2.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1422
+#: ../../source/upgrade/important-upgrade-notes.rst:1427
 msgid ""
 "Mattermost now handles multiple content types for integrations, including"
 " plaintext content type. If your integration suddenly prints the JSON "
@@ -2858,7 +2873,7 @@ msgid ""
 "previous behavior."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1425
+#: ../../source/upgrade/important-upgrade-notes.rst:1430
 msgid ""
 "By default, user-supplied URLs such as those used for Open Graph "
 "metadata, webhooks, or slash commands will no longer be allowed to "
@@ -2866,14 +2881,14 @@ msgid ""
 "addresses used for internal networks."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1428
+#: ../../source/upgrade/important-upgrade-notes.rst:1433
 msgid ""
 "This change may cause private integrations to break in testing "
 "environments, which may point to a URL such as http://127.0.0.1:1021/my-"
 "command."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1430
+#: ../../source/upgrade/important-upgrade-notes.rst:1435
 msgid ""
 "If you point private integrations to such URLs, you may whitelist such "
 "domains, IP addresses, or CIDR notations via the "
@@ -2885,19 +2900,19 @@ msgid ""
 "settings:allow untrusted internal connections>`."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1435
+#: ../../source/upgrade/important-upgrade-notes.rst:1440
 msgid ""
 "Push notification, OAuth 2.0 and WebRTC server URLs are trusted and not "
 "affected by this setting."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1437
+#: ../../source/upgrade/important-upgrade-notes.rst:1442
 msgid ""
 "Uploaded file attachments are now grouped by day and stored in ``/data"
 "/<date-of-upload-as-YYYYMMDD>/teams/...`` of your file storage system."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1439
+#: ../../source/upgrade/important-upgrade-notes.rst:1444
 msgid ""
 "Mattermost `/platform`` repo has been separated to ``/mattermost-webapp``"
 " and ``/mattermost-server``. This may affect you if you have a private "
@@ -2906,25 +2921,25 @@ msgid ""
 "repositories-on-september-6th/3708>`__."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1442
+#: ../../source/upgrade/important-upgrade-notes.rst:1447
 msgid "v4.0.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1442
+#: ../../source/upgrade/important-upgrade-notes.rst:1447
 msgid "(High Availability only)"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1444
+#: ../../source/upgrade/important-upgrade-notes.rst:1449
 msgid ""
 "You must manually add new items to the ``ClusterSettings`` section of "
 "your existing ``config.json``."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1446
+#: ../../source/upgrade/important-upgrade-notes.rst:1451
 msgid "v3.9.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1446
+#: ../../source/upgrade/important-upgrade-notes.rst:1451
 msgid ""
 "Old email invitation links, password reset links, and email verification "
 "links will no longer work due to a security change. Team invite links "
@@ -2932,110 +2947,121 @@ msgid ""
 "valid."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1449
+#: ../../source/upgrade/important-upgrade-notes.rst:1454
 msgid "v3.8.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1449
+#: ../../source/upgrade/important-upgrade-notes.rst:1454
 msgid "A change is required in the proxy configuration. If you’re using NGINX:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1452
+#: ../../source/upgrade/important-upgrade-notes.rst:1457
 msgid ""
 "Open the NGINX configuration file as root. The file is usually "
 "``/etc/nginx/sites-available/mattermost`` but might be different on your "
 "system."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1453
+#: ../../source/upgrade/important-upgrade-notes.rst:1458
 msgid "Locate the line: ``location /api/v3/users/websocket {``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1454
+#: ../../source/upgrade/important-upgrade-notes.rst:1459
 msgid "Replace the line with ``location ~ /api/v[0-9]+/(users/)?websocket$ {``"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1456
+#: ../../source/upgrade/important-upgrade-notes.rst:1461
 msgid ""
 "If you are using a proxy other than NGINX, make the equivalent change to "
 "that proxy's configuration."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1458
+#: ../../source/upgrade/important-upgrade-notes.rst:1463
 msgid ""
 "You need to verify settings in the System Console due to a security-"
 "related change."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1460
+#: ../../source/upgrade/important-upgrade-notes.rst:1465
 msgid "Go to the the GENERAL section of the System Console"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1461
+#: ../../source/upgrade/important-upgrade-notes.rst:1466
 msgid "Click **Logging**"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1462
+#: ../../source/upgrade/important-upgrade-notes.rst:1467
 msgid ""
 "Make sure that the **File Log Directory** field is either empty or has a "
 "directory path only. It must not have a filename as part of the path."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1464
+#: ../../source/upgrade/important-upgrade-notes.rst:1469
 msgid ""
 "Backwards compatibility with the old CLI tool was removed. If you have "
 "any scripts that rely on the old CLI, they must be revised to use the "
 ":doc:`new CLI  </manage/command-line-tools>`."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1467
+#: ../../source/upgrade/important-upgrade-notes.rst:1472
 msgid "v3.6.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1467
+#: ../../source/upgrade/important-upgrade-notes.rst:1472
 msgid "Update the maximum number of files that can be open."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1469
+#: ../../source/upgrade/important-upgrade-notes.rst:1474
 msgid "On RHEL6 and Ubuntu 14.04:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1470
+#: ../../source/upgrade/important-upgrade-notes.rst:1475
 msgid ""
 "Verify that the line ``limit nofile 50000 50000`` is included in the "
 "``/etc/init/mattermost.conf`` file."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1471
+#: ../../source/upgrade/important-upgrade-notes.rst:1476
 msgid "On RHEL7 and Ubuntu 16.04:"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1472
+#: ../../source/upgrade/important-upgrade-notes.rst:1477
 msgid ""
 "Verify that the line ``LimitNOFILE=49152`` is included in the "
 "``/etc/systemd/system/mattermost.service`` file."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1474
+#: ../../source/upgrade/important-upgrade-notes.rst:1479
 msgid "(Enterprise Only)"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1476
+#: ../../source/upgrade/important-upgrade-notes.rst:1481
 msgid ""
 "Previous ``config.json`` values for restricting Public and Private "
 "channel management will be used as the default values for new settings "
 "for restricting Public and Private channel creation and deletion."
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1479
+#: ../../source/upgrade/important-upgrade-notes.rst:1484
 msgid "v3.4.0"
 msgstr ""
 
-#: ../../source/upgrade/important-upgrade-notes.rst:1479
+#: ../../source/upgrade/important-upgrade-notes.rst:1484
 msgid ""
 "If public links are enabled, existing public links will no longer be "
 "valid. This is because in earlier versions, existing public links were "
 "not invalidated when the Public Link Salt was regenerated. You must "
 "update any place where you have published these links."
 msgstr ""
+
+#~ msgid ""
+#~ "Support for Mattermost Server v9.11 "
+#~ ":ref:`Extended Support Release <about/release-"
+#~ "policy:extended support releases>` is coming"
+#~ " to the end of its life cycle"
+#~ " on May 15, 2025. Upgrading to "
+#~ ":doc:`Mattermost Server v10.5 or later "
+#~ "</about/mattermost-server-releases>` is "
+#~ "required."
+#~ msgstr ""
 

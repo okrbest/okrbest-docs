@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mattermost \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-15 06:10+0900\n"
+"POT-Creation-Date: 2025-05-07 15:09+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ko\n"
@@ -17,31 +17,33 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:2
 msgid "Cloud VPC Private Connectivity"
-msgstr ""
+msgstr "클라우드 VPC 프라이빗 연결"
 
 #: ../../source/_static/badges/ent-cloud-only.rst:7
 msgid ""
 "|plans-img| Available only on `Enterprise "
 "<https://mattermost.com/pricing/>`__ plans"
 msgstr ""
+"|plans-img| `Enterprise <https://mattermost.com/pricing/>`__ 플랜에서만 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/ent-cloud-only.rst:9
 msgid ""
 "|deployment-img| Available only for `Cloud <https://mattermost.com/sign-"
 "up/>`__ deployments"
 msgstr ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ 배포에서만 사용 가능"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:7
 msgid ""
@@ -54,20 +56,27 @@ msgid ""
 "provides the ability for customers to connect from Mattermost Cloud to "
 "their private webhooks,endpoints and integrations."
 msgstr ""
+"Virtual Private Cloud (VPC) 프라이빗 연결(Private Link)은 "
+"Mattermost Cloud와의 프라이빗 연결 요구사항에 대한 맞춤형 솔루션을 Enterprise Cloud 고객에게 제공합니다. "
+"이러한 옵션을 통해 고객은 공용 인터넷을 사용하지 않고 AWS 네트워크를 통해 Mattermost Cloud에 액세스하거나, "
+"Mattermost 인프라 팀이 EKS 클러스터를 통해 고객의 VPC에서 호스팅되는 Mattermost 인스턴스를 관리할 수 있습니다. "
+"또한 고객이 Mattermost Cloud에서 자신의 프라이빗 웹훅, 엔드포인트 및 통합에 연결할 수 있는 기능을 제공합니다."
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:10
 msgid "The key objectives of this offering are to:"
-msgstr ""
+msgstr "이 제품의 주요 목표는 다음과 같습니다:"
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:12
 msgid "Allow customers to access Mattermost Cloud within their internal network."
-msgstr ""
+msgstr "고객이 내부 네트워크에서 Mattermost Cloud에 액세스할 수 있도록 합니다."
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:13
 msgid ""
 "Enable the Mattermost Infrastructure team to perform operations on a "
 "Mattermost instance hosted in the customer’s VPC, upon request."
 msgstr ""
+"요청 시 Mattermost 인프라 팀이 고객의 VPC에서 호스팅되는 Mattermost 인스턴스에 대한 "
+"작업을 수행할 수 있도록 합니다."
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:14
 msgid ""
@@ -75,58 +84,63 @@ msgid ""
 "exclusively through AWS’s network, without exposure to the public "
 "internet."
 msgstr ""
+"공용 인터넷에 노출되지 않고 AWS 네트워크를 통해서만 고객의 VPC와 Mattermost 간의 "
+"연결을 설정합니다."
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:15
 msgid "Ensure the setup process is straightforward and easy to implement."
-msgstr ""
+msgstr "설정 프로세스가 간단하고 구현하기 쉽도록 보장합니다."
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:16
 msgid "Adhere to all security best practices."
-msgstr ""
+msgstr "모든 보안 모범 사례를 준수합니다."
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:19
 msgid "Architecture"
-msgstr ""
+msgstr "아키텍처"
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:-1
 msgid "A generic overview of the Cloud VPC Private Connectivity Architecture"
-msgstr ""
+msgstr "클라우드 VPC 프라이빗 연결 아키텍처의 일반적인 개요"
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:25
 msgid "Configure VPC Private Connectivity"
-msgstr ""
+msgstr "VPC 프라이빗 연결 구성"
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:27
 msgid ""
 "Mattermost will provide Terraform modules tailored to the customer’s "
 "requirements."
 msgstr ""
+"Mattermost는 고객의 요구사항에 맞춘 Terraform 모듈을 제공합니다."
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:28
 msgid ""
 "Both Mattermost and customer Infrastructure teams will collaborate to "
 "establish connectivity on both sides."
 msgstr ""
+"Mattermost와 고객 인프라 팀이 양측의 연결을 설정하기 위해 협력할 것입니다."
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:29
 msgid "AWS Private Link will be used to connect AWS accounts."
-msgstr ""
+msgstr "AWS 계정을 연결하기 위해 AWS Private Link가 사용됩니다."
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:32
 msgid "Requirements"
-msgstr ""
+msgstr "요구사항"
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:34
 msgid "Customers must own their AWS Account."
-msgstr ""
+msgstr "고객은 자체 AWS 계정을 보유해야 합니다."
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:37
 msgid "Considerations"
-msgstr ""
+msgstr "고려사항"
 
 #: ../../source/about/cloud-vpc-private-connectivity.rst:39
 msgid ""
 "Proper communication is essential for setting expectations and scheduling"
 " changes."
 msgstr ""
+"기대치 설정과 변경 일정 수립을 위해서는 적절한 의사소통이 필수적입니다."
 

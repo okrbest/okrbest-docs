@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mattermost \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-15 06:10+0900\n"
+"POT-Creation-Date: 2025-05-16 21:31+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ko\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/configure/environment-configuration-settings.rst:2
 msgid "Environment configuration settings"
@@ -268,24 +268,25 @@ msgstr ""
 #: ../../source/configure/environment-configuration-settings.rst:1726
 #: ../../source/configure/environment-configuration-settings.rst:1745
 #: ../../source/configure/environment-configuration-settings.rst:1765
-#: ../../source/configure/environment-configuration-settings.rst:1846
-#: ../../source/configure/environment-configuration-settings.rst:1863
-#: ../../source/configure/environment-configuration-settings.rst:1883
-#: ../../source/configure/environment-configuration-settings.rst:2084
-#: ../../source/configure/environment-configuration-settings.rst:2201
-#: ../../source/configure/environment-configuration-settings.rst:2291
-#: ../../source/configure/environment-configuration-settings.rst:2312
-#: ../../source/configure/environment-configuration-settings.rst:2329
-#: ../../source/configure/environment-configuration-settings.rst:2350
-#: ../../source/configure/environment-configuration-settings.rst:2371
-#: ../../source/configure/environment-configuration-settings.rst:2388
-#: ../../source/configure/environment-configuration-settings.rst:2857
-#: ../../source/configure/environment-configuration-settings.rst:2874
-#: ../../source/configure/environment-configuration-settings.rst:2891
+#: ../../source/configure/environment-configuration-settings.rst:1787
+#: ../../source/configure/environment-configuration-settings.rst:1868
+#: ../../source/configure/environment-configuration-settings.rst:1885
+#: ../../source/configure/environment-configuration-settings.rst:1905
+#: ../../source/configure/environment-configuration-settings.rst:2106
+#: ../../source/configure/environment-configuration-settings.rst:2223
+#: ../../source/configure/environment-configuration-settings.rst:2313
+#: ../../source/configure/environment-configuration-settings.rst:2334
+#: ../../source/configure/environment-configuration-settings.rst:2351
+#: ../../source/configure/environment-configuration-settings.rst:2372
+#: ../../source/configure/environment-configuration-settings.rst:2393
+#: ../../source/configure/environment-configuration-settings.rst:2410
+#: ../../source/configure/environment-configuration-settings.rst:2879
+#: ../../source/configure/environment-configuration-settings.rst:2896
 #: ../../source/configure/environment-configuration-settings.rst:2913
-#: ../../source/configure/environment-configuration-settings.rst:3036
-#: ../../source/configure/environment-configuration-settings.rst:3216
-#: ../../source/configure/environment-configuration-settings.rst:3414
+#: ../../source/configure/environment-configuration-settings.rst:2935
+#: ../../source/configure/environment-configuration-settings.rst:3058
+#: ../../source/configure/environment-configuration-settings.rst:3238
+#: ../../source/configure/environment-configuration-settings.rst:3436
 msgid "System Config path: N/A"
 msgstr ""
 
@@ -390,12 +391,12 @@ msgstr ""
 #: ../../source/configure/environment-configuration-settings.rst:696
 #: ../../source/configure/environment-configuration-settings.rst:1400
 #: ../../source/configure/environment-configuration-settings.rst:1417
-#: ../../source/configure/environment-configuration-settings.rst:2561
-#: ../../source/configure/environment-configuration-settings.rst:2577
-#: ../../source/configure/environment-configuration-settings.rst:2877
+#: ../../source/configure/environment-configuration-settings.rst:2583
+#: ../../source/configure/environment-configuration-settings.rst:2599
 #: ../../source/configure/environment-configuration-settings.rst:2899
-#: ../../source/configure/environment-configuration-settings.rst:2917
-#: ../../source/configure/environment-configuration-settings.rst:3926
+#: ../../source/configure/environment-configuration-settings.rst:2921
+#: ../../source/configure/environment-configuration-settings.rst:2939
+#: ../../source/configure/environment-configuration-settings.rst:3948
 msgid "String input."
 msgstr ""
 
@@ -1414,7 +1415,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/configure/environment-configuration-settings.rst:831
-#: ../../source/configure/environment-configuration-settings.rst:1865
+#: ../../source/configure/environment-configuration-settings.rst:1887
 msgid "Numerical input in seconds. Default is **30** seconds."
 msgstr ""
 
@@ -2143,7 +2144,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/configure/environment-configuration-settings.rst:1289
-#: ../../source/configure/environment-configuration-settings.rst:1833
+#: ../../source/configure/environment-configuration-settings.rst:1855
 msgid "Restart the Mattermost server."
 msgstr ""
 
@@ -2751,50 +2752,81 @@ msgid ""
 msgstr ""
 
 #: ../../source/configure/environment-configuration-settings.rst:1762
-msgid "Live indexing batch size"
+msgid "Global search prefix"
 msgstr ""
 
 #: ../../source/configure/environment-configuration-settings.rst:1765
+msgid ""
+"Enable global search across multiple Elasticsearch indices with the same "
+"`index prefix <#index-prefix>`__."
+msgstr ""
+
+#: ../../source/configure/environment-configuration-settings.rst:1768
+msgid ""
+"This is helpful for setups with multiple data centers where Elasticsearch"
+" instances share data using cross-cluster replication. It allows for "
+"easier and unified searching across distributed indices."
+msgstr ""
+
+#: ../../source/configure/environment-configuration-settings.rst:1773
+msgid "Value must be a prefix of ``IndexPrefix``."
+msgstr ""
+
+#: ../../source/configure/environment-configuration-settings.rst:1766
+msgid ""
+"``config.json`` setting: "
+"``\".Elasticsearchsettings.GlobalSearchPrefix\",``"
+msgstr ""
+
+#: ../../source/configure/environment-configuration-settings.rst:1767
+msgid "Environment variable: ``MM_ELASTICSEARCHSETTINGS_GLOBALSEARCHPREFIX``"
+msgstr ""
+
+#: ../../source/configure/environment-configuration-settings.rst:1784
+msgid "Live indexing batch size"
+msgstr ""
+
+#: ../../source/configure/environment-configuration-settings.rst:1787
 msgid ""
 "The number of new posts needed before those posts are added to the "
 "Elasticsearch index. Once added to the Index, the post becomes "
 "searchable."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1769
+#: ../../source/configure/environment-configuration-settings.rst:1791
 msgid ""
 "On servers with more than 1 post per second, we suggest setting this "
 "value to the average number of  posts over a 20 second period of time."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1773
+#: ../../source/configure/environment-configuration-settings.rst:1795
 msgid ""
 "Numerical input. Default is **1**. Every post is indexed synchronously as"
 " they are created."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1766
+#: ../../source/configure/environment-configuration-settings.rst:1788
 msgid ""
 "``config.json`` setting: "
 "``\".Elasticsearchsettings.LiveIndexingBatchSize: 1\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1767
+#: ../../source/configure/environment-configuration-settings.rst:1789
 msgid "Environment variable: ``MM_ELASTICSEARCHSETTINGS_LIVEINDEXINGBATCHSIZE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1779
+#: ../../source/configure/environment-configuration-settings.rst:1801
 msgid ""
 "It may be necessary to increase this value to avoid hitting the rate "
 "limit or resource limit of your Elasticsearch cluster on installs "
 "handling more than 1 post per second."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1781
+#: ../../source/configure/environment-configuration-settings.rst:1803
 msgid "**What exactly happens when I increase this value?**"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1783
+#: ../../source/configure/environment-configuration-settings.rst:1805
 msgid ""
 "The primary impact is that a post will be indexed into Elasticsearch "
 "after the threshold of posts is met, which then makes the posts "
@@ -2807,24 +2839,24 @@ msgid ""
 "specifications."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1785
+#: ../../source/configure/environment-configuration-settings.rst:1807
 msgid ""
 "During busy periods, this delay will be faster as more traffic is "
 "occurring, causing more posts and a quicker time to hit the index number."
 " During slower periods, expect the reverse."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1787
+#: ../../source/configure/environment-configuration-settings.rst:1809
 msgid "**How to find the right number for your server**"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1789
+#: ../../source/configure/environment-configuration-settings.rst:1811
 msgid ""
 "You must understand how many posts your server makes every minute. Run "
 "the query below to calculate your server's average posts per minute."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1791
+#: ../../source/configure/environment-configuration-settings.rst:1813
 msgid ""
 "Note that this query can be heavy, so we recommend that you run it during"
 " non-peak hours. Additionally, you can adjust the ``WHERE`` clause to see"
@@ -2832,7 +2864,7 @@ msgid ""
 "``31536000000`` represents the number of milliseconds in a year."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1807
+#: ../../source/configure/environment-configuration-settings.rst:1829
 msgid ""
 "Decide the acceptable index window for your environment, and divide your "
 "average posts per minute by that. We suggest 10-20 seconds. Assuming you "
@@ -2843,108 +2875,108 @@ msgid ""
 " delay in searchability."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1809
+#: ../../source/configure/environment-configuration-settings.rst:1831
 msgid ""
 "Edit the ``config.json`` or run mmctl to modify the "
 "``LiveIndexingBatchSize`` setting"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1811
+#: ../../source/configure/environment-configuration-settings.rst:1833
 msgid "**In the ``config.json``**"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1821
+#: ../../source/configure/environment-configuration-settings.rst:1843
 msgid "**Via mmctl**"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1827
+#: ../../source/configure/environment-configuration-settings.rst:1849
 msgid "**Via an environment variable**"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1843
+#: ../../source/configure/environment-configuration-settings.rst:1865
 msgid "Batch size"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1846
+#: ../../source/configure/environment-configuration-settings.rst:1868
 msgid "The number of posts for a single batch during a bulk indexing job."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1849
+#: ../../source/configure/environment-configuration-settings.rst:1871
 msgid "Numerical input. Default is **10000**."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1847
+#: ../../source/configure/environment-configuration-settings.rst:1869
 msgid "``config.json`` setting: ``\".Elasticsearchsettings.BatchSize :10000\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1848
+#: ../../source/configure/environment-configuration-settings.rst:1870
 msgid "Environment variable: ``MM_ELASTICSEARCHSETTINGS_BATCHSIZE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1860
+#: ../../source/configure/environment-configuration-settings.rst:1882
 msgid "Request timeout"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1863
+#: ../../source/configure/environment-configuration-settings.rst:1885
 msgid "The timeout, in seconds, for Elasticsearch calls."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1864
+#: ../../source/configure/environment-configuration-settings.rst:1886
 msgid ""
 "``config.json`` setting: ``\".Elasticsearchsettings.RequestTimeoutSeconds"
 " :30\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1865
+#: ../../source/configure/environment-configuration-settings.rst:1887
 msgid "Environment variable: ``MM_ELASTICSEARCHSETTINGS_REQUESTTIMEOUTSECONDS``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1880
+#: ../../source/configure/environment-configuration-settings.rst:1902
 msgid "Trace"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1883
+#: ../../source/configure/environment-configuration-settings.rst:1905
 msgid "Options for printing Elasticsearch trace errors."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1885
+#: ../../source/configure/environment-configuration-settings.rst:1907
 msgid ""
 "**error**: Creates the error trace when initializing the Elasticsearch "
 "client and prints any template creation or search query that returns an "
 "error as part of the error message."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1889
+#: ../../source/configure/environment-configuration-settings.rst:1911
 msgid ""
 "**all**: Creates the three traces (error, trace and info) for the driver "
 "and doesn’t print the queries because they will be part of the trace log "
 "level of the driver."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1892
+#: ../../source/configure/environment-configuration-settings.rst:1914
 msgid "**not specified**: **(Default)** No error trace is created."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1884
+#: ../../source/configure/environment-configuration-settings.rst:1906
 msgid "``config.json`` setting: ``\".Elasticsearchsettings.Trace\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1885
+#: ../../source/configure/environment-configuration-settings.rst:1907
 msgid "Environment variable: ``MM_ELASTICSEARCHSETTINGS_TRACE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1898
+#: ../../source/configure/environment-configuration-settings.rst:1920
 msgid "File storage"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1903
+#: ../../source/configure/environment-configuration-settings.rst:1925
 msgid ""
 "Configure file storage settings by going to **System Console > "
 "Environment > File Storage**, or by editing the ``config.json`` file as "
 "described in the following tables."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1910
+#: ../../source/configure/environment-configuration-settings.rst:1932
 msgid ""
 "Mattermost currently supports storing files on the local filesystem and "
 "Amazon S3 or S3-compatible containers. We have tested Mattermost with "
@@ -2954,59 +2986,59 @@ msgid ""
 "S3-compatible containers, we recommend completing your own testing."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1923
+#: ../../source/configure/environment-configuration-settings.rst:1945
 msgid "File storage system"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1926
+#: ../../source/configure/environment-configuration-settings.rst:1948
 msgid ""
 "The type of file storage system used. Can be either Local File System or "
 "Amazon S3."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1929
+#: ../../source/configure/environment-configuration-settings.rst:1951
 msgid ""
 "**local**: **(Default)** Files and images are stored in the specified "
 "local file directory."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1931
+#: ../../source/configure/environment-configuration-settings.rst:1953
 msgid ""
 "**amazons3**: Files and images are stored on Amazon S3 based on the "
 "access key, bucket, and region fields provided. The driver is compatible "
 "with MinIO (Beta) and Digital Ocean Spaces."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1926
 #: ../../source/configure/environment-configuration-settings.rst:1948
 #: ../../source/configure/environment-configuration-settings.rst:1970
-#: ../../source/configure/environment-configuration-settings.rst:2000
-#: ../../source/configure/environment-configuration-settings.rst:2040
-#: ../../source/configure/environment-configuration-settings.rst:2067
-#: ../../source/configure/environment-configuration-settings.rst:2100
+#: ../../source/configure/environment-configuration-settings.rst:1992
+#: ../../source/configure/environment-configuration-settings.rst:2022
+#: ../../source/configure/environment-configuration-settings.rst:2062
+#: ../../source/configure/environment-configuration-settings.rst:2089
 #: ../../source/configure/environment-configuration-settings.rst:2122
-#: ../../source/configure/environment-configuration-settings.rst:2142
-#: ../../source/configure/environment-configuration-settings.rst:2163
-#: ../../source/configure/environment-configuration-settings.rst:2181
-#: ../../source/configure/environment-configuration-settings.rst:2223
-#: ../../source/configure/environment-configuration-settings.rst:2244
-#: ../../source/configure/environment-configuration-settings.rst:2269
+#: ../../source/configure/environment-configuration-settings.rst:2144
+#: ../../source/configure/environment-configuration-settings.rst:2164
+#: ../../source/configure/environment-configuration-settings.rst:2185
+#: ../../source/configure/environment-configuration-settings.rst:2203
+#: ../../source/configure/environment-configuration-settings.rst:2245
+#: ../../source/configure/environment-configuration-settings.rst:2266
+#: ../../source/configure/environment-configuration-settings.rst:2291
 msgid "System Config path: **Environment > File Storage**"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1927
+#: ../../source/configure/environment-configuration-settings.rst:1949
 msgid "``config.json`` setting: ``\".FileSettings.DriverName:  local”,``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1928
+#: ../../source/configure/environment-configuration-settings.rst:1950
 msgid "Environment variable: ``MM_FILESETTINGS_DRIVERNAME``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1945
+#: ../../source/configure/environment-configuration-settings.rst:1967
 msgid "Local storage directory"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1948
+#: ../../source/configure/environment-configuration-settings.rst:1970
 msgid ""
 "The local directory to which files are written when the **File storage "
 "system** is set to **local**. Can be any directory writable by the user "
@@ -3014,55 +3046,55 @@ msgid ""
 "Mattermost is installed."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1954
+#: ../../source/configure/environment-configuration-settings.rst:1976
 msgid "Defaults to **./data/**."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1949
+#: ../../source/configure/environment-configuration-settings.rst:1971
 msgid "``config.json`` setting: ``\".FileSettings.Directory”,``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1950
+#: ../../source/configure/environment-configuration-settings.rst:1972
 msgid "Environment variable: ``MM_FILESETTINGS_DIRECTORY``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1957
+#: ../../source/configure/environment-configuration-settings.rst:1979
 msgid ""
 "When **File storage system** is set to **amazons3**, this setting has no "
 "effect."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1967
+#: ../../source/configure/environment-configuration-settings.rst:1989
 msgid "Maximum file size"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1970
+#: ../../source/configure/environment-configuration-settings.rst:1992
 msgid ""
 "The maximum file size for message attachments and plugin uploads. This "
 "value must be specified in mebibytes in the System Console, and in bytes "
 "in the ``config.json`` file."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1974
+#: ../../source/configure/environment-configuration-settings.rst:1996
 msgid "The default is ``104857600`` bytes (**100** mebibytes)."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1971
+#: ../../source/configure/environment-configuration-settings.rst:1993
 msgid "``config.json`` setting: ``\".FileSettings.MaxFileSize: 104857600\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1972
+#: ../../source/configure/environment-configuration-settings.rst:1994
 msgid "Environment variable: ``MM_FILESETTINGS_MAXFILESIZE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1979
+#: ../../source/configure/environment-configuration-settings.rst:2001
 msgid ""
 "Verify server memory can support your setting choice. Large file sizes "
 "increase the risk of server crashes and failed uploads due to network "
 "disruptions."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1980
+#: ../../source/configure/environment-configuration-settings.rst:2002
 msgid ""
 "When :ref:`uploading plugin files <configure/plugins-configuration-"
 "settings:upload plugin>`, a ``Received invalid response from the server``"
@@ -3071,47 +3103,47 @@ msgid ""
 "sufficient."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1981
+#: ../../source/configure/environment-configuration-settings.rst:2003
 msgid ""
 "If you use a proxy or load balancer in front of Mattermost, the following"
 " proxy settings must be adjusted accordingly:"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1983
+#: ../../source/configure/environment-configuration-settings.rst:2005
 msgid "For NGINX, use ``client_max_body_size``."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1984
+#: ../../source/configure/environment-configuration-settings.rst:2006
 msgid "For Apache, use ``LimitRequestBody``."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:1997
+#: ../../source/configure/environment-configuration-settings.rst:2019
 msgid "Enable document search by content"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2000
+#: ../../source/configure/environment-configuration-settings.rst:2022
 msgid "Enable users to search the contents of documents attached to messages."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2003
+#: ../../source/configure/environment-configuration-settings.rst:2025
 msgid "**true**: **(Default)** Documents are searchable by their content."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2005
+#: ../../source/configure/environment-configuration-settings.rst:2027
 msgid ""
 "**false**: Documents aren’t searchable by their content. When document "
 "content search is disabled, users can search for files by file name only."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2001
+#: ../../source/configure/environment-configuration-settings.rst:2023
 msgid "``config.json`` setting: ``\".FileSettings.ExtractContent: true\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2002
+#: ../../source/configure/environment-configuration-settings.rst:2024
 msgid "Environment variable: ``MM_FILESETTINGS_EXTRACTCONTENT``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2009
+#: ../../source/configure/environment-configuration-settings.rst:2031
 msgid ""
 "**Note**: Document content search results for files shared before "
 "upgrading to Mattermost Server v5.35 may be incomplete until an "
@@ -3120,7 +3152,7 @@ msgid ""
 "search older files based on file name only."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2013
+#: ../../source/configure/environment-configuration-settings.rst:2035
 msgid ""
 "You can optionally install the following `dependencies "
 "<https://github.com/sajari/docconv#dependencies>`__ to extend content "
@@ -3128,67 +3160,67 @@ msgid ""
 " and ODT, such as DOC, RTF, XML, and HTML:"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2016
+#: ../../source/configure/environment-configuration-settings.rst:2038
 msgid "**tidy**: Used to search the contents of HTML documents."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2017
+#: ../../source/configure/environment-configuration-settings.rst:2039
 msgid "**wv**: Used to search the contents of DOC documents."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2018
+#: ../../source/configure/environment-configuration-settings.rst:2040
 msgid ""
 "**popplerutils**: Used to significantly improve server performance when "
 "extracting the contents of PDF documents."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2019
+#: ../../source/configure/environment-configuration-settings.rst:2041
 msgid "**unrtf**: Used to search the contents of RTF documents."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2020
+#: ../../source/configure/environment-configuration-settings.rst:2042
 msgid "**JusText**: Used to search HTML documents."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2022
+#: ../../source/configure/environment-configuration-settings.rst:2044
 msgid ""
 "If you choose not to install these dependencies, you’ll see log entries "
 "for documents that couldn’t be extracted. Any documents that can’t be "
 "extracted are skipped and logged so that content extraction can proceed."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2037
+#: ../../source/configure/environment-configuration-settings.rst:2059
 msgid "Enable searching content of documents within ZIP files"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2040
+#: ../../source/configure/environment-configuration-settings.rst:2062
 msgid ""
 "Enables users to search the contents of compressed ZIP files attached to "
 "messages."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2043
+#: ../../source/configure/environment-configuration-settings.rst:2065
 msgid ""
 "**true**: Contents of documents within ZIP files are returned in search "
 "results. This may have an impact on server performance for large files. "
 "the specified local file directory."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2047
+#: ../../source/configure/environment-configuration-settings.rst:2069
 msgid ""
 "**false**: **(Default)** The contents of documents within ZIP files "
 "aren’t returned in search results."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2041
+#: ../../source/configure/environment-configuration-settings.rst:2063
 msgid "``config.json`` setting: ``\".FileSettings.ArchiveRecursion: false\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2042
+#: ../../source/configure/environment-configuration-settings.rst:2064
 msgid "Environment variable: ``MM_FILESETTINGS_ARCHIVERECURSION``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2050
+#: ../../source/configure/environment-configuration-settings.rst:2072
 msgid ""
 "**Note**: Document content search within ZIP files is available, with "
 "mobile support coming soon. Searching document contents adds load to your"
@@ -3199,125 +3231,125 @@ msgid ""
 "production environment."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2064
+#: ../../source/configure/environment-configuration-settings.rst:2086
 msgid "Amazon S3 bucket"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2067
+#: ../../source/configure/environment-configuration-settings.rst:2089
 msgid "The name of the bucket for your S3-compatible object storage instance."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2070
+#: ../../source/configure/environment-configuration-settings.rst:2092
 msgid "A string with the S3-compatible bucket name."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2068
+#: ../../source/configure/environment-configuration-settings.rst:2090
 msgid "``config.json`` setting: ``\".FileSettings.AmazonS3Bucket\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2069
+#: ../../source/configure/environment-configuration-settings.rst:2091
 msgid "Environment variable: ``MM_FILESETTINGS_AMAZONS3BUCKET``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2081
+#: ../../source/configure/environment-configuration-settings.rst:2103
 msgid "Amazon S3 path prefix"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2084
+#: ../../source/configure/environment-configuration-settings.rst:2106
 msgid "The prefix you selected for your **Amazon S3 bucket** in AWS."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2086
+#: ../../source/configure/environment-configuration-settings.rst:2108
 msgid "A string containing the path prefix."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2085
+#: ../../source/configure/environment-configuration-settings.rst:2107
 msgid "``config.json`` setting: ``\".FileSettings.AmazonS3PathPrefix\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2086
+#: ../../source/configure/environment-configuration-settings.rst:2108
 msgid "Environment variable: ``MM_FILESETTINGS_AMAZONS3PATHPREFIX``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2097
+#: ../../source/configure/environment-configuration-settings.rst:2119
 msgid "Amazon S3 region"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2100
+#: ../../source/configure/environment-configuration-settings.rst:2122
 msgid ""
 "The AWS region you selected when creating your **Amazon S3 bucket** in "
 "AWS."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2103
+#: ../../source/configure/environment-configuration-settings.rst:2125
 msgid ""
 "A string with the AWS region containing the bucket. If no region is set, "
 "Mattermost attempts to get the appropriate region from AWS, and sets it "
 "to **us-east-1** if none found."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2101
+#: ../../source/configure/environment-configuration-settings.rst:2123
 msgid "``config.json`` setting: ```\".FileSettings.AmazonS3Region\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2102
+#: ../../source/configure/environment-configuration-settings.rst:2124
 msgid "Environment variable: ``MM_FILESETTINGS_AMAZONS3REGION``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2109
+#: ../../source/configure/environment-configuration-settings.rst:2131
 msgid "For MinIO or Digital Ocean Spaces, leave this setting empty."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2119
+#: ../../source/configure/environment-configuration-settings.rst:2141
 msgid "Amazon S3 access key ID"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2122
+#: ../../source/configure/environment-configuration-settings.rst:2144
 msgid ""
 "A string with the access key for the S3-compatible storage instance. Your"
 " EC2 administrator can supply you with the Access Key ID."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2123
+#: ../../source/configure/environment-configuration-settings.rst:2145
 msgid "``config.json`` setting: ``\".FileSettings.AmazonS3AccessKeyId\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2124
+#: ../../source/configure/environment-configuration-settings.rst:2146
 msgid "Environment variable: ``MM_FILESETTINGS_AMAZONS3ACCESSKEYID``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2129
+#: ../../source/configure/environment-configuration-settings.rst:2151
 msgid ""
 "This is required for access unless you are using an `Amazon S3 IAM Role "
 "<https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-"
 "role-ec2_instance-profiles.html>`__ with Amazon S3."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2139
+#: ../../source/configure/environment-configuration-settings.rst:2161
 msgid "Amazon S3 endpoint"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2142
+#: ../../source/configure/environment-configuration-settings.rst:2164
 msgid "The hostname of your S3-compatible instance."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2144
+#: ../../source/configure/environment-configuration-settings.rst:2166
 msgid ""
 "A string with the hostname of the S3-compatible storage instance. "
 "Defaults to **s3.amazonaws.com**."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2143
+#: ../../source/configure/environment-configuration-settings.rst:2165
 msgid ""
 "``config.json`` setting: ``\".FileSettings.AmazonS3Endpoint: "
 "s3.amazonaws.com\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2144
+#: ../../source/configure/environment-configuration-settings.rst:2166
 msgid "Environment variable: ``MM_FILESETTINGS_AMAZONS3ENDPOINT``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2150
+#: ../../source/configure/environment-configuration-settings.rst:2172
 msgid ""
 "For Digital Ocean Spaces, the hostname should be set to "
 "**<region>.digitaloceanspaces.com**, where **<region>** is the "
@@ -3325,79 +3357,79 @@ msgid ""
 "can be **nyc3**, **ams3**, or **sgp1**."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2160
+#: ../../source/configure/environment-configuration-settings.rst:2182
 msgid "Amazon S3 secret access key"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2163
+#: ../../source/configure/environment-configuration-settings.rst:2185
 msgid "The secret access key associated with your Amazon S3 Access Key ID."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2166
+#: ../../source/configure/environment-configuration-settings.rst:2188
 msgid ""
 "A string with the secret access key for the S3-compatible storage "
 "instance."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2164
+#: ../../source/configure/environment-configuration-settings.rst:2186
 msgid "``config.json`` setting: ``\".FileSettings.AmazonS3SecretAccessKey\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2165
+#: ../../source/configure/environment-configuration-settings.rst:2187
 msgid "Environment variable: ``MM_FILESETTINGS_AMAZONS3SECRETACCESSKEY``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2178
+#: ../../source/configure/environment-configuration-settings.rst:2200
 msgid "Enable secure Amazon S3 connections"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2181
+#: ../../source/configure/environment-configuration-settings.rst:2203
 msgid "Enable or disable secure Amazon S3 connections."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2183
+#: ../../source/configure/environment-configuration-settings.rst:2205
 msgid "**true**: **(Default)** Enables only secure Amazon S3 connections."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2185
+#: ../../source/configure/environment-configuration-settings.rst:2207
 msgid "**false**: Allows insecure connections to Amazon S3."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2182
+#: ../../source/configure/environment-configuration-settings.rst:2204
 msgid "``config.json`` setting: ``\".FileSettings.AmazonS3SSL: true\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2183
+#: ../../source/configure/environment-configuration-settings.rst:2205
 msgid "Environment variable: ``MM_FILESETTINGS_AMAZONS3SSL``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2198
+#: ../../source/configure/environment-configuration-settings.rst:2220
 msgid "Amazon S3 signature v2"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2201
+#: ../../source/configure/environment-configuration-settings.rst:2223
 msgid ""
 "By default, Mattermost uses Signature v4 to sign API calls to AWS, but "
 "under some circumstances, v2 is required."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2204
+#: ../../source/configure/environment-configuration-settings.rst:2226
 msgid "**true**: Use Signature v2 signing process."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2205
+#: ../../source/configure/environment-configuration-settings.rst:2227
 msgid "**false**: **(Default)** Use Signature v4 signing process."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2202
+#: ../../source/configure/environment-configuration-settings.rst:2224
 msgid "``config.json`` setting: ``\".FileSettings.AmazonS3SignV2: false\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2203
+#: ../../source/configure/environment-configuration-settings.rst:2225
 msgid "Environment variable: ``MM_FILESETTINGS_AMAZONS3SIGNV2``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2208
+#: ../../source/configure/environment-configuration-settings.rst:2230
 msgid ""
 "See the `AWS "
 "<https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html>`_ "
@@ -3405,73 +3437,73 @@ msgid ""
 "process."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2220
+#: ../../source/configure/environment-configuration-settings.rst:2242
 msgid "Enable server-side encryption for Amazon S3"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2223
+#: ../../source/configure/environment-configuration-settings.rst:2245
 msgid "Enable server-side encryption for Amazon S3."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2225
+#: ../../source/configure/environment-configuration-settings.rst:2247
 msgid ""
 "**true**: Encrypts files in Amazon S3 using server-side encryption with "
 "Amazon S3-managed keys."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2227
+#: ../../source/configure/environment-configuration-settings.rst:2249
 msgid "**false**: **(Default)** Doesn’t encrypt files in Amazon S3."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2224
+#: ../../source/configure/environment-configuration-settings.rst:2246
 msgid "``config.json`` setting: ``\".FileSettings.AmazonS3SSE: false\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2225
+#: ../../source/configure/environment-configuration-settings.rst:2247
 msgid "Environment variable: ``MM_FILESETTINGS_AMAZONS3SSE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2241
+#: ../../source/configure/environment-configuration-settings.rst:2263
 msgid "Enable Amazon S3 debugging"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2244
+#: ../../source/configure/environment-configuration-settings.rst:2266
 msgid ""
 "Enable or disable Amazon S3 debugging to capture additional debugging "
 "information in system logs."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2247
+#: ../../source/configure/environment-configuration-settings.rst:2269
 msgid ""
 "**true**: Log additional debugging information is logged to the system "
 "logs."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2249
+#: ../../source/configure/environment-configuration-settings.rst:2271
 msgid ""
 "**false**: **(Default)** No Amazon S3 debugging information is included "
 "in the system logs. Typically set to **false** in production."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2245
+#: ../../source/configure/environment-configuration-settings.rst:2267
 msgid "``config.json`` setting: ``\".FileSettings.AmazonS3Trace: false\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2246
+#: ../../source/configure/environment-configuration-settings.rst:2268
 msgid "Environment variable: ``MM_FILESETTINGS_AMAZONS3TRACE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2254
+#: ../../source/configure/environment-configuration-settings.rst:2276
 msgid ""
 "Select the **Test Connection** button in the System Console to validate "
 "the settings and ensure the user can access the server."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2264
+#: ../../source/configure/environment-configuration-settings.rst:2286
 msgid "Amazon S3 storage class"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2266
+#: ../../source/configure/environment-configuration-settings.rst:2288
 msgid ""
 "Some Amazon S3-compatible storage solutions require the storage class "
 "parameter to be present in upload requests, otherwise they will be "
@@ -3479,26 +3511,26 @@ msgid ""
 "your S3-compatible solution."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2269
+#: ../../source/configure/environment-configuration-settings.rst:2291
 msgid "The storage class to use for uploads to S3-compatible storage solutions."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2272
+#: ../../source/configure/environment-configuration-settings.rst:2294
 msgid ""
 "String input. Default is an empty string ``\"\"``. Select **Test "
 "Connection** to test the configured connection."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2270
+#: ../../source/configure/environment-configuration-settings.rst:2292
 msgid "``config.json`` setting: ``.FileSettings.AmazonS3StorageClass: \"\"``,"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2271
+#: ../../source/configure/environment-configuration-settings.rst:2293
 msgid "Environment variable: ``MM_FILESETTINGS_AMAZONS3STORAGECLASS``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2278
-#: ../../source/configure/environment-configuration-settings.rst:2299
+#: ../../source/configure/environment-configuration-settings.rst:2300
+#: ../../source/configure/environment-configuration-settings.rst:2321
 msgid ""
 "Most Amazon S3-compatible storage solutions assign a default storage "
 "class of ``STANDARD`` when no storage class is provided. See the `Amazon "
@@ -3508,142 +3540,142 @@ msgid ""
 " supported storage classes."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2288
+#: ../../source/configure/environment-configuration-settings.rst:2310
 msgid "Export Amazon S3 storage class"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2291
+#: ../../source/configure/environment-configuration-settings.rst:2313
 msgid "The storage class to use for exports to S3-compatible storage solutions."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2294
+#: ../../source/configure/environment-configuration-settings.rst:2316
 msgid "String input. Default is an empty string ``\"\"``."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2292
+#: ../../source/configure/environment-configuration-settings.rst:2314
 msgid ""
 "``config.json`` setting: ``.FileSettings.ExportAmazonS3StorageClass: "
 "\"\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2293
+#: ../../source/configure/environment-configuration-settings.rst:2315
 msgid "Environment variable: ``MM_FILESETTINGS_EXPORTAMAZONS3STORAGECLASS``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2309
-#: ../../source/configure/environment-configuration-settings.rst:2368
+#: ../../source/configure/environment-configuration-settings.rst:2331
+#: ../../source/configure/environment-configuration-settings.rst:2390
 msgid "Amazon S3 request timeout"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2312
-#: ../../source/configure/environment-configuration-settings.rst:2371
+#: ../../source/configure/environment-configuration-settings.rst:2334
+#: ../../source/configure/environment-configuration-settings.rst:2393
 msgid ""
 "The amount of time, in milliseconds, before requests to Amazon S3 storage"
 " time out."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2315
-#: ../../source/configure/environment-configuration-settings.rst:2374
+#: ../../source/configure/environment-configuration-settings.rst:2337
+#: ../../source/configure/environment-configuration-settings.rst:2396
 msgid "Default is 30000 (30 seconds)."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2313
-#: ../../source/configure/environment-configuration-settings.rst:2372
+#: ../../source/configure/environment-configuration-settings.rst:2335
+#: ../../source/configure/environment-configuration-settings.rst:2394
 msgid ""
 "``config.json`` setting: "
 "``\".FileSettings.AmazonS3RequestTimeoutMilliseconds: 30000``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2314
-#: ../../source/configure/environment-configuration-settings.rst:2373
+#: ../../source/configure/environment-configuration-settings.rst:2336
+#: ../../source/configure/environment-configuration-settings.rst:2395
 msgid ""
 "Environment variable: "
 "``MM_FILESETTINGS_AMAZONS3REQUESTTIMEOUTMILLISECONDS``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2326
+#: ../../source/configure/environment-configuration-settings.rst:2348
 msgid "Amazon S3 upload part size"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2329
+#: ../../source/configure/environment-configuration-settings.rst:2351
 msgid "The size, in bytes, of each part in a multi-part upload to Amazon S3."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2332
+#: ../../source/configure/environment-configuration-settings.rst:2354
 msgid "Numeric value. Default is 5242880 (5MB)."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2330
+#: ../../source/configure/environment-configuration-settings.rst:2352
 msgid ""
 "``config.json`` setting: ``\".FileSettings.AmazonS3UploadPartSizeBytes: "
 "5242880``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2331
+#: ../../source/configure/environment-configuration-settings.rst:2353
 msgid "Environment variable: ``MM_FILESETTINGS_AMAZONS3UPLOADPARTSIZEBYTES``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2337
-#: ../../source/configure/environment-configuration-settings.rst:2358
+#: ../../source/configure/environment-configuration-settings.rst:2359
+#: ../../source/configure/environment-configuration-settings.rst:2380
 msgid ""
 "A smaller part size can result in more requests and an increase in "
 "latency, while a larger part size can result in more memory being "
 "allocated."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2347
+#: ../../source/configure/environment-configuration-settings.rst:2369
 msgid "Amazon S3 exported upload part size"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2350
+#: ../../source/configure/environment-configuration-settings.rst:2372
 msgid "The size, in bytes, of each part in a multi-part exported to Amazon S3."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2353
+#: ../../source/configure/environment-configuration-settings.rst:2375
 msgid "Numeric value. Default is 104857600 (100MB)."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2351
+#: ../../source/configure/environment-configuration-settings.rst:2373
 msgid ""
 "``config.json`` setting: "
 "``\".FileSettings.ExportAmazonS3UploadPartSizeBytes: 104857600``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2352
+#: ../../source/configure/environment-configuration-settings.rst:2374
 msgid ""
 "Environment variable: "
 "``MM_FILESETTINGS_EXPORTAMAZONS3UPLOADPARTSIZEBYTES``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2385
+#: ../../source/configure/environment-configuration-settings.rst:2407
 msgid "Initial font"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2388
+#: ../../source/configure/environment-configuration-settings.rst:2410
 msgid ""
 "The font used in auto-generated profile pictures with colored backgrounds"
 " and username initials."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2391
+#: ../../source/configure/environment-configuration-settings.rst:2413
 msgid "A string with the font file name. Default is **nunito-bold.ttf**."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2389
+#: ../../source/configure/environment-configuration-settings.rst:2411
 msgid ""
 "``config.json`` setting: ``\".FileSettings.InitialFont: nunito-"
 "bold.ttf\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2390
+#: ../../source/configure/environment-configuration-settings.rst:2412
 msgid "Environment variable: ``MM_FILESETTINGS_INITIALFONT``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2398
+#: ../../source/configure/environment-configuration-settings.rst:2420
 msgid "Image proxy"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2403
+#: ../../source/configure/environment-configuration-settings.rst:2425
 msgid ""
 "An image proxy is used by Mattermost apps to prevent them from connecting"
 " directly to remote self-hosted servers. Configure an image proxy by "
@@ -3651,351 +3683,351 @@ msgid ""
 "the ``config.json`` file as described in the following tables."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2415
+#: ../../source/configure/environment-configuration-settings.rst:2437
 msgid "Enable image proxy"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2418
+#: ../../source/configure/environment-configuration-settings.rst:2440
 msgid ""
 "An image proxy anonymizes Mattermost app connections and prevents them "
 "from accessing insecure content."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2421
+#: ../../source/configure/environment-configuration-settings.rst:2443
 msgid "**true**: Enables an image proxy for loading external images."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2423
+#: ../../source/configure/environment-configuration-settings.rst:2445
 msgid "**false**: **(Default)** Disables the image proxy."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2418
-#: ../../source/configure/environment-configuration-settings.rst:2442
-#: ../../source/configure/environment-configuration-settings.rst:2462
-#: ../../source/configure/environment-configuration-settings.rst:2478
+#: ../../source/configure/environment-configuration-settings.rst:2440
+#: ../../source/configure/environment-configuration-settings.rst:2464
+#: ../../source/configure/environment-configuration-settings.rst:2484
+#: ../../source/configure/environment-configuration-settings.rst:2500
 msgid "System Config path: **Environment > Image Proxy**"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2419
+#: ../../source/configure/environment-configuration-settings.rst:2441
 msgid "``config.json setting``: ``\".ImageProxySettings.Enable\": true\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2420
+#: ../../source/configure/environment-configuration-settings.rst:2442
 msgid "Environment variable: ``MM_IMAGEPROXYSETTINGS_ENABLE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2426
-#: ../../source/configure/environment-configuration-settings.rst:2449
-#: ../../source/configure/environment-configuration-settings.rst:2483
+#: ../../source/configure/environment-configuration-settings.rst:2448
+#: ../../source/configure/environment-configuration-settings.rst:2471
+#: ../../source/configure/environment-configuration-settings.rst:2505
 msgid ""
 "See the :doc:`image proxy </deploy/server/image-proxy>` documentation to "
 "learn more."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2439
+#: ../../source/configure/environment-configuration-settings.rst:2461
 msgid "Image proxy type"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2442
+#: ../../source/configure/environment-configuration-settings.rst:2464
 msgid "The type of image proxy used by Mattermost."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2444
+#: ../../source/configure/environment-configuration-settings.rst:2466
 msgid ""
 "**local**: **(Default)** The Mattermost server itself acts as the image "
 "proxy."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2446
+#: ../../source/configure/environment-configuration-settings.rst:2468
 msgid "**atmos/camo**: An external atmos/camo image proxy is used."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2443
+#: ../../source/configure/environment-configuration-settings.rst:2465
 msgid ""
 "``config.json setting``: ``\".ImageProxySettings.ImageProxyType\": "
 "\"local\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2444
+#: ../../source/configure/environment-configuration-settings.rst:2466
 msgid "Environment variable: ``MM_IMAGEPROXYSETTINGS_IMAGEPROXYTYPE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2459
+#: ../../source/configure/environment-configuration-settings.rst:2481
 msgid "Remote image proxy URL"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2462
+#: ../../source/configure/environment-configuration-settings.rst:2484
 msgid ""
 "The URL of the atmos/camo proxy. This setting isn't needed when using the"
 " **local** image proxy."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2463
+#: ../../source/configure/environment-configuration-settings.rst:2485
 msgid "``config.json setting``: ``\".ImageProxySettings.RemoteImageProxyURL\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2464
+#: ../../source/configure/environment-configuration-settings.rst:2486
 msgid "Environment variable: ``MM_IMAGEPROXYSETTINGS_REMOTEIMAGEPROXYURL``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2475
+#: ../../source/configure/environment-configuration-settings.rst:2497
 msgid "Remote image proxy options"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2478
+#: ../../source/configure/environment-configuration-settings.rst:2500
 msgid ""
 "The URL signing key passed to an atmos/camo image proxy. This setting "
 "isn't needed when using the **local** image proxy type."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2479
+#: ../../source/configure/environment-configuration-settings.rst:2501
 msgid ""
 "``config.json setting``: "
 "``\".ImageProxySettings.RemoteImageProxyOptions\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2480
+#: ../../source/configure/environment-configuration-settings.rst:2502
 msgid "Environment variable: ``MM_IMAGEPROXYSETTINGS_REMOTEIMAGEPROXYOPTIONS``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2488
+#: ../../source/configure/environment-configuration-settings.rst:2510
 msgid "SMTP"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2493
+#: ../../source/configure/environment-configuration-settings.rst:2515
 msgid ""
 "Configure SMTP email server settings by going to **System Console > "
 "Environment > SMTP**, or by editing the ``config.json`` file as described"
 " in the following tables."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2503
+#: ../../source/configure/environment-configuration-settings.rst:2525
 msgid "SMTP server"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2506
+#: ../../source/configure/environment-configuration-settings.rst:2528
 msgid "The location of the SMTP email server used for email notifications."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2506
-#: ../../source/configure/environment-configuration-settings.rst:2522
-#: ../../source/configure/environment-configuration-settings.rst:2540
-#: ../../source/configure/environment-configuration-settings.rst:2559
-#: ../../source/configure/environment-configuration-settings.rst:2575
-#: ../../source/configure/environment-configuration-settings.rst:2594
-#: ../../source/configure/environment-configuration-settings.rst:2617
-#: ../../source/configure/environment-configuration-settings.rst:2638
-#: ../../source/configure/environment-configuration-settings.rst:2659
+#: ../../source/configure/environment-configuration-settings.rst:2528
+#: ../../source/configure/environment-configuration-settings.rst:2544
+#: ../../source/configure/environment-configuration-settings.rst:2562
+#: ../../source/configure/environment-configuration-settings.rst:2581
+#: ../../source/configure/environment-configuration-settings.rst:2597
+#: ../../source/configure/environment-configuration-settings.rst:2616
+#: ../../source/configure/environment-configuration-settings.rst:2639
+#: ../../source/configure/environment-configuration-settings.rst:2660
+#: ../../source/configure/environment-configuration-settings.rst:2681
 msgid "System Config path: **Environment > SMTP**"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2507
+#: ../../source/configure/environment-configuration-settings.rst:2529
 msgid "``config.json setting``: ``\".EmailSettings.SMTPServer\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2508
+#: ../../source/configure/environment-configuration-settings.rst:2530
 msgid "Environment variable: ``MM_EMAILSETTINGS_SMTPSERVER``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2519
+#: ../../source/configure/environment-configuration-settings.rst:2541
 msgid "SMTP server port"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2522
+#: ../../source/configure/environment-configuration-settings.rst:2544
 msgid "The port of SMTP email server."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2524
+#: ../../source/configure/environment-configuration-settings.rst:2546
 msgid "Numerical input."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2523
+#: ../../source/configure/environment-configuration-settings.rst:2545
 msgid "``config.json setting``: ``\".EmailSettings.SMTPPort\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2524
+#: ../../source/configure/environment-configuration-settings.rst:2546
 msgid "Environment variable: ``MM_EMAILSETTINGS_SMTPPORT``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2537
+#: ../../source/configure/environment-configuration-settings.rst:2559
 msgid "Enable SMTP authentication"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2540
+#: ../../source/configure/environment-configuration-settings.rst:2562
 msgid "Enable or disable SMTP authentication."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2542
+#: ../../source/configure/environment-configuration-settings.rst:2564
 msgid ""
 "**true**: SMTP username and password are used for authenticating to the "
 "SMTP server."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2544
+#: ../../source/configure/environment-configuration-settings.rst:2566
 msgid ""
 "**false**: **(Default)** Mattermost doesn’t attempt to authenticate to "
 "the SMTP server."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2541
+#: ../../source/configure/environment-configuration-settings.rst:2563
 msgid "``config.json setting``: ``\".EmailSettings.EnableSMTPAuth\": false\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2542
+#: ../../source/configure/environment-configuration-settings.rst:2564
 msgid "Environment variable: ``MM_EMAILSETTINGS_ENABLESMTPAUTH``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2556
+#: ../../source/configure/environment-configuration-settings.rst:2578
 msgid "SMTP server username"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2559
+#: ../../source/configure/environment-configuration-settings.rst:2581
 msgid "The username for authenticating to the SMTP server."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2560
+#: ../../source/configure/environment-configuration-settings.rst:2582
 msgid "``config.json setting``: ``\".EmailSettings.SMTPUsername\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2561
+#: ../../source/configure/environment-configuration-settings.rst:2583
 msgid "Environment variable: ``MM_EMAILSETTINGS_SMTPUSERNAME``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2572
+#: ../../source/configure/environment-configuration-settings.rst:2594
 msgid "SMTP server password"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2575
+#: ../../source/configure/environment-configuration-settings.rst:2597
 msgid "The password associated with the SMTP username."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2576
+#: ../../source/configure/environment-configuration-settings.rst:2598
 msgid "``config.json setting``: ``\".EmailSettings.SMTPPassword\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2577
+#: ../../source/configure/environment-configuration-settings.rst:2599
 msgid "Environment variable: ``MM_EMAILSETTINGS_SMTPPASSWORD``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2591
+#: ../../source/configure/environment-configuration-settings.rst:2613
 msgid "SMTP connection security"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2594
+#: ../../source/configure/environment-configuration-settings.rst:2616
 msgid "Specify connection security for emails sent using SMTP."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2596
+#: ../../source/configure/environment-configuration-settings.rst:2618
 msgid "**Not specified**: **(Default)** Send email over an unsecure connection."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2598
+#: ../../source/configure/environment-configuration-settings.rst:2620
 msgid ""
 "**TLS**: Communication between Mattermost and your email server is "
 "encrypted."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2600
+#: ../../source/configure/environment-configuration-settings.rst:2622
 msgid ""
 "**STARTTLS**: Attempts to upgrade an existing insecure connection to a "
 "secure connection using TLS."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2595
+#: ../../source/configure/environment-configuration-settings.rst:2617
 msgid "``config.json setting``: ``\".EmailSettings.ConnectionSecurity\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2596
+#: ../../source/configure/environment-configuration-settings.rst:2618
 msgid "Environment variable: ``MM_EMAILSETTINGS_CONNECTIONSECURITY``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2614
+#: ../../source/configure/environment-configuration-settings.rst:2636
 msgid "Skip server certificate verification"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2617
+#: ../../source/configure/environment-configuration-settings.rst:2639
 msgid ""
 "Configure Mattermost to skip the verification of the email server "
 "certificate."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2620
+#: ../../source/configure/environment-configuration-settings.rst:2642
 msgid "**true**: Mattermost won't verify the email server certificate."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2621
+#: ../../source/configure/environment-configuration-settings.rst:2643
 msgid "**false**: **(Default)** Mattermost verifies the email server certificate."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2618
+#: ../../source/configure/environment-configuration-settings.rst:2640
 msgid ""
 "``config.json setting``: "
 "``\".EmailSettings.SkipServerCertificateVerification\": false\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2619
+#: ../../source/configure/environment-configuration-settings.rst:2641
 msgid ""
 "Environment variable: "
 "``MM_EMAILSETTINGS_SKIPSERVERCERTIFICATEVERIFICATION``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2635
+#: ../../source/configure/environment-configuration-settings.rst:2657
 msgid "Enable security alerts"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2638
+#: ../../source/configure/environment-configuration-settings.rst:2660
 msgid "Enable or disable security alerts."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2640
+#: ../../source/configure/environment-configuration-settings.rst:2662
 msgid ""
 "**true**: **(Default)** System admins are notified by email if a relevant"
 " security fix alert is announced. Requires email to be enabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2643
+#: ../../source/configure/environment-configuration-settings.rst:2665
 msgid "**false**: Security alerts are disabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2639
+#: ../../source/configure/environment-configuration-settings.rst:2661
 msgid ""
 "``config.json setting``: ``\".ServiceSettings.EnableSecurityFixAlert\": "
 "true\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2640
+#: ../../source/configure/environment-configuration-settings.rst:2662
 msgid "Environment variable: ``MM_SERVICESETTINGS_ENABLESECURITYFIXALERT``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2646
+#: ../../source/configure/environment-configuration-settings.rst:2668
 msgid ""
 "See the :ref:`Telemetry <manage/telemetry:security update check feature>`"
 " documentation to learn more."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2656
+#: ../../source/configure/environment-configuration-settings.rst:2678
 msgid "SMTP server timeout"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2659
+#: ../../source/configure/environment-configuration-settings.rst:2681
 msgid ""
 "The maximum amount of time, in seconds, allowed for establishing a TCP "
 "connection between Mattermost and the SMTP server."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2663
+#: ../../source/configure/environment-configuration-settings.rst:2685
 msgid "Numerical value in seconds."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2660
+#: ../../source/configure/environment-configuration-settings.rst:2682
 msgid "``config.json setting``: ``\".EmailSettings.SMTPServerTimeout\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2661
+#: ../../source/configure/environment-configuration-settings.rst:2683
 msgid "Environment variable: ``MM_EMAILSETTINGS_SMTPSERVERTIMEOUT``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2669
+#: ../../source/configure/environment-configuration-settings.rst:2691
 msgid "Push notification server"
 msgstr ""
 
@@ -4392,11 +4424,11 @@ msgid ""
 "bottleneck."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2680
+#: ../../source/configure/environment-configuration-settings.rst:2702
 msgid "High availability"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2685
+#: ../../source/configure/environment-configuration-settings.rst:2707
 msgid ""
 "You can configure Mattermost as a :doc:`high availability cluster-based "
 "deployment </scale/high-availability-cluster-based-deployment>` by going "
@@ -4406,7 +4438,7 @@ msgid ""
 "taking effect."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2687
+#: ../../source/configure/environment-configuration-settings.rst:2709
 msgid ""
 "In a Mattermost high availability cluster-based deployment, the System "
 "Console is set to read-only, and settings can only be changed by editing "
@@ -4417,15 +4449,15 @@ msgid ""
 " be saved back to the configuration file."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2699
+#: ../../source/configure/environment-configuration-settings.rst:2721
 msgid "Enable high availability mode"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2702
+#: ../../source/configure/environment-configuration-settings.rst:2724
 msgid "You can enable high availability mode."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2704
+#: ../../source/configure/environment-configuration-settings.rst:2726
 msgid ""
 "**true**: The Mattermost server will attempt inter-node communication "
 "with the other servers in the cluster that have the same cluster name. "
@@ -4433,149 +4465,149 @@ msgid ""
 "``config.json`` files in sync."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2709
+#: ../../source/configure/environment-configuration-settings.rst:2731
 msgid "**false**: **(Default)** Mattermost high availability mode is disabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2702
 #: ../../source/configure/environment-configuration-settings.rst:2724
-#: ../../source/configure/environment-configuration-settings.rst:2742
-#: ../../source/configure/environment-configuration-settings.rst:2766
+#: ../../source/configure/environment-configuration-settings.rst:2746
+#: ../../source/configure/environment-configuration-settings.rst:2764
 #: ../../source/configure/environment-configuration-settings.rst:2788
-#: ../../source/configure/environment-configuration-settings.rst:2817
-#: ../../source/configure/environment-configuration-settings.rst:2840
+#: ../../source/configure/environment-configuration-settings.rst:2810
+#: ../../source/configure/environment-configuration-settings.rst:2839
+#: ../../source/configure/environment-configuration-settings.rst:2862
 msgid "System Config path: **Environment > High Availability**"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2703
+#: ../../source/configure/environment-configuration-settings.rst:2725
 msgid "``config.json`` setting: ``\".ClusterSettings.Enable\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2704
+#: ../../source/configure/environment-configuration-settings.rst:2726
 msgid "Environment variable: ``MM_CLUSTERSETTINGS_ENABLE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2721
+#: ../../source/configure/environment-configuration-settings.rst:2743
 msgid "Cluster name"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2724
+#: ../../source/configure/environment-configuration-settings.rst:2746
 msgid ""
 "The cluster to join by name in a high availability cluster-based "
 "deployment."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2726
+#: ../../source/configure/environment-configuration-settings.rst:2748
 msgid ""
 "Only nodes with the same cluster name will join together. This is to "
 "support blue-green deployments or staging pointing to the same database."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2725
+#: ../../source/configure/environment-configuration-settings.rst:2747
 msgid "``config.json`` setting: ``\".ClusterSettings.ClusterName\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2726
+#: ../../source/configure/environment-configuration-settings.rst:2748
 msgid "Environment variable: ``MM_CLUSTERSETTINGS_CLUSTERNAME``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2739
+#: ../../source/configure/environment-configuration-settings.rst:2761
 msgid "Override hostname"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2742
+#: ../../source/configure/environment-configuration-settings.rst:2764
 msgid "You can override the hostname of this server."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2744
+#: ../../source/configure/environment-configuration-settings.rst:2766
 msgid ""
 "This property can be set to a specific IP address if needed; however, we "
 "don’t recommend overriding the hostname unless it's necessary."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2747
+#: ../../source/configure/environment-configuration-settings.rst:2769
 msgid ""
 "If left blank, Mattermost attempts to get the hostname from the operating"
 " system or uses the IP address."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2743
+#: ../../source/configure/environment-configuration-settings.rst:2765
 msgid "``config.json`` setting: ``\".ClusterSettings.OverrideHostname\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2744
+#: ../../source/configure/environment-configuration-settings.rst:2766
 msgid "Environment variable: ``MM_CLUSTERSETTINGS_OVERRIDEHOSTNAME``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2751
+#: ../../source/configure/environment-configuration-settings.rst:2773
 msgid ""
 "See the :doc:`high availability cluster-based deployment </scale/high-"
 "availability-cluster-based-deployment>` documentation for details."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2763
+#: ../../source/configure/environment-configuration-settings.rst:2785
 msgid "Use IP address"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2766
+#: ../../source/configure/environment-configuration-settings.rst:2788
 msgid ""
 "You can configure your high availability cluster-based deployment to "
 "communicate using the hostname instead of the IP address."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2769
+#: ../../source/configure/environment-configuration-settings.rst:2791
 msgid ""
 "**true**: **(Default)** The cluster attempts to communicate using the IP "
 "address specified."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2771
+#: ../../source/configure/environment-configuration-settings.rst:2793
 msgid "**false**: The cluster attempts to communicate using the hostname."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2767
+#: ../../source/configure/environment-configuration-settings.rst:2789
 msgid "``config.json`` setting: ``\".ClusterSettings.UseIPAddress: true\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2768
+#: ../../source/configure/environment-configuration-settings.rst:2790
 msgid "Environment variable: ``MM_CLUSTERSETTINGS_USEIPADDRESS``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2785
+#: ../../source/configure/environment-configuration-settings.rst:2807
 msgid "Enable experimental gossip encryption"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2788
+#: ../../source/configure/environment-configuration-settings.rst:2810
 msgid ""
 "Gossip encryption uses AES-256 by default, and this value isn’t "
 "configurable by design."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2791
+#: ../../source/configure/environment-configuration-settings.rst:2813
 msgid ""
 "**true**: **(Default for Cloud deployments)** All communication through "
 "the cluster using the gossip protocol will be encrypted."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2794
+#: ../../source/configure/environment-configuration-settings.rst:2816
 msgid ""
 "**false**: **(Default for self-hosted deployments)** All communication "
 "using gossip protocol remains unchanged. protocol remains unencrypted."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2789
+#: ../../source/configure/environment-configuration-settings.rst:2811
 msgid ""
 "``config.json`` setting: "
 "``\".ClusterSettings.EnableExperimentalGossipEncryption: false”,``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2790
+#: ../../source/configure/environment-configuration-settings.rst:2812
 msgid ""
 "Environment variable: "
 "``MM_CLUSTERSETTINGS_ENABLEEXPERIMENTALGOSSIPENCRYPTION``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2801
+#: ../../source/configure/environment-configuration-settings.rst:2823
 msgid ""
 "The Gossip protocol is based on principles outlined in the `SWIM protocol"
 " developed by researchers at Cornell University "
@@ -4592,7 +4624,7 @@ msgid ""
 "delays in large networks."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2802
+#: ../../source/configure/environment-configuration-settings.rst:2824
 msgid ""
 "Alternatively, you can manually set the ``ClusterEncryptionKey`` row "
 "value in the **Systems** table. A key is a byte array converted to "
@@ -4600,146 +4632,146 @@ msgid ""
 "AES-192, or AES-256 respectively."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2814
+#: ../../source/configure/environment-configuration-settings.rst:2836
 msgid "Enable gossip compression"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2817
+#: ../../source/configure/environment-configuration-settings.rst:2839
 msgid ""
 "We recommend that you disable this configuration setting for better "
 "performance."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2820
+#: ../../source/configure/environment-configuration-settings.rst:2842
 msgid ""
 "**true**: **(Default for self-hosted deployments)** All communication "
 "through the cluster uses gossip compression. This setting is enabled by "
 "default to maintain compatibility with older servers."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2824
+#: ../../source/configure/environment-configuration-settings.rst:2846
 msgid ""
 "**false**: **(Default for Cloud deployments)** All communication using "
 "the gossip protocol remains uncompressed."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2818
+#: ../../source/configure/environment-configuration-settings.rst:2840
 msgid ""
 "``config.json`` setting: ``\".ClusterSettings.EnableGossipCompression: "
 "true”,``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2819
+#: ../../source/configure/environment-configuration-settings.rst:2841
 msgid "Environment variable: ``MM_CLUSTERSETTINGS_ENABLEGOSSIPCOMPRESSION``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2837
+#: ../../source/configure/environment-configuration-settings.rst:2859
 msgid "Gossip port"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2840
+#: ../../source/configure/environment-configuration-settings.rst:2862
 msgid ""
 "The port used for the gossip protocol. Both UDP and TCP should be allowed"
 " on this port."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2843
+#: ../../source/configure/environment-configuration-settings.rst:2865
 msgid "Numerical input. Default is **8074**."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2841
+#: ../../source/configure/environment-configuration-settings.rst:2863
 msgid "``config.json`` setting: ``\".ClusterSettings.GossipPort: 8074”,``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2842
+#: ../../source/configure/environment-configuration-settings.rst:2864
 msgid "Environment variable: ``MM_CLUSTERSETTINGS_GOSSIPPORT``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2854
+#: ../../source/configure/environment-configuration-settings.rst:2876
 msgid "Read only config"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2857
+#: ../../source/configure/environment-configuration-settings.rst:2879
 msgid ""
 "**true**: **(Default)** Changes made to settings in the System Console "
 "are ignored."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2859
+#: ../../source/configure/environment-configuration-settings.rst:2881
 msgid ""
 "**false**: Changes made to settings in the System Console are written to "
 "``config.json``."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2858
+#: ../../source/configure/environment-configuration-settings.rst:2880
 msgid "``config.json`` setting: ``\".ClusterSettings.ReadOnlyConfig: true,``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2859
+#: ../../source/configure/environment-configuration-settings.rst:2881
 msgid "Environment variable: ``MM_CLUSTERSETTINGS_READONLYCONFIG``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2871
+#: ../../source/configure/environment-configuration-settings.rst:2893
 msgid "Network interface"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2874
+#: ../../source/configure/environment-configuration-settings.rst:2896
 msgid ""
 "An IP address used to identify the device that does automatic IP "
 "detection in high availability cluster-based deployments."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2875
+#: ../../source/configure/environment-configuration-settings.rst:2897
 msgid "``config.json`` setting: ``\".ClusterSettings.NetworkInterface: \"\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2876
+#: ../../source/configure/environment-configuration-settings.rst:2898
 msgid "Environment variable: ``MM_CLUSTERSETTINGS_NETWORKINTERFACE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2888
+#: ../../source/configure/environment-configuration-settings.rst:2910
 msgid "Bind address"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2891
+#: ../../source/configure/environment-configuration-settings.rst:2913
 msgid "An IP address used to bind cluster traffic to a specific network device."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2894
+#: ../../source/configure/environment-configuration-settings.rst:2916
 msgid ""
 "This setting is used primarily for servers with multiple network devices "
 "or different Bind Address and Advertise Address like in deployments that "
 "involve NAT (Network Address Translation)."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2892
+#: ../../source/configure/environment-configuration-settings.rst:2914
 msgid "``config.json`` setting: ``\".ClusterSettings.BindAddress: \"\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2893
+#: ../../source/configure/environment-configuration-settings.rst:2915
 msgid "Environment variable: ``MM_CLUSTERSETTINGS_BINDADDRESS``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2910
+#: ../../source/configure/environment-configuration-settings.rst:2932
 msgid "Advertise address"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2913
+#: ../../source/configure/environment-configuration-settings.rst:2935
 msgid ""
 "The IP address used to access the server from other nodes. This settings "
 "is used primary when cluster nodes are not in the same network and "
 "involve NAT (Network Address Translation)."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2914
+#: ../../source/configure/environment-configuration-settings.rst:2936
 msgid "``config.json`` setting: ``\".ClusterSettings.AdvertiseAddress: \"\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2915
+#: ../../source/configure/environment-configuration-settings.rst:2937
 msgid "Environment variable: ``MM_CLUSTERSETTINGS_ADVERTISEADDRESS``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2923
+#: ../../source/configure/environment-configuration-settings.rst:2945
 msgid "Rate limiting"
 msgstr ""
 
@@ -4976,11 +5008,11 @@ msgstr ""
 msgid "Environment variable: ``MM_RATELIMITSETTINGS_VARYBYHEADER``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2934
+#: ../../source/configure/environment-configuration-settings.rst:2956
 msgid "Logging"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2939
+#: ../../source/configure/environment-configuration-settings.rst:2961
 msgid ""
 "Configure logging by going to **System Console > Environment > Logging**,"
 " or by editing the ``config.json`` file as described in the following "
@@ -4988,7 +5020,7 @@ msgid ""
 "server restart before taking effect."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2943
+#: ../../source/configure/environment-configuration-settings.rst:2965
 msgid ""
 "You can manage additional logging configuration within the "
 "``config.json`` file specifically for Mattermost notifications under "
@@ -4996,310 +5028,310 @@ msgid ""
 "configuration settings available under ``LogSettings``."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2955
+#: ../../source/configure/environment-configuration-settings.rst:2977
 msgid "Output logs to console"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2958
+#: ../../source/configure/environment-configuration-settings.rst:2980
 msgid "Configure Mattermost to output logs to the console."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2961
+#: ../../source/configure/environment-configuration-settings.rst:2983
 msgid ""
 "**true**: **(Default)** Output log messages are written to the console "
 "based on the `console log level <#console-log-level>`__ configuration. "
 "The server writes messages to the standard output stream (stdout)."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2966
+#: ../../source/configure/environment-configuration-settings.rst:2988
 msgid "**false**: Output log messages aren’t written to the console."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2958
-#: ../../source/configure/environment-configuration-settings.rst:2985
-#: ../../source/configure/environment-configuration-settings.rst:3011
-#: ../../source/configure/environment-configuration-settings.rst:3060
-#: ../../source/configure/environment-configuration-settings.rst:3088
-#: ../../source/configure/environment-configuration-settings.rst:3113
-#: ../../source/configure/environment-configuration-settings.rst:3138
-#: ../../source/configure/environment-configuration-settings.rst:3163
-#: ../../source/configure/environment-configuration-settings.rst:3189
-#: ../../source/configure/environment-configuration-settings.rst:3233
+#: ../../source/configure/environment-configuration-settings.rst:2980
+#: ../../source/configure/environment-configuration-settings.rst:3007
+#: ../../source/configure/environment-configuration-settings.rst:3033
+#: ../../source/configure/environment-configuration-settings.rst:3082
+#: ../../source/configure/environment-configuration-settings.rst:3110
+#: ../../source/configure/environment-configuration-settings.rst:3135
+#: ../../source/configure/environment-configuration-settings.rst:3160
+#: ../../source/configure/environment-configuration-settings.rst:3185
+#: ../../source/configure/environment-configuration-settings.rst:3211
+#: ../../source/configure/environment-configuration-settings.rst:3255
 msgid "System Config path: **Environment > Logging**"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2959
+#: ../../source/configure/environment-configuration-settings.rst:2981
 msgid "``config.json setting``: ``\".LogSettings.EnableConsole\": true\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2960
+#: ../../source/configure/environment-configuration-settings.rst:2982
 msgid "Environment variable: ``MM_LOGSETTINGS_ENABLECONSOLE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2982
+#: ../../source/configure/environment-configuration-settings.rst:3004
 msgid "Console log level"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2985
+#: ../../source/configure/environment-configuration-settings.rst:3007
 msgid ""
 "The level of detail in log events written when Mattermost outputs log "
 "messages to the console."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2989
+#: ../../source/configure/environment-configuration-settings.rst:3011
 msgid ""
 "**DEBUG**: **(Default)** Outputs verbose detail for developers debugging "
 "issues."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2991
-#: ../../source/configure/environment-configuration-settings.rst:3118
+#: ../../source/configure/environment-configuration-settings.rst:3013
+#: ../../source/configure/environment-configuration-settings.rst:3140
 msgid "**ERROR**: Outputs only error messages."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2992
+#: ../../source/configure/environment-configuration-settings.rst:3014
 msgid ""
 "**INFO**: Outputs error messages and information around startup and "
 "initialization."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2986
+#: ../../source/configure/environment-configuration-settings.rst:3008
 msgid "``config.json setting``: ``\".LogSettings.ConsoleLevel\": DEBUG\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:2987
+#: ../../source/configure/environment-configuration-settings.rst:3009
 msgid "Environment variable: ``MM_LOGSETTINGS_CONSOLELEVEL``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3008
+#: ../../source/configure/environment-configuration-settings.rst:3030
 msgid "Output console logs as JSON"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3011
+#: ../../source/configure/environment-configuration-settings.rst:3033
 msgid "Configure Mattermost to output console logs as JSON."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3014
-#: ../../source/configure/environment-configuration-settings.rst:3141
+#: ../../source/configure/environment-configuration-settings.rst:3036
+#: ../../source/configure/environment-configuration-settings.rst:3163
 msgid ""
 "**true**: **(Default)** Logged events are written in a machine-readable "
 "JSON format."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3016
-#: ../../source/configure/environment-configuration-settings.rst:3143
+#: ../../source/configure/environment-configuration-settings.rst:3038
+#: ../../source/configure/environment-configuration-settings.rst:3165
 msgid "**false**: Logged events are written in plain text."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3012
+#: ../../source/configure/environment-configuration-settings.rst:3034
 msgid "``config.json setting``: ``\".LogSettings.ConsoleJson\": true\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3013
+#: ../../source/configure/environment-configuration-settings.rst:3035
 msgid "Environment variable: ``MM_LOGSETTINGS_CONSOLEJSON``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3020
-#: ../../source/configure/environment-configuration-settings.rst:3147
+#: ../../source/configure/environment-configuration-settings.rst:3042
+#: ../../source/configure/environment-configuration-settings.rst:3169
 msgid "Typically set to **true** in a production environment."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3033
+#: ../../source/configure/environment-configuration-settings.rst:3055
 msgid "Colorize plain text console logs"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3036
+#: ../../source/configure/environment-configuration-settings.rst:3058
 msgid "Enables system admins to display plain text log level details in color."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3039
+#: ../../source/configure/environment-configuration-settings.rst:3061
 msgid ""
 "**true**: When logged events are output to the console as plain text, "
 "colorize log levels details."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3042
+#: ../../source/configure/environment-configuration-settings.rst:3064
 msgid ""
 "**false**: **(Default)** Plain text log details aren't colorized in the "
 "console."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3037
+#: ../../source/configure/environment-configuration-settings.rst:3059
 msgid "``config.json setting``: ``\".LogSettings.EnableColor\": false\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3038
+#: ../../source/configure/environment-configuration-settings.rst:3060
 msgid "Environment variable: ``MM_LOGSETTINGS_ENABLECOLOR``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3057
+#: ../../source/configure/environment-configuration-settings.rst:3079
 msgid "Output logs to file"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3060
+#: ../../source/configure/environment-configuration-settings.rst:3082
 msgid "Configure Mattermost to output console logs to a file."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3063
+#: ../../source/configure/environment-configuration-settings.rst:3085
 msgid ""
 "**true**: **(Default)** Logged events are written based on the `file log "
 "level <#file-log-level>`__ configuration to a ``mattermost.log`` file "
 "located in the directory configured via ``file location``."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3069
+#: ../../source/configure/environment-configuration-settings.rst:3091
 msgid "**false**: Logged events aren’t written to a file."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3061
+#: ../../source/configure/environment-configuration-settings.rst:3083
 msgid "``config.json setting``: ``\".LogSettings.EnableFile\": true\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3062
+#: ../../source/configure/environment-configuration-settings.rst:3084
 msgid "Environment variable: ``MM_LOGSETTINGS_ENABLEFILE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3075
+#: ../../source/configure/environment-configuration-settings.rst:3097
 msgid ""
 "Typically set to **true** in a production environment. When enabled, you "
 "can download the ``mattermost.log`` file locally by going to **System "
 "Console > Reporting > Server Logs**, and selecting **Download Logs**."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3085
+#: ../../source/configure/environment-configuration-settings.rst:3107
 msgid "File log directory"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3088
+#: ../../source/configure/environment-configuration-settings.rst:3110
 msgid "The location of the log files."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3090
+#: ../../source/configure/environment-configuration-settings.rst:3112
 msgid ""
 "String input. If left blank, log files are stored in the ``./logs`` "
 "directory."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3089
+#: ../../source/configure/environment-configuration-settings.rst:3111
 msgid "``config.json setting``: ``\".LogSettings.FileLocation\": \"\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3090
+#: ../../source/configure/environment-configuration-settings.rst:3112
 msgid "Environment variable: ``MM_LOGSETTINGS_FILELOCATION``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3096
+#: ../../source/configure/environment-configuration-settings.rst:3118
 msgid ""
 "The path you configure must exist, and Mattermost must have write "
 "permissions for this directory."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3110
+#: ../../source/configure/environment-configuration-settings.rst:3132
 msgid "File log level"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3113
+#: ../../source/configure/environment-configuration-settings.rst:3135
 msgid ""
 "The level of detail in log events when Mattermost outputs log messages to"
 " a file."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3116
+#: ../../source/configure/environment-configuration-settings.rst:3138
 msgid "**DEBUG**: Outputs verbose detail for developers debugging issues."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3119
+#: ../../source/configure/environment-configuration-settings.rst:3141
 msgid ""
 "**INFO**: **(Default)** Outputs error messages and information around "
 "startup and initialization."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3114
+#: ../../source/configure/environment-configuration-settings.rst:3136
 msgid "``config.json setting``: ``\".LogSettings.FileLevel\": INFO\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3115
+#: ../../source/configure/environment-configuration-settings.rst:3137
 msgid "Environment variable: ``MM_LOGSETTINGS_FILELEVEL``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3135
+#: ../../source/configure/environment-configuration-settings.rst:3157
 msgid "Output file logs as JSON"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3138
+#: ../../source/configure/environment-configuration-settings.rst:3160
 msgid "Configure Mattermost to output file logs as JSON."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3139
+#: ../../source/configure/environment-configuration-settings.rst:3161
 msgid "``config.json setting``: ``\".LogSettings.FileJson\": true\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3140
+#: ../../source/configure/environment-configuration-settings.rst:3162
 msgid "Environment variable: ``MM_LOGSETTINGS_FILEJSON``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3160
+#: ../../source/configure/environment-configuration-settings.rst:3182
 msgid "Enable webhook debugging"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3163
+#: ../../source/configure/environment-configuration-settings.rst:3185
 msgid ""
 "Configure Mattermost to capture the contents of incoming webhooks to "
 "console and/or file logs for debugging."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3167
+#: ../../source/configure/environment-configuration-settings.rst:3189
 msgid ""
 "**true**: **(Default)** The contents of incoming webhooks are printed to "
 "log files for debugging."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3170
+#: ../../source/configure/environment-configuration-settings.rst:3192
 msgid "**false**: The contents of incoming webhooks aren’t printed to log files."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3164
+#: ../../source/configure/environment-configuration-settings.rst:3186
 msgid ""
 "``config.json setting``: ``\".LogSettings.EnableWebhookDebugging\": "
 "true\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3165
+#: ../../source/configure/environment-configuration-settings.rst:3187
 msgid "Environment variable: ``MM_LOGSETTINGS_ENABLEWEBHOOKDEBUGGING``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3176
+#: ../../source/configure/environment-configuration-settings.rst:3198
 msgid ""
 "Enable debug logs by changing the :ref:`file log level "
 "<manage/logging:file logs>` to ``DEBUG`` to include the request body of "
 "incoming webhooks in logs."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3186
+#: ../../source/configure/environment-configuration-settings.rst:3208
 msgid "Output logs to multiple targets"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3189
+#: ../../source/configure/environment-configuration-settings.rst:3211
 msgid ""
 "Configure Mattermost to allow any combination of console, local file, "
 "syslog, and TCP socket targets, and send log records to multiple targets."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3194
+#: ../../source/configure/environment-configuration-settings.rst:3216
 msgid ""
 "String input can contain a filespec to another configuration file, a "
 "database DSN, or JSON."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3190
+#: ../../source/configure/environment-configuration-settings.rst:3212
 msgid "``config.json setting``: ``\".LogSettings.AdvancedLoggingJSON\":: \"\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3191
+#: ../../source/configure/environment-configuration-settings.rst:3213
 msgid "Environment variable: ``MM_LOGSETTINGS_ADVANCEDLOGGINGJSON``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3201
+#: ../../source/configure/environment-configuration-settings.rst:3223
 msgid ""
 "See the :doc:`Mattermost logging </manage/logging>` documentation for "
 "details. These targets have been chosen as they support the vast majority"
@@ -5307,70 +5339,70 @@ msgid ""
 "additional software installed."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3202
+#: ../../source/configure/environment-configuration-settings.rst:3224
 msgid "Logs are recorded asynchronously to reduce latency to the caller."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3203
+#: ../../source/configure/environment-configuration-settings.rst:3225
 msgid "Advanced logging supports hot-reloading of logger configuration."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3213
+#: ../../source/configure/environment-configuration-settings.rst:3235
 msgid "Maximum field size"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3216
+#: ../../source/configure/environment-configuration-settings.rst:3238
 msgid "Enables system admins to limit the size of log fields during logging."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3219
+#: ../../source/configure/environment-configuration-settings.rst:3241
 msgid "Numerical value. Default is **2048**."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3217
+#: ../../source/configure/environment-configuration-settings.rst:3239
 msgid "``config.json setting``: ``\".LogSettings.MaxFieldSize\": 2048\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3218
+#: ../../source/configure/environment-configuration-settings.rst:3240
 msgid "Environment variable: ``MM_LOGSETTINGS_MAXFIELDSIZE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3230
+#: ../../source/configure/environment-configuration-settings.rst:3252
 msgid "Enable diagnostics and error reporting"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3233
+#: ../../source/configure/environment-configuration-settings.rst:3255
 msgid "Whether or not diagnostics and error reports are sent to Mattermost, Inc."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3236
+#: ../../source/configure/environment-configuration-settings.rst:3258
 msgid "**true**: **(Default)** Send diagnostics and error reports."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3238
+#: ../../source/configure/environment-configuration-settings.rst:3260
 msgid "**false**: Diagnostics and error reports aren't sent."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3234
+#: ../../source/configure/environment-configuration-settings.rst:3256
 msgid "``config.json setting``: ``\".LogSettings.EnableDiagnostics\": \"\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3235
+#: ../../source/configure/environment-configuration-settings.rst:3257
 msgid "Environment variable: ``MM_LOGSETTINGS_ENABLEDIAGNOSTICS``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3244
+#: ../../source/configure/environment-configuration-settings.rst:3266
 msgid ""
 "See the :ref:`telemetry <manage/telemetry:error and diagnostics reporting"
 " feature>` docummentation for details on the information Mattermost "
 "collects."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3249
+#: ../../source/configure/environment-configuration-settings.rst:3271
 msgid "Session lengths"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3254
+#: ../../source/configure/environment-configuration-settings.rst:3276
 msgid ""
 "User sessions are cleared when a user tries to log in, and sessions are "
 "cleared every 24 hours from the sessions database table. Configure "
@@ -5380,17 +5412,17 @@ msgid ""
 "require a server restart before taking effect."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3266
+#: ../../source/configure/environment-configuration-settings.rst:3288
 msgid "Extend session length with activity"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3269
+#: ../../source/configure/environment-configuration-settings.rst:3291
 msgid ""
 "Improves the user experience by extending sessions and keeping users "
 "logged in if they are active in their Mattermost apps."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3272
+#: ../../source/configure/environment-configuration-settings.rst:3294
 msgid ""
 "**true**: **(Default)** Sessions are automatically extended when users "
 "are active in their Mattermost client. User sessions only expire when "
@@ -5398,43 +5430,43 @@ msgid ""
 " the session lengths defined."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3277
+#: ../../source/configure/environment-configuration-settings.rst:3299
 msgid ""
 "**false**: Sessions won't extend with activity in Mattermost. User "
 "sessions immediately expire at the end of the session length or based on "
 "the `session idle timeout <#session-idle-timeout>`__ configured."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3269
-#: ../../source/configure/environment-configuration-settings.rst:3296
-#: ../../source/configure/environment-configuration-settings.rst:3325
-#: ../../source/configure/environment-configuration-settings.rst:3348
+#: ../../source/configure/environment-configuration-settings.rst:3291
+#: ../../source/configure/environment-configuration-settings.rst:3318
+#: ../../source/configure/environment-configuration-settings.rst:3347
 #: ../../source/configure/environment-configuration-settings.rst:3370
-#: ../../source/configure/environment-configuration-settings.rst:3396
+#: ../../source/configure/environment-configuration-settings.rst:3392
+#: ../../source/configure/environment-configuration-settings.rst:3418
 msgid "System Config path: **Environment > Session Lengths**"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3270
+#: ../../source/configure/environment-configuration-settings.rst:3292
 msgid ""
 "``config.json`` setting: "
 "``\".ServiceSettings.ExtendSessionLengthWithActivity: true,``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3271
+#: ../../source/configure/environment-configuration-settings.rst:3293
 msgid ""
 "Environment variable: "
-"``MM_SERVICESETTINGS_EXTENDSESSONLENGTHWITHACTIVITY``"
+"``MM_SERVICESETTINGS_EXTENDSESSIONLENGTHWITHACTIVITY``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3293
+#: ../../source/configure/environment-configuration-settings.rst:3315
 msgid "Terminate sessions on password change"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3296
+#: ../../source/configure/environment-configuration-settings.rst:3318
 msgid "Enable or disable session revocation when a user's password changes."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3299
+#: ../../source/configure/environment-configuration-settings.rst:3321
 msgid ""
 "**true**: **(Default for new deployments)** Session revocation is "
 "enabled. All sessions of a user expire if their password is changed (by "
@@ -5442,7 +5474,7 @@ msgid ""
 "the user, their current session isn't terminated."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3305
+#: ../../source/configure/environment-configuration-settings.rst:3327
 msgid ""
 "**false**: **(Default for existing deployments)** Session revocation is "
 "disabled. When users change their password, only the user's current "
@@ -5450,77 +5482,77 @@ msgid ""
 " of the user's sessions are revoked."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3297
+#: ../../source/configure/environment-configuration-settings.rst:3319
 msgid ""
 "``config.json`` setting: "
 "``\".ServiceSettings.TerminateSessionsOnPasswordChange: true,``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3298
+#: ../../source/configure/environment-configuration-settings.rst:3320
 msgid ""
 "Environment variable: "
 "``MM_SERVICESETTINGS_TERMINATESESSIONSONPASSWORDCHANGE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3322
+#: ../../source/configure/environment-configuration-settings.rst:3344
 msgid "Session length for AD/LDAP and email"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3325
+#: ../../source/configure/environment-configuration-settings.rst:3347
 msgid ""
 "Set the number of hours counted from the last time a user entered their "
 "credentials into the web app or the desktop app to the expiry of the "
 "user’s session on email and AD/LDAP authentication."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3330
 #: ../../source/configure/environment-configuration-settings.rst:3352
+#: ../../source/configure/environment-configuration-settings.rst:3374
 msgid "Numerical input in hours. Default is **720** hours."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3326
+#: ../../source/configure/environment-configuration-settings.rst:3348
 msgid ""
 "``config.json`` setting: ``\".ServiceSettings.SessionLengthWebInHours: "
 "720,``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3327
-msgid "Environment variable: ``MM_SERVICESETTINGS_SESSONLENGTHWEBINHOURS``"
+#: ../../source/configure/environment-configuration-settings.rst:3349
+msgid "Environment variable: ``MM_SERVICESETTINGS_SESSIONLENGTHWEBINHOURS``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3335
 #: ../../source/configure/environment-configuration-settings.rst:3357
-#: ../../source/configure/environment-configuration-settings.rst:3382
+#: ../../source/configure/environment-configuration-settings.rst:3379
+#: ../../source/configure/environment-configuration-settings.rst:3404
 msgid ""
 "After changing this setting, the new session length takes effect after "
 "the next time the user enters their credentials."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3345
+#: ../../source/configure/environment-configuration-settings.rst:3367
 msgid "Session length for mobile"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3348
+#: ../../source/configure/environment-configuration-settings.rst:3370
 msgid ""
 "Set the number of hours counted from the last time a user entered their "
 "credential into the mobile app to the expiry of the user’s session."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3349
+#: ../../source/configure/environment-configuration-settings.rst:3371
 msgid ""
 "``config.json`` setting: ``\".ServiceSettings.SessionLengthMobileInHours:"
 " 720,``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3350
-msgid "Environment variable: ``MM_SERVICESETTINGS_SESSONLENGTHMOBILEINHOURS``"
+#: ../../source/configure/environment-configuration-settings.rst:3372
+msgid "Environment variable: ``MM_SERVICESETTINGS_SESSIONLENGTHMOBILEINHOURS``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3367
+#: ../../source/configure/environment-configuration-settings.rst:3389
 msgid "Session length for SSO"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3370
+#: ../../source/configure/environment-configuration-settings.rst:3392
 msgid ""
 "Set the number of hours from the last time a user entered their SSO "
 "credentials to the expiry of the user’s session. This setting defines the"
@@ -5528,83 +5560,83 @@ msgid ""
 "2.0."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3375
+#: ../../source/configure/environment-configuration-settings.rst:3397
 msgid ""
 "Numerical input in hours. Default is **720** hours. Numbers as decimals "
 "are also valid values for this configuration setting."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3371
+#: ../../source/configure/environment-configuration-settings.rst:3393
 msgid ""
 "``config.json`` setting: ``\".ServiceSettings.SessionLengthSSOInHours: "
 "720,``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3372
-msgid "Environment variable: ``MM_SERVICESETTINGS_SESSONLENGTHSSOINHOURS``"
+#: ../../source/configure/environment-configuration-settings.rst:3394
+msgid "Environment variable: ``MM_SERVICESETTINGS_SESSIONLENGTHSSOINHOURS``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3383
+#: ../../source/configure/environment-configuration-settings.rst:3405
 msgid ""
 "If the authentication method is SAML, GitLab, or OAuth 2.0, users may "
 "automatically be logged back in to Mattermost if they are already logged "
 "in to SAML, GitLab, or with OAuth 2.0."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3393
+#: ../../source/configure/environment-configuration-settings.rst:3415
 msgid "Session cache"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3396
+#: ../../source/configure/environment-configuration-settings.rst:3418
 msgid "Set the number of minutes to cache a session in memory."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3398
+#: ../../source/configure/environment-configuration-settings.rst:3420
 msgid "Numerical input in minutes. Default is **10** minutes."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3397
+#: ../../source/configure/environment-configuration-settings.rst:3419
 msgid "``config.json`` setting: ``\".ServiceSettings.SessionCacheInMinutes: 10,``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3398
-msgid "Environment variable: ``MM_SERVICESETTINGS_SESSONCACHEINMINUTES``"
+#: ../../source/configure/environment-configuration-settings.rst:3420
+msgid "Environment variable: ``MM_SERVICESETTINGS_SESSIONCACHEINMINUTES``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3411
+#: ../../source/configure/environment-configuration-settings.rst:3433
 msgid "Session idle timeout"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3414
+#: ../../source/configure/environment-configuration-settings.rst:3436
 msgid ""
 "The number of minutes from the last time a user was active on the system "
 "to the expiry of the user’s session. Once expired, the user will need to "
 "log in to continue."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3418
+#: ../../source/configure/environment-configuration-settings.rst:3440
 msgid ""
 "Numerical input in minutes. Default is **43200** (30 days). Minimum value"
 " is **5** minutes, and a value of **0** sets the time as unlimited."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3415
+#: ../../source/configure/environment-configuration-settings.rst:3437
 msgid ""
 "``config.json`` setting: "
 "``\".ServiceSettings.SessionIdleTimeoutInMinutes: 43200,``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3416
-msgid "Environment variable: ``MM_SERVICESETTINGS_SESSONIDLETIMEOUTINMINUTES``"
+#: ../../source/configure/environment-configuration-settings.rst:3438
+msgid "Environment variable: ``MM_SERVICESETTINGS_SESSIONIDLETIMEOUTINMINUTES``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3425
+#: ../../source/configure/environment-configuration-settings.rst:3447
 msgid ""
 "This setting has no effect when `extend session length with activity "
 "<#extend-session-length-with-activity>`__ is set to **true**."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3426
+#: ../../source/configure/environment-configuration-settings.rst:3448
 msgid ""
 "This setting applies to the webapp and the desktop app. For mobile apps, "
 "use an :doc:`EMM provider </deploy/mobile/deploy-mobile-apps-using-emm-"
@@ -5612,18 +5644,18 @@ msgid ""
 "                                                |"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3427
+#: ../../source/configure/environment-configuration-settings.rst:3449
 msgid ""
 "In :doc:`high availability mode </scale/high-availability-cluster-based-"
 "deployment>`, enable IP hash load balancing for reliable timeout "
 "measurement."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3432
+#: ../../source/configure/environment-configuration-settings.rst:3454
 msgid "Performance monitoring"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3437
+#: ../../source/configure/environment-configuration-settings.rst:3459
 msgid ""
 "Configure performance monitoring by going to **System Console > "
 "Environment > Performance Monitoring**, or by editing the ``config.json``"
@@ -5631,101 +5663,101 @@ msgid ""
 "settings in this section require a server restart before taking effect."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3439
+#: ../../source/configure/environment-configuration-settings.rst:3461
 msgid ""
 "See the :doc:`performance monitoring </scale/deploy-prometheus-grafana-"
 "for-performance-monitoring>` documentation to learn more about setting up"
 " performance monitoring."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3452
+#: ../../source/configure/environment-configuration-settings.rst:3474
 msgid "Enable performance monitoring"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3455
+#: ../../source/configure/environment-configuration-settings.rst:3477
 msgid "Enable or disable performance monitoring."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3457
+#: ../../source/configure/environment-configuration-settings.rst:3479
 msgid "**true**: Performance monitoring data collection and profiling is enabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3459
+#: ../../source/configure/environment-configuration-settings.rst:3481
 msgid "**false**: **(Default)** Mattermost performance monitoring is disabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3455
-#: ../../source/configure/environment-configuration-settings.rst:3479
-#: ../../source/configure/environment-configuration-settings.rst:3498
-#: ../../source/configure/environment-configuration-settings.rst:3519
+#: ../../source/configure/environment-configuration-settings.rst:3477
+#: ../../source/configure/environment-configuration-settings.rst:3501
+#: ../../source/configure/environment-configuration-settings.rst:3520
+#: ../../source/configure/environment-configuration-settings.rst:3541
 msgid "System Config path: **Environment > Performance Monitoring**"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3456
+#: ../../source/configure/environment-configuration-settings.rst:3478
 msgid "``config.json setting``: ``\".MetricsSettings.Enable\": false\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3457
-#: ../../source/configure/environment-configuration-settings.rst:3481
+#: ../../source/configure/environment-configuration-settings.rst:3479
+#: ../../source/configure/environment-configuration-settings.rst:3503
 msgid "Environment variable: ``MM_METRICSSETTINGS_ENABLE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3463
+#: ../../source/configure/environment-configuration-settings.rst:3485
 msgid ""
 "See the :doc:`performance monitoring </scale/deploy-prometheus-grafana-"
 "for-performance-monitoring>` documentation to learn more."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3476
+#: ../../source/configure/environment-configuration-settings.rst:3498
 msgid "Enable client performance monitoring"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3479
+#: ../../source/configure/environment-configuration-settings.rst:3501
 msgid "Enable or disable client performance monitoring."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3481
+#: ../../source/configure/environment-configuration-settings.rst:3503
 msgid ""
 "**true**: Client performance monitoring data collection and profiling is "
 "enabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3483
+#: ../../source/configure/environment-configuration-settings.rst:3505
 msgid ""
 "**false**: **(Default)** Mattermost client performance monitoring is "
 "disabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3480
+#: ../../source/configure/environment-configuration-settings.rst:3502
 msgid ""
 "``config.json setting``: ``\".MetricsSettings.EnableClientMetrics\": "
 "false\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3495
+#: ../../source/configure/environment-configuration-settings.rst:3517
 msgid "Client side user ids"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3498
+#: ../../source/configure/environment-configuration-settings.rst:3520
 msgid ""
 "A list of comma-separated user IDs you want to track for client-side "
 "webapp metrics."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3501
+#: ../../source/configure/environment-configuration-settings.rst:3523
 msgid "Limited to 5 user IDs. Blank by default."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3499
+#: ../../source/configure/environment-configuration-settings.rst:3521
 msgid "``config.json setting``: ``\".MetricsSettings.ClientSideUserIds\"``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3500
-#: ../../source/configure/environment-configuration-settings.rst:3521
+#: ../../source/configure/environment-configuration-settings.rst:3522
+#: ../../source/configure/environment-configuration-settings.rst:3543
 msgid "Environment variable: ``MM_METRICSSETTINGS_LISTENADDRESS``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3506
+#: ../../source/configure/environment-configuration-settings.rst:3528
 msgid ""
 "The total number of user IDs is limited to 5 to ensure performance. "
 "Adding more IDs can overwhelm Prometheus due to high label cardinality. "
@@ -5733,29 +5765,29 @@ msgid ""
 "list."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3516
+#: ../../source/configure/environment-configuration-settings.rst:3538
 msgid "Listen address"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3519
+#: ../../source/configure/environment-configuration-settings.rst:3541
 msgid ""
 "The port the Mattermost server will listen on to expose performance "
 "metrics, when enabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3522
+#: ../../source/configure/environment-configuration-settings.rst:3544
 msgid "Numerical input. Default is **8067**."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3520
+#: ../../source/configure/environment-configuration-settings.rst:3542
 msgid "``config.json setting``: ``\".MetricsSettings.ListenAddress\": 8067\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3528
+#: ../../source/configure/environment-configuration-settings.rst:3550
 msgid "Developer"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3533
+#: ../../source/configure/environment-configuration-settings.rst:3555
 msgid ""
 "Configure developer mode by going to **System Console > Environment > "
 "Developer**, or by editing the ``config.json`` file as described in the "
@@ -5763,126 +5795,126 @@ msgid ""
 "require a server restart before taking effect."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3546
+#: ../../source/configure/environment-configuration-settings.rst:3568
 msgid "Enable testing commands"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3549
+#: ../../source/configure/environment-configuration-settings.rst:3571
 msgid "Enable or disable the ``/test`` slash command."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3551
+#: ../../source/configure/environment-configuration-settings.rst:3573
 msgid ""
 "**true**: **(Default)** The ``/test`` slash command is enabled to load "
 "test accounts and test data."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3554
+#: ../../source/configure/environment-configuration-settings.rst:3576
 msgid "**false**:  The ``/test`` slash command is disabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3549
-#: ../../source/configure/environment-configuration-settings.rst:3572
-#: ../../source/configure/environment-configuration-settings.rst:3596
-#: ../../source/configure/environment-configuration-settings.rst:3619
+#: ../../source/configure/environment-configuration-settings.rst:3571
+#: ../../source/configure/environment-configuration-settings.rst:3594
+#: ../../source/configure/environment-configuration-settings.rst:3618
+#: ../../source/configure/environment-configuration-settings.rst:3641
 msgid "System Config path: **Environment > Developer**"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3550
+#: ../../source/configure/environment-configuration-settings.rst:3572
 msgid "``config.json setting``: ``\".ServiceSettings.EnableTesting\": true\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3551
+#: ../../source/configure/environment-configuration-settings.rst:3573
 msgid "Environment variable: ``MM_SERVICESETTINGS_ENABLETESTING``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3569
+#: ../../source/configure/environment-configuration-settings.rst:3591
 msgid "Enable developer mode"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3572
+#: ../../source/configure/environment-configuration-settings.rst:3594
 msgid "Enable or disable developer mode."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3574
+#: ../../source/configure/environment-configuration-settings.rst:3596
 msgid ""
 "**true**: **(Default)** Javascript errors are shown in a banner at the "
 "top of Mattermost the user interface. Not recommended for use in "
 "production."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3578
+#: ../../source/configure/environment-configuration-settings.rst:3600
 msgid "**false**: Users are not alerted to Javascript errors."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3573
+#: ../../source/configure/environment-configuration-settings.rst:3595
 msgid "``config.json setting``: ``\".ServiceSettings.EnableDeveloper\": true\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3574
+#: ../../source/configure/environment-configuration-settings.rst:3596
 msgid "Environment variable: ``MM_SERVICESETTINGS_ENABLEDEVELOPER``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3593
+#: ../../source/configure/environment-configuration-settings.rst:3615
 msgid "Enable client debugging"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3596
+#: ../../source/configure/environment-configuration-settings.rst:3618
 msgid ""
 "Enable or disable client-side debugging settings found in **Settings > "
 "Advanced > Debugging** for individual users."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3600
+#: ../../source/configure/environment-configuration-settings.rst:3622
 msgid "**true**: Those settings are visible and can be enabled by users."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3602
+#: ../../source/configure/environment-configuration-settings.rst:3624
 msgid "**false**: **(Default)** Those settings are hidden and disabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3597
+#: ../../source/configure/environment-configuration-settings.rst:3619
 msgid ""
 "``config.json setting``: "
 "``\".ServiceSettings.EnableClientPerformanceDebugging\": false\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3598
+#: ../../source/configure/environment-configuration-settings.rst:3620
 msgid ""
 "Environment variable: "
 "``MM_SERVICESETTINGS_ENABLECLIENTPERFORMANCEDEBUGGING``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3606
+#: ../../source/configure/environment-configuration-settings.rst:3628
 msgid ""
 "See the :ref:`client debugging <preferences/manage-advanced-"
 "options:performance debugging>` documentation to learn more."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3616
+#: ../../source/configure/environment-configuration-settings.rst:3638
 msgid "Allow untrusted internal connections"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3619
+#: ../../source/configure/environment-configuration-settings.rst:3641
 msgid ""
 "Limit the ability for the Mattermost server to make untrusted requests "
 "within its local network. A request is considered “untrusted” when it’s "
 "made on behalf of a client."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3620
+#: ../../source/configure/environment-configuration-settings.rst:3642
 msgid ""
 "``config.json setting``: "
 "``\".ServiceSettings.AllowedUntrustedInternalConnections\": \"\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3621
+#: ../../source/configure/environment-configuration-settings.rst:3643
 msgid ""
 "Environment variable: "
 "``MM_SERVICESETTINGS_ALLOWEDUNTRUSTEDINTERNALCONNECTIONS``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3624
+#: ../../source/configure/environment-configuration-settings.rst:3646
 msgid ""
 "This setting is a whitelist of local network addresses that can be "
 "requested by the Mattermost server. It’s configured as a whitespace-"
@@ -5890,56 +5922,56 @@ msgid ""
 "accessed."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3627
+#: ../../source/configure/environment-configuration-settings.rst:3649
 msgid ""
 "Requests that can only be configured by system admins are considered "
 "trusted and won't be affected by this setting. Trusted URLs include ones "
 "used for OAuth login or for sending push notifications."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3630
+#: ../../source/configure/environment-configuration-settings.rst:3652
 msgid ""
 "The following features make untrusted requests and are affected by this "
 "setting:"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3632
+#: ../../source/configure/environment-configuration-settings.rst:3654
 msgid ""
 "Integrations using webhooks, slash commands, or message actions. This "
 "prevents them from requesting endpoints within the local network."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3633
+#: ../../source/configure/environment-configuration-settings.rst:3655
 msgid ""
 "Link previews. When a link to a local network address is posted in a chat"
 " message, this prevents a link preview from being displayed."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3634
+#: ../../source/configure/environment-configuration-settings.rst:3656
 msgid ""
 "The local :doc:`image proxy </deploy/server/image-proxy>`. If the local "
 "image proxy is enabled, images located on the local network cannot be "
 "used by integrations or posted in chat messages."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3638
+#: ../../source/configure/environment-configuration-settings.rst:3660
 msgid "Some examples of when you may want to modify this setting include:"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3640
+#: ../../source/configure/environment-configuration-settings.rst:3662
 msgid ""
 "When installing a plugin that includes its own images, such as "
 "`Matterpoll <https://github.com/matterpoll/matterpoll>`__, you'll need to"
 " add the Mattermost server’s domain name to this list."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3643
+#: ../../source/configure/environment-configuration-settings.rst:3665
 msgid ""
 "When running a bot or webhook-based integration on your local network, "
 "you’ll need to add the hostname of the bot/integration to this list."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3644
+#: ../../source/configure/environment-configuration-settings.rst:3666
 msgid ""
 "If your network is configured in such a way that publicly-accessible web "
 "pages or images are accessed by the Mattermost server using their "
@@ -5947,7 +5979,7 @@ msgid ""
 "this list."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3647
+#: ../../source/configure/environment-configuration-settings.rst:3669
 msgid ""
 "**Warning**: This setting is intended to prevent users located outside "
 "your local network from using the Mattermost server to request "
@@ -5956,34 +5988,34 @@ msgid ""
 "network."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3651
+#: ../../source/configure/environment-configuration-settings.rst:3673
 msgid "**Notes**:"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3653
+#: ../../source/configure/environment-configuration-settings.rst:3675
 msgid ""
 "The public IP of the Mattermost application server itself is also "
 "considered a reserved IP."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3654
+#: ../../source/configure/environment-configuration-settings.rst:3676
 msgid ""
 "Use whitespaces instead of commas to list the hostnames, IP addresses, or"
 " CIDR ranges. For example: ``webhooks.internal.example.com``, "
 "``127.0.0.1``, or ``10.0.16.0/28``."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3656
+#: ../../source/configure/environment-configuration-settings.rst:3678
 msgid "IP address and domain name rules are applied before host resolution."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3657
+#: ../../source/configure/environment-configuration-settings.rst:3679
 msgid ""
 "CIDR rules are applied after host resolution, and only CIDR rules require"
 " DNS resolution."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3658
+#: ../../source/configure/environment-configuration-settings.rst:3680
 msgid ""
 "Mattermost attempts to match IP addresses and hostnames without even "
 "resolving. If that fails, Mattermost resolve using the local resolver (by"
@@ -5995,11 +6027,11 @@ msgid ""
 "``10.0.16.20``."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3666
+#: ../../source/configure/environment-configuration-settings.rst:3688
 msgid "Mobile security"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3671
+#: ../../source/configure/environment-configuration-settings.rst:3693
 msgid ""
 "From Mattermost v10.7 and mobile app v2.27, you can configure biometric "
 "authentication, prevent Mattermost use on jailbroken or rooted devices, "
@@ -6010,197 +6042,196 @@ msgid ""
 "require a server restart before taking effect."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3684
+#: ../../source/configure/environment-configuration-settings.rst:3706
 msgid "Enable biometric authentication"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3687
+#: ../../source/configure/environment-configuration-settings.rst:3709
 msgid ""
 "Enforce biometric authentication, with PIN/passcode fallback, before "
 "accessing the app. Users will be prompted based on session activity and "
 "server switching rules."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3692
+#: ../../source/configure/environment-configuration-settings.rst:3714
 msgid "**true**: Biometric authentication is enabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3694
+#: ../../source/configure/environment-configuration-settings.rst:3716
 msgid "**false**: **(Default)** Biometric authentication is disabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3687
-#: ../../source/configure/environment-configuration-settings.rst:3721
-#: ../../source/configure/environment-configuration-settings.rst:3751
+#: ../../source/configure/environment-configuration-settings.rst:3709
+#: ../../source/configure/environment-configuration-settings.rst:3743
+#: ../../source/configure/environment-configuration-settings.rst:3773
 msgid "System Config path: **Environment > Mobile Security**"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3688
+#: ../../source/configure/environment-configuration-settings.rst:3710
 msgid ""
 "``config.json setting``: ``\".NativeAppSettings.MobileEnableBiometrics\":"
 " false\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3689
+#: ../../source/configure/environment-configuration-settings.rst:3711
 msgid "Environment variable: ``MM_NATIVEAPPSETTINGS_MOBILEENABLEBIOMETRICS``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3700
+#: ../../source/configure/environment-configuration-settings.rst:3722
 msgid "Users must authenticate in the following situations:"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3702
+#: ../../source/configure/environment-configuration-settings.rst:3724
 msgid ""
 "Adding a new server: When a new server is added to the mobile app and "
 "biometric authentication is enabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3703
+#: ../../source/configure/environment-configuration-settings.rst:3725
 msgid ""
 "Opening the mobile app: At app launch when the active server requires "
 "authentication."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3704
+#: ../../source/configure/environment-configuration-settings.rst:3726
 msgid ""
 "Returning after background use: After the app has been in the background "
 "for 5 minutes or more and the active server requires authentication."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3705
+#: ../../source/configure/environment-configuration-settings.rst:3727
 msgid ""
 "Using multiple servers: When accessing a server for the first time, after"
 " 5 minutes of inactivity on a server, and when the last authentication "
 "attempt fails."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3718
+#: ../../source/configure/environment-configuration-settings.rst:3740
 msgid "Enable jailbreak/root protection"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3721
+#: ../../source/configure/environment-configuration-settings.rst:3743
 msgid ""
 "Prevent access to the app on devices detected as jailbroken or rooted. If"
 " a device fails the security check, users will be denied access or "
 "prompted to switch to a compliant server."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3727
+#: ../../source/configure/environment-configuration-settings.rst:3749
 msgid "**true**: Jailbreak/Root protection is enabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3729
+#: ../../source/configure/environment-configuration-settings.rst:3751
 msgid "**false**: **(Default)** Jailbreak/Root protection is disabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3722
+#: ../../source/configure/environment-configuration-settings.rst:3744
 msgid ""
 "``config.json setting``: "
 "``\".NativeAppSettings.MobileJailbreakProtection\": false\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3723
+#: ../../source/configure/environment-configuration-settings.rst:3745
 msgid "Environment variable: ``MM_NATIVEAPPSETTINGS_MOBILEJAILBREAKPROTECTION``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3735
+#: ../../source/configure/environment-configuration-settings.rst:3757
 msgid ""
 "See the `Expo SDK documentation "
 "<https://docs.expo.dev/versions/latest/sdk/device/#deviceisrootedexperimentalasync>`_"
 " to learn more about how checks are performed for this functionality."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3748
+#: ../../source/configure/environment-configuration-settings.rst:3770
 msgid "Prevent screen capture"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3751
+#: ../../source/configure/environment-configuration-settings.rst:3773
 msgid ""
 "Block screenshots and screen recordings when using the mobile app. "
 "Screenshots will appear blank, and screen recordings will blur (iOS) or "
 "show a black screen (Android). Also applies when switching apps."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3757
+#: ../../source/configure/environment-configuration-settings.rst:3779
 msgid "**true**: Screen capture blocking is enabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3759
+#: ../../source/configure/environment-configuration-settings.rst:3781
 msgid "**false**: **(Default)** Screen capture blocking is disabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3752
+#: ../../source/configure/environment-configuration-settings.rst:3774
 msgid ""
 "``config.json setting``: "
 "``\".NativeAppSettings.MobilePreventScreenCapture\": false\",``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3753
+#: ../../source/configure/environment-configuration-settings.rst:3775
 msgid "Environment variable: ``MM_NATIVEAPPSETTINGS_MOBILEPREVENTSCREENCAPTURE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3764
+#: ../../source/configure/environment-configuration-settings.rst:3786
 msgid "config.json-only settings"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3780
+#: ../../source/configure/environment-configuration-settings.rst:3802
 msgid "Disable Customer Portal requests"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3783
+#: ../../source/configure/environment-configuration-settings.rst:3805
 msgid "Enable or disable customer portal requests."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3786
+#: ../../source/configure/environment-configuration-settings.rst:3808
 msgid ""
 "**true**: **(Default)** Server-side requests made to the customer portal "
 "are disabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3789
+#: ../../source/configure/environment-configuration-settings.rst:3811
 msgid ""
 "**false**: Server-side requests made to the Mattermost Customer Portal "
 "are enabled, but will always fail in air-gapped and restricted deployment"
 " environments."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3783
-#: ../../source/configure/environment-configuration-settings.rst:3905
-#: ../../source/configure/environment-configuration-settings.rst:3924
-#: ../../source/configure/environment-configuration-settings.rst:3940
-#: ../../source/configure/environment-configuration-settings.rst:3957
-#: ../../source/configure/environment-configuration-settings.rst:3977
-#: ../../source/configure/environment-configuration-settings.rst:3997
+#: ../../source/configure/environment-configuration-settings.rst:3805
+#: ../../source/configure/environment-configuration-settings.rst:3927
+#: ../../source/configure/environment-configuration-settings.rst:3946
+#: ../../source/configure/environment-configuration-settings.rst:3962
+#: ../../source/configure/environment-configuration-settings.rst:3979
+#: ../../source/configure/environment-configuration-settings.rst:3999
 #: ../../source/configure/environment-configuration-settings.rst:4019
+#: ../../source/configure/environment-configuration-settings.rst:4041
 msgid "System Config path: **N/A**"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3784
+#: ../../source/configure/environment-configuration-settings.rst:3806
 msgid "``config.json setting``: ``CloudSettings`` > ``Disable`` > ``false,``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3785
+#: ../../source/configure/environment-configuration-settings.rst:3807
 msgid "Environment variable: ``MM_CLOUDSETTINGS_DISABLE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3796
+#: ../../source/configure/environment-configuration-settings.rst:3818
 msgid "Cloud admins can’t modify this configuration setting."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3808
+#: ../../source/configure/environment-configuration-settings.rst:3830
 msgid "Enable API team deletion"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3810
 #: ../../source/configure/environment-configuration-settings.rst:3832
 #: ../../source/configure/environment-configuration-settings.rst:3854
+#: ../../source/configure/environment-configuration-settings.rst:3876
 msgid ""
 "This setting isn't available in the System Console and can only be set in"
 " ``config.json``."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3812
-#, python-brace-format
+#: ../../source/configure/environment-configuration-settings.rst:3834
 msgid ""
 "**True**: The ``api/v4/teams/{teamid}?permanent=true`` API endpoint can "
 "be called by team admins and system admins (or users with appropriate "
@@ -6209,25 +6240,23 @@ msgid ""
 "team."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3814
-#, python-brace-format
+#: ../../source/configure/environment-configuration-settings.rst:3836
 msgid ""
 "**False**: The API endpoint cannot be called. Note that "
 "``api/v4/teams/{teamid}`` can still be used to soft delete a team."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3817
+#: ../../source/configure/environment-configuration-settings.rst:3839
 msgid ""
 "This feature's ``config.json`` setting is ``\"EnableAPITeamDeletion\": "
 "false`` with options ``true`` and ``false``."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3830
+#: ../../source/configure/environment-configuration-settings.rst:3852
 msgid "Enable API user deletion"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3834
-#, python-brace-format
+#: ../../source/configure/environment-configuration-settings.rst:3856
 msgid ""
 "**True**: The ``api/v4/users/{userid}?permanent=true`` API endpoint can "
 "be called by system admins (or users with appropriate permissions), or by"
@@ -6235,25 +6264,23 @@ msgid ""
 "tool:mmctl user delete>` command, to permanently delete a user."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3836
-#, python-brace-format
+#: ../../source/configure/environment-configuration-settings.rst:3858
 msgid ""
 "**False**: The API endpoint cannot be called. Note that "
 "``api/v4/users/{userid}`` can still be used to soft delete a user."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3839
+#: ../../source/configure/environment-configuration-settings.rst:3861
 msgid ""
 "This feature's ``config.json`` setting is ``\"EnableAPIUserDeletion\": "
 "false`` with options ``true`` and ``false``."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3852
+#: ../../source/configure/environment-configuration-settings.rst:3874
 msgid "Enable API channel deletion"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3856
-#, python-brace-format
+#: ../../source/configure/environment-configuration-settings.rst:3878
 msgid ""
 "**True**: The ``api/v4/channels/{channelid}?permanent=true`` API endpoint"
 " can be called by system admins (or users with appropriate permissions), "
@@ -6261,32 +6288,31 @@ msgid ""
 "tool:mmctl channel delete>` command, to permanently delete a channel."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3858
-#, python-brace-format
+#: ../../source/configure/environment-configuration-settings.rst:3880
 msgid ""
 "**False**: The API endpoint cannot be called. Note that "
 "``api/v4/channels/{channelid}`` can still be used to soft delete a "
 "channel."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3861
+#: ../../source/configure/environment-configuration-settings.rst:3883
 msgid ""
 "This feature's ``config.json`` setting is ``\"EnableAPIChannelDeletion\":"
 " false`` with options ``true`` and ``false``."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3865
+#: ../../source/configure/environment-configuration-settings.rst:3887
 msgid "Enable desktop app developer mode"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3867
+#: ../../source/configure/environment-configuration-settings.rst:3889
 msgid ""
 "From Desktop App v5.10, this setting enables developer debugging options "
 "available by going to the **View > Developer Tools** menu in the "
 "Mattermost desktop app."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3869
+#: ../../source/configure/environment-configuration-settings.rst:3891
 msgid ""
 "This setting isn't available in the System Console and can only be "
 "enabled in ``config.json`` by setting the environment variable "
@@ -6294,14 +6320,14 @@ msgid ""
 "default."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3871
+#: ../../source/configure/environment-configuration-settings.rst:3893
 msgid ""
 "**True**: Unlocks the following options in the Desktop App for the "
 "purposes of troubleshooting and debugging. You should only enable this "
 "setting if instructed to by a Mattermost developer:"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3873
+#: ../../source/configure/environment-configuration-settings.rst:3895
 msgid ""
 "**Browser Mode Only**: Completely disables the preload script and stops "
 "web app components from knowing they're in the desktop app. This option "
@@ -6311,7 +6337,7 @@ msgid ""
 "widget, and breaks resizing on macOS."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3874
+#: ../../source/configure/environment-configuration-settings.rst:3896
 msgid ""
 "**Disable Notification Storage**: Turns off maps that hold references to "
 "unread notifications until they've been selected & read. This option is "
@@ -6319,7 +6345,7 @@ msgid ""
 "references to unused notifications."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3875
+#: ../../source/configure/environment-configuration-settings.rst:3897
 msgid ""
 "**Disable User Activity Monitor**: Turns off the interval that checks "
 "whether the user is away or not. This option is good for debugging "
@@ -6327,13 +6353,13 @@ msgid ""
 "behavior."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3876
+#: ../../source/configure/environment-configuration-settings.rst:3898
 msgid ""
 "**Disable Context Menu**: Turns off the context menu attached to the "
 "BrowserViews. This option is good as a library santity check."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3877
+#: ../../source/configure/environment-configuration-settings.rst:3899
 msgid ""
 "**Force Legacy Messaging API**: Forces the app to revert back to the old "
 "messaging API instead of the newer contextBridge API. This option is a "
@@ -6341,18 +6367,18 @@ msgid ""
 "holding onto memory."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3878
+#: ../../source/configure/environment-configuration-settings.rst:3900
 msgid ""
 "**Force New Messaging API**: Forces the app to use the contextBridge API "
 "and completely disables the legacy one. This option forces off listeners "
 "for the legacy API."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3881
+#: ../../source/configure/environment-configuration-settings.rst:3903
 msgid "Redis cache backend"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3886
+#: ../../source/configure/environment-configuration-settings.rst:3908
 msgid ""
 "From Mattermost v10.4, Mattermost Enterprise customers can configure "
 "`Redis <https://redis.io/>`_ (Remote Dictionary Server) as an alternative"
@@ -6362,144 +6388,144 @@ msgid ""
 "its able to store data in memory and provide very quick data access."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3888
+#: ../../source/configure/environment-configuration-settings.rst:3910
 msgid ""
 "Using Redis as a caching solution can help ensure that Mattermost for "
 "enterprise-level deployments with high concurrency and large user bases "
 "remains performant and efficient, even under heavy usage."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3890
+#: ../../source/configure/environment-configuration-settings.rst:3912
 msgid ""
 "Configure a Redis cache by editing the ``config.json`` file as described "
 "in the following tables. Changes to configuration settings in this "
 "section require a server restart before taking effect."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3902
+#: ../../source/configure/environment-configuration-settings.rst:3924
 msgid "Cache type"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3905
+#: ../../source/configure/environment-configuration-settings.rst:3927
 msgid "Define the cache type."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3907
+#: ../../source/configure/environment-configuration-settings.rst:3929
 msgid "**lru**: **(Default)** Mattermost uses the in-memory cache store."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3909
+#: ../../source/configure/environment-configuration-settings.rst:3931
 msgid "**redis**: Mattermost uses the configured Redis cache store."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3906
+#: ../../source/configure/environment-configuration-settings.rst:3928
 msgid "``config.json setting``: ``CacheSettings`` > ``CacheType,`` > ``lru``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3907
+#: ../../source/configure/environment-configuration-settings.rst:3929
 msgid "Environment variable: ``MM_CACHESETTINGS_CACHETYPE``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3921
+#: ../../source/configure/environment-configuration-settings.rst:3943
 msgid "Redis address"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3924
+#: ../../source/configure/environment-configuration-settings.rst:3946
 msgid "The hostname of the Redis host."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3925
+#: ../../source/configure/environment-configuration-settings.rst:3947
 msgid "``config.json setting``: ``CacheSettings`` > ``RedisAddress,``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3926
+#: ../../source/configure/environment-configuration-settings.rst:3948
 msgid "Environment variable: ``MM_CACHESETTINGS_REDISADDRESS``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3937
+#: ../../source/configure/environment-configuration-settings.rst:3959
 msgid "Redis password"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3940
+#: ../../source/configure/environment-configuration-settings.rst:3962
 msgid "The password of the Redis host."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3942
+#: ../../source/configure/environment-configuration-settings.rst:3964
 msgid "String input. Leave blank if there is no password."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3941
+#: ../../source/configure/environment-configuration-settings.rst:3963
 msgid "``config.json setting``: ``CacheSettings`` > ``RedisPassword,``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3942
+#: ../../source/configure/environment-configuration-settings.rst:3964
 msgid "Environment variable: ``MM_CACHESETTINGS_REDISPASSWORD``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3954
+#: ../../source/configure/environment-configuration-settings.rst:3976
 msgid "Redis database"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3957
+#: ../../source/configure/environment-configuration-settings.rst:3979
 msgid "The database of the Redis host."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3959
+#: ../../source/configure/environment-configuration-settings.rst:3981
 msgid ""
 "Zero-indexed number up to 15. Typically set to ``0``. Redis allows a "
 "maximum of 16 databases."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3958
+#: ../../source/configure/environment-configuration-settings.rst:3980
 msgid "``config.json setting``: ``CacheSettings`` > ``RedisDB,``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3959
-#: ../../source/configure/environment-configuration-settings.rst:3979
+#: ../../source/configure/environment-configuration-settings.rst:3981
+#: ../../source/configure/environment-configuration-settings.rst:4001
 msgid "Environment variable: ``MM_CACHESETTINGS_REDISDB``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3974
+#: ../../source/configure/environment-configuration-settings.rst:3996
 msgid "Disable client cache"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3977
+#: ../../source/configure/environment-configuration-settings.rst:3999
 msgid "Disables the client-side cache of Redis."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3979
+#: ../../source/configure/environment-configuration-settings.rst:4001
 msgid ""
 "**true**: Client-side cache of Redis is disabled. Typically used as a "
 "test option, and not in production environments."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3982
+#: ../../source/configure/environment-configuration-settings.rst:4004
 msgid "**false**: **(Default)** Client-side cache of Redis is enabled."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3978
+#: ../../source/configure/environment-configuration-settings.rst:4000
 msgid ""
 "``config.json setting``: ``CacheSettings`` > ``DisableClientCache,`` > "
 "``false``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3994
+#: ../../source/configure/environment-configuration-settings.rst:4016
 msgid "Redis cache prefix"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3997
+#: ../../source/configure/environment-configuration-settings.rst:4019
 msgid "Adds a prefix to all Redis cache keys."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3998
+#: ../../source/configure/environment-configuration-settings.rst:4020
 msgid "``config.json setting``: ``CacheSettings`` > ``RedisCachePrefix``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:3999
+#: ../../source/configure/environment-configuration-settings.rst:4021
 msgid "Environment variable: ``MM_CACHESETTINGS_REDISCACHEPREFIX``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:4004
+#: ../../source/configure/environment-configuration-settings.rst:4026
 msgid ""
 "Adding a prefix to all Redis cache keys reduces key collisions, "
 "simplifies debugging, isolates data, and provides a clear structure for "
@@ -6508,37 +6534,57 @@ msgid ""
 "for maintaining data integrity and operational efficiency."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:4016
+#: ../../source/configure/environment-configuration-settings.rst:4038
 msgid "Enable webhub channel iteration"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:4019
+#: ../../source/configure/environment-configuration-settings.rst:4041
 msgid "Control the performance of websocket broadcasting in channels."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:4022
+#: ../../source/configure/environment-configuration-settings.rst:4044
 msgid ""
 "When enabled, improves websocket broadcasting performance; however, "
 "performance may decrease when users join or leave a channel."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:4026
+#: ../../source/configure/environment-configuration-settings.rst:4048
 msgid ""
 "Not recommended unless you have at least 200,000 concurrent users "
 "actively using Mattermost."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:4029
+#: ../../source/configure/environment-configuration-settings.rst:4051
 msgid "Disabled by default."
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:4020
+#: ../../source/configure/environment-configuration-settings.rst:4042
 msgid ""
 "``config.json setting``: ``ServiceSettings`` > "
 "``EnableWebHubChannelIteration,`` > ``false``"
 msgstr ""
 
-#: ../../source/configure/environment-configuration-settings.rst:4021
+#: ../../source/configure/environment-configuration-settings.rst:4043
 msgid "Environment variable: ``MM_SERVICESETTINGS_ENABLEWEBHUBCHANNELITERATION``"
 msgstr ""
+
+#~ msgid ""
+#~ "Environment variable: "
+#~ "``MM_SERVICESETTINGS_EXTENDSESSONLENGTHWITHACTIVITY``"
+#~ msgstr ""
+
+#~ msgid "Environment variable: ``MM_SERVICESETTINGS_SESSONLENGTHWEBINHOURS``"
+#~ msgstr ""
+
+#~ msgid "Environment variable: ``MM_SERVICESETTINGS_SESSONLENGTHMOBILEINHOURS``"
+#~ msgstr ""
+
+#~ msgid "Environment variable: ``MM_SERVICESETTINGS_SESSONLENGTHSSOINHOURS``"
+#~ msgstr ""
+
+#~ msgid "Environment variable: ``MM_SERVICESETTINGS_SESSONCACHEINMINUTES``"
+#~ msgstr ""
+
+#~ msgid "Environment variable: ``MM_SERVICESETTINGS_SESSONIDLETIMEOUTINMINUTES``"
+#~ msgstr ""
 

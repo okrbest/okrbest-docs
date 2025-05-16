@@ -1,0 +1,486 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-16 21:31+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:2
+msgid "Deploy Mattermost in Air-Gapped Environments"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:4
+msgid ""
+"This guide outlines how to deploy Mattermost in a self-hosted air-gapped "
+"environment, focusing on setting up the supporting infrastructure "
+"required for a successful deployment. An air-gapped environment is one "
+"that is isolated from the public internet, requiring all necessary "
+"components to be available locally."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:6
+msgid ""
+"Deploying Mattermost in an air-gapped environment involves detailed "
+"preparation to ensure uninterrupted availability of critical components "
+"within the network. These efforts mitigate risks associated with the lack"
+" of internet connectivity by ensuring access to secure, localized "
+"resources. Key considerations include:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:8
+msgid "Container images required when deploying in Kubernetes or Docker."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:9
+msgid ""
+"Mattermost server packages and dependencies required when deploying "
+"directly on Linux servers."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:10
+msgid "Access to a PostgreSQL database."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:11
+msgid ""
+"Object storage or a shared filesystem service for relaibly accessing "
+"files from multiple Mattermost servers."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:12
+msgid ""
+"Other supporting services such as LDAP for authentication, Elasticsearch "
+"for performant post searching, etc. as required for your scale and "
+"performance requirements."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:14
+msgid ""
+"Refer to Mattermost deployment documentation for setting up Mattermost as"
+" needed. This guide focuses on the supporting infrastructure needed for "
+"an air-gapped deployment which is required before deploying Mattermost in"
+" these environments."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:17
+msgid "Set up a self-hosted private container registry"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:19
+msgid ""
+"A private container registry securely stores Docker images for air-gapped"
+" deployments, ensuring compliance with data isolation requirements. Use "
+"it to enable local deployments in Kubernetes or Docker."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:21
+msgid ""
+"The process for uploading images to the registry will need to be tailored"
+" to the security policies of the air-gapped network. For example, perhaps"
+" the registry is allowed to pull images from the public internet. If not,"
+" images will have to be uploaded to the registry from a machine that has "
+"access to the public internet."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:23
+msgid ""
+"Ideally the air-gapped network already has a private registry available. "
+"If not, you can set up a private registry using Docker Registry or "
+"Harbor."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:27
+msgid "**Install Docker Registry**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:33
+msgid "**Configure persistent storage**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:41
+msgid "**Add TLS security** (recommended):"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:43
+msgid "Generate self-signed certificates:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:51
+msgid "Run the registry with TLS:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:64
+msgid ""
+"For more advanced features, consider using `Harbor "
+"<https://github.com/goharbor/harbor>`_."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:66
+msgid "**Download Harbor offline installer** before going air-gapped:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:68
+msgid "Download from https://github.com/goharbor/harbor/releases"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:70
+msgid "**Extract and configure**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:79
+msgid "**Install Harbor**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:85
+msgid ""
+"**Access Harbor** at ``https://harbor-hostname`` (based on your "
+"configuration)"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:88
+msgid "Populate your private registry"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:90
+msgid ""
+"If the private registry cannot access the public internet, retrieve "
+"images on an external machine and securely transfer them using approved "
+"data transfer methods."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:104
+msgid "Configure Kubernetes to use private image registries"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:106
+msgid ""
+"When using Kubernetes in an air-gapped environment, you need to configure"
+" it to use your private registry."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:109
+msgid "Create registry credentials"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:111
+msgid "**Create a kubernetes secret for registry authentication**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:121
+msgid "**Reference the secret in pod specifications**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:136
+msgid "**For Helm deployments**, specify the registry in ``values.yaml``:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:149
+msgid "Configure Docker to use private image registries"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:151
+msgid "Configure Docker on all hosts to trust and use your private registry."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:154
+msgid "Docker daemon configuration"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:156
+msgid "**Add your registry to Docker's trusted registries**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:158
+msgid "Edit or create ``/etc/docker/daemon.json``:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:166
+msgid "For registries using self-signed certificates:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:173
+msgid "**Restart Docker daemon**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:179
+msgid "**Test the configuration**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:186
+msgid "Set up a private Debian package mirror"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:188
+msgid ""
+"A local Debian mirror allows you to maintain packages for system updates "
+"and dependencies. In this case, the mirror will be used to provide "
+"packages for Mattermost server to debian-based hosts."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:190
+msgid ""
+"Ideally the air-gapped network already has a local mirror available. If "
+"not, you can set up a local mirror such as Aptly or debmirror."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:194
+msgid "**Install Aptly** (on an internet-connected machine):"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:201
+msgid "**Create GPG key for signing packages**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:207
+msgid "**Create a mirror configuration**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:213
+msgid "**Update the mirror to download packages**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:219
+msgid "**Create and publish a snapshot**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:226
+msgid "**Serve the repository**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:234
+msgid "For a simpler approach:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:236
+msgid "**Install debmirror**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:242
+msgid "**Create a mirror script**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:258
+msgid "**Set up a web server** (like nginx) to serve the mirror:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:278
+#: ../../source/deploy/server/air-gapped-deployment.rst:328
+msgid "Client configuration"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:280
+msgid "On air-gapped systems, configure apt to use your local mirror:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:289
+msgid "Set up a private RHEL package mirror"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:291
+msgid ""
+"For Red Hat Enterprise Linux environments, you'll need a local repository"
+" mirror."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:293
+msgid ""
+"Ideally the air-gapped network already has a local mirror available. If "
+"not, you can set up a local mirror such as reposync."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:296
+msgid "Use reposync"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:298
+msgid "**Install required tools** (on an internet-connected RHEL system):"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:304
+msgid "**Download packages**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:312
+msgid "**Create repository metadata**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:319
+msgid "**Set up a web server**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:330
+msgid "On air-gapped RHEL systems:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:332
+msgid "**Disable existing repositories**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:340
+msgid "**Create new repository files**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:360
+msgid "**Clear cache and test**:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:368
+msgid "Mattermost server configuration for air-gapped deployments"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:370
+msgid ""
+"When deploying Mattermost in an air-gapped environment, there are "
+"configuration options available to accommodate the lack of internet "
+"access. The following covers these configuration options and offers "
+"recommendations for settings."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:373
+msgid "Mobile push notifications"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:375
+msgid ""
+"Mattermost can use mobile push notifications to notify users of new "
+"messages and activity. These notifications require a server component to "
+"be deployed to send the notifications to the mobile devices. By default, "
+"Mattermost will use the public push notification service which is not "
+"available in an air-gapped environment. We recommend :ref:`disabling push"
+" notifications <configure/environment-configuration-settings:enable push "
+"notifications>` in **System Console > Environment > Push Notification "
+"Server**."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:378
+msgid "Website link previews"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:380
+msgid ""
+"Website link previews require a connection to the internet to fetch the "
+"content of the links. We recommend :ref:`disabling website link previews "
+"<configure/site-configuration-settings:enable website link previews>` in "
+"**System Console > Site Configuration > Posts**."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:383
+msgid "Additional considerations"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:385
+msgid ""
+"Remember that air-gapped environments require ongoing maintenance to stay"
+" secure and up-to-date. Regular updates to the Mattermost server and "
+"other components are required to ensure the environment remains secure "
+"and up-to-date."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:388
+msgid "Network security"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:390
+msgid "In air-gapped environments, network security is critical:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:392
+msgid ""
+"**Implement strict firewall rules** to control traffic between network "
+"segments."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:393
+msgid ""
+"**Use network segmentation** to isolate critical infrastructure "
+"components."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:394
+msgid ""
+"**Regularly audit network access** to ensure the environment remains "
+"properly isolated."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:397
+msgid "Transfer data to air-gapped networks"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:399
+msgid "For initial setup and updates:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:401
+msgid "**Use approved data diodes** or one-way transfer devices."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:402
+msgid ""
+"**Implement strict media control** for any physical media entering the "
+"air-gapped environment."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:403
+msgid ""
+"**Scan all incoming data** for malware before allowing it into the "
+"environment."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:406
+msgid "Keep systems updated"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:408
+msgid "Develop a process for regular updates:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:410
+msgid "**Schedule periodic updates** to your local mirrors."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:411
+msgid ""
+"**Maintain a consistent testing process** for all updates before "
+"deployment."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:412
+msgid "**Keep comprehensive documentation** of all packages and versions in use."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:415
+msgid "Monitoring and logging"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:417
+msgid "Ensure robust monitoring within the air-gapped environment:"
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:419
+msgid "**Deploy local monitoring solutions** that don't require internet access."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:420
+msgid "**Establish baselines** for normal system behavior."
+msgstr ""
+
+#: ../../source/deploy/server/air-gapped-deployment.rst:421
+msgid ""
+"**Implement centralized logging** for security analysis and "
+"troubleshooting."
+msgstr ""
+

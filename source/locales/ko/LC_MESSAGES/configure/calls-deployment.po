@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mattermost \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-15 06:10+0900\n"
+"POT-Creation-Date: 2025-05-16 21:31+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ko\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/configure/calls-deployment.md:1
 msgid "Calls self-hosted deployment"
@@ -352,7 +352,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/configure/calls-deployment.md:59
-#: ../../source/configure/calls-deployment.md:411
+#: ../../source/configure/calls-deployment.md:412
 msgid "Limitations"
 msgstr ""
 
@@ -395,7 +395,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/configure/calls-deployment.md:66
-#: ../../source/configure/calls-deployment.md:290
+#: ../../source/configure/calls-deployment.md:291
 msgid "Configuration"
 msgstr ""
 
@@ -1001,6 +1001,14 @@ msgstr ""
 
 #: ../../source/configure/calls-deployment.md:188
 msgid ""
+"The [Metrics plugin](https://docs.mattermost.com/scale/collect-"
+"performance-metrics.html) collects application-level metrics only and "
+"does not make system or OS-level calls. As a result, data typically "
+"derived from system-level metrics may be missing in the Grafana panel."
+msgstr ""
+
+#: ../../source/configure/calls-deployment.md:189
+msgid ""
 "On Mattermost versions prior to v9.5, plugin metrics were exposed through"
 " the public `/plugins/com.mattermost.calls/metrics` API endpoint "
 "controlled by the [Web server listen "
@@ -1009,210 +1017,210 @@ msgid ""
 "defaults to port `8065`."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:191
-#: ../../source/configure/calls-deployment.md:263
+#: ../../source/configure/calls-deployment.md:192
+#: ../../source/configure/calls-deployment.md:264
 msgid "**Process**"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:193
+#: ../../source/configure/calls-deployment.md:194
 msgid ""
 "`mattermost_plugin_calls_process_cpu_seconds_total`: Total user and "
 "system CPU time spent in seconds."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:194
+#: ../../source/configure/calls-deployment.md:195
 msgid ""
 "`mattermost_plugin_calls_process_max_fds`: Maximum number of open file "
 "descriptors."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:195
+#: ../../source/configure/calls-deployment.md:196
 msgid ""
 "`mattermost_plugin_calls_process_open_fds`: Number of open file "
 "descriptors."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:196
+#: ../../source/configure/calls-deployment.md:197
 msgid ""
 "`mattermost_plugin_calls_process_resident_memory_bytes`: Resident memory "
 "size in bytes."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:197
+#: ../../source/configure/calls-deployment.md:198
 msgid ""
 "`mattermost_plugin_calls_process_virtual_memory_bytes`: Virtual memory "
 "size in bytes."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:199
+#: ../../source/configure/calls-deployment.md:200
 msgid "**WebRTC connection**"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:201
+#: ../../source/configure/calls-deployment.md:202
 msgid ""
 "`mattermost_plugin_calls_rtc_conn_states_total`: Total number of RTC "
 "connection state changes."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:202
+#: ../../source/configure/calls-deployment.md:203
 msgid "`mattermost_plugin_calls_rtc_errors_total`: Total number of RTC errors."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:203
+#: ../../source/configure/calls-deployment.md:204
 msgid ""
 "`mattermost_plugin_calls_rtc_rtp_bytes_total`: Total number of "
 "sent/received RTP packets in bytes."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:205
-#: ../../source/configure/calls-deployment.md:209
+#: ../../source/configure/calls-deployment.md:206
+#: ../../source/configure/calls-deployment.md:210
 msgid "Note: removed as of v0.16.0"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:207
+#: ../../source/configure/calls-deployment.md:208
 msgid ""
 "`mattermost_plugin_calls_rtc_rtp_packets_total`: Total number of "
 "sent/received RTP packets."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:211
+#: ../../source/configure/calls-deployment.md:212
 msgid ""
 "`mattermost_plugin_calls_rtc_rtp_tracks_total`: Total number of "
 "incoming/outgoing RTP tracks."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:213
+#: ../../source/configure/calls-deployment.md:214
 msgid "Note: added as of v0.16.0"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:215
+#: ../../source/configure/calls-deployment.md:216
 msgid ""
 "`mattermost_plugin_calls_rtc_sessions_total`: Total number of active RTC "
 "sessions."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:217
+#: ../../source/configure/calls-deployment.md:218
 msgid "**Application**"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:219
+#: ../../source/configure/calls-deployment.md:220
 msgid ""
 "`mattermost_plugin_calls_app_handlers_time_bucket`: Time taken to execute"
 " app handlers."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:221
+#: ../../source/configure/calls-deployment.md:222
 msgid "`mattermost_plugin_calls_app_handlers_time_sum`"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:223
+#: ../../source/configure/calls-deployment.md:224
 msgid "`mattermost_plugin_calls_app_handlers_time_count`"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:225
+#: ../../source/configure/calls-deployment.md:226
 msgid "**Database**"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:227
+#: ../../source/configure/calls-deployment.md:228
 msgid ""
 "`mattermost_plugin_calls_store_ops_total`: Total number of db store "
 "operations."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:228
+#: ../../source/configure/calls-deployment.md:229
 msgid ""
 "`mattermost_plugin_calls_store_methods_time_bucket`: Time taken to "
 "execute store methods."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:230
+#: ../../source/configure/calls-deployment.md:231
 msgid "`mattermost_plugin_calls_store_methods_time_sum`"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:232
+#: ../../source/configure/calls-deployment.md:233
 msgid "`mattermost_plugin_calls_store_methods_time_count`"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:233
+#: ../../source/configure/calls-deployment.md:234
 msgid ""
 "`mattermost_plugin_calls_cluster_mutex_grab_time_bucket`: Time taken to "
 "grab global mutexes."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:235
+#: ../../source/configure/calls-deployment.md:236
 msgid "`mattermost_plugin_calls_cluster_mutex_grab_time_sum`"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:237
+#: ../../source/configure/calls-deployment.md:238
 msgid "`mattermost_plugin_calls_cluster_mutex_grab_time_count`"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:238
+#: ../../source/configure/calls-deployment.md:239
 msgid ""
 "`mattermost_plugin_calls_cluster_mutex_locked_time_bucket`: Time spent "
 "locked in global mutexes."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:240
+#: ../../source/configure/calls-deployment.md:241
 msgid "`mattermost_plugin_calls_cluster_mutex_locked_time_sum`"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:242
+#: ../../source/configure/calls-deployment.md:243
 msgid "`mattermost_plugin_calls_cluster_mutex_locked_time_count`"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:244
-#: ../../source/configure/calls-deployment.md:285
+#: ../../source/configure/calls-deployment.md:245
+#: ../../source/configure/calls-deployment.md:286
 msgid "**WebSocket**"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:246
+#: ../../source/configure/calls-deployment.md:247
 msgid ""
 "`mattermost_plugin_calls_websocket_connections_total`: Total number of "
 "active WebSocket connections."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:247
+#: ../../source/configure/calls-deployment.md:248
 msgid ""
 "`mattermost_plugin_calls_websocket_events_total`: Total number of "
 "WebSocket events."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:249
+#: ../../source/configure/calls-deployment.md:250
 msgid "**Jobs**"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:251
+#: ../../source/configure/calls-deployment.md:252
 msgid ""
 "`mattermost_plugin_calls_jobs_live_captions_new_audio_len_ms_bucket`: "
 "Duration (in ms) of new audio transcribed for live captions."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:253
+#: ../../source/configure/calls-deployment.md:254
 msgid "`mattermost_plugin_calls_jobs_live_captions_new_audio_len_ms_sum`"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:255
+#: ../../source/configure/calls-deployment.md:256
 msgid "`mattermost_plugin_calls_jobs_live_captions_new_audio_len_ms_count`"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:256
+#: ../../source/configure/calls-deployment.md:257
 msgid ""
 "`mattermost_plugin_calls_jobs_live_captions_pktPayloadCh_buf_full`: Total"
 " packets of audio data dropped due to full channel."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:257
+#: ../../source/configure/calls-deployment.md:258
 msgid ""
 "`mattermost_plugin_calls_jobs_live_captions_window_dropped`: Total "
 "windows of audio data dropped due to pressure on the transcriber."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:259
+#: ../../source/configure/calls-deployment.md:260
 msgid "WebRTC service metrics"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:261
+#: ../../source/configure/calls-deployment.md:262
 msgid ""
 "Metrics for the `rtcd` service are exposed through the `/metrics` API "
 "endpoint under the `rtcd` API listener controlled by the "
@@ -1220,101 +1228,101 @@ msgid ""
 "`8045`."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:265
+#: ../../source/configure/calls-deployment.md:266
 msgid ""
 "`rtcd_process_cpu_seconds_total`:  Total user and system CPU time spent "
 "in seconds."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:266
+#: ../../source/configure/calls-deployment.md:267
 msgid ""
 "`rtcd_plugin_calls_process_max_fds`: Maximum number of open file "
 "descriptors."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:267
+#: ../../source/configure/calls-deployment.md:268
 msgid "`rtcd_plugin_calls_process_open_fds`: Number of open file descriptors."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:268
+#: ../../source/configure/calls-deployment.md:269
 msgid ""
 "`rtcd_plugin_calls_process_resident_memory_bytes`: Resident memory size "
 "in bytes."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:269
+#: ../../source/configure/calls-deployment.md:270
 msgid ""
 "`rtcd_plugin_calls_process_virtual_memory_bytes`: Virtual memory size in "
 "bytes."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:271
+#: ../../source/configure/calls-deployment.md:272
 msgid "**WebRTC Connection**"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:273
+#: ../../source/configure/calls-deployment.md:274
 msgid ""
 "`rtcd_rtc_conn_states_total`: Total number of RTC connection state "
 "changes."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:274
+#: ../../source/configure/calls-deployment.md:275
 msgid "`rtcd_rtc_errors_total`: Total number of RTC errors."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:275
+#: ../../source/configure/calls-deployment.md:276
 msgid ""
 "`rtcd_rtc_rtp_bytes_total`: Total number of sent/received RTP packets in "
 "bytes."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:276
+#: ../../source/configure/calls-deployment.md:277
 msgid "`rtcd_rtc_rtp_packets_total`: Total number of sent/received RTP packets."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:277
+#: ../../source/configure/calls-deployment.md:278
 msgid "`rtcd_rtc_rtp_tracks_total`: Total number of incoming/outgoing RTP tracks."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:278
+#: ../../source/configure/calls-deployment.md:279
 msgid "`rtcd_rtc_sessions_total`: Total number of active RTC sessions."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:279
+#: ../../source/configure/calls-deployment.md:280
 msgid ""
 "`rtcd_rtc_rtp_tracks_writes_time_bucket`: Time taken to write to outgoing"
 " RTP tracks."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:281
+#: ../../source/configure/calls-deployment.md:282
 msgid "`rtcd_rtc_rtp_tracks_writes_time_sum`"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:283
+#: ../../source/configure/calls-deployment.md:284
 msgid "`rtcd_rtc_rtp_tracks_writes_time_count`"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:287
+#: ../../source/configure/calls-deployment.md:288
 msgid "`rtcd_ws_connections_total`: Total number of active WebSocket connections."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:288
+#: ../../source/configure/calls-deployment.md:289
 msgid ""
 "`rtcd_ws_messages_total`: Total number of received/sent WebSocket "
 "messages."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:292
+#: ../../source/configure/calls-deployment.md:293
 msgid ""
 "A sample Prometheus configuration to scrape both plugin and `rtcd` "
 "metrics could look like this:"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:308
+#: ../../source/configure/calls-deployment.md:309
 msgid "System tunings"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:310
+#: ../../source/configure/calls-deployment.md:311
 msgid ""
 "If you want to host many calls or calls with a large number of "
 "participants, take a look at the following platform specific (Linux) "
@@ -1322,7 +1330,7 @@ msgid ""
 "right now):"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:323
+#: ../../source/configure/calls-deployment.md:324
 msgid "The rtcd service"
 msgstr ""
 
@@ -1336,7 +1344,7 @@ msgid ""
 "available only on [Enterprise](https://mattermost.com/pricing/) plans"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:328
+#: ../../source/configure/calls-deployment.md:329
 msgid ""
 "The Calls plugin has a built-in [Selective Forwarding Unit "
 "(SFU)](https://bloggeek.me/webrtcglossary/sfu/) to route audio and "
@@ -1345,17 +1353,17 @@ msgid ""
 "functionality can be deployed separately as an external `rtcd` instance."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:330
+#: ../../source/configure/calls-deployment.md:331
 msgid "Reasons to use the `rtcd` service"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:332
+#: ../../source/configure/calls-deployment.md:333
 msgid ""
 "This section will help you understand when and why your organization "
 "would want to use `rtcd`."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:335
+#: ../../source/configure/calls-deployment.md:336
 msgid ""
 "`rtcd` is a standalone service, which adds operational complexity, "
 "maintenance costs, and requires an enterprise licence. For those who are "
@@ -1364,13 +1372,13 @@ msgid ""
 "initially."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:338
+#: ../../source/configure/calls-deployment.md:339
 msgid ""
 "The `rtcd` service is the recommended way to host Calls for the following"
 " reasons:"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:340
+#: ../../source/configure/calls-deployment.md:341
 msgid ""
 "**Performance of the main Mattermost server(s).** When the Calls plugin "
 "runs the SFU, calls traffic is added to the processing load of the server"
@@ -1380,7 +1388,7 @@ msgid ""
 "instances, and also reduces costs by minimizing CPU usage spikes."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:342
+#: ../../source/configure/calls-deployment.md:343
 msgid ""
 "**Performance, scalability, and stability of the Calls product.** If "
 "Calls traffic spikes, or more overall capacity is needed, `rtcd` servers "
@@ -1390,7 +1398,7 @@ msgid ""
 "dropped."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:344
+#: ../../source/configure/calls-deployment.md:345
 msgid ""
 "Some caveats apply here. Web socket events (for example: emoji reactions,"
 " hand raising, muting/unmuting) will not be transmitted while the main "
@@ -1398,28 +1406,28 @@ msgid ""
 "main server restarts."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:346
+#: ../../source/configure/calls-deployment.md:347
 msgid ""
 "**Kubernetes deployments.** In a Kubernetes deployment, `rtcd` is "
 "strongly recommended; it is currently the only officially supported way "
 "to run Calls."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:347
+#: ../../source/configure/calls-deployment.md:348
 msgid ""
 "**Technical benefits.** The dedicated `rtcd` service has been optimized "
 "and tuned at the system/network level for real-time audio/video traffic, "
 "where latency is generally more important than throughput."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:349
+#: ../../source/configure/calls-deployment.md:350
 msgid ""
 "In general, `rtcd` is the preferred solution for a performant and "
 "scalable deployment. With `rtcd`, the Mattermost server will be minimally"
 " impacted when hosting a high number of calls."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:351
+#: ../../source/configure/calls-deployment.md:352
 msgid ""
 "See the [Mattermost rtcd repository "
 "documentation](https://github.com/mattermost/rtcd/blob/master/README.md) "
@@ -1428,35 +1436,35 @@ msgid ""
 " as well as:"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:353
+#: ../../source/configure/calls-deployment.md:354
 msgid ""
 "[Key implementation "
 "details](https://github.com/mattermost/rtcd/blob/master/docs/implementation.md)"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:354
+#: ../../source/configure/calls-deployment.md:355
 msgid ""
 "[Project "
 "structure](https://github.com/mattermost/rtcd/blob/master/docs/project_structure.md)"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:355
+#: ../../source/configure/calls-deployment.md:356
 msgid ""
 "[Configuration "
 "overrides](https://github.com/mattermost/rtcd/blob/master/docs/env_config.md)"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:356
+#: ../../source/configure/calls-deployment.md:357
 msgid ""
 "[Authentication "
 "flow](https://github.com/mattermost/rtcd/blob/master/docs/security.md)"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:358
+#: ../../source/configure/calls-deployment.md:359
 msgid "Horizontal scalability"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:360
+#: ../../source/configure/calls-deployment.md:361
 msgid ""
 "The supported way to enable horizontal scalability for Calls is through a"
 " form of DNS based load balancing. This can be achieved regardless of how"
@@ -1464,7 +1472,7 @@ msgid ""
 "alternate way)."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:362
+#: ../../source/configure/calls-deployment.md:363
 msgid ""
 "In order for this to work, the [RTCD Service "
 "URL](https://docs.mattermost.com/configure/plugins-configuration-"
@@ -1474,41 +1482,41 @@ msgid ""
 " the available hosts."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:364
+#: ../../source/configure/calls-deployment.md:365
 msgid "The expected requirements are the following:"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:366
+#: ../../source/configure/calls-deployment.md:367
 msgid ""
 "When a new `rtcd` instance is deployed, it should be added to the DNS "
 "record. The plugin side will then be able to pick it up and start "
 "assigning calls to the new host."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:367
+#: ../../source/configure/calls-deployment.md:368
 msgid ""
 "If a `rtcd` instance goes down, it should be removed from the DNS record."
 " The plugin side can then detect the change and stop assigning new calls "
 "to that host."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:370
+#: ../../source/configure/calls-deployment.md:371
 msgid ""
 "Load balancing is done at the call level. This means that a single call "
 "will always live on a single `rtcd` instance."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:371
+#: ../../source/configure/calls-deployment.md:372
 msgid ""
 "There's currently no support for spreading sessions belonging to the same"
 " call across a fleet of instances."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:374
+#: ../../source/configure/calls-deployment.md:375
 msgid "Configure recording, transcriptions, and live captions"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:376
+#: ../../source/configure/calls-deployment.md:377
 msgid ""
 "Before you can start recording, transcribing, and live captioning calls, "
 "you need to configure the `calls-offloader` job service. See the [calls-"
@@ -1520,13 +1528,13 @@ msgid ""
 "also available on GitHub."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:379
+#: ../../source/configure/calls-deployment.md:380
 msgid ""
 "If deploying the service in a Kubernetes cluster, refer to the later "
 "section on [Helm charts](#helm-charts)."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:382
+#: ../../source/configure/calls-deployment.md:383
 msgid ""
 "Once the `calls-offloader` service is running, recordings should be "
 "explicitly enabled through the [Enable call "
@@ -1537,7 +1545,7 @@ msgid ""
 "settings.html#job-service-url)."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:384
+#: ../../source/configure/calls-deployment.md:385
 msgid ""
 "Call transcriptions can be enabled through the [Enable call "
 "transcriptions](https://docs.mattermost.com/configure/plugins-"
@@ -1545,52 +1553,52 @@ msgid ""
 "configuration setting."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:386
+#: ../../source/configure/calls-deployment.md:387
 msgid ""
 "Live captions can be enabled through the [Enable live "
 "captions](https://docs.mattermost.com/configure/plugins-configuration-"
 "settings.html#enable-live-captions-beta) configuration setting."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:389
+#: ../../source/configure/calls-deployment.md:390
 msgid ""
 "The call transcriptions functionality is available starting in Calls "
 "version v0.22.0."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:390
+#: ../../source/configure/calls-deployment.md:391
 msgid ""
 "The live captions functionality is available starting in Calls version "
 "v0.26.2."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:393
+#: ../../source/configure/calls-deployment.md:394
 msgid "Kubernetes deployments"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:395
+#: ../../source/configure/calls-deployment.md:396
 msgid ""
 "The Calls plugin has been designed to integrate well with Kubernetes to "
 "offer improved scalability and control over the deployment."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:397
+#: ../../source/configure/calls-deployment.md:398
 msgid ""
 "This is a sample diagram showing how the `rtcd` standalone service can be"
 " deployed in a Kubernetes cluster:"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:399
+#: ../../source/configure/calls-deployment.md:400
 msgid ""
 "![A diagram of calls deployed in a Kubernetes cluster.](/images/calls-"
 "deployment-kubernetes.png)"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:399
+#: ../../source/configure/calls-deployment.md:400
 msgid "A diagram of calls deployed in a Kubernetes cluster."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:401
+#: ../../source/configure/calls-deployment.md:402
 msgid ""
 "If Mattermost isn't deployed in a Kubernetes cluster, and you want to use"
 " this deployment type, see the [Deploy Mattermost on "
@@ -1598,11 +1606,11 @@ msgid ""
 "documentation."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:403
+#: ../../source/configure/calls-deployment.md:404
 msgid "Helm Charts"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:405
+#: ../../source/configure/calls-deployment.md:406
 msgid ""
 "The recommended way to deploy Calls related components and services in a "
 "Kubernetes deployment is to use the officially provided Helm charts. "
@@ -1610,25 +1618,25 @@ msgid ""
 "these services can be found in our `mattermost-helm` repository:"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:407
+#: ../../source/configure/calls-deployment.md:408
 msgid ""
 "[rtcd Helm chart](https://github.com/mattermost/mattermost-"
 "helm/tree/master/charts/mattermost-rtcd)"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:409
+#: ../../source/configure/calls-deployment.md:410
 msgid ""
 "[calls-offloader Helm chart](https://github.com/mattermost/mattermost-"
 "helm/tree/master/charts/mattermost-calls-offloader)"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:413
+#: ../../source/configure/calls-deployment.md:414
 msgid ""
 "Due to the inherent complexities of hosting a WebRTC service, some "
 "limitations apply when deploying Calls in a Kubernetes environment."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:415
+#: ../../source/configure/calls-deployment.md:416
 msgid ""
 "One key requirement is that each `rtcd` process live in a dedicated "
 "Kubernetes node. This is necessary to forward the data correctly while "
@@ -1636,7 +1644,7 @@ msgid ""
 "standard ingress but directly to the pod running the `rtcd` process."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:417
+#: ../../source/configure/calls-deployment.md:418
 msgid ""
 "The general recommendation is to expose one external IP address per "
 "`rtcd` instance (Kubernetes node). This makes it simpler to scale as the "
@@ -1645,7 +1653,7 @@ msgid ""
 "configuration."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:419
+#: ../../source/configure/calls-deployment.md:420
 msgid ""
 "If, for some reason, exposing multiple IP addresses is not possible in "
 "your environment, port mapping (NAT) can be used. In this scenario "
@@ -1653,49 +1661,49 @@ msgid ""
 "single external IP. Example:"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:427
+#: ../../source/configure/calls-deployment.md:428
 msgid "This case requires a couple of extra configurations:"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:429
+#: ../../source/configure/calls-deployment.md:430
 msgid ""
 "NAT mappings need to be in place for every `rtcd` node. This is usually "
 "done at the ingress point (e.g., ELB, NLB, etc)."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:430
+#: ../../source/configure/calls-deployment.md:431
 msgid ""
 "The `RTCD_RTC_ICEHOSTPORTOVERRIDE` config should be used to pass a full "
 "mapping of node IPs and their respective port."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:431
+#: ../../source/configure/calls-deployment.md:432
 msgid ""
 "Example: "
 "`RTCD_RTC_ICEHOSTPORTOVERRIDE=rtcdA_IP/8443,rtcdB_IP/8444,rtcdC_IP/8445`"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:432
+#: ../../source/configure/calls-deployment.md:433
 msgid ""
 "The `RTCD_RTC_ICEHOSTOVERRIDE` should be used to set the external IP "
 "address."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:435
+#: ../../source/configure/calls-deployment.md:436
 msgid ""
 "One option to limit these static mappings is to reduce the size of the "
 "local subnet (e.g., to `/29`)."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:438
+#: ../../source/configure/calls-deployment.md:439
 msgid "Frequently asked questions"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:440
+#: ../../source/configure/calls-deployment.md:441
 msgid "Is there encryption?"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:442
+#: ../../source/configure/calls-deployment.md:443
 msgid ""
 "Media (audio/video) is encrypted using security standards as part of "
 "WebRTC. It's mainly a combination of DTLS and SRTP. It's not e2e "
@@ -1706,11 +1714,11 @@ msgid ""
 "server have access to unencrypted call data."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:444
+#: ../../source/configure/calls-deployment.md:445
 msgid "Are there any third-party services involved?"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:446
+#: ../../source/configure/calls-deployment.md:447
 msgid ""
 "The only external service used is a Mattermost official STUN server "
 "(`stun.global.calls.mattermost.com`) which is configured as default. This"
@@ -1724,17 +1732,17 @@ msgid ""
 "settings.html#ice-host-override) setting is provided."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:449
+#: ../../source/configure/calls-deployment.md:450
 msgid ""
 "In air-gapped deployments, using STUN servers is not necessary since all "
 "connections remain within the local network."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:452
+#: ../../source/configure/calls-deployment.md:453
 msgid "Is using UDP a requirement?"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:454
+#: ../../source/configure/calls-deployment.md:455
 msgid ""
 "Yes, UDP is the recommended protocol to serve real-time media as it "
 "allows for the lowest latency between peers. However, there are a couple "
@@ -1742,7 +1750,7 @@ msgid ""
 "firewalls are unable to use UDP:"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:456
+#: ../../source/configure/calls-deployment.md:457
 msgid ""
 "Since plugin version 0.17 and `rtcd` version 0.11 the RTC service will "
 "listen for TCP connections in addition to UDP ones. If configured "
@@ -1751,7 +1759,7 @@ msgid ""
 "it through the preferred UDP channel."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:458
+#: ../../source/configure/calls-deployment.md:459
 msgid ""
 "Run calls through an external TURN server that listens on TCP and relays "
 "all media traffic between peers. However, this is a sub-optimal solution "
@@ -1759,11 +1767,11 @@ msgid ""
 "along with added infrastructural cost."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:460
+#: ../../source/configure/calls-deployment.md:461
 msgid "Do I need a TURN server?"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:462
+#: ../../source/configure/calls-deployment.md:463
 msgid ""
 "TURN becomes necessary when you expect to have clients that are unable to"
 " connect through the configured UDP port. This can happen due to very "
@@ -1773,20 +1781,20 @@ msgid ""
 "connectivity."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:464
+#: ../../source/configure/calls-deployment.md:465
 msgid ""
 "We officially support and recommend using "
 "[coturn](https://github.com/coturn/coturn) for a stable and performant "
 "TURN service implementation."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:466
+#: ../../source/configure/calls-deployment.md:467
 msgid ""
 "How will this work with an existing reverse proxy sitting in front of "
 "Mattermost?"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:468
+#: ../../source/configure/calls-deployment.md:469
 msgid ""
 "Generally clients should connect directly to either Mattermost or, if "
 "deployed, the dedicated `rtcd` service through the configured UDP port . "
@@ -1798,13 +1806,13 @@ msgid ""
 "HTTP."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:470
+#: ../../source/configure/calls-deployment.md:471
 msgid ""
 "Do calls require a dedicated server to work or can they run alongside "
 "Mattermost?"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:472
+#: ../../source/configure/calls-deployment.md:473
 msgid ""
 "The plugin can function in different modes. By default calls are handled "
 "completely by the plugin which runs as part of Mattermost. It's also "
@@ -1812,13 +1820,13 @@ msgid ""
 "bandwidth costs and scale further (Enterprise only)."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:474
+#: ../../source/configure/calls-deployment.md:475
 msgid ""
 "Can the traffic between Mattermost and `rtcd`  be kept internal or should"
 " it be opened to the public?"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:476
+#: ../../source/configure/calls-deployment.md:477
 msgid ""
 "When possible, it's recommended to keep communication between the "
 "Mattermost cluster and the dedicated `rtcd` service under the same "
@@ -1827,7 +1835,7 @@ msgid ""
 "internet."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:478
+#: ../../source/configure/calls-deployment.md:479
 msgid "Can Calls be rolled out on a per-channel basis?"
 msgstr ""
 
@@ -1846,7 +1854,7 @@ msgstr ""
 msgid "deployment-img-yellow"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:483
+#: ../../source/configure/calls-deployment.md:484
 msgid ""
 "Yes. Mattermost system admins running self-hosted deployments can enable "
 "or disable call functionality per channel. Once [test "
@@ -1854,42 +1862,42 @@ msgid ""
 "settings.html#test-mode) is enabled for Mattermost Calls:"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:485
+#: ../../source/configure/calls-deployment.md:486
 msgid "Select **Enable calls** for each channel where you want Calls enabled"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:486
+#: ../../source/configure/calls-deployment.md:487
 msgid "Select **Disable calls** for all channels where you want Calls disabled."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:488
+#: ../../source/configure/calls-deployment.md:489
 msgid ""
 "Once Calls is enabled for specific channels, users can start making calls"
 " in those channels."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:491
+#: ../../source/configure/calls-deployment.md:492
 msgid ""
 "When [test mode](https://docs.mattermost.com/configure/plugins-"
 "configuration-settings.html#test-mode) is disabled for Mattermost Calls, "
 "users in any Mattermost channel can make a call."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:494
+#: ../../source/configure/calls-deployment.md:495
 msgid "Troubleshooting"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:496
+#: ../../source/configure/calls-deployment.md:497
 msgid "Connectivity issues"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:498
+#: ../../source/configure/calls-deployment.md:499
 msgid ""
 "If calls are failing to connect or timing out, it's likely there could be"
 " a misconfiguration at either the plugin config or networking level."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:500
+#: ../../source/configure/calls-deployment.md:501
 msgid ""
 "For example, the [RTC Server Port "
 "(UDP)](https://docs.mattermost.com/configure/plugins-configuration-"
@@ -1899,35 +1907,35 @@ msgid ""
 "correctly."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:502
+#: ../../source/configure/calls-deployment.md:503
 msgid "Connectivity checks"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:504
+#: ../../source/configure/calls-deployment.md:505
 msgid ""
 "An easy way to check whether data can go through is to perform some tests"
 " using the `netcat` command line tool."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:506
+#: ../../source/configure/calls-deployment.md:507
 msgid ""
 "On the host running Calls (could be the Mattermost instance itself or the"
 " one running `rtcd` depending on the chosen setup), run the following:"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:512
+#: ../../source/configure/calls-deployment.md:513
 msgid ""
 "On the client side (i.e., the machine you would normally use to run the "
 "Mattermost desktop app or browser), run the following:"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:518
+#: ../../source/configure/calls-deployment.md:519
 msgid ""
 "If connection succeeds, you should be able to send and receive text "
 "messages by typing and hitting enter on either side."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:521
+#: ../../source/configure/calls-deployment.md:522
 msgid ""
 "`HOST_IP` should generally be the public (client facing) IP of the "
 "Mattermost (or `rtcd`) instance hosting the calls. When set, it should be"
@@ -1936,35 +1944,35 @@ msgid ""
 "settings.html#ice-host-override) config setting."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:525
+#: ../../source/configure/calls-deployment.md:526
 msgid ""
 "`8443` should be changed with the port configured in [RTC Server "
 "Port](https://docs.mattermost.com/configure/plugins-configuration-"
 "settings.html#rtc-server-port-udp)."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:527
+#: ../../source/configure/calls-deployment.md:528
 msgid ""
 "The same checks can be performed to test connectivity through the TCP "
 "port using the same commands with `-u` flag removed."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:530
+#: ../../source/configure/calls-deployment.md:531
 msgid "Network packets debugging"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:532
+#: ../../source/configure/calls-deployment.md:533
 msgid ""
 "A more advanced way to debug networking issues is to use the `tcpdump` "
 "command line utility to temporaily monitor network packets flowing in and"
 " out of the instance hosting calls."
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:534
+#: ../../source/configure/calls-deployment.md:535
 msgid "On the server side, run the following:"
 msgstr ""
 
-#: ../../source/configure/calls-deployment.md:540
+#: ../../source/configure/calls-deployment.md:541
 msgid ""
 "This command will output information (i.e. source and destination "
 "addresses) for all the network packets being sent or received through "
