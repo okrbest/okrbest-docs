@@ -1,0 +1,323 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 06:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/scale/scale-to-80000-users.rst:2
+msgid "Scale Mattermost up to 80000 users"
+msgstr ""
+
+#: ../../source/_static/badges/ent-selfhosted.rst:7
+msgid ""
+"|plans-img| Available on `Enterprise plans "
+"<https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/ent-selfhosted.rst:9
+msgid ""
+"|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
+"deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:7
+msgid ""
+"This page describes the Mattermost reference architecture designed for "
+"the load of up to 80000 concurrent users. Unsure which reference "
+"architecture to use? See the :doc:`scaling for enterprise </scale"
+"/scaling-for-enterprise>` documentation for details."
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:9
+msgid "**High Availability**: Required"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:10
+msgid "**Database Configuration**: writer, multiple readers"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:14
+msgid ""
+"Usage of CPU, RAM, and storage space can vary significantly based on user"
+" behavior. These hardware recommendations are based on traditional "
+"deployments and may grow or shrink depending on how active your users "
+"are."
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:15
+msgid ""
+"While the following Elasticsearch specifications may be more than "
+"sufficient for some use cases, we have not extensively tested "
+"configurations with lower resource allocations for this user scale. If "
+"cost optimization is a priority, admins may choose to experiment with "
+"smaller configurations, but we recommend starting with the tested "
+"specifications to ensure system stability and performance. Keep in mind "
+"that under-provisioning can lead to degraded user experience and "
+"additional troubleshooting effort."
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:18
+msgid "Requirements"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:22
+msgid "Scroll horizontally to see additional columns in the table below."
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:25
+msgid "**Resource Type**"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:25
+msgid "**Nodes**"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:25
+msgid "**vCPU/ Memory (GiB)**"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:25
+msgid "**AWS Instance**"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:25
+msgid "**Azure Instance**"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:28
+msgid "Mattermost Application"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:28
+#: ../../source/scale/scale-to-80000-users.rst:34
+msgid "4"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:28
+msgid "16/32"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:28
+msgid "c7i.4xlarge"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:28
+msgid "F16s v2"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:30
+msgid "RDS Writer"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:30
+#: ../../source/scale/scale-to-80000-users.rst:36
+msgid "1"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:30
+#: ../../source/scale/scale-to-80000-users.rst:32
+msgid "16/128"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:30
+#: ../../source/scale/scale-to-80000-users.rst:32
+msgid "db.r7g.4xlarge"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:30
+#: ../../source/scale/scale-to-80000-users.rst:32
+msgid "E16as v6"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:32
+msgid "RDS Reader"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:32
+msgid "3"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:34
+msgid "Elasticsearch cluster"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:34
+msgid "8/64"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:34
+msgid "r6g.2xlarge.search"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:34
+msgid "E8ads v6"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:36
+msgid "Proxy"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:36
+msgid "16/64"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:36
+msgid "m7i.4xlarge"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:36
+msgid "D16s v6"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:40
+msgid "Lifetime storage"
+msgstr ""
+
+#: ../../source/scale/lifetime-storage.rst:5
+msgid ""
+"To forecast your own storage usage, begin with a Mattermost server "
+"approximately 600 MB to 800 MB in size including operating system and "
+"database, then add the multiplied product of:"
+msgstr ""
+
+#: ../../source/scale/lifetime-storage.rst:7
+msgid ""
+"Estimated storage per user per month (see below), multiplied by 12 months"
+" in a year"
+msgstr ""
+
+#: ../../source/scale/lifetime-storage.rst:8
+msgid "Estimated mean average number of users in a year"
+msgstr ""
+
+#: ../../source/scale/lifetime-storage.rst:9
+msgid "A 1-2x safety factor"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:46
+msgid "Estimated storage per user, per month"
+msgstr ""
+
+#: ../../source/scale/estimated-storage-per-user-per-month.rst:5
+msgid ""
+"File usage per user varies significantly across industries. The below "
+"benchmarks are recommended:"
+msgstr ""
+
+#: ../../source/scale/estimated-storage-per-user-per-month.rst:7
+msgid "**Low usage teams** (1-5 MB/user/month)"
+msgstr ""
+
+#: ../../source/scale/estimated-storage-per-user-per-month.rst:9
+msgid ""
+"Primarily using text messages and links to communicate. Examples would "
+"include software development teams that heavily use web-based document "
+"creation and management tools, and therefore rarely upload files to the "
+"server."
+msgstr ""
+
+#: ../../source/scale/estimated-storage-per-user-per-month.rst:11
+msgid "**Medium usage teams** (5-25 MB/user/month)"
+msgstr ""
+
+#: ../../source/scale/estimated-storage-per-user-per-month.rst:13
+msgid ""
+"Using a mix of text messages as well as shared documents and images to "
+"communicate. Examples might include business teams that may commonly drag"
+" and drop screenshots, PDFs and Microsoft Office documents into "
+"Mattermost for sharing and review."
+msgstr ""
+
+#: ../../source/scale/estimated-storage-per-user-per-month.rst:15
+msgid "**High usage teams** (25-100 MB/user/month)"
+msgstr ""
+
+#: ../../source/scale/estimated-storage-per-user-per-month.rst:17
+msgid ""
+"Heaviest utilization comes from teams uploading a high number of large "
+"files into Mattermost on a regular basis. Examples include creative teams"
+" who share and store artwork and media with tags and commentary in a "
+"pipeline production process."
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:52
+msgid "Example"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:54
+msgid ""
+"A 80000-person team with medium usage (with a safety factor of 2x) would "
+"require between 10.56TB :sup:`1` and 52.8TB :sup:`2` of free space per "
+"annum."
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:56
+msgid ":sup:`1` 80000 users * 5 MB * 12 months * 2x safety factor"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:58
+msgid ":sup:`2` 80000 users * 25 MB * 12 months * 2x safety factor"
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:60
+msgid ""
+"We strongly recommend that you review storage utilization at least "
+"quarterly to ensure adequate free space is available."
+msgstr ""
+
+#: ../../source/scale/scale-to-80000-users.rst:63
+msgid "Additional considerations"
+msgstr ""
+
+#: ../../source/scale/additional-ha-considerations.rst:5
+msgid ""
+"`Elasticsearch <https://www.elastic.co>`__ provides enterprise-scale "
+"deployments with optimized search performance and prevents performance "
+"degradation and timeouts. Elasticsearch allows you to search large "
+"volumes of data quickly, in near real-time, by creating and managing an "
+"index of post data. Mattermost’s implementation uses `Elasticsearch "
+"<https://www.elastic.co>`_ as a distributed, RESTful search engine "
+"supporting highly efficient database searches in a :doc:`cluster "
+"environment </scale/high-availability-cluster-based-deployment>`. Visit "
+"the :doc:`Mattermost Elasticsearch product documentation "
+"</scale/elasticsearch>` for deployment and configuration details."
+msgstr ""
+
+#: ../../source/scale/additional-ha-considerations.rst:7
+msgid ""
+"Performance monitoring support enables a Mattermost server to track "
+"system health for large Enterprise deployments through integrations with "
+"`Prometheus <https://prometheus.io/>`__ and `Grafana "
+"<https://grafana.com/>`__. These integrations support data collection "
+"from several Mattermost servers, which is particularly useful if you’re "
+"running Mattermost :doc:`in high availability mode </scale/high-"
+"availability-cluster-based-deployment>`. Once you’re tracking system "
+"health, you can :doc:`set up performance alerts </scale/performance-"
+"alerting>` on your Grafana dashboard. Visit the :doc:`Mattermost "
+"Performance Monitoring product documentation </scale/deploy-prometheus-"
+"grafana-for-performance-monitoring>` for installation details."
+msgstr ""
+

@@ -11,6 +11,10 @@ SPHINXOPTS      ?= -j auto
 SPHINXBUILD     ?= pipenv run sphinx-build
 SPHINXAUTOBUILD ?= pipenv run sphinx-autobuild
 AUTOBUILDOPTS   ?= -D=html_baseurl=http://127.0.0.1:8000
+LANG ?= en
+BUILDLANGDIR = $(BUILDDIR)/html/$(LANG)
+DOCTREESLANGDIR = $(BUILDDIR)/doctrees/$(LANG)
+SPHINXOPTS += -D language=$(LANG)
 
 # If we're not on Windows, check to see if 'mm_url_path_prefix' is included in SPHINXOPTS.
 # If it is included, extract the PR ID from the prefix and set the html_baseurl config
@@ -44,11 +48,16 @@ test:
 # Run `make livehtml` to start sphinx-autobuild.
 livehtml:
 ifeq ($(OS),Windows_NT)
-	@CMD /C IF NOT EXIST $(BUILDDIR) MD $(BUILDDIR)
-	@CMD /C $(SPHINXAUTOBUILD) "$(SOURCEDIR)" "$(BUILDDIR)/html" -d "$(BUILDDIR)/doctrees" $(SPHINXOPTS) $(AUTOBUILDOPTS) $(O)
+#	@CMD /C IF NOT EXIST $(BUILDDIR) MD $(BUILDDIR)
+#	@CMD /C $(SPHINXAUTOBUILD) "$(SOURCEDIR)" "$(BUILDDIR)/html" -d "$(BUILDDIR)/doctrees" $(SPHINXOPTS) $(AUTOBUILDOPTS) $(O)
+	@CMD /C IF NOT EXIST $(BUILDLANGDIR) MD $(BUILDLANGDIR)
+	@CMD /C $(SPHINXAUTOBUILD) "$(SOURCEDIR)" "$(BUILDLANGDIR)" -d "$(DOCTREESLANGDIR)" $(SPHINXOPTS) $(AUTOBUILDOPTS) $(O)
 else
-	@mkdir -p "$(BUILDDIR)"
-	@$(SPHINXAUTOBUILD) "$(SOURCEDIR)" "$(BUILDDIR)/html" -d "$(BUILDDIR)/doctrees" $(SPHINXOPTS) $(AUTOBUILDOPTS) $(O)
+#	@mkdir -p "$(BUILDDIR)"
+#	@$(SPHINXAUTOBUILD) "$(SOURCEDIR)" "$(BUILDDIR)/html" -d "$(BUILDDIR)/doctrees" $(SPHINXOPTS) $(AUTOBUILDOPTS) $(O)
+	@mkdir -p "$(BUILDLANGDIR)"
+	@LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 
+	@$(SPHINXAUTOBUILD) "$(SOURCEDIR)" "$(BUILDLANGDIR)" -d "$(DOCTREESLANGDIR)" $(SPHINXOPTS) $(AUTOBUILDOPTS) $(O)
 endif
 
 # Run `make linkcheck` to check external links
@@ -85,3 +94,24 @@ else
 	@mkdir -p "$(BUILDDIR)"
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS2) $(O) 2>>"$(WARNINGSFILE)"
 endif
+
+# .pot 파일 생성
+# pipenv run sphinx-build -b gettext source/ build/gettext
+gettext:
+	@mkdir -p "$(BUILDDIR)/gettext"
+	@$(SPHINXBUILD) -b gettext "$(SOURCEDIR)" "$(BUILDDIR)/gettext" 
+
+# 추출된 `.pot` 파일을 기반으로 특정 언어(ko)의 `.po` 파일 생성
+# pipenv run sphinx-intl update -p build/gettext -l ko
+update-po-ko: gettext
+	@pipenv run sphinx-intl update -p "$(BUILDDIR)/gettext" -l ko
+
+livehtml-ko: update-po-ko
+	@pipenv run sphinx-intl build
+	@LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 $(MAKE) livehtml LANG=ko
+
+build-html-ko: clean 
+	@pipenv run sphinx-build -b html -D language=ko "$(SOURCEDIR)" "$(BUILDDIR)/html/ko"
+
+package-ko: build-html-ko
+	@tar -czf "$(BUILDDIR)/okrbest-docs-html.tgz" -C "$(BUILDDIR)/html/ko" .

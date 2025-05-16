@@ -103,6 +103,10 @@ templates_path = ["_templates"]
 # You can specify multiple suffix as a list of string:
 source_suffix = [".rst", ".md"]
 
+# 번역 파일 경로
+locale_dirs = ['locales/']  # 번역 파일(.po)이 저장될 디렉토리
+gettext_compact = False  # 번역 파일을 각 문서별로 분리
+
 # The encoding of source files.
 # source_encoding = 'utf-8-sig'
 

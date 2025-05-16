@@ -1,0 +1,655 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 06:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/onboard/advanced-permissions.rst:2
+msgid "Advanced permissions"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-cloud-selfhosted.rst:7
+msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-cloud-selfhosted.rst:9
+msgid ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
+"hosted <https://mattermost.com/download/>`__ deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:7
+msgid ""
+"Mattermost system admins using Mattermost Cloud or Mattermost Server can "
+"use Advanced Permissions to customize which users can perform specific "
+"actions, such as creating teams, managing channels, and configuring "
+"webhooks. The Mattermost permission system is based on a modified RBAC "
+"(role-based access control) architecture, using roles to determine which "
+"users have the ability to perform various actions."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:9
+msgid "Two permission schemes are provided in Mattermost:"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:11
+msgid ""
+"**System Scheme**: Applies permissions universally across all teams and "
+"channels."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:12
+msgid ""
+"**Team Override Schemes**: Allow admins to customize permissions for each"
+" team (available in Mattermost Enterprise and Professional)."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:14
+msgid ""
+"This document describes the types of permissions that can be given to "
+"users of Mattermost using schemes as well as channel settings and roles. "
+"The :doc:`permissions backend documentation </onboard/advanced-"
+"permissions-backend-infrastructure>` provides additional technical "
+"details around permissions."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:17
+msgid "Permissions structure"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:19
+msgid ""
+"The Mattermost System Console provides a number of elements for Admins to"
+" control the permissions in their system."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:22
+msgid "System scheme"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:24
+msgid ""
+"You can set the default permissions granted to system admins, team "
+"admins, channel admins, guests (if enabled), and all members. The "
+"permissions granted in the System Scheme apply system-wide, meaning:"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:26
+msgid ""
+"**Guests:** If Guest Accounts are enabled, permissions apply to guest "
+"users in all channels, in all teams."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:27
+msgid ""
+"**All Members:** Permissions apply to all members, including admins, in "
+"all channels, in all teams."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:28
+msgid ""
+"**Channel Administrators:** Permissions apply to all channel admins in "
+"all channels, in all teams."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:29
+msgid ""
+"**Team Administrators:** Permissions apply to all team admins, in all "
+"teams."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:31
+msgid ""
+"To override the System Scheme default permissions in a specific team, you"
+" must set up a Team Override Scheme."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:33
+msgid ""
+"You can access the System Scheme interface by going to **System Console >"
+" User Management > Permissions > System Scheme**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:38
+msgid "Team override scheme"
+msgstr ""
+
+#: ../../source/_static/badges/ent-only.rst:9
+#: ../../source/_static/badges/ent-pro-only.rst:9
+msgid "Note"
+msgstr ""
+
+#: ../../source/_static/badges/ent-pro-only.rst:11
+msgid ""
+"|plans-img-yellow| Available only on `Enterprise and Professional "
+"<https://mattermost.com/pricing/>`__ plans"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:43
+msgid ""
+"On systems with multiple :ref:`Mattermost teams <collaborate/organize-"
+"using-teams:single team versus multiple teams>`, each team may operate "
+"and collaborate in a unique way. Team Override Schemes give Admins the "
+"flexibility to tailor permissions to the needs of each team."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:45
+msgid "When you use this permission scheme:"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:47
+msgid ""
+"The permissions granted in a Team Override Scheme apply only in the teams"
+" which are assigned to the scheme."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:48
+msgid ""
+"The System Scheme does not apply to teams that are added to a Team "
+"Override Scheme."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:49
+msgid "Teams can only belong to one Team Override Scheme."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:51
+msgid ""
+"You can access the Team Override Scheme interface by going to **System "
+"Console > User Management > Permissions > Team Override Schemes**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:56
+msgid "Channel permissions"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:58
+msgid ""
+"The channel permissions interface is accessed in **System Console > User "
+"Management > Channels**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:61
+msgid "Advanced access controls"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:63
+msgid ""
+"See the :ref:`team and channel management <manage/team-channel-"
+"members:advanced access controls>` documentation for details."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:66
+msgid "Supplementary roles"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:68
+msgid "*Being considered for a future release of Mattermost Enterprise*"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:70
+msgid ""
+"Allows admins to grant additional permissions to specific users or to a "
+"group of users based on AD/LDAP group membership. Permissions can be "
+"granted within the scope of channels, teams, or system level."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:73
+msgid "Recipes"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:75
+msgid ""
+"This section provides some examples of common permissions use cases for "
+"team management, channel management, and overall permissions."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:78
+msgid "Team management"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:80
+msgid "**Only allow admins, in a specific team, to add members**"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:82
+msgid ""
+"Example: In Team A, only allow system and team admins to add new team "
+"members. As the default for all other teams, allow all users to add and "
+"invite new members."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:84
+#: ../../source/onboard/advanced-permissions.rst:106
+#: ../../source/onboard/advanced-permissions.rst:120
+#: ../../source/onboard/advanced-permissions.rst:139
+#: ../../source/onboard/advanced-permissions.rst:179
+#: ../../source/onboard/advanced-permissions.rst:188
+#: ../../source/onboard/advanced-permissions.rst:200
+msgid "Go to **System Console > User Management > Permissions**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:85
+#: ../../source/onboard/advanced-permissions.rst:107
+#: ../../source/onboard/advanced-permissions.rst:121
+#: ../../source/onboard/advanced-permissions.rst:140
+#: ../../source/onboard/advanced-permissions.rst:180
+#: ../../source/onboard/advanced-permissions.rst:189
+#: ../../source/onboard/advanced-permissions.rst:201
+msgid "Select **Edit Scheme**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:86
+msgid ""
+"In the **All Members > Teams** panel, check the box for **Add Team "
+"Members**. This sets the system default for all teams."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:87
+#: ../../source/onboard/advanced-permissions.rst:96
+#: ../../source/onboard/advanced-permissions.rst:123
+#: ../../source/onboard/advanced-permissions.rst:157
+#: ../../source/onboard/advanced-permissions.rst:168
+msgid "Select **Save**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:88
+#: ../../source/onboard/advanced-permissions.rst:97
+msgid "Select the back arrow to return to the **Permission Schemes** menu."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:89
+#: ../../source/onboard/advanced-permissions.rst:125
+msgid "Select **New Team Override Scheme**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:91
+msgid ""
+"Name and describe the scheme. For example, ``Authorized Personnel Only`` "
+"with description ``Restrict adding team members to eam and System "
+"Admins.``"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:92
+#: ../../source/onboard/advanced-permissions.rst:128
+msgid ""
+"Select **Add Teams** to add Team B to the **Select teams to override "
+"permissions** list, locate Team B, then select **Add**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:93
+msgid "In the **All Members** panel, uncheck the box for **Add Team Members**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:94
+msgid ""
+"In the **Team Administrators** panel, check the box for **Add Team "
+"Members**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:100
+msgid "Public and private channel management"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:102
+msgid "**Restrict who can rename channels and edit channel header and purposes**"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:104
+msgid ""
+"Example: As the default for the entire system, restrict renaming channels"
+" and editing headers and purposes to admins only."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:108
+msgid ""
+"In the **All Members** panel, uncheck the box for **Manage Public "
+"Channels > Manage Channel Settings**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:110
+msgid ""
+"The **Manage Channel Settings** option is now only available to channel "
+"admins, team admins, and system admins."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:114
+msgid ""
+"Permissions for channel renaming, editing channel header, and editing "
+"channel purpose are currently grouped in a single permission. These will "
+"be split into separate permissions in a future release."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:116
+msgid "**Restrict who can create channels, in specific teams**"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:118
+msgid ""
+"Example: In Team C, restrict public channel creation to admins. As the "
+"default for all other teams, allow everyone to create public channels."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:122
+msgid ""
+"In the **All Members** panel, in the **Manage Public Channels** menu, "
+"check the box for **Create Channels**. This sets the system default to "
+"allow creation of public channels on all teams."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:124
+msgid "Select the arrow to return to the **Permission Schemes** interface."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:127
+msgid ""
+"Name and describe the scheme. For example, ``Contractor Scheme`` with "
+"description ``Restrict public channel creation to Admins only``."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:129
+msgid ""
+"In the **All Members** panel, in the **Manage Public Channels** section, "
+"uncheck the box for **Create Channels**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:130
+msgid ""
+"In the **Team Administrators** panel, in the **Manage Public Channels** "
+"section, check the box for **Create Channels**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:133
+msgid "Convert public channels to private channels"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:135
+msgid "**Allow all members to convert public channels to private channels**"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:137
+msgid ""
+"Example: Set the default setting to allow all members, team admins, and "
+"channel admins to convert public channels to private."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:141
+msgid ""
+"In the **All Members** panel, uncheck the box for **Manage Public "
+"Channels > Convert Channels**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:143
+msgid ""
+"This permission is applied to all other roles (excluding the Guest role)."
+" When this permission is not enabled for all members, it must be manually"
+" applied to team admins and channel admins if required."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:146
+msgid "Read only channels"
+msgstr ""
+
+#: ../../source/_static/badges/ent-only.rst:11
+msgid ""
+"|plans-img-yellow| Available only on `Enterprise "
+"<https://mattermost.com/pricing/>`__ plans"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:151
+msgid ""
+"**Configure a channel so that members can post/reply/react but guests can"
+" only read and react.**"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:153
+msgid "Go to **System Console > User Management > Channels**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:154
+msgid "Select **Edit** next to the name of the channel you want to configure."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:155
+msgid "In the **Create Posts** panel, uncheck **Guests**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:156
+msgid "In the **Post Reactions** panel, uncheck **Guests** if required."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:159
+msgid ""
+"The channel is available for all members and guests to access, but guests"
+" can only read messages and react to them."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:161
+msgid ""
+"**Create an announcement channel where only channel admins are able to "
+"post.**"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:163
+msgid "Create a new channel (either public or private)."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:164
+msgid "Navigate to **System Console > User Management > Channels**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:165
+msgid ""
+"Select **Edit** next to the name of the channel you just created (you may"
+" need to search for it)."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:166
+msgid "In the **Create Posts** panel, uncheck **Guests** and **Members**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:167
+msgid "In the **Post Reactions** panel, uncheck **Guests** and **Members**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:170
+msgid ""
+"The channel is available for all members and guests to access but only "
+"admins can post."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:173
+msgid "Post management"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:175
+msgid "**Restrict who can delete posts.**"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:177
+msgid ""
+"Example: As the default for the entire system, restrict deleting posts to"
+" only system and team admins."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:181
+msgid ""
+"In the **All Members** and **Channel Administrators** panels, in the "
+"**Delete Posts** section, uncheck the boxes for **Delete Own Posts** and "
+"**Delete Others' Posts**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:182
+msgid ""
+"In the **Channel Administrators** and **Team Administrators** panels, in "
+"the **Delete Posts** section, check the boxes for **Delete Own Posts** "
+"and **Delete Others' Posts**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:184
+msgid "**Restrict who can edit posts.**"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:186
+msgid ""
+"Example: As the default for the entire system, only allow users to edit "
+"their own posts for five minutes after posting."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:190
+msgid ""
+"In the **All Members**, **Channel Administrators**, and **Team "
+"Administrators** panels, in the **Manage Posts** section, check the box "
+"for **Edit Posts**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:191
+msgid ""
+"From any panel, select the gear button to set the global time limit to "
+"``300`` seconds."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:194
+msgid "Integration management"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:196
+msgid "**Restrict managing webhooks and slash commands.**"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:198
+msgid ""
+"Example: As the default for the entire system, only allow system admins "
+"to create, edit and delete integrations."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:202
+msgid ""
+"In the **All Members** and **Team Administrators** panels, in the "
+"**Integrations & Customizations** section, uncheck the boxes for **Manage"
+" Incoming Webhooks**, **Manage Outgoing Webhooks**, and **Manage Slash "
+"Commands**."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:206
+msgid ""
+"Permissions for creating, editing, and deleting integrations are "
+"currently grouped for each integration type. These will be split into "
+"separate permissions in a future release."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:209
+msgid "Administration tools"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:211
+msgid ""
+"There are a number of API and mmctl tools available for admins to help in"
+" configuring and troubleshooting the permissions system:"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:213
+msgid ""
+"Reset all permissions to the default on new installations using the "
+":ref:`mmctl permissions reset <manage/mmctl-command-line-tool:mmctl "
+"permissions reset>` command."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:214
+msgid ""
+"Use the `GetAllRoles "
+"<https://api.mattermost.com/#tag/roles/operation/GetAllRoles>`__ API "
+"endpoint to get a list of all roles."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:215
+msgid ""
+"Add permissions to a role using the :ref:`mmctl permissions add <manage"
+"/mmctl-command-line-tool:mmctl permissions add>` command."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:218
+msgid "Backend infrastructure"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:220
+msgid ""
+"Technical admins or developers looking for a deeper understanding of the "
+"permissions backend can refer to our :doc:`permissions backend "
+"documentation </onboard/advanced-permissions-backend-infrastructure>`."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:223
+msgid "Glossary"
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:225
+msgid ""
+"**Permission:** The ability to execute certain actions. Permissions are "
+"granted to roles."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:226
+msgid "**Roles:** A set of permissions. Users or groups are assigned to roles."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:227
+msgid ""
+"**Group:** A set of users, usually synced from AD/LDAP. Groups are "
+"assigned to roles in the context of teams, channels, or system-wide."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:228
+msgid ""
+"**Default Roles:** All Members, Guests (if enabled), channel admins, team"
+" admins, system admins."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:229
+msgid "**System Scheme:** A set of default roles that apply system-wide."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:230
+msgid ""
+"**Team Override Scheme:** A set of default roles that apply only in the "
+"team specified. Permissions granted to roles in a Team Override Scheme "
+"overrides roles in the System Scheme."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:231
+msgid ""
+"**System-wide:** Applies across the entire system, including all teams of"
+" which the user is a member."
+msgstr ""
+
+#: ../../source/onboard/advanced-permissions.rst:232
+msgid "**Team-wide:** Applies in a specific team only."
+msgstr ""
+

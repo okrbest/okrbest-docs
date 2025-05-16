@@ -1,0 +1,996 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 06:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/integrate/jira.rst:2
+msgid "Connect Jira to Mattermost"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-cloud-selfhosted.rst:7
+msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-cloud-selfhosted.rst:9
+msgid ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
+"hosted <https://mattermost.com/download/>`__ deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:7
+msgid ""
+"Minimize distractions, reduce context switching between your project "
+"management tool and your communication platform by integrating Jira with "
+"Mattermost. You control which events trigger notifications including "
+"issue creation, field-specific issue updates, reopened, resolved, or "
+"deleted issues, as well as new, updated, or deleted issue comments. "
+"Create Jira issues directly from Mattermost conversations, attach "
+"messages to Jira issues, transition and assign Jira issues, and follow up"
+" on action items in real-time, directly from Mattermost channel "
+"subscriptions."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:9
+msgid ""
+"Mattermost supports versions 7 and 8 of Jira Core and Jira Software "
+"products, for Server, Data Center, and Cloud platforms. From v3.0 of this"
+" integration, a commercial Mattermost license is required for multiple "
+"Jira instances with Mattermost configured using Administrator Slash "
+"Commands."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:11 ../../source/integrate/jira.rst:21
+msgid ""
+"Jira Service Management (formally known as Jira Service Desk) isn't "
+"supported."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:14
+msgid "Deploy"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:16
+msgid "Setup starts in Mattermost, moves to Jira, and finishes in Mattermost."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:20
+msgid ""
+"Jira Core and Jira Software products, for Server, Data Center, and Cloud "
+"platforms are supported, and tested with versions 7 and 8."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:22
+msgid ""
+"From v3.0 of this integration, support for multiple Jira instances is "
+"supported with Mattermost Enterprise and Professional plans, configured "
+"using Administrator Slash Commands."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:25
+msgid "Mattermost configuration"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:27
+msgid "A Mattermost system admin must perform the following steps in Mattermost."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:29
+msgid "Install the Jira integration from the in-product App Marketplace:"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:31
+msgid ""
+"In Mattermost, from the Product menu |product-list|, select **App "
+"Marketplace**."
+msgstr ""
+
+#: ../../<rst_prolog>:100
+msgid ""
+"Navigate between Channels and collaborative playbooks using the product "
+"menu icon."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:32
+msgid "Search for or scroll to Jira, and select **Install**."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:33
+msgid "Once installed, select **Configure**. You're taken to the System Console."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:34
+msgid ""
+"On the Jira configuration page, enable and configure Jira "
+"interoperability as follows, and then select **Save**:"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:38
+msgid "Generate a **Webhook Secret** by selecting **Regenerate**."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:42
+msgid ""
+"We recommend making a copy of your webhook secret, as it will only be "
+"visible to you once."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:44
+msgid ""
+"**Allow users to attach and create Jira issues in Mattermost**: Enable or"
+" disable the user's ability to attach and create Jira issues in "
+"Mattermost. When enabled, you must also `install this Jira integration in"
+" your Jira instance <#install-integration-as-Jira-app>`__."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:45
+msgid ""
+"**Mattermost Roles Allowed to Edit Jira Subscriptions**: Specify the "
+"Mattermost roles that can edit Jira subscriptions to control which "
+"Mattermost users can subscribe channels to Jira tickets."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:46
+msgid ""
+"**Jira Groups Allowed to Edit Jira Subscriptions**: (Applies to older "
+"Jira v2.4 or earlier deployments only) Specify the Jira groups allowed to"
+" edit Jira subscriptions as a comma-separated list of user group names. "
+"Leave blank to allow any Jira user the ability to create subscriptions. "
+"The user editing a subscription only needs to be a member of one of the "
+"listed groups."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:47
+msgid ""
+"**Default Subscription Security Level to Empty**: Enable or disable "
+"default subscription security level. When enabled, subscriptions only "
+"include issues that have a security level assigned when a security level "
+"has been included as a filter."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:48
+msgid ""
+"**Additional Help Text to be shown with Jira Help**: Define any "
+"additional help text to display when users run the ``/jira help`` slash "
+"command."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:49
+msgid ""
+"**Hide issue descriptions and comments**: Show or hide issue descriptions"
+" and comments from subscription and webhook messages."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:50
+msgid ""
+"**Enable slash command**: Enable or disable slash command autocompletion "
+"to guide users through available ``/jira`` slash commands."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:51
+msgid ""
+"**Display Subscription name in notifications**: Show or hide subscription"
+" name in notification messages posted to a channel."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:52
+msgid ""
+"**Admin API Token**: Set an `API token  <https://support.atlassian.com"
+"/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/>`_ "
+"to get notified for comments and issue creation events, even when the "
+"user triggering the event isn't connected to Jira, and set up Autolink. "
+"API tokens must be created using an admin Jira account; otherwise, "
+"notifications won't be delivered for projects the user can't access, and "
+"Autolink won't work."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:53
+msgid ""
+"**Admin Email**: Set Admin email to get notified for comment and issue "
+"created events even if the user triggering the event is not connected to "
+"Jira and setup Autolink for Jira plugin."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:55
+msgid ""
+"Run ``/jira setup`` to start the wizard to configure the plugin. If you "
+"wish to set up the plugin manually, then please follow the steps below."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:58
+msgid "Install Jira integration in your Jira instance"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:60
+msgid ""
+"To enable your users to create and manage Jira issues across Mattermost "
+"channels, you must install this Jira integration, as an application, in "
+"your Jira instance."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:62
+msgid ""
+"For Jira Server or Data Center instances, run the ``/jira instance "
+"install server <YOUR-JIRA-URL>`` slash command in a Mattermost channel as"
+" a Mattermost system admin, then follow the steps posted to the channel, "
+"replacing ``YOUR-JIRA-URL`` with your Jira URL. This value must match the"
+" Jira server URL you use to log in. Run the ``/jira instance uninstall "
+"server <YOUR-JIRA-URL>`` slash command to uninstall your Jira Server or "
+"Data Center instance from your Mattermost instance."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:63
+msgid ""
+"For Jira Cloud, run the ``/jira instance install cloud-oauth <YOUR-JIRA-"
+"URL>`` slash command in a Mattermost channel as a Mattermost system "
+"admin, then follow the wizard to complete the setup. Run the ``/jira "
+"instance uninstall cloud-oauth <YOUR-JIRA-URL>`` slash command to "
+"uninstall your Jira Cloud instance from your Mattermost."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:66
+msgid "Configure webhooks in Jira"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:68
+msgid ""
+"A Mattermost system admin and a Jira system admin must perform the "
+"following steps to configure a single webhook for all possible event "
+"triggers, called a firehose, that you would like to be pushed into "
+"Mattermost. Mattermost receives a stream of events from the Jira server "
+"via a configured webhook, and routes the events to specific channels. A "
+"`channel subscription <#manage-channel-subscriptions-in-mattermost>`__ "
+"processes the firehose of data, and routes the events to channels based "
+"on your subscriptions."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:70
+msgid ""
+"In Mattermost, run the  ``/jira webhook <YOUR-JIRA-URL>`` slash command "
+"in a Mattermost channel to get the appropriate webhook URL, replacing "
+"``YOUR-JIRA-URL`` with your Jira URL."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:71
+msgid ""
+"In Jira, go to **Jira Settings > System > WebHooks**. (For older versions"
+" of Jira, select the gear icon in bottom left corner, then go to "
+"**Advanced > WebHooks**.)"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:72
+msgid "Select **Create a WebHook**."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:73
+msgid ""
+"Enter a **Name** for the webhook and add the Jira webhook URL you "
+"retrieved above in Mattermost as the URL."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:74
+msgid ""
+"Specify the issue events that will be sent to Mattermost channels by "
+"selecting all of the following:"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:76
+msgid "Comments: created, updated, and deleted."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:77
+msgid "Issues: created, updated, and deleted."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:79
+msgid "Select **Save**."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:82
+msgid "Manage channel subscriptions in Mattermost"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:84
+msgid ""
+"Mattermost channel admins can set up notifications they want to receive "
+"per channel as subscription rules based on the Jira project, event type, "
+"issue type. You can also filter out issues based on its value."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:86
+msgid ""
+"To modify subscription, users must meet the criteria of both the "
+"Mattermost user settings and Jira group settings. If you can subscribe "
+"channels to Jira events, you can also set up rules; however, you'll only "
+"see the projects and issue types you have access to within Jira. If you "
+"can't see a project in Jira, it won't be avaialble as an option."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:88
+msgid ""
+"If your organization's infrastructure is set up such that your Mattermost"
+" instance can't connect to your Jira instance, channel subscriptions "
+"won't be avaialable. Instead, use `legacy Webhooks <#legacy-jira-"
+"webhooks>`__ instead to allow a Jira webhook to post to a specific "
+"channel."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:90
+msgid ""
+"In any channel, run the ``/jira subscribe`` slash command to configure "
+"the following options:"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:92
+msgid "Configure what Jira notifications are sent to the current channel."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:93
+msgid ""
+"Specify filters including: affects versions, epic link, fix versions, "
+"labels, and priority."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:94
+msgid ""
+"Specify custom fields including: checkboxes, labels, radio buttons, and "
+"select list (single or multiple choice)."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:95
+msgid ""
+"Review the approximate JQL output generated. This is not guaranteed to be"
+" valid JQL and is only shown as a reference to what the query may look "
+"like if converted to JQL."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:97
+msgid ""
+"Run the ``/jira subscribe list`` slash command to display all "
+"subscription rules set up across all channels and teams on your "
+"Mattermost instance."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:100
+msgid "Legacy Jira webhooks"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:102
+msgid ""
+"If your Mattermost instance can't connect to your Jira instance, you "
+"won't be able to subscribe Mattermost channels. You'll need to use legacy"
+" webhooks instead."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:104
+msgid ""
+"To generate the webhook URL for a specific channel, run the  ``/jira "
+"webhook`` slash command, and use the URL output in the **Legacy "
+"Webhooks** section of the output."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:106
+msgid ""
+"As a Jira system admin, go to **Jira Settings > System > WebHooks**. (For"
+" older versions of Jira, select the gear icon in bottom left corner, then"
+" go to **Advanced > WebHooks**.)"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:108
+msgid ""
+"Select **Create a WebHook** to create a new webhook. Enter a **Name** for"
+" the webhook, and add the Jira webhook URL ``https://MATTERMOST-SITE-"
+"URL/plugins/jira/webhook?secret=MATTERMOST-WEBHOOK-SECRET&team"
+"=MATTERMOST-TEAM-URL&channel=MATTERMOST-CHANNEL-URL`` (for Jira 2.1) as "
+"the URL."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:110
+msgid ""
+"Replace ``MATTERMOST-TEAM-URL`` and ``MATTERMOST-CHANNEL-URL`` with the "
+"Mattermost team URL and channel URL you want the Jira events to post to, "
+"using lowercase characters."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:111
+msgid ""
+"Replace ``MATTERMOST-SITE-URL`` with the site URL of your Mattermost "
+"instance."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:112
+msgid ""
+"Replace ``MATTERMOST-WEBHOOK-SECRET`` with the secret generated in "
+"Mattermost by going to **System Console > Plugins > Jira**."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:114
+msgid ""
+"For example, if the team URL is ``contributors``, channel URL is ``town-"
+"square``, site URL is ``https://community.mattermost.com``, and the "
+"generated webhook secret is ``MYSECRET``, the final webhook URL would be:"
+" "
+"``https://community.mattermost.com/plugins/jira/webhook?secret=MYSECRET&team=contributors&channel"
+"=town-square``."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:116
+msgid ""
+"(Optional) Set a description and a custom JQL query to determine which "
+"tickets trigger events. For information on JQL queries, see the "
+"`Atlassian help documentation <https://support.atlassian.com/jira-"
+"software-cloud/docs/what-is-advanced-search-in-jira-cloud/>`_."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:118
+msgid ""
+"Set which issue events send messages to Mattermost channels, then select "
+"**Save**. The following issue events are supported: issues created, "
+"issues deleted, and issues updated (including reopened or resolved when "
+"the assignee changes)."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:120
+msgid ""
+"By default, the legacy webhook integration publishes notifications for "
+"issue created, resolve, unresolve, reopen, and assign events. To post "
+"more events, use the following extra &-separated parameters:"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:122
+msgid "``updated_all=1``: all events"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:123
+msgid "``updated_comments=1``: all comment events"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:124
+msgid "``updated_description=1``: updated issue description"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:125
+msgid "``updated_labels=1``: updated issue labels"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:126
+msgid "``updated_priority=1``: updated issue priority"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:127
+msgid "``updated_rank=1``: ranked issue higher or lower"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:128
+msgid "``updated_sprint=1``: assigned issue to a different sprint"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:129
+msgid ""
+"``updated_status=1``: transitioned issed to a different status, such as "
+"Done or In Progress"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:130
+msgid "``updated_summary=1``: renamed issue"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:132
+msgid ""
+"Here's an example of a webhook configured to create a post for comment "
+"events: "
+"``https://community.mattermost.com/plugins/jira/webhook?secret=MYSECRET&team=contributors&channel"
+"=town-square&updated_comments=1``"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:134
+msgid ""
+"Any previously configured webhooks set up in Jira that point to specific "
+"channels are supported and will continue to work."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:137
+msgid "Manage notifications"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:139
+msgid ""
+"Jira notifications are messages sent to a Mattermost channel when a "
+"particular event occurs in Jira. They can managed as `channel "
+"subscriptions <#manage-channel-subscriptions>`__ in Mattermost, or "
+"managed as `webhooks <#configure-webhooks-in-Jira>`__ in Jira. "
+"Notifications and metadata shown in a channel aren't protected by Jira "
+"permissions. Anyone in the channel can see what's posted to the channel. "
+"However, if users don't have the appropriate permission, they won't be "
+"able to see further details of the issue if they try to access it in "
+"Jira."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:141
+msgid ""
+"When any webhook event is received from Jira, and it matches a "
+"notification rule, it posts a notification to the channel. If there are "
+"no subscription matches, the webhook event is discarded."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:144
+msgid "Enable"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:146
+msgid ""
+"Notify your teams that they can `connect their Jira accounts to "
+"Mattermost <#connect-a-jira-account-to-mattermost>`__."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:148
+msgid ""
+"Do more with Jira interoperabiilty as a Mattermost system admin by using "
+"the following slash commands:"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:150
+msgid ""
+"``/jira instance alias [URL] [ALIAS-NAME]`` - Assign an alias to an "
+"instance."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:151
+msgid ""
+"``/jira instance unalias [ALIAS-NAME]`` - Remove an alias from an "
+"instance."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:152
+msgid "``/jira instance list`` - List all installed Jira instances."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:153
+msgid ""
+"``/jira instance v2 <YOUR-JIRA-URL>`` - Set the Jira instance to process "
+"legacy \"v2\" webhooks and subscriptions (which aren't prefixed with the "
+"instance ID)."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:154
+msgid "``/jira stats`` - Display usage statistics."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:155
+msgid ""
+"``/jira webhook [--instance=<YOUR-JIRA-URL>]`` - Display the Mattermost "
+"webhook that receive JQL queries."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:156
+msgid "``/jira v2revert`` - Revert to the legacy V2 jira integration data model."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:159
+msgid "Use"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:161
+msgid ""
+"Users who want to use Jira interconnectivity must connect a Jira account "
+"to Mattermost."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:163
+msgid ""
+"Once connected, you'll receive direct messages from the Jira bot in "
+"Mattermost for Jira activity."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:166
+msgid "Connect a Jira account to Mattermost"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:168
+msgid ""
+"In Mattermost, run the ``/jira connect`` slash command in any Mattermost "
+"channel to link your Mattermost account with your Jira account. Follow "
+"the link into your Jira instance, and select **Allow**."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:170
+msgid ""
+"If you have multiple Jira instances, run the ``/jira instance connect "
+"<YOUR-JIRA-URL>`` slash command instead to connect to a specific Jira "
+"instance."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:172
+msgid ""
+"Once connected, run the ``/jira help`` slash command to see what you can "
+"do."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:174
+msgid ""
+"To disconnect a Jira account from Mattermost, run the ``/jira "
+"disconnect`` slash command in any Mattermost channel."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:177
+msgid "Get started"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:179
+msgid "Here are some common slash commands you can get started with:"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:181
+msgid ""
+"``/jira info`` - Display information about the current user and the Jira "
+"integration"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:182
+msgid ""
+"``/jira connect [jiraURL]`` - Connect your Mattermost account to your "
+"Jira account"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:183
+msgid ""
+"``/jira disconnect [jiraURL]`` - Disconnect your Mattermost account from "
+"your Jira account"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:184
+msgid ""
+"``/jira issue assign [issue-key] [assignee]`` - Change the assignee of a "
+"Jira issue"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:185
+msgid ""
+"``/jira issue create [text]`` - Create a new Issue with 'text' inserted "
+"into the description field"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:186
+msgid ""
+"``/jira issue transition [issue-key] [state]`` - Change the state of a "
+"Jira issue"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:187
+msgid "``/jira issue unassign [issue-key]`` - Unassign the Jira issue"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:188
+msgid ""
+"``/jira issue view [issue-key]`` - View the details of a specific Jira "
+"issue"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:189
+msgid "``/jira instance settings`` - View your user settings"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:190
+msgid ""
+"``/jira instance settings [setting] [value]`` - Update your user "
+"settings. ``[setting]`` can be notifications and ``[value]`` can be "
+"``on`` or ``off``"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:193
+msgid "Create a Jira issue"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:195
+msgid ""
+"Use the ``/jira issue create`` slash command to create a Jira issue "
+"without leaving Mattermost. You can prepopulate the issue's summary by "
+"running ``/jira issue create This is my issue's summary``. You're "
+"prompted to fill out the issue details."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:-1
+msgid "An example of the create Jira issue workflow."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:201
+msgid "Transition Jira issues"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:203
+msgid ""
+"You can transition issues without leaving Mattermost by using the ``/jira"
+" transition <issue-key> <state>`` slash command. States and issue "
+"transitions are based on your Jira project workflow configuration. For "
+"example, ``/jira transition EXT-20 done`` transitions the issue key "
+"EXT-20 to a ``done`` state. Partial matches are supported. For example, "
+"running the  ``/jira transition EXT-20 in`` slash command transitions the"
+" issue to an ``in progress`` state. However, if your Jira instance "
+"includes states of both ``in review`` and ``in progress``, the Jira "
+"integration bot will prompt you to clarify which state you want."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:206
+msgid "Assign Jira issues"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:208
+msgid ""
+"Assign issues to other Jira users without leaving Mattermost using the "
+"``/jira assign`` command. Partial matches on usernames, firstnames, and "
+"lastnames are supported. For example, running the slash command ``/jira "
+"assign EXT-20 john`` transitions the issue EXT-20 to John."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:211
+msgid "Upgrade"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:213
+msgid ""
+"We recommend updating this integration as new versions are released. "
+"Generally, updates are seamless and don't interrupt the user experience "
+"in Mattermost. Visit the `Releases page <https://github.com/mattermost"
+"/mattermost-plugin-jira/releases>`__ for the latest release, available "
+"releases, and compatibiilty considerations."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:216
+msgid "Frequenly asked questions"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:219
+msgid "How do I disable Jira interoperability?"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:221
+msgid ""
+"You can disable the Jira integration at any time from Mattermost by going"
+" to **System Console > Plugins > Jira**. Once disabled, any webhook "
+"requests coming from Jira are ignored, and users can't create Jira issues"
+" from Mattermost."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:224
+msgid "Why isn't the Jira integration posting messages to Mattermost?"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:226
+msgid "Try the following troubleshooting steps:"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:228
+msgid ""
+"Confirm that your :ref:`Mattermost Site URL <configure/environment-"
+"configuration-settings:site url>` is configured, and that the webhook "
+"created in Jira is pointing to this URL. To ensure the URL is correct, "
+"run the ``/jira webhook`` slash command, then copy the output and paste "
+"it into Jira's webhook setup page."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:230
+msgid ""
+"If you specified a JQL query in your Jira webhook setup, paste the JQL to"
+" Jira issue search and make sure it returns results. If it doesn't, the "
+"query may be incorrect. Refer to the `Atlassian documentation "
+"<https://support.atlassian.com/jira-software-cloud/docs/what-is-advanced-"
+"search-in-jira-cloud/>`__ for help. A JQL query isn't required when "
+"setting up the webhook."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:232
+msgid "If you're using legacy webhooks:"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:234
+msgid ""
+"Confirm the team URL and channel URL you specified in the Jira webhook "
+"URL match up with the path shown in your browser when visiting the "
+"channel."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:235
+msgid "Only events described in the Legacy Webhook documentation are supported."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:236
+msgid ""
+"Use a curl command to make a POST request to the webhook URL. If curl "
+"command completes with a ``200 OK`` response, the integration is "
+"configured correctly. For instance, you can run the following command:"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:242
+msgid ""
+"Replace ``<YOUR-MATTERMOST-URL>``, ``<YOUR-SECRET>``, ``<YOUR-TEAM>``, "
+"and ``<YOUR-SECRET>`` with your setup when configuring the Jira "
+"integration. The curl command won't post a message in your Mattermost "
+"channel."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:245
+msgid ""
+"Can admins restrict who can create or attach Mattermost messages to Jira "
+"issues?"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:247
+msgid ""
+"Yes, Mattermost system admins can disable this functionality by going to "
+"**System Console > Plugins > Jira** to disable the **Allow users to "
+"attach and create Jira issues in Mattermost** option."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:250
+msgid "How does Mattermost know which Jira issues users can access?"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:252
+msgid ""
+"Mattermost only displays static messages in the channel, and doesn't "
+"enforce Jira permissions on viewers in a channel."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:254
+msgid ""
+"Any messages in a channel can be seen by all users of that channel. "
+"Subscriptions to Jira issues should be made carefully to avoid "
+"unwittingly exposing sensitive Jira issues in a public channel for "
+"example. Exposure is limited to the information posted to the channel. To"
+" transition an issue, or re-assign it the user needs to have the "
+"appropriate permissions in Jira."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:257
+msgid "Why must every user authenticate with Jira?"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:259
+msgid ""
+"The authentication with Jira lets the JiraBot provide personal "
+"notifications for each Mattermost/Jira user whenever they are mentioned "
+"on an issue, comment on an issue, or have an issue assigned to them. "
+"Additionally, the integration uses their authentication information to "
+"perform actions on their behalf. Tasks such as searching, viewing, "
+"creating, assigning, and transitioning issues all abide by the "
+"permissions granted to the user within Jira."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:261
+msgid ""
+"Users will need to temporarily enable third-party cookies in their "
+"browser during the Jira authentication process."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:264
+msgid "What does the error message ``'/(name)' not found`` mean?"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:266
+msgid ""
+"If you see the error ``'/(name)' not found`` in Mattermost, disable the "
+"Jira integration, check the log file looking for messages that refer to "
+"plugins and health check fail, such as ``ExecuteCommand``, etc. And "
+"consider :ref:`enabling debug logging <manage/logging:how do i enable "
+"debug logging?>` to log more verbose error events in the Mattermost "
+"system log. Then try re-enabling Jira interoperability and review the log"
+" file for clues."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:268
+msgid ""
+"Debug logging can cause log files to expand substantially, and may "
+"adversely impact the server performance. Keep an eye on your server logs,"
+" or only enable it temporarily or in development environments, and not "
+"production enviornments."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:271
+msgid "Why do I get a webhooks error?"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:273
+msgid ""
+"If you see a ``WebHooks can only use standard http and https ports (80 or"
+" 443)`` error, it indicates that you're using a non-standard port. Jira "
+"only allows webhooks to connect to the standard ports 80 and 443. You "
+"need to set up a proxy between Jira and your Mattermost instance to let "
+"Jira communicate over port 443."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:276
+msgid "How do I handle credential rotation for the Jira webhook?"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:278
+msgid ""
+"Generate a new secret by going to **System Console > Plugins > Jira**. "
+"Paste the new webhook URL in your Jira webhook configuration."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:281
+msgid "Customize"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:283
+msgid ""
+"This integration contains both a server and web app portion. Visit the "
+"`Mattermost Developer Workflow "
+"<https://developers.mattermost.com/extend/plugins/developer-workflow/>`__"
+" and `Mattermost Developer environment setup "
+"<https://developers.mattermost.com/extend/plugins/developer-setup/>`_ for"
+" information about developing, customizing, and extending Mattermost "
+"functionality."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:286
+msgid "Get help"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:288
+msgid ""
+"Mattermost commercial customers can open a `Mattermost support case "
+"<https://support.mattermost.com/hc/en-us/requests/new>`_. To report a "
+"bug, please open a GitHub issue against the `Mattermost Jira plugin "
+"repository <https://github.com/mattermost/mattermost-plugin-jira>`_."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:290
+msgid ""
+"For questions, feedback, and assistance, join our pubic `Integrations and"
+" Apps channel "
+"<https://community.mattermost.com/core/channels/integrations>`_ on the "
+"`Mattermost Community Server <https://community.mattermost.com/>`_ for "
+"assistance."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:292
+msgid ""
+"Mattermost Team Edition and Free customers can visit the Mattermost "
+"`peer-to-peer troubleshooting forum <https://forum.mattermost.com/c"
+"/trouble-shoot/16>`_ to access the global Mattermost Community for "
+"assistance."
+msgstr ""
+
+#: ../../source/integrate/jira.rst:296
+msgid ""
+"Download `this Jira workflows datasheet <https://mattermost.com"
+"/mattermost-jira-datasheet/>`_ to learn more about using Mattermost and "
+"Jira, including:"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:298
+msgid "Key benefits to integrating Jira and Mattermost"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:299
+msgid "Common Jira Workflows on Mattermost"
+msgstr ""
+
+#: ../../source/integrate/jira.rst:300
+msgid "How to get started with the Jira plugin for Mattermost"
+msgstr ""
+
