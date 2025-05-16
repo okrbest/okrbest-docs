@@ -1,0 +1,513 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 06:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/integrate/servicenow.rst:2
+msgid "Connect ServiceNow to Mattermost"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-cloud-selfhosted.rst:7
+msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-cloud-selfhosted.rst:9
+msgid ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
+"hosted <https://mattermost.com/download/>`__ deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:7
+msgid ""
+"Minimize distractions and reduce context switching by bridging the gap "
+"between IT service management (ITSM) and team communication. Create and "
+"manage incident reports, change requests, and service tickets, as well as"
+" manage event-driven notification subscriptions for ServiceNow record "
+"changes, in real-time, and automate routine tasks to decrease response "
+"times without leaving Mattermost."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:10
+msgid "Deploy"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:12
+msgid "Setup starts in ServiceNow and finishes in Mattermost."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:15
+msgid "Create an OAuth app in ServiceNow"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:17
+msgid ""
+"Go to your ServiceNow instance and then to **All > System OAuth > "
+"Application Registry**."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:18
+msgid ""
+"Select New in the top right corner, and then select **Create an OAuth API"
+" endpoint for external clients**."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:19
+msgid ""
+"Enter the name for your app and set the redirect URL to: ``https://<YOUR-"
+"MATTERMOST-URL>/plugins/mattermost-plugin-"
+"servicenow/api/v1/oauth2/complete``, replacing ``YOUR-MATTERMOST-URL`` "
+"with the Mattermost URL you want the ServiceNow events to post to, using "
+"lowercase characters."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:23
+msgid ""
+"A client secret is generated automatically. Copy the secret and the "
+"Client ID. You'll need these values for the Mattermost configuration."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:26
+msgid "Upload the update set in ServiceNow"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:28
+msgid ""
+"Changing your ServiceNow instance to support subscriptions, record "
+"changes, and send change notifications to Mattermost is done by a "
+"Mattermost and ServiceNow system admin using an `update set "
+"<https://docs.servicenow.com/bundle/washingtondc-application-"
+"development/page/build/system-update-sets/concept/system-update-"
+"sets.html>`_. Once created, you can download the update set from "
+"Mattermost and upload it into ServiceNow."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:30
+msgid "In the Mattermost System Console, download the update set XML file."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:31
+msgid ""
+"In your ServiceNow instance, go to **All > System Update Sets > Retrieved"
+" Update Sets**."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:32
+msgid "Select the **Import Update Set from XML** link at the bottom of the page."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:33
+msgid ""
+"Select the downloaded XML update set file and upload it. You'll see an "
+"update set named **ServiceNow for Mattermost Notifications**."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:34
+msgid "Select that update set, and then select **Preview Update Set**."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:35
+msgid "Select **Commit Update Set**."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:36
+msgid ""
+"Confirm the data loss notification, and select **Proceed with Commit**. "
+"Your update set is uploaded and committed to ServiceNow."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:39
+msgid "Set up user permissions in ServiceNow"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:41
+msgid ""
+"Once the update set is uploaded, it creates a new role called "
+"``x_830655_mm_std.user``. Users must have this role in ServiceNow to add "
+"or manage Mattermost subscriptions. You need to be a ServiceNow system "
+"admin to add the ``x_830655_mm_std.user`` role to all users who should "
+"have the ability to add or manage subscriptions through Mattermost."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:43
+msgid "In your ServiceNow instance, go to **All > User Administration > Users**."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:44
+msgid "On the Users page, open a user's profile where you want the role added."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:45
+msgid "Select the **Roles** tab in the table, and select **Edit**."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:46
+msgid ""
+"Search for the ``x_830655_mm_std.user`` role, and add that role to the "
+"user's **Roles** list, and select **Save**. That user can now add or "
+"manage Mattermost subscriptions."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:49
+msgid "Update the API secret on the change of ServiceNow Webhook Secret"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:51
+msgid ""
+"In Mattermost, copy the **Webhook Secret** from your Mattermost instance "
+"by going to **System Console > Plugins > ServiceNow**."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:52
+msgid ""
+"In your ServiceNow instance, go to **All > "
+"x_830655_mm_std_servicenow_for_mattermost_notifications_auth.list**. "
+"(**Note**: You must enter the complete name and search.)"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:53
+msgid ""
+"On the page, select the row containing your Mattermost Server URL. If "
+"that row doesn't exist, create it manually by selecting **New** located "
+"in the top-right corner, and adding your Mattermost Server URL."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:54
+msgid ""
+"Update the **API Secret** in the ServiceNow instance with the **Webhook "
+"Secret** from Mattermost, and select **Update**."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:57
+msgid "What changes are made to ServiceNow instance?"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:59
+msgid ""
+"**GetStates scripted REST API**: Returns different states available for "
+"the records. Records supported: incident, task, change_task, and "
+"cert_follow_on_task"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:60
+msgid "An application with the name **ServiceNow for Mattermost Notifications**."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:62
+msgid ""
+"**ServiceNow for Mattermost Notifications** application handles the "
+"storing of subscription details and sending notifications on the "
+"subscribed events."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:63
+msgid ""
+"**ServiceNow for Mattermost Notifications** ``Auth`` table to store "
+"different Mattermost server URLs with their webhook secrets."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:64
+msgid ""
+"**ServiceNow for Mattermost** ``Subscriptions`` table to store the "
+"subscription details."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:65
+msgid ""
+"**Business rules** to handle different events (example: new record "
+"created, comment added on record, record state updated, etc.)"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:66
+msgid "**Script actions** to send notifications based on the subscription events."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:67
+msgid "**Events registration** to register different record-type events."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:70
+msgid "ServiceNow tables accessible in Mattermost"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:72
+msgid "``incident``"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:73
+msgid "``problem``"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:74
+msgid "``change_request``"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:75
+msgid "``kb_knowledge``"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:76
+msgid "``task``"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:77
+msgid "``change_task``"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:78
+msgid "``cert_follow_on_task``"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:79
+msgid "``x_830655_mm_std_servicenow_for_mattermost_notifications_auth``"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:80
+msgid "``x_830655_mm_std_servicenow_for_mattermost_subscriptions``"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:81
+msgid "All the tables extending these tables above"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:84
+msgid "Mattermost configuration"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:86
+msgid "A Mattermost system admin must perform the following steps in Mattermost."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:88
+msgid "Install the ServiceNow integration from the in-product App Marketplace:"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:92
+msgid ""
+"We recommend making a copy of your webhook and encryption secret, as it "
+"will only be visible to you once."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:94
+msgid ""
+"In Mattermost, from the Product menu |product-list|, select **App "
+"Marketplace**."
+msgstr ""
+
+#: ../../<rst_prolog>:100
+msgid ""
+"Navigate between Channels and collaborative playbooks using the product "
+"menu icon."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:95
+msgid "Search for or scroll to ServiceNow, and select **Install**."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:96
+msgid "Once installed, select **Configure**. You're taken to the System Console."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:97
+msgid ""
+"On the ServiceNow configuration page, enable and configure ServiceNow "
+"interoperability as follows, and then select **Save**:"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:99
+msgid ""
+"**ServiceNow Server Base URL**: Enter the base URL of your ServiceNow "
+"instance."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:100
+msgid ""
+"**ServiceNow Webhook Secret**: Regenerate the webhook secret for "
+"ServiceNow. Regenerating this key will stop the subscription "
+"notifications. See the documentation on `creating an OAuth app in "
+"ServiceNow <#create-an-oauth-app-in-servicenow>`__ for details on "
+"updating the secret in the ServiceNow instance and start receiving "
+"notifications again."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:101
+msgid ""
+"**ServiceNow OAuth Client ID**: The clientID of your registered OAuth app"
+" in ServiceNow."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:102
+msgid ""
+"**ServiceNow OAuth Client Secret**: The client secret of your registered "
+"OAuth app in ServiceNow."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:103
+msgid ""
+"**Encryption Secret**: Select **Regenerate** to generate a new encryption"
+" secret. This encryption secret is used to encrypt and decrypt the OAuth "
+"token."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:104
+msgid ""
+"**Download ServiceNow Update Set**: Download the update set XML file to "
+"upload to ServiceNow."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:107
+msgid "Enable"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:109
+msgid ""
+"Notify your teams that they can `connect their ServiceNow accounts to "
+"Mattermost <#connect-a-servicenow-account-to-mattermost>`__."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:112
+msgid "Upgrade"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:114
+msgid ""
+"We recommend updating this integration as new versions are released. "
+"Generally, updates are seamless and don't interrupt the user experience "
+"in Mattermost. Visit the `Releases page <https://github.com/mattermost"
+"/mattermost-plugin-servicenow/releases>`__ for the latest release, "
+"available releases, and compatibiilty considerations."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:117
+msgid "Use"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:119
+msgid ""
+"Users who want to use ServiceNow interconnectivity must connect a "
+"ServiceNow account to Mattermost."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:121
+msgid ""
+"Once connected, you'll receive direct messages from the ServiceNow bot in"
+" Mattermost for ServiceNow activity."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:124
+msgid "Connect a ServiceNow account to Mattermost"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:126
+msgid ""
+"In Mattermost, run the ``/servicenow connect`` slash command in any "
+"Mattermost channel to link your Mattermost account with your ServiceNow "
+"account. Follow the link into your ServiceNow instance, and select "
+"**Allow**. You can disconnect your accounts by running the ``/servicenow "
+"disconnect`` slash command. Alternatively, select the **ServiceNow** icon"
+" in the apps bar on the right to connect your ServiceNow account."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:128
+msgid ""
+"Once connected, run the ``/servicenow help`` slash command to see what "
+"you can do."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:131
+msgid "Customize"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:133
+msgid "This integration contains both a server and web app portion."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:135
+msgid ""
+"ServiceNow itself provides developer instances to anyone who wishes to "
+"develop on ServiceNow. Developers can get a ServiceNow developer instance"
+" by logging in to their ServiceNow developer account, and selecting "
+"**Request Instance** in the top right corner. Once the instance is "
+"created, open the menu from the top right corner, go to **Manage Instance"
+" Password**, and log in to the developer instance in a new tab."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:137
+msgid ""
+"See the `Development <https://github.com/mattermost/mattermost-plugin-"
+"servicenow/blob/master/docs/developer_docs.md#development>`_ section of "
+"the Mattermost ServiceNow Plugin GitHub repository for details on "
+"customizing this integration."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:139
+msgid ""
+"Visit the `Mattermost Developer Workflow "
+"<https://developers.mattermost.com/extend/plugins/developer-workflow/>`__"
+" and `Mattermost Developer environment setup "
+"<https://developers.mattermost.com/extend/plugins/developer-setup/>`_ for"
+" information about developing, customizing, and extending Mattermost "
+"functionality."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:142
+msgid "Get help"
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:144
+msgid ""
+"Mattermost customers can open a `Mattermost support case "
+"<https://support.mattermost.com/hc/en-us/requests/new>`_. To report a "
+"bug, please open a GitHub issue against the `Mattermost ServiceNow plugin"
+" repository <https://github.com/mattermost/mattermost-plugin-"
+"servicenow>`_."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:146
+msgid ""
+"For questions, feedback, and assistance, join our pubic `Integrations and"
+" Apps channel "
+"<https://community.mattermost.com/core/channels/integrations>`_ on the "
+"`Mattermost Community Server <https://community.mattermost.com/>`_ for "
+"assistance."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:148
+msgid ""
+"Mattermost Team Edition and Free customers can visit the Mattermost "
+"`peer-to-peer troubleshooting forum <https://forum.mattermost.com/c"
+"/trouble-shoot/16>`_ to access the global Mattermost Community for "
+"assistance."
+msgstr ""
+
+#: ../../source/integrate/servicenow.rst:152
+msgid ""
+"Watch `this on-demand webinar on incident response with Mattermost and "
+"ServiceNow <https://mattermost.com/video/streamline-incident-response-"
+"with-mattermost-and-servicenow/>`_ to learn how to streamline incident "
+"response."
+msgstr ""
+

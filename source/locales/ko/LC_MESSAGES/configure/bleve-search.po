@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 06:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/configure/bleve-search.rst:2
+msgid "Bleve search (experimental)"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-selfhosted.rst:7
+msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-selfhosted.rst:9
+msgid ""
+"|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
+"deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:7
+msgid ""
+"Bleve is a search engine that uses Lucene-style full-text search and "
+"indexing. This style of search and indexing helps overcome limitations of"
+" the default database search such as challenges with characters and "
+"advanced search capabilities."
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:9
+msgid ""
+"The Bleve search engine works as a library integrated into the Mattermost"
+" codebase. As it generates indexes in the filesystem of the server that "
+"it is running on, it doesn’t require an external server to function. "
+"Because of this, Bleve should not be enabled in High Availability "
+"deployments."
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:13
+msgid ""
+"Bleve search uses the scorch index type on newly-created indexes. This "
+"new index type features efficiency improvements and indexes that use "
+"significantly less disk space. Go to **System Console > Experimental > "
+"Bleve** and select **Purge Index** to run a purge operation. When that's "
+"complete, select **Index Now** to reindex. Bleve remains compatible with "
+"existing indexes, so currently indexed data will continue to work if a "
+"purge and reindex isn't run."
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:16
+msgid "Configuring Bleve in Mattermost"
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:18
+msgid ""
+"Follow these steps to configure the Mattermost server to use Bleve and "
+"generate required indexes. Once the configuration is saved, new posts "
+"made to the database will be automatically indexed with Bleve."
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:20
+msgid ""
+"**Note:** During indexing, search results may be incomplete until the "
+"indexing job is complete."
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:22
+msgid "Open **System Console > Experimental > Bleve**."
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:23
+msgid ""
+"Set **Enable Bleve Indexing** to **true** to enable the other settings on"
+" the page."
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:24
+msgid ""
+"Set the directory path to use for storing Bleve indexes (e.g.: "
+"``/var/opt/mattermost/bleveindexes``). The user running Mattermost should"
+" have permissions to access the directory. See our :ref:`configuration "
+"settings <configure/experimental-configuration-settings:experimental "
+"bleve configuration settings>`  documentation for details."
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:25
+msgid "Save the configuration."
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:26
+msgid ""
+"Select **Index Now**. All users, channels, and posts in the database will"
+" be indexed oldest to newest."
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:27
+msgid "Set **Enable Bleve for search queries** to **true**."
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:28
+msgid "Set **Enable Bleve for autocomplete queries** to **true**."
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:32
+msgid ""
+"Search results for files shared before upgrading to Mattermost Server "
+"v5.35 may be incomplete until an extraction command is run using the "
+":ref:`mmctl <manage/mmctl-command-line-tool:mmctl extract>`. After "
+"running this command, the search index must be rebuilt. Go to **System "
+"Console > Experimental > Bleve > Bulk Indexing**, then select **Index "
+"Now** to rebuild the search index to include older file contents."
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:35
+msgid "Using Bleve search"
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:37
+msgid "The following conditions are applied when using Bleve search:"
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:39
+msgid ""
+"**Unquoted terms:** Search terms that contain non-alphanumeric "
+"characters/special characters outside of quotation marks are removed. For"
+" example, using ``abcd \"**\" && abc`` as a search term will return "
+"results for a search for ``abcd \"**\" abc`` as the ``&&`` characters "
+"weren't within the quotation marks."
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:40
+msgid "**Wildcard search:** Wildcard search (e.g., ``abc*``) is supported."
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:43
+msgid "How does search work with Bleve disabled?"
+msgstr ""
+
+#: ../../source/configure/bleve-search.rst:45
+msgid ""
+"Mattermost performs full text searches against the database unless you "
+"have an :ref:`Enterprise license <about/editions-and-offerings:mattermost"
+" enterprise edition>` and :doc:`Elasticsearch </scale/elasticsearch>` "
+"configured."
+msgstr ""
+

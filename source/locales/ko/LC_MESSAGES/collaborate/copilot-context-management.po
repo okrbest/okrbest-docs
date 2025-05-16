@@ -1,0 +1,210 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 06:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/collaborate/copilot-context-management.rst:2
+msgid "Copilot context management"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-cloud-selfhosted.rst:7
+msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-cloud-selfhosted.rst:9
+msgid ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
+"hosted <https://mattermost.com/download/>`__ deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:7
+msgid ""
+"Copilot is designed to handle context efficiently, ensuring that only "
+"necessary information is sent to the Large Language Model (LLM) for "
+"generating accurate responses. This document outlines how Copilot "
+"processes and includes relevant context. The company name, the server "
+"name, and the time are always passed to the LLM to ensure accurate and "
+"contextually relevant responses."
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:10
+msgid "**Ensure data privacy**"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:12
+msgid ""
+"We recommend that customers with strict privacy requirements run the LLM "
+"locally to prevent sensitive data, including personally identifiable "
+"information (PII) and message content, from being shared with an external"
+" LLM hosting vendor. This ensures data privacy while enabling Copilot’s "
+"functionality."
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:15
+msgid "Direct messages to the Copilot Bot"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:17
+msgid ""
+"When you send a direct message to the Copilot bot, the context sent to "
+"the LLM includes:"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:19
+#: ../../source/collaborate/copilot-context-management.rst:48
+msgid "The profile information of the user sending the prompt."
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:20
+msgid "Chat messages exchanged between the user and the bot."
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:22
+msgid "**Additional context in direct messages**"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:24
+msgid ""
+"By default, some tool use is enabled to allow for features such as "
+"integrations with JIRA, and additional context may be sent to the LLM, "
+"depending on the prompt that includes:"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:26
+msgid "Jira tickets (public tickets)"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:28
+msgid "Example: Summarize the Jira ticket: <LINK TO TICKET>"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:30
+msgid "GitHub issues"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:32
+msgid "Example: Summarize the GitHub issue: <LINK TO ISSUE>"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:34
+msgid "User data"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:36
+msgid "Example: What is @Bob's position?"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:39
+msgid "@-Mentions in channels"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:41
+msgid ""
+"When you @-mention Copilot in a channel, the context sent to the LLM "
+"includes:"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:43
+msgid "**Standalone messages (@-mentions in a channel)**"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:45
+msgid "The message containing the @-mention, including any attachments."
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:46
+msgid "The channel name and display name."
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:47
+msgid "The team name and display name."
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:50
+msgid "**Threaded messages (@-mentions in a thread)**"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:52
+msgid "Everything sent when used in a standalone message."
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:53
+msgid ""
+"Messages within the thread, including the usernames of the users "
+"involved, as well as any attachments and their filenames."
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:55
+msgid "**Context differences between standalone and threaded messages:**"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:57
+msgid ""
+"For @-mentions in standalone messages, the context includes only the "
+"mentioned message."
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:58
+msgid ""
+"For @-mentions in threads, the entire thread's messages are included, "
+"along with usernames of the authors of the messages."
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:61
+msgid "Built-in ways to trigger Copilot"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:63
+msgid ""
+"In addition to regular chat interactions, Copilot provides specialized "
+"features where extra context is sent to the LLM. Each feature provides "
+"specialized context tailored to the task being performed. Below are the "
+"scenarios where extra context is sent to the LLM:"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:65
+msgid ""
+"**Thread summarization**: Includes thread messages and the usernames of "
+"the authors"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:66
+msgid "**Meeting summary**: Incorporates transcriptions from calls"
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:67
+msgid ""
+"**Channel summary since last visit**: Uses channel posts along with their"
+" authors to create summaries."
+msgstr ""
+
+#: ../../source/collaborate/copilot-context-management.rst:68
+msgid ""
+"**Finding action items & open questions**: Analyzes thread and channel "
+"messages to identify action items or open questions."
+msgstr ""
+

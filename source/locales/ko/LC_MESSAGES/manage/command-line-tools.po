@@ -1,0 +1,642 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 06:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/manage/command-line-tools.rst:2
+msgid "Command line tools"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-selfhosted.rst:7
+msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-selfhosted.rst:9
+msgid ""
+"|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
+"deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:7
+msgid ""
+"In self-managed deployments, a ``mattermost`` command is available for "
+"configuring the system from the directory where the Mattermost server is "
+"installed. For an overview of the Mattermost command line interface "
+"(CLI), `read this article <https://medium.com/@santosjs/plugging-in-to-"
+"the-mattermost-cli-8cdcef2bd1f6>`_ from Santos."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:11
+msgid ""
+"From Mattermost v6.0, the majority of these CLI commands have been "
+"replaced with equivalents available using the :doc:`mmctl command line "
+"tool </manage/mmctl-command-line-tool>`. However, :ref:`mattermost import"
+" <manage/command-line-tools:mattermost import>` commands, "
+":ref:`mattermost export <manage/command-line-tools:mattermost export>` "
+"commands, and related subcommands, remain available and fully supported "
+"from Mattermost v6.0."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:13
+msgid "These ``mattermost`` commands include the following functionality:"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:15
+msgid "**Compliance Export**"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:17
+msgid "Export data"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:18
+msgid "Schedule an export job"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:20
+msgid "**Database**"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:22
+msgid "Initialize the database, execute migrations, and load custom defaults"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:23
+msgid "Migrate the database schema for unapplied migrations"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:24
+msgid "Reset the database to its initial state"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:25
+msgid "Return the most recently applied version number"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:26
+msgid "Roll back database migrations"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:28
+msgid "**Server Operations**"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:30
+msgid "Start the Mattermost job server"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:31
+msgid "Run the Mattermost server"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:32
+msgid "Display Mattermost version information"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:35
+msgid "Use the CLI"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:39
+msgid ""
+"To run the CLI commands, you must be in the Mattermost root directory. On"
+" a default installation of Mattermost, the root directory is "
+"``/opt/mattermost``. If you followed our standard :doc:`installation "
+"process </guides/deployment-guide>`, you must run the commands as the "
+"user ``mattermost``. The name of the executable is ``mattermost``, and it"
+" can be found in the ``/opt/mattermost/bin`` directory."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:41
+msgid ""
+"For example, to get the Mattermost version on a default installation of "
+"Mattermost:"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:50
+msgid ""
+"Ensure you run the Mattermost binary as the ``mattermost`` user. Running "
+"it as ``root`` user (for example) may cause complications with "
+"permissions as the binary initiates plugins and accesses various files "
+"when running CLI commands. Running the server as ``root`` may result in "
+"ownership of the plugins and files to be overwritten as well as other "
+"potential permissions errors."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:51
+msgid ""
+"When running CLI commands on a Mattermost installation that has the "
+"configuration stored in the database, you might need to pass the database"
+" connection string as:"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:59
+msgid ""
+"On GitLab Omnibus, you must be in the following directory when you run "
+"CLI commands: ``/opt/gitlab/embedded/service/mattermost``. Also, you must"
+" run the commands as the user *mattermost* and specify the location of "
+"the configuration file. The executable is "
+"``/opt/gitlab/embedded/bin/mattermost``."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:61
+msgid "For example, to get the Mattermost version on GitLab Omnibus:"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:70
+msgid ""
+"The example commands on this documentation page are for a default "
+"installation of Mattermost. You must modify the commands so that they "
+"work on GitLab Omnibus."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:74
+msgid ""
+"On Docker install, the ``/mattermost/bin`` directory was added to "
+"``PATH``, so you can use the CLI directly with the ``docker exec`` "
+"command. Note that the container name may be ``mattermostdocker_app_1`` "
+"if you installed Mattermost with ``docker-compose.yml``."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:76
+msgid "For example, to get the Mattermost version on a Docker Install:"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:84
+msgid ""
+"The Docker Install tab details and command references below also apply to"
+" the `Mattermost docker preview image <https://github.com/mattermost"
+"/mattermost-docker-preview>`_."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:87
+msgid ""
+"The CLI is run in a single node which bypasses the mechanisms that a "
+":doc:`High Availability environment </scale/high-availability-cluster-"
+"based-deployment>` uses to perform actions across all nodes in the "
+"cluster. As a result, when running :doc:`CLI commands </manage/command-"
+"line-tools>` in a High Availability environment, tasks that change "
+"configuration settings require a server restart."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:88
+msgid "Parameters in CLI commands are order-specific."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:89
+msgid ""
+"If special characters (``!``, ``|``, ``(``, ``)``, ``\\``, ``'``, or "
+"``\"``) are used, the entire argument needs to be surrounded by single "
+"quotes, or the individual characters need to be escaped out."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:92
+msgid "mattermost CLI commands"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:95
+#: ../../source/manage/command-line-tools.rst:116
+#: ../../source/manage/command-line-tools.rst:135
+#: ../../source/manage/command-line-tools.rst:156
+#: ../../source/manage/command-line-tools.rst:186
+#: ../../source/manage/command-line-tools.rst:212
+#: ../../source/manage/command-line-tools.rst:228
+#: ../../source/manage/command-line-tools.rst:244
+#: ../../source/manage/command-line-tools.rst:272
+#: ../../source/manage/command-line-tools.rst:301
+#: ../../source/manage/command-line-tools.rst:316
+#: ../../source/manage/command-line-tools.rst:333
+#: ../../source/manage/command-line-tools.rst:351
+#: ../../source/manage/command-line-tools.rst:369
+msgid "Description"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:95
+msgid "Commands for configuring and managing your Mattermost instance and users."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:101
+#: ../../source/manage/command-line-tools.rst:129
+#: ../../source/manage/command-line-tools.rst:150
+#: ../../source/manage/command-line-tools.rst:206
+#: ../../source/manage/command-line-tools.rst:288
+msgid "Options"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:110
+#: ../../source/manage/command-line-tools.rst:123
+#: ../../source/manage/command-line-tools.rst:189
+#: ../../source/manage/command-line-tools.rst:251
+msgid "Child Commands"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:104
+msgid "`mattermost db`_ - Database commands"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:105
+msgid "`mattermost export`_ - Compliance export commands"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:106
+msgid "`mattermost help`_ - Generate full documentation for the CLI"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:107
+msgid "`mattermost import`_ - Legacy import command"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:108
+msgid "`mattermost jobserver`_ - Start the Mattermost job server"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:109
+msgid "`mattermost server`_ - Run the Mattermost server"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:110
+msgid "`mattermost version`_ - Display version information"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:113
+msgid "mattermost db"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:116
+msgid "Commands related to the database"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:119
+msgid ""
+"`mattermost db downgrade`_ - Roll back database migrations. Requires "
+"either an update plan to roll back to, or comma-separated version numbers"
+" to be rolled back."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:120
+msgid ""
+"`mattermost db init`_ - Initialize the database, execute migrations, and "
+"load custom defaults"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:121
+msgid ""
+"`mattermost db migrate`_ - Migrate the database schema for unapplied "
+"migrations"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:122
+msgid "`mattermost db reset`_ - Reset the database to its initial state"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:123
+msgid "`mattermost db version`_ - Return the most recently applied version number"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:132
+msgid "mattermost db downgrade"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:135
+msgid ""
+"Rolls back database migrations. Requires either an update plan to roll "
+"back to, or comma-separated version numbers to be rolled back."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:140
+#: ../../source/manage/command-line-tools.rst:161
+#: ../../source/manage/command-line-tools.rst:194
+#: ../../source/manage/command-line-tools.rst:217
+#: ../../source/manage/command-line-tools.rst:233
+#: ../../source/manage/command-line-tools.rst:277
+#: ../../source/manage/command-line-tools.rst:306
+#: ../../source/manage/command-line-tools.rst:338
+#: ../../source/manage/command-line-tools.rst:356
+#: ../../source/manage/command-line-tools.rst:374
+#: ../../source/manage/command-line-tools.rst:391
+msgid "Format"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:145
+#: ../../source/manage/command-line-tools.rst:199
+#: ../../source/manage/command-line-tools.rst:222
+#: ../../source/manage/command-line-tools.rst:282
+#: ../../source/manage/command-line-tools.rst:343
+#: ../../source/manage/command-line-tools.rst:361
+msgid "Example"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:153
+msgid "mattermost db init"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:156
+msgid ""
+"Initializes the database for a given data source name (DSN), executes "
+"migrations, and loads custom defaults when specified."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:180
+msgid "Examples"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:164
+msgid "Use the ``config`` flag to pass the DSN:"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:170
+msgid "Run this command to use the ``MM_CONFIG`` environment variable:"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:176
+msgid ""
+"Run this command to set a custom defaults file to be loaded into the "
+"database:"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:183
+msgid "mattermost db migrate"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:186
+msgid "Migrates the database schema if there are any unapplied migrations."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:189
+msgid "`mattermost db downgrade`_ - Roll back database migrations."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:209
+msgid "mattermost db reset"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:212
+msgid ""
+"Resets the database to its initial state. Doesn't start the application "
+"server. Only starts the store layer and truncates the tables, excluding "
+"the ``migrations`` table."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:225
+msgid "mattermost db version"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:228
+msgid "Returns the most recently applied version number."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:238
+msgid "mattermost export"
+msgstr ""
+
+#: ../../source/_static/badges/ent-only.rst:9
+msgid "Note"
+msgstr ""
+
+#: ../../source/_static/badges/ent-only.rst:11
+msgid ""
+"|plans-img-yellow| Available only on `Enterprise "
+"<https://mattermost.com/pricing/>`__ plans"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:244
+msgid ""
+"Commands for exporting data for compliance and for merging multiple "
+"Mattermost instances."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:247
+msgid ""
+"`mattermost export actiance`_ - Deprecated from Mattermost v10.5 in favor"
+" of `mattermost export schedule`_."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:248
+msgid "`mattermost export csv`_ - Deprecated from Mattermost v10.5."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:249
+msgid "`mattermost export global-relay-zip`_ - Deprecated from Mattermost v10.5."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:250
+msgid "`mattermost export schedule`_ - Schedule a compliance export job."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:251
+msgid ""
+"`mattermost export bulk`_ - Export data to a file compatible with the "
+"Mattermost :doc:`Bulk Import format </onboard/bulk-loading-data>`. "
+"Deprecated in favor of :ref:`mmctl export commands <manage/mmctl-command-"
+"line-tool:mmctl export>`."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:254
+msgid "mattermost export actiance"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:256
+msgid ""
+"From Mattermost v10.5, this command has been deprecated. It will be added"
+" to the mmctl command line tool in a future version. Until then, please "
+"use `mattermost export schedule`_."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:259
+msgid "mattermost export csv"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:261
+#: ../../source/manage/command-line-tools.rst:266
+msgid ""
+"From Mattermost v10.5, this command has been deprecated. It will be added"
+" to the mmctl command line tool in a future version."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:264
+msgid "mattermost export global-relay-zip"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:269
+msgid "mattermost export schedule"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:272
+msgid ""
+"Schedule an export job in a format suitable for importing into a third-"
+"party archive system."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:291
+msgid "mattermost export bulk"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:293
+msgid ""
+"From Mattermost v6.0, this command has been deprecated in favor of "
+":ref:`mmctl export commands <manage/mmctl-command-line-tool:mmctl "
+"export>` as the supported way to export data out of Mattermost."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:298
+msgid "mattermost help"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:301
+msgid ""
+"Generate full documentation in Markdown format for the Mattermost command"
+" line tools."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:313
+msgid "mattermost import"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:316
+msgid "Import data into Mattermost."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:320
+msgid "Child Command"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:319
+msgid ""
+"`mattermost import bulk`_ - Import a Mattermost Bulk Import File. "
+"Deprecated in favor of :ref:`mmctl import commands <manage/mmctl-command-"
+"line-tool:mmctl import>`."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:320
+msgid "`mattermost import slack`_ - Import a team from Slack."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:323
+msgid "mattermost import bulk"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:325
+msgid ""
+"From Mattermost v6.0, this command has been deprecated in favor of "
+":ref:`mmctl import commands <manage/mmctl-command-line-tool:mmctl "
+"import>` as the supported way to import data into Mattermost."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:328
+msgid "mattermost import slack"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:330
+msgid ""
+"See the :ref:`mmctl import commands <manage/mmctl-command-line-tool:mmctl"
+" import>` documentation as the preferred way to import Slack data into "
+"Mattermost."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:333
+msgid "Import a team from a Slack export zip file."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:336
+msgid ". code-block:: sh"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:338
+#, python-brace-format
+msgid "mattermost import slack {team} {file}"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:348
+msgid "mattermost jobserver"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:351
+msgid "Start the Mattermost job server."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:366
+msgid "mattermost server"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:369
+msgid "Runs the Mattermost server."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:379
+msgid "mattermost version"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:383
+msgid ""
+"From Mattermost v6.5, this CLI command no longer interacts with the "
+"database. The :ref:`mattermost db migrate <manage/command-line-"
+"tools:mattermost db migrate>` CLI command has been introduced to trigger "
+"schema migrations."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:386
+msgid "Desription"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:386
+msgid "Displays Mattermost version information."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:396
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:399
+msgid "Executing a command hangs and doesn't complete"
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:401
+msgid ""
+"If you have Bleve search indexing enabled, temporarily disable it in "
+"**System Console > Experimental > Bleve** and run the command again. You "
+"can also optionally use the new :doc:`mmctl Command Line Tool </manage"
+"/mmctl-command-line-tool>`."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:403
+msgid ""
+"Bleve does not support multiple processes opening and manipulating the "
+"same index. Therefore, if the Mattermost server is running, an attempt to"
+" run the CLI will lock when trying to open the indeces."
+msgstr ""
+
+#: ../../source/manage/command-line-tools.rst:405
+msgid ""
+"If you aren't using the Bleve search indexing, feel free to post in our "
+"`Troubleshooting forum <https://forum.mattermost.com/c/trouble-"
+"shoot/16>`_ to get help."
+msgstr ""
+

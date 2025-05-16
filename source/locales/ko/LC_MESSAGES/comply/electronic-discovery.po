@@ -1,0 +1,209 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 06:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/comply/electronic-discovery.rst:4
+msgid "Electronic discovery"
+msgstr ""
+
+#: ../../source/_static/badges/ent-selfhosted.rst:7
+msgid ""
+"|plans-img| Available on `Enterprise plans "
+"<https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/ent-selfhosted.rst:9
+msgid ""
+"|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
+"deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:9
+msgid ""
+"Electronic discovery (also known as eDiscovery) refers to a process where"
+" electronic data is searched with the intent to use it as evidence in a "
+"legal case."
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:11
+msgid ""
+"This page describes how to extract data from Mattermost for eDiscovery. "
+"There are three primary methods that can be used to accomplish the goal "
+"of extracting user post data from Mattermost:"
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:13
+msgid ":doc:`Mattermost Compliance Exports </comply/compliance-export>`"
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:14
+msgid ""
+":ref:`Mattermost RESTful API <comply/electronic-discovery:mattermost "
+"restful api>`"
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:15
+msgid ""
+":ref:`Mattermost database using standard SQL queries <comply/electronic-"
+"discovery:mattermost database>`"
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:17
+msgid "Each of the options is discussed in detail below."
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:20
+msgid ""
+"Litigation hold (also known as legal hold) is an extension of eDiscovery "
+"where in addition to searching for records, no electronically stored "
+"information nor paper documents may be discarded if they may be deemed "
+"relevant for a present or future legal case."
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:23
+msgid "Mattermost compliance exports"
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:25
+msgid "Mattermost Enterprise has compliance report export capabilities."
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:27
+msgid ""
+"Mattermost can export compliance related data, including the content of "
+"messages and who might have seen those messages, in three formats: "
+"Actiance XML, Global Relay EML, and generic CSV. Reports can be "
+"configured to run on a delay basis and stored in a shared location."
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:29
+msgid ""
+"For more information about the exports feature and how to set up "
+"reporting, see :doc:`our documentation </comply/compliance-export>`."
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:32
+msgid "Mattermost RESTful API"
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:34
+msgid ""
+"The Mattermost API can be used to export a user's posts in CSV compliance"
+" format that is part of Mattermost Enterprise. The following section "
+"outlines how to use the API to create and retrieve a report for a "
+"specific user via the API. Please note that full documentation for the "
+"Mattermost API can be found at https://api.mattermost.com."
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:36
+msgid ""
+"To use the API, you must first authenticate `as described here "
+"<https://api.mattermost.com/#tag/authentication>`__. The account you are "
+"authenticating with must have ``manage_system`` permissions. If you are "
+"using curl, you can authenticate using the following command:"
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:42
+msgid "Mattermost will return a response that looks like this:"
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:57
+msgid ""
+"Include the ``token`` value sent in the response as part of the "
+"Authorization header on your future API requests with the Bearer method, "
+"e.g.:"
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:63
+#, python-format
+msgid ""
+"Once you're authenticated into Mattermost, you can use the `Compliance "
+"API to create a new compliance report "
+"<https://api.mattermost.com/#tag/compliance%2Fpaths%2F~1compliance~1reports%2Fpost>`__."
+" The curl based example below demonstrates how to send a request that "
+"bases the authentication token and asks Mattermost to create a report "
+"that spans posts from Dec 31, 2017 - 8:15 PM to Dec 31, 2018 - 8:15 PM "
+"for a user with the email address craig@mattermost.com:"
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:67
+msgid ""
+"The data in the JSON payload must be formatted as Unix Epoch. A tool like"
+" https://www.epochconverter.com/ can be useful when converting to and "
+"from the required format."
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:77
+msgid ""
+"If the post is successful, Mattermost will return a message that looks "
+"like the following, indicating that the server is running the compliance "
+"export process:"
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:83
+msgid ""
+"When the export process is complete (the execution time is based on the "
+"number of records to return and the current server load), you will need "
+"to send another HTTP Post request to Mattermost to retrieve and download "
+"a zip file containing the report that looks like the following curl "
+"request:"
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:93
+msgid ""
+"When sending the request, you need to get the report ID from the response"
+" returned by Mattermost when the report was created. You also need to "
+"supply a name to save that file as. In the example above, the file will "
+"be saved as ``report-zip.zip``."
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:96
+msgid "Mattermost database"
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:98
+msgid ""
+"Selecting messages from the Mattermost database using standard SQL is "
+"quite easy. If you know the username, the following query can be used to "
+"select all messages for the specified user:"
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:104
+msgid ""
+"If you want to limit the results of the query based on the date and time "
+"that the messages were posted, you can modify the above query to:"
+msgstr ""
+
+#: ../../source/comply/electronic-discovery.rst:111
+msgid ""
+"The Mattermost database stores date and time stamps in the `Unix Epoch "
+"<https://en.wikipedia.org/wiki/Unix_time>`__ format. A tool like the "
+"`Epoch Converter <https://www.epochconverter.com/>`__ can be useful in "
+"converting to and from the required format."
+msgstr ""
+

@@ -1,0 +1,214 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 06:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:2
+msgid "Communicate scheduled maintenance best practices"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-cloud-selfhosted.rst:7
+msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-cloud-selfhosted.rst:9
+msgid ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
+"hosted <https://mattermost.com/download/>`__ deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:7
+msgid ""
+"Performing scheduled maintenance on a Mattermost server with 1,000 or "
+"more users requires advanced planning and a clear communication strategy "
+"to ensure minimal disruption and maximum transparency."
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:9
+msgid ""
+"This guide provides best practices for notifying users via email and "
+"Mattermost channels, updating the load balancer’s error message, and "
+"configuring a dismissable banner to inform users of the upcoming "
+"maintenance."
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:12
+msgid "Communication strategy"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:14
+msgid ""
+"A well-defined communication strategy is essential for informing users "
+"before, during, and after maintenance. The key components of this "
+"strategy are:"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:16
+msgid ""
+"Define a clear maintenance window in which the self-hosted Mattermost "
+"server will be unavailable."
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:18
+msgid ""
+"Mattermost Cloud deployments have predefined service windows scheduled "
+"from 8:00-10:00 UTC on Saturdays only (when applicable) unless an "
+"exception has been made and communicated to impacted customers."
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:19
+msgid ""
+"`Email notifications <#email-templates>`__: Send structured and "
+"consistent emails to users at intervals of 7 days, 3 days, and 1 day "
+"before the scheduled maintenance window."
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:20
+msgid ""
+"`Channel-based reminders <#channel-reminder-templates>`__: :doc:`Send "
+"messages </collaborate/send-messages>` similar to the emails in relevant "
+"Mattermost channels at the same intervals as the email notifications."
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:21
+msgid ""
+"`Mattermost Banner notification <#banner-notification>`__: Set a :doc"
+":`system-wide notification </manage/system-wide-notifications>` to "
+"display at the top of the Mattermost instance ahead of the maintenance "
+"window and outage."
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:22
+msgid ""
+"`Display a load balancer message <#display-load-balancer-message>`__: "
+"Update the load balancer to show a maintenance message during the "
+"scheduled maintenance window of downtime."
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:25
+msgid "Notification templates"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:28
+msgid "Email Templates"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:31
+msgid "7-Day notice email"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:33
+msgid "**Email subject**: Scheduled Maintenance Notification: [Date and Time]"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:56
+msgid "3-Day notice email"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:58
+msgid "**Email subject**: Reminder: Scheduled Maintenance on [Date and Time]"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:78
+msgid "1-Day notice email"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:80
+msgid ""
+"**Email subject**: Final Reminder: Scheduled Maintenance Tomorrow on "
+"[Date and Time]"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:100
+msgid "Channel reminder templates"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:103
+msgid "7-Day channel reminder"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:113
+msgid "3-Day channel reminder"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:123
+msgid "1-Day channel reminder"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:133
+msgid "Banner notification"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:135
+msgid "Sample message:"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:143
+msgid ""
+"Users can dismiss the banner until they log in again, or until you update"
+" the banner."
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:146
+msgid "Display load balancer message"
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:148
+msgid ""
+"Configure the load balancer to display a notification message during the "
+"scheduled maintenance window of downtime."
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:150
+msgid "Identify the load balancer you are using (e.g., AWS, HAProxy)."
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:151
+msgid ""
+"Edit configuration. Adjust paths and configurations according to your "
+"specific environment."
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:153
+msgid "For AWS, navigate to the Load Balancer configurations in the EC2 console."
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:154
+msgid "For HAProxy, edit the ``haproxy.cfg`` file."
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:158
+msgid ""
+"We strongly recommend adding headers, where needed in your "
+"infrastructure, to avoid outdated information being communicated to your "
+"users during and following server maintenance."
+msgstr ""
+
+#: ../../source/upgrade/communicate-scheduled-maintenance.rst:160
+msgid "See the sample message HTML below to use as a starting point:"
+msgstr ""
+
