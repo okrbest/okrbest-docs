@@ -1,0 +1,797 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-07 15:09+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/onboard/sso-saml-keycloak.rst:2
+msgid "Configure SAML with Keycloak"
+msgstr ""
+
+#: ../../source/_static/badges/ent-cloud-selfhosted.rst:7
+msgid ""
+"|plans-img| Available on `Enterprise plans "
+"<https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/ent-cloud-selfhosted.rst:9
+msgid ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
+"hosted <https://mattermost.com/download/>`__ deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:7
+msgid ""
+"The following process provides steps to configure SAML with Keycloak for "
+"Mattermost."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:10
+msgid "Set up a connection app for Mattermost SSO"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:13
+msgid "This was tested with Keycloak v22.0.5."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:15
+msgid ""
+"Additionally, you don't typically need to make a realm dedicated to "
+"Mattermost. We recommend adding Mattermost as a client to your primary "
+"realm."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:17
+msgid "Log in to Keycloak as an administrator."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:19
+msgid ""
+"Select **Clients**, then **Create client**. You'll use this client ID in "
+"a later step."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:21
+msgid "**Client type**: ``SAML``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:22
+msgid "**Client ID**: ``mattermost``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:24
+msgid "Click **Next** and update the following values:"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:26
+msgid "**Home URL**: ``https://<<siteURL>>/login/sso/saml``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:27
+msgid "**Valid redirect URIs**: ``https://<<siteURL>>/login/sso/saml``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:29
+msgid "**Save** the client."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:31
+msgid "Under the **Settings** tab, update the following values:"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:33
+msgid "**Enabled**: **On**"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:34
+msgid "**Name ID format**: ``email``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:35
+msgid "**Force Name ID format**: **On**"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:36
+msgid "**Sign Documents**: **Off**"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:33
+msgid ""
+"In Keycloak, create the Mattermost client, specify the Client ID and "
+"Client Protocol, then save your changes."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:41
+msgid "Navigate to the **Keys** tab."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:43
+msgid "**Client signature required**: **Off**"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:44
+msgid "**Encrypt Assertions**: **On**"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:46
+msgid "Click **Generate**"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:47
+msgid "Download the **private.key** file."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:48
+msgid "Click **Confirm**"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:50
+msgid "Click **Export** and update the following values:"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:52
+msgid "**Archive Format**: ``PKCS12``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:53
+msgid "**Key Alias**: ``mattermost``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:54
+msgid "**Key Password**: ``mattermost``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:55
+msgid "**Store Password**: ``mattermost``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:58
+msgid ""
+"In the image below, we used `Mattermost` for the `Realm Certificate "
+"Alias`. You should use your Realm Name here, as it's designed to identify"
+" what this certificate is within your Keycloak realm."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:43
+msgid ""
+"In Keycloak, on the Keys tab, generate new keys, export using the values "
+"documented, then select Download."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:63
+msgid "Navigate to the **Client scopes** tab."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:65
+msgid "Select **mattermost-dedicated**"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:66
+msgid "Click **Add predefined mapper**"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:67
+msgid ""
+"Select the **X500 email**, **X500 givenName**, and **X500 surname** "
+"attributes."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:68
+msgid "Click **Add**."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:65
+msgid "In Keycloak, on the Mappers tab, add default attributes"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:73
+msgid "Add the username and ID attribute."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:75
+msgid ""
+"If you're planning to sync your SAML users with LDAP within Mattermost, "
+"the ID value used here must match with your Mattermost LDAP ``ID "
+"Attribute``."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:77
+msgid "Select **Add Mapper** -> **By Configuration** -> User Property."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:78
+msgid "Set **Name** to ``Username``."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:79
+msgid ""
+"Set **Property** to ``username`` (This is case sensitive and must be "
+"lowercase)."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:80
+msgid "Set **SAML Attribute Name** to ``username``."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:81
+#: ../../source/onboard/sso-saml-keycloak.rst:157
+msgid "Select **Save**."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:82
+msgid ""
+"Repeat the above steps and use the property of ``id`` to create the ID "
+"Attribute."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:75
+msgid ""
+"In Keycloak, on the Mappers tab, create a protocol mapper, then save your"
+" changes."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:90
+msgid "Once done your Mappers should look like this:"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst
+msgid "Example of protocol mapper configuration."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:92
+msgid "Get the metadata URL from Keycloak:"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:94
+msgid "Within your Realm, select **Realm Settings**."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:95
+msgid ""
+"At the bottom of the **General** tab you should see a **SAML 2.0 Identity"
+" Provider Metadata** endpoint. Right-click and copy this URL. Store for "
+"the next step."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:94
+msgid ""
+"Within your Realm, select Realm Settings. At the bottom of the General "
+"tab, you should see a SAML 2.0 Identify Provider Metadata endpoint. Copy "
+"this URL for the next step."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:101
+msgid "Configure SAML for Mattermost"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:103
+msgid ""
+"Start the Mattermost server and log in to Mattermost as a system admin. "
+"Go to **System Console > Authentication > SAML**."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:105
+msgid ""
+"Set the **Identity Provider Metadata URL** to the value you copied from "
+"the step above and select **Get SAML Metadata from IdP**. The metadata "
+"import will populate fields related to your Keycloak configuration."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:107
+msgid ""
+"If you have any issues with this import, you can check the "
+"``mattermost.log`` file for more information. :ref:`Enable debug logging "
+"<manage/logging:how do i enable debug logging?>` and try again."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:107
+msgid ""
+"In Mattermost, configure SAML in the System Console by going to "
+"Authentication > SAML. Set the Identity Provider Metadata URL to the "
+"value you copied in the previous step. When you select Get SAML Metadata "
+"from IdP, fields related to your Keycloak configuration are populated."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:112
+msgid "Set the below fields:"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:114
+msgid "**Verify Signature**: **false**"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:115
+msgid "**Service Provider Login URL**: ``http://<<siteURL>>/login/sso/saml``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:116
+msgid "**Service Provider Identifier**: ``mattermost``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:118
+msgid ""
+"The Service Provider Identifier will match the **Client ID** that you "
+"configured in the second Keycloak step."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:114
+msgid ""
+"In the System Console, configure SAML as documented, where the Service "
+"Provider Identifier matches the Client ID you configured in Keycloak."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:123
+msgid ""
+"Configure the Encryption using the key you downloaded in step 6 of the "
+"Keycloak config."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:125
+msgid "Generate the ``.crt`` file from the ``.p12`` file."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:127
+msgid "``openssl pkcs12 -in keystore.p12 -out mattermost.crt -nodes``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:129
+msgid "Generate the ``.key`` file from the ``.p12`` file."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:131
+msgid "``openssl pkcs12 -in keystore.p12 -out mattermost.key -nodes -nocerts``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:133
+msgid ""
+"Upload both of these files within the Mattermost System Console. Make "
+"sure to select **Upload**."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:135
+msgid "**Service Provider Private Key**: ``mattermost.key``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:136
+msgid "**Service Provider Private Certificate**: ``mattermost.crt``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:125
+msgid ""
+"In the System Console, upload both the Service Provider Private Key and "
+"the Service Provider Private Certificate."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:141
+msgid "(Optional) Set up request signing with the below parameters."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:143
+msgid ""
+"In the System Console, you can optionally request signing with configured"
+" parameters."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:146
+msgid ""
+"Set attributes for the SAML Assertions, which will update user "
+"information in Mattermost."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:148
+msgid ""
+"The attributes below are from steps 7 and 8 above. These values must be "
+"the **SAML Attribute Name** within Keycloak. See :ref:`documentation on "
+"SAML configuration settings <configure/authentication-configuration-"
+"settings:saml 2.0>` for more details."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:150
+msgid "**Email Attribute**: ``email``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:151
+msgid "**Username Attribute**:  ``username``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:152
+msgid "**Id Attribute**: ``id``"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:148
+msgid ""
+"Set attributes for the SAML assertions which updates user information in "
+"Mattermost."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:159
+msgid ""
+"You’re done! If you’d like to confirm SAML SSO is successfully enabled, "
+"switch your system admin account from email to SAML-based authentication "
+"via **Profile > Security > Sign-in Method > Switch to SAML SSO** and log "
+"in with your SAML credentials to complete the switch."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:161
+msgid ""
+"It's also recommended to post an announcement about how the migration "
+"will work for users."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-keycloak.rst:163
+msgid ""
+"You may also configure SAML for Keycloak by editing ``config.json``. "
+"Before starting the Mattermost server, edit ``config.json`` to enable "
+"SAML based on :ref:`SAML configuration settings <configure"
+"/authentication-configuration-settings:saml 2.0>`. You must restart the "
+"Mattermost server for the changes to take effect."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:4
+msgid "Configure SAML synchronization with AD/LDAP"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:6
+msgid ""
+"In addition to configuring SAML sign-in, you can optionally configure "
+"synchronizing SAML accounts with AD/LDAP. When configured:"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:8
+msgid ""
+"Mattermost queries AD/LDAP for relevant account information and updates "
+"SAML accounts based on changes to attributes (first name, last name, and "
+"nickname)"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:9
+msgid ""
+"Accounts disabled in AD/LDAP are deactivated in Mattermost, and their "
+"active sessions are revoked once Mattermost synchronizes attributes."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:11
+msgid "To configure SAML synchronization with AD/LDAP:"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:13
+msgid ""
+"Go to **System Console > Authentication > SAML 2.0**, then set **Enable "
+"Synchronizing SAML Accounts With AD/LDAP** to **true**."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:14
+msgid ""
+"Go to  **System Console > Authentication > AD/LDAP**, then set **Enable "
+"Synchronization with AD/LDAP** to **true**."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:15
+msgid ""
+"To ignore guest users when sychronizing, go to **System Console > "
+"Authentication > SAML 2.0**, then set **Ignore Guest Users when "
+"Synchronizing with AD/LDAP** to **true**."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:16
+msgid ""
+"Set the rest of the AD/LDAP settings based on :ref:`configuration "
+"settings documentation <configure/authentication-configuration-"
+"settings:ad/ldap>` to connect Mattermost with your AD/LDAP server."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:18
+msgid ""
+"If you don't want to enable AD/LDAP sign-in, go to **System Console > "
+"Authentication > AD/LDAP**, then set **Enable sign-in with AD/LDAP** to "
+"**false**."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:20
+msgid ""
+"To specify how often Mattermost synchronizes SAML user accounts with "
+"AD/LDAP, go to **System Console > Authentication > AD/LDAP**, then set a "
+"**Synchronization Interval** in minutes. The default setting is 60 "
+"minutes. If you want to synchronize immediately after disabling an "
+"account, select **AD/LDAP Synchronize Now**."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:21
+msgid ""
+"To confirm that Mattermost can successfully connect to your AD/LDAP "
+"server, go to **System Console > Authentication > AD/LDAP**, then select "
+"**AD/LDAP Test**."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:23
+msgid ""
+"Once the synchronization with AD/LDAP is enabled, user attributes are "
+"synchronized with AD/LDAP based on their email address. If a user with a "
+"given email address doesn't have an AD/LDAP account, they will be "
+"deactivated in Mattermost on the next AD/LDAP sync."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:25
+msgid "To re-activate the account:"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:27
+msgid "Add the user to your AD/LDAP server."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:28
+msgid ""
+"Purge all caches in Mattermost by going to **System Console > Environment"
+" > Web Server**, then select **Purge All Caches**."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:29
+msgid ""
+"Run AD/LDAP synchronization by going to **System Console > Authentication"
+" > AD/LDAP**, then select **AD/LDAP Synchronize Now**."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:30
+msgid ""
+"Purge all caches again in Mattermost by going to **System Console > "
+"Environment > Web Server**, then select **Purge All Caches** again. This "
+"re-activates the account in Mattermost."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:33
+msgid ""
+"If a user is deactivated from AD/LDAP, they will be deactivated in "
+"Mattermost on the next sync. They will be shown as \"Deactivated\" in the"
+" System Console users list, all of their sessions will expire and they "
+"won't be able to log back in to Mattermost."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:35
+msgid ""
+"If a user is deactivated from SAML, their session won't expire until "
+"they're deactivated from AD/LDAP. However, they won't be able to log back"
+" in to Mattermost."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:38
+msgid ""
+"SAML synchronization with AD/LDAP is designed to pull user attributes "
+"such as first name and last name from your AD/LDAP, not to control "
+"authentication."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:40
+msgid ""
+"In particular, the user filter cannot be used to control who can log in "
+"to Mattermost, this should be controlled by your SAML service provider's "
+"group permissions."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:42
+msgid ""
+"See :ref:`technical description of SAML synchronization with AD/LDAP "
+"<sso-saml-technical>` for more details."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:45
+msgid "Override SAML data with AD/LDAP data"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:47
+msgid ""
+"Alternatively, you can choose to override SAML bind data with AD/LDAP "
+"information. For more information on binding a user with the SAML ID "
+"Attribute, please refer to this :ref:`documentation <onboard/sso-saml-"
+"okta:how to bind authentication to id attribute instead of email>`."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:49
+msgid ""
+"This process overrides SAML email address with AD/LDAP email address data"
+" or SAML Id Attribute with AD/LDAP Id Attribute if configured. We "
+"recommend using this configuration with the SAML ID Attribute to help "
+"ensure new users are not created when the email address changes for a "
+"user."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:51
+msgid ""
+"To ensure existing user accounts do not get disabled in this process, "
+"ensure the SAML IDs match the LDAP IDs by exporting data from both "
+"systems and comparing the ID data. Mapping ID Attributes for both AD/LDAP"
+" and SAML within Mattermost to fields that hold the same data will ensure"
+" the IDs match as well."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:53
+msgid ""
+"Set the SAML ``Id Attribute`` by going to **System Console > "
+"Authentication > SAML 2.0 > Id Attribute**."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:54
+msgid ""
+"Set **System Console > Authentication > SAML 2.0 > Override SAML bind "
+"data with AD/LDAP information** to **true**."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:55
+msgid ""
+"Set **System Console > Authentication > SAML 2.0 > Enable Synchronizing "
+"SAML Accounts With AD/LDAP** to **true**."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-ldapsync.rst:56
+msgid ""
+"Run AD/LDAP sync by going to **System Console > Authentication > "
+"AD/LDAP**, then select **AD/LDAP Synchronize Now**."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:6
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:9
+msgid "How to bind authentication to Id attribute instead of email"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:11
+msgid ""
+"Alternatively, you can use an ``Id`` attribute instead of email to bind "
+"the user.  We recommend choosing an ID that is unique and will not change"
+" over time."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:13
+msgid ""
+"Configuring with an ``Id`` attribute allows you to reuse an email address"
+" for a new user without the old user's information being exposed. For "
+"instance, if a user with an email address joe.smith@mattermost.com was "
+"once an employee, a new employee named Joe Smith can use the same email. "
+"This configuration is also useful when a user's name changes and their "
+"email needs to be updated."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:15
+msgid ""
+"This process was designed with backwards compatibility to email binding. "
+"Here is the process applied to new account creations and to accounts "
+"logging in after the configuration:"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:17
+msgid ""
+"A user authenticated with SAML is bound to the SAML service user using "
+"the Id Attribute (as long as it has been configured) or bound by email "
+"using the email received from SAML."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:18
+msgid ""
+"When the user tries to login and the SAML server responds with a valid "
+"authentication, then the server uses the \"Id\" field of the SAML "
+"authentication to search the user."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:19
+msgid "If a user bound to that ID already exists, it logs in as that user."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:20
+msgid ""
+"If a user bound to that ID does not exist, it will search base on the "
+"email."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:21
+msgid ""
+"If a user bound to the email exists, it logs in with email and updates "
+"the autentication data to the ID, instead of the email."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:22
+msgid ""
+"If a user bound to the ID or email does not exist, it will create a new "
+"Mattermost account bound to the SAML account by ID and will allow the "
+"user to log in."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:25
+msgid "Existing accounts won't update until they log in to the server."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:28
+msgid ""
+"Can SAML via Microsoft ADFS be configured with Integrated Windows "
+"Authentication (IWA)?"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:30
+msgid ""
+"Yes. IWA is supported on the browser, with support added to iOS and "
+"Android mobile apps in Q2/2019 (mobile apps v1.18 and later)."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:32
+msgid ""
+"However, IWA is not supported on the Mattermost Desktop Apps due to a "
+"limitation in Electron. As a workaround you may create a browser desktop "
+"shortcut for quick access to Mattermost, just like a Desktop App."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:35
+msgid "Can I provision and deprovision users who log in via SAML?"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:37
+msgid ""
+"Yes, but this relies on AD/LDAP to do so. Currently, we do not support "
+"SCIM. See :ref:`\"How do I deactivate users?\" <onboard/ad-ldap:how do i "
+"deactivate users?>` for more information."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:40
+msgid ""
+"How do I migrate users from one authentication method (e.g. email) to "
+"SAML?"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:42
+msgid ""
+"See the :ref:`mmctl user migrate-auth <manage/mmctl-command-line-"
+"tool:mmctl user migrate-auth>` command documentation for details."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:45
+msgid "How is SAML different from OAuth 2.0 and OpenId Connect?"
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:47
+msgid ""
+"OAuth 2.0 was primarily intended for delegated authorization, where an "
+"app is authorized to access resources, such as Google contact list. It "
+"doesn’t deal with authentication."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:49
+msgid ""
+"OpenID Connect is built on top of OAuth 2.0, which supports "
+"authentication and thus direct SSO."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:51
+msgid ""
+"SAML is like OpenID Connect, except typically used in enterprise "
+"settings. OpenID Connect is more common in consumer websites and "
+"web/mobile apps."
+msgstr ""
+
+#: ../../source/onboard/sso-saml-faq.rst:53
+msgid ""
+"Learn more at https://hackernoon.com/demystifying-oauth-2-0-and-openid-"
+"connect-and-saml-12aa4cf9fdba."
+msgstr ""
+

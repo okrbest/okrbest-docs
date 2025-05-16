@@ -1,0 +1,1114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-07 15:09+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/deploy/server/deploy-linux.rst:2
+msgid "Deploy Mattermost on Linux"
+msgstr ""
+
+#: ../../source/deploy/server/deploy-linux.rst:4
+msgid ""
+"Mattermost Server can be deployed on various Linux distributions, "
+"providing a flexible and robust platform for smaller teams and non-"
+"commercial customers. We don't recommend deploying Mattermost Server and "
+"database on a single system for production use, but it is a good option "
+"for development and testing purposes."
+msgstr ""
+
+#: ../../source/deploy/server/deploy-linux.rst:6
+msgid ""
+"This page covers deployment options for major Linux distributions and "
+"installation methods. Choose your preferred platform below for specific "
+"deployment instructions:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:25
+msgid ""
+"You can deploy Mattermost server using our ``.deb`` signed packages using"
+" the Mattermost PPA (Personal Package Archive). This is the quickest way "
+"to install a Mattermost Server that provides automatic updates. This "
+"install method is used for both single and clustered installations, as "
+"you can tools like Packer for a clustered deployment."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:29
+msgid ""
+"Alternatively, an **Omnibus Package** deployment bundles together all "
+"required components to greatly reduce setup and ongoing maintenance, "
+"including Mattermost Server, a PostgreSQL database, NGINX as the "
+"application proxy, a custom CLI, and ansible recipes to configure and "
+"connect these components."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:31
+msgid ""
+"This Mattermost deployment includes 4 steps: add the PPA repository, "
+"install Mattermost server, configure the server, and update the server."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:33
+msgid "**Step 1: Add the Mattermost Server PPA repository**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:37
+msgid ""
+"The GPG public key has changed. You can `import the new public key "
+"<https://deb.packages.mattermost.com/pubkey.gpg>`_ or run the automatic "
+"Mattermost PPA repository setup script provided below. Depending on your "
+"setup, additional steps may also be required, particularly for "
+"installations that didn't rely on the repository setup script. We "
+"recommend deleting the old key from ``/etc/apt/trusted.gpg.d`` before "
+"adding the apt repository."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:39
+msgid "For Ubuntu Focal - 20.04 LTS:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:41
+msgid "``sudo apt-key del A1B31D46F0F3A10B02CF2D44F8F2C31744774B28``"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:43
+msgid ""
+"``curl -sL -o- https://deb.packages.mattermost.com/pubkey.gpg | gpg "
+"--dearmor | sudo apt-key add``"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:45
+msgid "For Ubuntu Jammy - 22.04 LTS and Ubuntu Noble - 24.04 LTS:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:47
+msgid "``sudo rm /usr/share/keyrings/mattermost-archive-keyring.gpg``"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:49
+msgid ""
+"``curl -sL -o- https://deb.packages.mattermost.com/pubkey.gpg |  gpg "
+"--dearmor | sudo tee /usr/share/keyrings/mattermost-archive-keyring.gpg >"
+" /dev/null``"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:51
+msgid ""
+"In a terminal window, run the following repository setup command to add "
+"the Mattermost Server repositories:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:57
+msgid ""
+"This command configures the repositories needed for a PostgreSQL "
+"database, configures an NGINX web server to act as a proxy, configures "
+"certbot to issue and renew the SSL certificate, and configures the "
+"Mattermost Omnibus repository so that you can run the install command."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:59
+msgid "**Step 2: Instal Mattermost server**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:61
+msgid ""
+"Ahead of installing the Mattermost Server, it's good practice to update "
+"all your repositories and, where required, update existing packages by "
+"running the following command:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:67
+msgid ""
+"After any updates and system reboots are complete, you can install the "
+"Mattermost Server by running:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:73
+msgid ""
+"You now have the latest Mattermost Server version installed on your "
+"system."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:75
+msgid ""
+"The installation path is ``/opt/mattermost``. The package will have added"
+" a user and group named ``mattermost``. The required systemd unit file "
+"has also been created but will not be set to active."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:79
+msgid ""
+"Since the signed package from the Mattermost repository is used for "
+"mulitple installation types, we don't add any dependencies in the systemd"
+" unit file. If you are installing the Mattermost server on the same "
+"system as your database, you may want to add both "
+"``After=postgresql.service`` and ``BindsTo=postgresql.service`` to the "
+"``[Unit]`` section of the systemd unit file."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:81
+msgid "**Step 3: Configure the server**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:83
+msgid ""
+"Before you start the Mattermost Server, you need to edit the "
+"configuration file. A sample configuration file is located at "
+"``/opt/mattermost/config/config.defaults.json``."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:85
+msgid "Rename this configuration file with correct permissions:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:145
+#: ../../source/deploy/server/linux/deploy-tar.rst:141
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:91
+msgid "Configure the following properties in this file:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:147
+#: ../../source/deploy/server/linux/deploy-tar.rst:143
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:93
+msgid ""
+"Under ``SqlSettings``, set ``DriverName`` to ``\"postgres\"``. This is "
+"the default and recommended database for all Mattermost installations."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:148
+#: ../../source/deploy/server/linux/deploy-tar.rst:144
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:94
+msgid ""
+"Under ``SqlSettings``, set ``DataSource`` to ``\"postgres://mmuser"
+":<mmuser-password>@<host-name-or-"
+"IP>:5432/mattermost?sslmode=disable&connect_timeout=10\"`` replacing "
+"``mmuser``, ``<mmuser-password>``, ``<host-name-or-IP>`` and "
+"``mattermost`` with your database name."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:149
+#: ../../source/deploy/server/linux/deploy-tar.rst:145
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:95
+msgid ""
+"Under ``ServiceSettings``, set ``\"SiteURL\"``: The domain name for the "
+"Mattermost application (e.g. ``https://mattermost.example.com``)."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:153
+#: ../../source/deploy/server/linux/deploy-tar.rst:147
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:97
+msgid ""
+"We recommend configuring the `Support Email "
+"<https://docs.mattermost.com/administration/config-settings.html#support-"
+"email>`_ under ``SupportSettings``, set ``\"SupportEmail\"``. This is the"
+" email address your users will contact when they need help."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:99
+msgid ""
+"After modifying the ``config.json`` configuration file, you can now start"
+" the Mattermost Server:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:105
+msgid ""
+"Verify that Mattermost is running: curl ``http://localhost:8065``. You "
+"should see the HTML that's returned by the Mattermost Server."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:107
+msgid ""
+"The final step, depending on your requirements, is to run ``sudo "
+"systemctl enable mattermost.service`` so that Mattermost will start on "
+"system boot."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:111
+msgid ""
+"The value of the ``sslmode`` property in the ``DataSource`` configuration"
+" is entirely dependent on your native environment. Please consult the "
+"native environment setup documentation for guidance on its value. The "
+"available options for ``sslmode`` are ``disable`` or ``require``. For "
+"example, if you are using Amazon Lightsail as your data source, you must "
+"set ``sslmode`` to ``require`` to successfully connect to the database."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-tar.rst:159
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:113
+msgid "**Step 4: Update the server**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:115
+msgid ""
+"When a new Mattermost version is released, run: ``sudo apt update && sudo"
+" apt upgrade`` to download and update your Mattermost instance."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:119
+msgid ""
+"When you run the ``sudo apt upgrade`` command, ``mattermost-server`` will"
+" be updated along with any other packages. We strongly recommend you stop"
+" the Mattermost Server before running the ``apt`` command using ``sudo "
+"systemctl stop mattermost``."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:228
+#: ../../source/deploy/server/linux/deploy-tar.rst:163
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:121
+msgid "**Remove Mattermost**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-ubuntu.rst:123
+msgid "Run the following command to remove the Mattermost Server:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:25
+msgid ""
+"You can deploy Mattermost Server using our ``rpm`` signed packages "
+"available through the Mattermost Yum repository."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:27
+msgid ""
+"This Mattermost deployment includes 4 steps: download, install Matermost "
+"server, set up the server, and update the server."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:29
+msgid "**Step 1: Download the latest Mattermost Server tarball**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:31
+#: ../../source/deploy/server/linux/deploy-tar.rst:30
+msgid ""
+"In a terminal window, ssh onto the system that will host the Mattermost "
+"Server. Using ``wget``, download the Mattermost Server release you want "
+"to install using one of the following commands. Replace ``amd64`` with "
+"the appropriate architecture (e.g., ``arm64`` for ARM-based systems) in "
+"the link as needed."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:47
+#: ../../source/deploy/server/linux/deploy-tar.rst:46
+msgid ""
+"If you are looking for an older release, Enterprise and Team Edition "
+"releases can be found in our :doc:`version archive </about/version-"
+"archive>` documentation."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:49
+#: ../../source/deploy/server/linux/deploy-tar.rst:48
+msgid "**Step 2: Install Mattermost server**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:51
+msgid ""
+"Ahead of installing the Mattermost Server, we recommend updating all your"
+" repositories and, where required, update existing packages by running "
+"the following commands:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:58
+msgid ""
+"After any updates, and any system reboots, are complete, install the "
+"Mattermost Server by extracting the tarball, creating users and groups, "
+"and setting file/folder permissions."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:60
+#: ../../source/deploy/server/linux/deploy-tar.rst:52
+msgid "First extract the tarball:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:66
+msgid ""
+"Now move the entire folder to the ``/opt`` directory (or whatever path "
+"you require):"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:74
+msgid ""
+"If you choose a custom path, ensure this alternate path is used in all "
+"steps that follow.`"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:76
+msgid ""
+"Create the default storage folder. By default the Mattermost Server uses "
+"``/opt/mattermost/data`` as the folder for files. This can be changed in "
+"the System Console during setup (even using alternative storage such as "
+"S3):"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:82
+#: ../../source/deploy/server/linux/deploy-tar.rst:74
+msgid "Set up a user and group called ``mattermost``:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:90
+#: ../../source/deploy/server/linux/deploy-tar.rst:82
+msgid ""
+"If you choose a custom user and group name, ensure it is used in all the "
+"steps that follow."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:92
+#: ../../source/deploy/server/linux/deploy-tar.rst:84
+msgid "Set the file and folder permissions for your installation:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:98
+#: ../../source/deploy/server/linux/deploy-tar.rst:90
+msgid "Give the ``mattermost`` group write permissions to the application folder:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:104
+#: ../../source/deploy/server/linux/deploy-tar.rst:96
+msgid ""
+"You will now have the latest Mattermost Server version installed on your "
+"system. Starting and stopping the Mattermost Server is done using "
+"``systemd``."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:106
+#: ../../source/deploy/server/linux/deploy-tar.rst:98
+msgid "Create the systemd unit file:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:112
+#: ../../source/deploy/server/linux/deploy-tar.rst:104
+msgid "As root, edit the systemd unit file to add the following lines:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:135
+#: ../../source/deploy/server/linux/deploy-tar.rst:131
+msgid ""
+"Save the file and reload systemd using ``sudo systemctl daemon-reload``. "
+"Mattermost Server is now installed and is ready for setup."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:137
+#: ../../source/deploy/server/linux/deploy-tar.rst:133
+msgid "**Step 3: Set up the server**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:139
+#: ../../source/deploy/server/linux/deploy-tar.rst:135
+msgid ""
+"Before you start the Mattermost Server, you need to edit the "
+"configuration file. A default configuration file is located at "
+"``/opt/mattermost/config/config.json``. We recommend taking a backup of "
+"this default config ahead of making changes:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:155
+#: ../../source/deploy/server/linux/deploy-tar.rst:149
+msgid ""
+"After modifying the ``config.json`` configuration file, you can now start"
+" the Mattermost server:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:161
+#: ../../source/deploy/server/linux/deploy-tar.rst:155
+msgid ""
+"Verify that Mattermost is running: curl ``http://localhost:8065``. You "
+"should see the HTML that’s returned by the Mattermost Server."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:163
+msgid ""
+"The final step, depending on your requirements, is to run sudo "
+"``systemctl enable mattermost.service`` so that Mattermost will start on "
+"system boot. If you don't receive an error when starting Mattermost after"
+" the previous step, you are good to go. If you did receive an error, "
+"continue on."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:167
+msgid ""
+"**Modify SELinux settings**: When deploying Mattermost from RHEL9, which "
+"has SELinux running with enforceing mode enabled by default, additional "
+"configuration is required."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:169
+msgid ""
+"SELinux is a security module that provides access control security "
+"policies. It's enabled by default on RHEL and CentOS systems. SELinux can"
+" block access to files, directories, and ports, which can cause issues "
+"when starting Mattermost. To resolve these issues, you'll need to set the"
+" appropriate SELinux contexts for the Mattermost binaries and "
+"directories, and allow Mattermost to bind to ports."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:170
+msgid ""
+"Ensure that SELinux is enabled and in enforcing mode by running the "
+"``sestatus`` command. If it's ``enforcing``, you'll need to configure it "
+"properly."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:171
+msgid ""
+"Set bin contexts for ``/opt/mattermost/bin``: SELinux enforces security "
+"contexts for binaries. To label the Mattermost binaries as safe, you'll "
+"need to set them to the below SELinux context."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:178
+msgid "Now, try starting Mattermost again with"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:184
+msgid ""
+"If you don't receive an error, verify that Mattermost is running: curl "
+"``http://localhost:8065``. You should see the HTML that's returned by the"
+" Mattermost Server. You're all set!"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:187
+msgid ""
+"If on starting Mattermost you receive an error, before moving on, check "
+"for the existence of a file in ``/opt/mattermost/logs`` - if "
+"``mattermost.log`` exists in that directory, it's more likely you're "
+"dealing with a configuration issue in  ``config.json``. Double check the "
+"previous steps before continuing"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:189
+msgid ""
+"Try different contexts for ``/opt/mattermost``: SELinux enforces security"
+" contexts for files and directories. To label your Mattermost directory "
+"as safe, you'll need to set an appropriate SELinux context."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:191
+msgid ""
+"Check current context by running ``ls -Z /opt/mattermost``. When you see "
+"something like ``drwxr-xr-x. root root unconfined_u:object_r:default_t:s0"
+" mattermost`` returned, the ``default_t`` indicates that SELinux doesn't "
+"know what this directory is for."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:192
+msgid ""
+"Set a safe context by assigning a SELinux type that's compatible with web"
+" services or applications by running ``sudo semanage fcontext -a -t "
+"httpd_sys_content_t \"/opt/mattermost(/.*)?\"``. A common one is "
+"``httpd_sys_content_t``, used for serving files. Ensure you match the "
+"directory and its contents recursively. Run the ``sudo restorecon -R "
+"/opt/mattermost`` to apply the changes."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:194
+msgid ""
+"Allow Mattermost to bind to ports: When Mattermost needs specific ports "
+"(e.g., 8065), ensure that SELinux allows it by allowing Mattermost to "
+"bind to ports. Run the ``sudo semanage port -l | grep 8065`` command, and"
+" if the port's not listed, you'll need to add it by running ``sudo "
+"semanage port -a -t http_port_t -p tcp 8065``, replacing the ``8065`` "
+"with the required port."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:196
+msgid ""
+"Handle custom policies: If Mattermost requires actions that SELinux "
+"blocks, you'll need to generate a custom policy."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:198
+msgid ""
+"Check for SELinux denials first in the logs by running ``sudo ausearch -m"
+" avc -ts recent``, or by checking the audit log: ``sudo cat "
+"/var/log/audit/audit.log | grep denied``."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:200
+msgid ""
+"If needed, generate a policy module by installing ``audit2allow`` to "
+"generate policies automatically."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:208
+msgid ""
+"Test the configuration: Restart Mattermost to confirm the configuation "
+"works as expected by running ``sudo systemctl restart mattermost``. In "
+"the case of failures, revisit the logs to identify other SELinux-related "
+"issues."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:210
+msgid "Need Mattermost working quickly for testing purposes?"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:212
+msgid ""
+"You can change SELinux to permissive mode by running the ``sudo "
+"setenforce 0``. command where policies aren't enforced, only logged."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:213
+msgid ""
+"This command changes the SELinux mode to \"permissive\". While in "
+"permissive mode, policies aren't enforced, and violations are logged "
+"instead of being blocked. This can be helpful for debugging and "
+"troubleshooting issues related to SELinux policies."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:214
+msgid ""
+"Ensure you re-enable enforcing mode once context is working as needed by "
+"running the ``sudo setenforce 1`` command."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:216
+msgid "See the following SELinux resources for additional details:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:218
+msgid ""
+"`SELinux User's and Administrator's Guide "
+"<https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/index>`_"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:219
+msgid "`SELinux Project Wiki <https://github.com/SELinuxProject/selinux>`_"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:220
+msgid ""
+"`Introduction to SELinux <https://github.blog/developer-skills"
+"/programming-languages-and-frameworks/introduction-to-selinux/>`_"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:221
+msgid ""
+"`A Sysadmin's Guide to SELinux: 42 Answers to the Big Questions "
+"<https://opensource.com/article/18/7/sysadmin-guide-selinux>`_"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:222
+msgid ""
+"`Mastering SELinux: A Comprehensive Guide to Linux Security "
+"<https://srivastavayushmaan1347.medium.com/mastering-selinux-a"
+"-comprehensive-guide-to-linux-security-8bed9976da88>`_"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:224
+msgid "**Step 3: Update the server**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:226
+#: ../../source/deploy/server/linux/deploy-tar.rst:161
+msgid ""
+"Updating your Mattermost Server installation when using the tarball "
+"requires several manual steps. See the :doc:`upgrade Mattermost Server "
+"</upgrade/upgrading-mattermost-server>` documentation for details."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:230
+msgid ""
+"To remove the Mattermost Server, you must stop the Mattermost Server, "
+"back up all important files, and then run this command:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:238
+#: ../../source/deploy/server/linux/deploy-tar.rst:173
+msgid ""
+"Depending on your configuration, there are several important folders in "
+"``/opt/mattermost`` to backup. These are ``config``, ``logs``, "
+"``plugins``, ``client/plugins``, and ``data``. We strongly recommend you "
+"back up these locations before running the ``rm`` command."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-rhel.rst:240
+#: ../../source/deploy/server/linux/deploy-tar.rst:175
+msgid ""
+"You may also remove the Mattermost systemd unit file and the user/group "
+"created for running the application."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-tar.rst:24
+msgid ""
+"You can install the Mattermost Server on any 64-bit Linux system using "
+"the tarball. This is the most flexible installation method, but it comes "
+"with the highest effort, typically favored by advanced system "
+"administrators."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-tar.rst:26
+msgid ""
+"This Mattermost deployment includes 3 steps: download, install Mattermost"
+" server, and set up the server."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-tar.rst:28
+msgid "**Step 1: Download**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-tar.rst:50
+msgid ""
+"Install the Mattermost Server by extracting the tarball, creating users "
+"and groups, and setting file/folder permissions."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-tar.rst:58
+msgid ""
+"Move the entire folder to the ``/opt`` directory (or whatever path you "
+"require):"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-tar.rst:66
+msgid ""
+"If you choose a custom path, ensure this alternate path is used in all "
+"steps that follow."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-tar.rst:68
+msgid ""
+"Create the default storage folder. By default the Mattermost Server uses "
+"``/opt/mattermost/data`` as the folder for files. This can be changed in "
+"the System Console during setup (even using alternative storage such as "
+"S3)."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-tar.rst:129
+msgid ""
+"If you are installing the Mattermost server on the same system as your "
+"database, you may want to add both ``After=postgresql.service`` and "
+"``BindsTo=postgresql.service`` to the ``[Unit]`` section of the systemd "
+"unit file."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-tar.rst:157
+msgid ""
+"The final step, depending on your requirements, is to run sudo "
+"``systemctl enable mattermost.service`` so that Mattermost will start on "
+"system boot."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-tar.rst:165
+msgid ""
+"To remove the Mattermost Server for any reason, you must stop the "
+"Mattermost Server, back up all important files, and then run this "
+"command:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:27
+msgid ""
+"Mattermost Omnibus will be deprecated and phased out in the upcoming "
+"months. We recommend using the standard **Ubuntu** deployment or "
+"**RHEL/CentOS** deployment instead, which provides more flexibility and "
+"better maintainability."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:29
+msgid ""
+"Mattermost Omnibus packages together all required components: the "
+":ref:`free version Mattermost Enterprise <about/editions-and-"
+"offerings:mattermost enterprise edition>`, a PostgreSQL database, and "
+"NGINX as the application proxy. It uses a custom CLI (``mmomni``) and "
+"ansible recipes to configure and connect these components. **Omnibus "
+"supports Ubuntu distributions only.**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:31
+msgid ""
+"This Mattermost deployment includes 4 steps: add the Mattermost PPA "
+"repositories, install Mattermost Omnibus, and set up Omnibus, and update "
+"Omnibus."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:33
+msgid "**Step 1: Add the Mattermost PPA repositories**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:51
+msgid "In a terminal window, run the following repository setup command:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:57
+msgid "This command sets up all required repositories and configures:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:59
+msgid "PostgreSQL database"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:60
+msgid "NGINX web server as a proxy"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:61
+msgid "Certbot for SSL certificate management"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:62
+msgid "Mattermost Omnibus repository"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:64
+msgid "**Step 2: Install Mattermost Omnibus**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:66
+msgid ""
+"When installing Mattermost Omnibus, SSL is enabled by default to provide "
+"a secure connection between the Mattermost server and the Mattermost "
+"client. To install with SSL, run the following command:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:75
+msgid ""
+"Just looking to try out Mattermost? Run the following command to install "
+"Omnibus without SSL:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:82
+msgid ""
+"You're prompted to specify a domain name and email address that will be "
+"used to generate the SSL certificate, and deliver related communications."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:84
+msgid ""
+"After all the packages are installed, Omnibus runs ansible scripts that "
+"configure all the platform components and starts the server."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:86
+msgid ""
+"Open a browser and navigate to your Mattermost domain either by domain "
+"name (e.g. ``mymattermostserver.com``), or by the server's IP address if "
+"you're not using a domain name."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:88
+msgid ""
+"Create your first Mattermost user, invite more users, and explore the "
+"Mattermost platform."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:90
+msgid "**Step 3: Configure Mattermost Omnibus**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:94
+msgid ""
+"Plugin uploads, local mode, and HTTPS are enabled by default. These "
+"settings are modified in the ``yaml`` file as described below."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:96
+msgid ""
+"Unlike traditional Mattermost installations, Omnibus stores its "
+"configuration directly in a database, eliminating the need for a "
+"``config.json`` file. However, Omnibus itself requires a configuration "
+"file located at ``/etc/mattermost/mmomni.yml`` to manage its own settings"
+" and service interconnections."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:98
+msgid ""
+"To modify Mattermost server settings within an Omnibus environment (with "
+"the exception of those listed below), you'll need to utilize the "
+"``mmctl`` command-line tool. Specifically, the ``mmctl --local config "
+"edit`` command allows you to make the necessary adjustments. For detailed"
+" instructions and options, refer to the :doc:`mmctl </manage/mmctl-"
+"command-line-tool>` documentation."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:100
+msgid ""
+"Please note that certain configuration parameters, such as the Mattermost"
+" server port, must remain unchanged to ensure optimal Omnibus "
+"functionality. The following parameters must be configured directly using"
+" the ``mmomni.yml`` file:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:102
+msgid ""
+"``db_user``: The PostgreSQL database user. This value is generated during"
+" the Omnibus installation and should not be changed."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:103
+msgid ""
+"``db_password``: The PostgreSQL database password. This value is "
+"generated during the Omnibus installation and should not be changed."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:104
+msgid ""
+"``fqdn``: The domain name for the Mattermost application. This is the "
+"value you're prompted for during the install process, and it's used to "
+"populate the ``ServiceSettings.SiteURL`` Mattermost configuration "
+"property, as well as to retrieve and configure the SSL certificate for "
+"the server."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:105
+msgid ""
+"``email``: The email address used for certificate communications. This is"
+" the value you're prompted for during the install process, and it won't "
+"used if HTTPS is disabled."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:106
+msgid ""
+"``https``: This indicates whether the platform should be configured to "
+"use HTTPS or HTTP with values ``true`` or ``false``. The recommended way "
+"to install Mattermost is to use HTTPS, but you can disable it if "
+"necessary."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:107
+msgid ""
+"``data_directory``: This is the directory where Mattermost stores its "
+"data."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:108
+msgid ""
+"``enable_plugin_uploads``: This setting can be ``true`` or ``false``, and"
+" is used to configure the ``PluginSettings.EnableUploads`` Mattermost "
+"configuration property."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:109
+msgid ""
+"``enable_local_mode``: This setting can be ``true`` or ``false`` and is "
+"used to configure the ``ServiceSettings.EnableLocalMode`` Mattermost "
+"configuration property."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:110
+msgid "``nginx_template``: Optional path to a custom NGINX template."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:112
+msgid ""
+"After modifying the ``mmomni.yml`` configuration file, run ``mmomni "
+"reconfigure`` to apply the changes, and then restart the Mattermost "
+"server with ``systemctl restart mattermost``."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:114
+msgid "**Step 4: Update Mattermost Omnibus**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:116
+msgid "Mattermost Omnibus is integrated with the apt package manager."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:118
+msgid ""
+"Before updating Mattermost , we strongly recommend stopping the "
+"Mattermost server by running the command ``sudo systemctl stop "
+"mattermost``."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:120
+msgid ""
+"Run the following command to download and update your Mattermost instance"
+" (along with any other packages):"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:126
+msgid "**Backup and restore**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:128
+msgid ""
+"The Mattermost Omnibus CLI tool ``mmomni`` simplifies server and domain "
+"migration, as well as backup and restore. You can easily create snapshots"
+" of your entire Mattermost server, including all content, users, plugins,"
+" configurations, and databases. These snapshots can be restored to the "
+"same server or a different one."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:130
+msgid ""
+"To back up the contents of your Mattermost server, run the following "
+"command:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:136
+msgid ""
+"To restore the contents of your Mattermost server, run the following two "
+"commands:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:143
+msgid "**Remove Mattermost Omnibus**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:145
+msgid ""
+"Run the following command to remove Mattermost and Mattermost Omnibus "
+"completely:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:151
+msgid "**Frequently asked questions**"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:153
+msgid ""
+"Can I use a license with Omnibus? **Yes.** Mattermost Omnibus bundles the"
+" free, unlicensed Mattermost Enterprise Edition, and Enterprise features "
+"are unlocked when you purchase and upload a license."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:155
+msgid ""
+"Can I use an Omnibus server as part of a cluster? **No.** Omnibus is "
+"designed to be a self-contained single server Mattermost platform. It "
+"expects all the necessary components to be on the same server."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:157
+msgid ""
+"Does the SSL Certificate automatically renew? **Yes.** The SSL "
+"certificate automatically updated and renewed. Omnibus installs the "
+"certbot package to manage the certificate, and it comes with a cron job "
+"that you can find at /etc/cron.d/certbot that automatically launches the "
+"renewal process."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:159
+msgid ""
+"How do I fix an EXPKEYSIG error on upgrades? **This error indicates that "
+"your certificate is expired.** Run the following commands to obtain a new"
+" certificate:"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:167
+msgid ""
+"Can I use a custom NGINX template? **Yes.** Mattermost Omnibus supports "
+"using a custom NGINX template to generate its configuration."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:169
+msgid ""
+"To use this feature, you need to copy and modify the original template "
+"located at ``/opt/mattermost/mmomni/ansible/playbooks/mattermost.conf`` "
+"to a new location."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:170
+msgid ""
+"**Use caution when using this feature.** Making changes to the custom "
+"template can cause the reconfigure process to fail, or the generated "
+"NGINX configuration to be invalid."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:171
+msgid ""
+"Then, you can either use the variables and internal logic already bundled"
+" in the template and modify the parts that you need, or use a fully "
+"static configuration instead."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:172
+msgid ""
+"After the template has been customized, add an ``nginx_template`` "
+"property to the ``/etc/mattermost/mmomni.yml`` configuration file, and "
+"then run ``mmomni reconfigure``. The reconfigure process will use the new"
+" template to generate the NGINX final configuration. You can check the "
+"contents of the ``/etc/nginx/conf.d/mattermost.conf`` file to validate "
+"that the changes were applied successfully."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:174
+msgid "What ``mmomni`` commands are available?"
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:176
+msgid ""
+"``mmomni backup``: Takes a complete snapshot of your Mattermost server "
+"and places the backup file in a specified file location."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:177
+msgid ""
+"``mmomni restore``: Restores specified backup file to your Mattermost "
+"server."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:178
+msgid ""
+"``mmomni reconfigure``: Reruns the process that changes domain, SSL, or "
+"any Omnibus-specified restrictions such as the ability to upload plugins."
+" It also applies any changes made to the mmomni.yml configuration file."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:179
+msgid "``mmomni status``: Shows current status of all Omnibus components."
+msgstr ""
+
+#: ../../source/deploy/server/linux/deploy-omnibus.rst:180
+msgid "``mmomni tail``: Runs a join tail of logs of all Omnibus components."
+msgstr ""
+
+#: ../../source/deploy/server/deploy-linux.rst:29
+msgid "Secure your Mattermost deployment"
+msgstr ""
+
+#: ../../source/deploy/server/deploy-linux.rst:31
+msgid ""
+"Configuring TLS and setting up an NGINX proxy ensures secure "
+"communication between clients and your Mattermost server. This setup "
+"allows you to serve HTTPS traffic while proxying requests to Mattermost. "
+"You don’t need TLS enabled within Mattermost itself as NGINX will handle "
+"HTTPS traffic."
+msgstr ""
+
+#: ../../source/deploy/server/deploy-linux.rst:33
+msgid ""
+"Install NGINX on the host server. See the :doc:`set up NGINX proxy "
+"</deploy/server/setup-nginx-proxy>` documentation for details."
+msgstr ""
+
+#: ../../source/deploy/server/deploy-linux.rst:34
+msgid ""
+"Obtain a TLS certificate from a trusted certificate authority (CA) or use"
+" a self-signed certificate for testing purposes."
+msgstr ""
+
+#: ../../source/deploy/server/deploy-linux.rst:35
+msgid ""
+"Configure NGINX with TLS certificates to serve HTTPS traffic. NGINX "
+"serves as a proxy, forwarding requests to the Mattermost application "
+"running locally or on a separate server."
+msgstr ""
+
+#: ../../source/deploy/server/deploy-linux.rst:39
+msgid ""
+"Your Mattermost Server deployments requires a PostgreSQL database. See "
+"the :ref:`database preparation <deploy/server/preparations:database "
+"preparation>` documentation for details on this prerequisite."
+msgstr ""
+
+#: ../../source/deploy/server/deploy-linux.rst:40
+msgid ""
+"See the :doc:`deployment troubleshooting </guides/deployment-"
+"troubleshooting>` documentation for resolutions to common deployment "
+"issues."
+msgstr ""
+

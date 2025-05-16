@@ -1,0 +1,273 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-07 15:09+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/onboard/sso-entraid.rst:2
+msgid "Entra ID Single Sign-On"
+msgstr ""
+
+#: ../../source/_static/badges/ent-pro-cloud-selfhosted.rst:7
+msgid ""
+"|plans-img| Available on `Enterprise and Professional plans "
+"<https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/ent-pro-cloud-selfhosted.rst:9
+msgid ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
+"hosted <https://mattermost.com/download/>`__ deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:8
+msgid "Configuring EntraID as a Single Sign-On (SSO) service"
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:10
+msgid ""
+"Follow these steps to configure Mattermost to use your Entra ID logon "
+"credentials and Azure Active Directory account as a Single Sign-on (SSO) "
+"service for team creation, account creation, and sign-in."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:14
+msgid ""
+"The system must be using SSL as Microsoft only allows OAuth redirect URIs"
+" that are SSL-enabled."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:17
+msgid "Step 1: Register an application in Azure Portal"
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:19
+msgid ""
+"Log in to the `Azure Portal <https://portal.azure.com/>`_ with the "
+"account that relates to the Azure Active Directory tenant where you want "
+"to register the application. You can confirm the tenant in the top right "
+"corner of the portal."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:21
+msgid ""
+"In the left-hand navigation pane, select the **Azure Active Directory "
+"service**, then select **App registrations > New registration**."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:23
+msgid "Give your new registration a **Name**."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:25
+msgid ""
+"Define which **Supported account types** can access the application. For "
+"example, if this is to be only accessed from your enterprise's Azure AD "
+"accounts, then select **Accounts in this organizational directory only**."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:27
+msgid ""
+"Define the **Redirect URI** as Web client, then input the URL with the "
+"host name that will be specific to your Mattermost service followed by "
+"``/signup/office365/complete``. An example below is: "
+"``https://your.mattermost.com/signup/office365/complete``"
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:33
+msgid ""
+"Once the App Registration has been created, you can configure it further."
+" See the standard `Azure AD documentation <https://learn.microsoft.com"
+"/en-gb/azure/active-directory/develop/quickstart-register-app>`_ for "
+"reference."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:36
+msgid "Step 2: Generate a new client secret in Azure Portal"
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:38
+msgid ""
+"In the Azure Portal, select **Certificates and Secrets** from the menu, "
+"then select the button to generate a **New Client secret**."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:40
+msgid ""
+"Provide a description, define the expiry for the token, then select "
+"**Add**."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:42
+msgid ""
+"In Azure Portal, select **Overview** from the menu, then copy and paste "
+"both the Application (client) ID and the Directory (tenant) ID to a "
+"temporary location. You will enter these values as an **Application ID** "
+"and as part of an **Auth Endpoint** and **Token Endpoint** URL in the "
+"Mattermost System Console."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:49
+msgid "Step 3: Configure Mattermost for Entra ID SSO"
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:51
+msgid ""
+"Log in to Mattermost, then go to **System Console > Authentication > "
+"OpenID Connect**."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:53
+msgid "Select **Entra ID** as the service provider."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:55
+msgid ""
+"Paste the **Directory (tenant) ID** from the Azure Portal as the "
+"**Directory (tenant) ID** in Mattermost."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:57
+msgid ""
+"The **Discovery Endpoint** for OpenID Connect with Entra ID is "
+"prepopulated with ``https://login.microsoftonline.com/common/v2.0/.well-"
+"known/openid-configuration``."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:59
+msgid ""
+"Paste the **Application (client) ID** from the Azure Portal as the "
+"**Client ID** in Mattermost."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:61
+msgid ""
+"Paste the **client secret** value from the Azure Portal as the **Client "
+"Secret** in Mattermost."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:63
+msgid "Select **Save**."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:66
+msgid ""
+"When Mattermost is configured to use OpenID Connect or OAuth 2.0 for user"
+" authentication, the following user attribute changes can't be made "
+"through the Mattermost API: first name, last name, or username. OpenID "
+"Connect or OAuth 2.0 must be the authoritative source for these user "
+"attributes."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:69
+msgid "Note about Microsoft Active Directory Tenants"
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:71
+msgid ""
+"A Microsoft Active Directory (AD) tenant is a dedicated instance of Azure"
+" Active Directory (Azure AD) that you own and would have received when "
+"signing up for a Microsoft cloud service, such as Azure or Entra ID. "
+"Tenants are commonly used by organizations who want to store information "
+"about their users, such as passwords, user profile data, and permissions."
+" See the Microsoft Entra ID <https://learn.microsoft.com/en-us/entra"
+"/identity-platform/quickstart-create-new-tenant>`_ documentation to learn"
+" more about getting an Azure AD tenant."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:73
+msgid ""
+"To allow your Azure AD users to log in to Mattermost using Entra ID SSO, "
+"you must register Mattermost in the Microsoft Azure AD tenant that "
+"contains the users' information. The registration can be done from the "
+"`Microsoft Azure portal <https://portal.azure.com>`__. The steps to "
+"register the Mattermost account in the tenant should be similar to those "
+"provided above, and you can find more information about `integrating apps"
+" with Azure AD here <https://learn.microsoft.com/en-us/azure/active-"
+"directory/develop/quickstart-create-new-tenant>`_."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:75
+msgid ""
+"If you don't register Mattermost in the Microsoft Azure AD tenant your "
+"organization uses, Entra ID SSO will likely fail for your users."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:79
+msgid ""
+"If you do not use Azure Active Directory, you may register Mattermost "
+"with your Entra ID or Azure account (a personal, work, or school "
+"account), then set up Entra ID SSO with Mattermost using the steps "
+"provided above."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:82
+msgid "Configure Mattermost ``config.json`` for Entra ID SSO"
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:87
+msgid ""
+"Instead of using the System Console, you can add the Entra ID settings "
+"directly to the ``config.json`` file on your Mattermost server."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:89
+msgid ""
+"Open ``config.json`` as *root* in a text editor. It’s usually in "
+"``/opt/mattermost/config`` but it might be elsewhere on your system."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:90
+msgid ""
+"Locate the ``Office365Settings`` section, then add or update the "
+"following information:"
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:106
+msgid ""
+"Save your changes, then restart your Mattermost server. After the server "
+"restarts, users must change their login method before they can log in "
+"with Entra ID."
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:109
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:112
+msgid "How can I use LDAP attributes or Groups with OpenID?"
+msgstr ""
+
+#: ../../source/onboard/sso-entraid.rst:114
+msgid ""
+"At this time, LDAP data isn't compatible with OpenID. If you currently "
+"rely on LDAP to manage your users' teams, channels, groups, or "
+"attributes, you won't be able to do this automatically with users who "
+"have logged in with OpenID. If you need LDAP synced to each user, we "
+"suggest using SAML or LDAP as the login provider. Some OpenID providers "
+"can use SAML instead, like Keycloak."
+msgstr ""
+

@@ -1,0 +1,219 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-07 15:09+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/manage/code-signing-custom-builds.rst:2
+msgid "Code signing custom builds"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-selfhosted.rst:7
+msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-selfhosted.rst:9
+msgid ""
+"|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
+"deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:7
+msgid ""
+"Code signing is an essential process for ensuring the authenticity and "
+"integrity of your custom ``Mattermost`` builds. This guide provides steps"
+" on how to code sign a build using your own certificates for Windows, "
+"Mac, and Linux."
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:11
+msgid ""
+"Make sure to follow each operating system's guidelines and best practices"
+" for signing applications."
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:14
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:18
+msgid ""
+"**Code Signing Certificate**: Obtain a certificate from a Certificate "
+"Authority (CA) or use a self-signed certificate if suitable."
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:19
+msgid "**SignTool**: Available as part of the Windows SDK."
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:23
+msgid "**GPG Key**: Create a GPG key if you don't have one."
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:24
+msgid ""
+"**GnuPG**: Install `GnuPG <https://gnupg.org/howtos/card-"
+"howto/en/ch02.html>`_ if not already installed."
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:28
+msgid ""
+"**Developer ID Application Certificate**: Obtain from Apple. It requires "
+"an Apple Developer account."
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:29
+msgid ""
+"**Xcode**: Ensure `Xcode <https://developer.apple.com/xcode/>`_ is "
+"installed."
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:32
+msgid "Process"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:36
+msgid "**Install SignTool**"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:38
+msgid "Install the Windows SDK to access the ``SignTool`` utility."
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:40
+#: ../../source/manage/code-signing-custom-builds.rst:103
+msgid "**Obtain a Code Signing Certificate**"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:42
+msgid "Purchase or create a certificate (``.pfx`` file) via a CA."
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:44
+#: ../../source/manage/code-signing-custom-builds.rst:107
+msgid "**Import the Certificate**"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:46
+msgid "Open the ``.pfx`` file and import it into the Windows Certificate Store."
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:48
+msgid "**Sign the Executable**"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:50
+msgid "Open the command prompt as Administrator."
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:51
+msgid "Use ``SignTool`` to sign your executable:"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:59
+msgid "**Create or Import Your GPG Key**"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:61
+msgid "If you don't have a GPG key, create one:"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:67
+msgid "Import an existing GPG key, if you have one:"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:73
+msgid "**Sign the Package**"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:75
+msgid "Use ``dpkg-sig`` to sign a Debian package:"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:81
+msgid "Use ``rpmsign`` to sign an RPM package:"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:87
+msgid "**Verify the Signature**"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:89
+msgid "Verify the signature of a ``.deb`` package:"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:95
+msgid "Verify the signature of an ``.rpm`` package:"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:105
+msgid ""
+"Create a ``Developer ID Application`` certificate in your Apple Developer"
+" account and download it."
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:109
+msgid "Double-click the certificate to import it into the Keychain."
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:111
+msgid "**Sign the Application**"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:113
+msgid "Use the ``codesign`` tool from Xcode to sign your application:"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:119
+msgid "[Optional] **Verify the Signature**"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:121
+msgid "Verify the signature to ensure everything is correctly signed:"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:129
+msgid "Summary"
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:131
+msgid ""
+"**Windows**: Use ``SignTool`` from the Windows SDK with your imported "
+"code signing certificate."
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:132
+msgid ""
+"**Mac**: Use ``codesign`` and ``spctl`` tools from Xcode with your Apple "
+"Developer ID certificate."
+msgstr ""
+
+#: ../../source/manage/code-signing-custom-builds.rst:133
+msgid ""
+"**Linux**: Use ``GnuPG`` to create/sign with your GPG key, ``dpkg-sig`` "
+"for ``.deb`` packages, and ``rpmsign`` for ``.rpm`` packages."
+msgstr ""
+

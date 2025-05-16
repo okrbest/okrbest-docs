@@ -1,0 +1,364 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-07 15:09+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:2
+msgid "Mobile security features"
+msgstr ""
+
+#: ../../source/_static/badges/ent-cloud-selfhosted.rst:7
+msgid ""
+"|plans-img| Available on `Enterprise plans "
+"<https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/ent-cloud-selfhosted.rst:9
+msgid ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
+"hosted <https://mattermost.com/download/>`__ deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:7
+msgid ""
+"This document outlines the key security features implemented in the "
+"mobile application, explains the significance of each control, and "
+"details our continuous security practices to maintain an up-to-date "
+"security posture."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:10
+msgid "Jailbreak and root detection"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:12
+msgid ""
+"Mattermost leverages built-in checks from the Expo framework to identify "
+"jailbroken (iOS) and rooted (Android) devices:"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:14
+msgid ""
+"On **Android**, the app looks for the presence of known jailbreak/root "
+"binaries, such as the ``su`` binary in ``/system/xbin/su``, which is a "
+"common indicator that the device has been rooted to allow unauthorized "
+"elevated access."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:15
+msgid ""
+"On **iOS**, the detection process involves checking for unusual apps "
+"(e.g., Cydia), modified system paths, and testing whether the app can "
+"alter protected system files—all signs that the device may be jailbroken."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:17
+msgid ""
+"See the :ref:`jailbreak/root protection configuration setting <configure"
+"/environment-configuration-settings:enable jailbreak/root protection>` "
+"documentation for details on enabling this feature."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:21
+msgid ""
+"Client-side detection methods are not bulletproof and can be bypassed by "
+"a sufficiently motivated user with root or jailbreak access. Determined "
+"users can employ reverse engineering to disable or modify these checks to"
+" produce false positives/negatives or even modify and recompile the "
+"source code to remove them entirely, allowing app usage on "
+"rooted/jailbroken devices."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:24
+msgid "Biometric authentication"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:26
+msgid ""
+"Mattermost integrates with iOS Face ID/Touch ID and Android’s Biometric "
+"API. When enabled by the server administrator, biometric checks are "
+"required before accessing specific servers, and the Mattermost mobile app"
+" mandates that a device PIN or biometric lock is active."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:28
+msgid ""
+"See the :ref:`biometric authentication configuration setting <configure"
+"/environment-configuration-settings:enable biometric authentication>` "
+"documentation for details on enabling this feature and the user workflows"
+" in which users must authenticate."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:32
+msgid ""
+"Biometric authentication, such as Face ID or fingerprint recognition, is "
+"handled by the device’s operating system. Mattermost does not provide or "
+"warrant the biometric functionality. The app will unlock if the OS "
+"determines that the biometric input is a positive match. Accuracy, "
+"security, and availability of biometric authentication depend entirely on"
+" the device and its underlying platform."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:35
+msgid "Screenshot and screen recording prevention"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:37
+msgid ""
+"Preventing screenshots and screen recordings protects sensitive "
+"information from being inadvertently or maliciously shared. This control "
+"is essential in ensuring that confidential communications and data remain"
+" within the secure confines of the app. By blocking unauthorized screen "
+"captures, Mattermost significantly reduces the risk of data leakage via "
+"visual content."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:39
+msgid ""
+"On **iOS**, the app detects attempts to capture the screen. For screen "
+"recordings, it immediately applies a blur overlay to the view to obscure "
+"any sensitive information, while screenshots will capture no content at "
+"all."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:41
+msgid ""
+"On **Android**, the app utilizes the FLAG_SECURE flag to block screen "
+"captures and recordings."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:43
+msgid ""
+"See the :ref:`prevent screen capture configuration setting <configure"
+"/environment-configuration-settings:prevent screen capture>` "
+"documentation for details on enabling this feature."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:47
+msgid ""
+"This feature prevents screen recording and screenshot capture on the "
+"mobile device where the Mattermost app is running. It cannot control or "
+"prevent recording from external devices, such as another phone or camera "
+"pointed at the screen. Mattermost provides these protections through "
+"mobile OS-level capabilities but cannot guarantee absolute prevention of "
+"visual data capture through other means."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:50
+msgid "Mobile data isolation"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:52
+msgid ""
+"Mattermost mobile applications are designed to ensure that sensitive data"
+" is stored securely and isolated from other applications on the device. "
+"This isolation is achieved through a combination of OS-level security "
+"features, app sandboxing, and secure data storage practices."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:54
+msgid "Mattermost stores 3 types of data within the mobile app:"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:56
+msgid ""
+"**SQLite Database**: For offline access to posts and channels that the "
+"user has viewed."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:57
+msgid ""
+"**Cached Files**: For temporary storage (e.g., PDFs) of viewed files. "
+"They are periodically purged."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:58
+msgid "**Logs**: Minimal logs kept for troubleshooting purposes."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:60
+msgid ""
+"The Mattermost mobile app for Apple iOS and Android devices uses the "
+"native OS security architecture to encrypt data-at-rest on mobile "
+"devices, ensuring that stored information remains secure even if the "
+"device is lost or stolen. This encryption protects sensitive data, such "
+"as messages and files, from unauthorized access."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:62
+msgid ""
+"Data stored by the Mattermost mobile app only resides within the app’s "
+"private storage container. This storage location is isolated by each "
+"platform’s rigorous sandboxing model. Learn more about :doc:`secure file "
+"storage </deploy/mobile/secure-mobile-file-storage>` for Mattermost "
+"mobile applications."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:65
+msgid "Security measures"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:67
+msgid ""
+"**OS sandboxing & app access isolation**: Mattermost’s data is confined "
+"within its app-specific sandbox (see `Apple’s iOS sandboxing "
+"<https://support.apple.com/guide/security/security-of-runtime-process-"
+"sec15bfe098e/web>`_ and `Android’s sandboxing "
+"<https://source.android.com/docs/security/app-sandbox>`_ guidelines). "
+"This sandboxing mechanism ensures that all stored data—whether in the "
+"SQLite databases, cached files, or logs—is isolated and inaccessible to "
+"other applications. This is why TikTok, and any other application is "
+"blocked from accessing Mattermost data."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:69
+msgid ""
+"**iOS** employs a rigorous sandboxing model that relies on containerized "
+"file systems and strict process isolation. Each app operates within its "
+"own sandbox, with its home directory randomly assigned during "
+"installation. As a result, data stored within the Mattermost app’s "
+"sandbox directory remains accessible only to the app unless explicitly "
+"shared by the user."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:71
+msgid ""
+"**Android** employs scoped storage by assigning each app its own Linux "
+"user ID and a dedicated private directory. This model prevents other "
+"applications from accessing an app’s private directory without explicit "
+"permission. As a result, the Mattermost app’s data remain inaccessible to"
+" other apps—unless the device is rooted, or the user explicitly shares "
+"the data."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:73
+msgid "**Cache invalidation**: Cached files are periodically deleted."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:75
+msgid ""
+"**No Google or Apple Cloud backup**: Mattermost files are not backed up "
+"during normal cloud backup procedures."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:77
+msgid ""
+"On **Android**, the application explicitly disables backups (using the "
+"appropriate manifest settings), ensuring that all Mattermost files remain"
+" strictly on-device."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:79
+msgid ""
+"On **iOS**, although the operating system automatically backs up files "
+"stored in the app's ``Documents`` folder, Mattermost intentionally stores"
+" its files in the ``Library/Caches`` directory, which is excluded from "
+"iCloud backups."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:81
+msgid ""
+"**Controlled data export**: Data only leaves Mattermost through explicit "
+"user actions such as:"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:83
+msgid "Manually exporting a file."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:84
+msgid "Takes a screenshot (if not blocked by policy or with a secondary camera)."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:85
+msgid "Sharing content using OS features (e.g., share sheet)."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:89
+msgid ""
+"This feature restricts direct access to stored data through robust OS-"
+"level sandboxing and storage controls. However, it cannot prevent "
+"unauthorized extraction if attackers employ alternative methods. For "
+"instance, on jailbroken (iOS) or rooted (Android) devices, where system "
+"integrity is compromised, an attacker may bypass standard security "
+"measures."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:91
+msgid ""
+"Similarly, exploiting zero-day or known OS vulnerabilities—or malicious "
+"apps that exploit permission weaknesses—could grant access to device "
+"storage. Mattermost uses mobile OS-level safeguards but cannot guarantee "
+"absolute prevention of such unauthorized data access."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:94
+msgid "Security compliance"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:96
+msgid ""
+"**Secure SDLC**: The mobile app adheres to the same secure Software "
+"Development Lifecycle (SDLC) process as all Mattermost components. This "
+"guarantees that new mobile features undergo comprehensive security "
+"reviews and that any issues are addressed before release."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:98
+msgid ""
+"**Vulnerability management**: The Mattermost mobile app is included in "
+"Mattermost’s public bug bounty program, inviting security researchers to "
+"rigorously assess the application. Additionally, established remediation "
+"SLAs ensure that any security issues are resolved promptly."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:100
+msgid ""
+"**Continuous dependency scanning**: Mattermost uses Snyk Open Source to "
+"conduct daily scans of all dependencies. This continuous approach ensures"
+" that any newly disclosed vulnerabilities are quickly identified and "
+"addressed within defined SLAs."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:102
+msgid ""
+"**BESPIN compliance**: Mattermost adheres to strict security evaluations "
+"including:"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:104
+msgid "Device Protection Profiles (NIAP Evaluation)"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:105
+msgid "Security Dependency & Code Analysis"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-security-features.rst:106
+msgid "Code Complexity & Testing Standards"
+msgstr ""
+

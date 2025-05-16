@@ -1,0 +1,214 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-07 15:09+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/scale/collect-performance-metrics.rst:2
+msgid "Collect performance metrics"
+msgstr ""
+
+#: ../../source/_static/badges/ent-cloud-selfhosted.rst:7
+msgid ""
+"|plans-img| Available on `Enterprise plans "
+"<https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/ent-cloud-selfhosted.rst:9
+msgid ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
+"hosted <https://mattermost.com/download/>`__ deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:7
+msgid ""
+"System admins can collect and store the :doc:`same performance monitoring"
+" metrics </scale/performance-monitoring-metrics>` as Prometheus, without "
+"having to deploy these third-party tools. Data is collected every minute "
+"and is stored in a path you configure. The data is synchronized to either"
+" a cloud-based or local file store every hour, and retained for 15 days."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:9
+msgid ""
+"Download and share the collected data with Mattermost to understand "
+"application performance, troubleshoot system stability and performance, "
+"as well as inform route cause analysis."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:13
+msgid ""
+"Already have Prometheus and Grafana deployed? You can :doc:`use these "
+"tools to monitor performance of your Mattermost deployment </scale"
+"/deploy-prometheus-grafana-for-performance-monitoring>`."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:16
+msgid "Mattermost configuration"
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:20
+msgid ""
+"For Mattermost Cloud deployments, no setup is required. See the `usage "
+"<#usage>`__ section below for details on collecting performance metrics."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:22
+msgid ""
+"For a self-hosted Mattermost deployment, a Mattermost system admin must "
+"perform the following steps in Mattermost."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:24
+msgid ""
+"Log in to your Mattermost :doc:`workspace </guides/use-mattermost>` as a "
+"system admin."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:25
+msgid ""
+"From Mattermost v10.1, you can install the Metrics plugin from the in-"
+"product Mattermost Marketplace by selecting the **Product** |product-"
+"list| icon and selecting **App Marketplace**. Search for **Metrics** and "
+"select **Install**."
+msgstr ""
+
+#: ../../<rst_prolog>:100
+msgid ""
+"Navigate between Channels and collaborative playbooks using the product "
+"menu icon."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:26
+msgid ""
+"Go to **System Console > Plugins > Plugin Management**. In the "
+"**Installed Plugins** section, scroll to **Mattermost Metrics Plugin**, "
+"and select **Enable Plugin**."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:27
+msgid "Specify the path of the time-series database, and select **Save**."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:28
+msgid ""
+"Go to **System Console > Environment > Performance Monitoring**, and set "
+"**Enable Performance Monitoring** to **true**. Select **Save**."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:32
+msgid ""
+"For Mattermost deployments prior to v10.1, you must download the latest "
+"version of `the plugin binary release <https://github.com/mattermost"
+"/mattermost-plugin-metrics/releases>`__, compatible with Mattermost "
+"v8.0.1 and later. Go to **System Console > Plugins > Plugin Management > "
+"Upload Plugin**, and upload the plugin binary you downloaded."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:35
+msgid "Upgrade"
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:37
+msgid ""
+"We recommend upgrading this feature as new versions are released. "
+"Generally, updates are seamless and don't interrupt the user experience "
+"in Mattermost. Visit the `Releases page <https://github.com/mattermost"
+"/mattermost-plugin-metrics/releases>`__ for the latest release, available"
+" releases, and compatibiilty considerations."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:40
+msgid "Usage"
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:42
+msgid ""
+"You need to be a Mattermost system admin to collect performance metrics. "
+"Select **Create Dump** to generate dump files."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:44
+msgid ""
+"To use the generated dump file, you can simply clone the `Dockprom "
+"<https://github.com/stefanprodan/dockprom>`__ repository. Change the "
+"Prometheus data volume to point to the dump that you just downloaded. The"
+" downloaded file is compressed, so to be able to use it, you need to "
+"decompress it first."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:46
+msgid ""
+"The volume configuration for Prometheus should look like the code below "
+"in the ``docker-compose.yml`` file:"
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:54
+msgid ""
+"Once you set this up, run ``docker-compose`` as described in `Dockprom "
+"Repository <https://github.com/stefanprodan/dockprom?tab=readme-ov-"
+"file#install>`__."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:56
+msgid ""
+"You can also use our `Mattermost Performance Monitoring v2 "
+"<https://grafana.com/grafana/dashboards/15582-mattermost-performance-"
+"monitoring-v2/>`_ dashboard by simply importing it into Grafana."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:58
+msgid "Open Grafana (``<localhost>:3000`` by default) and then log into it."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:59
+msgid ""
+"Once you log in, go to the **Plus** |plus| icon on the left sidebar, and "
+"then select **Import**."
+msgstr ""
+
+#: ../../<rst_prolog>:31
+msgid "The Plus icon provides access to channel and direct message functionality."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:60
+msgid ""
+"Enter the dashboard ID (``15582``) in the **Grafana.com Dashboard** "
+"field, and then select **Load** to fetch the dashboard."
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:63
+msgid "What's collected?"
+msgstr ""
+
+#: ../../source/scale/collect-performance-metrics.rst:65
+msgid ""
+"Mattermost provides :ref:`custom metrics <scale/performance-monitoring-"
+"metrics:custom Mattermost metrics>` and :ref:`standard Go metrics <scale"
+"/performance-monitoring-metrics:standard go metrics>` that can be used to"
+" monitor your system's performance."
+msgstr ""
+

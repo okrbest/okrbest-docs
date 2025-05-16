@@ -1,0 +1,353 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-07 15:09+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:2
+msgid "Mobile deployment troubleshooting"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:5
+msgid ""
+"I keep getting a message \"Cannot connect to the server. Please check "
+"your server URL and internet connection.\""
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:7
+msgid ""
+"First, confirm that your server URL has no typos and that it includes "
+"``http://`` or ``https://`` according to the server deployment "
+"configuration."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:9
+msgid ""
+"If the server URL is correct, there could be an issue with the SSL "
+"certificate configuration."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:11
+msgid ""
+"To check your SSL certificate set up, test it by visiting a site such as "
+"`SSL Labs <https://www.ssllabs.com/ssltest/index.html>`__. If there’s an "
+"error about the missing chain or certificate path, there is likely an "
+"intermediate certificate missing that needs to be included."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:13
+msgid ""
+"Please note that the apps cannot connect to servers with self-signed "
+"certificates, consider using :ref:`Let's Encrypt <deploy/server/setup-"
+"nginx-proxy:configure nginx with ssl and http/2>` instead."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:16
+msgid "Login with ADFS/Office365 is not working"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:18
+msgid ""
+"In line with Microsoft guidance we recommend `configuring intranet forms-"
+"based authentication for devices that do not support WIA "
+"<https://learn.microsoft.com/en-us/windows-server/identity/ad-"
+"fs/operations/configure-intranet-forms-based-authentication-for-devices-"
+"that-do-not-support-wia>`_."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:21
+msgid "I see a “Connecting…” bar that does not go away"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:23
+msgid ""
+"If your app is working properly, you should see a grey “Connecting…” bar "
+"that clears or says “Connected” after the app reconnects."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:25
+msgid ""
+"If you are seeing this message all the time, and your internet connection"
+" seems fine, ask your server administrator if the server uses NGINX or "
+"another webserver as a reverse proxy. If so, they should check that it is"
+" configured correctly for :ref:`supporting the websocket connection for "
+"APIv4 endpoints <deploy/server/setup-nginx-proxy:configure nginx as a "
+"proxy for mattermost server>`."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:28
+msgid ""
+"All my outbound connections need to go through a proxy. How can I connect"
+" to the Mattermost Hosted Push Notification Service?"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:30
+msgid ""
+"You can set up an internal server to proxy the connection out of their "
+"network to the Mattermost Hosted Push Notification Service (HPNS) by "
+"following the steps below:"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:32
+msgid ""
+"Make sure your proxy server is properly configured to support SSL. "
+"Confirm it works by checking the URL at https://www.digicert.com/help/."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:33
+msgid "Setup a proxy to forward requests to ``https://push.mattermost.com``."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:34
+msgid ""
+"In Mattermost set **System Console** > **Notification Settings** > "
+"**Mobile Push** > **Enable Push Notifications** in prior versions or "
+"**System Console > Environment > Push Notification Server > Enable Push "
+"Notifications** in versions after 5.12 to \"Manually enter Push "
+"Notification Service location\""
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:35
+msgid "Enter the URL of your proxy in the **Push Notification Server** field."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:39
+msgid ""
+"Depending on how your proxy is configured you may need to add a port "
+"number and create a URL like ``https://push.internalproxy.com:8000`` "
+"mapped to ``https://push.mattermost.com``"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:42
+msgid "Build gets stuck at ``bundleReleaseJsAndAssets``"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:44
+msgid "As a workaround, you can bundle the ``js`` manually first with"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:50
+msgid "and then ignore the gradle task with"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:57
+msgid "No image previews available in the mobile app"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:59
+msgid ""
+"This can happen if the server running Mattermost has its mime types not "
+"set up correctly. A server running Linux has this file located in "
+"``/etc/mime.types``. This might vary depending on your specific OS and "
+"distribution."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:62
+msgid ""
+"Some distributions also ship without ``mailcap`` which can result in "
+"missing or incorrectly configured mime types."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:65
+msgid "Messages with emojis aren't being sent from the Mobile App"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:67
+msgid ""
+"This can occur if the server running Mattermost is configured with an "
+"incorrect character set. To resolve this issue, in the ``config.json`` "
+"file under ``SqlSettings``, ensure that the ``DataSource`` key is "
+"configured correctly, then restart the Mattermost server."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:69
+msgid "For example:"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:78
+msgid ""
+"See our :ref:`Configuration Settings <configure/environment-"
+"configuration-settings:data source>` documentation for details on "
+"configuring the connection string to the master database."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:81
+msgid "Testing mobile push notifications"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:83
+msgid ""
+"Make sure to configure push notifications for your :doc:`pre-built mobile"
+" apps </deploy/mobile/mobile-app-deployment>`, or for :doc:`your custom "
+"built mobile apps </deploy/mobile/distribute-custom-mobile-apps>`."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:85
+msgid ""
+"Then use the following instructions to confirm push notifications are "
+"working properly."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:87
+msgid ""
+"Log in to your mobile app with an account on your Mattermost Server, "
+"which we’ll refer to as “Account A”."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:89
+msgid ""
+"(iOS) When the app asks whether you wish to receive notifications, "
+"**confirm you want to receive notifications**."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:91
+msgid ""
+"Mattermost prompts you to confirm whether you want to allow mobile push "
+"notifications. To test mobile push notifications, you must select Allow."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:95
+msgid "Confirm push notifications are enabled for “Account A”."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:97
+msgid "Go to the notification settings menu in the mobile app."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:97
+msgid ""
+"Access notification settings by selecting your profile picture to access "
+"Settings > Notifications."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:103
+msgid "Check that the mobile push notifications are set to send."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:97
+msgid ""
+"Select Push Notifications to confirm when mobile push notifications will "
+"be sent."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:97
+msgid ""
+"Specify whether all new messages or only mentions and direct messages "
+"send push notifications."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:113
+msgid "Have “Account A” put the app to background or close the app."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:115
+msgid "Using a browser, log in to “Account B” on the same Mattermost Server."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:117
+msgid "Open a direct message with “Account A”, and send a message."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:119
+msgid ""
+"A push notification with the message should appear on the mobile device "
+"of “Account A”."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:122
+msgid "Troubleshooting push notifications"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:124
+msgid ""
+"If you did not receive a push notification when testing push "
+"notifications, use the following procedure to troubleshoot:"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:126
+msgid ""
+"In **System Console > Environment > Logging > File Log Level**, select "
+"**DEBUG** in order to watch for push notifications in the server log."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:128
+msgid "Delete your mobile application, and reinstall it."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:130
+msgid ""
+"Log in with \"Account A\" and **confirm you want to receive push "
+"notifications** when prompted by the mobile app."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:132
+msgid ""
+"Go to **Profile** > **Security** > **View and Logout of Active Sessions**"
+" to confirm that there is a session for the native mobile app matching "
+"your login time."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:134
+msgid "Retest push notifications."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:136
+msgid ""
+"If no push notification displays, go to **System Console** > **Server "
+"Logs**, then select **Reload**. Look at the bottom of the logs for a "
+"message similar to:"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:138
+msgid ""
+"``[2016/04/21 03:16:44 UTC] [DEBG] Sending push notification to "
+"608xyz0... wi msg of '@accountb: Hello'``"
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:140
+msgid ""
+"If the log message displays, it means a message was sent to the HPNS "
+"server and was not received by your mobile app. Please `create a support "
+"ticket <https://support.mattermost.com/hc/en-us/requests/new>`_ with the "
+"subject \"HPNS issue\" for help from Mattermost's Support team."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:141
+msgid ""
+"If the log message does not display, it means no mobile push notification"
+" was sent to “Account A”. Please repeat the process starting at step 2 "
+"and double-check each step."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:145
+msgid ""
+"To conserve disk space, once your push notification issue is resolved, go"
+" to  **System Console > Environment > Logging > File Log Level**, then "
+"select **ERROR** to switch your logging detail level from **DEBUG** to "
+"**Errors Only**."
+msgstr ""
+
+#: ../../source/deploy/mobile/mobile-troubleshooting.rst:147
+msgid ""
+"If push notifications are not being delivered on the mobile device, "
+"confirm that you're logged in to the **Native** mobile app session "
+"through **Profile > Security > View and Log Out of Active Sessions**. "
+"Otherwise, the `DeviceId` won't get registered in the `Sessions` table "
+"and notifications won't be delivered."
+msgstr ""
+

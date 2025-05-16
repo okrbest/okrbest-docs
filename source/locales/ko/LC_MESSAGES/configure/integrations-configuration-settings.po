@@ -1,0 +1,638 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-07 15:09+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/configure/integrations-configuration-settings.rst:2
+msgid "Integrations configuration settings"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-cloud-selfhosted.rst:7
+#: ../../source/_static/badges/allplans-selfhosted.rst:7
+msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-cloud-selfhosted.rst:9
+msgid ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
+"hosted <https://mattermost.com/download/>`__ deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:7
+msgid ""
+"Review and manage the following integration configuration options in the "
+"System Console by selecting the **Product** |product-list| menu, "
+"selecting **System Console**, and then selecting **Integrations**:"
+msgstr ""
+
+#: ../../<rst_prolog>:100
+msgid ""
+"Navigate between Channels and collaborative playbooks using the product "
+"menu icon."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:9
+msgid "`Integrations management <#integrations-management>`__"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:10
+msgid "`Bot Accounts <#bot-acocunts>`__"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:11
+msgid "`GIF <#gif>`__"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:12
+msgid "`CORS <#cors>`__"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:16
+msgid ""
+"System admins managing a self-hosted Mattermost deployment can edit the "
+"``config.json`` file as described in the following tables. Each "
+"configuration value below includes a JSON path to access the value "
+"programmatically in the ``config.json`` file using a JSON-aware tool. For"
+" example, the ``EnableIncomingWebhooks`` value is under "
+"``ServiceSettings``."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:18
+msgid ""
+"If using a tool such as `jq <https://stedolan.github.io/jq/>`__, you'd "
+"enter: ``cat config/config.json | jq "
+"'.ServiceSettings.EnableIncomingWebhooks'``"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:19
+msgid ""
+"When working with the ``config.json`` file manually, look for an object "
+"such as ``ServiceSettings``, then within that object, find the key "
+"``EnableIncomingWebhooks``."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:24
+msgid "Integrations management"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:29
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Integrations > Integration Management**."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:41
+msgid "Enable incoming webhooks"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:43
+msgid ""
+"Developers building integrations can create webhook URLs for public "
+"channels and private channels. See the `incoming webhooks "
+"<https://developers.mattermost.com/integrate/webhooks/incoming/>`_ "
+"developer documentation to learn about creating webhooks, viewing "
+"samples, and letting community know about integrations you've built."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:45
+msgid ""
+"**True**: Incoming webhooks are allowed. To manage incoming webhooks, "
+"select **Integrations** from the Mattermost Product menu. The webhook "
+"URLs created can be used by external applications to create posts in any "
+"public or private channels that you have access to."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:47
+msgid ""
+"**False**: The **Integrations > Incoming Webhooks** section of the "
+"Mattermost Product menu is hidden and all incoming webhooks are disabled."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:50
+#: ../../source/configure/integrations-configuration-settings.rst:75
+msgid ""
+"Security note: By enabling this feature, users may be able to perform "
+"`phishing attacks <https://en.wikipedia.org/wiki/Phishing>`_ by "
+"attempting to impersonate other users. To combat these attacks, a BOT tag"
+" appears next to all posts from a webhook. Enable at your own risk."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:53
+msgid ""
+"This feature's ``config.json`` setting is ``\"EnableIncomingWebhooks\": "
+"true`` with options ``true`` and ``false``."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:66
+msgid "Enable outgoing webhooks"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:68
+msgid ""
+"Developers building integrations can create webhook tokens for public "
+"channels. Trigger words are used to fire new message events to external "
+"integrations. For security reasons, outgoing webhooks are only available "
+"in public channels. See the `outgoing webhooks "
+"<https://developers.mattermost.com/integrate/webhooks/outgoing/>`_ "
+"developer documentation to learn about creating webhooks and viewing "
+"samples."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:70
+msgid ""
+"**True**: Outgoing webhooks will be allowed. To manage outgoing webhooks,"
+" select **Integrations** from the Mattermost Product menu."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:72
+msgid ""
+"**False**: The **Integrations > Outgoing Webhooks** of the Mattermost "
+"Product menu is hidden and all outgoing webhooks are disabled."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:78
+msgid ""
+"This feature's ``config.json`` setting is ``\"EnableOutgoingWebhooks\": "
+"true`` with options ``true`` and ``false``."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:83
+msgid ""
+"Disabling this configuration setting in larger deployments may improve "
+"server performance in the following areas:"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:85
+msgid ""
+"Reduced Network Traffic: Outgoing webhooks generate network requests to "
+"external services. Disabling them reduces the amount of traffic and "
+"resource usage related to those requests."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:86
+msgid ""
+"Decreased Load on Server: Handling webhook events and managing "
+"connections to external services uses server resources. By disabling "
+"outgoing webhooks, the server workload is reduced, allowing it to "
+"allocate more resources to other important tasks."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:87
+msgid ""
+"Improved Response Time: When outgoing webhooks are enabled, the server "
+"waits for the external services to return responses, potentially slowing "
+"down the performance if the external services are slow or unresponsive. "
+"Disabling them removes this dependency, leading to faster response times "
+"for user requests."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:88
+msgid ""
+"Lower Memory Usage: Webhooks need memory to process and store data about "
+"the requests and responses. Disabling them can free up memory which can "
+"be used to improve overall server performance."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:89
+msgid ""
+"Simplified Error Handling: Managing errors and retries for outgoing "
+"webhook failures can add complexity and overhead. Disabling outgoing "
+"webhooks can simplify error handling and reduce the processing overhead "
+"associated with it."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:90
+msgid ""
+"However, outgoing webhooks are often essential for integrating Mattermost"
+" with other services and workflows. It’s important to balance performance"
+" improvements with the needs of your organization and users."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:102
+msgid "Enable custom slash commands"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:104
+msgid ""
+"Slash commands send events to external integrations that send a response "
+"back to Mattermost."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:106
+msgid ""
+"**True**: Allow users to create custom slash commands from **Main Menu > "
+"Integrations > Commands**."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:108
+msgid ""
+"**False**: Slash commands are hidden in the **Integrations** user "
+"interface."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:111
+msgid ""
+"This feature's ``config.json`` setting is ``\"EnableCommands\": false`` "
+"with options ``true`` and ``false``."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:124
+msgid "Enable OAuth 2.0 service provider"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:126
+msgid ""
+"**True**: Mattermost acts as an OAuth 2.0 service provider allowing "
+"Mattermost to authorize API requests from external applications."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:128
+msgid "**False**: Mattermost does not function as an OAuth 2.0 service provider."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:131
+msgid ""
+"This feature's ``config.json`` setting is "
+"``\"EnableOAuthServiceProvider\": true`` with options ``true`` and "
+"``false``."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:136
+msgid "Cloud admins can't modify this configuration setting."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:146
+msgid "Integration request timeout"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:148
+msgid ""
+"The number of seconds to wait for external integration HTTP requests, "
+"before timing out, including `custom slash commands "
+"<https://developers.mattermost.com/integrate/slash-commands/custom/>`_, "
+"`outgoing webhooks "
+"<https://developers.mattermost.com/integrate/webhooks/outgoing/>`_, "
+"`interactive messages "
+"<https://developers.mattermost.com/integrate/plugins/interactive-"
+"messages/>`_, and `interactive dialogs "
+"<https://developers.mattermost.com/integrate/plugins/interactive-"
+"dialogs/>`_. Increase this value if you have external integrations that "
+"can take some time to generate an HTTP response, or experience delayed "
+"responses due to latency."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:151
+msgid ""
+"This feature's ``config.json`` setting is "
+"``\"OutgoingIntegrationRequestsDefaultTimeout\": 3``."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:164
+msgid "Enable integrations to override usernames"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:166
+msgid ""
+"**True**: Webhooks, slash commands, OAuth 2.0 apps, and other "
+"integrations, will be allowed to change the username they are posting as."
+" If no username is present, the username for the post is the same as it "
+"would be for a setting of ``False``."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:168
+msgid ""
+"**False**: **(Default)** Custom slash commands can only post as the "
+"username of the user who used the slash command. OAuth 2.0 apps can only "
+"post as the username of the user who set up the integration. For incoming"
+" webhooks and outgoing webhooks, the username is \"webhook\". See "
+"https://developers.mattermost.com/integrate/other-integrations/ for more "
+"details."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:171
+msgid ""
+"This feature's ``config.json`` setting is "
+"``\"EnablePostUsernameOverride\": false`` with options ``true`` and "
+"``false``."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:184
+msgid "Enable integrations to override profile picture icons"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:186
+msgid ""
+"**True**: Webhooks, slash commands, and other integrations, will be "
+"allowed to change the profile picture they post with."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:188
+msgid ""
+"**False**: **(Default)** Webhooks, slash commands, and OAuth 2.0 apps can"
+" only post with the profile picture of the account they were set up with."
+" See https://developers.mattermost.com/integrate/other-integrations/ for "
+"more details."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:191
+msgid ""
+"This feature's ``config.json`` setting is ``\"EnablePostIconOverride\": "
+"false`` with options ``true`` and ``false``."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:204
+msgid "Enable personal access tokens"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:206
+msgid ""
+"**True**: Users can create `personal access tokens "
+"<https://developers.mattermost.com/integrate/admin-guide/admin-personal-"
+"access-token/>` for integrations in **Profile > Security**. They can be "
+"used to authenticate against the API and give full access to the account."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:208
+msgid ""
+"To manage who can create personal access tokens or to search users by "
+"token ID, go to the **System Console > Users** page."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:210
+msgid "**False**: Personal access tokens are disabled on the server."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:213
+msgid ""
+"This feature's ``config.json`` setting is ``\"EnableUserAccessTokens\": "
+"false`` with options ``true`` and ``false``."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:219
+msgid "Bot accounts"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:224
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Integrations > Bot Accounts**."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:236
+msgid "Enable bot account creation"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:238
+msgid ""
+"**True**: **(Default for Cloud deployments)** Users can create bot "
+"accounts for integrations in **Integrations > Bot Accounts**. Bot "
+"accounts are similar to user accounts except they cannot be used to log "
+"in. See `documentation <https://developers.mattermost.com/integrate"
+"/admin-guide/admin-bot-accounts/>`_ to learn more."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:240
+msgid ""
+"**False**: **(Default for self-hosted deployments)** Bot accounts cannot "
+"be created through the user interface or the RESTful API. Plugins can "
+"still create and manage bot accounts."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:243
+msgid ""
+"This feature's ``config.json`` setting is ``\"EnableBotAccountCreation\":"
+" false`` with options ``true`` and ``false``."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:256
+msgid "Disable bot accounts when owner is deactivated"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:258
+msgid ""
+"**True**: When a user is deactivated, disables all bot accounts managed "
+"by the user. To re-enable bot accounts, go to **Integrations > Bot "
+"Accounts**."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:260
+msgid ""
+"**False**: When a user is deactivated, all bot accounts managed by the "
+"user remain active."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:263
+msgid ""
+"This feature's ``config.json`` setting is "
+"``\"DisableBotsWhenOwnerIsDeactivated\": false`` with options ``true`` "
+"and ``false``."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:269
+msgid "GIF"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:274
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Integrations > GIF**."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:286
+msgid "Enable GIF picker"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:288
+msgid ""
+"**True**: Allow users to select GIFs from the emoji picker via a GIPHY "
+"integration."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:290
+msgid "**False**: GIFs cannot be selected in the emoji picker."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:293
+msgid ""
+"This feature's ``config.json`` setting is ``\"EnableGifPicker\": true`` "
+"with options ``true`` and ``false``."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:297
+msgid ""
+":ref:`Link previews <configure/site-configuration-settings:enable message"
+" link previews>` must be enabled in order to display GIF link previews. "
+"Mattermost deployments restricted to access behind a firewall must open "
+"port 443 (for all request types) for this feature to work."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:302
+msgid "CORS"
+msgstr ""
+
+#: ../../source/_static/badges/allplans-selfhosted.rst:9
+msgid ""
+"|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
+"deployments"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:307
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Integrations > CORS**."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:317
+msgid "Enable cross-origin requests from"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:319
+msgid "Enable HTTP cross-origin requests from specific domains."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:321
+msgid "Type ``*`` to allow CORS from any domain."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:322
+msgid "Enter a specific domain or multiple domains separated by spaces."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:323
+msgid "Type ``null`` to prevent CORS from any domain."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:324
+msgid "Leave blank to disable it and use the Mattermost **Site URL** instead."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:328
+msgid ""
+"Ensure you've entered your :ref:`Site URL <configure/environment-"
+"configuration-settings:site url>` before enabling this setting to prevent"
+" losing access to the System Console after saving. If you lose access to "
+"the System Console after changing this setting, you can set your Site URL"
+" through the ``config.json`` file."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:331
+msgid ""
+"This feature's ``config.json`` setting is ``\"AllowCorsFrom\": \"\"`` "
+"with string input."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:342
+msgid "CORS exposed headers"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:344
+msgid "Whitelist of headers that will be accessible to the requester."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:347
+msgid ""
+"This feature's ``config.json`` setting is ``\"CorsExposedHeaders\": "
+"\"\"`` with string input."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:360
+msgid "CORS allow credentials"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:362
+msgid ""
+"**True**: Requests that pass validation will include the ``Access-"
+"Control-Allow-Credentials`` header."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:364
+msgid ""
+"**False**: Requests won't include the ``Access-Control-Allow-"
+"Credentials`` header."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:367
+msgid ""
+"This feature's ``config.json`` setting is ``\"CorsAllowCredentials\": "
+"false`` with options ``true`` and ``false``."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:380
+msgid "CORS debug"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:382
+msgid ""
+"**True**: Prints messages to the logs to help when developing an "
+"integration that uses CORS. These messages will include the structured "
+"key value pair ``\"source\": \"cors\"``."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:384
+msgid "**False**: Debug messages not printed to the logs."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:387
+msgid ""
+"This feature's ``config.json`` setting is ``\"CorsDebug\": false`` with "
+"options ``true`` and ``false``."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:393
+msgid "Embedding"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:398
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Integrations > Embedding**."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:408
+msgid "Frame ancestors"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:410
+msgid ""
+"Enter a space-separated list of domains that are allowed to embed the "
+"Mattermost web client via an iFrame. Leave blank to disallow embedding. "
+"Leave blank to disable embedding. Blank by default."
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:413
+msgid "This feature's ``config.json`` setting is ``\"FrameAncestors\".``"
+msgstr ""
+
+#: ../../source/configure/integrations-configuration-settings.rst:418
+msgid ""
+"Embedding Mattermost via an iFrame can provide seamless integration for "
+"collaboration into an organization’s existing tools and workflows. "
+"However, you must ensure that correct configurations are in place to "
+"allow communication between the iframe and the parent domain without "
+"violating security."
+msgstr ""
+

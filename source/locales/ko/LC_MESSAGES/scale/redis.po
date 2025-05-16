@@ -1,0 +1,317 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2025 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-14 10:30+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/scale/redis.rst:2
+msgid "Redis"
+msgstr ""
+
+#: ../../source/_static/badges/ent-cloud-selfhosted.rst:7
+msgid ""
+"|plans-img| Available on `Enterprise plans "
+"<https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:2
+msgid "plans-img"
+msgstr ""
+
+#: ../../source/_static/badges/ent-cloud-selfhosted.rst:9
+msgid ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
+"hosted <https://mattermost.com/download/>`__ deployments"
+msgstr ""
+
+#: ../../<rst_prolog>:4
+msgid "deployment-img"
+msgstr ""
+
+#: ../../source/scale/redis.rst:7
+msgid ""
+"Redis is an open-source, in-memory data structure store used as a "
+"database, cache, message broker, and streaming engine. Mattermost uses "
+"Redis as an external cache to improve performance at scale. When properly"
+" configured, Redis can help support Mattermost installations with more "
+"than 100,000 users by providing improved performance through efficient "
+"caching."
+msgstr ""
+
+#: ../../source/scale/redis.rst:10
+msgid "Deployment guide"
+msgstr ""
+
+#: ../../source/scale/redis.rst:12
+msgid ""
+"Deploying Redis with Mattermost includes the following 2 steps: `setting "
+"up the Redis server <#set-up-a-redis-server>`__, and `configuring Redis "
+"in Mattermost <#configure-redis-in-mattermost>`__."
+msgstr ""
+
+#: ../../source/scale/redis.rst:15
+msgid "Set up a Redis server"
+msgstr ""
+
+#: ../../source/scale/redis.rst:17
+msgid ""
+"Download and install the latest release of `Redis 7.x "
+"<https://redis.io/download/>`_. See the Redis documentation for "
+"installation details specific to your operating system."
+msgstr ""
+
+#: ../../source/scale/redis.rst:19
+msgid ""
+"Configure Redis appropriately for your environment. Ensure that Redis is "
+"secured and accessible only by trusted systems."
+msgstr ""
+
+#: ../../source/scale/redis.rst:21
+msgid ""
+"For high availability deployments, consider setting up Redis in a cluster"
+" configuration for improved reliability and performance."
+msgstr ""
+
+#: ../../source/scale/redis.rst:24
+msgid "Configure Redis in Mattermost"
+msgstr ""
+
+#: ../../source/scale/redis.rst:26
+msgid "Follow these steps to configure Mattermost to use your Redis server:"
+msgstr ""
+
+#: ../../source/scale/redis.rst:28
+msgid "Go to **System Console > Environment > Cache**."
+msgstr ""
+
+#: ../../source/scale/redis.rst:29
+msgid "Set **Cache Type** to ``redis`` to enable the Redis-specific settings."
+msgstr ""
+
+#: ../../source/scale/redis.rst:30
+msgid "Set the Redis server connection details:"
+msgstr ""
+
+#: ../../source/scale/redis.rst:32
+msgid ""
+"Enter **Redis Address** for the Redis server you set up earlier (e.g., "
+"``redis.example.com:6379``)."
+msgstr ""
+
+#: ../../source/scale/redis.rst:33
+msgid ""
+"(Optional) Enter **Redis Password** if your Redis server requires "
+"authentication."
+msgstr ""
+
+#: ../../source/scale/redis.rst:34
+msgid ""
+"(Optional) Enter **Redis Database** to specify which Redis database to "
+"use (-1 by default, which uses Redis's default database)."
+msgstr ""
+
+#: ../../source/scale/redis.rst:36
+msgid "Save your configuration and restart the Mattermost server."
+msgstr ""
+
+#: ../../source/scale/redis.rst:38
+msgid "Alternatively, you can configure Redis in the ``config.json`` file:"
+msgstr ""
+
+#: ../../source/scale/redis.rst:52
+msgid "Deploy with AWS ElastiCache"
+msgstr ""
+
+#: ../../source/scale/redis.rst:54
+msgid ""
+"For enterprise-scale deployments, AWS ElastiCache for Redis provides a "
+"fully managed Redis service that simplifies deployment, operation, and "
+"scaling."
+msgstr ""
+
+#: ../../source/scale/redis.rst:56
+msgid "When deploying Mattermost with AWS ElastiCache:"
+msgstr ""
+
+#: ../../source/scale/redis.rst:58
+msgid ""
+"Create an ElastiCache for Redis instance, choosing Redis OSS version 7.1 "
+"or later."
+msgstr ""
+
+#: ../../source/scale/redis.rst:59
+msgid ""
+"Based on load testing results, we recommend starting with a "
+"``cache.m7g.2xlarge`` instance for deployments supporting over 100,000 "
+"users."
+msgstr ""
+
+#: ../../source/scale/redis.rst:60
+msgid "Configure your Mattermost server to connect to the ElastiCache endpoint."
+msgstr ""
+
+#: ../../source/scale/redis.rst:61
+msgid ""
+"Monitor CPU utilization closely, as Redis is single-threaded and "
+"performance bottlenecks are typically CPU-bound rather than memory-bound."
+msgstr ""
+
+#: ../../source/scale/redis.rst:64
+msgid "Performance considerations"
+msgstr ""
+
+#: ../../source/scale/redis.rst:66
+msgid ""
+"When using Redis with Mattermost, consider the following performance "
+"insights:"
+msgstr ""
+
+#: ../../source/scale/redis.rst:68
+msgid ""
+"Current load tests indicate that memory usage of Redis is relatively low,"
+" with CPU being the primary bottleneck because Redis is single-threaded."
+msgstr ""
+
+#: ../../source/scale/redis.rst:69
+msgid ""
+"When planning your Redis deployment, use CPU utilization as the primary "
+"metric for scaling decisions."
+msgstr ""
+
+#: ../../source/scale/redis.rst:72
+msgid "Implementation details"
+msgstr ""
+
+#: ../../source/scale/redis.rst:74
+msgid ""
+"Mattermost uses the `rueidis <https://github.com/redis/rueidis>`_ library"
+" instead of the more popular `go-redis <https://github.com/redis/go-"
+"redis>`_, primarily because rueidis offers more performance optimizations"
+" out of the box, including:"
+msgstr ""
+
+#: ../../source/scale/redis.rst:76
+msgid "Automatic pipelining of concurrent queries"
+msgstr ""
+
+#: ../../source/scale/redis.rst:77
+msgid "Client-side caching"
+msgstr ""
+
+#: ../../source/scale/redis.rst:78
+msgid "Additional performance tuning options like MaxFlushDelay"
+msgstr ""
+
+#: ../../source/scale/redis.rst:80
+msgid "The primary implementation files include:"
+msgstr ""
+
+#: ../../source/scale/redis.rst:82
+msgid ""
+"``platform/services/cache/provider.go`` - Contains the library "
+"initialization code"
+msgstr ""
+
+#: ../../source/scale/redis.rst:83
+msgid ""
+"``platform/services/cache/redis.go`` - Contains the cache interface "
+"implementation"
+msgstr ""
+
+#: ../../source/scale/redis.rst:86
+msgid "Frequently asked questions (FAQ)"
+msgstr ""
+
+#: ../../source/scale/redis.rst:89
+msgid "Do I need to use Redis?"
+msgstr ""
+
+#: ../../source/scale/redis.rst:91
+msgid ""
+"While Redis is not required for smaller Mattermost deployments, it is "
+"highly recommended for large-scale installations. - If your installation "
+"has more than 100K users, Redis is highly recommended. Redis "
+"significantly improves performance by reducing database load and "
+"optimizing common operations. - If your installation has less than 100K "
+"users, Redis is not recommended."
+msgstr ""
+
+#: ../../source/scale/redis.rst:95
+msgid ""
+"It is suggested to keep an eye on the "
+"``sum(rate(mattermost_cache_mem_invalidation_total[5m]))`` metric which "
+"indicates the rate of cache invalidations happening. A single cache "
+"invalidation will send a message across your HA cluster to all nodes, "
+"leading to database calls from all of them. So the metric, combined with "
+"the number of nodes in your cluster should be used to determine when is "
+"the right time to use Redis."
+msgstr ""
+
+#: ../../source/scale/redis.rst:97
+msgid ""
+"For example, if you have more than 10 nodes in your cluster, and the rate"
+" of invalidations goes beyond 10, then you should definitely start "
+"considering adding Redis."
+msgstr ""
+
+#: ../../source/scale/redis.rst:100
+msgid "Should I install Redis on the same machine as Mattermost Server?"
+msgstr ""
+
+#: ../../source/scale/redis.rst:102
+msgid ""
+"For production deployments, we recommend running Redis on a separate "
+"machine from the Mattermost server. This separation allows for better "
+"resource allocation and improved system reliability."
+msgstr ""
+
+#: ../../source/scale/redis.rst:105
+msgid "What Redis metrics should I monitor?"
+msgstr ""
+
+#: ../../source/scale/redis.rst:107
+msgid "When running Redis with Mattermost, monitor the following metrics:"
+msgstr ""
+
+#: ../../source/scale/redis.rst:109
+msgid "CPU utilization (primary bottleneck)"
+msgstr ""
+
+#: ../../source/scale/redis.rst:110
+msgid "Memory usage"
+msgstr ""
+
+#: ../../source/scale/redis.rst:111
+msgid "Connected clients"
+msgstr ""
+
+#: ../../source/scale/redis.rst:112
+msgid "Cache hit ratio"
+msgstr ""
+
+#: ../../source/scale/redis.rst:113
+msgid "Operation latency"
+msgstr ""
+
+#: ../../source/scale/redis.rst:114
+msgid ""
+"Mattermost's ``mattermost_db_cache_time`` Grafana metric with labels of "
+"``cache_name`` and ``operation``, which can be used to further monitor "
+"the performance of Redis"
+msgstr ""
+
