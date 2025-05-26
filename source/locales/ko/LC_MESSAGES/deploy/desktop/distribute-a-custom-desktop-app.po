@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:2
 msgid "Distribute a custom desktop app"
-msgstr ""
+msgstr "사용자 정의 데스크톱 앱 배포"
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:4
 msgid ""
@@ -29,6 +29,8 @@ msgid ""
 "by configuring `src/common/config/buildConfig.ts "
 "<https://github.com/mattermost/desktop/blob/master/src/common/config/buildConfig.ts>`__."
 msgstr ""
+"`src/common/config/buildConfig.ts <https://github.com/mattermost/desktop/blob/master/src/common/config/buildConfig.ts>`__ 를 "
+"구성하여 자체 Mattermost 데스크톱 애플리케이션을 사용자 정의하고 배포할 수 있습니다."
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:8
 msgid ""
@@ -37,6 +39,9 @@ msgid ""
 "`defaultTeams <#defaultTeams>`__, `helpLink <#helpLink>`__, and "
 "`enableServerManagement <#enableServerManagement>`__."
 msgstr ""
+"데스크톱 앱의 ``buildConfig.ts`` 파일을 구성하세요. `defaultTeams <#defaultTeams>`__, "
+"`helpLink <#helpLink>`__, `enableServerManagement <#enableServerManagement>`__ 등 "
+"다음 매개변수를 구성하여 사용자 경험을 사용자 정의할 수 있습니다."
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:10
 msgid ""
@@ -44,14 +49,17 @@ msgid ""
 "<https://developers.mattermost.com/contribute/more-info/desktop"
 "/developer-setup/>`__ to build the application."
 msgstr ""
+"애플리케이션을 빌드하려면 `Mattermost Desktop Development Guide "
+"<https://developers.mattermost.com/contribute/more-info/desktop/developer-setup/>`__ 를 "
+"따르세요."
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:11
 msgid "Distribute the application to your users."
-msgstr ""
+msgstr "애플리케이션을 사용자에게 배포하세요."
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:14
 msgid "``defaultTeams``"
-msgstr ""
+msgstr "``defaultTeams``"
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:16
 msgid ""
@@ -61,26 +69,30 @@ msgid ""
 "``enableServerManagement`` is set to ``false``. Expects an array of key-"
 "value pairs."
 msgstr ""
+"사용자가 수정할 수 없는 기본적으로 데스크톱 앱에 추가되는 서버 URL과 표시 이름 목록입니다. "
+"``enableServerManagement`` 가 ``false`` 로 설정되지 않은 경우, 사용자는 여전히 "
+"`Server Management 페이지 <#enableservermanagement>`_ 를 통해 서버를 추가할 수 있습니다. "
+"키-값 쌍의 배열을 예상합니다."
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:18
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:38
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:50
 msgid "Example:"
-msgstr ""
+msgstr "예시:"
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:34
 msgid "``helpLink``"
-msgstr ""
+msgstr "``helpLink``"
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:36
 msgid ""
 "The URL of the help documentation in **Help > Learn More** menu bar item."
 " If none is specified, the menu option is hidden. Expects a string."
-msgstr ""
+msgstr "**Help > Learn More** 메뉴 바 항목의 도움말 문서 URL입니다. 지정되지 않은 경우 메뉴 옵션이 숨겨집니다. 문자열을 예상합니다."
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:46
 msgid "``enableServerManagement``"
-msgstr ""
+msgstr "``enableServerManagement``"
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:48
 msgid ""
@@ -89,10 +101,13 @@ msgid ""
 " ``defaultTeams`` or else users cannot interact with any servers. Expects"
 " a boolean, true or false."
 msgstr ""
+"앱 설정 페이지에서 사용자가 서버를 추가, 편집 또는 제거할 수 있는지 제어합니다. false로 설정된 경우 "
+"``defaultTeams`` 에 대해 최소 하나의 서버를 지정해야 하며, 그렇지 않으면 사용자가 서버와 상호작용할 수 없습니다. "
+"boolean 값(true 또는 false)을 예상합니다."
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:57
 msgid "Managed resources"
-msgstr ""
+msgstr "관리형 리소스"
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:59
 msgid ""
@@ -100,6 +115,8 @@ msgid ""
 " the Mattermost desktop app support managed resources which are services "
 "available on the same hostname and protocol as the Mattermost server."
 msgstr ""
+"Mattermost 데스크톱 앱의 :doc:`Custom builds </deploy/desktop/distribute-a-custom-desktop-app>` 는 "
+"Mattermost 서버와 동일한 호스트명과 프로토콜에서 사용 가능한 서비스인 관리형 리소스를 지원합니다."
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:61
 msgid ""
@@ -107,6 +124,8 @@ msgid ""
 "``managedResources`` field in your configuration file. Selecting a "
 "managed resource opens it as a pop-up window in the desktop app."
 msgstr ""
+"관리형 리소스를 구성하려면 구성 파일의 ``managedResources`` 필드에 경로를 추가하세요. "
+"관리형 리소스를 선택하면 데스크톱 앱에서 팝업 창으로 열립니다."
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:63
 msgid ""
@@ -114,47 +133,49 @@ msgid ""
 "<configure/environment-configuration-settings:managed resource paths>` "
 "server configuration setting. For example, adding the ``/video`` path:"
 msgstr ""
+"또한 :ref:Managed Resource Paths <configure/environment-configuration-settings:managed resource paths>` "
+"서버 구성 설정을 구성해야 합니다. 예를 들어, ``/video`` 경로를 추가하는 경우:"
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:71
 msgid ""
 "Below are examples of server URLs with valid and invalid managed resource"
 " URLs:"
-msgstr ""
+msgstr "다음은 유효하고 유효하지 않은 관리형 리소스 URL이 있는 서버 URL 예시입니다:"
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:73
 msgid "Server: ``https://mattermost.my.org``"
-msgstr ""
+msgstr "서버: ``https://mattermost.my.org``"
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:75
 msgid "Valid: ``https://mattermost.my.org/video``"
-msgstr ""
+msgstr "유효함: ``https://mattermost.my.org/video``"
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:76
 msgid "Valid: ``https://mattermost.my.org/conference``"
-msgstr ""
+msgstr "유효함: ``https://mattermost.my.org/conference``"
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:77
 msgid "Invalid: ``http://mattermost.my.org/video`` (different protocol)"
-msgstr ""
+msgstr "유효하지 않음: ``http://mattermost.my.org/video`` (다른 프로토콜)"
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:78
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:85
 msgid "Invalid: ``https://conference.my.org`` (different origin)"
-msgstr ""
+msgstr "유효하지 않음: ``https://conference.my.org`` (다른 출처)"
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:80
 msgid "Server: ``https://my.org/mattermost``"
-msgstr ""
+msgstr "서버: ``https://my.org/mattermost``"
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:82
 msgid "Valid: ``https://my.org/video``"
-msgstr ""
+msgstr "유효함: ``https://my.org/video``"
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:83
 msgid "Valid: ``https://my.org/conference``"
-msgstr ""
+msgstr "유효함: ``https://my.org/conference``"
 
 #: ../../source/deploy/desktop/distribute-a-custom-desktop-app.rst:84
 msgid "Invalid: ``http://my.org/video`` (different protocol)"
-msgstr ""
+msgstr "유효하지 않음: ``http://my.org/video`` (다른 프로토콜)"
 

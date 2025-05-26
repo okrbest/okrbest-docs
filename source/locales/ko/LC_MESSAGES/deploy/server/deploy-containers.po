@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/deploy/server/deploy-containers.rst:2
 msgid "Deploy Mattermost using Containers"
-msgstr ""
+msgstr "컨테이너를 사용하여 Mattermost 배포하기"
 
 #: ../../source/deploy/server/deploy-containers.rst:4
 msgid ""
@@ -32,30 +32,33 @@ msgid ""
 "production environments as it doesn't support clustered deployments or "
 "High Availability (HA) configurations out-of-the-box."
 msgstr ""
+"기능 탐색, 테스트 및 개발 목적으로 컨테이너 기술을 사용하여 Mattermost Server를 배포할 수 있습니다. 이는 기본 인프라를 관리할 필요 없이 "
+"Mattermost 인스턴스를 빠르게 설정할 수 있게 해줍니다. 이 배포 방법은 기본적으로 클러스터 배포나 고가용성(HA) 구성을 지원하지 않기 때문에 "
+"프로덕션 환경에서는 사용하지 않아야 합니다."
 
 #: ../../source/deploy/server/deploy-containers.rst:7
 msgid ""
 "Choose your preferred container platform below for specific deployment "
 "instructions:"
-msgstr ""
+msgstr "특정 배포 지침을 위해 아래에서 선호하는 컨테이너 플랫폼을 선택하세요:"
 
 #: ../../source/deploy/server/containers/install-docker.rst:3
 msgid ""
 "This guide provides step-by-step instructions for deploying Mattermost "
 "using Docker containers."
-msgstr ""
+msgstr "이 가이드는 Docker 컨테이너를 사용하여 Mattermost를 배포하는 단계별 지침을 제공합니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:7
 msgid ""
 "Mattermost server deployment using Docker is officially supported on "
 "Linux operating systems only."
-msgstr ""
+msgstr "Docker를 사용한 Mattermost 서버 배포는 Linux 운영 체제에서만 공식적으로 지원됩니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:8
 msgid ""
 "macOS and Windows Docker deployments are supported for testing and "
 "development purposes only."
-msgstr ""
+msgstr "macOS와 Windows Docker 배포는 테스트 및 개발 목적으로만 지원됩니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:9
 msgid ""
@@ -66,10 +69,13 @@ msgid ""
 "</deploy/server/deploy-kubernetes>` for HA for these features to ensure "
 "reliability."
 msgstr ""
+"Docker는 자동 장애 조치, 공유 스토리지, 로드 밸런싱 등 주요 기능이 부족하기 때문에 고가용성(HA)에 이상적이지 않습니다. Docker는 "
+"여러 노드 관리와 장애 복구에도 어려움이 있습니다. 이러한 기능을 통해 안정성을 보장하기 위해 HA를 위해서는 :doc:`Kubernetes에 "
+"배포 </deploy/server/deploy-kubernetes>` 하는 것을 권장합니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:11
 msgid "**Step 1: Install Docker**"
-msgstr ""
+msgstr "**1단계: Docker 설치**"
 
 #: ../../source/deploy/server/containers/install-docker.rst:13
 msgid ""
@@ -78,10 +84,13 @@ msgid ""
 "<https://docs.docker.com/engine/install/>`__ and `Docker Compose "
 "<https://docs.docker.com/compose/install/>`_ (release 1.28 or later)."
 msgstr ""
+"Docker가 설치되어 있지 않다면, 운영 체제에 따라 아래 지침을 따르세요. `Docker Engine "
+"<https://docs.docker.com/engine/install/>`__ 와 `Docker Compose "
+"<https://docs.docker.com/compose/install/>`_ (1.28 이상 버전)이 필요합니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:15
 msgid "**Step 2: Deploy Mattermost on Docker**"
-msgstr ""
+msgstr "**2단계: Docker에 Mattermost 배포**"
 
 #: ../../source/deploy/server/containers/install-docker.rst:17
 msgid ""
@@ -89,36 +98,38 @@ msgid ""
 "Docker by leveraging `Docker Compose "
 "<https://docs.docker.com/compose/install/>`_."
 msgstr ""
+"이 섹션은 `Docker Compose <https://docs.docker.com/compose/install/>`_ 를 활용하여 "
+"Docker에 Mattermost를 배포하는 빠른 시작 가이드를 제공합니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:21
 msgid ""
 "The deployment configuration results in two separate containers: a "
 "container for the database and a container for the application. An "
 "optional third container results when using NGINX for reverse proxy."
-msgstr ""
+msgstr "배포 구성은 두 개의 별도 컨테이너로 구성됩니다: 데이터베이스용 컨테이너와 애플리케이션용 컨테이너입니다. NGINX를 리버스 프록시로 사용할 경우 선택적으로 세 번째 컨테이너가 추가됩니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:22
 msgid ""
 "Encountering issues with your Docker deployment? See the :doc:`Docker "
 "deployment troubleshooting </deploy/server/docker-troubleshooting>` "
 "documentation for details."
-msgstr ""
+msgstr "Docker 배포에 문제가 발생했나요? 자세한 내용은 :doc:`Docker 배포 문제 해결 </deploy/server/docker-troubleshooting>` 문서를 참조하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:24
 msgid "In a terminal window, clone the repository and enter the directory."
-msgstr ""
+msgstr "터미널 창에서 저장소를 복제하고 디렉토리로 이동하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:31
 msgid ""
 "Create your ``.env`` file by copying and adjusting the ``env.example`` "
 "file."
-msgstr ""
+msgstr "``env.example`` 파일을 복사하고 수정하여 ``.env`` 파일을 생성하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:39
 msgid ""
 "At a minimum, you must edit the ``DOMAIN`` value in the ``.env`` file to "
 "correspond to the domain for your Mattermost server."
-msgstr ""
+msgstr "최소한 ``.env`` 파일의 ``DOMAIN`` 값을 Mattermost 서버의 도메인에 맞게 수정해야 합니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:40
 msgid ""
@@ -126,100 +137,102 @@ msgid ""
 "<https://docs.mattermost.com/administration/config-settings.html#support-"
 "email>`_ via ``MM_SUPPORTSETTINGS_SUPPORTEMAIL``. This is the email "
 "address your users will contact when they need help."
-msgstr ""
+msgstr "``MM_SUPPORTSETTINGS_SUPPORTEMAIL`` 을 통해 `지원 이메일 <https://docs.mattermost.com/administration/config-settings.html#support-email>`_ 을 구성하는 것을 권장합니다. "
+"이는 사용자가 도움이 필요할 때 연락할 이메일 주소입니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:42
 msgid "Create the required directories and set their permissions."
-msgstr ""
+msgstr "필요한 디렉토리를 생성하고 권한을 설정하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:49
 msgid ""
 "*(Optional)* Configure TLS for NGINX. If you're not using the included "
 "NGINX reverse proxy, you can skip this step."
-msgstr ""
+msgstr "*(선택사항)* NGINX용 TLS를 구성하세요. 포함된 NGINX 리버스 프록시를 사용하지 않는 경우 이 단계를 건너뛸 수 있습니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:51
 msgid "**If creating a new certificate and key:**"
-msgstr ""
+msgstr "**새 인증서와 키를 생성하는 경우:**"
 
 #: ../../source/deploy/server/containers/install-docker.rst:57
 msgid ""
 "To include the certificate and key, uncomment the following lines in your"
 " ``.env`` file and ensure they point to the appropriate files."
-msgstr ""
+msgstr "인증서와 키를 포함하려면 ``.env`` 파일에서 다음 줄의 주석을 해제하고 적절한 파일을 가리키도록 하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:64
 msgid "**If using a pre-existing certificate and key:**"
-msgstr ""
+msgstr "**기존 인증서와 키를 사용하는 경우:**"
 
 #: ../../source/deploy/server/containers/install-docker.rst:72
 msgid ""
 "To include the certificate and key, ensure the following lines in your "
 "``.env`` file points to the appropriate files."
-msgstr ""
+msgstr "인증서와 키를 포함하려면 ``.env`` 파일의 다음 줄이 적절한 파일을 가리키도록 하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:79
 msgid "Deploy Mattermost."
-msgstr ""
+msgstr "Mattermost를 배포하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:81
 msgid "**Without using the included NGINX:**"
-msgstr ""
+msgstr "**포함된 NGINX를 사용하지 않는 경우:**"
 
 #: ../../source/deploy/server/containers/install-docker.rst:87
 msgid ""
 "To access your new Mattermost deployment, navigate to "
 "``http://<YOUR_MM_DOMAIN>:8065/`` in your browser."
-msgstr ""
+msgstr "새 Mattermost 배포에 접근하려면 브라우저에서 ``http://<YOUR_MM_DOMAIN>:8065/`` 로 이동하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:89
 #: ../../source/deploy/server/containers/install-docker.rst:103
 msgid "To shut down your deployment:"
-msgstr ""
+msgstr "배포를 종료하려면:"
 
 #: ../../source/deploy/server/containers/install-docker.rst:95
 msgid "**Using the included NGINX:**"
-msgstr ""
+msgstr "**포함된 NGINX를 사용하는 경우:**"
 
 #: ../../source/deploy/server/containers/install-docker.rst:101
 msgid ""
 "To access your new Mattermost deployment via HTTPS, navigate to "
 "``https://<YOUR_MM_DOMAIN>/`` in your browser."
-msgstr ""
+msgstr "HTTPS를 통해 새 Mattermost 배포에 접근하려면 브라우저에서 ``https://<YOUR_MM_DOMAIN>/`` 로 이동하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:109
 msgid ""
 "Create your first Mattermost system admin user, :doc:`invite more users "
 "</collaborate/manage-channel-members>`, and explore the Mattermost "
 "platform."
-msgstr ""
+msgstr "첫 번째 Mattermost 시스템 관리자 사용자를 생성하고, :doc:`더 많은 사용자 초대 </collaborate/manage-channel-members>`, 그리고 Mattermost 플랫폼을 탐색하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:111
 msgid "**Configure SSO With GitLab (Optional)**"
-msgstr ""
+msgstr "**GitLab으로 SSO 구성 (선택사항)**"
 
 #: ../../source/deploy/server/containers/install-docker.rst:113
 msgid ""
 "To use SSO with GitLab with a self-signed certificate, you have to add "
 "the PKI chain for your authority. This is required to avoid the ``Token "
 "request failed: certificate signed by unknown authority`` error."
-msgstr ""
+msgstr "자체 서명된 인증서로 GitLab과 SSO를 사용하려면 권한에 대한 PKI 체인을 추가해야 합니다. 이는 ``Token request failed: certificate signed by unknown authority`` "
+"오류를 방지하기 위해 필요합니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:115
 msgid ""
 "To add the PKI chain, uncomment the following line in your ``.env`` file,"
 " and ensure it points to your ``pki_chain.pem`` file:"
-msgstr ""
+msgstr "PKI 체인을 추가하려면 ``.env`` 파일에서 다음 줄의 주석을 해제하고 ``pki_chain.pem`` 파일을 가리키도록 하세요:"
 
 #: ../../source/deploy/server/containers/install-docker.rst:121
 msgid ""
 "Then uncomment the following line in your ``docker-compose.yml`` file, "
 "and ensure it points to the same ``pki_chain.pem`` file:"
-msgstr ""
+msgstr "그런 다음 ``docker-compose.yml`` 파일에서 다음 줄의 주석을 해제하고 동일한 ``pki_chain.pem`` 파일을 가리키도록 하세요:"
 
 #: ../../source/deploy/server/containers/install-docker.rst:127
 msgid "**Upgrade from mattermost-docker**"
-msgstr ""
+msgstr "**mattermost-docker에서 업그레이드**"
 
 #: ../../source/deploy/server/containers/install-docker.rst:129
 msgid ""
@@ -227,7 +240,8 @@ msgid ""
 "docker>`__ GitHub repository is deprecated. Visit the `mattermost/docker "
 "<https://github.com/mattermost/docker>`_ GitHub repository to access the "
 "official Docker deployment solution for Mattermost."
-msgstr ""
+msgstr "`mattermost-docker <https://github.com/mattermost/mattermost-docker>`__ GitHub 저장소는 더 이상 사용되지 않습니다. "
+"Mattermost의 공식 Docker 배포 솔루션에 접근하려면 `mattermost/docker <https://github.com/mattermost/docker>`_ GitHub 저장소를 방문하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:131
 msgid ""
@@ -238,27 +252,29 @@ msgid ""
 " v11+ databases, which we know has been a long-running challenge for the "
 "community, and you will not lose any features or functionality by moving "
 "to these new images."
-msgstr ""
+msgstr "기존 ``mattermost/mattermost-prod-app`` 이미지에서 마이그레이션하려면 Mattermost에서 공식적으로 지원하는 ``mattermost/mattermost-enterprise-edition`` "
+"또는 ``mattermost/mattermost-team-edition`` 이미지로 마이그레이션하는 것을 권장합니다. "
+"이 이미지들은 PostgreSQL v11+ 데이터베이스를 지원하며, 이는 커뮤니티에서 오랫동안 과제였던 부분입니다. 이러한 새 이미지로 이동해도 기능이나 기능성을 잃지 않습니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:133
 msgid ""
 "For additional help or questions, please refer to `this issue "
 "<https://github.com/mattermost/mattermost-docker/issues/489>`__."
-msgstr ""
+msgstr "추가 도움이나 질문이 있으면 `이 이슈 <https://github.com/mattermost/mattermost-docker/issues/489>`__ 를 참조하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:135
 msgid "**Install a different version of Mattermost**"
-msgstr ""
+msgstr "**다른 버전의 Mattermost 설치**"
 
 #: ../../source/deploy/server/containers/install-docker.rst:137
 msgid "Shut down your deployment."
-msgstr ""
+msgstr "배포를 종료하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:139
 msgid ""
 "Run ``git pull`` to fetch any recent changes to the repository, paying "
 "attention to any potential ``env.example`` changes."
-msgstr ""
+msgstr "저장소의 최근 변경사항을 가져오기 위해 ``git pull``을 실행하고, 잠재적인 ``env.example`` 변경사항에 주의하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:141
 msgid ""
@@ -267,36 +283,39 @@ msgid ""
 "enterprise-edition/tags?page=1&ordering=last_updated>`__ or `team "
 "<https://hub.docker.com/r/mattermost/mattermost-team-"
 "edition/tags?page=1&ordering=last_updated>`__ image version."
-msgstr ""
+msgstr "``.env`` 파일에서 ``MATTERMOST_IMAGE_TAG`` 를 원하는 "
+"`enterprise <https://hub.docker.com/r/mattermost/mattermost-enterprise-edition/tags?page=1&ordering=last_updated>`__ 또는 "
+"`team <https://hub.docker.com/r/mattermost/mattermost-team-edition/tags?page=1&ordering=last_updated>`__ 이미지 버전을 가리키도록 조정하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:143
 msgid "Redeploy Mattermost."
-msgstr ""
+msgstr "Mattermost를 재배포하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:145
 msgid "**Troubleshooting your Docker deployment**"
-msgstr ""
+msgstr "**Docker 배포 문제 해결**"
 
 #: ../../source/deploy/server/containers/install-docker.rst:147
 msgid ""
 "If deploying on an M1 Mac and encountering permission issues in the "
 "Docker container, `redo the third step <#create-the-required-directores-"
 "and-set-their-permissions>`__ and skip this command:"
-msgstr ""
+msgstr "M1 Mac에서 배포 중이고 Docker 컨테이너에서 권한 문제가 발생하는 경우, `세 번째 단계를 다시 수행 <#create-the-required-directores-and-set-their-permissions>`__ 하고 "
+"이 명령을 건너뛰세요:"
 
 #: ../../source/deploy/server/containers/install-docker.rst:153
 msgid ""
 "If having issues deploying on Docker generally, ensure the docker daemon "
 "is enabled and running:"
-msgstr ""
+msgstr "일반적으로 Docker 배포에 문제가 있는 경우, docker 데몬이 활성화되어 있고 실행 중인지 확인하세요:"
 
 #: ../../source/deploy/server/containers/install-docker.rst:159
 msgid "To remove all data and settings for your Mattermost deployment:"
-msgstr ""
+msgstr "Mattermost 배포의 모든 데이터와 설정을 제거하려면:"
 
 #: ../../source/deploy/server/containers/install-docker.rst:165
 msgid "**Troubleshooting PostgreSQL**"
-msgstr ""
+msgstr "**PostgreSQL 문제 해결**"
 
 #: ../../source/deploy/server/containers/install-docker.rst:167
 msgid ""
@@ -304,11 +323,12 @@ msgid ""
 "password (recommended) in the ``.env`` file. If your database is managed "
 "externally, you'll need to change the password in your database "
 "management tool. Then, update the ``.env`` file with the new credentials."
-msgstr ""
+msgstr "빠른 시작 배포의 경우 ``.env`` 파일에서 Postgres 사용자 이름 및/또는 비밀번호를 변경할 수 있습니다(권장). 데이터베이스가 외부에서 관리되는 경우, "
+"데이터베이스 관리 도구에서 비밀번호를 변경해야 합니다. 그런 다음 ``.env`` 파일을 새 자격 증명으로 업데이트하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:169
 msgid "**Troubleshooting TLS & NGINX**"
-msgstr ""
+msgstr "**TLS & NGINX 문제 해결**"
 
 #: ../../source/deploy/server/containers/install-docker.rst:171
 msgid ""
@@ -316,11 +336,12 @@ msgid ""
 "Nginx, please refer to `this document in the repository "
 "<https://github.com/mattermost/docker/blob/main/docs/issuing-letsencrypt-"
 "certificate.md>`__."
-msgstr ""
+msgstr "Nginx용 TLS 인증서와 키 구성에 대한 자세한 가이드는 저장소의 `이 문서 "
+"<https://github.com/mattermost/docker/blob/main/docs/issuing-letsencrypt-certificate.md>`__ 를 참조하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:173
 msgid "**Trial Mattermost using Docker Preview**"
-msgstr ""
+msgstr "**Docker Preview를 사용한 Mattermost 체험**"
 
 #: ../../source/deploy/server/containers/install-docker.rst:175
 msgid ""
@@ -328,7 +349,8 @@ msgid ""
 "Docker? We recommend using the `Mattermost Docker Preview Image "
 "<https://github.com/mattermost/mattermost-docker-preview>`_ to install "
 "Mattermost in Preview Mode."
-msgstr ""
+msgstr "Docker를 사용하여 단일 로컬 머신에서 Mattermost를 평가하는 방법을 찾고 계신가요? Preview 모드에서 Mattermost를 설치하기 위해 "
+"`Mattermost Docker Preview Image <https://github.com/mattermost/mattermost-docker-preview>`_ 를 사용하는 것을 권장합니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:179
 msgid ""
@@ -337,7 +359,9 @@ msgid ""
 "data and configuration as expected. You can see the :doc:`configuration "
 "settings </configure/configuration-settings>` documentation to learn more"
 " about customizing your trial deployment."
-msgstr ""
+msgstr "이 로컬 이미지는 자체 포함되어 있습니다(즉, 내부 데이터베이스가 있고 바로 사용할 수 있습니다). 이 이미지를 사용하는 컨테이너를 삭제하면 "
+"예상대로 데이터와 구성이 제거됩니다. 체험 배포를 사용자 지정하는 방법에 대해 자세히 알아보려면 :doc:`구성 설정 "
+"</configure/configuration-settings>` 문서를 참조하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:180
 msgid ""
@@ -345,7 +369,8 @@ msgid ""
 "uses a known password string, contains other non-production configuration"
 " settings, has email disabled, keeps no persistent data (all data lives "
 "inside the container), and doesn't support upgrades."
-msgstr ""
+msgstr "**Preview 모드** 는 알려진 비밀번호 문자열을 사용하고, 다른 비프로덕션 구성 설정을 포함하며, 이메일이 비활성화되어 있고, "
+"영구 데이터를 유지하지 않으며(모든 데이터는 컨테이너 내부에 있음), 업그레이드를 지원하지 않기 때문에 프로덕션 환경에서 사용해서는 안 됩니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:181
 msgid ""
@@ -353,21 +378,22 @@ msgid ""
 "on a non-local environment, you should ensure that the server is running "
 "on a secure (HTTPs) connection and that the :ref:`network requirements "
 "<configure/calls-deployment:network>` to run calls are met."
-msgstr ""
+msgstr "비로컬 환경에서 **Preview 모드** 의 통화 기능을 사용할 계획이라면, 서버가 보안(HTTPS) 연결에서 실행되고 있고 "
+":ref:`네트워크 요구 사항 <configure/calls-deployment:network>` 이 충족되는지 확인해야 합니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:183
 msgid "Install `Docker <https://www.docker.com/get-started/>`__."
-msgstr ""
+msgstr "`Docker <https://www.docker.com/get-started/>`__ 를 설치하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:185
 msgid "Once you have Docker, run the following command in a terminal window:"
-msgstr ""
+msgstr "Docker가 설치되면 터미널 창에서 다음 명령을 실행하세요:"
 
 #: ../../source/deploy/server/containers/install-docker.rst:191
 msgid ""
 "When Docker is done fetching the image, navigate to "
 "``http://localhost:8065/`` in your browser to preview Mattermost."
-msgstr ""
+msgstr "Docker가 이미지 가져오기를 완료하면 브라우저에서 ``http://localhost:8065/`` 로 이동하여 Mattermost를 미리 볼 수 있습니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:192
 msgid ""
@@ -377,15 +403,17 @@ msgid ""
 "/authentication-configuration-settings:enable open server>` configuration"
 " setting is enabled. This setting is disabled for self-hosted Mattermost "
 "deployments by default."
-msgstr ""
+msgstr "미리보기 인스턴스용 계정을 만들려면 화면 오른쪽 상단의 **계정이 없음** 을 선택하세요. 이 옵션이 보이지 않으면 "
+":ref:`서버 열기 활성화 <configure/authentication-configuration-settings:enable open server>` 구성 설정이 활성화되어 있는지 확인하세요. "
+"이 설정은 기본적으로 자체 호스팅 Mattermost 배포에서 비활성화되어 있습니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:193
 msgid "Log in to your preview instance with your user credentials."
-msgstr ""
+msgstr "사용자 자격 증명으로 미리보기 인스턴스에 로그인하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:195
 msgid "**Troubleshooting your preview deployment**"
-msgstr ""
+msgstr "**미리보기 배포 문제 해결**"
 
 #: ../../source/deploy/server/containers/install-docker.rst:197
 msgid ""
@@ -394,35 +422,37 @@ msgid ""
 "product can function without enabling email. See the :doc:`Configuration "
 "Settings </configure/configuration-settings>` documentation to customize "
 "your deployment."
-msgstr ""
+msgstr "Mattermost의 **Preview 모드** Docker 인스턴스는 제품 평가를 위해 설계되었으며, 이메일을 활성화하지 않고도 제품이 작동할 수 있도록 "
+"``SendEmailNotifications=false`` 로 설정됩니다. 배포를 사용자 지정하려면 :doc:`구성 설정 "
+"</configure/configuration-settings>` 문서를 참조하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:199
 msgid ""
 "To update your Mattermost preview image and container, you must first "
 "stop and delete your existing **mattermost-preview** container by running"
 " the following commands:"
-msgstr ""
+msgstr "Mattermost 미리보기 이미지와 컨테이너를 업데이트하려면 먼저 다음 명령을 실행하여 기존 **mattermost-preview** 컨테이너를 중지하고 삭제해야 합니다:"
 
 #: ../../source/deploy/server/containers/install-docker.rst:207
 msgid ""
 "Once the new image is pulled and the container is stopped and deleted you"
 " need to run the ``docker run`` command from above."
-msgstr ""
+msgstr "새 이미지를 가져오고 컨테이너가 중지되고 삭제되면 위의 ``docker run`` 명령을 실행해야 합니다."
 
 #: ../../source/deploy/server/containers/install-docker.rst:210
 msgid "On Linux, include ``sudo`` in front of all ``docker`` commands."
-msgstr ""
+msgstr "Linux에서는 모든 ``docker`` 명령 앞에 ``sudo`` 를 포함하세요."
 
 #: ../../source/deploy/server/containers/install-docker.rst:212
 msgid "To access a shell inside the container, run the following command:"
-msgstr ""
+msgstr "컨테이너 내부의 셸에 접근하려면 다음 명령을 실행하세요:"
 
 #: ../../source/deploy/server/containers/install-docker.rst:220
 msgid ""
 "See the :doc:`deployment troubleshooting </guides/deployment-"
 "troubleshooting>` documentation for resolutions to common deployment "
 "issues."
-msgstr ""
+msgstr "일반적인 배포 문제 해결 방법은 :doc:`배포 문제 해결 </guides/deployment-troubleshooting>` 문서를 참조하세요."
 
 #: ../../source/deploy/server/containers/install-aws-beanstalk.rst:3
 msgid ""
@@ -432,72 +462,76 @@ msgid ""
 "quickly set up a Mattermost instance without needing to manage the "
 "underlying infrastructure. This deployment method shouldn't be used in "
 "production environments."
-msgstr ""
+msgstr "Docker 컨테이너를 사용하여 AWS Elastic Beanstalk에서 Mattermost 서버를 **Preview 모드** 로 배포할 수 있습니다. "
+"이는 기본 인프라를 관리할 필요 없이 Mattermost 인스턴스를 빠르게 설정할 수 있게 해주므로 기능 탐색, 테스트 및 개발 목적으로 좋은 옵션입니다. "
+"이 배포 방법은 프로덕션 환경에서 사용하지 않아야 합니다."
 
 #: ../../source/deploy/server/containers/install-aws-beanstalk.rst:5
 msgid ""
 "The Elastic Beanstalk application creation process below combines "
 "Application and Environment creation in a single workflow:"
-msgstr ""
+msgstr "아래의 Elastic Beanstalk 애플리케이션 생성 프로세스는 애플리케이션과 환경 생성을 단일 워크플로우로 결합합니다:"
 
 #: ../../source/deploy/server/containers/install-aws-beanstalk.rst:7
 msgid ""
 "From your `AWS console <https://console.aws.amazon.com/console/home>`__ "
 "select **Elastic Beanstalk**."
-msgstr ""
+msgstr "`AWS 콘솔 <https://console.aws.amazon.com/console/home>`__ 에서 **Elastic Beanstalk** 를 선택하세요."
 
 #: ../../source/deploy/server/containers/install-aws-beanstalk.rst:8
 msgid ""
 "Select the **Create Application** button on the Elastic Beanstalk home "
 "page."
-msgstr ""
+msgstr "Elastic Beanstalk 홈 페이지에서 **애플리케이션 생성** 버튼을 선택하세요."
 
 #: ../../source/deploy/server/containers/install-aws-beanstalk.rst:9
 msgid "Enter an **Application name** for the Elastic Beanstalk application."
-msgstr ""
+msgstr "Elastic Beanstalk 애플리케이션의 **애플리케이션 이름** 을 입력하세요."
 
 #: ../../source/deploy/server/containers/install-aws-beanstalk.rst:10
 msgid "(Optional) Specify **Application tags**."
-msgstr ""
+msgstr "(선택 사항) **애플리케이션 태그** 를 지정하세요."
 
 #: ../../source/deploy/server/containers/install-aws-beanstalk.rst:11
 msgid "Select **Docker** for the Platform."
-msgstr ""
+msgstr "플랫폼으로 **Docker** 를 선택하세요."
 
 #: ../../source/deploy/server/containers/install-aws-beanstalk.rst:12
 msgid ""
 "Choose **Docker running on 64bit Amazon Linux 2** for the **Platform** "
 "branch. Note that multi-container Docker is now deprecated."
-msgstr ""
+msgstr "**플랫폼** 분기에서 **64비트 Amazon Linux 2에서 실행되는 Docker** 를 선택하세요. 다중 컨테이너 Docker는 더 이상 사용되지 않습니다."
 
 #: ../../source/deploy/server/containers/install-aws-beanstalk.rst:13
 msgid "Leave the platform version preselected as **3.4.8 (Recommended)**."
-msgstr ""
+msgstr "플랫폼 버전을 **3.4.8 (권장)** 으로 미리 선택된 상태로 두세요."
 
 #: ../../source/deploy/server/containers/install-aws-beanstalk.rst:14
 msgid "For **Application code**, select **Upload your code**."
-msgstr ""
+msgstr "**애플리케이션 코드**에서 **코드 업로드** 를 선택하세요."
 
 #: ../../source/deploy/server/containers/install-aws-beanstalk.rst:15
 msgid ""
 "Download the ``Dockerrun.aws.json`` file from "
 "https://raw.githubusercontent.com/mattermost/mattermost-docker-"
 "preview/master/Dockerrun.aws.json."
-msgstr ""
+msgstr "https://raw.githubusercontent.com/mattermost/mattermost-docker-preview/master/Dockerrun.aws.json 에서 ``Dockerrun.aws.json`` 파일을 다운로드하세요."
 
 #: ../../source/deploy/server/containers/install-aws-beanstalk.rst:17
 msgid ""
 "Set a unique **Version Label**, choose **Local File**, then select "
 "**Choose file** button to browse for the downloaded file in the previous "
 "step. You should see a **File successfully uploaded** message."
-msgstr ""
+msgstr "고유한 **버전 레이블** 을 설정하고, **로컬 파일** 을 선택한 다음 **파일 선택** 버튼을 클릭하여 이전 단계에서 다운로드한 파일을 찾으세요. "
+"**파일이 성공적으로 업로드됨** 메시지가 표시되어야 합니다."
 
 #: ../../source/deploy/server/containers/install-aws-beanstalk.rst:18
 msgid ""
 "Select **Create Application**. It may take a few minutes for Beanstalk to"
 " launch your environment. If the launch is successful, you will see a see"
 " a large green checkmark and the **Health status** displayed in green."
-msgstr ""
+msgstr "**애플리케이션 생성** 을 선택하세요. Beanstalk가 환경을 시작하는 데 몇 분이 걸릴 수 있습니다. "
+"시작이 성공하면 큰 녹색 체크 표시와 **상태** 가 녹색으로 표시됩니다."
 
 #: ../../source/deploy/server/containers/install-aws-beanstalk.rst:19
 msgid ""
@@ -507,11 +541,13 @@ msgid ""
 "url>.elasticbeanstalk.com``. You can also map your own domain if you "
 "prefer. When everything is working correctly, the domain navigates you to"
 " the Mattermost Login page. Enjoy exploring Mattermost!"
-msgstr ""
+msgstr "대시보드 상단의 애플리케이션 이름 옆에 있는 도메인 링크를 선택하여 환경을 테스트하세요. "
+"또는 브라우저에 ``http://<your-ebs-application-url>.elasticbeanstalk.com`` 형식으로 도메인을 입력하세요. "
+"원하는 경우 자체 도메인을 매핑할 수도 있습니다. 모든 것이 올바르게 작동하면 도메인이 Mattermost 로그인 페이지로 이동합니다. Mattermost 탐색을 즐기세요!"
 
 #: ../../source/deploy/server/containers/install-aws-beanstalk.rst:21
 msgid "**(Recommended) Enable Email**"
-msgstr ""
+msgstr "**(권장) 이메일 활성화**"
 
 #: ../../source/deploy/server/containers/install-aws-beanstalk.rst:23
 msgid ""
@@ -519,18 +555,19 @@ msgid ""
 "evaluation, and sets ``SendEmailNotifications=false`` so the product can "
 "function without enabling email. To see the product's full functionality,"
 " we recommend :doc:`enabling SMTP email </configure/smtp-email>`."
-msgstr ""
+msgstr "Mattermost의 기본 Docker 인스턴스는 제품 평가를 위해 설계되었으며, 이메일을 활성화하지 않고도 제품이 작동할 수 있도록 "
+"``SendEmailNotifications=false`` 로 설정됩니다. 제품의 전체 기능을 보려면 :doc:`SMTP 이메일 활성화 </configure/smtp-email>` 를 권장합니다."
 
 #: ../../source/deploy/server/containers/install-aws-beanstalk.rst:25
 msgid ""
 "See :doc:`Configuration Settings </configure/configuration-settings>` "
 "documentation for more configuration and customization options for your "
 "deployment."
-msgstr ""
+msgstr "배포에 대한 더 많은 구성 및 사용자 지정 옵션은 :doc:`Configuration Settings </configure/configuration-settings>` 문서를 참조하세요."
 
 #: ../../source/deploy/server/deploy-containers.rst:20
 msgid "Secure your Mattermost deployment"
-msgstr ""
+msgstr "Mattermost 배포 보안 설정"
 
 #: ../../source/deploy/server/deploy-containers.rst:22
 msgid ""
@@ -538,84 +575,87 @@ msgid ""
 "proper configurations for HTTPS and reverse proxying. This guide outlines"
 " the steps to set up TLS and an NGINX reverse proxy for your Mattermost "
 "deployment, ensuring secure communication between users and your server."
-msgstr ""
+msgstr "Docker 컨테이너를 사용한 Mattermost 배포는 HTTPS 및 리버스 프록시에 대한 적절한 구성으로 보안을 강화할 수 있습니다. "
+"이 가이드는 Mattermost 배포를 위한 TLS 및 NGINX 리버스 프록시 설정 단계를 설명하여 사용자와 서버 간의 안전한 통신을 보장합니다."
 
 #: ../../source/deploy/server/deploy-containers.rst:25
 msgid ""
 "Set Up an NGINX Container to serve as the reverse proxy. You can use "
 "NGINX either as a separate container or installed on the host machine."
-msgstr ""
+msgstr "리버스 프록시 역할을 하는 NGINX 컨테이너를 설정하세요. NGINX는 별도의 컨테이너로 사용하거나 호스트 시스템에 설치할 수 있습니다."
 
 #: ../../source/deploy/server/deploy-containers.rst:26
 msgid "Bind Volumes for NGINX Configuration and TLS Certificates:"
-msgstr ""
+msgstr "NGINX 구성 및 TLS 인증서를 위한 볼륨 바인딩:"
 
 #: ../../source/deploy/server/deploy-containers.rst:28
 msgid ""
 "Bind Docker volumes for NGINX configuration files and TLS certificates to"
 " ensure persistent and secure storage of these assets."
-msgstr ""
+msgstr "NGINX 구성 파일과 TLS 인증서를 위한 Docker 볼륨을 바인딩하여 이러한 자산의 지속적이고 안전한 저장을 보장하세요."
 
 #: ../../source/deploy/server/deploy-containers.rst:29
 msgid ""
 "Use permission restrictions on host directories where sensitive files "
 "such as TLS keys are stored."
-msgstr ""
+msgstr "TLS 키와 같은 민감한 파일이 저장된 호스트 디렉토리에 권한 제한을 사용하세요."
 
 #: ../../source/deploy/server/deploy-containers.rst:31
 msgid ""
 "Create the NGINX Configuration File by designing a robust ``nginx.conf`` "
 "file to configure reverse proxying and HTTPS. Here's a basic example:"
-msgstr ""
+msgstr "리버스 프록시와 HTTPS를 구성하기 위해 견고한 ``nginx.conf`` 파일을 설계하여 NGINX 구성 파일을 생성하세요. 기본 예시는 다음과 같습니다:"
 
 #: ../../source/deploy/server/deploy-containers.rst:54
 msgid "Verify the configuration with ``nginx -t`` before applying."
-msgstr ""
+msgstr "적용하기 전에 ``nginx -t`` 로 구성을 확인하세요."
 
 #: ../../source/deploy/server/deploy-containers.rst:56
 msgid "Obtain TLS Certificates:"
-msgstr ""
+msgstr "TLS 인증서 획득:"
 
 #: ../../source/deploy/server/deploy-containers.rst:58
 msgid ""
 "Use Let's Encrypt for free, automated certificates. Tools like Certbot "
 "can help automate the process."
-msgstr ""
+msgstr "무료 자동화된 인증서를 위해 Let's Encrypt를 사용하세요. Certbot과 같은 도구가 프로세스 자동화에 도움이 될 수 있습니다."
 
 #: ../../source/deploy/server/deploy-containers.rst:59
 msgid ""
 "Alternatively, purchase certificates from a trusted certificate authority"
 " (CA) and ensure proper setup of intermediate and root certificate "
 "chains."
-msgstr ""
+msgstr "또는 신뢰할 수 있는 인증 기관(CA)에서 인증서를 구매하고 중간 인증서와 루트 인증서 체인의 적절한 설정을 보장하세요."
 
 #: ../../source/deploy/server/deploy-containers.rst:61
 msgid ""
 "Keep private keys secure and avoid storing them directly inside Docker "
 "images."
-msgstr ""
+msgstr "개인 키를 안전하게 보관하고 Docker 이미지 내부에 직접 저장하지 마세요."
 
 #: ../../source/deploy/server/deploy-containers.rst:63
 msgid "Connect Containers Using Docker Networking:"
-msgstr ""
+msgstr "Docker 네트워킹을 사용하여 컨테이너 연결하기:"
 
 #: ../../source/deploy/server/deploy-containers.rst:65
 msgid "Use Docker's networking features to isolate and link containers."
-msgstr ""
+msgstr "컨테이너를 격리하고 연결하기 위해 Docker의 네트워킹 기능을 사용하세요."
 
 #: ../../source/deploy/server/deploy-containers.rst:66
 msgid ""
 "Create a custom Docker bridge network to ensure secure communication. For"
 " example:"
 msgstr ""
+"안전한 통신을 보장하기 위해 사용자 정의 Docker 브리지 네트워크를 생성하세요. "
+"예시:"
 
 #: ../../source/deploy/server/deploy-containers.rst:72
 msgid "Launch the Mattermost and NGINX containers on the same network:"
-msgstr ""
+msgstr "동일한 네트워크에서 Mattermost와 NGINX 컨테이너 실행하기:"
 
 #: ../../source/deploy/server/deploy-containers.rst:79
 msgid "Point your domain to the server IP address:"
-msgstr ""
+msgstr "도메인을 서버 IP 주소로 지정하기:"
 
 #: ../../source/deploy/server/deploy-containers.rst:81
 msgid ""
@@ -623,76 +663,99 @@ msgid ""
 "address of your server. If your IP is dynamic, consider setting up "
 "Dynamic DNS (DDNS) for seamless connectivity."
 msgstr ""
+"도메인(예: your-domain.com)이 서버의 공용 IP 주소를 가리키도록 하세요. "
+"IP가 동적인 경우 원활한 연결을 위해 동적 DNS(DDNS) 설정을 고려하세요."
 
 #: ../../source/deploy/server/deploy-containers.rst:83
 msgid ""
 "After placing the certificates and updating the configuration, restart "
 "the NGINX container:"
 msgstr ""
+"인증서를 배치하고 구성을 업데이트한 후 NGINX 컨테이너를 재시작하세요:"
 
 #: ../../source/deploy/server/deploy-containers.rst:85
 msgid ""
 "Use logs (docker logs nginx) to troubleshoot and validate the container’s"
 " operation."
 msgstr ""
+"컨테이너의 작동을 문제 해결하고 검증하기 위해 로그(docker logs nginx)를 "
+"사용하세요."
 
 #: ../../source/deploy/server/deploy-containers.rst:87
 msgid ""
 "Verify HTTPS Access by visiting ``https://your-domain.com`` in a web "
 "browser to confirm Mattermost is running securely over HTTPS."
 msgstr ""
+"웹 브라우저에서 ``https://your-domain.com`` 을 방문하여 HTTPS를 통해 "
+"Mattermost가 안전하게 실행되고 있는지 확인하세요."
 
 #: ../../source/deploy/server/deploy-containers.rst:89
 msgid ""
 "Use tools such as SSL Labs : https://www.ssllabs.com/ssltest/ to validate"
 " the quality of your TLS setup."
 msgstr ""
+"TLS 설정의 품질을 검증하기 위해 SSL Labs(https://www.ssllabs.com/ssltest/)와 "
+"같은 도구를 사용하세요."
 
 #: ../../source/deploy/server/deploy-containers.rst:91
 msgid ""
 "Enable HTTP Strict Transport Security (HSTS) in your NGINX configuration "
 "to prevent downgrade attacks."
 msgstr ""
+"다운그레이드 공격을 방지하기 위해 NGINX 구성에서 HTTP Strict Transport "
+"Security(HSTS)를 활성화하세요."
 
 #: ../../source/deploy/server/deploy-containers.rst:93
 msgid ""
 "Use NGINX rate-limiting features to restrict abusive traffic, such as "
 "excessive requests:"
 msgstr ""
+"과도한 요청과 같은 악의적인 트래픽을 제한하기 위해 NGINX 속도 제한 기능을 "
+"사용하세요:"
 
 #: ../../source/deploy/server/deploy-containers.rst:95
 msgid "Additionally, consider:"
-msgstr ""
+msgstr "추가로 고려할 사항:"
 
 #: ../../source/deploy/server/deploy-containers.rst:97
 msgid ""
 "Use Docker's security features such as Seccomp profiles and AppArmor to "
 "secure your container runtime."
 msgstr ""
+"컨테이너 런타임을 보호하기 위해 Seccomp 프로필과 AppArmor와 같은 Docker의 "
+"보안 기능을 사용하세요."
 
 #: ../../source/deploy/server/deploy-containers.rst:98
 msgid ""
 "Avoid running containers with elevated privileges ``--privileged`` and "
 "utilize user namespaces."
 msgstr ""
+"``--privileged`` 권한으로 컨테이너를 실행하지 말고 사용자 네임스페이스를 "
+"활용하세요."
 
 #: ../../source/deploy/server/deploy-containers.rst:99
 msgid ""
 "Always use trusted images (e.g., official NGINX and Mattermost images) to"
 " prevent exposure to vulnerabilities in third-party images."
 msgstr ""
+"서드파티 이미지의 취약점에 노출되는 것을 방지하기 위해 항상 신뢰할 수 있는 "
+"이미지(예: 공식 NGINX 및 Mattermost 이미지)를 사용하세요."
 
 #: ../../source/deploy/server/deploy-containers.rst:100
 msgid ""
 "Update Mattermost, NGINX, and Docker to their latest versions regularly "
 "to ensure patches for known vulnerabilities are applied."
 msgstr ""
+"알려진 취약점에 대한 패치가 적용되도록 Mattermost, NGINX, Docker를 정기적으로 "
+"최신 버전으로 업데이트하세요."
 
 #: ../../source/deploy/server/deploy-containers.rst:101
 msgid ""
 "Set up proper firewall rules to restrict unauthorized access and monitor "
 "traffic using tools like Fail2Ban or Wazuh."
 msgstr ""
+"Fail2Ban이나 Wazuh와 같은 도구를 사용하여 무단 접근을 제한하고 트래픽을 "
+"모니터링하기 위한 적절한 방화벽 규칙을 설정하세요."
 
 #: ../../source/deploy/server/deploy-containers.rst:103
 msgid ""
@@ -701,4 +764,6 @@ msgid ""
 " through NGINX. Implementing the additional security recommendations will"
 " further protect your environment against evolving threats."
 msgstr ""
-
+"이 단계들을 따르면 Docker 컨테이너를 사용하는 Mattermost 배포가 NGINX를 통한 "
+"효율적인 프록시와 함께 HTTPS를 통해 안전하게 접근 가능해집니다. 추가 보안 "
+"권장사항을 구현하면 진화하는 위협으로부터 환경을 더욱 보호할 수 있습니다."

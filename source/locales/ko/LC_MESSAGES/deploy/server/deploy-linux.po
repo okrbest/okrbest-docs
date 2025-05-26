@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/deploy/server/deploy-linux.rst:2
 msgid "Deploy Mattermost on Linux"
-msgstr ""
+msgstr "Linux에 Mattermost 배포하기"
 
 #: ../../source/deploy/server/deploy-linux.rst:4
 msgid ""
@@ -31,6 +31,9 @@ msgid ""
 "database on a single system for production use, but it is a good option "
 "for development and testing purposes."
 msgstr ""
+"Mattermost 서버는 다양한 Linux 배포판에 배포할 수 있으며, 소규모 팀과 비상업적 고객을 위한 "
+"유연하고 견고한 플랫폼을 제공합니다. 프로덕션 환경에서는 Mattermost 서버와 데이터베이스를 단일 시스템에 "
+"배포하는 것을 권장하지 않지만, 개발 및 테스트 목적으로는 좋은 옵션입니다."
 
 #: ../../source/deploy/server/deploy-linux.rst:6
 msgid ""
@@ -38,6 +41,8 @@ msgid ""
 "installation methods. Choose your preferred platform below for specific "
 "deployment instructions:"
 msgstr ""
+"이 페이지에서는 주요 Linux 배포판과 설치 방법에 대한 배포 옵션을 다룹니다. "
+"특정 배포 지침을 보려면 아래에서 선호하는 플랫폼을 선택하세요:"
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:25
 msgid ""
@@ -47,6 +52,9 @@ msgid ""
 "install method is used for both single and clustered installations, as "
 "you can tools like Packer for a clustered deployment."
 msgstr ""
+"Mattermost PPA(개인 패키지 아카이브)를 사용하여 서명된 ``.deb`` 패키지로 Mattermost 서버를 배포할 수 있습니다. "
+"이는 자동 업데이트를 제공하는 Mattermost 서버를 설치하는 가장 빠른 방법입니다. "
+"이 설치 방법은 단일 및 클러스터 설치 모두에 사용되며, Packer와 같은 도구를 사용하여 클러스터 배포를 할 수 있습니다."
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:29
 msgid ""
@@ -56,16 +64,21 @@ msgid ""
 "application proxy, a custom CLI, and ansible recipes to configure and "
 "connect these components."
 msgstr ""
+"또는 **Omnibus 패키지** 배포는 Mattermost 서버, PostgreSQL 데이터베이스, "
+"애플리케이션 프록시로 NGINX, 사용자 정의 CLI, 이러한 구성 요소를 구성하고 연결하기 위한 "
+"ansible 레시피를 포함하여 설정 및 지속적인 유지 관리를 크게 줄이는 모든 필수 구성 요소를 함께 번들로 제공합니다."
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:31
 msgid ""
 "This Mattermost deployment includes 4 steps: add the PPA repository, "
 "install Mattermost server, configure the server, and update the server."
 msgstr ""
+"이 Mattermost 배포에는 4단계가 포함됩니다: PPA 저장소 추가, Mattermost 서버 설치, "
+"서버 구성, 서버 업데이트."
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:33
 msgid "**Step 1: Add the Mattermost Server PPA repository**"
-msgstr ""
+msgstr "**1단계: Mattermost 서버 PPA 저장소 추가**"
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:37
 msgid ""
@@ -77,28 +90,34 @@ msgid ""
 "recommend deleting the old key from ``/etc/apt/trusted.gpg.d`` before "
 "adding the apt repository."
 msgstr ""
+"GPG 공개 키가 변경되었습니다. `새 공개 키 가져오기 <https://deb.packages.mattermost.com/pubkey.gpg>`_ "
+"또는 아래에서 제공하는 자동 Mattermost PPA 저장소 설정 스크립트를 실행할 수 있습니다. "
+"설정에 따라 추가 단계가 필요할 수 있으며, 특히 저장소 설정 스크립트에 의존하지 않는 설치의 경우 그렇습니다. "
+"apt 저장소를 추가하기 전에 ``/etc/apt/trusted.gpg.d`` 에서 이전 키를 삭제하는 것을 권장합니다."
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:39
 msgid "For Ubuntu Focal - 20.04 LTS:"
-msgstr ""
+msgstr "Ubuntu Focal - 20.04 LTS의 경우:"
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:41
 msgid "``sudo apt-key del A1B31D46F0F3A10B02CF2D44F8F2C31744774B28``"
-msgstr ""
+msgstr "``sudo apt-key del A1B31D46F0F3A10B02CF2D44F8F2C31744774B28``"
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:43
 msgid ""
 "``curl -sL -o- https://deb.packages.mattermost.com/pubkey.gpg | gpg "
 "--dearmor | sudo apt-key add``"
 msgstr ""
+"``curl -sL -o- https://deb.packages.mattermost.com/pubkey.gpg | gpg "
+"--dearmor | sudo apt-key add``"
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:45
 msgid "For Ubuntu Jammy - 22.04 LTS and Ubuntu Noble - 24.04 LTS:"
-msgstr ""
+msgstr "Ubuntu Jammy - 22.04 LTS 및 Ubuntu Noble - 24.04 LTS의 경우:"
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:47
 msgid "``sudo rm /usr/share/keyrings/mattermost-archive-keyring.gpg``"
-msgstr ""
+msgstr "``sudo rm /usr/share/keyrings/mattermost-archive-keyring.gpg``"
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:49
 msgid ""
@@ -106,12 +125,16 @@ msgid ""
 "--dearmor | sudo tee /usr/share/keyrings/mattermost-archive-keyring.gpg >"
 " /dev/null``"
 msgstr ""
+"``curl -sL -o- https://deb.packages.mattermost.com/pubkey.gpg |  gpg "
+"--dearmor | sudo tee /usr/share/keyrings/mattermost-archive-keyring.gpg >"
+" /dev/null``"
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:51
 msgid ""
 "In a terminal window, run the following repository setup command to add "
 "the Mattermost Server repositories:"
 msgstr ""
+"터미널 창에서 다음 저장소 설정 명령을 실행하여 Mattermost 서버 저장소를 추가하세요:"
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:57
 msgid ""
@@ -120,10 +143,12 @@ msgid ""
 "certbot to issue and renew the SSL certificate, and configures the "
 "Mattermost Omnibus repository so that you can run the install command."
 msgstr ""
+"이 명령은 PostgreSQL 데이터베이스에 필요한 저장소를 구성하고, 프록시 역할을 하는 NGINX 웹 서버를 구성하며, "
+"SSL 인증서를 발급하고 갱신하도록 certbot을 구성하고, 설치 명령을 실행할 수 있도록 Mattermost Omnibus 저장소를 구성합니다."
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:59
 msgid "**Step 2: Instal Mattermost server**"
-msgstr ""
+msgstr "**2단계: Mattermost 서버 설치**"
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:61
 msgid ""
@@ -131,18 +156,21 @@ msgid ""
 "all your repositories and, where required, update existing packages by "
 "running the following command:"
 msgstr ""
+"Mattermost 서버를 설치하기 전에 다음 명령을 실행하여 모든 저장소를 업데이트하고 필요한 경우 기존 패키지를 업데이트하는 것이 좋습니다:"
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:67
 msgid ""
 "After any updates and system reboots are complete, you can install the "
 "Mattermost Server by running:"
 msgstr ""
+"모든 업데이트와 시스템 재부팅이 완료된 후 다음 명령을 실행하여 Mattermost 서버를 설치할 수 있습니다:"
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:73
 msgid ""
 "You now have the latest Mattermost Server version installed on your "
 "system."
 msgstr ""
+"이제 시스템에 최신 Mattermost 서버 버전이 설치되었습니다."
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:75
 msgid ""
@@ -150,6 +178,8 @@ msgid ""
 " a user and group named ``mattermost``. The required systemd unit file "
 "has also been created but will not be set to active."
 msgstr ""
+"설치 경로는 ``/opt/mattermost`` 입니다. 패키지는 ``mattermost`` 라는 사용자와 그룹을 추가했습니다. "
+"필요한 systemd 유닛 파일도 생성되었지만 활성화되지는 않습니다."
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:79
 msgid ""
@@ -160,10 +190,13 @@ msgid ""
 "``After=postgresql.service`` and ``BindsTo=postgresql.service`` to the "
 "``[Unit]`` section of the systemd unit file."
 msgstr ""
+"Mattermost 저장소의 서명된 패키지는 여러 설치 유형에 사용되므로 systemd 유닛 파일에 의존성을 추가하지 않습니다. "
+"데이터베이스와 동일한 시스템에 Mattermost 서버를 설치하는 경우, systemd 유닛 파일의 ``[Unit]`` 섹션에 "
+"``After=postgresql.service`` 와 ``BindsTo=postgresql.service`` 를 모두 추가하는 것이 좋습니다."
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:81
 msgid "**Step 3: Configure the server**"
-msgstr ""
+msgstr "**3단계: 서버 구성**"
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:83
 msgid ""
@@ -171,16 +204,19 @@ msgid ""
 "configuration file. A sample configuration file is located at "
 "``/opt/mattermost/config/config.defaults.json``."
 msgstr ""
+"Mattermost 서버를 시작하기 전에 구성 파일을 편집해야 합니다. 샘플 구성 파일은 ``/opt/mattermost/config/config.defaults.json`` 에 있습니다."
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:85
 msgid "Rename this configuration file with correct permissions:"
 msgstr ""
+"올바른 권한으로 이 구성 파일의 이름을 변경하세요:"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:145
 #: ../../source/deploy/server/linux/deploy-tar.rst:141
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:91
 msgid "Configure the following properties in this file:"
 msgstr ""
+"이 파일에서 다음 속성을 구성하세요:"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:147
 #: ../../source/deploy/server/linux/deploy-tar.rst:143
@@ -189,6 +225,7 @@ msgid ""
 "Under ``SqlSettings``, set ``DriverName`` to ``\"postgres\"``. This is "
 "the default and recommended database for all Mattermost installations."
 msgstr ""
+"``SqlSettings`` 아래에서 ``DriverName`` 을 ``\"postgres\"`` 로 설정하세요. 이는 모든 Mattermost 설치에서 기본값이자 권장 데이터베이스입니다."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:148
 #: ../../source/deploy/server/linux/deploy-tar.rst:144
@@ -200,6 +237,8 @@ msgid ""
 "``mmuser``, ``<mmuser-password>``, ``<host-name-or-IP>`` and "
 "``mattermost`` with your database name."
 msgstr ""
+"``SqlSettings`` 아래에서 ``DataSource`` 를 ``\"postgres://mmuser:<mmuser-password>@<host-name-or-IP>:5432/mattermost?sslmode=disable&connect_timeout=10\"`` 로 설정하고, "
+"``mmuser``, ``<mmuser-password>``, ``<host-name-or-IP>`` 및 ``mattermost`` 를 데이터베이스 이름으로 대체하세요."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:149
 #: ../../source/deploy/server/linux/deploy-tar.rst:145
@@ -207,7 +246,7 @@ msgstr ""
 msgid ""
 "Under ``ServiceSettings``, set ``\"SiteURL\"``: The domain name for the "
 "Mattermost application (e.g. ``https://mattermost.example.com``)."
-msgstr ""
+msgstr "``ServiceSettings`` 아래에서 Mattermost 애플리케이션의 도메인 이름인 ``\"SiteURL\"`` 을 설정하세요 (예: ``https://mattermost.example.com``)."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:153
 #: ../../source/deploy/server/linux/deploy-tar.rst:147
@@ -218,25 +257,27 @@ msgid ""
 "email>`_ under ``SupportSettings``, set ``\"SupportEmail\"``. This is the"
 " email address your users will contact when they need help."
 msgstr ""
+"``SupportSettings`` 아래에서 `지원 이메일 <https://docs.mattermost.com/administration/config-settings.html#support-email>`_ 인 ``\"SupportEmail\"`` 을 구성하는 것을 권장합니다. "
+"이는 사용자가 도움이 필요할 때 연락할 이메일 주소입니다."
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:99
 msgid ""
 "After modifying the ``config.json`` configuration file, you can now start"
 " the Mattermost Server:"
-msgstr ""
+msgstr "``config.json`` 구성 파일을 수정한 후 Mattermost 서버를 시작할 수 있습니다:"
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:105
 msgid ""
 "Verify that Mattermost is running: curl ``http://localhost:8065``. You "
 "should see the HTML that's returned by the Mattermost Server."
-msgstr ""
+msgstr "Mattermost가 실행 중인지 확인하세요: curl ``http://localhost:8065``. Mattermost 서버에서 반환된 HTML이 표시되어야 합니다."
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:107
 msgid ""
 "The final step, depending on your requirements, is to run ``sudo "
 "systemctl enable mattermost.service`` so that Mattermost will start on "
 "system boot."
-msgstr ""
+msgstr "요구 사항에 따라 마지막 단계는 시스템 부팅 시 Mattermost가 시작되도록 ``sudo systemctl enable mattermost.service`` 를 실행하는 것입니다."
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:111
 msgid ""
@@ -247,17 +288,20 @@ msgid ""
 "example, if you are using Amazon Lightsail as your data source, you must "
 "set ``sslmode`` to ``require`` to successfully connect to the database."
 msgstr ""
+"``DataSource`` 구성의 ``sslmode`` 속성 값은 네이티브 환경에 완전히 의존합니다. 해당 값에 대한 지침은 네이티브 환경 설정 문서를 참조하세요. "
+"``sslmode`` 의 사용 가능한 옵션은 ``disable`` 또는 ``require`` 입니다. 예를 들어, Amazon Lightsail을 데이터 소스로 사용하는 경우 "
+"데이터베이스에 성공적으로 연결하려면 ``sslmode`` 를 ``require`` 로 설정해야 합니다."
 
 #: ../../source/deploy/server/linux/deploy-tar.rst:159
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:113
 msgid "**Step 4: Update the server**"
-msgstr ""
+msgstr "**4단계: 서버 업데이트**"
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:115
 msgid ""
 "When a new Mattermost version is released, run: ``sudo apt update && sudo"
 " apt upgrade`` to download and update your Mattermost instance."
-msgstr ""
+msgstr "새로운 Mattermost 버전이 출시되면 Mattermost 인스턴스를 다운로드하고 업데이트하기 위해 ``sudo apt update && sudo apt upgrade`` 를 실행하세요."
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:119
 msgid ""
@@ -266,32 +310,34 @@ msgid ""
 " the Mattermost Server before running the ``apt`` command using ``sudo "
 "systemctl stop mattermost``."
 msgstr ""
+"``sudo apt upgrade`` 명령을 실행하면 ``mattermost-server`` 가 다른 패키지와 함께 업데이트됩니다. ``apt`` 명령을 실행하기 전에 "
+"``sudo systemctl stop mattermost`` 를 사용하여 Mattermost 서버를 중지하는 것을 강력히 권장합니다."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:228
 #: ../../source/deploy/server/linux/deploy-tar.rst:163
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:121
 msgid "**Remove Mattermost**"
-msgstr ""
+msgstr "**Mattermost 제거**"
 
 #: ../../source/deploy/server/linux/deploy-ubuntu.rst:123
 msgid "Run the following command to remove the Mattermost Server:"
-msgstr ""
+msgstr "Mattermost 서버를 제거하려면 다음 명령을 실행하세요:"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:25
 msgid ""
 "You can deploy Mattermost Server using our ``rpm`` signed packages "
 "available through the Mattermost Yum repository."
-msgstr ""
+msgstr "Mattermost Yum 저장소를 통해 제공되는 서명된 ``rpm`` 패키지를 사용하여 Mattermost 서버를 배포할 수 있습니다."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:27
 msgid ""
 "This Mattermost deployment includes 4 steps: download, install Matermost "
 "server, set up the server, and update the server."
-msgstr ""
+msgstr "이 Mattermost 배포는 4단계로 구성됩니다: 다운로드, Mattermost 서버 설치, 서버 설정, 서버 업데이트."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:29
 msgid "**Step 1: Download the latest Mattermost Server tarball**"
-msgstr ""
+msgstr "**1단계: 최신 Mattermost 서버 tarball 다운로드**"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:31
 #: ../../source/deploy/server/linux/deploy-tar.rst:30
@@ -302,6 +348,8 @@ msgid ""
 "the appropriate architecture (e.g., ``arm64`` for ARM-based systems) in "
 "the link as needed."
 msgstr ""
+"터미널 창에서 Mattermost 서버를 호스팅할 시스템에 ssh로 접속하세요. ``wget`` 을 사용하여 다음 명령 중 하나를 사용하여 설치하려는 Mattermost 서버 릴리스를 다운로드하세요. "
+"필요에 따라 링크에서 ``amd64`` 를 적절한 아키텍처(예: ARM 기반 시스템의 경우 ``arm64``)로 대체하세요."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:47
 #: ../../source/deploy/server/linux/deploy-tar.rst:46
@@ -309,43 +357,43 @@ msgid ""
 "If you are looking for an older release, Enterprise and Team Edition "
 "releases can be found in our :doc:`version archive </about/version-"
 "archive>` documentation."
-msgstr ""
+msgstr "이전 릴리스를 찾고 있다면, Enterprise 및 Team Edition 릴리스는 :doc:`버전 아카이브 </about/version-archive>` 문서에서 찾을 수 있습니다."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:49
 #: ../../source/deploy/server/linux/deploy-tar.rst:48
 msgid "**Step 2: Install Mattermost server**"
-msgstr ""
+msgstr "**2단계: Mattermost 서버 설치**"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:51
 msgid ""
 "Ahead of installing the Mattermost Server, we recommend updating all your"
 " repositories and, where required, update existing packages by running "
 "the following commands:"
-msgstr ""
+msgstr "Mattermost 서버를 설치하기 전에 다음 명령을 실행하여 모든 저장소를 업데이트하고 필요한 경우 기존 패키지를 업데이트하는 것을 권장합니다:"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:58
 msgid ""
 "After any updates, and any system reboots, are complete, install the "
 "Mattermost Server by extracting the tarball, creating users and groups, "
 "and setting file/folder permissions."
-msgstr ""
+msgstr "모든 업데이트와 시스템 재부팅이 완료된 후, tarball을 추출하고 사용자와 그룹을 생성하며 파일/폴더 권한을 설정하여 Mattermost 서버를 설치하세요."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:60
 #: ../../source/deploy/server/linux/deploy-tar.rst:52
 msgid "First extract the tarball:"
-msgstr ""
+msgstr "먼저 tarball을 추출하세요:"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:66
 msgid ""
 "Now move the entire folder to the ``/opt`` directory (or whatever path "
 "you require):"
-msgstr ""
+msgstr "이제 전체 폴더를 ``/opt`` 디렉토리(또는 필요한 경로)로 이동하세요:"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:74
 msgid ""
 "If you choose a custom path, ensure this alternate path is used in all "
 "steps that follow.`"
-msgstr ""
+msgstr "사용자 지정 경로를 선택한 경우, 이후의 모든 단계에서 이 대체 경로가 사용되는지 확인하세요."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:76
 msgid ""
@@ -353,29 +401,30 @@ msgid ""
 "``/opt/mattermost/data`` as the folder for files. This can be changed in "
 "the System Console during setup (even using alternative storage such as "
 "S3):"
-msgstr ""
+msgstr "기본 저장소 폴더를 생성하세요. 기본적으로 Mattermost 서버는 파일을 위한 폴더로 ``/opt/mattermost/data`` 를 사용합니다. "
+"설정 중에 시스템 콘솔에서 이를 변경할 수 있습니다(S3와 같은 대체 저장소 사용도 가능)."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:82
 #: ../../source/deploy/server/linux/deploy-tar.rst:74
 msgid "Set up a user and group called ``mattermost``:"
-msgstr ""
+msgstr "``mattermost`` 라는 사용자와 그룹을 설정하세요:"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:90
 #: ../../source/deploy/server/linux/deploy-tar.rst:82
 msgid ""
 "If you choose a custom user and group name, ensure it is used in all the "
 "steps that follow."
-msgstr ""
+msgstr "사용자 지정 사용자 및 그룹 이름을 선택한 경우, 이후의 모든 단계에서 해당 이름이 사용되는지 확인하세요."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:92
 #: ../../source/deploy/server/linux/deploy-tar.rst:84
 msgid "Set the file and folder permissions for your installation:"
-msgstr ""
+msgstr "설치를 위한 파일 및 폴더 권한을 설정하세요:"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:98
 #: ../../source/deploy/server/linux/deploy-tar.rst:90
 msgid "Give the ``mattermost`` group write permissions to the application folder:"
-msgstr ""
+msgstr "``mattermost`` 그룹에 애플리케이션 폴더에 대한 쓰기 권한을 부여하세요:"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:104
 #: ../../source/deploy/server/linux/deploy-tar.rst:96
@@ -383,29 +432,30 @@ msgid ""
 "You will now have the latest Mattermost Server version installed on your "
 "system. Starting and stopping the Mattermost Server is done using "
 "``systemd``."
-msgstr ""
+msgstr "이제 시스템에 최신 Mattermost 서버 버전이 설치되었습니다. Mattermost 서버의 시작과 중지는 ``systemd`` 를 사용하여 수행됩니다."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:106
 #: ../../source/deploy/server/linux/deploy-tar.rst:98
 msgid "Create the systemd unit file:"
-msgstr ""
+msgstr "systemd 유닛 파일을 생성하세요:"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:112
 #: ../../source/deploy/server/linux/deploy-tar.rst:104
 msgid "As root, edit the systemd unit file to add the following lines:"
-msgstr ""
+msgstr "root 권한으로 systemd 유닛 파일을 편집하여 다음 줄을 추가하세요:"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:135
 #: ../../source/deploy/server/linux/deploy-tar.rst:131
 msgid ""
 "Save the file and reload systemd using ``sudo systemctl daemon-reload``. "
 "Mattermost Server is now installed and is ready for setup."
-msgstr ""
+msgstr "파일을 저장하고 ``sudo systemctl daemon-reload`` 를 사용하여 systemd를 다시 로드하세요. "
+"이제 Mattermost 서버가 설치되었으며 설정할 준비가 되었습니다."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:137
 #: ../../source/deploy/server/linux/deploy-tar.rst:133
 msgid "**Step 3: Set up the server**"
-msgstr ""
+msgstr "**3단계: 서버 설정**"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:139
 #: ../../source/deploy/server/linux/deploy-tar.rst:135
@@ -414,21 +464,21 @@ msgid ""
 "configuration file. A default configuration file is located at "
 "``/opt/mattermost/config/config.json``. We recommend taking a backup of "
 "this default config ahead of making changes:"
-msgstr ""
+msgstr "Mattermost 서버를 시작하기 전에 구성 파일을 편집해야 합니다. 기본 구성 파일은 ``/opt/mattermost/config/config.json`` 에 있습니다. 변경하기 전에 이 기본 구성을 백업하는 것을 권장합니다:"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:155
 #: ../../source/deploy/server/linux/deploy-tar.rst:149
 msgid ""
 "After modifying the ``config.json`` configuration file, you can now start"
 " the Mattermost server:"
-msgstr ""
+msgstr "``config.json`` 구성 파일을 수정한 후 Mattermost 서버를 시작할 수 있습니다:"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:161
 #: ../../source/deploy/server/linux/deploy-tar.rst:155
 msgid ""
 "Verify that Mattermost is running: curl ``http://localhost:8065``. You "
 "should see the HTML that’s returned by the Mattermost Server."
-msgstr ""
+msgstr "Mattermost가 실행 중인지 확인하세요: curl ``http://localhost:8065``. Mattermost 서버에서 반환된 HTML이 표시되어야 합니다."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:163
 msgid ""
@@ -437,14 +487,15 @@ msgid ""
 "system boot. If you don't receive an error when starting Mattermost after"
 " the previous step, you are good to go. If you did receive an error, "
 "continue on."
-msgstr ""
+msgstr "요구 사항에 따라 마지막 단계는 Mattermost가 시스템 부팅 시 시작되도록 sudo ``systemctl enable mattermost.service`` 를 실행하는 것입니다. "
+"이전 단계 후 Mattermost를 시작할 때 오류가 발생하지 않으면 완료된 것입니다. 오류가 발생했다면 계속 진행하세요."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:167
 msgid ""
 "**Modify SELinux settings**: When deploying Mattermost from RHEL9, which "
 "has SELinux running with enforceing mode enabled by default, additional "
 "configuration is required."
-msgstr ""
+msgstr "**SELinux 설정 수정**: 기본적으로 강제 모드가 활성화된 SELinux가 실행되는 RHEL9에서 Mattermost를 배포할 때 추가 구성이 필요합니다."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:169
 msgid ""
@@ -454,32 +505,34 @@ msgid ""
 "when starting Mattermost. To resolve these issues, you'll need to set the"
 " appropriate SELinux contexts for the Mattermost binaries and "
 "directories, and allow Mattermost to bind to ports."
-msgstr ""
+msgstr "SELinux는 액세스 제어 보안 정책을 제공하는 보안 모듈입니다. RHEL 및 CentOS 시스템에서 기본적으로 활성화되어 있습니다. SELinux는 파일, 디렉토리 및 포트에 대한 액세스를 차단할 수 있으며, "
+"이로 인해 Mattermost를 시작할 때 문제가 발생할 수 있습니다. 이러한 문제를 해결하려면 Mattermost 바이너리 및 "
+"디렉토리에 적절한 SELinux 컨텍스트를 설정하고 Mattermost가 포트에 바인딩할 수 있도록 허용해야 합니다."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:170
 msgid ""
 "Ensure that SELinux is enabled and in enforcing mode by running the "
 "``sestatus`` command. If it's ``enforcing``, you'll need to configure it "
 "properly."
-msgstr ""
+msgstr "``sestatus`` 명령을 실행하여 SELinux가 활성화되어 있고 강제 모드인지 확인하세요. ``enforcing`` 인 경우 적절히 구성해야 합니다."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:171
 msgid ""
 "Set bin contexts for ``/opt/mattermost/bin``: SELinux enforces security "
 "contexts for binaries. To label the Mattermost binaries as safe, you'll "
 "need to set them to the below SELinux context."
-msgstr ""
+msgstr "``/opt/mattermost/bin`` 에 대한 bin 컨텍스트 설정: SELinux는 바이너리에 대한 보안 컨텍스트를 적용합니다. Mattermost 바이너리를 안전하게 표시하려면 아래 SELinux 컨텍스트로 설정해야 합니다."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:178
 msgid "Now, try starting Mattermost again with"
-msgstr ""
+msgstr "이제 다음 명령으로 Mattermost를 다시 시작해보세요"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:184
 msgid ""
 "If you don't receive an error, verify that Mattermost is running: curl "
 "``http://localhost:8065``. You should see the HTML that's returned by the"
 " Mattermost Server. You're all set!"
-msgstr ""
+msgstr "오류가 발생하지 않으면 Mattermost가 실행 중인지 확인하세요: curl ``http://localhost:8065``. Mattermost 서버에서 반환된 HTML이 표시되어야 합니다. 이제 모든 설정이 완료되었습니다!"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:187
 msgid ""
@@ -488,14 +541,16 @@ msgid ""
 "``mattermost.log`` exists in that directory, it's more likely you're "
 "dealing with a configuration issue in  ``config.json``. Double check the "
 "previous steps before continuing"
-msgstr ""
+msgstr "Mattermost를 시작할 때 오류가 발생하면 계속 진행하기 전에 ``/opt/mattermost/logs`` 에 파일이 존재하는지 확인하세요 - 해당 디렉토리에 ``mattermost.log`` 가 있다면 "
+"``config.json`` 의 구성 문제일 가능성이 높습니다. 계속하기 전에 이전 단계를 다시 확인하세요"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:189
 msgid ""
 "Try different contexts for ``/opt/mattermost``: SELinux enforces security"
 " contexts for files and directories. To label your Mattermost directory "
 "as safe, you'll need to set an appropriate SELinux context."
-msgstr ""
+msgstr "``/opt/mattermost`` 에 대해 다른 컨텍스트를 시도하세요: SELinux는 파일과 디렉토리에 대한 보안 컨텍스트를 적용합니다. "
+"Mattermost 디렉토리를 안전하게 표시하려면 적절한 SELinux 컨텍스트를 설정해야 합니다."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:191
 msgid ""
@@ -503,7 +558,8 @@ msgid ""
 "something like ``drwxr-xr-x. root root unconfined_u:object_r:default_t:s0"
 " mattermost`` returned, the ``default_t`` indicates that SELinux doesn't "
 "know what this directory is for."
-msgstr ""
+msgstr "``ls -Z /opt/mattermost`` 명령을 실행하여 현재 컨텍스트를 확인하세요. ``drwxr-xr-x. root root unconfined_u:object_r:default_t:s0 mattermost`` 와 같은 결과가 반환되면, "
+"``default_t`` 는 SELinux가 이 디렉토리의 용도를 모른다는 것을 나타냅니다."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:192
 msgid ""
@@ -513,7 +569,9 @@ msgid ""
 "``httpd_sys_content_t``, used for serving files. Ensure you match the "
 "directory and its contents recursively. Run the ``sudo restorecon -R "
 "/opt/mattermost`` to apply the changes."
-msgstr ""
+msgstr "웹 서비스나 애플리케이션과 호환되는 SELinux 유형을 할당하여 안전한 컨텍스트를 설정하세요. ``sudo semanage fcontext -a -t httpd_sys_content_t \"/opt/mattermost(/.*)?\"`` "
+"명령을 실행하세요. 일반적으로 사용되는 것은 파일 제공에 사용되는 ``httpd_sys_content_t`` 입니다. 디렉토리와 그 내용을 재귀적으로 일치시키도록 하세요. "
+"변경사항을 적용하려면 ``sudo restorecon -R /opt/mattermost`` 명령을 실행하세요."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:194
 msgid ""
@@ -523,26 +581,28 @@ msgid ""
 " if the port's not listed, you'll need to add it by running ``sudo "
 "semanage port -a -t http_port_t -p tcp 8065``, replacing the ``8065`` "
 "with the required port."
-msgstr ""
+msgstr "Mattermost가 포트에 바인딩할 수 있도록 허용하세요: Mattermost가 특정 포트(예: 8065)가 필요할 때, SELinux가 이를 허용하도록 Mattermost가 포트에 바인딩할 수 있게 하세요. "
+"``sudo semanage port -l | grep 8065`` 명령을 실행하고, 포트가 나열되어 있지 않으면 ``sudo semanage port -a -t http_port_t -p tcp 8065`` "
+"명령을 실행하여 추가하세요. 여기서 ``8065`` 를 필요한 포트로 대체하세요."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:196
 msgid ""
 "Handle custom policies: If Mattermost requires actions that SELinux "
 "blocks, you'll need to generate a custom policy."
-msgstr ""
+msgstr "사용자 정의 정책 처리: Mattermost가 SELinux가 차단하는 작업을 필요로 하는 경우, 사용자 정의 정책을 생성해야 합니다."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:198
 msgid ""
 "Check for SELinux denials first in the logs by running ``sudo ausearch -m"
 " avc -ts recent``, or by checking the audit log: ``sudo cat "
 "/var/log/audit/audit.log | grep denied``."
-msgstr ""
+msgstr "먼저 ``sudo ausearch -m avc -ts recent`` 명령을 실행하거나 감사 로그를 확인하여 SELinux 거부 사항을 확인하세요: ``sudo cat /var/log/audit/audit.log | grep denied``."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:200
 msgid ""
 "If needed, generate a policy module by installing ``audit2allow`` to "
 "generate policies automatically."
-msgstr ""
+msgstr "필요한 경우 정책을 자동으로 생성하기 위해 ``audit2allow`` 를 설치하여 정책 모듈을 생성하세요."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:208
 msgid ""
@@ -550,17 +610,17 @@ msgid ""
 "works as expected by running ``sudo systemctl restart mattermost``. In "
 "the case of failures, revisit the logs to identify other SELinux-related "
 "issues."
-msgstr ""
+msgstr "구성을 테스트하세요: ``sudo systemctl restart mattermost`` 명령을 실행하여 구성이 예상대로 작동하는지 확인하세요. 실패하는 경우 로그를 다시 확인하여 다른 SELinux 관련 문제를 식별하세요."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:210
 msgid "Need Mattermost working quickly for testing purposes?"
-msgstr ""
+msgstr "테스트 목적으로 Mattermost를 빠르게 작동시키고 싶으신가요?"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:212
 msgid ""
 "You can change SELinux to permissive mode by running the ``sudo "
 "setenforce 0``. command where policies aren't enforced, only logged."
-msgstr ""
+msgstr "정책이 적용되지 않고 로깅만 되는 ``sudo setenforce 0`` 명령을 실행하여 SELinux를 허용 모드로 변경할 수 있습니다."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:213
 msgid ""
@@ -569,38 +629,46 @@ msgid ""
 "instead of being blocked. This can be helpful for debugging and "
 "troubleshooting issues related to SELinux policies."
 msgstr ""
+"이 명령은 SELinux 모드를 \"허용\" 모드로 변경합니다. 허용 모드에서는 정책이 적용되지 않고 위반 사항이 차단되지 않고 로깅됩니다. "
+"이는 SELinux 정책과 관련된 문제를 디버깅하고 해결하는 데 도움이 될 수 있습니다."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:214
 msgid ""
 "Ensure you re-enable enforcing mode once context is working as needed by "
 "running the ``sudo setenforce 1`` command."
-msgstr ""
+msgstr "컨텍스트가 필요에 따라 작동하면 ``sudo setenforce 1`` 명령을 실행하여 강제 모드를 다시 활성화하세요."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:216
 msgid "See the following SELinux resources for additional details:"
-msgstr ""
+msgstr "추가 세부 정보는 다음 SELinux 리소스를 참조하세요:"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:218
 msgid ""
 "`SELinux User's and Administrator's Guide "
 "<https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/index>`_"
 msgstr ""
+"`SELinux 사용자 및 관리자 가이드 "
+"<https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/index>`_"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:219
 msgid "`SELinux Project Wiki <https://github.com/SELinuxProject/selinux>`_"
-msgstr ""
+msgstr "`SELinux 프로젝트 위키 <https://github.com/SELinuxProject/selinux>`_"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:220
 msgid ""
 "`Introduction to SELinux <https://github.blog/developer-skills"
 "/programming-languages-and-frameworks/introduction-to-selinux/>`_"
 msgstr ""
+"`SELinux 소개 <https://github.blog/developer-skills"
+"/programming-languages-and-frameworks/introduction-to-selinux/>`_"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:221
 msgid ""
 "`A Sysadmin's Guide to SELinux: 42 Answers to the Big Questions "
 "<https://opensource.com/article/18/7/sysadmin-guide-selinux>`_"
 msgstr ""
+"`SELinux 시스템 관리자 가이드: 주요 질문에 대한 42가지 답변 "
+"<https://opensource.com/article/18/7/sysadmin-guide-selinux>`_"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:222
 msgid ""
@@ -608,10 +676,13 @@ msgid ""
 "<https://srivastavayushmaan1347.medium.com/mastering-selinux-a"
 "-comprehensive-guide-to-linux-security-8bed9976da88>`_"
 msgstr ""
+"`SELinux 마스터하기: Linux 보안 종합 가이드 "
+"<https://srivastavayushmaan1347.medium.com/mastering-selinux-a"
+"-comprehensive-guide-to-linux-security-8bed9976da88>`_"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:224
 msgid "**Step 3: Update the server**"
-msgstr ""
+msgstr "**3단계: 서버 업데이트**"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:226
 #: ../../source/deploy/server/linux/deploy-tar.rst:161
@@ -620,12 +691,14 @@ msgid ""
 "requires several manual steps. See the :doc:`upgrade Mattermost Server "
 "</upgrade/upgrading-mattermost-server>` documentation for details."
 msgstr ""
+"tarball을 사용할 때 Mattermost 서버 설치를 업데이트하려면 여러 수동 단계가 필요합니다. 자세한 내용은 :doc:`Mattermost 서버 업그레이드 "
+"</upgrade/upgrading-mattermost-server>` 문서를 참조하세요."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:230
 msgid ""
 "To remove the Mattermost Server, you must stop the Mattermost Server, "
 "back up all important files, and then run this command:"
-msgstr ""
+msgstr "Mattermost 서버를 제거하려면 Mattermost 서버를 중지하고, 모든 중요 파일을 백업한 다음 다음 명령을 실행해야 합니다:"
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:238
 #: ../../source/deploy/server/linux/deploy-tar.rst:173
@@ -635,13 +708,15 @@ msgid ""
 "``plugins``, ``client/plugins``, and ``data``. We strongly recommend you "
 "back up these locations before running the ``rm`` command."
 msgstr ""
+"구성에 따라 ``/opt/mattermost`` 에 백업해야 할 여러 중요한 폴더가 있습니다. 이는 ``config``, ``logs``, "
+"``plugins``, ``client/plugins``, ``data`` 입니다. ``rm`` 명령을 실행하기 전에 이러한 위치를 백업하는 것을 강력히 권장합니다."
 
 #: ../../source/deploy/server/linux/deploy-rhel.rst:240
 #: ../../source/deploy/server/linux/deploy-tar.rst:175
 msgid ""
 "You may also remove the Mattermost systemd unit file and the user/group "
 "created for running the application."
-msgstr ""
+msgstr "애플리케이션 실행을 위해 생성된 Mattermost systemd 유닛 파일과 사용자/그룹도 제거할 수 있습니다."
 
 #: ../../source/deploy/server/linux/deploy-tar.rst:24
 msgid ""
@@ -650,34 +725,36 @@ msgid ""
 "with the highest effort, typically favored by advanced system "
 "administrators."
 msgstr ""
+"tarball을 사용하여 64비트 Linux 시스템에 Mattermost 서버를 설치할 수 있습니다. "
+"이는 가장 유연한 설치 방법이지만 가장 많은 노력이 필요하며, 일반적으로 고급 시스템 관리자들이 선호합니다."
 
 #: ../../source/deploy/server/linux/deploy-tar.rst:26
 msgid ""
 "This Mattermost deployment includes 3 steps: download, install Mattermost"
 " server, and set up the server."
-msgstr ""
+msgstr "이 Mattermost 배포는 다운로드, Mattermost 서버 설치, 서버 설정의 3단계로 구성됩니다."
 
 #: ../../source/deploy/server/linux/deploy-tar.rst:28
 msgid "**Step 1: Download**"
-msgstr ""
+msgstr "**1단계: 다운로드**"
 
 #: ../../source/deploy/server/linux/deploy-tar.rst:50
 msgid ""
 "Install the Mattermost Server by extracting the tarball, creating users "
 "and groups, and setting file/folder permissions."
-msgstr ""
+msgstr "tarball을 추출하고, 사용자와 그룹을 생성하며, 파일/폴더 권한을 설정하여 Mattermost 서버를 설치하세요."
 
 #: ../../source/deploy/server/linux/deploy-tar.rst:58
 msgid ""
 "Move the entire folder to the ``/opt`` directory (or whatever path you "
 "require):"
-msgstr ""
+msgstr "전체 폴더를 ``/opt`` 디렉토리(또는 필요한 경로)로 이동하세요:"
 
 #: ../../source/deploy/server/linux/deploy-tar.rst:66
 msgid ""
 "If you choose a custom path, ensure this alternate path is used in all "
 "steps that follow."
-msgstr ""
+msgstr "사용자 정의 경로를 선택한 경우, 이후의 모든 단계에서 이 대체 경로가 사용되는지 확인하세요."
 
 #: ../../source/deploy/server/linux/deploy-tar.rst:68
 msgid ""
@@ -686,6 +763,8 @@ msgid ""
 "the System Console during setup (even using alternative storage such as "
 "S3)."
 msgstr ""
+"기본 저장소 폴더를 생성하세요. 기본적으로 Mattermost 서버는 파일을 위한 폴더로 ``/opt/mattermost/data`` 를 사용합니다. "
+"설정 중에 시스템 콘솔에서 이를 변경할 수 있습니다(S3와 같은 대체 저장소 사용도 가능)."
 
 #: ../../source/deploy/server/linux/deploy-tar.rst:129
 msgid ""
@@ -694,6 +773,8 @@ msgid ""
 "``BindsTo=postgresql.service`` to the ``[Unit]`` section of the systemd "
 "unit file."
 msgstr ""
+"데이터베이스와 동일한 시스템에 Mattermost 서버를 설치하는 경우, systemd 유닛 파일의 ``[Unit]`` 섹션에 "
+"``After=postgresql.service`` 와 ``BindsTo=postgresql.service`` 를 모두 추가하는 것이 좋습니다."
 
 #: ../../source/deploy/server/linux/deploy-tar.rst:157
 msgid ""
@@ -701,13 +782,14 @@ msgid ""
 "``systemctl enable mattermost.service`` so that Mattermost will start on "
 "system boot."
 msgstr ""
+"요구사항에 따라 마지막 단계는 시스템 부팅 시 Mattermost가 시작되도록 sudo ``systemctl enable mattermost.service`` 를 실행하는 것입니다."
 
 #: ../../source/deploy/server/linux/deploy-tar.rst:165
 msgid ""
 "To remove the Mattermost Server for any reason, you must stop the "
 "Mattermost Server, back up all important files, and then run this "
 "command:"
-msgstr ""
+msgstr "어떤 이유로든 Mattermost 서버를 제거하려면 Mattermost 서버를 중지하고, 모든 중요 파일을 백업한 다음 이 명령을 실행해야 합니다:"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:27
 msgid ""
@@ -716,6 +798,8 @@ msgid ""
 "**RHEL/CentOS** deployment instead, which provides more flexibility and "
 "better maintainability."
 msgstr ""
+"Mattermost Omnibus는 향후 몇 개월 내에 더 이상 사용되지 않고 단계적으로 중단될 예정입니다. "
+"더 많은 유연성과 더 나은 유지보수성을 제공하는 표준 **Ubuntu** 배포 또는 **RHEL/CentOS** 배포를 사용하는 것을 권장합니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:29
 msgid ""
@@ -726,93 +810,98 @@ msgid ""
 "ansible recipes to configure and connect these components. **Omnibus "
 "supports Ubuntu distributions only.**"
 msgstr ""
+"Mattermost Omnibus는 모든 필수 구성 요소를 함께 패키징합니다: "
+":ref:`무료 버전 Mattermost Enterprise <about/editions-and-offerings:mattermost enterprise edition>`, "
+"PostgreSQL 데이터베이스, 그리고 애플리케이션 프록시로 NGINX를 사용합니다. "
+"이러한 구성 요소를 구성하고 연결하기 위해 사용자 정의 CLI(``mmomni``)와 ansible 레시피를 사용합니다. "
+"**Omnibus는 Ubuntu 배포판만 지원합니다.**"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:31
 msgid ""
 "This Mattermost deployment includes 4 steps: add the Mattermost PPA "
 "repositories, install Mattermost Omnibus, and set up Omnibus, and update "
 "Omnibus."
-msgstr ""
+msgstr "이 Mattermost 배포는 Mattermost PPA 저장소 추가, Mattermost Omnibus 설치, Omnibus 설정, Omnibus 업데이트의 4단계로 구성됩니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:33
 msgid "**Step 1: Add the Mattermost PPA repositories**"
-msgstr ""
+msgstr "**1단계: Mattermost PPA 저장소 추가**"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:51
 msgid "In a terminal window, run the following repository setup command:"
-msgstr ""
+msgstr "터미널 창에서 다음 저장소 설정 명령을 실행하세요:"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:57
 msgid "This command sets up all required repositories and configures:"
-msgstr ""
+msgstr "이 명령은 필요한 모든 저장소를 설정하고 다음을 구성합니다:"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:59
 msgid "PostgreSQL database"
-msgstr ""
+msgstr "PostgreSQL 데이터베이스"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:60
 msgid "NGINX web server as a proxy"
-msgstr ""
+msgstr "프록시로 사용되는 NGINX 웹 서버"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:61
 msgid "Certbot for SSL certificate management"
-msgstr ""
+msgstr "SSL 인증서 관리를 위한 Certbot"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:62
 msgid "Mattermost Omnibus repository"
-msgstr ""
+msgstr "Mattermost Omnibus 저장소"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:64
 msgid "**Step 2: Install Mattermost Omnibus**"
-msgstr ""
+msgstr "**2단계: Mattermost Omnibus 설치**"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:66
 msgid ""
 "When installing Mattermost Omnibus, SSL is enabled by default to provide "
 "a secure connection between the Mattermost server and the Mattermost "
 "client. To install with SSL, run the following command:"
-msgstr ""
+msgstr "Mattermost Omnibus 설치 시 Mattermost 서버와 Mattermost 클라이언트 간의 보안 연결을 제공하기 위해 SSL이 기본적으로 활성화됩니다. SSL로 설치하려면 다음 명령을 실행하세요:"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:75
 msgid ""
 "Just looking to try out Mattermost? Run the following command to install "
 "Omnibus without SSL:"
-msgstr ""
+msgstr "Mattermost를 시험해보고 싶으신가요? SSL 없이 Omnibus를 설치하려면 다음 명령을 실행하세요:"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:82
 msgid ""
 "You're prompted to specify a domain name and email address that will be "
 "used to generate the SSL certificate, and deliver related communications."
-msgstr ""
+msgstr "SSL 인증서 생성 및 관련 통신 전달에 사용될 도메인 이름과 이메일 주소를 지정하라는 메시지가 표시됩니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:84
 msgid ""
 "After all the packages are installed, Omnibus runs ansible scripts that "
 "configure all the platform components and starts the server."
-msgstr ""
+msgstr "모든 패키지가 설치된 후 Omnibus는 모든 플랫폼 구성 요소를 구성하고 서버를 시작하는 ansible 스크립트를 실행합니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:86
 msgid ""
 "Open a browser and navigate to your Mattermost domain either by domain "
 "name (e.g. ``mymattermostserver.com``), or by the server's IP address if "
 "you're not using a domain name."
-msgstr ""
+msgstr "브라우저를 열고 도메인 이름(예: ``mymattermostserver.com``) 또는 도메인 이름을 사용하지 않는 경우 서버의 IP 주소를 통해 Mattermost 도메인으로 이동하세요."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:88
 msgid ""
 "Create your first Mattermost user, invite more users, and explore the "
 "Mattermost platform."
-msgstr ""
+msgstr "첫 번째 Mattermost 사용자를 생성하고, 더 많은 사용자를 초대하고, Mattermost 플랫폼을 탐색하세요."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:90
 msgid "**Step 3: Configure Mattermost Omnibus**"
-msgstr ""
+msgstr "**3단계: Mattermost Omnibus 구성**"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:94
 msgid ""
 "Plugin uploads, local mode, and HTTPS are enabled by default. These "
 "settings are modified in the ``yaml`` file as described below."
-msgstr ""
+msgstr "플러그인 업로드, 로컬 모드, HTTPS는 기본적으로 활성화되어 있습니다. 이러한 설정은 아래 설명된 대로 ``yaml`` 파일에서 수정됩니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:96
 msgid ""
@@ -822,6 +911,8 @@ msgid ""
 "file located at ``/etc/mattermost/mmomni.yml`` to manage its own settings"
 " and service interconnections."
 msgstr ""
+"기존 Mattermost 설치와 달리 Omnibus는 ``config.json`` 파일이 필요 없도록 구성을 데이터베이스에 직접 저장합니다. "
+"그러나 Omnibus 자체는 자체 설정과 서비스 상호 연결을 관리하기 위해 ``/etc/mattermost/mmomni.yml`` 에 위치한 구성 파일이 필요합니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:98
 msgid ""
@@ -832,6 +923,9 @@ msgid ""
 " instructions and options, refer to the :doc:`mmctl </manage/mmctl-"
 "command-line-tool>` documentation."
 msgstr ""
+"Omnibus 환경에서 Mattermost 서버 설정을 수정하려면(아래에 나열된 항목 제외) ``mmctl`` 명령줄 도구를 사용해야 합니다. "
+"특히 ``mmctl --local config edit`` 명령을 사용하여 필요한 조정을 할 수 있습니다. "
+"자세한 지침과 옵션은 :doc:`mmctl </manage/mmctl-command-line-tool>` 문서를 참조하세요."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:100
 msgid ""
@@ -840,18 +934,22 @@ msgid ""
 "functionality. The following parameters must be configured directly using"
 " the ``mmomni.yml`` file:"
 msgstr ""
+"Mattermost 서버 포트와 같은 특정 구성 매개변수는 최적의 Omnibus 기능을 보장하기 위해 변경되지 않아야 합니다. "
+"다음 매개변수는 ``mmomni.yml`` 파일을 사용하여 직접 구성해야 합니다:"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:102
 msgid ""
 "``db_user``: The PostgreSQL database user. This value is generated during"
 " the Omnibus installation and should not be changed."
 msgstr ""
+"``db_user``: PostgreSQL 데이터베이스 사용자입니다. 이 값은 Omnibus 설치 중에 생성되며 변경하면 안 됩니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:103
 msgid ""
 "``db_password``: The PostgreSQL database password. This value is "
 "generated during the Omnibus installation and should not be changed."
 msgstr ""
+"``db_password``: PostgreSQL 데이터베이스 비밀번호입니다. 이 값은 Omnibus 설치 중에 생성되며 변경하면 안 됩니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:104
 msgid ""
@@ -861,6 +959,8 @@ msgid ""
 "property, as well as to retrieve and configure the SSL certificate for "
 "the server."
 msgstr ""
+"``fqdn``: Mattermost 애플리케이션의 도메인 이름입니다. 이는 설치 과정에서 입력하라는 메시지가 표시되는 값으로, "
+"``ServiceSettings.SiteURL`` Mattermost 구성 속성을 채우고 서버의 SSL 인증서를 검색하고 구성하는 데 사용됩니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:105
 msgid ""
@@ -868,6 +968,8 @@ msgid ""
 " the value you're prompted for during the install process, and it won't "
 "used if HTTPS is disabled."
 msgstr ""
+"``email``: 인증서 통신에 사용되는 이메일 주소입니다. 이는 설치 과정에서 입력하라는 메시지가 표시되는 값이며, "
+"HTTPS가 비활성화된 경우 사용되지 않습니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:106
 msgid ""
@@ -876,12 +978,15 @@ msgid ""
 "to install Mattermost is to use HTTPS, but you can disable it if "
 "necessary."
 msgstr ""
+"``https``: 플랫폼이 ``true`` 또는 ``false`` 값을 사용하여 HTTPS 또는 HTTP를 사용하도록 구성해야 하는지 여부를 나타냅니다. "
+"Mattermost를 설치하는 권장 방법은 HTTPS를 사용하는 것이지만, 필요한 경우 비활성화할 수 있습니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:107
 msgid ""
 "``data_directory``: This is the directory where Mattermost stores its "
 "data."
 msgstr ""
+"``data_directory``: Mattermost가 데이터를 저장하는 디렉토리입니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:108
 msgid ""
@@ -889,6 +994,8 @@ msgid ""
 " is used to configure the ``PluginSettings.EnableUploads`` Mattermost "
 "configuration property."
 msgstr ""
+"``enable_plugin_uploads``: 이 설정은 ``true`` 또는 ``false`` 일 수 있으며, "
+"``PluginSettings.EnableUploads`` Mattermost 구성 속성을 구성하는 데 사용됩니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:109
 msgid ""
@@ -896,10 +1003,13 @@ msgid ""
 "used to configure the ``ServiceSettings.EnableLocalMode`` Mattermost "
 "configuration property."
 msgstr ""
+"``enable_local_mode``: 이 설정은 ``true`` 또는 ``false`` 일 수 있으며, "
+"``ServiceSettings.EnableLocalMode`` Mattermost 구성 속성을 구성하는 데 사용됩니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:110
 msgid "``nginx_template``: Optional path to a custom NGINX template."
 msgstr ""
+"``nginx_template``: 사용자 정의 NGINX 템플릿의 선택적 경로입니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:112
 msgid ""
@@ -907,14 +1017,16 @@ msgid ""
 "reconfigure`` to apply the changes, and then restart the Mattermost "
 "server with ``systemctl restart mattermost``."
 msgstr ""
+"``mmomni.yml`` 구성 파일을 수정한 후, 변경사항을 적용하기 위해 ``mmomni reconfigure`` 를 실행하고, "
+"그런 다음 ``systemctl restart mattermost`` 로 Mattermost 서버를 재시작하세요."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:114
 msgid "**Step 4: Update Mattermost Omnibus**"
-msgstr ""
+msgstr "**4단계: Mattermost Omnibus 업데이트**"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:116
 msgid "Mattermost Omnibus is integrated with the apt package manager."
-msgstr ""
+msgstr "Mattermost Omnibus는 apt 패키지 관리자와 통합되어 있습니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:118
 msgid ""
@@ -922,16 +1034,19 @@ msgid ""
 "Mattermost server by running the command ``sudo systemctl stop "
 "mattermost``."
 msgstr ""
+"Mattermost를 업데이트하기 전에 ``sudo systemctl stop mattermost`` 명령을 실행하여 "
+"Mattermost 서버를 중지하는 것을 강력히 권장합니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:120
 msgid ""
 "Run the following command to download and update your Mattermost instance"
 " (along with any other packages):"
 msgstr ""
+"Mattermost 인스턴스(및 기타 패키지)를 다운로드하고 업데이트하려면 다음 명령을 실행하세요:"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:126
 msgid "**Backup and restore**"
-msgstr ""
+msgstr "**백업 및 복원**"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:128
 msgid ""
@@ -941,32 +1056,38 @@ msgid ""
 " configurations, and databases. These snapshots can be restored to the "
 "same server or a different one."
 msgstr ""
+"Mattermost Omnibus CLI 도구 ``mmomni`` 는 서버 및 도메인 마이그레이션과 백업 및 복원을 간소화합니다. "
+"모든 콘텐츠, 사용자, 플러그인, 구성 및 데이터베이스를 포함한 전체 Mattermost 서버의 스냅샷을 쉽게 생성할 수 있습니다. "
+"이러한 스냅샷은 동일한 서버나 다른 서버에 복원할 수 있습니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:130
 msgid ""
 "To back up the contents of your Mattermost server, run the following "
 "command:"
 msgstr ""
+"Mattermost 서버의 내용을 백업하려면 다음 명령을 실행하세요:"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:136
 msgid ""
 "To restore the contents of your Mattermost server, run the following two "
 "commands:"
 msgstr ""
+"Mattermost 서버의 내용을 복원하려면 다음 두 명령을 실행하세요:"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:143
 msgid "**Remove Mattermost Omnibus**"
-msgstr ""
+msgstr "**Mattermost Omnibus 제거**"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:145
 msgid ""
 "Run the following command to remove Mattermost and Mattermost Omnibus "
 "completely:"
 msgstr ""
+"Mattermost와 Mattermost Omnibus를 완전히 제거하려면 다음 명령을 실행하세요:"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:151
 msgid "**Frequently asked questions**"
-msgstr ""
+msgstr "**자주 묻는 질문**"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:153
 msgid ""
@@ -974,6 +1095,8 @@ msgid ""
 " free, unlicensed Mattermost Enterprise Edition, and Enterprise features "
 "are unlocked when you purchase and upload a license."
 msgstr ""
+"Omnibus에서 라이선스를 사용할 수 있나요? **네.** Mattermost Omnibus는 무료, 라이선스가 없는 Mattermost Enterprise Edition을 번들로 제공하며, "
+"라이선스를 구매하고 업로드하면 Enterprise 기능이 잠금 해제됩니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:155
 msgid ""
@@ -981,6 +1104,8 @@ msgid ""
 "designed to be a self-contained single server Mattermost platform. It "
 "expects all the necessary components to be on the same server."
 msgstr ""
+"Omnibus 서버를 클러스터의 일부로 사용할 수 있나요? **아니요.** Omnibus는 독립적인 단일 서버 Mattermost 플랫폼으로 설계되었습니다. "
+"모든 필수 구성 요소가 동일한 서버에 있어야 합니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:157
 msgid ""
@@ -990,6 +1115,8 @@ msgid ""
 "that you can find at /etc/cron.d/certbot that automatically launches the "
 "renewal process."
 msgstr ""
+"SSL 인증서가 자동으로 갱신되나요? **네.** SSL 인증서는 자동으로 업데이트되고 갱신됩니다. Omnibus는 인증서를 관리하기 위해 certbot 패키지를 설치하며, "
+"/etc/cron.d/certbot에서 찾을 수 있는 cron 작업이 갱신 프로세스를 자동으로 시작합니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:159
 msgid ""
@@ -997,12 +1124,15 @@ msgid ""
 "your certificate is expired.** Run the following commands to obtain a new"
 " certificate:"
 msgstr ""
+"업그레이드 시 EXPKEYSIG 오류를 어떻게 수정하나요? **이 오류는 인증서가 만료되었음을 나타냅니다.** "
+"새 인증서를 얻으려면 다음 명령을 실행하세요:"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:167
 msgid ""
 "Can I use a custom NGINX template? **Yes.** Mattermost Omnibus supports "
 "using a custom NGINX template to generate its configuration."
 msgstr ""
+"사용자 정의 NGINX 템플릿을 사용할 수 있나요? **네.** Mattermost Omnibus는 구성을 생성하기 위해 사용자 정의 NGINX 템플릿 사용을 지원합니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:169
 msgid ""
@@ -1010,6 +1140,7 @@ msgid ""
 "located at ``/opt/mattermost/mmomni/ansible/playbooks/mattermost.conf`` "
 "to a new location."
 msgstr ""
+"이 기능을 사용하려면 ``/opt/mattermost/mmomni/ansible/playbooks/mattermost.conf`` 에 있는 원본 템플릿을 새 위치에 복사하고 수정해야 합니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:170
 msgid ""
@@ -1017,6 +1148,7 @@ msgid ""
 "template can cause the reconfigure process to fail, or the generated "
 "NGINX configuration to be invalid."
 msgstr ""
+"**이 기능을 사용할 때 주의하세요.** 사용자 정의 템플릿을 변경하면 재구성 프로세스가 실패하거나 생성된 NGINX 구성이 유효하지 않을 수 있습니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:171
 msgid ""
@@ -1024,6 +1156,7 @@ msgid ""
 " in the template and modify the parts that you need, or use a fully "
 "static configuration instead."
 msgstr ""
+"그런 다음 템플릿에 이미 번들로 제공된 변수와 내부 로직을 사용하여 필요한 부분을 수정하거나, 대신 완전히 정적인 구성을 사용할 수 있습니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:172
 msgid ""
@@ -1034,22 +1167,27 @@ msgid ""
 "contents of the ``/etc/nginx/conf.d/mattermost.conf`` file to validate "
 "that the changes were applied successfully."
 msgstr ""
+"템플릿을 사용자 정의한 후 ``/etc/mattermost/mmomni.yml`` 구성 파일에 ``nginx_template`` 속성을 추가하고 "
+"``mmomni reconfigure`` 를 실행하세요. 재구성 프로세스는 새 템플릿을 사용하여 NGINX 최종 구성을 생성합니다. "
+"변경 사항이 성공적으로 적용되었는지 확인하려면 ``/etc/nginx/conf.d/mattermost.conf`` 파일의 내용을 확인할 수 있습니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:174
 msgid "What ``mmomni`` commands are available?"
-msgstr ""
+msgstr "어떤 ``mmomni`` 명령어들을 사용할 수 있나요?"
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:176
 msgid ""
 "``mmomni backup``: Takes a complete snapshot of your Mattermost server "
 "and places the backup file in a specified file location."
 msgstr ""
+"``mmomni backup``: Mattermost 서버의 전체 스냅샷을 생성하고 백업 파일을 지정된 파일 위치에 저장합니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:177
 msgid ""
 "``mmomni restore``: Restores specified backup file to your Mattermost "
 "server."
 msgstr ""
+"``mmomni restore``: 지정된 백업 파일을 Mattermost 서버에 복원합니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:178
 msgid ""
@@ -1057,18 +1195,22 @@ msgid ""
 "any Omnibus-specified restrictions such as the ability to upload plugins."
 " It also applies any changes made to the mmomni.yml configuration file."
 msgstr ""
+"``mmomni reconfigure``: 도메인, SSL 또는 플러그인 업로드 기능과 같은 Omnibus 지정 제한 사항을 변경하는 프로세스를 다시 실행합니다. "
+"또한 mmomni.yml 구성 파일에 대한 모든 변경 사항을 적용합니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:179
 msgid "``mmomni status``: Shows current status of all Omnibus components."
 msgstr ""
+"``mmomni status``: 모든 Omnibus 구성 요소의 현재 상태를 표시합니다."
 
 #: ../../source/deploy/server/linux/deploy-omnibus.rst:180
 msgid "``mmomni tail``: Runs a join tail of logs of all Omnibus components."
 msgstr ""
+"``mmomni tail``: 모든 Omnibus 구성 요소의 로그를 결합하여 표시합니다."
 
 #: ../../source/deploy/server/deploy-linux.rst:29
 msgid "Secure your Mattermost deployment"
-msgstr ""
+msgstr "Mattermost 배포 보안 설정"
 
 #: ../../source/deploy/server/deploy-linux.rst:31
 msgid ""
@@ -1078,18 +1220,24 @@ msgid ""
 "You don’t need TLS enabled within Mattermost itself as NGINX will handle "
 "HTTPS traffic."
 msgstr ""
+"TLS 구성 및 NGINX 프록시 설정은 클라이언트와 Mattermost 서버 간의 안전한 통신을 보장합니다. "
+"이 설정을 통해 Mattermost로 요청을 프록시하면서 HTTPS 트래픽을 제공할 수 있습니다. "
+"NGINX가 HTTPS 트래픽을 처리하므로 Mattermost 자체에서 TLS를 활성화할 필요가 없습니다."
 
 #: ../../source/deploy/server/deploy-linux.rst:33
 msgid ""
 "Install NGINX on the host server. See the :doc:`set up NGINX proxy "
 "</deploy/server/setup-nginx-proxy>` documentation for details."
 msgstr ""
+"호스트 서버에 NGINX를 설치하세요. 자세한 내용은 :doc:`NGINX 프록시 설정 "
+"</deploy/server/setup-nginx-proxy>` 문서를 참조하세요."
 
 #: ../../source/deploy/server/deploy-linux.rst:34
 msgid ""
 "Obtain a TLS certificate from a trusted certificate authority (CA) or use"
 " a self-signed certificate for testing purposes."
 msgstr ""
+"신뢰할 수 있는 인증 기관(CA)에서 TLS 인증서를 얻거나 테스트 목적으로 자체 서명된 인증서를 사용하세요."
 
 #: ../../source/deploy/server/deploy-linux.rst:35
 msgid ""
@@ -1097,6 +1245,8 @@ msgid ""
 "serves as a proxy, forwarding requests to the Mattermost application "
 "running locally or on a separate server."
 msgstr ""
+"HTTPS 트래픽을 제공하기 위해 TLS 인증서로 NGINX를 구성하세요. NGINX는 프록시 역할을 하며 "
+"로컬 또는 별도 서버에서 실행 중인 Mattermost 애플리케이션으로 요청을 전달합니다."
 
 #: ../../source/deploy/server/deploy-linux.rst:39
 msgid ""
@@ -1104,6 +1254,8 @@ msgid ""
 "the :ref:`database preparation <deploy/server/preparations:database "
 "preparation>` documentation for details on this prerequisite."
 msgstr ""
+"Mattermost 서버 배포에는 PostgreSQL 데이터베이스가 필요합니다. 이 필수 조건에 대한 자세한 내용은 "
+":ref:`데이터베이스 준비 <deploy/server/preparations:database preparation>` 문서를 참조하세요."
 
 #: ../../source/deploy/server/deploy-linux.rst:40
 msgid ""
@@ -1111,4 +1263,6 @@ msgid ""
 "troubleshooting>` documentation for resolutions to common deployment "
 "issues."
 msgstr ""
+"일반적인 배포 문제 해결 방법은 :doc:`배포 문제 해결 </guides/deployment-troubleshooting>` "
+"문서를 참조하세요."
 

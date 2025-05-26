@@ -21,29 +21,31 @@ msgstr ""
 
 #: ../../source/about/faq-integrations.rst:2
 msgid "Integrations"
-msgstr ""
+msgstr "통합"
 
 #: ../../source/about/faq-integrations.rst:5
 msgid "What integrations come pre-packaged with Mattermost Server?"
-msgstr ""
+msgstr "Mattermost Server에 어떤 통합 기능이 사전 패키지로 제공되나요?"
 
 #: ../../source/about/faq-integrations.rst:7
 msgid ""
 "See the :doc:`integrations guide </about/integrations>` documentation for"
 " details on pre-packaged integrations available with Mattermost Server."
 msgstr ""
+"Mattermost Server에서 사용 가능한 사전 패키지 통합에 대한 자세한 내용은 :doc:`통합 가이드 </about/integrations>` 문서를 참조하세요."
 
 #: ../../source/about/faq-integrations.rst:10
 msgid ""
 "Can I use Mattermost to add messaging functionality to my proprietary "
 "SaaS service?"
-msgstr ""
+msgstr "내 독점 SaaS 서비스에 메시징 기능을 추가하기 위해 Mattermost를 사용할 수 있나요?"
 
 #: ../../source/about/faq-integrations.rst:12
 msgid ""
 "Mattermost is an open source, self-hosted alternative to proprietary SaaS"
 " services that lock in the data of users and customers."
 msgstr ""
+"Mattermost는 사용자와 고객의 데이터를 잠그는 독점 SaaS 서비스에 대한 오픈 소스, 자체 호스팅 대안입니다."
 
 #: ../../source/about/faq-integrations.rst:14
 msgid ""
@@ -52,6 +54,8 @@ msgid ""
 "advice for proprietary SaaS projects that result in customers potentially"
 " being paywalled from their data should they stop paying SaaS fees."
 msgstr ""
+"Mattermost 소스 코드를 오픈 소스 라이선스에 따라 사용하는 것은 환영하지만, Mattermost, Inc.는 고객이 SaaS 요금 지불을 중단할 경우 데이터에 대한 접근이 차단될 수 있는 "
+"독점 SaaS 프로젝트에 대한 지원이나 기술 조언을 제공하지 않습니다."
 
 #: ../../source/about/faq-integrations.rst:16
 msgid ""
@@ -59,14 +63,15 @@ msgid ""
 "should always have access to their data, please read `why we created "
 "Mattermost <https://mattermost.com/about-us/>`_."
 msgstr ""
+"사용자와 고객이 항상 자신의 데이터에 접근할 수 있어야 한다고 강하게 믿는 이유에 대해 자세히 알아보려면 `Mattermost를 만든 이유 <https://mattermost.com/about-us/>`_ 를 읽어보세요."
 
 #: ../../source/about/faq-integrations.rst:19
 msgid "What's the difference between incoming and outgoing webhooks?"
-msgstr ""
+msgstr "인바운드와 아웃바운드 웹훅의 차이점은 무엇인가요?"
 
 #: ../../source/about/faq-integrations.rst:21
 msgid "A webhook is a way for one app to send real-time data to another app."
-msgstr ""
+msgstr "웹훅은 한 앱이 다른 앱에 실시간 데이터를 보내는 방법입니다."
 
 #: ../../source/about/faq-integrations.rst:23
 msgid ""
@@ -75,6 +80,7 @@ msgid ""
 "notifications that are sent into a Mattermost channel when something "
 "happens in an external application."
 msgstr ""
+"Mattermost에서 인바운드 웹훅은 외부 애플리케이션으로부터 데이터를 수신하여 지정된 채널에 게시물을 만듭니다. 외부 애플리케이션에서 어떤 일이 발생했을 때 Mattermost 채널로 알림을 보내도록 설정하는 데 유용합니다."
 
 #: ../../source/about/faq-integrations.rst:25
 msgid ""
@@ -85,10 +91,12 @@ msgid ""
 "for a specific word, and then notifying external applications when a "
 "trigger word is used."
 msgstr ""
+"아웃바운드 웹훅은 Mattermost의 규칙에 따라 트리거되어 Mattermost에서 데이터(메시지 및 일부 컨텍스트 정보)를 가져와 외부 애플리케이션으로 전송합니다. "
+"아웃바운드 웹훅의 수신 서버는 그 후 Mattermost에 응답을 게시할 수 있습니다. 특정 단어를 감지하고 트리거 단어가 사용되었을 때 외부 애플리케이션에 알리는 데 유용합니다."
 
 #: ../../source/about/faq-integrations.rst:28
 msgid "What's a slash command?"
-msgstr ""
+msgstr "슬래시 명령어란 무엇인가요?"
 
 #: ../../source/about/faq-integrations.rst:30
 msgid ""
@@ -97,10 +105,11 @@ msgid ""
 "type in a slash command it will not be posted to a channel, whereas an "
 "outgoing webhook is only triggered by posted messages."
 msgstr ""
+"슬래시 명령어는 아웃바운드 웹훅과 유사하지만, 채널을 감시하는 대신 명령 도구로 사용됩니다. 즉, 슬래시 명령어를 입력하면 채널에 게시되지 않지만, 아웃바운드 웹훅은 게시된 메시지에 의해서만 트리거됩니다."
 
 #: ../../source/about/faq-integrations.rst:33
 msgid "What does Slack-compatible mean?"
-msgstr ""
+msgstr "Slack 호환성이란 무엇인가요?"
 
 #: ../../source/about/faq-integrations.rst:35
 msgid ""
@@ -110,10 +119,12 @@ msgid ""
 " in Mattermost without changing the format of the message being sent "
 "over."
 msgstr ""
+"Slack 호환성이란 Mattermost가 Slack의 레거시 \"Message Attachment\" 페이로드와 동일한 형식의 페이로드를 가진 통합을 수용한다는 의미입니다. "
+"Slack 통합이 있다면, 전송되는 메시지의 형식을 변경하지 않고도 Mattermost에서 설정할 수 있어야 합니다."
 
 #: ../../source/about/faq-integrations.rst:38
 msgid "What if I have a webhook from somewhere other than Slack?"
-msgstr ""
+msgstr "Slack이 아닌 다른 곳에서 웹훅을 가지고 있다면 어떻게 해야 하나요?"
 
 #: ../../source/about/faq-integrations.rst:40
 msgid ""
@@ -123,16 +134,18 @@ msgid ""
 "Mattermost uses. Since there’s currently no general standard for webhook "
 "formatting, this is unavoidable and just a part of how webhooks work."
 msgstr ""
+"다른 형식의 페이로드를 출력하는 통합이 있다면, Mattermost가 사용하는 형식으로 변환하기 위한 번역 계층 역할을 하는 N8N.io, Zapier 또는 Integromat과 같은 중간 애플리케이션을 작성해야 합니다. "
+"현재 웹훅 형식에 대한 일반적인 표준이 없기 때문에, 이는 불가피하며 웹훅 작동 방식의 일부입니다."
 
 #: ../../source/about/faq-integrations.rst:42
 msgid ""
 "If there's no translation layer, Mattermost won't understand the data "
 "you're sending."
-msgstr ""
+msgstr "번역 계층이 없으면 Mattermost는 전송하는 데이터를 이해하지 못합니다."
 
 #: ../../source/about/faq-integrations.rst:45
 msgid "What are attachments?"
-msgstr ""
+msgstr "첨부 파일이란 무엇인가요?"
 
 #: ../../source/about/faq-integrations.rst:47
 msgid ""
@@ -142,6 +155,8 @@ msgid ""
 "sent by an integration, and are used to customize the formatting of the "
 "message."
 msgstr ""
+"Mattermost 통합 문서에서 \"첨부 파일\"이 언급될 때, 이는 Slack의 메시지 첨부 파일 기능을 의미합니다. "
+"이러한 \"첨부 파일\"은 통합에서 전송하는 데이터에 배열로 선택적으로 추가할 수 있으며, 메시지의 형식을 사용자 지정하는 데 사용됩니다."
 
 #: ../../source/about/faq-integrations.rst:49
 msgid ""
@@ -149,10 +164,11 @@ msgid ""
 "post made via webhook. You can use the API to attach files to a message "
 "if needed."
 msgstr ""
+"Mattermost는 현재 웹훅을 통해 작성된 게시물에 파일을 첨부하는 기능을 지원하지 않습니다. 필요한 경우 API를 사용하여 메시지에 파일을 첨부할 수 있습니다."
 
 #: ../../source/about/faq-integrations.rst:52
 msgid "Where can I find existing integrations?"
-msgstr ""
+msgstr "기존 통합은 어디서 찾을 수 있나요?"
 
 #: ../../source/about/faq-integrations.rst:54
 msgid ""
@@ -161,6 +177,8 @@ msgid ""
 "and GitLab, along with interactive bot applications, and other "
 "communication tools that are freely available for use and customization."
 msgstr ""
+"`Mattermost Marketplace <https://mattermost.com/marketplace>`_ 를 방문하여 Jira, Jenkins, GitLab과 같은 일반적인 도구에 대한 오픈 소스 통합과 "
+"대화형 봇 애플리케이션, 그리고 자유롭게 사용하고 사용자 지정할 수 있는 기타 통신 도구에 접근할 수 있습니다."
 
 #: ../../source/about/faq-integrations.rst:56
 msgid ""
@@ -168,10 +186,11 @@ msgid ""
 " can click on the \"Marketplace\" option in the main menu and easily "
 "install plugins or apps from there."
 msgstr ""
+"또는 Mattermost 내에서 관리자로 로그인한 상태에서 메인 메뉴의 \"Marketplace\" 옵션을 클릭하여 플러그인이나 앱을 쉽게 설치할 수 있습니다."
 
 #: ../../source/about/faq-integrations.rst:59
 msgid "Where should I install my integrations?"
-msgstr ""
+msgstr "통합을 어디에 설치해야 하나요?"
 
 #: ../../source/about/faq-integrations.rst:61
 msgid ""
@@ -184,10 +203,14 @@ msgid ""
 " less strict, AWS, Heroku, and other public cloud options could also be "
 "used."
 msgstr ""
+"소규모 설정의 자체 호스팅 배포의 경우 Mattermost가 설치된 동일한 서버에 통합을 호스팅할 수 있습니다. "
+"대규모 배포의 경우 통합을 위한 별도의 서버를 설정하거나 외부 애플리케이션이 호스팅되는 서버에 추가할 수 있습니다. "
+"예를 들어, Jira 서버를 자체 호스팅하는 경우 Jira 서버 자체에 Jira 통합을 배포할 수 있습니다. "
+"자체 호스팅 제한이 덜 엄격한 경우 AWS, Heroku 및 기타 공용 클라우드 옵션도 사용할 수 있습니다."
 
 #: ../../source/about/faq-integrations.rst:64
 msgid "Where can I get more information about integrations?"
-msgstr ""
+msgstr "통합에 대한 추가 정보는 어디서 얻을 수 있나요?"
 
 #: ../../source/about/faq-integrations.rst:66
 msgid ""
@@ -196,6 +219,8 @@ msgid ""
 "build server, where you can discuss questions with community members and "
 "the Mattermost core team."
 msgstr ""
+"커뮤니티 구성원 및 Mattermost 핵심 팀과 질문을 논의할 수 있는 일일 빌드 서버의 "
+"`Contributors 커뮤니티 채널 <https://community.mattermost.com/core/channels/tickets>`_ 에 참여하세요."
 
 #: ../../source/about/faq-integrations.rst:68
 msgid ""
@@ -205,12 +230,14 @@ msgid ""
 "<https://community.mattermost.com/core/channels/integrations>`_ for all "
 "integrations and plugins discussions."
 msgstr ""
+"기술적 논의를 위해 `Developers 채널 <https://community.mattermost.com/core/channels/developers>`_ 에 참여하고, "
+"모든 통합 및 플러그인 논의를 위해 `Integrations 채널 <https://community.mattermost.com/core/channels/integrations>`_ 을 방문하세요."
 
 #: ../../source/about/faq-integrations.rst:71
 msgid ""
 "Can I use webhooks to be notified when new integrations are available on "
 "the Mattermost Marketplace?"
-msgstr ""
+msgstr "Mattermost Marketplace에 새로운 통합이 제공될 때 알림을 받기 위해 웹훅을 사용할 수 있나요?"
 
 #: ../../source/about/faq-integrations.rst:73
 msgid ""
@@ -223,4 +250,9 @@ msgid ""
 "locally stored version of the listing, and, if a new plugin is "
 "identified, a notification is pushed to a Mattermost channel."
 msgstr ""
+"네! Mattermost Marketplace에서 새로운 통합을 확인하고 Mattermost `incoming webhook "
+"<https://developers.mattermost.com/integrate/webhooks/incoming/>`_ 요청을 통해 게시물을 트리거하는 "
+"`bash script <https://gist.github.com/mickmister/543a49584146af18ba5e5f82dd86ea93>`_ 가 제공됩니다. "
+"이 스크립트는 최신 목록을 다운로드하고 로컬에 저장된 목록 버전과 비교한 다음, "
+"새로운 플러그인이 발견되면 Mattermost 채널로 알림이 전송됩니다."
 

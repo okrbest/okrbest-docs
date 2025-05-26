@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:2
 msgid "Deploy Mattermost on Kubernetes"
-msgstr ""
+msgstr "Kubernetes에 Mattermost 배포"
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:4
 msgid ""
@@ -30,10 +30,12 @@ msgid ""
 "communication needs. This guide covers deployment options for major cloud"
 " providers and general Kubernetes installations."
 msgstr ""
+"팀 커뮤니케이션 요구사항을 위한 확장 가능하고 견고한 인프라를 제공하는 Mattermost 서버는 다양한 Kubernetes 플랫폼에 배포할 수 있습니다. "
+"이 가이드는 주요 클라우드 제공업체와 일반 Kubernetes 설치에 대한 배포 옵션을 다룹니다."
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:6
 msgid "Choose your preferred platform below for specific deployment instructions:"
-msgstr ""
+msgstr "특정 배포 지침을 위해 아래에서 선호하는 플랫폼을 선택하세요:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:3
 msgid ""
@@ -42,14 +44,16 @@ msgid ""
 ".mattermost-operator>`__ to install Mattermost on your existing Azure "
 "infrastructure."
 msgstr ""
+"기존 Azure 인프라에 Mattermost를 설치하기 위해 지원되는 `Azure Marketplace Container Offer "
+"<https://azuremarketplace.microsoft.com/en-us/marketplace/apps/mattermost.mattermost-operator>`__ 를 사용할 수 있습니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:5
 msgid "**Before you begin**"
-msgstr ""
+msgstr "**시작하기 전에**"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:7
 msgid "Before deploying, make sure you have the following:"
-msgstr ""
+msgstr "배포하기 전에 다음 사항이 있는지 확인하세요:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:9
 msgid ""
@@ -58,6 +62,9 @@ msgid ""
 "gateway/tutorial-ingress-controller-add-on-new>`_ enabled or another "
 "Ingress controller deployed."
 msgstr ""
+"**AKS 클러스터**: `Application Gateway Ingress Controller (AGIC) add-on "
+"<https://learn.microsoft.com/en-us/azure/application-gateway/tutorial-ingress-controller-add-on-new>`_ 가 활성화되어 있거나 "
+"다른 Ingress 컨트롤러가 배포되어 있어야 합니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:11
 msgid ""
@@ -67,12 +74,16 @@ msgid ""
 "Microsoft quick start guide <https://learn.microsoft.com/en-"
 "us/azure/postgresql/flexible-server/quickstart-create-server-portal>`_."
 msgstr ""
+"**PostgreSQL v13.0+ 데이터베이스**: `Azure Database for PostgreSQL - Flexible Server with Private Access "
+"<https://learn.microsoft.com/en-us/azure/postgresql/>`_ 를 권장합니다. `이 Microsoft 빠른 시작 가이드 "
+"<https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/quickstart-create-server-portal>`_ 를 따라 하나를 배포하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:13
 msgid ""
 "**Private Network Connectivity**: Verify that there is network "
 "connectivity between your AKS cluster and the PostgreSQL database."
 msgstr ""
+"**프라이빗 네트워크 연결**: AKS 클러스터와 PostgreSQL 데이터베이스 간에 네트워크 연결이 있는지 확인하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:15
 msgid ""
@@ -80,33 +91,36 @@ msgid ""
 "zone and provide a valid TLS key and certificate for the Ingress "
 "Controller."
 msgstr ""
+"**유효한 DNS 이름과 TLS 인증서**: DNS 영역에 대한 접근 권한이 있어야 하며 Ingress 컨트롤러를 위한 유효한 TLS 키와 인증서를 제공해야 합니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:17
 msgid ""
 "**Node Capacity**: At least 2 AKS nodes for high availability when "
 "deploying for 100 users or more."
 msgstr ""
+"**노드 용량**: 100명 이상의 사용자를 위해 배포할 때 고가용성을 위해 최소 2개의 AKS 노드가 필요합니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:19
 msgid ""
 "**License Key**: Trial or Enterprise license to test high availability "
 "and other Enterprise features."
 msgstr ""
+"**라이선스 키**: 고가용성 및 기타 Enterprise 기능을 테스트하기 위한 평가판 또는 Enterprise 라이선스가 필요합니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:21
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:14
 msgid "**Installation steps**"
-msgstr ""
+msgstr "**설치 단계**"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:23
 msgid ""
 "The installation process includes deploying Mattermost and updating the "
 "server."
-msgstr ""
+msgstr "설치 프로세스에는 Mattermost 배포 및 서버 업데이트가 포함됩니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:25
 msgid "**Step 1: Deploy Mattermost**"
-msgstr ""
+msgstr "**1단계: Mattermost 배포**"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:27
 msgid ""
@@ -114,6 +128,8 @@ msgid ""
 "<https://azuremarketplace.microsoft.com/en-us/marketplace/apps/mattermost"
 ".mattermost-operator>`_ and select **Get it now**."
 msgstr ""
+"`Azure Marketplace Container Offer <https://azuremarketplace.microsoft.com/en-us/marketplace/apps/mattermost.mattermost-operator>`_ 에서 Mattermost를 "
+"배포하고 **지금 받기** 를 선택하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:29
 msgid ""
@@ -123,34 +139,36 @@ msgid ""
 "<https://learn.microsoft.com/en-gb/azure/aks/cluster-extensions?tabs"
 "=azure-cli>`_ to learn more."
 msgstr ""
+"또는 AKS 클러스터의 ``Extensions + Applications`` 섹션으로 이동하여 Mattermost 제품을 설치할 수 있습니다. "
+"자세한 내용은 `Microsoft 클러스터 확장 문서 <https://learn.microsoft.com/en-gb/azure/aks/cluster-extensions?tabs=azure-cli>`_ 를 참조하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:31
 msgid ""
 "Choose the **Resource Group** and the **Region** of your installed AKS "
 "and PostgreSQL database."
-msgstr ""
+msgstr "설치된 AKS 및 PostgreSQL 데이터베이스의 **리소스 그룹** 과 **지역** 을 선택하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:33
 msgid "An example of the Azure AKS Project details screen."
-msgstr ""
+msgstr "Azure AKS 프로젝트 상세 화면 예시."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:36
 msgid "Choose your AKS cluster."
-msgstr ""
+msgstr "AKS 클러스터를 선택하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:38
 msgid "An example of the Azure AKS cluster setup screen."
-msgstr ""
+msgstr "Azure AKS 클러스터 설정 화면 예시."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:41
 msgid ""
 "Fill in the details for your PostgreSQL database. Ensure the user "
 "specified has full access."
-msgstr ""
+msgstr "PostgreSQL 데이터베이스의 세부 정보를 입력하세요. 지정된 사용자가 전체 접근 권한을 가지고 있는지 확인하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:43
 msgid "An example of the Azure AKS Database setup screen."
-msgstr ""
+msgstr "Azure AKS 데이터베이스 설정 화면 예시."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:47
 msgid ""
@@ -159,10 +177,11 @@ msgid ""
 "installation that will provide filestore functionality for your "
 "Mattermost instance."
 msgstr ""
+"배포 이름과 배포 크기를 포함한 배포 세부 정보를 지정하세요. Mattermost 인스턴스에 대한 파일스토어 기능을 제공하는 필수 유틸리티인 Minio를 배포하려면 체크박스를 클릭하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:49
 msgid "An example of the Azure AKS Deployment Details setup screen."
-msgstr ""
+msgstr "Azure AKS 배포 세부 정보 설정 화면 예시."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:52
 msgid ""
@@ -170,37 +189,38 @@ msgid ""
 "add-on is used in the following example to show the ingress annotations "
 "required."
 msgstr ""
+"Mattermost 설치 호스트명과 Ingress 세부 정보를 구성하세요. 다음 예제에서는 필요한 ingress 주석을 보여주기 위해 AGIC 애드온이 사용됩니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:54
 msgid ""
 "You can use any pre-installed Ingress Controller in your cluster as long "
 "as it supports Kubernetes Ingress and TLS termination."
-msgstr ""
+msgstr "Kubernetes Ingress와 TLS 종료를 지원하는 한 클러스터의 사전 설치된 Ingress 컨트롤러를 사용할 수 있습니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:61
 msgid "Additionally, we recommend considering:"
-msgstr ""
+msgstr "또한 다음 사항을 고려하는 것을 권장합니다:"
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:67
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:63
 msgid "Enforcing a minimum TLS version (e.g., TLS 1.2)."
-msgstr ""
+msgstr "최소 TLS 버전 적용(예: TLS 1.2)."
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:68
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:64
 msgid ""
 "Deploying a Web Application Firewall (WAF) for additional protection, if "
 "supported by your ingress controller."
-msgstr ""
+msgstr "Ingress 컨트롤러가 지원하는 경우 추가 보호를 위해 Web Application Firewall(WAF) 배포."
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:69
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:65
 msgid "Limiting access using Kubernetes Network Policies."
-msgstr ""
+msgstr "Kubernetes 네트워크 정책을 사용하여 접근 제한."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:63
 msgid "An example of the Azure AKS Networking Details setup screen."
-msgstr ""
+msgstr "Azure AKS 네트워킹 세부 정보 설정 화면 예시."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:70
 msgid ""
@@ -208,63 +228,64 @@ msgid ""
 "installed plugin from the **AKS Extensions + Applications** page under "
 "the **Settings** menu."
 msgstr ""
+"모든 것이 실행 중인지 확인하세요. **설정** 메뉴 아래의 **AKS Extensions + Applications** 페이지에서 설치된 플러그인을 확인할 수 있어야 합니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:72
 msgid ""
 "When the deployment is complete, obtain the hostname or IP address of "
 "your Mattermost deployment using the following command:"
-msgstr ""
+msgstr "배포가 완료되면 다음 명령을 사용하여 Mattermost 배포의 호스트명 또는 IP 주소를 얻으세요:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:78
 msgid ""
 "Use your IP address from the ``ADDRESS`` column, and create a DNS record "
 "in your domain registration service."
-msgstr ""
+msgstr "``ADDRESS`` 열에서 IP 주소를 사용하여 도메인 등록 서비스에 DNS 레코드를 생성하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:80
 msgid ""
 "Access your working Mattermost installation at the URL you’ve determined "
 "in your DNS record."
-msgstr ""
+msgstr "DNS 레코드에서 결정한 URL에서 작동하는 Mattermost 설치에 접근하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:82
 msgid ""
 "Learn more about administrating your Mattermost server by visiting the "
 ":doc:`Administration Guide </guides/administration-guide>`."
-msgstr ""
+msgstr ":doc:`관리자 가이드 </guides/administration-guide>` 를 방문하여 Mattermost 서버 관리에 대해 자세히 알아보세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:84
 msgid "**Step 2: Upgrade Mattermost via your AKS cluster**"
-msgstr ""
+msgstr "**2단계: AKS 클러스터를 통해 Mattermost 업그레이드**"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:86
 msgid ""
 "Visit the ``Extensions + Applications`` section of your AKS cluster where"
 " your Mattermost installation is deployed."
-msgstr ""
+msgstr "Mattermost가 설치된 AKS 클러스터의 ``Extensions + Applications`` 섹션을 방문하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:87
 msgid ""
 "You can enable minor version auto upgrades since these are not updating "
 "Mattermost version"
-msgstr ""
+msgstr "Mattermost 버전을 업데이트하지 않으므로 마이너 버전 자동 업그레이드를 활성화할 수 있습니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:88
 msgid ""
 "Expand the ``Configuration Settings`` table and add the below "
 "configuration and the version you want to install as a value."
-msgstr ""
+msgstr "``Configuration Settings`` 테이블을 확장하고 아래 구성과 설치하려는 버전을 값으로 추가하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:97
 msgid "Select **Save** and wait for the upgrade."
-msgstr ""
+msgstr "**저장** 을 선택하고 업그레이드가 완료될 때까지 기다리세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s-aks.rst:101
 msgid ""
 "You are responsible for Azure costs associated with any infrastructure "
 "you spin up to host a Mattermost server, and Azure credits cannot be "
 "applied towards the purchase of a Mattermost license."
-msgstr ""
+msgstr "Mattermost 서버를 호스팅하기 위해 생성한 모든 인프라와 관련된 Azure 비용은 귀하가 부담하며, Azure 크레딧은 Mattermost 라이선스 구매에 적용할 수 없습니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:3
 msgid ""
@@ -272,35 +293,37 @@ msgid ""
 "Kubernetes using S3-compatible storage and a managed database service. "
 "While the operator supports a range of configurations, we strongly "
 "recommend using a cloud-native approach for production environments."
-msgstr ""
+msgstr "Mattermost Kubernetes Operator를 사용하여 S3 호환 스토리지와 관리형 데이터베이스 서비스를 사용하여 Kubernetes에 Mattermost를 배포할 수 있습니다. "
+"이 Operator는 다양한 구성을 지원하지만, 프로덕션 환경에서는 클라우드 네이티브 접근 방식을 강력히 권장합니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:5
 msgid "**Prerequisites**"
-msgstr ""
+msgstr "**사전 요구사항**"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:7
 msgid "Before you begin, ensure you have the following:"
-msgstr ""
+msgstr "시작하기 전에 다음 사항이 있는지 확인하세요:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:9
 msgid ""
 "A functioning Kubernetes cluster (see the `Kubernetes setup guide "
 "<https://kubernetes.io/docs/setup/>`__). Your cluster should be running a"
 " `supported Kubernetes version <https://kubernetes.io/releases/>`__."
-msgstr ""
+msgstr "작동하는 Kubernetes 클러스터(`Kubernetes 설정 가이드 <https://kubernetes.io/docs/setup/>`__ 참조). "
+"클러스터는 `지원되는 Kubernetes 버전 <https://kubernetes.io/releases/>`__ 을 실행해야 합니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:10
 msgid ""
 "The `kubectl` command-line tool installed on your local machine (see the "
 "`kubectl installation guide "
 "<https://kubernetes.io/docs/reference/kubectl/>`__)."
-msgstr ""
+msgstr "로컬 머신에 설치된 `kubectl` 명령줄 도구(`kubectl 설치 가이드 <https://kubernetes.io/docs/reference/kubectl/>`__ 참조)."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:11
 msgid ""
 "A fundamental understanding of Kubernetes concepts, such as deployments, "
 "pods, and applying manifests."
-msgstr ""
+msgstr "배포, 파드, 매니페스트 적용과 같은 Kubernetes 개념에 대한 기본적인 이해."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:12
 msgid ""
@@ -308,17 +331,17 @@ msgid ""
 "load. Consult the `Mattermost Kubernetes Operator <#install-the-"
 "mattermost-operator>`__ documentation for resource requirements at "
 "different scales."
-msgstr ""
+msgstr "예상 사용자 부하에 따라 할당된 충분한 Kubernetes 리소스. 다양한 규모의 리소스 요구사항은 `Mattermost Kubernetes Operator <#install-the-mattermost-operator>`__ 문서를 참조하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:16
 msgid ""
 "The installation process involves setting up necessary operators and then"
 " deploying Mattermost itself."
-msgstr ""
+msgstr "설치 프로세스는 필요한 Operator를 설정한 다음 Mattermost 자체를 배포하는 것을 포함합니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:18
 msgid "**Step 1: Install the NGINX Ingress Controller**"
-msgstr ""
+msgstr "**1단계: NGINX Ingress Controller 설치**"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:20
 msgid ""
@@ -327,26 +350,27 @@ msgid ""
 "NGINX ingress controller on your Kubernetes cluster. Mattermost "
 "recommends installing the Nginx Operator via helm, regardless of platform"
 " you are installing to."
-msgstr ""
+msgstr "Kubernetes 클러스터에 NGINX ingress controller를 설치하려면 `Kubernetes 배포 문서 <https://kubernetes.github.io/ingress-nginx/deploy/>`_ 의 지침을 따르세요. "
+"Mattermost는 설치하는 플랫폼에 관계없이 helm을 통해 Nginx Operator를 설치하는 것을 권장합니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:22
 msgid "**Step 2: Install the Mattermost Operator**"
-msgstr ""
+msgstr "**2단계: Mattermost Operator 설치**"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:24
 msgid "The Mattermost Kubernetes Operator can be installed using Helm."
-msgstr ""
+msgstr "Mattermost Kubernetes Operator는 Helm을 사용하여 설치할 수 있습니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:26
 msgid ""
 "Install Helm (version 3.13.0 or later). See the `Helm quickstart "
 "documentation <https://helm.sh/docs/using_helm/>`_ for installation "
 "instructions."
-msgstr ""
+msgstr "Helm(버전 3.13.0 이상)을 설치하세요. 설치 지침은 `Helm 빠른 시작 문서 <https://helm.sh/docs/using_helm/>`_ 를 참조하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:28
 msgid "Add the Mattermost Helm repository:"
-msgstr ""
+msgstr "Mattermost Helm 저장소를 추가하세요:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:34
 msgid ""
@@ -354,33 +378,34 @@ msgid ""
 "the `Mattermost operator values file <https://github.com/mattermost"
 "/mattermost-helm/blob/master/charts/mattermost-operator/values.yaml>`_. "
 "This file allows for customization of the operator."
-msgstr ""
+msgstr "``config.yaml`` 파일을 생성하고 `Mattermost operator values 파일 "
+"<https://github.com/mattermost/mattermost-helm/blob/master/charts/mattermost-operator/values.yaml>`_ 의 내용으로 채우세요. 이 파일을 통해 operator를 사용자 정의할 수 있습니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:36
 msgid "Create a namespace for the Mattermost Operator:"
-msgstr ""
+msgstr "Mattermost Operator를 위한 네임스페이스를 생성하세요:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:42
 msgid ""
 "Install the Mattermost Operator. If you don't specify a version, the "
 "latest version of the Mattermost Operator will be installed."
-msgstr ""
+msgstr "Mattermost Operator를 설치하세요. 버전을 지정하지 않으면 Mattermost Operator의 최신 버전이 설치됩니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:48
 msgid "For example:"
-msgstr ""
+msgstr "예시:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:54
 msgid "To use your custom ``config.yaml`` file:"
-msgstr ""
+msgstr "사용자 정의 ``config.yaml`` 파일을 사용하려면:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:60
 msgid "**Step 3: Deploy Mattermost**"
-msgstr ""
+msgstr "**3단계: Mattermost 배포**"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:64
 msgid "A Mattermost Enterprise license is required for multi-server deployments."
-msgstr ""
+msgstr "다중 서버 배포에는 Mattermost Enterprise 라이선스가 필요합니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:65
 msgid ""
@@ -388,14 +413,16 @@ msgid ""
 "``Replicas: 1`` to the ``spec`` section in step 2 below. See the "
 ":doc:`high availability documentation </scale/high-availability-cluster-"
 "based-deployment>` for more on highly-available deployments."
-msgstr ""
+msgstr "Enterprise 라이선스가 없는 단일 서버 배포의 경우, 아래 2단계의 ``spec`` 섹션에 ``Replicas: 1`` 을 추가하세요. "
+"고가용성 배포에 대한 자세한 내용은 :doc:`고가용성 문서 </scale/high-availability-cluster-based-deployment>` 를 참조하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:67
 msgid ""
 "**(Mattermost Enterprise only)** Create a Mattermost license secret. "
 "Create a file named ``mattermost-license-secret.yaml`` with the following"
 " content, replacing ``[LICENSE_FILE_CONTENTS]`` with your actual license:"
-msgstr ""
+msgstr "**(Mattermost Enterprise 전용)** Mattermost 라이선스 시크릿을 생성하세요. ``mattermost-license-secret.yaml`` 이라는 파일을 생성하고 다음 내용으로 채우되, "
+"``[LICENSE_FILE_CONTENTS]`` 를 실제 라이선스로 대체하세요:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:79
 msgid ""
@@ -403,37 +430,38 @@ msgid ""
 "installation.yaml``. File names in this guide are suggestions; you can "
 "use different names. Use the following template, adjusting the values as "
 "needed:"
-msgstr ""
+msgstr "``mattermost-installation.yaml`` 이라는 Mattermost 설치 매니페스트 파일을 생성하세요. 이 가이드의 파일 이름은 제안사항이며, 다른 이름을 사용할 수 있습니다. "
+"다음 템플릿을 사용하고 필요에 따라 값을 조정하세요:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:97
 msgid "Key fields in the manifest include:"
-msgstr ""
+msgstr "매니페스트의 주요 필드는 다음과 같습니다:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:99
 msgid "``metadata.name``: The name of your Mattermost deployment in Kubernetes."
-msgstr ""
+msgstr "``metadata.name``: Kubernetes에서의 Mattermost 배포 이름입니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:100
 msgid ""
 "``spec.size``: The size of your installation (e.g., \"100users\", "
 "\"1000users\", etc.)."
-msgstr ""
+msgstr "``spec.size``: 설치 크기입니다 (예: \"100users\", \"1000users\" 등)."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:101
 msgid "``spec.ingress.host``: The DNS name for your Mattermost installation."
-msgstr ""
+msgstr "``spec.ingress.host``: Mattermost 설치의 DNS 이름입니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:102
 msgid ""
 "``spec.version``: The Mattermost version. See the :doc:`server version "
 "archive </about/version-archive>` for available versions."
-msgstr ""
+msgstr "``spec.version``: Mattermost 버전입니다. 사용 가능한 버전은 :doc:`서버 버전 아카이브 </about/version-archive>` 를 참조하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:103
 msgid ""
 "``spec.licenseSecret``: The name of the Kubernetes secret containing your"
 " license (required for Enterprise)."
-msgstr ""
+msgstr "``spec.licenseSecret``: 라이선스가 포함된 Kubernetes 시크릿의 이름입니다 (Enterprise에 필요)."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:105
 msgid ""
@@ -442,22 +470,23 @@ msgid ""
 "operator/blob/master/docs/examples/mattermost_full.yaml>`_ and the "
 "`Custom Resource Definition <https://github.com/mattermost/mattermost-"
 "operator/blob/master/config/crd/bases/installation.mattermost.com_mattermosts.yaml>`_."
-msgstr ""
+msgstr "구성 가능한 필드의 전체 목록은 `예제 매니페스트 <https://github.com/mattermost/mattermost-operator/blob/master/docs/examples/mattermost_full.yaml>`_ 와 "
+"`커스텀 리소스 정의 <https://github.com/mattermost/mattermost-operator/blob/master/config/crd/bases/installation.mattermost.com_mattermosts.yaml>`_ 를 참조하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:107
 msgid ""
 "Create a file named ``mattermost-database-secret.yaml`` for database "
 "credentials. This secret must be in the same namespace as the Mattermost "
 "installation."
-msgstr ""
+msgstr "데이터베이스 자격 증명을 위한 ``mattermost-database-secret.yaml`` 파일을 생성하세요. 이 시크릿은 Mattermost 설치와 동일한 네임스페이스에 있어야 합니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:121
 msgid "Example for AWS Aurora with PostgreSQL:"
-msgstr ""
+msgstr "PostgreSQL이 있는 AWS Aurora 예시:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:135
 msgid "**Step 4: Create the Filestore Secret**"
-msgstr ""
+msgstr "**4단계: Filestore 시크릿 생성**"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:137
 msgid ""
@@ -465,47 +494,48 @@ msgid ""
 "credentials for your object storage service (e.g., AWS S3, MinIO). This "
 "secret must be created in the same namespace where you intend to install "
 "Mattermost. The file should contain the following YAML structure:"
-msgstr ""
+msgstr "객체 스토리지 서비스(예: AWS S3, MinIO)의 자격 증명을 저장하기 위해 ``mattermost-filestore-secret.yaml`` 파일을 생성하세요. "
+"이 시크릿은 Mattermost를 설치하려는 동일한 네임스페이스에 생성되어야 합니다. 파일은 다음 YAML 구조를 포함해야 합니다:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:1
 msgid "Key"
-msgstr ""
+msgstr "키"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:1
 msgid "Description"
-msgstr ""
+msgstr "설명"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:1
 msgid "Required"
-msgstr ""
+msgstr "필수"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:1
 msgid "accesskey"
-msgstr ""
+msgstr "accesskey"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:1
 msgid "Base64-encoded access key for your storage service."
-msgstr ""
+msgstr "스토리지 서비스의 Base64로 인코딩된 액세스 키입니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:1
 msgid "Yes"
-msgstr ""
+msgstr "예"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:1
 msgid "secretkey"
-msgstr ""
+msgstr "secretkey"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:1
 msgid "Base64-encoded secret key for your storage service."
-msgstr ""
+msgstr "스토리지 서비스의 Base64로 인코딩된 시크릿 키입니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:1
 msgid "metadata.name"
-msgstr ""
+msgstr "metadata.name"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:1
 msgid "The name of the Kubernetes secret."
-msgstr ""
+msgstr "Kubernetes 시크릿의 이름입니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:159
 msgid ""
@@ -513,14 +543,16 @@ msgid ""
 " not enter the raw keys directly. Use a command-line tool or online "
 "encoder to generate the base64 strings."
 msgstr ""
+"``accesskey``와 ``secretkey`` 값은 **base64로 인코딩** 되어야 합니다. 원시 키를 직접 입력하지 마세요. "
+"base64 문자열을 생성하려면 명령줄 도구나 온라인 인코더를 사용하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:161
 msgid "**Example (AWS S3):**"
-msgstr ""
+msgstr "**예시 (AWS S3):**"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:174
 msgid "**Step 5: Configure the Mattermost Installation Manifest**"
-msgstr ""
+msgstr "**5단계: Mattermost 설치 매니페스트 구성**"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:176
 msgid ""
@@ -529,19 +561,21 @@ msgid ""
 " the supported fields for guidance on where to add these configurations "
 "within the YAML structure."
 msgstr ""
+"``mattermost-installation.yaml`` 파일(2단계에서 생성)을 수정하여 Mattermost를 외부 데이터베이스와 객체 스토리지에 연결하세요. "
+"YAML 구조 내에서 이러한 구성을 추가할 위치에 대한 지침은 지원되는 필드를 참조하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:178
 msgid "Connect to the database:"
-msgstr ""
+msgstr "데이터베이스에 연결:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:180
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:191
 msgid "Add the following to the ``spec`` section of your manifest:"
-msgstr ""
+msgstr "매니페스트의 ``spec`` 섹션에 다음을 추가하세요:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:189
 msgid "Connect to Object Storage:"
-msgstr ""
+msgstr "객체 스토리지에 연결:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:202
 msgid ""
@@ -549,30 +583,33 @@ msgid ""
 "encryption (SSE) and SSL. Add the following environment variables to the "
 "``mattermostEnv`` section:"
 msgstr ""
+"Amazon S3를 사용하는 경우 서버 측 암호화(SSE)와 SSL을 활성화하는 것이 좋습니다. "
+"``mattermostEnv`` 섹션에 다음 환경 변수를 추가하세요:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:212
 msgid "**Review Mattermost Resource Status**"
-msgstr ""
+msgstr "**Mattermost 리소스 상태 검토**"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:214
 msgid ""
 "After a Mattermost installation has been created with the Operator, you "
 "can review its status with the following:"
 msgstr ""
+"Operator로 Mattermost 설치가 생성된 후에는 다음을 사용하여 상태를 검토할 수 있습니다:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:220
 msgid ""
 "The ``kubectl describe`` command can be used to obtain more information "
 "about the Mattermost server pods:"
-msgstr ""
+msgstr "Mattermost 서버 파드에 대한 자세한 정보를 얻기 위해 ``kubectl describe`` 명령어를 사용할 수 있습니다:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:226
 msgid "**Follow logs**"
-msgstr ""
+msgstr "**로그 추적**"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:228
 msgid "The following command can be used to follow logs on any kubernetes pod:"
-msgstr ""
+msgstr "다음 명령어를 사용하여 모든 Kubernetes 파드의 로그를 추적할 수 있습니다:"
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:234
 msgid ""
@@ -580,12 +617,14 @@ msgid ""
 "current context is used. We recommend specifying the namespace based on "
 "your deployment."
 msgstr ""
+"``-n [namespace]`` 를 생략하면 현재 컨텍스트의 기본 네임스페이스가 사용됩니다. "
+"배포에 따라 네임스페이스를 지정하는 것을 권장합니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:236
 msgid ""
 "This command can be used to review the Mattermost Operator or Mattermost "
 "server logs as needed."
-msgstr ""
+msgstr "이 명령어를 사용하여 필요에 따라 Mattermost Operator 또는 Mattermost 서버 로그를 검토할 수 있습니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:240
 msgid ""
@@ -602,6 +641,13 @@ msgid ""
 "CloudNative PG operator (or externally however you wish), or use a self-"
 "hosted MinIO instance for object storage."
 msgstr ""
+"Kubernetes가 처음이거나 관리형 솔루션을 선호하는 경우 `Amazon EKS <https://aws.amazon.com/eks/>`_, "
+"`Azure Kubernetes Service <https://azure.microsoft.com/en-ca/products/kubernetes-service/>`_, "
+"`Google Kubernetes Engine <https://cloud.google.com/kubernetes-engine/>`_, 또는 "
+"`DigitalOcean Kubernetes <https://www.digitalocean.com/products/kubernetes/>`_ 와 같은 서비스를 고려해보세요. "
+"이 가이드는 데이터베이스와 파일 스토리지를 위해 외부 관리형 서비스를 사용하는 데 중점을 두고 있지만, Mattermost Operator는 "
+"다른 솔루션을 사용할 수 있는 유연성을 제공합니다. 예를 들어, CloudNative PG operator를 사용하여 Kubernetes 클러스터 내에 "
+"PostgreSQL 데이터베이스를 배포하거나(또는 원하는 대로 외부에 배포), 객체 스토리지를 위해 자체 호스팅 MinIO 인스턴스를 사용할 수 있습니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:241
 msgid ""
@@ -610,28 +656,31 @@ msgid ""
 "services like MinIO for storage and CloudNative PG for PostgreSQL are "
 "also valid options if you have the expertise to manage them."
 msgstr ""
+"관리형 클라우드 서비스를 사용하는 것이 일반적으로 유지 관리가 더 간단하고 프로덕션 배포를 위한 권장 접근 방식이지만, "
+"스토리지를 위한 MinIO와 PostgreSQL을 위한 CloudNative PG와 같은 자체 관리형 서비스도 관리할 전문 지식이 있다면 "
+"유효한 옵션입니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:242
 msgid ""
 "If you choose to use self-managed components, you'll need to adapt the "
 "instructions accordingly, pointing to your internal services instead."
-msgstr ""
+msgstr "자체 관리형 구성 요소를 사용하기로 선택한 경우, 내부 서비스를 가리키도록 지침을 그에 맞게 조정해야 합니다."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:243
 msgid ""
 "To customize your production deployment, refer to the :doc:`configuration"
 " settings documentation </configure/configuration-settings>`."
-msgstr ""
+msgstr "프로덕션 배포를 사용자 정의하려면 :doc:`구성 설정 문서 </configure/configuration-settings>` 를 참조하세요."
 
 #: ../../source/deploy/server/kubernetes/deploy-k8s.rst:244
 msgid ""
 "If you encounter issues during deployment, consult the :doc:`deployment "
 "troubleshooting guide </guides/deployment-troubleshooting>`."
-msgstr ""
+msgstr "배포 중 문제가 발생하면 :doc:`배포 문제 해결 가이드 </guides/deployment-troubleshooting>` 를 참조하세요."
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:19
 msgid "Secure your Mattermost deployment"
-msgstr ""
+msgstr "Mattermost 배포 보안 설정"
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:21
 msgid ""
@@ -641,27 +690,29 @@ msgid ""
 "controller, you can enable secure HTTPS access to Mattermost while "
 "managing routing and TLS certificates effectively."
 msgstr ""
+"Kubernetes 환경에서 Mattermost를 배포하면 확장성, 보안 및 관리 용이성을 위한 Kubernetes 네이티브 기능을 활용할 수 있습니다. "
+"Ingress 리소스와 ingress 컨트롤러를 함께 사용하면 라우팅과 TLS 인증서를 효과적으로 관리하면서 Mattermost에 대한 안전한 HTTPS 접근을 활성화할 수 있습니다."
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:23
 msgid ""
 "Deploy an ingress controller, such as the `NGINX Ingress Controller "
 "<https://kubernetes.github.io/ingress-nginx/>`_, in your Kubernetes "
 "cluster."
-msgstr ""
+msgstr "Kubernetes 클러스터에 `NGINX Ingress Controller <https://kubernetes.github.io/ingress-nginx/>`_ 와 같은 ingress 컨트롤러를 배포하세요."
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:24
 msgid ""
 "Define an Ingress resource to route external traffic to your Mattermost "
 "service. Below is an example Ingress manifest:"
-msgstr ""
+msgstr "외부 트래픽을 Mattermost 서비스로 라우팅하기 위한 Ingress 리소스를 정의하세요. 아래는 Ingress 매니페스트 예시입니다:"
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:51
 msgid "Secure HTTPS access by using TLS certificates. You can either:"
-msgstr ""
+msgstr "TLS 인증서를 사용하여 HTTPS 접근을 보안하세요. 다음 중 하나를 선택할 수 있습니다:"
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:53
 msgid "Provide your own TLS certificate and private key."
-msgstr ""
+msgstr "자체 TLS 인증서와 개인 키를 제공하세요."
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:54
 msgid ""
@@ -669,12 +720,14 @@ msgid ""
 "<https://cert-manager.io/docs/>`_. If you are providing your own TLS "
 "certificate, create a Kubernetes secret to store it."
 msgstr ""
+"`cert-manager <https://cert-manager.io/docs/>`_ 를 사용하여 TLS 인증서 발급 및 관리를 자동화하세요. "
+"자체 TLS 인증서를 제공하는 경우, 이를 저장할 Kubernetes secret을 생성하세요."
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:55
 msgid ""
 "Ensure the Ingress resource references the secret name (mattermost-tls) "
 "in its tls section."
-msgstr ""
+msgstr "Ingress 리소스의 tls 섹션에서 secret 이름(mattermost-tls)을 참조하도록 하세요."
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:57
 msgid ""
@@ -682,6 +735,8 @@ msgid ""
 " and ``tls.yaml``) and apply them to your cluster using Kubernetes "
 "command-line tools."
 msgstr ""
+"Ingress와 TLS YAML 매니페스트를 파일(예: ``ingress.yaml`` 및 ``tls.yaml``)로 저장하고 "
+"Kubernetes 명령줄 도구를 사용하여 클러스터에 적용하세요."
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:59
 msgid ""
@@ -689,6 +744,8 @@ msgid ""
 "properly pointed to the external IP address of your cluster or ingress "
 "controller. You can verify this using tools like nslookup or dig."
 msgstr ""
+"도메인 이름 ``your-domain.com`` 이 클러스터 또는 ingress 컨트롤러의 외부 IP 주소를 올바르게 가리키도록 DNS를 구성하세요. "
+"nslookup이나 dig와 같은 도구를 사용하여 이를 확인할 수 있습니다."
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:61
 msgid ""
@@ -698,14 +755,17 @@ msgid ""
 "(``kubectl logs -n <namespace> <ingress-controller-pod-name>``, DNS "
 "records, and TLS configurations."
 msgstr ""
+"Ingress를 적용한 후, 웹 브라우저에서 도메인(예: ``https://your-domain.com``)으로 이동하여 HTTPS 접근을 확인하세요. "
+"문제가 발생하면 ingress 컨트롤러 로그(``kubectl logs -n <namespace> <ingress-controller-pod-name>``), "
+"DNS 레코드, TLS 구성을 확인하세요."
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:63
 msgid "Enable HSTS and Additional Security in your Ingress annotations."
-msgstr ""
+msgstr "Ingress 주석에서 HSTS 및 추가 보안을 활성화하세요."
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:65
 msgid "Additionally, consider:"
-msgstr ""
+msgstr "추가로 고려할 사항:"
 
 #: ../../source/deploy/server/deploy-kubernetes.rst:71
 msgid ""
@@ -714,4 +774,5 @@ msgid ""
 "controller managing routing and proxying, and proper security practices "
 "in place, you'll have a robust setup ready for production use."
 msgstr ""
-
+"이 단계를 따르면 Kubernetes의 Mattermost 배포가 TLS를 사용하여 HTTPS를 통해 안전하게 접근 가능해집니다. "
+"NGINX Ingress 컨트롤러가 라우팅과 프록시를 관리하고 적절한 보안 관행이 적용되어 있어 프로덕션 사용을 위한 견고한 설정이 준비됩니다."

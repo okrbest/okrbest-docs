@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:2
 msgid "Install desktop app on Linux"
-msgstr ""
+msgstr "Linux에서 데스크톱 앱 설치하기"
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:4
 msgid "This page describes how to install the Mattermost desktop app on Linux."
-msgstr ""
+msgstr "이 페이지는 Linux에서 Mattermost 데스크톱 앱을 설치하는 방법을 설명합니다."
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:8
 msgid ""
@@ -34,6 +34,8 @@ msgid ""
 "Automatic app updates are supported and enabled. When a new version of "
 "the desktop app is released, your app updates automatically."
 msgstr ""
+"Debian 9와 Ubuntu 20.04 LTS 이상 버전에서는 ``.deb`` 패키지(Beta)와 공식 APT 저장소를 모두 사용할 수 있습니다. "
+"자동 앱 업데이트가 지원되고 활성화되어 있습니다. 데스크톱 앱의 새 버전이 출시되면 앱이 자동으로 업데이트됩니다."
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:12
 msgid ""
@@ -48,22 +50,26 @@ msgid ""
 "also be required, particularly for installations that don't rely on the "
 "repository setup script."
 msgstr ""
+"GPG 공개 키가 변경되었습니다. 이전에 시스템에 저장소를 설정했다면 `새 키를 다운로드 <https://deb.packages.mattermost.com/pubkey.gpg>`_ 해야 합니다. "
+"설정 스크립트를 실행할 때 ``UPDATE_GPG_KEY=yes`` 환경 변수를 설정하여 시스템의 이전 키를 새 키로 덮어쓰도록 구성할 수 있습니다. "
+"그러면 설치의 첫 번째 단계는 다음과 같습니다: ``curl -fsS -o- https://deb.packages.mattermost.com/setup-repo.sh | sudo UPDATE_GPG_KEY=yes bash``. "
+"설정에 따라 추가 단계가 필요할 수 있으며, 특히 저장소 설정 스크립트에 의존하지 않는 설치의 경우 그렇습니다."
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:14
 msgid "At the command line, set up the Mattermost repository on your system:"
-msgstr ""
+msgstr "명령줄에서 시스템에 Mattermost 저장소를 설정하세요:"
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:20
 msgid "Install the Mattermost desktop app:"
-msgstr ""
+msgstr "Mattermost 데스크톱 앱을 설치하세요:"
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:26
 msgid "Update the Mattermost desktop app:"
-msgstr ""
+msgstr "Mattermost 데스크톱 앱 업데이트하기:"
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:32
 msgid "**Snapcraft package**"
-msgstr ""
+msgstr "**Snapcraft 패키지**"
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:34
 msgid ""
@@ -73,16 +79,19 @@ msgid ""
 "see `Install snapd <https://snapcraft.io/docs/installing-snapd>`_ on the "
 "Snapcraft website for details."
 msgstr ""
+"Snapcraft가 설치된 시스템에서는 snap을 사용할 수 있습니다. Snapcraft는 Ubuntu 16.04 이상에서 기본적으로 설치되지만, "
+"대부분의 다른 Linux 배포판에서는 수동으로 설치할 수 있습니다. Snapcraft 설치 방법은 Snapcraft 웹사이트의 "
+"`Install snapd <https://snapcraft.io/docs/installing-snapd>`_ 를 참조하세요."
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:36
 #: ../../source/deploy/desktop/linux-desktop-install.rst:55
 msgid "At the command line, execute the following command:"
-msgstr ""
+msgstr "명령줄에서 다음 명령을 실행하세요:"
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:42
 #: ../../source/deploy/desktop/linux-desktop-install.rst:61
 msgid "Run Mattermost as a desktop app."
-msgstr ""
+msgstr "Mattermost를 데스크톱 앱으로 실행하세요."
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:45
 #: ../../source/deploy/desktop/linux-desktop-install.rst:70
@@ -91,12 +100,15 @@ msgid ""
 "**More** |more-icon-vertical| icon located in the top left corner of the "
 "desktop app, then selecting **Help > Version...**."
 msgstr ""
+"데스크톱 앱의 현재 버전을 확인하려면 데스크톱 앱의 왼쪽 상단 모서리에 있는 **More** |more-icon-vertical| 아이콘을 선택한 다음 "
+"**Help > Version...** 을 선택하세요."
 
 #: ../../<rst_prolog>:50
 msgid ""
 "Use the More icon in the top left corner to access Mattermost desktop "
 "apps customization settings."
 msgstr ""
+"왼쪽 상단 모서리의 More 아이콘을 사용하여 Mattermost 데스크톱 앱의 사용자 지정 설정에 접근하세요."
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:49
 msgid ""
@@ -104,10 +116,12 @@ msgid ""
 "Automatic app updates aren't supported. You must update your app "
 "manually."
 msgstr ""
+"CentOS와 RHEL 7 및 8용 Beta ``.rpm`` 패키지를 사용할 수 있습니다. 자동 앱 업데이트는 지원되지 않습니다. "
+"앱을 수동으로 업데이트해야 합니다."
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:51
 msgid "**Install the Mattermost Desktop App**"
-msgstr ""
+msgstr "**Mattermost 데스크톱 앱 설치하기**"
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:53
 msgid ""
@@ -116,10 +130,13 @@ msgid ""
 "<https://releases.mattermost.com/desktop/5.12.0/mattermost-"
 "desktop-5.12.0-linux-x86_64.rpm>`_"
 msgstr ""
+"64비트 시스템용 Mattermost 데스크톱 앱의 최신 버전을 다운로드하세요: `mattermost-desktop-5.12.0-linux-x86_64.rpm "
+"<https://releases.mattermost.com/desktop/5.12.0/mattermost-"
+"desktop-5.12.0-linux-x86_64.rpm>`_"
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:63
 msgid "To manually update the desktop app, run the following command:"
-msgstr ""
+msgstr "데스크톱 앱을 수동으로 업데이트하려면 다음 명령을 실행하세요:"
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:74
 msgid ""
@@ -130,6 +147,10 @@ msgid ""
 " are supported and enabled on AppImage binary builds. When a new version "
 "of the desktop app is released, your app updates automatically."
 msgstr ""
+"데스크톱 앱은 대부분의 Linux 배포판에서 사용할 수 있는 두 가지 형식으로 제공됩니다: 압축된 tarball과 AppImage 바이너리입니다. "
+"두 형식 모두 `Desktop App's Github releases page <https://github.com/mattermost/desktop/releases>`_ 에서 "
+"다운로드할 수 있습니다. AppImage 바이너리 빌드에서는 자동 앱 업데이트가 지원되고 활성화되어 있습니다. 데스크톱 앱의 새 버전이 "
+"출시되면 앱이 자동으로 업데이트됩니다."
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:76
 msgid ""
@@ -137,10 +158,12 @@ msgid ""
 "`AppImage Quickstart documentation page "
 "<https://docs.appimage.org/introduction/quickstart.html>`_."
 msgstr ""
+"AppImage 바이너리 사용 방법에 대한 지침은 `AppImage Quickstart documentation page "
+"<https://docs.appimage.org/introduction/quickstart.html>`_ 를 참조하세요."
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:78
 msgid "**Install the Desktop App's compressed tarball**"
-msgstr ""
+msgstr "**데스크톱 앱의 압축된 tarball 설치하기**"
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:80
 msgid ""
@@ -149,6 +172,9 @@ msgid ""
 "<https://releases.mattermost.com/desktop/5.12.0/mattermost-"
 "desktop-5.12.0-linux-x64.tar.gz>`_"
 msgstr ""
+"64비트 시스템용 Mattermost 데스크톱 앱의 최신 버전을 다운로드하세요: `mattermost-desktop-5.12.0-linux-x64.tar.gz "
+"<https://releases.mattermost.com/desktop/5.12.0/mattermost-"
+"desktop-5.12.0-linux-x64.tar.gz>`_"
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:82
 msgid ""
@@ -157,16 +183,19 @@ msgid ""
 "permissions: ``sudo chown root:root chrome-sandbox && sudo chmod 4755 "
 "chrome-sandbox``"
 msgstr ""
+"아카이브를 편리한 위치에 추출한 다음, 추출된 디렉토리의 ``chrome-sandbox``에 필요한 소유권과 권한을 부여하세요: "
+"``sudo chown root:root chrome-sandbox && sudo chmod 4755 chrome-sandbox``"
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:84
 msgid "Execute ``mattermost-desktop`` located inside the extracted directory."
-msgstr ""
+msgstr "추출된 디렉토리 내에 있는 ``mattermost-desktop`` 을 실행하세요."
 
 #: ../../source/deploy/desktop/linux-desktop-install.rst:86
 msgid ""
 "To create a Desktop launcher, open the file ``README.md``, and follow the"
 " instructions in the **Desktop launcher** section."
 msgstr ""
+"데스크톱 실행기를 만들려면 ``README.md`` 파일을 열고 **Desktop launcher** 섹션의 지침을 따르세요."
 
 #~ msgid ""
 #~ "Download the latest version of the "
