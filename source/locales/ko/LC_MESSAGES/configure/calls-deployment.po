@@ -21,28 +21,30 @@ msgstr ""
 
 #: ../../source/configure/calls-deployment.md:1
 msgid "Calls self-hosted deployment"
-msgstr ""
+msgstr "Calls 자체 호스팅 배포"
 
 #: ../../source/_static/badges/allplans-selfhosted.md:6
 msgid ""
 "![plans-img](/_static/images/badges/flag_icon.svg) Available on [all "
 "plans](https://mattermost.com/pricing/)"
 msgstr ""
+"![plans-img](/_static/images/badges/flag_icon.svg) [모든 플랜](https://mattermost.com/pricing/)에서 사용 가능"
 
 #: ../../source/_static/badges/allplans-selfhosted.md:6
 #: ../../source/configure/calls-rtcd-ent-only.md:8
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/allplans-selfhosted.md:8
 msgid ""
 "![deployment-img](/_static/images/badges/deployment_icon.svg) [self-"
 "hosted](https://mattermost.com/download/) deployments"
 msgstr ""
+"![deployment-img](/_static/images/badges/deployment_icon.svg) [자체 호스팅](https://mattermost.com/download/) 배포"
 
 #: ../../source/_static/badges/allplans-selfhosted.md:8
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/configure/calls-deployment.md:6
 msgid ""
@@ -54,6 +56,9 @@ msgid ""
 "communication without reliance on public internet connectivity with "
 "flexible configuration options for complex network requirements."
 msgstr ""
+"Mattermost Calls는 통신 인프라에 대한 향상된 보안과 제어를 요구하는 조직을 위한 훌륭한 옵션입니다. Calls는 [에어갭 환경](https://docs.mattermost.com/configure"
+"/calls-deployment.html#air-gapped-deployments)을 포함한 자체 호스팅 배포에서 안전하게 작동하도록 설계되었으며, "
+"복잡한 네트워크 요구사항에 대한 유연한 구성 옵션으로 공용 인터넷 연결에 의존하지 않고 개인 통신을 보장합니다."
 
 #: ../../source/configure/calls-deployment.md:8
 msgid ""
@@ -63,10 +68,12 @@ msgid ""
 "deployment guidelines for the recording, transcription, and live captions"
 " service."
 msgstr ""
+"이 문서는 자체 호스팅 배포에서 Calls 플러그인을 성공적으로 작동시키는 방법에 대한 정보를 제공합니다. 또한 예시 다이어그램과 함께 가장 일반적인 배포 전략을 설명하고, "
+"녹화, 전사 및 실시간 자막 서비스에 대한 배포 가이드라인을 제공합니다."
 
 #: ../../source/configure/calls-deployment.md:10
 msgid "Terminology"
-msgstr ""
+msgstr "용어"
 
 #: ../../source/configure/calls-deployment.md:12
 msgid ""
@@ -74,25 +81,27 @@ msgid ""
 "underlying protocols/specifications on top of which calls are "
 "implemented."
 msgstr ""
+"[WebRTC](https://bloggeek.me/webrtcglossary/webrtc-2/): 통화가 구현되는 기본 프로토콜/명세의 집합입니다."
 
 #: ../../source/configure/calls-deployment.md:13
 msgid ""
 "**RTC (Real Time Connection)**: The real-time connection. This is the "
 "channel used to send media tracks (audio/video/screen)."
 msgstr ""
+"**RTC (Real Time Connection)**: 실시간 연결입니다. 이는 미디어 트랙(오디오/비디오/화면)을 전송하는 데 사용되는 채널입니다."
 
 #: ../../source/configure/calls-deployment.md:14
 msgid ""
 "**WS (WebSocket)**: The WebSocket connection. This is the channel used to"
 " set up a connection (signaling process)."
-msgstr ""
+msgstr "**WS (WebSocket)**: WebSocket 연결입니다. 이는 연결(시그널링 프로세스)을 설정하는 데 사용되는 채널입니다."
 
 #: ../../source/configure/calls-deployment.md:15
 msgid ""
 "[NAT (Network Address "
 "Translation)](https://bloggeek.me/webrtcglossary/nat/): A networking "
 "technique to map IP addresses."
-msgstr ""
+msgstr "[NAT (Network Address Translation)](https://bloggeek.me/webrtcglossary/nat/): IP 주소를 매핑하는 네트워킹 기술입니다."
 
 #: ../../source/configure/calls-deployment.md:16
 msgid ""
@@ -101,6 +110,8 @@ msgid ""
 "by WebRTC clients to help traversing NATs. On the server side it's mainly"
 " used to figure out the public IP of the instance."
 msgstr ""
+"[STUN (Session Traversal Utilities for NAT)](https://bloggeek.me/webrtcglossary/stun/): WebRTC 클라이언트가 NAT를 통과하는 데 도움을 주는 프로토콜/서비스입니다. "
+"서버 측에서는 주로 인스턴스의 공용 IP를 파악하는 데 사용됩니다."
 
 #: ../../source/configure/calls-deployment.md:17
 msgid ""
@@ -109,16 +120,18 @@ msgid ""
 "to help WebRTC clients behind strict firewalls connect to a call through "
 "media relay."
 msgstr ""
+"[TURN (Traversal Using Relays around NAT)](https://bloggeek.me/webrtcglossary/turn/): 엄격한 방화벽 뒤에 있는 WebRTC 클라이언트가 미디어 릴레이를 통해 통화에 "
+"연결할 수 있도록 도와주는 프로토콜/서비스입니다."
 
 #: ../../source/configure/calls-deployment.md:19
 msgid "Plugin components"
-msgstr ""
+msgstr "플러그인 구성 요소"
 
 #: ../../source/configure/calls-deployment.md:21
 msgid ""
 "**Calls plugin**: This is the main entry point and a requirement to "
 "enable channel calls."
-msgstr ""
+msgstr "**Calls 플러그인**: 이는 채널 통화를 활성화하기 위한 주요 진입점이자 요구사항입니다."
 
 #: ../../source/configure/calls-deployment.md:23
 msgid ""
@@ -127,14 +140,15 @@ msgid ""
 "connections. Read more about when and why to use [rtcd](#the-rtcd-"
 "service) below."
 msgstr ""
+"**rtcd**: WebRTC 연결과 관련된 모든 기능과 데이터 처리를 오프로드하기 위해 배포할 수 있는 선택적 서비스입니다. [rtcd](#the-rtcd-service)를 사용하는 시기와 이유에 대한 자세한 내용은 아래를 참조하세요."
 
 #: ../../source/configure/calls-deployment.md:25
 msgid "Requirements"
-msgstr ""
+msgstr "요구사항"
 
 #: ../../source/configure/calls-deployment.md:27
 msgid "Server"
-msgstr ""
+msgstr "서버"
 
 #: ../../source/configure/calls-deployment.md:29
 msgid ""
@@ -143,14 +157,16 @@ msgid ""
 "screen). See the [config TLS](https://docs.mattermost.com/deploy/server"
 "/setup-tls.html) section for more info."
 msgstr ""
+"Mattermost 서버를 보안(HTTPS) 연결로 실행하세요. 이는 클라이언트에서 장치(예: 마이크, 화면) 캡처를 허용하기 위한 필수 요구사항입니다. 자세한 내용은 "
+"[TLS 구성](https://docs.mattermost.com/deploy/server/setup-tls.html) 섹션을 참조하세요."
 
 #: ../../source/configure/calls-deployment.md:30
 msgid "See [network requirements](#network) below."
-msgstr ""
+msgstr "아래의 [네트워크 요구사항](#network)을 참조하세요."
 
 #: ../../source/configure/calls-deployment.md:32
 msgid "Client"
-msgstr ""
+msgstr "클라이언트"
 
 #: ../../source/configure/calls-deployment.md:34
 msgid ""
@@ -159,6 +175,8 @@ msgid ""
 " Port`. If this is not possible a TURN server should be used to achieve "
 "connectivity."
 msgstr ""
+"클라이언트는 `RTC Server Port` 로 구성된 UDP 포트를 통해 통화를 호스팅하는 인스턴스에 연결(데이터 송수신)할 수 있어야 합니다. "
+"이것이 불가능한 경우 연결을 위해 TURN 서버를 사용해야 합니다."
 
 #: ../../source/configure/calls-deployment.md:35
 msgid ""
@@ -166,59 +184,61 @@ msgid ""
 "additional permissions to the application (e.g., browser, desktop app) to"
 " allow them to capture audio inputs or share the screen."
 msgstr ""
+"플랫폼이나 운영체제에 따라 클라이언트는 오디오 입력 캡처나 화면 공유를 허용하기 위해 애플리케이션(예: 브라우저, 데스크톱 앱)에 "
+"추가 권한을 부여해야 할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:37
 msgid "Network"
-msgstr ""
+msgstr "네트워크"
 
 #: ../../source/configure/calls-deployment.md:40
 #: ../../source/configure/calls-deployment.md:140
 msgid "Scroll horizontally to see additional columns in the table below."
-msgstr ""
+msgstr "아래 표의 추가 열을 보려면 가로로 스크롤하세요."
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "Service"
-msgstr ""
+msgstr "서비스"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "Ports"
-msgstr ""
+msgstr "포트"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "Protocols"
-msgstr ""
+msgstr "프로토콜"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "Source"
-msgstr ""
+msgstr "소스"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "Target"
-msgstr ""
+msgstr "대상"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "Purpose"
-msgstr ""
+msgstr "목적"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "API (Calls plugin)"
-msgstr ""
+msgstr "API (Calls 플러그인)"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "80,443"
-msgstr ""
+msgstr "80,443"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "TCP (incoming)"
-msgstr ""
+msgstr "TCP (인바운드)"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "Mattermost clients (web/desktop/mobile)"
-msgstr ""
+msgstr "Mattermost 클라이언트 (웹/데스크톱/모바일)"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "Mattermost instance (Calls plugin)"
-msgstr ""
+msgstr "Mattermost 인스턴스 (Calls 플러그인)"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid ""
@@ -226,26 +246,28 @@ msgid ""
 "plugin. This API is exposed on the same connection as Mattermost, so "
 "there's likely no need to change anything."
 msgstr ""
+"클라이언트에서 Calls 플러그인으로의 HTTP 및 WebSocket 연결을 허용합니다. 이 API는 Mattermost와 동일한 연결에 노출되므로 "
+"아무것도 변경할 필요가 없을 것입니다."
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "RTC (Calls plugin or `rtcd`)"
-msgstr ""
+msgstr "RTC (Calls 플러그인 또는 `rtcd`)"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "8443"
-msgstr ""
+msgstr "8443"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "UDP (incoming)"
-msgstr ""
+msgstr "UDP (인바운드)"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "Mattermost clients (Web/Desktop/Mobile)"
-msgstr ""
+msgstr "Mattermost 클라이언트 (웹/데스크톱/모바일)"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "Mattermost instance or `rtcd` service"
-msgstr ""
+msgstr "Mattermost 인스턴스 또는 `rtcd` 서비스"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid ""
@@ -255,6 +277,9 @@ msgid ""
 "`rtcd`) and the clients joining calls so that UDP traffic is correctly "
 "routed both ways (from/to clients)."
 msgstr ""
+"클라이언트가 통화 관련 미디어(예: 오디오, 비디오)를 전송하는 연결을 설정할 수 있도록 합니다. 이는 플러그인(또는 `rtcd`)을 실행하는 "
+"인스턴스와 통화에 참여하는 클라이언트 사이의 모든 네트워크 구성 요소(예: NAT, 방화벽)에서 열려 있어야 하며, UDP 트래픽이 양방향(클라이언트에서/로)으로 "
+"올바르게 라우팅되도록 합니다."
 
 #: ../../source/configure/calls-deployment.md:39
 msgid ""
@@ -266,22 +291,26 @@ msgid ""
 "in case clients are unable to connect using UDP. It requires `rtcd` "
 "version >= v0.11 and Calls version >= v0.17."
 msgstr ""
+"클라이언트가 통화 관련 미디어(예: 오디오, 비디오)를 전송하는 연결을 설정할 수 있도록 합니다. 이는 플러그인(또는 `rtcd`)을 실행하는 "
+"인스턴스와 통화에 참여하는 클라이언트 사이의 모든 네트워크 구성 요소(예: NAT, 방화벽)에서 열려 있어야 하며, TCP 트래픽이 양방향(클라이언트에서/로)으로 "
+"올바르게 라우팅되도록 합니다. 클라이언트가 UDP를 사용하여 연결할 수 없는 경우 백업 채널로 사용할 수 있습니다. `rtcd` 버전 >= v0.11과 "
+"Calls 버전 >= v0.17이 필요합니다."
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "API (`rtcd`)"
-msgstr ""
+msgstr "API (`rtcd`)"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "8045"
-msgstr ""
+msgstr "8045"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "Mattermost instance(s) (Calls plugin)"
-msgstr ""
+msgstr "Mattermost 인스턴스(들) (Calls 플러그인)"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "`rtcd` service"
-msgstr ""
+msgstr "`rtcd` 서비스"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid ""
@@ -289,26 +318,28 @@ msgid ""
 "service. Can be expose internally as the service only needs to be "
 "reachable by the instance(s) running the Mattermost server."
 msgstr ""
+"Calls 플러그인에서 `rtcd` 서비스로의 HTTP/WebSocket 연결을 허용합니다. Mattermost 서버를 실행하는 인스턴스(들)에서만 "
+"접근 가능하면 되므로 내부적으로 노출될 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "STUN (Calls plugin or `rtcd`)"
-msgstr ""
+msgstr "STUN (Calls 플러그인 또는 `rtcd`)"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "3478"
-msgstr ""
+msgstr "3478"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "UDP (outgoing)"
-msgstr ""
+msgstr "UDP (아웃바운드)"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "Mattermost Instance(s) (Calls plugin) or `rtcd` service"
-msgstr ""
+msgstr "Mattermost 인스턴스(들) (Calls 플러그인) 또는 `rtcd` 서비스"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "Configured STUN servers"
-msgstr ""
+msgstr "구성된 STUN 서버"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid ""
@@ -318,10 +349,13 @@ msgid ""
 "through the [ICE Host Override](https://docs.mattermost.com/configure"
 "/plugins-configuration-settings.html#ice-host-override) config option."
 msgstr ""
+"(선택사항) Calls 플러그인 또는 `rtcd` 서비스가 인스턴스의 공용 IP를 발견할 수 있도록 합니다. STUN/TURN 서버를 구성하는 경우에만 "
+"필요합니다. [ICE Host Override](https://docs.mattermost.com/configure/plugins-configuration-settings.html#ice-host-override) "
+"구성 옵션을 통해 IP 또는 호스트명을 수동으로 설정하는 경우에는 이 요구사항이 적용되지 않습니다."
 
 #: ../../source/configure/calls-deployment.md:51
 msgid "Air-gapped deployments"
-msgstr ""
+msgstr "에어갭 배포"
 
 #: ../../source/configure/calls-deployment.md:53
 msgid ""
@@ -330,18 +364,20 @@ msgid ""
 "outside the local network, and no existing method supports that "
 "connection. In such setups:"
 msgstr ""
+"Mattermost Calls는 에어갭 환경에서 작동할 수 있습니다. 사용자가 로컬 네트워크 외부에서 연결해야 하고 기존 방법으로는 해당 연결을 지원할 수 "
+"없는 경우에만 Calls를 공용 인터넷에 노출할 필요가 있습니다. 이러한 설정에서는:"
 
 #: ../../source/configure/calls-deployment.md:55
 msgid ""
 "Users should connect from within the private/local network. This can be "
 "done on-premises, through a VPN, or via virtual machines."
-msgstr ""
+msgstr "사용자는 프라이빗/로컬 네트워크 내에서 연결해야 합니다. 온프레미스, VPN 또는 가상 머신을 통해 연결할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:56
 msgid ""
 "Configuring a STUN server is unnecessary, as all connections occur within"
 " the local network."
-msgstr ""
+msgstr "모든 연결이 로컬 네트워크 내에서 이루어지므로 STUN 서버 구성이 필요하지 않습니다."
 
 #: ../../source/configure/calls-deployment.md:57
 msgid ""
@@ -350,23 +386,25 @@ msgid ""
 "be optionally set with a local IP address (e.g., 192.168.1.45), depending"
 " on the specific network configuration and topology."
 msgstr ""
+"특정 네트워크 구성 및 토폴로지에 따라 [ICE Host Override](https://docs.mattermost.com/configure/plugins-"
+"configuration-settings.html#ice-host-override) 구성 설정을 로컬 IP 주소(예: 192.168.1.45)로 선택적으로 설정할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:59
 #: ../../source/configure/calls-deployment.md:412
 msgid "Limitations"
-msgstr ""
+msgstr "제한사항"
 
 #: ../../source/configure/calls-deployment.md:61
 msgid ""
 "All Mattermost customers can start, join, and participate in 1:1 audio "
 "calls with optional screen sharing."
-msgstr ""
+msgstr "모든 Mattermost 고객은 선택적 화면 공유가 가능한 1:1 오디오 통화를 시작하고, 참여하고, 참가할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:62
 msgid ""
 "For group calls up to 50 concurrent users, Mattermost Enterprise, "
 "Professional, or Mattermost Cloud is required."
-msgstr ""
+msgstr "최대 50명의 동시 사용자가 참여하는 그룹 통화를 위해서는 Mattermost Enterprise, Professional 또는 Mattermost Cloud가 필요합니다."
 
 #: ../../source/configure/calls-deployment.md:63
 msgid ""
@@ -380,6 +418,11 @@ msgid ""
 "hosted customers looking for group calls beyond 50 concurrent users "
 "consider using the [dedicated rtcd service](#the-rtcd-service)."
 msgstr ""
+"Enterprise 고객은 [통화 녹화](https://docs.mattermost.com/collaborate/make-calls.html#record-a-call), 통화 중 [실시간 텍스트 "
+"자막](https://docs.mattermost.com/collaborate/make-calls.html#live-captions-during-calls-beta) 활성화, [녹화된 통화 "
+"전사](https://docs.mattermost.com/collaborate/make-calls.html#transcribe-recorded-calls-beta) 기능을 사용할 수 있습니다. "
+"50명 이상의 동시 사용자가 참여하는 그룹 통화를 원하는 Enterprise 자체 호스팅 고객은 [전용 rtcd 서비스](#the-rtcd-service) 사용을 "
+"고려하는 것이 좋습니다."
 
 #: ../../source/configure/calls-deployment.md:64
 msgid ""
@@ -393,11 +436,15 @@ msgid ""
 "limits greatly depends on instance resources. For more details, refer to "
 "the [performance section](#performance) below."
 msgstr ""
+"Mattermost 자체 호스팅 배포의 경우, 시스템 관리자는 [시스템 콘솔](https://docs.mattermost.com/configure/plugins-configuration-"
+"settings.html#calls)을 사용하여 플러그인을 활성화하고 구성해야 합니다. 기본 최대 참가자 수는 무제한이지만, 통화당 최대 50명의 "
+"참가자를 권장합니다. 최대 통화 참가자 수는 **시스템 콘솔 > 플러그인 관리 > Calls > 최대 통화 참가자** 에서 구성할 수 있습니다. "
+"통화 참가자 제한은 인스턴스 리소스에 크게 의존합니다. 자세한 내용은 아래 [성능 섹션](#performance)을 참조하세요."
 
 #: ../../source/configure/calls-deployment.md:66
 #: ../../source/configure/calls-deployment.md:291
 msgid "Configuration"
-msgstr ""
+msgstr "구성"
 
 #: ../../source/configure/calls-deployment.md:68
 msgid ""
@@ -406,10 +453,12 @@ msgid ""
 " found in the [System Console](https://docs.mattermost.com/configure"
 "/plugins-configuration-settings.html#calls)."
 msgstr ""
+"Mattermost 자체 호스팅 고객의 경우, calls 플러그인은 사전 패키징되어 설치되고 활성화됩니다. 최종 사용자가 사용할 수 있도록 하는 구성은 "
+"[시스템 콘솔](https://docs.mattermost.com/configure/plugins-configuration-settings.html#calls)에서 찾을 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:70
 msgid "Modes of operation"
-msgstr ""
+msgstr "운영 모드"
 
 #: ../../source/configure/calls-deployment.md:72
 msgid ""
@@ -418,45 +467,47 @@ msgid ""
 "section below on [the rtcd service](#the-rtcd-service) to learn about the"
 " `rtcd` and the Selective Forwarding Unit (SFU)."
 msgstr ""
+"Mattermost 서버의 실행 방식에 따라 Calls 플러그인이 작동할 수 있는 여러 모드가 있습니다. `rtcd`와 Selective Forwarding Unit "
+"(SFU)에 대해 자세히 알아보려면 아래 [rtcd 서비스](#the-rtcd-service) 섹션을 참조하세요."
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "Mattermost deployment"
-msgstr ""
+msgstr "Mattermost 배포"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "SFU"
-msgstr ""
+msgstr "SFU"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "SFU deployment"
-msgstr ""
+msgstr "SFU 배포"
 
 #: ../../source/configure/calls-deployment.md:39
 #: ../../source/configure/calls-deployment.md:81
 msgid "Single instance"
-msgstr ""
+msgstr "단일 인스턴스"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "integrated"
-msgstr ""
+msgstr "통합"
 
 #: ../../source/configure/calls-deployment.md:39
 #: ../../source/configure/calls-deployment.md:89
 msgid "rtcd"
-msgstr ""
+msgstr "rtcd"
 
 #: ../../source/configure/calls-deployment.md:39
 #: ../../source/configure/calls-deployment.md:95
 msgid "High availability cluster-based"
-msgstr ""
+msgstr "고가용성 클러스터 기반"
 
 #: ../../source/configure/calls-deployment.md:39
 msgid "clustered"
-msgstr ""
+msgstr "클러스터"
 
 #: ../../source/configure/calls-deployment.md:83
 msgid "Integrated"
-msgstr ""
+msgstr "통합"
 
 #: ../../source/configure/calls-deployment.md:85
 msgid ""
@@ -464,36 +515,41 @@ msgid ""
 "Mattermost instance setup. The WebRTC service is integrated in the plugin"
 " itself and runs alongside the Mattermost server."
 msgstr ""
+"단일 Mattermost 인스턴스 설정에서 플러그인을 처음 설치할 때의 기본 모드입니다. WebRTC 서비스는 플러그인 자체에 통합되어 Mattermost "
+"서버와 함께 실행됩니다."
 
 #: ../../source/configure/calls-deployment.md:87
 msgid ""
 "![A diagram of the integrated configuration model of a single "
 "instance.](/images/calls-deployment-image3.png)"
 msgstr ""
+"![단일 인스턴스의 통합 구성 모델 다이어그램.](/images/calls-deployment-image3.png)"
 
 #: ../../source/configure/calls-deployment.md:87
 msgid "A diagram of the integrated configuration model of a single instance."
-msgstr ""
+msgstr "단일 인스턴스의 통합 구성 모델 다이어그램."
 
 #: ../../source/configure/calls-deployment.md:91
 msgid ""
 "An external, dedicated and scalable WebRTC service (`rtcd`) is used to "
 "handle all calls media routing."
 msgstr ""
+"외부 전용 확장 가능한 WebRTC 서비스(`rtcd`)가 모든 통화 미디어 라우팅을 처리하는 데 사용됩니다."
 
 #: ../../source/configure/calls-deployment.md:93
 msgid ""
 "![A diagram of a Web RTC deployment configuration.](/images/calls-"
 "deployment-image7.png)"
 msgstr ""
+"![Web RTC 배포 구성 다이어그램.](/images/calls-deployment-image7.png)"
 
 #: ../../source/configure/calls-deployment.md:93
 msgid "A diagram of a Web RTC deployment configuration."
-msgstr ""
+msgstr "Web RTC 배포 구성 다이어그램."
 
 #: ../../source/configure/calls-deployment.md:97
 msgid "Clustered"
-msgstr ""
+msgstr "클러스터"
 
 #: ../../source/configure/calls-deployment.md:99
 msgid ""
@@ -504,32 +560,37 @@ msgid ""
 "on the instance where the initiating websocket connection (first client "
 "to join) is made. A single call will be hosted on a single cluster node."
 msgstr ""
+"고가용성 클러스터 기반 배포에서 플러그인을 실행할 때의 기본 모드입니다. 모든 Mattermost 노드는 WebRTC 서비스를 포함하는 플러그인 "
+"인스턴스를 실행합니다. 통화는 기존 로드 밸런서를 통해 사용 가능한 모든 노드에 분산됩니다: 통화는 초기 websocket 연결(첫 번째 참가 "
+"클라이언트)이 이루어진 인스턴스에서 호스팅됩니다. 단일 통화는 단일 클러스터 노드에서 호스팅됩니다."
 
 #: ../../source/configure/calls-deployment.md:101
 msgid ""
 "![A diagram of a clustered calls deployment.](/images/calls-deployment-"
 "image5.png)"
 msgstr ""
+"![클러스터형 통화 배포 다이어그램.](/images/calls-deployment-image5.png)"
 
 #: ../../source/configure/calls-deployment.md:101
 msgid "A diagram of a clustered calls deployment."
-msgstr ""
+msgstr "클러스터형 통화 배포 다이어그램."
 
 #: ../../source/configure/calls-deployment.md:103
 msgid "rtcd (High Availability)"
-msgstr ""
+msgstr "rtcd (고가용성)"
 
 #: ../../source/configure/calls-deployment.md:105
 msgid "![A diagram of an rtcd deployment.](/images/calls-deployment-image2.png)"
 msgstr ""
+"![rtcd 배포 다이어그램.](/images/calls-deployment-image2.png)"
 
 #: ../../source/configure/calls-deployment.md:105
 msgid "A diagram of an rtcd deployment."
-msgstr ""
+msgstr "rtcd 배포 다이어그램."
 
 #: ../../source/configure/calls-deployment.md:107
 msgid "Performance"
-msgstr ""
+msgstr "성능"
 
 #: ../../source/configure/calls-deployment.md:109
 msgid ""
@@ -538,6 +599,8 @@ msgid ""
 "exhibits quadratic growth with the number of clients transmitting and "
 "receiving media."
 msgstr ""
+"Calls 성능은 주로 두 가지 리소스에 의존합니다: CPU와 대역폭(네트워크 지연 시간 및 전체 처리량). 최종 소비량은 미디어를 송수신하는 "
+"클라이언트 수에 따라 2차 성장을 보입니다."
 
 #: ../../source/configure/calls-deployment.md:111
 msgid ""
@@ -547,324 +610,327 @@ msgid ""
 "ultimately counts towards performance is the overall number of concurrent"
 " media flows (in/out) across the server."
 msgstr ""
+"예를 들어, 10명의 참가자 중 2명이 음소거 해제된(음성 데이터 전송) 단일 통화는 일반적으로 단일 참가자가 음소거 해제된 동일한 통화보다 "
+"두 배의 리소스를 소비합니다. 성능에 궁극적으로 영향을 미치는 것은 서버 전체의 동시 미디어 흐름(입력/출력)의 총 수입니다."
 
 #: ../../source/configure/calls-deployment.md:113
 msgid "Benchmarks"
-msgstr ""
+msgstr "벤치마크"
 
 #: ../../source/configure/calls-deployment.md:115
 msgid ""
 "Here are the results from internally conducted performance and ceiling "
 "tests on a dedicated `rtcd` instance:"
 msgstr ""
+"전용 `rtcd` 인스턴스에서 내부적으로 수행된 성능 및 한계 테스트 결과는 다음과 같습니다:"
 
 #: ../../source/configure/calls-deployment.md:117
 msgid "Deployment specifications"
-msgstr ""
+msgstr "배포 사양"
 
 #: ../../source/configure/calls-deployment.md:119
 msgid "1x r6i.large nginx proxy"
-msgstr ""
+msgstr "1x r6i.large nginx 프록시"
 
 #: ../../source/configure/calls-deployment.md:120
 msgid "3x c5.large MM app nodes (HA)"
-msgstr ""
+msgstr "3x c5.large MM 앱 노드 (HA)"
 
 #: ../../source/configure/calls-deployment.md:121
 msgid "2x db.x2g.xlarge RDS Aurora MySQL v8 (one writer, one reader)"
-msgstr ""
+msgstr "2x db.x2g.xlarge RDS Aurora MySQL v8 (작성자 1명, 읽기 1명)"
 
 #: ../../source/configure/calls-deployment.md:122
 msgid "1x (c7i.xlarge, c7i.2xlarge, c7i.4xlarge) RTCD"
-msgstr ""
+msgstr "1x (c7i.xlarge, c7i.2xlarge, c7i.4xlarge) RTCD"
 
 #: ../../source/configure/calls-deployment.md:123
 msgid "2x c7i.2xlarge load-test agents"
-msgstr ""
+msgstr "2x c7i.2xlarge 부하 테스트 에이전트"
 
 #: ../../source/configure/calls-deployment.md:125
 msgid "App specifications"
-msgstr ""
+msgstr "앱 사양"
 
 #: ../../source/configure/calls-deployment.md:127
 msgid "Mattermost v9.6"
-msgstr ""
+msgstr "Mattermost v9.6"
 
 #: ../../source/configure/calls-deployment.md:128
 msgid "Mattermost Calls v0.28.0"
-msgstr ""
+msgstr "Mattermost Calls v0.28.0"
 
 #: ../../source/configure/calls-deployment.md:129
 msgid "RTCD v0.16.0"
-msgstr ""
+msgstr "RTCD v0.16.0"
 
 #: ../../source/configure/calls-deployment.md:130
 msgid "load-test agent v0.28.0"
-msgstr ""
+msgstr "부하 테스트 에이전트 v0.28.0"
 
 #: ../../source/configure/calls-deployment.md:132
 msgid "Media specifications"
-msgstr ""
+msgstr "미디어 사양"
 
 #: ../../source/configure/calls-deployment.md:134
 msgid "Speech sample bitrate: 80Kbps"
-msgstr ""
+msgstr "음성 샘플 비트레이트: 80Kbps"
 
 #: ../../source/configure/calls-deployment.md:135
 msgid "Screen sharing sample bitrate: 1.6Mbps"
-msgstr ""
+msgstr "화면 공유 샘플 비트레이트: 1.6Mbps"
 
 #: ../../source/configure/calls-deployment.md:137
 msgid "Results"
-msgstr ""
+msgstr "결과"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "Calls"
-msgstr ""
+msgstr "통화"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "Participants/call"
-msgstr ""
+msgstr "참가자/통화"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "Unmuted/call"
-msgstr ""
+msgstr "음소거 해제/통화"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "Screen sharing"
-msgstr ""
+msgstr "화면 공유"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "CPU (avg)"
-msgstr ""
+msgstr "CPU (평균)"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "Memory (avg)"
-msgstr ""
+msgstr "메모리 (평균)"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "Bandwidth (in/out)"
-msgstr ""
+msgstr "대역폭 (입력/출력)"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "Instance type (RTCD)"
-msgstr ""
+msgstr "인스턴스 유형 (RTCD)"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "1000"
-msgstr ""
+msgstr "1000"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "no"
-msgstr ""
+msgstr "아니오"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "47%"
-msgstr ""
+msgstr "47%"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "1.46GB"
-msgstr ""
+msgstr "1.46GB"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "1Mbps / 194Mbps"
-msgstr ""
+msgstr "1Mbps / 194Mbps"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "c7i.xlarge"
-msgstr ""
+msgstr "c7i.xlarge"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "800"
-msgstr ""
+msgstr "800"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "yes"
-msgstr ""
+msgstr "예"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "64%"
-msgstr ""
+msgstr "64%"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "1.43GB"
-msgstr ""
+msgstr "1.43GB"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "2.7Mbps / 1.36Gbps"
-msgstr ""
+msgstr "2.7Mbps / 1.36Gbps"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "79%"
-msgstr ""
+msgstr "79%"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "1.54GB"
-msgstr ""
+msgstr "1.54GB"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "2.9Mbps / 1.68Gbps"
-msgstr ""
+msgstr "2.9Mbps / 1.68Gbps"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "10"
-msgstr ""
+msgstr "10"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "100"
-msgstr ""
+msgstr "100"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "74%"
-msgstr ""
+msgstr "74%"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "1.56GB"
-msgstr ""
+msgstr "1.56GB"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "18.2Mbps / 1.68Gbps"
-msgstr ""
+msgstr "18.2Mbps / 1.68Gbps"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "49%"
-msgstr ""
+msgstr "49%"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "18.7Mbps / 175Mbps"
-msgstr ""
+msgstr "18.7Mbps / 175Mbps"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "84%"
-msgstr ""
+msgstr "84%"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "1.73GB"
-msgstr ""
+msgstr "1.73GB"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "171Mbps / 1.53Gbps"
-msgstr ""
+msgstr "171Mbps / 1.53Gbps"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "20%"
-msgstr ""
+msgstr "20%"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "1.44GB"
-msgstr ""
+msgstr "1.44GB"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "1.4Mbps / 194Mbps"
-msgstr ""
+msgstr "1.4Mbps / 194Mbps"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "c7i.2xlarge"
-msgstr ""
+msgstr "c7i.2xlarge"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "1.53GB"
-msgstr ""
+msgstr "1.53GB"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "3.6Mbps / 1.79Gbps"
-msgstr ""
+msgstr "3.6Mbps / 1.79Gbps"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "73%"
-msgstr ""
+msgstr "73%"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "2.38GB"
-msgstr ""
+msgstr "2.38GB"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "5.7Mbps / 3.06Gbps"
-msgstr ""
+msgstr "5.7Mbps / 3.06Gbps"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "60%"
-msgstr ""
+msgstr "60%"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "1.74GB"
-msgstr ""
+msgstr "1.74GB"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "181Mbps / 1.62Gbps"
-msgstr ""
+msgstr "181Mbps / 1.62Gbps"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "150"
-msgstr ""
+msgstr "150"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "72%"
-msgstr ""
+msgstr "72%"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "2.26GB"
-msgstr ""
+msgstr "2.26GB"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "257Mbps / 2.30Gbps"
-msgstr ""
+msgstr "257Mbps / 2.30Gbps"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "2.34GB"
-msgstr ""
+msgstr "2.34GB"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "271Mbps / 2.41Gbps"
-msgstr ""
+msgstr "271Mbps / 2.41Gbps"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "250"
-msgstr ""
+msgstr "250"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "58%"
-msgstr ""
+msgstr "58%"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "2.66GB"
-msgstr ""
+msgstr "2.66GB"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "47Mbps / 439Mbps"
-msgstr ""
+msgstr "47Mbps / 439Mbps"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "78%"
-msgstr ""
+msgstr "78%"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "2.31GB"
-msgstr ""
+msgstr "2.31GB"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "178Mbps / 195Mbps"
-msgstr ""
+msgstr "178Mbps / 195Mbps"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "41%"
-msgstr ""
+msgstr "41%"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "2.6GB"
-msgstr ""
+msgstr "2.6GB"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "7.23Mbps / 3.60Gbps"
-msgstr ""
+msgstr "7.23Mbps / 3.60Gbps"
 
 #: ../../source/configure/calls-deployment.md:139
 msgid "c7i.4xlarge"
@@ -932,47 +998,47 @@ msgid ""
 "understand the processing limits within a single node. Scaling the RTCD "
 "service horizontally should be sufficient to support a higher number of "
 "calls."
-msgstr ""
+msgstr "단일 노드 내의 처리 한계를 이해하기 위해 테스트는 단일 수직 확장 RTCD 인스턴스에 초점을 맞췄습니다. RTCD 서비스를 수평으로 확장하면 더 많은 수의 통화를 지원하기에 충분할 것입니다."
 
 #: ../../source/configure/calls-deployment.md:167
 msgid ""
 "RTCD processes were executed with all performance profiling enabled "
 "(including block and mutex). This resulted in some computational "
 "overhead."
-msgstr ""
+msgstr "RTCD 프로세스는 모든 성능 프로파일링(블록 및 뮤텍스 포함)이 활성화된 상태로 실행되었습니다. 이로 인해 일부 계산 오버헤드가 발생했습니다."
 
 #: ../../source/configure/calls-deployment.md:168
 msgid ""
 "Both speech and screen samples have slightly higher bitrates than the "
 "average produced by a real client (e.g., a browser). This gives us some "
 "safety margin over real-world deployments."
-msgstr ""
+msgstr "음성 및 화면 샘플 모두 실제 클라이언트(예: 브라우저)에서 생성되는 평균보다 약간 더 높은 비트레이트를 가집니다. 이는 실제 배포에 대한 안전 마진을 제공합니다."
 
 #: ../../source/configure/calls-deployment.md:171
 msgid "Dedicated service"
-msgstr ""
+msgstr "전용 서비스"
 
 #: ../../source/configure/calls-deployment.md:173
 msgid ""
 "For Enterprise customers we offer a way to offload performance costs "
 "through a [dedicated service](https://github.com/mattermost/rtcd) that "
 "can be used to further scale up calls."
-msgstr ""
+msgstr "엔터프라이즈 고객을 위해 통화를 더 확장하는 데 사용할 수 있는 [전용 서비스](https://github.com/mattermost/rtcd)를 통해 성능 비용을 분산시키는 방법을 제공합니다."
 
 #: ../../source/configure/calls-deployment.md:175
 msgid "Load testing"
-msgstr ""
+msgstr "부하 테스트"
 
 #: ../../source/configure/calls-deployment.md:177
 msgid ""
 "We provide a [load-test tool](https://github.com/mattermost/mattermost-"
 "plugin-calls/tree/main/lt) that can be used to simulate and measure the "
 "performance impact of calls."
-msgstr ""
+msgstr "통화의 성능 영향을 시뮬레이션하고 측정하는 데 사용할 수 있는 [부하 테스트 도구](https://github.com/mattermost/mattermost-plugin-calls/tree/main/lt)를 제공합니다."
 
 #: ../../source/configure/calls-deployment.md:179
 msgid "Monitoring"
-msgstr ""
+msgstr "모니터링"
 
 #: ../../source/configure/calls-deployment.md:181
 msgid ""
@@ -983,11 +1049,13 @@ msgid ""
 "to [Performance monitoring](https://docs.mattermost.com/scale/deploy-"
 "prometheus-grafana-for-performance-monitoring.html) for more information "
 "on how to set up Prometheus and visualize metrics through Grafana."
-msgstr ""
+msgstr "플러그인과 외부 `rtcd` 서비스 모두 성능을 모니터링하기 위한 Prometheus 메트릭을 노출합니다. "
+"Grafana에서 가져올 수 있는 [공식 대시보드](https://grafana.com/grafana/dashboards/23225-mattermost-calls-performance-monitoring/)를 제공합니다. "
+"Prometheus를 설정하고 Grafana를 통해 메트릭을 시각화하는 방법에 대한 자세한 내용은 [성능 모니터링](https://docs.mattermost.com/scale/deploy-prometheus-grafana-for-performance-monitoring.html)을 참조하세요."
 
 #: ../../source/configure/calls-deployment.md:183
 msgid "Calls plugin metrics"
-msgstr ""
+msgstr "Calls 플러그인 메트릭"
 
 #: ../../source/configure/calls-deployment.md:185
 msgid ""
@@ -997,7 +1065,9 @@ msgid ""
 "address for performance](https://docs.mattermost.com/configure"
 "/environment-configuration-settings.html#listen-address-for-performance) "
 "configuration setting. It defaults to port `8067`."
-msgstr ""
+msgstr "Calls 플러그인의 메트릭은 기존 Mattermost 서버 메트릭 엔드포인트 아래의 `/plugins/com.mattermost.calls/metrics` 하위 경로를 통해 노출됩니다. "
+"이는 [성능을 위한 수신 주소](https://docs.mattermost.com/configure/environment-configuration-settings.html#listen-address-for-performance) 구성 설정에 의해 제어됩니다. "
+"기본값은 `8067` 포트입니다."
 
 #: ../../source/configure/calls-deployment.md:188
 msgid ""
@@ -1005,7 +1075,8 @@ msgid ""
 "performance-metrics.html) collects application-level metrics only and "
 "does not make system or OS-level calls. As a result, data typically "
 "derived from system-level metrics may be missing in the Grafana panel."
-msgstr ""
+msgstr "[메트릭 플러그인](https://docs.mattermost.com/scale/collect-performance-metrics.html)은 애플리케이션 수준의 메트릭만 수집하며 시스템 또는 OS 수준의 호출을 수행하지 않습니다. "
+"결과적으로 일반적으로 시스템 수준 메트릭에서 파생되는 데이터가 Grafana 패널에 누락될 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:189
 msgid ""
@@ -1015,210 +1086,212 @@ msgid ""
 "address](https://docs.mattermost.com/configure/environment-configuration-"
 "settings.html#web-server-listen-address) configuration setting. This "
 "defaults to port `8065`."
-msgstr ""
+msgstr "v9.5 이전 Mattermost 버전에서는 플러그인 메트릭이 "
+"[웹 서버 수신 주소](https://docs.mattermost.com/configure/environment-configuration-settings.html#web-server-listen-address) 구성 설정에 의해 제어되는 "
+"공개 `/plugins/com.mattermost.calls/metrics` API 엔드포인트를 통해 노출되었습니다. 기본값은 `8065` 포트입니다."
 
 #: ../../source/configure/calls-deployment.md:192
 #: ../../source/configure/calls-deployment.md:264
 msgid "**Process**"
-msgstr ""
+msgstr "**프로세스**"
 
 #: ../../source/configure/calls-deployment.md:194
 msgid ""
 "`mattermost_plugin_calls_process_cpu_seconds_total`: Total user and "
 "system CPU time spent in seconds."
-msgstr ""
+msgstr "`mattermost_plugin_calls_process_cpu_seconds_total`: 초 단위로 소요된 총 사용자 및 시스템 CPU 시간."
 
 #: ../../source/configure/calls-deployment.md:195
 msgid ""
 "`mattermost_plugin_calls_process_max_fds`: Maximum number of open file "
 "descriptors."
-msgstr ""
+msgstr "`mattermost_plugin_calls_process_max_fds`: 열린 파일 설명자의 최대 수."
 
 #: ../../source/configure/calls-deployment.md:196
 msgid ""
 "`mattermost_plugin_calls_process_open_fds`: Number of open file "
 "descriptors."
-msgstr ""
+msgstr "`mattermost_plugin_calls_process_open_fds`: 열린 파일 설명자의 수."
 
 #: ../../source/configure/calls-deployment.md:197
 msgid ""
 "`mattermost_plugin_calls_process_resident_memory_bytes`: Resident memory "
 "size in bytes."
-msgstr ""
+msgstr "`mattermost_plugin_calls_process_resident_memory_bytes`: 바이트 단위의 상주 메모리 크기."
 
 #: ../../source/configure/calls-deployment.md:198
 msgid ""
 "`mattermost_plugin_calls_process_virtual_memory_bytes`: Virtual memory "
 "size in bytes."
-msgstr ""
+msgstr "`mattermost_plugin_calls_process_virtual_memory_bytes`: 바이트 단위의 가상 메모리 크기."
 
 #: ../../source/configure/calls-deployment.md:200
 msgid "**WebRTC connection**"
-msgstr ""
+msgstr "**WebRTC 연결**"
 
 #: ../../source/configure/calls-deployment.md:202
 msgid ""
 "`mattermost_plugin_calls_rtc_conn_states_total`: Total number of RTC "
 "connection state changes."
-msgstr ""
+msgstr "`mattermost_plugin_calls_rtc_conn_states_total`: RTC 연결 상태 변경의 총 횟수."
 
 #: ../../source/configure/calls-deployment.md:203
 msgid "`mattermost_plugin_calls_rtc_errors_total`: Total number of RTC errors."
-msgstr ""
+msgstr "`mattermost_plugin_calls_rtc_errors_total`: RTC 오류의 총 횟수."
 
 #: ../../source/configure/calls-deployment.md:204
 msgid ""
 "`mattermost_plugin_calls_rtc_rtp_bytes_total`: Total number of "
 "sent/received RTP packets in bytes."
-msgstr ""
+msgstr "`mattermost_plugin_calls_rtc_rtp_bytes_total`: 바이트 단위의 송신/수신 RTP 패킷의 총 수."
 
 #: ../../source/configure/calls-deployment.md:206
 #: ../../source/configure/calls-deployment.md:210
 msgid "Note: removed as of v0.16.0"
-msgstr ""
+msgstr "참고: v0.16.0부터 제거됨"
 
 #: ../../source/configure/calls-deployment.md:208
 msgid ""
 "`mattermost_plugin_calls_rtc_rtp_packets_total`: Total number of "
 "sent/received RTP packets."
-msgstr ""
+msgstr "`mattermost_plugin_calls_rtc_rtp_packets_total`: 송신/수신 RTP 패킷의 총 수."
 
 #: ../../source/configure/calls-deployment.md:212
 msgid ""
 "`mattermost_plugin_calls_rtc_rtp_tracks_total`: Total number of "
 "incoming/outgoing RTP tracks."
-msgstr ""
+msgstr "`mattermost_plugin_calls_rtc_rtp_tracks_total`: 수신/송신 RTP 트랙의 총 수."
 
 #: ../../source/configure/calls-deployment.md:214
 msgid "Note: added as of v0.16.0"
-msgstr ""
+msgstr "참고: v0.16.0부터 추가됨"
 
 #: ../../source/configure/calls-deployment.md:216
 msgid ""
 "`mattermost_plugin_calls_rtc_sessions_total`: Total number of active RTC "
 "sessions."
-msgstr ""
+msgstr "`mattermost_plugin_calls_rtc_sessions_total`: 활성 RTC 세션의 총 수."
 
 #: ../../source/configure/calls-deployment.md:218
 msgid "**Application**"
-msgstr ""
+msgstr "**애플리케이션**"
 
 #: ../../source/configure/calls-deployment.md:220
 msgid ""
 "`mattermost_plugin_calls_app_handlers_time_bucket`: Time taken to execute"
 " app handlers."
-msgstr ""
+msgstr "`mattermost_plugin_calls_app_handlers_time_bucket`: 앱 핸들러 실행에 소요된 시간."
 
 #: ../../source/configure/calls-deployment.md:222
 msgid "`mattermost_plugin_calls_app_handlers_time_sum`"
-msgstr ""
+msgstr "`mattermost_plugin_calls_app_handlers_time_sum`"
 
 #: ../../source/configure/calls-deployment.md:224
 msgid "`mattermost_plugin_calls_app_handlers_time_count`"
-msgstr ""
+msgstr "`mattermost_plugin_calls_app_handlers_time_count`"
 
 #: ../../source/configure/calls-deployment.md:226
 msgid "**Database**"
-msgstr ""
+msgstr "**데이터베이스**"
 
 #: ../../source/configure/calls-deployment.md:228
 msgid ""
 "`mattermost_plugin_calls_store_ops_total`: Total number of db store "
 "operations."
-msgstr ""
+msgstr "`mattermost_plugin_calls_store_ops_total`: 데이터베이스 저장소 작업의 총 수."
 
 #: ../../source/configure/calls-deployment.md:229
 msgid ""
 "`mattermost_plugin_calls_store_methods_time_bucket`: Time taken to "
 "execute store methods."
-msgstr ""
+msgstr "`mattermost_plugin_calls_store_methods_time_bucket`: 저장소 메서드 실행에 소요된 시간."
 
 #: ../../source/configure/calls-deployment.md:231
 msgid "`mattermost_plugin_calls_store_methods_time_sum`"
-msgstr ""
+msgstr "`mattermost_plugin_calls_store_methods_time_sum`"
 
 #: ../../source/configure/calls-deployment.md:233
 msgid "`mattermost_plugin_calls_store_methods_time_count`"
-msgstr ""
+msgstr "`mattermost_plugin_calls_store_methods_time_count`"
 
 #: ../../source/configure/calls-deployment.md:234
 msgid ""
 "`mattermost_plugin_calls_cluster_mutex_grab_time_bucket`: Time taken to "
 "grab global mutexes."
-msgstr ""
+msgstr "`mattermost_plugin_calls_cluster_mutex_grab_time_bucket`: 전역 뮤텍스를 획득하는 데 소요된 시간."
 
 #: ../../source/configure/calls-deployment.md:236
 msgid "`mattermost_plugin_calls_cluster_mutex_grab_time_sum`"
-msgstr ""
+msgstr "`mattermost_plugin_calls_cluster_mutex_grab_time_sum`"
 
 #: ../../source/configure/calls-deployment.md:238
 msgid "`mattermost_plugin_calls_cluster_mutex_grab_time_count`"
-msgstr ""
+msgstr "`mattermost_plugin_calls_cluster_mutex_grab_time_count`"
 
 #: ../../source/configure/calls-deployment.md:239
 msgid ""
 "`mattermost_plugin_calls_cluster_mutex_locked_time_bucket`: Time spent "
 "locked in global mutexes."
-msgstr ""
+msgstr "`mattermost_plugin_calls_cluster_mutex_locked_time_bucket`: 전역 뮤텍스에서 잠긴 시간."
 
 #: ../../source/configure/calls-deployment.md:241
 msgid "`mattermost_plugin_calls_cluster_mutex_locked_time_sum`"
-msgstr ""
+msgstr "`mattermost_plugin_calls_cluster_mutex_locked_time_sum`"
 
 #: ../../source/configure/calls-deployment.md:243
 msgid "`mattermost_plugin_calls_cluster_mutex_locked_time_count`"
-msgstr ""
+msgstr "`mattermost_plugin_calls_cluster_mutex_locked_time_count`"
 
 #: ../../source/configure/calls-deployment.md:245
 #: ../../source/configure/calls-deployment.md:286
 msgid "**WebSocket**"
-msgstr ""
+msgstr "**WebSocket**"
 
 #: ../../source/configure/calls-deployment.md:247
 msgid ""
 "`mattermost_plugin_calls_websocket_connections_total`: Total number of "
 "active WebSocket connections."
-msgstr ""
+msgstr "`mattermost_plugin_calls_websocket_connections_total`: 활성 WebSocket 연결의 총 수."
 
 #: ../../source/configure/calls-deployment.md:248
 msgid ""
 "`mattermost_plugin_calls_websocket_events_total`: Total number of "
 "WebSocket events."
-msgstr ""
+msgstr "`mattermost_plugin_calls_websocket_events_total`: WebSocket 이벤트의 총 수."
 
 #: ../../source/configure/calls-deployment.md:250
 msgid "**Jobs**"
-msgstr ""
+msgstr "**작업**"
 
 #: ../../source/configure/calls-deployment.md:252
 msgid ""
 "`mattermost_plugin_calls_jobs_live_captions_new_audio_len_ms_bucket`: "
 "Duration (in ms) of new audio transcribed for live captions."
-msgstr ""
+msgstr "`mattermost_plugin_calls_jobs_live_captions_new_audio_len_ms_bucket`: 실시간 자막을 위해 전사된 새 오디오의 지속 시간(밀리초)."
 
 #: ../../source/configure/calls-deployment.md:254
 msgid "`mattermost_plugin_calls_jobs_live_captions_new_audio_len_ms_sum`"
-msgstr ""
+msgstr "`mattermost_plugin_calls_jobs_live_captions_new_audio_len_ms_sum`"
 
 #: ../../source/configure/calls-deployment.md:256
 msgid "`mattermost_plugin_calls_jobs_live_captions_new_audio_len_ms_count`"
-msgstr ""
+msgstr "`mattermost_plugin_calls_jobs_live_captions_new_audio_len_ms_count`"
 
 #: ../../source/configure/calls-deployment.md:257
 msgid ""
 "`mattermost_plugin_calls_jobs_live_captions_pktPayloadCh_buf_full`: Total"
 " packets of audio data dropped due to full channel."
-msgstr ""
+msgstr "`mattermost_plugin_calls_jobs_live_captions_pktPayloadCh_buf_full`: 채널이 가득 차서 삭제된 오디오 데이터 패킷의 총 수."
 
 #: ../../source/configure/calls-deployment.md:258
 msgid ""
 "`mattermost_plugin_calls_jobs_live_captions_window_dropped`: Total "
 "windows of audio data dropped due to pressure on the transcriber."
-msgstr ""
+msgstr "`mattermost_plugin_calls_jobs_live_captions_window_dropped`: 전사기에 부하가 걸려 삭제된 오디오 데이터 윈도우의 총 수."
 
 #: ../../source/configure/calls-deployment.md:260
 msgid "WebRTC service metrics"
-msgstr ""
+msgstr "WebRTC 서비스 메트릭"
 
 #: ../../source/configure/calls-deployment.md:262
 msgid ""
@@ -1226,101 +1299,101 @@ msgid ""
 "endpoint under the `rtcd` API listener controlled by the "
 "`api.http.listen_address` configuration setting. It defaults to port "
 "`8045`."
-msgstr ""
+msgstr "`rtcd` 서비스의 메트릭은 `api.http.listen_address` 구성 설정으로 제어되는 `rtcd` API 리스너 아래의 `/metrics` API 엔드포인트를 통해 노출됩니다. 기본 포트는 `8045`입니다."
 
 #: ../../source/configure/calls-deployment.md:266
 msgid ""
 "`rtcd_process_cpu_seconds_total`:  Total user and system CPU time spent "
 "in seconds."
-msgstr ""
+msgstr "`rtcd_process_cpu_seconds_total`: 사용자 및 시스템 CPU 시간의 총 소요 시간(초)."
 
 #: ../../source/configure/calls-deployment.md:267
 msgid ""
 "`rtcd_plugin_calls_process_max_fds`: Maximum number of open file "
 "descriptors."
-msgstr ""
+msgstr "`rtcd_plugin_calls_process_max_fds`: 열린 파일 디스크립터의 최대 수."
 
 #: ../../source/configure/calls-deployment.md:268
 msgid "`rtcd_plugin_calls_process_open_fds`: Number of open file descriptors."
-msgstr ""
+msgstr "`rtcd_plugin_calls_process_open_fds`: 열린 파일 디스크립터의 수."
 
 #: ../../source/configure/calls-deployment.md:269
 msgid ""
 "`rtcd_plugin_calls_process_resident_memory_bytes`: Resident memory size "
 "in bytes."
-msgstr ""
+msgstr "`rtcd_plugin_calls_process_resident_memory_bytes`: 상주 메모리 크기(바이트)."
 
 #: ../../source/configure/calls-deployment.md:270
 msgid ""
 "`rtcd_plugin_calls_process_virtual_memory_bytes`: Virtual memory size in "
 "bytes."
-msgstr ""
+msgstr "`rtcd_plugin_calls_process_virtual_memory_bytes`: 가상 메모리 크기(바이트)."
 
 #: ../../source/configure/calls-deployment.md:272
 msgid "**WebRTC Connection**"
-msgstr ""
+msgstr "**WebRTC 연결**"
 
 #: ../../source/configure/calls-deployment.md:274
 msgid ""
 "`rtcd_rtc_conn_states_total`: Total number of RTC connection state "
 "changes."
-msgstr ""
+msgstr "`rtcd_rtc_conn_states_total`: RTC 연결 상태 변경의 총 수."
 
 #: ../../source/configure/calls-deployment.md:275
 msgid "`rtcd_rtc_errors_total`: Total number of RTC errors."
-msgstr ""
+msgstr "`rtcd_rtc_errors_total`: RTC 오류의 총 수."
 
 #: ../../source/configure/calls-deployment.md:276
 msgid ""
 "`rtcd_rtc_rtp_bytes_total`: Total number of sent/received RTP packets in "
 "bytes."
-msgstr ""
+msgstr "`rtcd_rtc_rtp_bytes_total`: 송수신된 RTP 패킷의 총 바이트 수."
 
 #: ../../source/configure/calls-deployment.md:277
 msgid "`rtcd_rtc_rtp_packets_total`: Total number of sent/received RTP packets."
-msgstr ""
+msgstr "`rtcd_rtc_rtp_packets_total`: 송수신된 RTP 패킷의 총 수."
 
 #: ../../source/configure/calls-deployment.md:278
 msgid "`rtcd_rtc_rtp_tracks_total`: Total number of incoming/outgoing RTP tracks."
-msgstr ""
+msgstr "`rtcd_rtc_rtp_tracks_total`: 수신/송신 RTP 트랙의 총 수."
 
 #: ../../source/configure/calls-deployment.md:279
 msgid "`rtcd_rtc_sessions_total`: Total number of active RTC sessions."
-msgstr ""
+msgstr "`rtcd_rtc_sessions_total`: 활성 RTC 세션의 총 수."
 
 #: ../../source/configure/calls-deployment.md:280
 msgid ""
 "`rtcd_rtc_rtp_tracks_writes_time_bucket`: Time taken to write to outgoing"
 " RTP tracks."
-msgstr ""
+msgstr "`rtcd_rtc_rtp_tracks_writes_time_bucket`: 송신 RTP 트랙에 쓰는 데 소요된 시간."
 
 #: ../../source/configure/calls-deployment.md:282
 msgid "`rtcd_rtc_rtp_tracks_writes_time_sum`"
-msgstr ""
+msgstr "`rtcd_rtc_rtp_tracks_writes_time_sum`"
 
 #: ../../source/configure/calls-deployment.md:284
 msgid "`rtcd_rtc_rtp_tracks_writes_time_count`"
-msgstr ""
+msgstr "`rtcd_rtc_rtp_tracks_writes_time_count`"
 
 #: ../../source/configure/calls-deployment.md:288
 msgid "`rtcd_ws_connections_total`: Total number of active WebSocket connections."
-msgstr ""
+msgstr "`rtcd_ws_connections_total`: 활성 WebSocket 연결의 총 수."
 
 #: ../../source/configure/calls-deployment.md:289
 msgid ""
 "`rtcd_ws_messages_total`: Total number of received/sent WebSocket "
 "messages."
-msgstr ""
+msgstr "`rtcd_ws_messages_total`: 수신/송신된 WebSocket 메시지의 총 수."
 
 #: ../../source/configure/calls-deployment.md:293
 msgid ""
 "A sample Prometheus configuration to scrape both plugin and `rtcd` "
 "metrics could look like this:"
-msgstr ""
+msgstr "플러그인과 `rtcd` 메트릭을 모두 수집하는 Prometheus 구성 예시는 다음과 같습니다:"
 
 #: ../../source/configure/calls-deployment.md:309
 msgid "System tunings"
-msgstr ""
+msgstr "시스템 튜닝"
 
 #: ../../source/configure/calls-deployment.md:311
 msgid ""
@@ -1328,21 +1401,21 @@ msgid ""
 "participants, take a look at the following platform specific (Linux) "
 "tunings (this is the only officially supported target for the plugin "
 "right now):"
-msgstr ""
+msgstr "많은 수의 통화나 많은 참가자가 있는 통화를 호스팅하려면 다음 플랫폼별(Linux) 튜닝을 살펴보세요(현재 플러그인에서 공식적으로 지원하는 유일한 대상입니다):"
 
 #: ../../source/configure/calls-deployment.md:324
 msgid "The rtcd service"
-msgstr ""
+msgstr "rtcd 서비스"
 
 #: ../../source/configure/calls-rtcd-ent-only.md:6
 msgid "**Note**"
-msgstr ""
+msgstr "**참고**"
 
 #: ../../source/configure/calls-rtcd-ent-only.md:8
 msgid ""
 "![plans-img](../_static/images/badges/flag_icon.svg) The rtcd service is "
 "available only on [Enterprise](https://mattermost.com/pricing/) plans"
-msgstr ""
+msgstr "![plans-img](../_static/images/badges/flag_icon.svg) rtcd 서비스는 [Enterprise](https://mattermost.com/pricing/) 플랜에서만 사용할 수 있습니다"
 
 #: ../../source/configure/calls-deployment.md:329
 msgid ""
@@ -1351,17 +1424,18 @@ msgid ""
 "screensharing data. This is the `integrated` option described in the "
 "[Modes of operation](#modes-of-operation) section above. But this SFU "
 "functionality can be deployed separately as an external `rtcd` instance."
-msgstr ""
+msgstr "Calls 플러그인은 오디오와 화면 공유 데이터를 라우팅하기 위한 내장 [선택적 전달 장치(SFU)](https://bloggeek.me/webrtcglossary/sfu/)가 있습니다. "
+"이는 위의 [작동 모드](#modes-of-operation) 섹션에서 설명한 `integrated` 옵션입니다. 하지만 이 SFU 기능은 외부 `rtcd` 인스턴스로 별도 배포할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:331
 msgid "Reasons to use the `rtcd` service"
-msgstr ""
+msgstr "`rtcd` 서비스 사용 이유"
 
 #: ../../source/configure/calls-deployment.md:333
 msgid ""
 "This section will help you understand when and why your organization "
 "would want to use `rtcd`."
-msgstr ""
+msgstr "이 섹션에서는 조직이 `rtcd` 를 사용해야 하는 시기와 이유를 이해하는 데 도움이 됩니다."
 
 #: ../../source/configure/calls-deployment.md:336
 msgid ""
@@ -1371,12 +1445,14 @@ msgid ""
 "integrated SFU (the one included in the Calls plugin) may be sufficient "
 "initially."
 msgstr ""
+"`rtcd` 는 독립형 서비스로, 운영 복잡성과 유지 관리 비용이 추가되며 엔터프라이즈 라이선스가 필요합니다. Calls를 평가 중이거나 "
+"소규모 Mattermost 인스턴스의 경우, 통합 SFU(Calls 플러그인에 포함된 것)가 초기에는 충분할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:339
 msgid ""
 "The `rtcd` service is the recommended way to host Calls for the following"
 " reasons:"
-msgstr ""
+msgstr "다음과 같은 이유로 `rtcd` 서비스는 Calls 호스팅을 위한 권장 방식입니다:"
 
 #: ../../source/configure/calls-deployment.md:341
 msgid ""
@@ -1387,6 +1463,9 @@ msgid ""
 "rtcd service isolates the calls traffic processing to those rtcd "
 "instances, and also reduces costs by minimizing CPU usage spikes."
 msgstr ""
+"**주요 Mattermost 서버의 성능.** Calls 플러그인이 SFU를 실행할 때, 통화 트래픽이 Mattermost 서비스의 나머지 부분을 "
+"실행하는 서버의 처리 부하에 추가됩니다. Calls 트래픽이 급증하면 이러한 서비스의 응답성에 부정적인 영향을 미칠 수 있습니다. rtcd "
+"서비스를 사용하면 통화 트래픽 처리가 해당 rtcd 인스턴스로 격리되고, CPU 사용량 급증을 최소화하여 비용도 절감됩니다."
 
 #: ../../source/configure/calls-deployment.md:343
 msgid ""
@@ -1397,6 +1476,9 @@ msgid ""
 "people in a current call will not be affected - current calls won't be "
 "dropped."
 msgstr ""
+"**Calls 제품의 성능, 확장성 및 안정성.** Calls 트래픽이 급증하거나 전체 용량이 더 필요한 경우, 부하를 분산하기 위해 "
+"`rtcd` 서버를 추가할 수 있습니다. 추가적인 이점으로, Mattermost 트래픽이 급증하거나 Mattermost 인스턴스를 재시작해야 하는 "
+"경우에도 현재 통화 중인 사용자에게 영향을 주지 않습니다 - 현재 통화가 끊기지 않습니다."
 
 #: ../../source/configure/calls-deployment.md:345
 msgid ""
@@ -1405,6 +1487,8 @@ msgid ""
 "Mattermost server is down. But the call itself will continue while the "
 "main server restarts."
 msgstr ""
+"여기에는 몇 가지 주의사항이 있습니다. 메인 Mattermost 서버가 다운되는 동안 웹소켓 이벤트(예: 이모지 반응, 손 들기, 음소거/음소거 "
+"해제)는 전송되지 않습니다. 하지만 메인 서버가 재시작되는 동안 통화 자체는 계속됩니다."
 
 #: ../../source/configure/calls-deployment.md:347
 msgid ""
@@ -1412,6 +1496,8 @@ msgid ""
 "strongly recommended; it is currently the only officially supported way "
 "to run Calls."
 msgstr ""
+"**Kubernetes 배포.** Kubernetes 배포에서는 `rtcd`를 강력히 권장합니다. 현재 Calls를 실행하는 공식적으로 지원되는 "
+"유일한 방법입니다."
 
 #: ../../source/configure/calls-deployment.md:348
 msgid ""
@@ -1419,6 +1505,8 @@ msgid ""
 "and tuned at the system/network level for real-time audio/video traffic, "
 "where latency is generally more important than throughput."
 msgstr ""
+"**기술적 이점.** 전용 `rtcd` 서비스는 실시간 오디오/비디오 트래픽을 위해 시스템/네트워크 수준에서 최적화 및 조정되었으며, "
+"일반적으로 처리량보다 지연 시간이 더 중요한 경우에 적합합니다."
 
 #: ../../source/configure/calls-deployment.md:350
 msgid ""
@@ -1426,6 +1514,8 @@ msgid ""
 "scalable deployment. With `rtcd`, the Mattermost server will be minimally"
 " impacted when hosting a high number of calls."
 msgstr ""
+"일반적으로 `rtcd`는 성능이 좋고 확장 가능한 배포를 위한 선호되는 솔루션입니다. `rtcd`를 사용하면 많은 수의 통화를 호스팅할 때 "
+"Mattermost 서버에 미치는 영향이 최소화됩니다."
 
 #: ../../source/configure/calls-deployment.md:352
 msgid ""
@@ -1435,34 +1525,37 @@ msgid ""
 "service](https://github.com/mattermost/rtcd/blob/master/docs/getting_started.md),"
 " as well as:"
 msgstr ""
+"[서비스를 통해 통화를 실행하는 방법](https://github.com/mattermost/rtcd/blob/master/docs/getting_started.md)에 대한 "
+"자세한 내용은 GitHub의 [Mattermost rtcd 저장소 문서](https://github.com/mattermost/rtcd/blob/master/README.md)를 "
+"참조하세요. 또한:"
 
 #: ../../source/configure/calls-deployment.md:354
 msgid ""
 "[Key implementation "
 "details](https://github.com/mattermost/rtcd/blob/master/docs/implementation.md)"
-msgstr ""
+msgstr "[주요 구현 세부사항](https://github.com/mattermost/rtcd/blob/master/docs/implementation.md)"
 
 #: ../../source/configure/calls-deployment.md:355
 msgid ""
 "[Project "
 "structure](https://github.com/mattermost/rtcd/blob/master/docs/project_structure.md)"
-msgstr ""
+msgstr "[프로젝트 구조](https://github.com/mattermost/rtcd/blob/master/docs/project_structure.md)"
 
 #: ../../source/configure/calls-deployment.md:356
 msgid ""
 "[Configuration "
 "overrides](https://github.com/mattermost/rtcd/blob/master/docs/env_config.md)"
-msgstr ""
+msgstr "[구성 재정의](https://github.com/mattermost/rtcd/blob/master/docs/env_config.md)"
 
 #: ../../source/configure/calls-deployment.md:357
 msgid ""
 "[Authentication "
 "flow](https://github.com/mattermost/rtcd/blob/master/docs/security.md)"
-msgstr ""
+msgstr "[인증 흐름](https://github.com/mattermost/rtcd/blob/master/docs/security.md)"
 
 #: ../../source/configure/calls-deployment.md:359
 msgid "Horizontal scalability"
-msgstr ""
+msgstr "수평적 확장성"
 
 #: ../../source/configure/calls-deployment.md:361
 msgid ""
@@ -1471,6 +1564,8 @@ msgid ""
 " the `rtcd` service is deployed (bare bone instance, Kubernetes, or an "
 "alternate way)."
 msgstr ""
+"Calls의 수평적 확장성을 활성화하는 지원되는 방법은 DNS 기반 로드 밸런싱 형태를 통한 것입니다. 이는 `rtcd` 서비스가 "
+"어떻게 배포되든(베어본 인스턴스, Kubernetes 또는 대체 방식) 관계없이 달성할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:363
 msgid ""
@@ -1481,10 +1576,13 @@ msgid ""
 " Mattermost Calls plugin will then automatically distribute calls amongst"
 " the available hosts."
 msgstr ""
+"이것이 작동하려면 [RTCD 서비스 URL](https://docs.mattermost.com/configure/plugins-configuration-"
+"settings.html#rtcd-service-url)이 여러 IP 주소로 해석되는 호스트명을 가리켜야 하며, 각 IP 주소는 실행 중인 `rtcd` "
+"인스턴스를 가리킵니다. 그러면 Mattermost Calls 플러그인이 사용 가능한 호스트들 사이에 자동으로 통화를 분배합니다."
 
 #: ../../source/configure/calls-deployment.md:365
 msgid "The expected requirements are the following:"
-msgstr ""
+msgstr "예상되는 요구사항은 다음과 같습니다:"
 
 #: ../../source/configure/calls-deployment.md:367
 msgid ""
@@ -1492,6 +1590,8 @@ msgid ""
 "record. The plugin side will then be able to pick it up and start "
 "assigning calls to the new host."
 msgstr ""
+"새로운 `rtcd` 인스턴스가 배포되면 DNS 레코드에 추가되어야 합니다. 그러면 플러그인 측에서 이를 감지하고 새 호스트에 통화를 "
+"할당하기 시작할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:368
 msgid ""
@@ -1499,22 +1599,26 @@ msgid ""
 " The plugin side can then detect the change and stop assigning new calls "
 "to that host."
 msgstr ""
+"`rtcd` 인스턴스가 다운되면 DNS 레코드에서 제거되어야 합니다. 그러면 플러그인 측에서 변경 사항을 감지하고 해당 호스트에 새 "
+"통화를 할당하지 않습니다."
 
 #: ../../source/configure/calls-deployment.md:371
 msgid ""
 "Load balancing is done at the call level. This means that a single call "
 "will always live on a single `rtcd` instance."
 msgstr ""
+"로드 밸런싱은 통화 수준에서 수행됩니다. 이는 단일 통화가 항상 단일 `rtcd` 인스턴스에서 실행됨을 의미합니다."
 
 #: ../../source/configure/calls-deployment.md:372
 msgid ""
 "There's currently no support for spreading sessions belonging to the same"
 " call across a fleet of instances."
 msgstr ""
+"현재 동일한 통화에 속한 세션을 여러 인스턴스에 걸쳐 분산하는 기능은 지원되지 않습니다."
 
 #: ../../source/configure/calls-deployment.md:375
 msgid "Configure recording, transcriptions, and live captions"
-msgstr ""
+msgstr "녹화, 전사 및 실시간 자막 구성"
 
 #: ../../source/configure/calls-deployment.md:377
 msgid ""
@@ -1527,12 +1631,18 @@ msgid ""
 "offloader/blob/master/docs/performance.md) related to this service are "
 "also available on GitHub."
 msgstr ""
+"통화 녹화, 전사 및 실시간 자막을 시작하기 전에 `calls-offloader` 작업 서비스를 구성해야 합니다. 이 서비스의 배포 및 "
+"실행에 대한 자세한 내용은 GitHub의 [calls-offloader](https://github.com/mattermost/calls-"
+"offloader/blob/master/docs/getting_started.md) 문서를 참조하세요. 이 서비스와 관련된 [성능 및 확장성 "
+"권장사항](https://github.com/mattermost/calls-offloader/blob/master/docs/performance.md)도 GitHub에서 "
+"확인할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:380
 msgid ""
 "If deploying the service in a Kubernetes cluster, refer to the later "
 "section on [Helm charts](#helm-charts)."
 msgstr ""
+"Kubernetes 클러스터에 서비스를 배포하는 경우 [Helm 차트](#helm-charts) 섹션을 참조하세요."
 
 #: ../../source/configure/calls-deployment.md:383
 msgid ""
@@ -1544,6 +1654,10 @@ msgid ""
 "URL](https://docs.mattermost.com/configure/plugins-configuration-"
 "settings.html#job-service-url)."
 msgstr ""
+"`calls-offloader` 서비스가 실행되면 [통화 녹화 활성화](https://docs.mattermost.com/configure/plugins-configuration-"
+"settings.html#enable-call-recordings) 구성 설정을 통해 녹화를 명시적으로 활성화하고 [작업 서비스 "
+"URL](https://docs.mattermost.com/configure/plugins-configuration-settings.html#job-service-url)을 사용하여 "
+"서비스의 URL을 구성해야 합니다."
 
 #: ../../source/configure/calls-deployment.md:385
 msgid ""
@@ -1552,6 +1666,8 @@ msgid ""
 "configuration-settings.html#enable-call-transcriptions-beta) "
 "configuration setting."
 msgstr ""
+"통화 전사는 [통화 전사 활성화](https://docs.mattermost.com/configure/plugins-"
+"configuration-settings.html#enable-call-transcriptions-beta) 구성 설정을 통해 활성화할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:387
 msgid ""
@@ -1559,44 +1675,46 @@ msgid ""
 "captions](https://docs.mattermost.com/configure/plugins-configuration-"
 "settings.html#enable-live-captions-beta) configuration setting."
 msgstr ""
+"실시간 자막은 [실시간 자막 활성화](https://docs.mattermost.com/configure/plugins-configuration-"
+"settings.html#enable-live-captions-beta) 구성 설정을 통해 활성화할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:390
 msgid ""
 "The call transcriptions functionality is available starting in Calls "
 "version v0.22.0."
-msgstr ""
+msgstr "통화 전사 기능은 Calls v0.22.0 버전부터 사용할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:391
 msgid ""
 "The live captions functionality is available starting in Calls version "
 "v0.26.2."
-msgstr ""
+msgstr "실시간 자막 기능은 Calls v0.26.2 버전부터 사용할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:394
 msgid "Kubernetes deployments"
-msgstr ""
+msgstr "Kubernetes 배포"
 
 #: ../../source/configure/calls-deployment.md:396
 msgid ""
 "The Calls plugin has been designed to integrate well with Kubernetes to "
 "offer improved scalability and control over the deployment."
-msgstr ""
+msgstr "Calls 플러그인은 배포에 대한 향상된 확장성과 제어를 제공하기 위해 Kubernetes와 잘 통합되도록 설계되었습니다."
 
 #: ../../source/configure/calls-deployment.md:398
 msgid ""
 "This is a sample diagram showing how the `rtcd` standalone service can be"
 " deployed in a Kubernetes cluster:"
-msgstr ""
+msgstr "다음은 `rtcd` 독립형 서비스가 Kubernetes 클러스터에 배포되는 방법을 보여주는 예시 다이어그램입니다:"
 
 #: ../../source/configure/calls-deployment.md:400
 msgid ""
 "![A diagram of calls deployed in a Kubernetes cluster.](/images/calls-"
 "deployment-kubernetes.png)"
-msgstr ""
+msgstr "![Kubernetes 클러스터에 배포된 통화 다이어그램.](/images/calls-deployment-kubernetes.png)"
 
 #: ../../source/configure/calls-deployment.md:400
 msgid "A diagram of calls deployed in a Kubernetes cluster."
-msgstr ""
+msgstr "Kubernetes 클러스터에 배포된 통화 다이어그램."
 
 #: ../../source/configure/calls-deployment.md:402
 msgid ""
@@ -1604,11 +1722,12 @@ msgid ""
 " this deployment type, see the [Deploy Mattermost on "
 "Kubernetes](https://docs.mattermost.com/install/install-kubernetes.html) "
 "documentation."
-msgstr ""
+msgstr "Mattermost가 Kubernetes 클러스터에 배포되어 있지 않고 이 배포 유형을 사용하려면 "
+"[Kubernetes에 Mattermost 배포](https://docs.mattermost.com/install/install-kubernetes.html) 문서를 참조하세요."
 
 #: ../../source/configure/calls-deployment.md:404
 msgid "Helm Charts"
-msgstr ""
+msgstr "Helm 차트"
 
 #: ../../source/configure/calls-deployment.md:406
 msgid ""
@@ -1616,25 +1735,26 @@ msgid ""
 "Kubernetes deployment is to use the officially provided Helm charts. "
 "Related documentation including detailed information on how to deploy "
 "these services can be found in our `mattermost-helm` repository:"
-msgstr ""
+msgstr "Kubernetes 배포에서 Calls 관련 구성 요소와 서비스를 배포하는 권장 방법은 공식적으로 제공되는 Helm 차트를 사용하는 것입니다. "
+"이러한 서비스를 배포하는 방법에 대한 자세한 정보를 포함한 관련 문서는 `mattermost-helm` 저장소에서 찾을 수 있습니다:"
 
 #: ../../source/configure/calls-deployment.md:408
 msgid ""
 "[rtcd Helm chart](https://github.com/mattermost/mattermost-"
 "helm/tree/master/charts/mattermost-rtcd)"
-msgstr ""
+msgstr "[rtcd Helm 차트](https://github.com/mattermost/mattermost-helm/tree/master/charts/mattermost-rtcd)"
 
 #: ../../source/configure/calls-deployment.md:410
 msgid ""
 "[calls-offloader Helm chart](https://github.com/mattermost/mattermost-"
 "helm/tree/master/charts/mattermost-calls-offloader)"
-msgstr ""
+msgstr "[calls-offloader Helm 차트](https://github.com/mattermost/mattermost-helm/tree/master/charts/mattermost-calls-offloader)"
 
 #: ../../source/configure/calls-deployment.md:414
 msgid ""
 "Due to the inherent complexities of hosting a WebRTC service, some "
 "limitations apply when deploying Calls in a Kubernetes environment."
-msgstr ""
+msgstr "WebRTC 서비스 호스팅의 고유한 복잡성으로 인해 Kubernetes 환경에서 Calls를 배포할 때 일부 제한사항이 적용됩니다."
 
 #: ../../source/configure/calls-deployment.md:416
 msgid ""
@@ -1642,7 +1762,8 @@ msgid ""
 "Kubernetes node. This is necessary to forward the data correctly while "
 "allowing for horizontal scaling. Data should generally not go through a "
 "standard ingress but directly to the pod running the `rtcd` process."
-msgstr ""
+msgstr "주요 요구사항 중 하나는 각 `rtcd` 프로세스가 전용 Kubernetes 노드에 있어야 한다는 것입니다. 이는 수평적 확장을 허용하면서 데이터를 올바르게 전달하기 위해 필요합니다. "
+"데이터는 일반적으로 표준 ingress를 통해 전달되지 않고 `rtcd` 프로세스를 실행하는 pod로 직접 전달되어야 합니다."
 
 #: ../../source/configure/calls-deployment.md:418
 msgid ""
@@ -1651,7 +1772,8 @@ msgid ""
 "application is able to detect its own external address (through STUN) and"
 " advertise it to clients to achieve connectivity with minimal "
 "configuration."
-msgstr ""
+msgstr "일반적인 권장사항은 `rtcd` 인스턴스(Kubernetes 노드)당 하나의 외부 IP 주소를 노출하는 것입니다. 이렇게 하면 애플리케이션이 자체 외부 주소를(STUN을 통해) 감지하고 "
+"이를 클라이언트에 알려 최소한의 구성으로 연결성을 달성할 수 있어 확장이 더 간단해집니다."
 
 #: ../../source/configure/calls-deployment.md:420
 msgid ""
@@ -1659,49 +1781,49 @@ msgid ""
 "your environment, port mapping (NAT) can be used. In this scenario "
 "different ports are used to map the respective `rtcd` nodes behind the "
 "single external IP. Example:"
-msgstr ""
+msgstr "어떤 이유로 여러 IP 주소를 노출할 수 없는 환경에서는 포트 매핑(NAT)을 사용할 수 있습니다. 이 시나리오에서는 단일 외부 IP 뒤에 있는 각 `rtcd` 노드를 매핑하기 위해 다른 포트를 사용합니다. 예시:"
 
 #: ../../source/configure/calls-deployment.md:428
 msgid "This case requires a couple of extra configurations:"
-msgstr ""
+msgstr "이 경우 몇 가지 추가 구성이 필요합니다:"
 
 #: ../../source/configure/calls-deployment.md:430
 msgid ""
 "NAT mappings need to be in place for every `rtcd` node. This is usually "
 "done at the ingress point (e.g., ELB, NLB, etc)."
-msgstr ""
+msgstr "모든 `rtcd` 노드에 대해 NAT 매핑이 필요합니다. 이는 일반적으로 ingress 지점(예: ELB, NLB 등)에서 수행됩니다."
 
 #: ../../source/configure/calls-deployment.md:431
 msgid ""
 "The `RTCD_RTC_ICEHOSTPORTOVERRIDE` config should be used to pass a full "
 "mapping of node IPs and their respective port."
-msgstr ""
+msgstr "`RTCD_RTC_ICEHOSTPORTOVERRIDE` 구성을 사용하여 노드 IP와 해당 포트의 전체 매핑을 전달해야 합니다."
 
 #: ../../source/configure/calls-deployment.md:432
 msgid ""
 "Example: "
 "`RTCD_RTC_ICEHOSTPORTOVERRIDE=rtcdA_IP/8443,rtcdB_IP/8444,rtcdC_IP/8445`"
-msgstr ""
+msgstr "예시: `RTCD_RTC_ICEHOSTPORTOVERRIDE=rtcdA_IP/8443,rtcdB_IP/8444,rtcdC_IP/8445`"
 
 #: ../../source/configure/calls-deployment.md:433
 msgid ""
 "The `RTCD_RTC_ICEHOSTOVERRIDE` should be used to set the external IP "
 "address."
-msgstr ""
+msgstr "`RTCD_RTC_ICEHOSTOVERRIDE`를 사용하여 외부 IP 주소를 설정해야 합니다."
 
 #: ../../source/configure/calls-deployment.md:436
 msgid ""
 "One option to limit these static mappings is to reduce the size of the "
 "local subnet (e.g., to `/29`)."
-msgstr ""
+msgstr "이러한 정적 매핑을 제한하는 한 가지 옵션은 로컬 서브넷의 크기를 줄이는 것입니다(예: `/29`)."
 
 #: ../../source/configure/calls-deployment.md:439
 msgid "Frequently asked questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/configure/calls-deployment.md:441
 msgid "Is there encryption?"
-msgstr ""
+msgstr "암호화가 있나요?"
 
 #: ../../source/configure/calls-deployment.md:443
 msgid ""
@@ -1712,11 +1834,13 @@ msgid ""
 "to it. Media is then encrypted back to the clients so it's secured during"
 " transit. In short: only the participant clients and the Mattermost "
 "server have access to unencrypted call data."
-msgstr ""
+msgstr "미디어(오디오/비디오)는 WebRTC의 일부로 보안 표준을 사용하여 암호화됩니다. 주로 DTLS와 SRTP의 조합입니다. 현재 설계에서는 모든 미디어가 미디어 라우터 역할을 하는 Mattermost를 통해 "
+"전달되어야 하므로 엔드투엔드 암호화는 아닙니다. 미디어는 전송 중에 보안이 유지되도록 클라이언트로 다시 암호화됩니다. 요약하자면: 참가자 클라이언트와 Mattermost 서버만 암호화되지 않은 통화 데이터에 "
+"접근할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:445
 msgid "Are there any third-party services involved?"
-msgstr ""
+msgstr "관련된 타사 서비스가 있나요?"
 
 #: ../../source/configure/calls-deployment.md:447
 msgid ""
@@ -1731,16 +1855,21 @@ msgid ""
 "Override](https://docs.mattermost.com/configure/plugins-configuration-"
 "settings.html#ice-host-override) setting is provided."
 msgstr ""
+"사용되는 유일한 외부 서비스는 기본값으로 구성된 Mattermost 공식 STUN 서버(`stun.global.calls.mattermost.com`)입니다. 이는 "
+"[ICE Host Override](https://docs.mattermost.com/configure/plugins-configuration-settings.html#ice-host-override) 옵션을 "
+"통해 제공되지 않는 경우 Mattermost 인스턴스의 공용 주소를 찾는 데 주로 사용됩니다. "
+"이 서비스로 전송되는 유일한 정보는 다른 트래픽이 통과하지 않기 때문에 연결하는 클라이언트의 IP 주소입니다. "
+"[ICE Host Override](https://docs.mattermost.com/configure/plugins-configuration-settings.html#ice-host-override) 설정이 제공되는 경우 제거할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:450
 msgid ""
 "In air-gapped deployments, using STUN servers is not necessary since all "
 "connections remain within the local network."
-msgstr ""
+msgstr "에어갭 배포에서는 모든 연결이 로컬 네트워크 내에 유지되므로 STUN 서버를 사용할 필요가 없습니다."
 
 #: ../../source/configure/calls-deployment.md:453
 msgid "Is using UDP a requirement?"
-msgstr ""
+msgstr "UDP 사용이 필수인가요?"
 
 #: ../../source/configure/calls-deployment.md:455
 msgid ""
@@ -1749,6 +1878,7 @@ msgid ""
 "of possible solutions to cover clients that due to limitations or strict "
 "firewalls are unable to use UDP:"
 msgstr ""
+"네, UDP는 피어 간 최저 지연 시간을 허용하므로 실시간 미디어 제공을 위한 권장 프로토콜입니다. 그러나 제한이나 엄격한 방화벽으로 인해 UDP를 사용할 수 없는 클라이언트를 위한 몇 가지 가능한 해결책이 있습니다:"
 
 #: ../../source/configure/calls-deployment.md:457
 msgid ""
@@ -1758,6 +1888,8 @@ msgid ""
 "possible to have clients connect directly through TCP when unable to do "
 "it through the preferred UDP channel."
 msgstr ""
+"플러그인 버전 0.17과 `rtcd` 버전 0.11부터 RTC 서비스는 UDP 연결 외에도 TCP 연결을 수신합니다. 올바르게 구성된 경우(예: 80 또는 443과 같은 일반적으로 허용된 포트 사용) "
+"선호하는 UDP 채널을 통해 연결할 수 없는 경우 클라이언트가 TCP를 통해 직접 연결할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:459
 msgid ""
@@ -1766,10 +1898,11 @@ msgid ""
 "that should be avoided if possible as it will introduce extra latency "
 "along with added infrastructural cost."
 msgstr ""
+"TCP에서 수신하고 피어 간의 모든 미디어 트래픽을 중계하는 외부 TURN 서버를 통해 통화를 실행합니다. 그러나 이는 추가 지연 시간과 인프라 비용을 발생시키므로 가능하면 피해야 하는 차선책입니다."
 
 #: ../../source/configure/calls-deployment.md:461
 msgid "Do I need a TURN server?"
-msgstr ""
+msgstr "TURN 서버가 필요한가요?"
 
 #: ../../source/configure/calls-deployment.md:463
 msgid ""
@@ -1780,19 +1913,22 @@ msgid ""
 "(e.g. some corporate firewalls). In such cases TURN is needed to allow "
 "connectivity."
 msgstr ""
+"구성된 UDP 포트를 통해 연결할 수 없는 클라이언트가 있을 것으로 예상되는 경우 TURN이 필요해집니다. "
+"이는 나가는 방향에서도 비표준 포트를 차단하거나 UDP 프로토콜 사용을 전혀 허용하지 않는 매우 제한적인 방화벽(예: 일부 기업 방화벽)으로 인해 발생할 수 있습니다. "
+"이러한 경우 연결을 허용하기 위해 TURN이 필요합니다."
 
 #: ../../source/configure/calls-deployment.md:465
 msgid ""
 "We officially support and recommend using "
 "[coturn](https://github.com/coturn/coturn) for a stable and performant "
 "TURN service implementation."
-msgstr ""
+msgstr "안정적이고 성능이 좋은 TURN 서비스 구현을 위해 [coturn](https://github.com/coturn/coturn) 사용을 공식적으로 지원하고 권장합니다."
 
 #: ../../source/configure/calls-deployment.md:467
 msgid ""
 "How will this work with an existing reverse proxy sitting in front of "
 "Mattermost?"
-msgstr ""
+msgstr "Mattermost 앞에 있는 기존 리버스 프록시와 어떻게 작동하나요?"
 
 #: ../../source/configure/calls-deployment.md:469
 msgid ""
@@ -1805,12 +1941,15 @@ msgid ""
 "load balance the UDP flow across multiple instances like it happens for "
 "HTTP."
 msgstr ""
+"일반적으로 클라이언트는 구성된 UDP 포트를 통해 Mattermost 또는 배포된 경우 전용 `rtcd` 서비스에 직접 연결해야 합니다. "
+"그러나 UDP 프로토콜 라우팅을 지원하는 기존 로드 밸런서(예: nginx)를 통해 트래픽을 라우팅할 수도 있습니다. "
+"물론 HTTP와 달리 여러 인스턴스에서 UDP 흐름을 로드 밸런싱할 수 없기 때문에 추가 구성과 플러그인 실행 방식의 잠재적 변경이 필요합니다."
 
 #: ../../source/configure/calls-deployment.md:471
 msgid ""
 "Do calls require a dedicated server to work or can they run alongside "
 "Mattermost?"
-msgstr ""
+msgstr "통화가 작동하려면 전용 서버가 필요한가요, 아니면 Mattermost와 함께 실행할 수 있나요?"
 
 #: ../../source/configure/calls-deployment.md:473
 msgid ""
@@ -1819,12 +1958,14 @@ msgid ""
 "possible to use a dedicated service to offload the computational and "
 "bandwidth costs and scale further (Enterprise only)."
 msgstr ""
+"플러그인은 다양한 모드로 작동할 수 있습니다. 기본적으로 통화는 Mattermost의 일부로 실행되는 플러그인에 의해 완전히 처리됩니다. "
+"계산 및 대역폭 비용을 오프로드하고 더 확장하기 위해 전용 서비스를 사용할 수도 있습니다(Enterprise 전용)."
 
 #: ../../source/configure/calls-deployment.md:475
 msgid ""
 "Can the traffic between Mattermost and `rtcd`  be kept internal or should"
 " it be opened to the public?"
-msgstr ""
+msgstr "Mattermost와 `rtcd` 간의 트래픽을 내부적으로 유지할 수 있나요, 아니면 공개해야 하나요?"
 
 #: ../../source/configure/calls-deployment.md:477
 msgid ""
@@ -1834,14 +1975,16 @@ msgid ""
 "There's no requirement to expose `rtcd`'s HTTP API to the public "
 "internet."
 msgstr ""
+"가능한 경우 Mattermost 클러스터와 전용 `rtcd` 서비스 간의 통신을 동일한 프라이빗 네트워크 내에서 유지하는 것이 좋습니다. "
+"이는 배포와 보안을 크게 단순화할 수 있기 때문입니다. `rtcd`의 HTTP API를 공개 인터넷에 노출할 필요는 없습니다."
 
 #: ../../source/configure/calls-deployment.md:479
 msgid "Can Calls be rolled out on a per-channel basis?"
-msgstr ""
+msgstr "Calls를 채널별로 롤아웃할 수 있나요?"
 
 #: ../../source/_static/badges/selfhosted-only.md:6
 msgid "Note"
-msgstr ""
+msgstr "참고"
 
 #: ../../source/_static/badges/selfhosted-only.md:8
 msgid ""
@@ -1849,10 +1992,12 @@ msgid ""
 "yellow](/_static/images/badges/deployment_icon_yellow.svg) Available only"
 " for [self-hosted](https://mattermost.com/download/) deployments"
 msgstr ""
+"![deployment-img-"
+"yellow](/_static/images/badges/deployment_icon_yellow.svg) [self-hosted](https://mattermost.com/download/) 배포에서만 사용 가능"
 
 #: ../../source/_static/badges/selfhosted-only.md:8
 msgid "deployment-img-yellow"
-msgstr ""
+msgstr "deployment-img-yellow"
 
 #: ../../source/configure/calls-deployment.md:484
 msgid ""
@@ -1861,20 +2006,22 @@ msgid ""
 "mode](https://docs.mattermost.com/configure/plugins-configuration-"
 "settings.html#test-mode) is enabled for Mattermost Calls:"
 msgstr ""
+"네. 자체 호스팅 배포를 실행하는 Mattermost 시스템 관리자는 채널별로 통화 기능을 활성화하거나 비활성화할 수 있습니다. "
+"Mattermost Calls에 대해 [test mode](https://docs.mattermost.com/configure/plugins-configuration-settings.html#test-mode)가 활성화되면:"
 
 #: ../../source/configure/calls-deployment.md:486
 msgid "Select **Enable calls** for each channel where you want Calls enabled"
-msgstr ""
+msgstr "Calls를 활성화하려는 각 채널에서 **Enable calls** 를 선택하세요"
 
 #: ../../source/configure/calls-deployment.md:487
 msgid "Select **Disable calls** for all channels where you want Calls disabled."
-msgstr ""
+msgstr "Calls를 비활성화하려는 모든 채널에서 **Disable calls** 를 선택하세요."
 
 #: ../../source/configure/calls-deployment.md:489
 msgid ""
 "Once Calls is enabled for specific channels, users can start making calls"
 " in those channels."
-msgstr ""
+msgstr "특정 채널에 대해 Calls가 활성화되면 사용자는 해당 채널에서 통화를 시작할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:492
 msgid ""
@@ -1882,20 +2029,23 @@ msgid ""
 "configuration-settings.html#test-mode) is disabled for Mattermost Calls, "
 "users in any Mattermost channel can make a call."
 msgstr ""
+"Mattermost Calls에 대해 [test mode](https://docs.mattermost.com/configure/plugins-configuration-settings.html#test-mode)가 비활성화되면 "
+"모든 Mattermost 채널의 사용자가 통화를 할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:495
 msgid "Troubleshooting"
-msgstr ""
+msgstr "문제 해결"
 
 #: ../../source/configure/calls-deployment.md:497
 msgid "Connectivity issues"
-msgstr ""
+msgstr "연결 문제"
 
 #: ../../source/configure/calls-deployment.md:499
 msgid ""
 "If calls are failing to connect or timing out, it's likely there could be"
 " a misconfiguration at either the plugin config or networking level."
 msgstr ""
+"통화 연결이 실패하거나 시간 초과되는 경우 플러그인 구성이나 네트워킹 수준에서 잘못된 구성이 있을 가능성이 높습니다."
 
 #: ../../source/configure/calls-deployment.md:501
 msgid ""
@@ -1906,34 +2056,39 @@ msgid ""
 "settings.html#rtc-server-port-tcp) may not be open or forwarded "
 "correctly."
 msgstr ""
+"예를 들어, [RTC Server Port (UDP)](https://docs.mattermost.com/configure/plugins-configuration-settings.html#rtc-server-port-udp) 또는 "
+"[RTC Server Port (TCP)](https://docs.mattermost.com/configure/plugins-configuration-settings.html#rtc-server-port-tcp)가 열려 있지 않거나 "
+"올바르게 전달되지 않았을 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:503
 msgid "Connectivity checks"
-msgstr ""
+msgstr "연결 확인"
 
 #: ../../source/configure/calls-deployment.md:505
 msgid ""
 "An easy way to check whether data can go through is to perform some tests"
 " using the `netcat` command line tool."
 msgstr ""
+"데이터가 통과할 수 있는지 확인하는 쉬운 방법은 `netcat` 명령줄 도구를 사용하여 일부 테스트를 수행하는 것입니다."
 
 #: ../../source/configure/calls-deployment.md:507
 msgid ""
 "On the host running Calls (could be the Mattermost instance itself or the"
 " one running `rtcd` depending on the chosen setup), run the following:"
 msgstr ""
+"Calls를 실행하는 호스트(선택한 설정에 따라 Mattermost 인스턴스 자체이거나 `rtcd`를 실행하는 인스턴스)에서 다음을 실행하세요:"
 
 #: ../../source/configure/calls-deployment.md:513
 msgid ""
 "On the client side (i.e., the machine you would normally use to run the "
 "Mattermost desktop app or browser), run the following:"
-msgstr ""
+msgstr "클라이언트 측(즉, Mattermost 데스크톱 앱이나 브라우저를 실행하는 데 일반적으로 사용하는 컴퓨터)에서 다음을 실행하세요:"
 
 #: ../../source/configure/calls-deployment.md:519
 msgid ""
 "If connection succeeds, you should be able to send and receive text "
 "messages by typing and hitting enter on either side."
-msgstr ""
+msgstr "연결이 성공하면 양쪽에서 텍스트를 입력하고 Enter를 눌러 텍스트 메시지를 주고받을 수 있어야 합니다."
 
 #: ../../source/configure/calls-deployment.md:522
 msgid ""
@@ -1943,23 +2098,25 @@ msgid ""
 "Override](https://docs.mattermost.com/configure/plugins-configuration-"
 "settings.html#ice-host-override) config setting."
 msgstr ""
+"`HOST_IP`는 일반적으로 통화를 호스팅하는 Mattermost(또는 `rtcd`) 인스턴스의 공개(클라이언트 대면) IP여야 합니다. 설정된 경우 "
+"[ICE Host Override](https://docs.mattermost.com/configure/plugins-configuration-settings.html#ice-host-override) 구성 설정의 값이어야 합니다."
 
 #: ../../source/configure/calls-deployment.md:526
 msgid ""
 "`8443` should be changed with the port configured in [RTC Server "
 "Port](https://docs.mattermost.com/configure/plugins-configuration-"
 "settings.html#rtc-server-port-udp)."
-msgstr ""
+msgstr "`8443`은 [RTC Server Port](https://docs.mattermost.com/configure/plugins-configuration-settings.html#rtc-server-port-udp)에 구성된 포트로 변경해야 합니다."
 
 #: ../../source/configure/calls-deployment.md:528
 msgid ""
 "The same checks can be performed to test connectivity through the TCP "
 "port using the same commands with `-u` flag removed."
-msgstr ""
+msgstr "`-u` 플래그를 제거한 동일한 명령을 사용하여 TCP 포트를 통한 연결성을 테스트할 수 있습니다."
 
 #: ../../source/configure/calls-deployment.md:531
 msgid "Network packets debugging"
-msgstr ""
+msgstr "네트워크 패킷 디버깅"
 
 #: ../../source/configure/calls-deployment.md:533
 msgid ""
@@ -1967,10 +2124,12 @@ msgid ""
 "command line utility to temporaily monitor network packets flowing in and"
 " out of the instance hosting calls."
 msgstr ""
+"네트워킹 문제를 디버깅하는 더 고급 방법은 `tcpdump` 명령줄 유틸리티를 사용하여 통화를 호스팅하는 인스턴스로 들어오고 나가는 네트워크 패킷을 "
+"일시적으로 모니터링하는 것입니다."
 
 #: ../../source/configure/calls-deployment.md:535
 msgid "On the server side, run the following:"
-msgstr ""
+msgstr "서버 측에서 다음을 실행하세요:"
 
 #: ../../source/configure/calls-deployment.md:541
 msgid ""
@@ -1980,4 +2139,5 @@ msgid ""
 "out of the instance and can be used to quickly identify network "
 "configuration issues."
 msgstr ""
-
+"이 명령은 포트 `8443`을 통해 송수신되는 모든 네트워크 패킷에 대한 정보(즉, 소스 및 대상 주소)를 출력합니다. 이는 데이터가 인스턴스로 "
+"들어오고 나가는지 확인하는 좋은 방법이며, 네트워크 구성 문제를 빠르게 식별하는 데 사용할 수 있습니다."

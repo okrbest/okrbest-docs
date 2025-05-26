@@ -21,27 +21,27 @@ msgstr ""
 
 #: ../../source/deploy/server/preparations.rst:6
 msgid " Review software and hardware requirements"
-msgstr ""
+msgstr "소프트웨어 및 하드웨어 요구사항 검토"
 
 #: ../../source/deploy/server/preparations.rst:6
 msgid " Set up an NGINX proxy"
-msgstr ""
+msgstr "NGINX 프록시 설정"
 
 #: ../../source/deploy/server/preparations.rst:6
 msgid " Configure Mattermost Calls"
-msgstr ""
+msgstr "Mattermost Calls 구성"
 
 #: ../../source/deploy/server/preparations.rst:6
 msgid " Set up TLS"
-msgstr ""
+msgstr "TLS 설정"
 
 #: ../../source/deploy/server/preparations.rst:6
 msgid " Use an image proxy"
-msgstr ""
+msgstr "이미지 프록시 사용"
 
 #: ../../source/deploy/server/preparations.rst:2
 msgid "Prepare your Mattermost Server environment"
-msgstr ""
+msgstr "Mattermost 서버 환경 준비"
 
 #: ../../source/deploy/server/preparations.rst:4
 msgid ""
@@ -49,10 +49,12 @@ msgid ""
 "the Mattermost Server, focusing on setting up the database and file "
 "storage systems."
 msgstr ""
+"이 가이드는 Mattermost 서버 설치 전에 필요한 주요 준비 단계를 설명하며, 데이터베이스 및 파일 저장소 시스템 설정에 중점을 "
+"둡니다."
 
 #: ../../source/deploy/server/preparations.rst:18
 msgid "Database preparation"
-msgstr ""
+msgstr "데이터베이스 준비"
 
 #: ../../source/deploy/server/preparations.rst:20
 msgid ""
@@ -62,60 +64,64 @@ msgid ""
 ":doc:`PostgreSQL migration </deploy/postgres-migration>` documentation "
 "for guidance on migrating from MySQL to PostgreSQL."
 msgstr ""
+"Mattermost 서버 설치에는 PostgreSQL v13+가 필요합니다. :doc:`MySQL 데이터베이스 지원 </deploy/server/prepare-"
+"mattermost-mysql-database>` 은 Mattermost v11부터 더 이상 사용되지 않습니다. MySQL에서 PostgreSQL로 마이그레이션하는 "
+"방법은 :doc:`PostgreSQL 마이그레이션 </deploy/postgres-migration>` 문서를 참조하세요."
 
 #: ../../source/deploy/server/preparations.rst:22
 msgid "Create an PostgreSQL server instance:"
-msgstr ""
+msgstr "PostgreSQL 서버 인스턴스 생성:"
 
 #: ../../source/deploy/server/preparations.rst:52
 msgid "Create the Mattermost database and user:"
-msgstr ""
+msgstr "Mattermost 데이터베이스 및 사용자 생성:"
 
 #: ../../source/deploy/server/preparations.rst:54
 msgid "Access PostgreSQL by running:"
-msgstr ""
+msgstr "다음 명령을 실행하여 PostgreSQL에 접근:"
 
 #: ../../source/deploy/server/preparations.rst:60
 msgid "Create the database:"
-msgstr ""
+msgstr "데이터베이스 생성:"
 
 #: ../../source/deploy/server/preparations.rst:66
 msgid "Create the Mattermost user with a secure password:"
-msgstr ""
+msgstr "보안 비밀번호로 Mattermost 사용자 생성:"
 
 #: ../../source/deploy/server/preparations.rst:72
 msgid "Grant database access to the user:"
-msgstr ""
+msgstr "사용자에게 데이터베이스 접근 권한 부여:"
 
 #: ../../source/deploy/server/preparations.rst:78
 msgid "If using PostgreSQL v15.x or later, additional grants are required:"
-msgstr ""
+msgstr "PostgreSQL v15.x 이상을 사용하는 경우 추가 권한이 필요합니다:"
 
 #: ../../source/deploy/server/preparations.rst:85
 msgid ""
 "Configure PostgreSQL for remote connections (if database is on a separate"
 " server):"
 msgstr ""
+"원격 연결을 위한 PostgreSQL 구성(데이터베이스가 별도 서버에 있는 경우):"
 
 #: ../../source/deploy/server/preparations.rst:87
 msgid "Edit ``postgresql.conf`` to allow remote connections:"
-msgstr ""
+msgstr "원격 연결을 허용하도록 ``postgresql.conf`` 를 편집하세요:"
 
 #: ../../source/deploy/server/preparations.rst:91
 msgid "Edit ``/etc/postgresql/{version}/main/postgresql.conf``:"
-msgstr ""
+msgstr "``/etc/postgresql/{version}/main/postgresql.conf`` 를 편집하세요:"
 
 #: ../../source/deploy/server/preparations.rst:99
 msgid "Edit ``/var/lib/pgsql/{version}/data/postgresql.conf``:"
-msgstr ""
+msgstr "``/var/lib/pgsql/{version}/data/postgresql.conf`` 를 편집하세요:"
 
 #: ../../source/deploy/server/preparations.rst:105
 msgid "Configure client authentication by editing ``pg_hba.conf``:"
-msgstr ""
+msgstr "``pg_hba.conf`` 를 편집하여 클라이언트 인증을 구성하세요:"
 
 #: ../../source/deploy/server/preparations.rst:107
 msgid "Add the following line, replacing ``{mattermost-server-IP}``:"
-msgstr ""
+msgstr "``{mattermost-server-IP}`` 를 대체하여 다음 줄을 추가하세요:"
 
 #: ../../source/deploy/server/preparations.rst:115
 msgid ""
@@ -124,112 +130,118 @@ msgid ""
 "populate the ``pg_statistics`` table used to generate optimal query "
 "plans. Database performance may suffer if this step is skipped."
 msgstr ""
+"Postgres의 주요 버전을 업그레이드하는 경우, 업그레이드 후 데이터베이스에서 ``ANALYZE VERBOSE`` 가 실행되었는지 확인하세요. "
+"이는 최적의 쿼리 계획을 생성하는 데 사용되는 ``pg_statistics`` 테이블을 다시 채우는 데 필요합니다. 이 단계를 건너뛰면 데이터베이스 "
+"성능이 저하될 수 있습니다."
 
 #: ../../source/deploy/server/preparations.rst:118
 msgid "File storage preparation"
-msgstr ""
+msgstr "파일 스토리지 준비"
 
 #: ../../source/deploy/server/preparations.rst:120
 msgid ""
 "Mattermost requires a file storage system for storing user files, images,"
 " and attachments. You have several options, including:"
 msgstr ""
+"Mattermost는 사용자 파일, 이미지 및 첨부 파일을 저장하기 위한 파일 스토리지 시스템이 필요합니다. 다음과 같은 여러 옵션이 있습니다:"
 
 #: ../../source/deploy/server/preparations.rst:122
 msgid "S3-compatibile object storage (recommended)"
-msgstr ""
+msgstr "S3 호환 객체 스토리지(권장)"
 
 #: ../../source/deploy/server/preparations.rst:123
 msgid "local file storage"
-msgstr ""
+msgstr "로컬 파일 스토리지"
 
 #: ../../source/deploy/server/preparations.rst:126
 msgid "S3-compatible object storage (Recommended)"
-msgstr ""
+msgstr "S3 호환 객체 스토리지(권장)"
 
 #: ../../source/deploy/server/preparations.rst:128
 msgid ""
 "For production environments, we recommend using S3-compatible object "
 "storage such as:"
 msgstr ""
+"프로덕션 환경에서는 다음과 같은 S3 호환 객체 스토리지를 사용하는 것을 권장합니다:"
 
 #: ../../source/deploy/server/preparations.rst:130
 msgid "Amazon S3"
-msgstr ""
+msgstr "Amazon S3"
 
 #: ../../source/deploy/server/preparations.rst:131
 msgid "MinIO"
-msgstr ""
+msgstr "MinIO"
 
 #: ../../source/deploy/server/preparations.rst:132
 msgid "Digital Ocean Spaces"
-msgstr ""
+msgstr "Digital Ocean Spaces"
 
 #: ../../source/deploy/server/preparations.rst:133
 msgid "Other S3-compatible services"
-msgstr ""
+msgstr "기타 S3 호환 서비스"
 
 #: ../../source/deploy/server/preparations.rst:135
 msgid "When using S3 storage, you'll need:"
-msgstr ""
+msgstr "S3 스토리지를 사용할 때 다음이 필요합니다:"
 
 #: ../../source/deploy/server/preparations.rst:137
 msgid "A bucket created specifically for Mattermost"
-msgstr ""
+msgstr "Mattermost 전용으로 생성된 버킷"
 
 #: ../../source/deploy/server/preparations.rst:138
 msgid "Access credentials (Access Key and Secret Key)"
-msgstr ""
+msgstr "액세스 자격 증명(Access Key 및 Secret Key)"
 
 #: ../../source/deploy/server/preparations.rst:139
 msgid "Appropriate bucket policies configured"
-msgstr ""
+msgstr "적절한 버킷 정책 구성"
 
 #: ../../source/deploy/server/preparations.rst:140
 msgid "The following information for configuration:"
-msgstr ""
+msgstr "구성을 위한 다음 정보:"
 
 #: ../../source/deploy/server/preparations.rst:142
 msgid "Bucket name"
-msgstr ""
+msgstr "버킷 이름"
 
 #: ../../source/deploy/server/preparations.rst:143
 msgid "Region (if applicable)"
-msgstr ""
+msgstr "리전(해당되는 경우)"
 
 #: ../../source/deploy/server/preparations.rst:144
 msgid "Access Key"
-msgstr ""
+msgstr "액세스 키"
 
 #: ../../source/deploy/server/preparations.rst:145
 msgid "Secret Key"
-msgstr ""
+msgstr "시크릿 키"
 
 #: ../../source/deploy/server/preparations.rst:146
 msgid "Endpoint URL (for non-AWS S3 services)"
-msgstr ""
+msgstr "엔드포인트 URL(AWS가 아닌 S3 서비스용)"
 
 #: ../../source/deploy/server/preparations.rst:149
 msgid "Local file storage"
-msgstr ""
+msgstr "로컬 파일 스토리지"
 
 #: ../../source/deploy/server/preparations.rst:151
 msgid ""
 "For simple deployments, you can use local file storage. However, we don't"
 " recommend this for production environments or multi-node deployments."
 msgstr ""
+"간단한 배포의 경우 로컬 파일 스토리지를 사용할 수 있습니다. 하지만 프로덕션 환경이나 다중 노드 배포에는 이를 권장하지 않습니다."
 
 #: ../../source/deploy/server/preparations.rst:153
 msgid "Create a directory for file storage:"
-msgstr ""
+msgstr "파일 스토리지를 위한 디렉토리 생성:"
 
 #: ../../source/deploy/server/preparations.rst:159
 msgid "Set appropriate permissions:"
-msgstr ""
+msgstr "적절한 권한 설정:"
 
 #: ../../source/deploy/server/preparations.rst:166
 msgid "(Optional) Use an image proxy"
-msgstr ""
+msgstr "(선택사항) 이미지 프록시 사용"
 
 #: ../../source/deploy/server/preparations.rst:168
 msgid ""
@@ -240,6 +252,10 @@ msgid ""
 " image. This also prevents the use of tracking pixels (invisible images "
 "that do the same thing without the user even seeing an image)."
 msgstr ""
+":doc:`이미지 프록시 </deploy/server/image-proxy>` 를 사용하면 Mattermost 클라이언트가 만드는 모든 이미지 요청이 "
+"타사 서버에 직접 연락하는 대신 프록시를 통해 전달됩니다. 이는 타사 서버가 이미지를 보는 사람을 추적하는 것을 방지하여 "
+"사용자 개인정보를 보호하는 데 도움이 됩니다. 또한 추적 픽셀(사용자가 이미지를 보지도 못하는 상태에서 동일한 작업을 수행하는 "
+"보이지 않는 이미지)의 사용도 방지합니다."
 
 #: ../../source/deploy/server/preparations.rst:170
 msgid ""
@@ -247,52 +263,55 @@ msgid ""
 "loading images faster and more reliable. This caching also helps preserve"
 " posts by protecting them from dead images."
 msgstr ""
+"일부 프록시 서버는 캐싱 계층을 제공하여 이미지 로딩을 더 빠르고 안정적으로 만들 수 있습니다. "
+"이 캐싱은 게시물이 깨진 이미지로부터 보호되어 게시물을 보존하는 데도 도움이 됩니다."
 
 #: ../../source/deploy/server/preparations.rst:173
 msgid "Network preparation"
-msgstr ""
+msgstr "네트워크 준비"
 
 #: ../../source/deploy/server/preparations.rst:175
 msgid ""
 "The following table outlines the network ports and protocols required for"
 " Mattermost server:"
 msgstr ""
+"다음 표는 Mattermost 서버에 필요한 네트워크 포트와 프로토콜을 설명합니다:"
 
 #: ../../source/deploy/server/preparations.rst:178
 msgid "Service Name"
-msgstr ""
+msgstr "서비스 이름"
 
 #: ../../source/deploy/server/preparations.rst:178
 msgid "Config Setting"
-msgstr ""
+msgstr "설정 구성"
 
 #: ../../source/deploy/server/preparations.rst:178
 msgid "Port (default)"
-msgstr ""
+msgstr "포트(기본값)"
 
 #: ../../source/deploy/server/preparations.rst:178
 msgid "Protocol"
-msgstr ""
+msgstr "프로토콜"
 
 #: ../../source/deploy/server/preparations.rst:178
 msgid "Direction"
-msgstr ""
+msgstr "방향"
 
 #: ../../source/deploy/server/preparations.rst:178
 msgid "Info"
-msgstr ""
+msgstr "정보"
 
 #: ../../source/deploy/server/preparations.rst:180
 msgid "HTTP/Websocket"
-msgstr ""
+msgstr "HTTP/웹소켓"
 
 #: ../../source/deploy/server/preparations.rst:180
 msgid "ServiceSettings.ListenAddress"
-msgstr ""
+msgstr "ServiceSettings.ListenAddress"
 
 #: ../../source/deploy/server/preparations.rst:180
 msgid "8065/80/443 (TLS)"
-msgstr ""
+msgstr "8065/80/443 (TLS)"
 
 #: ../../source/deploy/server/preparations.rst:180
 #: ../../source/deploy/server/preparations.rst:186
@@ -300,45 +319,46 @@ msgstr ""
 #: ../../source/deploy/server/preparations.rst:192
 #: ../../source/deploy/server/preparations.rst:196
 msgid "TCP"
-msgstr ""
+msgstr "TCP"
 
 #: ../../source/deploy/server/preparations.rst:180
 #: ../../source/deploy/server/preparations.rst:184
 #: ../../source/deploy/server/preparations.rst:186
 msgid "Inbound"
-msgstr ""
+msgstr "인바운드"
 
 #: ../../source/deploy/server/preparations.rst:180
 msgid ""
 "External (no proxy) / Internal (with proxy) Usually this requires port 80"
 " and 443 when running HTTPS."
 msgstr ""
+"외부(프록시 없음) / 내부(프록시 있음) HTTPS를 실행할 때는 일반적으로 포트 80과 443이 필요합니다."
 
 #: ../../source/deploy/server/preparations.rst:184
 msgid "Cluster"
-msgstr ""
+msgstr "클러스터"
 
 #: ../../source/deploy/server/preparations.rst:184
 msgid "ClusterSettings.GossipPort"
-msgstr ""
+msgstr "ClusterSettings.GossipPort"
 
 #: ../../source/deploy/server/preparations.rst:184
 msgid "8074"
-msgstr ""
+msgstr "8074"
 
 #: ../../source/deploy/server/preparations.rst:184
 #: ../../source/deploy/server/preparations.rst:190
 #: ../../source/deploy/server/preparations.rst:194
 msgid "TCP/UDP"
-msgstr ""
+msgstr "TCP/UDP"
 
 #: ../../source/deploy/server/preparations.rst:184
 msgid "Internal"
-msgstr ""
+msgstr "내부"
 
 #: ../../source/deploy/server/preparations.rst:186
 msgid "Metrics"
-msgstr ""
+msgstr "메트릭스"
 
 #: ../../source/deploy/server/preparations.rst:186
 msgid "MetricsSettings.ListenAddress"
@@ -350,19 +370,19 @@ msgstr ""
 
 #: ../../source/deploy/server/preparations.rst:186
 msgid "External (no proxy) / Internal (with proxy)"
-msgstr ""
+msgstr "외부(프록시 없음) / 내부(프록시 있음)"
 
 #: ../../source/deploy/server/preparations.rst:188
 msgid "Database"
-msgstr ""
+msgstr "데이터베이스"
 
 #: ../../source/deploy/server/preparations.rst:188
 msgid "SqlSettings.DataSource"
-msgstr ""
+msgstr "SqlSettings.DataSource"
 
 #: ../../source/deploy/server/preparations.rst:188
 msgid "5432 (PostgreSQL) / 3306 (MySQL)"
-msgstr ""
+msgstr "5432 (PostgreSQL) / 3306 (MySQL)"
 
 #: ../../source/deploy/server/preparations.rst:188
 #: ../../source/deploy/server/preparations.rst:190
@@ -370,88 +390,90 @@ msgstr ""
 #: ../../source/deploy/server/preparations.rst:194
 #: ../../source/deploy/server/preparations.rst:196
 msgid "Outbound"
-msgstr ""
+msgstr "아웃바운드"
 
 #: ../../source/deploy/server/preparations.rst:188
 msgid "Usually internal (recommended)"
-msgstr ""
+msgstr "일반적으로 내부(권장)"
 
 #: ../../source/deploy/server/preparations.rst:190
 msgid "LDAP"
-msgstr ""
+msgstr "LDAP"
 
 #: ../../source/deploy/server/preparations.rst:190
 msgid "LdapSettings.LdapPort"
-msgstr ""
+msgstr "LdapSettings.LdapPort"
 
 #: ../../source/deploy/server/preparations.rst:190
 msgid "389"
-msgstr ""
+msgstr "389"
 
 #: ../../source/deploy/server/preparations.rst:192
 msgid "S3 Storage"
-msgstr ""
+msgstr "S3 스토리지"
 
 #: ../../source/deploy/server/preparations.rst:192
 msgid "FileSettings.AmazonS3Endpoint"
-msgstr ""
+msgstr "FileSettings.AmazonS3Endpoint"
 
 #: ../../source/deploy/server/preparations.rst:192
 #: ../../source/deploy/server/preparations.rst:196
 msgid "443 (TLS)"
-msgstr ""
+msgstr "443 (TLS)"
 
 #: ../../source/deploy/server/preparations.rst:194
 msgid "SMTP"
-msgstr ""
+msgstr "SMTP"
 
 #: ../../source/deploy/server/preparations.rst:194
 msgid "EmailSettings.SMTPPort"
-msgstr ""
+msgstr "EmailSettings.SMTPPort"
 
 #: ../../source/deploy/server/preparations.rst:194
 msgid "10025"
-msgstr ""
+msgstr "10025"
 
 #: ../../source/deploy/server/preparations.rst:196
 msgid "Push Notifications"
-msgstr ""
+msgstr "푸시 알림"
 
 #: ../../source/deploy/server/preparations.rst:196
 msgid "EmailSettings.PushNotificationServer"
-msgstr ""
+msgstr "EmailSettings.PushNotificationServer"
 
 #: ../../source/deploy/server/preparations.rst:201
 msgid "All outbound ports may vary based on your specific configuration"
-msgstr ""
+msgstr "모든 아웃바운드 포트는 특정 구성에 따라 달라질 수 있습니다"
 
 #: ../../source/deploy/server/preparations.rst:202
 msgid ""
 "Mattermost can be configured to use an outbound proxy for any HTTP/HTTPS "
 "traffic (see below)"
 msgstr ""
+"Mattermost는 모든 HTTP/HTTPS 트래픽에 대해 아웃바운드 프록시를 사용하도록 구성할 수 있습니다(아래 참조)"
 
 #: ../../source/deploy/server/preparations.rst:203
 msgid "Calls service may require additional ports"
-msgstr ""
+msgstr "Calls 서비스에는 추가 포트가 필요할 수 있습니다"
 
 #: ../../source/deploy/server/preparations.rst:206
 msgid "Outbound proxy configuration"
-msgstr ""
+msgstr "아웃바운드 프록시 구성"
 
 #: ../../source/deploy/server/preparations.rst:208
 msgid ""
 "If your deployment requires using an outbound proxy, you can configure "
 "Mattermost using environment variables:"
 msgstr ""
+"배포에 아웃바운드 프록시 사용이 필요한 경우 환경 변수를 사용하여 Mattermost를 구성할 수 있습니다:"
 
 #: ../../source/deploy/server/preparations.rst:210
 msgid "Configure the proxy settings in your service configuration:"
-msgstr ""
+msgstr "서비스 구성에서 프록시 설정을 구성하세요:"
 
 #: ../../source/deploy/server/preparations.rst:218
 msgid "For authenticated proxies, include credentials in the URL:"
-msgstr ""
+msgstr "인증된 프록시의 경우 URL에 자격 증명을 포함하세요:"
 
 #: ../../source/deploy/server/preparations.rst:225
 msgid ""
@@ -459,54 +481,59 @@ msgid ""
 " - CIDR ranges (e.g., ``1.2.3.4/8``) - Domain names (e.g., "
 "``example.com``) - Subdomains (e.g., ``.example.com``)"
 msgstr ""
+"``NO_PROXY`` 변수에는 다음이 포함될 수 있습니다: - IP 주소(예: ``1.2.3.4``) - CIDR 범위(예: ``1.2.3.4/8``) - "
+"도메인 이름(예: ``example.com``) - 하위 도메인(예: ``.example.com``)"
 
 #: ../../source/deploy/server/preparations.rst:233
 msgid ""
 "When using an HTTPS proxy, ensure your Mattermost server has the proxy's "
 "root certificate configured to avoid connection issues."
 msgstr ""
+"HTTPS 프록시를 사용할 때는 연결 문제를 방지하기 위해 Mattermost 서버에 프록시의 루트 인증서가 구성되어 있는지 확인하세요."
 
 #: ../../source/deploy/server/preparations.rst:235
 msgid "Example systemd Service Configuration"
-msgstr ""
+msgstr "systemd 서비스 구성 예시"
 
 #: ../../source/deploy/server/preparations.rst:271
 msgid "System requirements"
-msgstr ""
+msgstr "시스템 요구사항"
 
 #: ../../source/deploy/server/preparations.rst:273
 msgid "Ensure your system meets these minimum requirements:"
-msgstr ""
+msgstr "시스템이 다음 최소 요구사항을 충족하는지 확인하세요:"
 
 #: ../../source/deploy/server/preparations.rst:275
 msgid "Operating System: 64-bit Linux distribution"
-msgstr ""
+msgstr "운영체제: 64비트 Linux 배포판"
 
 #: ../../source/deploy/server/preparations.rst:276
 msgid "Hardware: 1 vCPU/core with 2GB RAM (supports up to 1,000 users)"
-msgstr ""
+msgstr "하드웨어: 2GB RAM이 있는 1 vCPU/코어 (최대 1,000명의 사용자 지원)"
 
 #: ../../source/deploy/server/preparations.rst:277
 msgid "Storage: Minimum 10GB available space"
-msgstr ""
+msgstr "스토리지: 최소 10GB 가용 공간"
 
 #: ../../source/deploy/server/preparations.rst:278
 msgid "Database: PostgreSQL v13+"
-msgstr ""
+msgstr "데이터베이스: PostgreSQL v13+"
 
 #: ../../source/deploy/server/preparations.rst:279
 msgid "Network: Reliable internet connection with sufficient bandwidth"
-msgstr ""
+msgstr "네트워크: 충분한 대역폭을 갖춘 안정적인 인터넷 연결"
 
 #: ../../source/deploy/server/preparations.rst:281
 msgid ""
 "See the :doc:`software and hardware requirements </deploy/software-"
 "hardware-requirements>` documentation for additional requirements."
 msgstr ""
+"추가 요구사항은 :doc:`소프트웨어 및 하드웨어 요구사항 </deploy/software-hardware-requirements>` "
+"문서를 참조하세요."
 
 #: ../../source/deploy/server/preparations.rst:284
 msgid "Next steps"
-msgstr ""
+msgstr "다음 단계"
 
 #: ../../source/deploy/server/preparations.rst:286
 msgid ""
@@ -514,16 +541,16 @@ msgid ""
 "installing the Mattermost server. Choose your preferred installation "
 "method:"
 msgstr ""
+"이러한 준비 단계를 완료하면 Mattermost 서버 설치를 진행할 수 있습니다. 선호하는 설치 방법을 선택하세요:"
 
 #: ../../source/deploy/server/preparations.rst:288
 msgid ":doc:`Deploy with Kubernetes </deploy/server/deploy-kubernetes>`"
-msgstr ""
+msgstr ":doc:`Kubernetes로 배포 </deploy/server/deploy-kubernetes>`"
 
 #: ../../source/deploy/server/preparations.rst:289
 msgid ":doc:`Deploy on Linux </deploy/server/deploy-linux>`"
-msgstr ""
+msgstr ":doc:`Linux에 배포 </deploy/server/deploy-linux>`"
 
 #: ../../source/deploy/server/preparations.rst:290
 msgid ":doc:`Deploy with Containers </deploy/server/deploy-containers>`"
-msgstr ""
-
+msgstr ":doc:`컨테이너로 배포 </deploy/server/deploy-containers>`"

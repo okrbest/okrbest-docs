@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/deploy/server/server-architecture.rst:2
 msgid "Reference Architecture for Mattermost Server"
-msgstr ""
+msgstr "Mattermost 서버 참조 아키텍처"
 
 #: ../../source/deploy/server/server-architecture.rst:4
 msgid ""
@@ -33,6 +33,11 @@ msgid ""
 "enterprise>` documentation for reference architecture guidance at scale, "
 "including hardware and infrastructure requirements."
 msgstr ""
+"다음 다이어그램은 다양한 규모의 :ref:`고가용성 Mattermost 배포 <scale/high-availability-"
+"cluster-based-deployment:deployment guide>` 에 대한 권장 아키텍처 구성을 상세히 보여줍니다. "
+"하드웨어 및 인프라 요구사항은 사용량과 정책에 따라 크게 달라질 수 있습니다. 하드웨어 및 인프라 요구사항을 포함한 "
+"규모에 따른 참조 아키텍처 가이드는 :doc:`scaling for enterprise </scale/scaling-for-"
+"enterprise>` 문서를 참조하세요."
 
 #: ../../source/deploy/server/server-architecture.rst:6
 msgid ""
@@ -45,6 +50,11 @@ msgid ""
 "requirement is not met, an outage of one component can result in an "
 "overload of the remaining components, causing a complete system outage."
 msgstr ""
+"Mattermost의 고가용성은 중복 Mattermost 애플리케이션 서버, 중복 데이터베이스 서버, 중복 로드 밸런서를 "
+"실행하여 이러한 구성 요소 중 하나가 실패하더라도 시스템 운영이 중단되지 않도록 하는 것으로 구성됩니다. "
+"하나의 구성 요소가 실패할 경우, 나머지 애플리케이션 서버, 데이터베이스 서버, 로드 밸런서는 시스템의 전체 부하를 "
+"처리할 수 있도록 크기가 조정되고 구성되어야 합니다. 이 요구사항이 충족되지 않으면 하나의 구성 요소 장애가 "
+"나머지 구성 요소의 과부하를 초래하여 전체 시스템 장애로 이어질 수 있습니다."
 
 #: ../../source/deploy/server/server-architecture.rst:10
 msgid ""
@@ -53,6 +63,8 @@ msgid ""
 "reside within the same datacenter to ensure proper functionality and "
 "performance."
 msgstr ""
+"Mattermost는 여러 데이터센터에 걸친 고가용성 배포를 지원하지 않습니다. 고가용성 클러스터의 모든 노드는 "
+"적절한 기능과 성능을 보장하기 위해 동일한 데이터센터 내에 위치해야 합니다."
 
 #: ../../source/deploy/server/server-architecture.rst:12
 msgid ""
@@ -64,10 +76,14 @@ msgid ""
 "Downtime for a server restart is around 5 seconds. For a database schema "
 "update, downtime can be up to 30 seconds."
 msgstr ""
+"시스템 구성 요소를 올바른 순서로 업데이트하는 한, 대부분의 구성 변경 및 도트 릴리스 보안 업데이트를 서비스 중단 없이 "
+"적용할 수 있습니다. 서버 재시작이 필요한 구성 설정 변경과 데이터베이스 스키마 변경이 포함된 서버 버전 업그레이드는 "
+"짧은 다운타임이 필요합니다. 서버 재시작의 다운타임은 약 5초이며, 데이터베이스 스키마 업데이트의 경우 최대 30초까지 "
+"걸릴 수 있습니다."
 
 #: ../../source/deploy/server/server-architecture.rst:15
 msgid "Designed for scale"
-msgstr ""
+msgstr "확장성을 고려한 설계"
 
 #: ../../source/deploy/server/server-architecture.rst:17
 msgid ""
@@ -81,6 +97,12 @@ msgid ""
 " the :doc:`scaling for enterprise </scale/scaling-for-enterprise>` "
 "documentation for more information on scaling Mattermost deployments."
 msgstr ""
+"Mattermost는 많은 수의 동시 사용자를 처리할 수 있도록 설계되었으며, 아키텍처는 필요에 따라 확장하거나 축소할 수 "
+"있습니다. 또한 아키텍처는 유연하게 설계되어 필요에 따라 새로운 구성 요소나 서비스를 추가할 수 있습니다. "
+"다음 다이어그램은 5,000, 10,000, 25,000, 50,000명의 사용자를 위한 Mattermost 배포의 권장 아키텍처를 "
+"보여줍니다. 다이어그램은 사용자 수별로 구성되어 있으며 일반 다이어그램과 AWS 및 Azure 버전의 다이어그램이 "
+"포함되어 있습니다. Mattermost 배포의 확장에 대한 자세한 내용은 :doc:`scaling for enterprise "
+"</scale/scaling-for-enterprise>` 문서를 참조하세요."
 
 #: ../../source/deploy/server/server-architecture.rst:19
 msgid ""
@@ -88,18 +110,24 @@ msgid ""
 "across all critical components. The proxy, database, file storage, and "
 "Elasticsearch layers can be replaced by cloud services."
 msgstr ""
+"각 일반화된 다이어그램은 모든 중요 구성 요소에 걸친 전체 고가용성 배포를 나타냅니다. 프록시, 데이터베이스, "
+"파일 스토리지, Elasticsearch 계층은 클라우드 서비스로 대체할 수 있습니다."
 
 #: ../../source/deploy/server/server-architecture.rst:20
 msgid ""
 "Each AWS diagram represents a full High Availability deployment on Amazon"
 " Web Services making full use of the available services."
 msgstr ""
+"각 AWS 다이어그램은 사용 가능한 서비스를 최대한 활용하는 Amazon Web Services의 전체 고가용성 배포를 "
+"나타냅니다."
 
 #: ../../source/deploy/server/server-architecture.rst:21
 msgid ""
 "Each Azure diagram represents a full High Availability deployment on "
 "Microsoft Azure making full use of the available services."
 msgstr ""
+"각 Azure 다이어그램은 사용 가능한 서비스를 최대한 활용하는 Microsoft Azure의 전체 고가용성 배포를 "
+"나타냅니다."
 
 #: ../../source/deploy/server/server-architecture.rst:22
 msgid ""
@@ -107,4 +135,6 @@ msgid ""
 "notification service <configure/environment-configuration-settings:hosted"
 " push notifications service (hpns)>`."
 msgstr ""
+"푸시 프록시는 Mattermost :ref:`호스팅 푸시 알림 서비스 <configure/environment-configuration-settings:hosted"
+" push notifications service (hpns)>` 로 대체할 수 있습니다."
 

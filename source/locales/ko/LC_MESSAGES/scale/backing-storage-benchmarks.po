@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/scale/backing-storage-benchmarks.rst:2
 msgid "Backing storage benchmarks"
-msgstr ""
+msgstr "백업 스토리지 벤치마크"
 
 #: ../../source/scale/backing-storage-benchmarks.rst:4
 msgid ""
@@ -31,6 +31,9 @@ msgid ""
 "helping you make informed decisions based on your use case and "
 "infrastructure needs."
 msgstr ""
+"Mattermost 배포를 최적화하기 위해서는 백업 스토리지의 성능 특성을 이해하는 것이 중요합니다. 이러한 벤치마크는 "
+"각 스토리지 옵션의 상대적 성능에 대한 통찰력을 제공하여 사용 사례와 인프라 요구 사항에 기반한 정보에 입각한 "
+"결정을 내리는 데 도움을 줍니다."
 
 #: ../../source/scale/backing-storage-benchmarks.rst:6
 msgid ""
@@ -39,26 +42,29 @@ msgid ""
 "<#local>`__, `network file system (EFS) <#efs>`__, and `object storage "
 "(S3) <#s3>`__."
 msgstr ""
+"이 페이지는 `로컬 파일 시스템 (EBS, gp3) <#local>`__, `네트워크 파일 시스템 (EFS) <#efs>`__, "
+"그리고 `오브젝트 스토리지 (S3) <#s3>`__ 를 포함한 지원되는 스토리지 옵션에 대한 상세한 쓰기 및 읽기 벤치마크 "
+"결과를 제공합니다."
 
 #: ../../source/scale/backing-storage-benchmarks.rst:9
 msgid "Write operations"
-msgstr ""
+msgstr "쓰기 작업"
 
 #: ../../source/scale/backing-storage-benchmarks.rst:12
 #: ../../source/scale/backing-storage-benchmarks.rst:41
 msgid "File Size"
-msgstr ""
+msgstr "파일 크기"
 
 #: ../../source/scale/backing-storage-benchmarks.rst:12
 #: ../../source/scale/backing-storage-benchmarks.rst:41
 msgid "Local (EBS)"
-msgstr ""
+msgstr "로컬 (EBS)"
 
 #: ../../source/scale/backing-storage-benchmarks.rst:12
 #: ../../source/scale/backing-storage-benchmarks.rst:41
 #: ../../source/scale/backing-storage-benchmarks.rst:88
 msgid "EFS"
-msgstr ""
+msgstr "EFS"
 
 #: ../../source/scale/backing-storage-benchmarks.rst:12
 #: ../../source/scale/backing-storage-benchmarks.rst:41
@@ -174,10 +180,12 @@ msgid ""
 "(100KB - 10MB), while EFS performs better for larger files (100MB - "
 "10GB). S3 is consistently the slowest for writes across all file sizes."
 msgstr ""
+"**쓰기 성능**: 로컬 EBS 스토리지는 작은 파일(100KB - 10MB)에서 가장 빠르며, EFS는 더 큰 파일(100MB - "
+"10GB)에서 더 나은 성능을 보입니다. S3는 모든 파일 크기에서 쓰기가 가장 느립니다."
 
 #: ../../source/scale/backing-storage-benchmarks.rst:38
 msgid "Read operations"
-msgstr ""
+msgstr "읽기 작업"
 
 #: ../../source/scale/backing-storage-benchmarks.rst:43
 msgid "0.05 ms (±0.02 ms, p50: 0.04 ms)"
@@ -258,6 +266,8 @@ msgid ""
 " S3 read performance is significantly slower, especially for large files "
 "(150.66s versus ~1.56s for 10GB files)."
 msgstr ""
+"**읽기 성능**: Local과 EFS는 매우 큰 파일(10GB)에서 비슷한 읽기 성능을 보이지만, 작은 파일에서는 Local 스토리지가 더 우수합니다. "
+"S3 읽기 성능은 특히 대용량 파일에서 훨씬 느립니다(10GB 파일의 경우 150.66초 대 ~1.56초)."
 
 #: ../../source/scale/backing-storage-benchmarks.rst:65
 msgid ""
@@ -266,6 +276,8 @@ msgid ""
 "consistent performance for large files. S3 generally has higher "
 "variability across all metrics."
 msgstr ""
+"**일관성**: Local 스토리지는 작은 파일에서 가장 일관된 성능(낮은 표준 편차)을 보이지만, EFS는 큰 파일에서 더 일관된 성능을 보입니다. "
+"S3는 일반적으로 모든 메트릭에서 더 높은 변동성을 보입니다."
 
 #: ../../source/scale/backing-storage-benchmarks.rst:66
 msgid ""
@@ -275,14 +287,17 @@ msgid ""
 "example, EFS read performance for 100MB and 1GB files shows much better "
 "median values than averages."
 msgstr ""
+"**중앙값 vs 평균**: 중앙값(p50)은 일반적으로 평균과 일치하지만, 일부 경우(특히 EFS 읽기 작업)에는 중앙값이 이상치가 평균에 "
+"상당한 영향을 미친다는 것을 보여줍니다. 예를 들어, 100MB와 1GB 파일에 대한 EFS 읽기 성능은 평균보다 훨씬 더 나은 "
+"중앙값을 보여줍니다."
 
 #: ../../source/scale/backing-storage-benchmarks.rst:-1
 msgid "Read and Write Performance"
-msgstr ""
+msgstr "읽기 및 쓰기 성능"
 
 #: ../../source/scale/backing-storage-benchmarks.rst:72
 msgid "Testing notes"
-msgstr ""
+msgstr "테스트 참고사항"
 
 #: ../../source/scale/backing-storage-benchmarks.rst:74
 msgid ""
@@ -290,10 +305,12 @@ msgid ""
 "/environment-configuration-settings:amazon s3 upload part size>` was set "
 "to the default value (100MB)."
 msgstr ""
+"S3 테스트의 경우 :ref:`Amazon S3 exported upload part size <configure"
+"/environment-configuration-settings:amazon s3 upload part size>` 가 기본값(100MB)으로 설정되었습니다."
 
 #: ../../source/scale/backing-storage-benchmarks.rst:75
 msgid "Local EBS storage is the stock gp3 (3000 IOPS) provided by EC2 instances."
-msgstr ""
+msgstr "Local EBS 스토리지는 EC2 인스턴스에서 제공하는 기본 gp3(3000 IOPS)입니다."
 
 #: ../../source/scale/backing-storage-benchmarks.rst:76
 msgid ""
@@ -310,14 +327,21 @@ msgid ""
 "configuration>`. EFS is a good alternative in this case, but EFS is not a"
 " block storage solution like EBS."
 msgstr ""
+"테스트된 EBS와 EFS 솔루션 모두 애플리케이션 관점에서 ``local`` 스토리지 옵션으로 간주되며, 이 경우 :ref:`file storage "
+"system <configure/environment-configuration-settings:file storage "
+"system>` 이 ``local`` 로 설정됩니다. EFS는 본질적으로 AWS의 관리형 NFS로, 고가용성(HA) 배포에서 "
+"여러 Mattermost 노드가 공통 파일 시스템을 공유할 수 있게 하여 S3의 잠재적 대안으로 사용할 수 있습니다. 이러한 HA "
+"시나리오에서는 표준 로컬 파일 스토리지(예: 단일 인스턴스에 연결된 EBS 볼륨)는 :ref:`여러 노드 간에 공유할 수 없어 "
+"적합하지 않습니다 <scale/high-availability-cluster-based-deployment:file storage "
+"configuration>`. 이 경우 EFS가 좋은 대안이지만, EFS는 EBS와 같은 블록 스토리지 솔루션이 아닙니다."
 
 #: ../../source/scale/backing-storage-benchmarks.rst:80
 msgid "Supported storage options"
-msgstr ""
+msgstr "지원되는 스토리지 옵션"
 
 #: ../../source/scale/backing-storage-benchmarks.rst:83
 msgid "Local"
-msgstr ""
+msgstr "로컬"
 
 #: ../../source/scale/backing-storage-benchmarks.rst:85
 msgid ""
@@ -328,6 +352,10 @@ msgid ""
 "storage is local to the server. This option is often the fastest for "
 "small files due to low latency."
 msgstr ""
+"Mattermost 서버의 로컬 파일 시스템입니다. AWS와 같은 클라우드 환경에서 실행할 경우, 이는 종종 인스턴스에 직접 "
+"연결된 블록 수준 스토리지를 제공하는 Elastic Block Storage(EBS)를 활용합니다. 스토리지가 서버에 로컬로 "
+"있기 때문에 이 설정은 일반적으로 낮은 지연 시간으로 높은 성능을 제공합니다. 낮은 지연 시간으로 인해 이 옵션은 "
+"작은 파일에 대해 종종 가장 빠릅니다."
 
 #: ../../source/scale/backing-storage-benchmarks.rst:90
 msgid ""
@@ -338,6 +366,10 @@ msgid ""
 "than local storage but can be beneficial for certain use cases requiring "
 "shared access."
 msgstr ""
+"여러 인스턴스 간의 공유 액세스를 지원하는 관리형 파일 스토리지 솔루션인 Amazon Elastic File System입니다. "
+"EFS는 여러 인스턴스 간의 공유 액세스를 지원하지만 네트워크 오버헤드를 추가하여 로컬 스토리지 옵션과 비교하여 "
+"성능에 영향을 미칠 수 있습니다. EFS는 일반적으로 로컬 스토리지보다 느리지만 공유 액세스가 필요한 특정 사용 "
+"사례에 유용할 수 있습니다."
 
 #: ../../source/scale/backing-storage-benchmarks.rst:95
 msgid ""
@@ -347,4 +379,7 @@ msgid ""
 "performance due to network-based access and its nature as object storage "
 "rather than block or file storage."
 msgstr ""
+"높은 내구성과 확장성을 제공하는 객체 스토리지 솔루션인 Amazon Simple Storage Service입니다. S3는 대량의 "
+"데이터를 안정적으로 저장하는 데 뛰어나지만, 네트워크 기반 액세스와 블록 또는 파일 스토리지가 아닌 객체 스토리지로서의 "
+"특성으로 인해 더 높은 지연 시간과 느린 성능을 초래합니다."
 

@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/deploy/application-architecture.rst:2
 msgid "Application architecture"
-msgstr ""
+msgstr "애플리케이션 아키텍처"
 
 #: ../../source/deploy/application-architecture.rst:4
 msgid ""
@@ -31,6 +31,9 @@ msgid ""
 "integrations, and customization. The platform is built with modular "
 "components to ensure scalability, flexibility, and extensibility."
 msgstr ""
+"Mattermost는 팀 커뮤니케이션을 위한 안전한 메시징, 파일 공유 및 통합을 제공하는 오픈소스 협업 플랫폼입니다. "
+"자체 호스팅 방식으로 IT 관리자가 데이터, 보안, 통합 및 사용자 정의에 대한 완전한 제어권을 가집니다. "
+"이 플랫폼은 확장성, 유연성 및 확장성을 보장하기 위해 모듈식 구성 요소로 구축되었습니다."
 
 #: ../../source/deploy/application-architecture.rst:-1
 msgid ""
@@ -38,10 +41,12 @@ msgid ""
 "Includes optional configurations for scaling for larger enterprise "
 "organizations."
 msgstr ""
+"Mattermost 네트워크 다이어그램은 구성 요소가 어떻게 배포될 수 있는지 보여줍니다. "
+"대규모 기업 조직을 위한 확장을 위한 선택적 구성이 포함되어 있습니다."
 
 #: ../../source/deploy/application-architecture.rst:11
 msgid "Workflow overview"
-msgstr ""
+msgstr "워크플로우 개요"
 
 #: ../../source/deploy/application-architecture.rst:13
 msgid ""
@@ -50,22 +55,26 @@ msgid ""
 " Server), which manages API communications, authentication, "
 "notifications, and data workflows."
 msgstr ""
+"사용자는 다양한 액세스 포인트(웹, 모바일, 데스크톱, 이메일)를 통해 연결됩니다. "
+"그들의 요청은 API 통신, 인증, 알림 및 데이터 워크플로우를 관리하는 애플리케이션 계층(Mattermost 서버)에서 처리됩니다."
 
 #: ../../source/deploy/application-architecture.rst:15
 msgid ""
 "The backend infrastructure supports these operations by storing all data "
 "and files in well-architected storage systems."
 msgstr ""
+"백엔드 인프라는 모든 데이터와 파일을 잘 설계된 스토리지 시스템에 저장하여 이러한 작업을 지원합니다."
 
 #: ../../source/deploy/application-architecture.rst:17
 msgid ""
 "Extendability and security layers ensure that the platform integrates "
 "seamlessly with enterprise systems while protecting sensitive data."
 msgstr ""
+"확장성과 보안 계층은 민감한 데이터를 보호하면서 플랫폼이 기업 시스템과 원활하게 통합되도록 보장합니다."
 
 #: ../../source/deploy/application-architecture.rst:20
 msgid "Core components"
-msgstr ""
+msgstr "핵심 구성 요소"
 
 #: ../../source/deploy/application-architecture.rst:22
 msgid ""
@@ -73,10 +82,12 @@ msgid ""
 "<#access-layer>`__, `Application layer <#application-layer>`__, and "
 "`Backend infrastructure <#backend-infrastructure>`__."
 msgstr ""
+"기술 아키텍처는 3개의 주요 계층을 중심으로 구성됩니다: `액세스 계층 <#access-layer>`__, "
+"`애플리케이션 계층 <#application-layer>`__, 그리고 `백엔드 인프라 <#backend-infrastructure>`__."
 
 #: ../../source/deploy/application-architecture.rst:25
 msgid "Access layer"
-msgstr ""
+msgstr "액세스 계층"
 
 #: ../../source/deploy/application-architecture.rst:27
 msgid ""
@@ -85,6 +96,9 @@ msgid ""
 "platforms. High availability measures provide uninterrupted functionality"
 " for users, even in the face of server or network failures."
 msgstr ""
+"액세스 계층은 사용자가 Mattermost와 상호작용하는 모든 방식을 포함하며, 선호하는 플랫폼에서 "
+"안전하고 확장 가능하며 신뢰할 수 있는 통신을 보장합니다. 고가용성 조치는 서버나 네트워크 장애가 "
+"발생하더라도 사용자에게 중단 없는 기능을 제공합니다."
 
 #: ../../source/deploy/application-architecture.rst:29
 msgid ""
@@ -96,6 +110,11 @@ msgid ""
 " server instances. Backup proxy servers can ensure failover scenarios to "
 "keep the web interface operational during outages."
 msgstr ""
+"**웹 인터페이스**: 사용자는 웹 브라우저(Chrome, Firefox, Safari, Edge)를 통해 Mattermost에 "
+"액세스할 수 있습니다. 웹 클라이언트는 HTTPS 프로토콜을 통해 Mattermost 서버와 통신합니다. "
+"웹 인터페이스의 고가용성은 여러 Mattermost 서버 인스턴스에 사용자 트래픽을 분산시키는 로드 밸런싱 "
+"리버스 프록시(예: NGINX 또는 HAProxy)를 통해 달성할 수 있습니다. 백업 프록시 서버는 중단 "
+"기간 동안 웹 인터페이스가 작동하도록 장애 조치 시나리오를 보장할 수 있습니다."
 
 #: ../../source/deploy/application-architecture.rst:30
 msgid ""
@@ -108,6 +127,10 @@ msgid ""
 " apps also benefit from retry mechanisms and fallback services for push "
 "notifications to maintain real-time responsiveness."
 msgstr ""
+"**데스크톱 및 모바일 앱**: iOS, Android, macOS, Windows, Linux용 네이티브 앱은 기기 간 원활한 기능을 제공합니다. "
+"이러한 앱은 실시간 메시징과 업데이트를 위해 서버와 상호작용하는 안전한 API에 의존합니다. 고가용성은 API 요청을 처리하기 위한 "
+"중복 서버 클러스터 배포와 정상 서버로 트래픽을 자동으로 리디렉션하는 장애 조치 메커니즘을 통해 보장할 수 있습니다. "
+"모바일 앱은 실시간 응답성을 유지하기 위한 푸시 알림을 위한 재시도 메커니즘과 대체 서비스의 이점을 얻습니다."
 
 #: ../../source/deploy/application-architecture.rst:31
 msgid ""
@@ -120,6 +143,10 @@ msgid ""
 "ensuring that notifications are sent without delay even if a primary mail"
 " server becomes unavailable."
 msgstr ""
+"**이메일 상호작용**: Outlook, Gmail, Thunderbird와 같은 이메일 클라이언트 지원을 통해 이메일 알림(예: 새 메시지 "
+"알림, 초대)을 사용자의 일반적인 워크플로우에 통합할 수 있습니다. 액세스 계층은 안전하고 동기화된 통신 경로를 유지하면서 "
+"사용자가 선택한 플랫폼을 통해 항상 연결되도록 보장합니다. 이메일 서비스는 중복성을 위해 여러 SMTP 서버로 구성할 수 "
+"있어 기본 메일 서버를 사용할 수 없게 되더라도 알림이 지연 없이 전송되도록 보장합니다."
 
 #: ../../source/deploy/application-architecture.rst:33
 msgid ""
@@ -129,10 +156,12 @@ msgid ""
 "place, organizations can guarantee a seamless user experience, regardless"
 " of the scale or complexity of their deployment."
 msgstr ""
+"액세스 계층은 안전하고 동기화된 통신 경로를 유지하면서 사용자가 선택한 플랫폼을 통해 항상 연결되도록 보장하는 중요한 역할을 "
+"합니다. 고가용성 조치가 갖춰져 있으면 배포의 규모나 복잡성에 관계없이 조직은 원활한 사용자 경험을 보장할 수 있습니다."
 
 #: ../../source/deploy/application-architecture.rst:36
 msgid "Application layer"
-msgstr ""
+msgstr "애플리케이션 계층"
 
 #: ../../source/deploy/application-architecture.rst:38
 msgid ""
@@ -140,10 +169,12 @@ msgid ""
 "processing all user and system operations. It's composed of multiple "
 "modular elements as follows:"
 msgstr ""
+"Mattermost 서버는 플랫폼의 핵심이며 모든 사용자 및 시스템 작업을 처리하는 역할을 담당합니다. 다음과 같은 여러 모듈식 "
+"요소로 구성됩니다:"
 
 #: ../../source/deploy/application-architecture.rst:-1
 msgid "Mattermost architecture basics"
-msgstr ""
+msgstr "Mattermost 아키텍처 기본"
 
 #: ../../source/deploy/application-architecture.rst:44
 msgid ""
@@ -154,6 +185,9 @@ msgid ""
 "layer can be distributed across multiple servers and load-balanced, "
 "preventing service disruptions due to high traffic or server failure."
 msgstr ""
+"**RESTful JSON 웹 서비스**: 모든 수신 API 요청(웹 클라이언트, 앱, 통합)을 처리하고 응답이 JSON 형식으로 "
+"포맷되도록 보장합니다. 클라이언트(액세스 계층)와 백엔드 시스템 간의 통신 다리 역할을 합니다. 고가용성을 보장하기 위해 "
+"이 계층은 여러 서버에 분산되고 로드 밸런싱되어 높은 트래픽이나 서버 장애로 인한 서비스 중단을 방지합니다."
 
 #: ../../source/deploy/application-architecture.rst:46
 msgid ""
@@ -164,6 +198,9 @@ msgid ""
 "redundant authentication nodes and failover mechanisms, ensuring "
 "uninterrupted access even if a primary authentication service fails."
 msgstr ""
+"**인증 클라이언트**: 사용자 인증을 관리하여 안전한 로그인 세션을 보장합니다. 기존의 사용자 이름/비밀번호 기반 인증이나 "
+"Active Directory/LDAP를 통한 SSO(단일 로그인)와 같은 엔터프라이즈급 솔루션과 통합됩니다. 고가용성은 중복 인증 "
+"노드와 장애 조치 메커니즘을 통해 유지되어 기본 인증 서비스가 실패하더라도 중단 없는 액세스를 보장합니다."
 
 #: ../../source/deploy/application-architecture.rst:48
 msgid ""
@@ -174,10 +211,13 @@ msgid ""
 "distributing authentication frameworks across multiple servers and "
 "offering fallback options for seamless identity management."
 msgstr ""
+"**인증 제공자**: OAuth, SSO, 타사 ID 서비스를 지원하기 위한 플러그형 인증 프레임워크를 제공합니다. 중앙 집중식 ID 관리가 있는 "
+"엔터프라이즈 환경에서 특히 중요합니다. 여러 서버에 인증 프레임워크를 분산하고 원활한 ID 관리를 위한 대체 옵션을 제공함으로써 "
+"중복성과 장애 조치 전략이 신뢰성을 보장합니다."
 
 #: ../../source/deploy/application-architecture.rst:50
 msgid "**Notification Service**: Sends notifications through supported mediums:"
-msgstr ""
+msgstr "**알림 서비스**: 지원되는 매체를 통해 알림을 전송합니다:"
 
 #: ../../source/deploy/application-architecture.rst:52
 msgid ""
@@ -187,6 +227,8 @@ msgid ""
 "that notifications are delivered even in the event of service "
 "disruptions."
 msgstr ""
+"**푸시 알림**: iOS 및 Android 기기로 실시간 알림을 전송합니다(Push Notification Service를 통해). 여러 알림 서버와 재시도 "
+"메커니즘을 통해 고가용성이 보장되어 서비스 중단이 발생하더라도 알림이 전달됩니다."
 
 #: ../../source/deploy/application-architecture.rst:53
 msgid ""
@@ -194,6 +236,8 @@ msgid ""
 " event alerts. Load balancing and backup mail server configurations help "
 "ensure email delivery remains consistent and reliable."
 msgstr ""
+"**이메일 알림**: 사용자가 오프라인이거나 이벤트 알림이 필요할 때 전달됩니다. 로드 밸런싱과 백업 메일 서버 구성으로 이메일 "
+"전달이 일관되고 신뢰할 수 있게 유지됩니다."
 
 #: ../../source/deploy/application-architecture.rst:55
 msgid ""
@@ -203,6 +247,9 @@ msgid ""
 " core of the platform, orchestrating user activities with data handling "
 "and integration capabilities."
 msgstr ""
+"**데이터 관리 서비스**: 메시지 데이터, 메타데이터, 사용자 프로필, 로그를 관리하는 역할을 담당합니다. 데이터베이스와 서버 간에 "
+"전달되는 데이터의 무결성을 보장합니다. 이 계층은 데이터 처리 및 통합 기능으로 사용자 활동을 조정하는 플랫폼의 운영 핵심 역할을 "
+"합니다."
 
 #: ../../source/deploy/application-architecture.rst:57
 msgid ""
@@ -213,10 +260,13 @@ msgid ""
 "operational core of the platform, orchestrating user activities with "
 "scalable and fault-tolerant data handling capabilities."
 msgstr ""
+"데이터베이스 복제, 장애 조치 전략, 분산 데이터 처리 메커니즘을 통해 고가용성이 달성됩니다. 이러한 조치는 데이터에 대한 중단 없는 "
+"액세스를 보장하고 구성 요소 장애나 다운타임으로부터 보호합니다. 데이터 관리 서비스는 확장 가능하고 내결함성이 있는 데이터 처리 "
+"기능으로 사용자 활동을 조정하는 플랫폼의 운영 핵심 역할을 합니다."
 
 #: ../../source/deploy/application-architecture.rst:60
 msgid "Backend infrastructure"
-msgstr ""
+msgstr "백엔드 인프라"
 
 #: ../../source/deploy/application-architecture.rst:62
 msgid ""
@@ -224,6 +274,8 @@ msgid ""
 "capabilities required for Mattermost operations. It consists of the "
 "following components:"
 msgstr ""
+"백엔드 인프라는 Mattermost 운영에 필요한 스토리지 및 데이터 처리 기능을 제공합니다. 다음과 같은 구성 요소로 "
+"구성됩니다:"
 
 #: ../../source/deploy/application-architecture.rst:64
 msgid ""
@@ -231,22 +283,24 @@ msgid ""
 "(supports Amazon RDS for cloud-hosted PostgreSQL) to store all persistent"
 " data, such as:"
 msgstr ""
+"**데이터베이스 시스템**: Mattermost는 모든 영구 데이터를 저장하기 위해 PostgreSQL을 주 데이터베이스로 사용합니다(클라우드 호스팅 "
+"PostgreSQL을 위한 Amazon RDS 지원). 저장되는 데이터는 다음과 같습니다:"
 
 #: ../../source/deploy/application-architecture.rst:66
 msgid "Messages"
-msgstr ""
+msgstr "메시지"
 
 #: ../../source/deploy/application-architecture.rst:67
 msgid "User accounts and credentials"
-msgstr ""
+msgstr "사용자 계정 및 자격 증명"
 
 #: ../../source/deploy/application-architecture.rst:68
 msgid "Configuration settings"
-msgstr ""
+msgstr "구성 설정"
 
 #: ../../source/deploy/application-architecture.rst:69
 msgid "Team/channel metadata"
-msgstr ""
+msgstr "팀/채널 메타데이터"
 
 #: ../../source/deploy/application-architecture.rst:71
 msgid ""
@@ -257,6 +311,9 @@ msgid ""
 "failover and backup capabilities, ensuring continuous operation during "
 "system failures."
 msgstr ""
+"고가용성을 보장하기 위해 데이터베이스 시스템은 클러스터링, 복제, 장애 조치 메커니즘을 활용할 수 있습니다. PostgreSQL은 "
+"중복성을 위한 복제본을 생성하기 위해 동기 및 비동기 복제와 같은 기능을 지원합니다. Amazon RDS와 같은 클라우드 호스팅 솔루션은 "
+"자동 장애 조치 및 백업 기능을 제공하여 시스템 장애 중에도 지속적인 운영을 보장합니다."
 
 #: ../../source/deploy/application-architecture.rst:73
 msgid ""
@@ -264,6 +321,8 @@ msgid ""
 "images, videos) shared across channels. Storage solutions include the "
 "following options:"
 msgstr ""
+"**파일 스토리지**: 채널 간에 공유되는 모든 멀티미디어 자산(예: 파일 업로드, 이미지, 비디오)을 관리합니다. 스토리지 솔루션에는 "
+"다음과 같은 옵션이 포함됩니다:"
 
 #: ../../source/deploy/application-architecture.rst:75
 msgid ""
@@ -271,6 +330,8 @@ msgid ""
 "high availability, redundancy can be achieved using RAID configurations "
 "or backups to recover from disk failures."
 msgstr ""
+"**로컬 스토리지**: 서버의 파일 시스템에 직접 저장된 파일입니다. 고가용성을 위해 RAID 구성이나 백업을 사용하여 디스크 "
+"장애로부터 복구할 수 있습니다."
 
 #: ../../source/deploy/application-architecture.rst:76
 msgid ""
@@ -279,6 +340,8 @@ msgid ""
 "configurations like distributed systems or replication for uninterrupted "
 "access."
 msgstr ""
+"**네트워크 연결 스토리지(NAS)**: 네트워크 내에서 파일 스토리지를 중앙화하는 기업에 일반적입니다. NAS 설정에는 분산 시스템이나 "
+"중단 없는 액세스를 위한 복제와 같은 내결함성 구성이 포함될 수 있습니다."
 
 #: ../../source/deploy/application-architecture.rst:77
 msgid ""
@@ -289,12 +352,16 @@ msgid ""
 "high availability by distributing data across multiple availability "
 "zones, ensuring no single point of failure."
 msgstr ""
+"**S3**: 분산 배포가 있는 대규모 환경이나 조직을 위한 클라우드 기반 확장 가능한 스토리지를 제공합니다. 데이터베이스와 파일 "
+"스토리지는 확장성을 처리하여 데이터 일관성을 보장하면서 수백만 개의 메시지와 파일에 대한 효율적인 지원을 보장합니다. S3는 "
+"여러 가용성 영역에 데이터를 분산시켜 단일 장애 지점이 없도록 하여 고가용성을 기본적으로 지원합니다."
 
 #: ../../source/deploy/application-architecture.rst:79
 msgid ""
 "High availability measures ensure scalable and fail-safe support for "
 "millions of messages and files while guaranteeing data consistency."
 msgstr ""
+"고가용성 조치는 데이터 일관성을 보장하면서 수백만 개의 메시지와 파일에 대한 확장 가능하고 안전한 지원을 보장합니다."
 
 #: ../../source/deploy/application-architecture.rst:81
 msgid ""
@@ -302,6 +369,8 @@ msgid ""
 "also a platform designed for extensibility. Key extensibility features "
 "include:"
 msgstr ""
+"**시스템 확장**: Mattermost는 협업 도구일 뿐만 아니라 확장성을 위해 설계된 플랫폼이기도 합니다. 주요 확장성 기능에는 다음이 "
+"포함됩니다:"
 
 #: ../../source/deploy/application-architecture.rst:83
 msgid ""
@@ -312,6 +381,9 @@ msgid ""
 "integrations can employ redundant communication channels and retry "
 "mechanisms to handle transient failures gracefully."
 msgstr ""
+"**자체 호스팅 통합**: Mattermost를 Jira, GitLab 또는 팀이 필요로 하는 모든 사용자 정의 통합과 같은 다른 로컬 또는 "
+"클라우드 기반 시스템에 연결합니다. 내장된 API와 웹훅을 활용하여 워크플로우를 자동화하고 시스템 간 통신을 트리거합니다. 고가용성을 "
+"위해 통합은 일시적인 장애를 우아하게 처리하기 위해 중복 통신 채널과 재시도 메커니즘을 사용할 수 있습니다."
 
 #: ../../source/deploy/application-architecture.rst:85
 msgid ""
@@ -322,16 +394,20 @@ msgid ""
 "strategies to ensure consistent and secure user access flows, even under "
 "high traffic or outages."
 msgstr ""
+"**타사 인증**: 타사 플랫폼(Slack 가져오기 API, OAuth 서비스 등)에 통합을 바인딩합니다. 타사 ID 서비스는 일관되고 "
+"안전한 사용자 액세스 흐름을 보장합니다. 타사 ID 서비스는 로드 밸런싱과 장애 조치 전략을 활용하여 높은 트래픽이나 중단 상황에서도 "
+"일관되고 안전한 사용자 액세스 흐름을 보장할 수 있습니다."
 
 #: ../../source/deploy/application-architecture.rst:87
 msgid ""
 "**Security and Scalability Features**: Security and scalability are baked"
 " into the architecture, making Mattermost ideal for enterprise use cases:"
 msgstr ""
+"**보안 및 확장성 기능**: 보안과 확장성이 아키텍처에 내장되어 있어 Mattermost는 기업용 사용 사례에 이상적입니다:"
 
 #: ../../source/deploy/application-architecture.rst:89
 msgid "**Security**"
-msgstr ""
+msgstr "**보안**"
 
 #: ../../source/deploy/application-architecture.rst:91
 msgid ""
@@ -339,16 +415,18 @@ msgid ""
 "external traffic. It protects servers, enforces HTTPS, and handles load "
 "balancing."
 msgstr ""
+"NGINX나 하드웨어 프록시와 같은 리버스 프록시가 외부 트래픽을 관리하도록 배포됩니다. 서버를 보호하고 HTTPS를 적용하며 로드 밸런싱을 "
+"처리합니다."
 
 #: ../../source/deploy/application-architecture.rst:92
 msgid "Configurable SSL/TLS encryption ensures data security during transmission."
-msgstr ""
+msgstr "구성 가능한 SSL/TLS 암호화는 전송 중 데이터 보안을 보장합니다."
 
 #: ../../source/deploy/application-architecture.rst:93
 msgid ""
 "Granular user permissions and roles secure sensitive information within "
 "teams."
-msgstr ""
+msgstr "세분화된 사용자 권한과 역할은 팀 내의 민감한 정보를 보호합니다."
 
 #: ../../source/deploy/application-architecture.rst:95
 msgid ""
@@ -359,6 +437,9 @@ msgid ""
 " so that user traffic is shifted to functioning servers in case of "
 "outages."
 msgstr ""
+"**확장성 및 고가용성**: Enterprise Edition은 대규모 조직에서 신뢰성과 성능을 위해 여러 서버에 걸쳐 사용자 요청을 분산시키기 위해 "
+"클러스터 환경에서 여러 Mattermost 서버를 배포하는 것을 지원합니다. 클러스터링은 장애 발생 시 사용자 트래픽이 작동 중인 서버로 "
+"전환되도록 자동 장애 조치를 보장합니다."
 
 #: ../../source/deploy/application-architecture.rst:97
 msgid ""
@@ -366,6 +447,7 @@ msgid ""
 "asynchronous and real-time communication, enhanced by notification "
 "systems tailored for different workflows:"
 msgstr ""
+"**알림 및 통신 서비스**: Mattermost는 다양한 워크플로우에 맞게 조정된 알림 시스템으로 향상된 비동기 및 실시간 통신을 지원합니다:"
 
 #: ../../source/deploy/application-architecture.rst:99
 msgid ""
@@ -373,6 +455,8 @@ msgid ""
 " mentions. High availability is achieved with backup notification "
 "services and retry mechanisms for reliable delivery."
 msgstr ""
+"**푸시 알림**: 메시지 알림이나 멘션을 위해 모바일 기기로 전달됩니다. 백업 알림 서비스와 재시도 메커니즘을 통해 안정적인 전달을 위한 "
+"고가용성을 달성합니다."
 
 #: ../../source/deploy/application-architecture.rst:100
 msgid ""
@@ -380,14 +464,16 @@ msgid ""
 "offline or inactive. Failover mail servers and distributed configurations"
 " ensure email notifications are sent without interruption."
 msgstr ""
+"**이메일 통합**: 사용자가 오프라인이거나 비활성 상태일 때 정기적인 알림을 제공합니다. 장애 조치 메일 서버와 분산 구성으로 이메일 "
+"알림이 중단 없이 전송되도록 보장합니다."
 
 #: ../../source/deploy/application-architecture.rst:102
 msgid "These services ensure continuous engagement and communication."
-msgstr ""
+msgstr "이러한 서비스는 지속적인 참여와 통신을 보장합니다."
 
 #: ../../source/deploy/application-architecture.rst:105
 msgid "Communication protocols"
-msgstr ""
+msgstr "통신 프로토콜"
 
 #: ../../source/deploy/application-architecture.rst:107
 msgid ""
@@ -396,17 +482,19 @@ msgid ""
 "availability measures ensure reliable and resilient connections between "
 "clients and the Mattermost server, especially in production environments."
 msgstr ""
+"사용자가 Mattermost 서버와의 연결 유형을 정의하는 통신 프로토콜(HTTPS 및 WS)도 있습니다. 고가용성 조치는 특히 프로덕션 환경에서 "
+"클라이언트와 Mattermost 서버 간의 안정적이고 탄력적인 연결을 보장합니다."
 
 #: ../../source/deploy/application-architecture.rst:109
 msgid "**HTTPS Connection** (Secure Hypertext Transfer Protocol)"
-msgstr ""
+msgstr "**HTTPS 연결** (보안 하이퍼텍스트 전송 프로토콜)"
 
 #: ../../source/deploy/application-architecture.rst:111
 msgid ""
 "HTTPS connections to the Mattermost server render pages and provide "
 "access to core platform functionality, but do not include real-time "
 "interactivity (which is enabled by WSS connections)."
-msgstr ""
+msgstr "Mattermost 서버에 대한 HTTPS 연결은 페이지를 렌더링하고 핵심 플랫폼 기능에 대한 액세스를 제공하지만, 실시간 상호작용은 포함하지 않습니다(WSS 연결에서 활성화됨)."
 
 #: ../../source/deploy/application-architecture.rst:112
 msgid ""
@@ -418,16 +506,20 @@ msgid ""
 " connections across multiple Mattermost server instances. Redundant proxy"
 " servers ensure failover capabilities, providing uninterrupted service."
 msgstr ""
+"HTTPS는 안전하고 암호화된 프로토콜이며 프로덕션 환경에서 매우 권장됩니다. 암호화되지 않은 HTTP 연결은 초기 테스트 및 구성에 사용될 수 "
+"있지만, 프로덕션 환경에서는 절대 사용해서는 안 됩니다. 고가용성을 위해 HTTPS 트래픽은 로드 밸런서 구성을 통해 여러 Mattermost "
+"서버 인스턴스에 연결을 분산시키는 리버스 프록시(예: NGINX 또는 HAProxy)로 처리되어야 합니다. 중복 프록시 서버는 장애 조치 기능을 "
+"보장하여 중단 없는 서비스를 제공합니다."
 
 #: ../../source/deploy/application-architecture.rst:114
 msgid "**WSS Connection** (Secure WebSocket Protocol)"
-msgstr ""
+msgstr "**WSS 연결** (보안 WebSocket 프로토콜)"
 
 #: ../../source/deploy/application-architecture.rst:116
 msgid ""
 "Secure WebSocket (WSS) connections to the Mattermost Server enable real-"
 "time updates and notifications between clients and the server."
-msgstr ""
+msgstr "Mattermost 서버에 대한 보안 WebSocket(WSS) 연결은 클라이언트와 서버 간의 실시간 업데이트 및 알림을 가능하게 합니다."
 
 #: ../../source/deploy/application-architecture.rst:118
 msgid ""
@@ -438,6 +530,9 @@ msgid ""
 "connected, while HTTPS has an intermittent connection and only connects "
 "to the server when a page or file is requested."
 msgstr ""
+"WSS 연결을 사용할 수 없고 HTTPS로 대체된 경우, 시스템은 작동하는 것처럼 보이지만 실시간 업데이트와 알림은 작동하지 않습니다. 이 "
+"작동 모드에서는 페이지 새로고침 시에만 업데이트가 표시됩니다. WSS는 클라이언트가 연결되어 있을 때 Mattermost 서버와 지속적인 "
+"연결을 유지하는 반면, HTTPS는 간헐적인 연결을 가지며 페이지나 파일이 요청될 때만 서버에 연결됩니다."
 
 #: ../../source/deploy/application-architecture.rst:120
 msgid ""
@@ -447,10 +542,13 @@ msgid ""
 "as sticky sessions or connection persistence) are essential to maintain "
 "real-time interactivity during server or network failures."
 msgstr ""
+"WSS 연결의 고가용성은 Mattermost 서버를 클러스터링하고 해당 클러스터 노드 간에 WebSocket 연결을 로드 밸런싱하여 달성할 수 "
+"있습니다. 프록시 서버와 WebSocket 특정 구성(스티키 세션이나 연결 지속성 등)은 서버 또는 네트워크 장애 중에 실시간 상호작용을 "
+"유지하는 데 필수적입니다."
 
 #: ../../source/deploy/application-architecture.rst:-1
 msgid "Mattermost architecture with protocol connections"
-msgstr ""
+msgstr "프로토콜 연결이 있는 Mattermost 아키텍처"
 
 #: ../../source/deploy/application-architecture.rst:126
 msgid ""
@@ -461,10 +559,13 @@ msgid ""
 "environments and distributed deployments where continuous communication "
 "is necessary."
 msgstr ""
+"통신 프로토콜에 고가용성 전략을 통합함으로써, 플랫폼은 일반적인 사용자 상호작용(HTTPS를 통해)과 실시간 업데이트(WSS를 통해) 모두에 "
+"대해 안전하고 확장 가능하며 신뢰할 수 있는 연결을 보장합니다. 이러한 조치는 지속적인 통신이 필요한 중요 업무 환경과 분산 배포에 "
+"중요합니다."
 
 #: ../../source/deploy/application-architecture.rst:128
 msgid "**Behind a VPN**"
-msgstr ""
+msgstr "**VPN 뒤에서**"
 
 #: ../../source/deploy/application-architecture.rst:130
 msgid ""
@@ -475,16 +576,19 @@ msgid ""
 "<https://openvpn.net/>`__, with additional authentication used to connect"
 " to Mattermost for web, desktop, and mobile experiences, is recommended."
 msgstr ""
+"Mattermost는 컴퓨팅 장치와 물리적 위치에 대한 안전한 액세스를 포함한 다중 인증 요소를 제공할 수 있는 개인 네트워크 내에 설치되도록 "
+"의도되었습니다. 외부 액세스가 필요한 경우, 웹, 데스크톱, 모바일 경험을 위해 Mattermost에 연결하는 데 추가 인증을 사용하는 "
+"`OpenVPN <https://openvpn.net/>`__ 와 같은 가상 사설망 클라이언트(VPN)를 사용하는 것이 권장됩니다."
 
 #: ../../source/deploy/application-architecture.rst:132
 msgid "**Non-VPN setup**"
-msgstr ""
+msgstr "**비 VPN 설정**"
 
 #: ../../source/deploy/application-architecture.rst:134
 msgid ""
 "If Mattermost is accessible from the open internet, the following is "
 "recommended:"
-msgstr ""
+msgstr "Mattermost가 공개 인터넷에서 접근 가능한 경우, 다음을 권장합니다:"
 
 #: ../../source/deploy/application-architecture.rst:136
 msgid ""
@@ -493,12 +597,15 @@ msgid ""
 "/security-updates/#sign-up>`__, and :doc:`apply new security updates "
 "</upgrade/upgrading-mattermost-server>`."
 msgstr ""
+"IT 관리자는 적절한 네트워크 보안을 설정하고, `Mattermost 보안 게시판 <https://mattermost.com/security-"
+"updates/#sign-up>`__ 에 가입하며, :doc:`새로운 보안 업데이트 적용 </upgrade/upgrading-mattermost-"
+"server>` 을 담당해야 합니다."
 
 #: ../../source/deploy/application-architecture.rst:137
 msgid ""
 "The organization enables :doc:`SAML Single Sign-on </onboard/sso-saml>` "
 "or enable :doc:`MFA </onboard/multi-factor-authentication>`."
-msgstr ""
+msgstr "조직은 :doc:`SAML Single Sign-on </onboard/sso-saml>` 또는 :doc:`MFA </onboard/multi-factor-authentication>` 을 활성화합니다."
 
 #: ../../source/deploy/application-architecture.rst:139
 msgid ""
@@ -506,10 +613,12 @@ msgid ""
 " up, we recommended using it only for non-confidential, unimportant "
 "conversations where impact of a compromised system is not essential."
 msgstr ""
+"VPN이나 MFA가 설정되지 않은 상태에서 Mattermost가 공개 인터넷에서 접근 가능한 경우, 시스템 침해의 영향이 중요하지 않은 비밀스럽지 않은 "
+"일반적인 대화에만 사용하는 것을 권장합니다."
 
 #: ../../source/deploy/application-architecture.rst:142
 msgid "Mattermost services ports"
-msgstr ""
+msgstr "Mattermost 서비스 포트"
 
 #: ../../source/deploy/application-architecture.rst:144
 msgid ""
@@ -518,52 +627,54 @@ msgid ""
 "that need to speak to the Mattermost server without a proxy can open "
 "specific firewall ports as needed."
 msgstr ""
+"다음 표는 Mattermost 서버, 푸시 프록시, 모바일 앱 클라이언트를 위한 Mattermost 서비스 포트를 나열합니다. 프록시 없이 Mattermost "
+"서버와 통신해야 하는 클라이언트가 있는 시스템 관리자는 필요에 따라 특정 방화벽 포트를 열 수 있습니다."
 
 #: ../../source/deploy/application-architecture.rst:146
 msgid "**Mattermost Server**"
-msgstr ""
+msgstr "**Mattermost 서버**"
 
 #: ../../source/deploy/application-architecture.rst:149
 #: ../../source/deploy/application-architecture.rst:173
 msgid "Service Name"
-msgstr ""
+msgstr "서비스 이름"
 
 #: ../../source/deploy/application-architecture.rst:149
 #: ../../source/deploy/application-architecture.rst:173
 msgid "Config Setting"
-msgstr ""
+msgstr "설정 구성"
 
 #: ../../source/deploy/application-architecture.rst:149
 #: ../../source/deploy/application-architecture.rst:173
 msgid "Port (default)"
-msgstr ""
+msgstr "포트 (기본값)"
 
 #: ../../source/deploy/application-architecture.rst:149
 #: ../../source/deploy/application-architecture.rst:173
 msgid "Protocol"
-msgstr ""
+msgstr "프로토콜"
 
 #: ../../source/deploy/application-architecture.rst:149
 #: ../../source/deploy/application-architecture.rst:173
 msgid "Direction"
-msgstr ""
+msgstr "방향"
 
 #: ../../source/deploy/application-architecture.rst:149
 #: ../../source/deploy/application-architecture.rst:173
 msgid "Info"
-msgstr ""
+msgstr "정보"
 
 #: ../../source/deploy/application-architecture.rst:151
 msgid "HTTP/Websocket"
-msgstr ""
+msgstr "HTTP/웹소켓"
 
 #: ../../source/deploy/application-architecture.rst:151
 msgid "ServiceSettings.ListenAddress"
-msgstr ""
+msgstr "ServiceSettings.ListenAddress"
 
 #: ../../source/deploy/application-architecture.rst:151
 msgid "8065/80/443 (TLS)"
-msgstr ""
+msgstr "8065/80/443 (TLS)"
 
 #: ../../source/deploy/application-architecture.rst:151
 #: ../../source/deploy/application-architecture.rst:157
@@ -572,24 +683,25 @@ msgstr ""
 #: ../../source/deploy/application-architecture.rst:167
 #: ../../source/deploy/application-architecture.rst:175
 msgid "TCP"
-msgstr ""
+msgstr "TCP"
 
 #: ../../source/deploy/application-architecture.rst:151
 #: ../../source/deploy/application-architecture.rst:155
 #: ../../source/deploy/application-architecture.rst:157
 #: ../../source/deploy/application-architecture.rst:175
 msgid "Inbound"
-msgstr ""
+msgstr "인바운드"
 
 #: ../../source/deploy/application-architecture.rst:151
 msgid ""
 "External (no proxy) / Internal (with proxy) Usually this requires port 80"
 " and 443 when running HTTPS."
 msgstr ""
+"외부 (프록시 없음) / 내부 (프록시 있음) HTTPS를 실행할 때는 일반적으로 포트 80과 443이 필요합니다."
 
 #: ../../source/deploy/application-architecture.rst:155
 msgid "Cluster"
-msgstr ""
+msgstr "클러스터"
 
 #: ../../source/deploy/application-architecture.rst:155
 msgid "ClusterSettings.GossipPort"
@@ -607,36 +719,36 @@ msgstr ""
 
 #: ../../source/deploy/application-architecture.rst:155
 msgid "Internal"
-msgstr ""
+msgstr "내부"
 
 #: ../../source/deploy/application-architecture.rst:157
 msgid "Metrics"
-msgstr ""
+msgstr "메트릭스"
 
 #: ../../source/deploy/application-architecture.rst:157
 msgid "MetricsSettings.ListenAddress"
-msgstr ""
+msgstr "MetricsSettings.ListenAddress"
 
 #: ../../source/deploy/application-architecture.rst:157
 msgid "8067"
-msgstr ""
+msgstr "8067"
 
 #: ../../source/deploy/application-architecture.rst:157
 #: ../../source/deploy/application-architecture.rst:175
 msgid "External (no proxy) / Internal (with proxy)"
-msgstr ""
+msgstr "외부 (프록시 없음) / 내부 (프록시 있음)"
 
 #: ../../source/deploy/application-architecture.rst:159
 msgid "Database"
-msgstr ""
+msgstr "데이터베이스"
 
 #: ../../source/deploy/application-architecture.rst:159
 msgid "SqlSettings.DataSource"
-msgstr ""
+msgstr "SqlSettings.DataSource"
 
 #: ../../source/deploy/application-architecture.rst:159
 msgid "5432 (PostgreSQL) / 3306 (MySQL)"
-msgstr ""
+msgstr "5432 (PostgreSQL) / 3306 (MySQL)"
 
 #: ../../source/deploy/application-architecture.rst:159
 #: ../../source/deploy/application-architecture.rst:161
@@ -644,76 +756,76 @@ msgstr ""
 #: ../../source/deploy/application-architecture.rst:165
 #: ../../source/deploy/application-architecture.rst:167
 msgid "Outbound"
-msgstr ""
+msgstr "아웃바운드"
 
 #: ../../source/deploy/application-architecture.rst:159
 msgid "Usually internal (recommended)"
-msgstr ""
+msgstr "일반적으로 내부 (권장)"
 
 #: ../../source/deploy/application-architecture.rst:161
 msgid "LDAP"
-msgstr ""
+msgstr "LDAP"
 
 #: ../../source/deploy/application-architecture.rst:161
 msgid "LdapSettings.LdapPort"
-msgstr ""
+msgstr "LdapSettings.LdapPort"
 
 #: ../../source/deploy/application-architecture.rst:161
 msgid "389"
-msgstr ""
+msgstr "389"
 
 #: ../../source/deploy/application-architecture.rst:163
 msgid "S3 Storage"
-msgstr ""
+msgstr "S3 스토리지"
 
 #: ../../source/deploy/application-architecture.rst:163
 msgid "FileSettings.AmazonS3Endpoint"
-msgstr ""
+msgstr "FileSettings.AmazonS3Endpoint"
 
 #: ../../source/deploy/application-architecture.rst:163
 #: ../../source/deploy/application-architecture.rst:167
 msgid "443 (TLS)"
-msgstr ""
+msgstr "443 (TLS)"
 
 #: ../../source/deploy/application-architecture.rst:165
 msgid "SMTP"
-msgstr ""
+msgstr "SMTP"
 
 #: ../../source/deploy/application-architecture.rst:165
 msgid "EmailSettings.SMTPPort"
-msgstr ""
+msgstr "EmailSettings.SMTPPort"
 
 #: ../../source/deploy/application-architecture.rst:165
 msgid "10025"
-msgstr ""
+msgstr "10025"
 
 #: ../../source/deploy/application-architecture.rst:167
 msgid "Push Notifications"
-msgstr ""
+msgstr "푸시 알림"
 
 #: ../../source/deploy/application-architecture.rst:167
 msgid "EmailSettings.PushNotificationServer"
-msgstr ""
+msgstr "EmailSettings.PushNotificationServer"
 
 #: ../../source/deploy/application-architecture.rst:170
 msgid "**Push Proxy**"
-msgstr ""
+msgstr "**푸시 프록시**"
 
 #: ../../source/deploy/application-architecture.rst:175
 msgid "Push Proxy"
-msgstr ""
+msgstr "푸시 프록시"
 
 #: ../../source/deploy/application-architecture.rst:175
 msgid "ListenAddress"
-msgstr ""
+msgstr "ListenAddress"
 
 #: ../../source/deploy/application-architecture.rst:175
 msgid "8066"
-msgstr ""
+msgstr "8066"
 
 #: ../../source/deploy/application-architecture.rst:178
 msgid "**Mobile Clients**"
-msgstr ""
+msgstr "**모바일 클라이언트**"
 
 #: ../../source/deploy/application-architecture.rst:180
 msgid ""
@@ -722,4 +834,7 @@ msgid ""
 "`ports 5228-5230 for Android <https://firebase.google.com/docs/cloud-"
 "messaging/concept-options#messaging-ports-and-your-firewall>`_."
 msgstr ""
+"푸시 알림을 수신하려면 네트워크에서 iOS 기기를 위한 `포트 5223 <https://support.apple.com/en-us/102266>`_ 과 "
+"Android를 위한 `포트 5228-5230 <https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-"
+"ports-and-your-firewall>`_ 에 대한 트래픽을 허용해야 합니다."
 

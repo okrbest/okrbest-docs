@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:2
 msgid "(Recommended) Set up an NGINX proxy"
-msgstr ""
+msgstr "(권장) NGINX 프록시 설정"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:4
 msgid ""
@@ -31,6 +31,8 @@ msgid ""
 " to increase security, performance and the ability to monitor and shape "
 "traffic connecting to Mattermost:"
 msgstr ""
+"프록시 서버는 다른 서버의 리소스를 요청하는 클라이언트의 요청을 중개하는 서버(컴퓨터 시스템 또는 애플리케이션)입니다. Mattermost는 보안, "
+"성능 및 Mattermost에 연결되는 트래픽을 모니터링하고 제어하는 기능을 향상시키기 위해 Mattermost 앞에 프록시를 사용하는 것을 권장합니다:"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:6
 msgid ""
@@ -38,6 +40,8 @@ msgid ""
 "encryption and set policy on how network traffic will be routed to the "
 "Mattermost server."
 msgstr ""
+"**보안:** 프록시 서버는 Secure Socket Layer(TLS/SSL) 암호화를 관리하고 Mattermost 서버로 네트워크 트래픽이 라우팅되는 "
+"방식에 대한 정책을 설정할 수 있습니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:7
 msgid ""
@@ -47,6 +51,8 @@ msgid ""
 "processing SSL encryption and decryption can also be used to increase "
 "performance."
 msgstr ""
+"**성능:** 고가용성 구성에서 프록시 서버는 최적화된 성능을 위해 여러 Mattermost 서버 간에 네트워크 부하를 분산합니다. SSL 암호화 및 "
+"복호화를 처리하기 위한 전용 장치가 있는 하드웨어 프록시를 사용하여 성능을 향상시킬 수도 있습니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:8
 msgid ""
@@ -56,20 +62,23 @@ msgid ""
 "captured include file uploads and downloads, which are not tracked by the"
 " Mattermost server logging process."
 msgstr ""
+"**모니터링**: 프록시 서버는 연결 트래픽을 모니터링하고 Kibana 및 Splunk와 같은 일반적인 모니터링 도구가 소비하고 보고할 수 있는 "
+"표준 감사 로그에 트래픽을 기록할 수 있습니다. 캡처할 수 있는 이벤트에는 Mattermost 서버 로깅 프로세스에서 추적하지 않는 파일 업로드 및 "
+"다운로드가 포함됩니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:10
 msgid ""
 "Mattermost supports the `NGINX proxy <https://www.f5.com/go/product"
 "/welcome-to-nginx>`_"
-msgstr ""
+msgstr "Mattermost는 `NGINX 프록시 <https://www.f5.com/go/product/welcome-to-nginx>`_ 를 지원합니다"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:-1
 msgid "Mattermost architecture with NGINX proxy"
-msgstr ""
+msgstr "NGINX 프록시가 있는 Mattermost 아키텍처"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:16
 msgid "Install NGINX server"
-msgstr ""
+msgstr "NGINX 서버 설치"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:18
 msgid ""
@@ -78,40 +87,42 @@ msgid ""
 "friendly than Apache in most cases, and can be used as a web server or "
 "reverse proxy."
 msgstr ""
+"NGINX는 인기 있는 웹 서버이며 인터넷에서 가장 크고 트래픽이 많은 일부 사이트를 호스팅하는 역할을 합니다. 대부분의 경우 Apache보다 "
+"리소스 친화적이며 웹 서버 또는 리버스 프록시로 사용할 수 있습니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:20
 msgid ""
 "In a production setting, we recommend using a proxy server for greater "
 "security and performance of Mattermost:"
-msgstr ""
+msgstr "프로덕션 환경에서는 Mattermost의 보안과 성능 향상을 위해 프록시 서버 사용을 권장합니다:"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:22
 msgid "SSL termination"
-msgstr ""
+msgstr "SSL 종료"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:23
 msgid "HTTP to HTTPS redirect"
-msgstr ""
+msgstr "HTTP에서 HTTPS로 리다이렉트"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:24
 msgid "Port mapping ``:80`` to ``:8065``"
-msgstr ""
+msgstr "포트 매핑 ``:80`` 에서 ``:8065`` 로"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:25
 msgid "Standard request logs"
-msgstr ""
+msgstr "표준 요청 로그"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:28
 msgid "Install NGINX on Ubuntu Server"
-msgstr ""
+msgstr "Ubuntu 서버에 NGINX 설치"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:30
 msgid "Log in to the server that will host the proxy and open a terminal window."
-msgstr ""
+msgstr "프록시를 호스팅할 서버에 로그인하고 터미널 창을 엽니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:32
 msgid "Install NGINX."
-msgstr ""
+msgstr "NGINX를 설치합니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:34
 msgid ""
@@ -120,12 +131,14 @@ msgid ""
 "packaging system. First, update your local ``apt`` package index for "
 "access to the most recent package listings. Then, install ``nginx``:"
 msgstr ""
+"NGINX는 Ubuntu의 기본 저장소에서 사용할 수 있으므로 ``apt`` 패키징 시스템을 사용하여 이러한 저장소에서 설치할 수 있습니다. "
+"먼저 최신 패키지 목록에 접근하기 위해 로컬 ``apt`` 패키지 인덱스를 업데이트합니다. 그런 다음 ``nginx`` 를 설치합니다:"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:41
 msgid ""
 "After accepting the procedure, ``apt`` will install NGINX and any "
 "required dependencies to your server."
-msgstr ""
+msgstr "절차를 수락한 후 ``apt`` 는 NGINX와 필요한 모든 종속성을 서버에 설치합니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:43
 msgid ""
@@ -133,10 +146,11 @@ msgid ""
 "your browser to your server IP address. You should see the default NGINX "
 "landing page:"
 msgstr ""
+"설치 후에는 필요한 모든 것이 준비됩니다. 브라우저를 서버 IP 주소로 지정할 수 있습니다. 기본 NGINX 랜딩 페이지가 표시됩니다:"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:45
 msgid "Example of the default NGINX landing page."
-msgstr ""
+msgstr "기본 NGINX 랜딩 페이지 예시."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:48
 msgid ""
@@ -144,81 +158,84 @@ msgid ""
 "server. This page is included with NGINX to show you that the server is "
 "running correctly."
 msgstr ""
+"이 페이지가 보이면 웹 서버에 NGINX가 성공적으로 설치된 것입니다. 이 페이지는 서버가 올바르게 실행 중임을 보여주기 위해 NGINX에 포함되어 "
+"있습니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:50
 msgid "Or you can also verify it by running ``curl http://localhost``."
-msgstr ""
+msgstr "또는 ``curl http://localhost`` 를 실행하여 확인할 수도 있습니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:52
 msgid "If NGINX is running, you see the following output:"
-msgstr ""
+msgstr "NGINX가 실행 중이면 다음과 같은 출력이 표시됩니다:"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:68
 msgid "Manage the NGINX process"
-msgstr ""
+msgstr "NGINX 프로세스 관리"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:70
 msgid ""
 "Now that you have your web server up and running, let's review some basic"
 " management commands. These are all run in the command line interface."
 msgstr ""
+"웹 서버가 실행 중이므로 몇 가지 기본 관리 명령을 살펴보겠습니다. 이 모든 명령은 명령줄 인터페이스에서 실행됩니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:72
 msgid "To stop your web server, use: ``sudo systemctl stop nginx``"
-msgstr ""
+msgstr "웹 서버를 중지하려면 다음을 사용하세요: ``sudo systemctl stop nginx``"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:74
 msgid ""
 "To start the web server when it's stopped, use: ``sudo systemctl start "
 "nginx``"
-msgstr ""
+msgstr "중지된 웹 서버를 시작하려면 다음을 사용하세요: ``sudo systemctl start nginx``"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:76
 msgid ""
 "To stop and then start the service again, use: ``sudo systemctl restart "
 "nginx``"
-msgstr ""
+msgstr "서비스를 중지한 후 다시 시작하려면 다음을 사용하세요: ``sudo systemctl restart nginx``"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:78
 msgid ""
 "If you're simply making configuration changes, NGINX can often reload "
 "without dropping connections. To do this, use: ``sudo systemctl reload "
 "nginx``"
-msgstr ""
+msgstr "구성 변경만 하는 경우 NGINX는 연결을 끊지 않고 다시 로드할 수 있습니다. 이렇게 하려면 다음을 사용하세요: ``sudo systemctl reload nginx``"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:80
 msgid ""
 "By default, NGINX is configured to start automatically when the server "
 "boots. If this isn't what you want, you can disable this behavior using: "
 "``sudo systemctl disable nginx``"
-msgstr ""
+msgstr "기본적으로 NGINX는 서버 부팅 시 자동으로 시작되도록 구성되어 있습니다. 이 기능이 필요하지 않은 경우 다음을 사용하여 비활성화할 수 있습니다: ``sudo systemctl disable nginx``"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:82
 msgid ""
 "To re-enable the service to start up at boot, use: ``sudo systemctl "
 "enable nginx``"
-msgstr ""
+msgstr "부팅 시 서비스가 시작되도록 다시 활성화하려면 다음을 사용하세요: ``sudo systemctl enable nginx``"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:85
 msgid "What to do next"
-msgstr ""
+msgstr "다음 단계"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:87
 msgid ""
 "Map a fully qualified domain name (FQDN) such as "
 "``mattermost.example.com`` on your DNS server/service, to point to the "
 "NGINX server."
-msgstr ""
+msgstr "DNS 서버/서비스에서 ``mattermost.example.com`` 과 같은 정규화된 도메인 이름(FQDN)을 NGINX 서버를 가리키도록 매핑하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:88
 msgid ""
 "Configure NGINX to proxy connections from the internet to the Mattermost "
 "server."
-msgstr ""
+msgstr "인터넷에서 Mattermost 서버로의 연결을 프록시하도록 NGINX를 구성하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:91
 msgid "Configure NGINX as a proxy for Mattermost server"
-msgstr ""
+msgstr "Mattermost 서버의 프록시로 NGINX 구성하기"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:93
 #: ../../source/deploy/server/setup-nginx-proxy.rst:218
@@ -228,25 +245,26 @@ msgid ""
 "the file, you need the IP address of your Mattermost server and the fully"
 " qualified domain name (FQDN) of your Mattermost website."
 msgstr ""
+"NGINX는 ``/etc/nginx/sites-available`` 디렉토리의 파일을 사용하여 구성됩니다. 파일을 생성한 후 활성화해야 합니다. 파일을 생성할 때는 Mattermost 서버의 IP 주소와 Mattermost 웹사이트의 정규화된 도메인 이름(FQDN)이 필요합니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:95
 #: ../../source/deploy/server/setup-nginx-proxy.rst:230
 msgid "Log in to the server that hosts NGINX and open a terminal window."
-msgstr ""
+msgstr "NGINX를 호스팅하는 서버에 로그인하고 터미널 창을 엽니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:96
 msgid ""
 "Create a configuration file for Mattermost by running the following "
 "command:"
-msgstr ""
+msgstr "다음 명령을 실행하여 Mattermost용 구성 파일을 생성하세요:"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:98
 msgid "``sudo touch /etc/nginx/sites-available/mattermost`` on Ubuntu"
-msgstr ""
+msgstr "Ubuntu에서 ``sudo touch /etc/nginx/sites-available/mattermost``"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:100
 msgid "``sudo touch /etc/nginx/conf.d/mattermost`` on RHEL 8"
-msgstr ""
+msgstr "RHEL 8에서 ``sudo touch /etc/nginx/conf.d/mattermost``"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:102
 msgid ""
@@ -256,10 +274,12 @@ msgid ""
 "that you use your own values for the Mattermost server IP address and "
 "FQDN for *server_name*."
 msgstr ""
+"텍스트 편집기에서 *root* 사용자로 ``/etc/nginx/sites-available/mattermost`` (Ubuntu) 또는 ``/etc/nginx/conf.d/mattermost`` (RHEL 8) 파일을 열고 "
+"내용이 있다면 다음 줄로 대체하세요. Mattermost 서버 IP 주소와 *server_name* 의 FQDN에 대해 자체 값을 사용해야 합니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:104
 msgid "SSL and HTTP/2 are enabled in the provided configuration example."
-msgstr ""
+msgstr "제공된 구성 예제에서 SSL과 HTTP/2가 활성화되어 있습니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:108
 msgid ""
@@ -268,6 +288,8 @@ msgid ""
 "<deploy/server/setup-nginx-proxy:configure nginx with ssl and http/2>` "
 "for details."
 msgstr ""
+"Let's Encrypt를 사용하여 SSL 인증서를 관리할 예정이라면 3단계에서 중지하고 자세한 내용은 :ref:`NGINX HTTP/2 및 SSL 제품 "
+"문서 <deploy/server/setup-nginx-proxy:configure nginx with ssl and http/2>` 를 참조하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:109
 msgid ""
@@ -275,12 +297,13 @@ msgid ""
 "certificates properly. Additionally, your browser must have permissions "
 "to accept the certificate as a valid CA-signed certificate."
 msgstr ""
+"NGINX가 인증서를 올바르게 고정하려면 유효한 SSL 인증서가 필요합니다. 또한 브라우저는 인증서를 유효한 CA 서명 인증서로 수락할 수 있는 권한이 있어야 합니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:110
 msgid ""
 "Note that the IP address included in the examples in this documentation "
 "may not match your network configuration."
-msgstr ""
+msgstr "이 문서의 예제에 포함된 IP 주소가 네트워크 구성과 일치하지 않을 수 있습니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:111
 #: ../../source/deploy/server/setup-nginx-proxy.rst:239
@@ -288,14 +311,14 @@ msgid ""
 "If you're running NGINX on the same machine as Mattermost, and NGINX "
 "resolves ``localhost`` to more than one IP address (IPv4 or IPv6), we "
 "recommend using ``127.0.0.1`` instead of ``localhost``."
-msgstr ""
+msgstr "Mattermost와 동일한 머신에서 NGINX를 실행 중이고 NGINX가 ``localhost`` 를 여러 IP 주소(IPv4 또는 IPv6)로 해석하는 경우 ``localhost`` 대신 ``127.0.0.1`` 을 사용하는 것을 권장합니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:201
 msgid ""
 "Remove the existing default sites-enabled file by running ``sudo rm "
 "/etc/nginx/sites-enabled/default`` (Ubuntu) or ``sudo rm "
 "/etc/nginx/conf.d/default`` (RHEL 8)"
-msgstr ""
+msgstr "``sudo rm /etc/nginx/sites-enabled/default`` (Ubuntu) 또는 ``sudo rm /etc/nginx/conf.d/default`` (RHEL 8)를 실행하여 기존 기본 sites-enabled 파일을 제거하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:203
 msgid ""
@@ -303,22 +326,23 @@ msgid ""
 "/sites-available/mattermost /etc/nginx/sites-enabled/mattermost`` "
 "(Ubuntu) or ``sudo ln -s /etc/nginx/conf.d/mattermost "
 "/etc/nginx/conf.d/default.conf`` (RHEL 8)"
-msgstr ""
+msgstr "``sudo ln -s /etc/nginx/sites-available/mattermost /etc/nginx/sites-enabled/mattermost`` (Ubuntu) 또는 "
+"``sudo ln -s /etc/nginx/conf.d/mattermost /etc/nginx/conf.d/default.conf`` (RHEL 8)를 실행하여 mattermost 구성을 활성화하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:205
 msgid "Restart NGINX by running ``sudo systemctl restart nginx``."
-msgstr ""
+msgstr "``sudo systemctl restart nginx`` 를 실행하여 NGINX를 재시작하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:207
 msgid ""
 "Verify that you can see Mattermost through the proxy by running ``curl "
 "https://localhost``. If everything is working, you will see the HTML for "
 "the Mattermost signup page."
-msgstr ""
+msgstr "``curl https://localhost`` 를 실행하여 프록시를 통해 Mattermost를 볼 수 있는지 확인하세요. 모든 것이 정상적으로 작동한다면 Mattermost 가입 페이지의 HTML이 표시됩니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:209
 msgid "Restrict access to port 8065."
-msgstr ""
+msgstr "포트 8065에 대한 접근을 제한하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:211
 msgid ""
@@ -328,37 +352,38 @@ msgid ""
 "machine that you use to administer the Mattermost server. If you're "
 "installing on Amazon Web Services, you can use Security Groups to "
 "restrict access."
-msgstr ""
+msgstr "기본적으로 Mattermost 서버는 네트워크의 모든 머신에서 포트 8065로의 연결을 허용합니다. NGINX를 호스팅하는 머신과 Mattermost 서버를 관리하는 데 사용하는 머신을 "
+"제외한 모든 머신에서 포트 8065로의 연결을 거부하도록 방화벽을 사용하세요. Amazon Web Services에 설치하는 경우 Security Groups를 사용하여 접근을 제한할 수 있습니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:213
 msgid ""
 "Now that NGINX is installed and running, you can configure it to use SSL,"
 " which allows you to use HTTPS connections and the HTTP/2 protocol."
-msgstr ""
+msgstr "NGINX가 설치되고 실행 중이므로 HTTPS 연결과 HTTP/2 프로토콜을 사용할 수 있도록 SSL을 사용하도록 구성할 수 있습니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:216
 msgid "Configure NGINX with SSL and HTTP/2"
-msgstr ""
+msgstr "SSL과 HTTP/2로 NGINX 구성하기"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:220
 msgid ""
 "Using SSL gives greater security by ensuring that communications between "
 "Mattermost clients and the Mattermost server are encrypted. It also "
 "allows you to configure NGINX to use the HTTP/2 protocol."
-msgstr ""
+msgstr "SSL을 사용하면 Mattermost 클라이언트와 Mattermost 서버 간의 통신이 암호화되어 보안이 향상됩니다. 또한 NGINX가 HTTP/2 프로토콜을 사용하도록 구성할 수 있습니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:222
 msgid ""
 "Although you can configure HTTP/2 without SSL, both Firefox and Chrome "
 "browsers support HTTP/2 on secure connections only."
-msgstr ""
+msgstr "SSL 없이 HTTP/2를 구성할 수 있지만 Firefox와 Chrome 브라우저는 보안 연결에서만 HTTP/2를 지원합니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:224
 msgid ""
 "You can use any certificate that you want, but these instructions show "
 "you how to download and install certificates from `Let's Encrypt "
 "<https://letsencrypt.org/>`__, a free certificate authority."
-msgstr ""
+msgstr "원하는 인증서를 사용할 수 있지만, 이 지침에서는 무료 인증 기관인 `Let's Encrypt <https://letsencrypt.org/>`__ 에서 인증서를 다운로드하고 설치하는 방법을 보여줍니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:228
 msgid ""
@@ -368,7 +393,9 @@ msgid ""
 " to complete the Let’s Encrypt certification. See the `Let's "
 "Encrypt/Certbot documentation <https://certbot.eff.org>`_ for additional "
 "assistance."
-msgstr ""
+msgstr "Let's Encrypt가 활성화된 경우, Let's Encrypt 인증을 완료하기 위해 방화벽을 통해 포트 80을 전달하고 ``config.json`` 설정에서 "
+":ref:`Forward80To443 <configure/environment-configuration-settings:forward port 80 to 443>` 을 ``true`` 로 설정하세요. 추가 도움이 필요하면 "
+"`Let's Encrypt/Certbot 문서 <https://certbot.eff.org>`_ 를 참조하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:232
 msgid ""
@@ -376,33 +403,34 @@ msgid ""
 "then update the ``{ip}`` address in the ``upstream backend`` to point "
 "towards Mattermost (such as ``127.0.0.1:8065``), and update the "
 "``server_name`` to be your domain for Mattermost."
-msgstr ""
+msgstr "텍스트 편집기에서 *root* 권한으로 Mattermost ``nginx.conf`` 파일을 열고, ``upstream backend`` 의 ``{ip}`` 주소를 Mattermost를 가리키도록 업데이트하세요(예: ``127.0.0.1:8065``). "
+"그리고 Mattermost의 도메인으로 ``server_name`` 을 업데이트하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:236
 msgid ""
 "On Ubuntu this file is located at ``/etc/nginx/sites-available/``. If you"
 " don't have this file, run ``sudo touch /etc/nginx/sites-"
 "available/mattermost``."
-msgstr ""
+msgstr "Ubuntu에서는 이 파일이 ``/etc/nginx/sites-available/`` 에 있습니다. 이 파일이 없다면 ``sudo touch /etc/nginx/sites-available/mattermost`` 를 실행하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:237
 msgid ""
 "On CentOS/RHEL this file is located at ``/etc/nginx/conf.d/``. If you "
 "don't have this file, run ``sudo touch /etc/nginx/conf.d/mattermost``."
-msgstr ""
+msgstr "CentOS/RHEL에서는 이 파일이 ``/etc/nginx/conf.d/`` 에 있습니다. 이 파일이 없다면 ``sudo touch /etc/nginx/conf.d/mattermost`` 를 실행하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:238
 msgid ""
 "The IP address included in the examples in this documentation may not "
 "match your network configuration."
-msgstr ""
+msgstr "이 문서의 예제에 포함된 IP 주소는 네트워크 구성과 일치하지 않을 수 있습니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:288
 msgid ""
 "Remove the existing default sites-enabled file by running ``sudo rm "
 "/etc/nginx/sites-enabled/default`` (Ubuntu) or ``sudo rm "
 "/etc/nginx/conf.d/default`` (RHEL 8)."
-msgstr ""
+msgstr "``sudo rm /etc/nginx/sites-enabled/default``(Ubuntu) 또는 ``sudo rm /etc/nginx/conf.d/default`` (RHEL 8)를 실행하여 기존 기본 sites-enabled 파일을 제거하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:290
 msgid ""
@@ -410,24 +438,26 @@ msgid ""
 "/sites-available/mattermost /etc/nginx/sites-enabled/mattermost`` "
 "(Ubuntu) or ``sudo ln -s /etc/nginx/conf.d/mattermost "
 "/etc/nginx/conf.d/default.conf`` (RHEL 8)."
-msgstr ""
+msgstr "``sudo ln -s /etc/nginx/sites-available/mattermost /etc/nginx/sites-enabled/mattermost`` (Ubuntu) 또는 "
+"``sudo ln -s /etc/nginx/conf.d/mattermost /etc/nginx/conf.d/default.conf`` (RHEL 8)를 실행하여 Mattermost 구성을 활성화하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:292
 msgid ""
 "Run ``sudo nginx -t`` to ensure your configuration is done properly. If "
 "you get an error, look into the NGINX config and make the needed changes "
 "to the file under ``/etc/nginx/sites-available/mattermost``."
-msgstr ""
+msgstr "구성이 올바르게 완료되었는지 확인하려면 ``sudo nginx -t`` 를 실행하세요. 오류가 발생하면 NGINX 구성을 확인하고 "
+"``/etc/nginx/sites-available/mattermost`` 아래의 파일에 필요한 변경사항을 적용하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:294
 msgid "Restart NGINX by running ``sudo systemctl start nginx``."
-msgstr ""
+msgstr "``sudo systemctl start nginx`` 를 실행하여 NGINX를 재시작하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:296
 msgid ""
 "Verify that you can see Mattermost through the proxy by running ``curl "
 "http://localhost``."
-msgstr ""
+msgstr "``curl http://localhost`` 를 실행하여 프록시를 통해 Mattermost를 볼 수 있는지 확인하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:298
 msgid ""
@@ -435,31 +465,32 @@ msgid ""
 " page. You will see invalid certificate when accessing through the IP or "
 "localhost. Use the full FQDN domain to verify if the SSL certificate has "
 "pinned properly and is valid."
-msgstr ""
+msgstr "모든 것이 작동하면 Mattermost 가입 페이지의 HTML이 표시됩니다. IP나 localhost를 통해 접근할 때는 유효하지 않은 인증서가 표시됩니다. "
+"SSL 인증서가 올바르게 고정되었고 유효한지 확인하려면 전체 FQDN 도메인을 사용하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:300
 msgid ""
 "Install and update Snap by running ``sudo snap install core; sudo snap "
 "refresh core``."
-msgstr ""
+msgstr "``sudo snap install core; sudo snap refresh core`` 를 실행하여 Snap을 설치하고 업데이트하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:302
 msgid ""
 "Install the Certbot package by running ``sudo snap install --classic "
 "certbot``."
-msgstr ""
+msgstr "``sudo snap install --classic certbot`` 를 실행하여 Certbot 패키지를 설치하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:304
 msgid ""
 "Add a symbolic link to ensure Certbot can run by running ``sudo ln -s "
 "/snap/bin/certbot /usr/bin/certbot``."
-msgstr ""
+msgstr "``sudo ln -s /snap/bin/certbot /usr/bin/certbot`` 를 실행하여 Certbot이 실행될 수 있도록 심볼릭 링크를 추가하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:306
 msgid ""
 "Run the Let's Encrypt installer dry-run to ensure your DNS is configured "
 "properly by running ``sudo certbot certonly --dry-run``."
-msgstr ""
+msgstr "DNS가 올바르게 구성되었는지 확인하기 위해 ``sudo certbot certonly --dry-run`` 을 실행하여 Let's Encrypt 설치 프로그램을 드라이 런으로 실행하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:308
 msgid ""
@@ -468,61 +499,66 @@ msgid ""
 "validate that your DNS points to this server properly and you are able to"
 " successfully generate a certificate. If this finishes successfully, "
 "proceed to step 12."
-msgstr ""
+msgstr "이메일을 입력하고, TOS를 수락하고, 이메일을 공유하고, certbot을 활성화할 도메인을 선택하라는 메시지가 표시됩니다. "
+"이를 통해 DNS가 이 서버를 올바르게 가리키고 있는지 확인하고 인증서를 성공적으로 생성할 수 있는지 검증합니다. "
+"이 작업이 성공적으로 완료되면 12단계로 진행하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:310
 msgid ""
 "Run the Let's Encrypt installer by running ``sudo certbot``. This will "
 "run certbot and will automatically edit your NGINX config file for the "
 "site(s) selected."
-msgstr ""
+msgstr "``sudo certbot`` 을 실행하여 Let's Encrypt 설치 프로그램을 실행하세요. "
+"이렇게 하면 certbot이 실행되고 선택한 사이트의 NGINX 구성 파일이 자동으로 편집됩니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:312
 msgid ""
 "Ensure your SSL is configured properly by running ``curl https://{your "
 "domain here}``"
-msgstr ""
+msgstr "``curl https://{your domain here}`` 를 실행하여 SSL이 올바르게 구성되었는지 확인하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:314
 msgid ""
 "Finally, we suggest editing your config file again to increase your SSL "
 "security settings above the default Let's Encrypt. This is the same file "
 "from Step 2 above. Edit it to look like the below:"
-msgstr ""
+msgstr "마지막으로, 기본 Let's Encrypt보다 높은 SSL 보안 설정을 위해 구성 파일을 다시 편집하는 것을 권장합니다. "
+"이는 위의 2단계와 동일한 파일입니다. 아래와 같이 편집하세요:"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:405
 msgid "Check that your SSL certificate is set up correctly."
-msgstr ""
+msgstr "SSL 인증서가 올바르게 설정되었는지 확인하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:407
 msgid ""
 "Test the SSL certificate by visiting a site such as "
 "https://www.ssllabs.com/ssltest/index.html."
-msgstr ""
+msgstr "https://www.ssllabs.com/ssltest/index.html과 같은 사이트를 방문하여 SSL 인증서를 테스트하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:408
 msgid ""
 "If there’s an error about the missing chain or certificate path, there is"
 " likely an intermediate certificate missing that needs to be included."
-msgstr ""
+msgstr "체인 또는 인증서 경로 누락에 대한 오류가 발생하면 포함해야 할 중간 인증서가 누락되었을 가능성이 높습니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:411
 msgid "NGINX configuration FAQ"
-msgstr ""
+msgstr "NGINX 구성 FAQ"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:414
 msgid "Why am I seeing the error \"Too many redirects?\""
-msgstr ""
+msgstr "\"Too many redirects?\" 오류가 발생하는 이유는 무엇인가요?"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:416
 msgid ""
 "You may see this error if you're setting Mattermost in a sub-path. To "
 "resolve this error, add the following block to the HEAD request:"
-msgstr ""
+msgstr "하위 경로에 Mattermost를 설정하는 경우 이 오류가 발생할 수 있습니다. "
+"이 오류를 해결하려면 HEAD 요청에 다음 블록을 추가하세요:"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:430
 msgid "Why are Websocket connections returning a 403 error?"
-msgstr ""
+msgstr "Websocket 연결이 403 오류를 반환하는 이유는 무엇인가요?"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:432
 msgid ""
@@ -531,7 +567,9 @@ msgid ""
 "host header. If it's not, a 403 error is returned. Open the file "
 "``/etc/nginx/sites-available/mattermost`` as *root* in a text editor and "
 "make sure that the host header being set in the proxy is dynamic:"
-msgstr ""
+msgstr "이는 교차 출처 검사 실패 때문일 가능성이 높습니다. WebSocket 코드에 ``Origin`` 헤더가 호스트 헤더와 동일한지 확인하는 검사가 적용됩니다. "
+"동일하지 않으면 403 오류가 반환됩니다. 텍스트 편집기에서 *root* 권한으로 ``/etc/nginx/sites-available/mattermost`` 파일을 열고 "
+"프록시에서 설정된 호스트 헤더가 동적인지 확인하세요:"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:444
 msgid ""
@@ -539,71 +577,72 @@ msgid ""
 "domain being used by clients. You may need to add variations of the host "
 "name that clients may send. Your NGINX log will be helpful in diagnosing "
 "the problem."
-msgstr ""
+msgstr "그런 다음 ``config.json`` 에서 ``AllowCorsFrom`` 설정을 클라이언트가 사용하는 도메인과 일치하도록 설정하세요. "
+"클라이언트가 보낼 수 있는 호스트 이름의 변형을 추가해야 할 수도 있습니다. NGINX 로그는 문제 진단에 도움이 될 것입니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:454
 msgid "How do I setup an NGINX proxy with the Mattermost Docker installation?"
-msgstr ""
+msgstr "Mattermost Docker 설치에서 NGINX 프록시를 어떻게 설정하나요?"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:456
 msgid "Find the name of the Mattermost network and connect it to the NGINX proxy."
-msgstr ""
+msgstr "Mattermost 네트워크의 이름을 찾아 NGINX 프록시에 연결하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:464
 msgid "Restart the Mattermost Docker containers."
-msgstr ""
+msgstr "Mattermost Docker 컨테이너를 재시작하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:473
 msgid ""
 "You don't need to run the 'web' container, since NGINX proxy accepts "
 "incoming requests."
-msgstr ""
+msgstr "NGINX 프록시가 들어오는 요청을 수락하므로 'web' 컨테이너를 실행할 필요가 없습니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:475
 msgid ""
 "Update your ``docker-compose.yml`` file to include a new environment "
 "variable ``VIRTUAL_HOST`` and an ``expose`` directive."
-msgstr ""
+msgstr "``docker-compose.yml`` 파일을 업데이트하여 새로운 환경 변수 ``VIRTUAL_HOST``와 ``expose`` 지시문을 포함하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:490
 msgid "Why does NGINX fail when installing GitLab CE with Mattermost on Azure?"
-msgstr ""
+msgstr "Azure에서 GitLab CE와 Mattermost를 설치할 때 NGINX가 실패하는 이유는 무엇인가요?"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:492
 msgid ""
 "You may need to update the Callback URLs for the Application entry of "
 "Mattermost inside your GitLab instance."
-msgstr ""
+msgstr "GitLab 인스턴스 내의 Mattermost 애플리케이션 항목에 대한 콜백 URL을 업데이트해야 할 수 있습니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:494
 msgid "Log in to your GitLab instance as the admin."
-msgstr ""
+msgstr "관리자로 GitLab 인스턴스에 로그인하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:495
 msgid "Go to **Admin > Applications**."
-msgstr ""
+msgstr "**관리자 > 애플리케이션** 으로 이동하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:496
 msgid "Select **Edit** on GitLab-Mattermost."
-msgstr ""
+msgstr "GitLab-Mattermost에서 **편집** 을 선택하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:497
 msgid "Update the callback URLs to your new domain/URL."
-msgstr ""
+msgstr "콜백 URL을 새 도메인/URL로 업데이트하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:498
 msgid "Save the changes."
-msgstr ""
+msgstr "변경사항을 저장하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:499
 msgid ""
 "Update the external URL for GitLab and Mattermost in the "
 "``/etc/gitlab/gitlab.rb`` configuration file."
-msgstr ""
+msgstr "``/etc/gitlab/gitlab.rb`` 구성 파일에서 GitLab과 Mattermost의 외부 URL을 업데이트하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:502
 msgid "Why does Certbot fail the http-01 challenge?"
-msgstr ""
+msgstr "Certbot이 http-01 챌린지에 실패하는 이유는 무엇인가요?"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:515
 msgid ""
@@ -613,24 +652,26 @@ msgid ""
 "server and your ``server_name`` within the NGINX config doesn't have a "
 "redirect."
 msgstr ""
+"위 오류가 표시되는 경우 일반적으로 Certbot이 포트 80에 접근할 수 없기 때문입니다. 이는 방화벽이나 다른 DNS 구성 때문일 수 있습니다. "
+"A/AAAA 레코드가 이 서버를 가리키고 있고 NGINX 구성의 ``server_name`` 에 리디렉션이 없는지 확인하세요."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:518
 msgid ""
 "If you're using Cloudflare you'll need to disable ``force traffic to "
 "https``."
-msgstr ""
+msgstr "Cloudflare를 사용 중이라면 ``force traffic to https`` 를 비활성화해야 합니다."
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:521
 msgid "Certbot rate limiting"
-msgstr ""
+msgstr "Certbot 속도 제한"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:523
 msgid "If you're running certbot as stand-alone you'll see this error:"
-msgstr ""
+msgstr "certbot을 독립 실행형으로 실행하는 경우 다음 오류가 표시됩니다:"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:537
 msgid "If you're running Let's Encrypt within Mattermost you'll see this error:"
-msgstr ""
+msgstr "Mattermost 내에서 Let's Encrypt를 실행하는 경우 다음 오류가 표시됩니다:"
 
 #: ../../source/deploy/server/setup-nginx-proxy.rst:543
 msgid ""
@@ -638,4 +679,5 @@ msgid ""
 "can find more information `here <https://letsencrypt.org/docs/rate-"
 "limits>`_."
 msgstr ""
-
+"이는 인증서를 너무 많이 생성하려고 시도했다는 의미입니다. 자세한 내용은 `여기 <https://letsencrypt.org/docs/rate-"
+"limits>`_ 에서 확인할 수 있습니다."

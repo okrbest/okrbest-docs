@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:2
 msgid "Deploy Mattermost in Air-Gapped Environments"
-msgstr ""
+msgstr "에어갭 환경에서 Mattermost 배포하기"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:4
 msgid ""
@@ -31,6 +31,8 @@ msgid ""
 "that is isolated from the public internet, requiring all necessary "
 "components to be available locally."
 msgstr ""
+"이 가이드는 자체 호스팅 에어갭 환경에서 Mattermost를 배포하는 방법을 설명하며, 성공적인 배포에 필요한 지원 인프라 설정에 중점을 둡니다. "
+"에어갭 환경은 공용 인터넷과 격리되어 있어 필요한 모든 구성 요소를 로컬에서 사용할 수 있어야 합니다."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:6
 msgid ""
@@ -40,26 +42,28 @@ msgid ""
 " of internet connectivity by ensuring access to secure, localized "
 "resources. Key considerations include:"
 msgstr ""
+"에어갭 환경에서 Mattermost를 배포하는 것은 네트워크 내에서 중요한 구성 요소의 중단 없는 가용성을 보장하기 위한 상세한 준비가 필요합니다. "
+"이러한 노력은 안전하고 지역화된 리소스에 대한 접근을 보장함으로써 인터넷 연결 부재와 관련된 위험을 완화합니다. 주요 고려사항은 다음과 같습니다:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:8
 msgid "Container images required when deploying in Kubernetes or Docker."
-msgstr ""
+msgstr "Kubernetes 또는 Docker에 배포할 때 필요한 컨테이너 이미지."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:9
 msgid ""
 "Mattermost server packages and dependencies required when deploying "
 "directly on Linux servers."
-msgstr ""
+msgstr "Linux 서버에 직접 배포할 때 필요한 Mattermost 서버 패키지 및 종속성."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:10
 msgid "Access to a PostgreSQL database."
-msgstr ""
+msgstr "PostgreSQL 데이터베이스 접근."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:11
 msgid ""
 "Object storage or a shared filesystem service for relaibly accessing "
 "files from multiple Mattermost servers."
-msgstr ""
+msgstr "여러 Mattermost 서버에서 파일을 안정적으로 접근하기 위한 객체 스토리지 또는 공유 파일시스템 서비스."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:12
 msgid ""
@@ -67,6 +71,7 @@ msgid ""
 "for performant post searching, etc. as required for your scale and "
 "performance requirements."
 msgstr ""
+"인증을 위한 LDAP, 성능 좋은 게시물 검색을 위한 Elasticsearch 등 규모와 성능 요구사항에 따라 필요한 기타 지원 서비스."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:14
 msgid ""
@@ -75,10 +80,12 @@ msgid ""
 "an air-gapped deployment which is required before deploying Mattermost in"
 " these environments."
 msgstr ""
+"필요에 따라 Mattermost를 설정하려면 Mattermost 배포 문서를 참조하세요. 이 가이드는 이러한 환경에서 Mattermost를 배포하기 전에 "
+"필요한 에어갭 배포를 위한 지원 인프라에 중점을 둡니다."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:17
 msgid "Set up a self-hosted private container registry"
-msgstr ""
+msgstr "자체 호스팅 프라이빗 컨테이너 레지스트리 설정"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:19
 msgid ""
@@ -86,6 +93,8 @@ msgid ""
 " deployments, ensuring compliance with data isolation requirements. Use "
 "it to enable local deployments in Kubernetes or Docker."
 msgstr ""
+"프라이빗 컨테이너 레지스트리는 에어갭 배포를 위한 Docker 이미지를 안전하게 저장하여 데이터 격리 요구사항을 준수합니다. "
+"Kubernetes 또는 Docker에서 로컬 배포를 가능하게 하는 데 사용하세요."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:21
 msgid ""
@@ -95,6 +104,9 @@ msgid ""
 " images will have to be uploaded to the registry from a machine that has "
 "access to the public internet."
 msgstr ""
+"레지스트리에 이미지를 업로드하는 프로세스는 에어갭 네트워크의 보안 정책에 맞게 조정되어야 합니다. "
+"예를 들어, 레지스트리가 공용 인터넷에서 이미지를 가져올 수 있을 수도 있습니다. 그렇지 않은 경우, "
+"공용 인터넷에 접근할 수 있는 기계에서 레지스트리로 이미지를 업로드해야 합니다."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:23
 msgid ""
@@ -102,58 +114,62 @@ msgid ""
 "If not, you can set up a private registry using Docker Registry or "
 "Harbor."
 msgstr ""
+"이상적으로는 에어갭 네트워크에 이미 프라이빗 레지스트리가 있을 것입니다. "
+"없다면 Docker Registry 또는 Harbor를 사용하여 프라이빗 레지스트리를 설정할 수 있습니다."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:27
 msgid "**Install Docker Registry**:"
-msgstr ""
+msgstr "**Docker Registry 설치**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:33
 msgid "**Configure persistent storage**:"
-msgstr ""
+msgstr "**영구 스토리지 구성**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:41
 msgid "**Add TLS security** (recommended):"
-msgstr ""
+msgstr "**TLS 보안 추가** (권장):"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:43
 msgid "Generate self-signed certificates:"
-msgstr ""
+msgstr "자체 서명 인증서 생성:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:51
 msgid "Run the registry with TLS:"
-msgstr ""
+msgstr "TLS로 레지스트리 실행:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:64
 msgid ""
 "For more advanced features, consider using `Harbor "
 "<https://github.com/goharbor/harbor>`_."
 msgstr ""
+"더 고급 기능을 위해서는 `Harbor <https://github.com/goharbor/harbor>`_ 사용을 고려하세요."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:66
 msgid "**Download Harbor offline installer** before going air-gapped:"
-msgstr ""
+msgstr "**에어갭 전에 Harbor 오프라인 설치 프로그램 다운로드**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:68
 msgid "Download from https://github.com/goharbor/harbor/releases"
-msgstr ""
+msgstr "https://github.com/goharbor/harbor/releases 에서 다운로드"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:70
 msgid "**Extract and configure**:"
-msgstr ""
+msgstr "**압축 해제 및 구성**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:79
 msgid "**Install Harbor**:"
-msgstr ""
+msgstr "**Harbor 설치**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:85
 msgid ""
 "**Access Harbor** at ``https://harbor-hostname`` (based on your "
 "configuration)"
 msgstr ""
+"구성에 따라 ``https://harbor-hostname`` 에서 **Harbor에 접근**"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:88
 msgid "Populate your private registry"
-msgstr ""
+msgstr "프라이빗 레지스트리 채우기"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:90
 msgid ""
@@ -161,68 +177,70 @@ msgid ""
 "images on an external machine and securely transfer them using approved "
 "data transfer methods."
 msgstr ""
+"프라이빗 레지스트리가 공용 인터넷에 접근할 수 없는 경우, 외부 기계에서 이미지를 검색하고 승인된 데이터 전송 방법을 사용하여 안전하게 전송하세요."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:104
 msgid "Configure Kubernetes to use private image registries"
-msgstr ""
+msgstr "프라이빗 이미지 레지스트리를 사용하도록 Kubernetes 구성하기"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:106
 msgid ""
 "When using Kubernetes in an air-gapped environment, you need to configure"
 " it to use your private registry."
 msgstr ""
+"에어갭 환경에서 Kubernetes를 사용할 때는 프라이빗 레지스트리를 사용하도록 구성해야 합니다."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:109
 msgid "Create registry credentials"
-msgstr ""
+msgstr "레지스트리 자격 증명 생성하기"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:111
 msgid "**Create a kubernetes secret for registry authentication**:"
-msgstr ""
+msgstr "**레지스트리 인증을 위한 kubernetes secret 생성**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:121
 msgid "**Reference the secret in pod specifications**:"
-msgstr ""
+msgstr "**pod 명세에서 secret 참조하기**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:136
 msgid "**For Helm deployments**, specify the registry in ``values.yaml``:"
-msgstr ""
+msgstr "**Helm 배포의 경우**, ``values.yaml`` 에서 레지스트리를 지정하세요:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:149
 msgid "Configure Docker to use private image registries"
-msgstr ""
+msgstr "프라이빗 이미지 레지스트리를 사용하도록 Docker 구성하기"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:151
 msgid "Configure Docker on all hosts to trust and use your private registry."
-msgstr ""
+msgstr "모든 호스트에서 Docker가 프라이빗 레지스트리를 신뢰하고 사용하도록 구성하세요."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:154
 msgid "Docker daemon configuration"
-msgstr ""
+msgstr "Docker 데몬 구성"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:156
 msgid "**Add your registry to Docker's trusted registries**:"
-msgstr ""
+msgstr "**Docker의 신뢰할 수 있는 레지스트리에 레지스트리 추가하기**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:158
 msgid "Edit or create ``/etc/docker/daemon.json``:"
-msgstr ""
+msgstr "``/etc/docker/daemon.json`` 편집 또는 생성:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:166
 msgid "For registries using self-signed certificates:"
-msgstr ""
+msgstr "자체 서명 인증서를 사용하는 레지스트리의 경우:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:173
 msgid "**Restart Docker daemon**:"
-msgstr ""
+msgstr "**Docker 데몬 재시작**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:179
 msgid "**Test the configuration**:"
-msgstr ""
+msgstr "**구성 테스트**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:186
 msgid "Set up a private Debian package mirror"
-msgstr ""
+msgstr "프라이빗 Debian 패키지 미러 설정하기"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:188
 msgid ""
@@ -230,117 +248,122 @@ msgid ""
 "and dependencies. In this case, the mirror will be used to provide "
 "packages for Mattermost server to debian-based hosts."
 msgstr ""
+"로컬 Debian 미러를 사용하면 시스템 업데이트 및 종속성을 위한 패키지를 유지할 수 있습니다. 이 경우 미러는 debian 기반 호스트에 "
+"Mattermost 서버용 패키지를 제공하는 데 사용됩니다."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:190
 msgid ""
 "Ideally the air-gapped network already has a local mirror available. If "
 "not, you can set up a local mirror such as Aptly or debmirror."
 msgstr ""
+"이상적으로는 에어갭 네트워크에 이미 로컬 미러가 있어야 합니다. 그렇지 않은 경우 Aptly나 debmirror와 같은 로컬 미러를 설정할 수 있습니다."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:194
 msgid "**Install Aptly** (on an internet-connected machine):"
-msgstr ""
+msgstr "**Aptly 설치** (인터넷 연결된 기계에서):"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:201
 msgid "**Create GPG key for signing packages**:"
-msgstr ""
+msgstr "**패키지 서명을 위한 GPG 키 생성**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:207
 msgid "**Create a mirror configuration**:"
-msgstr ""
+msgstr "**미러 구성 생성**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:213
 msgid "**Update the mirror to download packages**:"
-msgstr ""
+msgstr "**패키지를 다운로드하도록 미러 업데이트**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:219
 msgid "**Create and publish a snapshot**:"
-msgstr ""
+msgstr "**스냅샷 생성 및 게시**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:226
 msgid "**Serve the repository**:"
-msgstr ""
+msgstr "**저장소 제공**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:234
 msgid "For a simpler approach:"
-msgstr ""
+msgstr "더 간단한 방법:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:236
 msgid "**Install debmirror**:"
-msgstr ""
+msgstr "**debmirror 설치**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:242
 msgid "**Create a mirror script**:"
-msgstr ""
+msgstr "**미러 스크립트 생성**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:258
 msgid "**Set up a web server** (like nginx) to serve the mirror:"
-msgstr ""
+msgstr "**미러를 제공하기 위한 웹 서버** (nginx와 같은) 설정:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:278
 #: ../../source/deploy/server/air-gapped-deployment.rst:328
 msgid "Client configuration"
-msgstr ""
+msgstr "클라이언트 구성"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:280
 msgid "On air-gapped systems, configure apt to use your local mirror:"
-msgstr ""
+msgstr "에어갭 시스템에서 로컬 미러를 사용하도록 apt 구성:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:289
 msgid "Set up a private RHEL package mirror"
-msgstr ""
+msgstr "프라이빗 RHEL 패키지 미러 설정"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:291
 msgid ""
 "For Red Hat Enterprise Linux environments, you'll need a local repository"
 " mirror."
 msgstr ""
+"Red Hat Enterprise Linux 환경에서는 로컬 저장소 미러가 필요합니다."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:293
 msgid ""
 "Ideally the air-gapped network already has a local mirror available. If "
 "not, you can set up a local mirror such as reposync."
 msgstr ""
+"이상적으로는 에어갭 네트워크에 이미 로컬 미러가 있어야 합니다. 그렇지 않은 경우 reposync와 같은 로컬 미러를 설정할 수 있습니다."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:296
 msgid "Use reposync"
-msgstr ""
+msgstr "reposync 사용"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:298
 msgid "**Install required tools** (on an internet-connected RHEL system):"
-msgstr ""
+msgstr "**필요한 도구 설치** (인터넷 연결된 RHEL 시스템에서):"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:304
 msgid "**Download packages**:"
-msgstr ""
+msgstr "**패키지 다운로드**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:312
 msgid "**Create repository metadata**:"
-msgstr ""
+msgstr "**저장소 메타데이터 생성**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:319
 msgid "**Set up a web server**:"
-msgstr ""
+msgstr "**웹 서버 설정**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:330
 msgid "On air-gapped RHEL systems:"
-msgstr ""
+msgstr "에어갭 RHEL 시스템에서:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:332
 msgid "**Disable existing repositories**:"
-msgstr ""
+msgstr "**기존 저장소 비활성화**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:340
 msgid "**Create new repository files**:"
-msgstr ""
+msgstr "**새 저장소 파일 생성**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:360
 msgid "**Clear cache and test**:"
-msgstr ""
+msgstr "**캐시 지우기 및 테스트**:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:368
 msgid "Mattermost server configuration for air-gapped deployments"
-msgstr ""
+msgstr "에어갭 배포를 위한 Mattermost 서버 구성"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:370
 msgid ""
@@ -349,10 +372,12 @@ msgid ""
 "access. The following covers these configuration options and offers "
 "recommendations for settings."
 msgstr ""
+"에어갭 환경에서 Mattermost를 배포할 때는 인터넷 접근 부재를 수용하기 위한 구성 옵션이 있습니다. "
+"다음은 이러한 구성 옵션과 설정에 대한 권장사항을 다룹니다."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:373
 msgid "Mobile push notifications"
-msgstr ""
+msgstr "모바일 푸시 알림"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:375
 msgid ""
@@ -365,10 +390,15 @@ msgid ""
 "notifications>` in **System Console > Environment > Push Notification "
 "Server**."
 msgstr ""
+"Mattermost는 새 메시지와 활동에 대해 사용자에게 알리기 위해 모바일 푸시 알림을 사용할 수 있습니다. "
+"이러한 알림은 모바일 기기로 알림을 보내기 위한 서버 구성 요소가 필요합니다. 기본적으로 Mattermost는 "
+"에어갭 환경에서 사용할 수 없는 공용 푸시 알림 서비스를 사용합니다. **시스템 콘솔 > 환경 > 푸시 알림 서버** 에서 "
+":ref:`푸시 알림 비활성화 <configure/environment-configuration-settings:enable push notifications>` 를 "
+"권장합니다."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:378
 msgid "Website link previews"
-msgstr ""
+msgstr "웹사이트 링크 미리보기"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:380
 msgid ""
@@ -377,10 +407,13 @@ msgid ""
 "<configure/site-configuration-settings:enable website link previews>` in "
 "**System Console > Site Configuration > Posts**."
 msgstr ""
+"웹사이트 링크 미리보기는 링크의 내용을 가져오기 위해 인터넷 연결이 필요합니다. "
+"**시스템 콘솔 > 사이트 구성 > 게시물** 에서 :ref:`웹사이트 링크 미리보기 비활성화 "
+"<configure/site-configuration-settings:enable website link previews>` 를 권장합니다."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:383
 msgid "Additional considerations"
-msgstr ""
+msgstr "추가 고려사항"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:385
 msgid ""
@@ -389,98 +422,100 @@ msgid ""
 "other components are required to ensure the environment remains secure "
 "and up-to-date."
 msgstr ""
+"에어갭 환경은 안전하고 최신 상태를 유지하기 위해 지속적인 유지 관리가 필요하다는 점을 기억하세요. "
+"환경이 안전하고 최신 상태를 유지하기 위해서는 Mattermost 서버와 기타 구성 요소에 대한 정기적인 업데이트가 필요합니다."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:388
 msgid "Network security"
-msgstr ""
+msgstr "네트워크 보안"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:390
 msgid "In air-gapped environments, network security is critical:"
-msgstr ""
+msgstr "에어갭 환경에서는 네트워크 보안이 중요합니다:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:392
 msgid ""
 "**Implement strict firewall rules** to control traffic between network "
 "segments."
-msgstr ""
+msgstr "네트워크 세그먼트 간 트래픽을 제어하기 위해 **엄격한 방화벽 규칙 구현**."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:393
 msgid ""
 "**Use network segmentation** to isolate critical infrastructure "
 "components."
-msgstr ""
+msgstr "중요 인프라 구성 요소를 격리하기 위해 **네트워크 세그먼테이션 사용**."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:394
 msgid ""
 "**Regularly audit network access** to ensure the environment remains "
 "properly isolated."
-msgstr ""
+msgstr "환경이 적절히 격리되어 있는지 확인하기 위해 **정기적으로 네트워크 접근 감사**."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:397
 msgid "Transfer data to air-gapped networks"
-msgstr ""
+msgstr "에어갭 네트워크로 데이터 전송"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:399
 msgid "For initial setup and updates:"
-msgstr ""
+msgstr "초기 설정 및 업데이트를 위해:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:401
 msgid "**Use approved data diodes** or one-way transfer devices."
-msgstr ""
+msgstr "**승인된 데이터 다이오드** 또는 단방향 전송 장치 사용."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:402
 msgid ""
 "**Implement strict media control** for any physical media entering the "
 "air-gapped environment."
-msgstr ""
+msgstr "에어갭 환경에 들어가는 모든 물리적 미디어에 대해 **엄격한 미디어 제어 구현**."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:403
 msgid ""
 "**Scan all incoming data** for malware before allowing it into the "
 "environment."
-msgstr ""
+msgstr "환경에 들어가기 전에 모든 수신 데이터를 **악성코드 검사**."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:406
 msgid "Keep systems updated"
-msgstr ""
+msgstr "시스템 최신 상태 유지"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:408
 msgid "Develop a process for regular updates:"
-msgstr ""
+msgstr "정기적인 업데이트를 위한 프로세스 개발:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:410
 msgid "**Schedule periodic updates** to your local mirrors."
-msgstr ""
+msgstr "로컬 미러에 대한 **주기적인 업데이트 일정 수립**."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:411
 msgid ""
 "**Maintain a consistent testing process** for all updates before "
 "deployment."
-msgstr ""
+msgstr "배포 전 모든 업데이트에 대해 **일관된 테스트 프로세스 유지**."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:412
 msgid "**Keep comprehensive documentation** of all packages and versions in use."
-msgstr ""
+msgstr "사용 중인 모든 패키지와 버전에 대한 **포괄적인 문서화 유지**."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:415
 msgid "Monitoring and logging"
-msgstr ""
+msgstr "모니터링 및 로깅"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:417
 msgid "Ensure robust monitoring within the air-gapped environment:"
-msgstr ""
+msgstr "에어갭 환경 내에서 견고한 모니터링 보장:"
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:419
 msgid "**Deploy local monitoring solutions** that don't require internet access."
-msgstr ""
+msgstr "인터넷 접근이 필요하지 않은 **로컬 모니터링 솔루션 배포**."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:420
 msgid "**Establish baselines** for normal system behavior."
-msgstr ""
+msgstr "정상적인 시스템 동작을 위한 **기준선 설정**."
 
 #: ../../source/deploy/server/air-gapped-deployment.rst:421
 msgid ""
 "**Implement centralized logging** for security analysis and "
 "troubleshooting."
-msgstr ""
+msgstr "보안 분석 및 문제 해결을 위한 **중앙 집중식 로깅 구현**."
 

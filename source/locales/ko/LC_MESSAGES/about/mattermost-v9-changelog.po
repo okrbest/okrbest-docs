@@ -19,7 +19,6 @@ msgid "v9 Changelog"
 msgstr "v9 변경 로그"
 
 #: ../../source/about/common-esr-support-upgrade.md:5
-#, fuzzy
 msgid ""
 "Support for Mattermost Server v9.11 [Extended Support "
 "Release](https://docs.mattermost.com/about/release-policy.html#extended-"
@@ -27,8 +26,8 @@ msgid ""
 "Upgrading to Mattermost Server v10.5 or later is required."
 msgstr ""
 "Mattermost Server v9.11 [확장 지원 릴리스](https://docs.mattermost.com/about"
-"/release-policy.html#extended-support-releases)에 대한 지원이 2025년 5월 15일에 "
-"종료됩니다. Mattermost Server v10.5 이상으로 업그레이드가 필요합니다."
+"/release-policy.html#extended-support-releases)의 지원 수명 주기가 2025년 5월 15일에 "
+"종료됩니다. Mattermost Server v10.5 이상 버전으로 업그레이드가 필요합니다."
 
 #: ../../source/about/common-esr-support-upgrade.md:6
 msgid ""
@@ -82,7 +81,6 @@ msgid "**9.11.15, released 2025-05-09**"
 msgstr "**9.11.15, 2025년 5월 9일 릴리스**"
 
 #: ../../source/about/mattermost-v9-changelog.md:13
-#, fuzzy
 msgid ""
 "Mattermost v9.11.15 contains low to medium severity level security fixes."
 " [Upgrading](https://docs.mattermost.com/upgrade/upgrading-mattermost-"
@@ -91,7 +89,7 @@ msgid ""
 "days after release as per the [Mattermost Responsible Disclosure "
 "Policy](https://mattermost.com/security-vulnerability-report/)."
 msgstr ""
-"Mattermost v9.11.1은 낮음에서 중간 수준의 보안 수정 사항을 포함합니다. 이 릴리스로의 "
+"Mattermost v9.11.15은 낮음에서 중간 수준의 보안 수정 사항을 포함하고 있습니다. 이 릴리스로의 "
 "[업그레이드](https://docs.mattermost.com/upgrade/upgrading-mattermost-"
 "server.html)가 권장됩니다. 자세한 내용은 [Mattermost 책임 공개 정책](https://mattermost.com"
 "/security-vulnerability-report/)에 따라 릴리스 30일 후 [보안 업데이트 "
@@ -126,6 +124,13 @@ msgid ""
 "IF NOT EXISTS idx_sidebarchannels_categoryid ON "
 "sidebarchannels(categoryid);`` for PostgreSQL."
 msgstr ""
+"쿼리 성능 향상을 위해 ``SidebarChannels`` 테이블의 ``CategoryId`` 열에 새 인덱스가 추가되었습니다. "
+"이 업그레이드로 인한 데이터베이스 다운타임은 예상되지 않습니다. PostgreSQL에서 120만 행이 있는 테이블에 "
+"인덱스를 추가하는 데 약 2초가 걸리고, MySQL에서 30만 행이 있는 테이블에 약 5초가 걸립니다. 마이그레이션은 "
+"완전히 이전 버전과 호환되며 테이블 잠금이나 테이블의 기존 작업에 영향을 주지 않습니다. 이 릴리스로 업그레이드할 때 "
+"다운타임은 예상되지 않습니다. 포함된 SQL 쿼리는 MySQL의 경우 ``CREATE INDEX idx_sidebarchannels_categoryid ON "
+"SidebarChannels(CategoryId);``이고 PostgreSQL의 경우 ``CREATE INDEX CONCURRENTLY "
+"IF NOT EXISTS idx_sidebarchannels_categoryid ON sidebarchannels(categoryid);``입니다."
 
 #: ../../source/about/mattermost-v9-changelog.md:17
 msgid "**9.11.14, released 2025-05-05**"
