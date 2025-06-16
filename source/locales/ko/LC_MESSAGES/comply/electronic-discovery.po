@@ -21,27 +21,29 @@ msgstr ""
 
 #: ../../source/comply/electronic-discovery.rst:4
 msgid "Electronic discovery"
-msgstr ""
+msgstr "전자 증거 수집"
 
 #: ../../source/_static/badges/ent-selfhosted.rst:7
 msgid ""
 "|plans-img| Available on `Enterprise plans "
 "<https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img| `Enterprise 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/ent-selfhosted.rst:9
 msgid ""
 "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
 "deployments"
 msgstr ""
+"|deployment-img| `자체 호스팅 <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/comply/electronic-discovery.rst:9
 msgid ""
@@ -49,6 +51,7 @@ msgid ""
 " electronic data is searched with the intent to use it as evidence in a "
 "legal case."
 msgstr ""
+"전자 증거 수집(eDiscovery라고도 함)은 법적 사건에서 증거로 사용하기 위해 전자 데이터를 검색하는 프로세스를 의미합니다."
 
 #: ../../source/comply/electronic-discovery.rst:11
 msgid ""
@@ -56,26 +59,32 @@ msgid ""
 "There are three primary methods that can be used to accomplish the goal "
 "of extracting user post data from Mattermost:"
 msgstr ""
+"이 페이지에서는 전자 증거 수집을 위해 Mattermost에서 데이터를 추출하는 방법을 설명합니다. "
+"Mattermost에서 사용자 게시물 데이터를 추출하는 목표를 달성하기 위해 사용할 수 있는 세 가지 주요 방법이 있습니다:"
 
 #: ../../source/comply/electronic-discovery.rst:13
 msgid ":doc:`Mattermost Compliance Exports </comply/compliance-export>`"
-msgstr ""
+msgstr ":doc:`Mattermost 규정 준수 내보내기 </comply/compliance-export>`"
 
 #: ../../source/comply/electronic-discovery.rst:14
 msgid ""
 ":ref:`Mattermost RESTful API <comply/electronic-discovery:mattermost "
 "restful api>`"
 msgstr ""
+":ref:`Mattermost RESTful API <comply/electronic-discovery:mattermost "
+"restful api>`"
 
 #: ../../source/comply/electronic-discovery.rst:15
 msgid ""
 ":ref:`Mattermost database using standard SQL queries <comply/electronic-"
 "discovery:mattermost database>`"
 msgstr ""
+":ref:`표준 SQL 쿼리를 사용하는 Mattermost 데이터베이스 <comply/electronic-"
+"discovery:mattermost database>`"
 
 #: ../../source/comply/electronic-discovery.rst:17
 msgid "Each of the options is discussed in detail below."
-msgstr ""
+msgstr "각 옵션은 아래에서 자세히 설명합니다."
 
 #: ../../source/comply/electronic-discovery.rst:20
 msgid ""
@@ -84,14 +93,15 @@ msgid ""
 "information nor paper documents may be discarded if they may be deemed "
 "relevant for a present or future legal case."
 msgstr ""
+"소송 보존(법적 보존이라고도 함)은 전자 증거 수집의 확장으로, 기록 검색 외에도 현재 또는 향후 법적 사건과 관련될 수 있는 전자적으로 저장된 정보나 종이 문서는 폐기할 수 없습니다."
 
 #: ../../source/comply/electronic-discovery.rst:23
 msgid "Mattermost compliance exports"
-msgstr ""
+msgstr "Mattermost 규정 준수 내보내기"
 
 #: ../../source/comply/electronic-discovery.rst:25
 msgid "Mattermost Enterprise has compliance report export capabilities."
-msgstr ""
+msgstr "Mattermost Enterprise는 규정 준수 보고서 내보내기 기능을 제공합니다."
 
 #: ../../source/comply/electronic-discovery.rst:27
 msgid ""
@@ -100,16 +110,19 @@ msgid ""
 "Actiance XML, Global Relay EML, and generic CSV. Reports can be "
 "configured to run on a delay basis and stored in a shared location."
 msgstr ""
+"Mattermost는 메시지 내용과 해당 메시지를 본 사람을 포함한 규정 준수 관련 데이터를 세 가지 형식(Actiance XML, Global Relay EML, 일반 CSV)으로 내보낼 수 있습니다. "
+"보고서는 지연 기반으로 실행되도록 구성하고 공유 위치에 저장할 수 있습니다."
 
 #: ../../source/comply/electronic-discovery.rst:29
 msgid ""
 "For more information about the exports feature and how to set up "
 "reporting, see :doc:`our documentation </comply/compliance-export>`."
 msgstr ""
+"내보내기 기능과 보고 설정 방법에 대한 자세한 내용은 :doc:`문서 </comply/compliance-export>` 를 참조하세요."
 
 #: ../../source/comply/electronic-discovery.rst:32
 msgid "Mattermost RESTful API"
-msgstr ""
+msgstr "Mattermost RESTful API"
 
 #: ../../source/comply/electronic-discovery.rst:34
 msgid ""
@@ -119,6 +132,8 @@ msgid ""
 "specific user via the API. Please note that full documentation for the "
 "Mattermost API can be found at https://api.mattermost.com."
 msgstr ""
+"Mattermost API를 사용하여 Mattermost Enterprise의 일부인 CSV 규정 준수 형식으로 사용자의 게시물을 내보낼 수 있습니다. "
+"다음 섹션에서는 API를 사용하여 특정 사용자에 대한 보고서를 생성하고 검색하는 방법을 설명합니다. Mattermost API의 전체 문서는 https://api.mattermost.com에서 확인할 수 있습니다."
 
 #: ../../source/comply/electronic-discovery.rst:36
 msgid ""
@@ -127,10 +142,12 @@ msgid ""
 "authenticating with must have ``manage_system`` permissions. If you are "
 "using curl, you can authenticate using the following command:"
 msgstr ""
+"API를 사용하려면 먼저 `여기 <https://api.mattermost.com/#tag/authentication>`__ 에 설명된 대로 인증해야 합니다. "
+"인증에 사용하는 계정은 ``manage_system`` 권한이 있어야 합니다. curl을 사용하는 경우 다음 명령어로 인증할 수 있습니다:"
 
 #: ../../source/comply/electronic-discovery.rst:42
 msgid "Mattermost will return a response that looks like this:"
-msgstr ""
+msgstr "Mattermost는 다음과 같은 응답을 반환합니다:"
 
 #: ../../source/comply/electronic-discovery.rst:57
 msgid ""
@@ -138,6 +155,7 @@ msgid ""
 "Authorization header on your future API requests with the Bearer method, "
 "e.g.:"
 msgstr ""
+"응답으로 전송된 ``token`` 값을 Bearer 방식을 사용하여 향후 API 요청의 Authorization 헤더에 포함하세요. 예:"
 
 #: ../../source/comply/electronic-discovery.rst:63
 #, python-format
@@ -150,6 +168,10 @@ msgid ""
 "that spans posts from Dec 31, 2017 - 8:15 PM to Dec 31, 2018 - 8:15 PM "
 "for a user with the email address craig@mattermost.com:"
 msgstr ""
+"Mattermost에 인증되면 `규정 준수 API를 사용하여 새 규정 준수 보고서 생성 "
+"<https://api.mattermost.com/#tag/compliance%2Fpaths%2F~1compliance~1reports%2Fpost>`__ 할 수 있습니다. "
+"아래의 curl 기반 예제는 인증 토큰을 기반으로 요청을 보내고 Mattermost에 craig@mattermost.com 이메일 주소를 가진 사용자의 "
+"2017년 12월 31일 오후 8시 15분부터 2018년 12월 31일 오후 8시 15분까지의 게시물을 포함하는 보고서를 생성하도록 요청하는 방법을 보여줍니다:"
 
 #: ../../source/comply/electronic-discovery.rst:67
 msgid ""
@@ -157,6 +179,8 @@ msgid ""
 " https://www.epochconverter.com/ can be useful when converting to and "
 "from the required format."
 msgstr ""
+"JSON 페이로드의 데이터는 Unix Epoch 형식이어야 합니다. https://www.epochconverter.com/ 와 같은 도구는 "
+"필요한 형식으로 변환할 때 유용할 수 있습니다."
 
 #: ../../source/comply/electronic-discovery.rst:77
 msgid ""
@@ -164,6 +188,7 @@ msgid ""
 "like the following, indicating that the server is running the compliance "
 "export process:"
 msgstr ""
+"게시가 성공하면 Mattermost는 서버가 규정 준수 내보내기 프로세스를 실행 중임을 나타내는 다음과 같은 메시지를 반환합니다:"
 
 #: ../../source/comply/electronic-discovery.rst:83
 msgid ""
@@ -173,6 +198,8 @@ msgid ""
 "a zip file containing the report that looks like the following curl "
 "request:"
 msgstr ""
+"내보내기 프로세스가 완료되면(실행 시간은 반환할 레코드 수와 현재 서버 부하에 따라 다름) "
+"다음 curl 요청과 같은 보고서가 포함된 zip 파일을 검색하고 다운로드하기 위해 Mattermost에 다른 HTTP Post 요청을 보내야 합니다:"
 
 #: ../../source/comply/electronic-discovery.rst:93
 msgid ""
@@ -181,10 +208,12 @@ msgid ""
 "supply a name to save that file as. In the example above, the file will "
 "be saved as ``report-zip.zip``."
 msgstr ""
+"요청을 보낼 때는 보고서가 생성되었을 때 Mattermost가 반환한 응답에서 보고서 ID를 가져와야 합니다. "
+"또한 파일을 저장할 이름을 지정해야 합니다. 위 예제에서는 파일이 ``report-zip.zip`` 으로 저장됩니다."
 
 #: ../../source/comply/electronic-discovery.rst:96
 msgid "Mattermost database"
-msgstr ""
+msgstr "Mattermost 데이터베이스"
 
 #: ../../source/comply/electronic-discovery.rst:98
 msgid ""
@@ -192,12 +221,15 @@ msgid ""
 "quite easy. If you know the username, the following query can be used to "
 "select all messages for the specified user:"
 msgstr ""
+"표준 SQL을 사용하여 Mattermost 데이터베이스에서 메시지를 선택하는 것은 매우 쉽습니다. "
+"사용자 이름을 알고 있다면 다음 쿼리를 사용하여 지정된 사용자의 모든 메시지를 선택할 수 있습니다:"
 
 #: ../../source/comply/electronic-discovery.rst:104
 msgid ""
 "If you want to limit the results of the query based on the date and time "
 "that the messages were posted, you can modify the above query to:"
 msgstr ""
+"메시지가 게시된 날짜와 시간을 기준으로 쿼리 결과를 제한하려면 위 쿼리를 다음과 같이 수정할 수 있습니다:"
 
 #: ../../source/comply/electronic-discovery.rst:111
 msgid ""
@@ -206,4 +238,7 @@ msgid ""
 "`Epoch Converter <https://www.epochconverter.com/>`__ can be useful in "
 "converting to and from the required format."
 msgstr ""
-
+"Mattermost 데이터베이스는 날짜와 시간 스탬프를 `Unix Epoch "
+"<https://en.wikipedia.org/wiki/Unix_time>`__ 형식으로 저장합니다. "
+"`Epoch Converter <https://www.epochconverter.com/>`__ 와 같은 도구는 "
+"필요한 형식으로 변환할 때 유용할 수 있습니다."

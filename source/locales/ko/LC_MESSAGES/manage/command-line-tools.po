@@ -21,25 +21,25 @@ msgstr ""
 
 #: ../../source/manage/command-line-tools.rst:2
 msgid "Command line tools"
-msgstr ""
+msgstr "명령줄 도구"
 
 #: ../../source/_static/badges/allplans-selfhosted.rst:7
 msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `모든 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/allplans-selfhosted.rst:9
 msgid ""
 "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
 "deployments"
-msgstr ""
+msgstr "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/manage/command-line-tools.rst:7
 msgid ""
@@ -49,6 +49,10 @@ msgid ""
 "(CLI), `read this article <https://medium.com/@santosjs/plugging-in-to-"
 "the-mattermost-cli-8cdcef2bd1f6>`_ from Santos."
 msgstr ""
+"self-managed 배포에서는 Mattermost 서버가 설치된 디렉토리에서 시스템을 구성하기 위한 "
+"``mattermost`` 명령을 사용할 수 있습니다. Mattermost 명령줄 인터페이스(CLI)에 대한 "
+"개요는 Santos의 `이 글 <https://medium.com/@santosjs/plugging-in-to-the-mattermost-cli-8cdcef2bd1f6>`_ 을 "
+"참조하세요."
 
 #: ../../source/manage/command-line-tools.rst:11
 msgid ""
@@ -60,66 +64,71 @@ msgid ""
 "commands, and related subcommands, remain available and fully supported "
 "from Mattermost v6.0."
 msgstr ""
+"Mattermost v6.0부터 이러한 CLI 명령의 대부분이 :doc:`mmctl 명령줄 도구 </manage/mmctl-command-line-tool>` 을 "
+"사용하여 사용 가능한 동등한 명령으로 대체되었습니다. 그러나 :ref:`mattermost import "
+"<manage/command-line-tools:mattermost import>` 명령, :ref:`mattermost export "
+"<manage/command-line-tools:mattermost export>` 명령 및 관련 하위 명령은 Mattermost v6.0부터 "
+"계속 사용 가능하고 완전히 지원됩니다."
 
 #: ../../source/manage/command-line-tools.rst:13
 msgid "These ``mattermost`` commands include the following functionality:"
-msgstr ""
+msgstr "이러한 ``mattermost`` 명령에는 다음과 같은 기능이 포함됩니다:"
 
 #: ../../source/manage/command-line-tools.rst:15
 msgid "**Compliance Export**"
-msgstr ""
+msgstr "**규정 준수 내보내기**"
 
 #: ../../source/manage/command-line-tools.rst:17
 msgid "Export data"
-msgstr ""
+msgstr "데이터 내보내기"
 
 #: ../../source/manage/command-line-tools.rst:18
 msgid "Schedule an export job"
-msgstr ""
+msgstr "내보내기 작업 예약"
 
 #: ../../source/manage/command-line-tools.rst:20
 msgid "**Database**"
-msgstr ""
+msgstr "**데이터베이스**"
 
 #: ../../source/manage/command-line-tools.rst:22
 msgid "Initialize the database, execute migrations, and load custom defaults"
-msgstr ""
+msgstr "데이터베이스 초기화, 마이그레이션 실행 및 사용자 정의 기본값 로드"
 
 #: ../../source/manage/command-line-tools.rst:23
 msgid "Migrate the database schema for unapplied migrations"
-msgstr ""
+msgstr "적용되지 않은 마이그레이션을 위한 데이터베이스 스키마 마이그레이션"
 
 #: ../../source/manage/command-line-tools.rst:24
 msgid "Reset the database to its initial state"
-msgstr ""
+msgstr "데이터베이스를 초기 상태로 재설정"
 
 #: ../../source/manage/command-line-tools.rst:25
 msgid "Return the most recently applied version number"
-msgstr ""
+msgstr "가장 최근에 적용된 버전 번호 반환"
 
 #: ../../source/manage/command-line-tools.rst:26
 msgid "Roll back database migrations"
-msgstr ""
+msgstr "데이터베이스 마이그레이션 롤백"
 
 #: ../../source/manage/command-line-tools.rst:28
 msgid "**Server Operations**"
-msgstr ""
+msgstr "**서버 작업**"
 
 #: ../../source/manage/command-line-tools.rst:30
 msgid "Start the Mattermost job server"
-msgstr ""
+msgstr "Mattermost 작업 서버 시작"
 
 #: ../../source/manage/command-line-tools.rst:31
 msgid "Run the Mattermost server"
-msgstr ""
+msgstr "Mattermost 서버 실행"
 
 #: ../../source/manage/command-line-tools.rst:32
 msgid "Display Mattermost version information"
-msgstr ""
+msgstr "Mattermost 버전 정보 표시"
 
 #: ../../source/manage/command-line-tools.rst:35
 msgid "Use the CLI"
-msgstr ""
+msgstr "CLI 사용"
 
 #: ../../source/manage/command-line-tools.rst:39
 msgid ""
@@ -130,12 +139,16 @@ msgid ""
 "user ``mattermost``. The name of the executable is ``mattermost``, and it"
 " can be found in the ``/opt/mattermost/bin`` directory."
 msgstr ""
+"CLI 명령을 실행하려면 Mattermost 루트 디렉토리에 있어야 합니다. Mattermost의 기본 설치에서 "
+"루트 디렉토리는 ``/opt/mattermost`` 입니다. 표준 :doc:`설치 프로세스 </guides/deployment-guide>` 를 "
+"따랐다면 ``mattermost`` 사용자로 명령을 실행해야 합니다. 실행 파일의 이름은 ``mattermost`` 이며 "
+"``/opt/mattermost/bin`` 디렉토리에서 찾을 수 있습니다."
 
 #: ../../source/manage/command-line-tools.rst:41
 msgid ""
 "For example, to get the Mattermost version on a default installation of "
 "Mattermost:"
-msgstr ""
+msgstr "예를 들어, Mattermost의 기본 설치에서 Mattermost 버전을 확인하려면:"
 
 #: ../../source/manage/command-line-tools.rst:50
 msgid ""
@@ -146,6 +159,9 @@ msgid ""
 "ownership of the plugins and files to be overwritten as well as other "
 "potential permissions errors."
 msgstr ""
+"``mattermost`` 사용자로 Mattermost 바이너리를 실행해야 합니다. ``root`` 사용자로 실행하면(예를 들어) "
+"CLI 명령을 실행할 때 바이너리가 플러그인을 초기화하고 다양한 파일에 접근하면서 권한 관련 문제가 발생할 수 있습니다. "
+"``root`` 사용자로 서버를 실행하면 플러그인과 파일의 소유권이 덮어써지고 다른 잠재적인 권한 오류가 발생할 수 있습니다."
 
 #: ../../source/manage/command-line-tools.rst:51
 msgid ""
@@ -153,6 +169,7 @@ msgid ""
 "configuration stored in the database, you might need to pass the database"
 " connection string as:"
 msgstr ""
+"데이터베이스에 구성이 저장된 Mattermost 설치에서 CLI 명령을 실행할 때 다음과 같이 데이터베이스 연결 문자열을 전달해야 할 수 있습니다:"
 
 #: ../../source/manage/command-line-tools.rst:59
 msgid ""
@@ -162,10 +179,13 @@ msgid ""
 "the configuration file. The executable is "
 "``/opt/gitlab/embedded/bin/mattermost``."
 msgstr ""
+"GitLab Omnibus에서는 CLI 명령을 실행할 때 다음 디렉토리에 있어야 합니다: ``/opt/gitlab/embedded/service/mattermost``. "
+"또한 *mattermost* 사용자로 명령을 실행하고 구성 파일의 위치를 지정해야 합니다. "
+"실행 파일은 ``/opt/gitlab/embedded/bin/mattermost`` 입니다."
 
 #: ../../source/manage/command-line-tools.rst:61
 msgid "For example, to get the Mattermost version on GitLab Omnibus:"
-msgstr ""
+msgstr "예를 들어, GitLab Omnibus에서 Mattermost 버전을 확인하려면:"
 
 #: ../../source/manage/command-line-tools.rst:70
 msgid ""
@@ -173,6 +193,7 @@ msgid ""
 "installation of Mattermost. You must modify the commands so that they "
 "work on GitLab Omnibus."
 msgstr ""
+"이 문서 페이지의 예제 명령은 Mattermost의 기본 설치용입니다. GitLab Omnibus에서 작동하도록 명령을 수정해야 합니다."
 
 #: ../../source/manage/command-line-tools.rst:74
 msgid ""
@@ -181,10 +202,12 @@ msgid ""
 "command. Note that the container name may be ``mattermostdocker_app_1`` "
 "if you installed Mattermost with ``docker-compose.yml``."
 msgstr ""
+"Docker 설치에서는 ``/mattermost/bin`` 디렉토리가 ``PATH``에 추가되어 있어 ``docker exec`` 명령으로 CLI를 직접 사용할 수 있습니다. "
+"``docker-compose.yml`` 로 Mattermost를 설치한 경우 컨테이너 이름이 ``mattermostdocker_app_1`` 일 수 있습니다."
 
 #: ../../source/manage/command-line-tools.rst:76
 msgid "For example, to get the Mattermost version on a Docker Install:"
-msgstr ""
+msgstr "예를 들어, Docker 설치에서 Mattermost 버전을 확인하려면:"
 
 #: ../../source/manage/command-line-tools.rst:84
 msgid ""
@@ -192,6 +215,7 @@ msgid ""
 " the `Mattermost docker preview image <https://github.com/mattermost"
 "/mattermost-docker-preview>`_."
 msgstr ""
+"아래의 Docker 설치 탭 세부 정보와 명령 참조는 `Mattermost docker preview image <https://github.com/mattermost/mattermost-docker-preview>`_ 에도 적용됩니다."
 
 #: ../../source/manage/command-line-tools.rst:87
 msgid ""
@@ -202,10 +226,12 @@ msgid ""
 "line-tools>` in a High Availability environment, tasks that change "
 "configuration settings require a server restart."
 msgstr ""
+"CLI는 :doc:`고가용성 환경 </scale/high-availability-cluster-based-deployment>` 이 클러스터의 모든 노드에서 작업을 수행하는 데 사용하는 메커니즘을 우회하는 단일 노드에서 실행됩니다. "
+"결과적으로 고가용성 환경에서 :doc:`CLI 명령 </manage/command-line-tools>` 을 실행할 때 구성 설정을 변경하는 작업은 서버 재시작이 필요합니다."
 
 #: ../../source/manage/command-line-tools.rst:88
 msgid "Parameters in CLI commands are order-specific."
-msgstr ""
+msgstr "CLI 명령의 매개변수는 순서가 중요합니다."
 
 #: ../../source/manage/command-line-tools.rst:89
 msgid ""
@@ -213,10 +239,12 @@ msgid ""
 "``\"``) are used, the entire argument needs to be surrounded by single "
 "quotes, or the individual characters need to be escaped out."
 msgstr ""
+"특수 문자(``!``, ``|``, ``(``, ``)``, ``\\``, ``'``, ``\"``)를 사용하는 경우, "
+"전체 인수를 작은따옴표로 묶거나 개별 문자를 이스케이프 처리해야 합니다."
 
 #: ../../source/manage/command-line-tools.rst:92
 msgid "mattermost CLI commands"
-msgstr ""
+msgstr "mattermost CLI 명령어"
 
 #: ../../source/manage/command-line-tools.rst:95
 #: ../../source/manage/command-line-tools.rst:116
@@ -233,11 +261,11 @@ msgstr ""
 #: ../../source/manage/command-line-tools.rst:351
 #: ../../source/manage/command-line-tools.rst:369
 msgid "Description"
-msgstr ""
+msgstr "설명"
 
 #: ../../source/manage/command-line-tools.rst:95
 msgid "Commands for configuring and managing your Mattermost instance and users."
-msgstr ""
+msgstr "Mattermost 인스턴스와 사용자를 구성하고 관리하기 위한 명령어입니다."
 
 #: ../../source/manage/command-line-tools.rst:101
 #: ../../source/manage/command-line-tools.rst:129
@@ -245,50 +273,50 @@ msgstr ""
 #: ../../source/manage/command-line-tools.rst:206
 #: ../../source/manage/command-line-tools.rst:288
 msgid "Options"
-msgstr ""
+msgstr "옵션"
 
 #: ../../source/manage/command-line-tools.rst:110
 #: ../../source/manage/command-line-tools.rst:123
 #: ../../source/manage/command-line-tools.rst:189
 #: ../../source/manage/command-line-tools.rst:251
 msgid "Child Commands"
-msgstr ""
+msgstr "하위 명령어"
 
 #: ../../source/manage/command-line-tools.rst:104
 msgid "`mattermost db`_ - Database commands"
-msgstr ""
+msgstr "`mattermost db`_ - 데이터베이스 명령어"
 
 #: ../../source/manage/command-line-tools.rst:105
 msgid "`mattermost export`_ - Compliance export commands"
-msgstr ""
+msgstr "`mattermost export`_ - 규정 준수 내보내기 명령어"
 
 #: ../../source/manage/command-line-tools.rst:106
 msgid "`mattermost help`_ - Generate full documentation for the CLI"
-msgstr ""
+msgstr "`mattermost help`_ - CLI에 대한 전체 문서 생성"
 
 #: ../../source/manage/command-line-tools.rst:107
 msgid "`mattermost import`_ - Legacy import command"
-msgstr ""
+msgstr "`mattermost import`_ - 레거시 가져오기 명령어"
 
 #: ../../source/manage/command-line-tools.rst:108
 msgid "`mattermost jobserver`_ - Start the Mattermost job server"
-msgstr ""
+msgstr "`mattermost jobserver`_ - Mattermost 작업 서버 시작"
 
 #: ../../source/manage/command-line-tools.rst:109
 msgid "`mattermost server`_ - Run the Mattermost server"
-msgstr ""
+msgstr "`mattermost server`_ - Mattermost 서버 실행"
 
 #: ../../source/manage/command-line-tools.rst:110
 msgid "`mattermost version`_ - Display version information"
-msgstr ""
+msgstr "`mattermost version`_ - 버전 정보 표시"
 
 #: ../../source/manage/command-line-tools.rst:113
 msgid "mattermost db"
-msgstr ""
+msgstr "mattermost db"
 
 #: ../../source/manage/command-line-tools.rst:116
 msgid "Commands related to the database"
-msgstr ""
+msgstr "데이터베이스 관련 명령어"
 
 #: ../../source/manage/command-line-tools.rst:119
 msgid ""
@@ -296,36 +324,42 @@ msgid ""
 "either an update plan to roll back to, or comma-separated version numbers"
 " to be rolled back."
 msgstr ""
+"`mattermost db downgrade`_ - 데이터베이스 마이그레이션을 롤백합니다. 롤백할 업데이트 계획이나 "
+"쉼표로 구분된 버전 번호가 필요합니다."
 
 #: ../../source/manage/command-line-tools.rst:120
 msgid ""
 "`mattermost db init`_ - Initialize the database, execute migrations, and "
 "load custom defaults"
 msgstr ""
+"`mattermost db init`_ - 데이터베이스를 초기화하고, 마이그레이션을 실행하며, "
+"사용자 정의 기본값을 로드합니다"
 
 #: ../../source/manage/command-line-tools.rst:121
 msgid ""
 "`mattermost db migrate`_ - Migrate the database schema for unapplied "
 "migrations"
 msgstr ""
+"`mattermost db migrate`_ - 적용되지 않은 마이그레이션에 대한 데이터베이스 스키마를 마이그레이션합니다"
 
 #: ../../source/manage/command-line-tools.rst:122
 msgid "`mattermost db reset`_ - Reset the database to its initial state"
-msgstr ""
+msgstr "`mattermost db reset`_ - 데이터베이스를 초기 상태로 재설정합니다"
 
 #: ../../source/manage/command-line-tools.rst:123
 msgid "`mattermost db version`_ - Return the most recently applied version number"
-msgstr ""
+msgstr "`mattermost db version`_ - 가장 최근에 적용된 버전 번호 반환"
 
 #: ../../source/manage/command-line-tools.rst:132
 msgid "mattermost db downgrade"
-msgstr ""
+msgstr "mattermost db downgrade"
 
 #: ../../source/manage/command-line-tools.rst:135
 msgid ""
 "Rolls back database migrations. Requires either an update plan to roll "
 "back to, or comma-separated version numbers to be rolled back."
 msgstr ""
+"데이터베이스 마이그레이션을 롤백합니다. 롤백할 업데이트 계획 또는 쉼표로 구분된 버전 번호가 필요합니다."
 
 #: ../../source/manage/command-line-tools.rst:140
 #: ../../source/manage/command-line-tools.rst:161
@@ -339,7 +373,7 @@ msgstr ""
 #: ../../source/manage/command-line-tools.rst:374
 #: ../../source/manage/command-line-tools.rst:391
 msgid "Format"
-msgstr ""
+msgstr "형식"
 
 #: ../../source/manage/command-line-tools.rst:145
 #: ../../source/manage/command-line-tools.rst:199
@@ -348,51 +382,53 @@ msgstr ""
 #: ../../source/manage/command-line-tools.rst:343
 #: ../../source/manage/command-line-tools.rst:361
 msgid "Example"
-msgstr ""
+msgstr "예시"
 
 #: ../../source/manage/command-line-tools.rst:153
 msgid "mattermost db init"
-msgstr ""
+msgstr "mattermost db init"
 
 #: ../../source/manage/command-line-tools.rst:156
 msgid ""
 "Initializes the database for a given data source name (DSN), executes "
 "migrations, and loads custom defaults when specified."
 msgstr ""
+"지정된 데이터 소스 이름(DSN)으로 데이터베이스를 초기화하고, 마이그레이션을 실행하며, 지정된 경우 사용자 정의 기본값을 로드합니다."
 
 #: ../../source/manage/command-line-tools.rst:180
 msgid "Examples"
-msgstr ""
+msgstr "예시"
 
 #: ../../source/manage/command-line-tools.rst:164
 msgid "Use the ``config`` flag to pass the DSN:"
-msgstr ""
+msgstr "DSN을 전달하려면 ``config`` 플래그를 사용하세요:"
 
 #: ../../source/manage/command-line-tools.rst:170
 msgid "Run this command to use the ``MM_CONFIG`` environment variable:"
-msgstr ""
+msgstr "``MM_CONFIG`` 환경 변수를 사용하려면 이 명령어를 실행하세요:"
 
 #: ../../source/manage/command-line-tools.rst:176
 msgid ""
 "Run this command to set a custom defaults file to be loaded into the "
 "database:"
 msgstr ""
+"데이터베이스에 로드할 사용자 정의 기본값 파일을 설정하려면 이 명령어를 실행하세요:"
 
 #: ../../source/manage/command-line-tools.rst:183
 msgid "mattermost db migrate"
-msgstr ""
+msgstr "mattermost db migrate"
 
 #: ../../source/manage/command-line-tools.rst:186
 msgid "Migrates the database schema if there are any unapplied migrations."
-msgstr ""
+msgstr "적용되지 않은 마이그레이션이 있으면 데이터베이스 스키마를 마이그레이션합니다."
 
 #: ../../source/manage/command-line-tools.rst:189
 msgid "`mattermost db downgrade`_ - Roll back database migrations."
-msgstr ""
+msgstr "`mattermost db downgrade`_ - 데이터베이스 마이그레이션 롤백"
 
 #: ../../source/manage/command-line-tools.rst:209
 msgid "mattermost db reset"
-msgstr ""
+msgstr "mattermost db reset"
 
 #: ../../source/manage/command-line-tools.rst:212
 msgid ""
@@ -400,56 +436,60 @@ msgid ""
 "server. Only starts the store layer and truncates the tables, excluding "
 "the ``migrations`` table."
 msgstr ""
+"데이터베이스를 초기 상태로 재설정합니다. 애플리케이션 서버는 시작하지 않으며, 저장소 계층만 시작하고 ``migrations`` 테이블을 제외한 모든 테이블을 비웁니다."
 
 #: ../../source/manage/command-line-tools.rst:225
 msgid "mattermost db version"
-msgstr ""
+msgstr "mattermost db version"
 
 #: ../../source/manage/command-line-tools.rst:228
 msgid "Returns the most recently applied version number."
-msgstr ""
+msgstr "가장 최근에 적용된 버전 번호를 반환합니다."
 
 #: ../../source/manage/command-line-tools.rst:238
 msgid "mattermost export"
-msgstr ""
+msgstr "mattermost export"
 
 #: ../../source/_static/badges/ent-only.rst:9
 msgid "Note"
-msgstr ""
+msgstr "참고"
 
 #: ../../source/_static/badges/ent-only.rst:11
 msgid ""
 "|plans-img-yellow| Available only on `Enterprise "
 "<https://mattermost.com/pricing/>`__ plans"
 msgstr ""
+"|plans-img-yellow| `Enterprise <https://mattermost.com/pricing/>`__ 플랜에서만 사용 가능합니다."
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
-msgstr ""
+msgstr "plans-img-yellow"
 
 #: ../../source/manage/command-line-tools.rst:244
 msgid ""
 "Commands for exporting data for compliance and for merging multiple "
 "Mattermost instances."
 msgstr ""
+"컴플라이언스 준수를 위한 데이터 내보내기와 여러 Mattermost 인스턴스 병합을 위한 명령어입니다."
 
 #: ../../source/manage/command-line-tools.rst:247
 msgid ""
 "`mattermost export actiance`_ - Deprecated from Mattermost v10.5 in favor"
 " of `mattermost export schedule`_."
 msgstr ""
+"`mattermost export actiance`_ - Mattermost v10.5부터 사용 중단되었으며, `mattermost export schedule`_ 명령어를 사용하세요."
 
 #: ../../source/manage/command-line-tools.rst:248
 msgid "`mattermost export csv`_ - Deprecated from Mattermost v10.5."
-msgstr ""
+msgstr "`mattermost export csv`_ - Mattermost v10.5부터 사용 중단되었습니다."
 
 #: ../../source/manage/command-line-tools.rst:249
 msgid "`mattermost export global-relay-zip`_ - Deprecated from Mattermost v10.5."
-msgstr ""
+msgstr "`mattermost export global-relay-zip`_ - Mattermost v10.5부터 사용 중단되었습니다."
 
 #: ../../source/manage/command-line-tools.rst:250
 msgid "`mattermost export schedule`_ - Schedule a compliance export job."
-msgstr ""
+msgstr "`mattermost export schedule`_ - 컴플라이언스 내보내기 작업 예약"
 
 #: ../../source/manage/command-line-tools.rst:251
 msgid ""
@@ -458,10 +498,12 @@ msgid ""
 "Deprecated in favor of :ref:`mmctl export commands <manage/mmctl-command-"
 "line-tool:mmctl export>`."
 msgstr ""
+"`mattermost export bulk`_ - Mattermost :doc:`대량 가져오기 형식 </onboard/bulk-loading-data>` 과 호환되는 파일로 데이터를 내보냅니다."
+"이 명령어는 :ref:`mmctl export commands <manage/mmctl-command-line-tool:mmctl export>` 로 대체되어 사용 중단되었습니다."
 
 #: ../../source/manage/command-line-tools.rst:254
 msgid "mattermost export actiance"
-msgstr ""
+msgstr "mattermost export actiance"
 
 #: ../../source/manage/command-line-tools.rst:256
 msgid ""
@@ -469,10 +511,13 @@ msgid ""
 " to the mmctl command line tool in a future version. Until then, please "
 "use `mattermost export schedule`_."
 msgstr ""
+"Mattermost v10.5부터 이 명령어는 사용 중단되었습니다. "
+"향후 버전에서 mmctl 명령줄 도구에 추가될 예정입니다. "
+"그때까지는 `mattermost export schedule`_ 명령어를 사용해 주세요."
 
 #: ../../source/manage/command-line-tools.rst:259
 msgid "mattermost export csv"
-msgstr ""
+msgstr "mattermost export csv"
 
 #: ../../source/manage/command-line-tools.rst:261
 #: ../../source/manage/command-line-tools.rst:266
@@ -480,24 +525,27 @@ msgid ""
 "From Mattermost v10.5, this command has been deprecated. It will be added"
 " to the mmctl command line tool in a future version."
 msgstr ""
+"Mattermost v10.5부터 이 명령어는 사용 중단되었습니다. "
+"향후 버전에서 mmctl 명령줄 도구에 추가될 예정입니다."
 
 #: ../../source/manage/command-line-tools.rst:264
 msgid "mattermost export global-relay-zip"
-msgstr ""
+msgstr "mattermost export global-relay-zip"
 
 #: ../../source/manage/command-line-tools.rst:269
 msgid "mattermost export schedule"
-msgstr ""
+msgstr "mattermost export schedule"
 
 #: ../../source/manage/command-line-tools.rst:272
 msgid ""
 "Schedule an export job in a format suitable for importing into a third-"
 "party archive system."
 msgstr ""
+"타사 아카이브 시스템에 가져오기 적합한 형식으로 내보내기 작업을 예약합니다."
 
 #: ../../source/manage/command-line-tools.rst:291
 msgid "mattermost export bulk"
-msgstr ""
+msgstr "mattermost export bulk"
 
 #: ../../source/manage/command-line-tools.rst:293
 msgid ""
@@ -505,28 +553,31 @@ msgid ""
 ":ref:`mmctl export commands <manage/mmctl-command-line-tool:mmctl "
 "export>` as the supported way to export data out of Mattermost."
 msgstr ""
+"Mattermost v6.0부터 이 명령어는 사용 중단되었으며, "
+"데이터를 내보내는 공식적인 방법으로 :ref:`mmctl export commands <manage/mmctl-command-line-tool:mmctl export>` 를 사용하세요."
 
 #: ../../source/manage/command-line-tools.rst:298
 msgid "mattermost help"
-msgstr ""
+msgstr "mattermost help"
 
 #: ../../source/manage/command-line-tools.rst:301
 msgid ""
 "Generate full documentation in Markdown format for the Mattermost command"
 " line tools."
 msgstr ""
+"Mattermost 명령줄 도구에 대한 전체 문서를 Markdown 형식으로 생성합니다."
 
 #: ../../source/manage/command-line-tools.rst:313
 msgid "mattermost import"
-msgstr ""
+msgstr "mattermost import"
 
 #: ../../source/manage/command-line-tools.rst:316
 msgid "Import data into Mattermost."
-msgstr ""
+msgstr "Mattermost로 데이터를 가져옵니다."
 
 #: ../../source/manage/command-line-tools.rst:320
 msgid "Child Command"
-msgstr ""
+msgstr "하위 명령어"
 
 #: ../../source/manage/command-line-tools.rst:319
 msgid ""
@@ -534,14 +585,16 @@ msgid ""
 "Deprecated in favor of :ref:`mmctl import commands <manage/mmctl-command-"
 "line-tool:mmctl import>`."
 msgstr ""
+"`mattermost import bulk`_ - Mattermost 대량 가져오기 파일을 가져옵니다. "
+"이 명령어는 :ref:`mmctl import commands <manage/mmctl-command-line-tool:mmctl import>` 를 권장하며, 더 이상 사용되지 않습니다."
 
 #: ../../source/manage/command-line-tools.rst:320
 msgid "`mattermost import slack`_ - Import a team from Slack."
-msgstr ""
+msgstr "`mattermost import slack`_ - Slack에서 팀을 가져옵니다."
 
 #: ../../source/manage/command-line-tools.rst:323
 msgid "mattermost import bulk"
-msgstr ""
+msgstr "mattermost import bulk"
 
 #: ../../source/manage/command-line-tools.rst:325
 msgid ""
@@ -549,10 +602,12 @@ msgid ""
 ":ref:`mmctl import commands <manage/mmctl-command-line-tool:mmctl "
 "import>` as the supported way to import data into Mattermost."
 msgstr ""
+"Mattermost v6.0부터 이 명령어는 더 이상 사용되지 않으며, "
+"데이터를 가져오는 공식적인 방법으로 :ref:`mmctl import commands <manage/mmctl-command-line-tool:mmctl import>` 를 사용하세요."
 
 #: ../../source/manage/command-line-tools.rst:328
 msgid "mattermost import slack"
-msgstr ""
+msgstr "mattermost import slack"
 
 #: ../../source/manage/command-line-tools.rst:330
 msgid ""
@@ -560,38 +615,40 @@ msgid ""
 " import>` documentation as the preferred way to import Slack data into "
 "Mattermost."
 msgstr ""
+"Slack 데이터를 Mattermost로 가져오는 권장 방법은 "
+":ref:`mmctl import commands <manage/mmctl-command-line-tool:mmctl import>` 문서를 참고하세요."
 
 #: ../../source/manage/command-line-tools.rst:333
 msgid "Import a team from a Slack export zip file."
-msgstr ""
+msgstr "Slack 내보내기 zip 파일에서 팀을 가져옵니다."
 
 #: ../../source/manage/command-line-tools.rst:336
 msgid ". code-block:: sh"
-msgstr ""
+msgstr ". code-block:: sh"
 
 #: ../../source/manage/command-line-tools.rst:338
 msgid "mattermost import slack {team} {file}"
-msgstr ""
+msgstr "mattermost import slack {team} {file}"
 
 #: ../../source/manage/command-line-tools.rst:348
 msgid "mattermost jobserver"
-msgstr ""
+msgstr "mattermost jobserver"
 
 #: ../../source/manage/command-line-tools.rst:351
 msgid "Start the Mattermost job server."
-msgstr ""
+msgstr "Mattermost 작업 서버를 시작합니다."
 
 #: ../../source/manage/command-line-tools.rst:366
 msgid "mattermost server"
-msgstr ""
+msgstr "mattermost server"
 
 #: ../../source/manage/command-line-tools.rst:369
 msgid "Runs the Mattermost server."
-msgstr ""
+msgstr "Mattermost 서버를 실행합니다."
 
 #: ../../source/manage/command-line-tools.rst:379
 msgid "mattermost version"
-msgstr ""
+msgstr "mattermost version"
 
 #: ../../source/manage/command-line-tools.rst:383
 msgid ""
@@ -600,22 +657,24 @@ msgid ""
 "tools:mattermost db migrate>` CLI command has been introduced to trigger "
 "schema migrations."
 msgstr ""
+"Mattermost v6.5부터 이 CLI 명령어는 더 이상 데이터베이스와 상호작용하지 않습니다."
+" 스키마 마이그레이션을 실행하려면 :ref:`mattermost db migrate <manage/command-line-tools:mattermost db migrate>` CLI 명령어가 도입되었습니다."
 
 #: ../../source/manage/command-line-tools.rst:386
 msgid "Desription"
-msgstr ""
+msgstr "설명"
 
 #: ../../source/manage/command-line-tools.rst:386
 msgid "Displays Mattermost version information."
-msgstr ""
+msgstr "Mattermost 버전 정보를 표시합니다."
 
 #: ../../source/manage/command-line-tools.rst:396
 msgid "Troubleshooting"
-msgstr ""
+msgstr "문제 해결"
 
 #: ../../source/manage/command-line-tools.rst:399
 msgid "Executing a command hangs and doesn't complete"
-msgstr ""
+msgstr "명령어 실행이 멈추고 완료되지 않음"
 
 #: ../../source/manage/command-line-tools.rst:401
 msgid ""
@@ -624,6 +683,8 @@ msgid ""
 "can also optionally use the new :doc:`mmctl Command Line Tool </manage"
 "/mmctl-command-line-tool>`."
 msgstr ""
+"Bleve 검색 인덱싱이 활성화되어 있다면, **System Console > Experimental > Bleve** 에서 일시적으로 비활성화한 후 명령어를 다시 실행하세요."
+" 또는 새롭게 제공되는 :doc:`mmctl Command Line Tool </manage/mmctl-command-line-tool>` 을 사용할 수도 있습니다."
 
 #: ../../source/manage/command-line-tools.rst:403
 msgid ""
@@ -631,6 +692,8 @@ msgid ""
 "same index. Therefore, if the Mattermost server is running, an attempt to"
 " run the CLI will lock when trying to open the indeces."
 msgstr ""
+"Bleve는 여러 프로세스가 동일한 인덱스를 동시에 열고 조작하는 것을 지원하지 않습니다. "
+"따라서 Mattermost 서버가 실행 중일 때 CLI를 실행하려고 하면 인덱스를 열 때 잠길 수 있습니다."
 
 #: ../../source/manage/command-line-tools.rst:405
 msgid ""
@@ -638,4 +701,6 @@ msgid ""
 "`Troubleshooting forum <https://forum.mattermost.com/c/trouble-"
 "shoot/16>`_ to get help."
 msgstr ""
+"Bleve 검색 인덱싱을 사용하지 않는 경우, 도움이 필요하다면 언제든지 "
+"`Troubleshooting forum <https://forum.mattermost.com/c/trouble-shoot/16>`_ 에 글을 남겨주세요."
 

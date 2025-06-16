@@ -21,13 +21,14 @@ msgstr ""
 
 #: ../../source/onboard/sso-entraid.rst:2
 msgid "Entra ID Single Sign-On"
-msgstr ""
+msgstr "Entra ID 단일 로그인"
 
 #: ../../source/_static/badges/ent-pro-cloud-selfhosted.rst:7
 msgid ""
 "|plans-img| Available on `Enterprise and Professional plans "
 "<https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img| `Enterprise 및 Professional 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
@@ -38,6 +39,8 @@ msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
 msgstr ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ 및 `self-"
+"hosted <https://mattermost.com/download/>`__ 배포 지원"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
@@ -45,7 +48,7 @@ msgstr ""
 
 #: ../../source/onboard/sso-entraid.rst:8
 msgid "Configuring EntraID as a Single Sign-On (SSO) service"
-msgstr ""
+msgstr "EntraID를 단일 로그인(SSO) 서비스로 구성하기"
 
 #: ../../source/onboard/sso-entraid.rst:10
 msgid ""
@@ -53,16 +56,19 @@ msgid ""
 "credentials and Azure Active Directory account as a Single Sign-on (SSO) "
 "service for team creation, account creation, and sign-in."
 msgstr ""
+"팀 생성, 계정 생성 및 로그인을 위한 단일 로그인(SSO) 서비스로 Entra ID 로그인 자격 증명과 Azure Active Directory 계정을 "
+"사용하도록 Mattermost를 구성하는 단계를 따르세요."
 
 #: ../../source/onboard/sso-entraid.rst:14
 msgid ""
 "The system must be using SSL as Microsoft only allows OAuth redirect URIs"
 " that are SSL-enabled."
 msgstr ""
+"Microsoft는 SSL이 활성화된 OAuth 리디렉션 URI만 허용하므로 시스템에서 SSL을 사용해야 합니다."
 
 #: ../../source/onboard/sso-entraid.rst:17
 msgid "Step 1: Register an application in Azure Portal"
-msgstr ""
+msgstr "1단계: Azure Portal에서 애플리케이션 등록하기"
 
 #: ../../source/onboard/sso-entraid.rst:19
 msgid ""
@@ -71,16 +77,18 @@ msgid ""
 "to register the application. You can confirm the tenant in the top right "
 "corner of the portal."
 msgstr ""
+"애플리케이션을 등록하려는 Azure Active Directory 테넌트와 관련된 계정으로 `Azure Portal <https://portal.azure.com/>`_ 에 로그인하세요. 포털의 오른쪽 상단 모서리에서 테넌트를 확인할 수 있습니다."
 
 #: ../../source/onboard/sso-entraid.rst:21
 msgid ""
 "In the left-hand navigation pane, select the **Azure Active Directory "
 "service**, then select **App registrations > New registration**."
 msgstr ""
+"왼쪽 탐색 창에서 **Azure Active Directory 서비스** 를 선택한 다음 **앱 등록 > 새 등록** 을 선택하세요."
 
 #: ../../source/onboard/sso-entraid.rst:23
 msgid "Give your new registration a **Name**."
-msgstr ""
+msgstr "새 등록에 **이름** 을 지정하세요."
 
 #: ../../source/onboard/sso-entraid.rst:25
 msgid ""
@@ -88,6 +96,7 @@ msgid ""
 "example, if this is to be only accessed from your enterprise's Azure AD "
 "accounts, then select **Accounts in this organizational directory only**."
 msgstr ""
+"애플리케이션에 액세스할 수 있는 **지원되는 계정 유형** 을 정의하세요. 예를 들어, 기업의 Azure AD 계정에서만 액세스하려면 **이 조직 디렉토리의 계정만** 을 선택하세요."
 
 #: ../../source/onboard/sso-entraid.rst:27
 msgid ""
@@ -96,6 +105,8 @@ msgid ""
 "``/signup/office365/complete``. An example below is: "
 "``https://your.mattermost.com/signup/office365/complete``"
 msgstr ""
+"**리디렉션 URI** 를 웹 클라이언트로 정의한 다음 Mattermost 서비스에 특정한 호스트 이름이 포함된 URL을 입력하고 ``/signup/office365/complete``를 추가하세요. "
+"아래 예시: ``https://your.mattermost.com/signup/office365/complete``"
 
 #: ../../source/onboard/sso-entraid.rst:33
 msgid ""
@@ -104,22 +115,25 @@ msgid ""
 "/en-gb/azure/active-directory/develop/quickstart-register-app>`_ for "
 "reference."
 msgstr ""
+"앱 등록이 생성되면 추가로 구성할 수 있습니다. 자세한 내용은 표준 `Azure AD 문서 <https://learn.microsoft.com/en-gb/azure/active-directory/develop/quickstart-register-app>`_ 를 참조하세요."
 
 #: ../../source/onboard/sso-entraid.rst:36
 msgid "Step 2: Generate a new client secret in Azure Portal"
-msgstr ""
+msgstr "2단계: Azure Portal에서 새 클라이언트 비밀 생성하기"
 
 #: ../../source/onboard/sso-entraid.rst:38
 msgid ""
 "In the Azure Portal, select **Certificates and Secrets** from the menu, "
 "then select the button to generate a **New Client secret**."
 msgstr ""
+"Azure Portal에서 메뉴에서 **인증서 및 비밀** 을 선택한 다음 **새 클라이언트 비밀** 생성을 선택하세요."
 
 #: ../../source/onboard/sso-entraid.rst:40
 msgid ""
 "Provide a description, define the expiry for the token, then select "
 "**Add**."
 msgstr ""
+"설명을 제공하고 토큰의 만료 기간을 정의한 다음 **추가** 를 선택하세요."
 
 #: ../../source/onboard/sso-entraid.rst:42
 msgid ""
@@ -129,26 +143,30 @@ msgid ""
 "and as part of an **Auth Endpoint** and **Token Endpoint** URL in the "
 "Mattermost System Console."
 msgstr ""
+"Azure Portal에서 메뉴에서 **개요** 를 선택한 다음 애플리케이션(클라이언트) ID와 디렉토리(테넌트) ID를 모두 복사하여 임시 위치에 붙여넣으세요. "
+"이러한 값은 Mattermost 시스템 콘솔에서 **애플리케이션 ID** 와 **인증 엔드포인트** 및 **토큰 엔드포인트** URL의 일부로 입력됩니다."
 
 #: ../../source/onboard/sso-entraid.rst:49
 msgid "Step 3: Configure Mattermost for Entra ID SSO"
-msgstr ""
+msgstr "3단계: Entra ID SSO용 Mattermost 구성하기"
 
 #: ../../source/onboard/sso-entraid.rst:51
 msgid ""
 "Log in to Mattermost, then go to **System Console > Authentication > "
 "OpenID Connect**."
 msgstr ""
+"Mattermost에 로그인한 다음 **시스템 콘솔 > 인증 > OpenID Connect** 로 이동하세요."
 
 #: ../../source/onboard/sso-entraid.rst:53
 msgid "Select **Entra ID** as the service provider."
-msgstr ""
+msgstr "서비스 공급자로 **Entra ID** 를 선택하세요."
 
 #: ../../source/onboard/sso-entraid.rst:55
 msgid ""
 "Paste the **Directory (tenant) ID** from the Azure Portal as the "
 "**Directory (tenant) ID** in Mattermost."
 msgstr ""
+"Azure Portal의 **디렉토리(테넌트) ID** 를 Mattermost의 **디렉토리(테넌트) ID** 로 붙여넣으세요."
 
 #: ../../source/onboard/sso-entraid.rst:57
 msgid ""
@@ -156,22 +174,23 @@ msgid ""
 "prepopulated with ``https://login.microsoftonline.com/common/v2.0/.well-"
 "known/openid-configuration``."
 msgstr ""
+"Entra ID와 함께 사용하는 OpenID Connect의 **디스커버리 엔드포인트** 는 ``https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration`` 로 미리 채워져 있습니다."
 
 #: ../../source/onboard/sso-entraid.rst:59
 msgid ""
 "Paste the **Application (client) ID** from the Azure Portal as the "
 "**Client ID** in Mattermost."
-msgstr ""
+msgstr "Azure Portal의 **Application (client) ID** 를 Mattermost의 **Client ID** 로 붙여넣으세요."
 
 #: ../../source/onboard/sso-entraid.rst:61
 msgid ""
 "Paste the **client secret** value from the Azure Portal as the **Client "
 "Secret** in Mattermost."
-msgstr ""
+msgstr "Azure Portal의 **client secret** 값을 Mattermost의 **Client Secret** 으로 붙여넣으세요."
 
 #: ../../source/onboard/sso-entraid.rst:63
 msgid "Select **Save**."
-msgstr ""
+msgstr "**저장** 을 선택하세요."
 
 #: ../../source/onboard/sso-entraid.rst:66
 msgid ""
@@ -180,11 +199,13 @@ msgid ""
 "through the Mattermost API: first name, last name, or username. OpenID "
 "Connect or OAuth 2.0 must be the authoritative source for these user "
 "attributes."
-msgstr ""
+msgstr "Mattermost가 사용자 인증을 위해 OpenID Connect 또는 OAuth 2.0을 사용하도록 구성된 경우, "
+"다음 사용자 속성 변경은 Mattermost API를 통해 수행할 수 없습니다: 이름, 성 또는 사용자 이름. "
+"OpenID Connect 또는 OAuth 2.0이 이러한 사용자 속성의 권한 있는 소스여야 합니다."
 
 #: ../../source/onboard/sso-entraid.rst:69
 msgid "Note about Microsoft Active Directory Tenants"
-msgstr ""
+msgstr "Microsoft Active Directory 테넌트에 대한 참고 사항"
 
 #: ../../source/onboard/sso-entraid.rst:71
 msgid ""
@@ -196,7 +217,10 @@ msgid ""
 " See the Microsoft Entra ID <https://learn.microsoft.com/en-us/entra"
 "/identity-platform/quickstart-create-new-tenant>`_ documentation to learn"
 " more about getting an Azure AD tenant."
-msgstr ""
+msgstr "Microsoft Active Directory(AD) 테넌트는 Azure 또는 Entra ID와 같은 Microsoft 클라우드 서비스에 가입할 때 받게 되는 "
+"소유한 Azure Active Directory(Azure AD)의 전용 인스턴스입니다. "
+"테넌트는 일반적으로 비밀번호, 사용자 프로필 데이터 및 권한과 같은 사용자 정보를 저장하려는 조직에서 사용합니다. "
+"Azure AD 테넌트 획득에 대한 자세한 내용은 Microsoft Entra ID <https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-create-new-tenant>`_ 문서를 참조하세요."
 
 #: ../../source/onboard/sso-entraid.rst:73
 msgid ""
@@ -208,13 +232,17 @@ msgid ""
 "provided above, and you can find more information about `integrating apps"
 " with Azure AD here <https://learn.microsoft.com/en-us/azure/active-"
 "directory/develop/quickstart-create-new-tenant>`_."
-msgstr ""
+msgstr "Azure AD 사용자가 Entra ID SSO를 사용하여 Mattermost에 로그인할 수 있도록 하려면, "
+"사용자 정보가 포함된 Microsoft Azure AD 테넌트에 Mattermost를 등록해야 합니다. "
+"등록은 `Microsoft Azure portal <https://portal.azure.com>`__ 에서 수행할 수 있습니다. "
+"테넌트에 Mattermost 계정을 등록하는 단계는 위에서 제공한 단계와 유사하며, "
+"Azure AD와 앱 통합에 대한 자세한 내용은 `여기 <https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-create-new-tenant>`_ 에서 확인할 수 있습니다."
 
 #: ../../source/onboard/sso-entraid.rst:75
 msgid ""
 "If you don't register Mattermost in the Microsoft Azure AD tenant your "
 "organization uses, Entra ID SSO will likely fail for your users."
-msgstr ""
+msgstr "조직에서 사용하는 Microsoft Azure AD 테넌트에 Mattermost를 등록하지 않으면 사용자에 대한 Entra ID SSO가 실패할 가능성이 높습니다."
 
 #: ../../source/onboard/sso-entraid.rst:79
 msgid ""
@@ -222,44 +250,47 @@ msgid ""
 "with your Entra ID or Azure account (a personal, work, or school "
 "account), then set up Entra ID SSO with Mattermost using the steps "
 "provided above."
-msgstr ""
+msgstr "Azure Active Directory를 사용하지 않는 경우, Entra ID 또는 Azure 계정(개인, 직장 또는 학교 계정)으로 Mattermost를 등록한 다음, "
+"위에서 제공한 단계를 사용하여 Mattermost와 함께 Entra ID SSO를 설정할 수 있습니다."
 
 #: ../../source/onboard/sso-entraid.rst:82
 msgid "Configure Mattermost ``config.json`` for Entra ID SSO"
-msgstr ""
+msgstr "Entra ID SSO용 Mattermost ``config.json`` 구성하기"
 
 #: ../../source/onboard/sso-entraid.rst:87
 msgid ""
 "Instead of using the System Console, you can add the Entra ID settings "
 "directly to the ``config.json`` file on your Mattermost server."
-msgstr ""
+msgstr "시스템 콘솔을 사용하는 대신 Mattermost 서버의 ``config.json`` 파일에 Entra ID 설정을 직접 추가할 수 있습니다."
 
 #: ../../source/onboard/sso-entraid.rst:89
 msgid ""
 "Open ``config.json`` as *root* in a text editor. It’s usually in "
 "``/opt/mattermost/config`` but it might be elsewhere on your system."
-msgstr ""
+msgstr "텍스트 편집기에서 *root* 권한으로 ``config.json`` 을 엽니다. 일반적으로 ``/opt/mattermost/config`` 에 있지만, "
+"시스템의 다른 위치에 있을 수도 있습니다."
 
 #: ../../source/onboard/sso-entraid.rst:90
 msgid ""
 "Locate the ``Office365Settings`` section, then add or update the "
 "following information:"
-msgstr ""
+msgstr "``Office365Settings`` 섹션을 찾은 다음 다음 정보를 추가하거나 업데이트하세요:"
 
 #: ../../source/onboard/sso-entraid.rst:106
 msgid ""
 "Save your changes, then restart your Mattermost server. After the server "
 "restarts, users must change their login method before they can log in "
 "with Entra ID."
-msgstr ""
+msgstr "변경 사항을 저장한 다음 Mattermost 서버를 재시작하세요. 서버가 재시작된 후 사용자는 Entra ID로 로그인하기 전에 "
+"로그인 방법을 변경해야 합니다."
 
 #: ../../source/onboard/sso-entraid.rst:109
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/onboard/sso-entraid.rst:112
 msgid "How can I use LDAP attributes or Groups with OpenID?"
-msgstr ""
+msgstr "OpenID와 함께 LDAP 속성 또는 그룹을 어떻게 사용할 수 있나요?"
 
 #: ../../source/onboard/sso-entraid.rst:114
 msgid ""
@@ -269,5 +300,6 @@ msgid ""
 "have logged in with OpenID. If you need LDAP synced to each user, we "
 "suggest using SAML or LDAP as the login provider. Some OpenID providers "
 "can use SAML instead, like Keycloak."
-msgstr ""
-
+msgstr "현재 LDAP 데이터는 OpenID와 호환되지 않습니다. 현재 LDAP를 사용하여 사용자의 팀, 채널, 그룹 또는 속성을 관리하는 경우, "
+"OpenID로 로그인한 사용자에게는 이를 자동으로 수행할 수 없습니다. 각 사용자에게 LDAP 동기화가 필요한 경우, "
+"로그인 제공자로 SAML 또는 LDAP를 사용하는 것을 권장합니다. Keycloak과 같은 일부 OpenID 제공자는 대신 SAML을 사용할 수 있습니다."

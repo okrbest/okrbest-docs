@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/configure/smtp-email.rst:2
 msgid "SMTP email setup"
-msgstr ""
+msgstr "SMTP 이메일 설정"
 
 #: ../../source/_static/badges/allplans-selfhosted.rst:7
 msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `모든 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
@@ -35,7 +35,7 @@ msgstr ""
 msgid ""
 "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
 "deployments"
-msgstr ""
+msgstr "|deployment-img| `자체 호스팅 <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
@@ -48,10 +48,12 @@ msgid ""
 "authentication <configure/authentication-configuration-settings:enable "
 "sign-in with email>`."
 msgstr ""
+"프로덕션 환경에서는 :ref:`이메일 기반 인증 <configure/authentication-configuration-settings:enable "
+"sign-in with email>` 을 사용할 때 이메일 알림과 비밀번호 재설정을 위해 SMTP 이메일이 필요합니다."
 
 #: ../../source/configure/smtp-email.rst:10
 msgid "Set up an SMTP email service"
-msgstr ""
+msgstr "SMTP 이메일 서비스 설정"
 
 #: ../../source/configure/smtp-email.rst:12
 msgid ""
@@ -59,24 +61,32 @@ msgid ""
 "information: ``Server Name``, ``Port``, ``SMTP Username``, and ``SMTP "
 "Password``."
 msgstr ""
+"모든 SMTP 이메일 서비스를 사용할 수 있습니다. 다음 정보의 복사본이 필요합니다: ``Server Name``, "
+"``Port``, ``SMTP Username``, ``SMTP Password``."
 
 #: ../../source/configure/smtp-email.rst:16
 msgid ""
 "If you don't have an SMTP service you can set one up with `Amazon Simple "
 "Email Service (SES) <https://aws.amazon.com/ses/>`_:"
 msgstr ""
+"SMTP 서비스가 없는 경우 `Amazon Simple Email Service (SES) <https://aws.amazon.com/ses/>`_ "
+"로 설정할 수 있습니다:"
 
 #: ../../source/configure/smtp-email.rst:18
 msgid ""
 "Go to `Amazon SES console <https://console.aws.amazon.com/ses>`__ then "
 "**SMTP Settings > Create My SMTP Credentials**."
 msgstr ""
+"`Amazon SES 콘솔 <https://console.aws.amazon.com/ses>`__ 로 이동한 다음 "
+"**SMTP 설정 > SMTP 자격 증명 생성** 을 선택하세요."
 
 #: ../../source/configure/smtp-email.rst:19
 msgid ""
 "Copy the ``Server Name``, ``Port``, ``SMTP Username``, and ``SMTP "
 "Password`` values. You'll need these values to configure Mattermost."
 msgstr ""
+"``Server Name``, ``Port``, ``SMTP Username``, ``SMTP Password`` 값을 복사하세요. "
+"Mattermost를 구성하는 데 이러한 값이 필요합니다."
 
 #: ../../source/configure/smtp-email.rst:20
 msgid ""
@@ -88,12 +98,19 @@ msgid ""
 "<https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail>`__ (DKIM) for "
 "your email domain."
 msgstr ""
+"``Domains`` 메뉴에서 새 도메인을 설정하고 확인한 다음 도메인에 대해 ``Generate DKIM Settings`` 를 "
+"활성화하세요. 이메일 도메인에 대해 `Sender Policy Framework "
+"<https://en.wikipedia.org/wiki/Sender_Policy_Framework>`__ (SPF) 및/또는 "
+"`Domain Keys Identified Mail <https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail>`__ "
+"(DKIM)을 설정하는 것을 권장합니다."
 
 #: ../../source/configure/smtp-email.rst:22
 msgid ""
 "Choose a sender address like ``mattermost@domain.com`` and select ``Send "
 "a Test Email`` to verify setup is working correctly."
 msgstr ""
+"``mattermost@domain.com`` 와 같은 발신자 주소를 선택하고 설정이 올바르게 작동하는지 확인하기 위해 "
+"``Send a Test Email`` 를 선택하세요."
 
 #: ../../source/configure/smtp-email.rst:24
 msgid ""
@@ -101,6 +118,8 @@ msgid ""
 "smtp-settings>`__, or can set up local ``sendmail`` by setting **Server "
 "Name** ``127.0.0.1`` with **Port** ``25``."
 msgstr ""
+"또는 아래에 나열된 `서비스 <#sample-smtp-settings>`__ 중 하나를 사용하거나 **Server Name** "
+"``127.0.0.1`` 와 **Port** ``25`` 를 설정하여 로컬 ``sendmail`` 을 설정할 수 있습니다."
 
 #: ../../source/configure/smtp-email.rst:26
 msgid ""
@@ -112,16 +131,24 @@ msgid ""
 "Mattermost is deployed. Ensure that **Port 25** is open if a firewall is "
 "present."
 msgstr ""
+":doc:`Docker </deploy/server/deploy-containers>` 를 사용하여 Mattermost를 배포하는 경우, "
+"표준 docker ``172.16.0.0/12`` IP 범위는 사용되지 않습니다. 릴레이 액세스 오류를 방지하기 위해 "
+"이메일 서비스에 IP 범위 ``192.168.0.0/24`` 를 지정하세요. postfix를 사용하는 경우 "
+"``/etc/postfix/main.cf`` 에서 ``mynetworks = 192.168.0.0/24`` 를 지정하세요. 이는 "
+"Mattermost가 배포되는 방식에 따라 달라질 수 있습니다. 방화벽이 있는 경우 **Port 25** 가 "
+"열려 있는지 확인하세요."
 
 #: ../../source/configure/smtp-email.rst:29
 msgid "Configure SMTP settings"
-msgstr ""
+msgstr "SMTP 설정 구성"
 
 #: ../../source/configure/smtp-email.rst:31
 msgid ""
 "In Mattermost go to **System Console > Authentication > Email**, and set "
 "**Allow Sign Up With Email**  to **true**."
 msgstr ""
+"Mattermost에서 **System Console > Authentication > Email** 로 이동하여 "
+"**Allow Sign Up With Email** 을 **true** 로 설정하세요."
 
 #: ../../source/configure/smtp-email.rst:33
 msgid ""
@@ -130,38 +157,42 @@ msgid ""
 "<configure/environment-configuration-settings:smtp>` documentation for "
 "details."
 msgstr ""
+"System Console에서 **Notifications > Email** 로 이동하여 SMTP 서비스에 맞게 Mattermost를 "
+"구성하세요. 자세한 내용은 :ref:`SMTP configuration "
+"<configure/environment-configuration-settings:smtp>` 문서를 참조하세요."
 
 #: ../../source/configure/smtp-email.rst:35
 msgid "Set **Send Email Notifications** to **true**."
-msgstr ""
+msgstr "**Send Email Notifications** 를 **true** 로 설정하세요."
 
 #: ../../source/configure/smtp-email.rst:36
 msgid ""
 "Set the **Notification Display Name** for the account sending "
 "notifications."
 msgstr ""
+"알림을 보내는 계정의 **Notification Display Name** 을 설정하세요."
 
 #: ../../source/configure/smtp-email.rst:37
 msgid ""
 "Set **Notification Email Address** for the email address used to send "
 "notifications."
-msgstr ""
+msgstr "알림을 보내는 데 사용할 이메일 주소로 **Notification Email Address** 를 설정하세요."
 
 #: ../../source/configure/smtp-email.rst:38
 msgid ""
 "Enter the **SMTP Username**, **SMTP Password**, **SMTP Server**, and "
 "**SMTP Port** you copied from initial setup."
-msgstr ""
+msgstr "초기 설정에서 복사한 **SMTP Username**, **SMTP Password**, **SMTP Server**, **SMTP Port** 를 입력하세요."
 
 #: ../../source/configure/smtp-email.rst:39
 msgid ""
 "We recommend setting **Connection Security**: to **TLS (Recommended)** to"
 " encrypt communication between Mattermost and your SMTP service."
-msgstr ""
+msgstr "Mattermost와 SMTP 서비스 간의 통신을 암호화하기 위해 **Connection Security** 를 **TLS (Recommended)** 로 설정하는 것을 권장합니다."
 
 #: ../../source/configure/smtp-email.rst:41
 msgid "Select **Save**."
-msgstr ""
+msgstr "**Save** 를 선택하세요."
 
 #: ../../source/configure/smtp-email.rst:42
 msgid ""
@@ -171,80 +202,84 @@ msgid ""
 "about why it failed in the System Console. See the `check Mattermost logs"
 " <#troubleshooting-using-logs>`__ section below for details."
 msgstr ""
+"**Connection Security** 아래에서 **Test Connection** 을 선택하세요. Mattermost는 이메일을 "
+"보내서 SMTP 서비스에 대한 연결이 성공적인지 확인합니다. 테스트가 실패하면 Mattermost는 "
+"System Console에서 실패 이유에 대한 세부 정보를 제공합니다. 자세한 내용은 아래의 "
+"`check Mattermost logs <#troubleshooting-using-logs>`__ 섹션을 참조하세요."
 
 #: ../../source/configure/smtp-email.rst:45
 msgid "Sample SMTP settings"
-msgstr ""
+msgstr "SMTP 설정 예시"
 
 #: ../../source/configure/smtp-email.rst:49
 msgid "Set **SMTP Username** to **[YOUR_SMTP_USERNAME]**"
-msgstr ""
+msgstr "**SMTP Username** 을 **[YOUR_SMTP_USERNAME]** 로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:50
 msgid "Set **SMTP Password** to **[YOUR_SMTP_PASSWORD]**"
-msgstr ""
+msgstr "**SMTP Password** 를 **[YOUR_SMTP_PASSWORD]** 로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:51
 msgid "Set **SMTP Server** to **email-smtp.us-east-1.amazonaws.com**"
-msgstr ""
+msgstr "**SMTP Server** 를 **email-smtp.us-east-1.amazonaws.com** 으로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:52
 msgid "Set **SMTP Port** to **465**"
-msgstr ""
+msgstr "**SMTP Port** 를 **465** 로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:53
 msgid "Set **Connection Security** to **TLS**"
-msgstr ""
+msgstr "**Connection Security** 를 **TLS** 로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:57
 msgid "Make sure Postfix is installed on the same machine as Mattermost."
-msgstr ""
+msgstr "Postfix가 Mattermost와 동일한 시스템에 설치되어 있는지 확인하세요."
 
 #: ../../source/configure/smtp-email.rst:59
 msgid "Set **SMTP Username** to **(empty)**"
-msgstr ""
+msgstr "**SMTP Username** 을 **(empty)** 로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:60
 msgid "Set **SMTP Password** to **(empty)**"
-msgstr ""
+msgstr "**SMTP Password** 를 **(empty)** 로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:61
 msgid "Set **SMTP Server** to **localhost**"
-msgstr ""
+msgstr "**SMTP Server** 를 **localhost** 로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:62
 msgid "Set **SMTP Port** to **25**"
-msgstr ""
+msgstr "**SMTP Port** 를 **25** 로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:63
 msgid "Set **Connection Security** to **(empty)**"
-msgstr ""
+msgstr "**Connection Security** 를 **(empty)** 로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:67
 msgid "Set **SMTP Username** to **your\\_email@gmail.com**"
-msgstr ""
+msgstr "**SMTP Username** 을 **your\\_email@gmail.com** 로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:68
 #: ../../source/configure/smtp-email.rst:80
 #: ../../source/configure/smtp-email.rst:88
 msgid "Set **SMTP Password** to **your\\_password**"
-msgstr ""
+msgstr "**SMTP Password** 를 **your\\_password** 로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:69
 msgid "Set **SMTP Server** to **smtp.gmail.com**"
-msgstr ""
+msgstr "**SMTP Server** 를 **smtp.gmail.com** 으로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:70
 #: ../../source/configure/smtp-email.rst:82
 #: ../../source/configure/smtp-email.rst:90
 msgid "Set **SMTP Port** to **587**"
-msgstr ""
+msgstr "**SMTP Port** 를 **587** 로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:71
 #: ../../source/configure/smtp-email.rst:83
 #: ../../source/configure/smtp-email.rst:91
 msgid "Set **Connection Security** to **STARTTLS**"
-msgstr ""
+msgstr "**Connection Security** 를 **STARTTLS** 로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:75
 msgid ""
@@ -254,37 +289,42 @@ msgid ""
 "<https://support.google.com/a/answer/2956491?hl=en>`_ for the required "
 "steps."
 msgstr ""
+"SMTP 이메일이 Google 서버를 통해 릴레이되도록 하려면 Google에서 추가 구성이 필요합니다. "
+"필요한 단계는 `SMTP relay: Route outgoing non-Gmail messages through Google "
+"<https://support.google.com/a/answer/2956491?hl=en>`_ 를 참조하세요."
 
 #: ../../source/configure/smtp-email.rst:79
 #: ../../source/configure/smtp-email.rst:87
 msgid "Set **SMTP Username** to **your\\_email@hotmail.com**"
-msgstr ""
+msgstr "**SMTP Username** 을 **your\\_email@hotmail.com** 로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:81
 msgid "Set **SMTP Server** to **smtp-mail.outlook.com**"
-msgstr ""
+msgstr "**SMTP Server** 를 **smtp-mail.outlook.com** 으로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:89
 msgid "Set **SMTP Server Name** to **smtp.office365.com**"
-msgstr ""
+msgstr "**SMTP Server Name** 을 **smtp.office365.com** 으로 설정하세요"
 
 #: ../../source/configure/smtp-email.rst:94
 msgid "Troubleshooting SMTP"
-msgstr ""
+msgstr "SMTP 문제 해결"
 
 #: ../../source/configure/smtp-email.rst:97
 msgid "TLS/STARTTLS requirements"
-msgstr ""
+msgstr "TLS/STARTTLS 요구사항"
 
 #: ../../source/configure/smtp-email.rst:99
 msgid ""
 "If you fill in **SMTP Username** and **SMTP Password** then you must set "
 "**Connection Security** to **TLS** or to **STARTTLS**"
 msgstr ""
+"**SMTP Username** 과 **SMTP Password** 를 입력한 경우 **Connection Security** 를 "
+"**TLS** 또는 **STARTTLS** 로 설정해야 합니다"
 
 #: ../../source/configure/smtp-email.rst:102
 msgid "Troubleshooting using logs"
-msgstr ""
+msgstr "로그를 사용한 문제 해결"
 
 #: ../../source/configure/smtp-email.rst:104
 msgid ""
@@ -294,6 +334,10 @@ msgid ""
 "issue. Sometimes ISPs require nuanced setups for SMTP and error codes can"
 " hint at how to make the proper adjustments."
 msgstr ""
+"SMTP 설치에 문제가 있는 경우 Mattermost 팀 사이트에서 **System Console > Logs** 로 "
+"이동하여 설정과 관련된 오류 메시지를 확인하세요. 오류 코드를 검색하여 문제를 좁힐 수 "
+"있습니다. 때로는 ISP에서 SMTP에 대한 세부적인 설정이 필요하며 오류 코드가 적절한 "
+"조정 방법을 암시할 수 있습니다."
 
 #: ../../source/configure/smtp-email.rst:106
 msgid ""
@@ -301,10 +345,12 @@ msgid ""
 "search for ``554 5.7.1 error`` and ``Client host rejected: Access "
 "denied``."
 msgstr ""
+"예를 들어, **System Console > Logs** 에서 다음과 같은 오류가 표시되면 ``554 5.7.1 "
+"error`` 와 ``Client host rejected: Access denied`` 를 검색하세요."
 
 #: ../../source/configure/smtp-email.rst:113
 msgid "Checking your Notifications settings"
-msgstr ""
+msgstr "알림 설정 확인"
 
 #: ../../source/configure/smtp-email.rst:115
 msgid ""
@@ -317,10 +363,18 @@ msgid ""
 " and **Notification Reply-To Address**. Cloud administrators can't manage"
 " **Notification From Address** or **Notification Reply-To Address**."
 msgstr ""
+"자체 호스팅 Mattermost 배포의 System Console에서 SMTP 연결 테스트가 ``Connection "
+"unsuccessful: Failed to set the to address: 550 5.7.27 <test@example.com>`` "
+"메시지와 함께 실패하는 경우 **System Console > Site Configuration > "
+"Notifications** 로 이동하여 **Notification Display Name**, **Notification "
+"From Address**, **Support Email Address**, **Notification Reply-To Address** "
+"를 포함한 알림 설정이 올바르게 구성되었는지 확인하세요. 클라우드 관리자는 "
+"**Notification From Address** 또는 **Notification Reply-To Address** 를 "
+"관리할 수 없습니다."
 
 #: ../../source/configure/smtp-email.rst:118
 msgid "Checking your SMTP server is reachable"
-msgstr ""
+msgstr "SMTP 서버 연결 가능 여부 확인"
 
 #: ../../source/configure/smtp-email.rst:120
 msgid ""
@@ -330,24 +384,34 @@ msgid ""
 "you're using an earlier version than Exchange Server 2019, select your "
 "version from the left-hand navigation menu."
 msgstr ""
+"서버가 연결 가능한지 확인하기 위해 이메일 서비스에 Telnet을 시도하세요. 자세한 내용은 "
+"https://learn.microsoft.com/en-us/exchange/mail-flow/test-smtp-with-telnet?view=exchserver-2019 를 "
+"방문하세요. Exchange Server 2019보다 이전 버전을 사용 중인 경우 왼쪽 탐색 메뉴에서 "
+"해당 버전을 선택하세요."
 
 #: ../../source/configure/smtp-email.rst:121
 msgid ""
 "You must run the following commands from the same machine or virtual "
 "instance where ``mattermost/bin/mattermost`` is located."
 msgstr ""
+"``mattermost/bin/mattermost`` 가 있는 동일한 머신이나 가상 인스턴스에서 다음 명령어를 "
+"실행해야 합니다."
 
 #: ../../source/configure/smtp-email.rst:122
 msgid ""
 "Telnet to the email server with ``telnet mail.example.com 25``. If the "
 "command works you should see something like:"
 msgstr ""
+"``telnet mail.example.com 25`` 로 이메일 서버에 Telnet을 시도하세요. 명령어가 작동하면 "
+"다음과 같은 내용이 표시됩니다:"
 
 #: ../../source/configure/smtp-email.rst:130
 msgid ""
 "Then type something like ``HELO <your mail server domain>``. If the "
 "command works you should see something like:"
 msgstr ""
+"그런 다음 ``HELO <your mail server domain>`` 와 같은 내용을 입력하세요. 명령어가 "
+"작동하면 다음과 같은 내용이 표시됩니다:"
 
 #: ../../source/configure/smtp-email.rst:141
 msgid ""
@@ -355,6 +419,8 @@ msgid ""
 " need to use ``ping`` on those, or install Telnet yourself either "
 "directly or by modifying the Dockerfile."
 msgstr ""
+"Telnet은 공식 Mattermost Docker 이미지에 포함되어 있지 않으므로, 해당 이미지에서는 "
+"``ping`` 을 사용하거나 Dockerfile을 수정하여 직접 Telnet을 설치해야 합니다."
 
 #: ../../source/configure/smtp-email.rst:142
 msgid ""
@@ -363,4 +429,6 @@ msgid ""
 "reported errors, or `join the Mattermost user community for "
 "troubleshooting help <https://mattermost.com/community/>`_."
 msgstr ""
-
+"추가 도움이 필요하면 `문제 해결 포럼 <https://forum.mattermost.com/c/trouble-shoot/16>`_ 에서 "
+"이전에 보고된 오류를 검토하거나 `문제 해결을 위해 Mattermost 사용자 커뮤니티에 참여하세요 "
+"<https://mattermost.com/community/>`_."

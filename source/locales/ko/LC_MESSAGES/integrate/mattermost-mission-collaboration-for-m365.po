@@ -21,27 +21,30 @@ msgstr ""
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:2
 msgid "Connect Microsoft 365, Teams, and Outlook with Mattermost (Beta)"
-msgstr ""
+msgstr "Mattermost와 Microsoft 365, Teams 및 Outlook 연결하기 (베타)"
 
 #: ../../source/_static/badges/ent-cloud-selfhosted.rst:7
 msgid ""
 "|plans-img| Available on `Enterprise plans "
 "<https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img| `Enterprise 플랜 <https://mattermost.com/pricing/>`__ 에서 이용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/ent-cloud-selfhosted.rst:9
 msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
 msgstr ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ 및 `self-"
+"hosted <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:7
 msgid ""
@@ -50,14 +53,16 @@ msgid ""
 "and DevSecOps workflows in demanding environments, including air-gapped "
 "and classified networks."
 msgstr ""
+"Mattermost Mission Collaboration for Microsoft는 에어갭 및 분류된 네트워크를 포함한 까다로운 환경에서 "
+"임무 중심 조정, 명령 및 제어, 사고 대응, DevSecOps 워크플로우를 위한 Microsoft를 확장합니다."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:9
 msgid "This app is designed to work with Microsoft 365, Teams, and Outlook."
-msgstr ""
+msgstr "이 앱은 Microsoft 365, Teams 및 Outlook과 함께 작동하도록 설계되었습니다."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:12
 msgid "Deploy"
-msgstr ""
+msgstr "배포"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:14
 msgid ""
@@ -71,10 +76,15 @@ msgid ""
 "services. Then complete the following integration setup steps in the "
 "order listed below."
 msgstr ""
+"설정을 시작하기 전에 Mattermost와 M365를 통합하는 데 필요한 3가지 구성 요소인 `Azure App registration "
+"<#register-an-ms-teams-app-in-azure>`__, `Microsoft Teams App installation "
+"<#mattermost-plugin-setup>`__, `Mattermost plugin configuration <#install-mattermost-in-microsoft-"
+"teams>`__ 에 대해 이 섹션을 검토하세요. 각 구성 요소는 Mattermost와 Microsoft 365 서비스 간의 "
+"원활한 통신과 협업을 보장하는 데 중요한 역할을 합니다. 그런 다음 아래에 나열된 순서대로 통합 설정 단계를 완료하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:17
 msgid "Register an MS Teams app in Azure"
-msgstr ""
+msgstr "Azure에서 MS Teams 앱 등록하기"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:19
 msgid ""
@@ -84,36 +94,38 @@ msgid ""
 "connectivity. The **Azure App** is responsible for authentication and "
 "managing permissions."
 msgstr ""
+"Mattermost와 M365 서비스 간의 안전한 인증 및 권한 부여를 활성화하려면 Microsoft Azure에 애플리케이션을 등록해야 합니다. "
+"이 앱 등록은 권한과 연결성을 위한 다리 역할을 합니다. **Azure App** 은 인증과 권한 관리를 담당합니다."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:21
 msgid ""
 "Sign in to the `Azure portal <https://portal.azure.com/>`_ using an admin"
 " Azure account."
-msgstr ""
+msgstr "관리자 Azure 계정을 사용하여 `Azure portal <https://portal.azure.com/>`_ 에 로그인하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:23
 msgid "Go to your **Azure Portal > Microsoft Entra ID**."
-msgstr ""
+msgstr "**Azure Portal > Microsoft Entra ID** 로 이동하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:25
 msgid "Go to **App registrations**."
-msgstr ""
+msgstr "**App registrations** 로 이동하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:27
 msgid "Create a new app registration by selecting **Add > App registration**:"
-msgstr ""
+msgstr "**Add > App registration** 을 선택하여 새 앱 등록을 생성하세요:"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:29
 msgid "Give it a name"
-msgstr ""
+msgstr "이름을 지정하세요"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:30
 msgid "Accounts in this organizational directory only (single tenant)"
-msgstr ""
+msgstr "이 조직 디렉토리의 계정만 (단일 테넌트)"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:31
 msgid "No redirect URIs"
-msgstr ""
+msgstr "리디렉션 URI 없음"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:33
 msgid ""
@@ -121,6 +133,8 @@ msgid ""
 "ID** and **Directory (tenant) ID** values. You'll need those later to "
 "configure the plugin."
 msgstr ""
+"새로 생성한 애플리케이션으로 이동하여 **Application (client) ID**와 **Directory (tenant) ID** 값을 "
+"복사하세요. 플러그인을 구성할 때 이 값들이 필요합니다."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:35
 msgid ""
@@ -128,24 +142,26 @@ msgid ""
 " and Directory (tenant) ID values. You'll need those later to configure "
 "the plugin."
 msgstr ""
+"새로 생성한 애플리케이션으로 이동하여 Application (client) ID와 Directory (tenant) ID 값을 복사하세요. "
+"플러그인을 구성할 때 이 값들이 필요합니다."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:38
 msgid ""
 "Go to **Certificates and secrets** to generate a new client secret. Make "
 "a copy of the secret value, as it will only be shown once. You'll need "
 "this value to configure the plugin."
-msgstr ""
+msgstr "새 클라이언트 시크릿을 생성하려면 **Certificates and secrets** 로 이동하세요. 시크릿 값은 한 번만 표시되므로 복사해두세요. 플러그인을 구성할 때 이 값이 필요합니다."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:40
 msgid ""
 "Go to Certificates and secrets to generate a new client secret. Make a "
 "copy of the secret value, as it will only be shown once. You'll need this"
 " value to configure the plugin."
-msgstr ""
+msgstr "새 클라이언트 시크릿을 생성하려면 Certificates and secrets로 이동하세요. 시크릿 값은 한 번만 표시되므로 복사해두세요. 플러그인을 구성할 때 이 값이 필요합니다."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:43
 msgid "Go to **API Permissions** to complete the following steps:"
-msgstr ""
+msgstr "다음 단계를 완료하려면 **API Permissions** 로 이동하세요:"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:45
 msgid ""
@@ -153,7 +169,8 @@ msgid ""
 "`Microsoft SSO documentation <https://learn.microsoft.com/en-"
 "us/microsoftteams/platform/tabs/how-to/authentication/tab-sso-register-"
 "aad#enable-sso-in-microsoft-entra-id>`_ for details."
-msgstr ""
+msgstr "``User.Read`` **delegated** 권한이 추가되었는지 확인하세요. 자세한 내용은 "
+"`Microsoft SSO 문서 <https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/tab-sso-register-aad#enable-sso-in-microsoft-entra-id>`_ 를 참조하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:46
 msgid ""
@@ -161,7 +178,8 @@ msgid ""
 "notifications. See the `Microsoft notifications documentation "
 "<https://learn.microsoft.com/en-us/graph/teams-send-"
 "activityfeednotifications?tabs=desktop%2Chttp>`_ for details.`"
-msgstr ""
+msgstr "알림을 위해 ``TeamsActivity.Send`` **application** 권한을 추가하세요. 자세한 내용은 "
+"`Microsoft 알림 문서 <https://learn.microsoft.com/en-us/graph/teams-send-activityfeednotifications?tabs=desktop%2Chttp>`_ 를 참조하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:47
 msgid ""
@@ -169,71 +187,73 @@ msgid ""
 "notifications. See the `Microsoft List teamsApp documentation "
 "<https://learn.microsoft.com/en-us/graph/api/appcatalogs-list-"
 "teamsapps?view=graph-rest-1.0&tabs=http>`_ for details."
-msgstr ""
+msgstr "알림을 위해 ``AppCatalog.Read.All`` **application** 권한을 추가하세요. 자세한 내용은 "
+"`Microsoft List teamsApp 문서 <https://learn.microsoft.com/en-us/graph/api/appcatalogs-list-teamsapps?view=graph-rest-1.0&tabs=http>`_ 를 참조하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:48
 msgid ""
 "Grant admin consent for the default directory to prevent users from "
 "seeing the consent prompt."
-msgstr ""
+msgstr "사용자가 동의 프롬프트를 보지 않도록 기본 디렉토리에 대한 관리자 동의를 부여하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:50
 msgid "Go to **Expose an API** to complete the following steps:"
-msgstr ""
+msgstr "다음 단계를 완료하려면 **Expose an API** 로 이동하세요:"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:52
 msgid ""
 "Edit the ``_Application ID URI_`` to ``api://{{Mattermost Site URL "
 "Hostname}}/{{Application (client) ID}}``."
-msgstr ""
+msgstr "``_Application ID URI_`` 를 ``api://{{Mattermost Site URL Hostname}}/{{Application (client) ID}}`` 로 편집하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:53
 msgid ""
 "Add the ``access_as_user`` scope by selecting **Add a scope** and setting"
 " the following values:"
-msgstr ""
+msgstr "**Add a scope** 를 선택하고 다음 값을 설정하여 ``access_as_user`` 범위를 추가하세요:"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:55
 msgid "**Scope name**: ``access_as_user``."
-msgstr ""
+msgstr "**범위 이름**: ``access_as_user``."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:56
 msgid "**Who can consent?** Admins and users"
-msgstr ""
+msgstr "**누가 동의할 수 있나요?** 관리자 및 사용자"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:57
 msgid ""
 "Provide a display name and description, as well as a user consent display"
 " name and description. These will be shown to end users on the consent "
 "screen. For example:"
-msgstr ""
+msgstr "표시 이름과 설명, 그리고 사용자 동의 표시 이름과 설명을 제공하세요. 이는 동의 화면에서 최종 사용자에게 표시됩니다. 예시:"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:59
 msgid "**Display name**: Log in to Mattermost"
-msgstr ""
+msgstr "**표시 이름**: Mattermost에 로그인"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:60
 msgid ""
 "**Description**: Used to allow O365 users to log in to the Mattermost "
 "application"
-msgstr ""
+msgstr "**설명**: O365 사용자가 Mattermost 애플리케이션에 로그인할 수 있도록 허용하는 데 사용됩니다"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:61
 msgid "**User consent display name**: Log in to Mattermost"
-msgstr ""
+msgstr "**사용자 동의 표시 이름**: Mattermost에 로그인"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:62
 msgid ""
 "**User consent description**: This permission is required to "
 "automatically log you in into Mattermost from Microsoft applications."
-msgstr ""
+msgstr "**사용자 동의 설명**: Microsoft 애플리케이션에서 Mattermost로 자동 로그인하기 위해 필요한 권한입니다."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:64
 msgid ""
 "See the `Microsoft API scope documentation <https://learn.microsoft.com"
 "/en-us/microsoftteams/platform/tabs/how-to/authentication/tab-sso-"
 "register-aad#to-configure-api-scope>`_ for details."
-msgstr ""
+msgstr "자세한 내용은 "
+"`Microsoft API 범위 문서 <https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/tab-sso-register-aad#to-configure-api-scope>`_ 를 참조하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:66
 msgid ""
@@ -241,37 +261,38 @@ msgid ""
 "authorized client documentation <https://learn.microsoft.com/en-"
 "us/microsoftteams/platform/tabs/how-to/authentication/tab-sso-register-"
 "aad#to-configure-authorized-client-application>`_ for details."
-msgstr ""
+msgstr "범위에 대한 인증된 클라이언트 애플리케이션을 추가하세요. 자세한 내용은 "
+"`Microsoft 인증된 클라이언트 문서 <https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/tab-sso-register-aad#to-configure-authorized-client-application>`_ 를 참조하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:68
 msgid ""
 "Select ``_Add a client application_``. **You must add a client "
 "application for each target Microsoft application**:"
-msgstr ""
+msgstr "``_클라이언트 애플리케이션 추가_`` 를 선택하세요. **각 대상 Microsoft 애플리케이션에 대해 클라이언트 애플리케이션을 추가해야 합니다**:"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:70
 msgid "**Authorised scopes**: The one we just created"
-msgstr ""
+msgstr "**인증된 범위**: 방금 생성한 범위"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:72
 msgid "**Client ID**:"
-msgstr ""
+msgstr "**클라이언트 ID**:"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:74
 msgid "**Teams web**: 5e3ce6c0-2b1f-4285-8d4b-75ee78787346"
-msgstr ""
+msgstr "**Teams 웹**: 5e3ce6c0-2b1f-4285-8d4b-75ee78787346"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:75
 msgid "**Teams app**: 1fec8e78-bce4-4aaf-ab1b-5451cc387264"
-msgstr ""
+msgstr "**Teams 앱**: 1fec8e78-bce4-4aaf-ab1b-5451cc387264"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:76
 msgid "**Outlook desktop** : d3590ed6-52b3-4102-aeff-aad2292ab01c"
-msgstr ""
+msgstr "**Outlook 데스크톱**: d3590ed6-52b3-4102-aeff-aad2292ab01c"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:77
 msgid "**Outlook web**     : bc59ab01-8403-45c6-8796-ac3ef710b3e3"
-msgstr ""
+msgstr "**Outlook 웹**: bc59ab01-8403-45c6-8796-ac3ef710b3e3"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:80
 #, python-format
@@ -281,11 +302,12 @@ msgid ""
 "<https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-"
 "to/authentication/tab-sso-register-aad#to-configure-authorized-client-"
 "application:~:text=Select%20one%20of%20the%20following%20client%20IDs%3A>`_."
-msgstr ""
+msgstr "더 많은 Microsoft 애플리케이션에서 애플리케이션을 사용할 수 있게 하려면 "
+"`다음 표 <https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/tab-sso-register-aad#to-configure-authorized-client-application:~:text=Select%20one%20of%20the%20following%20client%20IDs%3A>`_ 에서 클라이언트 애플리케이션을 계속 추가하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:83
 msgid "Configure the Mattermost plugin"
-msgstr ""
+msgstr "Mattermost 플러그인 구성"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:85
 msgid ""
@@ -293,70 +315,71 @@ msgid ""
 "facilitates collaboration between Mattermost and Teams, providing a tab "
 "containing Mattermost within the Teams client. The **Teams App** is "
 "installed within Microsoft Teams to enable collaboration via a tab."
-msgstr ""
+msgstr "Microsoft Teams 앱은 Microsoft Teams에 설치됩니다. 이 앱은 Teams 클라이언트 내에 Mattermost를 포함하는 탭을 제공하여 Mattermost와 Teams 간의 협업을 용이하게 합니다. "
+"**Teams 앱** 은 탭을 통한 협업을 가능하게 하기 위해 Microsoft Teams 내에 설치됩니다."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:87
 msgid ""
 "Download the `latest release of the plugin <https://github.com/mattermost"
 "/mattermost-plugin-msteams-devsecops/releases>`_."
-msgstr ""
+msgstr "`플러그인의 최신 릴리스 <https://github.com/mattermost/mattermost-plugin-msteams-devsecops/releases>`_ 를 다운로드하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:89
 msgid ""
 "Go to **System Console > Plugins > Plugin Management > Upload Plugin**, "
 "and upload the plugin binary you downloaded in the previous step."
-msgstr ""
+msgstr "**시스템 콘솔 > 플러그인 > 플러그인 관리 > 플러그인 업로드** 로 이동하여 이전 단계에서 다운로드한 플러그인 바이너리를 업로드하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:91
 msgid ""
 "Go to **System Console > Plugins > Plugin Management**. In the "
 "**Installed Plugins** section, scroll to **MSTeams DevSecOps**."
-msgstr ""
+msgstr "**시스템 콘솔 > 플러그인 > 플러그인 관리** 로 이동하세요. **설치된 플러그인** 섹션에서 **MSTeams DevSecOps** 로 스크롤하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:93
 msgid "Enter an **Application Version**. You can start with ``1.0.0``."
-msgstr ""
+msgstr "**애플리케이션 버전** 을 입력하세요. ``1.0.0`` 으로 시작할 수 있습니다."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:95
 msgid ""
 "Generate an Application ID in `version 4 UUID format "
 "<https://www.uuidgenerator.net/>`_ and enter it in the **Application ID**"
 " field."
-msgstr ""
+msgstr "`버전 4 UUID 형식 <https://www.uuidgenerator.net/>`_ 으로 애플리케이션 ID를 생성하고 **애플리케이션 ID** 필드에 입력하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:97
 msgid ""
 "Enter the values you noted earlier in the appropriate fields, including "
 "**Directory (tenant) ID**, **Application (client) ID**, and **Client "
 "Secret**."
-msgstr ""
+msgstr "**디렉토리(테넌트) ID**, **애플리케이션(클라이언트) ID**, **클라이언트 시크릿** 을 포함한 적절한 필드에 이전에 기록한 값을 입력하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:99
 msgid ""
 "In the Mattermost System Console, enter the Directory (tenant) ID, "
 "Application (client) ID, and Client Secret for the plugin."
-msgstr ""
+msgstr "Mattermost 시스템 콘솔에서 플러그인용 디렉토리(테넌트) ID, 애플리케이션(클라이언트) ID, 클라이언트 시크릿을 입력하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:102
 msgid ""
 "Enter an **Application Display Name** to define how your application is "
 "named in the MS Teams App Store."
-msgstr ""
+msgstr "MS Teams 앱 스토어에서 애플리케이션이 표시되는 이름을 정의하기 위해 **애플리케이션 표시 이름** 을 입력하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:104
 msgid "Save the changes and enable the plugin."
-msgstr ""
+msgstr "변경사항을 저장하고 플러그인을 활성화하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:106
 msgid ""
 "Select the **Download Manifest** button to generate the MS Teams "
 "application as a ZIP file, containing the app manifest. Save this file as"
 " it will be used in the next steps."
-msgstr ""
+msgstr "앱 매니페스트가 포함된 ZIP 파일로 MS Teams 애플리케이션을 생성하려면 **매니페스트 다운로드** 버튼을 선택하세요. 이 파일은 다음 단계에서 사용되므로 저장하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:109
 msgid "Install Mattermost in Microsoft Teams"
-msgstr ""
+msgstr "Microsoft Teams에 Mattermost 설치하기"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:111
 msgid ""
@@ -365,41 +388,42 @@ msgid ""
 "integration hub on the Mattermost side, connecting to both the Azure App "
 "and the Teams App. The **Mattermost Plugin** is the configuration point "
 "within Mattermost that unifies the integration."
-msgstr ""
+msgstr "Mattermost 내에서 Microsoft용 Mattermost Mission Collaboration 플러그인을 설치하고 구성해야 합니다. "
+"이 플러그인은 Mattermost 측의 통합 허브 역할을 하며 Azure 앱과 Teams 앱 모두에 연결됩니다. **Mattermost 플러그인** 은 통합을 통합하는 Mattermost 내의 구성 지점입니다."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:113
 msgid ""
 "Go to the `Microsoft Teams admin center "
 "<https://admin.teams.microsoft.com/dashboard>`_."
-msgstr ""
+msgstr "`Microsoft Teams 관리 센터 <https://admin.teams.microsoft.com/dashboard>`_ 로 이동하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:115
 msgid "Go to **Teams apps > Manage apps**."
-msgstr ""
+msgstr "**Teams 앱 > 앱 관리** 로 이동하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:117
 msgid ""
 "In MS Teams, go to Manage Apps to install the Mattermost Mission "
 "Collaboration for Microsoft 365 app."
-msgstr ""
+msgstr "MS Teams에서 앱 관리를 통해 Microsoft 365용 Mattermost Mission Collaboration 앱을 설치하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:120
 msgid ""
 "Go to **Actions > Upload new app** located in the upper-right corner of "
 "the Manage apps page."
-msgstr ""
+msgstr "앱 관리 페이지의 오른쪽 상단에 있는 **작업 > 새 앱 업로드** 로 이동하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:122
 msgid "Select **Upload** and select the ZIP file saved previously."
-msgstr ""
+msgstr "**업로드** 를 선택하고 이전에 저장한 ZIP 파일을 선택하세요."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:124
 msgid "Done! Your application is now available to users."
-msgstr ""
+msgstr "완료! 이제 애플리케이션을 사용자들이 사용할 수 있습니다."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:127
 msgid "Use"
-msgstr ""
+msgstr "사용"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:129
 msgid ""
@@ -409,6 +433,9 @@ msgid ""
 "authentication methods (LDAP, SAML, email/password, OpenID) can "
 "additionally be used for Mattermost."
 msgstr ""
+"이 플러그인은 Microsoft Teams에 로그인할 때 자동 인증을 지원합니다. 두 플랫폼의 이메일 주소가 정확히 일치하면 "
+"Teams 인증이 자동으로 사용자를 Mattermost에 로그인시킵니다. 일반 인증 방법(LDAP, SAML, 이메일/비밀번호, "
+"OpenID)도 Mattermost에 추가로 사용할 수 있습니다."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:131
 msgid ""
@@ -419,20 +446,24 @@ msgid ""
 "can pre-distribute the Mattermost desktop app using Windows MSI or the "
 "mobile app via EMM."
 msgstr ""
+"에어갭 환경이나 비즈니스 연속성 중단 시 Microsoft Teams에 참여할 수 없는 사용자는 별도의 앱(예: 새 브라우저 창)에서 "
+"Mattermost를 열어 Mattermost 자격 증명을 사용하여 계속 Mattermost에 접근할 수 있습니다. 또는 Mattermost "
+"관리자가 Windows MSI를 사용하여 Mattermost 데스크톱 앱을 사전 배포하거나 EMM을 통해 모바일 앱을 배포할 수 "
+"있습니다."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:134
 msgid "FAQ"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:137
 msgid "Get help"
-msgstr ""
+msgstr "도움 받기"
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:139
 msgid ""
 "Mattermost commercial customers can open a `Mattermost support case "
 "<https://support.mattermost.com/hc/en-us/requests/new>`_."
-msgstr ""
+msgstr "Mattermost 상용 고객은 `Mattermost 지원 케이스 <https://support.mattermost.com/hc/en-us/requests/new>`_ 를 열 수 있습니다."
 
 #: ../../source/integrate/mattermost-mission-collaboration-for-m365.rst:141
 msgid ""
@@ -442,6 +473,8 @@ msgid ""
 "`Mattermost Community Server <https://community.mattermost.com/>`_ for "
 "assistance."
 msgstr ""
+"질문, 피드백 및 도움이 필요하시면 `Mattermost 커뮤니티 서버 <https://community.mattermost.com/>`_ 의 "
+"공개 `통합 및 앱 채널 <https://community.mattermost.com/core/channels/integrations>`_ 에 참여하세요."
 
 #~ msgid "Mattermost Mission Collaboration for Microsoft 365 (Beta)"
 #~ msgstr ""

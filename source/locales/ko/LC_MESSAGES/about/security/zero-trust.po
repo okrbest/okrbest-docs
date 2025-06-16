@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/about/security/zero-trust.rst:2
 msgid "Zero Trust with Mattermost"
-msgstr ""
+msgstr "Mattermost의 제로 트러스트"
 
 #: ../../source/about/security/zero-trust.rst:4
 msgid ""
 "Mattermost helps organizations adopt and implement Zero Trust principles "
 "to safeguard their mission-critical communications and collaboration."
 msgstr ""
+"Mattermost는 조직이 핵심적인 커뮤니케이션과 협업을 보호하기 위해 제로 트러스트 원칙을 채택하고 "
+"구현하는 데 도움을 줍니다."
 
 #: ../../source/about/security/zero-trust.rst:6
 msgid ""
@@ -36,6 +38,8 @@ msgid ""
 " governance processes like incident response or data lifecycle "
 "management."
 msgstr ""
+"보안 팀을 위해 Mattermost의 제로 트러스트 우선 접근 방식은 사고 대응이나 데이터 수명 주기 관리와 "
+"같은 핵심 거버넌스 프로세스를 자동화하여 조직의 위험 정책을 지속적으로 준수하도록 보장합니다."
 
 #: ../../source/about/security/zero-trust.rst:8
 msgid ""
@@ -44,6 +48,9 @@ msgid ""
 " offering customizable, secure solutions that protect sensitive "
 "communication workflows from both internal and external risks."
 msgstr ""
+"기존 보안 접근 방식과 달리 제로 트러스트는 모든 사용자와 시스템이 잠재적 위협일 수 있다고 가정합니다. "
+"Mattermost는 민감한 커뮤니케이션 워크플로우를 내부 및 외부 위험으로부터 보호하는 맞춤형 보안 "
+"솔루션을 제공하여 이 패러다임을 구현합니다."
 
 #: ../../source/about/security/zero-trust.rst:10
 msgid ""
@@ -57,16 +64,24 @@ msgid ""
 "management>`__, and `Incident response <#incident-response>`__. Links to "
 "detailed documentation resources are provided below."
 msgstr ""
+"이 문서는 다양한 규모의 조직을 위한 Mattermost의 제로 트러스트 핵심 원칙 지원 방식을 설명합니다. "
+"여기에는 `Identity and access management <#identity-and-access-management>`__, "
+"`Continuous monitoring <#continuous-monitoring>`__, `Deployment and host control "
+"<#deployment-and-host-control>`__, `Encryption <#encryption>`__, `Micro-"
+"segmentation <#micro-segmentation>`__, `Multi-factor authentication "
+"<#multi-factor-authentication-mfa>`__, `Data management <#data-"
+"management>`__, `Incident response <#incident-response>`__ 가 포함됩니다. "
+"자세한 문서 리소스 링크는 아래에 제공됩니다."
 
 #: ../../source/about/security/zero-trust.rst:13
 msgid "Identity and access management"
-msgstr ""
+msgstr "ID 및 액세스 관리"
 
 #: ../../source/about/security/zero-trust.rst:15
 msgid ""
 "Mattermost integrates seamlessly with enterprise identity providers "
 "(IdPs), enabling strong identity verification and strict access control."
-msgstr ""
+msgstr "Mattermost는 강력한 ID 검증과 엄격한 액세스 제어를 가능하게 하는 기업용 ID 제공업체(IdPs)와 원활하게 통합됩니다."
 
 #: ../../source/about/security/zero-trust.rst:17
 msgid ""
@@ -74,6 +89,8 @@ msgid ""
 " least-privilege access via roles and groups, Mattermost ensures that "
 "only verified individuals gain access to the platform and its resources:"
 msgstr ""
+"아래에 나열된 보안 ID 메커니즘 중 하나를 사용하고 역할 및 그룹을 통해 최소 권한 액세스를 적용함으로써, "
+"Mattermost는 검증된 개인만이 플랫폼과 그 리소스에 접근할 수 있도록 보장합니다:"
 
 #: ../../source/about/security/zero-trust.rst:19
 msgid ""
@@ -81,6 +98,8 @@ msgid ""
 "seamless Single Sign-On, ensuring centralized authentication to "
 "continuously enforce user verification."
 msgstr ""
+"`SAML <https://docs.mattermost.com/onboard/sso-saml.html>`_: 원활한 Single Sign-On을 "
+"활성화하여 중앙 집중식 인증을 통해 사용자 검증을 지속적으로 적용합니다."
 
 #: ../../source/about/security/zero-trust.rst:20
 msgid ""
@@ -88,6 +107,8 @@ msgid ""
 "integration with enterprise directories to tightly control user access, "
 "adhering to granular identity verification."
 msgstr ""
+"`LDAP <https://docs.mattermost.com/onboard/ad-ldap.html>`_: 세분화된 ID 검증을 준수하면서 "
+"사용자 액세스를 엄격하게 제어하기 위해 기업 디렉토리와의 통합을 용이하게 합니다."
 
 #: ../../source/about/security/zero-trust.rst:21
 msgid ""
@@ -96,6 +117,9 @@ msgid ""
 "standards-based user authentication to verify identities and enforce "
 "secure access."
 msgstr ""
+"`OpenID Connect <https://docs.mattermost.com/configure/authentication-"
+"configuration-settings.html#openid-connect>`_: ID를 검증하고 보안 액세스를 적용하기 위한 "
+"안전하고 표준 기반의 사용자 인증을 제공합니다."
 
 #: ../../source/about/security/zero-trust.rst:22
 msgid ""
@@ -107,12 +131,17 @@ msgid ""
 " session policies, Mattermost mitigates the risk of stolen session tokens"
 " or extended unauthorized access."
 msgstr ""
+"`Session Management <https://docs.mattermost.com/configure/environment-"
+"configuration-settings.html#session-lengths>`_: 세션 길이를 제어하고 비활성 상태 또는 정책 "
+"위반을 기반으로 세션을 자동으로 취소하여 지속적인 ID 검증을 보장함으로써 지속적인 인증을 강화합니다. "
+"세션 수명을 제한하고 엄격한 세션 정책을 적용함으로써 Mattermost는 세션 토큰 도난 또는 장기간의 "
+"무단 액세스 위험을 완화합니다."
 
 #: ../../source/about/security/zero-trust.rst:24
 msgid ""
 "Authorized users can seamlessly be added and removed from channels "
 "utilizing the native AD/LDAP integration based on group memberships:"
-msgstr ""
+msgstr "그룹 멤버십을 기반으로 하는 네이티브 AD/LDAP 통합을 활용하여 인증된 사용자를 채널에 원활하게 추가하고 제거할 수 있습니다:"
 
 #: ../../source/about/security/zero-trust.rst:26
 msgid ""
@@ -121,10 +150,13 @@ msgid ""
 " control by dynamically syncing with organizational directories to "
 "minimize risks and enforce policies."
 msgstr ""
+"`LDAP Synchronized User Groups <https://docs.mattermost.com/onboard/ad-"
+"ldap-groups-synchronization.html>`_: 조직 디렉토리와 동적으로 동기화하여 위험을 최소화하고 "
+"정책을 적용함으로써 사용자 관리 및 액세스 제어를 자동화합니다."
 
 #: ../../source/about/security/zero-trust.rst:29
 msgid "Continuous monitoring"
-msgstr ""
+msgstr "지속적인 모니터링"
 
 #: ../../source/about/security/zero-trust.rst:31
 msgid ""
@@ -134,6 +166,9 @@ msgid ""
 "potential issues or breaches, delivering visibility into the activity "
 "across the platform."
 msgstr ""
+"Mattermost는 활동 모니터링, 의심스러운 행동 식별, 세션 관리 및 실시간 사고 대응을 위한 도구를 "
+"제공합니다. 감사 추적 및 성능 모니터링은 잠재적인 문제나 침해를 사전에 감지하여 플랫폼 전반의 "
+"활동에 대한 가시성을 제공합니다."
 
 #: ../../source/about/security/zero-trust.rst:33
 msgid ""
@@ -143,6 +178,10 @@ msgid ""
 "compromised accounts or insider threats, or responding to unusual file-"
 "sharing activity within sensitive channels."
 msgstr ""
+"`Audit Logging <https://docs.mattermost.com/manage/logging.html>`_: "
+"침해된 계정이나 내부자 위협으로부터의 비정상적인 행동 감지 또는 민감한 채널 내의 비정상적인 "
+"파일 공유 활동에 대응하는 등 실시간 이상 감지 사용 사례를 모니터링하고 식별하기 위한 상세 "
+"활동 로그를 추적합니다."
 
 #: ../../source/about/security/zero-trust.rst:34
 msgid ""
@@ -151,6 +190,9 @@ msgid ""
 "monitoring within existing security systems to detect and respond to "
 "lateral movement threats or policy violations consistently."
 msgstr ""
+"`SIEM Integrations "
+"<https://developers.mattermost.com/integrate/webhooks/>`_: 기존 보안 시스템 내에서 "
+"모니터링을 간소화하여 측면 이동 위협이나 정책 위반을 일관되게 감지하고 대응합니다."
 
 #: ../../source/about/security/zero-trust.rst:35
 msgid ""
@@ -159,10 +201,13 @@ msgid ""
 "potential threats by analyzing system and user behaviors via proactive "
 "monitoring."
 msgstr ""
+"`Performance Monitoring <https://docs.mattermost.com/scale/deploy-"
+"prometheus-grafana-for-performance-monitoring.html>`_: 사전 모니터링을 통해 시스템 및 "
+"사용자 행동을 분석하여 잠재적 위협으로부터 보호합니다."
 
 #: ../../source/about/security/zero-trust.rst:38
 msgid "Deployment and host control"
-msgstr ""
+msgstr "배포 및 호스트 제어"
 
 #: ../../source/about/security/zero-trust.rst:40
 msgid ""
@@ -171,6 +216,9 @@ msgid ""
 "secure, efficient, and reliable deployment of applications while "
 "maintaining strict control over the hosting environment."
 msgstr ""
+"애플리케이션의 안전하고 효율적이며 신뢰할 수 있는 배포를 보장하면서 호스팅 환경에 대한 엄격한 "
+"제어를 유지함으로써 취약점, 다운타임 및 무단 수정의 위험을 최소화하기 위해 Mattermost를 "
+"안전하게 호스팅할 수 있는 유연성과 제어 기능을 제공합니다."
 
 #: ../../source/about/security/zero-trust.rst:42
 msgid ""
@@ -179,6 +227,9 @@ msgid ""
 "ensures scalable control for remote or hybrid teams operating across "
 "distributed environments:"
 msgstr ""
+"Mattermost의 자체 호스팅은 특수 보안 요구사항이 있는 온프레미스 시스템을 위한 맞춤형 구성을 "
+"활성화하고, 클라우드 IP 필터링은 분산 환경에서 운영되는 원격 또는 하이브리드 팀을 위한 "
+"확장 가능한 제어를 보장합니다:"
 
 #: ../../source/about/security/zero-trust.rst:44
 msgid ""
@@ -187,6 +238,7 @@ msgid ""
 "deployment environments, enabling organizations to implement custom Zero "
 "Trust security measures."
 msgstr ""
+":doc:`Self-hosting Mattermost </guides/deployment-guide>`: 조직이 맞춤형 제로 트러스트 보안 조치를 구현할 수 있도록 배포 환경에 대한 완전한 제어와 더 엄격한 데이터 주권 요구사항을 적용합니다."
 
 #: ../../source/about/security/zero-trust.rst:45
 msgid ""
@@ -195,10 +247,12 @@ msgid ""
 "platform access to trusted network ranges, enforcing an evaluation of "
 "every connection."
 msgstr ""
+":ref:`Cloud IP Filtering <manage/cloud-ip-filtering:cloud ip filtering>`: 신뢰할 수 없는 엔티티의 초기 접근을 방지하고, "
+"모든 연결에 대한 평가를 적용하여 플랫폼 접근을 신뢰할 수 있는 네트워크 범위로 제한합니다."
 
 #: ../../source/about/security/zero-trust.rst:48
 msgid "Encryption"
-msgstr ""
+msgstr "암호화"
 
 #: ../../source/about/security/zero-trust.rst:50
 msgid ""
@@ -208,6 +262,8 @@ msgid ""
 "permissions limit access to sensitive files and data to only authorized "
 "users."
 msgstr ""
+"암호화는 저장된 데이터와 전송 중인 데이터를 모두 보호하여 민감한 통신에 대한 종단 간 보안을 보장합니다. 암호화는 저장 및 전송 중 데이터 도난의 위험을 완화하고, "
+"세분화된 권한은 민감한 파일과 데이터에 대한 접근을 승인된 사용자로만 제한합니다."
 
 #: ../../source/about/security/zero-trust.rst:52
 msgid ""
@@ -215,6 +271,8 @@ msgid ""
 "options.html#database>`_: Protects user and organizational data at rest, "
 "safeguarding sensitive information from unauthorized access."
 msgstr ""
+"`Database Encryption <https://docs.mattermost.com/deploy/encryption-"
+"options.html#database>`_: 저장된 사용자 및 조직 데이터를 보호하여 민감한 정보를 무단 접근으로부터 안전하게 보호합니다."
 
 #: ../../source/about/security/zero-trust.rst:53
 msgid ""
@@ -222,6 +280,9 @@ msgid ""
 "<https://docs.mattermost.com/deploy/encryption-options.html#encryption-"
 "in-transit>`_: Secures data in transit by encrypting communications."
 msgstr ""
+"`Transport Layer Security (TLS) Encryption "
+"<https://docs.mattermost.com/deploy/encryption-options.html#encryption-"
+"in-transit>`_: 통신을 암호화하여 전송 중인 데이터를 보호합니다."
 
 #: ../../source/about/security/zero-trust.rst:54
 msgid ""
@@ -229,10 +290,12 @@ msgid ""
 "options.html#file-storage>`_: Ensures strict compliance through automated"
 " enforcement, protecting data integrity."
 msgstr ""
+"`Policy Enforcement <https://docs.mattermost.com/deploy/encryption-"
+"options.html#file-storage>`_: 자동화된 적용을 통해 엄격한 규정 준수를 보장하고 데이터 무결성을 보호합니다."
 
 #: ../../source/about/security/zero-trust.rst:57
 msgid "Micro-segmentation"
-msgstr ""
+msgstr "마이크로 세그멘테이션"
 
 #: ../../source/about/security/zero-trust.rst:59
 msgid ""
@@ -243,22 +306,24 @@ msgid ""
 "conversations, ensuring secure communication channels tailored to "
 "individual teams or missions."
 msgstr ""
+"공격 중 측면 이동을 최소화하기 위해 민감한 리소스를 분할하고 격리하는 것이 중요합니다. Mattermost는 조직 및 역할 기반 기능을 통해 마이크로 세그멘테이션을 지원합니다. "
+"마이크로 세그멘테이션을 통해 조직은 개별 팀이나 미션에 맞춤화된 안전한 통신 채널을 보장하면서 민감한 대화에 대한 접근을 제한할 수 있습니다."
 
 #: ../../source/about/security/zero-trust.rst:61
 msgid ""
 "To achieve comprehensive micro-segmentation, the following areas of "
 "Mattermost functionality play a critical role."
-msgstr ""
+msgstr "포괄적인 마이크로 세그멘테이션을 달성하기 위해 Mattermost 기능의 다음 영역이 중요한 역할을 합니다."
 
 #: ../../source/about/security/zero-trust.rst:64
 msgid "Access control and permissions"
-msgstr ""
+msgstr "접근 제어 및 권한"
 
 #: ../../source/about/security/zero-trust.rst:66
 msgid ""
 "Ensure precise and role-based access to sensitive resources in order to "
 "minimize the risk of unauthorized access and potential data breaches:"
-msgstr ""
+msgstr "무단 접근 및 잠재적인 데이터 침해의 위험을 최소화하기 위해 민감한 리소스에 대한 정확하고 역할 기반의 접근을 보장합니다:"
 
 #: ../../source/about/security/zero-trust.rst:68
 msgid ""
@@ -266,6 +331,8 @@ msgid ""
 "channel-members.html#advanced-access-controls>`_: Enforces specific "
 "permissions configurations to restrict access based on roles."
 msgstr ""
+"`Advanced Access Controls <https://docs.mattermost.com/manage/team-"
+"channel-members.html#advanced-access-controls>`_: 역할 기반으로 접근을 제한하는 특정 권한 구성을 적용합니다."
 
 #: ../../source/about/security/zero-trust.rst:69
 msgid ""
@@ -274,10 +341,12 @@ msgid ""
 "workflows, ensuring resources are available only to authorized team "
 "members."
 msgstr ""
+"`Playbook-Specific Permissions <https://docs.mattermost.com/repeatable-"
+"processes/share-and-collaborate.html>`_: 민감한 워크플로우에 대한 접근을 제어하여 리소스가 승인된 팀 구성원만 사용할 수 있도록 합니다."
 
 #: ../../source/about/security/zero-trust.rst:72
 msgid "Organizational design and user management"
-msgstr ""
+msgstr "조직 설계 및 사용자 관리"
 
 #: ../../source/about/security/zero-trust.rst:74
 msgid ""
@@ -285,6 +354,7 @@ msgid ""
 "identities, roles, and access workflows to ensure accountability, "
 "facilitate collaboration, and enforce security policies:"
 msgstr ""
+"책임감을 보장하고 협업을 촉진하며 보안 정책을 적용하기 위해 사용자 ID, 역할 및 액세스 워크플로우를 관리하는 구조화되고 확장 가능한 프레임워크를 구축합니다:"
 
 #: ../../source/about/security/zero-trust.rst:76
 msgid ""
@@ -293,6 +363,8 @@ msgid ""
 "fostering compartmentalization and limiting exposure to unauthorized "
 "users."
 msgstr ""
+"`Teams <https://docs.mattermost.com/collaborate/organize-using-"
+"teams.html>`_: 액세스와 협업의 분할을 가능하게 하여 구획화를 촉진하고 무단 사용자에 대한 노출을 제한합니다."
 
 #: ../../source/about/security/zero-trust.rst:77
 msgid ""
@@ -301,6 +373,8 @@ msgid ""
 "participants, protecting sensitive data and adhering to need-to-know "
 "principles."
 msgstr ""
+"`Private Channels <https://docs.mattermost.com/collaborate/channel-"
+"types.html#private-channels>`_: 대화를 승인된 참가자로 제한하여 민감한 데이터를 보호하고 필요에 따른 정보 공유 원칙을 준수합니다."
 
 #: ../../source/about/security/zero-trust.rst:78
 msgid ""
@@ -308,6 +382,8 @@ msgid ""
 "accounts.html>`_: Enables secure, scoped access for external parties, "
 "ensuring least privilege principles are maintained."
 msgstr ""
+"`Guest Accounts <https://docs.mattermost.com/onboard/guest-"
+"accounts.html>`_: 외부 당사자를 위한 안전하고 범위가 지정된 액세스를 가능하게 하여 최소 권한 원칙이 유지되도록 합니다."
 
 #: ../../source/about/security/zero-trust.rst:79
 msgid ""
@@ -316,10 +392,12 @@ msgid ""
 "of access and permissions for specific user sets, enhancing access "
 "segmentation."
 msgstr ""
+"`Custom User Groups <https://docs.mattermost.com/collaborate/organize-"
+"using-custom-user-groups.html>`_: 특정 사용자 세트에 대한 액세스 및 권한의 정확한 관리 제어를 허용하여 액세스 분할을 강화합니다."
 
 #: ../../source/about/security/zero-trust.rst:82
 msgid "Administrative controls"
-msgstr ""
+msgstr "관리 제어"
 
 #: ../../source/about/security/zero-trust.rst:84
 msgid ""
@@ -327,6 +405,7 @@ msgid ""
 "management, enhancing productivity and security by aligning user access "
 "with their specific roles:"
 msgstr ""
+"팀 수준 및 그룹 수준 관리를 통해 논리적 분할을 적용하여 사용자 액세스를 특정 역할에 맞게 조정함으로써 생산성과 보안을 향상시킵니다:"
 
 #: ../../source/about/security/zero-trust.rst:86
 msgid ""
@@ -334,6 +413,8 @@ msgid ""
 "/delegated-granular-administration.html>`_: Ensures operational security "
 "by enabling controlled management access based on responsibilities."
 msgstr ""
+"`Delegated Granular Administration <https://docs.mattermost.com/onboard"
+"/delegated-granular-administration.html>`_: 책임에 기반한 제어된 관리 액세스를 활성화하여 운영 보안을 보장합니다."
 
 #: ../../source/about/security/zero-trust.rst:87
 msgid ""
@@ -343,6 +424,8 @@ msgid ""
 "policies and strengthens compliance, particularly in regulated industries"
 " where custom terms may reflect specific mandates."
 msgstr ""
+"`Custom Terms of Service <https://docs.mattermost.com/comply/custom-"
+"terms-of-service.html>`_: 액세스 전에 조직별 서비스 약관을 인지하도록 요구하여 보안 정책과의 일치를 보장하고 규제 산업에서 특히 맞춤형 약관이 특정 의무를 반영할 수 있는 경우 규정 준수를 강화합니다."
 
 #: ../../source/about/security/zero-trust.rst:88
 msgid ""
@@ -350,6 +433,8 @@ msgid ""
 "granular-administration.html>`_: Facilitates precise control over user "
 "and system permissions, adhering to the principle of least privilege."
 msgstr ""
+"`Granular Permissions <https://docs.mattermost.com/onboard/delegated-"
+"granular-administration.html>`_: 최소 권한 원칙을 준수하면서 사용자 및 시스템 권한에 대한 정확한 제어를 용이하게 합니다."
 
 #: ../../source/about/security/zero-trust.rst:89
 msgid ""
@@ -358,10 +443,12 @@ msgid ""
 "file-sharing capabilities to safeguard sensitive information from "
 "unauthorized alterations."
 msgstr ""
+"`Read-Only Permissions for Files <https://docs.mattermost.com/configure"
+"/site-configuration-settings.html#file-sharing-and-downloads>`_: 무단 변경으로부터 민감한 정보를 보호하기 위해 파일 공유 기능을 제한합니다."
 
 #: ../../source/about/security/zero-trust.rst:92
 msgid "Security policies and tokens"
-msgstr ""
+msgstr "보안 정책 및 토큰"
 
 #: ../../source/about/security/zero-trust.rst:94
 msgid ""
@@ -370,6 +457,7 @@ msgid ""
 "establishing and enforcing secure, consistent, and scalable "
 "authentication mechanisms:"
 msgstr ""
+"안전하고 일관되며 확장 가능한 인증 메커니즘을 수립하고 적용하여 무단 API 사용 및 자격 증명 오용으로부터 시스템과 데이터를 보호하는 맞춤형 인증 도구로 보안을 강화합니다:"
 
 #: ../../source/about/security/zero-trust.rst:96
 msgid ""
@@ -378,16 +466,20 @@ msgid ""
 "token/>`_: Enables secure API access with identity verification aligned "
 "to least privilege."
 msgstr ""
+"`Personal Access Tokens "
+"<https://developers.mattermost.com/integrate/reference/personal-access-"
+"token/>`_: 최소 권한에 맞춘 ID 검증으로 안전한 API 액세스를 가능하게 합니다."
 
 #: ../../source/about/security/zero-trust.rst:99
 msgid "Multi-factor authentication (MFA)"
-msgstr ""
+msgstr "다중 인증(MFA)"
 
 #: ../../source/about/security/zero-trust.rst:101
 msgid ""
 "Mattermost supports MFA to strengthen authentication practices by adding "
 "an extra layer of protection for high-risk workflows beyond passwords:"
 msgstr ""
+"Mattermost는 비밀번호 외에도 고위험 워크플로우에 대한 추가 보호 계층을 추가하여 인증 관행을 강화하는 MFA를 지원합니다:"
 
 #: ../../source/about/security/zero-trust.rst:103
 msgid ""
@@ -397,14 +489,16 @@ msgid ""
 "are denied access even if passwords are compromised, reducing the risk of"
 " account breaches."
 msgstr ""
+"`MFA <https://docs.mattermost.com/onboard/multi-factor-"
+"authentication.html>`_: 인증에 여러 요소를 요구하여 사용자 ID 검증을 강화합니다. MFA는 비밀번호가 손상되더라도 무단 사용자의 접근을 차단하여 계정 침해 위험을 줄입니다."
 
 #: ../../source/about/security/zero-trust.rst:105
 msgid "Alternatively, often enforced through the identity provider (IDP)."
-msgstr ""
+msgstr "또는 ID 제공업체(IDP)를 통해 자주 적용됩니다."
 
 #: ../../source/about/security/zero-trust.rst:108
 msgid "Data management"
-msgstr ""
+msgstr "데이터 관리"
 
 #: ../../source/about/security/zero-trust.rst:110
 msgid ""
@@ -414,6 +508,8 @@ msgid ""
 " also that it is not retained longer than necessary, thereby reducing "
 "risks."
 msgstr ""
+"데이터 관리는 데이터 수명 주기의 모든 단계에서 민감한 정보가 어떻게 관리, 제어 및 보호되는지 직접적으로 다룹니다. 적절한 데이터 보존 관행은 데이터가 안전하게 저장될 뿐만 아니라 "
+"필요한 기간보다 오래 보존되지 않도록 하여 위험을 줄입니다."
 
 #: ../../source/about/security/zero-trust.rst:112
 msgid ""
@@ -423,6 +519,8 @@ msgid ""
 "access, their exposure is minimized. The less data stored, the smaller "
 "the \"footprint\" for potential exploitation:"
 msgstr ""
+"데이터를 필요한 기간 동안만 보존하고 안전하게 폐기함으로써 악의적인 활동이나 무단 접근에 대한 노출이 크게 줄어듭니다. 공격자가 접근하더라도 그들의 노출은 최소화됩니다. "
+"저장된 데이터가 적을수록 잠재적 악용을 위한 \"흔적\"이 작아집니다:"
 
 #: ../../source/about/security/zero-trust.rst:114
 msgid ""
@@ -430,6 +528,8 @@ msgid ""
 "retention-policy.html>`_: Enforces strict retention controls to reduce "
 "data exposure and help comply with governance standards."
 msgstr ""
+"`Data Retention Policies <https://docs.mattermost.com/comply/data-"
+"retention-policy.html>`_: 데이터 노출을 줄이고 거버넌스 표준을 준수하도록 엄격한 보존 제어를 적용합니다."
 
 #: ../../source/about/security/zero-trust.rst:115
 msgid ""
@@ -437,6 +537,8 @@ msgid ""
 "export.html>`_: Ensures data portability for audit and compliance "
 "purposes in a secure and controlled manner."
 msgstr ""
+"`Compliance Export <https://docs.mattermost.com/comply/compliance-"
+"export.html>`_: 감사 및 규정 준수 목적을 위해 안전하고 제어된 방식으로 데이터 이식성을 보장합니다."
 
 #: ../../source/about/security/zero-trust.rst:116
 msgid ""
@@ -444,6 +546,8 @@ msgid ""
 "monitoring.html>`_: Offers visibility into adherence to security and "
 "compliance policies, supporting compliance mandates."
 msgstr ""
+"`Compliance Monitoring <https://docs.mattermost.com/comply/compliance-"
+"monitoring.html>`_: 보안 및 규정 준수 정책 준수에 대한 가시성을 제공하여 규정 준수 요구사항을 지원합니다."
 
 #: ../../source/about/security/zero-trust.rst:117
 msgid ""
@@ -454,6 +558,9 @@ msgid ""
 "compliance expectations for legal audits under frameworks like GDPR or "
 "HIPAA without sacrificing secure collaboration workflows."
 msgstr ""
+"`E-Discovery <https://docs.mattermost.com/comply/electronic-"
+"discovery.html>`_: 안전한 프로토콜 하에서 법적 및 규정 준수 감사를 위한 저장된 데이터의 발견 가능성을 보장하여 조직적 감독을 강화합니다. "
+"E-Discovery 기능은 안전한 협업 워크플로우를 희생하지 않고도 GDPR이나 HIPAA와 같은 프레임워크 하에서 법적 감사를 위한 규정 준수 기대치를 충족하는 데 도움을 줍니다."
 
 #: ../../source/about/security/zero-trust.rst:118
 msgid ""
@@ -466,10 +573,15 @@ msgid ""
 "adherence to security best practices while maintaining the ability to "
 "securely restore resources if needed."
 msgstr ""
+"`Archiving Inactive Teams or Channels <https://docs.mattermost.com/manage"
+"/team-channel-members.html#archive-a-team>`_ & `Unarchive Channels "
+"<https://docs.mattermost.com/collaborate/archive-unarchive-"
+"channels.html>`_: 비활성 리소스를 안전하게 비활성화하고 저장하여 잠재적 공격 표면을 줄이고, 활성 데이터 노출과 악용 가능성을 최소화합니다. "
+"이 접근 방식은 필요한 경우 리소스를 안전하게 복원할 수 있는 기능을 유지하면서 보안 모범 사례를 준수하도록 보장합니다."
 
 #: ../../source/about/security/zero-trust.rst:121
 msgid "Incident response"
-msgstr ""
+msgstr "사고 대응"
 
 #: ../../source/about/security/zero-trust.rst:123
 msgid ""
@@ -480,6 +592,8 @@ msgid ""
 " that organizations are vigilant, prepared, and capable of protecting "
 "themselves in a dynamic and evolving threat landscape."
 msgstr ""
+"사고 대응은 네트워크 내부나 외부에 관계없이 어떤 개체도 기본적으로 신뢰해서는 안 된다는 프레임워크 내에서 조직이 보안 위협을 효과적으로 감지, 조사 및 대응할 수 있도록 보장합니다. "
+"사고 대응은 조직이 역동적이고 진화하는 위협 환경에서 경계하고 준비하며 스스로를 보호할 수 있는 운영 수단입니다."
 
 #: ../../source/about/security/zero-trust.rst:125
 msgid ""
@@ -489,6 +603,8 @@ msgid ""
 "workflows, ensuring that responses are consistent, documented, and "
 "transparent:"
 msgstr ""
+"Mattermost Playbooks는 조직이 사고 대응 워크플로우를 미리 정의하고 자동화할 수 있도록 하여 위협에 대응하는 시간을 단축하고 "
+"자동화된 사고 알림을 통해 규정 준수에 맞춘 문서화를 보장합니다. 이를 통해 대응이 일관되고 문서화되며 투명하게 이루어집니다:"
 
 #: ../../source/about/security/zero-trust.rst:127
 msgid ""
@@ -501,6 +617,11 @@ msgid ""
 "response teams, ensuring faster mitigation of active threats like "
 "phishing or ransomware attacks."
 msgstr ""
+"`Incident-Specific Channels for Secure Collaboration "
+"<https://docs.mattermost.com/repeatable-processes/work-with-"
+"playbooks.html#actions>`_: 외부 도구를 포함하는 더 넓은 사고 대응 워크플로우에서 안전한 협업 워크플로우를 유지하며, "
+"사고 발생 중 운영 연속성을 위한 중앙 집중식 제어 모델을 적용합니다. 사고별 채널은 전문 대응 팀을 구성하는 시간을 단축하여 "
+"피싱이나 랜섬웨어 공격과 같은 활성 위협을 더 빠르게 완화할 수 있도록 합니다."
 
 #: ../../source/about/security/zero-trust.rst:128
 msgid ""
@@ -508,6 +629,8 @@ msgid ""
 "/repeatable-processes/notifications-and-updates.html>`_: Streamlines "
 "response workflows with authenticated alerts."
 msgstr ""
+"`Automated Incident Notifications <https://docs.mattermost.com"
+"/repeatable-processes/notifications-and-updates.html>`_: 인증된 알림으로 대응 워크플로우를 간소화합니다."
 
 #: ../../source/about/security/zero-trust.rst:130
 msgid ""
@@ -515,6 +638,8 @@ msgid ""
 " future attack surfaces, and meet compliance expectations by securely "
 "centralizing documentation to improve future response processes:"
 msgstr ""
+"문서를 안전하게 중앙 집중화하여 향후 대응 프로세스를 개선함으로써 사고로부터의 학습을 강화하고, "
+"역사적 책임을 보장하며, 향후 공격 표면을 줄이고, 규정 준수 기대치를 충족합니다:"
 
 #: ../../source/about/security/zero-trust.rst:132
 msgid ""
@@ -523,6 +648,9 @@ msgid ""
 "for learnings, ensuring compliance with attack surface minimization "
 "principles."
 msgstr ""
+"`Post-Incident Documentation <https://docs.mattermost.com/repeatable-"
+"processes/metrics-and-goals.html>`_: 학습 내용의 안전한 저장 및 접근을 가능하게 하여 "
+"공격 표면 최소화 원칙에 대한 규정 준수를 보장합니다."
 
 #: ../../source/about/security/zero-trust.rst:134
 msgid ""
@@ -531,6 +659,9 @@ msgid ""
 "the tools needed to safeguard collaboration workflows in today's evolving"
 " threat landscape."
 msgstr ""
+"접근, 모니터링, 데이터 관리 및 사고 대응 전반에 걸쳐 Zero Trust 원칙을 적용함으로써, "
+"Mattermost는 오늘날 진화하는 위협 환경에서 협업 워크플로우를 보호하는 데 필요한 도구를 "
+"조직에 제공합니다."
 
 #: ../../source/about/security/zero-trust.rst:136
 msgid ""
@@ -539,4 +670,6 @@ msgid ""
 "<https://mattermost.com/contact-sales/>`_ to explore tailored solutions "
 "for your organization’s secure collaboration needs."
 msgstr ""
-
+"오늘 Mattermost가 귀사의 Zero Trust 전략을 어떻게 변화시킬 수 있는지 알아보세요. "
+"조직의 안전한 협업 요구사항을 위한 맞춤형 솔루션을 탐색하기 위해 `Mattermost Zero Trust 전문가 "
+"<https://mattermost.com/contact-sales/>`_ 와 라이브 데모를 예약하세요."

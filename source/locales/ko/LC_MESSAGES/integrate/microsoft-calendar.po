@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/integrate/microsoft-calendar.rst:2
 msgid "Connect Microsoft Calendar to Mattermost"
-msgstr ""
+msgstr "Microsoft 캘린더를 Mattermost에 연결하기"
 
 #: ../../source/_static/badges/allplans-cloud-selfhosted.rst:7
 msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `모든 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
@@ -35,7 +35,7 @@ msgstr ""
 msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
-msgstr ""
+msgstr "|deployment-img| `클라우드 <https://mattermost.com/sign-up/>`__ 및 `자체 호스팅 <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
@@ -47,53 +47,55 @@ msgid ""
 "receive daily summaries of calendar events, synchronize your  M365 status"
 " in Mattermost, and accept or decline calendar invites from Mattermost."
 msgstr ""
+"Mattermost 인스턴스에 Microsoft M365 캘린더를 연결하여 캘린더 이벤트의 일일 요약을 받고, Mattermost에서 M365 "
+"상태를 동기화하며, Mattermost에서 캘린더 초대를 수락하거나 거절할 수 있습니다."
 
 #: ../../source/integrate/microsoft-calendar.rst:10
 msgid "Deploy"
-msgstr ""
+msgstr "배포"
 
 #: ../../source/integrate/microsoft-calendar.rst:12
 msgid "Setup starts in Microsoft Azure and ends in Mattermost."
-msgstr ""
+msgstr "설정은 Microsoft Azure에서 시작하여 Mattermost에서 완료됩니다."
 
 #: ../../source/integrate/microsoft-calendar.rst:15
 msgid "Create a Mattermost App in Azure"
-msgstr ""
+msgstr "Azure에서 Mattermost 앱 만들기"
 
 #: ../../source/integrate/microsoft-calendar.rst:17
 msgid ""
 "Sign in to `portal.azure.com <https://portal.azure.com>`_ using an admin "
 "Azure account."
-msgstr ""
+msgstr "관리자 Azure 계정을 사용하여 `portal.azure.com <https://portal.azure.com>`_ 에 로그인하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:18
 msgid ""
 "Navigate to `App Registrations "
 "<https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps>`_"
-msgstr ""
+msgstr "`앱 등록 <https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps>`_ 으로 이동하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:19
 msgid "Select **New registration** at the top of the page."
-msgstr ""
+msgstr "페이지 상단에서 **새 등록** 을 선택하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:21
 #: ../../source/integrate/microsoft-calendar.rst:26
 msgid "In Azure, create a new app registration."
-msgstr ""
+msgstr "Azure에서 새 앱 등록을 생성하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:24
 msgid ""
 "Fill out the form with the following values. Select **Register** to "
 "submit the form."
-msgstr ""
+msgstr "다음 값으로 양식을 작성하세요. 양식을 제출하려면 **등록** 을 선택하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:26
 msgid "**Name**: Mattermost MS Calendar Plugin"
-msgstr ""
+msgstr "**이름**: Mattermost MS Calendar Plugin"
 
 #: ../../source/integrate/microsoft-calendar.rst:27
 msgid "**Supported account types**: Default value (Single tenant)"
-msgstr ""
+msgstr "**지원되는 계정 유형**: 기본값 (단일 테넌트)"
 
 #: ../../source/integrate/microsoft-calendar.rst:28
 msgid ""
@@ -102,14 +104,17 @@ msgid ""
 " Replace ``<MM_SITE_URL>`` with your Mattermost server's Site URL. Select"
 " **Register** to submit the form."
 msgstr ""
+"**리디렉션 URI**: "
+"``https://<MM_SITE_URL>/plugins/com.mattermost.mscalendar/oauth2/complete``"
+" ``<MM_SITE_URL>`` 을 Mattermost 서버의 사이트 URL로 바꾸세요. 양식을 제출하려면 **등록** 을 선택하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:33
 msgid "Go to **Certificates & secrets** in the left pane."
-msgstr ""
+msgstr "왼쪽 창에서 **인증서 및 비밀** 로 이동하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:35
 msgid "In Azure, go to Certificates & secrets located in the left pane."
-msgstr ""
+msgstr "Azure에서 왼쪽 창에 있는 인증서 및 비밀로 이동하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:38
 msgid ""
@@ -117,104 +122,108 @@ msgid ""
 " right corner of the screen. We'll use this value later in the Mattermost"
 " System Console."
 msgstr ""
+"**새 클라이언트 비밀 > 추가** 를 선택하고 화면 오른쪽 하단에 있는 새 비밀을 복사하세요. 이 값은 나중에 Mattermost "
+"시스템 콘솔에서 사용할 것입니다."
 
 #: ../../source/integrate/microsoft-calendar.rst:40
 msgid "In Azure, create a new client secret and copy the value for later."
-msgstr ""
+msgstr "Azure에서 새 클라이언트 비밀을 생성하고 나중에 사용할 수 있도록 값을 복사하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:43
 msgid "Go to **API permissions** in the left pane."
-msgstr ""
+msgstr "왼쪽 창에서 **API 권한** 으로 이동하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:45
 msgid "In Azure, go to API permissions located in the left pane."
-msgstr ""
+msgstr "Azure에서 왼쪽 창에 있는 API 권한으로 이동하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:48
 msgid "Select **Add a permission**, then **Microsoft Graph** in the right pane."
-msgstr ""
+msgstr "**권한 추가** 를 선택한 다음 오른쪽 창에서 **Microsoft Graph** 를 선택하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:50
 msgid "In Azure, add a permission for Microsoft Graph."
-msgstr ""
+msgstr "Azure에서 Microsoft Graph에 대한 권한을 추가하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:53
 msgid ""
 "Select **Delegated permissions**, and scroll down to select the following"
 " permissions. Select **Add permissions** to submit the form:"
 msgstr ""
+"**위임된 권한** 을 선택하고 아래로 스크롤하여 다음 권한을 선택하세요. 양식을 제출하려면 **권한 추가** 를 "
+"선택하세요:"
 
 #: ../../source/integrate/microsoft-calendar.rst:55
 msgid "``Calendars.ReadWrite``"
-msgstr ""
+msgstr "``Calendars.ReadWrite``"
 
 #: ../../source/integrate/microsoft-calendar.rst:56
 msgid "``Calendars.ReadWrite.Shared``"
-msgstr ""
+msgstr "``Calendars.ReadWrite.Shared``"
 
 #: ../../source/integrate/microsoft-calendar.rst:57
 #: ../../source/integrate/microsoft-calendar.rst:67
 msgid "``MailboxSettings.Read``"
-msgstr ""
+msgstr "``MailboxSettings.Read``"
 
 #: ../../source/integrate/microsoft-calendar.rst:55
 msgid "In Azure, select required permissions."
-msgstr ""
+msgstr "Azure에서 필요한 권한을 선택하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:62
 msgid ""
 "Add application permissions by going to **Add a permission > Microsoft "
 "Graph > Application permissions**, and select **Add permissions** to "
 "submit the form."
-msgstr ""
+msgstr "**권한 추가 > Microsoft Graph > 애플리케이션 권한** 으로 이동하여 애플리케이션 권한을 추가하고, 양식을 제출하려면 **권한 추가** 를 선택하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:64
 msgid ""
 "Select the following permissions, and then select **Grant admin consent "
 "for mattermost** to grant the permissions for the application."
-msgstr ""
+msgstr "다음 권한을 선택한 다음 애플리케이션에 대한 권한을 부여하기 위해 **mattermost에 대한 관리자 동의 부여** 를 선택하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:66
 msgid "``Calendars.Read``"
-msgstr ""
+msgstr "``Calendars.Read``"
 
 #: ../../source/integrate/microsoft-calendar.rst:68
 msgid "``User.Read.All``"
-msgstr ""
+msgstr "``User.Read.All``"
 
 #: ../../source/integrate/microsoft-calendar.rst:66
 msgid "In Azure, grant admin consent permissions for the application."
-msgstr ""
+msgstr "Azure에서 애플리케이션에 대한 관리자 동의 권한을 부여하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:73
 msgid "You're all set for configuration in the Azure portal."
-msgstr ""
+msgstr "Azure 포털에서의 구성이 모두 완료되었습니다."
 
 #: ../../source/integrate/microsoft-calendar.rst:76
 msgid "Install the Microsoft Calendar integration"
-msgstr ""
+msgstr "Microsoft 캘린더 통합 설치하기"
 
 #: ../../source/integrate/microsoft-calendar.rst:78
 msgid ""
 "Log in to your Mattermost :doc:`workspace </guides/use-mattermost>` as a "
 "system admin."
-msgstr ""
+msgstr "시스템 관리자로 Mattermost :doc:`워크스페이스 </guides/use-mattermost>` 에 로그인하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:79
 msgid ""
 "In Mattermost, from the Product menu |product-list|, select **App "
 "Marketplace**."
-msgstr ""
+msgstr "Mattermost에서 제품 메뉴 |product-list| 에서 **앱 마켓플레이스** 를 선택하세요."
 
 #: ../../<rst_prolog>:100
 msgid ""
 "Navigate between Channels and collaborative playbooks using the product "
 "menu icon."
-msgstr ""
+msgstr "제품 메뉴 아이콘을 사용하여 채널과 협업 플레이북 간을 탐색하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:80
 msgid "Search for or scroll to Microsoft Calendar, and select **Install**."
-msgstr ""
+msgstr "Microsoft Calendar를 검색하거나 스크롤하여 **설치** 를 선택하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:81
 msgid ""
@@ -222,6 +231,8 @@ msgid ""
 " directly to the **Microsoft Calendar** integration page, under "
 "**Plugins**."
 msgstr ""
+"설치가 완료되면 **구성** 을 선택하세요. 그러면 **플러그인** 아래의 **Microsoft Calendar** 통합 페이지로 "
+"직접 이동됩니다."
 
 #: ../../source/integrate/microsoft-calendar.rst:85
 msgid ""
@@ -232,101 +243,106 @@ msgid ""
 "mscalendar/releases>`_, and upload it to your server via **System Console"
 " > Plugin Management**."
 msgstr ""
+"Mattermost v9.11.2(ESR)와 Mattermost Cloud v10부터는 이 플러그인이 Mattermost 서버에 사전 패키징되어 "
+"있습니다. Mattermost 배포가 v9.11.2 이전 버전인 경우, `최신 플러그인 바이너리 릴리스 "
+"<https://github.com/mattermost/mattermost-plugin-mscalendar/releases>`_ 를 다운로드하고 "
+"**시스템 콘솔 > 플러그인 관리** 를 통해 서버에 업로드하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:88
 msgid "Enable and configure the Microsoft Calendar integration in Mattermost"
-msgstr ""
+msgstr "Mattermost에서 Microsoft Calendar 통합 활성화 및 구성하기"
 
 #: ../../source/integrate/microsoft-calendar.rst:90
 msgid ""
 "In Azure, copy the **Application (client) ID** and **Directory (tenant) "
 "ID** from the Azure portal."
-msgstr ""
+msgstr "Azure 포털에서 **애플리케이션(클라이언트) ID** 와 **디렉토리(테넌트) ID** 를 복사하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:92
 msgid "In Azure, copy the Client ID and Tenant ID values."
-msgstr ""
+msgstr "Azure에서 클라이언트 ID와 테넌트 ID 값을 복사하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:95
 msgid ""
 "In Mattermost, go to **System Console > Plugins > Microsoft Calendar** to"
 " enable this integration."
-msgstr ""
+msgstr "Mattermost에서 **시스템 콘솔 > 플러그인 > Microsoft Calendar** 로 이동하여 이 통합을 활성화하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:97
 msgid ""
 "Copy the **Application (client) ID** and **Directory (tenant) ID** from "
 "the Azure portal."
-msgstr ""
+msgstr "Azure 포털에서 **애플리케이션(클라이언트) ID** 와 **디렉토리(테넌트) ID** 를 복사하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:99
 msgid ""
 "In Mattermost, enter the following values in the fields provided. Select "
 "**Save** to apply the configuration:"
-msgstr ""
+msgstr "Mattermost에서 제공된 필드에 다음 값을 입력하세요. 구성을 적용하려면 **저장** 을 선택하세요:"
 
 #: ../../source/integrate/microsoft-calendar.rst:101
 msgid ""
 "**Admin User IDs** - A comma-separated list of :ref:`user IDs <configure"
 "/user-management-configuration-settings:identify a user's id>` for "
 "authorized users who can manage this integration."
-msgstr ""
+msgstr "**관리자 사용자 ID** - 이 통합을 관리할 수 있는 권한이 있는 사용자의 :ref:`사용자 ID <configure/user-management-configuration-settings:identify a user's id>` 쉼표로 "
+"구분된 목록입니다."
 
 #: ../../source/integrate/microsoft-calendar.rst:102
 msgid ""
 "**Copy plugin logs to admins, as bot messages** - Select the log level "
 "for logs."
-msgstr ""
+msgstr "**관리자에게 봇 메시지로 플러그인 로그 복사** - 로그의 로그 레벨을 선택하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:103
 msgid ""
 "**Display full context for each admin log message** - Show or hide full "
 "context for all log entries."
-msgstr ""
+msgstr "**각 관리자 로그 메시지에 대한 전체 컨텍스트 표시** - 모든 로그 항목에 대한 전체 컨텍스트를 표시하거나 숨깁니다."
 
 #: ../../source/integrate/microsoft-calendar.rst:104
 msgid ""
 "**Azure - Directory (tenant) ID** - Paste the **Directory (tenant) ID** "
 "from the Azure portal."
-msgstr ""
+msgstr "**Azure - 디렉토리(테넌트) ID** - Azure 포털에서 **디렉토리(테넌트) ID** 를 붙여넣으세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:105
 msgid ""
 "**Azure - Application (client) ID** - Paste the **Application (client) "
 "ID** from the Azure portal."
-msgstr ""
+msgstr "**Azure - 애플리케이션(클라이언트) ID** - Azure 포털에서 **애플리케이션(클라이언트) ID** 를 붙여넣으세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:106
 msgid ""
 "**Microsoft Office Client Secret** - Copy from the Azure portal "
 "(generated in **Certificates & secrets** earlier in these instructions)."
-msgstr ""
+msgstr "**Microsoft Office 클라이언트 시크릿** - Azure 포털에서 복사하세요(이전 지침의 **인증서 및 시크릿** 에서 생성됨)."
 
 #: ../../source/integrate/microsoft-calendar.rst:108
 msgid ""
 "Notify your teams that they can `connect their Microsoft Office accounts "
 "to Mattermost <#connect-a-microsoft-calendar-account-to-mattermost>`__."
-msgstr ""
+msgstr "팀원들에게 `Microsoft Office 계정을 Mattermost에 연결 <#connect-a-microsoft-calendar-account-to-mattermost>`__ 할 수 있다는 것을 알려주세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:111
 msgid "Use"
-msgstr ""
+msgstr "사용"
 
 #: ../../source/integrate/microsoft-calendar.rst:113
 msgid ""
 "Users who want to use Microsoft Calendar interconnectivity must connect a"
 " Microsoft Office account to Mattermost."
-msgstr ""
+msgstr "Microsoft 캘린더 상호연결성을 사용하려는 사용자는 Microsoft Office 계정을 Mattermost에 연결해야 합니다."
 
 #: ../../source/integrate/microsoft-calendar.rst:115
 msgid ""
 "Once connected, you'll receive direct messages from the Microsoft "
 "Calendar bot in Mattermost for Microsoft Calendar activity."
-msgstr ""
+msgstr "연결되면 Microsoft 캘린더 활동에 대한 Microsoft 캘린더 봇의 다이렉트 메시지를 Mattermost에서 받게 됩니다."
 
 #: ../../source/integrate/microsoft-calendar.rst:118
 msgid "Upgrade"
-msgstr ""
+msgstr "업그레이드"
 
 #: ../../source/integrate/microsoft-calendar.rst:120
 msgid ""
@@ -336,10 +352,14 @@ msgid ""
 "/mattermost-plugin-mscalendar/releases>`__ for the latest release, "
 "available releases, and compatibiilty considerations."
 msgstr ""
+"새 버전이 출시되면 이 통합을 업데이트하는 것을 권장합니다. 일반적으로 업데이트는 원활하게 이루어지며 Mattermost의 "
+"사용자 경험을 방해하지 않습니다. 최신 릴리스, 사용 가능한 릴리스 및 호환성 고려사항은 `Releases page "
+"<https://github.com/mattermost/mattermost-plugin-mscalendar/releases>`__ 를 "
+"방문하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:123
 msgid "Get help"
-msgstr ""
+msgstr "도움 받기"
 
 #: ../../source/integrate/microsoft-calendar.rst:125
 msgid ""
@@ -349,6 +369,10 @@ msgid ""
 "Calendar plugin repository <https://github.com/mattermost/mattermost-"
 "plugin-mscalendar>`_."
 msgstr ""
+"Mattermost 상용 고객은 `Mattermost support case <https://support.mattermost.com/hc/en-us/requests/new>`_ "
+"를 열 수 있습니다. 버그를 보고하려면 `Mattermost Microsoft Calendar plugin repository "
+"<https://github.com/mattermost/mattermost-plugin-mscalendar>`_ 에 GitHub 이슈를 "
+"등록하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:127
 msgid ""
@@ -358,6 +382,9 @@ msgid ""
 "`Mattermost Community Server <https://community.mattermost.com/>`_ for "
 "assistance."
 msgstr ""
+"질문, 피드백 및 도움이 필요하시면 `Mattermost Community Server <https://community.mattermost.com/>`_ 의 "
+"공개 `Integrations and Apps channel <https://community.mattermost.com/core/channels/integrations>`_ "
+"에 참여하세요."
 
 #: ../../source/integrate/microsoft-calendar.rst:129
 msgid ""
@@ -366,6 +393,9 @@ msgid ""
 "/trouble-shoot/16>`_ to access the global Mattermost Community for "
 "assistance."
 msgstr ""
+"Mattermost Team Edition 및 무료 고객은 도움을 받기 위해 Mattermost `peer-to-peer troubleshooting forum "
+"<https://forum.mattermost.com/c/trouble-shoot/16>`_ 를 방문하여 글로벌 Mattermost 커뮤니티에 접근할 수 "
+"있습니다."
 
 #~ msgid "Setup"
 #~ msgstr ""

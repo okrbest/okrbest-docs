@@ -21,13 +21,14 @@ msgstr ""
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:2
 msgid "Audit Log JSON Schema"
-msgstr ""
+msgstr "감사 로그 JSON 스키마"
 
 #: ../../source/_static/badges/ent-selfhosted.rst:7
 msgid ""
 "|plans-img| Available on `Enterprise plans "
 "<https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img| `Enterprise 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
@@ -38,6 +39,7 @@ msgid ""
 "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
 "deployments"
 msgstr ""
+"|deployment-img| `self-hosted <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
@@ -50,32 +52,36 @@ msgid ""
 " being written to the audit log, including: field names, data types, "
 "objects, and structure."
 msgstr ""
+"감사 로그 JSON 스키마는 필드 이름, 데이터 유형, 객체 및 구조를 포함하여 단일 이벤트가 감사 로그에 "
+"기록될 때 어떻게 표시되어야 하는지 일관되게 정의하는 표준화된 청사진 또는 도식으로 기능합니다."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:9
 msgid ""
 "An outline of the JSON audit logging schema is provided below. See the "
 "`JSON data model <#json-data-model>`__ for additional details."
 msgstr ""
+"JSON 감사 로깅 스키마의 개요는 아래에 제공됩니다. 자세한 내용은 `JSON 데이터 모델 <#json-data-model>`__ 을 "
+"참조하세요."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:41
 msgid "Audit log record examples"
-msgstr ""
+msgstr "감사 로그 레코드 예시"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:44
 msgid "Update user preferences"
-msgstr ""
+msgstr "사용자 환경설정 업데이트"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:72
 msgid "JSON data model"
-msgstr ""
+msgstr "JSON 데이터 모델"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:75
 msgid "**Name**"
-msgstr ""
+msgstr "**이름**"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:75
 msgid "**Type**"
-msgstr ""
+msgstr "**유형**"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:75
 #: ../../source/comply/embedded-json-audit-log-schema.rst:110
@@ -83,25 +89,27 @@ msgstr ""
 #: ../../source/comply/embedded-json-audit-log-schema.rst:141
 #: ../../source/comply/embedded-json-audit-log-schema.rst:152
 msgid "**Description**"
-msgstr ""
+msgstr "**설명**"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:77
 msgid "timestamp"
-msgstr ""
+msgstr "타임스탬프"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:77
 msgid "int64"
-msgstr ""
+msgstr "int64"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:77
 msgid "Date/time when event or activity has taken place."
-msgstr ""
+msgstr "이벤트나 활동이 발생한 날짜/시간"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:79
 msgid ""
 "Mattermost currently supports three log formats: plain, JSON, and `GELF "
 "<https://go2docs.graylog.org/current/getting_in_log_data/gelf.html>`__."
 msgstr ""
+"Mattermost는 현재 세 가지 로그 형식을 지원합니다: plain, JSON, `GELF "
+"<https://go2docs.graylog.org/current/getting_in_log_data/gelf.html>`__"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:82
 msgid ""
@@ -110,6 +118,9 @@ msgid ""
 "configuration <manage/logging:plain log format configuration options>` "
 "documentation for supported options."
 msgstr ""
+"Plain 로그 형식은 기본적으로 `RFC3339 <https://www.rfc-"
+"editor.org/rfc/rfc3339>`__ 를 사용합니다. 지원되는 옵션에 대한 자세한 내용은 :ref:`plain 로그 형식 "
+"구성 <manage/logging:plain log format configuration options>` 문서를 참조하세요."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:85
 msgid ""
@@ -117,18 +128,20 @@ msgid ""
 " by default. See the :ref:`JSON log format configuration "
 "<manage/logging:json log format configuration options>` documentation for"
 " supported options."
-msgstr ""
+msgstr "JSON 로그 형식은 기본적으로 `RFC3339 <https://www.rfc-editor.org/rfc/rfc3339>`__ 를 사용합니다. "
+"지원되는 옵션에 대한 자세한 내용은 :ref:`JSON 로그 형식 구성 <manage/logging:json log format configuration options>` 문서를 참조하세요."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:88
 msgid ""
 "GELF log format uses `unixtime <https://www.unixtimestamp.com/>`__. See "
 "the :ref:`GELF log format configuration <manage/logging:gelf log format "
 "configuration options>` documentation for supported options."
-msgstr ""
+msgstr "GELF 로그 형식은 `unixtime <https://www.unixtimestamp.com/>`__ 를 사용합니다. "
+"지원되는 옵션에 대한 자세한 내용은 :ref:`GELF 로그 형식 구성 <manage/logging:gelf log format configuration options>` 문서를 참조하세요."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:92
 msgid "event_name"
-msgstr ""
+msgstr "이벤트_이름"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:92
 #: ../../source/comply/embedded-json-audit-log-schema.rst:95
@@ -140,102 +153,102 @@ msgstr ""
 #: ../../source/comply/embedded-json-audit-log-schema.rst:143
 #: ../../source/comply/embedded-json-audit-log-schema.rst:154
 msgid "string"
-msgstr ""
+msgstr "문자열"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:92
 msgid ""
 "Unique name and identifier of the event type taking place (e.g. "
 "``getLogs`` ``requestRenewalLink``, ``createTeam``, ``createChannel``, "
 "``deleteChannel``, or ``extendSessionExpiry``)."
-msgstr ""
+msgstr "발생하는 이벤트 유형의 고유 이름 및 식별자 (예: ``getLogs``, ``requestRenewalLink``, ``createTeam``, ``createChannel``, ``deleteChannel`` 또는 ``extendSessionExpiry``)."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:95
 msgid "status"
-msgstr ""
+msgstr "상태"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:95
 msgid "Success or failure of the audited event."
-msgstr ""
+msgstr "감사된 이벤트의 성공 또는 실패."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:97
 msgid "event"
-msgstr ""
+msgstr "이벤트"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:97
 msgid "`EventData <#eventdata>`__"
-msgstr ""
+msgstr "`EventData <#eventdata>`__"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:97
 msgid "Event parameters and object states."
-msgstr ""
+msgstr "이벤트 매개변수 및 객체 상태."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:99
 msgid "actor"
-msgstr ""
+msgstr "행위자"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:99
 msgid "`EventActor <#eventactor>`__"
-msgstr ""
+msgstr "`EventActor <#eventactor>`__"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:99
 msgid "User involved with the event."
-msgstr ""
+msgstr "이벤트와 관련된 사용자."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:101
 msgid "meta"
-msgstr ""
+msgstr "메타"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:101
 msgid "`EventMeta <#eventmeta>`__"
-msgstr ""
+msgstr "`EventMeta <#eventmeta>`__"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:101
 msgid "Related event metadata."
-msgstr ""
+msgstr "관련 이벤트 메타데이터."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:103
 msgid "error"
-msgstr ""
+msgstr "오류"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:103
 msgid "`EventError <#eventerror>`__"
-msgstr ""
+msgstr "`EventError <#eventerror>`__"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:103
 msgid "The resulting error if the status is in a failed state."
-msgstr ""
+msgstr "상태가 실패 상태일 경우 발생하는 오류."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:107
 msgid "EventData"
-msgstr ""
+msgstr "이벤트 데이터"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:110
 #: ../../source/comply/embedded-json-audit-log-schema.rst:126
 #: ../../source/comply/embedded-json-audit-log-schema.rst:141
 #: ../../source/comply/embedded-json-audit-log-schema.rst:152
 msgid "**Field name**"
-msgstr ""
+msgstr "**필드 이름**"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:110
 #: ../../source/comply/embedded-json-audit-log-schema.rst:126
 #: ../../source/comply/embedded-json-audit-log-schema.rst:141
 #: ../../source/comply/embedded-json-audit-log-schema.rst:152
 msgid "**Data type**"
-msgstr ""
+msgstr "**데이터 유형**"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:112
 msgid "parameters"
-msgstr ""
+msgstr "매개변수"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:112
 #: ../../source/comply/embedded-json-audit-log-schema.rst:114
 #: ../../source/comply/embedded-json-audit-log-schema.rst:117
 msgid "map"
-msgstr ""
+msgstr "맵"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:112
 msgid "Payload and parameters being processed as part of the request."
-msgstr ""
+msgstr "요청의 일부로 처리되는 페이로드 및 매개변수."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:114
 msgid "prior_state"
@@ -245,7 +258,7 @@ msgstr ""
 msgid ""
 "Prior state of the entity being modified. ``null`` if there was no prior "
 "state."
-msgstr ""
+msgstr "수정 중인 엔티티의 이전 상태. 이전 상태가 없는 경우 ``null``."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:117
 msgid "resulting_state"
@@ -253,7 +266,7 @@ msgstr ""
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:117
 msgid "Resulting entity after creating or modifying it."
-msgstr ""
+msgstr "생성 또는 수정 후의 결과 엔티티."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:119
 msgid "object_type"
@@ -261,7 +274,7 @@ msgstr ""
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:119
 msgid "String representation of the entity type (e.g. post)"
-msgstr ""
+msgstr "엔티티 유형의 문자열 표현(예: post)"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:123
 msgid "EventActor"
@@ -273,7 +286,7 @@ msgstr ""
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:128
 msgid "Unique identifier of the event actor."
-msgstr ""
+msgstr "이벤트 실행자의 고유 식별자."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:130
 msgid "session_id"
@@ -281,7 +294,7 @@ msgstr ""
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:130
 msgid "Unique session identifier of the event actor."
-msgstr ""
+msgstr "이벤트 실행자의 고유 세션 식별자."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:132
 msgid "client"
@@ -289,7 +302,7 @@ msgstr ""
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:132
 msgid "User agent of the client/platform in use by the event actor."
-msgstr ""
+msgstr "이벤트 실행자가 사용 중인 클라이언트/플랫폼의 사용자 에이전트."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:134
 msgid "ip_address"
@@ -297,7 +310,7 @@ msgstr ""
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:134
 msgid "IPv4/IPv6 IP address of the event actor."
-msgstr ""
+msgstr "이벤트 실행자의 IPv4/IPv6 IP 주소."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:138
 msgid "EventMeta"
@@ -309,7 +322,7 @@ msgstr ""
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:143
 msgid "The REST endpoint which caused the event."
-msgstr ""
+msgstr "이벤트를 발생시킨 REST 엔드포인트."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:145
 msgid "cluster_id"
@@ -318,11 +331,11 @@ msgstr ""
 #: ../../source/comply/embedded-json-audit-log-schema.rst:145
 #: ../../source/comply/embedded-json-audit-log-schema.rst:156
 msgid "integer"
-msgstr ""
+msgstr "정수"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:145
 msgid "Cluster identifier."
-msgstr ""
+msgstr "클러스터 식별자."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:149
 msgid "EventError"
@@ -330,11 +343,11 @@ msgstr ""
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:154
 msgid "description"
-msgstr ""
+msgstr "설명"
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:154
 msgid "(Optional) Error description."
-msgstr ""
+msgstr "(선택 사항) 오류 설명."
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:156
 msgid "status_code"
@@ -342,5 +355,4 @@ msgstr ""
 
 #: ../../source/comply/embedded-json-audit-log-schema.rst:156
 msgid "(Optional) Error status code."
-msgstr ""
-
+msgstr "(선택 사항) 오류 상태 코드."

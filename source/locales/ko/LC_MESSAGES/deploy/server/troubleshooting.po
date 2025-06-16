@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mattermost \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 15:09+0900\n"
+"POT-Creation-Date: 2025-05-26 23:00+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ko\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/deploy/server/troubleshooting.rst:2
 msgid "General deployment troubleshooting"
-msgstr ""
+msgstr "일반 배포 문제 해결"
 
 #: ../../source/deploy/server/troubleshooting.rst:4
 msgid ""
@@ -29,16 +29,18 @@ msgid ""
 "resolutions. Some of these suggestions can be done directly, and others "
 "may need consultation from your network administrator."
 msgstr ""
+"이 문서는 일반적인 배포 문제 해결 이슈와 해결 방법을 요약합니다. 일부 제안사항은 직접 수행할 수 있지만, 다른 사항들은 네트워크"
+" 관리자의 상담이 필요할 수 있습니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:7
 msgid "Start Mattermost at system boot"
-msgstr ""
+msgstr "시스템 부팅 시 Mattermost 시작하기"
 
 #: ../../source/deploy/server/troubleshooting.rst:9
 msgid ""
 "To have the Mattermost Server start at system boot, the systemd unit file"
 " needs to be enabled. Run the following command:"
-msgstr ""
+msgstr "Mattermost 서버가 시스템 부팅 시 시작되도록 하려면 systemd 유닛 파일을 활성화해야 합니다. 다음 명령어를 실행하세요:"
 
 #: ../../source/deploy/server/troubleshooting.rst:15
 msgid ""
@@ -47,10 +49,14 @@ msgid ""
 "systemd unit file to add ``After=postgresql.service`` and "
 "``BindsTo=postgresql.service`` to the ``[Unit]`` section."
 msgstr ""
+"데이터베이스가 Mattermost 서버와 동일한 시스템에 있는 경우, 기본 "
+"``/lib/systemd/system/mattermost.service`` systemd 유닛 파일을 편집하여 ``[Unit]``"
+" 섹션에 ``After=postgresql.service`` 와 ``BindsTo=postgresql.service`` 를 추가하는"
+" 것을 권장합니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:18
 msgid "Run Mattermost without a proxy"
-msgstr ""
+msgstr "프록시 없이 Mattermost 실행하기"
 
 #: ../../source/deploy/server/troubleshooting.rst:20
 msgid ""
@@ -59,6 +65,9 @@ msgid ""
 "``CAP_NET_BIND_SERVICE`` capability to allow the new Mattermost binary to"
 " bind to ports lower than 1024 by running the following command:"
 msgstr ""
+"Mattermost는 8065 대신 443에 바인딩됩니다. Mattermost 바이너리는 해당 바인딩을 위해 올바른 권한이 "
+"필요합니다. 다음 명령어를 실행하여 ``CAP_NET_BIND_SERVICE`` 기능을 활성화하여 새 Mattermost 바이너리가"
+" 1024 미만의 포트에 바인딩할 수 있도록 해야 합니다:"
 
 #: ../../source/deploy/server/troubleshooting.rst:28
 msgid ""
@@ -68,10 +77,14 @@ msgid ""
 " concurrent users, you'll need :doc:`a proxy </deploy/server/setup-nginx-"
 "proxy>`, such as NGINX, in front of Mattermost to manage the traffic."
 msgstr ""
+"동시 사용자가 200명까지인 경우 Mattermost 서버 앞에 프록시를 사용하는 것을 강력히 권장합니다. 동시 사용자가 200명 "
+"미만인 경우 :doc:`TLS 설정 </deploy/server/setup-tls>` 을 할 수 있습니다. 동시 사용자가 200명을"
+" 초과하는 경우 트래픽을 관리하기 위해 Mattermost 앞에 NGINX와 같은 :doc:`프록시 </deploy/server"
+"/setup-nginx-proxy>` 가 필요합니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:31
 msgid "Review Mattermost logs"
-msgstr ""
+msgstr "Mattermost 로그 검토하기"
 
 #: ../../source/deploy/server/troubleshooting.rst:33
 msgid ""
@@ -79,10 +92,12 @@ msgid ""
 "These steps assume that you have appropriate :doc:`system admin "
 "permissions </onboard/advanced-permissions>` to do so."
 msgstr ""
+"Mattermost의 로그에 접근하여 문제 해결에 사용할 수 있습니다. 이 단계들은 적절한 :doc:`시스템 관리자 권한 "
+"</onboard/advanced-permissions>` 이 있다고 가정합니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:36
 msgid "Mattermost Server logs"
-msgstr ""
+msgstr "Mattermost 서버 로그"
 
 #: ../../source/deploy/server/troubleshooting.rst:38
 msgid ""
@@ -90,18 +105,20 @@ msgid ""
 "Environment > Logging**, confirm that **Output logs to file** is set to "
 "**true**."
 msgstr ""
+"로그 파일이 생성되고 있는지 확인하세요: **시스템 콘솔 > 환경 > 로깅** 으로 이동하여 **파일에 로그 출력** 이 "
+"**true** 로 설정되어 있는지 확인하세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:39
 msgid ""
 "You can obtain the path for the log files in **System Console > "
 "Environment > Logging > File Log Directory**."
-msgstr ""
+msgstr "**시스템 콘솔 > 환경 > 로깅 > 파일 로그 디렉토리** 에서 로그 파일의 경로를 확인할 수 있습니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:41
 msgid ""
 "The resulting server log file is called ``mattermost.log`` and can be "
 "opened with a standard text editor or shared directly."
-msgstr ""
+msgstr "생성된 서버 로그 파일은 ``mattermost.log`` 라고 불리며 표준 텍스트 편집기로 열거나 직접 공유할 수 있습니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:44
 msgid ""
@@ -110,6 +127,9 @@ msgid ""
 "again. Make sure to revert the file log level to **INFO** after "
 "troubleshooting to save disk space."
 msgstr ""
+"더 자세한 로그를 위해 **시스템 콘솔 > 환경 > 로깅** 을 열고 **파일 로그 레벨** 을 **DEBUG** 로 설정한 다음 "
+"문제를 재현하여 다시 로그를 기록하세요. 문제 해결 후 디스크 공간을 절약하기 위해 파일 로그 레벨을 **INFO** 로 되돌리는 "
+"것을 잊지 마세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:46
 msgid ""
@@ -117,39 +137,45 @@ msgid ""
 "Reporting > Server Logs** to locate the current system logs which can be "
 "copied to a file."
 msgstr ""
+"파일 시스템에 접근할 수 없는 경우 **시스템 콘솔 > 보고서 > 서버 로그** 로 이동하여 파일로 복사할 수 있는 현재 시스템 "
+"로그를 찾을 수 있습니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:48
 msgid ""
 "You can find more on logging settings :ref:`here <configure/environment-"
 "configuration-settings:logging>`."
 msgstr ""
+"로깅 설정에 대한 자세한 내용은 :ref:`여기 <configure/environment-configuration-"
+"settings:logging>` 에서 확인할 수 있습니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:51
 msgid "Mattermost Desktop App logs"
-msgstr ""
+msgstr "Mattermost 데스크톱 앱 로그"
 
 #: ../../source/deploy/server/troubleshooting.rst:53
 msgid ""
 "Access desktop app logs by going to **Help > Show logs** from the menu "
 "bar."
-msgstr ""
+msgstr "메뉴 모음에서 **도움말 > 로그 표시** 로 이동하여 데스크톱 앱 로그에 접근할 수 있습니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:55
 msgid ""
 "Alternatively, you can access desktop app log files in the following "
 "directory:"
-msgstr ""
+msgstr "또는 다음 디렉토리에서 데스크톱 앱 로그 파일에 접근할 수 있습니다:"
 
 #: ../../source/deploy/server/troubleshooting.rst:57
 #, python-format
 msgid "**Windows:** ``%userprofile%\\AppData\\Roaming\\Mattermost\\logs``"
-msgstr ""
+msgstr "**Windows:** ``%userprofile%\\AppData\\Roaming\\Mattermost\\logs``"
 
 #: ../../source/deploy/server/troubleshooting.rst:58
 msgid ""
 "**Linux:** ``~/.local/share/Mattermost/logs`` OR "
 "``~/.config/Mattermost/logs``"
 msgstr ""
+"**Linux:** ``~/.local/share/Mattermost/logs`` 또는 "
+"``~/.config/Mattermost/logs``"
 
 #: ../../source/deploy/server/troubleshooting.rst:59
 msgid ""
@@ -157,10 +183,13 @@ msgid ""
 "``~Library/Containers/Mattermost.Desktop/Data/Library/Logs/Mattermost`` "
 "(Appstore installation only)"
 msgstr ""
+"**MacOS:** ``~/Library/Logs/Mattermost`` (DMG 설치) 또는 "
+"``~Library/Containers/Mattermost.Desktop/Data/Library/Logs/Mattermost`` "
+"(Appstore 설치만 해당)"
 
 #: ../../source/deploy/server/troubleshooting.rst:62
 msgid "Mattermost web logs"
-msgstr ""
+msgstr "Mattermost 웹 로그"
 
 #: ../../source/deploy/server/troubleshooting.rst:64
 msgid ""
@@ -168,20 +197,24 @@ msgid ""
 "has to be debugged, use the development tools integrated in your browser "
 "for action history."
 msgstr ""
+"브라우저 기반 앱은 추가 로그 파일을 생성하지 않습니다. 앱을 디버깅해야 하는 경우 브라우저에 통합된 개발 도구를 사용하여 작업 "
+"기록을 확인하세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:67
 msgid "Mattermost Push Notification Service logs"
-msgstr ""
+msgstr "Mattermost 푸시 알림 서비스 로그"
 
 #: ../../source/deploy/server/troubleshooting.rst:69
 msgid ""
 "Logging for the Mattermost Push Notification Service is handled via "
 "system log with logger and is appended to ``/var/log/syslog``."
 msgstr ""
+"Mattermost 푸시 알림 서비스의 로깅은 logger를 통한 시스템 로그로 처리되며 ``/var/log/syslog`` 에 "
+"추가됩니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:72
 msgid "Review Mattermost environment"
-msgstr ""
+msgstr "Mattermost 환경 검토"
 
 #: ../../source/deploy/server/troubleshooting.rst:74
 msgid ""
@@ -190,50 +223,52 @@ msgid ""
 "are now having connection issues it might be worth reviewing the settings"
 " or rolling back to see whether that resolves the problem."
 msgstr ""
+"오류/문제가 발생하기 전의 이벤트를 제거하기 위해 타임라인을 작성하세요. 예를 들어, 최근에 방화벽을 재구성했고 현재 연결 문제가 "
+"발생하고 있다면 설정을 검토하거나 롤백하여 문제가 해결되는지 확인하는 것이 좋습니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:76
 msgid ""
 "If the problem occurred subsequent to some period of normal operation, "
 "did anything change in the environment?"
-msgstr ""
+msgstr "정상 작동 기간 이후에 문제가 발생했다면, 환경에 어떤 변화가 있었나요?"
 
 #: ../../source/deploy/server/troubleshooting.rst:78
 msgid "Was the client, host, or server upgraded?"
-msgstr ""
+msgstr "클라이언트, 호스트 또는 서버가 업그레이드되었나요?"
 
 #: ../../source/deploy/server/troubleshooting.rst:79
 msgid "Was an operating system update applied?"
-msgstr ""
+msgstr "운영 체제 업데이트가 적용되었나요?"
 
 #: ../../source/deploy/server/troubleshooting.rst:80
 msgid ""
 "Did the network environment change? For example, was a server moved or a "
 "domain migrated?"
-msgstr ""
+msgstr "네트워크 환경이 변경되었나요? 예를 들어, 서버가 이동되었거나 도메인이 마이그레이션되었나요?"
 
 #: ../../source/deploy/server/troubleshooting.rst:81
 msgid "Did the system (client or server) recently fail or abnormally terminate?"
-msgstr ""
+msgstr "시스템(클라이언트 또는 서버)이 최근에 실패하거나 비정상적으로 종료되었나요?"
 
 #: ../../source/deploy/server/troubleshooting.rst:82
 msgid "How many users are impacted?"
-msgstr ""
+msgstr "몇 명의 사용자가 영향을 받나요?"
 
 #: ../../source/deploy/server/troubleshooting.rst:84
 msgid "Is this problem affecting one, some, or all users?"
-msgstr ""
+msgstr "이 문제가 한 명, 일부 또는 모든 사용자에게 영향을 미치나요?"
 
 #: ../../source/deploy/server/troubleshooting.rst:85
 msgid ""
 "Is the problem occurring only for a user who was recently added to the "
 "environment, such as a new employee?"
-msgstr ""
+msgstr "이 문제가 새 직원과 같이 최근에 환경에 추가된 사용자에게만 발생하나요?"
 
 #: ../../source/deploy/server/troubleshooting.rst:86
 msgid ""
 "Do differences exist between the users who are affected and the users who"
 " are not affected?"
-msgstr ""
+msgstr "영향을 받는 사용자와 영향을 받지 않는 사용자 사이에 차이점이 있나요?"
 
 #: ../../source/deploy/server/troubleshooting.rst:88
 msgid ""
@@ -241,18 +276,20 @@ msgid ""
 "our `forum <https://forum.mattermost.com/t/how-to-use-the-"
 "troubleshooting-forum/150>`__ can often be found and applied."
 msgstr ""
+"오류 메시지를 온라인에서 검색할 수도 있습니다. `포럼 <https://forum.mattermost.com/t/how-to-"
+"use-the-troubleshooting-forum/150>`__ 에서 기존 솔루션을 찾아 적용할 수 있는 경우가 많습니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:91
 msgid "Connect to another server"
-msgstr ""
+msgstr "다른 서버에 연결"
 
 #: ../../source/deploy/server/troubleshooting.rst:93
 msgid "Create an account at https://community.mattermost.com."
-msgstr ""
+msgstr "https://community.mattermost.com에서 계정을 만드세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:94
 msgid "Erase your mobile application and reinstall it."
-msgstr ""
+msgstr "모바일 애플리케이션을 삭제하고 다시 설치하세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:95
 msgid ""
@@ -260,26 +297,28 @@ msgid ""
 " and then your login credentials to test whether the connection is "
 "working."
 msgstr ""
+"모바일 앱에서 서버 URL https://community.mattermost.com을 입력한 다음 로그인 자격 증명을 입력하여 "
+"연결이 작동하는지 테스트하세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:98
 msgid "Connect with another device"
-msgstr ""
+msgstr "다른 기기로 연결"
 
 #: ../../source/deploy/server/troubleshooting.rst:100
 msgid ""
 "If you have another mobile device available, try connecting with that to "
 "see if your issue still reproduces."
-msgstr ""
+msgstr "다른 모바일 기기를 사용할 수 있다면, 해당 기기로 연결하여 문제가 여전히 재현되는지 확인해보세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:101
 msgid ""
 "If you don’t have another device available, check with other teammates to"
 " see if they are having the same issue."
-msgstr ""
+msgstr "다른 기기를 사용할 수 없는 경우, 다른 팀원들에게 동일한 문제가 발생하는지 확인하세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:104
 msgid "Opening a support ticket for self-hosted deployments"
-msgstr ""
+msgstr "자체 호스팅 배포를 위한 지원 티켓 열기"
 
 #: ../../source/deploy/server/troubleshooting.rst:106
 msgid ""
@@ -290,6 +329,12 @@ msgid ""
 "entitled to open support tickets via our `online support portal "
 "<https://support.mattermost.com/hc/en-us/requests/new>`_."
 msgstr ""
+":doc:`Mattermost 제품의 유료 구독 </about/editions-and-offerings>` 이 있는 경우, 예를 "
+"들어 :ref:`Mattermost Professional <about/editions-and-offerings:mattermost"
+" professional>` 또는 :ref:`Mattermost Enterprise <about/editions-and-"
+"offerings:mattermost enterprise>` 가 있다면, `온라인 지원 포털 "
+"<https://support.mattermost.com/hc/en-us/requests/new>`_ 을 통해 지원 티켓을 열 수 "
+"있습니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:108
 msgid ""
@@ -298,30 +343,32 @@ msgid ""
 "timely manner. Knowing what information is relevant can be confusing. We "
 "use the anagram C.L.U.E.S. to remember what we need:"
 msgstr ""
+"유료 구독의 일부로 지원 티켓을 열 때는 가능한 한 많은 정보를 적시에 제공하는 것이 중요합니다. 어떤 정보가 관련 있는지 파악하는"
+" 것이 혼란스러울 수 있습니다. 우리는 필요한 사항을 기억하기 위해 C.L.U.E.S.라는 약어를 사용합니다:"
 
 #: ../../source/deploy/server/troubleshooting.rst:110
 msgid "Configurations"
-msgstr ""
+msgstr "구성"
 
 #: ../../source/deploy/server/troubleshooting.rst:111
 #: ../../source/deploy/server/troubleshooting.rst:183
 msgid "Logs"
-msgstr ""
+msgstr "로그"
 
 #: ../../source/deploy/server/troubleshooting.rst:112
 #: ../../source/deploy/server/troubleshooting.rst:260
 msgid "Users affected"
-msgstr ""
+msgstr "영향을 받는 사용자"
 
 #: ../../source/deploy/server/troubleshooting.rst:113
 #: ../../source/deploy/server/troubleshooting.rst:286
 msgid "Environment"
-msgstr ""
+msgstr "환경"
 
 #: ../../source/deploy/server/troubleshooting.rst:114
 #: ../../source/deploy/server/troubleshooting.rst:353
 msgid "Steps to reproduce"
-msgstr ""
+msgstr "재현 단계"
 
 #: ../../source/deploy/server/troubleshooting.rst:116
 msgid ""
@@ -331,27 +378,30 @@ msgid ""
 "need to escalate the issue to our developers so they can spend as much "
 "time as possible improving our product."
 msgstr ""
+"C.L.U.E.S.는 문제를 명확히 하는 데 필요한 모든 정보를 나타냅니다. 이러한 세부 정보를 통해 단순한 구성 변경이든 제품 "
+"버그든 원인을 찾기 시작할 수 있습니다. 또한 문제를 개발자에게 에스컬레이션해야 할 때 제품 개선에 최대한 많은 시간을 투자할 수 "
+"있도록 도움이 됩니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:119
 msgid "General guidelines for information"
-msgstr ""
+msgstr "정보에 대한 일반적인 지침"
 
 #: ../../source/deploy/server/troubleshooting.rst:121
 msgid "Follow these guidelines when providing diagnostic data to us:"
-msgstr ""
+msgstr "진단 데이터를 제공할 때 다음 지침을 따르세요:"
 
 #: ../../source/deploy/server/troubleshooting.rst:123
 msgid ""
 "Make sure the files you provide are as complete as possible, rather than "
 "providing a few lines. Entire log files and configurations provide us "
 "with important context."
-msgstr ""
+msgstr "몇 줄만 제공하는 것보다 가능한 한 완전한 파일을 제공하세요. 전체 로그 파일과 구성은 중요한 컨텍스트를 제공합니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:124
 msgid ""
 "Provide configuration and log files in plaintext format if possible, as "
 "these are far easier for us to search than screenshots."
-msgstr ""
+msgstr "가능한 경우 구성 및 로그 파일을 일반 텍스트 형식으로 제공하세요. 스크린샷보다 검색하기가 훨씬 쉽습니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:125
 msgid ""
@@ -360,20 +410,22 @@ msgid ""
 "that contain the same special characters if possible, as special "
 "characters are common causes of configuration errors."
 msgstr ""
+"구성 및 로그 파일에서 사용자 이름, 비밀번호, LDAP 그룹을 제거하도록 정리하세요. 특수 문자가 구성 오류의 일반적인 원인이므로"
+" 가능한 경우 동일한 특수 문자를 포함하는 예제 문자열로 이러한 세부 정보를 대체하세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:126
 msgid ""
 "Provide screenshots or screen recordings of unexpected product behavior "
 "so that we know exactly what your users are seeing."
-msgstr ""
+msgstr "사용자가 정확히 무엇을 보고 있는지 알 수 있도록 예상치 못한 제품 동작의 스크린샷이나 화면 녹화를 제공하세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:129
 msgid "Configuration"
-msgstr ""
+msgstr "구성"
 
 #: ../../source/deploy/server/troubleshooting.rst:132
 msgid "Why we need your configuration data"
-msgstr ""
+msgstr "구성 데이터가 필요한 이유"
 
 #: ../../source/deploy/server/troubleshooting.rst:134
 msgid ""
@@ -383,46 +435,49 @@ msgid ""
 "picture of your system setup as possible. This also helps us to reproduce"
 " bugs so our developers can fix them."
 msgstr ""
+"Linux 시스템에서는 설정이 일반적으로 구성 파일에 저장됩니다. 많은 문제는 구성 설정을 활성화하거나 비활성화하여 해결할 수 "
+"있습니다. 해결책을 찾기 위해서는 가능한 한 시스템 설정에 대한 완전한 그림이 필요합니다. 이는 또한 개발자가 버그를 수정할 수 "
+"있도록 버그를 재현하는 데 도움이 됩니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:137
 msgid "What configuration data includes"
-msgstr ""
+msgstr "구성 데이터에 포함되는 내용"
 
 #: ../../source/deploy/server/troubleshooting.rst:139
 msgid "Configuration includes (but is not limited to):"
-msgstr ""
+msgstr "구성에는 다음이 포함됩니다(이에 국한되지 않음):"
 
 #: ../../source/deploy/server/troubleshooting.rst:141
 msgid "The Mattermost ``config.json`` file."
-msgstr ""
+msgstr "Mattermost ``config.json`` 파일."
 
 #: ../../source/deploy/server/troubleshooting.rst:142
 msgid "The configuration for the reverse proxy, e.g. NGINX, HAProxy, AWS."
-msgstr ""
+msgstr "리버스 프록시 구성, 예: NGINX, HAProxy, AWS."
 
 #: ../../source/deploy/server/troubleshooting.rst:143
 msgid "The database configuration."
-msgstr ""
+msgstr "데이터베이스 구성."
 
 #: ../../source/deploy/server/troubleshooting.rst:144
 msgid ""
 "SAML configuration when the issue is regarding SAML authentication. The "
 "configuration for the Mattermost service is in the SAML IdP."
-msgstr ""
+msgstr "SAML 인증과 관련된 문제가 있을 때의 SAML 구성. Mattermost 서비스의 구성은 SAML IdP에 있습니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:145
 msgid ""
 "Any other systems that Mattermost connects to or systems that exist "
 "between the user and the Mattermost server."
-msgstr ""
+msgstr "Mattermost가 연결하는 다른 시스템이나 사용자와 Mattermost 서버 사이에 존재하는 시스템."
 
 #: ../../source/deploy/server/troubleshooting.rst:148
 msgid "How to access your configuration data"
-msgstr ""
+msgstr "구성 데이터에 접근하는 방법"
 
 #: ../../source/deploy/server/troubleshooting.rst:150
 msgid "**Mattermost configuration**"
-msgstr ""
+msgstr "**Mattermost 구성**"
 
 #: ../../source/deploy/server/troubleshooting.rst:152
 msgid ""
@@ -431,10 +486,13 @@ msgid ""
 " configuration to the database, you can get the configuration using "
 "``mmctl`` or by running this database query:"
 msgstr ""
+"Mattermost 구성은 일반적으로 ``/opt/mattermost/config/config.json`` 에 저장됩니다. "
+"Mattermost 구성을 데이터베이스로 마이그레이션한 경우, ``mmctl`` 을 사용하거나 다음 데이터베이스 쿼리를 실행하여 "
+"구성을 가져올 수 있습니다:"
 
 #: ../../source/deploy/server/troubleshooting.rst:158
 msgid "**Reverse Proxy configuration**"
-msgstr ""
+msgstr "**리버스 프록시 구성**"
 
 #: ../../source/deploy/server/troubleshooting.rst:160
 msgid ""
@@ -444,10 +502,13 @@ msgid ""
 "available``. Providing both of these configuration files is helpful, but "
 "providing the latter is more important."
 msgstr ""
+"NGINX는 일반적으로 구성을 두 부분으로 나눕니다: ``/etc/nginx/nginx.conf`` 의 메인 서버 구성과 가상 서버"
+" 구성입니다. Ubuntu에서는 이 구성이 ``/etc/nginx/sites-available`` 에 저장됩니다. 두 구성 파일을 "
+"모두 제공하는 것이 도움이 되지만, 후자를 제공하는 것이 더 중요합니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:162
 msgid "**SAML configuration**"
-msgstr ""
+msgstr "**SAML 구성**"
 
 #: ../../source/deploy/server/troubleshooting.rst:164
 msgid ""
@@ -457,46 +518,49 @@ msgid ""
 "screenshots similar to the ones in the setup documentation is sufficient "
 "because most SAML providers are configured using a web interface."
 msgstr ""
+"SAML 로그인과 관련된 문제가 발생한 경우, SAML 제공업체의 Mattermost 서비스에 대한 전체 구성을 확인해야 합니다. "
+"Mattermost 서비스의 구성은 SAML IdP에 있습니다. 대부분의 SAML 제공업체가 웹 인터페이스를 사용하여 구성되므로, "
+"설정 문서의 스크린샷과 유사한 스크린샷을 제공하는 것으로 충분합니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:166
 msgid "**LDAP configuration**"
-msgstr ""
+msgstr "**LDAP 구성**"
 
 #: ../../source/deploy/server/troubleshooting.rst:168
 msgid ""
 "The LDAP administrator should confirm the correct values for the "
 "following Mattermost LDAP settings:"
-msgstr ""
+msgstr "LDAP 관리자는 다음 Mattermost LDAP 설정의 올바른 값을 확인해야 합니다:"
 
 #: ../../source/deploy/server/troubleshooting.rst:170
 msgid "LDAP server hostname."
-msgstr ""
+msgstr "LDAP 서버 호스트명."
 
 #: ../../source/deploy/server/troubleshooting.rst:171
 msgid "LDAP connection port, security, and certificates."
-msgstr ""
+msgstr "LDAP 연결 포트, 보안 및 인증서."
 
 #: ../../source/deploy/server/troubleshooting.rst:172
 msgid "BaseDN, bind username, and bind password."
-msgstr ""
+msgstr "BaseDN, 바인드 사용자 이름 및 바인드 비밀번호."
 
 #: ../../source/deploy/server/troubleshooting.rst:173
 msgid "User, Group, Guest, and Admin filters."
-msgstr ""
+msgstr "사용자, 그룹, 게스트 및 관리자 필터."
 
 #: ../../source/deploy/server/troubleshooting.rst:174
 msgid "Display attributes."
-msgstr ""
+msgstr "표시 속성."
 
 #: ../../source/deploy/server/troubleshooting.rst:176
 msgid ""
 "These can be provided as a text file or as screenshots from the LDAP "
 "server."
-msgstr ""
+msgstr "이러한 정보는 텍스트 파일이나 LDAP 서버의 스크린샷으로 제공할 수 있습니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:178
 msgid "**Other configurations**"
-msgstr ""
+msgstr "**기타 구성**"
 
 #: ../../source/deploy/server/troubleshooting.rst:180
 msgid ""
@@ -505,10 +569,12 @@ msgid ""
 "diagnose the problem. A system admin for the external system should be "
 "able to provide you with the configuration."
 msgstr ""
+"모바일에서 문제가 발생하고 있고 MDM이나 VPN을 사용하여 서버에 연결하는 경우, 문제를 진단하기 위해 해당 구성이 필요합니다. "
+"외부 시스템의 시스템 관리자가 구성을 제공할 수 있어야 합니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:186
 msgid "Why we need them"
-msgstr ""
+msgstr "로그가 필요한 이유"
 
 #: ../../source/deploy/server/troubleshooting.rst:188
 msgid ""
@@ -517,33 +583,37 @@ msgid ""
 "logs are invaluable when diagnosing a problem, but only if they're as "
 "complete as possible."
 msgstr ""
+"거의 모든 컴퓨터 시스템에는 애플리케이션이 실행 중일 때 발생하는 상황을 보여주는 오류 및 애플리케이션 동작 로그가 있습니다. 오류"
+" 로그는 문제를 진단할 때 매우 중요하지만, 가능한 한 완전한 경우에만 그렇습니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:191
 msgid "What logs are available"
-msgstr ""
+msgstr "사용 가능한 로그"
 
 #: ../../source/deploy/server/troubleshooting.rst:193
 #: ../../source/deploy/server/troubleshooting.rst:215
 msgid "**Mattermost**"
-msgstr ""
+msgstr "**Mattermost**"
 
 #: ../../source/deploy/server/troubleshooting.rst:195
 msgid ""
 "Mattermost has two log files, one for general messages and the other for "
 "notification-related messages. These are found at:"
 msgstr ""
+"Mattermost에는 일반 메시지용과 알림 관련 메시지용 두 개의 로그 파일이 있습니다. 이 파일들은 다음 위치에서 찾을 수 "
+"있습니다:"
 
 #: ../../source/deploy/server/troubleshooting.rst:197
 msgid "``/opt/mattermost/logs/mattermost.log``"
-msgstr ""
+msgstr "``/opt/mattermost/logs/mattermost.log``"
 
 #: ../../source/deploy/server/troubleshooting.rst:198
 msgid "``/opt/mattermost/logs/notification.log``"
-msgstr ""
+msgstr "``/opt/mattermost/logs/notification.log``"
 
 #: ../../source/deploy/server/troubleshooting.rst:200
 msgid "**Proxy**"
-msgstr ""
+msgstr "**프록시**"
 
 #: ../../source/deploy/server/troubleshooting.rst:202
 msgid ""
@@ -551,10 +621,12 @@ msgid ""
 "place to start looking is in ``/var/log``. Your proxy administrator "
 "should be able to help you find the logs."
 msgstr ""
+"이러한 로그의 위치는 프록시 구성에 따라 다르지만, ``/var/log`` 에서 찾아보는 것이 좋은 시작점입니다. 프록시 관리자가 "
+"로그를 찾는 데 도움을 줄 수 있습니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:204
 msgid "**Database**"
-msgstr ""
+msgstr "**데이터베이스**"
 
 #: ../../source/deploy/server/troubleshooting.rst:206
 msgid ""
@@ -562,18 +634,20 @@ msgid ""
 " on your configuration. If the issue is related to database connectivity,"
 " check the database documentation to locate the logs."
 msgstr ""
+"PostgreSQL과 MySQL은 서로 다른 로그를 가지며, 그 위치는 구성에 따라 다릅니다. 데이터베이스 연결과 관련된 문제가 "
+"있는 경우, 데이터베이스 문서를 확인하여 로그 위치를 찾으세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:208
 msgid "**SAML, LDAP, and other systems**"
-msgstr ""
+msgstr "**SAML, LDAP 및 기타 시스템**"
 
 #: ../../source/deploy/server/troubleshooting.rst:210
 msgid "Your organization's system admin should be able to find these for you."
-msgstr ""
+msgstr "조직의 시스템 관리자가 이러한 로그를 찾을 수 있어야 합니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:213
 msgid "How to access logs"
-msgstr ""
+msgstr "로그 접근 방법"
 
 #: ../../source/deploy/server/troubleshooting.rst:217
 msgid ""
@@ -583,12 +657,15 @@ msgid ""
 "both **Console File Level** and **File Log Level** to **DEBUG**. Remember"
 " to save your changes."
 msgstr ""
+"로그에서 최대한 많은 정보를 얻을 수 있도록 :ref:`디버그 로깅이 활성화되어 있는지 <manage/logging:how do i"
+" enable debug logging?>` 확인하세요. 이를 위해 **시스템 콘솔 > 환경 > 로깅** 으로 이동한 다음 **콘솔"
+" 파일 레벨** 과 **파일 로그 레벨** 을 모두 **DEBUG** 로 설정하세요. 변경사항을 저장하는 것을 잊지 마세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:219
 msgid ""
 "If the behavior started at a known time or date, use ``journalctl`` to "
 "get the logs like this:"
-msgstr ""
+msgstr "문제가 발생한 시간이나 날짜를 알고 있다면, 다음과 같이 ``journalctl`` 을 사용하여 로그를 가져올 수 있습니다:"
 
 #: ../../source/deploy/server/troubleshooting.rst:225
 msgid ""
@@ -597,18 +674,20 @@ msgid ""
 "``date`` command. If the log files generated are too large to send, "
 "compress them with this command:"
 msgstr ""
+"문제가 발생한 날짜와 시간(서버 기준)으로 2020-08-23 17:15:00을 대체하세요. 서버 시간을 확인하려면 ``date``"
+" 명령어를 사용하세요. 생성된 로그 파일이 전송하기에 너무 크다면 다음 명령어로 압축하세요:"
 
 #: ../../source/deploy/server/troubleshooting.rst:231
 msgid ""
 "The compressed logs will be located on the server at "
 "``/tmp/mattermost.log.tgz``."
-msgstr ""
+msgstr "압축된 로그는 서버의 ``/tmp/mattermost.log.tgz`` 에 위치합니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:233
 msgid ""
 "If the compressed file is still too big, use these commands to split the "
 "compressed file into two or more 20MB files:"
-msgstr ""
+msgstr "압축 파일이 여전히 너무 크다면, 다음 명령어를 사용하여 압축 파일을 20MB 크기의 두 개 이상의 파일로 분할하세요:"
 
 #: ../../source/deploy/server/troubleshooting.rst:241
 msgid ""
@@ -617,6 +696,9 @@ msgid ""
 " and so on. Use a file transfer client that supports SSH/SFTP, such as "
 "Cyberduck, to copy these files from the server."
 msgstr ""
+"압축된 파일은 서버의 ``/tmp/mattermost-logs`` 에 위치하며 ``mattermost.log.tgz.aa``, "
+"``mattermost.log.tgz.ab`` 등의 이름으로 저장됩니다. Cyberduck과 같은 SSH/SFTP를 지원하는 파일 "
+"전송 클라이언트를 사용하여 서버에서 이러한 파일을 복사하세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:243
 msgid ""
@@ -628,10 +710,14 @@ msgid ""
 " also contain a lot more sensitive data, including user data, so be sure "
 "to sanitize it completely before sharing it with us."
 msgstr ""
+"Elasticsearch, LDAP 또는 데이터베이스에 문제가 있는 경우, ``config.json`` 에서 해당 설정 아래에 "
+"``Trace`` 를 ``true`` 로 설정하여 추적 로깅을 활성화할 수 있습니다. 이를 ``DEBUG`` 레벨 파일 로그 출력과"
+" 결합하면 로그 파일이 매우 커지므로, 문제를 재현할 수 있을 만큼만 추적 로깅을 활성화하세요. 결과 로그에는 사용자 데이터를 "
+"포함한 더 많은 민감한 데이터가 포함되므로, 공유하기 전에 완전히 정리해야 합니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:245
 msgid "**System logs**"
-msgstr ""
+msgstr "**시스템 로그**"
 
 #: ../../source/deploy/server/troubleshooting.rst:247
 msgid ""
@@ -639,6 +725,8 @@ msgid ""
 " the logs for all processes on the Mattermost server is to use "
 "``journalctl`` like this:"
 msgstr ""
+"다른 시스템의 로그 파일 위치는 다양하지만, Mattermost 서버의 모든 프로세스에 대한 로그를 가져오는 좋은 방법은 다음과 "
+"같이 ``journalctl`` 을 사용하는 것입니다:"
 
 #: ../../source/deploy/server/troubleshooting.rst:253
 msgid ""
@@ -646,10 +734,12 @@ msgid ""
 "server) when the error occurred. You can use ``--until`` with the same "
 "timestamp format to get the logs between two times:"
 msgstr ""
+"오류가 발생한 날짜와 시간(서버 기준)으로 2020-08-23 17:15:00을 대체하세요. 동일한 타임스탬프 형식으로 "
+"``--until`` 을 사용하여 두 시간 사이의 로그를 가져올 수 있습니다:"
 
 #: ../../source/deploy/server/troubleshooting.rst:263
 msgid "Why we need it"
-msgstr ""
+msgstr "필요한 이유"
 
 #: ../../source/deploy/server/troubleshooting.rst:265
 msgid ""
@@ -659,11 +749,14 @@ msgid ""
 "affected by a problem can help us sift through all this information to "
 "find the root cause."
 msgstr ""
+"Mattermost 서버는 복잡한 환경입니다. 사용자들이 여러 팀의 수십 개 채널에 있을 수 있는 동안 매초마다 수천 개의 게시물,"
+" 웹소켓 작업, 웹훅 호출이 발생합니다. 어떤 사용자가 문제의 영향을 받는지 알면 이 모든 정보를 분석하여 근본 원인을 찾는 데 "
+"도움이 됩니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:268
 #: ../../source/deploy/server/troubleshooting.rst:291
 msgid "What information to include"
-msgstr ""
+msgstr "포함해야 할 정보"
 
 #: ../../source/deploy/server/troubleshooting.rst:270
 msgid ""
@@ -671,22 +764,24 @@ msgid ""
 "reporting the unexpected behavior have in common. This includes (but is "
 "not limited to):"
 msgstr ""
+"이는 예상치 못한 동작을 보고하는 최종 사용자들이 공통적으로 가지고 있는 모든 것에 대한 자세한 설명이어야 합니다. 여기에는 다음이"
+" 포함됩니다(이에 국한되지 않음):"
 
 #: ../../source/deploy/server/troubleshooting.rst:272
 msgid "Team and Channel memberships, including Direct and Group Messages."
-msgstr ""
+msgstr "팀 및 채널 멤버십, 직접 메시지 및 그룹 메시지 포함."
 
 #: ../../source/deploy/server/troubleshooting.rst:273
 msgid "Authentication methods."
-msgstr ""
+msgstr "인증 방법."
 
 #: ../../source/deploy/server/troubleshooting.rst:274
 msgid "Client operating system and app versions."
-msgstr ""
+msgstr "클라이언트 운영체제 및 앱 버전."
 
 #: ../../source/deploy/server/troubleshooting.rst:275
 msgid "How users connect to the Mattermost server."
-msgstr ""
+msgstr "사용자가 Mattermost 서버에 연결하는 방법."
 
 #: ../../source/deploy/server/troubleshooting.rst:276
 msgid ""
@@ -694,26 +789,28 @@ msgid ""
 "whether their login information recently changed, or if they are being "
 "synchronized via LDAP."
 msgstr ""
+"가입 시기, 로그인 정보가 최근에 변경되었는지 여부, LDAP을 통해 동기화되고 있는지 여부 등 이 사용자들이 공통적으로 가지고 "
+"있는 기타 사항."
 
 #: ../../source/deploy/server/troubleshooting.rst:278
 msgid "Note for Agents: This information is also required:"
-msgstr ""
+msgstr "에이전트 참고: 다음 정보도 필요합니다:"
 
 #: ../../source/deploy/server/troubleshooting.rst:280
 msgid "Customer name"
-msgstr ""
+msgstr "고객 이름"
 
 #: ../../source/deploy/server/troubleshooting.rst:281
 msgid "Customer contacts"
-msgstr ""
+msgstr "고객 연락처"
 
 #: ../../source/deploy/server/troubleshooting.rst:282
 msgid "Customer license, e.g. Enterprise/Professional"
-msgstr ""
+msgstr "고객 라이선스, 예: Enterprise/Professional"
 
 #: ../../source/deploy/server/troubleshooting.rst:283
 msgid "Customer tier"
-msgstr ""
+msgstr "고객 등급"
 
 #: ../../source/deploy/server/troubleshooting.rst:288
 msgid ""
@@ -722,6 +819,8 @@ msgid ""
 "prevent users from connecting even if there's nothing wrong with "
 "Mattermost."
 msgstr ""
+"아키텍처에서 Mattermost 서버의 위치는 잠재적 문제에 큰 영향을 미칩니다. 예를 들어, 잘못 구성된 프록시 서버는 "
+"Mattermost에 문제가 없더라도 사용자의 연결을 방지할 수 있습니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:293
 msgid ""
@@ -729,40 +828,42 @@ msgid ""
 "that the Mattermost server operates in is key to solving problems. This "
 "includes (but is not limited to):"
 msgstr ""
+"이러한 이유로 Mattermost 서버가 운영되는 서버와 네트워크에 대한 완전한 그림을 갖는 것이 문제 해결의 핵심입니다. 여기에는"
+" 다음이 포함됩니다(이에 국한되지 않음):"
 
 #: ../../source/deploy/server/troubleshooting.rst:295
 msgid "Mattermost version (e.g. 7.3.0, 7.8.3)"
-msgstr ""
+msgstr "Mattermost 버전(예: 7.3.0, 7.8.3)"
 
 #: ../../source/deploy/server/troubleshooting.rst:296
 msgid "Server OS and version (e.g. RHEL7, Ubuntu 20.04)"
-msgstr ""
+msgstr "서버 OS 및 버전(예: RHEL7, Ubuntu 20.04)"
 
 #: ../../source/deploy/server/troubleshooting.rst:297
 msgid "Any orchestration/automation used like Docker or Kubernetes"
-msgstr ""
+msgstr "Docker 또는 Kubernetes와 같은 오케스트레이션/자동화 사용 여부"
 
 #: ../../source/deploy/server/troubleshooting.rst:298
 msgid "Reverse proxy and version (e.g. NGINX 1.16)"
-msgstr ""
+msgstr "리버스 프록시 및 버전(예: NGINX 1.16)"
 
 #: ../../source/deploy/server/troubleshooting.rst:299
 msgid "Database type and version (e.g. PostgreSQL 13)"
-msgstr ""
+msgstr "데이터베이스 유형 및 버전(예: PostgreSQL 13)"
 
 #: ../../source/deploy/server/troubleshooting.rst:300
 msgid "SAML provider (e.g. Windows Server 2012 Active Directory, Okta, KeyCloak)"
-msgstr ""
+msgstr "SAML 제공자(예: Windows Server 2012 Active Directory, Okta, KeyCloak)"
 
 #: ../../source/deploy/server/troubleshooting.rst:301
 msgid "LDAP provider (e.g. Windows Server 2016 Active Directory, Okta, OpenLDAP)"
-msgstr ""
+msgstr "LDAP 제공자(예: Windows Server 2016 Active Directory, Okta, OpenLDAP)"
 
 #: ../../source/deploy/server/troubleshooting.rst:302
 msgid ""
 "The type and version of any proxies or VPNs on the network that the "
 "Mattermost server is connecting through"
-msgstr ""
+msgstr "Mattermost 서버가 연결하는 네트워크의 모든 프록시 또는 VPN의 유형과 버전"
 
 #: ../../source/deploy/server/troubleshooting.rst:304
 msgid ""
@@ -771,128 +872,130 @@ msgid ""
 "firewalls or filtering proxies that may be on your network, either "
 "inbound or outbound."
 msgstr ""
+"환경을 설명할 때 가능한 한 구체적으로 설명하세요. **Connection Refused** 와 같은 오류가 발생하는 경우, "
+"네트워크에 있을 수 있는 모든 방화벽이나 필터링 프록시를 포함해야 합니다(인바운드 또는 아웃바운드)."
 
 #: ../../source/deploy/server/troubleshooting.rst:306
 msgid "**Examples**"
-msgstr ""
+msgstr "**예시**"
 
 #: ../../source/deploy/server/troubleshooting.rst:308
 msgid "Mattermost server"
-msgstr ""
+msgstr "Mattermost 서버"
 
 #: ../../source/deploy/server/troubleshooting.rst:310
 #: ../../source/deploy/server/troubleshooting.rst:335
 msgid "External hostname: mattermost.example.com"
-msgstr ""
+msgstr "외부 호스트명: mattermost.example.com"
 
 #: ../../source/deploy/server/troubleshooting.rst:311
 msgid "Internal hostname: mattermost.lan"
-msgstr ""
+msgstr "내부 호스트명: mattermost.lan"
 
 #: ../../source/deploy/server/troubleshooting.rst:312
 msgid "Mattermost v7.3.0"
-msgstr ""
+msgstr "Mattermost v7.3.0"
 
 #: ../../source/deploy/server/troubleshooting.rst:313
 msgid "Zoom plugin v1.4.1"
-msgstr ""
+msgstr "Zoom 플러그인 v1.4.1"
 
 #: ../../source/deploy/server/troubleshooting.rst:314
 msgid "NGINX v1.18.0"
-msgstr ""
+msgstr "NGINX v1.18.0"
 
 #: ../../source/deploy/server/troubleshooting.rst:316
 msgid "Database server"
-msgstr ""
+msgstr "데이터베이스 서버"
 
 #: ../../source/deploy/server/troubleshooting.rst:318
 msgid "Internal hostname: postgresql.lan"
-msgstr ""
+msgstr "내부 호스트명: postgresql.lan"
 
 #: ../../source/deploy/server/troubleshooting.rst:319
 #: ../../source/deploy/server/troubleshooting.rst:344
 msgid "PostgreSQL v13"
-msgstr ""
+msgstr "PostgreSQL v13"
 
 #: ../../source/deploy/server/troubleshooting.rst:320
 msgid "LDAP Provider - 192.168.1.102"
-msgstr ""
+msgstr "LDAP 제공자 - 192.168.1.102"
 
 #: ../../source/deploy/server/troubleshooting.rst:321
 msgid "Internal hostname: ldap.lan"
-msgstr ""
+msgstr "내부 호스트명: ldap.lan"
 
 #: ../../source/deploy/server/troubleshooting.rst:322
 msgid "OpenLDAP 2.4.54 (Docker container)"
-msgstr ""
+msgstr "OpenLDAP 2.4.54 (Docker 컨테이너)"
 
 #: ../../source/deploy/server/troubleshooting.rst:324
 msgid "Mattermost servers"
-msgstr ""
+msgstr "Mattermost 서버들"
 
 #: ../../source/deploy/server/troubleshooting.rst:326
 msgid "Hostnames: mm1.local.lan, mm2.local.lan, mm3.local.lan, mm4.local.lan"
-msgstr ""
+msgstr "호스트명: mm1.local.lan, mm2.local.lan, mm3.local.lan, mm4.local.lan"
 
 #: ../../source/deploy/server/troubleshooting.rst:328
 msgid "Mattermost server versions"
-msgstr ""
+msgstr "Mattermost 서버 버전"
 
 #: ../../source/deploy/server/troubleshooting.rst:330
 msgid "mm1-3: 5.25.4"
-msgstr ""
+msgstr "mm1-3: 5.25.4"
 
 #: ../../source/deploy/server/troubleshooting.rst:331
 msgid "mm4: 5.21.0"
-msgstr ""
+msgstr "mm4: 5.21.0"
 
 #: ../../source/deploy/server/troubleshooting.rst:333
 msgid "Proxy server"
-msgstr ""
+msgstr "프록시 서버"
 
 #: ../../source/deploy/server/troubleshooting.rst:336
 msgid "Internal hostname: proxy.local.lan"
-msgstr ""
+msgstr "내부 호스트명: proxy.local.lan"
 
 #: ../../source/deploy/server/troubleshooting.rst:337
 msgid "NGINX v1.16.0"
-msgstr ""
+msgstr "NGINX v1.16.0"
 
 #: ../../source/deploy/server/troubleshooting.rst:339
 msgid "Database servers"
-msgstr ""
+msgstr "데이터베이스 서버들"
 
 #: ../../source/deploy/server/troubleshooting.rst:341
 msgid "Hostnames: db1.local.lan, db2.local.lan, db3.local.lan"
-msgstr ""
+msgstr "호스트명: db1.local.lan, db2.local.lan, db3.local.lan"
 
 #: ../../source/deploy/server/troubleshooting.rst:342
 msgid "Primary: db1.local.lan"
-msgstr ""
+msgstr "주 서버: db1.local.lan"
 
 #: ../../source/deploy/server/troubleshooting.rst:343
 msgid "Read-Only: db2.local.lan, db3.local.lan"
-msgstr ""
+msgstr "읽기 전용: db2.local.lan, db3.local.lan"
 
 #: ../../source/deploy/server/troubleshooting.rst:346
 msgid "Elasticsearch server"
-msgstr ""
+msgstr "Elasticsearch 서버"
 
 #: ../../source/deploy/server/troubleshooting.rst:348
 msgid "Hostname: elastic.local.lan"
-msgstr ""
+msgstr "호스트명: elastic.local.lan"
 
 #: ../../source/deploy/server/troubleshooting.rst:349
 msgid "Elasticsearch v7.9 with these plugins"
-msgstr ""
+msgstr "다음 플러그인이 포함된 Elasticsearch v7.9"
 
 #: ../../source/deploy/server/troubleshooting.rst:350
 msgid "analysis-icu"
-msgstr ""
+msgstr "analysis-icu"
 
 #: ../../source/deploy/server/troubleshooting.rst:356
 msgid "What it is"
-msgstr ""
+msgstr "이것이 무엇인가"
 
 #: ../../source/deploy/server/troubleshooting.rst:358
 msgid ""
@@ -902,20 +1005,23 @@ msgid ""
 "possible, but nothing is better than a screenshot or a screen recording "
 "of the behavior."
 msgstr ""
+"특정 동작이 사용자가 특정 작업을 수행할 때만 발생하는 경우, 이를 재현하기 위한 자세한 단계를 제공하면 올바른 버그를 찾고 "
+"수정하는 데 도움이 됩니다. 이러한 세부 정보는 가능한 한 설명적이어야 하지만, 동작의 스크린샷이나 화면 녹화만큼 좋은 것은 "
+"없습니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:360
 msgid ""
 "A short summary of the steps to reproduce is also helpful. If you want "
 "some examples, look at the bug tickets on some Mattermost Jira tickets."
-msgstr ""
+msgstr "재현 단계에 대한 간단한 요약도 도움이 됩니다. 예시를 원하시면 Mattermost Jira 티켓의 버그 티켓을 참조하세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:363
 msgid "How to provide these details"
-msgstr ""
+msgstr "이러한 세부 정보를 제공하는 방법"
 
 #: ../../source/deploy/server/troubleshooting.rst:365
 msgid "**macOS**"
-msgstr ""
+msgstr "**macOS**"
 
 #: ../../source/deploy/server/troubleshooting.rst:367
 msgid ""
@@ -924,21 +1030,27 @@ msgid ""
 " press :kbd:`⌘` :kbd:`⇧` :kbd:`4` and select the region to take a "
 "screenshot. The screenshot files are placed on the desktop by default."
 msgstr ""
+"화면 녹화 도구를 열고 녹화하려는 화면 영역을 선택하려면 :kbd:`⌘` :kbd:`⇧` :kbd:`5` 를 누르세요. 스크린샷을 "
+"찍으려면 :kbd:`⌘` :kbd:`⇧` :kbd:`4` 를 누르고 스크린샷을 찍을 영역을 선택하세요. 스크린샷 파일은 기본적으로 "
+"바탕화면에 저장됩니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:369
 msgid "**Windows**"
-msgstr ""
+msgstr "**Windows**"
 
 #: ../../source/deploy/server/troubleshooting.rst:371
+#, fuzzy
 msgid ""
 "Press :kbd:`Ctrl` :kbd:`Shift` :kbd:`S` to open the snipping tool to take"
 " a screenshot. If you want to take a screen recording you'll need to "
 "install third-party software such as `OBS <https://obsproject.com/>`__."
 msgstr ""
+"스크린샷을 찍으려면 :kbd:`Ctrl` :kbd:`Shift` :kbd:`S` 를 눌러 스니핑 도구를 여세요. 화면 녹화를 "
+"원하시면 `OBS <https://obsproject.com/>`__ 와 같은 타사 소프트웨어를 설치해야 합니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:373
 msgid "**iOS**"
-msgstr ""
+msgstr "**iOS**"
 
 #: ../../source/deploy/server/troubleshooting.rst:375
 msgid ""
@@ -946,24 +1058,28 @@ msgid ""
 "<https://support.apple.com/guide/iphone/take-a-screenshot-"
 "iphc872c0115/ios>`_."
 msgstr ""
+"`iPhone에서 스크린샷 또는 화면 녹화 <https://support.apple.com/guide/iphone/take-a"
+"-screenshot-iphc872c0115/ios>`_ 를 참조하세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:377
 msgid "**Android**"
-msgstr ""
+msgstr "**Android**"
 
 #: ../../source/deploy/server/troubleshooting.rst:379
 msgid ""
 "Take a screenshot or record your screen on your `Android device "
 "<https://support.google.com/android/answer/9075928?hl=en>`_."
 msgstr ""
+"`Android 기기에서 스크린샷을 찍거나 화면을 녹화 "
+"<https://support.google.com/android/answer/9075928?hl=en>`_ 하세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:382
 msgid "Appendix"
-msgstr ""
+msgstr "부록"
 
 #: ../../source/deploy/server/troubleshooting.rst:384
 msgid "**A note on mobile issues**"
-msgstr ""
+msgstr "**모바일 문제에 대한 참고사항**"
 
 #: ../../source/deploy/server/troubleshooting.rst:386
 msgid ""
@@ -973,10 +1089,14 @@ msgid ""
 "replayed to reproduce issues. Talk to a `Mattermost Expert "
 "<https://mattermost.com/contact-sales/>`_ for help setting these up."
 msgstr ""
+"모바일 앱에는 디버그 모드가 없기 때문에, 사용자 데이터에서 발생하는 문제를 진단하려면 Charles나 mitmproxy와 같은 "
+"프록시가 필요합니다. 이러한 도구들은 클라이언트의 트래픽을 가로채고 기록하여 문제를 재현하는 데 사용할 수 있습니다. 이러한 설정에"
+" 도움이 필요하면 `Mattermost 전문가 <https://mattermost.com/contact-sales/>`_ 에게 "
+"문의하세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:388
 msgid "**SAML login issues**"
-msgstr ""
+msgstr "**SAML 로그인 문제**"
 
 #: ../../source/deploy/server/troubleshooting.rst:390
 msgid ""
@@ -985,10 +1105,13 @@ msgid ""
 "that can reveal issues that are easy to fix. Follow these instructions to"
 " view the SAML login flow if you are experiencing SAML authentication."
 msgstr ""
+"SAML 로그인에 문제가 있는 경우, 중요한 컨텍스트 중 하나는 SAML 로그인 흐름입니다. 여기에는 쉽게 수정할 수 있는 문제를 "
+"발견할 수 있는 헤더와 인증 정보가 포함되어 있습니다. SAML 인증을 사용 중이라면 다음 지침에 따라 SAML 로그인 흐름을 "
+"확인하세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:393
 msgid "Checking keys and certificates"
-msgstr ""
+msgstr "키와 인증서 확인"
 
 #: ../../source/deploy/server/troubleshooting.rst:395
 msgid ""
@@ -997,22 +1120,26 @@ msgid ""
 "should verify the format of the keys and certificates by running this "
 "command:"
 msgstr ""
+"키와 인증서 파일은 절대 공유해서는 안 되지만, 오류가 키나 인증서의 형식에 문제가 있음을 나타내는 경우 다음 명령을 실행하여 키와"
+" 인증서의 형식을 확인해야 합니다:"
 
 #: ../../source/deploy/server/troubleshooting.rst:401
 msgid "The output must meet these criteria exactly to be valid:"
-msgstr ""
+msgstr "출력은 유효하려면 다음 기준을 정확히 충족해야 합니다:"
 
 #: ../../source/deploy/server/troubleshooting.rst:403
 msgid "Start with ``-----BEGIN CERTIFICATE-----$``."
-msgstr ""
+msgstr "``-----BEGIN CERTIFICATE-----$`` 로 시작해야 합니다."
 
 #: ../../source/deploy/server/troubleshooting.rst:404
 msgid ""
 "All lines must end with ``$``. If they end with ``^M$`` then convert them"
 " to UNIX line endings with ``dos2unix``."
 msgstr ""
+"모든 줄은 ``$`` 로 끝나야 합니다. ``^M$`` 로 끝나는 경우 ``dos2unix`` 를 사용하여 UNIX 줄 끝으로 "
+"변환하세요."
 
 #: ../../source/deploy/server/troubleshooting.rst:405
 msgid "End with ``-----END CERTIFICATE-----$``."
-msgstr ""
+msgstr "``-----END CERTIFICATE-----$`` 로 끝나야 합니다."
 

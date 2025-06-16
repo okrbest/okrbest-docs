@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/deploy/server/trouble-postgres.rst:2
 msgid "PostgreSQL installation troubleshooting"
-msgstr ""
+msgstr "PostgreSQL 설치 문제 해결"
 
 #: ../../source/deploy/server/trouble-postgres.rst:4
 msgid ""
@@ -29,6 +29,8 @@ msgid ""
 "requirements:database software>` is our database of choice for Mattermost"
 " to enhance the platform’s performance and capabilities."
 msgstr ""
+"Mattermost v8.0부터 플랫폼의 성능과 기능을 향상시키기 위해 :ref:`PostgreSQL <deploy/software-hardware-"
+"requirements:database software>` 를 선호하는 데이터베이스로 사용합니다."
 
 #: ../../source/deploy/server/trouble-postgres.rst:6
 msgid ""
@@ -37,12 +39,15 @@ msgid ""
 " v15, run this command: ``GRANT CREATE ON SCHEMA public TO PUBLIC`` to "
 "ensure that you can use Mattermost."
 msgstr ""
+"PostgreSQL v15는 이전 버전과의 호환성에 영향을 줄 수 있는 변경사항을 도입했습니다. PostgreSQL v15를 새로 설치하는 경우, "
+"Mattermost를 사용할 수 있도록 다음 명령을 실행하세요: ``GRANT CREATE ON SCHEMA public TO PUBLIC``"
 
 #: ../../source/deploy/server/trouble-postgres.rst:9
 msgid ""
 "PostgresSQL full-text search fails to use indexes with non-english "
 "``default_text_search_config``"
 msgstr ""
+"PostgreSQL 전체 텍스트 검색이 영어가 아닌 ``default_text_search_config`` 로 인덱스를 사용하지 못함"
 
 #: ../../source/deploy/server/trouble-postgres.rst:11
 msgid ""
@@ -51,6 +56,8 @@ msgid ""
 "However, indexes are still created with a hardcoded text search config "
 "(english) and as a result, full-text search may never use the indexes."
 msgstr ""
+"Mattermost는 하드코딩된 텍스트 검색 설정 대신 PostgreSQL 데이터베이스의 전체 텍스트 검색에 ``default_text_search_config`` 를 사용합니다. "
+"하지만 인덱스는 여전히 하드코딩된 텍스트 검색 설정(영어)으로 생성되며, 결과적으로 전체 텍스트 검색이 인덱스를 사용하지 못할 수 있습니다."
 
 #: ../../source/deploy/server/trouble-postgres.rst:13
 msgid ""
@@ -58,6 +65,7 @@ msgid ""
 "GIN indexes to improve the database full-text search feature in "
 "PostgreSQL."
 msgstr ""
+"Mattermost의 ``Posts`` 나 ``Users`` 와 같은 일부 테이블에는 PostgreSQL의 데이터베이스 전체 텍스트 검색 기능을 개선하기 위한 GIN 인덱스가 포함되어 있습니다."
 
 #: ../../source/deploy/server/trouble-postgres.rst:15
 msgid ""
@@ -68,6 +76,8 @@ msgid ""
 "indexes, the language specified in the query needs to match the language "
 "specified in the index."
 msgstr ""
+"이러한 인덱스는 특정 언어에 대해 구축되어야 하며, 생성될 때 영어로 하드코딩됩니다. 전체 텍스트 검색 쿼리는 항상 ``default_text_search_config`` "
+"데이터베이스 설정을 사용하여 수행됩니다. 전체 텍스트 검색 기능이 인덱스를 활용하려면 쿼리에 지정된 언어가 인덱스에 지정된 언어와 일치해야 합니다."
 
 #: ../../source/deploy/server/trouble-postgres.rst:17
 msgid ""
@@ -76,10 +86,12 @@ msgid ""
 " dropping the specific GIN index they're interested in and rebuilding it "
 "with the value of ``default_text_search_config``."
 msgstr ""
+"``default_text_search_config`` 가 ``english`` 로 설정되지 않은 경우 GIN 인덱스가 사용되지 않습니다. 데이터베이스 관리자는 "
+"관심 있는 특정 GIN 인덱스를 삭제하고 ``default_text_search_config`` 의 값으로 다시 구축하여 이 문제를 해결할 수 있습니다."
 
 #: ../../source/deploy/server/trouble-postgres.rst:19
 msgid "For example, if the default language of your server is Spanish:"
-msgstr ""
+msgstr "예를 들어, 서버의 기본 언어가 스페인어인 경우:"
 
 #: ../../source/deploy/server/trouble-postgres.rst:21
 msgid ""
@@ -90,14 +102,20 @@ msgid ""
 "DROP INDEX CONCURRENTLY IF EXISTS idx_posts_message_txt; ALTER INDEX "
 "idx_posts_message_txt_spanish RENAME TO idx_posts_message_txt; ```"
 msgstr ""
+"```sql # 이전 인덱스를 삭제하기 전에 새 이름으로 새 인덱스 생성"
+" CREATE INDEX CONCURRENTLY IF NOT EXISTS idx_posts_message_txt_spanish ON"
+" posts USING gin(to_tsvector('spanish', message)); # 새 인덱스가 작동하는지 확인. "
+"작동한다면 이전 인덱스를 삭제하고 새 인덱스의 이름을 변경: "
+"DROP INDEX CONCURRENTLY IF EXISTS idx_posts_message_txt; ALTER INDEX "
+"idx_posts_message_txt_spanish RENAME TO idx_posts_message_txt; ```"
 
 #: ../../source/deploy/server/trouble-postgres.rst:30
 msgid "Change the PostgreSQL username and password"
-msgstr ""
+msgstr "PostgreSQL 사용자 이름과 비밀번호 변경"
 
 #: ../../source/deploy/server/trouble-postgres.rst:32
 msgid ""
 "We recommend changing the PostgreSQL username and password in the "
 "``.env`` file."
 msgstr ""
-
+"``.env`` 파일에서 PostgreSQL 사용자 이름과 비밀번호를 변경하는 것을 권장합니다."

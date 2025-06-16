@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/configure/customize-mattermost.rst:2
 msgid "Customizing Mattermost"
-msgstr ""
+msgstr "Mattermost 사용자 정의"
 
 #: ../../source/_static/badges/allplans-selfhosted.rst:7
 msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `모든 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
@@ -35,7 +35,7 @@ msgstr ""
 msgid ""
 "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
 "deployments"
-msgstr ""
+msgstr "|deployment-img| `자체 호스팅 <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
@@ -43,7 +43,7 @@ msgstr ""
 
 #: ../../source/configure/customize-mattermost.rst:7
 msgid "There are several ways to customize your Mattermost server."
-msgstr ""
+msgstr "Mattermost 서버를 사용자 정의하는 여러 방법이 있습니다."
 
 #: ../../source/configure/customize-mattermost.rst:9
 msgid ""
@@ -55,6 +55,11 @@ msgid ""
 "trademark guidelines <https://mattermost.com/trademark-standards-of-"
 "use/>`_ for details."
 msgstr ""
+"Mattermost를 사용자 정의할 때는 Mattermost 브랜드와 혼동될 수 있는 브랜딩을 피해주세요. "
+"예를 들어, \"Healthcare Central\" 은 완전히 다른 브랜드이므로 괜찮습니다. "
+"\"Mattermost Healthcare Central\" 은 Mattermost 브랜드와 혼동될 수 있으므로 적절하지 "
+"않습니다. 자세한 내용은 `Mattermost 상표 가이드라인 <https://mattermost.com/trademark-"
+"standards-of-use/>`_ 을 참조하세요."
 
 #: ../../source/configure/customize-mattermost.rst:11
 msgid ""
@@ -63,62 +68,67 @@ msgid ""
 " not remove the Mattermost, Inc. copyright notice from the login footer "
 "or from the About dialog."
 msgstr ""
+"변경 사항에 따라 필요하다고 판단되면 사용자 인터페이스에 자체 저작권 고지를 추가할 수 "
+"있지만, 로그인 푸터나 About 대화 상자에서 Mattermost, Inc.의 저작권 고지는 제거하지 "
+"말아주세요."
 
 #: ../../source/configure/customize-mattermost.rst:14
 msgid "Mattermost Web App"
-msgstr ""
+msgstr "Mattermost 웹 앱"
 
 #: ../../source/configure/customize-mattermost.rst:16
 msgid ""
 "The Mattermost webapp is licensed under the Apache 2.0 license. To modify"
 " and use with the Mattermost server, you can:"
 msgstr ""
+"Mattermost 웹앱은 Apache 2.0 라이선스로 제공됩니다. Mattermost 서버와 함께 수정하여 "
+"사용하려면 다음 단계를 따르세요:"
 
 #: ../../source/configure/customize-mattermost.rst:18
 msgid "Install the Mattermost server by following one of our installation guides"
-msgstr ""
+msgstr "설치 가이드 중 하나를 따라 Mattermost 서버를 설치하세요"
 
 #: ../../source/configure/customize-mattermost.rst:19
 msgid ""
 "Fork the `mattermost <https://github.com/mattermost/mattermost>`_ "
 "repository"
-msgstr ""
+msgstr "`mattermost <https://github.com/mattermost/mattermost>`_ 저장소를 포크하세요"
 
 #: ../../source/configure/customize-mattermost.rst:20
 msgid ""
 "Go to the web app code located in the ``webapp`` directory and make your "
 "changes"
-msgstr ""
+msgstr "``webapp`` 디렉토리에 있는 웹 앱 코드로 이동하여 변경 사항을 적용하세요"
 
 #: ../../source/configure/customize-mattermost.rst:21
 msgid "Run ``make package`` to create ``mattermost-webapp.tar.gz``"
-msgstr ""
+msgstr "``make package`` 를 실행하여 ``mattermost-webapp.tar.gz`` 를 생성하세요"
 
 #: ../../source/configure/customize-mattermost.rst:22
 msgid ""
 "Copy ``mattermost-webapp-tar.gz`` to the location Mattermost was "
 "installed in Step 1"
-msgstr ""
+msgstr "``mattermost-webapp-tar.gz`` 를 1단계에서 Mattermost가 설치된 위치로 복사하세요"
 
 #: ../../source/configure/customize-mattermost.rst:23
 msgid "Rename the existing ``client`` folder to ``client-original``"
-msgstr ""
+msgstr "기존 ``client`` 폴더를 ``client-original`` 로 이름을 변경하세요"
 
 #: ../../source/configure/customize-mattermost.rst:24
 msgid ""
 "Run ``tar -xvf mattermost-webapp.tar.gz`` to extract your new customized "
 "``client`` folder"
-msgstr ""
+msgstr "``tar -xvf mattermost-webapp.tar.gz`` 를 실행하여 새로 사용자 정의된 ``client`` 폴더를 추출하세요"
 
 #: ../../source/configure/customize-mattermost.rst:25
 msgid ""
 "If you're installing Mattermost 7.5 - 7.10, copy the ``products`` folder "
 "from ``client-original`` into ``client``"
-msgstr ""
+msgstr "Mattermost 7.5 - 7.10을 설치하는 경우 ``client-original`` 에서 ``products`` 폴더를 ``client`` 로 복사하세요"
 
 #: ../../source/configure/customize-mattermost.rst:26
 msgid "Restart your Mattermost server"
-msgstr ""
+msgstr "Mattermost 서버를 재시작하세요"
 
 #: ../../source/configure/customize-mattermost.rst:28
 msgid ""
@@ -126,6 +136,8 @@ msgid ""
 "by using our :doc:`Custom Branding <../configure/custom-branding-tools>` "
 "settings."
 msgstr ""
+":doc:`사용자 정의 브랜딩 <../configure/custom-branding-tools>` 설정을 사용하여 "
+"포크하지 않고도 웹앱의 특정 부분을 사용자 정의할 수 있습니다."
 
 #: ../../source/configure/customize-mattermost.rst:30
 msgid ""
@@ -133,65 +145,67 @@ msgid ""
 "the ``/images`` directory. To change the app icon, modify the "
 "``/app/components/app_icon.js`` file."
 msgstr ""
+"이메일 알림의 로고를 변경하려면 ``/images`` 디렉토리에 있는 파일을 변경하세요. "
+"앱 아이콘을 변경하려면 ``/app/components/app_icon.js`` 파일을 수정하세요."
 
 #: ../../source/configure/customize-mattermost.rst:33
 msgid "Mattermost Server"
-msgstr ""
+msgstr "Mattermost 서버"
 
 #: ../../source/configure/customize-mattermost.rst:35
 msgid ""
 "There are a few things you can customize in the Mattermost server without"
 " forking:"
-msgstr ""
+msgstr "포크하지 않고도 Mattermost 서버에서 사용자 정의할 수 있는 몇 가지 사항이 있습니다:"
 
 #: ../../source/configure/customize-mattermost.rst:37
 msgid "Modify text in the Mattermost interface by modifying the ``en.json`` file."
-msgstr ""
+msgstr "``en.json`` 파일을 수정하여 Mattermost 인터페이스의 텍스트를 수정하세요."
 
 #: ../../source/configure/customize-mattermost.rst:38
 msgid ""
 "Customize or hide help and support links by modifying your "
 ":ref:`configuration settings <configure/site-configuration-"
 "settings:customization>`."
-msgstr ""
+msgstr ":ref:`구성 설정 <configure/site-configuration-settings:customization>` 을 수정하여 도움말 및 지원 링크를 사용자 정의하거나 숨기세요."
 
 #: ../../source/configure/customize-mattermost.rst:39
 msgid ""
 "Customize the email notifications by editing the HTML files in "
 "``/templates``."
-msgstr ""
+msgstr "``/templates`` 의 HTML 파일을 편집하여 이메일 알림을 사용자 정의하세요."
 
 #: ../../source/configure/customize-mattermost.rst:42
 msgid "Mattermost mobile apps"
-msgstr ""
+msgstr "Mattermost 모바일 앱"
 
 #: ../../source/configure/customize-mattermost.rst:44
 msgid ""
 "The Mattermost mobile apps can be customized if you choose to build the "
 "apps yourself."
-msgstr ""
+msgstr "앱을 직접 빌드하기로 선택한 경우 Mattermost 모바일 앱을 사용자 정의할 수 있습니다."
 
 #: ../../source/configure/customize-mattermost.rst:46
 msgid "To brand the mobile apps:"
-msgstr ""
+msgstr "모바일 앱을 브랜딩하려면:"
 
 #: ../../source/configure/customize-mattermost.rst:48
 msgid ""
 "Fork the `mattermost-mobile <https://github.com/mattermost/mattermost-"
 "mobile>`_ repository."
-msgstr ""
+msgstr "`mattermost-mobile <https://github.com/mattermost/mattermost-mobile>`_ 저장소를 포크하세요."
 
 #: ../../source/configure/customize-mattermost.rst:49
 msgid "Replace the name, images, and any key text strings."
-msgstr ""
+msgstr "이름, 이미지 및 주요 텍스트 문자열을 교체하세요."
 
 #: ../../source/configure/customize-mattermost.rst:50
 msgid "Compile the custom apps."
-msgstr ""
+msgstr "사용자 정의 앱을 컴파일하세요."
 
 #: ../../source/configure/customize-mattermost.rst:51
 msgid "Deploy the apps to an app store."
-msgstr ""
+msgstr "앱을 앱 스토어에 배포하세요."
 
 #: ../../source/configure/customize-mattermost.rst:53
 msgid ""
@@ -199,39 +213,40 @@ msgid ""
 "are welcome to deploy to iTunes and Google Play as long as the branding "
 "is not confusable with official Mattermost products."
 msgstr ""
+"대부분의 조직은 내부 엔터프라이즈 앱 스토어에 배포하지만, 브랜딩이 공식 Mattermost 제품과 "
+"혼동되지 않는 한 iTunes와 Google Play에 배포할 수 있습니다."
 
 #: ../../source/configure/customize-mattermost.rst:56
 msgid "Mattermost desktop apps"
-msgstr ""
+msgstr "Mattermost 데스크톱 앱"
 
 #: ../../source/configure/customize-mattermost.rst:58
 msgid ""
 "The Mattermost desktop apps can be customized if you choose to build the "
 "apps yourself."
-msgstr ""
+msgstr "앱을 직접 빌드하기로 선택한 경우 Mattermost 데스크톱 앱을 사용자 정의할 수 있습니다."
 
 #: ../../source/configure/customize-mattermost.rst:60
 msgid "To brand the desktop apps:"
-msgstr ""
+msgstr "데스크톱 앱을 브랜딩하려면:"
 
 #: ../../source/configure/customize-mattermost.rst:62
 msgid ""
 "Fork the `mattermost/desktop <https://github.com/mattermost/desktop>`_ "
 "repository"
-msgstr ""
+msgstr "`mattermost/desktop <https://github.com/mattermost/desktop>`_ 저장소를 포크하세요"
 
 #: ../../source/configure/customize-mattermost.rst:63
 msgid "Replace the name, images, and any key text strings"
-msgstr ""
+msgstr "이름, 이미지 및 주요 텍스트 문자열을 교체하세요"
 
 #: ../../source/configure/customize-mattermost.rst:64
 msgid ""
 "Refer to `the Mattermost Developer documentation "
 "<https://developers.mattermost.com/contribute/more-info/desktop/>`_ for "
 "help with compiling the apps"
-msgstr ""
+msgstr "앱 컴파일에 대한 도움말은 `Mattermost 개발자 문서 <https://developers.mattermost.com/contribute/more-info/desktop/>`_ 를 참조하세요"
 
 #: ../../source/configure/customize-mattermost.rst:65
 msgid "Share the desktop application with your users"
-msgstr ""
-
+msgstr "사용자와 데스크톱 애플리케이션을 공유하세요"

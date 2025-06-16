@@ -21,25 +21,26 @@ msgstr ""
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:2
 msgid "Downgrade Mattermost Server"
-msgstr ""
+msgstr "Mattermost 서버 다운그레이드"
 
 #: ../../source/_static/badges/allplans-selfhosted.rst:7
 msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `모든 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/allplans-selfhosted.rst:9
 msgid ""
 "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
 "deployments"
 msgstr ""
+"|deployment-img| `자체 호스팅 <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:7
 msgid ""
@@ -48,34 +49,36 @@ msgid ""
 ":doc:`Mattermost server version archive </about/version-archive>` "
 "documentation."
 msgstr ""
+"대부분의 경우 :doc:`upgrading-mattermost-server` 와 동일한 단계를 사용하여 Mattermost 서버를 다운그레이드할 수 있습니다. "
+"서버 바이너리는 :doc:`Mattermost 서버 버전 아카이브 </about/version-archive>` 문서에서 찾을 수 있습니다."
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:11
 msgid ""
 "We don't recommend downgrading more than one major version back from your"
 " current installation."
-msgstr ""
+msgstr "현재 설치 버전에서 한 메이저 버전 이상 다운그레이드하는 것은 권장하지 않습니다."
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:12
 msgid ""
 "We strongly recommend testing the downgrade in a staging environment "
 "first to identify any potential issues."
-msgstr ""
+msgstr "잠재적인 문제를 식별하기 위해 먼저 스테이징 환경에서 다운그레이드를 테스트하는 것을 강력히 권장합니다."
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:13
 msgid ""
 "Ensure that your plugins and integrations are compatible with the "
 "downgraded version you're moving to."
-msgstr ""
+msgstr "플러그인과 통합이 다운그레이드하려는 버전과 호환되는지 확인하세요."
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:16
 msgid "Prepare for downgrade"
-msgstr ""
+msgstr "다운그레이드 준비"
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:18
 msgid ""
 "Before downgrading the Mattermost server, we strongly recommend the "
 "following preparation steps."
-msgstr ""
+msgstr "Mattermost 서버를 다운그레이드하기 전에 다음 준비 단계를 강력히 권장합니다."
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:20
 msgid ""
@@ -83,26 +86,27 @@ msgid ""
 "Mattermost application files. This is crucial in case you need to revert "
 "any changes."
 msgstr ""
+"데이터 백업: 데이터베이스와 Mattermost 애플리케이션 파일의 전체 백업이 있는지 확인하세요. 변경 사항을 되돌려야 할 경우를 대비하여 이는 매우 중요합니다."
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:22
 msgid ""
 "Back up your database using your organization’s standard procedures for "
 "backing up the database."
-msgstr ""
+msgstr "조직의 표준 데이터베이스 백업 절차를 사용하여 데이터베이스를 백업하세요."
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:24
 msgid ""
 "Back up your application by copying into an archive folder (e.g. "
 "``mattermost-back-YYYY-MM-DD-HH-mm``). Ensure to copy your Mattermost "
 "configuration files and any other necessary application files."
-msgstr ""
+msgstr "아카이브 폴더(예: ``mattermost-back-YYYY-MM-DD-HH-mm``)에 복사하여 애플리케이션을 백업하세요. Mattermost 구성 파일과 기타 필요한 애플리케이션 파일을 복사해야 합니다."
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:26
 msgid ""
 "Carefully review the Mattermost changelog for the version you are "
 "downgrading to in order to understand any potential issues or "
 "incompatibilities."
-msgstr ""
+msgstr "잠재적인 문제나 호환성 문제를 이해하기 위해 다운그레이드하려는 버전의 Mattermost 변경 로그를 주의 깊게 검토하세요."
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:28
 msgid ""
@@ -114,16 +118,19 @@ msgid ""
 "<https://github.com/mattermost/mattermost/blob/master/server/channels/db/migrations/migrations.list>`_"
 " (Select the tag for desired version)."
 msgstr ""
+":ref:`mattermost db version --all<manage/command-line-tools:mattermost db version>` 명령을 사용하여 데이터베이스의 현재 스키마 버전을 확인하세요. "
+"또한 대상 스키마에 대해 확실하지 않은 경우, 공개 `GitHub 저장소 <https://github.com/mattermost/mattermost/blob/master/server/channels/db/migrations/migrations.list>`_ "
+"(원하는 버전의 태그 선택)를 확인하여 대상 스키마 버전(즉, 적용된 마이그레이션)을 확인할 수 있습니다."
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:31
 msgid "Perform the downgrade"
-msgstr ""
+msgstr "다운그레이드 수행"
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:33
 msgid ""
 "Stop the Mattermost service to ensure that no data is being written to "
 "the database during the downgrade process."
-msgstr ""
+msgstr "다운그레이드 과정 중에 데이터베이스에 데이터가 기록되지 않도록 Mattermost 서비스를 중지하세요."
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:35
 msgid ""
@@ -133,6 +140,8 @@ msgid ""
 "tools:mattermost db downgrade>` command. For example: ``mattermost db "
 "downgrade 128,127,126``"
 msgstr ""
+"버전 간에 데이터베이스 스키마가 변경된 경우 스키마를 다운그레이드해야 합니다. :ref:`mattermost db downgrade <manage/command-line-tools:mattermost db downgrade>` 명령을 사용하여 "
+"더 새로운 mattermost 바이너리로 다운그레이드를 수행하세요. 예: ``mattermost db downgrade 128,127,126``"
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:39
 msgid ""
@@ -143,6 +152,9 @@ msgid ""
 "versions of Mattermost to perform the downgrade. For example: "
 "``mattermost db downgrade migration_plan_128_127.json``."
 msgstr ""
+"Mattermost 업그레이드 중에 ``--save-plan`` 옵션을 사용했다면, 변경 사항을 적용하기 전에 다운그레이드 변경 사항을 검토할 수 있습니다. 이 옵션에는 정방향과 역방향 SQL 스크립트가 모두 포함되어 있습니다. "
+"이 옵션을 사용하면 다운그레이드할 마이그레이션을 지정할 필요가 없으며, 더 오래된 버전의 Mattermost를 사용하여 다운그레이드를 수행할 수 있습니다. "
+"예: ``mattermost db downgrade migration_plan_128_127.json``"
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:41
 msgid ""
@@ -150,10 +162,11 @@ msgid ""
 "any necessary configuration changes in the ``config.json`` file to match "
 "the downgraded version's expectations and support."
 msgstr ""
+"버전 간에 구성 설정이 변경되었을 수 있습니다. 다운그레이드된 버전의 요구 사항과 지원에 맞게 ``config.json`` 파일에서 필요한 구성 변경 사항을 되돌리세요."
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:44
 msgid "After the downgrade"
-msgstr ""
+msgstr "다운그레이드 후"
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:46
 msgid ""
@@ -164,20 +177,22 @@ msgid ""
 "downgrade; then you start using the application binary of the version you"
 " want to downgrade to."
 msgstr ""
+"현재 Mattermost 애플리케이션 바이너리를 다운그레이드하려는 버전으로 교체하세요. 대상 버전의 바이너리를 사용해야 합니다. 더 새로운 Mattermost 바이너리에는 "
+"롤백할 마이그레이션을 위한 다운그레이드 SQL이 포함되어 있습니다. 더 새로운 바이너리 버전을 사용하여 다운그레이드를 수행한 후, 다운그레이드하려는 버전의 애플리케이션 바이너리를 사용하기 시작합니다."
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:48
 msgid "Restart the Mattermost Server after completing the downgrade."
-msgstr ""
+msgstr "다운그레이드 완료 후 Mattermost 서버를 재시작하세요."
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:49
 msgid ""
 "Check the logs and test the application to ensure that everything is "
 "functioning correctly."
-msgstr ""
+msgstr "모든 것이 올바르게 작동하는지 확인하기 위해 로그를 확인하고 애플리케이션을 테스트하세요."
 
 #: ../../source/upgrade/downgrading-mattermost-server.rst:50
 msgid ""
 "Inform your users about the downgrade and any potential changes they "
 "might experience."
-msgstr ""
+msgstr "사용자에게 다운그레이드와 경험할 수 있는 잠재적인 변경 사항에 대해 알리세요."
 

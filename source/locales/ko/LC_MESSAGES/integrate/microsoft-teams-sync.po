@@ -21,13 +21,14 @@ msgstr ""
 
 #: ../../source/integrate/microsoft-teams-sync.rst:2
 msgid "Connect Microsoft Teams to Mattermost"
-msgstr ""
+msgstr "Microsoft Teams를 Mattermost에 연결하기"
 
 #: ../../source/_static/badges/ent-cloud-selfhosted.rst:7
 msgid ""
 "|plans-img| Available on `Enterprise plans "
 "<https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img| `Enterprise 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
@@ -38,6 +39,8 @@ msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
 msgstr ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ 및 `self-"
+"hosted <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
@@ -49,85 +52,87 @@ msgid ""
 "environment by forwarding real-time chat notifications from Microsoft "
 "Teams to Mattermost."
 msgstr ""
+"Mattermost와 Microsoft Teams가 혼합된 환경에서 Microsoft Teams의 실시간 채팅 알림을 "
+"Mattermost로 전달하여 정보 격차를 해소하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:13
 msgid "Deploy"
-msgstr ""
+msgstr "배포"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:15
 msgid "Setup starts in Microsoft Teams and ends in Mattermost."
-msgstr ""
+msgstr "설정은 Microsoft Teams에서 시작하여 Mattermost에서 완료됩니다."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:18
 msgid "Set up an OAuth application in Azure"
-msgstr ""
+msgstr "Azure에서 OAuth 애플리케이션 설정하기"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:20
 msgid ""
 "Sign into `portal.azure.com <https://portal.azure.com>`_ using an admin "
 "Azure account."
-msgstr ""
+msgstr "관리자 Azure 계정을 사용하여 `portal.azure.com <https://portal.azure.com>`_ 에 로그인하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:21
 msgid ""
 "Navigate to `App Registrations "
 "<https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps>`_."
-msgstr ""
+msgstr "`앱 등록 <https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps>`_ 으로 이동하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:22
 msgid "Select **New registration** at the top of the page."
-msgstr ""
+msgstr "페이지 상단에서 **새 등록** 을 선택하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:24
 msgid "In Azure, create a new app registration."
-msgstr ""
+msgstr "Azure에서 새 앱 등록을 생성하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:27
 msgid "Fill out the form with the following values:"
-msgstr ""
+msgstr "다음 값으로 양식을 작성하세요:"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:29
 msgid "**Name**: ``Mattermost MS Teams``"
-msgstr ""
+msgstr "**이름**: ``Mattermost MS Teams``"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:30
 msgid "**Supported account types**: ``Default value (Single tenant)``"
-msgstr ""
+msgstr "**지원되는 계정 유형**: ``기본값 (단일 테넌트)``"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:31
 msgid "**Platform**: ``Web``"
-msgstr ""
+msgstr "**플랫폼**: ``Web``"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:32
 msgid ""
 "**Redirect URI**: ``https://(MM_SITE_URL)/plugins/com.mattermost.msteams-"
 "sync/oauth-redirect``"
-msgstr ""
+msgstr "**리디렉션 URI**: ``https://(MM_SITE_URL)/plugins/com.mattermost.msteams-sync/oauth-redirect``"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:34
 msgid ""
 "Replace ``(MM_SITE_URL)`` with your Mattermost server's Site URL. Select "
 "**Register** to submit the form."
-msgstr ""
+msgstr "``(MM_SITE_URL)`` 을 Mattermost 서버의 사이트 URL로 대체하세요. 양식을 제출하려면 **등록** 을 선택하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:36
 msgid "In Azure, register the new Mattermost app."
-msgstr ""
+msgstr "Azure에서 새 Mattermost 앱을 등록하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:39
 msgid ""
 "From this screen, make note of the **Application (client) ID** and "
 "**Directory (tenant) ID**, needed later to configure the plugin in "
 "Mattermost."
-msgstr ""
+msgstr "이 화면에서 Mattermost에서 플러그인을 구성하는 데 나중에 필요한 **애플리케이션(클라이언트) ID** 와 **디렉토리(테넌트) ID** 를 기록하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:41
 msgid "Note important IDs to use later."
-msgstr ""
+msgstr "나중에 사용할 중요한 ID를 기록하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:44
 msgid "Navigate to **Certificates & secrets** in the left pane."
-msgstr ""
+msgstr "왼쪽 창에서 **인증서 및 비밀** 로 이동하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:46
 msgid ""
@@ -136,83 +141,88 @@ msgid ""
 "the secret ID. We'll use this value later in the Mattermost System "
 "Console."
 msgstr ""
+"**새 클라이언트 비밀** 을 선택하세요. 설명을 입력하고 **추가** 를 선택하세요. 클라이언트 비밀 생성 후, 비밀 ID가 아닌 "
+"새 비밀 값을 복사하세요. 이 값은 나중에 Mattermost 시스템 콘솔에서 사용할 것입니다."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:48
 msgid "In Azure, enter client secret details."
-msgstr ""
+msgstr "Azure에서 클라이언트 비밀 세부 정보를 입력하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:51
 msgid "Navigate to **API permissions** in the left pane."
-msgstr ""
+msgstr "왼쪽 창에서 **API 권한** 으로 이동하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:53
 msgid "Select **Add a permission**, then **Microsoft Graph** in the right pane."
-msgstr ""
+msgstr "**권한 추가** 를 선택한 다음 오른쪽 창에서 **Microsoft Graph** 를 선택하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:55
 msgid "In Azure, manage API permissions for the Mattermost app."
-msgstr ""
+msgstr "Azure에서 Mattermost 앱의 API 권한을 관리하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:58
 msgid ""
 "Select **Delegated permissions**, and scroll down to select the following"
 " permissions:"
-msgstr ""
+msgstr "**위임된 권한** 을 선택하고 아래로 스크롤하여 다음 권한을 선택하세요:"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:60
 msgid "``Chat.Read``"
-msgstr ""
+msgstr "``Chat.Read``"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:61
 msgid "``ChatMessage.Read``"
-msgstr ""
+msgstr "``ChatMessage.Read``"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:62
 msgid "``Files.Read.All``"
-msgstr ""
+msgstr "``Files.Read.All``"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:63
 msgid "``offline_access``"
-msgstr ""
+msgstr "``offline_access``"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:64
 msgid "``User.Read``"
-msgstr ""
+msgstr "``User.Read``"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:66
 #: ../../source/integrate/microsoft-teams-sync.rst:75
 msgid "Select **Add permissions** to submit the form."
-msgstr ""
+msgstr "양식을 제출하려면 **권한 추가** 를 선택하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:68
 msgid ""
 "Next, add application permissions via **Add a permission > Microsoft "
 "Graph > Application permissions**."
 msgstr ""
+"다음으로 **권한 추가 > Microsoft Graph > 애플리케이션 권한** 을 통해 애플리케이션 권한을 추가하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:70
 msgid "Select the following permissions:"
-msgstr ""
+msgstr "다음 권한을 선택하세요:"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:72
 msgid "``Chat.Read.All``"
-msgstr ""
+msgstr "``Chat.Read.All``"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:73
 msgid "``Presence.Read.All``"
-msgstr ""
+msgstr "``Presence.Read.All``"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:77
 msgid ""
 "Select **Grant admin consent for...** to grant the permissions for the "
 "application."
 msgstr ""
+"애플리케이션에 대한 권한을 부여하려면 **관리자 동의 부여...** 를 선택하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:80
 msgid ""
 "Ensure you have the metered APIs enabled (and the pay subscription "
 "associated to it)"
 msgstr ""
+"측정된 API가 활성화되어 있는지 확인하세요(그리고 관련된 유료 구독이 있는지)"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:82
 msgid ""
@@ -221,6 +231,8 @@ msgid ""
 "instructions at https://learn.microsoft.com/en-us/graph/metered-api-"
 "setup."
 msgstr ""
+"채팅 알림을 구독하려면 OAuth 앱을 유료 Azure 구독과 연결해야 합니다. 이 설정을 완료하려면 "
+"https://learn.microsoft.com/en-us/graph/metered-api-setup 에서 지침을 따르세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:86
 msgid ""
@@ -232,14 +244,17 @@ msgid ""
 "documentation <https://learn.microsoft.com/en-us/graph/teams-licenses>`__"
 " for more details."
 msgstr ""
+"측정된 API를 구성하지 않으면 월별 변경 사항이 제한된 **평가 모델** (Mattermost에서 구성 가능)을 사용해야 합니다. "
+"속도 제한으로 인해 메시지 수신이 중단될 수 있으므로 실제 프로덕션 환경에서 평가 모델 구성을 사용하지 않는 것을 강력히 권장합니다. "
+"자세한 내용은 `이 Microsoft 문서 <https://learn.microsoft.com/en-us/graph/teams-licenses>`__ 를 참조하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:88
 msgid "You're all set for configuration inside Azure."
-msgstr ""
+msgstr "Azure 내부 구성이 모두 완료되었습니다."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:91
 msgid "Install and configure the Microsoft Teams integration in Mattermost"
-msgstr ""
+msgstr "Mattermost에서 Microsoft Teams 통합 설치 및 구성"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:95
 msgid ""
@@ -247,38 +262,42 @@ msgid ""
 "instance running v9.8.0 (or later) and configured to use PostgreSQL. This"
 " Mattermost integration doesn't support MySQL databases."
 msgstr ""
+"이 설치 지침은 v9.8.0(또는 그 이상)을 실행 중이고 PostgreSQL을 사용하도록 구성된 Mattermost 인스턴스가 "
+"이미 있다고 가정합니다. 이 Mattermost 통합은 MySQL 데이터베이스를 지원하지 않습니다."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:97
 msgid ""
 "Log in to your Mattermost :doc:`workspace </guides/use-mattermost>` as a "
 "system admin."
-msgstr ""
+msgstr "시스템 관리자로 Mattermost :doc:`워크스페이스 </guides/use-mattermost>` 에 로그인하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:98
 msgid ""
 "In Mattermost, from the Product menu |product-list|, select **App "
 "Marketplace**."
-msgstr ""
+msgstr "Mattermost에서 제품 메뉴 |product-list| 에서 **앱 마켓플레이스** 를 선택하세요."
 
 #: ../../<rst_prolog>:100
 msgid ""
 "Navigate between Channels and collaborative playbooks using the product "
 "menu icon."
-msgstr ""
+msgstr "제품 메뉴 아이콘을 사용하여 채널과 협업 플레이북 사이를 탐색하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:99
 msgid "Search for or scroll to MS Teams, and select **Install**."
-msgstr ""
+msgstr "MS Teams를 검색하거나 스크롤하여 **설치** 를 선택하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:100
 msgid "Once installed, select **Configure**. You're taken to the System Console."
-msgstr ""
+msgstr "설치가 완료되면 **구성** 을 선택하세요. 시스템 콘솔로 이동합니다."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:101
 msgid ""
 "Configure the **Tenant ID**, **Client ID**, and **Client Secret** with "
 "the values obtained from setting up the OAuth App in Azure above."
 msgstr ""
+"위에서 Azure에서 OAuth 앱 설정 시 얻은 값으로 **Tenant ID**, **Client ID**, **Client Secret** 을 "
+"구성하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:103
 msgid ""
@@ -286,6 +305,8 @@ msgid ""
 "/plugins-configuration-settings:ms teams>` documentation for additional "
 "configuration options."
 msgstr ""
+"추가 구성 옵션은 :ref:`Microsoft Teams 플러그인 구성 설정 <configure/plugins-configuration-settings:ms teams>` "
+"문서를 참조하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:107
 msgid ""
@@ -296,16 +317,20 @@ msgid ""
 "msteams>`_, and upload it to your server via **System Console > Plugin "
 "Management**."
 msgstr ""
+"Mattermost v9.11.2(ESR)와 Mattermost Cloud v10부터 이 플러그인의 v2.0이 Mattermost 서버에 사전 패키지로 "
+"포함됩니다. Mattermost 배포가 v9.11.2 이전 버전인 경우 `최신 플러그인 바이너리 릴리스 "
+"<https://github.com/mattermost/mattermost-plugin-msteams>`_ 를 다운로드하여 **시스템 콘솔 > "
+"플러그인 관리** 를 통해 서버에 업로드하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:108
 msgid ""
 "We recommend making a copy of your webhook secret and encryption key, as "
 "it will only be visible to you once."
-msgstr ""
+msgstr "웹훅 시크릿과 암호화 키는 한 번만 표시되므로 복사본을 만드는 것을 권장합니다."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:111
 msgid "Monitor performance"
-msgstr ""
+msgstr "성능 모니터링"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:113
 msgid ""
@@ -314,18 +339,22 @@ msgid ""
 "</scale/performance-alerting>` for this plugin using Prometheus and "
 "Grafana."
 msgstr ""
+"Prometheus와 Grafana를 사용하여 이 플러그인에 대한 :doc:`성능 모니터링 </scale/deploy-prometheus-grafana-for-"
+"performance-monitoring>` 및 :doc:`성능 알림 </scale/performance-alerting>` 을 설정할 수 있습니다."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:115
 msgid ""
 "Monitoring enables you to proactively review the overall health of the "
 "plugin, including database calls, HTTP requests, and API latency."
 msgstr ""
+"모니터링을 통해 데이터베이스 호출, HTTP 요청, API 지연 시간을 포함한 플러그인의 전반적인 상태를 사전에 검토할 수 있습니다."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:116
 msgid ""
 "Alerting enables you to detect and take action as issues come up, such as"
 " the integration being offline."
 msgstr ""
+"알림을 통해 통합이 오프라인 상태가 되는 등의 문제가 발생할 때 이를 감지하고 조치를 취할 수 있습니다."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:118
 msgid ""
@@ -335,34 +364,37 @@ msgid ""
 "deployments as a useful starting point. These dashboards are designed for"
 " use in Mattermost Cloud, and filter to a given ``namespace``."
 msgstr ""
+"Mattermost Cloud 배포를 위한 유용한 시작점으로 Grafana 대시보드가 `GitHub <https://github.com/mattermost/"
+"mattermost-plugin-msteams/tree/main/server/metrics/dashboards>`_ 에서 제공됩니다. 이 대시보드는 Mattermost "
+"Cloud에서 사용하도록 설계되었으며, 지정된 ``namespace`` 로 필터링됩니다."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:-1
 msgid ""
 "Example of a Grafana monitoring dashboard for a Mattermost instance "
 "connected to Microsoft Teams."
-msgstr ""
+msgstr "Microsoft Teams에 연결된 Mattermost 인스턴스의 Grafana 모니터링 대시보드 예시."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:125
 msgid ""
 "Modifications will be necessary for self-hosted Mattermost deployments. "
 "See the `Get help <#get-help>`__ section below for details on how to "
 "contact us for assistance."
-msgstr ""
+msgstr "자체 호스팅 Mattermost 배포에는 수정이 필요합니다. 도움을 받는 방법에 대한 자세한 내용은 아래 `Get help <#get-help>`__ 섹션을 참조하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:128
 msgid "Use"
-msgstr ""
+msgstr "사용"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:130
 msgid ""
 "See the :doc:`collaborate within connected microsoft teams </collaborate"
 "/collaborate-within-connected-microsoft-teams>` product documentation to "
 "get started using Microsoft Teams synchronization."
-msgstr ""
+msgstr "Microsoft Teams 동기화 사용을 시작하려면 :doc:`연결된 Microsoft Teams 내에서 협업 </collaborate/collaborate-within-connected-microsoft-teams>` 제품 문서를 참조하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:133
 msgid "Upgrade"
-msgstr ""
+msgstr "업그레이드"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:135
 msgid ""
@@ -372,23 +404,25 @@ msgid ""
 "/mattermost-plugin-msteams>`__ for the latest release, available "
 "releases, and compatibiilty considerations."
 msgstr ""
+"새 버전이 출시될 때마다 이 통합을 업데이트하는 것을 권장합니다. 일반적으로 업데이트는 원활하게 이루어지며 Mattermost의 사용자 경험을 방해하지 않습니다. "
+"최신 릴리스, 사용 가능한 릴리스 및 호환성 고려사항은 `Releases page <https://github.com/mattermost/mattermost-plugin-msteams>`__ 를 방문하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:138
 msgid "Frequently asked questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:141
 msgid ""
 "My email address in Mattermost doesn't match my email address in "
 "Microsoft Teams: can I still connect?"
-msgstr ""
+msgstr "Mattermost의 이메일 주소가 Microsoft Teams의 이메일 주소와 일치하지 않습니다. 그래도 연결할 수 있나요?"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:143
 msgid ""
 "No. Currently, only accounts with the same email addresses are allowed to"
 " be connected. Specify the email address that matches your Mattermost "
 "account."
-msgstr ""
+msgstr "아니요. 현재는 동일한 이메일 주소를 가진 계정만 연결할 수 있습니다. Mattermost 계정과 일치하는 이메일 주소를 지정하세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:145
 msgid ""
@@ -397,10 +431,12 @@ msgid ""
 " open `GitHub issue <https://github.com/mattermost/mattermost-plugin-"
 "msteams/issues/519>`__ for you to share your feedback."
 msgstr ""
+"다른 이메일 주소를 가진 Microsoft Teams 계정에 Mattermost 계정을 연결하는 것이 워크스페이스에 필요한 경우, 피드백을 공유할 수 있는 "
+"`GitHub issue <https://github.com/mattermost/mattermost-plugin-msteams/issues/519>`__ 가 열려 있습니다."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:148
 msgid "How is encryption handled at rest and in motion?"
-msgstr ""
+msgstr "휴지 상태와 전송 중인 암호화는 어떻게 처리되나요?"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:150
 msgid ""
@@ -411,32 +447,34 @@ msgid ""
 " on behalf of the connected user. All communication between the "
 "integration and the Microsoft Graph API is conducted via TLS."
 msgstr ""
+"Mattermost 구성에 저장된 구성된 클라이언트 시크릿은 Microsoft Graph API에 대한 앱 전용 액세스에 사용됩니다. 사용자가 통합을 통해 Microsoft Teams에 연결하면, "
+"결과적인 액세스 토큰은 암호화되어 Mattermost 데이터베이스에 저장되어 연결된 사용자를 대신하여 액세스에 사용됩니다. 통합과 Microsoft Graph API 간의 모든 통신은 TLS를 통해 이루어집니다."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:152
 msgid ""
 "When notifications are enabled, chats and file attachments received by "
 "connected users will be stored as posts in the direct message channel "
 "between that user and the bot account created by the integration."
-msgstr ""
+msgstr "알림이 활성화되면 연결된 사용자가 받은 채팅과 파일 첨부물이 해당 사용자와 통합에서 생성된 봇 계정 간의 다이렉트 메시지 채널에 게시물로 저장됩니다."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:155
 msgid "Are there any database or network security considerations?"
-msgstr ""
+msgstr "데이터베이스나 네트워크 보안 관련 고려사항이 있나요?"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:157
 #: ../../source/integrate/microsoft-teams-sync.rst:162
 msgid ""
 "There is nothing specific to the integration that is beyond what would "
 "apply to a Mattermost instance."
-msgstr ""
+msgstr "Mattermost 인스턴스에 적용되는 것 이상의 통합 특정 사항은 없습니다."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:160
 msgid "Are there any compliance considerations (ie. GDPR, PCI)?"
-msgstr ""
+msgstr "준수 관련 고려사항(GDPR, PCI 등)이 있나요?"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:165
 msgid "How is this integration architectured?"
-msgstr ""
+msgstr "이 통합은 어떻게 구성되어 있나요?"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:167
 msgid ""
@@ -448,10 +486,12 @@ msgid ""
 "fetch the contents of these chats and represent them appropriately within"
 " Mattermost."
 msgstr ""
+"이 통합은 Microsoft Graph API의 변경 알림을 구독합니다. 이러한 변경 알림은 Microsoft Teams 내의 새로운 채팅이나 업데이트된 채팅에 대해 Mattermost에 알립니다. "
+"변경 알림을 수신하면, 통합은 앱 전용 액세스(클라이언트 시크릿을 통해)와 위임된 액세스(연결된 사용자를 통해)를 조합하여 이러한 채팅의 내용을 가져와 Mattermost 내에서 적절하게 표시합니다."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:170
 msgid "Get help"
-msgstr ""
+msgstr "도움 받기"
 
 #: ../../source/integrate/microsoft-teams-sync.rst:172
 msgid ""
@@ -461,6 +501,8 @@ msgid ""
 "Teams Sync plugin repository <https://github.com/mattermost/mattermost-"
 "plugin-msteams>`_."
 msgstr ""
+"Mattermost 고객은 `Mattermost support case <https://support.mattermost.com/hc/en-us/requests/new>`_ 를 열 수 있습니다. "
+"버그를 보고하려면 `Mattermost for Microsoft Teams Sync plugin repository <https://github.com/mattermost/mattermost-plugin-msteams>`_ 에 GitHub 이슈를 열어주세요."
 
 #: ../../source/integrate/microsoft-teams-sync.rst:174
 msgid ""
@@ -470,6 +512,8 @@ msgid ""
 "`Mattermost Community Server <https://community.mattermost.com/>`_ for "
 "assistance."
 msgstr ""
+"질문, 피드백 및 도움이 필요하시면 `Mattermost Community Server <https://community.mattermost.com/>`_ 의 "
+"`Integrations and Apps channel <https://community.mattermost.com/core/channels/integrations>`_ 에 참여하시면 도움을 받으실 수 있습니다."
 
 #~ msgid "Setup"
 #~ msgstr ""

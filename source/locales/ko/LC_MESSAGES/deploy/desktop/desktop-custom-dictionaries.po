@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/deploy/desktop/desktop-custom-dictionaries.rst:2
 msgid "Desktop App custom dictionaries"
-msgstr ""
+msgstr "데스크톱 앱 사용자 정의 사전"
 
 #: ../../source/deploy/desktop/desktop-custom-dictionaries.rst:4
 msgid ""
@@ -32,10 +32,13 @@ msgid ""
 "desktop app uses dictionary definitions provided by Apple that can't be "
 "customized."
 msgstr ""
+"Mattermost 데스크톱 앱 v4.7.1부터 Windows와 Linux에서 URL을 통해 사용자 정의 사전 정의를 제공할 수 있습니다. "
+"사용자 정의 사전이 지정되지 않은 경우 기본 사전 정의는 Chromium의 CDN(콘텐츠 전송 네트워크)에서 자동으로 가져옵니다. "
+"macOS에서는 Mattermost 데스크톱 앱이 사용자 정의할 수 없는 Apple에서 제공하는 사전 정의를 사용합니다."
 
 #: ../../source/deploy/desktop/desktop-custom-dictionaries.rst:7
 msgid "Prepare custom dictionaries"
-msgstr ""
+msgstr "사용자 정의 사전 준비"
 
 #: ../../source/deploy/desktop/desktop-custom-dictionaries.rst:9
 msgid ""
@@ -44,10 +47,13 @@ msgid ""
 "can download a copy of these dictionary definitions and modify them to "
 "fit specific needs."
 msgstr ""
+"Windows와 Linux에서는 Mattermost 데스크톱 앱이 기본적으로 `Hunspell Dictionary definitions "
+"<https://hunspell.github.io/>`_ 를 사용합니다. 이러한 사전 정의의 복사본을 다운로드하여 특정 요구사항에 맞게 "
+"수정할 수 있습니다."
 
 #: ../../source/deploy/desktop/desktop-custom-dictionaries.rst:11
 msgid "To access a copy of these dictionary definitions:"
-msgstr ""
+msgstr "이러한 사전 정의의 복사본에 접근하려면:"
 
 #: ../../source/deploy/desktop/desktop-custom-dictionaries.rst:13
 msgid ""
@@ -55,10 +61,12 @@ msgid ""
 "electron release "
 "<https://github.com/electron/electron/releases/latest>`__."
 msgstr ""
+"`최신 electron 릴리스 <https://github.com/electron/electron/releases/latest>`__ 에서 "
+"``hunspell_dictionaries.zip`` 의 복사본을 다운로드하세요."
 
 #: ../../source/deploy/desktop/desktop-custom-dictionaries.rst:15
 msgid "Extract the dictionary definitions from the ZIP file."
-msgstr ""
+msgstr "ZIP 파일에서 사전 정의를 추출하세요."
 
 #: ../../source/deploy/desktop/desktop-custom-dictionaries.rst:17
 msgid ""
@@ -66,6 +74,8 @@ msgid ""
 "than ``en-US``). Once renamed, these definition files match the usage of "
 "using Chromium's CDN ones, and you can modify the definitions as needed."
 msgstr ""
+"파일 이름을 소문자로 변환하세요. (Chromium은 ``en-US`` 대신 ``en-us`` 를 예상합니다). "
+"이름을 변경하면 이러한 정의 파일이 Chromium의 CDN 사용과 일치하며, 필요에 따라 정의를 수정할 수 있습니다."
 
 #: ../../source/deploy/desktop/desktop-custom-dictionaries.rst:19
 msgid ""
@@ -73,42 +83,44 @@ msgid ""
 "URL to the root folder of the dictionaries. Specify this URL as the "
 "**alternate dictionary URL** in the desktop app."
 msgstr ""
+"추출하고 변환된 파일을 웹 서버에서 제공하고 사전의 루트 폴더에 대한 URL을 기록하세요. "
+"이 URL을 데스크톱 앱의 **대체 사전 URL** 로 지정하세요."
 
 #: ../../source/deploy/desktop/desktop-custom-dictionaries.rst:22
 msgid "Configure the Desktop App"
-msgstr ""
+msgstr "데스크톱 앱 구성"
 
 #: ../../source/deploy/desktop/desktop-custom-dictionaries.rst:24
 msgid ""
 "In the Mattermost Desktop App, go to Settings by selecting |more-icon-"
 "vertical| **> File > Settings**."
 msgstr ""
+"Mattermost 데스크톱 앱에서 |more-icon-vertical| **> 파일 > 설정** 을 선택하여 설정으로 이동하세요."
 
 #: ../../<rst_prolog>:50
 msgid ""
 "Use the More icon in the top left corner to access Mattermost desktop "
 "apps customization settings."
-msgstr ""
+msgstr "Mattermost 데스크톱 앱 사용자 정의 설정에 접근하려면 왼쪽 상단 모서리의 More 아이콘을 사용하세요."
 
 #: ../../source/deploy/desktop/desktop-custom-dictionaries.rst:26
 msgid ""
 "Under **App Options**, ensure that the **Check spelling** option is "
 "enabled."
-msgstr ""
+msgstr "**앱 옵션** 아래에서 **맞춤법 검사** 옵션이 활성화되어 있는지 확인하세요."
 
 #: ../../source/deploy/desktop/desktop-custom-dictionaries.rst:28
 msgid ""
 "Select **Use an alternative dictionary URL** to specify the URL to the "
 "root folder of your custom dictionaries, then select **Save**."
-msgstr ""
+msgstr "사용자 정의 사전의 루트 폴더에 대한 URL을 지정하려면 **대체 사전 URL 사용** 을 선택한 다음 **저장** 을 선택하세요."
 
 #: ../../source/deploy/desktop/desktop-custom-dictionaries.rst:31
 msgid "Remove custom dictionaries"
-msgstr ""
+msgstr "사용자 정의 사전 제거"
 
 #: ../../source/deploy/desktop/desktop-custom-dictionaries.rst:33
 msgid ""
 "Select **Revert to default** to stop using the specified dictionary "
 "definitions, and revert to default dictionary definitions."
-msgstr ""
-
+msgstr "지정된 사전 정의 사용을 중지하고 기본 사전 정의로 되돌리려면 **기본값으로 되돌리기** 를 선택하세요."

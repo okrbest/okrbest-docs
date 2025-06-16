@@ -21,27 +21,27 @@ msgstr ""
 
 #: ../../source/onboard/delegated-granular-administration.rst:2
 msgid "Delegated granular administration"
-msgstr ""
+msgstr "위임된 세분화된 관리"
 
 #: ../../source/_static/badges/ent-cloud-selfhosted.rst:7
 msgid ""
 "|plans-img| Available on `Enterprise plans "
 "<https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `Enterprise 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/ent-cloud-selfhosted.rst:9
 msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
-msgstr ""
+msgstr "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ 및 `자체 호스팅 <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/onboard/delegated-granular-administration.rst:7
 msgid ""
@@ -51,6 +51,8 @@ msgid ""
 "to delegate and de-centralize specialized administration and "
 "administrative tasks with specific admin roles."
 msgstr ""
+"Mattermost는 특정 세분화된 권한과 시스템 콘솔 접근 권한을 가진 시스템 관리 역할의 생성과 맞춤 설정을 지원합니다.\n"
+"이를 통해 대규모 조직의 상위 관리자는 특정 관리자 역할을 통해 전문화된 관리 및 행정 업무를 위임하고 분산시킬 수 있습니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:9
 msgid ""
@@ -61,6 +63,9 @@ msgid ""
 "original role or the user's permissions configured by the Permissions "
 "scheme."
 msgstr ""
+"이러한 관리자 역할은 시스템 콘솔의 특정 영역과 관련 API 엔드포인트에 세분화된 접근을 허용합니다.\n"
+"이 역할을 통해 사용자는 전체 시스템 관리 영역에 접근하지 않고도 일부 관리 작업을 수행할 수 있습니다.\n"
+"이 시스템 역할은 사용자의 원래 역할이나 권한 스킴에서 설정된 권한을 절대 대체하지 않습니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:12
 msgid ""
@@ -71,10 +76,14 @@ msgid ""
 "can modify configuration values across all areas. Administrators should "
 "assign **Can Edit** permissions with caution."
 msgstr ""
+"시스템 콘솔 페이지에서 역할이 **접근 불가** 또는 **읽기 전용** 으로 설정되어 있더라도,\n"
+"어떤 시스템 콘솔 페이지에서든 **편집 가능** 권한을 부여하면 기본 구성 엔드포인트(``PUT /api/v4/config/patch``)에 접근할 수 있습니다.\n"
+"즉, 한 영역에서 쓰기 권한이 있는 사용자는 모든 영역의 구성 값을 수정할 수 있습니다.\n"
+"관리자는 **편집 가능** 권한을 신중하게 부여해야 합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:15
 msgid "Available roles"
-msgstr ""
+msgstr "사용 가능한 역할"
 
 #: ../../source/onboard/delegated-granular-administration.rst:17
 msgid ""
@@ -82,18 +91,20 @@ msgid ""
 "administration roles in the System Console. Each role has a set of "
 "default permissions, which can be adjusted as needed."
 msgstr ""
+"시스템 관리자는 시스템 콘솔에서 다음과 같은 위임 세분화 관리 역할을 구성할 수 있습니다.\n"
+"각 역할에는 기본 권한이 설정되어 있으며, 필요에 따라 조정할 수 있습니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:19
 msgid ""
 "**System Manager:** This role can be configured to have read/write "
 "permissions in different management areas."
-msgstr ""
+msgstr "**시스템 관리자:** 이 역할은 다양한 관리 영역에서 읽기/쓰기 권한을 가질 수 있도록 설정할 수 있습니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:20
 msgid ""
 "**User Manager:** This role can be configured to have read/write to all "
 "the user management areas and to authentication"
-msgstr ""
+msgstr "**사용자 관리자:** 이 역할은 모든 사용자 관리 영역과 인증에 대해 읽기/쓰기 권한을 가질 수 있도록 설정할 수 있습니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:21
 msgid ""
@@ -104,12 +115,14 @@ msgid ""
 "are removed for **All Members** via **System Console > Permissions > Edit"
 " Scheme > Custom Groups**."
 msgstr ""
+"**커스텀 그룹 관리자** 이 역할은 :doc:`커스텀 사용자 그룹 생성, 편집, 복원, 삭제 </collaborate/organize-using-custom-user-groups>` 권한을 가집니다.\n"
+"이 역할은 **시스템 콘솔 > 권한 > 스킴 편집 > 커스텀 그룹** 에서 **모든 멤버** 에 대한 **커스텀 그룹** 권한이 제거된 경우, 개별 사용자에게 커스텀 그룹 관리 권한을 부여하는 데 사용할 수 있습니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:22
 msgid ""
 "**Viewer:** The Viewer role can view all areas of the System Console, and"
 " can be configured with write access where needed."
-msgstr ""
+msgstr "**뷰어:** 뷰어 역할은 시스템 콘솔의 모든 영역을 볼 수 있으며, 필요에 따라 쓰기 권한도 설정할 수 있습니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:24
 msgid ""
@@ -118,6 +131,8 @@ msgid ""
 "different set of default permissions, and what users can access or view "
 "depends on the role they've been assigned."
 msgstr ""
+"사용자에게 시스템 역할이 할당되면, 해당 역할에 따라 시스템 콘솔과 관련 API 엔드포인트에 접근할 수 있습니다.\n"
+"각 역할마다 기본 권한이 다르며, 사용자가 접근하거나 볼 수 있는 영역은 할당된 역할에 따라 달라집니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:26
 msgid ""
@@ -127,177 +142,180 @@ msgid ""
 "Permissions write access, as it enables modifications to the permissions "
 "of any role, except for the delegated granular administrator roles."
 msgstr ""
+"아래 표는 각 역할의 기본 권한을 나열합니다.\n"
+"관리자는 조직의 요구에 맞게 이 설정을 신중하게 검토하고 구성해야 합니다.\n"
+"특히 권한 쓰기 접근 권한은 위임 세분화 관리자 역할을 제외한 모든 역할의 권한을 수정할 수 있으므로 주의해서 부여해야 합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:29
 msgid "**System role**"
-msgstr ""
+msgstr "**시스템 역할**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:29
 msgid "**Read/Write access**"
-msgstr ""
+msgstr "**읽기/쓰기 접근**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:29
 msgid "**Read Only access**"
-msgstr ""
+msgstr "**읽기 전용 접근**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:31
 msgid "System Manager"
-msgstr ""
+msgstr "시스템 관리자"
 
 #: ../../source/onboard/delegated-granular-administration.rst:31
 msgid "User Management - Groups - Teams - Channels - Permissions"
-msgstr ""
+msgstr "사용자 관리 - 그룹 - 팀 - 채널 - 권한"
 
 #: ../../source/onboard/delegated-granular-administration.rst:36
 #: ../../source/onboard/delegated-granular-administration.rst:180
 msgid "Environment"
-msgstr ""
+msgstr "환경"
 
 #: ../../source/onboard/delegated-granular-administration.rst:37
 #: ../../source/onboard/delegated-granular-administration.rst:232
 msgid "Site Configuration"
-msgstr ""
+msgstr "사이트 구성"
 
 #: ../../source/onboard/delegated-granular-administration.rst:38
 #: ../../source/onboard/delegated-granular-administration.rst:307
 msgid "Integrations"
-msgstr ""
+msgstr "통합"
 
 #: ../../source/onboard/delegated-granular-administration.rst:31
 msgid "Edition/License"
-msgstr ""
+msgstr "에디션/라이선스"
 
 #: ../../source/onboard/delegated-granular-administration.rst:32
 #: ../../source/onboard/delegated-granular-administration.rst:148
 msgid "Reporting"
-msgstr ""
+msgstr "보고서"
 
 #: ../../source/onboard/delegated-granular-administration.rst:33
 #: ../../source/onboard/delegated-granular-administration.rst:41
 #: ../../source/onboard/delegated-granular-administration.rst:272
 msgid "Authentication"
-msgstr ""
+msgstr "인증"
 
 #: ../../source/onboard/delegated-granular-administration.rst:34
 msgid "Plugins"
-msgstr ""
+msgstr "플러그인"
 
 #: ../../source/onboard/delegated-granular-administration.rst:40
 msgid "User Manager"
-msgstr ""
+msgstr "사용자 관리자"
 
 #: ../../source/onboard/delegated-granular-administration.rst:40
 msgid "User Management - Groups - Teams - Channels"
-msgstr ""
+msgstr "사용자 관리 - 그룹 - 팀 - 채널"
 
 #: ../../source/onboard/delegated-granular-administration.rst:40
 msgid "(User Management) Permissions"
-msgstr ""
+msgstr "(사용자 관리) 권한"
 
 #: ../../source/onboard/delegated-granular-administration.rst:45
 msgid "Custom Group Manager"
-msgstr ""
+msgstr "커스텀 그룹 관리자"
 
 #: ../../source/onboard/delegated-granular-administration.rst:45
 msgid "Custom User Groups"
-msgstr ""
+msgstr "커스텀 사용자 그룹"
 
 #: ../../source/onboard/delegated-granular-administration.rst:45
 #: ../../source/onboard/delegated-granular-administration.rst:47
 msgid "N/A"
-msgstr ""
+msgstr "해당 없음"
 
 #: ../../source/onboard/delegated-granular-administration.rst:47
 msgid "Viewer"
-msgstr ""
+msgstr "뷰어"
 
 #: ../../source/onboard/delegated-granular-administration.rst:47
 msgid "All pages within the System Console"
-msgstr ""
+msgstr "시스템 콘솔 내의 모든 페이지"
 
 #: ../../source/onboard/delegated-granular-administration.rst:51
 msgid "Assign admin roles"
-msgstr ""
+msgstr "관리자 역할 할당"
 
 #: ../../source/onboard/delegated-granular-administration.rst:53
 #: ../../source/onboard/delegated-granular-administration.rst:94
 msgid "There are two ways to assign roles:"
-msgstr ""
+msgstr "역할을 할당하는 방법은 두 가지가 있습니다:"
 
 #: ../../source/onboard/delegated-granular-administration.rst:55
 #: ../../source/onboard/delegated-granular-administration.rst:96
 msgid ""
 "In the System Console under **User Management > Delegated Granular "
 "Administration**."
-msgstr ""
+msgstr "**시스템 콘솔 > 사용자 관리 > 위임 세분화 관리** 에서"
 
 #: ../../source/onboard/delegated-granular-administration.rst:56
 #: ../../source/onboard/delegated-granular-administration.rst:97
 msgid ""
 "Using the :doc:`mmctl tool </manage/mmctl-command-line-tool>`. This can "
 "be done either locally or remotely."
-msgstr ""
+msgstr ":doc:`mmctl 도구 </manage/mmctl-command-line-tool>` 사용. 로컬 또는 원격으로 수행할 수 있습니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:59
 #: ../../source/onboard/delegated-granular-administration.rst:100
 msgid "**You want to**"
-msgstr ""
+msgstr "**원하는 작업**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:59
 #: ../../source/onboard/delegated-granular-administration.rst:100
 msgid "**Using the System Console**"
-msgstr ""
+msgstr "**시스템 콘솔 사용**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:59
 #: ../../source/onboard/delegated-granular-administration.rst:100
 msgid "**Using mmctl**"
-msgstr ""
+msgstr "**mmctl 사용**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:61
 msgid "Assign roles"
-msgstr ""
+msgstr "역할 할당"
 
 #: ../../source/onboard/delegated-granular-administration.rst:61
 msgid ""
 "Go to **System Console > User Management > Delegated Granular "
 "Administration > Assigned People**"
-msgstr ""
+msgstr "**시스템 콘솔 > 사용자 관리 > 위임 세분화 관리 > 할당된 사용자** 로 이동"
 
 #: ../../source/onboard/delegated-granular-administration.rst:61
 msgid "``mmctl permissions role assign [role_name] [username...]``"
-msgstr ""
+msgstr "``mmctl permissions role assign [role_name] [username...]``"
 
 #: ../../source/onboard/delegated-granular-administration.rst:63
 msgid "Grant the System Manager role to a user"
-msgstr ""
+msgstr "사용자에게 시스템 관리자 역할 부여"
 
 #: ../../source/onboard/delegated-granular-administration.rst:63
 #: ../../source/onboard/delegated-granular-administration.rst:85
 msgid ""
 "Go to **System Console > User Management > Delegated Granular "
 "Administration**, then select the **System Manager** role."
-msgstr ""
+msgstr "**시스템 콘솔 > 사용자 관리 > 위임 세분화 관리** 로 이동한 후 **시스템 관리자** 역할을 선택합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:64
 #: ../../source/onboard/delegated-granular-administration.rst:68
 #: ../../source/onboard/delegated-granular-administration.rst:72
 #: ../../source/onboard/delegated-granular-administration.rst:77
 msgid "Under **Assigned People**, select **Add People**."
-msgstr ""
+msgstr "**할당된 사용자** 아래에서 **사용자 추가** 를 선택합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:65
 msgid ""
 "Search for and select the user name, then select **Add** to grant the "
 "System Manager role to that user."
-msgstr ""
+msgstr "사용자 이름을 검색하고 선택한 후, **추가** 를 선택하여 해당 사용자에게 시스템 관리자 역할을 부여합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:63
 msgid "``mmctl permissions role assign system_manager user-name``"
-msgstr ""
+msgstr "``mmctl permissions role assign system_manager user-name``"
 
 #: ../../source/onboard/delegated-granular-administration.rst:67
 msgid "Grant the User Manager role to two users"
-msgstr ""
+msgstr "두 사용자에게 사용자 관리자 역할 부여"
 
 #: ../../source/onboard/delegated-granular-administration.rst:67
 #: ../../source/onboard/delegated-granular-administration.rst:111
@@ -305,55 +323,55 @@ msgstr ""
 msgid ""
 "Go to **System Console > User Management > Delegated Granular "
 "Administration**, then select the **User Manager** role."
-msgstr ""
+msgstr "**시스템 콘솔 > 사용자 관리 > 위임 세분화 관리** 로 이동한 후 **사용자 관리자** 역할을 선택합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:69
 msgid ""
 "Search for and select the two users, then select **Add** to grant the "
 "User Manager role to those users."
-msgstr ""
+msgstr "두 사용자를 검색하고 선택한 후, **추가** 를 선택하여 해당 사용자들에게 사용자 관리자 역할을 부여합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:67
 msgid ""
 "``mmctl permissions role assign system_user_manager user-name1 user-"
 "name2``"
-msgstr ""
+msgstr "``mmctl permissions role assign system_user_manager user-name1 user-name2``"
 
 #: ../../source/onboard/delegated-granular-administration.rst:71
 msgid "Grant the Viewer role to a user"
-msgstr ""
+msgstr "사용자에게 뷰어 역할 부여"
 
 #: ../../source/onboard/delegated-granular-administration.rst:71
 msgid ""
 "Go to **System Console > User Management > Delegated Granular "
 "Administration**, then select the **Viewer** role."
-msgstr ""
+msgstr "**시스템 콘솔 > 사용자 관리 > 위임 세분화 관리** 로 이동한 후 **뷰어** 역할을 선택합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:73
 msgid ""
 "Search for and select the user name, then select **Add** to grant the "
 "Viewer role to that user."
-msgstr ""
+msgstr "사용자 이름을 검색하고 선택한 후, **추가** 를 선택하여 해당 사용자에게 뷰어 역할을 부여합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:71
 msgid "``mmctl permissions role assign system_read_only_admin user-name``"
-msgstr ""
+msgstr "``mmctl permissions role assign system_read_only_admin user-name``"
 
 #: ../../source/onboard/delegated-granular-administration.rst:75
 msgid "Grant the Custom Group Manager role to two users"
-msgstr ""
+msgstr "두 사용자에게 커스텀 그룹 관리자 역할 부여"
 
 #: ../../source/onboard/delegated-granular-administration.rst:75
 msgid ""
 "Go to **System Console > User Management > Delegated Granular "
 "Administration**, then select the **Custom Group Manager** role."
-msgstr ""
+msgstr "**시스템 콘솔 > 사용자 관리 > 위임 세분화 관리** 로 이동한 후 **커스텀 그룹 관리자** 역할을 선택합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:78
 msgid ""
 "Search for and select the two users, then select **Add** to grant the "
 "Custom Group Manager role to those users."
-msgstr ""
+msgstr "두 사용자를 검색하고 선택한 후, **추가** 를 선택하여 해당 사용자들에게 커스텀 그룹 관리자 역할을 부여합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:80
 msgid ""
@@ -364,28 +382,31 @@ msgid ""
 "clear all of the **Custom Groups** permissions, including **Create**, "
 "**Manage members**, **Edit**, and **Delete**."
 msgstr ""
+"기본적으로 모든 사용자는 커스텀 사용자 그룹을 생성할 수 있는 권한을 가집니다.\n"
+"사용자에게 커스텀 그룹 관리자 역할을 할당할 때는 **시스템 콘솔 > 사용자 관리 > 권한 > 스킴 편집** 으로 이동하여\n"
+"**모든 멤버** 아래에서 **생성**, **멤버 관리**, **편집**, **삭제** 를 포함한 모든 **커스텀 그룹** 권한을 수동으로 제거해야 합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:75
 msgid ""
 "``mmctl permissions role assign system_custom_group_admin user-name1 "
 "user-name2``"
-msgstr ""
+msgstr "``mmctl permissions role assign system_custom_group_admin user-name1 user-name2``"
 
 #: ../../source/onboard/delegated-granular-administration.rst:85
 msgid "Remove the System Manager role from a single user"
-msgstr ""
+msgstr "단일 사용자로부터 시스템 관리자 역할 제거"
 
 #: ../../source/onboard/delegated-granular-administration.rst:86
 msgid "Under **Assigned People**, search for the user, then select **Remove**."
-msgstr ""
+msgstr "**할당된 사용자** 아래에서 사용자를 검색한 후 **제거** 를 선택합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:85
 msgid "``mmctl permissions role unassign system_manager bob-smith``"
-msgstr ""
+msgstr "``mmctl permissions role unassign system_manager bob-smith``"
 
 #: ../../source/onboard/delegated-granular-administration.rst:90
 msgid "Edit privileges of admin roles (advanced)"
-msgstr ""
+msgstr "관리자 역할의 권한 편집(고급)"
 
 #: ../../source/onboard/delegated-granular-administration.rst:92
 msgid ""
@@ -393,10 +414,12 @@ msgid ""
 "Console, as well as remove read/write access (including default access), "
 "for all system roles except the Custom Group Manager role."
 msgstr ""
+"시스템 관리자는 커스텀 그룹 관리자 역할을 제외한 모든 시스템 역할에 대해 시스템 콘솔의 다른 영역에 대한 읽기/쓰기 접근 권한을 부여하거나 "
+"제거할 수 있습니다(기본 접근 권한 포함)."
 
 #: ../../source/onboard/delegated-granular-administration.rst:102
 msgid "Edit role privileges"
-msgstr ""
+msgstr "역할 권한 편집"
 
 #: ../../source/onboard/delegated-granular-administration.rst:102
 msgid ""
@@ -404,311 +427,319 @@ msgid ""
 "Administration**, then select the **System Manager**, **User Manager**, "
 "or **Viewer** role."
 msgstr ""
+"**시스템 콘솔 > 사용자 관리 > 위임 세분화 관리** 로 이동한 후 **시스템 관리자**, **사용자 관리자** 또는 **뷰어** "
+"역할을 선택합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:104
 msgid ""
 "For each set of privileges, select the access level as **Can edit**, "
 "**Read only**, or **No access**."
 msgstr ""
+"각 권한 세트에 대해 접근 수준을 **편집 가능**, **읽기 전용** 또는 **접근 불가** 로 선택합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:108
 msgid ""
 "If you set privilege subsections to different access levels, then the "
 "privilege access level displays as **Mixed Access**."
 msgstr ""
+"권한 하위 섹션을 서로 다른 접근 수준으로 설정하면 권한 접근 수준이 **혼합 접근** 으로 표시됩니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:102
 msgid ""
 "``mmctl permissions add [role_name] [permission...]`` ``mmctl permissions"
 " reset system_read_only_admin``"
-msgstr ""
+msgstr "``mmctl permissions add [role_name] [permission...]`` ``mmctl permissions reset system_read_only_admin``"
 
 #: ../../source/onboard/delegated-granular-administration.rst:111
 msgid ""
 "Grant write access to the Authentication section of the System Console "
 "for all users with the User Manager role"
 msgstr ""
+"사용자 관리자 역할이 있는 모든 사용자에게 시스템 콘솔의 인증 섹션에 대한 쓰기 접근 권한 부여"
 
 #: ../../source/onboard/delegated-granular-administration.rst:112
 msgid ""
 "Under **Privileges > Authentication** select **Can edit**, then select "
 "**Save**."
 msgstr ""
+"**권한 > 인증** 아래에서 **편집 가능** 을 선택한 후 **저장** 을 선택합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:111
 msgid ""
 "``mmctl permissions add system_user_manager "
 "sysconsole_write_authentication``"
-msgstr ""
+msgstr "``mmctl permissions add system_user_manager sysconsole_write_authentication``"
 
 #: ../../source/onboard/delegated-granular-administration.rst:115
 msgid ""
 "Grant read-only access to the Authentication section of the System "
 "Console for all users with the User Manager role"
 msgstr ""
+"사용자 관리자 역할이 있는 모든 사용자에게 시스템 콘솔의 인증 섹션에 대한 읽기 전용 접근 권한 부여"
 
 #: ../../source/onboard/delegated-granular-administration.rst:115
 msgid ""
 "Go to **System Console > User Management > Delegated Granular "
 "Administration**. then select the **User Manager** role."
 msgstr ""
+"**시스템 콘솔 > 사용자 관리 > 위임 세분화 관리** 로 이동한 후 **사용자 관리자** 역할을 선택합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:116
 msgid ""
 "Under **Privileges > Authentication** select **Read only**, then select "
 "**Save**."
-msgstr ""
+msgstr "**권한 > 인증** 아래에서 **읽기 전용** 을 선택한 후 **저장** 을 선택합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:115
 msgid ""
 "``mmctl permissions remove system_user_manager "
 "sysconsole_read_authentication``"
-msgstr ""
+msgstr "``mmctl permissions remove system_user_manager sysconsole_read_authentication``"
 
 #: ../../source/onboard/delegated-granular-administration.rst:119
 msgid ""
 "Remove write access to the Authentication section of the System Console "
 "for all users with the User Manager role"
-msgstr ""
+msgstr "사용자 관리자 역할이 있는 모든 사용자에게 시스템 콘솔의 인증 섹션에 대한 쓰기 접근 권한 제거"
 
 #: ../../source/onboard/delegated-granular-administration.rst:120
 msgid ""
 "Under **Privileges > Authentication** select **No access**, then choose "
 "**Save**."
-msgstr ""
+msgstr "**권한 > 인증** 아래에서 **접근 불가** 를 선택한 후 **저장** 을 선택합니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:119
 msgid ""
 "``mmctl permissions remove system_user_manager "
 "sysconsole_write_authentication``"
-msgstr ""
+msgstr "``mmctl permissions remove system_user_manager sysconsole_write_authentication``"
 
 #: ../../source/onboard/delegated-granular-administration.rst:123
 msgid "Reset a role to its default set of permissions"
-msgstr ""
+msgstr "역할을 기본 권한 세트로 재설정"
 
 #: ../../source/onboard/delegated-granular-administration.rst:123
 msgid "This is completed using the mmctl tool only."
-msgstr ""
+msgstr "이는 mmctl 도구를 통해서만 완료됩니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:123
 msgid ""
 "``mmctl permissions reset [role_name]`` For example, to reset the "
 "permissions of the ``system_read_only_admin`` role: ``mmctl permissions "
 "reset system_read_only_admin``"
-msgstr ""
+msgstr "``mmctl permissions reset [role_name]`` 예를 들어, ``system_read_only_admin`` 역할의 권한을 재설정하려면: ``mmctl permissions reset system_read_only_admin``"
 
 #: ../../source/onboard/delegated-granular-administration.rst:129
 msgid "Admin roles and privileges"
-msgstr ""
+msgstr "관리자 역할 및 권한"
 
 #: ../../source/onboard/delegated-granular-administration.rst:132
 msgid "Roles"
-msgstr ""
+msgstr "역할"
 
 #: ../../source/onboard/delegated-granular-administration.rst:134
 msgid "``system_manager``"
-msgstr ""
+msgstr "``system_manager``"
 
 #: ../../source/onboard/delegated-granular-administration.rst:135
 msgid "``system_user_manager``"
-msgstr ""
+msgstr "``system_user_manager``"
 
 #: ../../source/onboard/delegated-granular-administration.rst:136
 msgid "``system_custom_group_admin``"
-msgstr ""
+msgstr "``system_custom_group_admin``"
 
 #: ../../source/onboard/delegated-granular-administration.rst:137
 msgid "``system_read_only_admin``"
-msgstr ""
+msgstr "``system_read_only_admin``"
 
 #: ../../source/onboard/delegated-granular-administration.rst:140
 msgid "Privileges"
-msgstr ""
+msgstr "권한"
 
 #: ../../source/onboard/delegated-granular-administration.rst:143
 msgid "System Console section"
-msgstr ""
+msgstr "시스템 콘솔 섹션"
 
 #: ../../source/onboard/delegated-granular-administration.rst:143
 msgid "Permissions"
-msgstr ""
+msgstr "권한"
 
 #: ../../source/onboard/delegated-granular-administration.rst:145
 msgid "About"
-msgstr ""
+msgstr "정보"
 
 #: ../../source/onboard/delegated-granular-administration.rst:145
 msgid "PERMISSION_SYSCONSOLE_READ_ABOUT_EDITION_AND_LICENSE"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_ABOUT_EDITION_AND_LICENSE"
 
 #: ../../source/onboard/delegated-granular-administration.rst:146
 msgid "PERMISSION_SYSCONSOLE_WRITE_ABOUT_EDITION_AND_LICENSE"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_ABOUT_EDITION_AND_LICENSE"
 
 #: ../../source/onboard/delegated-granular-administration.rst:150
 msgid "**Site Statistics**"
-msgstr ""
+msgstr "**사이트 통계**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:149
 msgid "PERMISSION_SYSCONSOLE_READ_REPORTING_SITE_STATISTICS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_REPORTING_SITE_STATISTICS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:150
 msgid "PERMISSION_SYSCONSOLE_WRITE_REPORTING_SITE_STATISTICS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_REPORTING_SITE_STATISTICS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:154
 msgid "**Team Statistics**"
-msgstr ""
+msgstr "**팀 통계**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:153
 msgid "PERMISSION_SYSCONSOLE_READ_REPORTING_TEAM_STATISTICS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_REPORTING_TEAM_STATISTICS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:154
 msgid "PERMISSION_SYSCONSOLE_WRITE_REPORTING_TEAM_STATISTICS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_REPORTING_TEAM_STATISTICS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:157
 msgid "**Server Logs**"
-msgstr ""
+msgstr "**서버 로그**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:157
 msgid "PERMISSION_SYSCONSOLE_READ_REPORTING_SERVER_LOGS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_REPORTING_SERVER_LOGS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:158
 msgid "PERMISSION_SYSCONSOLE_WRITE_REPORTING_SERVER_LOGS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_REPORTING_SERVER_LOGS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:160
 msgid "User Management"
-msgstr ""
+msgstr "사용자 관리"
 
 #: ../../source/onboard/delegated-granular-administration.rst:162
 msgid "**Users**"
-msgstr ""
+msgstr "**사용자**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:161
 msgid "PERMISSION_SYSCONSOLE_READ_USERMANAGEMENT_USERS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_USERMANAGEMENT_USERS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:162
 msgid "PERMISSION_SYSCONSOLE_WRITE_USERMANAGEMENT_USERS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_USERMANAGEMENT_USERS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:166
 msgid "**Groups**"
-msgstr ""
+msgstr "**그룹**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:165
 msgid "PERMISSION_SYSCONSOLE_READ_USERMANAGEMENT_GROUPS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_USERMANAGEMENT_GROUPS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:166
 msgid "PERMISSION_SYSCONSOLE_WRITE_USERMANAGEMENT_GROUPS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_USERMANAGEMENT_GROUPS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:170
 msgid "**Teams**"
-msgstr ""
+msgstr "**팀**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:169
 msgid "PERMISSION_SYSCONSOLE_READ_USERMANAGEMENT_TEAMS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_USERMANAGEMENT_TEAMS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:170
 msgid "PERMISSION_SYSCONSOLE_WRITE_USERMANAGEMENT_TEAMS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_USERMANAGEMENT_TEAMS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:174
 msgid "**Channels**"
-msgstr ""
+msgstr "**채널**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:173
 msgid "PERMISSION_SYSCONSOLE_READ_USERMANAGEMENT_CHANNELS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_USERMANAGEMENT_CHANNELS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:174
 msgid "PERMISSION_SYSCONSOLE_WRITE_USERMANAGEMENT_CHANNELS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_USERMANAGEMENT_CHANNELS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:177
 msgid "**Permissions**"
-msgstr ""
+msgstr "**권한**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:177
 msgid "PERMISSION_SYSCONSOLE_READ_USERMANAGEMENT_PERMISSIONS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_USERMANAGEMENT_PERMISSIONS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:178
 msgid "PERMISSION_SYSCONSOLE_WRITE_USERMANAGEMENT_PERMISSIONS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_USERMANAGEMENT_PERMISSIONS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:182
 msgid "**Web Server**"
-msgstr ""
+msgstr "**웹 서버**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:181
 msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_WEB_SERVER"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_WEB_SERVER"
 
 #: ../../source/onboard/delegated-granular-administration.rst:182
 msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_WEB_SERVER"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_WEB_SERVER"
 
 #: ../../source/onboard/delegated-granular-administration.rst:186
 msgid "**Database**"
-msgstr ""
+msgstr "**데이터베이스**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:185
 msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_DATABASE"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_DATABASE"
 
 #: ../../source/onboard/delegated-granular-administration.rst:186
 msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_DATABASE"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_DATABASE"
 
 #: ../../source/onboard/delegated-granular-administration.rst:190
 msgid "**Elasticsearch**"
-msgstr ""
+msgstr "**Elasticsearch**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:189
 msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_ELASTICSEARCH"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_ELASTICSEARCH"
 
 #: ../../source/onboard/delegated-granular-administration.rst:190
 msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_ELASTICSEARCH"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_ELASTICSEARCH"
 
 #: ../../source/onboard/delegated-granular-administration.rst:194
 msgid "**File Storage**"
-msgstr ""
+msgstr "**파일 저장소**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:193
 msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_FILE_STORAGE"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_FILE_STORAGE"
 
 #: ../../source/onboard/delegated-granular-administration.rst:194
 msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_FILE_STORAGE"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_FILE_STORAGE"
 
 #: ../../source/onboard/delegated-granular-administration.rst:198
 msgid "**Image Proxy**"
-msgstr ""
+msgstr "**이미지 프록시**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:197
 msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_IMAGE_PROXY"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_IMAGE_PROXY"
 
 #: ../../source/onboard/delegated-granular-administration.rst:198
 msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_IMAGE_PROXY"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_IMAGE_PROXY"
 
 #: ../../source/onboard/delegated-granular-administration.rst:202
 msgid "**SMTP**"
-msgstr ""
+msgstr "**SMTP**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:201
 msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_SMTP"
@@ -720,143 +751,143 @@ msgstr ""
 
 #: ../../source/onboard/delegated-granular-administration.rst:206
 msgid "**Push Notification Server**"
-msgstr ""
+msgstr "**푸시 알림 서버**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:205
 msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_PUSH_NOTIFICATION_SERVER"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_PUSH_NOTIFICATION_SERVER"
 
 #: ../../source/onboard/delegated-granular-administration.rst:206
 msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_PUSH_NOTIFICATION_SERVER"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_PUSH_NOTIFICATION_SERVER"
 
 #: ../../source/onboard/delegated-granular-administration.rst:210
 msgid "**High Availability**"
-msgstr ""
+msgstr "**고가용성**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:209
 msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_HIGH_AVAILABILITY"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_HIGH_AVAILABILITY"
 
 #: ../../source/onboard/delegated-granular-administration.rst:210
 msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_HIGH_AVAILABILITY"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_HIGH_AVAILABILITY"
 
 #: ../../source/onboard/delegated-granular-administration.rst:214
 msgid "**Rate Limiting**"
-msgstr ""
+msgstr "**속도 제한**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:213
 msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_RATE_LIMITING"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_RATE_LIMITING"
 
 #: ../../source/onboard/delegated-granular-administration.rst:214
 msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_RATE_LIMITING"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_RATE_LIMITING"
 
 #: ../../source/onboard/delegated-granular-administration.rst:218
 msgid "**Logging**"
-msgstr ""
+msgstr "**로깅**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:217
 msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_LOGGING"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_LOGGING"
 
 #: ../../source/onboard/delegated-granular-administration.rst:218
 msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_LOGGING"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_LOGGING"
 
 #: ../../source/onboard/delegated-granular-administration.rst:222
 msgid "**Session Lengths**"
-msgstr ""
+msgstr "**세션 길이**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:221
 msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_SESSION_LENGTHS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_SESSION_LENGTHS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:222
 msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_SESSION_LENGTHS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_SESSION_LENGTHS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:226
 msgid "**Performance Monitoring**"
-msgstr ""
+msgstr "**성능 모니터링**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:225
 msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_PERFORMANCE_MONITORING"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_PERFORMANCE_MONITORING"
 
 #: ../../source/onboard/delegated-granular-administration.rst:226
 msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_PERFORMANCE_MONITORING"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_PERFORMANCE_MONITORING"
 
 #: ../../source/onboard/delegated-granular-administration.rst:229
 msgid "**Developer**"
-msgstr ""
+msgstr "**개발자**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:229
 msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_DEVELOPER"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_DEVELOPER"
 
 #: ../../source/onboard/delegated-granular-administration.rst:230
 msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_DEVELOPER"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_DEVELOPER"
 
 #: ../../source/onboard/delegated-granular-administration.rst:234
 msgid "**Customization**"
-msgstr ""
+msgstr "**사용자 지정**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:233
 msgid "PERMISSION_SYSCONSOLE_READ_SITE_CUSTOMIZATION"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_SITE_CUSTOMIZATION"
 
 #: ../../source/onboard/delegated-granular-administration.rst:234
 msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_CUSTOMIZATION"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_SITE_CUSTOMIZATION"
 
 #: ../../source/onboard/delegated-granular-administration.rst:238
 msgid "**Localization**"
-msgstr ""
+msgstr "**현지화**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:237
 msgid "PERMISSION_SYSCONSOLE_READ_SITE_LOCALIZATION"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_SITE_LOCALIZATION"
 
 #: ../../source/onboard/delegated-granular-administration.rst:238
 msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_LOCALIZATION"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_SITE_LOCALIZATION"
 
 #: ../../source/onboard/delegated-granular-administration.rst:242
 msgid "**Users and Teams**"
-msgstr ""
+msgstr "**사용자 및 팀**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:241
 msgid "PERMISSION_SYSCONSOLE_READ_SITE_USERS_AND_TEAMS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_SITE_USERS_AND_TEAMS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:242
 msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_USERS_AND_TEAMS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_SITE_USERS_AND_TEAMS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:246
 msgid "**Notifications**"
-msgstr ""
+msgstr "**알림**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:245
 msgid "PERMISSION_SYSCONSOLE_READ_SITE_NOTIFICATIONS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_SITE_NOTIFICATIONS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:246
 msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_NOTIFICATIONS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_SITE_NOTIFICATIONS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:250
 msgid "**Announcement Banner**"
-msgstr ""
+msgstr "**공지사항 배너**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:249
 msgid "PERMISSION_SYSCONSOLE_READ_SITE_ANNOUNCEMENT_BANNER"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_SITE_ANNOUNCEMENT_BANNER"
 
 #: ../../source/onboard/delegated-granular-administration.rst:250
 msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_ANNOUNCEMENT_BANNER"
@@ -864,103 +895,103 @@ msgstr ""
 
 #: ../../source/onboard/delegated-granular-administration.rst:254
 msgid "**Emoji**"
-msgstr ""
+msgstr "**이모지**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:253
 msgid "PERMISSION_SYSCONSOLE_READ_SITE_EMOJI"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_SITE_EMOJI"
 
 #: ../../source/onboard/delegated-granular-administration.rst:254
 msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_EMOJI"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_SITE_EMOJI"
 
 #: ../../source/onboard/delegated-granular-administration.rst:258
 msgid "**Posts**"
-msgstr ""
+msgstr "**게시물**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:257
 msgid "PERMISSION_SYSCONSOLE_READ_SITE_POSTS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_SITE_POSTS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:258
 msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_POSTS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_SITE_POSTS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:262
 msgid "**File Sharing and Downloads**"
-msgstr ""
+msgstr "**파일 공유 및 다운로드**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:261
 msgid "PERMISSION_SYSCONSOLE_READ_SITE_FILE_SHARING_AND_DOWNLOADS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_SITE_FILE_SHARING_AND_DOWNLOADS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:262
 msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_FILE_SHARING_AND_DOWNLOADS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_SITE_FILE_SHARING_AND_DOWNLOADS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:266
 msgid "**Public Links**"
-msgstr ""
+msgstr "**공개 링크**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:265
 msgid "PERMISSION_SYSCONSOLE_READ_SITE_PUBLIC_LINKS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_SITE_PUBLIC_LINKS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:266
 msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_PUBLIC_LINKS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_SITE_PUBLIC_LINKS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:269
 msgid "**Notices**"
-msgstr ""
+msgstr "**공지사항**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:269
 msgid "PERMISSION_SYSCONSOLE_READ_SITE_NOTICES"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_SITE_NOTICES"
 
 #: ../../source/onboard/delegated-granular-administration.rst:270
 msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_NOTICES"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_SITE_NOTICES"
 
 #: ../../source/onboard/delegated-granular-administration.rst:274
 msgid "**Signup**"
-msgstr ""
+msgstr "**가입**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:273
 msgid "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_SIGNUP"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_SIGNUP"
 
 #: ../../source/onboard/delegated-granular-administration.rst:274
 msgid "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_SIGNUP"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_SIGNUP"
 
 #: ../../source/onboard/delegated-granular-administration.rst:278
 msgid "**Email**"
-msgstr ""
+msgstr "**이메일**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:277
 msgid "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_EMAIL"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_EMAIL"
 
 #: ../../source/onboard/delegated-granular-administration.rst:278
 msgid "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_EMAIL"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_EMAIL"
 
 #: ../../source/onboard/delegated-granular-administration.rst:282
 msgid "**Password**"
-msgstr ""
+msgstr "**비밀번호**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:281
 msgid "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_PASSWORD"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_PASSWORD"
 
 #: ../../source/onboard/delegated-granular-administration.rst:282
 msgid "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_PASSWORD"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_PASSWORD"
 
 #: ../../source/onboard/delegated-granular-administration.rst:286
 msgid "**MFA**"
-msgstr ""
+msgstr "**MFA**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:285
 #: ../../source/onboard/delegated-granular-administration.rst:289
@@ -974,139 +1005,139 @@ msgstr ""
 
 #: ../../source/onboard/delegated-granular-administration.rst:290
 msgid "**AD/LDAP**"
-msgstr ""
+msgstr "**AD/LDAP**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:294
 msgid "**SAML 2.0**"
-msgstr ""
+msgstr "**SAML 2.0**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:293
 msgid "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_SAML"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_SAML"
 
 #: ../../source/onboard/delegated-granular-administration.rst:294
 msgid "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_SAML"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_SAML"
 
 #: ../../source/onboard/delegated-granular-administration.rst:298
 msgid "**OpenID Connect**"
-msgstr ""
+msgstr "**OpenID Connect**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:297
 msgid "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_OPENID"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_OPENID"
 
 #: ../../source/onboard/delegated-granular-administration.rst:298
 msgid "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_OPENID"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_OPENID"
 
 #: ../../source/onboard/delegated-granular-administration.rst:301
 msgid "**Guest Access**"
-msgstr ""
+msgstr "**게스트 액세스**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:301
 msgid "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_GUEST_ACCESS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_GUEST_ACCESS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:302
 msgid "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_GUEST_ACCESS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_GUEST_ACCESS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:304
 msgid "Plugin"
-msgstr ""
+msgstr "플러그인"
 
 #: ../../source/onboard/delegated-granular-administration.rst:304
 msgid "PERMISSION_SYSCONSOLE_READ_PLUGINS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_PLUGINS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:305
 msgid "PERMISSION_SYSCONSOLE_WRITE_PLUGINS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_PLUGINS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:309
 msgid "**Integration Management**"
-msgstr ""
+msgstr "**통합 관리**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:308
 msgid "PERMISSION_SYSCONSOLE_READ_INTEGRATIONS_INTEGRATION_MANAGEMENT"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_INTEGRATIONS_INTEGRATION_MANAGEMENT"
 
 #: ../../source/onboard/delegated-granular-administration.rst:309
 msgid "PERMISSION_SYSCONSOLE_WRITE_INTEGRATIONS_INTEGRATION_MANAGEMENT"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_INTEGRATIONS_INTEGRATION_MANAGEMENT"
 
 #: ../../source/onboard/delegated-granular-administration.rst:313
 msgid "**Bot Accounts**"
-msgstr ""
+msgstr "**봇 계정**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:312
 msgid "PERMISSION_SYSCONSOLE_READ_INTEGRATIONS_BOT_ACCOUNTS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_INTEGRATIONS_BOT_ACCOUNTS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:313
 msgid "PERMISSION_SYSCONSOLE_WRITE_INTEGRATIONS_BOT_ACCOUNTS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_INTEGRATIONS_BOT_ACCOUNTS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:317
 msgid "**GIF (Beta)**"
-msgstr ""
+msgstr "**GIF (베타)**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:316
 msgid "PERMISSION_SYSCONSOLE_READ_INTEGRATIONS_GIF"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_INTEGRATIONS_GIF"
 
 #: ../../source/onboard/delegated-granular-administration.rst:317
 msgid "PERMISSION_SYSCONSOLE_WRITE_INTEGRATIONS_GIF"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_INTEGRATIONS_GIF"
 
 #: ../../source/onboard/delegated-granular-administration.rst:320
 msgid "**CORS**"
-msgstr ""
+msgstr "**CORS**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:320
 msgid "PERMISSION_SYSCONSOLE_READ_INTEGRATIONS_CORS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_INTEGRATIONS_CORS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:321
 msgid "PERMISSION_SYSCONSOLE_WRITE_INTEGRATIONS_CORS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_INTEGRATIONS_CORS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:323
 msgid "Compliance"
-msgstr ""
+msgstr "규정 준수"
 
 #: ../../source/onboard/delegated-granular-administration.rst:325
 msgid "**Data Retention Policy**"
-msgstr ""
+msgstr "**데이터 보존 정책**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:324
 msgid "PERMISSION_SYSCONSOLE_READ_COMPLIANCE_DATA_RETENTION_POLICY"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_COMPLIANCE_DATA_RETENTION_POLICY"
 
 #: ../../source/onboard/delegated-granular-administration.rst:325
 msgid "PERMISSION_SYSCONSOLE_WRITE_COMPLIANCE_DATA_RETENTION_POLICY"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_COMPLIANCE_DATA_RETENTION_POLICY"
 
 #: ../../source/onboard/delegated-granular-administration.rst:329
 msgid "**Compliance Export**"
-msgstr ""
+msgstr "**규정 준수 내보내기**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:328
 msgid "PERMISSION_SYSCONSOLE_READ_COMPLIANCE_COMPLIANCE_EXPORT"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_COMPLIANCE_COMPLIANCE_EXPORT"
 
 #: ../../source/onboard/delegated-granular-administration.rst:329
 msgid "PERMISSION_SYSCONSOLE_WRITE_COMPLIANCE_COMPLIANCE_EXPORT"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_COMPLIANCE_COMPLIANCE_EXPORT"
 
 #: ../../source/onboard/delegated-granular-administration.rst:333
 msgid "**Compliance Monitoring**"
-msgstr ""
+msgstr "**규정 준수 모니터링**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:332
 msgid "PERMISSION_SYSCONSOLE_READ_COMPLIANCE_COMPLIANCE_MONITORING"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_COMPLIANCE_COMPLIANCE_MONITORING"
 
 #: ../../source/onboard/delegated-granular-administration.rst:333
 msgid "PERMISSION_SYSCONSOLE_WRITE_COMPLIANCE_COMPLIANCE_MONITORING"
@@ -1114,65 +1145,65 @@ msgstr ""
 
 #: ../../source/onboard/delegated-granular-administration.rst:336
 msgid "**Custom Terms of Service**"
-msgstr ""
+msgstr "**사용자 정의 서비스 약관**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:336
 msgid "PERMISSION_SYSCONSOLE_READ_COMPLIANCE_CUSTOM_TERMS_OF_SERVICE"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_COMPLIANCE_CUSTOM_TERMS_OF_SERVICE"
 
 #: ../../source/onboard/delegated-granular-administration.rst:337
 msgid "PERMISSION_SYSCONSOLE_WRITE_COMPLIANCE_CUSTOM_TERMS_OF_SERVICE"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_COMPLIANCE_CUSTOM_TERMS_OF_SERVICE"
 
 #: ../../source/onboard/delegated-granular-administration.rst:339
 msgid "Experimental"
-msgstr ""
+msgstr "실험적"
 
 #: ../../source/onboard/delegated-granular-administration.rst:341
 msgid "**Features**"
-msgstr ""
+msgstr "**기능**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:340
 msgid "PERMISSION_SYSCONSOLE_READ_EXPERIMENTAL_FEATURES"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_EXPERIMENTAL_FEATURES"
 
 #: ../../source/onboard/delegated-granular-administration.rst:341
 msgid "PERMISSION_SYSCONSOLE_WRITE_EXPERIMENTAL_FEATURES"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_EXPERIMENTAL_FEATURES"
 
 #: ../../source/onboard/delegated-granular-administration.rst:345
 msgid "**Feature Flags**"
-msgstr ""
+msgstr "**기능 플래그**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:344
 msgid "PERMISSION_SYSCONSOLE_READ_EXPERIMENTAL_FEATURE_FLAGS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_EXPERIMENTAL_FEATURE_FLAGS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:345
 msgid "PERMISSION_SYSCONSOLE_WRITE_EXPERIMENTAL_FEATURE_FLAGS"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_EXPERIMENTAL_FEATURE_FLAGS"
 
 #: ../../source/onboard/delegated-granular-administration.rst:348
 msgid "**Bleve**"
-msgstr ""
+msgstr "**Bleve**"
 
 #: ../../source/onboard/delegated-granular-administration.rst:348
 msgid "PERMISSION_SYSCONSOLE_READ_EXPERIMENTAL_BLEVE"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_READ_EXPERIMENTAL_BLEVE"
 
 #: ../../source/onboard/delegated-granular-administration.rst:349
 msgid "PERMISSION_SYSCONSOLE_WRITE_EXPERIMENTAL_BLEVE"
-msgstr ""
+msgstr "PERMISSION_SYSCONSOLE_WRITE_EXPERIMENTAL_BLEVE"
 
 #: ../../source/onboard/delegated-granular-administration.rst:353
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/onboard/delegated-granular-administration.rst:356
 msgid ""
 "Can a User Manager or System Manager reset an administrator’s email or "
 "password without their knowledge?"
-msgstr ""
+msgstr "사용자 관리자나 시스템 관리자가 관리자의 이메일이나 비밀번호를 모르게 재설정할 수 있나요?"
 
 #: ../../source/onboard/delegated-granular-administration.rst:358
 msgid ""
@@ -1180,10 +1211,12 @@ msgid ""
 "ability to reset passwords or email addresses of administrators is "
 "limited to system admins."
 msgstr ""
+"이러한 역할의 기본 권한으로는 불가능합니다.\n"
+"관리자의 비밀번호나 이메일 주소를 재설정할 수 있는 권한은 시스템 관리자로 제한됩니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:361
 msgid "Can a User Manager or System Manager access the configuration file?"
-msgstr ""
+msgstr "사용자 관리자나 시스템 관리자가 구성 파일에 접근할 수 있나요?"
 
 #: ../../source/onboard/delegated-granular-administration.rst:363
 msgid ""
@@ -1191,24 +1224,27 @@ msgid ""
 " values in accordance with their permissions. If appropriate read "
 "permissions do not exist, the default key values will be displayed."
 msgstr ""
+"네. 하지만 그들은 자신의 권한에 따라 실제 값을 읽고 수정할 수 있는 접근 권한만 가집니다.\n"
+"적절한 읽기 권한이 없는 경우 기본 키 값이 표시됩니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:366
 msgid "Are all actions of admin roles logged?"
-msgstr ""
+msgstr "관리자 역할의 모든 작업이 기록되나요?"
 
 #: ../../source/onboard/delegated-granular-administration.rst:368
 msgid "Every change made by any admin is included in the audit log."
-msgstr ""
+msgstr "모든 관리자가 수행한 모든 변경 사항이 감사 로그에 포함됩니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:371
 msgid "Can a System Manager change their own permissions or elevate their role?"
-msgstr ""
+msgstr "시스템 관리자가 자신의 권한을 변경하거나 역할을 승격할 수 있나요?"
 
 #: ../../source/onboard/delegated-granular-administration.rst:373
 msgid ""
 "No. System Managers can't elevate their role, and aren't able to elevate "
 "other members' roles."
 msgstr ""
+"아니요. 시스템 관리자는 자신의 역할을 승격할 수 없으며, 다른 구성원의 역할도 승격할 수 없습니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:376
 msgid ""
@@ -1216,28 +1252,32 @@ msgid ""
 "information within the System Console (such as SMTP, AWS, Elastic "
 "Search)?"
 msgstr ""
+"새로운 역할 중 어느 것도 시스템 콘솔 내에서 API 키/비밀번호나 다른 민감한 정보(SMTP, AWS, Elastic Search 등)를 볼 수 있나요?"
 
 #: ../../source/onboard/delegated-granular-administration.rst:378
 msgid ""
 "No, password information is only visible to system admins and is "
 "obfuscated for other roles."
 msgstr ""
+"아니요, 비밀번호 정보는 시스템 관리자에게만 표시되며 다른 역할에는 난독화됩니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:381
 msgid ""
 "If download links for compliance exports are enabled in the System "
 "Console, can a Read Only Admin download the reports?"
 msgstr ""
+"시스템 콘솔에서 규정 준수 내보내기를 위한 다운로드 링크가 활성화된 경우, 읽기 전용 관리자가 보고서를 다운로드할 수 있나요?"
 
 #: ../../source/onboard/delegated-granular-administration.rst:383
 msgid ""
 "Only roles that are explicitly granted access to **System Console > "
 "Compliance** have access to download compliance reports."
 msgstr ""
+"**시스템 콘솔 > 규정 준수** 에 대한 접근 권한이 명시적으로 부여된 역할만 규정 준수 보고서를 다운로드할 수 있습니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:386
 msgid "Can any of the new roles force-join Private channels?"
-msgstr ""
+msgstr "새로운 역할 중 어느 것도 비공개 채널에 강제로 참여할 수 있나요?"
 
 #: ../../source/onboard/delegated-granular-administration.rst:388
 msgid ""
@@ -1246,48 +1286,51 @@ msgid ""
 "private channel. We are also planning on adding a permission which would "
 "remove the ability to access Private channels."
 msgstr ""
+"현재는 가능하지만, 향후에는 비공개 채널에 진입한다는 알림을 표시하도록 개선할 예정입니다.\n"
+"또한 비공개 채널에 접근할 수 있는 권한을 제거하는 기능도 추가할 계획입니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:391
 msgid "Can I create a new role or clone an existing role?"
-msgstr ""
+msgstr "새로운 역할을 생성하거나 기존 역할을 복제할 수 있나요?"
 
 #: ../../source/onboard/delegated-granular-administration.rst:393
 msgid "No, but we are actively seeking feedback on this capability."
-msgstr ""
+msgstr "아니요, 하지만 이 기능에 대한 피드백을 적극적으로 수집하고 있습니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:396
 msgid "Can I use an LDAP filter to assign these roles?"
-msgstr ""
+msgstr "LDAP 필터를 사용하여 이러한 역할을 할당할 수 있나요?"
 
 #: ../../source/onboard/delegated-granular-administration.rst:398
 msgid "No, but we are considering this functionality for a future enhancement."
-msgstr ""
+msgstr "아니요, 하지만 향후 개선 사항으로 이 기능을 고려하고 있습니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:401
 msgid "Can I rename the roles?"
-msgstr ""
+msgstr "역할의 이름을 변경할 수 있나요?"
 
 #: ../../source/onboard/delegated-granular-administration.rst:403
 msgid "This is being considered for future development."
-msgstr ""
+msgstr "이는 향후 개발을 위해 고려 중입니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:406
 msgid ""
 "Can a System Manager or User Manager demote or deactivate another Admin "
 "or Manager?"
-msgstr ""
+msgstr "시스템 관리자나 사용자 관리자가 다른 관리자나 매니저를 강등하거나 비활성화할 수 있나요?"
 
 #: ../../source/onboard/delegated-granular-administration.rst:408
 msgid ""
 "A System or User Manager can demote or deactivate another System or User "
 "Manager, but can't demote or deactivate a system admin."
 msgstr ""
+"시스템 관리자나 사용자 관리자는 다른 시스템 관리자나 사용자 관리자를 강등하거나 비활성화할 수 있지만,\n"
+"시스템 관리자는 강등하거나 비활성화할 수 없습니다."
 
 #: ../../source/onboard/delegated-granular-administration.rst:411
 msgid "Can a System Manager or User Manager assign or unassign admin roles?"
-msgstr ""
+msgstr "시스템 관리자나 사용자 관리자가 관리자 역할을 할당하거나 해제할 수 있나요?"
 
 #: ../../source/onboard/delegated-granular-administration.rst:413
 msgid "Only the system admin has access to edit system roles."
-msgstr ""
-
+msgstr "시스템 관리자만 시스템 역할을 편집할 수 있습니다."

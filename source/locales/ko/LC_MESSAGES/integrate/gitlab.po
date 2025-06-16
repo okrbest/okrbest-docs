@@ -21,25 +21,26 @@ msgstr ""
 
 #: ../../source/integrate/gitlab.rst:2
 msgid "Connect GitLab to Mattermost"
-msgstr ""
+msgstr "GitLab을 Mattermost에 연결하기"
 
 #: ../../source/_static/badges/allplans-cloud-selfhosted.rst:7
 msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `모든 요금제 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/allplans-cloud-selfhosted.rst:9
 msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
 msgstr ""
+"|deployment-img| `클라우드 <https://mattermost.com/sign-up/>`__ 및 `자체 호스팅 <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/integrate/gitlab.rst:7
 msgid ""
@@ -52,32 +53,36 @@ msgid ""
 "notifications on new and closed merge requests, new and closed issues, "
 "and tag creation events, directly from Mattermost channel subscriptions."
 msgstr ""
+"GitLab을 Mattermost와 통합하여 GitLab 코드 저장소와 커뮤니케이션 플랫폼 간의 방해 요소를 최소화하고 컨텍스트 전환을 줄이세요. "
+"병합, 이슈 댓글, 병합 요청 댓글, 파이프라인, 풀 리뷰 등 기본 이벤트를 넘어서는 알림 트리거 이벤트를 제어할 수 있습니다. "
+"Mattermost 채널 구독을 통해 새로운 병합 요청과 닫힌 병합 요청, 새로운 이슈와 닫힌 이슈, 태그 생성 이벤트에 대한 일일 작업 요약, "
+"실시간 업데이트 및 알림을 통해 팀이 집중하고 생산적으로 일할 수 있도록 도와주세요."
 
 #: ../../source/integrate/gitlab.rst:9
 msgid ""
 "Mattermost supports both Software-as-a-Service (SaaS) and on-premises "
 "versions of GitLab."
-msgstr ""
+msgstr "Mattermost는 GitLab의 Software-as-a-Service(SaaS) 및 온프레미스 버전을 모두 지원합니다."
 
 #: ../../source/integrate/gitlab.rst:-1
 msgid "An example of the GitLab integration for Mattermost."
-msgstr ""
+msgstr "Mattermost용 GitLab 통합 예시입니다."
 
 #: ../../source/integrate/gitlab.rst:15
 msgid "Deploy"
-msgstr ""
+msgstr "배포"
 
 #: ../../source/integrate/gitlab.rst:17
 msgid "Setup starts in GitLab and configuration ends in Mattermost."
-msgstr ""
+msgstr "설정은 GitLab에서 시작하여 Mattermost에서 완료됩니다."
 
 #: ../../source/integrate/gitlab.rst:20
 msgid "Register an OAuth app in GitLab"
-msgstr ""
+msgstr "GitLab에서 OAuth 앱 등록하기"
 
 #: ../../source/integrate/gitlab.rst:22
 msgid "A Mattermost system admin must perform the following steps in GitLab."
-msgstr ""
+msgstr "Mattermost 시스템 관리자가 GitLab에서 다음 단계를 수행해야 합니다."
 
 #: ../../source/integrate/gitlab.rst:24
 msgid ""
@@ -86,14 +91,17 @@ msgid ""
 "``YOURDOMAIN.COM`` with your GitHub URL, to register an OAuth app with "
 "GitLab."
 msgstr ""
+"GitLab에서 OAuth 앱을 등록하려면 ``https://gitlab.com/-/profile/applications`` 또는 "
+"``https://gitlab.YOURDOMAIN.com/-/profile/applications`` 로 이동하세요. "
+"``YOURDOMAIN.COM`` 을 GitHub URL로 교체하세요."
 
 #: ../../source/integrate/gitlab.rst:25 ../../source/integrate/gitlab.rst:101
 msgid "Set the following values:"
-msgstr ""
+msgstr "다음 값을 설정하세요:"
 
 #: ../../source/integrate/gitlab.rst:27
 msgid "**Name**: ``Mattermost GitLab Plugin - <YOUR COMPANY NAME>``"
-msgstr ""
+msgstr "**이름**: ``Mattermost GitLab Plugin - <YOUR COMPANY NAME>``"
 
 #: ../../source/integrate/gitlab.rst:28
 msgid ""
@@ -103,79 +111,87 @@ msgid ""
 "Mattermost URL. This value must match the Mattermost server URL you use "
 "to log in."
 msgstr ""
+"**리디렉션 URI**: ``https://YOUR-MATTERMOST-"
+"URL.COM/plugins/com.github.manland.mattermost-plugin-"
+"gitlab/oauth/complete``, ``YOUR-MATTERMOST-URL.COM`` 을 Mattermost URL로 교체하세요. "
+"이 값은 로그인에 사용하는 Mattermost 서버 URL과 일치해야 합니다."
 
 #: ../../source/integrate/gitlab.rst:30
 msgid "Select ``api`` and ``read_user`` in **Scopes**."
-msgstr ""
+msgstr "**범위** 에서 ``api`` 와 ``read_user`` 를 선택하세요."
 
 #: ../../source/integrate/gitlab.rst:31
 msgid ""
 "Save your changes. Copy the **Application ID** and **Secret** fields in "
 "the resulting screen."
 msgstr ""
+"변경 사항을 저장하세요. 결과 화면에서 **Application ID** 와 **Secret** 필드를 복사하세요."
 
 #: ../../source/integrate/gitlab.rst:34
 msgid "Mattermost configuration"
-msgstr ""
+msgstr "Mattermost 구성"
 
 #: ../../source/integrate/gitlab.rst:36
 msgid "A Mattermost system admin must perform the following steps in Mattermost."
-msgstr ""
+msgstr "Mattermost 시스템 관리자가 Mattermost에서 다음 단계를 수행해야 합니다."
 
 #: ../../source/integrate/gitlab.rst:38
 msgid "Install the GitLab integration from the in-product App Marketplace:"
-msgstr ""
+msgstr "제품 내 App Marketplace에서 GitLab 통합을 설치하세요:"
 
 #: ../../source/integrate/gitlab.rst:42
 msgid ""
 "We recommend making a copy of your webhook secret and encryption key, as "
 "it will only be visible to you once."
 msgstr ""
+"웹훅 시크릿과 암호화 키는 한 번만 표시되므로 복사본을 만드는 것을 권장합니다."
 
 #: ../../source/integrate/gitlab.rst:44
 msgid ""
 "In Mattermost, from the Product menu |product-list|, select **App "
 "Marketplace**."
 msgstr ""
+"Mattermost에서 제품 메뉴 |product-list| 에서 **App Marketplace** 를 선택하세요."
 
 #: ../../<rst_prolog>:100
 msgid ""
 "Navigate between Channels and collaborative playbooks using the product "
 "menu icon."
 msgstr ""
+"제품 메뉴 아이콘을 사용하여 채널과 협업 플레이북 사이를 탐색하세요."
 
 #: ../../source/integrate/gitlab.rst:45
 msgid "Search for or scroll to GitLab, and select **Install**."
-msgstr ""
+msgstr "GitLab을 검색하거나 스크롤하여 **설치** 를 선택하세요."
 
 #: ../../source/integrate/gitlab.rst:46
 msgid "Once installed, select **Configure**. You're taken to the System Console."
-msgstr ""
+msgstr "설치가 완료되면 **구성** 을 선택하세요. 시스템 콘솔로 이동합니다."
 
 #: ../../source/integrate/gitlab.rst:47
 msgid ""
 "On the GitLab configuration page, enable and configure GitLab "
 "interoperability as follows, and then select **Save**:"
-msgstr ""
+msgstr "GitLab 구성 페이지에서 다음과 같이 GitLab 상호 운용성을 활성화하고 구성한 다음 **저장** 을 선택하세요:"
 
 #: ../../source/integrate/gitlab.rst:49
 msgid ""
 "Enter the **GitLab URL**, **GitLab OAuth Client ID**, and **GitLab OAuth "
 "Client Secret** you obtained when `registering the OAuth app in GitLab "
 "<#register-an-oauth-app-in-GitLab>`__."
-msgstr ""
+msgstr "`GitLab에서 OAuth 앱 등록 <#register-an-oauth-app-in-GitLab>`__ 시 얻은 **GitLab URL**, **GitLab OAuth Client ID**, **GitLab OAuth Client Secret** 을 입력하세요."
 
 #: ../../source/integrate/gitlab.rst:50
 msgid ""
 "Generate a **Webhook Secret** and **At Rest Encryption Key** by selecting"
 " **Generate**."
-msgstr ""
+msgstr "**생성** 을 선택하여 **Webhook Secret** 과 **At Rest Encryption Key** 를 생성하세요."
 
 #: ../../source/integrate/gitlab.rst:51
 msgid ""
 "(Optional) **GitLab Group**: Lock the integration to a single GitLab "
 "group."
-msgstr ""
+msgstr "(선택 사항) **GitLab Group**: 통합을 단일 GitLab 그룹으로 제한하세요."
 
 #: ../../source/integrate/gitlab.rst:52
 msgid ""
@@ -183,21 +199,22 @@ msgid ""
 "with private repositories. Affected users are notified once private "
 "repositories are enabled, and must reconnect their GitLab accounts to "
 "gain access to private repositories."
-msgstr ""
+msgstr "(선택 사항) **비공개 저장소 활성화**: 비공개 저장소 작업 기능을 활성화하세요. 비공개 저장소가 활성화되면 영향을 받는 사용자에게 알림이 표시되며, "
+"비공개 저장소에 접근하려면 GitLab 계정을 다시 연결해야 합니다."
 
 #: ../../source/integrate/gitlab.rst:55
 msgid "Enable"
-msgstr ""
+msgstr "활성화"
 
 #: ../../source/integrate/gitlab.rst:57
 msgid ""
 "Notify your teams that they can `connect their GitLab accounts to "
 "Mattermost <#connect-a-gitlab-account-to-mattermost>`__."
-msgstr ""
+msgstr "팀원들에게 `GitLab 계정을 Mattermost에 연결 <#connect-a-gitlab-account-to-mattermost>`__ 할 수 있다고 알리세요."
 
 #: ../../source/integrate/gitlab.rst:60
 msgid "Upgrade"
-msgstr ""
+msgstr "업그레이드"
 
 #: ../../source/integrate/gitlab.rst:62
 msgid ""
@@ -206,18 +223,19 @@ msgid ""
 "in Mattermost. Visit the `Releases page <https://github.com/mattermost"
 "/mattermost-plugin-gitlab/releases>`__ for the latest release, available "
 "releases, and compatibility considerations."
-msgstr ""
+msgstr "새 버전이 출시될 때마다 이 통합을 업데이트하는 것을 권장합니다. 일반적으로 업데이트는 원활하게 이루어지며 Mattermost의 사용자 경험을 방해하지 않습니다. "
+"최신 릴리스, 사용 가능한 릴리스 및 호환성 고려사항은 `Releases page <https://github.com/mattermost/mattermost-plugin-gitlab/releases>`__ 를 방문하세요."
 
 #: ../../source/integrate/gitlab.rst:65
 msgid "Use"
-msgstr ""
+msgstr "사용"
 
 #: ../../source/integrate/gitlab.rst:67
 msgid ""
 "Users who want to use GitLab interconnectivity must register an OAuth app"
 " in GitLab for Mattermost, and then connect a GitLab account to "
 "Mattermost."
-msgstr ""
+msgstr "GitLab 상호 연결성을 사용하려는 사용자는 Mattermost용 OAuth 앱을 GitLab에 등록한 다음 GitLab 계정을 Mattermost에 연결해야 합니다."
 
 #: ../../source/integrate/gitlab.rst:69
 msgid ""
@@ -225,57 +243,58 @@ msgid ""
 "Mattermost when someone mentions you, requests a review, comments on, or "
 "modifies one of your merge requests/issues, or assigns you to an issue on"
 " GitLab."
-msgstr ""
+msgstr "연결이 완료되면 누군가가 귀하를 멘션하거나, 리뷰를 요청하거나, 귀하의 병합 요청/이슈에 댓글을 달거나 수정하거나, "
+"GitLab에서 이슈를 할당할 때 Mattermost의 GitLab 봇으로부터 직접 메시지를 받게 됩니다."
 
 #: ../../source/integrate/gitlab.rst:72
 msgid "Connect a GitLab account to Mattermost"
-msgstr ""
+msgstr "GitLab 계정을 Mattermost에 연결"
 
 #: ../../source/integrate/gitlab.rst:74
 msgid ""
 "Run the ``/gitlab connect`` slash account in any Mattermost channel to "
 "link your Mattermost account with your GitLab account."
-msgstr ""
+msgstr "Mattermost 계정을 GitLab 계정과 연결하려면 아무 Mattermost 채널에서 ``/gitlab connect`` 슬래시 명령어를 실행하세요."
 
 #: ../../source/integrate/gitlab.rst:76
 msgid ""
 "Disconnect a GitLab account by running the ``/gitlab disconnect`` slash "
 "command. Run the ``/gitlab me`` slash command to review which account is "
 "connected to GitLab."
-msgstr ""
+msgstr "``/gitlab disconnect`` 슬래시 명령어를 실행하여 GitLab 계정 연결을 해제하세요. ``/gitlab me`` 슬래시 명령어를 실행하여 어떤 계정이 GitLab에 연결되어 있는지 확인할 수 있습니다."
 
 #: ../../source/integrate/gitlab.rst:78
 msgid ""
 "Once connected, run the ``/gitlab help`` slash command to see what you "
 "can do."
-msgstr ""
+msgstr "연결이 완료되면 ``/gitlab help`` 슬래시 명령어를 실행하여 사용 가능한 기능을 확인하세요."
 
 #: ../../source/integrate/gitlab.rst:81
 msgid "Get started"
-msgstr ""
+msgstr "시작하기"
 
 #: ../../source/integrate/gitlab.rst:83
 msgid ""
 "Run the  ``/gitlab todo`` slash command to get a list of to-do's, "
 "assigned issues, assigned merge requests and merge requests awaiting your"
 " review. Alternatively, use the options located in the left sidebar."
-msgstr ""
+msgstr "``/gitlab todo`` 슬래시 명령어를 실행하여 할 일 목록, 할당된 이슈, 할당된 병합 요청 및 리뷰 대기 중인 병합 요청 목록을 확인하세요. 또는 왼쪽 사이드바에 있는 옵션을 사용할 수 있습니다."
 
 #: ../../source/integrate/gitlab.rst:85
 msgid ""
 "Run the ``/gitlab webhook`` slash command to have GitLab send events to "
 "Mattermost. For example: ``/gitlab webhook add group[/project]``"
-msgstr ""
+msgstr "GitLab이 Mattermost로 이벤트를 전송하도록 ``/gitlab webhook`` 슬래시 명령어를 실행하세요. 예: ``/gitlab webhook add group[/project]``"
 
 #: ../../source/integrate/gitlab.rst:88
 msgid "Channel subscriptions"
-msgstr ""
+msgstr "채널 구독"
 
 #: ../../source/integrate/gitlab.rst:90
 msgid ""
 "Run the ``/gitlab subscriptions list`` to review all of your "
 "subscriptions."
-msgstr ""
+msgstr "``/gitlab subscriptions list`` 를 실행하여 모든 구독을 확인하세요."
 
 #: ../../source/integrate/gitlab.rst:92
 msgid ""
@@ -285,6 +304,9 @@ msgid ""
 "unsubscribe and stop receiving posts, run the ``/gitlab subscriptions "
 "delete group[/project]`` slash command."
 msgstr ""
+"GitLab 프로젝트의 새로운 병합 요청, 이슈 또는 기타 기능에 대한 게시물을 받기 위해 Mattermost 채널을 구독하려면 "
+"``/gitlab subscriptions add group[/project] [features]`` 슬래시 명령어를 실행하세요. 구독을 해제하고 게시물 수신을 중지하려면 "
+"``/gitlab subscriptions delete group[/project]`` 슬래시 명령어를 실행하세요."
 
 #: ../../source/integrate/gitlab.rst:94
 msgid ""
@@ -293,16 +315,19 @@ msgid ""
 "GitLab by running the ``/gitlab webhook`` slash command. For example: "
 "``/gitlab webhook add group[/project]``"
 msgstr ""
+"알림을 받거나 구독하려는 각 프로젝트에 대해, GitLab에서 전송된 이벤트를 모니터링하려는 채널에서 ``/gitlab webhook`` 슬래시 명령어를 실행하여 웹훅을 생성하세요. "
+"예: ``/gitlab webhook add group[/project]``"
 
 #: ../../source/integrate/gitlab.rst:98
 msgid "For GitLab versions prior to 1.2:"
-msgstr ""
+msgstr "GitLab 1.2 이전 버전의 경우:"
 
 #: ../../source/integrate/gitlab.rst:100
 msgid ""
 "In GitLab, go to the project you want to subscribe to, and select "
 "**Settings > Integrations** in the sidebar."
 msgstr ""
+"GitLab에서 구독하려는 프로젝트로 이동한 후 사이드바에서 **설정 > 통합** 을 선택하세요."
 
 #: ../../source/integrate/gitlab.rst:103
 msgid ""
@@ -312,40 +337,43 @@ msgid ""
 "``/plugins/com.github.manland.mattermost-plugin-gitlab/webhook`` to the "
 "URL, or the webhook won't work."
 msgstr ""
+"**URL**: ``https://YOUR-MATTERMOST-URL.COM/plugins/com.github.manland.mattermost-plugin-gitlab/webhook`` 에서 "
+"``https://YOUR-MATTERMOST-URL.COM`` 을 Mattermost URL로 교체하세요. URL에 ``/plugins/com.github.manland.mattermost-plugin-gitlab/webhook`` 을 추가해야 하며, "
+"그렇지 않으면 웹훅이 작동하지 않습니다."
 
 #: ../../source/integrate/gitlab.rst:104
 msgid "**Secret Token**: Copy the webhook secret you generated earlier."
-msgstr ""
+msgstr "**시크릿 토큰**: 이전에 생성한 웹훅 시크릿을 복사하세요."
 
 #: ../../source/integrate/gitlab.rst:105
 msgid "Select all the events in **Triggers**."
-msgstr ""
+msgstr "**트리거** 에서 모든 이벤트를 선택하세요."
 
 #: ../../source/integrate/gitlab.rst:106
 msgid "Add the webhook."
-msgstr ""
+msgstr "웹훅을 추가하세요."
 
 #: ../../source/integrate/gitlab.rst:109
 msgid "Update settings"
-msgstr ""
+msgstr "설정 업데이트"
 
 #: ../../source/integrate/gitlab.rst:111
 msgid ""
 "Run the ``/gitlab settings [setting] [value]`` slash command to update "
 "your preferences for the integration:"
-msgstr ""
+msgstr "통합에 대한 기본 설정을 업데이트하려면 ``/gitlab settings [setting] [value]`` 슬래시 명령어를 실행하세요:"
 
 #: ../../source/integrate/gitlab.rst:113
 msgid "Turn personal notifications on or off."
-msgstr ""
+msgstr "개인 알림을 켜거나 끄세요."
 
 #: ../../source/integrate/gitlab.rst:114
 msgid "Turn reminders on or off when you connect initially each day."
-msgstr ""
+msgstr "매일 처음 연결할 때 알림을 켜거나 끄세요."
 
 #: ../../source/integrate/gitlab.rst:117
 msgid "Customize"
-msgstr ""
+msgstr "사용자 지정"
 
 #: ../../source/integrate/gitlab.rst:119
 msgid ""
@@ -357,10 +385,13 @@ msgid ""
 " information about developing, customizing, and extending Mattermost "
 "functionality."
 msgstr ""
+"이 통합에는 서버와 웹 앱 부분이 모두 포함되어 있습니다. Mattermost 기능을 개발, 사용자 지정 및 확장하는 방법에 대한 정보는 "
+"`Mattermost 개발자 워크플로우 <https://developers.mattermost.com/extend/plugins/developer-workflow/>`__ 와 "
+"`Mattermost 개발자 환경 설정 <https://developers.mattermost.com/extend/plugins/developer-setup/>`_ 을 참조하세요."
 
 #: ../../source/integrate/gitlab.rst:122
 msgid "Get help"
-msgstr ""
+msgstr "도움 받기"
 
 #: ../../source/integrate/gitlab.rst:124
 msgid ""
@@ -369,6 +400,9 @@ msgid ""
 "bug, please open a GitHub issue against the `Mattermost GitLab plugin "
 "repository <https://github.com/mattermost/mattermost-plugin-gitlab>`_."
 msgstr ""
+"Mattermost 고객은 `Mattermost 지원 케이스 <https://support.mattermost.com/hc/en-us/requests/new>`_ 를 열 수 있습니다. "
+"버그를 보고하려면 `Mattermost GitLab 플러그인 저장소 <https://github.com/mattermost/mattermost-plugin-gitlab>`_ 에 "
+"GitHub 이슈를 열어주세요."
 
 #: ../../source/integrate/gitlab.rst:126
 msgid ""
@@ -378,6 +412,8 @@ msgid ""
 "`Mattermost Community Server <https://community.mattermost.com/>`_ for "
 "assistance."
 msgstr ""
+"질문, 피드백 및 도움이 필요하시면 `Mattermost 커뮤니티 서버 <https://community.mattermost.com/>`_ 의 "
+"공개 `통합 및 앱 채널 <https://community.mattermost.com/core/channels/integrations>`_ 에 참여하세요."
 
 #: ../../source/integrate/gitlab.rst:128
 msgid ""
@@ -386,6 +422,8 @@ msgid ""
 "/trouble-shoot/16>`_ to access the global Mattermost Community for "
 "assistance."
 msgstr ""
+"Mattermost Team Edition 및 무료 고객은 도움을 받기 위해 Mattermost `피어 투 피어 문제 해결 포럼 <https://forum.mattermost.com/c/trouble-shoot/16>`_ 에 "
+"방문하여 글로벌 Mattermost 커뮤니티에 접근할 수 있습니다."
 
 #: ../../source/integrate/gitlab.rst:132
 msgid ""
@@ -394,6 +432,8 @@ msgid ""
 " to learn how to streamline and standardize your release processes, while"
 " reducing the amount of effort required to ship your latest releases."
 msgstr ""
+"최신 릴리스 출시에 필요한 노력을 줄이면서 릴리스 프로세스를 간소화하고 표준화하는 방법을 알아보려면 "
+"`Mattermost와 GitLab을 사용한 릴리스 관리에 대한 주문형 웨비나 <https://mattermost.com/webinar/release-management-with-gitlab/>`_ 를 시청하세요."
 
 #~ msgid "Setup"
 #~ msgstr ""

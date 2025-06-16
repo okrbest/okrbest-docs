@@ -21,27 +21,27 @@ msgstr ""
 
 #: ../../source/scale/push-notification-health-targets.rst:2
 msgid "Push notification health targets"
-msgstr ""
+msgstr "푸시 알림 상태 목표"
 
 #: ../../source/_static/badges/ent-cloud-selfhosted.rst:7
 msgid ""
 "|plans-img| Available on `Enterprise plans "
 "<https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `Enterprise 플랜 <https://mattermost.com/pricing/>`__ 에서 이용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/ent-cloud-selfhosted.rst:9
 msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
-msgstr ""
+msgstr "|deployment-img| `클라우드 <https://mattermost.com/sign-up/>`__ 및 `자체 호스팅 <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/scale/push-notification-health-targets.rst:7
 msgid ""
@@ -52,23 +52,27 @@ msgid ""
 "notification health targets to ensure a performant production deployment "
 "of Mattermost."
 msgstr ""
+"Mattermost에서 전송된 다양한 유형의 알림을 추적하기 위해 `Mattermost Notification Health "
+"<https://grafana.com/grafana/dashboards/21305-mattermost-notification-"
+"health>`_ Grafana 대시보드를 사용할 때, Mattermost의 성능이 우수한 프로덕션 배포를 보장하기 위해 "
+"다음 모바일 푸시 알림 상태 목표를 준수하는 것을 권장합니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:11
 msgid ""
 "Accessing and enabling Mattermost Notification Health Monitoring requires"
 " the feature flag ``NotificationMonitoring`` to be set to ``true``."
-msgstr ""
+msgstr "Mattermost Notification Health Monitoring에 접근하고 활성화하려면 기능 플래그 ``NotificationMonitoring`` 을 ``true`` 로 설정해야 합니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:12
 msgid ""
 "System admins can :ref:`disable notification monitoring data collection "
 "<configure/site-configuration-settings:enable notification monitoring>` "
 "through the System Console."
-msgstr ""
+msgstr "시스템 관리자는 System Console을 통해 :ref:`알림 모니터링 데이터 수집을 비활성화 <configure/site-configuration-settings:enable notification monitoring>` 할 수 있습니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:15
 msgid "Push Proxy Delivery Rate"
-msgstr ""
+msgstr "푸시 프록시 전송률"
 
 #: ../../source/scale/push-notification-health-targets.rst:17
 msgid ""
@@ -78,6 +82,8 @@ msgid ""
 "Firebase Cloud Messaging (FCM)) out of the total number of push "
 "notifications sent."
 msgstr ""
+"**푸시 프록시 전송률** 패널은 전송된 총 푸시 알림 수 대비 푸시 알림 서비스(즉, Apple Push Notification service (APNs) 또는 "
+"Firebase Cloud Messaging (FCM))에 성공적으로 전달된 푸시 알림의 비율을 나타냅니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:19
 #, python-format
@@ -88,6 +94,9 @@ msgid ""
 " the push notification configuration, connectivity problems, or possible "
 "service interruptions with the push proxy provider."
 msgstr ""
+"사용자가 알림을 적시에 받고 있는지 확인하기 위해 이 전송률을 모니터링하세요. 이 값은 항상 100%여야 합니다. "
+"99% 미만인 경우 푸시 알림 구성, 연결 문제 또는 푸시 프록시 제공업체의 가능한 서비스 중단과 관련된 "
+"문제를 식별하기 위해 추가 조사가 필요합니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:-1
 msgid ""
@@ -95,10 +104,12 @@ msgid ""
 "breakdown of the errors encountered when sending push notifications, "
 "categorized by the specific reason for each error."
 msgstr ""
+"Push Notifications Errors by Reason 패널은 푸시 알림 전송 시 발생한 오류를 각 오류의 "
+"특정 원인별로 분류하여 관리자에게 제공합니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:26
 msgid "Push Notifications Errors by Reason"
-msgstr ""
+msgstr "푸시 알림 오류 원인별 분석"
 
 #: ../../source/scale/push-notification-health-targets.rst:28
 msgid ""
@@ -108,6 +119,8 @@ msgid ""
 "sending push notifications, categorized by the specific reason for each "
 "error."
 msgstr ""
+"**푸시 알림 오류 원인별 분석** 패널은 푸시 알림 시스템의 신뢰성과 효과성을 유지하기 위한 중요한 도구입니다. "
+"이 값들은 푸시 알림 전송 시 발생한 오류를 각 오류의 특정 원인별로 분류하여 제공합니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:30
 msgid ""
@@ -117,6 +130,9 @@ msgid ""
 " serious, and enhance the overall user experience with the Mattermost "
 "platform."
 msgstr ""
+"이 정보는 관리자가 푸시 알림 전송에 영향을 미치는 일반적인 문제를 정확히 파악하고, 문제를 더 효율적으로 진단하고 수정하며, "
+"패턴과 추세를 감지하고, 간헐적인 문제가 더 심각해지기 전에 식별하여 Mattermost 플랫폼의 전반적인 "
+"사용자 경험을 향상시키는 데 도움이 됩니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:32
 msgid ""
@@ -124,10 +140,12 @@ msgid ""
 "occurences of this error increase, verify logs for "
 "``push_proxy_send_error``."
 msgstr ""
+"누락된 프로필 오류는 일반적으로 무시해도 안전합니다. 그러나 이 오류 발생이 증가하는 것을 발견하면 "
+"``push_proxy_send_error`` 로그를 확인하세요."
 
 #: ../../source/scale/push-notification-health-targets.rst:35
 msgid "Push Notifications Not Sent Distribution"
-msgstr ""
+msgstr "미전송 푸시 알림 분포"
 
 #: ../../source/scale/push-notification-health-targets.rst:37
 msgid ""
@@ -136,6 +154,8 @@ msgid ""
 "providing detailed insights into the specific reasons why notifications "
 "weren't sent."
 msgstr ""
+"**미전송 푸시 알림 분포** 패널은 알림이 전송되지 않은 특정 원인에 대한 자세한 인사이트를 제공하여 "
+"관리자가 푸시 알림 시스템의 견고성과 신뢰성을 보장하는 데 도움을 줍니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:39
 msgid ""
@@ -147,23 +167,26 @@ msgid ""
 "monitor any trends or spikes in push notifications not sent, resulting in"
 " proactive maintenance and quicker resolution of issues as they arise."
 msgstr ""
+"이 정보는 관리자가 푸시 알림이 전송되지 않는 이유(예: 채널 음소거)를 이해하고, 주의가 필요한 기본 시스템 또는 구성 문제를 식별하며, "
+"알림 전송률에 영향을 미치는 가장 중요한 문제에 집중하여 문제 해결 및 개선 영역의 우선순위를 정하고, 미전송 푸시 알림의 추세나 급증을 모니터링하여 "
+"사전 예방적 유지 관리와 문제 발생 시 신속한 해결이 가능하도록 도와줍니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:-1
 msgid ""
 "The Push Notifications Not Sent Distribution panel provides admins with "
 "detailed insights into the specific reasons for notification delivery "
 "failures."
-msgstr ""
+msgstr "미전송 푸시 알림 분포 패널은 관리자에게 알림 전송 실패의 특정 원인에 대한 자세한 인사이트를 제공합니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:46
 msgid "Push Notifications Stats"
-msgstr ""
+msgstr "푸시 알림 통계"
 
 #: ../../source/scale/push-notification-health-targets.rst:48
 msgid ""
 "The **Push Notifications Stats** panel provides a high-level view of the "
 "number of notifications sent and acknowledged."
-msgstr ""
+msgstr "**푸시 알림 통계** 패널은 전송 및 확인된 알림 수에 대한 상위 수준의 보기를 제공합니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:50
 msgid ""
@@ -172,29 +195,31 @@ msgid ""
 "successfully received the push notification, and sent back a confirmation"
 " of delivery to the push notification service."
 msgstr ""
+"확인된 푸시 알림은 수신자의 모바일 기기가 푸시 알림을 성공적으로 수신하고 푸시 알림 서비스에 전송 확인을 다시 보냈기 때문에 "
+"서비스와 기기 간의 성공적인 통신을 나타냅니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:52
 msgid ""
 "When a push notification isn't acknowledged, this indicates that the "
 "notification wasn't received, or that the device didn't send back a "
 "confirmation to the push notification service."
-msgstr ""
+msgstr "푸시 알림이 확인되지 않으면 알림이 수신되지 않았거나 기기가 푸시 알림 서비스에 확인을 다시 보내지 않았음을 나타냅니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:54
 msgid ""
 "Closer alignment between the send and acknowledge lines in this graph "
 "indicates better performance."
-msgstr ""
+msgstr "이 그래프에서 전송 및 확인 라인 간의 더 가까운 정렬은 더 나은 성능을 나타냅니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:-1
 msgid ""
 "The Push Notifications Stats panel provides admins with a high-level view"
 " of the number of notifications sent and acknowledged."
-msgstr ""
+msgstr "푸시 알림 통계 패널은 관리자에게 전송 및 확인된 알림 수에 대한 상위 수준의 보기를 제공합니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:61
 msgid "Total Acked Push Notifications"
-msgstr ""
+msgstr "총 확인된 푸시 알림"
 
 #: ../../source/scale/push-notification-health-targets.rst:63
 #, python-format
@@ -208,6 +233,9 @@ msgid ""
 "delivered and received as intended. Any value over 80% is considered "
 "normal."
 msgstr ""
+"**총 확인된 푸시 알림** 값은 모바일 기기에서 확인한 푸시 알림의 총 수를 나타냅니다. 이 메트릭은 Mattermost 서버에서 전송된 푸시 알림 중 "
+"모바일 기기에서 성공적으로 수신 및 확인된 알림 수를 관리자가 이해하는 데 도움을 줍니다. 메시지가 의도한 대로 전달되고 수신되는지 확인하므로 "
+"푸시 알림 시스템의 신뢰성과 효과성의 중요한 지표입니다. 80% 이상의 값은 정상으로 간주됩니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:-1
 msgid ""
@@ -215,17 +243,19 @@ msgid ""
 " push notifications sent from the Mattermost server were successfully "
 "received and acknowledged by mobile devices."
 msgstr ""
+"총 확인된 푸시 알림 값은 Mattermost 서버에서 전송된 푸시 알림 중 모바일 기기에서 성공적으로 수신 및 확인된 알림 수를 관리자가 이해하는 데 "
+"도움을 줍니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:69
 #, python-format
 msgid ""
 "There are several scenarios where notifications may not be acknowledged "
 "which cover the remaining ~10-20% of notifications, as follows:"
-msgstr ""
+msgstr "나머지 약 10-20%의 알림을 차지하는 확인되지 않을 수 있는 알림의 여러 시나리오는 다음과 같습니다:"
 
 #: ../../source/scale/push-notification-health-targets.rst:71
 msgid "Servers removed without users logging out"
-msgstr ""
+msgstr "사용자 로그아웃 없이 서버 제거"
 
 #: ../../source/scale/push-notification-health-targets.rst:73
 msgid ""
@@ -235,10 +265,13 @@ msgid ""
 " mobile device. These sent notifications, can't be acknowledged because "
 "Mattermost would be missing the information about the server URL."
 msgstr ""
+"모바일 앱에서 서버가 제거되고 더 이상 모바일 앱을 사용하여 서버에 연락할 수 없을 때, 서버는 사용자 세션을 로그아웃하지 않습니다. "
+"따라서 Mattermost는 모바일 기기에 계속 알림을 전송합니다. 이러한 전송된 알림은 Mattermost가 서버 URL에 대한 정보가 누락되어 있기 때문에 "
+"확인할 수 없습니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:75
 msgid "iOS notifications are disabled"
-msgstr ""
+msgstr "iOS 알림이 비활성화됨"
 
 #: ../../source/scale/push-notification-health-targets.rst:77
 msgid ""
@@ -249,10 +282,13 @@ msgid ""
 "any change without re-starting the app can lead to notifications not "
 "being acknowledged."
 msgstr ""
+"iOS 기기에서 알림이 비활성화되면 알림이 모바일 앱에서 처리되지 않습니다. 따라서 이러한 알림을 확인할 수 없습니다. Mattermost는 기기의 "
+"알림 비활성화 여부를 추적하지만, 이 정보는 앱이 시작될 때만 업데이트됩니다. 따라서 앱을 다시 시작하지 않고 변경하면 알림이 확인되지 않을 수 "
+"있습니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:79
 msgid "Notifications are dropped at the Push Notification Service"
-msgstr ""
+msgstr "푸시 알림 서비스에서 알림이 삭제됨"
 
 #: ../../source/scale/push-notification-health-targets.rst:81
 msgid ""
@@ -262,14 +298,16 @@ msgid ""
 "the Push Notification Service. Therefore, the mobile device cannot "
 "acknowledge the notification."
 msgstr ""
+"APNs와 FCM은 여러 상황에서 알림을 삭제할 수 있으며, 특히 모바일 기기가 연결되어 있지 않을 때 그렇습니다. 알림은 Push Proxy로 전송된 것으로 "
+"표시되지만 Push Notification Service에서 기기로 전송되지 않습니다. 따라서 모바일 기기는 알림을 확인할 수 없습니다."
 
 #: ../../source/scale/push-notification-health-targets.rst:83
 msgid "Extreme battery save mode"
-msgstr ""
+msgstr "극단적인 배터리 절약 모드"
 
 #: ../../source/scale/push-notification-health-targets.rst:85
 msgid ""
 "On Android, users can activate an extreme battery save mode. In this "
 "mode, notifications are not acknowledged."
 msgstr ""
-
+"Android에서는 사용자가 극단적인 배터리 절약 모드를 활성화할 수 있습니다. 이 모드에서는 알림이 확인되지 않습니다."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mattermost \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 15:09+0900\n"
+"POT-Creation-Date: 2025-05-26 23:00+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ko\n"
@@ -21,27 +21,29 @@ msgstr ""
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:2
 msgid "Secure file storage"
-msgstr ""
+msgstr "보안 파일 저장소"
 
 #: ../../source/_static/badges/ent-cloud-selfhosted.rst:7
 msgid ""
 "|plans-img| Available on `Enterprise plans "
 "<https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `Enterprise 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/ent-cloud-selfhosted.rst:9
 msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
 msgstr ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ 및 `self-"
+"hosted <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:7
 msgid ""
@@ -55,6 +57,10 @@ msgid ""
 "unauthorized parties and ensuring isolation from third-party "
 "applications."
 msgstr ""
+"이 문서는 iOS 및 Android용 Mattermost 모바일 앱의 파일 저장소를 관리하는 보안 조치를 설명합니다. 애플리케이션 "
+"컨테이너 내에서 파일이 저장, 접근 및 보호되는 방식을 설명하며, 모바일 기기에서 통제되지 않은 비분류 정보(CUI) 및 HIPAA"
+" 규제 데이터를 포함한 민감한 데이터와 관련된 우려사항을 다룹니다. 목표는 승인된 인원만이 이러한 데이터를 보고, 접근하거나 공유할"
+" 수 있도록 하면서 승인되지 않은 당사자에게 노출되는 것을 방지하고 타사 애플리케이션과의 격리를 보장하는 것입니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:9
 msgid ""
@@ -66,10 +72,14 @@ msgid ""
 " data like CUI or HIPAA-regulated information to authorized personnel "
 "only."
 msgstr ""
+"Mattermost는 iOS와 Android 모두에서 강력한 샌드박싱 메커니즘을 활용하여 애플리케이션 컨테이너 내의 캐시 폴더에 "
+"파일을 안전하게 저장하고, 승인되지 않은 타사 앱과의 격리를 보장합니다. 사용자가 시작한 작업(다운로드, 공유, 링크 복사)은 서버"
+" 측 권한에 의해 제어되며, 관리자는 CUI 또는 HIPAA 규제 정보와 같은 민감한 데이터에 대한 접근을 승인된 인원으로만 제한할"
+" 수 있습니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:12
 msgid "File storage and app sandbox security"
-msgstr ""
+msgstr "파일 저장소 및 앱 샌드박스 보안"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:14
 msgid ""
@@ -78,15 +88,17 @@ msgid ""
 "container. This storage location is isolated by each platform’s "
 "sandboxing model:"
 msgstr ""
+"Mattermost 모바일 앱을 통해 업로드되거나 접근된 파일은 앱의 개인 저장소 컨테이너 내에 있는 앱의 캐시 폴더에 저장됩니다."
+" 이 저장 위치는 각 플랫폼의 샌드박싱 모델에 의해 격리됩니다:"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:17
 msgid "iOS – app sandbox"
-msgstr ""
+msgstr "iOS – 앱 샌드박스"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:19
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:38
 msgid "**Sandboxing & storage:**"
-msgstr ""
+msgstr "**샌드박싱 및 저장소:**"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:21
 msgid ""
@@ -96,11 +108,14 @@ msgid ""
 "As a result, files stored within the Mattermost app’s cache folder remain"
 " accessible only to the app unless explicitly shared by the user."
 msgstr ""
+"iOS는 컨테이너화된 파일 시스템과 엄격한 프로세스 격리에 의존하는 강력한 샌드박싱 모델을 사용합니다. 각 앱은 설치 시 무작위로 "
+"할당된 홈 디렉토리를 가진 자체 샌드박스 내에서 작동합니다. 결과적으로 Mattermost 앱의 캐시 폴더에 저장된 파일은 사용자가"
+" 명시적으로 공유하지 않는 한 해당 앱에서만 접근 가능합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:23
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:42
 msgid "**Secure file viewing:**"
-msgstr ""
+msgstr "**보안 파일 보기:**"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:25
 msgid ""
@@ -109,6 +124,8 @@ msgid ""
 " app’s sandbox, ensuring that raw file data isn’t exposed to external "
 "processes."
 msgstr ""
+"이미지와 비디오가 아닌 파일은 QLPreviewController와 같은 보안 프레임워크를 사용하여 렌더링됩니다. 이 컨트롤러는 "
+"앱의 샌드박스 내에서 파일 미리보기를 표시하여 원시 파일 데이터가 외부 프로세스에 노출되지 않도록 합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:26
 msgid ""
@@ -118,6 +135,9 @@ msgid ""
 "mobile app uses the QLPreviewController framework, just as it does for "
 "other file types."
 msgstr ""
+"지원되는 이미지 및 비디오 파일은 앱 내에서 직접 미리보기가 가능하며, 파일은 보안 샌드박스 내에 있는 앱의 캐시 폴더에 "
+"다운로드됩니다. 지원되지 않는 이미지 및 비디오 형식의 경우, Mattermost 모바일 앱은 다른 파일 유형과 마찬가지로 "
+"QLPreviewController 프레임워크를 사용합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:27
 msgid ""
@@ -127,34 +147,45 @@ msgid ""
 "download the file to a location of their choosing. However, if mobile "
 "downloads are disabled, these files become unavailable to the user."
 msgstr ""
+"파일 형식이 QLPreviewController에서도 지원되지 않고 서버에서 :ref:`모바일 다운로드가 활성화 <configure"
+"/site-configuration-settings:allow file downloads on mobile>` 되어 있다면, "
+"사용자는 원하는 위치에 파일을 다운로드할 수 있습니다. 그러나 모바일 다운로드가 비활성화된 경우 이러한 파일은 사용자가 사용할 수 "
+"없게 됩니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:29
 msgid "**Official references:**"
-msgstr ""
+msgstr "**공식 참조 문서:**"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:31
 msgid ""
 "`Apple App Sandbox Design Guide "
 "<https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html>`_"
 msgstr ""
+"`Apple 앱 샌드박스 디자인 가이드 "
+"<https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/AboutAppSandbox/AboutAppSandbox.html>`_"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:32
 msgid ""
 "`Security of runtime process in iOS, iPadOS and visionOS "
 "<https://support.apple.com/en-gb/guide/security/sec15bfe098e/web>`_"
 msgstr ""
+"`iOS, iPadOS 및 visionOS의 런타임 프로세스 보안 <https://support.apple.com/en-"
+"gb/guide/security/sec15bfe098e/web>`_"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:33
 msgid ""
 "`Apple Security Guide <https://help.apple.com/pdf/security/en_GB/apple-"
 "platform-security-guide-b.pdf>`_"
 msgstr ""
+"`Apple 보안 가이드 <https://help.apple.com/pdf/security/en_GB/apple-platform-"
+"security-guide-b.pdf>`_"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:36
 msgid "Android – scoped storage"
-msgstr ""
+msgstr "Android – 범위가 지정된 저장소"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:40
+#, fuzzy
 msgid ""
 "Android employs scoped storage by assigning each app its own Linux user "
 "ID and a dedicated private directory. This model prevents other "
@@ -162,6 +193,9 @@ msgid ""
 "As a result, the Mattermost app’s files remain inaccessible to other "
 "apps—unless the device is rooted, or the user explicitly shares the data."
 msgstr ""
+"Android는 각 앱에 고유한 Linux 사용자 ID와 전용 개인 디렉토리를 할당하여 범위가 지정된 저장소를 사용합니다. 이 "
+"모델은 명시적인 권한 없이는 다른 애플리케이션이 앱의 캐시에 접근하는 것을 방지합니다. 결과적으로 Mattermost 앱의 파일은 "
+"기기가 루팅되었거나 사용자가 명시적으로 데이터를 공유하지 않는 한 다른 앱에서 접근할 수 없습니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:44
 msgid ""
@@ -170,6 +204,9 @@ msgid ""
 "to an external app only if the user explicitly triggers the action, while"
 " the file remains securely stored within Mattermost’s cache folder."
 msgstr ""
+"사용자가 이미지/비디오가 아닌 파일을 보려고 할 때 Mattermost는 ``Intent.ACTION_VIEW`` 를 사용하여 "
+"파일을 엽니다. 이 인텐트는 사용자가 명시적으로 작업을 트리거할 때만 외부 앱에 렌더링을 위임하며, 파일은 Mattermost의 "
+"캐시 폴더 내에 안전하게 저장됩니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:45
 msgid ""
@@ -177,6 +214,8 @@ msgid ""
 " are enabled <configure/site-configuration-settings:allow file downloads "
 "on mobile>` on the server."
 msgstr ""
+"이미지/비디오가 아닌 파일 보기는 서버에서 :ref:`모바일 다운로드가 활성화 <configure/site-"
+"configuration-settings:allow file downloads on mobile>` 되어 있는 경우에만 가능합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:46
 msgid ""
@@ -187,10 +226,13 @@ msgid ""
 "the file with an external application, just as it does for other file "
 "types."
 msgstr ""
+"지원되는 형식의 이미지 및 비디오 파일은 앱 내에서 직접 미리보기가 가능하며, 파일은 보안 샌드박스 내에 있는 앱의 캐시 폴더에 "
+"다운로드됩니다. 지원되지 않는 이미지 및 비디오 형식의 경우 Mattermost 모바일 앱은 다른 파일 유형과 마찬가지로 "
+"``Intent.ACTION_VIEW`` 를 사용하여 외부 애플리케이션으로 파일을 엽니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:48
 msgid "**Official reference:**"
-msgstr ""
+msgstr "**공식 참조 문서:**"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:50
 msgid ""
@@ -198,6 +240,9 @@ msgid ""
 "<https://developer.android.com/about/versions/10/privacy/changes#scoped-"
 "storage>`_"
 msgstr ""
+"`범위가 지정된 저장소 "
+"<https://developer.android.com/about/versions/10/privacy/changes#scoped-"
+"storage>`_"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:52
 msgid ""
@@ -205,14 +250,16 @@ msgid ""
 "under low storage conditions or upon user logout), thereby reducing the "
 "risk of sensitive information like CUI remaining on the device."
 msgstr ""
+"또한 두 플랫폼 모두 캐시된 데이터를 자동으로 지울 수 있습니다(예: 저장 공간이 부족하거나 사용자가 로그아웃할 때). 이를 통해 "
+"CUI와 같은 민감한 정보가 기기에 남아있을 위험을 줄일 수 있습니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:55
 msgid "Differentiating file handling to external applications"
-msgstr ""
+msgstr "외부 애플리케이션에 대한 파일 처리 구분"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:57
 msgid "**Previewing files:**"
-msgstr ""
+msgstr "**파일 미리보기:**"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:59
 msgid ""
@@ -227,10 +274,16 @@ msgid ""
 "downloads are enabled <configure/site-configuration-settings:allow file "
 "downloads on mobile>` on the server side."
 msgstr ""
+"파일 미리보기는 iOS와 Android의 \"보안 파일 보기\" 섹션에서 설명한 보안 보기 관행을 따릅니다. 미리보기 전의 모든 "
+"파일은 Mattermost 앱 샌드박스의 캐시 폴더에 저장됩니다. 지원되는 형식의 이미지와 비디오는 Mattermost 모바일 앱 "
+"내에서 직접 미리보기가 가능합니다. 이미지와 비디오가 아닌 파일은 iOS에서는 앱 내에서 미리보기가 가능하지만 Android에서는 "
+"원본 데이터가 앱의 캐시에 안전하게 저장된 상태로 외부 애플리케이션에 전달됩니다. 이미지/비디오가 아닌 파일의 미리보기는 서버 "
+"측에서 :ref:`모바일 다운로드가 활성화 <configure/site-configuration-settings:allow file"
+" downloads on mobile>` 되어 있는 경우에만 가능합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:61
 msgid "**Downloading files:**"
-msgstr ""
+msgstr "**파일 다운로드:**"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:63
 msgid ""
@@ -239,10 +292,12 @@ msgid ""
 "prompted to save it to another destination via platform-specific sharing "
 "methods."
 msgstr ""
+"사용자가 파일 다운로드를 시작하면 파일은 먼저 Mattermost의 개인 캐시 디렉토리에 저장됩니다. 그런 다음 사용자는 플랫폼별 "
+"공유 방법을 통해 다른 대상에 저장하라는 메시지가 즉시 표시됩니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:64
 msgid "On **iOS** devices:"
-msgstr ""
+msgstr "**iOS** 기기에서:"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:66
 msgid ""
@@ -251,22 +306,24 @@ msgid ""
 "them through the system’s file sharing mechanisms. Once downloaded, the "
 "file appears in the gallery."
 msgstr ""
+"내장된 샌드박싱은 사용자가 시스템의 파일 공유 메커니즘을 통해 명시적으로 공유하거나 저장하지 않는 한 다운로드된 파일이 다른 앱에서"
+" 접근할 수 없도록 보장합니다. 다운로드가 완료되면 파일이 갤러리에 표시됩니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:67
 msgid "If the server has the download setting enabled, the user has two options:"
-msgstr ""
+msgstr "서버에서 다운로드 설정이 활성화된 경우 사용자는 두 가지 옵션이 있습니다:"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:69
 msgid ""
 "Download the file: Opens the **Files** app, allowing the user to save the"
 " file to any permitted location, including iCloud."
-msgstr ""
+msgstr "파일 다운로드: **Files** 앱을 열어 사용자가 iCloud를 포함한 허용된 모든 위치에 파일을 저장할 수 있게 합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:70
 msgid ""
 "Share the file: Launches the native share sheet, enabling the user to "
 "share the file with other compatible applications."
-msgstr ""
+msgstr "파일 공유: 기본 공유 시트를 실행하여 사용자가 다른 호환 가능한 애플리케이션과 파일을 공유할 수 있게 합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:72
 msgid ""
@@ -275,10 +332,12 @@ msgid ""
 "the file becomes accessible to other apps based on the chosen location "
 "and the device’s file sharing permissions."
 msgstr ""
+"**Android** 기기에서는 앱이 시스템의 파일 선택기를 사용합니다. 이를 통해 최종 사용자가 선호하는 저장 위치를 선택할 수 "
+"있습니다. 저장이 완료되면 선택한 위치와 기기의 파일 공유 권한에 따라 파일이 다른 앱에서 접근 가능해집니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:75
 msgid "File accessibility options"
-msgstr ""
+msgstr "파일 접근성 옵션"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:77
 msgid ""
@@ -287,6 +346,8 @@ msgid ""
 "actions are always user‑initiated, ensuring that sensitive data is only "
 "exposed with explicit consent."
 msgstr ""
+"서버 구성에 따라 사용자는 Mattermost 모바일 앱에서 직접 파일을 다운로드하거나, 공유하거나, 공개 링크를 복사할 수 "
+"있습니다. 이러한 작업은 항상 사용자가 시작하며, 명시적인 동의가 있는 경우에만 민감한 데이터가 노출되도록 보장합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:79
 msgid ""
@@ -297,10 +358,13 @@ msgid ""
 "sharing is enabled on the Mattermost server, file operations via mobile "
 "browsers will still be possible."
 msgstr ""
+"또한 관리자는 민감한 콘텐츠가 승인된 채널 내에 유지되도록 모바일 파일 업로드 및 다운로드를 제한할 수 있는 옵션이 있습니다. "
+"모바일 파일 다운로드가 비활성화된 경우 앱은 이미지 및 비디오 파일 미리보기만 허용합니다. 그러나 Mattermost 서버에서 일반"
+" 파일 공유가 활성화된 경우 모바일 브라우저를 통한 파일 작업은 여전히 가능합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:82
 msgid "Layered defense strategies for sensitive eata"
-msgstr ""
+msgstr "민감한 데이터를 위한 다층 방어 전략"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:84
 msgid ""
@@ -310,10 +374,13 @@ msgid ""
 " powerful server-side controls, providing a layered defense that "
 "minimizes the risk of data exposure."
 msgstr ""
+"Mattermost는 승인된 인력만 접근하거나 공유할 수 있도록 하여 CUI 및 HIPAA 규제 정보와 같은 민감한 데이터를 "
+"보호하도록 설계되었습니다. 이 플랫폼은 보안 모바일 앱 기능과 강력한 서버 측 제어를 결합하여 데이터 노출 위험을 최소화하는 다층 "
+"방어를 제공합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:87
 msgid "Core defense pillars"
-msgstr ""
+msgstr "핵심 방어 기둥"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:89
 msgid ""
@@ -325,6 +392,11 @@ msgid ""
 "<https://docs.mattermost.com/about/security.html#authentication-"
 "safeguards>`_."
 msgstr ""
+"**강력한 인증:** Mattermost는 SSO(예: SAML, LDAP, OpenID Connect) 또는 기존 사용자 "
+"이름/비밀번호 로그인을 통한 사용자 인증을 요구합니다. 이 인증은 서버 측 ID 제어로 관리되어 검증된 사용자만 앱과 데이터에 "
+"접근할 수 있도록 합니다. 자세한 내용은 `Mattermost Security Overview "
+"<https://docs.mattermost.com/about/security.html#authentication-"
+"safeguards>`_ 를 참조하세요."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:91
 msgid ""
@@ -335,6 +407,10 @@ msgid ""
 "Downloads <https://docs.mattermost.com/configure/site-configuration-"
 "settings.html#file-sharing-and-downloads>`_."
 msgstr ""
+"**서버 측 접근 제어:** 관리자는 System Console을 통해 파일 다운로드, 공유 및 공개 링크 생성을 제한하는 정책을 "
+"적용할 수 있습니다. 현재 정책은 서버 수준에서 적용됩니다. 자세한 내용은 `Configuration Settings - File "
+"Sharing and Downloads <https://docs.mattermost.com/configure/site-"
+"configuration-settings.html#file-sharing-and-downloads>`_ 를 참조하세요."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:93
 msgid ""
@@ -343,6 +419,8 @@ msgid ""
 "if a device is shared or compromised, other apps cannot access the cached"
 " files without explicit user action."
 msgstr ""
+"**샌드박스 격리:** 앞서 설명한 대로 Mattermost 모바일 앱은 파일을 샌드박스 환경에 저장합니다. 이 격리는 기기가 "
+"공유되거나 손상되더라도 명시적인 사용자 작업 없이는 다른 앱이 캐시된 파일에 접근할 수 없도록 합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:95
 msgid ""
@@ -351,6 +429,9 @@ msgid ""
 "controlled environment or delegate to OS-approved apps without "
 "duplicating sensitive data outside the sandbox."
 msgstr ""
+"**제어된 파일 미리보기:** 파일 미리보기(**iOS** 의 QLPreviewController 또는 **Android** 의 "
+"open intent)는 애플리케이션의 제어된 환경 내에서 발생하거나 샌드박스 외부에 민감한 데이터를 복제하지 않고 OS 승인 앱에"
+" 위임됩니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:97
 msgid ""
@@ -358,6 +439,8 @@ msgid ""
 "unencrypted by default, they are protected at rest by OS-level encryption"
 " (iOS File Data Protection and Android Full Disk Encryption)."
 msgstr ""
+"**OS 수준 암호화:** 캐시 폴더의 파일은 기본적으로 암호화되지 않은 상태로 저장되지만, OS 수준 암호화(iOS File "
+"Data Protection 및 Android Full Disk Encryption)로 보호됩니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:99
 msgid ""
@@ -367,10 +450,12 @@ msgid ""
 "tightly controlled by server policies, platform security features, and "
 "explicit user consent."
 msgstr ""
+"엄격한 인증, 서버 측 제어, 샌드박스 격리 및 보안 파일 처리를 결합함으로써 Mattermost는 민감한 데이터가 승인된 "
+"사용자에게만 제한되도록 하며, 접근 및 공유는 서버 정책, 플랫폼 보안 기능 및 명시적인 사용자 동의에 의해 엄격하게 제어됩니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:102
 msgid "Testing procedure to validate file isolation"
-msgstr ""
+msgstr "파일 격리 검증을 위한 테스트 절차"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:104
 msgid ""
@@ -381,175 +466,179 @@ msgid ""
 "Downloads/ can be accessed, the private Mattermost cache remains isolated"
 " unless a file is explicitly shared by an authorized user."
 msgstr ""
+"아래 플레이북은 CUI와 같은 민감한 데이터가 저장될 수 있는 Mattermost 앱의 개인 캐시 폴더에 저장된 파일이 승인되지 "
+"않은 타사 애플리케이션에서 접근할 수 없음을 테스트하고 확인하는 것을 목표로 합니다. 테스트는 Downloads/와 같은 공개 "
+"디렉토리에 접근할 수 있더라도, 승인된 사용자가 명시적으로 파일을 공유하지 않는 한 개인 Mattermost 캐시는 격리된 상태로 "
+"유지됨을 보여주도록 설계되었습니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:106
 msgid "**Preparation**"
-msgstr ""
+msgstr "**준비**"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:110
 msgid "On **Android**:"
-msgstr ""
+msgstr "**Android** 에서:"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:109
 msgid "Install Adobe Acrobat Reader for PDF viewing."
-msgstr ""
+msgstr "PDF 보기를 위해 Adobe Acrobat Reader를 설치하세요."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:110
 msgid "Install Files by Google as a file manager."
-msgstr ""
+msgstr "파일 관리자로 Files by Google을 설치하세요."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:111
 msgid "Install Google Chrome as a system browser."
-msgstr ""
+msgstr "시스템 브라우저로 Google Chrome을 설치하세요."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:114
 msgid "On **iOS**:"
-msgstr ""
+msgstr "**iOS** 에서:"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:113
 msgid "Install Adobe Acrobat Reader (from the App Store)."
-msgstr ""
+msgstr "Adobe Acrobat Reader를 설치하세요(앱 스토어에서)."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:114
 msgid "Use the built-in Files app."
-msgstr ""
+msgstr "내장된 Files 앱을 사용하세요."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:115
 msgid "Use Safari as the default browser."
-msgstr ""
+msgstr "기본 브라우저로 Safari를 사용하세요."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:116
 msgid "Any PDF viewer, file manager, or browser can be used for these steps."
-msgstr ""
+msgstr "이 단계에는 PDF 뷰어, 파일 관리자 또는 브라우저를 사용할 수 있습니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:118
 msgid "**Control test: Verify public directory accessibility**"
-msgstr ""
+msgstr "**대조 실험: 공개 디렉토리 접근성 확인**"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:123
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:136
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:146
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:157
 msgid "**Android:**"
-msgstr ""
+msgstr "**Android:**"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:121
 msgid "Open Files by Google."
-msgstr ""
+msgstr "Files by Google을 엽니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:122
 msgid "Navigate to a known public directory (e.g., Downloads/)."
-msgstr ""
+msgstr "알려진 공개 디렉토리(예: Downloads/)로 이동합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:123
 msgid "Confirm that files in this location are visible and can be opened."
-msgstr ""
+msgstr "이 위치의 파일이 보이고 열 수 있는지 확인합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:128
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:140
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:150
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:162
 msgid "**iOS:**"
-msgstr ""
+msgstr "**iOS:**"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:126
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:139
 msgid "Open the Files app."
-msgstr ""
+msgstr "Files 앱을 엽니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:127
 msgid ""
 "Browse to an accessible directory (e.g., iCloud Drive or “On My iPhone” "
 "public folders)."
-msgstr ""
+msgstr "접근 가능한 디렉토리(예: iCloud Drive 또는 \"On My iPhone\" 공개 폴더)로 이동합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:128
 msgid "Confirm these files are accessible."
-msgstr ""
+msgstr "이 파일들에 접근할 수 있는지 확인합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:130
 msgid ""
 "This step demonstrates that allowed directories can be accessed, setting "
 "a baseline for comparison."
-msgstr ""
+msgstr "이 단계는 허용된 디렉토리에 접근할 수 있음을 보여주어 비교를 위한 기준선을 설정합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:132
 msgid "**Attempt unauthorized access to Mattermost’s private cache**"
-msgstr ""
+msgstr "**Mattermost의 개인 캐시에 대한 무단 접근 시도**"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:135
 msgid ""
 "In Files by Google, try navigating through the directory structure to "
 "identify files of the Mattermost application."
-msgstr ""
+msgstr "Files by Google에서 Mattermost 애플리케이션의 파일을 식별하기 위해 디렉토리 구조를 탐색해보세요."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:136
 msgid ""
 "Verify that you cannot access private directories such as Mattermost "
 "app’s private cache folder."
-msgstr ""
+msgstr "Mattermost 앱의 개인 캐시 폴더와 같은 개인 디렉토리에 접근할 수 없음을 확인하세요."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:140
 msgid ""
 "Verify that the Mattermost app’s private cache folder does not appear "
 "under “On My iPhone/iPad.”"
-msgstr ""
+msgstr "Mattermost 앱의 개인 캐시 폴더가 \"On My iPhone/iPad\" 아래에 나타나지 않는지 확인합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:142
 msgid ""
 "**Attempt unauthorized access to a specific file in Mattermost’s private "
 "cache**"
-msgstr ""
+msgstr "**Mattermost의 개인 캐시에서 특정 파일에 대한 무단 접근 시도**"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:145
 msgid ""
 "Use the search functionality in Files by Google to search for a known "
 "file name from the Mattermost cache."
-msgstr ""
+msgstr "Files by Google의 검색 기능을 사용하여 Mattermost 캐시에서 알려진 파일 이름을 검색합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:146
 msgid "Verify that the file does not appear in search results."
-msgstr ""
+msgstr "파일이 검색 결과에 나타나지 않는지 확인합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:149
 msgid ""
 "Use the Files app’s search capability to look for a specific file name "
 "from the Mattermost cache."
-msgstr ""
+msgstr "Files 앱의 검색 기능을 사용하여 Mattermost 캐시에서 특정 파일 이름을 찾습니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:150
 msgid "Confirm that the file does not appear in search results."
-msgstr ""
+msgstr "파일이 검색 결과에 나타나지 않는지 확인합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:152
 msgid "**Attempt authorized access to downloaded file**"
-msgstr ""
+msgstr "**다운로드된 파일에 대한 승인된 접근 시도**"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:155
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:160
 msgid "Confirm that mobile downloads are enabled on the server."
-msgstr ""
+msgstr "서버에서 모바일 다운로드가 활성화되어 있는지 확인합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:156
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:161
 msgid "Download a file using the Mattermost mobile app."
-msgstr ""
+msgstr "Mattermost 모바일 앱을 사용하여 파일을 다운로드합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:157
 msgid ""
 "Open the Files by Google app and verify that the downloaded file is "
 "visible and opens correctly."
-msgstr ""
+msgstr "Files by Google 앱을 열고 다운로드된 파일이 보이고 올바르게 열리는지 확인합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:162
 msgid ""
 "Open the iOS Files app and verify that the downloaded file appears and "
 "can be opened successfully."
-msgstr ""
+msgstr "iOS Files 앱을 열고 다운로드된 파일이 나타나고 성공적으로 열 수 있는지 확인합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:164
 msgid "**Repeat across multiple apps and devices**"
-msgstr ""
+msgstr "**여러 앱과 기기에서 반복**"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:166
 msgid ""
@@ -558,10 +647,12 @@ msgid ""
 "Android and iOS) to ensure that the private cache folder remains "
 "inaccessible under all conditions."
 msgstr ""
+"위 단계는 Google과 iOS의 Files 앱을 사용합니다. 모든 조건에서 개인 캐시 폴더가 접근할 수 없도록 다양한 기기와 OS"
+" 버전(Android 및 iOS 모두)에서 제안된 각 앱을 사용하여 이러한 테스트를 반복합니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:169
 msgid "Test execution & findings"
-msgstr ""
+msgstr "테스트 실행 및 결과"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:171
 msgid ""
@@ -569,10 +660,12 @@ msgid ""
 "files, both during normal operation and after forcing the app to stop or "
 "crash, and observed the following results:"
 msgstr ""
+"Mattermost는 정상 작동 중과 앱을 강제로 중지하거나 충돌시킨 후 모두 숨겨진 파일을 스캔하는 것을 포함한 위의 플레이북을 "
+"실행하고 다음과 같은 결과를 관찰했습니다:"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:173
 msgid "**Devices Tested**: iPhone 12, iOS 18.4, Android 11"
-msgstr ""
+msgstr "**테스트된 기기**: iPhone 12, iOS 18.4, Android 11"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:174
 msgid ""
@@ -580,6 +673,8 @@ msgid ""
 "app, iOS Files app, Files Media Manager, Hidden Files Finder, Hidden "
 "Files Finder & Recover"
 msgstr ""
+"**사용된 앱**: Adobe Reader, Google Files 앱, Android 기본 Files 앱, iOS Files 앱,"
+" Files Media Manager, Hidden Files Finder, Hidden Files Finder & Recover"
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:175
 msgid ""
@@ -588,12 +683,15 @@ msgid ""
 "Access was only possible when files were explicitly downloaded or shared "
 "via Mattermost’s controlled functionality by an authorized user."
 msgstr ""
+"**결과**: 서드파티 파일 브라우저와 복구 도구는 Mattermost 앱의 캐시 폴더나 그 내용에 접근하는 데 일관되게 "
+"실패했습니다. 파일이 승인된 사용자에 의해 Mattermost의 제어된 기능을 통해 명시적으로 다운로드되거나 공유될 때만 접근이 "
+"가능했습니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:176
 msgid ""
 "**Outcome**: Files remain isolated within the app container, adhering to "
 "platform security guidelines and protecting against unauthorized access."
-msgstr ""
+msgstr "**결과**: 파일은 플랫폼 보안 가이드라인을 준수하고 무단 접근으로부터 보호하면서 앱 컨테이너 내에서 격리된 상태로 유지됩니다."
 
 #: ../../source/deploy/mobile/secure-mobile-file-storage.rst:178
 msgid ""
@@ -605,4 +703,7 @@ msgid ""
 "authorized users while addressing key access control and risk mitigation "
 "requirements."
 msgstr ""
+"문서화된 테스트 절차는 앱의 파일 저장소가 승인되지 않은 서드파티 애플리케이션에서 접근할 수 없음을 확인하여 강력한 보안 상태를 "
+"유지합니다. 강력한 인증과 네이티브 OS 암호화와 결합하여 Mattermost 모바일 앱은 핵심 접근 제어 및 위험 완화 요구사항을"
+" 해결하면서 모바일 기기의 민감한 데이터를 승인된 사용자에게만 제한하는 강력한 프레임워크를 제공합니다."
 

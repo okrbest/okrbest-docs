@@ -21,27 +21,27 @@ msgstr ""
 
 #: ../../source/scale/performance-alerting.rst:2
 msgid "Mattermost performance alerting guide"
-msgstr ""
+msgstr "Mattermost 성능 알림 가이드"
 
 #: ../../source/_static/badges/ent-cloud-selfhosted.rst:7
 msgid ""
 "|plans-img| Available on `Enterprise plans "
 "<https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `엔터프라이즈 플랜 <https://mattermost.com/pricing/>`__ 에서 이용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/ent-cloud-selfhosted.rst:9
 msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
-msgstr ""
+msgstr "|deployment-img| `클라우드 <https://mattermost.com/sign-up/>`__ 및 `자체 호스팅 <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/scale/performance-alerting.rst:7
 msgid ""
@@ -52,17 +52,21 @@ msgid ""
 "health tracking </scale/deploy-prometheus-grafana-for-performance-"
 "monitoring>`."
 msgstr ""
+"Mattermost는 Mattermost 애플리케이션 서버의 성능 메트릭을 추적하기 위해 `Prometheus <https://prometheus.io/>`_ 와 "
+"`Grafana <https://grafana.com/>`_ 를 사용하는 것을 권장합니다. 이 가이드의 목적은 :doc:`시스템 상태 추적 설정 "
+"</scale/deploy-prometheus-grafana-for-performance-monitoring>` 을 완료한 후 Grafana 대시보드에 "
+"알림을 설정하는 데 도움을 드리는 것입니다."
 
 #: ../../source/scale/performance-alerting.rst:10
 msgid ""
 "We highly recommend setting up performance alerting for deployments above"
 " 5,000 users, where additional servers have been added for performance "
 "load-balancing."
-msgstr ""
+msgstr "성능 부하 분산을 위해 추가 서버가 추가된 5,000명 이상의 사용자가 있는 배포에 대해 성능 알림 설정을 강력히 권장합니다."
 
 #: ../../source/scale/performance-alerting.rst:13
 msgid "Prerequisites"
-msgstr ""
+msgstr "사전 요구사항"
 
 #: ../../source/scale/performance-alerting.rst:15
 msgid ""
@@ -70,20 +74,23 @@ msgid ""
 "Monitoring </scale/deploy-prometheus-grafana-for-performance-monitoring>`"
 " documentation to learn more."
 msgstr ""
+"Mattermost의 성능 모니터링을 설정하세요. 자세한 내용은 :doc:`성능 모니터링 "
+"</scale/deploy-prometheus-grafana-for-performance-monitoring>` 문서를 참조하세요."
 
 #: ../../source/scale/performance-alerting.rst:17
 msgid ""
 "To get alerts, first set up a Notification Channel in Grafana. Here’s how"
 " you can set it up to automatically post alerts in Mattermost:"
 msgstr ""
+"알림을 받으려면 먼저 Grafana에서 알림 채널을 설정하세요. Mattermost에 자동으로 알림을 게시하도록 설정하는 방법은 다음과 같습니다:"
 
 #: ../../source/scale/performance-alerting.rst:19
 msgid "In Mattermost:"
-msgstr ""
+msgstr "Mattermost에서:"
 
 #: ../../source/scale/performance-alerting.rst:21
 msgid "Create an Alerts channel."
-msgstr ""
+msgstr "알림 채널을 생성하세요."
 
 #: ../../source/scale/performance-alerting.rst:22
 msgid ""
@@ -91,40 +98,41 @@ msgid ""
 "<https://developers.mattermost.com/integrate/webhooks/incoming/>`_ for "
 "the Alerts channel and copy the URL."
 msgstr ""
+"알림 채널을 위한 `수신 웹훅 <https://developers.mattermost.com/integrate/webhooks/incoming/>`_ 을 생성하고 URL을 복사하세요."
 
 #: ../../source/scale/performance-alerting.rst:24
 msgid "In Grafana:"
-msgstr ""
+msgstr "Grafana에서:"
 
 #: ../../source/scale/performance-alerting.rst:26
 msgid "Under the alert icon in the sidebar, select **Contact points**."
-msgstr ""
+msgstr "사이드바의 알림 아이콘 아래에서 **연락처** 를 선택하세요."
 
 #: ../../source/scale/performance-alerting.rst:27
 msgid "Select **Create contact point**."
-msgstr ""
+msgstr "**연락처 생성** 을 선택하세요."
 
 #: ../../source/scale/performance-alerting.rst:28
 msgid "Enter **Mattermost Alerts Channel** as the name."
-msgstr ""
+msgstr "이름으로 **Mattermost 알림 채널** 을 입력하세요."
 
 #: ../../source/scale/performance-alerting.rst:29
 msgid "For type, select **Slack**."
-msgstr ""
+msgstr "유형으로 **Slack** 을 선택하세요."
 
 #: ../../source/scale/performance-alerting.rst:30
 msgid "Paste your webhook URL into the URL field."
-msgstr ""
+msgstr "URL 필드에 웹훅 URL을 붙여넣으세요."
 
 #: ../../source/scale/performance-alerting.rst:31
 msgid ""
 "Include an @ mention in the mention field, if you want to send mentions "
 "when an alert is posted to Mattermost."
-msgstr ""
+msgstr "Mattermost에 알림이 게시될 때 멘션을 보내려면 멘션 필드에 @ 멘션을 포함하세요."
 
 #: ../../source/scale/performance-alerting.rst:32
 msgid "Press **Send Test** to test the alert."
-msgstr ""
+msgstr "**테스트 전송** 을 눌러 알림을 테스트하세요."
 
 #: ../../source/scale/performance-alerting.rst:34
 msgid ""
@@ -132,10 +140,11 @@ msgid ""
 "instructions <https://grafana.com/docs/grafana/latest/alerting/>`__ to "
 "set that up."
 msgstr ""
+"이메일 알림도 받고 싶다면 `이 지침 <https://grafana.com/docs/grafana/latest/alerting/>`__ 을 따라 설정할 수 있습니다."
 
 #: ../../source/scale/performance-alerting.rst:37
 msgid "Configure alerts"
-msgstr ""
+msgstr "알림 구성"
 
 #: ../../source/scale/performance-alerting.rst:39
 msgid ""
@@ -143,27 +152,28 @@ msgid ""
 "<https://grafana.com/grafana/dashboards/?search=mattermost>`_ for Grafana"
 " come with some partially pre-configured alerts on the following charts:"
 msgstr ""
+"Grafana용 `Mattermost 대시보드 <https://grafana.com/grafana/dashboards/?search=mattermost>`_ 에는 다음 차트에 대해 부분적으로 사전 구성된 알림이 포함되어 있습니다:"
 
 #: ../../source/scale/performance-alerting.rst:41
 msgid "CPU Utilization Rate"
-msgstr ""
+msgstr "CPU 사용률"
 
 #: ../../source/scale/performance-alerting.rst:42
 msgid "Memory Usage"
-msgstr ""
+msgstr "메모리 사용량"
 
 #: ../../source/scale/performance-alerting.rst:43
 #: ../../source/scale/performance-alerting.rst:105
 msgid "Number of Goroutines"
-msgstr ""
+msgstr "Goroutine 수"
 
 #: ../../source/scale/performance-alerting.rst:44
 msgid "Number of API Errors per Second"
-msgstr ""
+msgstr "초당 API 오류 수"
 
 #: ../../source/scale/performance-alerting.rst:45
 msgid "Mean API Request Time"
-msgstr ""
+msgstr "평균 API 요청 시간"
 
 #: ../../source/scale/performance-alerting.rst:47
 msgid ""
@@ -172,64 +182,68 @@ msgid ""
 "setting the correct threshold can have some variances that are better "
 "handled on a per-chart basis."
 msgstr ""
+"알림을 구성하려면 적절한 임계값을 설정하고 알림을 활성화하세요. 알림 활성화는 각 차트에 대해 동일하지만, "
+"올바른 임계값 설정은 차트별로 더 잘 처리되는 일부 변동이 있을 수 있습니다."
 
 #: ../../source/scale/performance-alerting.rst:49
 msgid "For each chart, select the chart name, then select **Edit**:"
-msgstr ""
+msgstr "각 차트에 대해 차트 이름을 선택한 다음 **편집** 을 선택하세요:"
 
 #: ../../source/scale/performance-alerting.rst:-1
 msgid ""
 "Configure Grafana dashboard alerts for each chart by selecting the chart "
 "name then selecting Edit."
 msgstr ""
+"차트 이름을 선택한 다음 편집을 선택하여 각 차트에 대한 Grafana 대시보드 알림을 구성하세요."
 
 #: ../../source/scale/performance-alerting.rst:54
 msgid "Select the **Alert** tab:"
-msgstr ""
+msgstr "**알림** 탭을 선택하세요:"
 
 #: ../../source/scale/performance-alerting.rst:-1
 msgid ""
 "Switch to the Alert tab to access and configure Grafana dashboard alerts "
 "for the current chart."
 msgstr ""
+"현재 차트에 대한 Grafana 대시보드 알림에 액세스하고 구성하려면 알림 탭으로 전환하세요."
 
 #: ../../source/scale/performance-alerting.rst:59
 msgid ""
 "The alert threshold, which will be discussed in the sections below, is "
 "the last field under **Conditions** (the one set to 600 in the screenshot"
 " above)."
-msgstr ""
+msgstr "아래 섹션에서 설명할 알림 임계값은 **조건** 아래의 마지막 필드입니다(위 스크린샷에서 600으로 설정된 필드)."
 
 #: ../../source/scale/performance-alerting.rst:61
 msgid ""
 "See the sections below for how to set the threshold for each individual "
 "chart. If you would like to add your own custom alert conditions, "
 "configure them here."
-msgstr ""
+msgstr "각 개별 차트의 임계값 설정 방법은 아래 섹션을 참조하세요. 사용자 정의 알림 조건을 추가하려면 여기에서 구성하세요."
 
 #: ../../source/scale/performance-alerting.rst:-1
 msgid ""
 "When configuring Grafana dashboard alerts, set custom threshold "
 "conditions in the Conditions section of the screen."
-msgstr ""
+msgstr "Grafana 대시보드 알림을 구성할 때 화면의 조건 섹션에서 사용자 정의 임계값 조건을 설정하세요."
 
 #: ../../source/scale/performance-alerting.rst:66
 msgid ""
 "To enable the notifications for any alerts, select the **Notification** "
 "tab on the left, then select **Mattermost Alerts Channel** under **Send "
 "to**:"
-msgstr ""
+msgstr "모든 알림에 대한 알림을 활성화하려면 왼쪽의 **알림** 탭을 선택한 다음 **보내기** 아래에서 **Mattermost 알림 채널** 을 선택하세요:"
 
 #: ../../source/scale/performance-alerting.rst:-1
 msgid ""
 "When configuring Grafana dashboard alerts, set notifications for any "
 "alerts by switching to the Notification tab, selecting Send to, then "
 "selecting by Mattermost Alerts Channel."
-msgstr ""
+msgstr "Grafana 대시보드 알림을 구성할 때 알림 탭으로 전환하고, 보내기를 선택한 다음 Mattermost 알림 채널을 선택하여 모든 알림에 대한 알림을 설정하세요."
 
 #: ../../source/scale/performance-alerting.rst:71
 msgid "Enter a message if you would like to add more context to the alert."
-msgstr ""
+msgstr "알림에 더 많은 컨텍스트를 추가하려면 메시지를 입력하세요."
 
 #: ../../source/scale/performance-alerting.rst:73
 msgid ""
@@ -241,18 +255,21 @@ msgid ""
 " result from natural spikes in usage. The alert state for each chart is "
 "evaluated every minute."
 msgstr ""
+"기본적으로 알림은 차트의 지난 1분 평균을 확인하여 해당 값이 임계값을 초과하는지 확인하도록 구성됩니다. "
+"임계값을 초과하면 알림이 트리거됩니다. 지난 1분의 평균이므로 임계값을 초과하는 작은 스파이크가 반드시 알림을 발생시키지는 않습니다. "
+"이는 사용량의 자연스러운 스파이크로 인한 오탐지를 방지하는 데 도움이 됩니다. 각 차트의 알림 상태는 1분마다 평가됩니다."
 
 #: ../../source/scale/performance-alerting.rst:76
 msgid "Available charts"
-msgstr ""
+msgstr "사용 가능한 차트"
 
 #: ../../source/scale/performance-alerting.rst:78
 msgid "The sections below describe each chart in more detail."
-msgstr ""
+msgstr "아래 섹션에서는 각 차트에 대해 더 자세히 설명합니다."
 
 #: ../../source/scale/performance-alerting.rst:81
 msgid "CPU utilization rate"
-msgstr ""
+msgstr "CPU 사용률"
 
 #: ../../source/scale/performance-alerting.rst:83
 #, python-format
@@ -264,6 +281,8 @@ msgid ""
 "100% utilization rate on all four cores, the graph would show 400% for "
 "that app server."
 msgstr ""
+"CPU 사용률은 매우 직관적입니다. CPU 사용률은 앱 서버의 CPU 사용량을 백분율로 추적합니다. 최대 백분율은 앱 서버가 보유한 CPU 코어 또는 vCPU 수를 기반으로 합니다. "
+"예를 들어, 4개의 CPU 코어가 있고 앱 서버가 4개의 코어 모두에서 100% 사용률을 보였다면, 해당 앱 서버에 대한 그래프는 400%를 표시할 것입니다."
 
 #: ../../source/scale/performance-alerting.rst:85
 msgid ""
@@ -276,10 +295,14 @@ msgid ""
 "you may not receive an alert for an incident until it’s gotten worse. The"
 " same principle applies to all alerts, regardless of the chart."
 msgstr ""
+"평균 CPU 사용률과 앱 서버가 보유한 코어/vCPU 수를 기반으로 알림 임계값을 설정하는 것이 좋습니다. 지난 7일간의 차트를 살펴보세요. "
+"최대 CPU 사용량(코어 * 100)과 현재 보이는 CPU 사용량 사이의 어딘가에 임계값을 설정하고 싶을 것입니다. "
+"임계값을 낮게 설정할수록 더 많은 알림과 오탐지가 발생합니다. 임계값을 너무 높게 설정하면 문제가 심각해질 때까지 알림을 받지 못할 수 있습니다. "
+"이 원칙은 차트에 관계없이 모든 알림에 적용됩니다."
 
 #: ../../source/scale/performance-alerting.rst:87
 msgid "For example, on our community server, we have the threshold set to 15%:"
-msgstr ""
+msgstr "예를 들어, 커뮤니티 서버에서는 임계값을 15%로 설정했습니다:"
 
 #: ../../source/scale/performance-alerting.rst:-1
 msgid ""
@@ -288,6 +311,8 @@ msgid ""
 "threshold between the maximum CPU usage and the CPU usage observed in "
 "metrics."
 msgstr ""
+"Mattermost 커뮤니티 서버의 CPU 사용률 메트릭 예시로, 임계값이 15%로 설정되어 있습니다. "
+"시스템 관리자는 최대 CPU 사용량과 메트릭에서 관찰된 CPU 사용량 사이에 임계값을 설정해야 합니다."
 
 #: ../../source/scale/performance-alerting.rst:92
 msgid ""
@@ -295,10 +320,12 @@ msgid ""
 "peak times. Therefore, we will get alerts if we begin experiencing "
 "unusually high CPU usage."
 msgstr ""
+"이 값은 최대 CPU 사용량보다 낮고 피크 시간의 평균 사용량보다 높습니다. "
+"따라서 비정상적으로 높은 CPU 사용량이 발생하기 시작하면 알림을 받게 됩니다."
 
 #: ../../source/scale/performance-alerting.rst:95
 msgid "Memory usage"
-msgstr ""
+msgstr "메모리 사용량"
 
 #: ../../source/scale/performance-alerting.rst:97
 msgid ""
@@ -306,16 +333,19 @@ msgid ""
 " Set the threshold similar to the CPU Utilization Rate: below maximum "
 "available memory and above your average usage during peak times."
 msgstr ""
+"메모리 사용량은 앱 서버가 사용 중인 RAM의 메가바이트를 추적합니다. "
+"CPU 사용률과 유사하게 임계값을 설정하세요: 최대 사용 가능한 메모리보다 낮고 피크 시간의 평균 사용량보다 높게 설정하세요."
 
 #: ../../source/scale/performance-alerting.rst:99
 msgid "Here’s how we have the alert set on our Community server:"
-msgstr ""
+msgstr "커뮤니티 서버에서 알림을 설정한 방법은 다음과 같습니다:"
 
 #: ../../source/scale/performance-alerting.rst:-1
 msgid ""
 "Example memory usage metrics for the Mattermost Community Server, where "
 "the threshold is configured similarly to the CPU utilization rate."
 msgstr ""
+"CPU 사용률과 유사하게 임계값이 구성된 Mattermost 커뮤니티 서버의 메모리 사용량 메트릭 예시입니다."
 
 #: ../../source/scale/performance-alerting.rst:107
 msgid ""
@@ -326,6 +356,10 @@ msgid ""
 " app server can't keep up and is creating goroutines faster than they can"
 " complete their tasks and stop."
 msgstr ""
+"Goroutine은 다른 함수 및 메서드와 동시에 실행되는 함수 또는 메서드입니다. "
+"Goroutine은 생성 비용이 낮은 경량 스레드와 같습니다. "
+"Goroutine 수의 증가는 앱 서버의 성능을 측정하는 좋은 지표가 될 수 있습니다. "
+"지속적인 증가는 앱 서버가 따라가지 못하고 작업을 완료하고 중지하는 것보다 더 빠르게 Goroutine을 생성하고 있음을 나타냅니다."
 
 #: ../../source/scale/performance-alerting.rst:109
 msgid ""
@@ -334,10 +368,13 @@ msgid ""
 "about. It’s the uncontrolled climbing of goroutines that you want to "
 "watch out for."
 msgstr ""
+"피크 부하 시간 동안 보이는 평균 Goroutine 수보다 높은 곳에 임계값을 설정하세요. "
+"작은 스파이크는 일반적으로 걱정할 필요가 없습니다. "
+"주의해야 할 것은 Goroutine의 통제되지 않은 증가입니다."
 
 #: ../../source/scale/performance-alerting.rst:111
 msgid "Here’s how we have it set on our Community server:"
-msgstr ""
+msgstr "커뮤니티 서버에서 설정한 방법은 다음과 같습니다:"
 
 #: ../../source/scale/performance-alerting.rst:-1
 msgid ""
@@ -345,10 +382,11 @@ msgid ""
 " threshold is configured above the average number of Goroutines observed "
 "during peak load times."
 msgstr ""
+"피크 부하 시간 동안 관찰된 평균 Goroutine 수보다 높게 임계값이 구성된 Mattermost 커뮤니티 서버의 Goroutine 메트릭 예시입니다."
 
 #: ../../source/scale/performance-alerting.rst:117
 msgid "Number of API errors per second"
-msgstr ""
+msgstr "초당 API 오류 수"
 
 #: ../../source/scale/performance-alerting.rst:119
 msgid ""
@@ -359,6 +397,9 @@ msgid ""
 "is being given a ``404 Not Found`` response. It is normal to have some "
 "API errors that scale with your installation base."
 msgstr ""
+"4xx 또는 5xx HTTP 응답 상태 코드는 REST API 오류로 계산됩니다. API 오류 자체가 반드시 문제는 아닙니다. "
+"사용자 세션 만료나 클라이언트가 리소스 존재 여부를 확인하기 위해 요청하여 ``404 Not Found`` 응답을 받는 것과 같이 "
+"API 오류가 발생하는 합법적인 이유가 많이 있습니다. 설치 기반에 따라 확장되는 일부 API 오류가 있는 것은 정상입니다."
 
 #: ../../source/scale/performance-alerting.rst:121
 msgid ""
@@ -369,10 +410,14 @@ msgid ""
 "bad requests. Alerts on API errors per second would help catch these and "
 "other issues."
 msgstr ""
+"그러나 REST API에 대한 오류는 배포 및 기타 문제를 나타낼 수 있습니다. 예를 들어, 앱 서버 중 하나가 어떤 이유로 "
+"제대로 배포되지 않았다면 많은 수의 API 오류를 반환하기 시작할 수 있습니다. 또 다른 예로는 악의적인 봇이 API에 "
+"잘못된 요청을 스팸으로 보내는 경우가 있습니다. 초당 API 오류에 대한 알림은 이러한 문제와 기타 문제를 발견하는 데 "
+"도움이 됩니다."
 
 #: ../../source/scale/performance-alerting.rst:123
 msgid "Here’s how it’s set on our Community server:"
-msgstr ""
+msgstr "커뮤니티 서버에서 설정한 방법은 다음과 같습니다:"
 
 #: ../../source/scale/performance-alerting.rst:-1
 msgid ""
@@ -381,10 +426,12 @@ msgid ""
 "with an installation base, but that can be indicative of deployment "
 "issues or other issues."
 msgstr ""
+"설치 기반에 따라 확장되는 일부 API 오류가 있는 것은 정상이지만 배포 문제나 기타 문제를 나타낼 수 있는 Mattermost "
+"커뮤니티 서버의 초당 API 오류 수 메트릭 예시입니다."
 
 #: ../../source/scale/performance-alerting.rst:129
 msgid "Mean API request time"
-msgstr ""
+msgstr "평균 API 요청 시간"
 
 #: ../../source/scale/performance-alerting.rst:131
 msgid ""
@@ -395,16 +442,20 @@ msgid ""
 "your database can’t sustain the load from the app servers. It may also be"
 " indicative of an issue between the app servers and your proxy."
 msgstr ""
+"평균 API 요청 시간은 Mattermost 앱 서버에 대한 REST API 요청이 완료되는 데 걸리는 평균 시간입니다. "
+"앱 서버의 성능이 저하되기 시작하면 요청 완료에 더 오래 걸리므로 평균 요청 시간이 증가하는 것을 볼 수 있습니다. "
+"데이터베이스가 앱 서버의 부하를 감당할 수 없는 경우에도 이런 일이 발생할 수 있습니다. "
+"이는 앱 서버와 프록시 사이의 문제를 나타낼 수도 있습니다."
 
 #: ../../source/scale/performance-alerting.rst:133
 msgid ""
 "You’ll want to set the alert threshold a little above what the mean "
 "request time is during your peak load times."
-msgstr ""
+msgstr "피크 부하 시간 동안의 평균 요청 시간보다 약간 높게 알림 임계값을 설정하세요."
 
 #: ../../source/scale/performance-alerting.rst:135
 msgid "Here’s how it’s set on our community server:"
-msgstr ""
+msgstr "커뮤니티 서버에서 설정한 방법은 다음과 같습니다:"
 
 #: ../../source/scale/performance-alerting.rst:-1
 msgid ""
@@ -412,10 +463,12 @@ msgid ""
 "Server, where the alert threshold is configured a bit above the mean "
 "request time during peak load times."
 msgstr ""
+"피크 부하 시간 동안의 평균 요청 시간보다 약간 높게 알림 임계값이 구성된 Mattermost 커뮤니티 서버의 "
+"평균 API 요청 시간 메트릭 예시입니다."
 
 #: ../../source/scale/performance-alerting.rst:141
 msgid "Plugin hooks"
-msgstr ""
+msgstr "플러그인 훅"
 
 #: ../../source/scale/performance-alerting.rst:143
 msgid ""
@@ -423,10 +476,12 @@ msgid ""
 "examples of hooks and API Prometheus metrics that you may want to be "
 "aware of when troubleshooting or monitoring your server's performance."
 msgstr ""
+"Prometheus를 사용하여 훅과 플러그인 API 호출을 추적할 수 있습니다. 아래는 서버 성능을 "
+"문제 해결하거나 모니터링할 때 알아두면 좋을 훅과 API Prometheus 메트릭의 몇 가지 예시입니다."
 
 #: ../../source/scale/performance-alerting.rst:173
 msgid "Other alerts"
-msgstr ""
+msgstr "기타 알림"
 
 #: ../../source/scale/performance-alerting.rst:175
 msgid ""
@@ -435,4 +490,6 @@ msgid ""
 ":doc:`Performance Monitoring feature documentation </scale/performance-"
 "monitoring-metrics>`."
 msgstr ""
-
+"더 많은 알림이 필요하다면 원하는 Grafana 차트에 설정할 수 있습니다. "
+":doc:`성능 모니터링 기능 문서 </scale/performance-monitoring-metrics>` 에 "
+"나열된 사용자 정의 메트릭을 검토하는 것을 권장합니다."
