@@ -21,27 +21,27 @@ msgstr ""
 
 #: ../../source/manage/admin/generating-support-packet.rst:2
 msgid "Generate a Support Packet"
-msgstr ""
+msgstr "지원 패킷 생성"
 
 #: ../../source/_static/badges/ent-pro-selfhosted.rst:7
 msgid ""
 "|plans-img| Available on `Enterprise and Professional plans "
 "<https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `Enterprise 및 Professional 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/ent-pro-selfhosted.rst:9
 msgid ""
 "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
 "deployments"
-msgstr ""
+msgstr "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/manage/admin/generating-support-packet.rst:7
 msgid ""
@@ -53,10 +53,14 @@ msgid ""
 "availability cluster. Confidential data, such as passwords, are "
 "automatically stripped."
 msgstr ""
+"지원 패킷은 고객이 문제를 진단하고 해결하는 데 도움을 주기 위해 사용됩니다. System Console 또는 :ref:`mmctl system supportpacket "
+"<manage/mmctl-command-line-tool:mmctl system supportpacket>` 명령을 사용하여 구성 정보, 로그, 플러그인 "
+"세부 정보 및 고가용성 클러스터의 모든 노드에 걸친 외부 종속성 데이터를 포함하는 zip 파일을 생성합니다. 비밀번호와 같은 기밀 데이터는 "
+"자동으로 제거됩니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:10
 msgid "Generate"
-msgstr ""
+msgstr "생성"
 
 #: ../../source/manage/admin/generating-support-packet.rst:14
 msgid ""
@@ -64,16 +68,19 @@ msgid ""
 "> Logging** and ensure **Output logs to file** is set to **true**, and "
 "set **File Log Level** to **DEBUG**."
 msgstr ""
+"지원 패킷을 생성하기 전에 **System Console > Environment > Logging** 으로 이동하여 "
+"**Output logs to file** 이 **true** 로 설정되어 있는지 확인하고 **File Log Level** 을 "
+"**DEBUG** 로 설정하세요."
 
 #: ../../source/manage/admin/generating-support-packet.rst:18
 msgid ""
 "Go to the System Console, and select **Commercial Support** from the "
 "System Console menu."
-msgstr ""
+msgstr "System Console로 이동하여 System Console 메뉴에서 **Commercial Support** 를 선택하세요."
 
 #: ../../source/manage/admin/generating-support-packet.rst
 msgid "Example of available System Console menu options."
-msgstr ""
+msgstr "사용 가능한 System Console 메뉴 옵션 예시입니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:23
 msgid ""
@@ -81,23 +88,25 @@ msgid ""
 " machine. You'll be notified if any packet files are unavailable during "
 "packet generation. See the ``warning.txt`` file for details."
 msgstr ""
+"**Download Support Packet** 을 선택하세요. zip 파일이 로컬 컴퓨터에 다운로드됩니다. 패킷 생성 중에 사용할 수 없는 "
+"패킷 파일이 있으면 알림을 받게 됩니다. 자세한 내용은 ``warning.txt`` 파일을 참조하세요."
 
 #: ../../source/manage/admin/generating-support-packet.rst:27
 msgid ""
 "Run the :ref:`mmctl system supportpacket <manage/mmctl-command-line-"
 "tool:mmctl system supportpacket>` command to generate and download a "
 "Support Packet to share with Mattermost Support."
-msgstr ""
+msgstr "Mattermost 지원팀과 공유할 지원 패킷을 생성하고 다운로드하려면 :ref:`mmctl system supportpacket <manage/mmctl-command-line-tool:mmctl system supportpacket>` 명령을 실행하세요."
 
 #: ../../source/manage/admin/generating-support-packet.rst:39
 msgid "Santitize confidential data"
-msgstr ""
+msgstr "기밀 데이터 정리"
 
 #: ../../source/manage/admin/generating-support-packet.rst:41
 msgid ""
 "Please sanitize any confidential data you wish to exclude before sharing "
 "the packet with Mattermost."
-msgstr ""
+msgstr "Mattermost와 패킷을 공유하기 전에 제외하려는 기밀 데이터를 정리하세요."
 
 #: ../../source/manage/admin/generating-support-packet.rst:43
 msgid ""
@@ -114,6 +123,16 @@ msgid ""
 "``MessageExportSettings.GlobalRelaySettings.SmtpPassword``, and "
 "``ServiceSettings.SplitKey``."
 msgstr ""
+"패킷 생성 중에 다음 정보가 있는 경우 자동으로 정리됩니다: ``LdapSettings.BindPassword``, "
+"``FileSettings.PublicLinkSalt``, "
+"``FileSettings.AmazonS3SecretAccessKey``, ``EmailSettings.SMTPPassword``, "
+"``GitLabSettings.Secret``, ``GoogleSettings.Secret``, "
+"``Office365Settings.Secret``, ``OpenIdSettings.Secret``, "
+"``SqlSettings.DataSource``, ``SqlSettings.AtRestEncryptKey``, "
+"``ElasticsearchSettings.Password``, ``All SqlSettings.DataSourceReplicas``, "
+"``All SqlSettings.DataSourceSearchReplicas``, "
+"``MessageExportSettings.GlobalRelaySettings.SmtpPassword``, "
+"``ServiceSettings.SplitKey``."
 
 #: ../../source/manage/admin/generating-support-packet.rst:47
 msgid ""
@@ -126,10 +145,14 @@ msgid ""
 "characters if possible, as special characters are common causes of "
 "configuration errors."
 msgstr ""
+"플러그인은 패킷 생성 중에 정리되지 않을 수 있습니다. - Mattermost v10.1부터 플러그인은 구성을 숨김으로 표시할 수 있습니다. "
+"플러그인이 구성을 숨김으로 표시하면 패킷 생성 중에 구성이 정리됩니다. - 그렇지 않은 경우 Mattermost와 공유하기 전에 "
+"``plugin.json`` 파일에서 추가 기밀 세부 정보를 정리하세요. 특수 문자가 구성 오류의 일반적인 원인이므로 가능한 경우 "
+"동일한 특수 문자를 포함하는 예제 문자열로 세부 정보를 대체하세요."
 
 #: ../../source/manage/admin/generating-support-packet.rst:52
 msgid "Share the packet with Mattermost"
-msgstr ""
+msgstr "Mattermost와 패킷 공유"
 
 #: ../../source/manage/admin/generating-support-packet.rst:54
 msgid ""
@@ -137,6 +160,8 @@ msgid ""
 "<https://support.mattermost.com/hc/en-us/requests/new>`_, or share with "
 "with the Mattermost team you're working with."
 msgstr ""
+"생성된 지원 패킷을 `표준 지원 요청 <https://support.mattermost.com/hc/en-us/requests/new>`_ 에 추가하거나 "
+"협업 중인 Mattermost 팀과 공유하세요."
 
 #: ../../source/manage/admin/generating-support-packet.rst:58
 msgid ""
@@ -145,179 +170,181 @@ msgid ""
 "impact server performance. We recommend enabling it temporarily, or in "
 "development environments, but not production enviornments."
 msgstr ""
+"지원 패킷을 생성한 후에는 디버그 로깅을 비활성화하세요. 디버그 로깅은 로그 파일을 크게 확장할 수 있으며 서버 성능에 부정적인 영향을 "
+"미칠 수 있습니다. 임시로 또는 개발 환경에서만 활성화하고 프로덕션 환경에서는 활성화하지 않는 것을 권장합니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:61
 msgid "Contents of a Support Packet"
-msgstr ""
+msgstr "지원 패킷의 내용"
 
 #: ../../source/manage/admin/generating-support-packet.rst:63
 msgid "A Mattermost Support Packet can contain the following files:"
-msgstr ""
+msgstr "Mattermost 지원 패킷에는 다음 파일이 포함될 수 있습니다:"
 
 #: ../../source/manage/admin/generating-support-packet.rst:69
 msgid "From v10.5, the following support packet data has changed:"
-msgstr ""
+msgstr "v10.5부터 다음 지원 패킷 데이터가 변경되었습니다:"
 
 #: ../../source/manage/admin/generating-support-packet.rst:71
 msgid ""
 "The ``support_packet.yaml`` file has been removed and split into "
 "``diagnostics.yaml`` and ``stats.yaml`` files."
-msgstr ""
+msgstr "``support_packet.yaml`` 파일이 제거되고 ``diagnostics.yaml`` 및 ``stats.yaml`` 파일로 분할되었습니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:72
 msgid ""
 "All fields in ``diagnostics.yaml`` have been moved into their own objects"
 " for improved readability."
-msgstr ""
+msgstr "``diagnostics.yaml`` 의 모든 필드가 가독성 향상을 위해 자체 객체로 이동되었습니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:73
 msgid "Field names are normalized."
-msgstr ""
+msgstr "필드 이름이 정규화되었습니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:74
 msgid ""
 "New data includes server statistics, logs, permissions, and extended job "
 "list details."
-msgstr ""
+msgstr "새로운 데이터에는 서버 통계, 로그, 권한 및 확장된 작업 목록 세부 정보가 포함됩니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:75
 msgid "Mattermost-supported plugin diagnostic data is included where applicable."
-msgstr ""
+msgstr "해당되는 경우 Mattermost 지원 플러그인 진단 데이터가 포함됩니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:77
 #: ../../source/manage/admin/generating-support-packet.rst:105
 msgid "`metadata.yaml <#metadata>`__"
-msgstr ""
+msgstr "`metadata.yaml <#metadata>`__"
 
 #: ../../source/manage/admin/generating-support-packet.rst:78
 msgid "``mattermost.log`` (Mattermost logs)"
-msgstr ""
+msgstr "``mattermost.log`` (Mattermost 로그)"
 
 #: ../../source/manage/admin/generating-support-packet.rst:79
 msgid "``audit.log`` (Mattermost audit logs)"
-msgstr ""
+msgstr "``audit.log`` (Mattermost 감사 로그)"
 
 #: ../../source/manage/admin/generating-support-packet.rst:80
 msgid "``ldap.log`` (AD/LDAP logs)"
-msgstr ""
+msgstr "``ldap.log`` (AD/LDAP 로그)"
 
 #: ../../source/manage/admin/generating-support-packet.rst:81
 msgid "``notifications.log`` (notifications logs)"
-msgstr ""
+msgstr "``notifications.log`` (알림 로그)"
 
 #: ../../source/manage/admin/generating-support-packet.rst:82
 msgid "``plugins.json`` (all active and inactive plugins)"
-msgstr ""
+msgstr "``plugins.json`` (모든 활성 및 비활성 플러그인)"
 
 #: ../../source/manage/admin/generating-support-packet.rst:83
 msgid "``sanitized_config.json`` (sanitized copy of the Mattermost configuration)"
-msgstr ""
+msgstr "``sanitized_config.json`` (Mattermost 구성의 정리된 복사본)"
 
 #: ../../source/manage/admin/generating-support-packet.rst:84
 msgid "``stats.yaml`` (Mattermost usage statistics)"
-msgstr ""
+msgstr "``stats.yaml`` (Mattermost 사용 통계)"
 
 #: ../../source/manage/admin/generating-support-packet.rst:85
 msgid "``jobs.yaml`` (last runs of important jobs)"
-msgstr ""
+msgstr "``jobs.yaml`` (중요 작업의 마지막 실행)"
 
 #: ../../source/manage/admin/generating-support-packet.rst:86
 #: ../../source/manage/admin/generating-support-packet.rst:110
 msgid "``diagnostics.yaml`` (core plugin diagnostics data)"
-msgstr ""
+msgstr "``diagnostics.yaml`` (핵심 플러그인 진단 데이터)"
 
 #: ../../source/manage/admin/generating-support-packet.rst:87
 msgid "``permissions.yaml`` (role & scheme information)"
-msgstr ""
+msgstr "``permissions.yaml`` (역할 및 스키마 정보)"
 
 #: ../../source/manage/admin/generating-support-packet.rst:88
 #: ../../source/manage/admin/generating-support-packet.rst:111
 msgid ""
 "`Go performance metrics <#go-performance-metrics>`__, including: "
 "``cpu.prof``, ``heap.prof``, and ``goroutines``"
-msgstr ""
+msgstr "`Go 성능 메트릭 <#go-performance-metrics>`__, 포함: ``cpu.prof``, ``heap.prof``, 및 ``goroutines``"
 
 #: ../../source/manage/admin/generating-support-packet.rst:89
 #: ../../source/manage/admin/generating-support-packet.rst:112
 msgid ""
 "``warning.txt`` (present when issues are encountered during packet "
 "generation)"
-msgstr ""
+msgstr "``warning.txt`` (패킷 생성 중 문제가 발생할 때 존재)"
 
 #: ../../source/manage/admin/generating-support-packet.rst:90
 msgid ""
 "``tsdb_dump.tar.gz`` (present when the Metrics plugin is installed and "
 "the **Performance metrics** option is selected when generating the "
 "Support Packet)"
-msgstr ""
+msgstr "``tsdb_dump.tar.gz`` (Metrics 플러그인이 설치되어 있고 지원 패킷 생성 시 **성능 메트릭** 옵션이 선택된 경우 존재)"
 
 #: ../../source/manage/admin/generating-support-packet.rst:92
 msgid ""
 "The following additional plugin diagnostic data is included in the "
 "generated support packet when the plugin is enabled and operational:"
-msgstr ""
+msgstr "플러그인이 활성화되어 있고 작동 중일 때 생성된 지원 패킷에 다음 추가 플러그인 진단 데이터가 포함됩니다:"
 
 #: ../../source/manage/admin/generating-support-packet.rst:94
 msgid "GitHub: ``/github/diagnostics.yaml``"
-msgstr ""
+msgstr "GitHub: ``/github/diagnostics.yaml``"
 
 #: ../../source/manage/admin/generating-support-packet.rst:95
 msgid "GitLab: ``/com.github.manland.mattermost-plugin-gitlab/diagnostics.yaml``"
-msgstr ""
+msgstr "GitLab: ``/com.github.manland.mattermost-plugin-gitlab/diagnostics.yaml``"
 
 #: ../../source/manage/admin/generating-support-packet.rst:96
 msgid "Jira: ``/jira/diagnostics.yaml``"
-msgstr ""
+msgstr "Jira: ``/jira/diagnostics.yaml``"
 
 #: ../../source/manage/admin/generating-support-packet.rst:97
 msgid "Calls: ``/com.mattermost.calls/diagnostics.yaml``"
-msgstr ""
+msgstr "Calls: ``/com.mattermost.calls/diagnostics.yaml``"
 
 #: ../../source/manage/admin/generating-support-packet.rst:98
 msgid "Boards: ``/focalboard/diagnostics.yaml``"
-msgstr ""
+msgstr "Boards: ``/focalboard/diagnostics.yaml``"
 
 #: ../../source/manage/admin/generating-support-packet.rst:99
 msgid "Playbooks: ``/playbooks/diagnostics.yaml``"
-msgstr ""
+msgstr "Playbooks: ``/playbooks/diagnostics.yaml``"
 
 #: ../../source/manage/admin/generating-support-packet.rst:100
 msgid "MSCalendar: ``/com.mattermost.mscalendar/diagnostics.yaml``"
-msgstr ""
+msgstr "MSCalendar: ``/com.mattermost.mscalendar/diagnostics.yaml``"
 
 #: ../../source/manage/admin/generating-support-packet.rst:101
 msgid "Google Calendar: ``/com.mattermost.gcal/diagnostics.yaml``"
-msgstr ""
+msgstr "Google Calendar: ``/com.mattermost.gcal/diagnostics.yaml``"
 
 #: ../../source/manage/admin/generating-support-packet.rst:106
 msgid "``mattermost.log``"
-msgstr ""
+msgstr "``mattermost.log``"
 
 #: ../../source/manage/admin/generating-support-packet.rst:107
 msgid "``plugins.json``"
-msgstr ""
+msgstr "``plugins.json``"
 
 #: ../../source/manage/admin/generating-support-packet.rst:108
 msgid "``sanitized_config.json``"
-msgstr ""
+msgstr "``sanitized_config.json``"
 
 #: ../../source/manage/admin/generating-support-packet.rst:109
 msgid "``support_packet.yaml``"
-msgstr ""
+msgstr "``support_packet.yaml``"
 
 #: ../../source/manage/admin/generating-support-packet.rst:116
 msgid ""
 "Each node in the cluster of a :doc:`high availability </scale/high-"
 "availability-cluster-based-deployment>` deployment has its own "
 "``mattermost.log`` file and advanced logging files, if present."
-msgstr ""
+msgstr ":doc:`고가용성 </scale/high-availability-cluster-based-deployment>` 배포의 클러스터에 있는 각 노드는 자체 ``mattermost.log`` 파일과 고급 로깅 파일(있는 경우)을 가집니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:117
 msgid ""
 "LDAP groups are not included during Support Packet generation. Only "
 "``LDAP Version`` and ``LDAP Vendor`` are included when present. These "
 "values are included in the ``support_packet.yaml`` file."
-msgstr ""
+msgstr "지원 패킷 생성 시 LDAP 그룹은 포함되지 않습니다. 존재하는 경우 ``LDAP Version``과 ``LDAP Vendor``만 포함됩니다. 이러한 값들은 ``support_packet.yaml`` 파일에 포함됩니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:118
 msgid ""
@@ -325,7 +352,8 @@ msgid ""
 " Packet. If fetching the LDAP Vendor name fails, the Support Packet "
 "generation includes the error in ``warning.txt``. If no LDAP Vendor name "
 "is found, the Support Packet lists them as ``unknown``."
-msgstr ""
+msgstr "Mattermost v9.11부터 ``LDAP Vendor`` 오류가 지원 패킷에 포함됩니다. LDAP Vendor 이름을 가져오는 데 실패하면 지원 패킷 생성 시 오류가 ``warning.txt``에 포함됩니다. "
+"LDAP Vendor 이름을 찾을 수 없는 경우 지원 패킷은 이를 ``unknown`` 으로 표시합니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:119
 msgid ""
@@ -333,37 +361,37 @@ msgid ""
 "Mattermost Calls diagostics data, including plugin version, calls and "
 "active session counts, as well as average duration and participant "
 "counts."
-msgstr ""
+msgstr "Mattermost v10.4부터 새로운 ``diagnostics.yaml`` 파일에 플러그인 버전, 통화 및 활성 세션 수, 평균 지속 시간 및 참가자 수를 포함한 Mattermost Calls 진단 데이터가 포함됩니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:122
 msgid "Metadata"
-msgstr ""
+msgstr "메타데이터"
 
 #: ../../source/manage/admin/generating-support-packet.rst:124
 msgid ""
 "From Mattermost v9.11, generated Support Packets include a "
 "``metadata.yaml`` file that contains the following information."
-msgstr ""
+msgstr "Mattermost v9.11부터 생성된 지원 패킷에는 다음 정보가 포함된 ``metadata.yaml`` 파일이 포함됩니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:127
 msgid "**Field name**"
-msgstr ""
+msgstr "**필드 이름**"
 
 #: ../../source/manage/admin/generating-support-packet.rst:127
 msgid "**Required/Optional**"
-msgstr ""
+msgstr "**필수/선택**"
 
 #: ../../source/manage/admin/generating-support-packet.rst:127
 msgid "**Description**"
-msgstr ""
+msgstr "**설명**"
 
 #: ../../source/manage/admin/generating-support-packet.rst:127
 msgid "**Example**"
-msgstr ""
+msgstr "**예시**"
 
 #: ../../source/manage/admin/generating-support-packet.rst:129
 msgid "version"
-msgstr ""
+msgstr "버전"
 
 #: ../../source/manage/admin/generating-support-packet.rst:129
 #: ../../source/manage/admin/generating-support-packet.rst:132
@@ -371,107 +399,107 @@ msgstr ""
 #: ../../source/manage/admin/generating-support-packet.rst:138
 #: ../../source/manage/admin/generating-support-packet.rst:141
 msgid "Required"
-msgstr ""
+msgstr "필수"
 
 #: ../../source/manage/admin/generating-support-packet.rst:129
 msgid ""
 "Version of the schema that the current metadata file is compatible with. "
 "Current version is 1."
-msgstr ""
+msgstr "현재 메타데이터 파일이 호환되는 스키마의 버전입니다. 현재 버전은 1입니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:129
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: ../../source/manage/admin/generating-support-packet.rst:132
 msgid "type"
-msgstr ""
+msgstr "유형"
 
 #: ../../source/manage/admin/generating-support-packet.rst:132
 msgid ""
 "The type of the packet. Each type of Support Packet can be mapped to a "
 "specific component generating the Support Packet."
-msgstr ""
+msgstr "패킷의 유형입니다. 각 지원 패킷 유형은 지원 패킷을 생성하는 특정 구성 요소에 매핑될 수 있습니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:132
 msgid "mattermost"
-msgstr ""
+msgstr "mattermost"
 
 #: ../../source/manage/admin/generating-support-packet.rst:135
 msgid "generated_at"
-msgstr ""
+msgstr "생성 시간"
 
 #: ../../source/manage/admin/generating-support-packet.rst:135
 msgid "The date and time the packet was created. Value is in epoch (ms)."
-msgstr ""
+msgstr "패킷이 생성된 날짜와 시간입니다. 값은 epoch(밀리초) 형식입니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:135
 msgid "1707473288731"
-msgstr ""
+msgstr "1707473288731"
 
 #: ../../source/manage/admin/generating-support-packet.rst:138
 msgid "server_version"
-msgstr ""
+msgstr "서버 버전"
 
 #: ../../source/manage/admin/generating-support-packet.rst:138
 msgid ""
 "Version of the server that the Support Packet was generated at. Semver is"
 " expected."
-msgstr ""
+msgstr "지원 패킷이 생성된 서버의 버전입니다. Semver 형식이어야 합니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:138
 msgid "9.1.1"
-msgstr ""
+msgstr "9.1.1"
 
 #: ../../source/manage/admin/generating-support-packet.rst:141
 msgid "server_id"
-msgstr ""
+msgstr "서버 ID"
 
 #: ../../source/manage/admin/generating-support-packet.rst:141
 msgid "Unique identifier of the server. Expected to be 26 characters or longer."
-msgstr ""
+msgstr "서버의 고유 식별자입니다. 26자 이상이어야 합니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:141
 msgid "9qpiszyjr3g8bxda35abcd1234"
-msgstr ""
+msgstr "9qpiszyjr3g8bxda35abcd1234"
 
 #: ../../source/manage/admin/generating-support-packet.rst:144
 msgid "license_id"
-msgstr ""
+msgstr "라이선스 ID"
 
 #: ../../source/manage/admin/generating-support-packet.rst:144
 #: ../../source/manage/admin/generating-support-packet.rst:148
 #: ../../source/manage/admin/generating-support-packet.rst:152
 msgid "Optional"
-msgstr ""
+msgstr "선택"
 
 #: ../../source/manage/admin/generating-support-packet.rst:144
 msgid ""
 "Unique identifier of the current server's license. Expected to be 26 "
 "characters or longer. This field is empty when there’s no license."
-msgstr ""
+msgstr "현재 서버 라이선스의 고유 식별자입니다. 26자 이상이어야 합니다. 라이선스가 없을 경우 이 필드는 비어 있습니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:144
 msgid "abcdejisd67yigqhmkz4ho1234"
-msgstr ""
+msgstr "abcdejisd67yigqhmkz4ho1234"
 
 #: ../../source/manage/admin/generating-support-packet.rst:148
 msgid "customer_id"
-msgstr ""
+msgstr "고객 ID"
 
 #: ../../source/manage/admin/generating-support-packet.rst:148
 msgid ""
 "The id of the customer, as defined in the license file. Expected to be 26"
 " characters or longer. Empty when there’s no license."
-msgstr ""
+msgstr "라이선스 파일에 정의된 고객 ID입니다. 26자 이상이어야 합니다. 라이선스가 없을 경우 비어 있습니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:148
 msgid "a1b2c3d4qbbr5cpkbpbmef123h"
-msgstr ""
+msgstr "a1b2c3d4qbbr5cpkbpbmef123h"
 
 #: ../../source/manage/admin/generating-support-packet.rst:152
 msgid "extras"
-msgstr ""
+msgstr "추가 정보"
 
 #: ../../source/manage/admin/generating-support-packet.rst:152
 msgid ""
@@ -479,62 +507,62 @@ msgid ""
 " that generated the file. Can be useful for identifying the contents of "
 "the data. Consider adding plugin (or component) versions in order to set "
 "expectation regarding the contents of this object."
-msgstr ""
+msgstr "파일을 생성한 플러그인/구성 요소에 특정한 추가 정보의 키/값입니다. 데이터의 내용을 식별하는 데 유용할 수 있습니다. "
+"이 객체의 내용에 대한 기대치를 설정하기 위해 플러그인(또는 구성 요소) 버전을 추가하는 것을 고려하세요."
 
 #: ../../source/manage/admin/generating-support-packet.rst:156
 msgid "extras.plugin_id"
-msgstr ""
+msgstr "extras.plugin_id"
 
 #: ../../source/manage/admin/generating-support-packet.rst:156
 #: ../../source/manage/admin/generating-support-packet.rst:158
 msgid "Required for plugins"
-msgstr ""
+msgstr "플러그인 필수"
 
 #: ../../source/manage/admin/generating-support-packet.rst:156
 msgid "The ID of the plugin."
-msgstr ""
+msgstr "플러그인의 ID입니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:158
 msgid "extras.plugin_version"
-msgstr ""
+msgstr "extras.plugin_version"
 
 #: ../../source/manage/admin/generating-support-packet.rst:158
 msgid "The version of the plugin."
-msgstr ""
+msgstr "플러그인의 버전입니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:161
 msgid "For example:"
-msgstr ""
+msgstr "예시:"
 
 #: ../../source/manage/admin/generating-support-packet.rst:177
 msgid "Go performance metrics"
-msgstr ""
+msgstr "Go 성능 메트릭"
 
 #: ../../source/manage/admin/generating-support-packet.rst:179
 msgid "The Support Packet contains 3 go runtime profiling files:"
-msgstr ""
+msgstr "지원 패킷에는 3개의 Go 런타임 프로파일링 파일이 포함되어 있습니다:"
 
 #: ../../source/manage/admin/generating-support-packet.rst:181
 msgid "``cpu.prof`` contains a 5-second CPU profile"
-msgstr ""
+msgstr "``cpu.prof`` 는 5초 CPU 프로파일을 포함합니다"
 
 #: ../../source/manage/admin/generating-support-packet.rst:182
 msgid "``heap.prof`` contains a heap profile"
-msgstr ""
+msgstr "``heap.prof`` 는 힙 프로파일을 포함합니다"
 
 #: ../../source/manage/admin/generating-support-packet.rst:183
 msgid "``goroutines`` contains a dump of all the running go routines"
-msgstr ""
+msgstr "``goroutines`` 는 실행 중인 모든 Go 루틴의 덤프를 포함합니다"
 
 #: ../../source/manage/admin/generating-support-packet.rst:185
 msgid ""
 "These files can be read using `pprof "
 "<https://golang.google.cn/cmd/pprof/>`_."
-msgstr ""
+msgstr "이 파일들은 `pprof <https://golang.google.cn/cmd/pprof/>`_ 를 사용하여 읽을 수 있습니다."
 
 #: ../../source/manage/admin/generating-support-packet.rst:187
 msgid ""
 "Use ``go tool pprof -web X`` to open a visualization of the profile in "
 "your browser, replacing ``X`` with the profile's file name."
-msgstr ""
-
+msgstr "프로파일의 시각화를 브라우저에서 열려면 ``go tool pprof -web X`` 를 사용하세요. 여기서 ``X`` 는 프로파일의 파일 이름으로 대체됩니다."

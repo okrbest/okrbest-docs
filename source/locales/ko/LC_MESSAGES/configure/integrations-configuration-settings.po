@@ -21,26 +21,28 @@ msgstr ""
 
 #: ../../source/configure/integrations-configuration-settings.rst:2
 msgid "Integrations configuration settings"
-msgstr ""
+msgstr "통합 구성 설정"
 
 #: ../../source/_static/badges/allplans-cloud-selfhosted.rst:7
 #: ../../source/_static/badges/allplans-selfhosted.rst:7
 msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `모든 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/allplans-cloud-selfhosted.rst:9
 msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
 msgstr ""
+"|deployment-img| `클라우드 <https://mattermost.com/sign-up/>`__ 및 `자체 호스팅 "
+"<https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/configure/integrations-configuration-settings.rst:7
 msgid ""
@@ -48,28 +50,31 @@ msgid ""
 "System Console by selecting the **Product** |product-list| menu, "
 "selecting **System Console**, and then selecting **Integrations**:"
 msgstr ""
+"**제품** |product-list| 메뉴를 선택하고 **시스템 콘솔** 을 선택한 다음 "
+"**통합** 을 선택하여 시스템 콘솔에서 다음 통합 구성 옵션을 검토하고 관리하세요:"
 
 #: ../../<rst_prolog>:100
 msgid ""
 "Navigate between Channels and collaborative playbooks using the product "
 "menu icon."
 msgstr ""
+"제품 메뉴 아이콘을 사용하여 채널과 협업 플레이북 간을 탐색하세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:9
 msgid "`Integrations management <#integrations-management>`__"
-msgstr ""
+msgstr "`통합 관리 <#integrations-management>`__"
 
 #: ../../source/configure/integrations-configuration-settings.rst:10
 msgid "`Bot Accounts <#bot-acocunts>`__"
-msgstr ""
+msgstr "`봇 계정 <#bot-acocunts>`__"
 
 #: ../../source/configure/integrations-configuration-settings.rst:11
 msgid "`GIF <#gif>`__"
-msgstr ""
+msgstr "`GIF <#gif>`__"
 
 #: ../../source/configure/integrations-configuration-settings.rst:12
 msgid "`CORS <#cors>`__"
-msgstr ""
+msgstr "`CORS <#cors>`__"
 
 #: ../../source/configure/integrations-configuration-settings.rst:16
 msgid ""
@@ -80,6 +85,10 @@ msgid ""
 " example, the ``EnableIncomingWebhooks`` value is under "
 "``ServiceSettings``."
 msgstr ""
+"자체 호스팅 Mattermost 배포를 관리하는 시스템 관리자는 다음 표에 설명된 대로 "
+"``config.json`` 파일을 편집할 수 있습니다. 아래의 각 구성 값에는 JSON 인식 도구를 사용하여 "
+"``config.json`` 파일에서 프로그래밍 방식으로 값에 접근하기 위한 JSON 경로가 포함되어 있습니다. "
+"예를 들어, ``EnableIncomingWebhooks`` 값은 ``ServiceSettings`` 아래에 있습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:18
 msgid ""
@@ -87,6 +96,8 @@ msgid ""
 "enter: ``cat config/config.json | jq "
 "'.ServiceSettings.EnableIncomingWebhooks'``"
 msgstr ""
+"`jq <https://stedolan.github.io/jq/>`__ 와 같은 도구를 사용하는 경우 다음을 입력하세요: "
+"``cat config/config.json | jq '.ServiceSettings.EnableIncomingWebhooks'``"
 
 #: ../../source/configure/integrations-configuration-settings.rst:19
 msgid ""
@@ -94,20 +105,23 @@ msgid ""
 "such as ``ServiceSettings``, then within that object, find the key "
 "``EnableIncomingWebhooks``."
 msgstr ""
+"``config.json`` 파일을 수동으로 작업할 때는 ``ServiceSettings`` 와 같은 객체를 찾은 다음 "
+"해당 객체 내에서 ``EnableIncomingWebhooks`` 키를 찾으세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:24
 msgid "Integrations management"
-msgstr ""
+msgstr "통합 관리"
 
 #: ../../source/configure/integrations-configuration-settings.rst:29
 msgid ""
 "Access the following configuration settings in the System Console by "
 "going to **Integrations > Integration Management**."
 msgstr ""
+"**통합 > 통합 관리** 로 이동하여 시스템 콘솔에서 다음 구성 설정에 접근하세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:41
 msgid "Enable incoming webhooks"
-msgstr ""
+msgstr "인커밍 웹훅 활성화"
 
 #: ../../source/configure/integrations-configuration-settings.rst:43
 msgid ""
@@ -117,6 +131,9 @@ msgid ""
 "developer documentation to learn about creating webhooks, viewing "
 "samples, and letting community know about integrations you've built."
 msgstr ""
+"통합을 구축하는 개발자는 공개 채널과 비공개 채널용 웹훅 URL을 생성할 수 있습니다. 웹훅 생성, 샘플 "
+"확인, 구축한 통합을 커뮤니티에 알리는 방법에 대해 알아보려면 `incoming webhooks "
+"<https://developers.mattermost.com/integrate/webhooks/incoming/>`_ 개발자 문서를 참조하세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:45
 msgid ""
@@ -125,12 +142,17 @@ msgid ""
 "URLs created can be used by external applications to create posts in any "
 "public or private channels that you have access to."
 msgstr ""
+"**True**: 인커밍 웹훅이 허용됩니다. 인커밍 웹훅을 관리하려면 Mattermost 제품 메뉴에서 "
+"**통합** 을 선택하세요. 생성된 웹훅 URL은 외부 애플리케이션에서 접근 가능한 모든 공개 또는 "
+"비공개 채널에 게시물을 생성하는 데 사용할 수 있습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:47
 msgid ""
 "**False**: The **Integrations > Incoming Webhooks** section of the "
 "Mattermost Product menu is hidden and all incoming webhooks are disabled."
 msgstr ""
+"**False**: Mattermost 제품 메뉴의 **통합 > 인커밍 웹훅** 섹션이 숨겨지고 모든 인커밍 웹훅이 "
+"비활성화됩니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:50
 #: ../../source/configure/integrations-configuration-settings.rst:75
@@ -140,16 +162,21 @@ msgid ""
 "attempting to impersonate other users. To combat these attacks, a BOT tag"
 " appears next to all posts from a webhook. Enable at your own risk."
 msgstr ""
+"보안 참고사항: 이 기능을 활성화하면 사용자가 다른 사용자를 가장하여 `phishing attacks "
+"<https://en.wikipedia.org/wiki/Phishing>`_ 를 수행할 수 있습니다. 이러한 공격을 방지하기 위해 "
+"웹훅의 모든 게시물 옆에 BOT 태그가 표시됩니다. 위험을 감수하고 활성화하세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:53
 msgid ""
 "This feature's ``config.json`` setting is ``\"EnableIncomingWebhooks\": "
 "true`` with options ``true`` and ``false``."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 ``\"EnableIncomingWebhooks\": true`` 이며 옵션은 "
+"``true`` 와 ``false`` 입니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:66
 msgid "Enable outgoing webhooks"
-msgstr ""
+msgstr "아웃고잉 웹훅 활성화"
 
 #: ../../source/configure/integrations-configuration-settings.rst:68
 msgid ""
@@ -161,30 +188,41 @@ msgid ""
 "developer documentation to learn about creating webhooks and viewing "
 "samples."
 msgstr ""
+"통합을 구축하는 개발자는 공개 채널용 웹훅 토큰을 생성할 수 있습니다. 트리거 단어는 외부 통합에 "
+"새 메시지 이벤트를 발생시키는 데 사용됩니다. 보안상의 이유로 아웃고잉 웹훅은 공개 채널에서만 "
+"사용할 수 있습니다. 웹훅 생성 및 샘플 확인 방법에 대해 알아보려면 `outgoing webhooks "
+"<https://developers.mattermost.com/integrate/webhooks/outgoing/>`_ 개발자 문서를 참조하세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:70
 msgid ""
 "**True**: Outgoing webhooks will be allowed. To manage outgoing webhooks,"
 " select **Integrations** from the Mattermost Product menu."
 msgstr ""
+"**True**: 아웃고잉 웹훅이 허용됩니다. 아웃고잉 웹훅을 관리하려면 Mattermost 제품 메뉴에서 "
+"**통합** 을 선택하세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:72
 msgid ""
 "**False**: The **Integrations > Outgoing Webhooks** of the Mattermost "
 "Product menu is hidden and all outgoing webhooks are disabled."
 msgstr ""
+"**False**: Mattermost 제품 메뉴의 **통합 > 아웃고잉 웹훅** 이 숨겨지고 모든 아웃고잉 웹훅이 "
+"비활성화됩니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:78
 msgid ""
 "This feature's ``config.json`` setting is ``\"EnableOutgoingWebhooks\": "
 "true`` with options ``true`` and ``false``."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 ``\"EnableOutgoingWebhooks\": true`` 이며 옵션은 "
+"``true`` 와 ``false`` 입니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:83
 msgid ""
 "Disabling this configuration setting in larger deployments may improve "
 "server performance in the following areas:"
 msgstr ""
+"대규모 배포에서 이 구성 설정을 비활성화하면 다음과 같은 영역에서 서버 성능이 향상될 수 있습니다:"
 
 #: ../../source/configure/integrations-configuration-settings.rst:85
 msgid ""
@@ -192,6 +230,8 @@ msgid ""
 "external services. Disabling them reduces the amount of traffic and "
 "resource usage related to those requests."
 msgstr ""
+"네트워크 트래픽 감소: 아웃고잉 웹훅은 외부 서비스에 네트워크 요청을 생성합니다. 이를 비활성화하면 "
+"해당 요청과 관련된 트래픽 및 리소스 사용량이 감소합니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:86
 msgid ""
@@ -200,6 +240,8 @@ msgid ""
 "outgoing webhooks, the server workload is reduced, allowing it to "
 "allocate more resources to other important tasks."
 msgstr ""
+"서버 부하 감소: 웹훅 이벤트 처리 및 외부 서비스와의 연결 관리는 서버 리소스를 사용합니다. "
+"아웃고잉 웹훅을 비활성화하면 서버 작업량이 감소하여 다른 중요한 작업에 더 많은 리소스를 할당할 수 있습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:87
 msgid ""
@@ -209,6 +251,9 @@ msgid ""
 "Disabling them removes this dependency, leading to faster response times "
 "for user requests."
 msgstr ""
+"응답 시간 개선: 아웃고잉 웹훅이 활성화되면 서버는 외부 서비스의 응답을 기다리며, "
+"외부 서비스가 느리거나 응답하지 않는 경우 성능이 저하될 수 있습니다. "
+"이를 비활성화하면 이러한 의존성이 제거되어 사용자 요청에 대한 응답 시간이 빨라집니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:88
 msgid ""
@@ -216,6 +261,8 @@ msgid ""
 "the requests and responses. Disabling them can free up memory which can "
 "be used to improve overall server performance."
 msgstr ""
+"메모리 사용량 감소: 웹훅은 요청 및 응답에 대한 데이터를 처리하고 저장하기 위해 메모리가 필요합니다. "
+"이를 비활성화하면 메모리가 확보되어 전반적인 서버 성능을 향상시키는 데 사용할 수 있습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:89
 msgid ""
@@ -224,6 +271,8 @@ msgid ""
 "webhooks can simplify error handling and reduce the processing overhead "
 "associated with it."
 msgstr ""
+"오류 처리 단순화: 아웃고잉 웹훅 실패에 대한 오류 및 재시도 관리는 복잡성과 오버헤드를 추가할 수 있습니다. "
+"아웃고잉 웹훅을 비활성화하면 오류 처리가 단순화되고 관련된 처리 오버헤드가 감소합니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:90
 msgid ""
@@ -231,48 +280,56 @@ msgid ""
 " with other services and workflows. It’s important to balance performance"
 " improvements with the needs of your organization and users."
 msgstr ""
+"그러나 아웃고잉 웹훅은 Mattermost를 다른 서비스 및 워크플로우와 통합하는 데 필수적입니다. "
+"성능 개선과 조직 및 사용자의 요구사항 사이의 균형을 맞추는 것이 중요합니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:102
 msgid "Enable custom slash commands"
-msgstr ""
+msgstr "사용자 정의 슬래시 명령어 활성화"
 
 #: ../../source/configure/integrations-configuration-settings.rst:104
 msgid ""
 "Slash commands send events to external integrations that send a response "
 "back to Mattermost."
 msgstr ""
+"슬래시 명령어는 Mattermost로 응답을 다시 보내는 외부 통합으로 이벤트를 전송합니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:106
 msgid ""
 "**True**: Allow users to create custom slash commands from **Main Menu > "
 "Integrations > Commands**."
 msgstr ""
+"**True**: 사용자가 **메인 메뉴 > 통합 > 명령어** 에서 사용자 정의 슬래시 명령어를 생성할 수 있습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:108
 msgid ""
 "**False**: Slash commands are hidden in the **Integrations** user "
 "interface."
 msgstr ""
+"**False**: 슬래시 명령어가 **통합** 사용자 인터페이스에서 숨겨집니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:111
 msgid ""
 "This feature's ``config.json`` setting is ``\"EnableCommands\": false`` "
 "with options ``true`` and ``false``."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 ``\"EnableCommands\": false`` 이며 옵션은 ``true`` 와 ``false`` 입니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:124
 msgid "Enable OAuth 2.0 service provider"
-msgstr ""
+msgstr "OAuth 2.0 서비스 제공자 활성화"
 
 #: ../../source/configure/integrations-configuration-settings.rst:126
 msgid ""
 "**True**: Mattermost acts as an OAuth 2.0 service provider allowing "
 "Mattermost to authorize API requests from external applications."
 msgstr ""
+"**True**: Mattermost가 OAuth 2.0 서비스 제공자 역할을 하여 외부 애플리케이션의 API 요청을 승인할 수 있습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:128
 msgid "**False**: Mattermost does not function as an OAuth 2.0 service provider."
 msgstr ""
+"**False**: Mattermost가 OAuth 2.0 서비스 제공자로 작동하지 않습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:131
 msgid ""
@@ -280,14 +337,15 @@ msgid ""
 "``\"EnableOAuthServiceProvider\": true`` with options ``true`` and "
 "``false``."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 ``\"EnableOAuthServiceProvider\": true`` 이며 옵션은 ``true`` 와 ``false`` 입니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:136
 msgid "Cloud admins can't modify this configuration setting."
-msgstr ""
+msgstr "클라우드 관리자는 이 구성 설정을 수정할 수 없습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:146
 msgid "Integration request timeout"
-msgstr ""
+msgstr "통합 요청 시간 초과"
 
 #: ../../source/configure/integrations-configuration-settings.rst:148
 msgid ""
@@ -304,16 +362,26 @@ msgid ""
 "can take some time to generate an HTTP response, or experience delayed "
 "responses due to latency."
 msgstr ""
+"외부 통합 HTTP 요청의 시간 초과 전 대기 시간(초)으로, `custom slash commands "
+"<https://developers.mattermost.com/integrate/slash-commands/custom/>`_, "
+"`outgoing webhooks "
+"<https://developers.mattermost.com/integrate/webhooks/outgoing/>`_, "
+"`interactive messages "
+"<https://developers.mattermost.com/integrate/plugins/interactive-"
+"messages/>`_, `interactive dialogs "
+"<https://developers.mattermost.com/integrate/plugins/interactive-"
+"dialogs/>`_ 가 포함됩니다. HTTP 응답을 생성하는 데 시간이 걸리거나 지연으로 인해 응답이 지연되는 외부 통합이 있는 경우 이 값을 늘리세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:151
 msgid ""
 "This feature's ``config.json`` setting is "
 "``\"OutgoingIntegrationRequestsDefaultTimeout\": 3``."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 ``\"OutgoingIntegrationRequestsDefaultTimeout\": 3`` 입니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:164
 msgid "Enable integrations to override usernames"
-msgstr ""
+msgstr "사용자 이름 재정의를 위한 통합 활성화"
 
 #: ../../source/configure/integrations-configuration-settings.rst:166
 msgid ""
@@ -322,6 +390,8 @@ msgid ""
 " If no username is present, the username for the post is the same as it "
 "would be for a setting of ``False``."
 msgstr ""
+"**True**: 웹훅, 슬래시 명령어, OAuth 2.0 앱 및 기타 통합에서 게시하는 사용자 이름을 변경할 수 있습니다. "
+"사용자 이름이 없는 경우 게시물의 사용자 이름은 ``False`` 설정과 동일합니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:168
 msgid ""
@@ -332,6 +402,9 @@ msgid ""
 "https://developers.mattermost.com/integrate/other-integrations/ for more "
 "details."
 msgstr ""
+"**False**: **(기본값)** 사용자 정의 슬래시 명령어는 슬래시 명령어를 사용한 사용자의 사용자 이름으로만 게시할 수 있습니다. "
+"OAuth 2.0 앱은 통합을 설정한 사용자의 사용자 이름으로만 게시할 수 있습니다. 인바운드 웹훅과 아웃바운드 웹훅의 경우 사용자 이름은 \"webhook\"입니다. "
+"자세한 내용은 https://developers.mattermost.com/integrate/other-integrations/ 를 참조하세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:171
 msgid ""
@@ -339,16 +412,18 @@ msgid ""
 "``\"EnablePostUsernameOverride\": false`` with options ``true`` and "
 "``false``."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 ``\"EnablePostUsernameOverride\": false`` 이며 옵션은 ``true`` 와 ``false`` 입니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:184
 msgid "Enable integrations to override profile picture icons"
-msgstr ""
+msgstr "프로필 사진 아이콘 재정의를 위한 통합 활성화"
 
 #: ../../source/configure/integrations-configuration-settings.rst:186
 msgid ""
 "**True**: Webhooks, slash commands, and other integrations, will be "
 "allowed to change the profile picture they post with."
 msgstr ""
+"**True**: 웹훅, 슬래시 명령어 및 기타 통합에서 게시하는 프로필 사진을 변경할 수 있습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:188
 msgid ""
@@ -357,16 +432,19 @@ msgid ""
 " See https://developers.mattermost.com/integrate/other-integrations/ for "
 "more details."
 msgstr ""
+"**False**: **(기본값)** 웹훅, 슬래시 명령어 및 OAuth 2.0 앱은 설정된 계정의 프로필 사진으로만 게시할 수 있습니다. "
+"자세한 내용은 https://developers.mattermost.com/integrate/other-integrations/ 를 참조하세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:191
 msgid ""
 "This feature's ``config.json`` setting is ``\"EnablePostIconOverride\": "
 "false`` with options ``true`` and ``false``."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 ``\"EnablePostIconOverride\": false`` 이며 옵션은 ``true`` 와 ``false`` 입니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:204
 msgid "Enable personal access tokens"
-msgstr ""
+msgstr "개인 액세스 토큰 활성화"
 
 #: ../../source/configure/integrations-configuration-settings.rst:206
 msgid ""
@@ -375,36 +453,44 @@ msgid ""
 "access-token/>` for integrations in **Profile > Security**. They can be "
 "used to authenticate against the API and give full access to the account."
 msgstr ""
+"**True**: 사용자는 **프로필 > 보안** 에서 통합을 위한 `개인 액세스 토큰 <https://developers.mattermost.com/integrate/admin-guide/admin-personal-access-token/>` 을 생성할 수 있습니다. "
+"이 토큰은 API 인증에 사용되며 계정에 대한 전체 액세스 권한을 부여합니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:208
 msgid ""
 "To manage who can create personal access tokens or to search users by "
 "token ID, go to the **System Console > Users** page."
 msgstr ""
+"개인 액세스 토큰을 생성할 수 있는 사용자를 관리하거나 토큰 ID로 사용자를 검색하려면 **시스템 콘솔 > 사용자** 페이지로 이동하세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:210
 msgid "**False**: Personal access tokens are disabled on the server."
 msgstr ""
+"**False**: 서버에서 개인 액세스 토큰이 비활성화됩니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:213
 msgid ""
 "This feature's ``config.json`` setting is ``\"EnableUserAccessTokens\": "
 "false`` with options ``true`` and ``false``."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 ``\"EnableUserAccessTokens\": false`` 이며 옵션은 ``true`` 와 ``false`` 입니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:219
 msgid "Bot accounts"
 msgstr ""
+"봇 계정"
 
 #: ../../source/configure/integrations-configuration-settings.rst:224
 msgid ""
 "Access the following configuration settings in the System Console by "
 "going to **Integrations > Bot Accounts**."
 msgstr ""
+"**통합 > 봇 계정** 으로 이동하여 시스템 콘솔에서 다음 구성 설정에 접근할 수 있습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:236
 msgid "Enable bot account creation"
 msgstr ""
+"봇 계정 생성 활성화"
 
 #: ../../source/configure/integrations-configuration-settings.rst:238
 msgid ""
@@ -414,6 +500,9 @@ msgid ""
 "in. See `documentation <https://developers.mattermost.com/integrate"
 "/admin-guide/admin-bot-accounts/>`_ to learn more."
 msgstr ""
+"**True**: **(클라우드 배포의 기본값)** 사용자는 **통합 > 봇 계정** 에서 통합을 위한 봇 계정을 생성할 수 있습니다. "
+"봇 계정은 로그인에 사용할 수 없다는 점을 제외하고는 사용자 계정과 유사합니다. "
+"자세한 내용은 `문서 <https://developers.mattermost.com/integrate/admin-guide/admin-bot-accounts/>`_ 를 참조하세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:240
 msgid ""
@@ -421,16 +510,20 @@ msgid ""
 "be created through the user interface or the RESTful API. Plugins can "
 "still create and manage bot accounts."
 msgstr ""
+"**False**: **(자체 호스팅 배포의 기본값)** 사용자 인터페이스나 RESTful API를 통해 봇 계정을 생성할 수 없습니다. "
+"플러그인은 여전히 봇 계정을 생성하고 관리할 수 있습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:243
 msgid ""
 "This feature's ``config.json`` setting is ``\"EnableBotAccountCreation\":"
 " false`` with options ``true`` and ``false``."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 ``\"EnableBotAccountCreation\": false`` 이며 옵션은 ``true`` 와 ``false`` 입니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:256
 msgid "Disable bot accounts when owner is deactivated"
 msgstr ""
+"소유자가 비활성화될 때 봇 계정 비활성화"
 
 #: ../../source/configure/integrations-configuration-settings.rst:258
 msgid ""
@@ -438,12 +531,15 @@ msgid ""
 "by the user. To re-enable bot accounts, go to **Integrations > Bot "
 "Accounts**."
 msgstr ""
+"**True**: 사용자가 비활성화되면 해당 사용자가 관리하는 모든 봇 계정이 비활성화됩니다. "
+"봇 계정을 다시 활성화하려면 **통합 > 봇 계정** 으로 이동하세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:260
 msgid ""
 "**False**: When a user is deactivated, all bot accounts managed by the "
 "user remain active."
 msgstr ""
+"**False**: 사용자가 비활성화되어도 해당 사용자가 관리하는 모든 봇 계정은 활성 상태로 유지됩니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:263
 msgid ""
@@ -451,36 +547,38 @@ msgid ""
 "``\"DisableBotsWhenOwnerIsDeactivated\": false`` with options ``true`` "
 "and ``false``."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 ``\"DisableBotsWhenOwnerIsDeactivated\": false`` 이며 옵션은 ``true`` 와 ``false`` 입니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:269
 msgid "GIF"
 msgstr ""
+"GIF"
 
 #: ../../source/configure/integrations-configuration-settings.rst:274
 msgid ""
 "Access the following configuration settings in the System Console by "
 "going to **Integrations > GIF**."
-msgstr ""
+msgstr "**통합 > GIF** 로 이동하여 시스템 콘솔에서 다음 구성 설정에 접근하세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:286
 msgid "Enable GIF picker"
-msgstr ""
+msgstr "GIF 선택기 활성화"
 
 #: ../../source/configure/integrations-configuration-settings.rst:288
 msgid ""
 "**True**: Allow users to select GIFs from the emoji picker via a GIPHY "
 "integration."
-msgstr ""
+msgstr "**True**: GIPHY 통합을 통해 사용자가 이모지 선택기에서 GIF를 선택할 수 있습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:290
 msgid "**False**: GIFs cannot be selected in the emoji picker."
-msgstr ""
+msgstr "**False**: 이모지 선택기에서 GIF를 선택할 수 없습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:293
 msgid ""
 "This feature's ``config.json`` setting is ``\"EnableGifPicker\": true`` "
 "with options ``true`` and ``false``."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"EnableGifPicker\": true`` 이며 옵션은 ``true`` 와 ``false`` 입니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:297
 msgid ""
@@ -488,47 +586,48 @@ msgid ""
 " link previews>` must be enabled in order to display GIF link previews. "
 "Mattermost deployments restricted to access behind a firewall must open "
 "port 443 (for all request types) for this feature to work."
-msgstr ""
+msgstr "GIF 링크 미리보기를 표시하려면 :ref:`링크 미리보기 <configure/site-configuration-settings:enable message link previews>` 를 활성화해야 합니다. "
+"방화벽 뒤에서 접근이 제한된 Mattermost 배포는 이 기능이 작동하려면 포트 443(모든 요청 유형)을 열어야 합니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:302
 msgid "CORS"
-msgstr ""
+msgstr "CORS"
 
 #: ../../source/_static/badges/allplans-selfhosted.rst:9
 msgid ""
 "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
 "deployments"
-msgstr ""
+msgstr "|deployment-img| `자체 호스팅 <https://mattermost.com/download/>`__ 배포"
 
 #: ../../source/configure/integrations-configuration-settings.rst:307
 msgid ""
 "Access the following configuration settings in the System Console by "
 "going to **Integrations > CORS**."
-msgstr ""
+msgstr "**통합 > CORS** 로 이동하여 시스템 콘솔에서 다음 구성 설정에 접근하세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:317
 msgid "Enable cross-origin requests from"
-msgstr ""
+msgstr "다음에서 교차 출처 요청 활성화"
 
 #: ../../source/configure/integrations-configuration-settings.rst:319
 msgid "Enable HTTP cross-origin requests from specific domains."
-msgstr ""
+msgstr "특정 도메인에서 HTTP 교차 출처 요청을 활성화합니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:321
 msgid "Type ``*`` to allow CORS from any domain."
-msgstr ""
+msgstr "모든 도메인에서 CORS를 허용하려면 ``*`` 를 입력하세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:322
 msgid "Enter a specific domain or multiple domains separated by spaces."
-msgstr ""
+msgstr "특정 도메인이나 공백으로 구분된 여러 도메인을 입력하세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:323
 msgid "Type ``null`` to prevent CORS from any domain."
-msgstr ""
+msgstr "모든 도메인에서 CORS를 방지하려면 ``null`` 을 입력하세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:324
 msgid "Leave blank to disable it and use the Mattermost **Site URL** instead."
-msgstr ""
+msgstr "비활성화하고 Mattermost **사이트 URL** 을 대신 사용하려면 비워두세요."
 
 #: ../../source/configure/integrations-configuration-settings.rst:328
 msgid ""
@@ -537,95 +636,96 @@ msgid ""
 " losing access to the System Console after saving. If you lose access to "
 "the System Console after changing this setting, you can set your Site URL"
 " through the ``config.json`` file."
-msgstr ""
+msgstr "저장 후 시스템 콘솔에 대한 접근 권한을 잃지 않도록 이 설정을 활성화하기 전에 :ref:`사이트 URL <configure/environment-configuration-settings:site url>` 을 입력했는지 확인하세요. "
+"이 설정을 변경한 후 시스템 콘솔에 대한 접근 권한을 잃은 경우 ``config.json`` 파일을 통해 사이트 URL을 설정할 수 있습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:331
 msgid ""
 "This feature's ``config.json`` setting is ``\"AllowCorsFrom\": \"\"`` "
 "with string input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 문자열 입력이 있는 ``\"AllowCorsFrom\": \"\"`` 입니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:342
 msgid "CORS exposed headers"
-msgstr ""
+msgstr "CORS 노출 헤더"
 
 #: ../../source/configure/integrations-configuration-settings.rst:344
 msgid "Whitelist of headers that will be accessible to the requester."
-msgstr ""
+msgstr "요청자가 접근할 수 있는 헤더의 허용 목록입니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:347
 msgid ""
 "This feature's ``config.json`` setting is ``\"CorsExposedHeaders\": "
 "\"\"`` with string input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 문자열 입력이 있는 ``\"CorsExposedHeaders\": \"\"`` 입니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:360
 msgid "CORS allow credentials"
-msgstr ""
+msgstr "CORS 자격 증명 허용"
 
 #: ../../source/configure/integrations-configuration-settings.rst:362
 msgid ""
 "**True**: Requests that pass validation will include the ``Access-"
 "Control-Allow-Credentials`` header."
-msgstr ""
+msgstr "**True**: 유효성 검사를 통과한 요청에는 ``Access-Control-Allow-Credentials`` 헤더가 포함됩니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:364
 msgid ""
 "**False**: Requests won't include the ``Access-Control-Allow-"
 "Credentials`` header."
-msgstr ""
+msgstr "**False**: 요청에 ``Access-Control-Allow-Credentials`` 헤더가 포함되지 않습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:367
 msgid ""
 "This feature's ``config.json`` setting is ``\"CorsAllowCredentials\": "
 "false`` with options ``true`` and ``false``."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``true`` 와 ``false`` 옵션이 있는 ``\"CorsAllowCredentials\": false`` 입니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:380
 msgid "CORS debug"
-msgstr ""
+msgstr "CORS 디버그"
 
 #: ../../source/configure/integrations-configuration-settings.rst:382
 msgid ""
 "**True**: Prints messages to the logs to help when developing an "
 "integration that uses CORS. These messages will include the structured "
 "key value pair ``\"source\": \"cors\"``."
-msgstr ""
+msgstr "**True**: CORS를 사용하는 통합을 개발할 때 도움이 되도록 로그에 메시지를 출력합니다. 이 메시지에는 구조화된 키-값 쌍 ``\"source\": \"cors\"`` 가 포함됩니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:384
 msgid "**False**: Debug messages not printed to the logs."
-msgstr ""
+msgstr "**False**: 디버그 메시지가 로그에 출력되지 않습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:387
 msgid ""
 "This feature's ``config.json`` setting is ``\"CorsDebug\": false`` with "
 "options ``true`` and ``false``."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``true`` 와 ``false`` 옵션이 있는 ``\"CorsDebug\": false`` 입니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:393
 msgid "Embedding"
-msgstr ""
+msgstr "임베딩"
 
 #: ../../source/configure/integrations-configuration-settings.rst:398
 msgid ""
 "Access the following configuration settings in the System Console by "
 "going to **Integrations > Embedding**."
-msgstr ""
+msgstr "**통합 > 임베딩** 으로 이동하여 시스템 콘솔에서 다음 구성 설정에 접근할 수 있습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:408
 msgid "Frame ancestors"
-msgstr ""
+msgstr "프레임 상위 요소"
 
 #: ../../source/configure/integrations-configuration-settings.rst:410
 msgid ""
 "Enter a space-separated list of domains that are allowed to embed the "
 "Mattermost web client via an iFrame. Leave blank to disallow embedding. "
 "Leave blank to disable embedding. Blank by default."
-msgstr ""
+msgstr "iFrame을 통해 Mattermost 웹 클라이언트를 임베딩할 수 있는 도메인의 공백으로 구분된 목록을 입력하세요. 임베딩을 비활성화하려면 비워두세요. 기본값은 비어 있습니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:413
 msgid "This feature's ``config.json`` setting is ``\"FrameAncestors\".``"
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"FrameAncestors\"`` 입니다."
 
 #: ../../source/configure/integrations-configuration-settings.rst:418
 msgid ""
@@ -634,5 +734,5 @@ msgid ""
 "However, you must ensure that correct configurations are in place to "
 "allow communication between the iframe and the parent domain without "
 "violating security."
-msgstr ""
-
+msgstr "iFrame을 통해 Mattermost를 임베딩하면 조직의 기존 도구와 워크플로우에 원활한 협업 통합을 제공할 수 있습니다. "
+"그러나 보안을 침해하지 않고 iframe과 상위 도메인 간의 통신을 허용하기 위해 올바른 구성이 설정되어 있는지 확인해야 합니다."

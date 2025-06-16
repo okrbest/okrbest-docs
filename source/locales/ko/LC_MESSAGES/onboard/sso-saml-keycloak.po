@@ -21,13 +21,14 @@ msgstr ""
 
 #: ../../source/onboard/sso-saml-keycloak.rst:2
 msgid "Configure SAML with Keycloak"
-msgstr ""
+msgstr "Keycloak으로 SAML 구성하기"
 
 #: ../../source/_static/badges/ent-cloud-selfhosted.rst:7
 msgid ""
 "|plans-img| Available on `Enterprise plans "
 "<https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img| `Enterprise 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
@@ -38,6 +39,8 @@ msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
 msgstr ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ 및 `self-"
+"hosted <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
@@ -48,14 +51,15 @@ msgid ""
 "The following process provides steps to configure SAML with Keycloak for "
 "Mattermost."
 msgstr ""
+"다음 프로세스는 Mattermost용 Keycloak으로 SAML을 구성하는 단계를 제공합니다."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:10
 msgid "Set up a connection app for Mattermost SSO"
-msgstr ""
+msgstr "Mattermost SSO용 연결 앱 설정하기"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:13
 msgid "This was tested with Keycloak v22.0.5."
-msgstr ""
+msgstr "이 문서는 Keycloak v22.0.5로 테스트되었습니다."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:15
 msgid ""
@@ -63,110 +67,116 @@ msgid ""
 "Mattermost. We recommend adding Mattermost as a client to your primary "
 "realm."
 msgstr ""
+"또한 일반적으로 Mattermost 전용 realm을 만들 필요는 없습니다.\n"
+"기본 realm에 Mattermost를 클라이언트로 추가하는 것을 권장합니다."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:17
 msgid "Log in to Keycloak as an administrator."
-msgstr ""
+msgstr "관리자로 Keycloak에 로그인하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:19
 msgid ""
 "Select **Clients**, then **Create client**. You'll use this client ID in "
 "a later step."
 msgstr ""
+"**Clients** 를 선택한 다음 **Create client** 를 선택하세요.\n"
+"이 클라이언트 ID는 나중 단계에서 사용됩니다."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:21
 msgid "**Client type**: ``SAML``"
-msgstr ""
+msgstr "**클라이언트 유형**: ``SAML``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:22
 msgid "**Client ID**: ``mattermost``"
-msgstr ""
+msgstr "**클라이언트 ID**: ``mattermost``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:24
 msgid "Click **Next** and update the following values:"
-msgstr ""
+msgstr "**다음** 을 클릭하고 다음 값을 업데이트하세요:"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:26
 msgid "**Home URL**: ``https://<<siteURL>>/login/sso/saml``"
-msgstr ""
+msgstr "**홈 URL**: ``https://<<siteURL>>/login/sso/saml``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:27
 msgid "**Valid redirect URIs**: ``https://<<siteURL>>/login/sso/saml``"
-msgstr ""
+msgstr "**유효한 리디렉션 URI**: ``https://<<siteURL>>/login/sso/saml``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:29
 msgid "**Save** the client."
-msgstr ""
+msgstr "클라이언트를 **저장** 하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:31
 msgid "Under the **Settings** tab, update the following values:"
-msgstr ""
+msgstr "**설정** 탭에서 다음 값을 업데이트하세요:"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:33
 msgid "**Enabled**: **On**"
-msgstr ""
+msgstr "**활성화**: **켜기**"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:34
 msgid "**Name ID format**: ``email``"
-msgstr ""
+msgstr "**이름 ID 형식**: ``email``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:35
 msgid "**Force Name ID format**: **On**"
-msgstr ""
+msgstr "**이름 ID 형식 강제**: **켜기**"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:36
 msgid "**Sign Documents**: **Off**"
-msgstr ""
+msgstr "**문서 서명**: **끄기**"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:33
 msgid ""
 "In Keycloak, create the Mattermost client, specify the Client ID and "
 "Client Protocol, then save your changes."
 msgstr ""
+"Keycloak에서 Mattermost 클라이언트를 생성하고,\n"
+"클라이언트 ID와 클라이언트 프로토콜을 지정한 다음 변경사항을 저장하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:41
 msgid "Navigate to the **Keys** tab."
-msgstr ""
+msgstr "**키** 탭으로 이동하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:43
 msgid "**Client signature required**: **Off**"
-msgstr ""
+msgstr "**클라이언트 서명 필요**: **끄기**"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:44
 msgid "**Encrypt Assertions**: **On**"
-msgstr ""
+msgstr "**어서션 암호화**: **켜기**"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:46
 msgid "Click **Generate**"
-msgstr ""
+msgstr "**생성** 을 클릭하세요"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:47
 msgid "Download the **private.key** file."
-msgstr ""
+msgstr "**private.key** 파일을 다운로드하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:48
 msgid "Click **Confirm**"
-msgstr ""
+msgstr "**확인** 을 클릭하세요"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:50
 msgid "Click **Export** and update the following values:"
-msgstr ""
+msgstr "**내보내기** 를 클릭하고 다음 값을 업데이트하세요:"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:52
 msgid "**Archive Format**: ``PKCS12``"
-msgstr ""
+msgstr "**아카이브 형식**: ``PKCS12``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:53
 msgid "**Key Alias**: ``mattermost``"
-msgstr ""
+msgstr "**키 별칭**: ``mattermost``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:54
 msgid "**Key Password**: ``mattermost``"
-msgstr ""
+msgstr "**키 비밀번호**: ``mattermost``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:55
 msgid "**Store Password**: ``mattermost``"
-msgstr ""
+msgstr "**저장소 비밀번호**: ``mattermost``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:58
 msgid ""
@@ -174,42 +184,47 @@ msgid ""
 "Alias`. You should use your Realm Name here, as it's designed to identify"
 " what this certificate is within your Keycloak realm."
 msgstr ""
+"아래 이미지에서는 `Realm Certificate Alias` 로 `Mattermost` 를 사용했습니다.\n"
+"이 인증서가 Keycloak 영역 내에서 무엇인지 식별하기 위해 여기에 영역 이름을 사용해야 합니다."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:43
 msgid ""
 "In Keycloak, on the Keys tab, generate new keys, export using the values "
 "documented, then select Download."
 msgstr ""
+"Keycloak의 키 탭에서 새 키를 생성하고,\n"
+"문서화된 값을 사용하여 내보낸 다음 다운로드를 선택하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:63
 msgid "Navigate to the **Client scopes** tab."
-msgstr ""
+msgstr "**클라이언트 범위** 탭으로 이동하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:65
 msgid "Select **mattermost-dedicated**"
-msgstr ""
+msgstr "**mattermost-dedicated** 를 선택하세요"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:66
 msgid "Click **Add predefined mapper**"
-msgstr ""
+msgstr "**미리 정의된 매퍼 추가** 를 클릭하세요"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:67
 msgid ""
 "Select the **X500 email**, **X500 givenName**, and **X500 surname** "
 "attributes."
 msgstr ""
+"**X500 email**, **X500 givenName**, **X500 surname** 속성을 선택하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:68
 msgid "Click **Add**."
-msgstr ""
+msgstr "**추가** 를 클릭하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:65
 msgid "In Keycloak, on the Mappers tab, add default attributes"
-msgstr ""
+msgstr "Keycloak의 매퍼 탭에서 기본 속성을 추가하세요"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:73
 msgid "Add the username and ID attribute."
-msgstr ""
+msgstr "사용자 이름과 ID 속성을 추가하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:75
 msgid ""
@@ -217,57 +232,59 @@ msgid ""
 "the ID value used here must match with your Mattermost LDAP ``ID "
 "Attribute``."
 msgstr ""
+"Mattermost 내에서 SAML 사용자를 LDAP과 동기화할 계획이라면,\n"
+"여기서 사용하는 ID 값이 Mattermost LDAP ``ID 속성`` 과 일치해야 합니다."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:77
 msgid "Select **Add Mapper** -> **By Configuration** -> User Property."
-msgstr ""
+msgstr "**매퍼 추가** -> **구성으로** -> 사용자 속성을 선택하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:78
 msgid "Set **Name** to ``Username``."
-msgstr ""
+msgstr "**이름** 을 ``Username`` 으로 설정하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:79
 msgid ""
 "Set **Property** to ``username`` (This is case sensitive and must be "
 "lowercase)."
-msgstr ""
+msgstr "**속성** 을 ``username`` 으로 설정하세요(대소문자를 구분하며 소문자여야 합니다)."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:80
 msgid "Set **SAML Attribute Name** to ``username``."
-msgstr ""
+msgstr "**SAML 속성 이름** 을 ``username`` 으로 설정하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:81
 #: ../../source/onboard/sso-saml-keycloak.rst:157
 msgid "Select **Save**."
-msgstr ""
+msgstr "**저장** 을 선택하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:82
 msgid ""
 "Repeat the above steps and use the property of ``id`` to create the ID "
 "Attribute."
-msgstr ""
+msgstr "위 단계를 반복하고 ``id`` 속성을 사용하여 ID 속성을 생성하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:75
 msgid ""
 "In Keycloak, on the Mappers tab, create a protocol mapper, then save your"
 " changes."
-msgstr ""
+msgstr "Keycloak의 매퍼 탭에서 프로토콜 매퍼를 생성한 후 변경 사항을 저장하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:90
 msgid "Once done your Mappers should look like this:"
-msgstr ""
+msgstr "완료되면 매퍼가 다음과 같이 표시됩니다:"
 
 #: ../../source/onboard/sso-saml-keycloak.rst
 msgid "Example of protocol mapper configuration."
-msgstr ""
+msgstr "프로토콜 매퍼 구성 예시."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:92
 msgid "Get the metadata URL from Keycloak:"
-msgstr ""
+msgstr "Keycloak에서 메타데이터 URL을 가져오세요:"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:94
 msgid "Within your Realm, select **Realm Settings**."
-msgstr ""
+msgstr "영역 내에서 **영역 설정** 을 선택하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:95
 msgid ""
@@ -275,6 +292,8 @@ msgid ""
 " Provider Metadata** endpoint. Right-click and copy this URL. Store for "
 "the next step."
 msgstr ""
+"**일반** 탭 하단에 **SAML 2.0 ID 공급자 메타데이터** 엔드포인트가 표시됩니다.\n"
+"이 URL을 마우스 오른쪽 버튼으로 클릭하여 복사하세요. 다음 단계를 위해 저장하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:94
 msgid ""
@@ -282,16 +301,20 @@ msgid ""
 "tab, you should see a SAML 2.0 Identify Provider Metadata endpoint. Copy "
 "this URL for the next step."
 msgstr ""
+"영역 내에서 영역 설정을 선택하세요. 일반 탭 하단에 SAML 2.0 ID 공급자 메타데이터 엔드포인트가 표시됩니다.\n"
+"다음 단계를 위해 이 URL을 복사하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:101
 msgid "Configure SAML for Mattermost"
-msgstr ""
+msgstr "Mattermost용 SAML 구성"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:103
 msgid ""
 "Start the Mattermost server and log in to Mattermost as a system admin. "
 "Go to **System Console > Authentication > SAML**."
 msgstr ""
+"Mattermost 서버를 시작하고 시스템 관리자로 Mattermost에 로그인하세요.\n"
+"**시스템 콘솔 > 인증 > SAML** 로 이동하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:105
 msgid ""
@@ -299,6 +322,8 @@ msgid ""
 "the step above and select **Get SAML Metadata from IdP**. The metadata "
 "import will populate fields related to your Keycloak configuration."
 msgstr ""
+"**ID 공급자 메타데이터 URL** 을 위 단계에서 복사한 값으로 설정하고 **IdP에서 SAML 메타데이터 가져오기** 를 선택하세요.\n"
+"메타데이터 가져오기는 Keycloak 구성과 관련된 필드를 채웁니다."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:107
 msgid ""
@@ -306,6 +331,8 @@ msgid ""
 "``mattermost.log`` file for more information. :ref:`Enable debug logging "
 "<manage/logging:how do i enable debug logging?>` and try again."
 msgstr ""
+"이 가져오기에 문제가 있는 경우 ``mattermost.log`` 파일을 확인하여 자세한 정보를 얻을 수 있습니다.\n"
+":ref:`디버그 로깅 활성화 <manage/logging:how do i enable debug logging?>` 하고 다시 시도하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:107
 msgid ""
@@ -314,92 +341,102 @@ msgid ""
 "value you copied in the previous step. When you select Get SAML Metadata "
 "from IdP, fields related to your Keycloak configuration are populated."
 msgstr ""
+"Mattermost에서 시스템 콘솔의 인증 > SAML로 이동하여 SAML을 구성하세요.\n"
+"ID 공급자 메타데이터 URL을 이전 단계에서 복사한 값으로 설정하세요.\n"
+"IdP에서 SAML 메타데이터 가져오기를 선택하면 Keycloak 구성과 관련된 필드가 채워집니다."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:112
 msgid "Set the below fields:"
-msgstr ""
+msgstr "다음 필드를 설정하세요:"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:114
 msgid "**Verify Signature**: **false**"
-msgstr ""
+msgstr "**서명 확인**: **false**"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:115
 msgid "**Service Provider Login URL**: ``http://<<siteURL>>/login/sso/saml``"
-msgstr ""
+msgstr "**서비스 제공자 로그인 URL**: ``http://<<siteURL>>/login/sso/saml``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:116
 msgid "**Service Provider Identifier**: ``mattermost``"
-msgstr ""
+msgstr "**서비스 제공자 식별자**: ``mattermost``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:118
 msgid ""
 "The Service Provider Identifier will match the **Client ID** that you "
 "configured in the second Keycloak step."
 msgstr ""
+"서비스 제공자 식별자는 두 번째 Keycloak 단계에서 구성한 **클라이언트 ID** 와 일치합니다."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:114
 msgid ""
 "In the System Console, configure SAML as documented, where the Service "
 "Provider Identifier matches the Client ID you configured in Keycloak."
 msgstr ""
+"시스템 콘솔에서 문서에 따라 SAML을 구성하세요. 여기서 서비스 제공자 식별자는 Keycloak에서 구성한 클라이언트 ID와 일치해야 합니다."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:123
 msgid ""
 "Configure the Encryption using the key you downloaded in step 6 of the "
 "Keycloak config."
 msgstr ""
+"Keycloak 구성의 6단계에서 다운로드한 키를 사용하여 암호화를 구성하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:125
 msgid "Generate the ``.crt`` file from the ``.p12`` file."
-msgstr ""
+msgstr "``.p12`` 파일에서 ``.crt`` 파일을 생성하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:127
 msgid "``openssl pkcs12 -in keystore.p12 -out mattermost.crt -nodes``"
-msgstr ""
+msgstr "``openssl pkcs12 -in keystore.p12 -out mattermost.crt -nodes``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:129
 msgid "Generate the ``.key`` file from the ``.p12`` file."
-msgstr ""
+msgstr "``.p12`` 파일에서 ``.key`` 파일을 생성하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:131
 msgid "``openssl pkcs12 -in keystore.p12 -out mattermost.key -nodes -nocerts``"
-msgstr ""
+msgstr "``openssl pkcs12 -in keystore.p12 -out mattermost.key -nodes -nocerts``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:133
 msgid ""
 "Upload both of these files within the Mattermost System Console. Make "
 "sure to select **Upload**."
 msgstr ""
+"Mattermost 시스템 콘솔 내에서 이 두 파일을 업로드하세요. **업로드** 를 선택해야 합니다."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:135
 msgid "**Service Provider Private Key**: ``mattermost.key``"
-msgstr ""
+msgstr "**서비스 제공자 개인 키**: ``mattermost.key``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:136
 msgid "**Service Provider Private Certificate**: ``mattermost.crt``"
-msgstr ""
+msgstr "**서비스 제공자 개인 인증서**: ``mattermost.crt``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:125
 msgid ""
 "In the System Console, upload both the Service Provider Private Key and "
 "the Service Provider Private Certificate."
 msgstr ""
+"시스템 콘솔에서 서비스 제공자 개인 키와 서비스 제공자 개인 인증서를 모두 업로드하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:141
 msgid "(Optional) Set up request signing with the below parameters."
-msgstr ""
+msgstr "(선택 사항) 아래 매개변수로 요청 서명을 설정하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:143
 msgid ""
 "In the System Console, you can optionally request signing with configured"
 " parameters."
 msgstr ""
+"시스템 콘솔에서 구성된 매개변수로 서명을 요청할 수 있습니다."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:146
 msgid ""
 "Set attributes for the SAML Assertions, which will update user "
 "information in Mattermost."
 msgstr ""
+"Mattermost의 사용자 정보를 업데이트할 SAML 어설션의 속성을 설정하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:148
 msgid ""
@@ -408,24 +445,26 @@ msgid ""
 "SAML configuration settings <configure/authentication-configuration-"
 "settings:saml 2.0>` for more details."
 msgstr ""
+"아래 속성은 위의 7단계와 8단계에서 가져온 것입니다. 이 값은 Keycloak 내의 **SAML 속성 이름** 이어야 합니다.\n"
+"자세한 내용은 :ref:`SAML 구성 설정 문서 <configure/authentication-configuration-settings:saml 2.0>` 를 참조하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:150
 msgid "**Email Attribute**: ``email``"
-msgstr ""
+msgstr "**이메일 속성**: ``email``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:151
 msgid "**Username Attribute**:  ``username``"
-msgstr ""
+msgstr "**사용자 이름 속성**: ``username``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:152
 msgid "**Id Attribute**: ``id``"
-msgstr ""
+msgstr "**ID 속성**: ``id``"
 
 #: ../../source/onboard/sso-saml-keycloak.rst:148
 msgid ""
 "Set attributes for the SAML assertions which updates user information in "
 "Mattermost."
-msgstr ""
+msgstr "Mattermost의 사용자 정보를 업데이트하는 SAML 어설션의 속성을 설정하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:159
 msgid ""
@@ -434,12 +473,15 @@ msgid ""
 "via **Profile > Security > Sign-in Method > Switch to SAML SSO** and log "
 "in with your SAML credentials to complete the switch."
 msgstr ""
+"완료되었습니다! SAML SSO가 성공적으로 활성화되었는지 확인하려면\n"
+"**프로필 > 보안 > 로그인 방법 > SAML SSO로 전환** 을 통해 시스템 관리자 계정을 이메일에서 SAML 기반 인증으로 전환하고\n"
+"SAML 자격 증명으로 로그인하여 전환을 완료하세요."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:161
 msgid ""
 "It's also recommended to post an announcement about how the migration "
 "will work for users."
-msgstr ""
+msgstr "사용자에게 마이그레이션이 어떻게 진행될지에 대한 공지사항을 게시하는 것도 권장됩니다."
 
 #: ../../source/onboard/sso-saml-keycloak.rst:163
 msgid ""
@@ -449,16 +491,19 @@ msgid ""
 "/authentication-configuration-settings:saml 2.0>`. You must restart the "
 "Mattermost server for the changes to take effect."
 msgstr ""
+"``config.json`` 파일을 편집하여 Keycloak용 SAML을 구성할 수도 있습니다.\n"
+"Mattermost 서버를 시작하기 전에 :ref:`SAML 구성 설정 <configure/authentication-configuration-settings:saml 2.0>` 을 기반으로\n"
+"``config.json`` 파일을 편집하여 SAML을 활성화하세요. 변경사항을 적용하려면 Mattermost 서버를 재시작해야 합니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:4
 msgid "Configure SAML synchronization with AD/LDAP"
-msgstr ""
+msgstr "SAML을 AD/LDAP과 동기화하도록 구성"
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:6
 msgid ""
 "In addition to configuring SAML sign-in, you can optionally configure "
 "synchronizing SAML accounts with AD/LDAP. When configured:"
-msgstr ""
+msgstr "SAML 로그인을 구성하는 것 외에도 SAML 계정을 AD/LDAP과 동기화하도록 선택적으로 구성할 수 있습니다. 구성 시:"
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:8
 msgid ""
@@ -466,28 +511,32 @@ msgid ""
 "SAML accounts based on changes to attributes (first name, last name, and "
 "nickname)"
 msgstr ""
+"Mattermost는 AD/LDAP에서 관련 계정 정보를 조회하고\n"
+"속성(이름, 성, 닉네임) 변경 사항을 기반으로 SAML 계정을 업데이트합니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:9
 msgid ""
 "Accounts disabled in AD/LDAP are deactivated in Mattermost, and their "
 "active sessions are revoked once Mattermost synchronizes attributes."
 msgstr ""
+"AD/LDAP에서 비활성화된 계정은 Mattermost에서도 비활성화되며,\n"
+"속성 동기화 시 해당 계정의 활성 세션이 해제됩니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:11
 msgid "To configure SAML synchronization with AD/LDAP:"
-msgstr ""
+msgstr "SAML을 AD/LDAP과 동기화하도록 구성하려면:"
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:13
 msgid ""
 "Go to **System Console > Authentication > SAML 2.0**, then set **Enable "
 "Synchronizing SAML Accounts With AD/LDAP** to **true**."
-msgstr ""
+msgstr "**시스템 콘솔 > 인증 > SAML 2.0** 으로 이동한 다음 **SAML 계정을 AD/LDAP과 동기화 활성화** 를 **true** 로 설정하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:14
 msgid ""
 "Go to  **System Console > Authentication > AD/LDAP**, then set **Enable "
 "Synchronization with AD/LDAP** to **true**."
-msgstr ""
+msgstr "**시스템 콘솔 > 인증 > AD/LDAP** 으로 이동한 다음 **AD/LDAP과 동기화 활성화** 를 **true** 로 설정하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:15
 msgid ""
@@ -495,20 +544,23 @@ msgid ""
 "Authentication > SAML 2.0**, then set **Ignore Guest Users when "
 "Synchronizing with AD/LDAP** to **true**."
 msgstr ""
+"동기화 시 게스트 사용자를 무시하려면 **시스템 콘솔 > 인증 > SAML 2.0** 으로 이동한 다음\n"
+"**AD/LDAP과 동기화 시 게스트 사용자 무시** 를 **true** 로 설정하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:16
 msgid ""
 "Set the rest of the AD/LDAP settings based on :ref:`configuration "
 "settings documentation <configure/authentication-configuration-"
 "settings:ad/ldap>` to connect Mattermost with your AD/LDAP server."
-msgstr ""
+msgstr "Mattermost를 AD/LDAP 서버와 연결하려면 :ref:`configuration settings documentation <configure/authentication-configuration-settings:ad/ldap>` 를 참조하여 "
+"나머지 AD/LDAP 설정을 구성하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:18
 msgid ""
 "If you don't want to enable AD/LDAP sign-in, go to **System Console > "
 "Authentication > AD/LDAP**, then set **Enable sign-in with AD/LDAP** to "
 "**false**."
-msgstr ""
+msgstr "AD/LDAP 로그인을 활성화하지 않으려면 **System Console > Authentication > AD/LDAP** 으로 이동한 후 **Enable sign-in with AD/LDAP** 을 **false** 로 설정하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:20
 msgid ""
@@ -518,13 +570,16 @@ msgid ""
 "minutes. If you want to synchronize immediately after disabling an "
 "account, select **AD/LDAP Synchronize Now**."
 msgstr ""
+"Mattermost가 SAML 사용자 계정을 AD/LDAP과 동기화하는 빈도를 지정하려면 **System Console > Authentication > AD/LDAP** 으로 이동한 후\n"
+"**Synchronization Interval** 을 분 단위로 설정하세요. 기본 설정은 60분입니다."
+"계정을 비활성화한 후 즉시 동기화하려면 **AD/LDAP Synchronize Now** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:21
 msgid ""
 "To confirm that Mattermost can successfully connect to your AD/LDAP "
 "server, go to **System Console > Authentication > AD/LDAP**, then select "
 "**AD/LDAP Test**."
-msgstr ""
+msgstr "Mattermost가 AD/LDAP 서버에 성공적으로 연결할 수 있는지 확인하려면 **System Console > Authentication > AD/LDAP** 으로 이동한 후 **AD/LDAP Test** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:23
 msgid ""
@@ -533,26 +588,28 @@ msgid ""
 "given email address doesn't have an AD/LDAP account, they will be "
 "deactivated in Mattermost on the next AD/LDAP sync."
 msgstr ""
+"AD/LDAP과의 동기화가 활성화되면 사용자 속성이 이메일 주소를 기반으로 AD/LDAP과 동기화됩니다."
+"특정 이메일 주소를 가진 사용자가 AD/LDAP 계정이 없는 경우, 다음 AD/LDAP 동기화 시 Mattermost에서 비활성화됩니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:25
 msgid "To re-activate the account:"
-msgstr ""
+msgstr "계정을 다시 활성화하려면:"
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:27
 msgid "Add the user to your AD/LDAP server."
-msgstr ""
+msgstr "사용자를 AD/LDAP 서버에 추가하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:28
 msgid ""
 "Purge all caches in Mattermost by going to **System Console > Environment"
 " > Web Server**, then select **Purge All Caches**."
-msgstr ""
+msgstr "**System Console > Environment > Web Server** 으로 이동한 후 **Purge All Caches** 를 선택하여 Mattermost의 모든 캐시를 삭제하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:29
 msgid ""
 "Run AD/LDAP synchronization by going to **System Console > Authentication"
 " > AD/LDAP**, then select **AD/LDAP Synchronize Now**."
-msgstr ""
+msgstr "**System Console > Authentication > AD/LDAP** 으로 이동한 후 **AD/LDAP Synchronize Now** 를 선택하여 AD/LDAP 동기화를 실행하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:30
 msgid ""
@@ -560,6 +617,8 @@ msgid ""
 "Environment > Web Server**, then select **Purge All Caches** again. This "
 "re-activates the account in Mattermost."
 msgstr ""
+"**System Console > Environment > Web Server** 으로 이동한 후 **Purge All Caches** 를 다시 선택하여 Mattermost의 모든 캐시를 다시 삭제하세요."
+"이렇게 하면 Mattermost에서 계정이 다시 활성화됩니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:33
 msgid ""
@@ -568,37 +627,39 @@ msgid ""
 " System Console users list, all of their sessions will expire and they "
 "won't be able to log back in to Mattermost."
 msgstr ""
+"사용자가 AD/LDAP에서 비활성화되면 다음 동기화 시 Mattermost에서도 비활성화됩니다."
+"시스템 콘솔 사용자 목록에서 \"비활성화됨\"으로 표시되며, 모든 세션이 만료되고 Mattermost에 다시 로그인할 수 없게 됩니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:35
 msgid ""
 "If a user is deactivated from SAML, their session won't expire until "
 "they're deactivated from AD/LDAP. However, they won't be able to log back"
 " in to Mattermost."
-msgstr ""
+msgstr "사용자가 SAML에서 비활성화되면 AD/LDAP에서 비활성화될 때까지 세션이 만료되지 않습니다. 하지만 Mattermost에 다시 로그인할 수는 없습니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:38
 msgid ""
 "SAML synchronization with AD/LDAP is designed to pull user attributes "
 "such as first name and last name from your AD/LDAP, not to control "
 "authentication."
-msgstr ""
+msgstr "SAML과 AD/LDAP의 동기화는 인증을 제어하기 위한 것이 아니라 이름과 성과 같은 사용자 속성을 AD/LDAP에서 가져오기 위해 설계되었습니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:40
 msgid ""
 "In particular, the user filter cannot be used to control who can log in "
 "to Mattermost, this should be controlled by your SAML service provider's "
 "group permissions."
-msgstr ""
+msgstr "특히 사용자 필터는 Mattermost에 로그인할 수 있는 사용자를 제어하는 데 사용할 수 없으며, 이는 SAML 서비스 제공자의 그룹 권한으로 제어해야 합니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:42
 msgid ""
 "See :ref:`technical description of SAML synchronization with AD/LDAP "
 "<sso-saml-technical>` for more details."
-msgstr ""
+msgstr "자세한 내용은 :ref:`SAML과 AD/LDAP 동기화의 기술적 설명 <sso-saml-technical>` 을 참고하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:45
 msgid "Override SAML data with AD/LDAP data"
-msgstr ""
+msgstr "SAML 데이터를 AD/LDAP 데이터로 덮어쓰기"
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:47
 msgid ""
@@ -606,7 +667,8 @@ msgid ""
 "information. For more information on binding a user with the SAML ID "
 "Attribute, please refer to this :ref:`documentation <onboard/sso-saml-"
 "okta:how to bind authentication to id attribute instead of email>`."
-msgstr ""
+msgstr "또는 SAML 바인드 데이터를 AD/LDAP 정보로 덮어쓸 수 있습니다. SAML ID 속성으로 사용자를 바인딩하는 방법에 대한 자세한 내용은 "
+":ref:`이 문서 <onboard/sso-saml-okta:how to bind authentication to id attribute instead of email>` 를 참고하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:49
 msgid ""
@@ -615,7 +677,8 @@ msgid ""
 "recommend using this configuration with the SAML ID Attribute to help "
 "ensure new users are not created when the email address changes for a "
 "user."
-msgstr ""
+msgstr "이 프로세스는 SAML 이메일 주소를 AD/LDAP 이메일 주소 데이터로 덮어쓰거나, 구성된 경우 SAML ID 속성을 AD/LDAP ID 속성으로 덮어씁니다. "
+"사용자의 이메일 주소가 변경될 때 새 사용자가 생성되지 않도록 하기 위해 SAML ID 속성과 함께 이 구성을 사용하는 것을 권장합니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:51
 msgid ""
@@ -624,46 +687,47 @@ msgid ""
 "systems and comparing the ID data. Mapping ID Attributes for both AD/LDAP"
 " and SAML within Mattermost to fields that hold the same data will ensure"
 " the IDs match as well."
-msgstr ""
+msgstr "이 프로세스에서 기존 사용자 계정이 비활성화되지 않도록 하려면, 두 시스템에서 데이터를 내보내고 ID 데이터를 비교하여 SAML ID가 LDAP ID와 일치하는지 확인하세요. "
+"Mattermost 내에서 AD/LDAP과 SAML 모두의 ID 속성을 동일한 데이터를 보유하는 필드에 매핑하면 ID가 일치하는지 확인할 수 있습니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:53
 msgid ""
 "Set the SAML ``Id Attribute`` by going to **System Console > "
 "Authentication > SAML 2.0 > Id Attribute**."
-msgstr ""
+msgstr "**System Console > Authentication > SAML 2.0 > Id Attribute** 로 이동하여 SAML ``Id Attribute`` 를 설정하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:54
 msgid ""
 "Set **System Console > Authentication > SAML 2.0 > Override SAML bind "
 "data with AD/LDAP information** to **true**."
-msgstr ""
+msgstr "**System Console > Authentication > SAML 2.0 > Override SAML bind data with AD/LDAP information** 을 **true** 로 설정하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:55
 msgid ""
 "Set **System Console > Authentication > SAML 2.0 > Enable Synchronizing "
 "SAML Accounts With AD/LDAP** to **true**."
-msgstr ""
+msgstr "**System Console > Authentication > SAML 2.0 > Enable Synchronizing SAML Accounts With AD/LDAP** 을 **true** 로 설정하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:56
 msgid ""
 "Run AD/LDAP sync by going to **System Console > Authentication > "
 "AD/LDAP**, then select **AD/LDAP Synchronize Now**."
-msgstr ""
+msgstr "**System Console > Authentication > AD/LDAP** 로 이동한 후 **AD/LDAP Synchronize Now** 를 선택하여 AD/LDAP 동기화를 실행하세요."
 
 #: ../../source/onboard/sso-saml-faq.rst:6
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/onboard/sso-saml-faq.rst:9
 msgid "How to bind authentication to Id attribute instead of email"
-msgstr ""
+msgstr "이메일 대신 Id 속성으로 인증을 바인딩하는 방법"
 
 #: ../../source/onboard/sso-saml-faq.rst:11
 msgid ""
 "Alternatively, you can use an ``Id`` attribute instead of email to bind "
 "the user.  We recommend choosing an ID that is unique and will not change"
 " over time."
-msgstr ""
+msgstr "또는 이메일 대신 ``Id`` 속성을 사용하여 사용자를 바인딩할 수 있습니다. 시간이 지나도 변경되지 않는 고유한 ID를 선택하는 것을 권장합니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:13
 msgid ""
@@ -674,6 +738,10 @@ msgid ""
 "This configuration is also useful when a user's name changes and their "
 "email needs to be updated."
 msgstr ""
+"``Id`` 속성으로 구성하면 이전 사용자의 정보가 노출되지 않고 새 사용자에게 이메일 주소를 재사용할 수 있습니다. "
+"예를 들어, joe.smith@mattermost.com 이메일 주소를 가진 사용자가 이전에 직원이었다면, "
+"Joe Smith라는 새 직원이 동일한 이메일을 사용할 수 있습니다. "
+"이 구성은 사용자의 이름이 변경되고 이메일을 업데이트해야 할 때도 유용합니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:15
 msgid ""
@@ -681,6 +749,8 @@ msgid ""
 "Here is the process applied to new account creations and to accounts "
 "logging in after the configuration:"
 msgstr ""
+"이 프로세스는 이메일 바인딩과의 이전 버전 호환성을 고려하여 설계되었습니다. "
+"다음은 새 계정 생성과 구성 후 로그인하는 계정에 적용되는 프로세스입니다:"
 
 #: ../../source/onboard/sso-saml-faq.rst:17
 msgid ""
@@ -688,6 +758,8 @@ msgid ""
 "the Id Attribute (as long as it has been configured) or bound by email "
 "using the email received from SAML."
 msgstr ""
+"SAML으로 인증된 사용자는 Id 속성을 사용하여 SAML 서비스 사용자에 바인딩되거나(구성된 경우), "
+"SAML에서 받은 이메일을 사용하여 이메일로 바인딩됩니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:18
 msgid ""
@@ -695,22 +767,26 @@ msgid ""
 "authentication, then the server uses the \"Id\" field of the SAML "
 "authentication to search the user."
 msgstr ""
+"사용자가 로그인을 시도하고 SAML 서버가 유효한 인증으로 응답하면, "
+"서버는 SAML 인증의 \"Id\" 필드를 사용하여 사용자를 검색합니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:19
 msgid "If a user bound to that ID already exists, it logs in as that user."
-msgstr ""
+msgstr "해당 ID에 바인딩된 사용자가 이미 존재하면 해당 사용자로 로그인합니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:20
 msgid ""
 "If a user bound to that ID does not exist, it will search base on the "
 "email."
-msgstr ""
+msgstr "해당 ID에 바인딩된 사용자가 존재하지 않으면 이메일을 기반으로 검색합니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:21
 msgid ""
 "If a user bound to the email exists, it logs in with email and updates "
 "the autentication data to the ID, instead of the email."
 msgstr ""
+"이메일에 바인딩된 사용자가 존재하면 이메일로 로그인하고 "
+"인증 데이터를 이메일 대신 ID로 업데이트합니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:22
 msgid ""
@@ -718,22 +794,24 @@ msgid ""
 "Mattermost account bound to the SAML account by ID and will allow the "
 "user to log in."
 msgstr ""
+"ID나 이메일에 바인딩된 사용자가 존재하지 않으면, "
+"ID로 SAML 계정에 바인딩된 새 Mattermost 계정을 생성하고 사용자가 로그인할 수 있도록 합니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:25
 msgid "Existing accounts won't update until they log in to the server."
-msgstr ""
+msgstr "기존 계정은 서버에 로그인할 때까지 업데이트되지 않습니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:28
 msgid ""
 "Can SAML via Microsoft ADFS be configured with Integrated Windows "
 "Authentication (IWA)?"
-msgstr ""
+msgstr "Microsoft ADFS를 통한 SAML을 통합 Windows 인증(IWA)으로 구성할 수 있나요?"
 
 #: ../../source/onboard/sso-saml-faq.rst:30
 msgid ""
 "Yes. IWA is supported on the browser, with support added to iOS and "
 "Android mobile apps in Q2/2019 (mobile apps v1.18 and later)."
-msgstr ""
+msgstr "네. IWA는 브라우저에서 지원되며, 2019년 2분기(mobile apps v1.18 이상)에 iOS 및 Android 모바일 앱에 지원이 추가되었습니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:32
 msgid ""
@@ -741,10 +819,12 @@ msgid ""
 "limitation in Electron. As a workaround you may create a browser desktop "
 "shortcut for quick access to Mattermost, just like a Desktop App."
 msgstr ""
+"하지만 Electron의 제한으로 인해 Mattermost 데스크톱 앱에서는 IWA가 지원되지 않습니다. "
+"대안으로 데스크톱 앱처럼 Mattermost에 빠르게 접근할 수 있는 브라우저 데스크톱 바로가기를 만들 수 있습니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:35
 msgid "Can I provision and deprovision users who log in via SAML?"
-msgstr ""
+msgstr "SAML을 통해 로그인하는 사용자를 프로비저닝하고 프로비저닝 해제할 수 있나요?"
 
 #: ../../source/onboard/sso-saml-faq.rst:37
 msgid ""
@@ -752,22 +832,25 @@ msgid ""
 "SCIM. See :ref:`\"How do I deactivate users?\" <onboard/ad-ldap:how do i "
 "deactivate users?>` for more information."
 msgstr ""
+"네, 하지만 이를 위해서는 AD/LDAP에 의존해야 합니다. 현재는 SCIM을 지원하지 않습니다. "
+"자세한 내용은 :ref:`\"사용자를 비활성화하려면 어떻게 해야 하나요?\" <onboard/ad-ldap:how do i deactivate users?>` 를 참조하세요."
 
 #: ../../source/onboard/sso-saml-faq.rst:40
 msgid ""
 "How do I migrate users from one authentication method (e.g. email) to "
 "SAML?"
-msgstr ""
+msgstr "사용자를 한 인증 방법(예: 이메일)에서 SAML로 마이그레이션하려면 어떻게 해야 하나요?"
 
 #: ../../source/onboard/sso-saml-faq.rst:42
 msgid ""
 "See the :ref:`mmctl user migrate-auth <manage/mmctl-command-line-"
 "tool:mmctl user migrate-auth>` command documentation for details."
 msgstr ""
+"자세한 내용은 :ref:`mmctl user migrate-auth <manage/mmctl-command-line-tool:mmctl user migrate-auth>` 명령 문서를 참조하세요."
 
 #: ../../source/onboard/sso-saml-faq.rst:45
 msgid "How is SAML different from OAuth 2.0 and OpenId Connect?"
-msgstr ""
+msgstr "SAML은 OAuth 2.0 및 OpenId Connect와 어떻게 다른가요?"
 
 #: ../../source/onboard/sso-saml-faq.rst:47
 msgid ""
@@ -775,12 +858,15 @@ msgid ""
 "app is authorized to access resources, such as Google contact list. It "
 "doesn’t deal with authentication."
 msgstr ""
+"OAuth 2.0은 주로 위임된 권한 부여를 위해 설계되었으며, 앱이 Google 연락처 목록과 같은 리소스에 접근할 수 있는 권한을 부여받습니다. "
+"인증은 처리하지 않습니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:49
 msgid ""
 "OpenID Connect is built on top of OAuth 2.0, which supports "
 "authentication and thus direct SSO."
 msgstr ""
+"OpenID Connect는 OAuth 2.0을 기반으로 구축되었으며, 인증을 지원하므로 직접적인 SSO가 가능합니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:51
 msgid ""
@@ -788,10 +874,12 @@ msgid ""
 "settings. OpenID Connect is more common in consumer websites and "
 "web/mobile apps."
 msgstr ""
+"SAML은 OpenID Connect와 유사하지만 주로 기업 환경에서 사용됩니다. "
+"OpenID Connect는 소비자 웹사이트와 웹/모바일 앱에서 더 일반적으로 사용됩니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:53
 msgid ""
 "Learn more at https://hackernoon.com/demystifying-oauth-2-0-and-openid-"
 "connect-and-saml-12aa4cf9fdba."
 msgstr ""
-
+"자세한 내용은 https://hackernoon.com/demystifying-oauth-2-0-and-openid-connect-and-saml-12aa4cf9fdba 에서 확인하세요."

@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/configure/config-proxy-apache2.rst:7
 msgid "Configuring Apache2 as a proxy for Mattermost Server (Unofficial)"
-msgstr ""
+msgstr "Mattermost 서버용 Apache2 프록시 구성 (비공식)"
 
 #: ../../source/configure/config-proxy-apache2.rst:9
 msgid ""
@@ -33,6 +33,10 @@ msgid ""
 "<https://github.com/mattermost/docs/blob/master/source/configure/config-"
 "proxy-apache2.rst>`_."
 msgstr ""
+"이 비공식 가이드는 Mattermost 커뮤니티에서 유지 관리되며 이 배포 구성은 아직 Mattermost, Inc.에서 공식적으로 지원하지 않습니다. "
+"`커뮤니티 테스트, 피드백 및 개선 사항은 환영하며 매우 감사합니다 <https://github.com/mattermost/docs/issues/1295>`_. "
+"`GitHub에서 이 페이지를 편집할 수 있습니다 <https://github.com/mattermost/docs/blob/master/source/configure/config-"
+"proxy-apache2.rst>`_."
 
 #: ../../source/configure/config-proxy-apache2.rst:11
 msgid ""
@@ -44,14 +48,17 @@ msgid ""
 "you'll want to create a new configuration file along the lines of "
 "``mysubdomain.mydomain.com.conf``."
 msgstr ""
+"Ubuntu와 같은 Debian 기반 운영 체제에서는 Apache2 프록시 구성이 ``/etc/apache2/sites-available`` 디렉토리에서 이루어집니다. "
+"Red Hat 기반 시스템은 Apache 구성 파일을 `다르게 구성합니다 <https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/system_administrators_guide"
+"/ch-web_servers>`_. 서브도메인에 Mattermost를 설정하는 경우 ``mysubdomain.mydomain.com.conf`` 와 같은 새 구성 파일을 생성해야 합니다."
 
 #: ../../source/configure/config-proxy-apache2.rst:13
 msgid "**To configure Apache2 as a proxy**"
-msgstr ""
+msgstr "**Apache2를 프록시로 구성하려면**"
 
 #: ../../source/configure/config-proxy-apache2.rst:15
 msgid "SSH into your server."
-msgstr ""
+msgstr "서버에 SSH로 접속하세요."
 
 #: ../../source/configure/config-proxy-apache2.rst:16
 msgid ""
@@ -59,6 +66,8 @@ msgid ""
 "``mod_proxy_http``, and ``mod_proxy_wstunnel`` are installed and enabled."
 " If not, follow the instructions from your Linux distribution to do so."
 msgstr ""
+"Apache 모듈 ``mod_rewrite``, ``mod_proxy``, ``mod_proxy_http``, ``mod_proxy_wstunnel`` 이 설치되어 있고 활성화되어 있는지 확인하세요. "
+"그렇지 않은 경우 Linux 배포판의 지침에 따라 설치하세요."
 
 #: ../../source/configure/config-proxy-apache2.rst:17
 msgid ""
@@ -66,32 +75,36 @@ msgid ""
 "start with a copy of ``000-default.conf`` or ``default-ssl.conf`` (on "
 "Ubuntu)."
 msgstr ""
+"위에서 언급한 구성 파일을 생성하세요. ``000-default.conf`` 또는 ``default-ssl.conf`` (Ubuntu의 경우)의 복사본으로 시작하는 것이 도움이 됩니다."
 
 #: ../../source/configure/config-proxy-apache2.rst:18
 msgid "Edit your configuration using the guide below:"
-msgstr ""
+msgstr "아래 가이드를 사용하여 구성을 편집하세요:"
 
 #: ../../source/configure/config-proxy-apache2.rst:20
 msgid ""
 "If you're not setting up a subdomain, your ``ServerName`` will simply be "
 "set to ``mydomain.com``."
 msgstr ""
+"서브도메인을 설정하지 않는 경우 ``ServerName`` 은 단순히 ``mydomain.com`` 으로 설정됩니다."
 
 #: ../../source/configure/config-proxy-apache2.rst:21
 msgid ""
 "``ServerAlias`` can been added too if you want to capture "
 "``www.mydomain.com``."
 msgstr ""
+"``www.mydomain.com`` 을 캡처하려면 ``ServerAlias`` 도 추가할 수 있습니다."
 
 #: ../../source/configure/config-proxy-apache2.rst:22
 msgid "Remember to change the values to match your server's name, etc."
-msgstr ""
+msgstr "서버 이름 등에 맞게 값을 변경하는 것을 잊지 마세요."
 
 #: ../../source/configure/config-proxy-apache2.rst:23
 msgid ""
 "If you have enabled TLS in the Mattermost settings, you must use the "
 "protocol ``wss://`` instead of ``ws://`` in the ``RewriteRule``."
 msgstr ""
+"Mattermost 설정에서 TLS를 활성화한 경우 ``RewriteRule`` 에서 ``ws://`` 대신 ``wss://`` 프로토콜을 사용해야 합니다."
 
 #: ../../source/configure/config-proxy-apache2.rst:24
 msgid ""
@@ -99,6 +112,7 @@ msgid ""
 "setting the port in the VirtualHost element, add ``Listen 8443`` on a "
 "separate line before the VirtualHost line."
 msgstr ""
+"다른 포트(예: 8443)에서 요청을 제공하려면 VirtualHost 요소에서 포트를 설정하는 것 외에도 VirtualHost 줄 앞에 별도의 줄에 ``Listen 8443`` 을 추가하세요."
 
 #: ../../source/configure/config-proxy-apache2.rst:51
 msgid ""
@@ -106,18 +120,20 @@ msgid ""
 "before now on Apache2, run ``a2ensite mysubdomain.mydomain.com`` to "
 "enable the site (do not run ``a2ensite mysubdomain.mydomain.com.conf``)."
 msgstr ""
+"(Debian/Ubuntu만 해당) Apache2에서 아직 서브도메인을 설정하지 않았을 가능성이 높으므로 사이트를 활성화하려면 ``a2ensite mysubdomain.mydomain.com`` 을 "
+"실행하세요(``a2ensite mysubdomain.mydomain.com.conf`` 는 실행하지 마세요)."
 
 #: ../../source/configure/config-proxy-apache2.rst:53
 msgid "Restart Apache2."
-msgstr ""
+msgstr "Apache2를 재시작하세요."
 
 #: ../../source/configure/config-proxy-apache2.rst:55
 msgid "On Ubuntu 14.04 and RHEL 6: ``sudo service apache2 restart``"
-msgstr ""
+msgstr "Ubuntu 14.04 및 RHEL 6: ``sudo service apache2 restart``"
 
 #: ../../source/configure/config-proxy-apache2.rst:56
 msgid "On Ubuntu 16.04+ and RHEL 7+: ``sudo systemctl restart apache2``"
-msgstr ""
+msgstr "Ubuntu 16.04+ 및 RHEL 7+: ``sudo systemctl restart apache2``"
 
 #: ../../source/configure/config-proxy-apache2.rst:58
 msgid ""
@@ -127,4 +143,6 @@ msgid ""
 "external access to Mattermost on port 8065, in the config file, set "
 "``ListenAddress`` to ``localhost:8065`` instead of ``:8065``."
 msgstr ""
-
+"이제 모든 설정이 완료되었습니다! Mattermost 구성 파일이 올바른 URL(포트가 포함될 수 있음)을 가리키고 있는지 확인한 다음, "
+"배포 후 소켓 연결이 끊어지지 않는지 확인하세요. 포트 8065에서 Mattermost에 대한 외부 액세스를 방지하려면 "
+"구성 파일에서 ``ListenAddress`` 를 ``:8065`` 대신 ``localhost:8065`` 로 설정하세요."

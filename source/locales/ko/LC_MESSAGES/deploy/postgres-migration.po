@@ -21,19 +21,19 @@ msgstr ""
 
 #: ../../source/deploy/postgres-migration.rst:9
 msgid "Automate PostgreSQL migration"
-msgstr ""
+msgstr "PostgreSQL 마이그레이션 자동화"
 
 #: ../../source/deploy/postgres-migration.rst:9
 msgid "Manually migrate to PostgreSQL"
-msgstr ""
+msgstr "PostgreSQL로 수동 마이그레이션"
 
 #: ../../source/deploy/postgres-migration.rst:2
 msgid "Migration guidelines from MySQL to PostgreSQL"
-msgstr ""
+msgstr "MySQL에서 PostgreSQL로의 마이그레이션 가이드라인"
 
 #: ../../source/_static/badges/allplans-selfhosted.rst:7
 msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `모든 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
@@ -43,7 +43,7 @@ msgstr ""
 msgid ""
 "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
 "deployments"
-msgstr ""
+msgstr "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
@@ -58,6 +58,11 @@ msgid ""
 "migrating from a MySQL database, we have taken proactive measures to "
 "provide guidance and best practices."
 msgstr ""
+"Mattermost v8.0부터 :ref:`PostgreSQL <deploy/software-hardware-"
+"requirements:database software>` 는 플랫폼의 성능과 기능을 향상시키기 위한 "
+"Mattermost의 선택된 데이터베이스입니다. MySQL 데이터베이스에서 마이그레이션에 관심이 있는 "
+"커뮤니티 구성원을 지원하는 것의 중요성을 인식하여, 우리는 지침과 모범 사례를 제공하기 위한 "
+"사전 조치를 취했습니다."
 
 #: ../../source/deploy/postgres-migration.rst:17
 msgid ""
@@ -66,6 +71,9 @@ msgid ""
 "``migration-assist`` tool to streamline the migration process, alleviate "
 "potential challenges, and faciliate a smooth transition."
 msgstr ""
+":doc:`MySQL에서 PostgreSQL로 자동 마이그레이션 </deploy/postgres-migration-assist-tool>` - "
+"마이그레이션 프로세스를 간소화하고 잠재적인 문제를 완화하며 원활한 전환을 촉진하기 위한 포괄적인 "
+"지침 세트와 ``migration-assist`` 도구입니다."
 
 #: ../../source/deploy/postgres-migration.rst:18
 msgid ""
@@ -74,14 +82,17 @@ msgid ""
 "administrators to own the migration process, or if you want to learn what"
 " the ``migration-assist`` tool automates for you."
 msgstr ""
+":doc:`MySQL에서 PostgreSQL로 수동 마이그레이션 </deploy/manual-postgres-migration>` - "
+"조직에 마이그레이션 프로세스를 담당할 데이터베이스 관리자가 있거나 ``migration-assist`` 도구가 "
+"자동화하는 내용을 배우고 싶은 경우에 좋은 옵션입니다."
 
 #: ../../source/deploy/postgres-migration.rst:21
 msgid "Frequently asked questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/deploy/postgres-migration.rst:24
 msgid "Why is Mattermost dropping support for MySQL?"
-msgstr ""
+msgstr "Mattermost가 MySQL 지원을 중단하는 이유는 무엇인가요?"
 
 #: ../../source/deploy/postgres-migration.rst:26
 msgid ""
@@ -94,20 +105,25 @@ msgid ""
 "robust, and scalable database interactions for all Mattermost "
 "deployments."
 msgstr ""
+"Mattermost는 개발을 간소화하고 더 효율적이고 최적화된 기능을 제공하는 데 집중하기 위해 MySQL "
+"데이터베이스 지원을 중단하기로 결정했습니다. 일반적으로 더 발전되고 기업 환경에 더 적합한 것으로 "
+"간주되는 PostgreSQL만 지원함으로써 Mattermost는 복잡성을 줄이고, 성능을 개선하며, 제품을 "
+"향상시키기 위한 리소스를 더 잘 할당할 수 있습니다. 이러한 변경은 모든 Mattermost 배포에 대해 "
+"더 일관되고 견고하며 확장 가능한 데이터베이스 상호 작용을 보장하는 데 도움이 됩니다."
 
 #: ../../source/deploy/postgres-migration.rst:29
 msgid "Is migrating to PostgreSQL before upgrading Mattermost recommended?"
-msgstr ""
+msgstr "Mattermost를 업그레이드하기 전에 PostgreSQL로 마이그레이션하는 것이 권장되나요?"
 
 #: ../../source/deploy/postgres-migration.rst:31
 msgid ""
 "Yes. We also recommend upgrading to Mattermost server v8.x or later "
 "before migrating to PostgreSQL."
-msgstr ""
+msgstr "네. PostgreSQL로 마이그레이션하기 전에 Mattermost 서버 v8.x 이상으로 업그레이드하는 것도 권장합니다."
 
 #: ../../source/deploy/postgres-migration.rst:34
 msgid "Can the migration-assist be run on the Mattermost server?"
-msgstr ""
+msgstr "migration-assist를 Mattermost 서버에서 실행할 수 있나요?"
 
 #: ../../source/deploy/postgres-migration.rst:36
 msgid ""
@@ -117,10 +133,14 @@ msgid ""
 "migration against a copy of the MySQL database to ensure that the "
 "migration process does not impact the production environment."
 msgstr ""
+"기술적으로는 가능합니다. ``migration-assist`` 도구는 Mattermost 서버에서 실행할 수 있습니다. "
+"하지만 성능 문제를 피하기 위해 별도의 서버에서 도구를 실행하는 것이 권장됩니다. 마이그레이션 "
+"프로세스가 프로덕션 환경에 영향을 미치지 않도록 MySQL 데이터베이스의 복사본에 대해 마이그레이션을 "
+"실행하는 것이 좋습니다."
 
 #: ../../source/deploy/postgres-migration.rst:39
 msgid "How large should the PostgreSQL server be?"
-msgstr ""
+msgstr "PostgreSQL 서버의 크기는 어느 정도여야 하나요?"
 
 #: ../../source/deploy/postgres-migration.rst:41
 msgid ""
@@ -128,10 +148,12 @@ msgid ""
 "initially. We recommend monitoring the performance of the PostgreSQL "
 "server and adjusting the resources as needed."
 msgstr ""
+"PostgreSQL 서버의 크기는 초기에는 MySQL 서버와 동일해야 합니다. PostgreSQL 서버의 성능을 "
+"모니터링하고 필요에 따라 리소스를 조정하는 것이 좋습니다."
 
 #: ../../source/deploy/postgres-migration.rst:44
 msgid "How large should the server running ``migration-assist`` server be?"
-msgstr ""
+msgstr "``migration-assist`` 서버를 실행하는 서버의 크기는 어느 정도여야 하나요?"
 
 #: ../../source/deploy/postgres-migration.rst:46
 msgid ""
@@ -141,10 +163,13 @@ msgid ""
 "the size of the MySQL database, your downtime limitations, and the "
 "configuration of ``pgloader``."
 msgstr ""
+"도구 자체는 가볍고 대형 서버가 필요하지 않습니다. 기본 구성의 경우 2개의 CPU 코어와 16GB RAM이 "
+"있는 서버면 충분합니다. 그러나 MySQL 데이터베이스의 크기, 다운타임 제한 및 ``pgloader`` 의 "
+"구성에 따라 리소스를 조정해야 할 수 있습니다."
 
 #: ../../source/deploy/postgres-migration.rst:49
 msgid "Do we/will Mattermost bundle pgloader or is that a separate install?"
-msgstr ""
+msgstr "Mattermost가 pgloader를 번들로 제공하나요, 아니면 별도로 설치해야 하나요?"
 
 #: ../../source/deploy/postgres-migration.rst:51
 msgid ""
@@ -153,22 +178,25 @@ msgid ""
 ":ref:`install pgloader <deploy/manual-postgres-migration:install "
 "pgloader>` documentation."
 msgstr ""
+"Mattermost는 Mattermost 서버에 pgloader를 번들로 제공하지 않습니다. pgloader를 별도로 "
+"설치해야 합니다. 자세한 내용은 :ref:`install pgloader <deploy/manual-postgres-migration:install "
+"pgloader>` 문서를 참조하세요."
 
 #: ../../source/deploy/postgres-migration.rst:54
 msgid ""
 "Are there any other migrations available for plugins, or just Boards, "
 "Playbooks, and Calls?"
-msgstr ""
+msgstr "Boards, Playbooks, Calls 외에 다른 플러그인용 마이그레이션이 있나요?"
 
 #: ../../source/deploy/postgres-migration.rst:56
 msgid ""
 "We're developing migrations for other plugins, such as NPS-plugin. Please"
 " stay tuned for updates."
-msgstr ""
+msgstr "NPS-plugin과 같은 다른 플러그인용 마이그레이션을 개발 중입니다. 업데이트를 기다려주세요."
 
 #: ../../source/deploy/postgres-migration.rst:59
 msgid "Do these processes support AWS RDS databases?"
-msgstr ""
+msgstr "이 프로세스들은 AWS RDS 데이터베이스를 지원하나요?"
 
 #: ../../source/deploy/postgres-migration.rst:61
 msgid ""
@@ -176,10 +204,12 @@ msgid ""
 "adjust the security group settings to allow the migration process to "
 "access the databases."
 msgstr ""
+"네, 이 프로세스들은 AWS RDS 데이터베이스를 지원합니다. 하지만 마이그레이션 프로세스가 "
+"데이터베이스에 접근할 수 있도록 보안 그룹 설정을 조정해야 할 수 있습니다."
 
 #: ../../source/deploy/postgres-migration.rst:64
 msgid "Does Mattermost support MariaDB? If not, why not?"
-msgstr ""
+msgstr "Mattermost는 MariaDB를 지원하나요? 지원하지 않는다면 그 이유는 무엇인가요?"
 
 #: ../../source/deploy/postgres-migration.rst:66
 msgid ""
@@ -191,6 +221,11 @@ msgid ""
 "advanced features, and suitability for enterprise use, making it the "
 "chosen database for Mattermost."
 msgstr ""
+"Mattermost는 MariaDB를 지원하지 않습니다. 이 결정의 주요 이유는 단일 데이터베이스 기술에 "
+"집중하여 개발과 유지보수를 간소화하기 위함입니다. PostgreSQL을 표준화함으로써 Mattermost는 "
+"최적화된 기능, 향상된 성능, 그리고 더 집중된 엔지니어링 노력을 제공할 수 있습니다. "
+"PostgreSQL은 견고성, 고급 기능, 기업용 적합성으로 잘 알려져 있어 Mattermost의 선택된 "
+"데이터베이스가 되었습니다."
 
 #: ../../source/deploy/postgres-migration.rst:68
 msgid ""
@@ -198,14 +233,16 @@ msgid ""
 "additional complexity and potential inconsistency, which the Mattermost "
 "development team aims to avoid by limiting database support."
 msgstr ""
+"MariaDB는 MySQL과 상당 부분 호환되지만, 추가적인 복잡성과 잠재적인 불일치를 초래하며, "
+"Mattermost 개발팀은 데이터베이스 지원을 제한함으로써 이를 피하고자 합니다."
 
 #: ../../source/deploy/postgres-migration.rst:71
 msgid "Troubleshooting"
-msgstr ""
+msgstr "문제 해결"
 
 #: ../../source/deploy/postgres-migration.rst:74
 msgid "Unsupported authentication for MySQL"
-msgstr ""
+msgstr "MySQL의 지원되지 않는 인증"
 
 #: ../../source/deploy/postgres-migration.rst:76
 msgid ""
@@ -218,10 +255,15 @@ msgid ""
 "``mysql.cnf`` file. Also, do not forget to update your user to use this "
 "authentication method."
 msgstr ""
+"MySQL v8 인증으로 인한 오류가 발생하는 경우, 이는 pgloader의 `알려진 문제 "
+"<https://github.com/dimitri/pgloader/issues/782>`__ 와 관련이 있을 수 있습니다. 해결책은 "
+"MySQL 구성에서 기본 인증 방법을 ``mysql_native_password``로 설정하는 것입니다. 이를 위해 "
+"``mysql.cnf`` 파일에 ``default-authentication-plugin=mysql_native_password`` 값을 추가하세요. "
+"또한 사용자가 이 인증 방법을 사용하도록 업데이트하는 것을 잊지 마세요."
 
 #: ../../source/deploy/postgres-migration.rst:83
 msgid "Errors during the pgloader command execution"
-msgstr ""
+msgstr "pgloader 명령 실행 중 오류"
 
 #: ../../source/deploy/postgres-migration.rst:85
 msgid ""
@@ -231,6 +273,9 @@ msgid ""
 "the migration if there are errors during the execution of the "
 "``pgloader`` command."
 msgstr ""
+"``pgloader`` 명령 실행 중 오류가 발생하면 두 데이터베이스에 모두 접근 가능한지, 사용자가 "
+"데이터베이스에 접근할 수 있는 필요한 권한을 가지고 있는지 확인하세요. ``pgloader`` 명령 실행 "
+"중에 오류가 있는 경우 마이그레이션을 계속하지 마세요."
 
 #: ../../source/deploy/postgres-migration.rst:89
 msgid ""
@@ -242,22 +287,28 @@ msgid ""
 "``search_path`` is restored (or remove necessary clauses from the "
 "configuration)."
 msgstr ""
+"경험이 있는 사용자의 경우, 처음부터 마이그레이션을 다시 시작하지 않고도 ``pgloader`` 를 실행할 "
+"수 있습니다. 이 경우 테이블의 문제를 수동으로 수정하고, 해당 테이블에 특화된 구성으로 "
+"``pgloader`` 명령을 실행해야 합니다. 또한 스키마 이름이 ``public`` 으로 되돌아갔는지, "
+"``search_path`` 가 복원되었는지(또는 구성에서 필요한 절을 제거했는지) 확인하세요."
 
 #: ../../source/deploy/postgres-migration.rst:91
 msgid ""
 "The following sections detail how to resolve some common errors you may "
 "encounter during the execution of the ``pgloader`` command:"
 msgstr ""
+"다음 섹션에서는 ``pgloader`` 명령 실행 중 발생할 수 있는 일반적인 오류를 해결하는 방법을 "
+"자세히 설명합니다:"
 
 #: ../../source/deploy/postgres-migration.rst:94
 msgid "Invalid input syntax for type JSON"
-msgstr ""
+msgstr "JSON 유형에 대한 잘못된 입력 구문"
 
 #: ../../source/deploy/postgres-migration.rst:96
 #: ../../source/deploy/postgres-migration.rst:113
 #: ../../source/deploy/postgres-migration.rst:124
 msgid "If you receive an error message similar to the following:"
-msgstr ""
+msgstr "다음과 유사한 오류 메시지가 표시되는 경우:"
 
 #: ../../source/deploy/postgres-migration.rst:102
 msgid ""
@@ -268,6 +319,10 @@ msgid ""
 "replaced with the actual table and column names indicated in the "
 "``pgloader`` output):"
 msgstr ""
+"MySQL 데이터베이스의 데이터가 유효한 JSON 형식이 아닙니다. MySQL 데이터베이스의 데이터를 유효한 "
+"JSON 형식으로 업데이트하여 이 문제를 해결할 수 있습니다. 어떤 행이 문제를 일으키는지 확인하려면 "
+"다음 쿼리를 실행하세요(여기서 ``<table_name>`` 과 ``<column_name>`` 은 ``pgloader`` 출력에 "
+"표시된 실제 테이블과 열 이름으로 대체해야 함):"
 
 #: ../../source/deploy/postgres-migration.rst:108
 msgid ""
@@ -275,10 +330,12 @@ msgid ""
 "JSON format with the query above. After updating the data, you can run "
 "the ``pgloader`` command again."
 msgstr ""
+"위의 쿼리를 사용하여 MySQL 데이터베이스의 데이터를 찾고 유효한 JSON 형식으로 업데이트할 수 "
+"있습니다. 데이터를 업데이트한 후 ``pgloader`` 명령을 다시 실행할 수 있습니다."
 
 #: ../../source/deploy/postgres-migration.rst:111
 msgid "Failed to find column or table"
-msgstr ""
+msgstr "열 또는 테이블을 찾을 수 없음"
 
 #: ../../source/deploy/postgres-migration.rst:119
 msgid ""
@@ -286,11 +343,12 @@ msgid ""
 "this issue by checking whether you have created the correct version of "
 "Postgres schema. After re-creating the schema, you can run the "
 "``pgloader`` command again."
-msgstr ""
+msgstr "PostgreSQL 데이터베이스에 열이나 테이블이 없습니다. 올바른 버전의 Postgres 스키마를 생성했는지 확인하여 이 문제를 해결할 수 있습니다. "
+"스키마를 다시 생성한 후 ``pgloader`` 명령을 다시 실행할 수 있습니다."
 
 #: ../../source/deploy/postgres-migration.rst:122
 msgid "Fell through ECASE expression"
-msgstr ""
+msgstr "ECASE 표현식을 통과함"
 
 #: ../../source/deploy/postgres-migration.rst:130
 msgid ""
@@ -300,6 +358,10 @@ msgid ""
 "image. See: :ref:`install pgloader <deploy/manual-postgres-"
 "migration:install pgloader>` for more information."
 msgstr ""
+"이는 pgloader의 `알려진 문제 <https://github.com/dimitri/pgloader/issues/1183>`__ 입니다. "
+"소스에서 ``pgloader`` 를 컴파일하거나 docker 이미지로 ``pgloader`` 를 실행하여 이 문제를 "
+"해결할 수 있습니다. 자세한 내용은 :ref:`install pgloader <deploy/manual-postgres-"
+"migration:install pgloader>` 를 참조하세요."
 
 #: ../../source/deploy/postgres-migration.rst:134
 msgid ""
@@ -310,10 +372,14 @@ msgid ""
 "possible to run the ``pgloader`` command with the ``--debug`` flag to get"
 " more information about the errors."
 msgstr ""
+"또한 pgloader가 마이그레이션 중에 나머지 테이블을 계속 마이그레이션하고 하나 이상의 테이블을 "
+"건너뛰는 경우가 있을 수 있습니다. 이러한 경우 테이블의 문제를 식별하고 깨끗한 데이터베이스로 "
+"``pgloader`` 명령을 다시 실행하기 전에 수정하는 것이 좋습니다. 오류에 대한 자세한 정보를 "
+"얻기 위해 ``--debug`` 플래그로 ``pgloader`` 명령을 실행할 수 있습니다."
 
 #: ../../source/deploy/postgres-migration.rst:138
 msgid "Mattermost can't connect to the PostgreSQL database"
-msgstr ""
+msgstr "Mattermost가 PostgreSQL 데이터베이스에 연결할 수 없음"
 
 #: ../../source/deploy/postgres-migration.rst:140
 msgid ""
@@ -325,6 +391,11 @@ msgid ""
 "manually revert the schema name back to ``public`` and restore the "
 "``search_path`` by running the following commands:"
 msgstr ""
+"Mattermost가 PostgreSQL 데이터베이스에 연결할 수 없는 문제가 발생하는 경우, PostgreSQL "
+"서버가 실행 중이고 데이터베이스에 접근할 수 있는지 확인하세요. ``pgloader`` 명령 실행 중에 "
+"오류가 발생한 경우 스키마 이름을 ``public`` 으로 되돌리거나 ``search_path`` 를 복원하는 데 "
+"실패할 수 있습니다. 다음 명령을 실행하여 스키마 이름을 수동으로 ``public`` 으로 되돌리고 "
+"``search_path`` 를 복원할 수 있습니다:"
 
 #: ../../source/deploy/postgres-migration.rst:146
 msgid ""
@@ -332,16 +403,18 @@ msgid ""
 "default access to the ``public`` schema. You can do this by running the "
 "following commands:"
 msgstr ""
+"또한 데이터베이스 사용자가 ``public`` 스키마에 기본적으로 접근할 수 있는 필요한 설정이 있는지 "
+"확인하세요. 다음 명령을 실행하여 이를 수행할 수 있습니다:"
 
 #: ../../source/deploy/postgres-migration.rst:153
 msgid ""
 "You can check for the default ``search_path`` by running the following "
 "command:"
-msgstr ""
+msgstr "다음 명령을 실행하여 기본 ``search_path`` 를 확인할 수 있습니다:"
 
 #: ../../source/deploy/postgres-migration.rst:160
 msgid "Contact Support"
-msgstr ""
+msgstr "지원 문의"
 
 #: ../../source/deploy/postgres-migration.rst:162
 msgid ""
@@ -349,4 +422,6 @@ msgid ""
 "deployment can contact a `Mattermost Expert <https://mattermost.com"
 "/contact-sales/>`_ for guidance."
 msgstr ""
+"Mattermost 배포에 맞춤화된 지침을 찾는 Mattermost 고객은 `Mattermost Expert "
+"<https://mattermost.com/contact-sales/>`_ 에 문의하여 지침을 받을 수 있습니다."
 

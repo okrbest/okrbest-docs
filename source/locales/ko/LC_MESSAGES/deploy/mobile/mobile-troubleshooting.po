@@ -21,13 +21,14 @@ msgstr ""
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:2
 msgid "Mobile deployment troubleshooting"
-msgstr ""
+msgstr "모바일 배포 문제 해결"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:5
 msgid ""
 "I keep getting a message \"Cannot connect to the server. Please check "
 "your server URL and internet connection.\""
 msgstr ""
+"\"서버에 연결할 수 없습니다. 서버 URL과 인터넷 연결을 확인하세요.\"라는 메시지가 계속 표시됩니다."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:7
 msgid ""
@@ -35,12 +36,14 @@ msgid ""
 "``http://`` or ``https://`` according to the server deployment "
 "configuration."
 msgstr ""
+"먼저 서버 URL에 오타가 없고 서버 배포 구성에 따라 ``http://`` 또는 ``https://`` 가 포함되어 있는지 확인하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:9
 msgid ""
 "If the server URL is correct, there could be an issue with the SSL "
 "certificate configuration."
 msgstr ""
+"서버 URL이 올바른 경우 SSL 인증서 구성에 문제가 있을 수 있습니다."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:11
 msgid ""
@@ -49,6 +52,8 @@ msgid ""
 "error about the missing chain or certificate path, there is likely an "
 "intermediate certificate missing that needs to be included."
 msgstr ""
+"SSL 인증서 설정을 확인하려면 `SSL Labs <https://www.ssllabs.com/ssltest/index.html>`__ 와 같은 사이트를 방문하여 테스트하세요. "
+"체인 또는 인증서 경로 누락에 대한 오류가 있는 경우 포함해야 하는 중간 인증서가 누락되었을 가능성이 높습니다."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:13
 msgid ""
@@ -56,10 +61,12 @@ msgid ""
 "certificates, consider using :ref:`Let's Encrypt <deploy/server/setup-"
 "nginx-proxy:configure nginx with ssl and http/2>` instead."
 msgstr ""
+"앱은 자체 서명된 인증서가 있는 서버에 연결할 수 없으므로 대신 :ref:`Let's Encrypt <deploy/server/setup-"
+"nginx-proxy:configure nginx with ssl and http/2>` 사용을 고려하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:16
 msgid "Login with ADFS/Office365 is not working"
-msgstr ""
+msgstr "ADFS/Office365로 로그인이 작동하지 않음"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:18
 msgid ""
@@ -69,16 +76,20 @@ msgid ""
 "fs/operations/configure-intranet-forms-based-authentication-for-devices-"
 "that-do-not-support-wia>`_."
 msgstr ""
+"Microsoft 가이드라인에 따라 WIA를 지원하지 않는 기기를 위한 인트라넷 양식 기반 인증을 `구성 <https://learn.microsoft.com/en-us/windows-server/identity/ad-"
+"fs/operations/configure-intranet-forms-based-authentication-for-devices-"
+"that-do-not-support-wia>`_ 하는 것을 권장합니다."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:21
 msgid "I see a “Connecting…” bar that does not go away"
-msgstr ""
+msgstr "\"연결 중...\" 표시줄이 사라지지 않음"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:23
 msgid ""
 "If your app is working properly, you should see a grey “Connecting…” bar "
 "that clears or says “Connected” after the app reconnects."
 msgstr ""
+"앱이 제대로 작동하는 경우 앱이 다시 연결된 후 회색 \"연결 중...\" 표시줄이 사라지거나 \"연결됨\"이라고 표시되어야 합니다."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:25
 msgid ""
@@ -89,29 +100,32 @@ msgid ""
 "APIv4 endpoints <deploy/server/setup-nginx-proxy:configure nginx as a "
 "proxy for mattermost server>`."
 msgstr ""
+"이 메시지가 계속 표시되고 인터넷 연결이 정상적인 경우, 서버 관리자에게 서버가 NGINX 또는 다른 웹서버를 리버스 프록시로 사용하는지 문의하세요. "
+"그렇다면 :ref:`APIv4 엔드포인트의 웹소켓 연결 지원 <deploy/server/setup-nginx-proxy:configure nginx as a "
+"proxy for mattermost server>` 을 위해 올바르게 구성되었는지 확인해야 합니다."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:28
 msgid ""
 "All my outbound connections need to go through a proxy. How can I connect"
 " to the Mattermost Hosted Push Notification Service?"
-msgstr ""
+msgstr "모든 아웃바운드 연결이 프록시를 통해야 합니다. Mattermost 호스팅 푸시 알림 서비스에 어떻게 연결할 수 있나요?"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:30
 msgid ""
 "You can set up an internal server to proxy the connection out of their "
 "network to the Mattermost Hosted Push Notification Service (HPNS) by "
 "following the steps below:"
-msgstr ""
+msgstr "다음 단계에 따라 내부 서버를 설정하여 네트워크에서 Mattermost 호스팅 푸시 알림 서비스(HPNS)로 연결을 프록시할 수 있습니다:"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:32
 msgid ""
 "Make sure your proxy server is properly configured to support SSL. "
 "Confirm it works by checking the URL at https://www.digicert.com/help/."
-msgstr ""
+msgstr "프록시 서버가 SSL을 지원하도록 올바르게 구성되어 있는지 확인하세요. https://www.digicert.com/help/ 에서 URL을 확인하여 작동하는지 확인하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:33
 msgid "Setup a proxy to forward requests to ``https://push.mattermost.com``."
-msgstr ""
+msgstr "``https://push.mattermost.com`` 으로 요청을 전달하는 프록시를 설정하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:34
 msgid ""
@@ -121,10 +135,12 @@ msgid ""
 "Notifications** in versions after 5.12 to \"Manually enter Push "
 "Notification Service location\""
 msgstr ""
+"Mattermost에서 이전 버전의 경우 **시스템 콘솔** > **알림 설정** > **모바일 푸시** > **푸시 알림 활성화** 또는 "
+"5.12 이후 버전의 경우 **시스템 콘솔 > 환경 > 푸시 알림 서버 > 푸시 알림 활성화** 를 \"푸시 알림 서비스 위치 수동 입력\"으로 설정하세요"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:35
 msgid "Enter the URL of your proxy in the **Push Notification Server** field."
-msgstr ""
+msgstr "**푸시 알림 서버** 필드에 프록시의 URL을 입력하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:39
 msgid ""
@@ -132,22 +148,24 @@ msgid ""
 "number and create a URL like ``https://push.internalproxy.com:8000`` "
 "mapped to ``https://push.mattermost.com``"
 msgstr ""
+"프록시 구성 방식에 따라 포트 번호를 추가하고 ``https://push.mattermost.com`` 에 매핑된 "
+"``https://push.internalproxy.com:8000`` 와 같은 URL을 생성해야 할 수 있습니다"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:42
 msgid "Build gets stuck at ``bundleReleaseJsAndAssets``"
-msgstr ""
+msgstr "빌드가 ``bundleReleaseJsAndAssets`` 에서 멈춤"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:44
 msgid "As a workaround, you can bundle the ``js`` manually first with"
-msgstr ""
+msgstr "해결 방법으로, 먼저 다음 명령으로 ``js`` 를 수동으로 번들링할 수 있습니다"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:50
 msgid "and then ignore the gradle task with"
-msgstr ""
+msgstr "그런 다음 다음 명령으로 gradle 작업을 무시하세요"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:57
 msgid "No image previews available in the mobile app"
-msgstr ""
+msgstr "모바일 앱에서 이미지 미리보기를 사용할 수 없음"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:59
 msgid ""
@@ -156,16 +174,19 @@ msgid ""
 "``/etc/mime.types``. This might vary depending on your specific OS and "
 "distribution."
 msgstr ""
+"Mattermost를 실행하는 서버의 mime 타입이 올바르게 설정되지 않은 경우 발생할 수 있습니다. "
+"Linux를 실행하는 서버는 이 파일이 ``/etc/mime.types`` 에 있습니다. "
+"이는 특정 OS와 배포판에 따라 다를 수 있습니다."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:62
 msgid ""
 "Some distributions also ship without ``mailcap`` which can result in "
 "missing or incorrectly configured mime types."
-msgstr ""
+msgstr "일부 배포판은 ``mailcap`` 없이 제공되어 mime 타입이 누락되거나 잘못 구성될 수 있습니다."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:65
 msgid "Messages with emojis aren't being sent from the Mobile App"
-msgstr ""
+msgstr "모바일 앱에서 이모지가 포함된 메시지가 전송되지 않음"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:67
 msgid ""
@@ -174,10 +195,13 @@ msgid ""
 "file under ``SqlSettings``, ensure that the ``DataSource`` key is "
 "configured correctly, then restart the Mattermost server."
 msgstr ""
+"Mattermost를 실행하는 서버가 잘못된 문자 집합으로 구성된 경우 발생할 수 있습니다. 이 문제를 해결하려면 "
+"``SqlSettings`` 아래의 ``config.json`` 파일에서 ``DataSource`` 키가 올바르게 구성되어 있는지 확인한 다음 "
+"Mattermost 서버를 재시작하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:69
 msgid "For example:"
-msgstr ""
+msgstr "예시:"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:78
 msgid ""
@@ -185,10 +209,12 @@ msgid ""
 "configuration-settings:data source>` documentation for details on "
 "configuring the connection string to the master database."
 msgstr ""
+"마스터 데이터베이스의 연결 문자열 구성에 대한 자세한 내용은 :ref:`Configuration Settings <configure/environment-"
+"configuration-settings:data source>` 문서를 참조하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:81
 msgid "Testing mobile push notifications"
-msgstr ""
+msgstr "모바일 푸시 알림 테스트"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:83
 msgid ""
@@ -196,128 +222,131 @@ msgid ""
 " apps </deploy/mobile/mobile-app-deployment>`, or for :doc:`your custom "
 "built mobile apps </deploy/mobile/distribute-custom-mobile-apps>`."
 msgstr ""
+":doc:`사전 빌드된 모바일 앱 </deploy/mobile/mobile-app-deployment>` 또는 "
+":doc:`사용자 정의 빌드 모바일 앱 </deploy/mobile/distribute-custom-mobile-apps>` 에 대한 "
+"푸시 알림을 구성했는지 확인하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:85
 msgid ""
 "Then use the following instructions to confirm push notifications are "
 "working properly."
-msgstr ""
+msgstr "그런 다음 다음 지침을 사용하여 푸시 알림이 제대로 작동하는지 확인하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:87
 msgid ""
 "Log in to your mobile app with an account on your Mattermost Server, "
 "which we’ll refer to as “Account A”."
-msgstr ""
+msgstr "Mattermost 서버의 계정으로 모바일 앱에 로그인하세요. 이 계정을 "계정 A"라고 부르겠습니다."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:89
 msgid ""
 "(iOS) When the app asks whether you wish to receive notifications, "
 "**confirm you want to receive notifications**."
-msgstr ""
+msgstr "(iOS) 앱이 알림 수신 여부를 묻는 경우 **알림을 수신하겠다고 확인** 하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:91
 msgid ""
 "Mattermost prompts you to confirm whether you want to allow mobile push "
 "notifications. To test mobile push notifications, you must select Allow."
-msgstr ""
+msgstr "Mattermost가 모바일 푸시 알림을 허용할지 확인하라는 메시지를 표시합니다. 모바일 푸시 알림을 테스트하려면 허용을 선택해야 합니다."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:95
 msgid "Confirm push notifications are enabled for “Account A”."
-msgstr ""
+msgstr ""계정 A"에 대해 푸시 알림이 활성화되어 있는지 확인하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:97
 msgid "Go to the notification settings menu in the mobile app."
-msgstr ""
+msgstr "모바일 앱의 알림 설정 메뉴로 이동하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:97
 msgid ""
 "Access notification settings by selecting your profile picture to access "
 "Settings > Notifications."
-msgstr ""
+msgstr "프로필 사진을 선택하여 설정 > 알림으로 이동하여 알림 설정에 접근하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:103
 msgid "Check that the mobile push notifications are set to send."
-msgstr ""
+msgstr "모바일 푸시 알림이 전송되도록 설정되어 있는지 확인하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:97
 msgid ""
 "Select Push Notifications to confirm when mobile push notifications will "
 "be sent."
-msgstr ""
+msgstr "모바일 푸시 알림이 언제 전송될지 확인하려면 푸시 알림을 선택하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:97
 msgid ""
 "Specify whether all new messages or only mentions and direct messages "
 "send push notifications."
-msgstr ""
+msgstr "모든 새 메시지 또는 멘션과 다이렉트 메시지만 푸시 알림을 보낼지 지정하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:113
 msgid "Have “Account A” put the app to background or close the app."
-msgstr ""
+msgstr ""계정 A"가 앱을 백그라운드로 보내거나 앱을 종료하도록 하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:115
 msgid "Using a browser, log in to “Account B” on the same Mattermost Server."
-msgstr ""
+msgstr "브라우저를 사용하여 동일한 Mattermost 서버에 "계정 B"로 로그인하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:117
 msgid "Open a direct message with “Account A”, and send a message."
-msgstr ""
+msgstr ""계정 A"와의 다이렉트 메시지를 열고 메시지를 보내세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:119
 msgid ""
 "A push notification with the message should appear on the mobile device "
 "of “Account A”."
-msgstr ""
+msgstr "메시지가 포함된 푸시 알림이 "계정 A"의 모바일 기기에 표시되어야 합니다."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:122
 msgid "Troubleshooting push notifications"
-msgstr ""
+msgstr "푸시 알림 문제 해결"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:124
 msgid ""
 "If you did not receive a push notification when testing push "
 "notifications, use the following procedure to troubleshoot:"
-msgstr ""
+msgstr "푸시 알림을 테스트할 때 푸시 알림을 받지 못한 경우 다음 절차를 사용하여 문제를 해결하세요:"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:126
 msgid ""
 "In **System Console > Environment > Logging > File Log Level**, select "
 "**DEBUG** in order to watch for push notifications in the server log."
-msgstr ""
+msgstr "서버 로그에서 푸시 알림을 확인하려면 **시스템 콘솔 > 환경 > 로깅 > 파일 로그 수준** 에서 **DEBUG** 를 선택하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:128
 msgid "Delete your mobile application, and reinstall it."
-msgstr ""
+msgstr "모바일 애플리케이션을 삭제하고 다시 설치하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:130
 msgid ""
 "Log in with \"Account A\" and **confirm you want to receive push "
 "notifications** when prompted by the mobile app."
-msgstr ""
+msgstr ""계정 A"로 로그인하고 모바일 앱에서 요청할 때 **푸시 알림을 수신하겠다고 확인** 하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:132
 msgid ""
 "Go to **Profile** > **Security** > **View and Logout of Active Sessions**"
 " to confirm that there is a session for the native mobile app matching "
 "your login time."
-msgstr ""
+msgstr "로그인 시간과 일치하는 네이티브 모바일 앱 세션이 있는지 확인하려면 **프로필** > **보안** > **활성 세션 보기 및 로그아웃** 으로 이동하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:134
 msgid "Retest push notifications."
-msgstr ""
+msgstr "푸시 알림을 다시 테스트하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:136
 msgid ""
 "If no push notification displays, go to **System Console** > **Server "
 "Logs**, then select **Reload**. Look at the bottom of the logs for a "
 "message similar to:"
-msgstr ""
+msgstr "푸시 알림이 표시되지 않으면 **시스템 콘솔** > **서버 로그** 로 이동한 다음 **다시 로드** 를 선택하세요. 로그 하단에서 다음과 유사한 메시지를 찾으세요:"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:138
 msgid ""
 "``[2016/04/21 03:16:44 UTC] [DEBG] Sending push notification to "
 "608xyz0... wi msg of '@accountb: Hello'``"
-msgstr ""
+msgstr "``[2016/04/21 03:16:44 UTC] [DEBG] '@accountb: Hello' 메시지로 608xyz0...에 푸시 알림 전송 중``"
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:140
 msgid ""
@@ -325,14 +354,15 @@ msgid ""
 "server and was not received by your mobile app. Please `create a support "
 "ticket <https://support.mattermost.com/hc/en-us/requests/new>`_ with the "
 "subject \"HPNS issue\" for help from Mattermost's Support team."
-msgstr ""
+msgstr "로그 메시지가 표시되면 메시지가 HPNS 서버로 전송되었지만 모바일 앱에서 수신하지 못했다는 의미입니다. "
+"Mattermost 지원팀의 도움을 받으려면 제목이 \"HPNS issue\"인 `지원 티켓을 생성 <https://support.mattermost.com/hc/en-us/requests/new>`_ 하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:141
 msgid ""
 "If the log message does not display, it means no mobile push notification"
 " was sent to “Account A”. Please repeat the process starting at step 2 "
 "and double-check each step."
-msgstr ""
+msgstr "로그 메시지가 표시되지 않으면 "계정 A"로 모바일 푸시 알림이 전송되지 않았다는 의미입니다. 2단계부터 프로세스를 반복하고 각 단계를 다시 한 번 확인하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:145
 msgid ""
@@ -340,7 +370,8 @@ msgid ""
 " to  **System Console > Environment > Logging > File Log Level**, then "
 "select **ERROR** to switch your logging detail level from **DEBUG** to "
 "**Errors Only**."
-msgstr ""
+msgstr "디스크 공간을 절약하기 위해 푸시 알림 문제가 해결되면 **시스템 콘솔 > 환경 > 로깅 > 파일 로그 수준** 으로 이동하여 "
+"**ERROR** 를 선택하여 로깅 상세 수준을 **DEBUG** 에서 **Errors Only** 로 전환하세요."
 
 #: ../../source/deploy/mobile/mobile-troubleshooting.rst:147
 msgid ""
@@ -349,5 +380,6 @@ msgid ""
 "through **Profile > Security > View and Log Out of Active Sessions**. "
 "Otherwise, the `DeviceId` won't get registered in the `Sessions` table "
 "and notifications won't be delivered."
-msgstr ""
+msgstr "모바일 기기에서 푸시 알림이 전달되지 않는 경우 **프로필 > 보안 > 활성 세션 보기 및 로그아웃** 을 통해 **Native** 모바일 앱 세션에 로그인되어 있는지 확인하세요. "
+"그렇지 않으면 `DeviceId` 가 `Sessions` 테이블에 등록되지 않고 알림이 전달되지 않습니다."
 

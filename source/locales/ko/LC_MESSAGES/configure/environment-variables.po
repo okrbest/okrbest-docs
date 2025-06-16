@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/configure/environment-variables.rst:2
 msgid "Environment variables"
-msgstr ""
+msgstr "환경 변수"
 
 #: ../../source/_static/badges/allplans-selfhosted.rst:7
 msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `모든 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
@@ -35,7 +35,7 @@ msgstr ""
 msgid ""
 "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
 "deployments"
-msgstr ""
+msgstr "|deployment-img| `자체 호스팅 <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
@@ -49,6 +49,9 @@ msgid ""
 " then changes to the corresponding environment variable also require a "
 "server restart."
 msgstr ""
+"환경 변수를 사용하여 구성을 관리할 수 있습니다. 환경 변수는 ``config.json`` 의 설정을 "
+"덮어씁니다. ``config.json`` 의 설정 변경에 서버 재시작이 필요한 경우, 해당 환경 변수의 "
+"변경에도 서버 재시작이 필요합니다."
 
 #: ../../source/configure/environment-variables.rst:9
 msgid ""
@@ -56,24 +59,28 @@ msgid ""
 "the name of that setting in ``config.json``. For example, to derive the "
 "name of the Site URL setting:"
 msgstr ""
+"모든 설정의 환경 변수 이름은 ``config.json`` 에서 해당 설정의 이름을 기반으로 "
+"파생할 수 있습니다. 예를 들어, Site URL 설정의 이름을 파생하는 방법은 다음과 같습니다:"
 
 #: ../../source/configure/environment-variables.rst:11
 msgid ""
 "Find the setting in ``config.json``. In this case, "
 "*ServiceSettings.SiteURL*."
-msgstr ""
+msgstr "``config.json`` 에서 설정을 찾습니다. 이 경우 *ServiceSettings.SiteURL* 입니다."
 
 #: ../../source/configure/environment-variables.rst:12
 msgid ""
 "Add ``MM_`` to the beginning and convert all characters to uppercase and "
 "replace the ``.`` with ``_``. For example, *MM_SERVICESETTINGS_SITEURL*."
 msgstr ""
+"앞에 ``MM_`` 를 추가하고 모든 문자를 대문자로 변환한 다음 ``.`` 를 ``_`` 로 "
+"바꿉니다. 예를 들어, *MM_SERVICESETTINGS_SITEURL* 입니다."
 
 #: ../../source/configure/environment-variables.rst:13
 msgid ""
 "The setting becomes ``export "
 "MM_SERVICESETTINGS_SITEURL=\"http://example.com\"``."
-msgstr ""
+msgstr "설정은 ``export MM_SERVICESETTINGS_SITEURL=\"http://example.com\"`` 가 됩니다."
 
 #: ../../source/configure/environment-variables.rst:17
 msgid ""
@@ -82,6 +89,9 @@ msgid ""
 " In the second case, the file specified contains the list of environment "
 "variables to set."
 msgstr ""
+"Mattermost가 초기화 파일에서 실행되는 경우, 환경 변수는 ``Environment=<>`` 또는 "
+"``EnvironmentFile=<path/to/file>`` 를 통해 설정할 수 있습니다. 두 번째 경우에는 "
+"지정된 파일에 설정할 환경 변수 목록이 포함됩니다."
 
 #: ../../source/configure/environment-variables.rst:18
 msgid ""
@@ -91,6 +101,10 @@ msgid ""
 "plugins are configured at the same time. For example, "
 "``MM_PLUGINSETTINGS_PLUGINSTATES=\"{\\\"com.mattermost.calls\\\":{\\\"Enable\\\":true},\\\"com.mattermost.nps\\\":{\\\"Enable\\\":true}}\"``."
 msgstr ""
+"Mattermost v7.5부터 환경 구성 파싱이 ``MM_PLUGINSETTINGS_PLUGINS`` 와 "
+"``MM_PLUGINSETTINGS_PLUGINSTATES`` 에 대해 JSON을 지원합니다. 이는 모든 플러그인이 "
+"동시에 구성되는 경우 Helm 구성 파일에 특히 유용합니다. 예를 들어, "
+"``MM_PLUGINSETTINGS_PLUGINSTATES=\"{\\\"com.mattermost.calls\\\":{\\\"Enable\\\":true},\\\"com.mattermost.nps\\\":{\\\"Enable\\\":true}}\"`` 입니다."
 
 #: ../../source/configure/environment-variables.rst:19
 msgid ""
@@ -100,6 +114,9 @@ msgid ""
 "made in the System Console, the value stored of the environment variable "
 "will be written back to the ``config.json`` as that setting's value."
 msgstr ""
+"환경 변수를 통해 설정이 구성되면 시스템 관리자는 시스템 콘솔에서 이를 수정할 수 없습니다. "
+"환경 변수를 통해 설정이 구성되고 시스템 콘솔에서 다른 변경 사항이 이루어지면, "
+"저장된 환경 변수의 값이 해당 설정의 값으로 ``config.json`` 에 다시 기록됩니다."
 
 #: ../../source/configure/environment-variables.rst:20
 msgid ""
@@ -107,6 +124,8 @@ msgid ""
 "variables, the Mattermost server uses the setting's default value as "
 "documented in the sections below on this page."
 msgstr ""
+"``config.json`` 또는 환경 변수에 설정되지 않은 설정의 경우, Mattermost 서버는 "
+"이 페이지 아래 섹션에 문서화된 대로 설정의 기본값을 사용합니다."
 
 #: ../../source/configure/environment-variables.rst:24
 msgid ""
@@ -115,6 +134,9 @@ msgid ""
 "information, see the :doc:`configuration in a database </configure"
 "/configuration-in-your-database>` documentation."
 msgstr ""
+"활성 셸 내에서 설정된 Mattermost 설정의 환경 변수는 구성을 마이그레이션할 때 적용됩니다. "
+"자세한 내용은 :doc:`데이터베이스의 구성 </configure/configuration-in-your-database>` "
+"문서를 참조하세요."
 
 #: ../../source/configure/environment-variables.rst:25
 msgid ""
@@ -124,10 +146,14 @@ msgid ""
 "formatted strings may cause some characters to terminate the string "
 "early, resulting in issues when the connection string is parsed."
 msgstr ""
+"데이터베이스 읽기 및 검색 복제본의 데이터베이스 연결 문자열은 `URL 인코딩 "
+"<https://www.w3schools.com/tags/ref_urlencode.asp>`__ 을 사용하여 형식화해야 합니다. "
+"잘못된 형식의 문자열은 일부 문자로 인해 문자열이 조기에 종료되어 연결 문자열을 "
+"구문 분석할 때 문제가 발생할 수 있습니다."
 
 #: ../../source/configure/environment-variables.rst:28
 msgid "Override Mattermost license file"
-msgstr ""
+msgstr "Mattermost 라이선스 파일 재정의"
 
 #: ../../source/configure/environment-variables.rst:30
 msgid ""
@@ -136,12 +162,17 @@ msgid ""
 "starting the server, specify the license key as ``MM_LICENSE`` with the "
 "contents of a license file."
 msgstr ""
+"환경 변수를 사용하여 해당 라이선스를 대체하지 않고 데이터베이스 또는 파일 구성의 "
+"모든 라이선스를 재정의할 수 있습니다. 서버를 시작할 때 라이선스 파일의 내용을 "
+"``MM_LICENSE`` 로 지정하세요."
 
 #: ../../source/configure/environment-variables.rst:33
 msgid ""
 "If ``MM_LICENSE`` is set to a non-empty string, but the license specified"
 " is not valid, the Mattermost server will be started without a license."
 msgstr ""
+"``MM_LICENSE`` 가 비어 있지 않은 문자열로 설정되었지만 지정된 라이선스가 유효하지 "
+"않은 경우, Mattermost 서버는 라이선스 없이 시작됩니다."
 
 #: ../../source/configure/environment-variables.rst:35
 msgid ""
@@ -149,26 +180,28 @@ msgid ""
 "override a server license only affects the individual app server and "
 "doesn't propagate to other servers in the cluster."
 msgstr ""
+"고가용성 배포에서 환경 변수를 사용하여 서버 라이선스를 재정의하면 개별 앱 서버에만 "
+"영향을 미치며 클러스터의 다른 서버에는 전파되지 않습니다."
 
 #: ../../source/configure/environment-variables.rst:38
 msgid "Load custom configuration defaults"
-msgstr ""
+msgstr "사용자 정의 구성 기본값 로드"
 
 #: ../../source/configure/environment-variables.rst:40
 msgid ""
 "This custom configuration applies only if the values are not already "
 "present in the current server configuration."
 msgstr ""
+"이 사용자 정의 구성은 현재 서버 구성에 값이 아직 없는 경우에만 적용됩니다."
 
 #: ../../source/configure/environment-variables.rst:42
 msgid ""
 "Create a JSON file that contains the custom configuration defaults. For "
 "example, ``custom.json``."
-msgstr ""
+msgstr "사용자 정의 구성 기본값을 포함하는 JSON 파일을 생성하세요. 예: ``custom.json``."
 
 #: ../../source/configure/environment-variables.rst:43
 msgid ""
 "When starting the server, point the custom defaults environment variable "
 "to the defaults file: ``MM_CUSTOM_DEFAULTS_PATH=custom.json``."
-msgstr ""
-
+msgstr "서버를 시작할 때 사용자 정의 기본값 환경 변수를 기본값 파일로 지정하세요: ``MM_CUSTOM_DEFAULTS_PATH=custom.json``."

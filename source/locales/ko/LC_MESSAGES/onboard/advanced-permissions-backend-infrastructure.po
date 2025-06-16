@@ -21,25 +21,27 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:2
 msgid "Advanced permissions: backend infrastructure"
-msgstr ""
+msgstr "고급 권한: 백엔드 인프라"
 
 #: ../../source/_static/badges/allplans-cloud-selfhosted.rst:7
 msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `모든 플랜 <https://mattermost.com/pricing/>`__ 에서 이용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/allplans-cloud-selfhosted.rst:9
 msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
 msgstr ""
+"|deployment-img| `클라우드 <https://mattermost.com/sign-up/>`__ 및 `자체 호스팅 "
+"<https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:7
 msgid ""
@@ -47,15 +49,17 @@ msgid ""
 "in Mattermost and is recommended only for technical Admins or developers "
 "looking to make modifications to their installation."
 msgstr ""
+"이 문서는 Mattermost의 권한에 대한 백엔드 서버 인프라를 설명하며, 설치를 수정하려는 "
+"기술 관리자나 개발자에게만 권장됩니다."
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:10
 msgid "Entity definitions"
-msgstr ""
+msgstr "엔티티 정의"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:13
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:52
 msgid "Permissions"
-msgstr ""
+msgstr "권한"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:15
 msgid ""
@@ -63,10 +67,12 @@ msgid ""
 " an object. It describes the action that users may perform in the context"
 " in which they have been assigned the role granting the permission."
 msgstr ""
+"**권한** 은 객체에 대해 수행될 수 있는 허용된 작업을 설명합니다. 이는 사용자가 권한을 부여하는 "
+"역할이 할당된 컨텍스트에서 수행할 수 있는 작업을 설명합니다."
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:18
 msgid "Roles"
-msgstr ""
+msgstr "역할"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:20
 msgid ""
@@ -75,11 +81,14 @@ msgid ""
 "permissions in that context. One user may end up with different sets of "
 "permissions granted by different roles in different contexts."
 msgstr ""
+"**역할** 은 권한이 부여되는 것으로, 해당 컨텍스트에서 할당된 권한을 부여하기 위해 컨텍스트에서 "
+"사용자에게 할당됩니다. 한 사용자는 서로 다른 컨텍스트에서 서로 다른 역할에 의해 부여된 다양한 "
+"권한 세트를 가질 수 있습니다."
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:23
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:59
 msgid "Scope"
-msgstr ""
+msgstr "범위"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:25
 msgid ""
@@ -90,28 +99,31 @@ msgid ""
 "permission applies to any channels within that team. A permission is "
 "considered,"
 msgstr ""
+"권한은 주어진 범위 내에 존재합니다. Mattermost 시스템에는 세 가지 범위가 있습니다: 시스템, 팀 및 채널. "
+"권한은 적용된 컨텍스트에서 범위를 따라 계단식으로 내려갑니다. 예를 들어, "채널" 범위의 권한이 "팀" 컨텍스트에 "
+"적용되면, 해당 권한은 해당 팀 내의 모든 채널에 적용됩니다. 권한은 다음과 같이 간주됩니다:"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:27
 msgid ""
 "**System scope** if it makes sense only on the system level. For example,"
 " ``manage_oauth``."
-msgstr ""
+msgstr "시스템 수준에서만 의미가 있는 경우 **시스템 범위** 입니다. 예: ``manage_oauth``."
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:28
 msgid ""
 "**Team scope** if it makes sense at the team level and system level. For "
 "example, ``create_public_channel``."
-msgstr ""
+msgstr "팀 수준과 시스템 수준에서 의미가 있는 경우 **팀 범위** 입니다. 예: ``create_public_channel``."
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:29
 msgid ""
 "**Channel scope** if it makes sense at channel, team and system level. "
 "For example, ``manage_public_channel_properties``."
-msgstr ""
+msgstr "채널, 팀 및 시스템 수준에서 의미가 있는 경우 **채널 범위** 입니다. 예: ``manage_public_channel_properties``."
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:32
 msgid "Context"
-msgstr ""
+msgstr "컨텍스트"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:34
 msgid ""
@@ -121,6 +133,9 @@ msgid ""
 "ordering of scopes. Each context has one parent, and may have multiple "
 "children, with the ultimate parent context being the system context:"
 msgstr ""
+"**컨텍스트** 는 범위의 인스턴스입니다. 예를 들어, "Developers Hangout"이라는 채널은 채널 범위의 인스턴스입니다. "
+"컨텍스트는 범위의 계층적 순서를 반영하는 계층적 관계를 가집니다. 각 컨텍스트는 하나의 부모를 가지며, "
+"여러 자식을 가질 수 있으며, 최종 부모 컨텍스트는 시스템 컨텍스트입니다:"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:36
 msgid ""
@@ -129,6 +144,8 @@ msgid ""
 "context, with parent team context \"Contributors Team\", with parent "
 "system context."
 msgstr ""
+"채널 컨텍스트는 부모 팀 컨텍스트를 가지며, 그 부모는 시스템 컨텍스트입니다. 예를 들어, "Developers Hangout" 채널은 "
+"채널 컨텍스트이며, 부모 팀 컨텍스트는 "Contributors Team"이고, 그 부모는 시스템 컨텍스트입니다."
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:37
 msgid ""
@@ -137,6 +154,8 @@ msgid ""
 "system context, and with children channel contexts such as \"Developers "
 "Hangout\", \"Reception\" and \"Marketing\"."
 msgstr ""
+"팀 컨텍스트는 부모 시스템 컨텍스트와 자식 채널 컨텍스트를 가집니다. 예를 들어, "Contributors Team"은 팀 컨텍스트이며, "
+"부모 시스템 컨텍스트와 "Developers Hangout", "Reception", "Marketing"과 같은 자식 채널 컨텍스트를 가집니다."
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:39
 msgid ""
@@ -149,10 +168,14 @@ msgid ""
 "context, then the user has permissions to manage public channel "
 "properties in all channels, in all teams, of which they are a member."
 msgstr ""
+"사용자가 주어진 컨텍스트에서 주어진 작업을 수행할 수 있는지 여부를 결정할 때, 해당 사용자가 현재 컨텍스트와 "
+"그 부모 컨텍스트에서 할당받은 모든 역할의 권한의 합집합이 계산됩니다. 이를 통해 권한이 범위 계층 구조를 따라 "
+"계단식으로 내려갈 수 있습니다. 예를 들어, 사용자가 시스템 컨텍스트의 역할에서 ``manage_public_channel_properties`` "
+"권한을 부여받았다면, 해당 사용자는 자신이 멤버인 모든 팀의 모든 채널에서 공개 채널 속성을 관리할 수 있는 권한을 가집니다."
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:42
 msgid "Schemes"
-msgstr ""
+msgstr "스키마"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:44
 msgid ""
@@ -164,6 +187,10 @@ msgid ""
 "For example, if Team A does not have a team-scoped scheme defined, the "
 "System Scheme will provide the defaults for all contexts in Team A."
 msgstr ""
+"스키마는 컨텍스트와 모든 자식 컨텍스트에서 사용자에게 적용되는 기본 역할을 설명합니다. 스키마는 특정 컨텍스트에 대해 "
+"정의되거나, 지정되지 않은 경우 부모 컨텍스트의 스키마의 관련 부분이 적용되며, 궁극적으로 시스템 전체 기본값을 "
+"제공하는 목적을 수행하는 시스템 스키마까지 계층 구조를 따라 올라갑니다. 예를 들어, 팀 A에 팀 범위 스키마가 "
+"정의되어 있지 않다면, 시스템 스키마가 팀 A의 모든 컨텍스트에 대한 기본값을 제공합니다."
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:46
 msgid ""
@@ -172,10 +199,12 @@ msgid ""
 "takes precedence over the System Scheme defaults for all contexts in Team"
 " B."
 msgstr ""
+"또한, 가장 낮은 범위의 스키마가 항상 컨텍스트에서 우선순위를 가집니다. 예를 들어, 팀 B에 팀 범위 스키마가 있다면, "
+"해당 스키마가 팀 B의 모든 컨텍스트에 대해 시스템 스키마 기본값보다 우선순위를 가집니다."
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:49
 msgid "Data structure"
-msgstr ""
+msgstr "데이터 구조"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:54
 msgid ""
@@ -183,18 +212,20 @@ msgid ""
 "not created or modified dynamically. The current set of permissions are "
 "as described in the table below."
 msgstr ""
+"Mattermost의 권한은 서버 코드베이스의 속성이며 동적으로 생성되거나 수정되지 않습니다. 현재 권한 세트는 "
+"아래 표에 설명되어 있습니다."
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:56
 msgid "**Mattermost permissions**"
-msgstr ""
+msgstr "**Mattermost 권한**"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:59
 msgid "Name (i18n)"
-msgstr ""
+msgstr "이름 (i18n)"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:59
 msgid "Description"
-msgstr ""
+msgstr "설명"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:61
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:372
@@ -229,11 +260,11 @@ msgstr ""
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:199
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:201
 msgid "team"
-msgstr ""
+msgstr "팀"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:61
 msgid "Invite users to the team using Send Email Invite or Get Team Invite Link."
-msgstr ""
+msgstr "이메일 초대 보내기 또는 팀 초대 링크 가져오기를 사용하여 팀에 사용자 초대하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:63
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:350
@@ -245,7 +276,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:63
 msgid "Add existing server users to the current team."
-msgstr ""
+msgstr "현재 팀에 기존 서버 사용자 추가하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:65
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:399
@@ -289,11 +320,11 @@ msgstr ""
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:219
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:221
 msgid "system"
-msgstr ""
+msgstr "시스템"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:65
 msgid "Create, edit, and delete your own slash commands."
-msgstr ""
+msgstr "자신의 슬래시 명령어 생성, 편집 및 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:67
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:331
@@ -303,7 +334,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:67
 msgid "Edit or delete other users' slash commands."
-msgstr ""
+msgstr "다른 사용자의 슬래시 명령어 편집 또는 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:69
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:337
@@ -313,7 +344,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:69
 msgid "Create public channels."
-msgstr ""
+msgstr "공개 채널 생성하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:71
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:428
@@ -323,7 +354,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:71
 msgid "Create private channels."
-msgstr ""
+msgstr "비공개 채널 생성하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:73
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:277
@@ -364,11 +395,11 @@ msgstr ""
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:235
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:237
 msgid "channel"
-msgstr ""
+msgstr "채널"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:73
 msgid "Manage public channel members."
-msgstr ""
+msgstr "공개 채널 멤버 관리하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:75
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:269
@@ -382,7 +413,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:75
 msgid "Manage private channel members."
-msgstr ""
+msgstr "비공개 채널 멤버 관리하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:77
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:400
@@ -391,7 +422,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:77
 msgid "Grant other users the system admin role."
-msgstr ""
+msgstr "다른 사용자에게 시스템 관리자 역할 부여하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:79
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:391
@@ -400,7 +431,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:79
 msgid "Manage other users' system-wide roles."
-msgstr ""
+msgstr "다른 사용자의 시스템 전체 역할 관리하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:81
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:442
@@ -412,7 +443,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:81
 msgid "Add and remove team members."
-msgstr ""
+msgstr "팀 멤버 추가 및 제거하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:83
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:278
@@ -425,7 +456,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:83
 msgid "Add and remove channel members."
-msgstr ""
+msgstr "채널 멤버 추가 및 제거하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:85
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:413
@@ -434,7 +465,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:85
 msgid "Access to System Console."
-msgstr ""
+msgstr "시스템 콘솔 접근하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:87
 msgid "sysconsole_read_usermanagement_system_roles"
@@ -442,7 +473,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:87
 msgid "View system roles."
-msgstr ""
+msgstr "시스템 역할 보기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:89
 msgid "sysconsole_write_usermanagement_system_roles"
@@ -450,7 +481,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:89
 msgid "Add, remove, and assign system roles."
-msgstr ""
+msgstr "시스템 역할 추가, 제거 및 할당하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:91
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:403
@@ -461,7 +492,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:91
 msgid "Open Direct Message channels."
-msgstr ""
+msgstr "다이렉트 메시지 채널 열기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:93
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:389
@@ -472,7 +503,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:93
 msgid "Open Group Message channels."
-msgstr ""
+msgstr "그룹 메시지 채널 열기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:95
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:301
@@ -484,7 +515,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:95
 msgid "Edit public channel name, header, and purpose."
-msgstr ""
+msgstr "공개 채널 이름, 헤더 및 목적 편집하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:97
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:317
@@ -496,7 +527,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:97
 msgid "Edit private channel name, header, and purpose."
-msgstr ""
+msgstr "비공개 채널 이름, 헤더 및 목적 편집하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:99
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:404
@@ -525,7 +556,7 @@ msgstr ""
 msgid ""
 "Join public teams listed in the \"Join Another Team\" menu accessed from "
 "the main menu."
-msgstr ""
+msgstr "메인 메뉴에서 접근 가능한 \"다른 팀 참여\" 메뉴에 나열된 공개 팀에 참여하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:103
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:346
@@ -539,7 +570,7 @@ msgstr ""
 msgid ""
 "View private teams listed in the \"Join Another Team\" menu accessed from"
 " the main menu."
-msgstr ""
+msgstr "메인 메뉴에서 접근 가능한 \"다른 팀 참여\" 메뉴에 나열된 비공개 팀 보기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:105
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:340
@@ -552,7 +583,7 @@ msgstr ""
 msgid ""
 "Join private teams listed in the \"Join Another Team\" menu accessed from"
 " the main menu."
-msgstr ""
+msgstr "메인 메뉴에서 접근 가능한 \"다른 팀 참여\" 메뉴에 나열된 비공개 팀에 참여하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:107
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:369
@@ -562,7 +593,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:107
 msgid "List public channels in a team."
-msgstr ""
+msgstr "팀의 공개 채널 목록 보기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:109
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:344
@@ -572,7 +603,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:109
 msgid "Join public channels."
-msgstr ""
+msgstr "공개 채널 참여하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:111
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:307
@@ -584,7 +615,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:111
 msgid "Archive public channels."
-msgstr ""
+msgstr "공개 채널 보관하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:113
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:304
@@ -596,7 +627,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:113
 msgid "Archive private channels."
-msgstr ""
+msgstr "비공개 채널 보관하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:115
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:436
@@ -605,7 +636,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:115
 msgid "Edit values on the `user` object of other users."
-msgstr ""
+msgstr "다른 사용자의 `user` 객체 값 편집하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:117
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:290
@@ -619,7 +650,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:117
 msgid "View posts in a channel."
-msgstr ""
+msgstr "채널의 게시물 보기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:119
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:291
@@ -630,7 +661,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:119
 msgid "Read the contents of a channel."
-msgstr ""
+msgstr "채널의 내용 읽기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:121
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:432
@@ -643,7 +674,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:121
 msgid "View and access public channels on a team."
-msgstr ""
+msgstr "팀의 공개 채널 보기 및 접근하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:123
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:274
@@ -656,7 +687,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:123
 msgid "Add emoji reactions to posts."
-msgstr ""
+msgstr "게시물에 이모지 반응 추가하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:125
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:276
@@ -669,7 +700,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:125
 msgid "Remove emoji reactions from posts."
-msgstr ""
+msgstr "게시물에서 이모지 반응 제거하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:127
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:374
@@ -678,7 +709,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:127
 msgid "Remove other users emoji reactions from posts."
-msgstr ""
+msgstr "게시물에서 다른 사용자의 이모지 반응 제거하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:129
 msgid "permanent_delete_user (deprecated)"
@@ -686,7 +717,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:129
 msgid "Permanently delete other users."
-msgstr ""
+msgstr "다른 사용자 영구 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:131
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:294
@@ -697,7 +728,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:131
 msgid "Upload file attachments to posts."
-msgstr ""
+msgstr "게시물에 파일 첨부하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:133
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:313
@@ -707,7 +738,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:133
 msgid "Get permalink for posts."
-msgstr ""
+msgstr "게시물의 고정 링크 가져오기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:135
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:335
@@ -717,7 +748,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:135
 msgid "Create, edit, and delete your own incoming webhooks."
-msgstr ""
+msgstr "자신의 인커밍 웹훅 생성, 편집 및 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:137
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:411
@@ -727,7 +758,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:137
 msgid "Create, edit, and delete your own outgoing webhooks."
-msgstr ""
+msgstr "자신의 아웃고잉 웹훅 생성, 편집 및 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:139
 msgid "manage_others_webhooks(deprecated)"
@@ -735,7 +766,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:139
 msgid "Edit and delete other users' incoming or outgoing webhooks."
-msgstr ""
+msgstr "다른 사용자의 인커밍 또는 아웃고잉 웹훅 편집 및 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:141
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:385
@@ -745,7 +776,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:141
 msgid "Edit and delete other users' incoming webhooks."
-msgstr ""
+msgstr "다른 사용자의 인커밍 웹훅 편집 및 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:143
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:382
@@ -755,7 +786,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:143
 msgid "Edit and delete other users' outgoing webhooks."
-msgstr ""
+msgstr "다른 사용자의 아웃고잉 웹훅 편집 및 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:145
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:368
@@ -764,7 +795,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:145
 msgid "Create, edit, and delete your own OAuth 2.0 apps."
-msgstr ""
+msgstr "자신의 OAuth 2.0 앱 생성, 편집 및 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:147
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:383
@@ -773,7 +804,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:147
 msgid "Edit or delete other users' OAuth 2.0 apps."
-msgstr ""
+msgstr "다른 사용자의 OAuth 2.0 앱 편집 또는 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:149
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:272
@@ -788,7 +819,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:149
 msgid "Post in channels."
-msgstr ""
+msgstr "채널에 게시하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:151
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:405
@@ -799,7 +830,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:151
 msgid "Create a system message within a channel."
-msgstr ""
+msgstr "채널 내에 시스템 메시지 생성하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:153
 msgid "create_post_ephermal"
@@ -807,7 +838,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:153
 msgid "Create an ephemeral message within a channel."
-msgstr ""
+msgstr "채널 내에 임시 메시지 생성하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:155
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:295
@@ -818,7 +849,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:155
 msgid "Authors edit their own posts."
-msgstr ""
+msgstr "작성자가 자신의 게시물 편집하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:157
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:379
@@ -827,7 +858,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:157
 msgid "Edit other users' posts."
-msgstr ""
+msgstr "다른 사용자의 게시물 편집하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:159
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:312
@@ -838,7 +869,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:159
 msgid "Authors delete their own posts."
-msgstr ""
+msgstr "작성자가 자신의 게시물 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:161
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:354
@@ -848,7 +879,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:161
 msgid "Delete other users' posts."
-msgstr ""
+msgstr "다른 사용자의 게시물 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:163
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:365
@@ -860,7 +891,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:163
 msgid "Remove users from team."
-msgstr ""
+msgstr "팀에서 사용자 제거하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:165
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:370
@@ -870,7 +901,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:165
 msgid "Create teams."
-msgstr ""
+msgstr "팀 생성하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:167
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:366
@@ -882,7 +913,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:167
 msgid "Access Team Settings."
-msgstr ""
+msgstr "팀 설정에 접근하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:169
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:417
@@ -892,7 +923,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:169
 msgid "Import teams in Team Settings."
-msgstr ""
+msgstr "팀 설정에서 팀 가져오기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:171
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:426
@@ -906,7 +937,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:171
 msgid "Read the Team object."
-msgstr ""
+msgstr "팀 객체 읽기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:173
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:429
@@ -915,7 +946,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:173
 msgid "Create bot accounts."
-msgstr ""
+msgstr "봇 계정 생성하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:175
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:380
@@ -924,7 +955,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:175
 msgid "Assign bots to users other than who created the bot."
-msgstr ""
+msgstr "봇을 생성한 사용자 외의 다른 사용자에게 봇 할당하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:177
 msgid "read_bot"
@@ -932,7 +963,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:177
 msgid "View own bots created."
-msgstr ""
+msgstr "자신이 생성한 봇 보기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:179
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:360
@@ -941,7 +972,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:179
 msgid "View bots created by others."
-msgstr ""
+msgstr "다른 사용자가 생성한 봇 보기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:181
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:381
@@ -950,7 +981,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:181
 msgid "Edit and delete own bots."
-msgstr ""
+msgstr "자신의 봇 편집 및 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:183
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:348
@@ -959,7 +990,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:183
 msgid "Edit and delete bots created by others."
-msgstr ""
+msgstr "다른 사용자가 생성한 봇 편집 및 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:185
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:351
@@ -969,7 +1000,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:185
 msgid "List all members on the team."
-msgstr ""
+msgstr "팀의 모든 구성원 목록 보기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:187
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:342
@@ -978,7 +1009,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:187
 msgid "List users without a team."
-msgstr ""
+msgstr "팀이 없는 사용자 목록 보기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:189
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:440
@@ -988,7 +1019,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:189
 msgid "Create user access tokens."
-msgstr ""
+msgstr "사용자 액세스 토큰 생성하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:191
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:349
@@ -998,7 +1029,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:191
 msgid "Read user access tokens by ID."
-msgstr ""
+msgstr "ID로 사용자 액세스 토큰 읽기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:193
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:359
@@ -1008,7 +1039,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:193
 msgid "Revoke user access tokens."
-msgstr ""
+msgstr "사용자 액세스 토큰 취소하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:195
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:409
@@ -1018,7 +1049,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:195
 msgid "Create and cancel jobs."
-msgstr ""
+msgstr "작업 생성 및 취소하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:197
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:444
@@ -1028,7 +1059,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:197
 msgid "Create custom emoji."
-msgstr ""
+msgstr "사용자 정의 이모지 생성하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:199
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:424
@@ -1038,7 +1069,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:199
 msgid "Delete own custom emoji."
-msgstr ""
+msgstr "자신의 사용자 정의 이모지 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:201
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:384
@@ -1047,7 +1078,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:201
 msgid "Delete custom emoji created by others."
-msgstr ""
+msgstr "다른 사용자가 생성한 사용자 정의 이모지 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:203
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:345
@@ -1056,7 +1087,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:203
 msgid "Invite guest users via email invite or add existing guests to teams."
-msgstr ""
+msgstr "이메일 초대를 통해 게스트 사용자 초대하거나 기존 게스트를 팀에 추가하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:205
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:386
@@ -1074,7 +1105,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:207
 msgid "Demote member users to guests."
-msgstr ""
+msgstr "멤버 사용자를 게스트로 강등하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:209
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:375
@@ -1083,7 +1114,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:209
 msgid "Add, remove, and view remote clusters for shared channels."
-msgstr ""
+msgstr "공유 채널을 위한 원격 클러스터 추가, 제거 및 보기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:211
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:445
@@ -1092,7 +1123,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:211
 msgid "Manage the status of a Bleve post indexing job."
-msgstr ""
+msgstr "Bleve 게시물 인덱싱 작업의 상태 관리하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:213
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:446
@@ -1101,7 +1132,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:213
 msgid "Manage the status of a data retention job."
-msgstr ""
+msgstr "데이터 보존 작업의 상태 관리하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:215
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:447
@@ -1110,7 +1141,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:215
 msgid "Manage the status of a compliance export job."
-msgstr ""
+msgstr "규정 준수 내보내기 작업의 상태 관리하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:217
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:448
@@ -1119,7 +1150,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:217
 msgid "Manage the status of an Elasticsearch post indexing job."
-msgstr ""
+msgstr "Elasticsearch 게시물 인덱싱 작업의 상태 관리하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:219
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:449
@@ -1128,7 +1159,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:219
 msgid "Manage the status of an Elasticsearch post aggregation job."
-msgstr ""
+msgstr "Elasticsearch 게시물 집계 작업의 상태 관리하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:221
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:450
@@ -1137,7 +1168,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:221
 msgid "Manage the status of an LDAP synchronization job."
-msgstr ""
+msgstr "LDAP 동기화 작업의 상태 관리하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:223
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:279
@@ -1149,7 +1180,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:223
 msgid "Add bookmarks to a public channel."
-msgstr ""
+msgstr "공개 채널에 북마크 추가하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:225
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:283
@@ -1161,7 +1192,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:225
 msgid "Add bookmarks to a private channel."
-msgstr ""
+msgstr "비공개 채널에 북마크 추가하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:227
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:280
@@ -1173,7 +1204,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:227
 msgid "Make changes to bookmarks in a public channel."
-msgstr ""
+msgstr "공개 채널의 북마크 변경하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:229
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:284
@@ -1185,7 +1216,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:229
 msgid "Make changes to bookmarks in a private channel."
-msgstr ""
+msgstr "비공개 채널의 북마크 변경하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:231
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:281
@@ -1197,7 +1228,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:231
 msgid "Delete bookmarks in a public channel."
-msgstr ""
+msgstr "공개 채널의 북마크 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:233
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:285
@@ -1209,7 +1240,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:233
 msgid "Delete bookmarks in a private channel."
-msgstr ""
+msgstr "비공개 채널의 북마크 삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:235
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:282
@@ -1221,7 +1252,7 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:235
 msgid "Reorder bookmarks in a public channel."
-msgstr ""
+msgstr "공개 채널의 북마크 순서 변경하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:237
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:286
@@ -1233,11 +1264,11 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:237
 msgid "Reorder bookmarks in a private channel."
-msgstr ""
+msgstr "비공개 채널의 북마크 순서 변경하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:241
 msgid "``Roles`` field"
-msgstr ""
+msgstr "``Roles`` 필드"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:243
 msgid ""
@@ -1245,6 +1276,9 @@ msgid ""
 "context. These are referenced in the ``Roles`` field of the ``User``, "
 "``TeamMember``, ``ChannelMember`` and ``Schemes`` Tables."
 msgstr ""
+"역할은 사용자의 멤버십을 나타내는 객체에 적용됩니다. 이는 ``User``, "
+"``TeamMember``, ``ChannelMember`` 및 ``Schemes`` 테이블의 ``Roles`` "
+"필드에서 참조됩니다."
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:245
 msgid ""
@@ -1257,51 +1291,57 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:248
 msgid "``Roles`` table"
-msgstr ""
+msgstr "``Roles`` 테이블"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:250
 msgid ""
 "Roles are dynamic and user configurable, necessitating a database table "
 "with the following fields:"
 msgstr ""
+"역할은 동적이며 사용자가 구성할 수 있어 다음과 같은 필드가 있는 데이터베이스 "
+"테이블이 필요합니다:"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:252
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:672
 msgid "``Id`` (Autoincrement, Primary Key)"
-msgstr ""
+msgstr "``Id`` (자동 증가, 기본 키)"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:253
 msgid "``Name`` (Unique String with Character Constraints, e.g. “team_user”)."
-msgstr ""
+msgstr "``Name`` (문자 제약 조건이 있는 고유 문자열, 예: "team_user")"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:254
 msgid "``Display Name`` (String)"
-msgstr ""
+msgstr "``Display Name`` (문자열)"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:255
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:675
 msgid "``Description`` (String)"
-msgstr ""
+msgstr "``Description`` (문자열)"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:256
 msgid "``Permissions`` (String): Space-separated permissions names"
-msgstr ""
+msgstr "``Permissions`` (문자열): 공백으로 구분된 권한 이름"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:257
 msgid ""
 "``Scheme Managed`` (bool): Indicates whether this role is managed as part"
 " of a scheme."
 msgstr ""
+"``Scheme Managed`` (불리언): 이 역할이 스키마의 일부로 관리되는지 여부를 "
+"나타냅니다."
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:258
 msgid ""
 "``BuiltIn`` (bool): Indicates if this role is built-in to the Mattermost "
 "system and not removable by the user."
 msgstr ""
+"``BuiltIn`` (불리언): 이 역할이 Mattermost 시스템에 내장되어 있고 사용자가 "
+"제거할 수 없는지 여부를 나타냅니다."
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:261
 msgid "Built-in roles"
-msgstr ""
+msgstr "내장 역할"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:263
 msgid ""
@@ -1310,10 +1350,14 @@ msgid ""
 "API to `retrieve a list of permissions by role name "
 "<https://api.mattermost.com/#tag/roles/paths/~1roles~1names/post>`__."
 msgstr ""
+"시스템 스키마는 제품에 내장되어 있으며, 그 역할은 ``Roles`` 테이블에서 "
+"``BuiltIn: true`` 로 정의됩니다. Mattermost API를 사용하여 `역할 이름별로 "
+"권한 목록을 검색 <https://api.mattermost.com/#tag/roles/paths/~1roles~1names/post>`__ "
+"할 수 있습니다."
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:265
 msgid "The following built-in roles with default permissions are available:"
-msgstr ""
+msgstr "다음 기본 권한이 있는 내장 역할을 사용할 수 있습니다:"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:267
 msgid "*channel_admin*"
@@ -1591,23 +1635,23 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:462
 msgid "create"
-msgstr ""
+msgstr "생성하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:463
 msgid "edit"
-msgstr ""
+msgstr "편집하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:464
 msgid "delete"
-msgstr ""
+msgstr "삭제하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:465
 msgid "manage members"
-msgstr ""
+msgstr "구성원 관리하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:466
 msgid "restore"
-msgstr ""
+msgstr "복원하기"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:468
 msgid "*system_guest*"
@@ -1667,49 +1711,49 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:668
 msgid "``Schemes`` table"
-msgstr ""
+msgstr "``Schemes`` 테이블"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:670
 msgid ""
 "Schemes are dynamic and user configurable, necessitating a database table"
 " with the following fields:"
 msgstr ""
+"Schemes는 동적이며 사용자가 구성할 수 있어, 다음과 같은 필드가 있는 데이터베이스 테이블이 필요합니다:"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:673
 msgid ""
 "``Name`` (Unique String with Character Constraints, e.g. "
 "“corporate_scheme”)"
-msgstr ""
+msgstr "``Name`` (문자 제약조건이 있는 고유 문자열, 예: \"corporate_scheme\")"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:674
 msgid "``Display`` Name"
-msgstr ""
+msgstr "``Display`` 이름"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:676
 msgid "``Scope`` (String): Team or Channel"
-msgstr ""
+msgstr "``Scope`` (문자열): Team 또는 Channel"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:677
 msgid "``Team Admin Role`` (String): Empty if Channel Scope"
-msgstr ""
+msgstr "``Team Admin Role`` (문자열): Channel Scope인 경우 비어있음"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:678
 msgid "``Team User Role`` (String): Empty if Channel Scope"
-msgstr ""
+msgstr "``Team User Role`` (문자열): Channel Scope인 경우 비어있음"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:679
 msgid "``Team Guest Role`` (String): Empty if Channel Scope"
-msgstr ""
+msgstr "``Team Guest Role`` (문자열): Channel Scope인 경우 비어있음"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:680
 msgid "``Channel Admin Role`` (String): Always provided"
-msgstr ""
+msgstr "``Channel Admin Role`` (문자열): 항상 제공됨"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:681
 msgid "``Channel User Role`` (String): Always provided"
-msgstr ""
+msgstr "``Channel User Role`` (문자열): 항상 제공됨"
 
 #: ../../source/onboard/advanced-permissions-backend-infrastructure.rst:682
 msgid "``Channel Guest Role`` (String): Always provided"
-msgstr ""
-
+msgstr "``Channel Guest Role`` (문자열): 항상 제공됨"

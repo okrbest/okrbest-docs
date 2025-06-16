@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/deploy/server/docker-troubleshooting.rst:2
 msgid "Docker deployment troubleshooting"
-msgstr ""
+msgstr "Docker 배포 문제 해결"
 
 #: ../../source/deploy/server/docker-troubleshooting.rst:5
 msgid "Permission issues on M1 Mac"
-msgstr ""
+msgstr "M1 Mac의 권한 문제"
 
 #: ../../source/deploy/server/docker-troubleshooting.rst:7
 msgid ""
@@ -34,20 +34,23 @@ msgid ""
 "required directories and set their permissions, then skip the following "
 "command because it causes the deploy to stop working."
 msgstr ""
+"M1 Mac에서 Docker를 사용하여 Mattermost 서버를 배포하고 Docker 컨테이너에서 권한 문제가 발생하는 경우, "
+"필요한 디렉토리를 다시 생성하고 권한을 설정한 다음 배포가 작동을 멈추게 하는 다음 명령을 건너뛰세요."
 
 #: ../../source/deploy/server/docker-troubleshooting.rst:13
 msgid ""
 "If you're experiencing issues deploying on Docker generally, ensure the "
 "docker daemon is enabled and running:"
 msgstr ""
+"일반적으로 Docker 배포에 문제가 있는 경우, docker 데몬이 활성화되어 있고 실행 중인지 확인하세요:"
 
 #: ../../source/deploy/server/docker-troubleshooting.rst:19
 msgid "To remove all data and settings for your Mattermost deployment:"
-msgstr ""
+msgstr "Mattermost 배포의 모든 데이터와 설정을 제거하려면:"
 
 #: ../../source/deploy/server/docker-troubleshooting.rst:26
 msgid "TLS and NGINX issues"
-msgstr ""
+msgstr "TLS 및 NGINX 문제"
 
 #: ../../source/deploy/server/docker-troubleshooting.rst:28
 msgid ""
@@ -56,20 +59,24 @@ msgid ""
 "<https://github.com/mattermost/docker/blob/main/docs/issuing-letsencrypt-"
 "certificate.md>`__."
 msgstr ""
+"NGINX용 TLS 인증서와 키 구성에 대한 자세한 가이드는 `저장소의 이 문서 "
+"<https://github.com/mattermost/docker/blob/main/docs/issuing-letsencrypt-"
+"certificate.md>`__ 를 참조하세요."
 
 #: ../../source/deploy/server/docker-troubleshooting.rst:31
 msgid "Install a different version of Mattermost"
-msgstr ""
+msgstr "다른 버전의 Mattermost 설치"
 
 #: ../../source/deploy/server/docker-troubleshooting.rst:33
 msgid "Shut down your deployment."
-msgstr ""
+msgstr "배포를 종료하세요."
 
 #: ../../source/deploy/server/docker-troubleshooting.rst:35
 msgid ""
 "Run ``git pull`` to fetch any recent changes to the repository, paying "
 "attention to any potential ``env.example`` changes."
 msgstr ""
+"저장소의 최근 변경사항을 가져오기 위해 ``git pull``을 실행하고, 잠재적인 ``env.example`` 변경사항에 주의하세요."
 
 #: ../../source/deploy/server/docker-troubleshooting.rst:37
 msgid ""
@@ -79,14 +86,18 @@ msgid ""
 "<https://hub.docker.com/r/mattermost/mattermost-team-"
 "edition/tags?page=1&ordering=last_updated>`__ image version."
 msgstr ""
+"``.env`` 파일에서 ``MATTERMOST_IMAGE_TAG`` 를 원하는 `enterprise <https://hub.docker.com/r/mattermost/mattermost-"
+"enterprise-edition/tags?page=1&ordering=last_updated>`__ 또는 `team "
+"<https://hub.docker.com/r/mattermost/mattermost-team-"
+"edition/tags?page=1&ordering=last_updated>`__ 이미지 버전을 가리키도록 조정하세요."
 
 #: ../../source/deploy/server/docker-troubleshooting.rst:39
 msgid "Redeploy Mattermost."
-msgstr ""
+msgstr "Mattermost를 재배포하세요."
 
 #: ../../source/deploy/server/docker-troubleshooting.rst:42
 msgid "Upgrading from ``mattermost-docker``"
-msgstr ""
+msgstr "``mattermost-docker`` 에서 업그레이드"
 
 #: ../../source/deploy/server/docker-troubleshooting.rst:44
 msgid ""
@@ -97,4 +108,7 @@ msgid ""
 "For additional help, please refer to `this issue "
 "<https://github.com/mattermost/mattermost-docker/issues/489>`__."
 msgstr ""
-
+"더 이상 사용되지 않는 `mattermost-docker 저장소 <https://github.com/mattermost/mattermost-docker>`__ 에서 "
+"업그레이드하는 방법에 대한 자세한 가이드는 `이 문서 "
+"<https://github.com/mattermost/docker/blob/main/scripts/UPGRADE.md>`__ 를 참조하세요. "
+"추가 도움이 필요하면 `이 이슈 <https://github.com/mattermost/mattermost-docker/issues/489>`__ 를 참조하세요."

@@ -21,31 +21,31 @@ msgstr ""
 
 #: ../../source/onboard/ad-ldap.rst:2
 msgid "AD/LDAP setup"
-msgstr ""
+msgstr "AD/LDAP 설정"
 
 #: ../../source/_static/badges/ent-pro-cloud-selfhosted.rst:7
 msgid ""
 "|plans-img| Available on `Enterprise and Professional plans "
 "<https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `Enterprise 및 Professional 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/ent-pro-cloud-selfhosted.rst:9
 msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
-msgstr ""
+msgstr "|deployment-img| `클라우드 <https://mattermost.com/sign-up/>`__ 및 `자체 호스팅 <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/onboard/ad-ldap.rst:8
 msgid "Overview"
-msgstr ""
+msgstr "개요"
 
 #: ../../source/onboard/ad-ldap.rst:10
 msgid ""
@@ -53,7 +53,8 @@ msgid ""
 "as Active Directory/LDAP). Enable the same credentials used in on-prem "
 "AD/LDAP deployments to be reused in Mattermost, with optional :doc"
 ":`multi-factor authentication </onboard/multi-factor-authentication>`."
-msgstr ""
+msgstr "Mattermost는 Microsoft AD/LDAP(공식적으로 Active Directory/LDAP로 알려짐)와 함께 "Same Sign-On"을 제공합니다. "
+"온프레미스 AD/LDAP 배포에서 사용하는 동일한 자격 증명을 선택적 :doc:`다중 인증 </onboard/multi-factor-authentication>` 과 함께 Mattermost에서 재사용할 수 있습니다."
 
 #: ../../source/onboard/ad-ldap.rst:12
 msgid ""
@@ -62,138 +63,141 @@ msgid ""
 " system with Mattermost, users can log into Mattermost without having to "
 "create new credentials. User accounts are managed in AD/LDAP, and changes"
 " are synchronized with Mattermost."
-msgstr ""
+msgstr "AD/LDAP는 조직 네트워크에서 사용자의 인증 및 권한 부여 세부 정보를 저장하는 서비스입니다. "
+"AD/LDAP 시스템을 Mattermost와 통합하면 사용자는 새로운 자격 증명을 만들 필요 없이 Mattermost에 로그인할 수 있습니다. "
+"사용자 계정은 AD/LDAP에서 관리되며 변경 사항은 Mattermost와 동기화됩니다."
 
 #: ../../source/onboard/ad-ldap.rst:14
 msgid "Benefits of integrating AD/LDAP with Mattermost include:"
-msgstr ""
+msgstr "Mattermost와 AD/LDAP 통합의 이점은 다음과 같습니다:"
 
 #: ../../source/onboard/ad-ldap.rst:16
 msgid ""
 "**Single sign-on.** Users can log in to Mattermost with their AD/LDAP "
 "credentials."
-msgstr ""
+msgstr "**단일 로그인.** 사용자는 AD/LDAP 자격 증명으로 Mattermost에 로그인할 수 있습니다."
 
 #: ../../source/onboard/ad-ldap.rst:17
 msgid ""
 "**Centralized identity management.** Mattermost accounts can display user"
 " information from AD/LDAP, such as first and last name, email, and "
 "username."
-msgstr ""
+msgstr "**중앙 집중식 ID 관리.** Mattermost 계정은 이름, 성, 이메일, 사용자 이름과 같은 AD/LDAP의 사용자 정보를 표시할 수 있습니다."
 
 #: ../../source/onboard/ad-ldap.rst:18
 msgid ""
 "**Automatic account provisioning.** A Mattermost user account is "
 "automatically created the first time a user signs in with their AD/LDAP "
 "credentials."
-msgstr ""
+msgstr "**자동 계정 프로비저닝.** 사용자가 AD/LDAP 자격 증명으로 처음 로그인할 때 Mattermost 사용자 계정이 자동으로 생성됩니다."
 
 #: ../../source/onboard/ad-ldap.rst:19
 msgid ""
 "**Sync groups to predefined roles in Mattermost.** Assign team and "
 "channel roles to groups via AD/LDAP Group Sync."
-msgstr ""
+msgstr "**Mattermost의 미리 정의된 역할에 그룹 동기화.** AD/LDAP 그룹 동기화를 통해 팀 및 채널 역할을 그룹에 할당합니다."
 
 #: ../../source/onboard/ad-ldap.rst:20
 msgid ""
 "**Compliance alignment with administrator management.** Manage "
 "Administrator access to Mattermost in the System Console using AD/LDAP "
 "filters."
-msgstr ""
+msgstr "**관리자 관리와의 규정 준수 정렬.** AD/LDAP 필터를 사용하여 시스템 콘솔에서 Mattermost에 대한 관리자 액세스를 관리합니다."
 
 #: ../../source/onboard/ad-ldap.rst:23
 msgid "Pre-installation notes"
-msgstr ""
+msgstr "설치 전 참고 사항"
 
 #: ../../source/onboard/ad-ldap.rst:25
 msgid ""
 "If you're using AD/LDAP with **nested security groups** you need to write"
 " a PowerShell script, or similar, to flatten and aggregate the tree into "
 "a single security group to map into Mattermost."
-msgstr ""
+msgstr "**중첩된 보안 그룹** 이 있는 AD/LDAP를 사용하는 경우, PowerShell 스크립트나 유사한 것을 작성하여 트리를 평탄화하고 단일 보안 그룹으로 집계하여 Mattermost에 매핑해야 합니다."
 
 #: ../../source/onboard/ad-ldap.rst:27
 msgid "We strongly recommend the following as you prepare to set up AD/LDAP:"
-msgstr ""
+msgstr "AD/LDAP 설정을 준비할 때 다음 사항을 강력히 권장합니다:"
 
 #: ../../source/onboard/ad-ldap.rst:29
 msgid "Attribute Naming and Case Sensitivity:"
-msgstr ""
+msgstr "속성 명명 및 대소문자 구분:"
 
 #: ../../source/onboard/ad-ldap.rst:31
 msgid ""
 "Attribute names in both AD/LDAP and Mattermost configurations are **case-"
 "sensitive**."
-msgstr ""
+msgstr "AD/LDAP와 Mattermost 구성 모두에서 속성 이름은 **대소문자를 구분** 합니다."
 
 #: ../../source/onboard/ad-ldap.rst:32
 msgid ""
 "Ensure that the attribute names in the AD/LDAP claim rules **exactly "
 "match** the expected attribute names in Mattermost. Case deviations will "
 "result in issues."
-msgstr ""
+msgstr "AD/LDAP 클레임 규칙의 속성 이름이 Mattermost에서 예상하는 속성 이름과 **정확히 일치** 하는지 확인하세요. 대소문자 차이는 문제를 일으킬 수 있습니다."
 
 #: ../../source/onboard/ad-ldap.rst:34
 msgid "Essential attributes:"
-msgstr ""
+msgstr "필수 속성:"
 
 #: ../../source/onboard/ad-ldap.rst:36
 msgid ""
 "The ``NameID`` element is required for user identification in SAML "
 "assertions."
-msgstr ""
+msgstr "SAML 어설션에서 사용자 식별을 위해 ``NameID`` 요소가 필요합니다."
 
 #: ../../source/onboard/ad-ldap.rst:37
 msgid ""
 "All required attributes (e.g., ``Email``, ``Username``, ``FirstName``, "
 "and ``LastName``) must be included and correctly mapped."
-msgstr ""
+msgstr "모든 필수 속성(예: ``Email``, ``Username``, ``FirstName``, ``LastName``)이 포함되어 있고 올바르게 매핑되어야 합니다."
 
 #: ../../source/onboard/ad-ldap.rst:39
 msgid "How to choose a stable unique identifier for ``NameID``:"
-msgstr ""
+msgstr "``NameID`` 에 대한 안정적인 고유 식별자를 선택하는 방법:"
 
 #: ../../source/onboard/ad-ldap.rst:41
 msgid ""
 "Using a stable and unique identifier (``EmployeeID`` or ``ObjectGUID``) "
 "for the ``NameID`` helps prevent issues in cases where user details could"
 " change over time (e.g., ``LastName`` or ``Email``)."
-msgstr ""
+msgstr "``NameID`` 에 안정적이고 고유한 식별자(``EmployeeID`` 또는 ``ObjectGUID``)를 사용하면 사용자 세부 정보가 시간이 지남에 따라 "
+"변경될 수 있는 경우(예: ``LastName`` 또는 ``Email``) 문제를 방지하는 데 도움이 됩니다."
 
 #: ../../source/onboard/ad-ldap.rst:42
 msgid ""
 "If stable, unique attributes aren't available in AD, using attributes "
 "that might change over time can result in future issues."
-msgstr ""
+msgstr "AD에서 안정적이고 고유한 속성을 사용할 수 없는 경우, 시간이 지남에 따라 변경될 수 있는 속성을 사용하면 향후 문제가 발생할 수 있습니다."
 
 #: ../../source/onboard/ad-ldap.rst:45
 msgid "Getting started"
-msgstr ""
+msgstr "시작하기"
 
 #: ../../source/onboard/ad-ldap.rst:47
 msgid "There are two ways to set up AD/LDAP:"
-msgstr ""
+msgstr "AD/LDAP를 설정하는 방법은 두 가지가 있습니다:"
 
 #: ../../source/onboard/ad-ldap.rst:49
 msgid "**Configure AD/LDAP using the System Console user interface**"
-msgstr ""
+msgstr "**시스템 콘솔 사용자 인터페이스를 사용하여 AD/LDAP 구성**"
 
 #: ../../source/onboard/ad-ldap.rst:51
 msgid ""
 "Log in to your workspace and create a new account using email and "
 "password. This is assigned the system admin role as the first user "
 "created."
-msgstr ""
+msgstr "워크스페이스에 로그인하고 이메일과 비밀번호를 사용하여 새 계정을 만듭니다. 이는 첫 번째로 생성된 사용자로 시스템 관리자 역할이 할당됩니다."
 
 #: ../../source/onboard/ad-ldap.rst:52
 msgid ""
 "Next, configure AD/LDAP and then convert your system admin account to use"
 " the AD/LDAP login method."
-msgstr ""
+msgstr "다음으로 AD/LDAP를 구성하고 시스템 관리자 계정을 AD/LDAP 로그인 방식으로 변환하세요."
 
 #: ../../source/onboard/ad-ldap.rst:54
 msgid "**Configure AD/LDAP by editing ``config.json``**"
-msgstr ""
+msgstr "**``config.json`` 편집을 통해 AD/LDAP 구성**"
 
 #: ../../source/onboard/ad-ldap.rst:56
 msgid ""
@@ -202,14 +206,17 @@ msgid ""
 "settings:ad/ldap>`. When you log in to Mattermost the first user to log "
 "in with valid AD/LDAP credentials will be assigned the system admin role."
 msgstr ""
+":ref:`AD/LDAP 설정 문서 <configure/authentication-configuration-settings:ad/ldap>` 를 기반으로 "
+"``config.json`` 을 편집하여 AD/LDAP를 활성화하세요. Mattermost에 로그인할 때 유효한 AD/LDAP 자격 증명으로 "
+"로그인하는 첫 번째 사용자에게 시스템 관리자 역할이 할당됩니다."
 
 #: ../../source/onboard/ad-ldap.rst:59
 msgid "Configure AD/LDAP login"
-msgstr ""
+msgstr "AD/LDAP 로그인 구성"
 
 #: ../../source/onboard/ad-ldap.rst:61
 msgid "**Create a system admin account using email authentication.**"
-msgstr ""
+msgstr "**이메일 인증을 사용하여 시스템 관리자 계정 생성.**"
 
 #: ../../source/onboard/ad-ldap.rst:63
 msgid ""
@@ -217,10 +224,12 @@ msgid ""
 "which is automatically assigned the **system admin** role since it is the"
 " first account created. You may also assign the role to another account."
 msgstr ""
+"새 워크스페이스를 만들고 이메일과 비밀번호를 사용하여 계정을 생성하세요. 이는 첫 번째로 생성된 계정이므로 "
+"**시스템 관리자** 역할이 자동으로 할당됩니다. 다른 계정에도 이 역할을 할당할 수 있습니다."
 
 #: ../../source/onboard/ad-ldap.rst:65
 msgid "**Configure AD/LDAP.**"
-msgstr ""
+msgstr "**AD/LDAP 구성.**"
 
 #: ../../source/onboard/ad-ldap.rst:67
 msgid ""
@@ -228,20 +237,22 @@ msgid ""
 "settings based on the :ref:`configuration settings documentation "
 "<configure/authentication-configuration-settings:ad/ldap>`."
 msgstr ""
+"**시스템 콘솔 > 인증 > AD/LDAP** 로 이동하여 :ref:`구성 설정 문서 "
+"<configure/authentication-configuration-settings:ad/ldap>` 를 기반으로 AD/LDAP 설정을 입력하세요."
 
 #: ../../source/onboard/ad-ldap.rst:69
 msgid "**Confirm that AD/LDAP sign-on is enabled.**"
-msgstr ""
+msgstr "**AD/LDAP 로그인이 활성화되었는지 확인.**"
 
 #: ../../source/onboard/ad-ldap.rst:71
 msgid ""
 "After AD/LDAP has been enabled, confirm that users can log in using "
 "AD/LDAP credentials."
-msgstr ""
+msgstr "AD/LDAP가 활성화된 후 사용자가 AD/LDAP 자격 증명을 사용하여 로그인할 수 있는지 확인하세요."
 
 #: ../../source/onboard/ad-ldap.rst:73
 msgid "**Switch your system admin account from email to AD/LDAP authentication.**"
-msgstr ""
+msgstr "**시스템 관리자 계정을 이메일에서 AD/LDAP 인증으로 전환.**"
 
 #: ../../source/onboard/ad-ldap.rst:75
 msgid ""
@@ -249,10 +260,12 @@ msgid ""
 " to AD/LDAP** and log in with your AD/LDAP credentials to complete the "
 "switch."
 msgstr ""
+"프로필로 이동하여 **보안 > 로그인 방식 > AD/LDAP로 전환** 을 선택하고 AD/LDAP 자격 증명으로 로그인하여 "
+"전환을 완료하세요."
 
 #: ../../source/onboard/ad-ldap.rst:77
 msgid "**(Optional) Restrict authentication to AD/LDAP.**"
-msgstr ""
+msgstr "**(선택사항) 인증을 AD/LDAP로 제한.**"
 
 #: ../../source/onboard/ad-ldap.rst:79
 msgid ""
@@ -260,36 +273,38 @@ msgid ""
 "in with email** to **false** and **Enable sign-in with username** to "
 "**false**."
 msgstr ""
+"**시스템 콘솔 > 인증 > 이메일** 로 이동하여 **이메일로 로그인 활성화** 를 **false** 로 설정하고 "
+"**사용자 이름으로 로그인 활성화** 를 **false** 로 설정하세요."
 
 #: ../../source/onboard/ad-ldap.rst:80
 msgid ""
 "Then choose **Save** to save the changes. This should leave AD/LDAP as "
 "the only login option."
-msgstr ""
+msgstr "그런 다음 **저장** 을 선택하여 변경사항을 저장하세요. 이렇게 하면 AD/LDAP가 유일한 로그인 옵션이 됩니다."
 
 #: ../../source/onboard/ad-ldap.rst:82
 msgid ""
 "**(Optional) If you configured `First Name Attribute` and `Last Name "
 "Attribute` in the System Console.**"
-msgstr ""
+msgstr "**(선택사항) 시스템 콘솔에서 `First Name Attribute` 와 `Last Name Attribute` 를 구성한 경우.**"
 
 #: ../../source/onboard/ad-ldap.rst:84
 msgid ""
 "Navigate to **System Console > Site Configuration > Users and Teams** and"
 " set **Teammate Name Display** to **Show first and last name**. This is "
 "recommended for a better user experience."
-msgstr ""
+msgstr "**시스템 콘솔 > 사이트 구성 > 사용자 및 팀** 으로 이동하여 **팀원 이름 표시** 를 **이름과 성 표시** 로 설정하세요. 더 나은 사용자 경험을 위해 권장됩니다."
 
 #: ../../source/onboard/ad-ldap.rst:88
 msgid ""
 "If you've made a mistake and lock yourself out of the system somehow, you"
 " can set an existing account to system admin using the :ref:`mmctl roles "
 "<manage/mmctl-command-line-tool:mmctl roles>` command."
-msgstr ""
+msgstr "실수로 시스템에서 잠겨버린 경우, :ref:`mmctl roles <manage/mmctl-command-line-tool:mmctl roles>` 명령을 사용하여 기존 계정을 시스템 관리자로 설정할 수 있습니다."
 
 #: ../../source/onboard/ad-ldap.rst:91
 msgid "Configure AD/LDAP synchronization"
-msgstr ""
+msgstr "AD/LDAP 동기화 구성"
 
 #: ../../source/onboard/ad-ldap.rst:93
 msgid ""
@@ -301,13 +316,16 @@ msgid ""
 " their active sessions are revoked once Mattermost synchronizes the "
 "updated attributes."
 msgstr ""
+"AD/LDAP 로그인을 구성하는 것 외에도 AD/LDAP 동기화를 구성할 수 있습니다. 동기화 시 Mattermost는 관련 계정 정보를 위해 AD/LDAP를 "
+"쿼리하고 속성 변경(이름, 성, 닉네임)에 따라 Mattermost 계정을 업데이트합니다. AD/LDAP에서 계정이 비활성화되면 사용자는 Mattermost에서 "
+"비활성화되고, Mattermost가 업데이트된 속성을 동기화하면 활성 세션이 취소됩니다."
 
 #: ../../source/onboard/ad-ldap.rst:95
 msgid ""
 "The AD/LDAP synchronization depends on email. Make sure all users on your"
 " AD/LDAP server have an email address, or ensure their account is "
 "deactivated in Mattermost."
-msgstr ""
+msgstr "AD/LDAP 동기화는 이메일에 의존합니다. AD/LDAP 서버의 모든 사용자가 이메일 주소를 가지고 있는지 확인하거나, Mattermost에서 계정이 비활성화되어 있는지 확인하세요."
 
 #: ../../source/onboard/ad-ldap.rst:97
 msgid ""
@@ -316,16 +334,18 @@ msgid ""
 "name, last name, position, nickname, email, profile image, or username. "
 "LDAP must be the authoritative source for these user attributes."
 msgstr ""
+"Mattermost가 사용자 인증에 AD/LDAP를 사용하도록 구성된 경우, 다음 사용자 속성 변경은 API를 통해 수행할 수 없습니다: 이름, 성, 직위, "
+"닉네임, 이메일, 프로필 이미지 또는 사용자 이름. LDAP는 이러한 사용자 속성의 권한 있는 소스여야 합니다."
 
 #: ../../source/onboard/ad-ldap.rst:99
 msgid "To configure AD/LDAP synchronization with AD/LDAP sign-in:"
-msgstr ""
+msgstr "AD/LDAP 로그인과 함께 AD/LDAP 동기화를 구성하려면:"
 
 #: ../../source/onboard/ad-ldap.rst:101
 msgid ""
 "Go to **System Console > Authentication > AD/LDAP** and set **Enable "
 "Synchronization with AD/LDAP** to **true**."
-msgstr ""
+msgstr "**시스템 콘솔 > 인증 > AD/LDAP** 로 이동하여 **AD/LDAP와 동기화 활성화** 를 **true** 로 설정하세요."
 
 #: ../../source/onboard/ad-ldap.rst:103
 msgid ""
@@ -334,24 +354,26 @@ msgid ""
 "default setting is 60 minutes. The profile picture attribute is only "
 "synchronized when the user logs in."
 msgstr ""
+"**동기화 간격(분)** 으로 스크롤하여 Mattermost 계정이 AD/LDAP와 속성을 얼마나 자주 동기화할지 지정하세요. 기본 설정은 60분입니다. "
+"프로필 사진 속성은 사용자가 로그인할 때만 동기화됩니다."
 
 #: ../../source/onboard/ad-ldap.rst:105
 msgid ""
 "If you want to synchronize immediately after disabling an account, use "
 "the **AD/LDAP Synchronize Now** button in **System Console > AD/LDAP**."
-msgstr ""
+msgstr "계정을 비활성화한 후 즉시 동기화하려면 **시스템 콘솔 > AD/LDAP** 의 **AD/LDAP 지금 동기화** 버튼을 사용하세요."
 
 #: ../../source/onboard/ad-ldap.rst:106
 msgid ""
 "To configure AD/LDAP synchronization with SAML sign-in, see the "
 ":doc:`SAML documentation </onboard/sso-saml>`."
-msgstr ""
+msgstr ":doc:`SAML 문서 </onboard/sso-saml>` 를 참조하여 SAML 로그인과 함께 AD/LDAP 동기화를 구성하세요."
 
 #: ../../source/onboard/ad-ldap.rst:110
 msgid ""
 "Ensure at least one AD/LDAP user is in Mattermost or the sync won't "
 "complete."
-msgstr ""
+msgstr "동기화가 완료되려면 Mattermost에 최소 한 명의 AD/LDAP 사용자가 있어야 합니다."
 
 #: ../../source/onboard/ad-ldap.rst:111
 msgid ""
@@ -362,20 +384,24 @@ msgid ""
 "administration <onboard/delegated-granular-administration:edit privileges"
 " of admin roles (advanced)>` documentation for details."
 msgstr ""
+"시스템 콘솔의 AD/LDAP 설정과의 동기화는 임의의 호스트의 연결성과 가용성을 확인하는 데 사용될 수 있습니다. 이에 대해 우려하는 시스템 "
+"관리자는 사용자 지정 관리자 역할을 사용하여 이러한 설정 수정에 대한 액세스를 제한할 수 있습니다. 자세한 내용은 :ref:`위임된 세분화된 "
+"관리 <onboard/delegated-granular-administration:edit privileges of admin roles (advanced)>` "
+"문서를 참조하세요."
 
 #: ../../source/onboard/ad-ldap.rst:114
 msgid "Configure AD/LDAP sign-in using filters"
-msgstr ""
+msgstr "필터를 사용하여 AD/LDAP 로그인 구성"
 
 #: ../../source/onboard/ad-ldap.rst:116
 msgid ""
 "Using filters assigns roles to specified users on login. To access "
 "AD/LDAP filter settings navigate to **System Console > AD/LDAP**."
-msgstr ""
+msgstr "필터를 사용하면 로그인 시 지정된 사용자에게 역할을 할당합니다. AD/LDAP 필터 설정에 접근하려면 **시스템 콘솔 > AD/LDAP** 로 이동하세요."
 
 #: ../../source/onboard/ad-ldap.rst:119
 msgid "User filter"
-msgstr ""
+msgstr "사용자 필터"
 
 #: ../../source/onboard/ad-ldap.rst:121
 msgid ""
@@ -384,26 +410,28 @@ msgid ""
 "Mattermost. For AD/LDAP, the query to filter out disabled users is "
 "``(&(objectCategory=Person)(!(UserAccountControl:1.2.840.113556.1.4.803:=2)))``."
 msgstr ""
+"(선택 사항) 사용자 개체를 검색할 때 사용할 AD/LDAP 필터를 입력하세요. 쿼리로 선택된 사용자만 Mattermost에 접근할 수 있습니다. "
+"AD/LDAP의 경우 비활성화된 사용자를 필터링하는 쿼리는 ``(&(objectCategory=Person)(!(UserAccountControl:1.2.840.113556.1.4.803:=2)))`` 입니다."
 
 #: ../../source/onboard/ad-ldap.rst:123 ../../source/onboard/ad-ldap.rst:139
 #: ../../source/onboard/ad-ldap.rst:154
 msgid "Navigate to **System Console > Authentication > AD/LDAP**."
-msgstr ""
+msgstr "**시스템 콘솔 > 인증 > AD/LDAP** 로 이동하세요."
 
 #: ../../source/onboard/ad-ldap.rst:124
 msgid "Complete the **User Filter** field."
-msgstr ""
+msgstr "**사용자 필터** 필드를 완성하세요."
 
 #: ../../source/onboard/ad-ldap.rst:125 ../../source/onboard/ad-ldap.rst:141
 #: ../../source/onboard/ad-ldap.rst:157
 msgid "Choose **Save**."
-msgstr ""
+msgstr "**저장** 을 선택하세요."
 
 #: ../../source/onboard/ad-ldap.rst:127
 msgid ""
 "When the user accesses Mattermost, they log in with same username and "
 "password that they use for organizational logins."
-msgstr ""
+msgstr "사용자가 Mattermost에 접근할 때 조직 로그인에 사용하는 것과 동일한 사용자 이름과 비밀번호로 로그인합니다."
 
 #: ../../source/onboard/ad-ldap.rst:129
 msgid ""
@@ -411,10 +439,12 @@ msgid ""
 "groups. For AD/LDAP, the query to filter out groups is "
 "``(&(memberof=cn=ACME_ALL,ou=Users,dc=sademo,dc=com)(!(memberof=cn=DEV_OPS,ou=Users,dc=sademo,dc=com)))``."
 msgstr ""
+"필터는 특정 그룹에 속한 사용자를 제외하는 데에도 사용할 수 있습니다. AD/LDAP의 경우 그룹을 필터링하는 쿼리는 "
+"``(&(memberof=cn=ACME_ALL,ou=Users,dc=sademo,dc=com)(!(memberof=cn=DEV_OPS,ou=Users,dc=sademo,dc=com)))`` 입니다."
 
 #: ../../source/onboard/ad-ldap.rst:132
 msgid "Guest filter"
-msgstr ""
+msgstr "게스트 필터"
 
 #: ../../source/onboard/ad-ldap.rst:134
 msgid ""
@@ -424,6 +454,9 @@ msgid ""
 "immediately upon first login instead of the default member user role. "
 "This eliminates having to manually assign the role in the System Console."
 msgstr ""
+"(선택 사항) 활성화되면 Mattermost의 게스트 필터는 AD/LDAP 역할이 게스트이고 Mattermost 워크스페이스에 참여하도록 초대된 외부 "
+"사용자를 식별합니다. 이러한 사용자는 기본 멤버 사용자 역할 대신 첫 로그인 시 즉시 게스트 역할이 적용됩니다. 이를 통해 시스템 콘솔에서 "
+"수동으로 역할을 할당할 필요가 없어집니다."
 
 #: ../../source/onboard/ad-ldap.rst:136
 msgid ""
@@ -431,32 +464,34 @@ msgid ""
 "a member and will retain their Guest role. Guests can be promoted in "
 "**System Console > User Management**."
 msgstr ""
+"이 필터가 제거되거나 변경되면 활성 게스트는 멤버로 승격되지 않고 게스트 역할을 유지합니다. 게스트는 **시스템 콘솔 > 사용자 관리** 에서 "
+"승격할 수 있습니다."
 
 #: ../../source/onboard/ad-ldap.rst:138
 msgid ""
 "Navigate to **System Console > Authentication > Guest Access** and set "
 "Guest Access to ``true``."
-msgstr ""
+msgstr "**시스템 콘솔 > 인증 > 게스트 액세스** 로 이동하여 게스트 액세스를 ``true`` 로 설정하세요."
 
 #: ../../source/onboard/ad-ldap.rst:140
 msgid "Complete the **Guest Filter** field."
-msgstr ""
+msgstr "**게스트 필터** 필드를 완성하세요."
 
 #: ../../source/onboard/ad-ldap.rst:143
 msgid ""
 "When a guest logs in for the first time they are presented with a default"
 " landing page until they are added to channels."
-msgstr ""
+msgstr "게스트가 처음 로그인할 때는 채널에 추가될 때까지 기본 랜딩 페이지가 표시됩니다."
 
 #: ../../source/onboard/ad-ldap.rst:145
 msgid ""
 "See the :doc:`Guest Accounts documentation </onboard/guest-accounts>` for"
 " more information about this feature."
-msgstr ""
+msgstr "이 기능에 대한 자세한 내용은 :doc:`게스트 계정 문서 </onboard/guest-accounts>` 를 참조하세요."
 
 #: ../../source/onboard/ad-ldap.rst:148
 msgid "Admin filter"
-msgstr ""
+msgstr "관리자 필터"
 
 #: ../../source/onboard/ad-ldap.rst:150
 msgid ""
@@ -467,6 +502,9 @@ msgid ""
 "identified by this attribute will be promoted from member to system admin"
 " upon next login."
 msgstr ""
+"(선택 사항) 시스템 관리자를 지정하는 데 사용할 AD/LDAP 필터를 입력하세요. 쿼리로 선택된 사용자는 시스템 관리자로 Mattermost "
+"워크스페이스에 접근할 수 있습니다. 기본적으로 시스템 관리자는 Mattermost 시스템 콘솔에 완전한 접근 권한을 가집니다. 이 속성으로 "
+"식별된 기존 멤버는 다음 로그인 시 멤버에서 시스템 관리자로 승격됩니다."
 
 #: ../../source/onboard/ad-ldap.rst:152
 msgid ""
@@ -475,14 +513,16 @@ msgid ""
 "manually in **System Console > User Management** to ensure access is "
 "restricted immediately."
 msgstr ""
+"다음 로그인은 **시스템 콘솔 > 세션 길이** 에 설정된 세션 길이를 기반으로 합니다. 접근이 즉시 제한되도록 하기 위해 **시스템 "
+"콘솔 > 사용자 관리** 에서 사용자를 수동으로 멤버로 강등하는 것이 좋습니다."
 
 #: ../../source/onboard/ad-ldap.rst:155
 msgid "Set **Admin Filter** to **true**."
-msgstr ""
+msgstr "**관리자 필터** 를 **true** 로 설정하세요."
 
 #: ../../source/onboard/ad-ldap.rst:156
 msgid "Complete the **Admin Filter** field."
-msgstr ""
+msgstr "**관리자 필터** 필드를 완성하세요."
 
 #: ../../source/onboard/ad-ldap.rst:161
 msgid ""
@@ -490,17 +530,18 @@ msgid ""
 "admin is retained. However if this filter is removed/changed, system "
 "admins that were promoted via this filter will be demoted to members and "
 "won't retain access to the System Console."
-msgstr ""
+msgstr "관리자 필터가 ``false`` 로 설정되면 시스템 관리자 역할이 유지됩니다. 하지만 이 필터가 제거되거나 변경되면, 이 필터를 통해 승격된 시스템 관리자는 멤버로 강등되고 "
+"시스템 콘솔에 대한 접근 권한을 유지하지 못합니다."
 
 #: ../../source/onboard/ad-ldap.rst:163
 msgid ""
 "When this filter isn't in use, members can be manually promoted/demoted "
 "via **System Console > User Management**."
-msgstr ""
+msgstr "이 필터를 사용하지 않을 때는 **시스템 콘솔 > 사용자 관리** 를 통해 멤버를 수동으로 승격/강등할 수 있습니다."
 
 #: ../../source/onboard/ad-ldap.rst:166
 msgid "Configure AD/LDAP deployments with multiple domains"
-msgstr ""
+msgstr "여러 도메인이 있는 AD/LDAP 배포 구성"
 
 #: ../../source/onboard/ad-ldap.rst:168
 msgid ""
@@ -510,22 +551,23 @@ msgid ""
 "<https://learn.microsoft.com/en-us/previous-versions/windows/it-pro"
 "/windows-server-2003/cc759073(v=ws.10)?redirectedfrom=MSDN>`_ for more "
 "information."
-msgstr ""
+msgstr "여러 도메인을 사용하는 조직은 \"Forest\" 구성을 사용하여 여러 도메인을 통합할 수 있습니다. "
+"자세한 내용은 `Forests as Collections of Domain Controllers that Trust Each Other <https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc759073(v=ws.10)?redirectedfrom=MSDN>`_ 를 참조하세요."
 
 #: ../../source/onboard/ad-ldap.rst:170
 msgid ""
 "For forest configurations that contain multiple domains which do NOT "
 "share a common root, you can search across all of the domains using the "
 "Global Catalog. To do so, update your ``config.json`` as follows:"
-msgstr ""
+msgstr "공통 루트를 공유하지 않는 여러 도메인이 포함된 forest 구성의 경우, 글로벌 카탈로그를 사용하여 모든 도메인을 검색할 수 있습니다. 이를 위해 ``config.json`` 을 다음과 같이 업데이트하세요:"
 
 #: ../../source/onboard/ad-ldap.rst:172
 msgid "Set the LdapPort to 3268 (instead of 389)"
-msgstr ""
+msgstr "LdapPort를 3268로 설정하세요(389 대신)"
 
 #: ../../source/onboard/ad-ldap.rst:173
 msgid "Set the BaseDN to \" \" (A single space character)"
-msgstr ""
+msgstr "BaseDN을 \" \"로 설정하세요(공백 문자 하나)"
 
 #: ../../source/onboard/ad-ldap.rst:175
 msgid ""
@@ -533,11 +575,11 @@ msgid ""
 "/previous-versions/windows/it-"
 "pro/windows-2000-server/cc978012(v=technet.10)?redirectedfrom=MSDN>`_ for"
 " additional details."
-msgstr ""
+msgstr "추가 세부 정보는 `Global Catalog and LDAP Searches <https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc978012(v=technet.10)?redirectedfrom=MSDN>`_ 를 참조하세요."
 
 #: ../../source/onboard/ad-ldap.rst:178
 msgid "Troubleshooting/FAQ"
-msgstr ""
+msgstr "문제 해결/자주 묻는 질문"
 
 #: ../../source/onboard/ad-ldap.rst:180
 msgid ""
@@ -545,13 +587,13 @@ msgid ""
 "suggestions on common error messages and issues. It is recommended that "
 "you check your logs for errors as they can provide an idea of what the "
 "issue is."
-msgstr ""
+msgstr "다음은 일반적인 오류 메시지와 문제에 대한 자주 묻는 질문과 문제 해결 제안입니다. 로그에서 오류를 확인하는 것이 좋습니다. 로그는 문제가 무엇인지 파악하는 데 도움이 될 수 있습니다."
 
 #: ../../source/onboard/ad-ldap.rst:183
 msgid ""
 "If the **AD/LDAP Test** button fails, how can I troubleshoot the "
 "connection?"
-msgstr ""
+msgstr "**AD/LDAP 테스트** 버튼이 실패하면 연결 문제를 어떻게 해결할 수 있나요?"
 
 #: ../../source/onboard/ad-ldap.rst:185
 msgid ""
@@ -559,11 +601,12 @@ msgid ""
 "AD/LDAP user query in an external system. See `LDAP Connection Test "
 "Example <https://ldaptool.sourceforge.net/>`__. If the AD/LDAP connection"
 " is verified to be working outside of Mattermost, try the following:"
-msgstr ""
+msgstr "외부 시스템에서 AD/LDAP 사용자 쿼리를 실행하여 AD/LDAP 연결 설정이 올바른지 확인하세요. "
+"`LDAP Connection Test Example <https://ldaptool.sourceforge.net/>`__ 를 참조하세요. AD/LDAP 연결이 Mattermost 외부에서 작동하는 것으로 확인되면 다음을 시도해보세요:"
 
 #: ../../source/onboard/ad-ldap.rst:187
 msgid "Check your AD/LDAP system to verify your ``Bind Username`` format."
-msgstr ""
+msgstr "AD/LDAP 시스템에서 ``Bind Username`` 형식을 확인하세요."
 
 #: ../../source/onboard/ad-ldap.rst:188
 msgid ""
@@ -571,42 +614,44 @@ msgid ""
 "System Console. (**AD/LDAP Port** set to 389 typically uses **Connection "
 "Security** set to ``None``. **AD/LDAP Port** set to 636 typically ties to"
 " **Connection Security** set to **TLS**)."
-msgstr ""
+msgstr "시스템 콘솔에서 **AD/LDAP Port** 와 **Connection Security** 설정을 확인하세요. "
+"(**AD/LDAP Port** 가 389로 설정된 경우 일반적으로 **Connection Security** 는 ``None`` 으로 설정됩니다. "
+"**AD/LDAP Port** 가 636으로 설정된 경우 일반적으로 **Connection Security** 는 **TLS** 로 설정됩니다)."
 
 #: ../../source/onboard/ad-ldap.rst:189
 msgid ""
 "If you're seeing ``x509: certificate signed by unknown authority`` in "
 "your logs, try installing an intermediate SSL certificate or have your "
 "LDAP server send the complete certificate chain."
-msgstr ""
+msgstr "로그에 ``x509: certificate signed by unknown authority`` 가 표시되면 중간 SSL 인증서를 설치하거나 LDAP 서버가 전체 인증서 체인을 전송하도록 설정하세요."
 
 #: ../../source/onboard/ad-ldap.rst:191
 msgid ""
 "If these options don't work, please `contact our support team "
 "<https://mattermost.com/support/>`_."
-msgstr ""
+msgstr "이 옵션들이 작동하지 않으면 `지원팀에 문의 <https://mattermost.com/support/>`_ 하세요."
 
 #: ../../source/onboard/ad-ldap.rst:194
 msgid ""
 "When I first set up and synchronize AD/LDAP, are the users automatically "
 "created in Mattermost?"
-msgstr ""
+msgstr "AD/LDAP를 처음 설정하고 동기화할 때 사용자가 Mattermost에 자동으로 생성되나요?"
 
 #: ../../source/onboard/ad-ldap.rst:196
 msgid "No, each user is created on their first login."
-msgstr ""
+msgstr "아니요, 각 사용자는 첫 로그인 시 생성됩니다."
 
 #: ../../source/onboard/ad-ldap.rst:199
 msgid ""
 "When I try to synchronize AD/LDAP, why does the status show as "
 "``Pending`` and not complete?"
-msgstr ""
+msgstr "AD/LDAP 동기화를 시도할 때 상태가 ``Pending`` 으로 표시되고 완료되지 않는 이유는 무엇인가요?"
 
 #: ../../source/onboard/ad-ldap.rst:201
 msgid ""
 "Go to **System Console > AD/LDAP** and make sure that the **Enable "
 "Synchronization with AD/LDAP** setting is set to **true**."
-msgstr ""
+msgstr "**시스템 콘솔 > AD/LDAP** 로 이동하여 **Enable Synchronization with AD/LDAP** 설정이 **true** 로 설정되어 있는지 확인하세요."
 
 #: ../../source/onboard/ad-ldap.rst:203
 msgid ""
@@ -615,25 +660,26 @@ msgid ""
 "syntax was formatted incorrectly. Refer to this :ref:`document <configure"
 "/authentication-configuration-settings:user filter>` for guidance on "
 "setting a correct syntax format."
-msgstr ""
+msgstr "문제가 지속되면 **User Filter** 필드를 비워두고 동기화를 시도해보세요. 이 경우 동기화가 완료되면 일반 구문이 잘못 형식화된 것입니다. "
+"올바른 구문 형식 설정에 대한 지침은 :ref:`document <configure/authentication-configuration-settings:user filter>` 를 참조하세요."
 
 #: ../../source/onboard/ad-ldap.rst:205
 msgid ""
 "Make sure that you also have at least one AD/LDAP user in Mattermost or "
 "the synchronization will not complete."
-msgstr ""
+msgstr "Mattermost에 최소 한 명의 AD/LDAP 사용자가 있어야 동기화가 완료됩니다."
 
 #: ../../source/onboard/ad-ldap.rst:208
 msgid ""
 "What's the difference between the Username Attribute, ID Attribute, and "
 "Login ID Attribute?"
-msgstr ""
+msgstr "Username Attribute, ID Attribute, Login ID Attribute의 차이점은 무엇인가요?"
 
 #: ../../source/onboard/ad-ldap.rst:210
 msgid ""
 "There are three AD/LDAP attributes that apear to be similar but serve a "
 "different purpose:"
-msgstr ""
+msgstr "비슷해 보이지만 다른 목적을 가진 세 가지 AD/LDAP 속성이 있습니다:"
 
 #: ../../source/onboard/ad-ldap.rst:212
 msgid ""
@@ -642,7 +688,8 @@ msgid ""
 " to ``john.smith``, a user typing ``@john`` will see ``@john.smith`` in "
 "their autocomplete options and posting a message with ``@john.smith`` "
 "will send a notification to that user that they’ve been mentioned."
-msgstr ""
+msgstr "**Username Attribute:** Mattermost 사용자 인터페이스에서 사용자를 식별하고 멘션하는 데 사용됩니다. 예를 들어, **Username Attribute** 가 ``john.smith`` 로 설정된 경우, "
+"사용자가 ``@john`` 을 입력하면 자동 완성 옵션에서 ``@john.smith`` 가 표시되고, ``@john.smith`` 로 메시지를 게시하면 해당 사용자에게 멘션 알림이 전송됩니다."
 
 #: ../../source/onboard/ad-ldap.rst:213
 msgid ""
@@ -653,35 +700,38 @@ msgid ""
 " this field after users have already logged in, use the :ref:`mattermost "
 "ldap idmigrate mmctl tool <manage/mmctl-command-line-tool:mmctl ldap "
 "idmigrate>`."
-msgstr ""
+msgstr "**ID Attribute:** Mattermost에서 고유 식별자로 사용됩니다. ``ObjectGUID`` 와 같이 변경되지 않는 값을 가진 AD/LDAP 속성이어야 합니다. "
+"사용자의 ID 속성이 변경되면 이전 계정과 연결되지 않은 새로운 Mattermost 계정이 생성됩니다. "
+"사용자가 이미 로그인한 후 이 필드를 변경해야 하는 경우 :ref:`mattermost ldap idmigrate mmctl tool <manage/mmctl-command-line-tool:mmctl ldap idmigrate>` 를 사용하세요."
 
 #: ../../source/onboard/ad-ldap.rst:214
 msgid ""
 "**Login ID Attribute:** The attribute in the AD/LDAP server used to log "
 "in to Mattermost. Normally this attribute is the same as the **Username "
 "Attribute** field above, or another field that users can easily remember."
-msgstr ""
+msgstr "**Login ID Attribute:** Mattermost에 로그인하는 데 사용되는 AD/LDAP 서버의 속성입니다. "
+"일반적으로 이 속성은 위의 **Username Attribute** 필드와 동일하거나 사용자가 쉽게 기억할 수 있는 다른 필드입니다."
 
 #: ../../source/onboard/ad-ldap.rst:217
 msgid "How do I deactivate users?"
-msgstr ""
+msgstr "사용자를 비활성화하려면 어떻게 해야 하나요?"
 
 #: ../../source/onboard/ad-ldap.rst:219
 msgid ""
 "If a user has logged into Mattermost through AD/LDAP or SAML, you can "
 "choose how they are deactivated, whether manually or automatically."
-msgstr ""
+msgstr "AD/LDAP 또는 SAML을 통해 Mattermost에 로그인한 사용자는 수동 또는 자동으로 비활성화하는 방법을 선택할 수 있습니다."
 
 #: ../../source/onboard/ad-ldap.rst:221
 msgid "There are three main ways to do this:"
-msgstr ""
+msgstr "이를 수행하는 세 가지 주요 방법이 있습니다:"
 
 #: ../../source/onboard/ad-ldap.rst:223
 msgid ""
 "**User deletion:** If the user is completely removed from the AD/LDAP "
 "server, they will be deactivated in Mattermost on the next "
 "synchronization."
-msgstr ""
+msgstr "**사용자 삭제:** AD/LDAP 서버에서 사용자가 완전히 제거되면 다음 동기화 시 Mattermost에서 비활성화됩니다."
 
 #: ../../source/onboard/ad-ldap.rst:224
 msgid ""
@@ -690,7 +740,8 @@ msgid ""
 " users you want to have access to Mattermost. When someone is removed "
 "from the selected group, they will be deactivated in Mattermost on the "
 "next synchronization."
-msgstr ""
+msgstr "**사용자 필터:** :ref:`user filter <configure/authentication-configuration-settings:user filter>` 를 설정하여 "
+"Mattermost에 접근할 수 있는 AD/LDAP 사용자의 하위 집합만 선택합니다. 선택한 그룹에서 사용자가 제거되면 다음 동기화 시 Mattermost에서 비활성화됩니다."
 
 #: ../../source/onboard/ad-ldap.rst:225
 msgid ""
@@ -698,42 +749,43 @@ msgid ""
 "Users**, select a user's role, and select **Deactivate**. When you "
 "manually deactivate a user, they can reactivate themselves by logging "
 "back in."
-msgstr ""
+msgstr "**수동 비활성화**: **시스템 콘솔 > 사용자 관리 > 사용자** 로 이동하여 사용자의 역할을 선택하고 **비활성화** 를 선택합니다. "
+"사용자를 수동으로 비활성화하면 다시 로그인하여 스스로 재활성화할 수 있습니다."
 
 #: ../../source/onboard/ad-ldap.rst:227
 msgid ""
 "For AD/LDAP, to filter out deactivated users you must set the user filter"
 " to:"
-msgstr ""
+msgstr "AD/LDAP에서 비활성화된 사용자를 필터링하려면 사용자 필터를 다음과 같이 설정해야 합니다:"
 
 #: ../../source/onboard/ad-ldap.rst:229
 msgid "``(&(objectCategory=Person)(!(UserAccountControl:1.2.840.113556.1.4.803:=2)))``"
-msgstr ""
+msgstr "``(&(objectCategory=Person)(!(UserAccountControl:1.2.840.113556.1.4.803:=2)))``"
 
 #: ../../source/onboard/ad-ldap.rst:231
 msgid ""
 "Filters can also be used for excluding users who belong to certain "
 "groups. For AD/LDAP, the query to filter out groups is:"
-msgstr ""
+msgstr "필터는 특정 그룹에 속한 사용자를 제외하는 데에도 사용할 수 있습니다. AD/LDAP의 경우 그룹을 필터링하는 쿼리는 다음과 같습니다:"
 
 #: ../../source/onboard/ad-ldap.rst:233
 msgid "``(&(memberof=cn=ACME_ALL,ou=Users,dc=sademo,dc=com)``"
-msgstr ""
+msgstr "``(&(memberof=cn=ACME_ALL,ou=Users,dc=sademo,dc=com)``"
 
 #: ../../source/onboard/ad-ldap.rst:235
 msgid "``(!(memberof=cn=DEV_OPS,ou=Users,dc=sademo,dc=com)))``"
-msgstr ""
+msgstr "``(!(memberof=cn=DEV_OPS,ou=Users,dc=sademo,dc=com)))``"
 
 #: ../../source/onboard/ad-ldap.rst:237
 msgid ""
 "When a user is deactivated in Mattermost via options one or two above, "
 "all the user's current sessions are revoked and they will be unable to "
 "log in or access Mattermost."
-msgstr ""
+msgstr "위의 옵션 1 또는 2를 통해 Mattermost에서 사용자가 비활성화되면 사용자의 모든 현재 세션이 취소되고 Mattermost에 로그인하거나 접근할 수 없게 됩니다."
 
 #: ../../source/onboard/ad-ldap.rst:240
 msgid "Can I connect to multiple AD/LDAP servers?"
-msgstr ""
+msgstr "여러 AD/LDAP 서버에 연결할 수 있나요?"
 
 #: ../../source/onboard/ad-ldap.rst:242
 msgid ""
@@ -742,12 +794,14 @@ msgid ""
 "connecting to Mattermost. Consider upvoting the `feature request "
 "<https://portal.productboard.com/mattermost/33-what-matters-to-you>`_ on "
 "our forum."
-msgstr ""
+msgstr "현재 여러 AD/LDAP 서버에 연결하는 내장된 방법은 없습니다. Mattermost에 연결하기 전에 포리스트의 인스턴스를 연결해야 합니다. "
+"포럼에서 `기능 요청 <https://portal.productboard.com/mattermost/33-what-matters-to-you>`_ 에 투표하는 것을 고려해보세요."
 
 #: ../../source/onboard/ad-ldap.rst:245
 msgid ""
 "When trying to log in, I see the error ``AD/LDAP not available on this "
 "server``"
+msgstr "로그인을 시도할 때 ``AD/LDAP not available on this server`` 오류가 표시됩니다"
 msgstr ""
 
 #: ../../source/onboard/ad-ldap.rst:247
@@ -755,50 +809,50 @@ msgid ""
 "This indicates that there is a problem somewhere with your configuration."
 " We recommend that you check your Mattermost configuration settings to "
 "ensure that AD/LDAP is enabled, and the settings are correct."
-msgstr ""
+msgstr "이는 구성에 문제가 있다는 것을 나타냅니다. AD/LDAP가 활성화되어 있고 설정이 올바른지 Mattermost 구성 설정을 확인하는 것이 좋습니다."
 
 #: ../../source/onboard/ad-ldap.rst:249
 msgid ""
 "If you're still having issues, you can `contact support "
 "<https://mattermost.com/support/>`__ for additional troubleshooting."
-msgstr ""
+msgstr "문제가 계속되면 추가 문제 해결을 위해 `지원팀에 문의 <https://mattermost.com/support/>`__ 하세요."
 
 #: ../../source/onboard/ad-ldap.rst:252
 msgid "I see the error ``User not registered on AD/LDAP server``"
-msgstr ""
+msgstr "``User not registered on AD/LDAP server`` 오류가 표시됩니다"
 
 #: ../../source/onboard/ad-ldap.rst:254
 msgid ""
 "This means the query sent back to the AD/LDAP server returned no results."
 " We recommend that you:"
-msgstr ""
+msgstr "이는 AD/LDAP 서버로 전송된 쿼리가 결과를 반환하지 않았다는 의미입니다. 다음을 확인하는 것이 좋습니다:"
 
 #: ../../source/onboard/ad-ldap.rst:256
 msgid ""
 "Check that the user credentials were entered properly - you should log in"
 " with the field set as the :ref:`*ID Attribute* <configure"
 "/authentication-configuration-settings:id attribute>`."
-msgstr ""
+msgstr "사용자 자격 증명이 올바르게 입력되었는지 확인하세요 - :ref:`*ID Attribute* <configure/authentication-configuration-settings:id attribute>` 로 설정된 필드로 로그인해야 합니다."
 
 #: ../../source/onboard/ad-ldap.rst:257
 msgid "Check that the user account exists in the AD/LDAP server."
-msgstr ""
+msgstr "사용자 계정이 AD/LDAP 서버에 존재하는지 확인하세요."
 
 #: ../../source/onboard/ad-ldap.rst:258
 msgid "Check the AD/LDAP configuration settings are correct."
-msgstr ""
+msgstr "AD/LDAP 구성 설정이 올바른지 확인하세요."
 
 #: ../../source/onboard/ad-ldap.rst:260
 msgid ""
 "If you're still having issues, you can `contact Mattermost Support "
 "<https://mattermost.com/support/>`__ for additional troubleshooting."
-msgstr ""
+msgstr "문제가 계속되면 추가 문제 해결을 위해 `Mattermost 지원팀에 문의 <https://mattermost.com/support/>`__ 하세요."
 
 #: ../../source/onboard/ad-ldap.rst:263
 msgid ""
 "I updated a user account in AD/LDAP, and they can no longer log in to "
 "Mattermost"
-msgstr ""
+msgstr "AD/LDAP에서 사용자 계정을 업데이트했는데 Mattermost에 더 이상 로그인할 수 없습니다"
 
 #: ../../source/onboard/ad-ldap.rst:265
 msgid ""
@@ -807,7 +861,8 @@ msgid ""
 "that email already exists``, or a new Mattermost account is created when "
 "they try to log in - this means the **ID Attribute** for their account "
 "has changed."
-msgstr ""
+msgstr "사용자가 AD/LDAP 자격 증명으로 Mattermost에 더 이상 로그인할 수 없는 경우 - 예를 들어, ``An account with that email already exists`` 오류 메시지가 표시되거나 "
+"로그인을 시도할 때 새 Mattermost 계정이 생성되는 경우 - 이는 계정의 **ID Attribute** 가 변경되었음을 의미합니다."
 
 #: ../../source/onboard/ad-ldap.rst:267
 msgid ""
@@ -816,32 +871,34 @@ msgid ""
 " that sometimes changes for an **ID Attribute** (e.g. username, email "
 "that changes when someone gets married), we recommend you switch to using"
 " a non-changing field such as a GUID."
-msgstr ""
+msgstr "**ID Attribute** 로 사용되는 필드의 값을 이전 값으로 변경하여 문제를 해결할 수 있습니다. "
+"현재 **ID Attribute** 로 가끔 변경되는 필드(예: 사용자 이름, 결혼 시 변경되는 이메일)를 사용 중이라면, GUID와 같이 변경되지 않는 필드를 사용하는 것이 좋습니다."
 
 #: ../../source/onboard/ad-ldap.rst:269
 msgid ""
 "To do this, you can set the :ref:`Login ID Attribute <configure"
 "/authentication-configuration-settings:id attribute>` to whatever you "
 "would like users to log in with (e.g. username or email)."
-msgstr ""
+msgstr "이를 위해 :ref:`Login ID Attribute <configure/authentication-configuration-settings:id attribute>` 를 "
+"사용자가 로그인에 사용하고 싶은 값(예: 사용자 이름 또는 이메일)으로 설정할 수 있습니다."
 
 #: ../../source/onboard/ad-ldap.rst:272
 msgid ""
 "Currently the value is case sensitive. If the **ID Attribute** is set to "
 "the username and the username changes from ``John.Smith`` to "
 "``john.smith``, the user will experience problems logging in."
-msgstr ""
+msgstr "현재 값은 대소문자를 구분합니다. **ID Attribute** 가 사용자 이름으로 설정되어 있고 사용자 이름이 ``John.Smith`` 에서 ``john.smith`` 로 변경되면 사용자는 로그인에 문제가 발생할 수 있습니다."
 
 #: ../../source/onboard/ad-ldap.rst:275
 msgid "I see the log error ``LDAP Result Code 4 \"Size Limit Exceeded\"``"
-msgstr ""
+msgstr "로그에 ``LDAP Result Code 4 \"Size Limit Exceeded\"`` 오류가 표시됩니다"
 
 #: ../../source/onboard/ad-ldap.rst:277
 msgid ""
 "This indicates that your AD/LDAP server configuration has a maximum page "
 "size set and the query coming from Mattermost is returning a result set "
 "in excess of that limit."
-msgstr ""
+msgstr "이는 AD/LDAP 서버 구성에 최대 페이지 크기가 설정되어 있고 Mattermost에서 오는 쿼리가 해당 제한을 초과하는 결과 집합을 반환하고 있음을 나타냅니다."
 
 #: ../../source/onboard/ad-ldap.rst:279
 msgid ""
@@ -851,7 +908,8 @@ msgid ""
 "will return a sequence of result sets that do not exceed the max page "
 "size, rather than returning all results in a single query. A max page "
 "size setting of 1500 is recommended."
-msgstr ""
+msgstr "이 문제를 해결하기 위해 Mattermost 구성에서 :ref:`max page size <configure/authentication-configuration-settings:maximum page size>` 를 AD/LDAP 서버의 제한과 일치하도록 설정할 수 있습니다. "
+"이렇게 하면 단일 쿼리에서 모든 결과를 반환하는 대신 최대 페이지 크기를 초과하지 않는 결과 집합 시퀀스를 반환합니다. 최대 페이지 크기는 1500으로 설정하는 것이 좋습니다."
 
 #: ../../source/onboard/ad-ldap.rst:281
 msgid ""
@@ -859,11 +917,12 @@ msgid ""
 "logged into Mattermost yet. Ensure that at least one AD/LDAP user has "
 "logged into Mattermost and re-run the synchronization. The error should "
 "disappear at that point."
-msgstr ""
+msgstr "오류가 계속 발생한다면 아직 AD/LDAP 사용자가 Mattermost에 로그인하지 않았을 가능성이 높습니다. "
+"최소한 한 명의 AD/LDAP 사용자가 Mattermost에 로그인했는지 확인하고 동기화를 다시 실행하세요. 이 시점에서 오류가 사라질 것입니다."
 
 #: ../../source/onboard/ad-ldap.rst:284
 msgid "I see the log error ``Missing NameID Element``"
-msgstr ""
+msgstr "로그에 ``Missing NameID Element`` 오류가 표시됩니다"
 
 #: ../../source/onboard/ad-ldap.rst:286
 msgid ""
@@ -873,11 +932,12 @@ msgid ""
 "``NameID`` is mapped to a unique user identifier, such as the user's "
 "email address or another stable attribute that isn't subject to change "
 "over time."
-msgstr ""
+msgstr "이는 AD/LDAP 서버 구성에 SAML 어설션에 ``NameID`` 요소가 포함되어 있지 않음을 나타냅니다. "
+"``NameID`` 요소는 SAML 어설션에서 사용자 식별에 필요합니다. ``NameID`` 가 사용자의 이메일 주소나 시간이 지나도 변경되지 않는 다른 안정적인 속성과 같은 고유한 사용자 식별자에 매핑되어 있는지 확인하세요."
 
 #: ../../source/onboard/ad-ldap.rst:289
 msgid "I see the log error ``Username Attribute is Missing``"
-msgstr ""
+msgstr "로그에 ``Username Attribute is Missing`` 오류가 표시됩니다"
 
 #: ../../source/onboard/ad-ldap.rst:291
 msgid ""
@@ -887,32 +947,34 @@ msgid ""
 "exactly what Mattermost expects. Update the claim rules in AD/LDAP to "
 "correctly map LDAP attributes to the expected outgoing claim types, "
 "ensuring proper casing (e.g., ``Username`` instead of ``UserName``)."
-msgstr ""
+msgstr "SAML 어설션의 ``Username`` 속성이 누락되었거나 잘못된 이름으로 지정되었습니다. SAML 어설션에 필요한 모든 속성이 포함되어 있는지 확인하세요. "
+"속성 이름은 대소문자를 구분하며 Mattermost가 예상하는 것과 정확히 일치해야 합니다. AD/LDAP의 클레임 규칙을 업데이트하여 LDAP 속성을 예상되는 발신 클레임 유형에 올바르게 매핑하고, "
+"적절한 대소문자를 사용하세요(예: ``UserName`` 대신 ``Username``)."
 
 #: ../../source/onboard/ad-ldap.rst:294
 msgid "Can the Enter ID User Filter read security groups?"
-msgstr ""
+msgstr "Enter ID User Filter가 보안 그룹을 읽을 수 있나요?"
 
 #: ../../source/onboard/ad-ldap.rst:296
 msgid "Yes it can, but make sure that:"
-msgstr ""
+msgstr "네, 가능하지만 다음 사항을 확인하세요:"
 
 #: ../../source/onboard/ad-ldap.rst:298
 msgid "Permissions are correctly configured on the service account you are using."
-msgstr ""
+msgstr "사용 중인 서비스 계정에 권한이 올바르게 구성되어 있는지 확인하세요."
 
 #: ../../source/onboard/ad-ldap.rst:299
 msgid "Each user object is a direct member of the security group."
-msgstr ""
+msgstr "각 사용자 객체가 보안 그룹의 직접 구성원인지 확인하세요."
 
 #: ../../source/onboard/ad-ldap.rst:302
 msgid "How do I know if an AD/LDAP sync job fails?"
-msgstr ""
+msgstr "AD/LDAP 동기화 작업이 실패했는지 어떻게 알 수 있나요?"
 
 #: ../../source/onboard/ad-ldap.rst:304
 msgid ""
 "Mattermost provides the status of each AD/LDAP sync job in **System "
 "Console > Authentication > AD/LDAP**. Here you can see the number of "
 "users updated and if the job succeeded or failed."
-msgstr ""
-
+msgstr "Mattermost는 **시스템 콘솔 > 인증 > AD/LDAP** 에서 각 AD/LDAP 동기화 작업의 상태를 제공합니다. "
+"여기에서 업데이트된 사용자 수와 작업 성공 또는 실패 여부를 확인할 수 있습니다."

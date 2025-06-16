@@ -21,23 +21,23 @@ msgstr ""
 
 #: ../../source/onboard/sso-saml-adfs.rst:2
 msgid "Configure SAML with Microsoft ADFS for Windows Server 2012"
-msgstr ""
+msgstr "Windows Server 2012용 Microsoft ADFS로 SAML 구성하기"
 
 #: ../../source/onboard/sso-saml-adfs.rst:4
 msgid ""
 "The following process provides steps to configure SAML 2.0 with Microsoft"
 " ADFS for Mattermost."
-msgstr ""
+msgstr "다음 과정은 Mattermost용 Microsoft ADFS로 SAML 2.0을 구성하는 단계를 제공합니다."
 
 #: ../../source/onboard/sso-saml-before-you-begin.rst:6
 msgid "Before you begin"
-msgstr ""
+msgstr "시작하기 전에"
 
 #: ../../source/onboard/sso-saml-before-you-begin.rst:8
 msgid ""
 "Before you begin, you need to generate encryption certificates for "
 "encrypting the SAML connection."
-msgstr ""
+msgstr "시작하기 전에 SAML 연결을 암호화하기 위한 암호화 인증서를 생성해야 합니다."
 
 #: ../../source/onboard/sso-saml-before-you-begin.rst:10
 msgid ""
@@ -49,6 +49,10 @@ msgid ""
 "generating a self-signed x509v3 certificate for use with multiple URLs / "
 "IPs."
 msgstr ""
+"GitHub의 ``mattermost/docs`` 저장소에서 `Bash 스크립트 "
+"<https://github.com/mattermost/docs/tree/master/source/scripts/generate-"
+"certificates>`_ 를 사용하거나 다른 적절한 방법을 사용할 수 있습니다. 여러 URL/IP에 사용할 수 있는 자체 서명된 x509v3 인증서 생성에 대한 자세한 내용은 :doc:`자체 서명 인증서 생성 "
+"</scripts/generate-certificates/gencert>` 문서를 참조하세요."
 
 #: ../../source/onboard/sso-saml-before-you-begin.rst:11
 msgid ""
@@ -57,10 +61,11 @@ msgid ""
 "Provider Private Key** and the **Service Provider Public Certificate** "
 "respectively."
 msgstr ""
+"생성된 두 개의 파일을 저장하세요. 이는 개인 키와 공개 키입니다. 시스템 콘솔에서는 각각 **서비스 제공자 개인 키** 와 **서비스 제공자 공개 인증서** 로 참조됩니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:13
 msgid "The following are basic requirements to use ADFS for Mattermost:"
-msgstr ""
+msgstr "Mattermost에서 ADFS를 사용하기 위한 기본 요구사항은 다음과 같습니다:"
 
 #: ../../source/onboard/sso-saml-adfs.rst:10
 msgid ""
@@ -68,6 +73,7 @@ msgid ""
 "username attributes. For Mattermost servers running 3.3 and earlier, "
 "users must also have their first name and last name attributes specified."
 msgstr ""
+"모든 사용자가 지정된 이메일과 사용자 이름 속성을 가진 Active Directory 인스턴스. Mattermost 서버 3.3 이전 버전을 실행하는 경우, 사용자는 이름과 성 속성도 지정해야 합니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:11
 msgid ""
@@ -75,10 +81,11 @@ msgid ""
 "Microsoft Server 2012R2, but similar steps should work for other "
 "versions."
 msgstr ""
+"실행 중인 Microsoft Server. 이 가이드에서 사용된 스크린샷은 Microsoft Server 2012R2의 것이지만, 다른 버전에서도 유사한 단계가 작동할 것입니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:12
 msgid "An SSL certificate to sign your ADFS login page."
-msgstr ""
+msgstr "ADFS 로그인 페이지에 서명할 SSL 인증서."
 
 #: ../../source/onboard/sso-saml-adfs.rst:13
 msgid ""
@@ -88,6 +95,9 @@ msgid ""
 "/deployment-administrators-"
 "guide/gg188612(v=crm.8)?redirectedfrom=MSDN>`_."
 msgstr ""
+"Microsoft Server에 설치된 ADFS. "
+"`이 Microsoft 문서 <https://learn.microsoft.com/en-us/previous-versions/dynamicscrm-2016/deployment-administrators-guide/gg188612(v=crm.8)?redirectedfrom=MSDN>`_ 에서 "
+"ADFS 배포 및 구성에 대한 자세한 가이드를 찾을 수 있습니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:15
 msgid ""
@@ -96,10 +106,12 @@ msgid ""
 "**SAML SSO URL Endpoint** in this guide. If you chose the defaults for "
 "the installation, this will be ``/adfs/ls/``."
 msgstr ""
+"ADFS 설치에서 ADFS Endpoints 섹션의 **SAML 2.0/W-Federation URL** 값을 기록하세요. 이 가이드에서는 **SAML SSO URL Endpoint** 로도 알려져 있습니다. "
+"설치 시 기본값을 선택한 경우 이 값은 ``/adfs/ls/`` 가 됩니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:18
 msgid "Add a relying party trust"
-msgstr ""
+msgstr "신뢰 당사자 신뢰 추가"
 
 #: ../../source/onboard/sso-saml-adfs.rst:20
 msgid ""
@@ -107,16 +119,18 @@ msgid ""
 "Relying Party Trusts**, then select **Add Relying Party Trust**. A "
 "configuration wizard opens for adding a new relying party trust."
 msgstr ""
+"ADFS 관리 사이드바에서 **AD FS > Trust Relationships > Relying Party Trusts** 로 이동한 다음 **Add Relying Party Trust** 를 선택하세요. "
+"새로운 신뢰 당사자 신뢰를 추가하기 위한 구성 마법사가 열립니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:24
 msgid "On the **Welcome** screen, select **Start**."
-msgstr ""
+msgstr "**Welcome** 화면에서 **Start** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:28
 msgid ""
 "On the **Select Data Source** screen, select **Enter data about the "
 "relying party manually**."
-msgstr ""
+msgstr "**Select Data Source** 화면에서 **Enter data about the relying party manually** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:32
 msgid ""
@@ -124,22 +138,23 @@ msgid ""
 "recognize the trust, such as ``Mattermost``, then add any notes you want "
 "to make."
 msgstr ""
+"**Specify Display Name** 화면에서 신뢰를 인식할 수 있는 **Display Name** 을 입력하세요(예: ``Mattermost``). 그런 다음 원하는 메모를 추가하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:36
 msgid "On the **Choose Profile** screen, select **AD FS profile**."
-msgstr ""
+msgstr "**Choose Profile** 화면에서 **AD FS profile** 을 선택하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:40
 msgid ""
 "On the **Configure Certificate** screen, leave the certificate settings "
 "at their default values."
-msgstr ""
+msgstr "**Configure Certificate** 화면에서 인증서 설정을 기본값으로 두세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:44
 msgid ""
 "However, if you would like to set up encryption for your SAML connection,"
 " select **Browse**, then upload your Service Provider Public Certificate."
-msgstr ""
+msgstr "하지만 SAML 연결에 대한 암호화를 설정하려면 **Browse** 를 선택한 다음 Service Provider Public Certificate를 업로드하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:48
 msgid ""
@@ -149,6 +164,9 @@ msgid ""
 "mattermost-url>`` should typically match the :ref:`Mattermost Site URL "
 "<configure/environment-configuration-settings:site url>`."
 msgstr ""
+"**Configure URL** 화면에서 **Enable Support for the SAML 2.0 WebSSO protocol** 을 선택한 다음 "
+"**SAML 2.0 SSO service URL** 을 입력하세요. 이는 ``https://<your-mattermost-url>/login/sso/saml`` 와 유사하며, "
+"여기서 ``<your-mattermost-url>`` 은 일반적으로 :ref:`Mattermost Site URL <configure/environment-configuration-settings:site url>` 과 일치해야 합니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:52
 msgid ""
@@ -156,6 +174,8 @@ msgid ""
 "identifier** (also known as the **Identity Provider Issuer URL**) of the "
 "form ``https://<your-idp-url>/adfs/services/trust``, then click **Add**."
 msgstr ""
+"**Configure Identifiers** 화면에서 **Relying party trust identifier**(**Identity Provider Issuer URL** 이라고도 함)를 "
+"``https://<your-idp-url>/adfs/services/trust`` 형식으로 입력한 다음 **Add** 를 클릭하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:56
 msgid ""
@@ -163,16 +183,18 @@ msgid ""
 "enable multi-factor authentication. This is beyond the scope of this "
 "documentation."
 msgstr ""
+"**Configure Multi-factor Authentication Now** 화면에서 다중 인증을 활성화할 수 있습니다. "
+"이는 이 문서의 범위를 벗어납니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:60
 msgid ""
 "On the **Choose Issuance Authorization Rules** screen, select **Permit "
 "all users to access this relying party**."
-msgstr ""
+msgstr "**Choose Issuance Authorization Rules** 화면에서 **Permit all users to access this relying party** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:64
 msgid "On the **Ready to Add Trust** screen, review your settings."
-msgstr ""
+msgstr "**Ready to Add Trust** 화면에서 설정을 검토하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:68
 msgid ""
@@ -180,10 +202,12 @@ msgid ""
 "this relying party trust when the wizard closes**, then select **Close**."
 " You exit the configuration wizard, and a **Claim Rules** editor opens."
 msgstr ""
+"**Finish** 화면에서 **Open the Edit Claim Rules dialog for this relying party trust when the wizard closes** 를 선택한 다음 "
+"**Close** 를 선택하세요. 구성 마법사가 종료되고 **Claim Rules** 편집기가 열립니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:73
 msgid "Create claim rules"
-msgstr ""
+msgstr "클레임 규칙 생성"
 
 #: ../../source/onboard/sso-saml-adfs.rst:75
 msgid ""
@@ -191,137 +215,139 @@ msgid ""
 "editor, select **Add Rule…** to open an **Add Transform Claim Rule "
 "Wizard**."
 msgstr ""
+"**Claim Rules** 편집기의 **Issuance Transform Rules** 섹션에서 **Add Rule…** 을 선택하여 "
+"**Add Transform Claim Rule Wizard** 를 엽니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:79
 msgid ""
 "On the **Choose Rule Type** screen, select **Send LDAP Attributes as "
 "Claims** from the drop-down menu, then select **Next**."
-msgstr ""
+msgstr "**Choose Rule Type** 화면에서 드롭다운 메뉴에서 **Send LDAP Attributes as Claims** 를 선택한 다음 **Next** 를 클릭하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:83
 msgid ""
 "In the **Configure Claim Rule** screen, enter a **Claim Rule Name** of "
 "your choice, select **Active Directory** as the **Attribute Store**, then"
 " complete the following:"
-msgstr ""
+msgstr "**Configure Claim Rule** 화면에서 원하는 **Claim Rule Name** 을 입력하고 **Attribute Store** 로 **Active Directory** 를 선택한 다음 다음을 완료하세요:"
 
 #: ../../source/onboard/sso-saml-adfs.rst:85
 msgid ""
 "From the **LDAP Attribute column**, select ``E-Mail-Addresses``. From the"
 " **Outgoing Claim Type**, type ``Email``."
-msgstr ""
+msgstr "**LDAP Attribute column** 에서 ``E-Mail-Addresses`` 를 선택하세요. **Outgoing Claim Type** 에서 ``Email`` 을 입력하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:86
 msgid ""
 "From the **LDAP Attribute column**, select ``E-Mail-Addresses``. From the"
 " **Outgoing Claim Type**, type ``Name ID``."
-msgstr ""
+msgstr "**LDAP Attribute column** 에서 ``E-Mail-Addresses`` 를 선택하세요. **Outgoing Claim Type** 에서 ``Name ID`` 를 입력하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:87
 msgid ""
 "From the **LDAP Attribute column**, select ``Given-Name``. From the "
 "**Outgoing Claim Type**, type ``FirstName``."
-msgstr ""
+msgstr "**LDAP Attribute column** 에서 ``Given-Name`` 을 선택하세요. **Outgoing Claim Type** 에서 ``FirstName`` 을 입력하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:88
 msgid ""
 "From the **LDAP Attribute column**, select ``Surname``. From the "
 "**Outgoing Claim Type**, type ``LastName``."
-msgstr ""
+msgstr "**LDAP Attribute column** 에서 ``Surname`` 을 선택하세요. **Outgoing Claim Type** 에서 ``LastName`` 을 입력하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:89
 msgid ""
 "From the **LDAP Attribute column**, select ``SAM-Account-Name``. From the"
 " **Outgoing Claim Type**, type ``Username``."
-msgstr ""
+msgstr "**LDAP Attribute column** 에서 ``SAM-Account-Name`` 을 선택하세요. **Outgoing Claim Type** 에서 ``Username`` 을 입력하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:91
 msgid "The ``FirstName`` and ``LastName`` attributes are optional."
-msgstr ""
+msgstr "``FirstName`` 및 ``LastName`` 속성은 선택 사항입니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:93
 msgid "Select **Finish** to add the rule."
-msgstr ""
+msgstr "규칙을 추가하려면 **Finish** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:95
 msgid ""
 "Note that the entries in the **Outgoing Claim Type** column can be chosen"
 " to be something else. They can contain dashes but no spaces. They will "
 "be used to map the corresponding fields in Mattermost later."
-msgstr ""
+msgstr "**Outgoing Claim Type** 열의 항목은 다른 것으로 선택할 수 있습니다. 대시는 포함할 수 있지만 공백은 포함할 수 없습니다. 이는 나중에 Mattermost의 해당 필드를 매핑하는 데 사용됩니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:99
 msgid "Create another new rule by selecting **Add Rule**."
-msgstr ""
+msgstr "**Add Rule** 을 선택하여 다른 새 규칙을 만드세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:101
 msgid ""
 "On the **Choose Rule Type** screen, select **Transform an Incoming "
 "Claim** from the drop-down menu, then select **Next**."
-msgstr ""
+msgstr "**Choose Rule Type** 화면에서 드롭다운 메뉴에서 **Transform an Incoming Claim** 을 선택한 다음 **Next** 를 클릭하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:105
 msgid ""
 "On the **Configure Claim Rule** screen, enter a **Claim Rule Name** of "
 "your choice, then:"
-msgstr ""
+msgstr "**Configure Claim Rule** 화면에서 원하는 **Claim Rule Name** 을 입력한 다음:"
 
 #: ../../source/onboard/sso-saml-adfs.rst:107
 msgid "Select **Name ID** for the **Incoming claim type**."
-msgstr ""
+msgstr "**Incoming claim type** 에 대해 **Name ID** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:108
 msgid "Select **Unspecified** for the **Incoming name ID format**."
-msgstr ""
+msgstr "**Incoming name ID format** 에 대해 **Unspecified** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:109
 msgid "Select **E-Mail Address** for the **Outgoing claim type**."
-msgstr ""
+msgstr "**Outgoing claim type** 에 대해 **E-Mail Address** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:111
 msgid "Select **Pass through all claim values**, then select **Finish**."
-msgstr ""
+msgstr "**Pass through all claim values** 를 선택한 다음 **Finish** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:115
 msgid ""
 "Select **Finish** to create the claim rule, then select **OK** to finish "
 "creating rules."
-msgstr ""
+msgstr "클레임 규칙을 생성하려면 **Finish** 를 선택한 다음 규칙 생성을 완료하려면 **OK** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:117
 msgid ""
 "Open Windows PowerShell as an administrator, then run the following "
 "command:"
-msgstr ""
+msgstr "관리자 권한으로 Windows PowerShell을 열고 다음 명령을 실행하세요:"
 
 #: ../../source/onboard/sso-saml-adfs.rst:119
 msgid ""
 "``Set-ADFSRelyingPartyTrust -TargetName <display-name> "
 "-SamlResponseSignature \"MessageAndAssertion\"``"
-msgstr ""
+msgstr "``Set-ADFSRelyingPartyTrust -TargetName <display-name> -SamlResponseSignature \"MessageAndAssertion\"``"
 
 #: ../../source/onboard/sso-saml-adfs.rst:121
 msgid ""
 "where ``<display-name>`` is the name you specified in step 4 when adding "
 "a relying party trust. In this example, ``<display-name>`` would be "
 "``mattermost``."
-msgstr ""
+msgstr "여기서 ``<display-name>`` 은 신뢰 당사자 트러스트를 추가할 때 4단계에서 지정한 이름입니다. 이 예에서는 ``<display-name>`` 이 ``mattermost`` 가 됩니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:123
 msgid ""
 "This action adds the signature to SAML messages, making verification "
 "successful."
-msgstr ""
+msgstr "이 작업은 SAML 메시지에 서명을 추가하여 검증을 성공적으로 수행합니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:126
 msgid "Export identity provider certificate"
-msgstr ""
+msgstr "ID 공급자 인증서 내보내기"
 
 #: ../../source/onboard/sso-saml-adfs.rst:128
 msgid ""
 "Next, export the identity provider certificate, which will be later "
 "uploaded to Mattermost to finish SAML configuration."
-msgstr ""
+msgstr "다음으로, ID 공급자 인증서를 내보내세요. 이 인증서는 나중에 SAML 구성을 완료하기 위해 Mattermost에 업로드됩니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:130
 msgid ""
@@ -329,44 +355,45 @@ msgid ""
 " then double click on the certificate under **Token-signing**. "
 "Alternatively, you can right-click on the field, then select **View "
 "Certificate**."
-msgstr ""
+msgstr "ADFS 관리 사이드바에서 **AD FS > Service > Certificates** 로 이동한 다음 **Token-signing** 아래의 인증서를 더블 클릭하세요. "
+또는 필드를 마우스 오른쪽 버튼으로 클릭한 다음 **View Certificate** 를 선택할 수 있습니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:134
 msgid ""
 "On the **Certificate** screen, go to the **Details** tab, then select "
 "**Copy to File**, followed by **OK**. This opens a **Certificate Export "
 "Wizard**."
-msgstr ""
+msgstr "**Certificate** 화면에서 **Details** 탭으로 이동한 다음 **Copy to File** 을 선택하고 **OK** 를 클릭하세요. 그러면 **Certificate Export Wizard** 가 열립니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:138
 msgid ""
 "On the **Certificate Export Wizard** screen, select **Next**, then, "
 "select the option **Base-64 encoded X.509 (.CER)**, and select **Next** "
 "again."
-msgstr ""
+msgstr "**Certificate Export Wizard** 화면에서 **Next** 를 선택한 다음 **Base-64 encoded X.509 (.CER)** 옵션을 선택하고 다시 **Next** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:142
 msgid ""
 "On the **Certificate Export Wizard** screen, select **Browse** to specify"
 " the location where you want the Identity Provider Certificate to be "
 "exported, then specify the file name."
-msgstr ""
+msgstr "**Certificate Export Wizard** 화면에서 **Browse** 를 선택하여 ID 공급자 인증서를 내보낼 위치를 지정한 다음 파일 이름을 지정하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:146
 msgid ""
 "Select **Save**. In the **Certificate Export Wizard** screen, verify the "
 "file path is correct, then select **Next**."
-msgstr ""
+msgstr "**Save** 를 선택하세요. **Certificate Export Wizard** 화면에서 파일 경로가 올바른지 확인한 다음 **Next** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:148
 msgid ""
 "In the **Completing the Certificate Export Wizard**, select **Finish**, "
 "then select **OK** to confirm the export was successful."
-msgstr ""
+msgstr "**Completing the Certificate Export Wizard** 에서 **Finish** 를 선택한 다음 내보내기가 성공했는지 확인하기 위해 **OK** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:153
 msgid "Configure SAML Sign-On for Mattermost"
-msgstr ""
+msgstr "Mattermost용 SAML 로그인 구성"
 
 #: ../../source/onboard/sso-saml-adfs.rst:155
 msgid ""
@@ -374,7 +401,8 @@ msgid ""
 "\"FederationMetadata/2007-06/FederationMetadata.xml\" to the root URL of "
 "the ADFS server, for example: "
 "``https://<adfs.domain.com>/federationmetadata/2007-06/FederationMetadata.xml>``."
-msgstr ""
+msgstr "ADFS 서버의 루트 URL에 \"FederationMetadata/2007-06/FederationMetadata.xml\" 을 추가하여 메타데이터 URL을 생성하세요. "
+"예: ``https://<adfs.domain.com>/federationmetadata/2007-06/FederationMetadata.xml>``."
 
 #: ../../source/onboard/sso-saml-adfs.rst:157
 msgid ""
@@ -382,55 +410,56 @@ msgid ""
 "admin. Go to **System Console > Authentication > SAML**, paste the "
 "metadata URL in the **Identity Provider Metadata URL** field, then select"
 " **Get SAML Metadata from IdP**."
-msgstr ""
+msgstr "다음으로 Mattermost 서버를 시작하고 시스템 관리자로 Mattermost에 로그인하세요. **System Console > Authentication > SAML** 로 이동하여 "
+"**Identity Provider Metadata URL** 필드에 메타데이터 URL을 붙여넣은 다음 **Get SAML Metadata from IdP** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:159
 msgid ""
 "This populates the **SAML SSO URL** and the **Identity Provider Issuer "
 "URL** fields automatically. The Identity Provider Public Certificate is "
 "also downloaded from the server and set locally."
-msgstr ""
+msgstr "이렇게 하면 **SAML SSO URL** 과 **Identity Provider Issuer URL** 필드가 자동으로 채워집니다. ID 공급자 공개 인증서도 서버에서 다운로드되어 로컬에 설정됩니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:166
 msgid "Alternatively you can enter the following fields manually:"
-msgstr ""
+msgstr "또는 다음 필드를 수동으로 입력할 수 있습니다:"
 
 #: ../../source/onboard/sso-saml-adfs.rst:162
 msgid ""
 "**SAML SSO URL**: **SAML 2.0/W-Federation URL** ADFS Endpoint you copied "
 "earlier."
-msgstr ""
+msgstr "**SAML SSO URL**: 이전에 복사한 **SAML 2.0/W-Federation URL** ADFS 엔드포인트"
 
 #: ../../source/onboard/sso-saml-adfs.rst:163
 msgid ""
 "**Identity Provider Issuer URL**: ``Relying party trust identifier`` from"
 " ADFS you specified earlier."
-msgstr ""
+msgstr "**Identity Provider Issuer URL**: 이전에 지정한 ADFS의 ``Relying party trust identifier``"
 
 #: ../../source/onboard/sso-saml-adfs.rst:164
 msgid ""
 "**Identity Provider Public Certificate**: ``X.509 Public Certificate`` "
 "you downloaded earlier."
-msgstr ""
+msgstr "**Identity Provider Public Certificate**: 이전에 다운로드한 ``X.509 Public Certificate``"
 
 #: ../../source/onboard/sso-saml-adfs.rst:168
 msgid ""
 "Configure Mattermost to verify the signature. The **Service Provider "
 "Login URL** is the SAML 2.0 SSO service URL you specified in ADFS "
 "earlier."
-msgstr ""
+msgstr "서명을 확인하도록 Mattermost를 구성하세요. **Service Provider Login URL** 은 이전에 ADFS에서 지정한 SAML 2.0 SSO 서비스 URL입니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:172
 msgid ""
 "Enable encryption by uploading the Service Provider Private Key and "
 "Service Provider Public Certificate you generated earlier."
-msgstr ""
+msgstr "이전에 생성한 Service Provider Private Key와 Service Provider Public Certificate를 업로드하여 암호화를 활성화하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:176
 msgid ""
 "Configure Mattermost to sign SAML requests using the Service Provider "
 "Private Key."
-msgstr ""
+msgstr "Service Provider Private Key를 사용하여 SAML 요청에 서명하도록 Mattermost를 구성하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:178
 msgid ""
@@ -439,21 +468,22 @@ msgid ""
 "required and should match the values you entered in ADFS earlier. See "
 ":ref:`documentation on SAML configuration settings <saml-enterprise>` for"
 " more detail."
-msgstr ""
+msgstr "Mattermost의 사용자 정보를 업데이트하는 데 사용될 SAML Assertions의 속성을 설정하세요. 이메일과 사용자 이름에 대한 속성은 필수이며 이전에 ADFS에 입력한 값과 일치해야 합니다. "
+"자세한 내용은 :ref:`SAML 구성 설정 문서 <saml-enterprise>` 를 참조하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:180
 msgid ""
 "For Mattermost servers running 3.3 and earlier, the ``FirstName`` and "
 "``LastName`` attributes are also required fields."
-msgstr ""
+msgstr "3.3 이전 버전의 Mattermost 서버의 경우 ``FirstName`` 과 ``LastName`` 속성도 필수 필드입니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:184
 msgid "(Optional) Customize the login button text."
-msgstr ""
+msgstr "(선택사항) 로그인 버튼 텍스트를 사용자 지정하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:188
 msgid "Select **Save**."
-msgstr ""
+msgstr "**Save** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:190
 msgid ""
@@ -461,7 +491,8 @@ msgid ""
 "go to **System Console > Site Configuration > Users and Teams**, then set"
 " **Teammate Name Display** to **Show first and last name**. This is "
 "recommended for a better user experience."
-msgstr ""
+msgstr "(선택사항) ``FirstName`` 과 ``LastName`` 속성을 구성한 경우 **System Console > Site Configuration > Users and Teams** 로 이동하여 "
+"**Teammate Name Display** 를 **Show first and last name** 으로 설정하세요. 더 나은 사용자 경험을 위해 권장됩니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:192
 msgid ""
@@ -470,13 +501,14 @@ msgid ""
 "profile picture via **Profile > Security > Sign-in Method > Switch to "
 "SAML SSO**, then log in with your SAML credentials to complete the "
 "switch."
-msgstr ""
+msgstr "SAML SSO가 성공적으로 활성화되었는지 확인하려면 프로필 사진을 통해 **Profile > Security > Sign-in Method > Switch to SAML SSO** 로 이동하여 "
+"시스템 관리자 계정을 이메일에서 SAML 기반 인증으로 전환한 다음 SAML 자격 증명으로 로그인하여 전환을 완료하세요."
 
 #: ../../source/onboard/sso-saml-adfs.rst:194
 msgid ""
 "We recommend that you post an announcement about how the migration will "
 "work for your users."
-msgstr ""
+msgstr "사용자를 위한 마이그레이션 방법에 대한 공지사항을 게시하는 것을 권장합니다."
 
 #: ../../source/onboard/sso-saml-adfs.rst:196
 msgid ""
@@ -484,67 +516,70 @@ msgid ""
 "to enable SAML based on :ref:`SAML configuration settings <saml-"
 "enterprise>`. You must restart the Mattermost server for the changes to "
 "take effect."
-msgstr ""
+msgstr "``config.json`` 파일을 편집하여 :ref:`SAML 구성 설정 <saml-enterprise>` 에 따라 SAML을 활성화하여 ADFS용 SAML을 구성할 수도 있습니다. "
+"변경사항을 적용하려면 Mattermost 서버를 재시작해야 합니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:4
 msgid "Configure SAML synchronization with AD/LDAP"
-msgstr ""
+msgstr "AD/LDAP와 SAML 동기화 구성"
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:6
 msgid ""
 "In addition to configuring SAML sign-in, you can optionally configure "
 "synchronizing SAML accounts with AD/LDAP. When configured:"
-msgstr ""
+msgstr "SAML 로그인을 구성하는 것 외에도 선택적으로 SAML 계정을 AD/LDAP와 동기화하도록 구성할 수 있습니다. 구성 시:"
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:8
 msgid ""
 "Mattermost queries AD/LDAP for relevant account information and updates "
 "SAML accounts based on changes to attributes (first name, last name, and "
 "nickname)"
-msgstr ""
+msgstr "Mattermost는 관련 계정 정보를 위해 AD/LDAP를 조회하고 속성(이름, 성, 닉네임) 변경에 따라 SAML 계정을 업데이트합니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:9
 msgid ""
 "Accounts disabled in AD/LDAP are deactivated in Mattermost, and their "
 "active sessions are revoked once Mattermost synchronizes attributes."
-msgstr ""
+msgstr "AD/LDAP에서 비활성화된 계정은 Mattermost에서 비활성화되며, Mattermost가 속성을 동기화하면 활성 세션이 취소됩니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:11
 msgid "To configure SAML synchronization with AD/LDAP:"
-msgstr ""
+msgstr "AD/LDAP와 SAML 동기화를 구성하려면:"
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:13
 msgid ""
 "Go to **System Console > Authentication > SAML 2.0**, then set **Enable "
 "Synchronizing SAML Accounts With AD/LDAP** to **true**."
-msgstr ""
+msgstr "**System Console > Authentication > SAML 2.0**으로 이동한 다음 **Enable Synchronizing SAML Accounts With AD/LDAP** 를 **true** 로 설정하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:14
 msgid ""
 "Go to  **System Console > Authentication > AD/LDAP**, then set **Enable "
 "Synchronization with AD/LDAP** to **true**."
-msgstr ""
+msgstr "**System Console > Authentication > AD/LDAP** 로 이동한 다음 **Enable Synchronization with AD/LDAP** 를 **true** 로 설정하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:15
 msgid ""
 "To ignore guest users when sychronizing, go to **System Console > "
 "Authentication > SAML 2.0**, then set **Ignore Guest Users when "
 "Synchronizing with AD/LDAP** to **true**."
-msgstr ""
+msgstr "동기화 시 게스트 사용자를 무시하려면 **System Console > Authentication > SAML 2.0** 으로 이동한 다음 "
+"**Ignore Guest Users when Synchronizing with AD/LDAP** 를 **true** 로 설정하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:16
 msgid ""
 "Set the rest of the AD/LDAP settings based on :ref:`configuration "
 "settings documentation <configure/authentication-configuration-"
 "settings:ad/ldap>` to connect Mattermost with your AD/LDAP server."
-msgstr ""
+msgstr "Mattermost를 AD/LDAP 서버와 연결하려면 :ref:`configuration settings documentation <configure/authentication-configuration-settings:ad/ldap>` 를 기반으로 "
+"나머지 AD/LDAP 설정을 구성하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:18
 msgid ""
 "If you don't want to enable AD/LDAP sign-in, go to **System Console > "
 "Authentication > AD/LDAP**, then set **Enable sign-in with AD/LDAP** to "
 "**false**."
-msgstr ""
+msgstr "AD/LDAP 로그인을 활성화하지 않으려면 **System Console > Authentication > AD/LDAP** 로 이동한 다음 **Enable sign-in with AD/LDAP** 를 **false** 로 설정하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:20
 msgid ""
@@ -553,14 +588,15 @@ msgid ""
 "**Synchronization Interval** in minutes. The default setting is 60 "
 "minutes. If you want to synchronize immediately after disabling an "
 "account, select **AD/LDAP Synchronize Now**."
-msgstr ""
+msgstr "Mattermost가 SAML 사용자 계정을 AD/LDAP와 얼마나 자주 동기화할지 지정하려면 **System Console > Authentication > AD/LDAP** 로 이동한 다음 "
+"**Synchronization Interval** 을 분 단위로 설정하세요. 기본 설정은 60분입니다. 계정을 비활성화한 후 즉시 동기화하려면 **AD/LDAP Synchronize Now** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:21
 msgid ""
 "To confirm that Mattermost can successfully connect to your AD/LDAP "
 "server, go to **System Console > Authentication > AD/LDAP**, then select "
 "**AD/LDAP Test**."
-msgstr ""
+msgstr "Mattermost가 AD/LDAP 서버에 성공적으로 연결할 수 있는지 확인하려면 **System Console > Authentication > AD/LDAP** 로 이동한 다음 **AD/LDAP Test** 를 선택하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:23
 msgid ""
@@ -568,34 +604,36 @@ msgid ""
 "synchronized with AD/LDAP based on their email address. If a user with a "
 "given email address doesn't have an AD/LDAP account, they will be "
 "deactivated in Mattermost on the next AD/LDAP sync."
-msgstr ""
+msgstr "AD/LDAP와의 동기화가 활성화되면 사용자 속성이 이메일 주소를 기반으로 AD/LDAP와 동기화됩니다. 주어진 이메일 주소를 가진 사용자가 AD/LDAP 계정을 가지고 있지 않으면 "
+"다음 AD/LDAP 동기화에서 Mattermost에서 비활성화됩니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:25
 msgid "To re-activate the account:"
-msgstr ""
+msgstr "계정을 다시 활성화하려면:"
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:27
 msgid "Add the user to your AD/LDAP server."
-msgstr ""
+msgstr "사용자를 AD/LDAP 서버에 추가하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:28
 msgid ""
 "Purge all caches in Mattermost by going to **System Console > Environment"
 " > Web Server**, then select **Purge All Caches**."
-msgstr ""
+msgstr "**System Console > Environment > Web Server** 로 이동한 다음 **Purge All Caches** 를 선택하여 Mattermost의 모든 캐시를 삭제하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:29
 msgid ""
 "Run AD/LDAP synchronization by going to **System Console > Authentication"
 " > AD/LDAP**, then select **AD/LDAP Synchronize Now**."
-msgstr ""
+msgstr "**System Console > Authentication > AD/LDAP** 로 이동한 다음 **AD/LDAP Synchronize Now** 를 선택하여 AD/LDAP 동기화를 실행하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:30
 msgid ""
 "Purge all caches again in Mattermost by going to **System Console > "
 "Environment > Web Server**, then select **Purge All Caches** again. This "
 "re-activates the account in Mattermost."
-msgstr ""
+msgstr "**System Console > Environment > Web Server** 로 이동한 다음 **Purge All Caches** 를 다시 선택하여 Mattermost의 모든 캐시를 다시 삭제하세요. "
+"이렇게 하면 Mattermost에서 계정이 다시 활성화됩니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:33
 msgid ""
@@ -603,38 +641,39 @@ msgid ""
 "Mattermost on the next sync. They will be shown as \"Deactivated\" in the"
 " System Console users list, all of their sessions will expire and they "
 "won't be able to log back in to Mattermost."
-msgstr ""
+msgstr "사용자가 AD/LDAP에서 비활성화되면 다음 동기화에서 Mattermost에서도 비활성화됩니다. System Console 사용자 목록에서 \"Deactivated\"로 표시되며, "
+"모든 세션이 만료되고 Mattermost에 다시 로그인할 수 없게 됩니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:35
 msgid ""
 "If a user is deactivated from SAML, their session won't expire until "
 "they're deactivated from AD/LDAP. However, they won't be able to log back"
 " in to Mattermost."
-msgstr ""
+msgstr "사용자가 SAML에서 비활성화되면 AD/LDAP에서 비활성화될 때까지 세션이 만료되지 않습니다. 하지만 Mattermost에 다시 로그인할 수는 없습니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:38
 msgid ""
 "SAML synchronization with AD/LDAP is designed to pull user attributes "
 "such as first name and last name from your AD/LDAP, not to control "
 "authentication."
-msgstr ""
+msgstr "AD/LDAP와의 SAML 동기화는 인증을 제어하기 위한 것이 아니라 AD/LDAP에서 이름과 성과 같은 사용자 속성을 가져오도록 설계되었습니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:40
 msgid ""
 "In particular, the user filter cannot be used to control who can log in "
 "to Mattermost, this should be controlled by your SAML service provider's "
 "group permissions."
-msgstr ""
+msgstr "특히 사용자 필터는 Mattermost에 로그인할 수 있는 사용자를 제어하는 데 사용할 수 없으며, 이는 SAML 서비스 제공자의 그룹 권한으로 제어해야 합니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:42
 msgid ""
 "See :ref:`technical description of SAML synchronization with AD/LDAP "
 "<sso-saml-technical>` for more details."
-msgstr ""
+msgstr "자세한 내용은 :ref:`SAML과 AD/LDAP 동기화의 기술적 설명 <sso-saml-technical>` 을 참조하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:45
 msgid "Override SAML data with AD/LDAP data"
-msgstr ""
+msgstr "AD/LDAP 데이터로 SAML 데이터 덮어쓰기"
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:47
 msgid ""
@@ -642,7 +681,8 @@ msgid ""
 "information. For more information on binding a user with the SAML ID "
 "Attribute, please refer to this :ref:`documentation <onboard/sso-saml-"
 "okta:how to bind authentication to id attribute instead of email>`."
-msgstr ""
+msgstr "또는 AD/LDAP 정보로 SAML 바인딩 데이터를 덮어쓸 수 있습니다. SAML ID 속성으로 사용자를 바인딩하는 방법에 대한 "
+"자세한 내용은 :ref:`이 문서 <onboard/sso-saml-okta:how to bind authentication to id attribute instead of email>` 를 참조하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:49
 msgid ""
@@ -651,7 +691,8 @@ msgid ""
 "recommend using this configuration with the SAML ID Attribute to help "
 "ensure new users are not created when the email address changes for a "
 "user."
-msgstr ""
+msgstr "이 프로세스는 SAML 이메일 주소를 AD/LDAP 이메일 주소 데이터로 덮어쓰거나, 구성된 경우 SAML ID 속성을 AD/LDAP ID 속성으로 덮어씁니다. "
+"사용자의 이메일 주소가 변경될 때 새 사용자가 생성되지 않도록 하기 위해 SAML ID 속성과 함께 이 구성을 사용하는 것을 권장합니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:51
 msgid ""
@@ -660,46 +701,47 @@ msgid ""
 "systems and comparing the ID data. Mapping ID Attributes for both AD/LDAP"
 " and SAML within Mattermost to fields that hold the same data will ensure"
 " the IDs match as well."
-msgstr ""
+msgstr "이 프로세스에서 기존 사용자 계정이 비활성화되지 않도록 하려면 두 시스템에서 데이터를 내보내고 ID 데이터를 비교하여 SAML ID가 LDAP ID와 일치하는지 확인하세요. "
+"Mattermost 내에서 AD/LDAP와 SAML 모두의 ID 속성을 동일한 데이터를 보유하는 필드에 매핑하면 ID가 일치하는지 확인할 수 있습니다."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:53
 msgid ""
 "Set the SAML ``Id Attribute`` by going to **System Console > "
 "Authentication > SAML 2.0 > Id Attribute**."
-msgstr ""
+msgstr "**System Console > Authentication > SAML 2.0 > Id Attribute** 로 이동하여 SAML ``Id Attribute`` 를 설정하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:54
 msgid ""
 "Set **System Console > Authentication > SAML 2.0 > Override SAML bind "
 "data with AD/LDAP information** to **true**."
-msgstr ""
+msgstr "**System Console > Authentication > SAML 2.0 > Override SAML bind data with AD/LDAP information** 을 **true** 로 설정하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:55
 msgid ""
 "Set **System Console > Authentication > SAML 2.0 > Enable Synchronizing "
 "SAML Accounts With AD/LDAP** to **true**."
-msgstr ""
+msgstr "**System Console > Authentication > SAML 2.0 > Enable Synchronizing SAML Accounts With AD/LDAP** 을 **true** 로 설정하세요."
 
 #: ../../source/onboard/sso-saml-ldapsync.rst:56
 msgid ""
 "Run AD/LDAP sync by going to **System Console > Authentication > "
 "AD/LDAP**, then select **AD/LDAP Synchronize Now**."
-msgstr ""
+msgstr "**System Console > Authentication > AD/LDAP** 로 이동한 다음 **AD/LDAP Synchronize Now** 를 선택하여 AD/LDAP 동기화를 실행하세요."
 
 #: ../../source/onboard/sso-saml-faq.rst:6
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/onboard/sso-saml-faq.rst:9
 msgid "How to bind authentication to Id attribute instead of email"
-msgstr ""
+msgstr "이메일 대신 Id 속성으로 인증을 바인딩하는 방법"
 
 #: ../../source/onboard/sso-saml-faq.rst:11
 msgid ""
 "Alternatively, you can use an ``Id`` attribute instead of email to bind "
 "the user.  We recommend choosing an ID that is unique and will not change"
 " over time."
-msgstr ""
+msgstr "대안으로, 사용자를 바인딩하기 위해 이메일 대신 ``Id`` 속성을 사용할 수 있습니다. 시간이 지나도 변경되지 않는 고유한 ID를 선택하는 것을 권장합니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:13
 msgid ""
@@ -709,125 +751,134 @@ msgid ""
 "once an employee, a new employee named Joe Smith can use the same email. "
 "This configuration is also useful when a user's name changes and their "
 "email needs to be updated."
-msgstr ""
+msgstr "``Id`` 속성으로 구성하면 이전 사용자의 정보가 노출되지 않고 새 사용자에게 이메일 주소를 재사용할 수 있습니다. "
+"예를 들어, joe.smith@mattermost.com 이메일 주소를 가진 사용자가 이전 직원이었다면, Joe Smith라는 새 직원이 동일한 이메일을 사용할 수 있습니다. "
+"이 구성은 사용자의 이름이 변경되고 이메일을 업데이트해야 할 때도 유용합니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:15
 msgid ""
 "This process was designed with backwards compatibility to email binding. "
 "Here is the process applied to new account creations and to accounts "
 "logging in after the configuration:"
-msgstr ""
+msgstr "이 프로세스는 이메일 바인딩과의 하위 호환성을 고려하여 설계되었습니다. "
+"다음은 새 계정 생성 및 구성 후 로그인하는 계정에 적용되는 프로세스입니다:"
 
 #: ../../source/onboard/sso-saml-faq.rst:17
 msgid ""
 "A user authenticated with SAML is bound to the SAML service user using "
 "the Id Attribute (as long as it has been configured) or bound by email "
 "using the email received from SAML."
-msgstr ""
+msgstr "SAML으로 인증된 사용자는 Id 속성을 사용하여 SAML 서비스 사용자에 바인딩되거나(구성된 경우) "
+"SAML에서 받은 이메일을 사용하여 이메일로 바인딩됩니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:18
 msgid ""
 "When the user tries to login and the SAML server responds with a valid "
 "authentication, then the server uses the \"Id\" field of the SAML "
 "authentication to search the user."
-msgstr ""
+msgstr "사용자가 로그인을 시도하고 SAML 서버가 유효한 인증으로 응답하면, "
+"서버는 SAML 인증의 \"Id\" 필드를 사용하여 사용자를 검색합니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:19
 msgid "If a user bound to that ID already exists, it logs in as that user."
-msgstr ""
+msgstr "해당 ID에 바인딩된 사용자가 이미 존재하는 경우, 해당 사용자로 로그인합니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:20
 msgid ""
 "If a user bound to that ID does not exist, it will search base on the "
 "email."
-msgstr ""
+msgstr "해당 ID에 바인딩된 사용자가 존재하지 않는 경우, 이메일을 기준으로 검색합니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:21
 msgid ""
 "If a user bound to the email exists, it logs in with email and updates "
 "the autentication data to the ID, instead of the email."
-msgstr ""
+msgstr "이메일에 바인딩된 사용자가 존재하는 경우, 이메일로 로그인하고 인증 데이터를 이메일 대신 ID로 업데이트합니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:22
 msgid ""
 "If a user bound to the ID or email does not exist, it will create a new "
 "Mattermost account bound to the SAML account by ID and will allow the "
 "user to log in."
-msgstr ""
+msgstr "ID 또는 이메일에 바인딩된 사용자가 존재하지 않는 경우, "
+"ID로 SAML 계정에 바인딩된 새 Mattermost 계정을 생성하고 사용자가 로그인할 수 있도록 합니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:25
 msgid "Existing accounts won't update until they log in to the server."
-msgstr ""
+msgstr "기존 계정은 서버에 로그인할 때까지 업데이트되지 않습니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:28
 msgid ""
 "Can SAML via Microsoft ADFS be configured with Integrated Windows "
 "Authentication (IWA)?"
-msgstr ""
+msgstr "Microsoft ADFS를 통한 SAML이 통합 Windows 인증(IWA)으로 구성될 수 있나요?"
 
 #: ../../source/onboard/sso-saml-faq.rst:30
 msgid ""
 "Yes. IWA is supported on the browser, with support added to iOS and "
 "Android mobile apps in Q2/2019 (mobile apps v1.18 and later)."
-msgstr ""
+msgstr "네. IWA는 브라우저에서 지원되며, 2019년 2분기부터 iOS 및 Android 모바일 앱(v1.18 이상)에도 지원이 추가되었습니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:32
 msgid ""
 "However, IWA is not supported on the Mattermost Desktop Apps due to a "
 "limitation in Electron. As a workaround you may create a browser desktop "
 "shortcut for quick access to Mattermost, just like a Desktop App."
-msgstr ""
+msgstr "하지만 Electron의 제한으로 인해 Mattermost 데스크톱 앱에서는 IWA가 지원되지 않습니다. "
+"대안으로 Mattermost에 빠르게 접근할 수 있는 브라우저 데스크톱 바로가기를 만들 수 있습니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:35
 msgid "Can I provision and deprovision users who log in via SAML?"
-msgstr ""
+msgstr "SAML을 통해 로그인하는 사용자를 프로비저닝 및 프로비저닝 해제할 수 있나요?"
 
 #: ../../source/onboard/sso-saml-faq.rst:37
 msgid ""
 "Yes, but this relies on AD/LDAP to do so. Currently, we do not support "
 "SCIM. See :ref:`\"How do I deactivate users?\" <onboard/ad-ldap:how do i "
 "deactivate users?>` for more information."
-msgstr ""
+msgstr "네, 하지만 이를 위해서는 AD/LDAP에 의존해야 합니다. 현재는 SCIM을 지원하지 않습니다. "
+"자세한 내용은 :ref:`\"사용자를 비활성화하려면 어떻게 해야 하나요?\" <onboard/ad-ldap:how do i deactivate users?>` 를 참조하세요."
 
 #: ../../source/onboard/sso-saml-faq.rst:40
 msgid ""
 "How do I migrate users from one authentication method (e.g. email) to "
 "SAML?"
-msgstr ""
+msgstr "사용자를 한 인증 방법(예: 이메일)에서 SAML로 마이그레이션하려면 어떻게 해야 하나요?"
 
 #: ../../source/onboard/sso-saml-faq.rst:42
 msgid ""
 "See the :ref:`mmctl user migrate-auth <manage/mmctl-command-line-"
 "tool:mmctl user migrate-auth>` command documentation for details."
-msgstr ""
+msgstr "자세한 내용은 :ref:`mmctl user migrate-auth <manage/mmctl-command-line-tool:mmctl user migrate-auth>` 명령 문서를 참조하세요."
 
 #: ../../source/onboard/sso-saml-faq.rst:45
 msgid "How is SAML different from OAuth 2.0 and OpenId Connect?"
-msgstr ""
+msgstr "SAML은 OAuth 2.0 및 OpenId Connect와 어떻게 다른가요?"
 
 #: ../../source/onboard/sso-saml-faq.rst:47
 msgid ""
 "OAuth 2.0 was primarily intended for delegated authorization, where an "
 "app is authorized to access resources, such as Google contact list. It "
 "doesn’t deal with authentication."
-msgstr ""
+msgstr "OAuth 2.0은 주로 위임된 권한 부여를 위해 설계되었으며, 앱이 Google 연락처 목록과 같은 리소스에 접근할 수 있는 권한을 부여받습니다. "
+"인증은 처리하지 않습니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:49
 msgid ""
 "OpenID Connect is built on top of OAuth 2.0, which supports "
 "authentication and thus direct SSO."
-msgstr ""
+msgstr "OpenID Connect는 OAuth 2.0을 기반으로 구축되었으며, 인증을 지원하므로 직접적인 SSO가 가능합니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:51
 msgid ""
 "SAML is like OpenID Connect, except typically used in enterprise "
 "settings. OpenID Connect is more common in consumer websites and "
 "web/mobile apps."
-msgstr ""
+msgstr "SAML은 OpenID Connect와 유사하지만 주로 기업 환경에서 사용됩니다. "
+"OpenID Connect는 소비자 웹사이트와 웹/모바일 앱에서 더 일반적으로 사용됩니다."
 
 #: ../../source/onboard/sso-saml-faq.rst:53
 msgid ""
 "Learn more at https://hackernoon.com/demystifying-oauth-2-0-and-openid-"
 "connect-and-saml-12aa4cf9fdba."
-msgstr ""
-
+msgstr "자세한 내용은 https://hackernoon.com/demystifying-oauth-2-0-and-openid-connect-and-saml-12aa4cf9fdba에서 확인하세요."

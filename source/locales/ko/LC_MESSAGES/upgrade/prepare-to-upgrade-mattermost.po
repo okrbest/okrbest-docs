@@ -21,25 +21,25 @@ msgstr ""
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:2
 msgid "Prepare to upgrade Mattermost"
-msgstr ""
+msgstr "Mattermost 업그레이드 준비"
 
 #: ../../source/_static/badges/allplans-selfhosted.rst:7
 msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `모든 플랜 <https://mattermost.com/pricing/>`__ 에서 이용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/allplans-selfhosted.rst:9
 msgid ""
 "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
 "deployments"
-msgstr ""
+msgstr "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:7
 msgid ""
@@ -52,10 +52,16 @@ msgid ""
 " found on our :ref:`software and hardware requirements <deploy/software-"
 "hardware-requirements:server software>` page."
 msgstr ""
+"대부분의 경우 :doc:`Mattermost Server </upgrade/upgrading-mattermost-server>` 를 "
+"몇 분 내에 업그레이드할 수 있습니다. 하지만 설치의 크기와 복잡성, 업그레이드하는 "
+"버전 등 여러 요소에 따라 업그레이드에 더 오래 걸릴 수 있습니다. 업그레이드를 "
+"계획할 때는 현재 데이터베이스와 운영체제 버전이 여전히 지원되는지 확인하는 것이 "
+"좋습니다. 자세한 내용은 :ref:`소프트웨어 및 하드웨어 요구사항 <deploy/software-"
+"hardware-requirements:server software>` 페이지에서 확인할 수 있습니다."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:10
 msgid "Upgrade Best Practices"
-msgstr ""
+msgstr "업그레이드 모범 사례"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:12
 msgid ""
@@ -65,6 +71,11 @@ msgid ""
 "ESR2, and ESR3, upgrading from ESR1 to ESR2, and then ESR2 to ESR3 will "
 "ensure backwards compatibility, but not from ESR1 to ESR3 directly."
 msgstr ""
+"Mattermost는 일반적으로 잠금이 없는 하위 호환 마이그레이션을 목표로 합니다. "
+"이 하위 호환성 보장은 마지막 ESR 버전까지만 적용됩니다. 예를 들어, ESR1, ESR2, "
+"ESR3의 세 가지 ESR 버전이 있는 경우, ESR1에서 ESR2로, 그 다음 ESR2에서 ESR3로 "
+"업그레이드하면 하위 호환성이 보장되지만, ESR1에서 ESR3로 직접 업그레이드하는 "
+"것은 보장되지 않습니다."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:14
 msgid ""
@@ -73,20 +84,26 @@ msgid ""
 "directly upgrade to the latest version as it might break backwards "
 "compatibility of the older nodes in the cluster during the upgrade."
 msgstr ""
+"업그레이드가 지연된 경우, 먼저 가장 가까운 ESR 버전으로 업그레이드한 다음 "
+"그곳에서 다음 ESR로 업그레이드하는 것을 권장합니다. 클러스터의 이전 노드의 "
+"하위 호환성이 업그레이드 중에 깨질 수 있으므로 최신 버전으로 직접 업그레이드하려고 "
+"하지 마세요."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:17
 msgid "Upgrade to Mattermost v7.1"
-msgstr ""
+msgstr "Mattermost v7.1로 업그레이드"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:19
 msgid ""
 "Mattermost v7.1 introduces schema changes in the form of a new column and"
 " its index. Our test results for the schema changes include:"
 msgstr ""
+"Mattermost v7.1은 새로운 열과 인덱스 형태의 스키마 변경을 도입합니다. "
+"스키마 변경에 대한 테스트 결과는 다음과 같습니다:"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:21
 msgid "PostgreSQL 12M Posts, 2.5M Reactions - ~1min 18s (instance: db.r5.2xlarge)"
-msgstr ""
+msgstr "PostgreSQL 12M 게시물, 2.5M 반응 - ~1분 18초 (인스턴스: db.r5.2xlarge)"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:23
 msgid ""
@@ -95,6 +112,9 @@ msgid ""
 "won't be reflected in the database until the migrations are complete. "
 "This is fully backwards-compatible."
 msgstr ""
+"업그레이드 전에 ``Reactions`` 테이블에 잠금을 얻는 다음 SQL 쿼리를 실행할 수 "
+"있습니다. 이 시간 동안 게시된 사용자의 반응은 마이그레이션이 완료될 때까지 "
+"데이터베이스에 반영되지 않습니다. 이것은 완전히 하위 호환됩니다."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:25
 msgid ""
@@ -105,60 +125,76 @@ msgid ""
 "column, and database administrators may choose to set different collation"
 " levels for different objects."
 msgstr ""
+"연결 정렬과 테이블 정렬이 다른 경우 `Illegal mix of collations` 오류가 발생할 수 있습니다. "
+"이 오류를 해결하려면 연결과 테이블 모두에 동일한 정렬을 설정하세요. 정렬은 여러 수준(연결, "
+"데이터베이스, 테이블, 열)에서 다를 수 있으며, 데이터베이스 관리자는 다른 객체에 대해 "
+"다른 정렬 수준을 설정할 수 있습니다."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:27
 msgid ""
 "``ALTER TABLE reactions ADD COLUMN IF NOT EXISTS channelid varchar(26) "
 "NOT NULL DEFAULT '';``"
 msgstr ""
+"``ALTER TABLE reactions ADD COLUMN IF NOT EXISTS channelid varchar(26) "
+"NOT NULL DEFAULT '';``"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:29
 msgid ""
 "``UPDATE reactions SET channelid = COALESCE((select channelid from posts "
 "where posts.id = reactions.postid), '') WHERE channelid='';``"
 msgstr ""
+"``UPDATE reactions SET channelid = COALESCE((select channelid from posts "
+"where posts.id = reactions.postid), '') WHERE channelid='';``"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:31
 msgid ""
 "``CREATE INDEX CONCURRENTLY IF NOT EXISTS idx_reactions_channel_id on "
 "reactions (channelid);``"
 msgstr ""
+"``CREATE INDEX CONCURRENTLY IF NOT EXISTS idx_reactions_channel_id on "
+"reactions (channelid);``"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:34
 msgid "Upgrade to Mattermost v6.7"
-msgstr ""
+msgstr "Mattermost v6.7로 업그레이드"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:36
 msgid ""
 "Mattermost v6.7 introduces schema changes in the form of a new index. The"
 " following notes our test results for the schema changes:"
 msgstr ""
+"Mattermost v6.7은 새로운 인덱스 형태의 스키마 변경을 도입합니다. "
+"스키마 변경에 대한 테스트 결과는 다음과 같습니다:"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:38
 msgid "Postgres 7M Posts - ~9s  (instance: db.r5.xlarge)"
-msgstr ""
+msgstr "Postgres 7M 게시물 - ~9초 (인스턴스: db.r5.xlarge)"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:40
 msgid ""
 "If you want a zero downtime upgrade, you can apply this index prior to "
 "doing the upgrade."
 msgstr ""
+"다운타임 없는 업그레이드를 원한다면, 업그레이드 전에 이 인덱스를 적용할 수 있습니다."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:42
 msgid ""
 "``CREATE INDEX CONCURRENTLY IF NOT EXISTS idx_posts_create_at_id on "
 "posts(createat, id);``"
 msgstr ""
+"``CREATE INDEX CONCURRENTLY IF NOT EXISTS idx_posts_create_at_id on "
+"posts(createat, id);``"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:44
 msgid ""
 "This is fully backwards-compatible and will not acquire any table lock or"
 " affect any existing operations on the table."
 msgstr ""
+"이는 완전히 하위 호환되며 테이블 잠금을 획득하지 않고 테이블의 기존 작업에 영향을 주지 않습니다."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:48
 msgid "Upgrade to Mattermost v6.0"
-msgstr ""
+msgstr "Mattermost v6.0으로 업그레이드"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:50
 msgid ""
@@ -168,6 +204,9 @@ msgid ""
 "efforts made during the migration process, it can be minimized to a large"
 " extent."
 msgstr ""
+"Mattermost Server v6.0 업그레이드는 데이터 세트 크기에 따라 시작 시간이 길어질 수 있는 "
+"중요한 데이터베이스 스키마 변경을 실행합니다. v6.0에서는 다운타임을 제로로 만들 수는 없지만, "
+"마이그레이션 과정에서의 노력에 따라 크게 최소화할 수 있습니다."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:52
 msgid ""
@@ -175,22 +214,25 @@ msgid ""
 "However, some queries can still cause full table locking and require "
 "Mattermost to be in read-only mode for the duration of the query."
 msgstr ""
+"업그레이드 전에 쿼리를 실행하면 다운타임을 줄일 수도 있습니다. "
+"그러나 일부 쿼리는 여전히 전체 테이블 잠금을 발생시키고 쿼리 기간 동안 "
+"Mattermost를 읽기 전용 모드로 설정해야 할 수 있습니다."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:54
 msgid "We strongly recommend that you:"
-msgstr ""
+msgstr "다음 사항을 강력히 권장합니다:"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:56
 msgid ""
 "Set up a maintenance window outside of working hours to mitigate the "
 "migration impact."
-msgstr ""
+msgstr "마이그레이션 영향을 완화하기 위해 근무 시간 외에 유지보수 시간을 설정하세요."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:57
 msgid ""
 "Keep a backup of your database to ensure you can load a previous database"
 " snapshot if necessary."
-msgstr ""
+msgstr "필요한 경우 이전 데이터베이스 스냅샷을 로드할 수 있도록 데이터베이스 백업을 유지하세요."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:58
 msgid ""
@@ -198,6 +240,8 @@ msgid ""
 "Release (ESR) </about/mattermost-server-releases>` first before "
 "attempting to run the Mattermost v6.0 upgrade."
 msgstr ""
+"Mattermost v6.0 업그레이드를 실행하기 전에 먼저 Mattermost 인스턴스를 최신 :doc:`Extended Support "
+"Release (ESR) </about/mattermost-server-releases>` 로 업그레이드하세요."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:62
 msgid ""
@@ -210,10 +254,15 @@ msgid ""
 " versions in between to ensure you’re aware of the possible migrations "
 "that could affect your upgrade."
 msgstr ""
+"Mattermost Server v9.11 :doc:`Extended Support Release </about/mattermost-server-releases>` 의 지원은 "
+"2025년 5월 15일에 수명 주기가 종료됩니다. Mattermost Server v10.5 Extended Support Release 이상으로 "
+"업그레이드하는 것이 권장됩니다. 이전 Extended Support Release에서 최신 Extended Support Release로의 "
+"업그레이드가 지원됩니다. 업그레이드에 영향을 줄 수 있는 가능한 마이그레이션을 인지할 수 있도록 "
+"중간 버전에 대한 :doc:`important-upgrade-notes` 를 검토하세요."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:65
 msgid "v6.0 database schema migrations"
-msgstr ""
+msgstr "v6.0 데이터베이스 스키마 마이그레이션"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:67
 msgid ""
@@ -224,30 +273,35 @@ msgid ""
 "supported PostgreSQL database drivers, using realistic datasets of more "
 "than 10 million posts and more than 72 million posts."
 msgstr ""
+"Mattermost v6.0은 데이터베이스와 애플리케이션 성능을 모두 개선하기 위해 여러 데이터베이스 스키마 변경을 도입합니다. "
+"업그레이드는 데이터 세트 크기에 따라 시작 시간이 길어질 수 있는 중요한 데이터베이스 스키마 변경을 실행합니다. "
+"지원되는 PostgreSQL 데이터베이스 드라이버에 대해 1,000만 개 이상의 게시물과 7,200만 개 이상의 게시물이 있는 "
+"실제 데이터 세트를 사용하여 광범위한 테스트를 수행했습니다."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:69
 msgid ""
 "The following query executed during the migration process will have a "
 "significant impact on database CPU usage and write operation restrictions"
 " for the duration of the query:"
-msgstr ""
+msgstr "마이그레이션 프로세스 중 실행되는 다음 쿼리는 쿼리 기간 동안 데이터베이스 CPU 사용량과 쓰기 작업 제한에 상당한 영향을 미칩니다:"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:71
 msgid ""
 "``ALTER TABLE posts ALTER COLUMN props TYPE jsonb USING props::jsonb;`` "
 "(~ 11 minutes)"
-msgstr ""
+msgstr "``ALTER TABLE posts ALTER COLUMN props TYPE jsonb USING props::jsonb;`` (~ 11분)"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:73
 msgid ""
 "For a complete breakdown of PostgreSQL queries, as well as their impact "
 "and duration, see the `Mattermost v6.0 DB schema migrations analysis "
 "<https://gist.github.com/streamer45/59b3582118913d4fc5e8ff81ea78b055#postgresql-1>`__."
-msgstr ""
+msgstr "PostgreSQL 쿼리의 전체 분석과 영향 및 지속 시간은 "
+"`Mattermost v6.0 DB schema migrations analysis <https://gist.github.com/streamer45/59b3582118913d4fc5e8ff81ea78b055#postgresql-1>`__ 를 참조하세요."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:76
 msgid "Upgrade from releases older than v5.35"
-msgstr ""
+msgstr "v5.35보다 이전 릴리스에서 업그레이드"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:78
 msgid ""
@@ -260,6 +314,11 @@ msgid ""
 ":doc:`unsupported legacy releases </about/unsupported-legacy-releases>` "
 "documentation for additional details."
 msgstr ""
+"Mattermost v5.35보다 이전 릴리스에서 업그레이드하는 고객은 v5.35에서 도입된 백엔드 데이터베이스 아키텍처로 인해 "
+"v6.0으로 업그레이드할 때 다운타임이 길어질 것으로 예상해야 합니다. 이 업그레이드 경로는 대규모 설치에 권장되지 않습니다. "
+"Mattermost v6.0으로 업그레이드하기 전에 먼저 최신 :doc:`Extended Support Release (ESR) </about/mattermost-server-releases>` 로 "
+"업그레이드하는 것을 권장합니다. 자세한 내용은 :doc:`unsupported legacy releases </about/unsupported-legacy-releases>` "
+"문서를 참조하세요."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:80
 msgid ""
@@ -273,20 +332,25 @@ msgid ""
 "binary should point to the ``mattermost`` binary (i.e. "
 "``/opt/mattermost/bin/mattermost``)."
 msgstr ""
+"Mattermost v5.0 이전 버전에서 업그레이드하는 경우 v6.0으로 직접 업그레이드할 수 없습니다. 대신, "
+"먼저 최신 ESR로 업그레이드한 다음 v6.0으로 업그레이드하는 단계적 접근 방식을 강력히 권장합니다. "
+"첫 번째 업데이트 단계에서 v5.0 릴리스에서 도입된 바이너리 변경 사항과 함께 작동하도록 서비스 파일을 "
+"수정해야 합니다. 실행 디렉토리는 Mattermost 기본 디렉토리(예: ``/opt/mattermost``)를 가리켜야 하며, "
+"바이너리는 ``mattermost`` 바이너리(예: ``/opt/mattermost/bin/mattermost``)를 가리켜야 합니다."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:82
 msgid ""
 "Ensure you review the :doc:`important-upgrade-notes` for all intermediate"
 " release versions in between to ensure you’re aware of the possible "
 "migrations that could affect your upgrade."
-msgstr ""
+msgstr "업그레이드에 영향을 줄 수 있는 가능한 마이그레이션을 인지할 수 있도록 중간 릴리스 버전에 대한 :doc:`important-upgrade-notes` 를 검토하세요."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:86
 msgid ""
 "Customers upgrading from releases older than v5.35 following our "
 "recommended upgrade process may encounter the following error during the "
 "upgrade to v6.0:"
-msgstr ""
+msgstr "권장 업그레이드 프로세스를 따라 v5.35보다 이전 릴리스에서 업그레이드하는 고객은 v6.0으로 업그레이드하는 동안 다음과 같은 오류가 발생할 수 있습니다:"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:88
 msgid ""
@@ -294,7 +358,8 @@ msgid ""
 "in the column. Please fix the values manually and run the migration "
 "again.\",\"caller\":\"sqlstore/store.go:854\",\"error\":\"pq: unsupported"
 " Unicode escape sequence``"
-msgstr ""
+msgstr "``열 유형을 변경하지 못했습니다. 열에 잘못된 JSON 값이 있을 가능성이 높습니다. 값을 수동으로 수정하고 마이그레이션을 "
+"다시 실행하세요.\",\"caller\":\"sqlstore/store.go:854\",\"error\":\"pq: unsupported Unicode escape sequence``"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:90
 msgid ""
@@ -304,23 +369,26 @@ msgid ""
 "Run these against your v5.39 development database to find out which table"
 " and column has Unicode issues:"
 msgstr ""
+"문제 해결을 돕기 위해 ``SqlSettings.Trace`` 를 활성화하여 업그레이드 중에 어떤 테이블과 열이 문제를 일으키는지 "
+"파악할 수 있습니다. 다음 쿼리는 PostgreSQL에서 열을 JSONB 형식으로 변경합니다. "
+"v5.39 개발 데이터베이스에서 이 쿼리를 실행하여 어떤 테이블과 열에 유니코드 문제가 있는지 확인하세요:"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:104
 msgid ""
 "Once you've identified the table being affected, verify how many invalid "
 "occurrences of `\\u0000` you have using the following SELECT query:"
-msgstr ""
+msgstr "영향을 받는 테이블을 식별한 후, 다음 SELECT 쿼리를 사용하여 `\\u0000` 의 잘못된 발생 횟수를 확인하세요:"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:110
 msgid ""
 "Then select and fix the rows accordingly. If you prefer, you can also fix"
 " all occurrences at once in a given table or column using the following "
 "UPDATE query:"
-msgstr ""
+msgstr "그런 다음 해당 행을 선택하고 수정하세요. 원하는 경우 다음 UPDATE 쿼리를 사용하여 주어진 테이블이나 열의 모든 발생을 한 번에 수정할 수도 있습니다:"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:117
 msgid "Upgrade high availability cluster-based deployments"
-msgstr ""
+msgstr "고가용성 클러스터 기반 배포 업그레이드"
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:119
 msgid ""
@@ -331,6 +399,10 @@ msgid ""
 " lock the tables for posts which will prevent your users from posting or "
 "receiving messages until the migration is complete."
 msgstr ""
+":doc:`고가용성 클러스터 기반 </scale/high-availability-cluster-based-deployment>` 환경에서는 "
+"v6.0으로 업그레이드하기 위해 다운타임을 예약해야 합니다. 데이터베이스 크기와 설정에 따라 "
+"v6.0으로의 마이그레이션은 상당한 시간이 걸릴 수 있으며, 게시물 테이블을 잠글 수도 있어 "
+"마이그레이션이 완료될 때까지 사용자가 메시지를 게시하거나 수신할 수 없게 됩니다."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:121
 msgid ""
@@ -340,6 +412,9 @@ msgid ""
 "you're aware of any actions you need to take before or after upgrading "
 "from your particular version."
 msgstr ""
+":ref:`고가용성 클러스터 기반 배포 업그레이드 가이드 <scale/high-availability-cluster-based-deployment:upgrade guide>` 와 "
+":doc:`important-upgrade-notes` 를 검토하여 특정 버전에서 업그레이드하기 전후에 취해야 할 조치를 "
+"인지하도록 하세요."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:125
 msgid ""
@@ -348,10 +423,12 @@ msgid ""
 "the clustering code in v6.0, nodes from different versions cannot be run,"
 " as noted in the :doc:`important-upgrade-notes` product documentation."
 msgstr ""
+"클러스터에서 두 가지 다른 버전의 Mattermost를 실행하는 것은 업그레이드 시나리오 외에는 수행하지 마세요. "
+"v6.0의 클러스터링 코드에 근본적인 변경이 있어 :doc:`important-upgrade-notes` 제품 문서에 명시된 대로 "
+"다른 버전의 노드를 실행할 수 없습니다."
 
 #: ../../source/upgrade/prepare-to-upgrade-mattermost.rst:127
 msgid ""
 "The release of v6.0 also introduces database schema changes and longer "
 "migration times should be expected."
-msgstr ""
-
+msgstr "v6.0 릴리스는 데이터베이스 스키마 변경을 도입하며 마이그레이션 시간이 더 길어질 것으로 예상됩니다."

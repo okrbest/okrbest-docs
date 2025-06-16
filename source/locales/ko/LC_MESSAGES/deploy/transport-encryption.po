@@ -21,27 +21,29 @@ msgstr ""
 
 #: ../../source/deploy/transport-encryption.rst:2
 msgid "Configuring transport encryption"
-msgstr ""
+msgstr "전송 암호화 구성"
 
 #: ../../source/_static/badges/ent-selfhosted.rst:7
 msgid ""
 "|plans-img| Available on `Enterprise plans "
 "<https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img| `Enterprise 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/ent-selfhosted.rst:9
 msgid ""
 "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
 "deployments"
 msgstr ""
+"|deployment-img| `self-hosted <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/deploy/transport-encryption.rst:7
 msgid ""
@@ -50,6 +52,8 @@ msgid ""
 "encryption between the nodes of the Mattermost cluster, all transports "
 "rely on TLS encryption."
 msgstr ""
+"Mattermost 설정의 구성 요소는 사용된 전송 암호화를 포함하여 다음 다이어그램에 표시됩니다. "
+"Mattermost 클러스터의 노드 간 암호화를 제외하고 모든 전송은 TLS 암호화에 의존합니다."
 
 #: ../../source/deploy/transport-encryption.rst:11
 msgid ""
@@ -58,63 +62,70 @@ msgid ""
 "automatic encryption between cluster nodes is in progress and planned for"
 " a later release."
 msgstr ""
+"애플리케이션 서버 간 전송은 기본적으로 사용되지 않으며 추가 설정 단계가 필요합니다. "
+"클러스터 노드 간 자동 암호화를 포함하도록 핵심 제품을 개선하는 작업이 진행 중이며 "
+"향후 릴리스에서 계획되어 있습니다."
 
 #: ../../source/deploy/transport-encryption.rst:-1
 msgid ""
 "Components of the Mattermost setup where all transports rely on TLS "
 "encryption."
 msgstr ""
+"모든 전송이 TLS 암호화에 의존하는 Mattermost 설정의 구성 요소."
 
 #: ../../source/deploy/transport-encryption.rst:17
 msgid "Configuring proxy to Mattermost transport encryption"
-msgstr ""
+msgstr "프록시에서 Mattermost로의 전송 암호화 구성"
 
 #: ../../source/deploy/transport-encryption.rst:22
 msgid ""
 "Mattermost is able to encrypt the traffic between the proxy and the "
 "application server using TLS."
 msgstr ""
+"Mattermost는 TLS를 사용하여 프록시와 애플리케이션 서버 간의 트래픽을 암호화할 수 있습니다."
 
 #: ../../source/deploy/transport-encryption.rst:25
 #: ../../source/deploy/transport-encryption.rst:139
 #: ../../source/deploy/transport-encryption.rst:263
 msgid "Prerequisites"
-msgstr ""
+msgstr "사전 요구사항"
 
 #: ../../source/deploy/transport-encryption.rst:27
 #: ../../source/deploy/transport-encryption.rst:141
 msgid "Operational Mattermost server or cluster."
-msgstr ""
+msgstr "운영 중인 Mattermost 서버 또는 클러스터."
 
 #: ../../source/deploy/transport-encryption.rst:28
 msgid "Authentication credentials for Mattermost user on application server."
-msgstr ""
+msgstr "애플리케이션 서버의 Mattermost 사용자 인증 정보."
 
 #: ../../source/deploy/transport-encryption.rst:31
 #: ../../source/deploy/transport-encryption.rst:147
 #: ../../source/deploy/transport-encryption.rst:276
 msgid "Example environment"
-msgstr ""
+msgstr "예제 환경"
 
 #: ../../source/deploy/transport-encryption.rst:33
 msgid ""
 "In this scenario there is one Mattermost application server and one NGINX"
 " server, both running Ubuntu 20.04, with the following IPs:"
 msgstr ""
+"이 시나리오에는 Ubuntu 20.04를 실행하는 Mattermost 애플리케이션 서버와 NGINX 서버가 각각 하나씩 있으며, "
+"다음과 같은 IP를 사용합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:35
 #: ../../source/deploy/transport-encryption.rst:151
 #: ../../source/deploy/transport-encryption.rst:280
 msgid "**transport-encryption-mattermost1:** 10.10.250.146"
-msgstr ""
+msgstr "**transport-encryption-mattermost1:** 10.10.250.146"
 
 #: ../../source/deploy/transport-encryption.rst:36
 msgid "**transport-encryption-nginx:** 10.10.250.107"
-msgstr ""
+msgstr "**transport-encryption-nginx:** 10.10.250.107"
 
 #: ../../source/deploy/transport-encryption.rst:39
 msgid "Configuring NGINX"
-msgstr ""
+msgstr "NGINX 구성"
 
 #: ../../source/deploy/transport-encryption.rst:41
 msgid ""
@@ -122,21 +133,24 @@ msgid ""
 "Open the Mattermost proxy configuration and search for the following line"
 " twice:"
 msgstr ""
+"NGINX 서버에서 sudo 또는 root 사용자로 두 서버에 연결합니다. "
+"Mattermost 프록시 구성을 열고 다음 줄을 두 번 검색합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:47
 msgid "Change the protocol from ``http`` to ``https``:"
-msgstr ""
+msgstr "프로토콜을 ``http``에서 ``https`` 로 변경합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:53
 msgid ""
 "Afterwards do not reload the NGINX server yet to minimize the downtime of"
 " the service."
 msgstr ""
+"서비스 중단 시간을 최소화하기 위해 아직 NGINX 서버를 다시 로드하지 마세요."
 
 #: ../../source/deploy/transport-encryption.rst:56
 #: ../../source/deploy/transport-encryption.rst:199
 msgid "Configuring Mattermost"
-msgstr ""
+msgstr "Mattermost 구성"
 
 #: ../../source/deploy/transport-encryption.rst:58
 msgid ""
@@ -144,10 +158,13 @@ msgid ""
 "and generate a self-signed certificate that will be used to encrypt the "
 "traffic between the proxy server and the application server."
 msgstr ""
+"Mattermost 서버에서 Mattermost의 config 디렉토리로 이동하여 "
+"프록시 서버와 애플리케이션 서버 간의 트래픽을 암호화하는 데 사용할 "
+"자체 서명 인증서를 생성합니다."
 
 #: ../../source/deploy/transport-encryption.rst:60
 msgid "**Note:** Alternatively you can sign a certificate from your company's CA."
-msgstr ""
+msgstr "**참고:** 대안으로 회사의 CA에서 인증서를 서명할 수 있습니다."
 
 #: ../../source/deploy/transport-encryption.rst:70
 msgid ""
@@ -155,28 +172,32 @@ msgid ""
 "``ConnectionSecurity``, ``TLSCertFile`` and ``TLSKeyFile`` in the "
 "``ServiceSettings`` section."
 msgstr ""
+"완료되면 ``config.json`` 파일을 열고 ``ServiceSettings`` 섹션에서 "
+"``ConnectionSecurity``, ``TLSCertFile``, ``TLSKeyFile`` 값을 수정합니다."
 
 #: ../../source/deploy/transport-encryption.rst:72
 msgid "**Before**"
-msgstr ""
+msgstr "**이전**"
 
 #: ../../source/deploy/transport-encryption.rst:91
 msgid "**After**"
-msgstr ""
+msgstr "**이후**"
 
 #: ../../source/deploy/transport-encryption.rst:110
 msgid "Restart the Mattermost server and ensure it's up and running:"
-msgstr ""
+msgstr "Mattermost 서버를 재시작하고 정상적으로 실행 중인지 확인합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:124
 msgid ""
 "Finally, on the **NGINX server**, reload the configuration to ensure that"
 " requests are sent on HTTPS:"
 msgstr ""
+"마지막으로 **NGINX 서버** 에서 요청이 HTTPS로 전송되도록 "
+"구성을 다시 로드합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:131
 msgid "Configuring database transport encryption"
-msgstr ""
+msgstr "데이터베이스 전송 암호화 구성"
 
 #: ../../source/deploy/transport-encryption.rst:136
 msgid ""
@@ -184,40 +205,44 @@ msgid ""
 "application using TLS. This guide describes the setup steps for a single,"
 " separate MySQL server."
 msgstr ""
+"Mattermost는 TLS를 사용하여 데이터베이스와 애플리케이션 간의 트래픽을 암호화할 수 있습니다. "
+"이 가이드는 단일 독립 MySQL 서버에 대한 설정 단계를 설명합니다."
 
 #: ../../source/deploy/transport-encryption.rst:142
 msgid "Operational MySQL server."
-msgstr ""
+msgstr "운영 중인 MySQL 서버."
 
 #: ../../source/deploy/transport-encryption.rst:143
 msgid "Confirmed connectivity between Mattermost and MySQL server."
-msgstr ""
+msgstr "Mattermost와 MySQL 서버 간의 연결이 확인되었습니다."
 
 #: ../../source/deploy/transport-encryption.rst:144
 msgid "Authentication credentials for Mattermost user on MySQL server."
-msgstr ""
+msgstr "MySQL 서버의 Mattermost 사용자 인증 정보."
 
 #: ../../source/deploy/transport-encryption.rst:149
 msgid ""
 "In this scenario there is one Mattermost application server and one MySQL"
 " server, both running Ubuntu 20.04, with the following IPs:"
 msgstr ""
+"이 시나리오에는 Ubuntu 20.04를 실행하는 Mattermost 애플리케이션 서버와 MySQL 서버가 각각 하나씩 있으며, "
+"다음과 같은 IP를 사용합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:152
 msgid "**transport-encryption-mysql1:** 10.10.250.148"
-msgstr ""
+msgstr "**transport-encryption-mysql1:** 10.10.250.148"
 
 #: ../../source/deploy/transport-encryption.rst:155
 msgid "Configuring MySQL"
-msgstr ""
+msgstr "MySQL 구성"
 
 #: ../../source/deploy/transport-encryption.rst:157
 msgid "As a first step, connect to both servers with a sudo or root user."
-msgstr ""
+msgstr "첫 번째 단계로, sudo 또는 root 사용자로 두 서버에 연결합니다."
 
 #: ../../source/deploy/transport-encryption.rst:159
 msgid "Execute the following command to prepare the server for SSL connections:"
-msgstr ""
+msgstr "SSL 연결을 위해 서버를 준비하려면 다음 명령을 실행합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:165
 msgid ""
@@ -226,6 +251,8 @@ msgid ""
 "certificates from your company CA, please follow the MySQL documentation "
 "for configuration steps."
 msgstr ""
+"이렇게 하면 MySQL 서버가 연결을 암호화하는 데 사용하는 자체 서명 인증서가 ``/var/lib/mysql/`` 에 생성됩니다. "
+"회사 CA의 인증서를 사용하려면 MySQL 문서의 구성 단계를 따르세요."
 
 #: ../../source/deploy/transport-encryption.rst:167
 msgid ""
@@ -234,20 +261,22 @@ msgid ""
 "``/etc/mysql/mysql.conf.d/mysqld.cnf`` and append the following line to "
 "the file:"
 msgstr ""
+"**참고:** 선택적으로 모든 연결이 로컬 소켓 연결 또는 TLS를 통해 이루어져야 한다고 강제할 수 있습니다. "
+"이를 위해 ``/etc/mysql/mysql.conf.d/mysqld.cnf`` 를 열고 다음 줄을 파일에 추가합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:173
 msgid ""
 "Any connection to the MySQL server must now be made with secure transport"
 " enabled."
-msgstr ""
+msgstr "이제 MySQL 서버에 대한 모든 연결은 보안 전송을 활성화하여 이루어져야 합니다."
 
 #: ../../source/deploy/transport-encryption.rst:175
 msgid "Last but not least, restart the server and confirm it is up and running:"
-msgstr ""
+msgstr "마지막으로, 서버를 재시작하고 정상적으로 실행 중인지 확인합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:179
 msgid "systemctl restart mysql systemctl status mysql"
-msgstr ""
+msgstr "systemctl restart mysql systemctl status mysql"
 
 #: ../../source/deploy/transport-encryption.rst:201
 msgid ""
@@ -255,34 +284,36 @@ msgid ""
 "``DataSource`` value in the ``SqlSettings`` section. It should look "
 "similar to this:"
 msgstr ""
+"Mattermost 서버에서 ``config.json`` 파일을 열고 ``SqlSettings`` 섹션에서 "
+"``DataSource`` 값을 찾습니다. 다음과 비슷하게 보일 것입니다:"
 
 #: ../../source/deploy/transport-encryption.rst:207
 msgid ""
 "At the end of the line, we can configure that TLS must be turned on with "
 "the ``tls`` flag which supports the following values:"
-msgstr ""
+msgstr "``tls`` 플래그를 사용하여 TLS를 활성화하도록 구성할 수 있으며, 이 플래그는 다음 값을 지원합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:209
 msgid "true (Require TLS + a trusted certificate)"
-msgstr ""
+msgstr "true (TLS 필요 + 신뢰할 수 있는 인증서)"
 
 #: ../../source/deploy/transport-encryption.rst:210
 msgid "false"
-msgstr ""
+msgstr "false"
 
 #: ../../source/deploy/transport-encryption.rst:211
 msgid "skip-verify (Require TLS + accept self-signed)"
-msgstr ""
+msgstr "skip-verify (TLS 필요 + 자체 서명 인증서 허용)"
 
 #: ../../source/deploy/transport-encryption.rst:212
 msgid "preferred (Try TLS, fallback to unencrypted)"
-msgstr ""
+msgstr "preferred (TLS 시도, 암호화되지 않은 연결로 대체)"
 
 #: ../../source/deploy/transport-encryption.rst:214
 msgid ""
 "In our case we need to use ``skip-verify`` since we use a self-signed "
 "certificate. The configuration setting will now look like this:"
-msgstr ""
+msgstr "자체 서명 인증서를 사용하므로 ``skip-verify`` 를 사용해야 합니다. 구성 설정은 다음과 같이 됩니다:"
 
 #: ../../source/deploy/transport-encryption.rst:220
 msgid ""
@@ -290,17 +321,18 @@ msgid ""
 " each node of the cluster. If you are using configuration in the "
 "database, be sure to update the ``systemd`` unit file and enable TLS for "
 "the configuration store."
-msgstr ""
+msgstr "클러스터에서 Mattermost를 실행 중인 경우, 클러스터의 각 노드에서 값을 업데이트해야 합니다. "
+"데이터베이스에서 구성을 사용하는 경우, ``systemd`` 유닛 파일을 업데이트하고 구성 저장소에 대해 TLS를 활성화해야 합니다."
 
 #: ../../source/deploy/transport-encryption.rst:222
 msgid ""
 "Once complete, restart the Mattermost server and ensure the system is "
 "operational:"
-msgstr ""
+msgstr "완료되면 Mattermost 서버를 재시작하고 시스템이 정상 작동하는지 확인합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:253
 msgid "Configuring cluster transport encryption"
-msgstr ""
+msgstr "클러스터 전송 암호화 구성"
 
 #: ../../source/deploy/transport-encryption.rst:258
 msgid ""
@@ -308,93 +340,100 @@ msgid ""
 "deployment using SSH tunneling. The guide walks through the deployment of"
 " this solution on Ubuntu 20.04, but it can be adapted for any Linux "
 "operating system."
-msgstr ""
+msgstr "Mattermost는 SSH 터널링을 사용하여 배포 클러스터 내에서 전송되는 메시지를 암호화할 수 있습니다. "
+"이 가이드는 Ubuntu 20.04에서 이 솔루션의 배포 과정을 설명하지만, 모든 Linux 운영 체제에 적용할 수 있습니다."
 
 #: ../../source/deploy/transport-encryption.rst:260
 msgid ""
 "While this document only describes the configuration of a three-node "
 "cluster, it is by no means limited to that number."
-msgstr ""
+msgstr "이 문서는 3노드 클러스터의 구성만 설명하지만, 이 수로 제한되지는 않습니다."
 
 #: ../../source/deploy/transport-encryption.rst:265
 msgid "SSH port whitelisted between each node of the deployment."
-msgstr ""
+msgstr "배포의 각 노드 간에 SSH 포트가 허용 목록에 등록되어 있어야 합니다."
 
 #: ../../source/deploy/transport-encryption.rst:266
 msgid "Active ufw/iptables on each node."
-msgstr ""
+msgstr "각 노드에서 ufw/iptables가 활성화되어 있어야 합니다."
 
 #: ../../source/deploy/transport-encryption.rst:267
 msgid "Access to the root/sudo user of each node for configuration."
-msgstr ""
+msgstr "구성을 위해 각 노드의 root/sudo 사용자에 대한 접근 권한이 있어야 합니다."
 
 #: ../../source/deploy/transport-encryption.rst:268
 msgid "A configured Mattermost cluster."
-msgstr ""
+msgstr "구성된 Mattermost 클러스터가 있어야 합니다."
 
 #: ../../source/deploy/transport-encryption.rst:269
 msgid "Mattermost running with a dedicated service user."
-msgstr ""
+msgstr "전용 서비스 사용자로 실행 중인 Mattermost가 있어야 합니다."
 
 #: ../../source/deploy/transport-encryption.rst:270
 msgid "Mattermost service is stopped on each cluster node."
-msgstr ""
+msgstr "각 클러스터 노드에서 Mattermost 서비스가 중지되어 있어야 합니다."
 
 #: ../../source/deploy/transport-encryption.rst:273
 msgid ""
 "Support on the application level is currently in development and, when "
 "available, will deprecate this document."
 msgstr ""
+"애플리케이션 수준의 지원은 현재 개발 중이며, 사용 가능해지면 이 문서는 더 이상 사용되지 않을 것입니다."
 
 #: ../../source/deploy/transport-encryption.rst:278
 msgid ""
 "In this scenario there are three application nodes in our environment "
 "with the following hostname/IP mapping:"
 msgstr ""
+"이 시나리오에서는 다음과 같은 호스트명/IP 매핑을 가진 3개의 애플리케이션 노드가 환경에 있습니다:"
 
 #: ../../source/deploy/transport-encryption.rst:281
 msgid "**transport-encryption-mattermost2:** 10.10.250.231"
-msgstr ""
+msgstr "**transport-encryption-mattermost2:** 10.10.250.231"
 
 #: ../../source/deploy/transport-encryption.rst:282
 msgid "**transport-encryption-mattermost3:** 10.10.250.165"
-msgstr ""
+msgstr "**transport-encryption-mattermost3:** 10.10.250.165"
 
 #: ../../source/deploy/transport-encryption.rst:285
 msgid "Preparations"
-msgstr ""
+msgstr "준비 사항"
 
 #: ../../source/deploy/transport-encryption.rst:287
 msgid "Connect to each Mattermost server with a sudo or root user."
-msgstr ""
+msgstr "sudo 또는 root 사용자로 각 Mattermost 서버에 연결합니다."
 
 #: ../../source/deploy/transport-encryption.rst:288
 msgid ""
 "Make a note of the IP from each cluster member used for the internal "
 "communication."
 msgstr ""
+"내부 통신에 사용되는 각 클러스터 구성원의 IP를 기록해 둡니다."
 
 #: ../../source/deploy/transport-encryption.rst:289
 msgid ""
 "Ensure ``AllowTcpForwarding`` is enabled in ``/etc/ssh/sshd_config`` of "
 "each cluster node."
 msgstr ""
+"각 클러스터 노드의 ``/etc/ssh/sshd_config`` 에서 ``AllowTcpForwarding`` 이 활성화되어 있는지 확인합니다."
 
 #: ../../source/deploy/transport-encryption.rst:292
 msgid "SSH authentication"
-msgstr ""
+msgstr "SSH 인증"
 
 #: ../../source/deploy/transport-encryption.rst:294
 msgid ""
 "On each node, generate a SSH key-pair for the service account. In our "
 "scenario this is called ``mattermost``:"
 msgstr ""
+"각 노드에서 서비스 계정용 SSH 키 쌍을 생성합니다. 이 시나리오에서는 이를 ``mattermost`` 라고 합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:312
 msgid ""
 "The location of the SSH key itself is irrelevant if company policies "
 "require the usage of another storage location."
 msgstr ""
+"회사 정책에서 다른 저장 위치 사용을 요구하는 경우 SSH 키 자체의 위치는 중요하지 않습니다."
 
 #: ../../source/deploy/transport-encryption.rst:314
 msgid ""
@@ -403,6 +442,9 @@ msgid ""
 "copy the contents of ``/home/mattermost/.ssh/id_rsa.pub`` of nodes 2 and "
 "3, and add it to ``/home/mattermost/.ssh/authorized_keys`` of node 1."
 msgstr ""
+"다음으로, 각 노드의 SSH 공개 키가 클러스터의 다른 노드들의 ``authorized_keys`` 파일에 추가되었는지 확인합니다. "
+"이를 위해 노드 2와 3의 ``/home/mattermost/.ssh/id_rsa.pub`` 내용을 복사하여 노드 1의 "
+"``/home/mattermost/.ssh/authorized_keys`` 에 추가합니다."
 
 #: ../../source/deploy/transport-encryption.rst:316
 msgid ""
@@ -410,6 +452,7 @@ msgid ""
 "should be able to establish an SSH connection to the other nodes of the "
 "cluster."
 msgstr ""
+"클러스터의 각 노드에 대해 이 단계를 반복합니다. 결과적으로 각 노드는 클러스터의 다른 노드들과 SSH 연결을 설정할 수 있어야 합니다."
 
 #: ../../source/deploy/transport-encryption.rst:320
 msgid ""
@@ -418,34 +461,38 @@ msgid ""
 "this service account is allowed to create a SSH tunnel with port "
 "forwarding, but it doesn't require any additional permissions."
 msgstr ""
+"이 서비스 계정은 Mattermost ``systemd`` 서비스 자체에 이미 사용 중인 서비스 계정과 별개일 수 있습니다. "
+"이 서비스 계정이 포트 포워딩이 있는 SSH 터널을 생성할 수 있도록 허용되어야 하는 것이 중요하지만, 추가 권한은 필요하지 않습니다."
 
 #: ../../source/deploy/transport-encryption.rst:323
 msgid "ufw configuration"
-msgstr ""
+msgstr "ufw 구성"
 
 #: ../../source/deploy/transport-encryption.rst:325
 msgid ""
 "As a next step, allow SSH access from each of the other member nodes, "
 "e.g.:"
 msgstr ""
+"다음 단계로, 다른 멤버 노드들로부터의 SSH 접근을 허용합니다. 예:"
 
 #: ../../source/deploy/transport-encryption.rst:327
 msgid "mattermost1 allows from mattermost2 and mattermost3"
-msgstr ""
+msgstr "mattermost1은 mattermost2와 mattermost3로부터의 접근을 허용"
 
 #: ../../source/deploy/transport-encryption.rst:328
 msgid "mattermost2 allows from mattermost1 and mattermost3"
-msgstr ""
+msgstr "mattermost2는 mattermost1과 mattermost3로부터의 접근을 허용"
 
 #: ../../source/deploy/transport-encryption.rst:329
 msgid "mattermost3 allows from mattermost1 and mattermost2"
-msgstr ""
+msgstr "mattermost3는 mattermost1과 mattermost2로부터의 접근을 허용"
 
 #: ../../source/deploy/transport-encryption.rst:331
 msgid ""
 "To do so, we add an exception in the firewall. The commands for "
 "``mattermost1`` look as follows:"
 msgstr ""
+"이를 위해 방화벽에 예외를 추가합니다. ``mattermost1`` 에 대한 명령어는 다음과 같습니다:"
 
 #: ../../source/deploy/transport-encryption.rst:353
 msgid ""
@@ -453,18 +500,22 @@ msgid ""
 " from the other member nodes. Do so for each member node, excluding the "
 "node itself."
 msgstr ""
+"다른 노드들에서도 동일한 단계를 반복하되, IP를 다른 멤버 노드들의 IP로 교체합니다. "
+"자기 자신을 제외한 각 멤버 노드에 대해 이 작업을 수행합니다."
 
 #: ../../source/deploy/transport-encryption.rst:355
 msgid ""
 "Next, open ``/etc/ufw/after.rules`` and add the following block to the "
 "bottom of the file:"
 msgstr ""
+"다음으로, ``/etc/ufw/after.rules`` 를 열고 파일 하단에 다음 블록을 추가합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:371
 msgid ""
 "Two lines always belong to a single node, so in a deployment with four "
 "nodes:"
 msgstr ""
+"두 줄은 항상 단일 노드에 속하므로, 4개의 노드가 있는 배포에서는:"
 
 #: ../../source/deploy/transport-encryption.rst:382
 msgid ""
@@ -472,40 +523,44 @@ msgid ""
 "you have a cluster of six nodes, use 8075 and 8074 with 1 to 5 in front "
 "of it. If the cluster is of bigger size, additional ports must be used."
 msgstr ""
+"오른쪽의 포트는 고유해야 한다는 점에 유의하세요. 6개의 노드가 있는 클러스터의 경우, "
+"8075와 8074 앞에 1부터 5까지의 숫자를 사용하세요. 클러스터가 더 큰 경우, "
+"추가 포트를 사용해야 합니다."
 
 #: ../../source/deploy/transport-encryption.rst:384
 msgid ""
 "Ensure that your operating system has IP forwarding enabled using the "
 "following command:"
 msgstr ""
+"다음 명령어를 사용하여 운영 체제에서 IP 포워딩이 활성화되어 있는지 확인합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:390
 msgid ""
 "After that, reload the ufw rules and confirm that the iptable rules were "
 "successfully created:"
-msgstr ""
+msgstr "그 후, ufw 규칙을 다시 로드하고 iptable 규칙이 성공적으로 생성되었는지 확인합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:411
 msgid ""
 "Repeat those steps for every node on the cluster. At the end of this "
 "section the following should be configured:"
-msgstr ""
+msgstr "클러스터의 모든 노드에 대해 이러한 단계를 반복합니다. 이 섹션의 끝에서 다음이 구성되어야 합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:413
 msgid "SSH access enabled in firewall from each cluster node to another."
-msgstr ""
+msgstr "각 클러스터 노드에서 다른 노드로의 방화벽 SSH 접근이 활성화되어 있습니다."
 
 #: ../../source/deploy/transport-encryption.rst:414
 msgid "Per node 2 iptables rules for port 8074 and 8075."
-msgstr ""
+msgstr "포트 8074와 8075에 대한 노드당 2개의 iptables 규칙이 있습니다."
 
 #: ../../source/deploy/transport-encryption.rst:415
 msgid "IP forwarding enabled."
-msgstr ""
+msgstr "IP 포워딩이 활성화되어 있습니다."
 
 #: ../../source/deploy/transport-encryption.rst:418
 msgid "SSH configuration"
-msgstr ""
+msgstr "SSH 구성"
 
 #: ../../source/deploy/transport-encryption.rst:420
 msgid ""
@@ -513,20 +568,25 @@ msgid ""
 "Mattermost service start. To do so, create a file called ``pre_start.sh``"
 " in ``/opt/mattermost/bin`` on ``mattermost1``:"
 msgstr ""
+"다음 단계로, SSH 터널이 Mattermost 서비스 시작의 일부로 생성되도록 합니다. "
+"이를 위해 ``mattermost1`` 의 ``/opt/mattermost/bin`` 에 ``pre_start.sh`` 라는 "
+"파일을 생성합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:432
 msgid ""
 "We're ignoring the error from the SSH connection itself in case a tunnel "
 "is already active. Otherwise the Mattermost server would fail to start."
 msgstr ""
+"터널이 이미 활성화된 경우 SSH 연결 자체의 오류를 무시합니다. "
+"그렇지 않으면 Mattermost 서버가 시작되지 않을 것입니다."
 
 #: ../../source/deploy/transport-encryption.rst:433
 msgid "Please make sure to back up this script in case of a version upgrade."
-msgstr ""
+msgstr "버전 업그레이드 시를 대비하여 이 스크립트를 백업해 두세요."
 
 #: ../../source/deploy/transport-encryption.rst:435
 msgid "Afterwards, set the executable bit on the shell script:"
-msgstr ""
+msgstr "그 후, 셸 스크립트에 실행 권한을 설정합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:441
 msgid ""
@@ -534,30 +594,36 @@ msgid ""
 "After this, enter a ``ExecStartPre`` script that will be executed before "
 "Mattermost itself is started:"
 msgstr ""
+"Mattermost의 systemd 유닛 파일을 열고 ``Type=Notify`` 를 찾습니다. "
+"그 후, Mattermost 자체가 시작되기 전에 실행될 ``ExecStartPre`` 스크립트를 입력합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:449
 msgid "Reload the systemd daemon afterwards:"
-msgstr ""
+msgstr "그 후 systemd 데몬을 다시 로드합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:455
 msgid ""
 "Repeat the same steps on each of the member nodes and adapt the node IPs "
 "and amount of entries for your environment."
 msgstr ""
+"각 멤버 노드에서 동일한 단계를 반복하고 환경에 맞게 노드 IP와 항목 수를 조정합니다."
 
 #: ../../source/deploy/transport-encryption.rst:458
 msgid "Cluster start"
-msgstr ""
+msgstr "클러스터 시작"
 
 #: ../../source/deploy/transport-encryption.rst:460
 msgid ""
 "Once each node is configured, restart the service on each cluster and "
 "confirm that it's running using the command below:"
 msgstr ""
+"각 노드가 구성되면 각 클러스터에서 서비스를 다시 시작하고 아래 명령어를 사용하여 "
+"실행 중인지 확인합니다:"
 
 #: ../../source/deploy/transport-encryption.rst:474
 msgid ""
 "Next, open the Mattermost System Console and confirm that each node is "
 "reporting successfully in the High Availability section."
 msgstr ""
-
+"다음으로 Mattermost 시스템 콘솔을 열고 각 노드가 고가용성 섹션에서 "
+"성공적으로 보고되고 있는지 확인합니다."

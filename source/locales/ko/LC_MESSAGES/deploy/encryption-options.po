@@ -21,25 +21,25 @@ msgstr ""
 
 #: ../../source/deploy/encryption-options.rst:2
 msgid "Encryption options"
-msgstr ""
+msgstr "암호화 옵션"
 
 #: ../../source/_static/badges/allplans-selfhosted.rst:7
 msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `모든 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/allplans-selfhosted.rst:9
 msgid ""
 "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
 "deployments"
-msgstr ""
+msgstr "|deployment-img| `자체 호스팅 <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/deploy/encryption-options.rst:7
 msgid ""
@@ -47,16 +47,20 @@ msgid ""
 "capabilities. This page guides you through setting up appropriate "
 "encryption security."
 msgstr ""
+"Mattermost는 전송 중 암호화 및 저장 시 암호화 기능을 제공합니다. 이 페이지에서는 "
+"적절한 암호화 보안을 설정하는 방법을 안내합니다."
 
 #: ../../source/deploy/encryption-options.rst:9
 msgid ""
 "Encryption is not required for GDPR, although it can be used as an "
 "additional safeguard against data breach."
 msgstr ""
+"GDPR에는 암호화가 필수는 아니지만, 데이터 침해에 대한 추가적인 보호 수단으로 "
+"사용할 수 있습니다."
 
 #: ../../source/deploy/encryption-options.rst:12
 msgid "Encryption-in-transit"
-msgstr ""
+msgstr "전송 중 암호화"
 
 #: ../../source/deploy/encryption-options.rst:14
 msgid ""
@@ -66,6 +70,10 @@ msgid ""
 "install a proxy such as NGINX and set up TLS on the proxy. Refer to our "
 ":doc:`configuration guide for more details </deploy/server/setup-tls>`."
 msgstr ""
+"Mattermost는 Mattermost 클라이언트 애플리케이션과 Mattermost 서버 간의 모든 데이터 "
+"전송에 2048비트 RSA와 함께 AES-256을 포함한 TLS 암호화를 지원합니다. Mattermost "
+"서버에 TLS를 설정하거나 NGINX와 같은 프록시를 설치하고 프록시에 TLS를 설정할 수 "
+"있습니다. 자세한 내용은 :doc:`설정 가이드 </deploy/server/setup-tls>` 를 참조하세요."
 
 #: ../../source/deploy/encryption-options.rst:16
 msgid ""
@@ -73,14 +81,16 @@ msgid ""
 " TLS or stunnel <configure/authentication-configuration-settings:ad/ldap "
 "port>`."
 msgstr ""
+"Active Directory/LDAP 연결은 :ref:`TLS 또는 stunnel로 선택적으로 보안 설정할 수 "
+"있습니다 <configure/authentication-configuration-settings:ad/ldap port>`."
 
 #: ../../source/deploy/encryption-options.rst:18
 msgid "Connections to calls are secured with a combination of:"
-msgstr ""
+msgstr "통화 연결은 다음 조합으로 보안이 설정됩니다:"
 
 #: ../../source/deploy/encryption-options.rst:20
 msgid "TLS: The existing WebSocket channel is used to secure the signaling path."
-msgstr ""
+msgstr "TLS: 기존 WebSocket 채널이 시그널링 경로를 보호하는 데 사용됩니다."
 
 #: ../../source/deploy/encryption-options.rst:21
 msgid ""
@@ -88,6 +98,8 @@ msgid ""
 "``TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256`` and "
 "``TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA`` algorithms."
 msgstr ""
+"DTLS v1.2 (필수): 초기 키 교환에 사용됩니다. ``TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256`` 및 "
+"``TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA`` 알고리즘을 지원합니다."
 
 #: ../../source/deploy/encryption-options.rst:22
 msgid ""
@@ -95,10 +107,12 @@ msgid ""
 "containing voice or screen share). Supports ``AEAD_AES_128_GCM`` and "
 "``AES128_CM_HMAC_SHA1_80`` algorithms."
 msgstr ""
+"SRTP (필수): 모든 미디어 패킷(음성 또는 화면 공유를 포함하는 패킷)을 암호화하는 데 사용됩니다. "
+"``AEAD_AES_128_GCM`` 및 ``AES128_CM_HMAC_SHA1_80`` 알고리즘을 지원합니다."
 
 #: ../../source/deploy/encryption-options.rst:25
 msgid "Gossip encryption (experimental)"
-msgstr ""
+msgstr "Gossip 암호화 (실험적)"
 
 #: ../../source/deploy/encryption-options.rst:27
 msgid ""
@@ -118,6 +132,14 @@ msgid ""
 "to node failures. However, it can suffer from redundancy and propagation "
 "delays in large networks."
 msgstr ""
+"고가용성 모드에서 Mattermost는 `Cornell University의 연구자들이 개발한 SWIM 프로토콜 "
+"<https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf>`_ 에 설명된 원칙을 기반으로 하는 "
+"gossip 프로토콜을 사용할 때 클러스터 데이터의 전송 중 암호화를 지원합니다. gossip 프로토콜은 네트워크 전반에 걸쳐 "
+"데이터 일관성을 보장하기 위해 노드가 무작위로 정보를 교환하는 분산 시스템의 통신 메커니즘입니다. 이는 분산되어 있고 확장 가능하며 "
+"내결함성이 있어 수많은 노드가 있는 시스템에 이상적입니다. 정보는 소셜 gossip과 유사한 방식으로 퍼지며, 네트워크가 일관된 상태로 "
+"수렴할 때까지 노드가 주기적으로 무작위 피어에게 업데이트를 \"gossiping\"합니다. 분산 데이터베이스, 블록체인 네트워크 및 "
+"피어투피어 시스템에서 널리 사용되는 이 프로토콜은 구현이 간단하고 노드 장애에 강인합니다. 그러나 대규모 네트워크에서는 중복성과 "
+"전파 지연이 발생할 수 있습니다."
 
 #: ../../source/deploy/encryption-options.rst:29
 msgid ""
@@ -127,10 +149,13 @@ msgid ""
 "converted to base64. It can be set to a length of 16, 24, or 32 bytes to "
 "select AES-128, AES-192, or AES-256 respectively."
 msgstr ""
+"암호화는 기본적으로 AES-256을 사용하며 구성할 수 없습니다. 그러나 ``Systems`` 테이블의 ``ClusterEncryptionKey`` "
+"행에 값을 수동으로 설정할 수 있습니다. 키는 base64로 변환된 바이트 배열입니다. AES-128, AES-192 또는 AES-256을 "
+"선택하려면 각각 16, 24 또는 32바이트 길이로 설정할 수 있습니다."
 
 #: ../../source/deploy/encryption-options.rst:32
 msgid "Encryption-at-rest"
-msgstr ""
+msgstr "저장 시 암호화"
 
 #: ../../source/deploy/encryption-options.rst:34
 msgid ""
@@ -140,6 +165,9 @@ msgid ""
 "search and compliance reporting of message histories, Mattermost does not"
 " offer encryption within the database."
 msgstr ""
+"저장 시 암호화는 인프라 내의 자체 서버에 있는 Mattermost 데이터베이스에 적용된 하드웨어 및 소프트웨어 디스크 암호화 솔루션을 통해 "
+"메시지에 사용할 수 있습니다. 최종 사용자의 메시지 기록 검색 및 규정 준수 보고를 가능하게 하기 위해 Mattermost는 데이터베이스 "
+"내부 암호화를 제공하지 않습니다."
 
 #: ../../source/deploy/encryption-options.rst:36
 msgid ""
@@ -149,6 +177,9 @@ msgid ""
 "Transparent Data Encryption (TDE) can be employed. Integration with "
 "external encrypted storage systems is supported."
 msgstr ""
+"데이터베이스와 파일 저장소 모두 소프트웨어 또는 하드웨어 디스크 암호화 솔루션을 사용하여 보안을 설정할 수 있습니다. LUKS(Linux), "
+"BitLocker(Windows)와 같은 전체 디스크 암호화 방법이나 Transparent Data Encryption(TDE)과 같은 데이터베이스 "
+"특정 솔루션을 사용할 수 있습니다. 외부 암호화 저장 시스템과의 통합이 지원됩니다."
 
 #: ../../source/deploy/encryption-options.rst:38
 msgid ""
@@ -156,10 +187,12 @@ msgid ""
 "hardware and software disk encryption solutions applied to the server "
 "used for local storage or storage via MinIO."
 msgstr ""
+"또한 로컬 저장소 또는 MinIO를 통한 저장에 사용되는 서버에 적용된 하드웨어 및 소프트웨어 디스크 암호화 솔루션을 통해 저장된 파일에 "
+"저장 시 암호화를 사용할 수 있습니다."
 
 #: ../../source/deploy/encryption-options.rst:41
 msgid "Database"
-msgstr ""
+msgstr "데이터베이스"
 
 #: ../../source/deploy/encryption-options.rst:43
 msgid ""
@@ -169,10 +202,13 @@ msgid ""
 " <https://www.postgresql.org/docs/10/encryption-options.html>`__ database"
 " documentation for details on encryption options at the disk level."
 msgstr ""
+"저장 시 암호화는 인프라 내의 자체 서버에 있는 Mattermost 데이터베이스에 적용된 하드웨어 및 소프트웨어 디스크 암호화 솔루션을 통해 "
+"메시지에 사용할 수 있습니다. 디스크 수준의 암호화 옵션에 대한 자세한 내용은 `PostgreSQL "
+"<https://www.postgresql.org/docs/10/encryption-options.html>`__ 데이터베이스 문서를 참조하세요."
 
 #: ../../source/deploy/encryption-options.rst:46
 msgid "File storage"
-msgstr ""
+msgstr "파일 저장소"
 
 #: ../../source/deploy/encryption-options.rst:48
 msgid ""
@@ -180,6 +216,8 @@ msgid ""
 "for files stored via hardware and software disk encryption solutions "
 "applied to the server."
 msgstr ""
+"로컬 저장소 또는 Minio를 통한 저장의 경우, 서버에 적용된 하드웨어 및 소프트웨어 디스크 암호화 솔루션을 통해 저장된 파일에 저장 시 "
+"암호화를 사용할 수 있습니다."
 
 #: ../../source/deploy/encryption-options.rst:50
 msgid ""
@@ -188,4 +226,6 @@ msgid ""
 "/environment-configuration-settings:enable server-side encryption for "
 "amazon s3>` in Mattermost enterprise-badge."
 msgstr ""
-
+"Amazon의 독점 S3 시스템의 경우, Mattermost enterprise-badge에서 :ref:`Amazon S3 관리형 키를 사용한 서버 측 "
+"암호화 <configure/environment-configuration-settings:enable server-side encryption for amazon s3>` 를 "
+"통해 저장 시 암호화를 사용할 수 있습니다."

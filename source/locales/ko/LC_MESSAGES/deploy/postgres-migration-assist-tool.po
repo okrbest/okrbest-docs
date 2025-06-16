@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:2
 msgid "Automated PostgreSQL migration"
-msgstr ""
+msgstr "자동화된 PostgreSQL 마이그레이션"
 
 #: ../../source/_static/badges/allplans-selfhosted.rst:7
 msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `모든 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
@@ -36,6 +36,8 @@ msgid ""
 "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
 "deployments"
 msgstr ""
+"|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
+"배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
@@ -50,6 +52,10 @@ msgid ""
 " to be executed </deploy/manual-postgres-migration>`, even in air-gapped "
 "deployment environments."
 msgstr ""
+"데이터베이스 마이그레이션은 어려운 작업일 수 있으며, 이전에 마이그레이션을 수행한 적이 없다면 "
+"필요한 단계를 놓치거나 잘못 해석하기 쉽습니다. 저희 ``migration-assist`` 도구는 "
+":doc:`수행할 작업 </deploy/manual-postgres-migration>` 을 자동화하여 효율적이고 "
+"오류 없는 마이그레이션 경험을 제공하며, 에어갭 배포 환경에서도 작동합니다."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:9
 msgid ""
@@ -58,10 +64,13 @@ msgid ""
 "deployment can contact a `Mattermost Expert <https://mattermost.com"
 "/contact-sales/>`_."
 msgstr ""
+"이 도구가 귀하의 Mattermost 배포에 적합한지 확실하지 않으신가요? Mattermost 배포에 "
+"기반한 맞춤형 가이드가 필요한 Mattermost 고객은 `Mattermost Expert "
+"<https://mattermost.com/contact-sales/>`_ 에 문의하실 수 있습니다."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:12
 msgid "Install"
-msgstr ""
+msgstr "설치"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:14
 msgid ""
@@ -69,6 +78,8 @@ msgid ""
 "repository `releases page <https://github.com/mattermost/migration-"
 "assist/releases>`_."
 msgstr ""
+"GitHub 저장소의 `releases page <https://github.com/mattermost/migration-"
+"assist/releases>`_ 에서 Mattermost ``migration-assist`` 도구를 다운로드하세요."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:16
 msgid ""
@@ -80,6 +91,11 @@ msgid ""
 "download and `compile <#compile-the-migration-assist-tool>`__ the "
 "``migration-assist`` tool yourself."
 msgstr ""
+"``migration-assist`` 도구를 Mattermost 배포와 동일한 서버에서 실행할 수 있지만, "
+"대신 Mattermost 서버와 동일한 네트워크의 가상 머신에서 도구를 실행하는 것을 권장합니다. "
+"도구 자체는 가볍고 대형 서버가 필요하지 않습니다. 2개의 CPU 코어와 16GB RAM이 있는 "
+"서버면 충분합니다. 원하는 경우 ``migration-assist`` 도구를 직접 다운로드하고 "
+"`compile <#compile-the-migration-assist-tool>`__ 할 수 있습니다."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:18
 msgid ""
@@ -89,10 +105,14 @@ msgid ""
 ":ref:`pgloader <deploy/manual-postgres-migration:install pgloader>` "
 "installation documentation for details."
 msgstr ""
+"MySQL에서 PostgreSQL로 데이터를 마이그레이션하려면 ``pgloader`` 도구도 설치해야 합니다. "
+"``pgloader`` 를 Mattermost 서버와 동일한 네트워크의 가상 머신에서 실행하는 것을 권장합니다. "
+"자세한 내용은 :ref:`pgloader <deploy/manual-postgres-migration:install pgloader>` "
+"설치 문서를 참조하세요."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:21
 msgid "Usage"
-msgstr ""
+msgstr "사용법"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:25
 msgid ""
@@ -102,14 +122,18 @@ msgid ""
 "Mattermost database </deploy/server/preparations>` documentation for "
 "details."
 msgstr ""
+"마이그레이션을 수행하기 위한 필요한 환경이 갖춰져 있는지 확인하세요. MySQL과 PostgreSQL "
+"데이터베이스가 실행 중이고 접근 가능한지 확인하세요. PostgreSQL 인스턴스 설정에 대한 "
+"자세한 내용은 :doc:`Mattermost 데이터베이스 준비 </deploy/server/preparations>` "
+"문서를 참조하세요."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:28
 msgid "Step 1 - Check the MySQL database schema"
-msgstr ""
+msgstr "1단계 - MySQL 데이터베이스 스키마 확인"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:30
 msgid "Run the following command to check the MySQL database schema:"
-msgstr ""
+msgstr "MySQL 데이터베이스 스키마를 확인하려면 다음 명령어를 실행하세요:"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:36
 msgid ""
@@ -117,14 +141,16 @@ msgid ""
 "common issues. The flags for fixes are as follows (where all fixes can be"
 " used together at the same time):"
 msgstr ""
+"이 명령어는 준비 상태를 출력하고 일반적인 문제에 대한 필요한 수정사항을 출력합니다. "
+"수정을 위한 플래그는 다음과 같습니다(모든 수정사항을 동시에 함께 사용할 수 있음):"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:45
 msgid "Step 2 - Create the PostgreSQL database schema"
-msgstr ""
+msgstr "2단계 - PostgreSQL 데이터베이스 스키마 생성"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:47
 msgid "Run the following command to create the Postgres database schema:"
-msgstr ""
+msgstr "Postgres 데이터베이스 스키마를 생성하려면 다음 명령어를 실행하세요:"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:53
 msgid ""
@@ -132,6 +158,9 @@ msgid ""
 "Postgres database. The ``--mattermost-version`` flag is required to "
 "specify the Mattermost version you are migrating from."
 msgstr ""
+"이 명령어는 필요한 마이그레이션을 다운로드하고 Postgres 데이터베이스에 적용합니다. "
+"마이그레이션하는 Mattermost 버전을 지정하기 위해 ``--mattermost-version`` 플래그가 "
+"필요합니다."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:55
 msgid ""
@@ -139,20 +168,25 @@ msgid ""
 "postgres`` command to run a few checks before running the migrations. You"
 " can disable them by setting the following flags to false:"
 msgstr ""
+"마이그레이션을 실행하기 전에 몇 가지 검사를 실행하기 위해 ``migration-assist postgres`` "
+"명령어와 함께 사용할 수 있는 두 가지 플래그가 있습니다. 다음 플래그를 false로 설정하여 "
+"비활성화할 수 있습니다:"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:63
 msgid "Step 3 - Generate a pgloader configuration"
-msgstr ""
+msgstr "3단계 - pgloader 구성 생성"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:65
 msgid "Run the following command to generate a pgloader configuration:"
-msgstr ""
+msgstr "pgloader 구성을 생성하려면 다음 명령어를 실행하세요:"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:71
 msgid ""
 "This command will generate a pgloader configuration file that can be used"
 " to migrate the data from MySQL to Postgres."
 msgstr ""
+"이 명령어는 MySQL에서 Postgres로 데이터를 마이그레이션하는 데 사용할 수 있는 pgloader "
+"구성 파일을 생성합니다."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:73
 msgid ""
@@ -162,16 +196,21 @@ msgid ""
 "disable this behavior, you can set the ``--remove-null-chars`` to "
 "``false``."
 msgstr ""
+"생성된 구성에는 텍스트 유형 데이터에서 null 문자를 제거하는 설정이 있습니다. 이는 "
+"Postgres에 데이터를 삽입하는 동안 마이그레이션이 오류를 반환하지 않도록 하기 위한 "
+"것입니다. 그러나 이 동작을 비활성화하려면 ``--remove-null-chars`` 를 ``false`` 로 "
+"설정할 수 있습니다."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:76
 msgid "Step 4 - Run pgloader"
-msgstr ""
+msgstr "4단계 - pgloader 실행"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:78
 msgid ""
 ":ref:`Run pgloader <deploy/manual-postgres-migration:pgloader>` with the "
 "generated configuration file:"
 msgstr ""
+"생성된 구성 파일로 :ref:`pgloader 실행 <deploy/manual-postgres-migration:pgloader>`:"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:84
 msgid ""
@@ -179,16 +218,19 @@ msgid ""
 "during the migration process. If there were any errors, please contact "
 "Mattermost for further guidance."
 msgstr ""
+"마이그레이션 과정에서 오류가 발생했는지 분석하기 위해 로그 파일을 주의 깊게 읽으세요. 오류가 "
+"발생한 경우 Mattermost에 추가 지침을 요청하세요."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:87
 msgid "Step 5 - Restore full-text indexes"
-msgstr ""
+msgstr "5단계 - 전체 텍스트 인덱스 복원"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:89
 msgid ""
 "Run the following command to create the full-text indexes for the "
 "``Posts`` and ``FileInfo`` tables:"
 msgstr ""
+"``Posts`` 및 ``FileInfo`` 테이블의 전체 텍스트 인덱스를 생성하려면 다음 명령어를 실행하세요:"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:95
 msgid ""
@@ -197,20 +239,25 @@ msgid ""
 "/manual-postgres-migration:restore full-text indexes>` documentation for "
 "more information."
 msgstr ""
+"이 명령어는 ``Posts`` 및 ``FileInfo`` 테이블의 전체 텍스트 인덱스를 생성합니다. 자세한 "
+"내용은 :ref:`전체 텍스트 인덱스 복원 <deploy/manual-postgres-migration:restore full-text indexes>` "
+"문서를 참조하세요."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:98
 msgid "Step 6 - Complete plugin migrations"
-msgstr ""
+msgstr "6단계 - 플러그인 마이그레이션 완료"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:100
 msgid ""
 "Generate migration configuration for collaborative playbooks, boards and "
 "calls:"
 msgstr ""
+"협업 플레이북, 보드 및 통화를 위한 마이그레이션 구성을 생성하세요:"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:108
 msgid "Then run pgloader with the generated configuration files:"
 msgstr ""
+"그런 다음 생성된 구성 파일로 pgloader를 실행하세요:"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:116
 msgid ""
@@ -219,10 +266,13 @@ msgid ""
 "/manual-postgres-migration:plugin migrations>` documentation for "
 "information on migrating Playbooks, Boards and Calls."
 msgstr ""
+"마이그레이션 과정에서 오류가 발생했는지 분석하기 위해 로그 파일을 주의 깊게 읽으세요. "
+"Playbooks, Boards 및 Calls 마이그레이션에 대한 정보는 :ref:`플러그인 마이그레이션 "
+"<deploy/manual-postgres-migration:plugin migrations>` 문서를 참조하세요."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:119
 msgid "Step 7 - Configure Mattermost to utilize the new PostgreSQL database"
-msgstr ""
+msgstr "7단계 - 새로운 PostgreSQL 데이터베이스를 사용하도록 Mattermost 구성"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:121
 msgid ""
@@ -234,6 +284,11 @@ msgid ""
 "See the :ref:`Environment configuration settings <configure/environment-"
 "configuration-settings:database>` documentation for more information."
 msgstr ""
+"이것은 마이그레이션 프로세스의 마지막 단계로, 새로운 PostgreSQL 데이터베이스를 가리키도록 "
+"Mattermost 구성을 업데이트해야 합니다. 이를 위해 ``config.json`` 에서 ``SqlSettings.DataSource`` 와 "
+"``SqlSettings.DriverName`` 필드를 찾아 새로운 PostgreSQL 데이터베이스 연결 세부 정보를 반영하도록 "
+"이러한 필드를 수정하세요. 자세한 내용은 :ref:`환경 구성 설정 <configure/environment-"
+"configuration-settings:database>` 문서를 참조하세요."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:125
 msgid ""
@@ -243,10 +298,13 @@ msgid ""
 "details. Once migrated, you should also update the ``MM_CONFIG`` "
 "environment variable to point to the new DSN."
 msgstr ""
+"구성이 데이터베이스에 저장된 경우 마이그레이션 세부 정보는 :ref:`데이터베이스의 구성 "
+"<deploy/manual-postgres-migration:configuration in database>` 문서를 참조하세요. "
+"마이그레이션이 완료되면 ``MM_CONFIG`` 환경 변수도 새로운 DSN을 가리키도록 업데이트해야 합니다."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:128
 msgid "Air-gapped environments"
-msgstr ""
+msgstr "에어갭 환경"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:130
 msgid ""
@@ -256,18 +314,24 @@ msgid ""
 "below to perform a seamless MySQL to PostgreSQL migration in an air-"
 "gapped environment without needing external dependencies:"
 msgstr ""
+"``migration-assist`` 도구는 마이그레이션에 필요한 모든 파일을 포함하고 있어 저장소에 대한 "
+"외부 액세스가 필요하지 않습니다. 에어갭을 통해 전송되면 도구는 독립적으로 작동합니다. 외부 "
+"의존성 없이 에어갭 환경에서 MySQL에서 PostgreSQL로 원활한 마이그레이션을 수행하려면 아래 "
+"지침을 따르세요:"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:132
 msgid ""
 "Verify that the ``migration-assist`` binary is the latest version "
 "available to benefit from improvements and fixes."
 msgstr ""
+"개선 사항과 수정 사항의 이점을 얻기 위해 ``migration-assist`` 바이너리가 최신 버전인지 "
+"확인하세요."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:134
 msgid ""
 "Transfer the latest version of the ``migration-assist`` binary into the "
 "air-gapped environment."
-msgstr ""
+msgstr "에어갭 환경으로 ``migration-assist`` 바이너리의 최신 버전을 전송하세요."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:136
 msgid ""
@@ -277,12 +341,16 @@ msgid ""
 "the MySQL database schema, applies necessary fixes, and automatically "
 "produces a file named ``mysql.output``:"
 msgstr ""
+"Unicode, 아티팩트 및 VARCHAR에 대한 ``--fix`` 플래그를 사용하여 MySQL에서 스키마와 데이터 "
+"출력 파일을 생성하세요. 이 단계는 MySQL 데이터베이스가 마이그레이션 준비가 되었는지 확인하는 "
+"중요한 단계입니다. 다음 명령어는 MySQL 데이터베이스 스키마를 확인하고, 필요한 수정 사항을 "
+"적용하며, 자동으로 ``mysql.output`` 이라는 파일을 생성합니다:"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:142
 msgid ""
 "Use the ``mysql.output`` file to apply the schema and data into the "
 "PostgreSQL database:"
-msgstr ""
+msgstr "``mysql.output`` 파일을 사용하여 스키마와 데이터를 PostgreSQL 데이터베이스에 적용하세요:"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:148
 msgid ""
@@ -291,18 +359,22 @@ msgid ""
 "database>`__ above to complete the migration process using the "
 "``migration-assist`` tool."
 msgstr ""
+"``migration-assist`` 도구를 사용하여 마이그레이션 프로세스를 완료하려면 위의 `step 3 "
+"<#step-3-generate-a-pgloader-configuration>`__ 부터 `step 7 "
+"<#step-7-configure-mattermost-to-utilize-the-new-postgresql-database>`__ 까지 "
+"따르세요."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:151
 msgid "Tool commands"
-msgstr ""
+msgstr "도구 명령어"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:153
 msgid "The ``migration-assist`` tool offers 3 core utility commands:"
-msgstr ""
+msgstr "``migration-assist`` 도구는 3가지 핵심 유틸리티 명령어를 제공합니다:"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:155
 msgid "``migration-assist mysql``"
-msgstr ""
+msgstr "``migration-assist mysql``"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:157
 msgid ""
@@ -310,20 +382,25 @@ msgid ""
 "offers fixes for common issues. See the `install <#install>`__ section "
 "below for details on installing the ``migration-assist`` tool."
 msgstr ""
+"MySQL 데이터베이스 스키마를 확인하여 마이그레이션 준비 상태를 확인하고, 일반적인 문제에 대한 "
+"수정 사항을 제공합니다. ``migration-assist`` 도구 설치에 대한 자세한 내용은 아래의 `install "
+"<#install>`__ 섹션을 참조하세요."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:159
 msgid "``migration-assist postgres``"
-msgstr ""
+msgstr "``migration-assist postgres``"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:161
 msgid ""
 "Creates the PostgreSQL database schema, and prepares it for Mattermost "
 "deployment by downloading the necessary migrations and applying them."
 msgstr ""
+"PostgreSQL 데이터베이스 스키마를 생성하고, 필요한 마이그레이션을 다운로드하여 적용함으로써 "
+"Mattermost 배포를 준비합니다."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:163
 msgid "``migration-assist pgloader``"
-msgstr ""
+msgstr "``migration-assist pgloader``"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:165
 msgid ""
@@ -332,10 +409,13 @@ msgid ""
 "migration:install pgloader>` documentation for details on installing the "
 "pgloader tool."
 msgstr ""
+"DSN 값에서 pgloader 구성을 생성하여 정확한 데이터 전송을 보장합니다. pgloader 도구 설치에 대한 "
+"자세한 내용은 :ref:`install pgloader <deploy/manual-postgres-migration:install "
+"pgloader>` 문서를 참조하세요."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:168
 msgid "Compile the migration-assist tool"
-msgstr ""
+msgstr "migration-assist 도구 컴파일하기"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:170
 msgid ""
@@ -343,18 +423,22 @@ msgid ""
 "<https://go.dev/>`__ toolchain. The tool requires at least ``v1.22`` of "
 "the Go compiler."
 msgstr ""
+"`Go <https://go.dev/>`__ 툴체인을 사용하여 ``migration-assist`` 도구를 다운로드하고 컴파일할 수 "
+"있습니다. 이 도구는 Go 컴파일러 ``v1.22`` 이상이 필요합니다."
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:172
 msgid "Use ``go install`` to install the tool:"
-msgstr ""
+msgstr "도구를 설치하려면 ``go install`` 을 사용하세요:"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:179
 msgid "Troubleshooting"
-msgstr ""
+msgstr "문제 해결"
 
 #: ../../source/deploy/postgres-migration-assist-tool.rst:181
 msgid ""
 "See :ref:`troubleshooting errors during migration from MySQL to "
 "PostgreSQL <deploy/postgres-migration:troubleshooting>`"
 msgstr ""
-
+"MySQL에서 PostgreSQL로 마이그레이션 중 발생하는 오류 해결 방법은 :ref:`troubleshooting "
+"errors during migration from MySQL to PostgreSQL <deploy/postgres-migration:troubleshooting>` "
+"를 참조하세요"

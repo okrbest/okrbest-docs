@@ -21,33 +21,37 @@ msgstr ""
 
 #: ../../source/comply/data-retention-policy.rst:2
 msgid "Data retention policy"
-msgstr ""
+msgstr "데이터 보존 정책"
 
 #: ../../source/_static/badges/ent-cloud-selfhosted.rst:7
 msgid ""
 "|plans-img| Available on `Enterprise plans "
 "<https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img| `Enterprise 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/ent-cloud-selfhosted.rst:9
 msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
 msgstr ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ 및 `self-"
+"hosted <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/comply/data-retention-policy.rst:7
 msgid ""
 "Mattermost stores all message history providing an unlimited search "
 "history to system admins and end users."
 msgstr ""
+"Mattermost는 시스템 관리자와 최종 사용자에게 무제한 검색 기록을 제공하는 모든 메시지 기록을 저장합니다."
 
 #: ../../source/comply/data-retention-policy.rst:9
 msgid ""
@@ -56,6 +60,8 @@ msgid ""
 "uploads are kept in Mattermost channels and direct messages in order to "
 "meet data retention compliance requirements."
 msgstr ""
+"Mattermost Enterprise 고객은 데이터 보존 규정 요구사항을 충족하기 위해 Mattermost 채널과 다이렉트 메시지에서 메시지와 파일 업로드가 얼마나 오래 보관되는지 "
+"관리하기 위해 전역 보존 정책과 사용자 정의 보존 정책을 설정할 수 있습니다."
 
 #: ../../source/comply/data-retention-policy.rst:13
 msgid ""
@@ -63,6 +69,7 @@ msgid ""
 "files deleted based on user actions are removed from the user interface, "
 "but persist in the Mattermost database."
 msgstr ""
+"기본적으로 Mattermost는 사용자 작업에 따라 삭제된 메시지와 파일이 사용자 인터페이스에서 제거되지만 Mattermost 데이터베이스에는 유지되는 '소프트 삭제' 시스템을 사용합니다."
 
 #: ../../source/comply/data-retention-policy.rst:14
 msgid ""
@@ -70,25 +77,26 @@ msgid ""
 "irreversible. We recommend using caution when setting up global or custom"
 " data retention policies to avoid data loss."
 msgstr ""
+"메시지나 파일이 영구적으로 삭제되면 해당 작업은 되돌릴 수 없습니다. 데이터 손실을 방지하기 위해 전역 또는 사용자 정의 데이터 보존 정책을 설정할 때 주의를 기울이는 것을 권장합니다."
 
 #: ../../source/comply/data-retention-policy.rst:17
 msgid "Configure a global data retention policy"
-msgstr ""
+msgstr "전역 데이터 보존 정책 구성"
 
 #: ../../source/comply/data-retention-policy.rst:19
 msgid "To set a global data retention policy:"
-msgstr ""
+msgstr "전역 데이터 보존 정책을 설정하려면:"
 
 #: ../../source/comply/data-retention-policy.rst:21
 #: ../../source/comply/data-retention-policy.rst:34
 msgid "Go to **System Console > Compliance > Data Retention Policies**."
-msgstr ""
+msgstr "**시스템 콘솔 > 규정 준수 > 데이터 보존 정책** 으로 이동합니다."
 
 #: ../../source/comply/data-retention-policy.rst:22
 msgid ""
 "Select **Edit** from the menu located to the right of the **Global "
 "retention policy** table."
-msgstr ""
+msgstr "**전역 보존 정책** 테이블 오른쪽에 있는 메뉴에서 **편집** 을 선택합니다."
 
 #: ../../source/comply/data-retention-policy.rst:23
 msgid ""
@@ -99,6 +107,9 @@ msgid ""
 "than the duration you set will be deleted. The minimum retention period "
 "is one hour."
 msgstr ""
+"드롭다운에서 **채널 및 다이렉트 메시지 보존** 옵션을 선택하여 채널 메시지와 다이렉트 메시지에 대한 전역 보존 정책을 지정한 다음, "
+"해당 메시지를 시간, 일 또는 연 단위로 얼마나 오래 보관할지 설정합니다. 시간이 설정되면 설정한 기간보다 오래된 메시지와 파일 첨부 "
+"파일이 삭제됩니다. 최소 보존 기간은 1시간입니다."
 
 #: ../../source/comply/data-retention-policy.rst:24
 msgid ""
@@ -111,37 +122,41 @@ msgid ""
 "files regardless of whether they're in a direct message, private, or "
 "public channel."
 msgstr ""
+"드롭다운에서 **파일 보존** 옵션을 선택합니다. 파일을 보관할 시간, 일 또는 연 단위의 수를 설정합니다. 시간이 설정되면 설정한 "
+"기간보다 오래된 업로드된 파일이 파일 저장 시스템(**시스템 콘솔 > 환경 > 파일 저장소** 에 지정된 대로 로컬 디스크 또는 Amazon "
+"S3 서비스)에서 삭제됩니다. 최소 보존 기간은 1시간입니다. 전역 파일 정책은 다이렉트 메시지, 비공개 또는 공개 채널에 있는지 여부에 "
+"관계없이 모든 파일을 삭제합니다."
 
 #: ../../source/comply/data-retention-policy.rst:25
 msgid ""
 "Under the **Policy log** section, select **Edit** to specify the start "
 "time of the daily scheduled data retention job. Choose a time when fewer "
 "people are using your system."
-msgstr ""
+msgstr "**정책 로그** 섹션에서 **편집** 을 선택하여 일일 예약된 데이터 보존 작업의 시작 시간을 지정합니다. 시스템을 사용하는 사람이 적은 시간을 선택하세요."
 
 #: ../../source/comply/data-retention-policy.rst:27
 msgid ""
 "Select **Save**. Messages and files older than the duration you set will "
 "be deleted at the specified server time, as applicable."
-msgstr ""
+msgstr "**저장** 을 선택합니다. 설정한 기간보다 오래된 메시지와 파일은 해당되는 경우 지정된 서버 시간에 삭제됩니다."
 
 #: ../../source/comply/data-retention-policy.rst:30
 msgid "Configure a custom data retention policy"
-msgstr ""
+msgstr "사용자 정의 데이터 보존 정책 구성"
 
 #: ../../source/comply/data-retention-policy.rst:32
 msgid "To set a custom data retention policy:"
-msgstr ""
+msgstr "사용자 정의 데이터 보존 정책을 설정하려면:"
 
 #: ../../source/comply/data-retention-policy.rst:35
 msgid ""
 "Select **Add policy** to the right of the **Custom retention policies** "
 "table."
-msgstr ""
+msgstr "**사용자 정의 보존 정책** 테이블 오른쪽에서 **정책 추가** 를 선택합니다."
 
 #: ../../source/comply/data-retention-policy.rst:36
 msgid "Specify a name for your policy."
-msgstr ""
+msgstr "정책의 이름을 지정합니다."
 
 #: ../../source/comply/data-retention-policy.rst:37
 msgid ""
@@ -151,6 +166,9 @@ msgid ""
 " a time is set, messages and file attachments older than the duration you"
 " set will be deleted. The minimum retention period is one day."
 msgstr ""
+"드롭다운에서 **채널 및 다이렉트 메시지 보존** 옵션을 선택하여 채널 및 다이렉트 메시지에 대한 사용자 정의 보존 정책을 지정한 다음, "
+"업로드된 파일을 일 또는 연 단위로 얼마나 오래 보관할지 설정합니다. 시간이 설정되면 설정한 기간보다 오래된 메시지와 파일 첨부 "
+"파일이 삭제됩니다. 최소 보존 기간은 1일입니다."
 
 #: ../../source/comply/data-retention-policy.rst:38
 msgid ""
@@ -159,6 +177,8 @@ msgid ""
 "searching for a specific channel. If only teams are specified, all "
 "channels for selected teams will be included in the a policy."
 msgstr ""
+"**팀 추가** 를 선택하고 특정 팀을 검색하거나 **채널 추가** 를 선택하고 특정 채널을 검색하여 이 정책에 팀과 채널을 할당합니다. "
+"팀만 지정된 경우 선택한 팀의 모든 채널이 정책에 포함됩니다."
 
 #: ../../source/comply/data-retention-policy.rst:39
 msgid ""
@@ -168,23 +188,25 @@ msgid ""
 "retention policy, then the same time applies to custom data retention "
 "policies."
 msgstr ""
+"**정책 로그** 섹션에서 **편집** 을 선택하여 일일 예약된 데이터 보존 작업의 시작 시간을 지정합니다. 시스템을 사용하는 사람이 적은 "
+"시간을 선택하세요. 전역 보존 정책에 이미 시간이 설정되어 있는 경우 동일한 시간이 사용자 정의 데이터 보존 정책에도 적용됩니다."
 
 #: ../../source/comply/data-retention-policy.rst:41
 msgid ""
 "Save the settings. Messages and files older than the duration you set "
 "will be deleted at the specified server time, as applicable."
-msgstr ""
+msgstr "설정을 저장합니다. 설정한 기간보다 오래된 메시지와 파일은 해당되는 경우 지정된 서버 시간에 삭제됩니다."
 
 #: ../../source/comply/data-retention-policy.rst:44
 msgid "Run a deletion job manually"
-msgstr ""
+msgstr "삭제 작업 수동 실행"
 
 #: ../../source/comply/data-retention-policy.rst:46
 msgid ""
 "You can also run the deletion job manually at any time by selecting **Run"
 " Deletion Job Now** in **System Console > Compliance > Data Retention "
 "Policy**."
-msgstr ""
+msgstr "**시스템 콘솔 > 규정 준수 > 데이터 보존 정책** 에서 **지금 삭제 작업 실행** 을 선택하여 언제든지 삭제 작업을 수동으로 실행할 수도 있습니다."
 
 #: ../../source/comply/data-retention-policy.rst:50
 msgid ""
@@ -192,38 +214,39 @@ msgid ""
 "ensure the :ref:`ElasticSearch aggregate search indexes <configure"
 "/environment-configuration-settings:aggregate search indexes>` setting is"
 " set to a value that is greater than your data retention policy in days."
-msgstr ""
+msgstr "데이터 보존과 :doc:`ElasticSearch </scale/elasticsearch>` 를 사용하는 경우, "
+":ref:`ElasticSearch 집계 검색 인덱스 <configure/environment-configuration-settings:aggregate search indexes>` 설정이 데이터 보존 정책의 일수보다 큰 값으로 설정되어 있는지 확인하세요."
 
 #: ../../source/comply/data-retention-policy.rst:53
 msgid "Frequently Asked Questions (FAQs)"
-msgstr ""
+msgstr "자주 묻는 질문(FAQ)"
 
 #: ../../source/comply/data-retention-policy.rst:56
 msgid "What happens when a message is deleted?"
-msgstr ""
+msgstr "메시지가 삭제되면 어떻게 되나요?"
 
 #: ../../source/comply/data-retention-policy.rst:58
 msgid ""
 "The message is removed from the Mattermost user interface and deleted "
 "from the ``Posts`` table. The message is no longer searchable and cannot "
 "be retrieved in pinned posts or saved posts lists."
-msgstr ""
+msgstr "메시지는 Mattermost 사용자 인터페이스에서 제거되고 ``Posts`` 테이블에서 삭제됩니다. 메시지는 더 이상 검색할 수 없으며 고정된 게시물이나 저장된 게시물 목록에서 검색할 수 없습니다."
 
 #: ../../source/comply/data-retention-policy.rst:60
 msgid ""
 "Replies that did not exceed the message duration are still displayed in "
 "the user interface. However, further replies are no longer possible."
-msgstr ""
+msgstr "메시지 기간을 초과하지 않은 답글은 여전히 사용자 인터페이스에 표시됩니다. 그러나 더 이상 답글을 작성할 수 없습니다."
 
 #: ../../source/comply/data-retention-policy.rst:62
 msgid ""
 "If there was a file attached to the message, it will be removed from the "
 "user interface only."
-msgstr ""
+msgstr "메시지에 첨부 파일이 있었다면 사용자 인터페이스에서만 제거됩니다."
 
 #: ../../source/comply/data-retention-policy.rst:65
 msgid "Why can I still see messages that were supposedly deleted?"
-msgstr ""
+msgstr "삭제되었다고 하는 메시지가 왜 여전히 보이나요?"
 
 #: ../../source/comply/data-retention-policy.rst:67
 msgid ""
@@ -231,10 +254,12 @@ msgid ""
 "job will be visible to end users until they clear their cache and "
 "refresh."
 msgstr ""
+"웹 및 데스크톱 앱은 게시물을 캐시합니다. 데이터 보존 작업으로 삭제된 게시물은 사용자가 캐시를 지우고 새로고침할 때까지 "
+"최종 사용자에게 표시됩니다."
 
 #: ../../source/comply/data-retention-policy.rst:70
 msgid "What happens when a file is deleted by the file retention policy?"
-msgstr ""
+msgstr "파일 보존 정책으로 파일이 삭제되면 어떻게 되나요?"
 
 #: ../../source/comply/data-retention-policy.rst:72
 msgid ""
@@ -243,32 +268,37 @@ msgid ""
 "S3 service as specified in **System Console > Environment > File "
 "Storage**."
 msgstr ""
+"첨부 파일은 Mattermost 사용자 인터페이스에서 제거되고, ``FileInfo`` 테이블에서 삭제되며, **시스템 콘솔 > "
+"환경 > 파일 저장소** 에 지정된 대로 로컬 디스크 또는 Amazon S3 서비스에서 삭제됩니다."
 
 #: ../../source/comply/data-retention-policy.rst:75
 msgid "Why didn't an old file get deleted after running the deletion job?"
-msgstr ""
+msgstr "삭제 작업을 실행한 후에도 오래된 파일이 삭제되지 않은 이유는 무엇인가요?"
 
 #: ../../source/comply/data-retention-policy.rst:77
 msgid ""
 "Check the data deletion was successful in the deletion job table in "
 "**System Console > Compliance > Data Retention Policy**."
 msgstr ""
+"**시스템 콘솔 > 규정 준수 > 데이터 보존 정책** 의 삭제 작업 테이블에서 데이터 삭제가 성공적으로 이루어졌는지 확인하세요."
 
 #: ../../source/comply/data-retention-policy.rst:79
 msgid ""
 "Delete the ``teams/`` folder in the root of your  Mattermost storage "
 "directory."
 msgstr ""
+"Mattermost 저장소 디렉토리의 루트에 있는 ``teams/`` 폴더를 삭제하세요."
 
 #: ../../source/comply/data-retention-policy.rst:81
 msgid ""
 "Note that these files will still be removed from the Mattermost user "
 "interface."
 msgstr ""
+"이러한 파일은 여전히 Mattermost 사용자 인터페이스에서 제거됩니다."
 
 #: ../../source/comply/data-retention-policy.rst:84
 msgid "Why do I see ``Pending`` in the deletion job table with no details?"
-msgstr ""
+msgstr "삭제 작업 테이블에서 세부 정보 없이 ``Pending`` 이 표시되는 이유는 무엇인가요?"
 
 #: ../../source/comply/data-retention-policy.rst:86
 msgid ""
@@ -276,16 +306,18 @@ msgid ""
 "verify this in the deletion job table in  **System Console > Compliance >"
 " Data Retention Policy**."
 msgstr ""
+"이는 일반적으로 다른 데이터 보존 작업이 진행 중임을 의미합니다. **시스템 콘솔 > 규정 준수 > 데이터 보존 정책** 의 "
+"삭제 작업 테이블에서 이를 확인할 수 있습니다."
 
 #: ../../source/comply/data-retention-policy.rst:89
 msgid "How is data retention handled in the mobile apps?"
-msgstr ""
+msgstr "모바일 앱에서 데이터 보존은 어떻게 처리되나요?"
 
 #: ../../source/comply/data-retention-policy.rst:91
 msgid ""
 "When messages or files are deleted, they are no longer searchable in the "
 "Mattermost mobile apps."
-msgstr ""
+msgstr "메시지나 파일이 삭제되면 Mattermost 모바일 앱에서 더 이상 검색할 수 없습니다."
 
 #: ../../source/comply/data-retention-policy.rst:93
 msgid ""
@@ -293,24 +325,28 @@ msgid ""
 "deleted from local storage in the following cases, if they exceed the "
 "retention policy duration:"
 msgstr ""
+"iOS 및 Android 앱의 v1.5 이상 버전에서는 보존 정책 기간을 초과하는 경우 다음과 같은 상황에서 메시지와 파일이 로컬 "
+"저장소에서 삭제됩니다:"
 
 #: ../../source/comply/data-retention-policy.rst:95
 msgid "When the user opens the app."
-msgstr ""
+msgstr "사용자가 앱을 열 때"
 
 #: ../../source/comply/data-retention-policy.rst:96
 msgid "When the user puts the app into the background."
-msgstr ""
+msgstr "사용자가 앱을 백그라운드로 전환할 때"
 
 #: ../../source/comply/data-retention-policy.rst:98
 msgid ""
 "In v1.4 and earlier of the mobile apps, messages and files are not "
 "cleared from local storage when the data retention policy is enabled."
 msgstr ""
+"모바일 앱의 v1.4 및 이전 버전에서는 데이터 보존 정책이 활성화되어 있어도 메시지와 파일이 로컬 저장소에서 삭제되지 "
+"않습니다."
 
 #: ../../source/comply/data-retention-policy.rst:101
 msgid "How do I know if a data retention job fails?"
-msgstr ""
+msgstr "데이터 보존 작업이 실패했는지 어떻게 알 수 있나요?"
 
 #: ../../source/comply/data-retention-policy.rst:103
 msgid ""
@@ -318,6 +354,8 @@ msgid ""
 "Console** > **Compliance** > **Data Retention Policy**. Here, you can see"
 " if the job succeeded or failed, including the details of the error."
 msgstr ""
+"Mattermost는 **시스템 콘솔** > **규정 준수** > **데이터 보존 정책** 에서 각 데이터 보존 작업의 상태를 "
+"제공합니다. 여기서 작업이 성공했는지 실패했는지, 오류 세부 정보를 포함하여 확인할 수 있습니다."
 
 #: ../../source/comply/data-retention-policy.rst:105
 msgid ""
@@ -328,10 +366,13 @@ msgid ""
 "programmatically queries for such failures and notifies the appropriate "
 "system."
 msgstr ""
+"또한 모든 실패는 서버 로그에 반환됩니다. 오류 로그는 ``Failed job`` 문자열로 시작하며 job_id 키/값 쌍을 포함합니다. "
+"데이터 보존 작업 실패는 ``EnterpriseDataRetention`` 작업자 이름으로 식별됩니다. 이러한 실패를 프로그래밍 방식으로 "
+"쿼리하고 적절한 시스템에 알리는 스크립트를 선택적으로 생성할 수 있습니다."
 
 #: ../../source/comply/data-retention-policy.rst:108
 msgid "What happens when the data retention period is changed?"
-msgstr ""
+msgstr "데이터 보존 기간이 변경되면 어떻게 되나요?"
 
 #: ../../source/comply/data-retention-policy.rst:110
 msgid ""
@@ -340,12 +381,14 @@ msgid ""
 "automatically schedule any additional run of the data retention job - it "
 "only updates how long data is kept in Mattermost."
 msgstr ""
+"데이터 보존은 ``config.json`` 파일에 지정된 시간에 하루에 한 번 실행됩니다. 보존 기간을 변경해도 데이터 보존 "
+"작업의 추가 실행이 자동으로 예약되지 않습니다. Mattermost에서 데이터가 보존되는 기간만 업데이트됩니다."
 
 #: ../../source/comply/data-retention-policy.rst:113
 msgid ""
 "Does the system administrator get any notification when the data "
 "retention period is changed?"
-msgstr ""
+msgstr "데이터 보존 기간이 변경될 때 시스템 관리자는 알림을 받나요?"
 
 #: ../../source/comply/data-retention-policy.rst:115
 msgid ""
@@ -353,10 +396,12 @@ msgid ""
 "feedback on what the effects will be (e.g. reporting of how many messages"
 " are to be deleted)."
 msgstr ""
+"아니요, 새 구성이 업데이트되지만 시스템 관리자는 어떤 영향이 있을지에 대한 피드백(예: 삭제될 메시지 수 보고)을 받지 "
+"못합니다."
 
 #: ../../source/comply/data-retention-policy.rst:118
 msgid "Does the data retention job affect the audits table?"
-msgstr ""
+msgstr "데이터 보존 작업이 감사 테이블에 영향을 미치나요?"
 
 #: ../../source/comply/data-retention-policy.rst:120
 msgid ""
@@ -365,10 +410,12 @@ msgid ""
 "audit table will retain the user activity corresponding to the data "
 "retention time configuration."
 msgstr ""
+"v5.20 이전에는 데이터 보존이 데이터 보존 시간 구성에 해당하는 모든 사용자 활동을 삭제했습니다. v5.20부터는 감사 "
+"테이블이 데이터 보존 시간 구성에 해당하는 사용자 활동을 보존합니다."
 
 #: ../../source/comply/data-retention-policy.rst:123
 msgid "Does the data retention job include archived channels?"
-msgstr ""
+msgstr "데이터 보존 작업에 보관된 채널이 포함되나요?"
 
 #: ../../source/comply/data-retention-policy.rst:125
 msgid ""
@@ -376,12 +423,14 @@ msgid ""
 "retention job. If a post exceeds the age configured for the data "
 "retention job it will be deleted from the database."
 msgstr ""
+"보관된 채널의 게시물과 첨부 파일은 데이터 보존 작업의 영향을 받습니다. 게시물이 데이터 보존 작업에 대해 구성된 기간을 "
+"초과하면 데이터베이스에서 삭제됩니다."
 
 #: ../../source/comply/data-retention-policy.rst:128
 msgid ""
 "How long does it take to run a deletion query and does it affect server "
 "performance?"
-msgstr ""
+msgstr "삭제 쿼리 실행에 얼마나 걸리며 서버 성능에 영향을 미치나요?"
 
 #: ../../source/comply/data-retention-policy.rst:130
 msgid ""
@@ -391,6 +440,9 @@ msgid ""
 " to this limit keeps the query down to a few milliseconds' execution time"
 " on the database itself."
 msgstr ""
+"데이터 보존은 실제 삭제 쿼리를 일괄 처리로 실행하여 쿼리당 1000개의 레코드 블록으로 데이터를 삭제합니다. 이는 데이터베이스가 "
+"장시간 실행되는 쿼리로 인해 장시간 잠기지 않도록 하기 위함입니다. 이 제한을 유지하면 데이터베이스 자체에서 쿼리 실행 시간이 "
+"몇 밀리초로 유지됩니다."
 
 #: ../../source/comply/data-retention-policy.rst:132
 msgid ""
@@ -398,10 +450,12 @@ msgid ""
 " to execute on small batches. This helps the server remain fully "
 "responsive while the process is running."
 msgstr ""
+"각 데이터 배치는 인덱스를 기반으로 삭제되어 작은 배치에서 쿼리를 빠르게 실행할 수 있습니다. 이는 프로세스가 실행되는 동안 "
+"서버가 완전히 응답할 수 있도록 도와줍니다."
 
 #: ../../source/comply/data-retention-policy.rst:135
 msgid "How do I know whether the data retention job is running/scheduled?"
-msgstr ""
+msgstr "데이터 보존 작업이 실행 중인지/예약되었는지 어떻게 알 수 있나요?"
 
 #: ../../source/comply/data-retention-policy.rst:137
 msgid ""
@@ -409,6 +463,8 @@ msgid ""
 " in the configuration settings. At this time a ``DEBUG``-level log line "
 "is printed: ``Scheduling data retention job``."
 msgstr ""
+"작업 스케줄러는 구성 설정에 지정된 시간을 기준으로 데이터 보존 작업을 실행합니다. 이때 ``DEBUG`` 수준의 로그 라인이 "
+"인쇄됩니다: ``Scheduling data retention job``."
 
 #: ../../source/comply/data-retention-policy.rst:139
 msgid ""
@@ -416,10 +472,13 @@ msgid ""
 "``DEBUG``-level log line is generated: ``Worker EnterpriseDataRetention: "
 "Received a new candidate job``."
 msgstr ""
+"작업 서버가 예약된 작업을 실행하기 위해 선택하면 ``DEBUG`` 수준의 로그 라인이 생성됩니다: ``Worker "
+"EnterpriseDataRetention: Received a new candidate job``."
 
 #: ../../source/comply/data-retention-policy.rst:141
 msgid ""
 "When the job is complete, an ``INFO``-level log line is generated: "
 "``Worker EnterpriseDataRetention: Job is complete``."
 msgstr ""
-
+"작업이 완료되면 ``INFO`` 수준의 로그 라인이 생성됩니다: ``Worker EnterpriseDataRetention: Job is "
+"complete``."

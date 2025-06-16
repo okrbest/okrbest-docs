@@ -21,25 +21,27 @@ msgstr ""
 
 #: ../../source/onboard/advanced-permissions.rst:2
 msgid "Advanced permissions"
-msgstr ""
+msgstr "고급 권한"
 
 #: ../../source/_static/badges/allplans-cloud-selfhosted.rst:7
 msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `모든 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/allplans-cloud-selfhosted.rst:9
 msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
 msgstr ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ 및 `self-"
+"hosted <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/onboard/advanced-permissions.rst:7
 msgid ""
@@ -50,22 +52,26 @@ msgid ""
 "(role-based access control) architecture, using roles to determine which "
 "users have the ability to perform various actions."
 msgstr ""
+"Mattermost Cloud 또는 Mattermost Server를 사용하는 시스템 관리자는 고급 권한을 사용하여 "
+"팀 생성, 채널 관리, 웹훅 구성과 같은 특정 작업을 수행할 수 있는 사용자를 사용자 정의할 수 있습니다. "
+"Mattermost 권한 시스템은 수정된 RBAC(역할 기반 액세스 제어) 아키텍처를 기반으로 하며, "
+"역할을 사용하여 다양한 작업을 수행할 수 있는 사용자를 결정합니다."
 
 #: ../../source/onboard/advanced-permissions.rst:9
 msgid "Two permission schemes are provided in Mattermost:"
-msgstr ""
+msgstr "Mattermost에서는 두 가지 권한 체계를 제공합니다:"
 
 #: ../../source/onboard/advanced-permissions.rst:11
 msgid ""
 "**System Scheme**: Applies permissions universally across all teams and "
 "channels."
-msgstr ""
+msgstr "**시스템 체계**: 모든 팀과 채널에 걸쳐 권한을 보편적으로 적용합니다."
 
 #: ../../source/onboard/advanced-permissions.rst:12
 msgid ""
 "**Team Override Schemes**: Allow admins to customize permissions for each"
 " team (available in Mattermost Enterprise and Professional)."
-msgstr ""
+msgstr "**팀 재정의 체계**: 관리자가 각 팀의 권한을 사용자 정의할 수 있습니다(Mattermost Enterprise 및 Professional에서 사용 가능)."
 
 #: ../../source/onboard/advanced-permissions.rst:14
 msgid ""
@@ -75,20 +81,23 @@ msgid ""
 "permissions-backend-infrastructure>` provides additional technical "
 "details around permissions."
 msgstr ""
+"이 문서는 체계와 채널 설정 및 역할을 사용하여 Mattermost 사용자에게 부여할 수 있는 권한 유형을 설명합니다. "
+":doc:`권한 백엔드 문서 </onboard/advanced-permissions-backend-infrastructure>` 는 "
+"권한에 대한 추가 기술 세부 정보를 제공합니다."
 
 #: ../../source/onboard/advanced-permissions.rst:17
 msgid "Permissions structure"
-msgstr ""
+msgstr "권한 구조"
 
 #: ../../source/onboard/advanced-permissions.rst:19
 msgid ""
 "The Mattermost System Console provides a number of elements for Admins to"
 " control the permissions in their system."
-msgstr ""
+msgstr "Mattermost 시스템 콘솔은 관리자가 시스템의 권한을 제어할 수 있는 여러 요소를 제공합니다."
 
 #: ../../source/onboard/advanced-permissions.rst:22
 msgid "System scheme"
-msgstr ""
+msgstr "시스템 체계"
 
 #: ../../source/onboard/advanced-permissions.rst:24
 msgid ""
@@ -96,57 +105,59 @@ msgid ""
 "admins, channel admins, guests (if enabled), and all members. The "
 "permissions granted in the System Scheme apply system-wide, meaning:"
 msgstr ""
+"시스템 관리자, 팀 관리자, 채널 관리자, 게스트(활성화된 경우) 및 모든 구성원에게 부여되는 기본 권한을 설정할 수 있습니다. "
+"시스템 체계에서 부여된 권한은 시스템 전체에 적용됩니다. 즉:"
 
 #: ../../source/onboard/advanced-permissions.rst:26
 msgid ""
 "**Guests:** If Guest Accounts are enabled, permissions apply to guest "
 "users in all channels, in all teams."
-msgstr ""
+msgstr "**게스트:** 게스트 계정이 활성화된 경우, 모든 팀의 모든 채널에서 게스트 사용자에게 권한이 적용됩니다."
 
 #: ../../source/onboard/advanced-permissions.rst:27
 msgid ""
 "**All Members:** Permissions apply to all members, including admins, in "
 "all channels, in all teams."
-msgstr ""
+msgstr "**모든 구성원:** 모든 팀의 모든 채널에서 관리자를 포함한 모든 구성원에게 권한이 적용됩니다."
 
 #: ../../source/onboard/advanced-permissions.rst:28
 msgid ""
 "**Channel Administrators:** Permissions apply to all channel admins in "
 "all channels, in all teams."
-msgstr ""
+msgstr "**채널 관리자:** 모든 팀의 모든 채널에서 모든 채널 관리자에게 권한이 적용됩니다."
 
 #: ../../source/onboard/advanced-permissions.rst:29
 msgid ""
 "**Team Administrators:** Permissions apply to all team admins, in all "
 "teams."
-msgstr ""
+msgstr "**팀 관리자:** 모든 팀에서 모든 팀 관리자에게 권한이 적용됩니다."
 
 #: ../../source/onboard/advanced-permissions.rst:31
 msgid ""
 "To override the System Scheme default permissions in a specific team, you"
 " must set up a Team Override Scheme."
-msgstr ""
+msgstr "특정 팀에서 시스템 체계 기본 권한을 재정의하려면 팀 재정의 체계를 설정해야 합니다."
 
 #: ../../source/onboard/advanced-permissions.rst:33
 msgid ""
 "You can access the System Scheme interface by going to **System Console >"
 " User Management > Permissions > System Scheme**."
-msgstr ""
+msgstr "**시스템 콘솔 > 사용자 관리 > 권한 > 시스템 체계** 로 이동하여 시스템 체계 인터페이스에 접근할 수 있습니다."
 
 #: ../../source/onboard/advanced-permissions.rst:38
 msgid "Team override scheme"
-msgstr ""
+msgstr "팀 재정의 체계"
 
 #: ../../source/_static/badges/ent-only.rst:9
 #: ../../source/_static/badges/ent-pro-only.rst:9
 msgid "Note"
-msgstr ""
+msgstr "참고"
 
 #: ../../source/_static/badges/ent-pro-only.rst:11
 msgid ""
 "|plans-img-yellow| Available only on `Enterprise and Professional "
 "<https://mattermost.com/pricing/>`__ plans"
-msgstr ""
+msgstr "|plans-img-yellow| `Enterprise 및 Professional <https://mattermost.com/pricing/>`__ 플랜에서만 사용 가능"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -158,86 +169,88 @@ msgid ""
 "using-teams:single team versus multiple teams>`, each team may operate "
 "and collaborate in a unique way. Team Override Schemes give Admins the "
 "flexibility to tailor permissions to the needs of each team."
-msgstr ""
+msgstr "여러 개의 :ref:`Mattermost 팀 <collaborate/organize-using-teams:single team versus multiple teams>` 이 있는 시스템에서 "
+"각 팀은 고유한 방식으로 운영되고 협업할 수 있습니다. 팀 재정의 체계는 관리자가 각 팀의 요구 사항에 맞게 권한을 조정할 수 있는 유연성을 제공합니다."
 
 #: ../../source/onboard/advanced-permissions.rst:45
 msgid "When you use this permission scheme:"
-msgstr ""
+msgstr "이 권한 체계를 사용할 때:"
 
 #: ../../source/onboard/advanced-permissions.rst:47
 msgid ""
 "The permissions granted in a Team Override Scheme apply only in the teams"
 " which are assigned to the scheme."
-msgstr ""
+msgstr "팀 재정의 체계에서 부여된 권한은 해당 체계에 할당된 팀에만 적용됩니다."
 
 #: ../../source/onboard/advanced-permissions.rst:48
 msgid ""
 "The System Scheme does not apply to teams that are added to a Team "
 "Override Scheme."
-msgstr ""
+msgstr "팀 재정의 체계에 추가된 팀에는 시스템 체계가 적용되지 않습니다."
 
 #: ../../source/onboard/advanced-permissions.rst:49
 msgid "Teams can only belong to one Team Override Scheme."
-msgstr ""
+msgstr "팀은 하나의 팀 재정의 체계에만 속할 수 있습니다."
 
 #: ../../source/onboard/advanced-permissions.rst:51
 msgid ""
 "You can access the Team Override Scheme interface by going to **System "
 "Console > User Management > Permissions > Team Override Schemes**."
-msgstr ""
+msgstr "**시스템 콘솔 > 사용자 관리 > 권한 > 팀 재정의 체계** 로 이동하여 팀 재정의 체계 인터페이스에 접근할 수 있습니다."
 
 #: ../../source/onboard/advanced-permissions.rst:56
 msgid "Channel permissions"
-msgstr ""
+msgstr "채널 권한"
 
 #: ../../source/onboard/advanced-permissions.rst:58
 msgid ""
 "The channel permissions interface is accessed in **System Console > User "
 "Management > Channels**."
-msgstr ""
+msgstr "채널 권한 인터페이스는 **시스템 콘솔 > 사용자 관리 > 채널** 에서 접근할 수 있습니다."
 
 #: ../../source/onboard/advanced-permissions.rst:61
 msgid "Advanced access controls"
-msgstr ""
+msgstr "고급 액세스 제어"
 
 #: ../../source/onboard/advanced-permissions.rst:63
 msgid ""
 "See the :ref:`team and channel management <manage/team-channel-"
 "members:advanced access controls>` documentation for details."
-msgstr ""
+msgstr "자세한 내용은 :ref:`팀 및 채널 관리 <manage/team-channel-members:advanced access controls>` 문서를 참조하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:66
 msgid "Supplementary roles"
-msgstr ""
+msgstr "보완 역할"
 
 #: ../../source/onboard/advanced-permissions.rst:68
 msgid "*Being considered for a future release of Mattermost Enterprise*"
-msgstr ""
+msgstr "*Mattermost Enterprise의 향후 릴리스에서 고려 중*"
 
 #: ../../source/onboard/advanced-permissions.rst:70
 msgid ""
 "Allows admins to grant additional permissions to specific users or to a "
 "group of users based on AD/LDAP group membership. Permissions can be "
 "granted within the scope of channels, teams, or system level."
-msgstr ""
+msgstr "관리자가 AD/LDAP 그룹 멤버십을 기반으로 특정 사용자 또는 사용자 그룹에 추가 권한을 부여할 수 있습니다. "
+"권한은 채널, 팀 또는 시스템 수준의 범위 내에서 부여될 수 있습니다."
 
 #: ../../source/onboard/advanced-permissions.rst:73
 msgid "Recipes"
-msgstr ""
+msgstr "레시피"
 
 #: ../../source/onboard/advanced-permissions.rst:75
 msgid ""
 "This section provides some examples of common permissions use cases for "
 "team management, channel management, and overall permissions."
-msgstr ""
+msgstr "이 섹션에서는 팀 관리, 채널 관리 및 전체 권한에 대한 일반적인 권한 사용 사례의 예를 제공합니다."
 
 #: ../../source/onboard/advanced-permissions.rst:78
 msgid "Team management"
-msgstr ""
+msgstr "팀 관리"
 
 #: ../../source/onboard/advanced-permissions.rst:80
 msgid "**Only allow admins, in a specific team, to add members**"
-msgstr ""
+msgstr "**특정 팀에서 관리자만 멤버 추가 허용**"
 
 #: ../../source/onboard/advanced-permissions.rst:82
 msgid ""
@@ -245,6 +258,8 @@ msgid ""
 "members. As the default for all other teams, allow all users to add and "
 "invite new members."
 msgstr ""
+"예시: 팀 A에서는 시스템 및 팀 관리자만 새 팀 멤버를 추가할 수 있습니다. "
+"다른 모든 팀의 기본값으로 모든 사용자가 새 멤버를 추가하고 초대할 수 있습니다."
 
 #: ../../source/onboard/advanced-permissions.rst:84
 #: ../../source/onboard/advanced-permissions.rst:106
@@ -254,7 +269,7 @@ msgstr ""
 #: ../../source/onboard/advanced-permissions.rst:188
 #: ../../source/onboard/advanced-permissions.rst:200
 msgid "Go to **System Console > User Management > Permissions**."
-msgstr ""
+msgstr "**시스템 콘솔 > 사용자 관리 > 권한** 으로 이동하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:85
 #: ../../source/onboard/advanced-permissions.rst:107
@@ -264,13 +279,15 @@ msgstr ""
 #: ../../source/onboard/advanced-permissions.rst:189
 #: ../../source/onboard/advanced-permissions.rst:201
 msgid "Select **Edit Scheme**."
-msgstr ""
+msgstr "**체계 편집** 을 선택하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:86
 msgid ""
 "In the **All Members > Teams** panel, check the box for **Add Team "
 "Members**. This sets the system default for all teams."
 msgstr ""
+"**모든 멤버 > 팀** 패널에서 **팀 멤버 추가** 확인란을 선택하세요. "
+"이는 모든 팀에 대한 시스템 기본값을 설정합니다."
 
 #: ../../source/onboard/advanced-permissions.rst:87
 #: ../../source/onboard/advanced-permissions.rst:96
@@ -278,17 +295,17 @@ msgstr ""
 #: ../../source/onboard/advanced-permissions.rst:157
 #: ../../source/onboard/advanced-permissions.rst:168
 msgid "Select **Save**."
-msgstr ""
+msgstr "**저장** 을 선택하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:88
 #: ../../source/onboard/advanced-permissions.rst:97
 msgid "Select the back arrow to return to the **Permission Schemes** menu."
-msgstr ""
+msgstr "뒤로 가기 화살표를 선택하여 **권한 체계** 메뉴로 돌아가세요."
 
 #: ../../source/onboard/advanced-permissions.rst:89
 #: ../../source/onboard/advanced-permissions.rst:125
 msgid "Select **New Team Override Scheme**."
-msgstr ""
+msgstr "**새 팀 재정의 체계** 를 선택하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:91
 msgid ""
@@ -296,6 +313,8 @@ msgid ""
 "with description ``Restrict adding team members to eam and System "
 "Admins.``"
 msgstr ""
+"체계의 이름과 설명을 입력하세요. 예를 들어, ``Authorized Personnel Only`` 라는 이름과 "
+"``팀 및 시스템 관리자만 팀 멤버 추가 제한`` 이라는 설명을 사용할 수 있습니다."
 
 #: ../../source/onboard/advanced-permissions.rst:92
 #: ../../source/onboard/advanced-permissions.rst:128
@@ -303,42 +322,45 @@ msgid ""
 "Select **Add Teams** to add Team B to the **Select teams to override "
 "permissions** list, locate Team B, then select **Add**."
 msgstr ""
+"**팀 추가** 를 선택하여 팀 B를 **권한 재정의할 팀 선택** 목록에 추가하고, "
+"팀 B를 찾은 다음 **추가** 를 선택하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:93
 msgid "In the **All Members** panel, uncheck the box for **Add Team Members**."
-msgstr ""
+msgstr "**모든 멤버** 패널에서 **팀 멤버 추가** 확인란을 선택 해제하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:94
 msgid ""
 "In the **Team Administrators** panel, check the box for **Add Team "
 "Members**."
-msgstr ""
+msgstr "**팀 관리자** 패널에서 **팀 멤버 추가** 확인란을 선택하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:100
 msgid "Public and private channel management"
-msgstr ""
+msgstr "공개 및 비공개 채널 관리"
 
 #: ../../source/onboard/advanced-permissions.rst:102
 msgid "**Restrict who can rename channels and edit channel header and purposes**"
-msgstr ""
+msgstr "**채널 이름 변경 및 채널 헤더와 목적 편집 권한 제한**"
 
 #: ../../source/onboard/advanced-permissions.rst:104
 msgid ""
 "Example: As the default for the entire system, restrict renaming channels"
 " and editing headers and purposes to admins only."
 msgstr ""
+"예: 전체 시스템의 기본값으로 채널 이름 변경과 헤더 및 목적 편집을 관리자로만 제한합니다."
 
 #: ../../source/onboard/advanced-permissions.rst:108
 msgid ""
 "In the **All Members** panel, uncheck the box for **Manage Public "
 "Channels > Manage Channel Settings**."
-msgstr ""
+msgstr "**모든 멤버** 패널에서 **공개 채널 관리 > 채널 설정 관리** 확인란을 선택 해제하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:110
 msgid ""
 "The **Manage Channel Settings** option is now only available to channel "
 "admins, team admins, and system admins."
-msgstr ""
+msgstr "**채널 설정 관리** 옵션은 이제 채널 관리자, 팀 관리자 및 시스템 관리자만 사용할 수 있습니다."
 
 #: ../../source/onboard/advanced-permissions.rst:114
 msgid ""
@@ -346,158 +368,164 @@ msgid ""
 "channel purpose are currently grouped in a single permission. These will "
 "be split into separate permissions in a future release."
 msgstr ""
+"채널 이름 변경, 채널 헤더 편집 및 채널 목적 편집에 대한 권한은 현재 단일 권한으로 그룹화되어 있습니다. "
+"이는 향후 릴리스에서 개별 권한으로 분리될 예정입니다."
 
 #: ../../source/onboard/advanced-permissions.rst:116
 msgid "**Restrict who can create channels, in specific teams**"
-msgstr ""
+msgstr "**특정 팀에서 채널 생성 권한 제한**"
 
 #: ../../source/onboard/advanced-permissions.rst:118
 msgid ""
 "Example: In Team C, restrict public channel creation to admins. As the "
 "default for all other teams, allow everyone to create public channels."
 msgstr ""
+"예: 팀 C에서는 공개 채널 생성을 관리자로만 제한합니다. 다른 모든 팀의 기본값으로는 모든 사용자가 공개 채널을 생성할 수 있도록 합니다."
 
 #: ../../source/onboard/advanced-permissions.rst:122
 msgid ""
 "In the **All Members** panel, in the **Manage Public Channels** menu, "
 "check the box for **Create Channels**. This sets the system default to "
 "allow creation of public channels on all teams."
-msgstr ""
+msgstr "**모든 멤버** 패널의 **공개 채널 관리** 메뉴에서 **채널 생성** 확인란을 선택하세요. "
+"이렇게 하면 모든 팀에서 공개 채널 생성을 허용하는 시스템 기본값이 설정됩니다."
 
 #: ../../source/onboard/advanced-permissions.rst:124
 msgid "Select the arrow to return to the **Permission Schemes** interface."
-msgstr ""
+msgstr "**권한 구성** 인터페이스로 돌아가려면 화살표를 선택하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:127
 msgid ""
 "Name and describe the scheme. For example, ``Contractor Scheme`` with "
 "description ``Restrict public channel creation to Admins only``."
-msgstr ""
+msgstr "구성의 이름과 설명을 입력하세요. 예: ``계약자 구성`` 설명 ``공개 채널 생성을 관리자로만 제한``"
 
 #: ../../source/onboard/advanced-permissions.rst:129
 msgid ""
 "In the **All Members** panel, in the **Manage Public Channels** section, "
 "uncheck the box for **Create Channels**."
-msgstr ""
+msgstr "**모든 멤버** 패널의 **공개 채널 관리** 섹션에서 **채널 생성** 확인란을 선택 해제하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:130
 msgid ""
 "In the **Team Administrators** panel, in the **Manage Public Channels** "
 "section, check the box for **Create Channels**."
-msgstr ""
+msgstr "**팀 관리자** 패널의 **공개 채널 관리** 섹션에서 **채널 생성** 확인란을 선택하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:133
 msgid "Convert public channels to private channels"
-msgstr ""
+msgstr "공개 채널을 비공개 채널로 변환"
 
 #: ../../source/onboard/advanced-permissions.rst:135
 msgid "**Allow all members to convert public channels to private channels**"
-msgstr ""
+msgstr "**모든 멤버가 공개 채널을 비공개 채널로 변환할 수 있도록 허용**"
 
 #: ../../source/onboard/advanced-permissions.rst:137
 msgid ""
 "Example: Set the default setting to allow all members, team admins, and "
 "channel admins to convert public channels to private."
-msgstr ""
+msgstr "예: 모든 멤버, 팀 관리자 및 채널 관리자가 공개 채널을 비공개로 변환할 수 있도록 기본 설정을 지정합니다."
 
 #: ../../source/onboard/advanced-permissions.rst:141
 msgid ""
 "In the **All Members** panel, uncheck the box for **Manage Public "
 "Channels > Convert Channels**."
-msgstr ""
+msgstr "**모든 멤버** 패널에서 **공개 채널 관리 > 채널 변환** 확인란을 선택 해제하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:143
 msgid ""
 "This permission is applied to all other roles (excluding the Guest role)."
 " When this permission is not enabled for all members, it must be manually"
 " applied to team admins and channel admins if required."
-msgstr ""
+msgstr "이 권한은 다른 모든 역할(게스트 역할 제외)에 적용됩니다. "
+"이 권한이 모든 멤버에 대해 활성화되지 않은 경우, 필요한 경우 팀 관리자와 채널 관리자에게 수동으로 적용해야 합니다."
 
 #: ../../source/onboard/advanced-permissions.rst:146
 msgid "Read only channels"
-msgstr ""
+msgstr "읽기 전용 채널"
 
 #: ../../source/_static/badges/ent-only.rst:11
 msgid ""
 "|plans-img-yellow| Available only on `Enterprise "
 "<https://mattermost.com/pricing/>`__ plans"
-msgstr ""
+msgstr "|plans-img-yellow| `Enterprise <https://mattermost.com/pricing/>`__ 플랜에서만 사용 가능"
 
 #: ../../source/onboard/advanced-permissions.rst:151
 msgid ""
 "**Configure a channel so that members can post/reply/react but guests can"
 " only read and react.**"
-msgstr ""
+msgstr "**멤버는 게시/답변/반응이 가능하고 게스트는 읽기와 반응만 가능하도록 채널을 구성하세요.**"
 
 #: ../../source/onboard/advanced-permissions.rst:153
 msgid "Go to **System Console > User Management > Channels**."
-msgstr ""
+msgstr "**시스템 콘솔 > 사용자 관리 > 채널** 로 이동하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:154
 msgid "Select **Edit** next to the name of the channel you want to configure."
-msgstr ""
+msgstr "구성하려는 채널 이름 옆의 **편집** 을 선택하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:155
 msgid "In the **Create Posts** panel, uncheck **Guests**."
-msgstr ""
+msgstr "**게시물 생성** 패널에서 **게스트** 확인란을 선택 해제하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:156
 msgid "In the **Post Reactions** panel, uncheck **Guests** if required."
-msgstr ""
+msgstr "**게시물 반응** 패널에서 필요한 경우 **게스트** 확인란을 선택 해제하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:159
 msgid ""
 "The channel is available for all members and guests to access, but guests"
 " can only read messages and react to them."
-msgstr ""
+msgstr "채널은 모든 멤버와 게스트가 접근할 수 있지만, 게스트는 메시지를 읽고 반응하는 것만 가능합니다."
 
 #: ../../source/onboard/advanced-permissions.rst:161
 msgid ""
 "**Create an announcement channel where only channel admins are able to "
 "post.**"
-msgstr ""
+msgstr "**채널 관리자만 게시할 수 있는 공지 채널을 생성하세요.**"
 
 #: ../../source/onboard/advanced-permissions.rst:163
 msgid "Create a new channel (either public or private)."
-msgstr ""
+msgstr "새 채널(공개 또는 비공개)을 생성하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:164
 msgid "Navigate to **System Console > User Management > Channels**."
-msgstr ""
+msgstr "**시스템 콘솔 > 사용자 관리 > 채널** 로 이동하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:165
 msgid ""
 "Select **Edit** next to the name of the channel you just created (you may"
 " need to search for it)."
-msgstr ""
+msgstr "방금 생성한 채널 이름 옆의 **편집** 을 선택하세요(검색이 필요할 수 있음)."
 
 #: ../../source/onboard/advanced-permissions.rst:166
 msgid "In the **Create Posts** panel, uncheck **Guests** and **Members**."
-msgstr ""
+msgstr "**게시물 생성** 패널에서 **게스트** 와 **멤버** 확인란을 선택 해제하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:167
 msgid "In the **Post Reactions** panel, uncheck **Guests** and **Members**."
-msgstr ""
+msgstr "**게시물 반응** 패널에서 **게스트** 와 **멤버** 확인란을 선택 해제하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:170
 msgid ""
 "The channel is available for all members and guests to access but only "
 "admins can post."
-msgstr ""
+msgstr "채널은 모든 멤버와 게스트가 접근할 수 있지만 관리자만 게시할 수 있습니다."
 
 #: ../../source/onboard/advanced-permissions.rst:173
 msgid "Post management"
-msgstr ""
+msgstr "게시물 관리"
 
 #: ../../source/onboard/advanced-permissions.rst:175
 msgid "**Restrict who can delete posts.**"
-msgstr ""
+msgstr "**게시물을 삭제할 수 있는 사용자를 제한하세요.**"
 
 #: ../../source/onboard/advanced-permissions.rst:177
 msgid ""
 "Example: As the default for the entire system, restrict deleting posts to"
 " only system and team admins."
 msgstr ""
+"예: 전체 시스템의 기본값으로, 게시물 삭제를 시스템 관리자와 팀 관리자로만 제한하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:181
 msgid ""
@@ -505,6 +533,8 @@ msgid ""
 "**Delete Posts** section, uncheck the boxes for **Delete Own Posts** and "
 "**Delete Others' Posts**."
 msgstr ""
+"**모든 멤버** 및 **채널 관리자** 패널의 **게시물 삭제** 섹션에서 **자신의 게시물 삭제** 와 "
+"**다른 사용자의 게시물 삭제** 확인란을 선택 해제하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:182
 msgid ""
@@ -512,16 +542,19 @@ msgid ""
 "the **Delete Posts** section, check the boxes for **Delete Own Posts** "
 "and **Delete Others' Posts**."
 msgstr ""
+"**채널 관리자** 및 **팀 관리자** 패널의 **게시물 삭제** 섹션에서 **자신의 게시물 삭제** 와 "
+"**다른 사용자의 게시물 삭제** 확인란을 선택하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:184
 msgid "**Restrict who can edit posts.**"
-msgstr ""
+msgstr "**게시물을 편집할 수 있는 사용자를 제한하세요.**"
 
 #: ../../source/onboard/advanced-permissions.rst:186
 msgid ""
 "Example: As the default for the entire system, only allow users to edit "
 "their own posts for five minutes after posting."
 msgstr ""
+"예: 전체 시스템의 기본값으로, 사용자가 게시 후 5분 동안만 자신의 게시물을 편집할 수 있도록 허용하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:190
 msgid ""
@@ -529,26 +562,29 @@ msgid ""
 "Administrators** panels, in the **Manage Posts** section, check the box "
 "for **Edit Posts**."
 msgstr ""
+"**모든 멤버**, **채널 관리자**, **팀 관리자** 패널의 **게시물 관리** 섹션에서 "
+"**게시물 편집** 확인란을 선택하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:191
 msgid ""
 "From any panel, select the gear button to set the global time limit to "
 "``300`` seconds."
 msgstr ""
+"모든 패널에서 기어 버튼을 선택하여 전역 시간 제한을 ``300`` 초로 설정하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:194
 msgid "Integration management"
-msgstr ""
+msgstr "통합 관리"
 
 #: ../../source/onboard/advanced-permissions.rst:196
 msgid "**Restrict managing webhooks and slash commands.**"
-msgstr ""
+msgstr "**웹훅과 슬래시 명령어 관리를 제한하세요.**"
 
 #: ../../source/onboard/advanced-permissions.rst:198
 msgid ""
 "Example: As the default for the entire system, only allow system admins "
 "to create, edit and delete integrations."
-msgstr ""
+msgstr "예: 전체 시스템의 기본값으로, 시스템 관리자만 통합을 생성, 편집 및 삭제할 수 있도록 허용하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:202
 msgid ""
@@ -557,6 +593,8 @@ msgid ""
 " Incoming Webhooks**, **Manage Outgoing Webhooks**, and **Manage Slash "
 "Commands**."
 msgstr ""
+"**모든 멤버** 및 **팀 관리자** 패널의 **통합 및 사용자 지정** 섹션에서 **들어오는 웹훅 관리**, "
+"**나가는 웹훅 관리**, **슬래시 명령어 관리** 확인란을 선택 해제하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:206
 msgid ""
@@ -564,16 +602,19 @@ msgid ""
 "currently grouped for each integration type. These will be split into "
 "separate permissions in a future release."
 msgstr ""
+"통합 생성, 편집 및 삭제 권한은 현재 각 통합 유형별로 그룹화되어 있습니다. 이러한 권한은 향후 릴리스에서 "
+"개별 권한으로 분리될 예정입니다."
 
 #: ../../source/onboard/advanced-permissions.rst:209
 msgid "Administration tools"
-msgstr ""
+msgstr "관리 도구"
 
 #: ../../source/onboard/advanced-permissions.rst:211
 msgid ""
 "There are a number of API and mmctl tools available for admins to help in"
 " configuring and troubleshooting the permissions system:"
 msgstr ""
+"관리자가 권한 시스템을 구성하고 문제를 해결하는 데 도움이 되는 여러 API 및 mmctl 도구가 있습니다:"
 
 #: ../../source/onboard/advanced-permissions.rst:213
 msgid ""
@@ -581,6 +622,8 @@ msgid ""
 ":ref:`mmctl permissions reset <manage/mmctl-command-line-tool:mmctl "
 "permissions reset>` command."
 msgstr ""
+":ref:`mmctl permissions reset <manage/mmctl-command-line-tool:mmctl permissions reset>` "
+"명령을 사용하여 새 설치에서 모든 권한을 기본값으로 재설정하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:214
 msgid ""
@@ -588,16 +631,18 @@ msgid ""
 "<https://api.mattermost.com/#tag/roles/operation/GetAllRoles>`__ API "
 "endpoint to get a list of all roles."
 msgstr ""
+"`GetAllRoles <https://api.mattermost.com/#tag/roles/operation/GetAllRoles>`__ API "
+"엔드포인트를 사용하여 모든 역할 목록을 가져오세요."
 
 #: ../../source/onboard/advanced-permissions.rst:215
 msgid ""
 "Add permissions to a role using the :ref:`mmctl permissions add <manage"
 "/mmctl-command-line-tool:mmctl permissions add>` command."
-msgstr ""
+msgstr ":ref:`mmctl permissions add <manage/mmctl-command-line-tool:mmctl permissions add>` 명령을 사용하여 역할에 권한을 추가하세요."
 
 #: ../../source/onboard/advanced-permissions.rst:218
 msgid "Backend infrastructure"
-msgstr ""
+msgstr "백엔드 인프라"
 
 #: ../../source/onboard/advanced-permissions.rst:220
 msgid ""
@@ -605,36 +650,40 @@ msgid ""
 "permissions backend can refer to our :doc:`permissions backend "
 "documentation </onboard/advanced-permissions-backend-infrastructure>`."
 msgstr ""
+"권한 백엔드에 대한 더 깊은 이해를 원하는 기술 관리자나 개발자는 :doc:`권한 백엔드 "
+"문서 </onboard/advanced-permissions-backend-infrastructure>` 를 참조할 수 있습니다."
 
 #: ../../source/onboard/advanced-permissions.rst:223
 msgid "Glossary"
-msgstr ""
+msgstr "용어집"
 
 #: ../../source/onboard/advanced-permissions.rst:225
 msgid ""
 "**Permission:** The ability to execute certain actions. Permissions are "
 "granted to roles."
-msgstr ""
+msgstr "**권한:** 특정 작업을 실행할 수 있는 능력. 권한은 역할에 부여됩니다."
 
 #: ../../source/onboard/advanced-permissions.rst:226
 msgid "**Roles:** A set of permissions. Users or groups are assigned to roles."
-msgstr ""
+msgstr "**역할:** 권한 집합. 사용자나 그룹이 역할에 할당됩니다."
 
 #: ../../source/onboard/advanced-permissions.rst:227
 msgid ""
 "**Group:** A set of users, usually synced from AD/LDAP. Groups are "
 "assigned to roles in the context of teams, channels, or system-wide."
 msgstr ""
+"**그룹:** 일반적으로 AD/LDAP에서 동기화된 사용자 집합. 그룹은 팀, 채널 또는 시스템 전체의 "
+"컨텍스트에서 역할에 할당됩니다."
 
 #: ../../source/onboard/advanced-permissions.rst:228
 msgid ""
 "**Default Roles:** All Members, Guests (if enabled), channel admins, team"
 " admins, system admins."
-msgstr ""
+msgstr "**기본 역할:** 모든 멤버, 게스트(활성화된 경우), 채널 관리자, 팀 관리자, 시스템 관리자."
 
 #: ../../source/onboard/advanced-permissions.rst:229
 msgid "**System Scheme:** A set of default roles that apply system-wide."
-msgstr ""
+msgstr "**시스템 스키마:** 시스템 전체에 적용되는 기본 역할 집합."
 
 #: ../../source/onboard/advanced-permissions.rst:230
 msgid ""
@@ -642,14 +691,15 @@ msgid ""
 "team specified. Permissions granted to roles in a Team Override Scheme "
 "overrides roles in the System Scheme."
 msgstr ""
+"**팀 재정의 스키마:** 지정된 팀에만 적용되는 기본 역할 집합. 팀 재정의 스키마의 역할에 부여된 "
+"권한은 시스템 스키마의 역할을 재정의합니다."
 
 #: ../../source/onboard/advanced-permissions.rst:231
 msgid ""
 "**System-wide:** Applies across the entire system, including all teams of"
 " which the user is a member."
-msgstr ""
+msgstr "**시스템 전체:** 사용자가 멤버인 모든 팀을 포함하여 전체 시스템에 적용됩니다."
 
 #: ../../source/onboard/advanced-permissions.rst:232
 msgid "**Team-wide:** Applies in a specific team only."
-msgstr ""
-
+msgstr "**팀 전체:** 특정 팀에만 적용됩니다."

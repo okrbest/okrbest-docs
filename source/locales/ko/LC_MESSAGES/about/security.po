@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/about/security.rst:2
 msgid "Security Guide"
-msgstr ""
+msgstr "보안 가이드"
 
 #: ../../source/about/security.rst:4
 msgid ""
@@ -32,10 +32,14 @@ msgid ""
 " prioritizing security, Mattermost ensures that customers can trust the "
 "mobile application to safeguard their data and privacy."
 msgstr ""
+"Mattermost는 모바일 애플리케이션의 정보를 보호하기 위한 포괄적인 보안 기능 세트를 제공합니다. "
+"암호화와 인증부터 기기 관리 및 사용자 교육에 이르기까지 이러한 기능은 팀 협업과 커뮤니케이션을 위한 "
+"안전한 환경을 제공합니다. 보안을 최우선으로 함으로써 Mattermost는 고객이 모바일 애플리케이션이 "
+"데이터와 개인정보를 안전하게 보호할 수 있다고 신뢰할 수 있도록 보장합니다."
 
 #: ../../source/about/security.rst:15
 msgid "Data-in-transit encryption"
-msgstr ""
+msgstr "전송 중 데이터 암호화"
 
 #: ../../source/about/security.rst:17
 msgid ""
@@ -46,6 +50,10 @@ msgid ""
 "can access the content, preventing unauthorized parties from intercepting"
 " or reading the information."
 msgstr ""
+"Mattermost는 네트워크를 통해 전송되는 데이터를 암호화하기 위해 Transport Layer Security(TLS)를 "
+"사용하도록 구성할 수 있습니다. TLS는 데이터 교환을 위한 안전한 채널을 제공하여 전송 중 도청 및 "
+"변조로부터 보호합니다. 이 암호화는 의도된 수신자만 콘텐츠에 접근할 수 있도록 하여, "
+"권한이 없는 당사자가 정보를 가로채거나 읽는 것을 방지합니다."
 
 #: ../../source/about/security.rst:19
 msgid ""
@@ -57,10 +65,15 @@ msgid ""
 "Mattermost :ref:`data-in-transit encryption <deploy/encryption-options"
 ":encryption-in-transit>`."
 msgstr ""
+"개인 및 공용 네트워크에 대한 액세스 설정을 구성하려는 Mattermost 관리자는 :doc:`리버스 프록시 "
+"</deploy/server/setup-tls>` 를 사용하여 타사 인프라로 이를 수행할 수 있습니다. 이를 통해 "
+"보안 네트워크에 연결된 기기는 신뢰할 수 없는 네트워크의 액세스를 제한하면서 안전하게 애플리케이션에 "
+"접근할 수 있습니다. Mattermost :ref:`전송 중 데이터 암호화 <deploy/encryption-options"
+":encryption-in-transit>` 에 대해 자세히 알아보세요."
 
 #: ../../source/about/security.rst:22
 msgid "Data-at-rest encryption"
-msgstr ""
+msgstr "저장 데이터 암호화"
 
 #: ../../source/about/security.rst:24
 msgid ""
@@ -71,6 +84,10 @@ msgid ""
 "keys. Learn more about Mattermost :ref:`data-at-rest encryption <deploy"
 "/encryption-options:encryption-at-rest>`."
 msgstr ""
+"저장 데이터 암호화는 Mattermost 데이터베이스와 파일 저장소에 저장된 메시지, 파일 및 기타 데이터가 "
+"물리적 저장 매체(예: 디스크)의 데이터를 암호화하여 보호함으로써 권한이 없는 접근으로부터 보호되도록 "
+"합니다. 적절한 암호화 키 없이는 접근할 수 없게 만듭니다. Mattermost :ref:`저장 데이터 암호화 "
+"<deploy/encryption-options:encryption-at-rest>` 에 대해 자세히 알아보세요."
 
 #: ../../source/about/security.rst:26
 msgid ""
@@ -80,6 +97,10 @@ msgid ""
 "server-side encryption for amazon s3>` (Mattermost Enterprise) when users"
 " choose not to use open source options."
 msgstr ""
+"사용자가 오픈 소스 옵션을 사용하지 않기로 선택할 경우, :ref:`Amazon S3 관리형 키 "
+"<configure/environment-configuration-settings:enable server-side encryption "
+"for amazon s3>` 를 사용한 서버 측 암호화로 Amazon의 독점 S3 시스템에 저장된 파일에도 "
+"저장 데이터 암호화를 사용할 수 있습니다(Mattermost Enterprise)."
 
 #: ../../source/about/security.rst:28
 msgid ""
@@ -87,14 +108,17 @@ msgid ""
 "keys using tools, enabling logging and monitoring for access to encrypted"
 " data, and ensuring that backup data is encrypted."
 msgstr ""
+"암호화 키를 정기적으로 교체하고 도구를 사용하여 안전하게 저장하며, 암호화된 데이터에 대한 "
+"접근을 위한 로깅 및 모니터링을 활성화하고, 백업 데이터가 암호화되도록 하는 것을 강력히 "
+"권장합니다."
 
 #: ../../source/about/security.rst:31
 msgid "Authentication and access control"
-msgstr ""
+msgstr "인증 및 접근 제어"
 
 #: ../../source/about/security.rst:34
 msgid "Single Sign-On (SSO)"
-msgstr ""
+msgstr "싱글 사인온(SSO)"
 
 #: ../../source/about/security.rst:36
 msgid ""
@@ -104,10 +128,14 @@ msgid ""
 "breaches and streamlines the login process. Learn more about Mattermost "
 ":doc:`SSO </manage/admin/user-provisioning>`."
 msgstr ""
+"모바일 애플리케이션은 싱글 사인온 제공업체와 통합되어 사용자가 다른 신뢰할 수 있는 시스템의 기존 "
+"자격 증명을 사용하여 인증할 수 있게 합니다. 이는 비밀번호 관련 보안 침해 위험을 줄이고 로그인 "
+"프로세스를 간소화합니다. Mattermost :doc:`SSO </manage/admin/user-provisioning>` 에 "
+"대해 자세히 알아보세요."
 
 #: ../../source/about/security.rst:39
 msgid "Multi-Factor Authentication (MFA)"
-msgstr ""
+msgstr "다중 인증(MFA)"
 
 #: ../../source/about/security.rst:41
 msgid ""
@@ -116,10 +144,13 @@ msgid ""
 "to protect accounts from unauthorized access, even if login credentials "
 "are compromised."
 msgstr ""
+"사용자 이름과 비밀번호 외에 추가적인 보안 계층입니다. 고객은 :doc:`MFA를 활성화하고 적용 "
+"</onboard/multi-factor-authentication>` 하여 로그인 자격 증명이 손상되더라도 계정을 "
+"무단 접근으로부터 보호할 수 있습니다."
 
 #: ../../source/about/security.rst:44
 msgid "User password requirements"
-msgstr ""
+msgstr "사용자 비밀번호 요구사항"
 
 #: ../../source/about/security.rst:46
 msgid ""
@@ -127,6 +158,8 @@ msgid ""
 "safeguard the platform against a range of common attack vectors while "
 "maintaining usability and compliance with enterprise security policies:"
 msgstr ""
+"시스템 관리자는 플랫폼을 일반적인 공격 벡터로부터 보호하면서 사용성과 기업 보안 정책 준수를 "
+"유지하도록 사용자 비밀번호 설정을 구성할 수 있습니다:"
 
 #: ../../source/about/security.rst:48
 msgid ""
@@ -135,6 +168,9 @@ msgid ""
 "password length <configure/authentication-configuration-settings:minimum "
 "password length>`."
 msgstr ""
+"더 긴 비밀번호를 적용하면 모든 사용자의 자격 증명에 대한 기본 수준의 강도를 보장합니다. "
+":ref:`최소 비밀번호 길이 <configure/authentication-configuration-settings:minimum "
+"password length>` 구성에 대해 자세히 알아보세요."
 
 #: ../../source/about/security.rst:49
 msgid ""
@@ -144,6 +180,10 @@ msgid ""
 "configuring :ref:`password requirements <configure/authentication-"
 "configuration-settings:password requirements>`."
 msgstr ""
+"문자 복잡성 적용은 사전 공격과 일반적인 비밀번호 취약점에 저항하는 비밀번호를 적용하여 약하거나 "
+"너무 단순한 비밀번호를 악용하는 공격자로부터 보호합니다. :ref:`비밀번호 요구사항 "
+"<configure/authentication-configuration-settings:password requirements>` "
+"구성에 대해 자세히 알아보세요."
 
 #: ../../source/about/security.rst:50
 msgid ""
@@ -154,6 +194,10 @@ msgid ""
 "login attempts <configure/authentication-configuration-settings:maximum "
 "login attempts>`."
 msgstr ""
+"계정을 일시적으로 또는 영구적으로 잠그기 전에 실패한 인증 시도 횟수를 제한하면 공격자가 잠재적인 "
+"조합을 반복적으로 입력하여 비밀번호를 추측하는 무차별 대입 공격을 완화할 수 있습니다. "
+":ref:`최대 로그인 시도 횟수 <configure/authentication-configuration-settings:maximum "
+"login attempts>` 구성에 대해 자세히 알아보세요."
 
 #: ../../source/about/security.rst:51
 msgid ""
@@ -163,10 +207,14 @@ msgid ""
 ":ref:`enabling a password reset workflow <configure/authentication-"
 "configuration-settings:enable forgot password link>`."
 msgstr ""
+"비밀번호 찾기 흐름을 활성화하면 사용자가 필요할 때 비밀번호를 재설정할 수 있으면서도 합법적인 "
+"자격 증명 손실로 인해 계정이 잠기는 것을 방지하여 편의성을 추가합니다. :ref:`비밀번호 재설정 "
+"워크플로우 활성화 <configure/authentication-configuration-settings:enable forgot "
+"password link>` 에 대해 자세히 알아보세요."
 
 #: ../../source/about/security.rst:54
 msgid "Session management"
-msgstr ""
+msgstr "세션 관리"
 
 #: ../../source/about/security.rst:56
 msgid ""
@@ -177,10 +225,14 @@ msgid ""
 "Learn more about :ref:`session management configuration settings "
 "<configure/environment-configuration-settings:session lengths>`."
 msgstr ""
+"시스템 관리자는 세션 길이, 세션 캐시 및 유휴 시간 초과를 포함한 세션 관리 설정을 구성하여 사용자 "
+"세션이 효과적이고 안전하게 관리되도록 할 수 있습니다. Mattermost는 각 로그인마다 새로운 세션 "
+"쿠키를 설정하므로 세션 고정 공격이 완화됩니다. :ref:`세션 관리 구성 설정 "
+"<configure/environment-configuration-settings:session lengths>` 에 대해 자세히 알아보세요."
 
 #: ../../source/about/security.rst:59
 msgid "Protection against brute force attacks"
-msgstr ""
+msgstr "무차별 대입 공격 방지"
 
 #: ../../source/about/security.rst:61
 msgid ""
@@ -188,10 +240,12 @@ msgid ""
 "/environment-configuration-settings>` based on query frequency, memory "
 "store size, remote address, and headers."
 msgstr ""
+"시스템 관리자는 쿼리 빈도, 메모리 저장소 크기, 원격 주소 및 헤더를 기반으로 Mattermost API를 "
+":doc:`속도 제한 </configure/environment-configuration-settings>` 할 수 있습니다."
 
 #: ../../source/about/security.rst:64
 msgid "Remote session revocation & password reset"
-msgstr ""
+msgstr "원격 세션 취소 및 비밀번호 재설정"
 
 #: ../../source/about/security.rst:66
 msgid ""
@@ -201,6 +255,10 @@ msgid ""
 "<configure/user-management-configuration-settings:reset user's password>`"
 " to enhance security."
 msgstr ""
+"시스템 관리자는 웹, 모바일 기기 및 데스크톱 앱에서 사용자 세션을 원격으로 :doc:`취소 "
+"</preferences/manage-your-security-preferences>` 할 수 있습니다. 보안을 강화하기 위해 "
+"사용자 비밀번호를 원격으로 :ref:`재설정 <configure/user-management-configuration-"
+"settings:reset user's password>` 할 수 있습니다."
 
 #: ../../source/about/security.rst:69
 msgid ""
@@ -210,10 +268,14 @@ msgid ""
 "/user-management-configuration-settings:revoke a user's session>` to "
 "force users to log back into the system immediately."
 msgstr ""
+"관리자는 :ref:`세션 길이 <configure/environment-configuration-settings:session "
+"lengths>` 를 정의하고 :ref:`사용자 세션 취소 <configure/user-management-configuration-"
+"settings:revoke a user's session>` 를 통해 지정된 시간 후에 재로그인을 강제하여 사용자가 "
+"즉시 시스템에 다시 로그인하도록 할 수 있습니다."
 
 #: ../../source/about/security.rst:72
 msgid "Role-Based Access Control (ABAC)"
-msgstr ""
+msgstr "역할 기반 액세스 제어(ABAC)"
 
 #: ../../source/about/security.rst:74
 msgid ""
@@ -224,10 +286,14 @@ msgid ""
 "Mattermost :doc:`role-based access control </collaborate/learn-about-"
 "roles>`."
 msgstr ""
+"관리자는 애플리케이션 내의 민감한 정보에 대한 접근을 제어하기 위해 세분화된 권한을 설정할 수 있습니다. "
+"이 기능은 사용자가 자신의 역할에 필요한 데이터에만 접근할 수 있도록 하여 의도적이거나 "
+"우발적인 데이터 노출의 위험을 최소화합니다. Mattermost :doc:`역할 기반 액세스 제어 "
+"</collaborate/learn-about-roles>` 에 대해 자세히 알아보세요."
 
 #: ../../source/about/security.rst:77
 msgid "Cross-origin requests control"
-msgstr ""
+msgstr "교차 출처 요청 제어"
 
 #: ../../source/about/security.rst:79
 msgid ""
@@ -235,10 +301,12 @@ msgid ""
 "<configure/integrations-configuration-settings:enable cross-origin "
 "requests from>` for enhanced control."
 msgstr ""
+"향상된 제어를 위해 :ref:`교차 출처 요청 <configure/integrations-configuration-"
+"settings:enable cross-origin requests from>` 을 제한하거나 활성화할지 선택하세요."
 
 #: ../../source/about/security.rst:82
 msgid "Public link management"
-msgstr ""
+msgstr "공개 링크 관리"
 
 #: ../../source/about/security.rst:84
 msgid ""
@@ -246,6 +314,8 @@ msgid ""
 "invalidated by :ref:`regenerating salts <configure/site-configuration-"
 "settings:public link salt>` to ensure security."
 msgstr ""
+"계정 생성, 파일 및 이미지 공유를 위한 공개 링크는 보안을 위해 :ref:`솔트 재생성 "
+"<configure/site-configuration-settings:public link salt>` 을 통해 무효화할 수 있습니다."
 
 #: ../../source/about/security.rst:86
 msgid ""
@@ -254,10 +324,13 @@ msgid ""
 "string. This prevents the creation of new public links and invalidates "
 "existing ones."
 msgstr ""
+":ref:`공개 링크 솔트 <configure/site-configuration-settings:public link salt>` 를 "
+"빈 문자열로 설정하여 공개 링크를 비활성화할 수도 있습니다. 이렇게 하면 새로운 공개 링크 생성이 "
+"방지되고 기존 링크가 무효화됩니다."
 
 #: ../../source/about/security.rst:89
 msgid "LLM context management"
-msgstr ""
+msgstr "LLM 컨텍스트 관리"
 
 #: ../../source/about/security.rst:91
 msgid ""
@@ -267,10 +340,14 @@ msgid ""
 "context </collaborate/copilot-context-management>` and how to ensure data"
 " privacy."
 msgstr ""
+"Mattermost Copilot은 Mattermost에서 정확한 응답을 생성하기 위해 필요한 정보만 대규모 언어 "
+"모델(LLM)에 전송되도록 설계되었습니다. Mattermost :doc:`Copilot이 LLM 컨텍스트를 관리하는 "
+"방법 </collaborate/copilot-context-management>` 과 데이터 개인정보 보호를 보장하는 방법에 대해 "
+"알아보세요."
 
 #: ../../source/about/security.rst:94
 msgid "Audit logs and monitoring"
-msgstr ""
+msgstr "감사 로그 및 모니터링"
 
 #: ../../source/about/security.rst:96
 msgid ""
@@ -279,10 +356,13 @@ msgid ""
 "directly to syslog and TCP socket destination targets. Learn more about "
 ":doc:`Mattermost logging </manage/logging>`."
 msgstr ""
+"Mattermost는 콘솔과 로그 파일 모두에 기계가 읽을 수 있는 JSON 형식으로 로그를 기록합니다. "
+"상업용 고객은 추가로 syslog 및 TCP 소켓 대상에 직접 로깅할 수 있습니다. :doc:`Mattermost "
+"로깅 </manage/logging>` 에 대해 자세히 알아보세요."
 
 #: ../../source/about/security.rst:99
 msgid "Activity monitoring"
-msgstr ""
+msgstr "활동 모니터링"
 
 #: ../../source/about/security.rst:101
 msgid ""
@@ -294,6 +374,11 @@ msgid ""
 "their messages after they are posted. Learn more about :doc:`Mattermost "
 "permissions </onboard/advanced-permissions>`."
 msgstr ""
+"Mattermost는 업로드된 모든 파일과 함께 편집 및 삭제를 포함한 메시지의 전체 기록을 저장합니다. "
+"메시지와 채널을 삭제하는 사용자 인터페이스 작업은 사용자 인터페이스에서만 데이터를 제거하며, "
+"데이터는 데이터베이스 내에 보관됩니다. 규정 준수 지침이 요구하는 경우 사용자가 게시 후 메시지를 "
+"편집하고 삭제하는 기능을 비활성화할 수 있습니다. :doc:`Mattermost 권한 "
+"</onboard/advanced-permissions>` 에 대해 자세히 알아보세요."
 
 #: ../../source/about/security.rst:103
 msgid ""
@@ -302,14 +387,17 @@ msgid ""
 " access and identify potential security threats, ensuring timely "
 "detection and response to suspicious behavior."
 msgstr ""
+"Mattermost 모바일 앱은 사용자 활동과 시스템 이벤트를 기록하는 감사 로그를 생성합니다. "
+"이러한 로그를 통해 관리자는 접근을 모니터링하고 잠재적인 보안 위협을 식별하여 의심스러운 "
+"행동을 적시에 감지하고 대응할 수 있습니다."
 
 #: ../../source/about/security.rst:106
 msgid "Regular security updates"
-msgstr ""
+msgstr "정기적인 보안 업데이트"
 
 #: ../../source/about/security.rst:109
 msgid "Patch management"
-msgstr ""
+msgstr "패치 관리"
 
 #: ../../source/about/security.rst:111
 msgid ""
@@ -319,10 +407,13 @@ msgid ""
 "security improvements. Learn more about Mattermost :doc:`releases and the"
 " release life cycle </about/releases-lifecycle>`."
 msgstr ""
+"Mattermost는 취약점을 해결하고 애플리케이션의 보안 상태를 향상시키기 위해 정기적으로 보안 업데이트를 "
+"출시합니다. 사용자는 최신 보안 개선 사항의 이점을 얻기 위해 모바일 애플리케이션을 최신 상태로 "
+"유지하는 것이 권장됩니다. Mattermost :doc:`릴리스 및 릴리스 수명 주기 </about/releases-lifecycle>` 에 대해 자세히 알아보세요."
 
 #: ../../source/about/security.rst:114
 msgid "Community and expert contributions"
-msgstr ""
+msgstr "커뮤니티 및 전문가 기여"
 
 #: ../../source/about/security.rst:116
 msgid ""
@@ -332,10 +423,13 @@ msgid ""
 "remains robust and secure. Learn more about `contributing to Mattermost "
 "<https://mattermost.com/contribute/>`_."
 msgstr ""
+"오픈 코어 플랫폼으로서 Mattermost는 보안 커뮤니티와 전문가들의 기여로부터 이점을 얻습니다. "
+"이러한 기여는 잠재적인 보안 위험을 식별하고 완화하여 모바일 애플리케이션이 견고하고 안전하게 "
+"유지되도록 합니다. `Mattermost에 기여하기 <https://mattermost.com/contribute/>`_ 에 대해 자세히 알아보세요."
 
 #: ../../source/about/security.rst:119
 msgid "HIPAA compliance*"
-msgstr ""
+msgstr "HIPAA 규정 준수*"
 
 #: ../../source/about/security.rst:121
 msgid ""
@@ -344,16 +438,19 @@ msgid ""
 "standards <https://www.hhs.gov/hipaa/for-professionals/security/laws-"
 "regulations/>`_."
 msgstr ""
+"HIPAA 규정을 준수하는 IT 인프라의 일부로 Mattermost를 배포하려면 `HIPAA 규정 준수 요구사항 및 "
+"표준 <https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/>`_ 에 대해 "
+"교육받은 배포 팀이 필요합니다."
 
 #: ../../source/about/security.rst:123
 msgid "HIPAA-compliant deployments commonly consider the following:"
-msgstr ""
+msgstr "HIPAA 규정을 준수하는 배포는 일반적으로 다음 사항을 고려합니다:"
 
 #: ../../source/about/security.rst:125
 msgid ""
 "Omitting the contents of messages from mobile push and email "
 "notifications:"
-msgstr ""
+msgstr "모바일 푸시 및 이메일 알림에서 메시지 내용 생략:"
 
 #: ../../source/about/security.rst:127
 msgid ""
@@ -365,6 +462,10 @@ msgid ""
 " with user and channel names`` or ``Send generic description with only "
 "sender name``."
 msgstr ""
+":ref:`푸시 알림 내용 <configure/site-configuration-settings:push notification contents>` "
+"옵션이 ``전체 메시지 스니펫 전송`` 으로 설정되어 있으면 메시지에 포함된 개인 건강 정보(PHI)가 "
+"사용자의 잠긴 휴대폰에 알림으로 표시될 수 있습니다. 이를 방지하려면 ``사용자 및 채널 이름이 포함된 "
+"일반 설명 전송`` 또는 ``발신자 이름만 포함된 일반 설명 전송`` 옵션으로 설정하세요."
 
 #: ../../source/about/security.rst:128
 msgid ""
@@ -374,22 +475,25 @@ msgid ""
 " of the person who sent the message, with no information about channel "
 "name or message contents included in email notifications."
 msgstr ""
+":ref:`이메일 알림 내용 <configure/site-configuration-settings:email notification contents>` "
+"을 ``발신자 이름만 포함된 일반 설명 전송`` 으로 설정하면 팀 이름과 메시지를 보낸 사람의 이름만 "
+"전송되며, 이메일 알림에는 채널 이름이나 메시지 내용에 대한 정보가 포함되지 않습니다."
 
 #: ../../source/about/security.rst:130
 msgid "Beyond Technical Safeguards, HIPAA compliance deployments also require:"
-msgstr ""
+msgstr "기술적 보호 조치 외에도 HIPAA 규정 준수 배포에는 다음이 필요합니다:"
 
 #: ../../source/about/security.rst:132
 msgid "Administrative Safeguards"
-msgstr ""
+msgstr "관리적 보호 조치"
 
 #: ../../source/about/security.rst:133
 msgid "Physical Safeguards"
-msgstr ""
+msgstr "물리적 보호 조치"
 
 #: ../../source/about/security.rst:134
 msgid "Organizational requirements and other standards."
-msgstr ""
+msgstr "조직 요구사항 및 기타 표준."
 
 #: ../../source/about/security.rst:136
 msgid ""
@@ -397,10 +501,12 @@ msgid ""
 "of Health and Human Services <https://www.hhs.gov/hipaa/for-"
 "professionals/security/laws-regulations/>`_."
 msgstr ""
+"자세한 내용은 `미국 보건복지부의 HIPAA 요구사항 <https://www.hhs.gov/hipaa/for-"
+"professionals/security/laws-regulations/>`_ 을 참조하세요."
 
 #: ../../source/about/security.rst:139
 msgid "FINRA compliance*"
-msgstr ""
+msgstr "FINRA 규정 준수*"
 
 #: ../../source/about/security.rst:140
 msgid ""
@@ -412,6 +518,10 @@ msgid ""
 "assessments, technical controls, incident response, vendor management, "
 "data loss prevention, and staff training."
 msgstr ""
+"Mattermost Enterprise 기능은 기술 거버넌스, 시스템 변경 관리, 위험 평가, 기술적 통제, "
+"사고 대응, 공급업체 관리, 데이터 손실 방지 및 직원 교육을 포함한 고객의 기존 운영 시스템의 "
+"일부로서 `미국 금융산업규제청(FINRA)의 사이버 보안 요구사항 <https://www.finra.org/rules-"
+"guidance/key-topics/cybersecurity>`_ 을 충족하는 데 도움을 줍니다."
 
 #: ../../source/about/security.rst:142
 msgid ""
@@ -419,6 +529,8 @@ msgid ""
 " and availability of sensitive customer information. This includes "
 "reviewing each firm’s compliance with SEC regulations, including:"
 msgstr ""
+"FINRA는 기업이 민감한 고객 정보의 기밀성, 무결성 및 가용성을 보호하는 능력을 검토합니다. "
+"여기에는 각 기업의 SEC 규정 준수 여부 검토가 포함되며, 다음 사항이 포함됩니다:"
 
 #: ../../source/about/security.rst:144
 msgid ""
@@ -428,6 +540,8 @@ msgid ""
 "written policies and procedures to protect customer information against "
 "cyber-attacks and other forms of unauthorized access."
 msgstr ""
+"`S-P 규정(17 CFR §248.30) <https://www.ecfr.gov/current/title-17/chapter-II/part-248/subpart-A/subject-group-"
+"ECFR83262a0bce5ffaa/section-248.30>`_ 은 기업이 사이버 공격 및 기타 무단 접근으로부터 고객 정보를 보호하기 위한 서면 정책과 절차를 채택하도록 요구합니다."
 
 #: ../../source/about/security.rst:146
 msgid ""
@@ -436,6 +550,7 @@ msgid ""
 "outlines a firm's duties regarding the detection, prevention, and "
 "mitigation of identity theft."
 msgstr ""
+"`S-ID 규정(17 CFR §248.201-202) <https://www.ecfr.gov/current/title-17/chapter-II/part-248>`_ 은 신원 도용의 탐지, 예방 및 완화에 관한 기업의 의무를 설명합니다."
 
 #: ../../source/about/security.rst:148
 msgid ""
@@ -444,12 +559,15 @@ msgid ""
 "requires firms to preserve electronically stored records in a non-"
 "rewriteable, non-erasable format."
 msgstr ""
+"`1934년 증권거래법(17 CFR §240.17a-4(f)) <https://www.ecfr.gov/current/title-17/chapter-II/part-240>`_ 은 기업이 전자적으로 저장된 기록을 재기록 불가능하고 "
+"삭제 불가능한 형식으로 보존하도록 요구합니다."
 
 #: ../../source/about/security.rst:150
 msgid ""
 "Mattermost supports FINRA compliance as part of a customer's integrated "
 "operations in the following ways:"
 msgstr ""
+"Mattermost는 고객의 통합 운영의 일부로서 다음과 같은 방식으로 FINRA 규정 준수를 지원합니다:"
 
 #: ../../source/about/security.rst:152
 msgid ""
@@ -459,6 +577,8 @@ msgid ""
 "for Smarsh/Actiance and Global Relay provide third-party eDiscovery "
 "options."
 msgstr ""
+"**지속적인 아카이빙:** 시스템에 입력된 모든 메시지와 파일에 대한 재기록 불가능하고 삭제 불가능한 기록 시스템으로 구성됩니다. "
+"또한 Smarsh/Actiance 및 Global Relay에 대한 자동화된 규정 준수 내보내기 및 통합 지원은 타사 eDiscovery 옵션을 제공합니다."
 
 #: ../../source/about/security.rst:153
 msgid ""
@@ -466,6 +586,7 @@ msgid ""
 " networks with existing FINRA-compliant safeguards and infrastructure to "
 "protect customer information from cyber attack."
 msgstr ""
+"**보안 배포:** 기존의 FINRA 규정 준수 보호 조치와 인프라를 갖춘 개인, 공용 및 온프레미스 네트워크 내에서의 배포로 사이버 공격으로부터 고객 정보를 보호합니다."
 
 #: ../../source/about/security.rst:154
 msgid ""
@@ -474,6 +595,8 @@ msgid ""
 " database access, including configuration of proxy, application, and "
 "database logging to deeply audit system interactions."
 msgstr ""
+"**침입 탐지 지원:** 인증 시스템부터 애플리케이션 서버, 데이터베이스 접근에 이르기까지 다층적 침입 탐지를 지원하는 기능으로, 프록시, 애플리케이션 및 데이터베이스 로깅 구성을 포함하여 "
+"시스템 상호작용을 심층적으로 감사합니다."
 
 #: ../../source/about/security.rst:155
 msgid ""
@@ -481,6 +604,7 @@ msgid ""
 "automated data back up, and enterprise information archiving integration "
 "to prevent data loss and recover from disaster."
 msgstr ""
+"**다층적 재해 복구:** 고가용성 구성, 자동화된 데이터 백업 및 기업 정보 아카이빙 통합으로 데이터 손실을 방지하고 재해로부터 복구합니다."
 
 #: ../../source/about/security.rst:157
 msgid ""
@@ -497,4 +621,8 @@ msgid ""
 "BE A SUBSTITUTE TO CONSULTING WITH YOUR OWN LEGAL AND COMPLIANCE "
 "REPRESENTATIVES ON THESE MATTERS."
 msgstr ""
+"***면책 조항:** MATTERMOST는 자사 제품을 "보장된 규정 준수 솔루션"으로 포지셔닝하지 않습니다. MATTERMOST 제품을 사용하여 규제 준수를 달성할 것이라고 보장하지 않습니다. "
+"규제 준수 달성의 성공 수준은 적용 가능한 규정에 대한 귀하의 해석과 그 요구사항을 준수하기 위해 취하는 조치에 달려 있습니다. "
+"이러한 요소는 개인과 기업에 따라 다르기 때문에 귀하의 성공을 보장할 수 없으며, 귀하의 행동에 대해 책임을 지지 않습니다. "
+"MATTERMOST 사용이나 웹사이트에 포함된 권장사항으로부터 특정 규정 준수 결과를 달성할 것이라고 보장하지 않으며, 따라서 이는 이러한 문제에 대해 자체 법률 및 규정 준수 대표자와 상담하는 것을 대체할 수 없습니다."
 

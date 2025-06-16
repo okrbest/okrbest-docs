@@ -21,25 +21,26 @@ msgstr ""
 
 #: ../../source/integrate/github.rst:2
 msgid "Connect GitHub to Mattermost"
-msgstr ""
+msgstr "GitHub를 Mattermost에 연결"
 
 #: ../../source/_static/badges/allplans-cloud-selfhosted.rst:7
 msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `모든 요금제 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/allplans-cloud-selfhosted.rst:9
 msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
 msgstr ""
+"|deployment-img| `클라우드 <https://mattermost.com/sign-up/>`__ 및 `자체 호스팅 <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/integrate/github.rst:7
 msgid ""
@@ -49,46 +50,48 @@ msgid ""
 "time updates on commits, pull requests, issues, and more directly from "
 "Mattermost channels."
 msgstr ""
+"GitHub를 Mattermost와 통합하여 GitHub 코드 저장소와 커뮤니케이션 플랫폼 간의 주의 산만함을 최소화하고 컨텍스트 전환을 줄이세요. "
+"Mattermost 채널에서 직접 커밋, 풀 리퀘스트, 이슈 등에 대한 실시간 업데이트를 통해 팀이 집중하고 생산적으로 일할 수 있도록 도와주세요."
 
 #: ../../source/integrate/github.rst:-1
 msgid "An example of the GitHub integration for Mattermost."
-msgstr ""
+msgstr "Mattermost용 GitHub 통합 예시."
 
 #: ../../source/integrate/github.rst:13
 msgid "Deploy"
-msgstr ""
+msgstr "배포"
 
 #: ../../source/integrate/github.rst:15
 msgid "Setup starts in GitHub and configuration ends in Mattermost."
-msgstr ""
+msgstr "설정은 GitHub에서 시작하고 Mattermost에서 완료됩니다."
 
 #: ../../source/integrate/github.rst:18
 msgid "Register an OAuth app in GitHub"
-msgstr ""
+msgstr "GitHub에서 OAuth 앱 등록"
 
 #: ../../source/integrate/github.rst:20
 msgid "A Mattermost system admin must perform the following steps in GitHub."
-msgstr ""
+msgstr "Mattermost 시스템 관리자는 GitHub에서 다음 단계를 수행해야 합니다."
 
 #: ../../source/integrate/github.rst:22
 msgid ""
 "Go to https://github.com/settings/applications/new to register an OAuth "
 "app with GitHub."
-msgstr ""
+msgstr "GitHub에서 OAuth 앱을 등록하려면 https://github.com/settings/applications/new 로 이동하세요."
 
 #: ../../source/integrate/github.rst:23 ../../source/integrate/github.rst:45
 msgid "Set the following values:"
-msgstr ""
+msgstr "다음 값을 설정하세요:"
 
 #: ../../source/integrate/github.rst:25 ../../source/integrate/github.rst:118
 msgid "**Application name**: ``Mattermost GitHub Plugin - <YOUR COMPANY NAME>``"
-msgstr ""
+msgstr "**애플리케이션 이름**: ``Mattermost GitHub Plugin - <YOUR COMPANY NAME>``"
 
 #: ../../source/integrate/github.rst:26 ../../source/integrate/github.rst:119
 msgid ""
 "**Homepage URL**: ``https://github.com/mattermost/mattermost-plugin-"
 "github``"
-msgstr ""
+msgstr "**홈페이지 URL**: ``https://github.com/mattermost/mattermost-plugin-github``"
 
 #: ../../source/integrate/github.rst:27 ../../source/integrate/github.rst:120
 msgid ""
@@ -97,20 +100,23 @@ msgid ""
 "MATTERMOST-URL.COM`` with your Mattermost URL. This value must match the "
 "Mattermost server URL you use to log in."
 msgstr ""
+"**인증 콜백 URL**: ``https://YOUR-MATTERMOST-URL.COM/plugins/github/oauth/complete``, "
+"``https://YOUR-MATTERMOST-URL.COM`` 을 Mattermost URL로 대체하세요. "
+"이 값은 로그인에 사용하는 Mattermost 서버 URL과 일치해야 합니다."
 
 #: ../../source/integrate/github.rst:29
 msgid "Save your changes."
-msgstr ""
+msgstr "변경 사항을 저장하세요."
 
 #: ../../source/integrate/github.rst:30
 msgid ""
 "Select **Generate a new client secret**, and enter your GitHub password "
 "to continue."
-msgstr ""
+msgstr "**새 클라이언트 시크릿 생성** 을 선택하고 GitHub 비밀번호를 입력하여 계속하세요."
 
 #: ../../source/integrate/github.rst:31
 msgid "Copy the **Client ID** and **Client Secret** in the resulting screen."
-msgstr ""
+msgstr "결과 화면에서 **Client ID** 와 **Client Secret** 을 복사하세요."
 
 #: ../../source/integrate/github.rst:32
 msgid ""
@@ -119,16 +125,20 @@ msgid ""
 "selecting **Regenerate** next to each field. You'll need a copy of the "
 "**Webhook Secret** value to create a webhook in GitHub."
 msgstr ""
+"Mattermost에서 **시스템 콘솔 > 플러그인 > GitHub** 로 이동하여 각 필드 옆의 **재생성** 을 선택하여 "
+"**Webhook Secret** 과 **At Rest Encryption Key** 를 모두 재생성하세요. "
+"GitHub에서 웹훅을 생성하려면 **Webhook Secret** 값의 복사본이 필요합니다."
 
 #: ../../source/integrate/github.rst:36
 msgid ""
 "We recommend making a copy of your webhook secret and encryption key, as "
 "it will only be visible to you once."
 msgstr ""
+"웹훅 시크릿과 암호화 키는 한 번만 표시되므로 복사본을 만드는 것을 권장합니다."
 
 #: ../../source/integrate/github.rst:39
 msgid "Create a webhook in GitHub"
-msgstr ""
+msgstr "GitHub에서 웹훅 생성"
 
 #: ../../source/integrate/github.rst:41
 msgid ""
@@ -136,16 +146,19 @@ msgid ""
 "Create a webhook in GitHub for each GitHub organization you want to set "
 "up."
 msgstr ""
+"Mattermost 시스템 관리자는 GitHub에서 다음 단계를 수행해야 합니다. "
+"설정하려는 각 GitHub 조직에 대해 GitHub에서 웹훅을 생성하세요."
 
 #: ../../source/integrate/github.rst:43
 msgid ""
 "In GitHub, go to the **Settings** page where you want to send "
 "notifications from, then select **Webhooks** in the sidebar."
 msgstr ""
+"GitHub에서 알림을 보내려는 **설정** 페이지로 이동한 다음 사이드바에서 **Webhooks** 를 선택하세요."
 
 #: ../../source/integrate/github.rst:44
 msgid "Select **Add Webhook**."
-msgstr ""
+msgstr "**웹훅 추가** 를 선택하세요."
 
 #: ../../source/integrate/github.rst:47
 msgid ""
@@ -153,80 +166,83 @@ msgid ""
 "URL.COM/plugins/github/webhook``. Replace ``https://YOUR-MATTERMOST-"
 "URL.COM`` with your Mattermost URL."
 msgstr ""
+"**페이로드 URL**: ``https://YOUR-MATTERMOST-URL.COM/plugins/github/webhook``. "
+"``https://YOUR-MATTERMOST-URL.COM`` 을 Mattermost URL로 대체하세요."
 
 #: ../../source/integrate/github.rst:48
 msgid "**Content Type**: ``application/json``"
-msgstr ""
+msgstr "**콘텐츠 유형**: ``application/json``"
 
 #: ../../source/integrate/github.rst:49
 msgid "**Secret**: The **Webhook Secret** value you copied earlier."
-msgstr ""
+msgstr "**시크릿**: 앞서 복사한 **Webhook Secret** 값."
 
 #: ../../source/integrate/github.rst:51
 msgid ""
 "Under **Which events would you like to trigger this webhook?**, select "
 "**Let me select individual events**."
 msgstr ""
+"**어떤 이벤트로 이 웹훅을 트리거하시겠습니까?** 아래에서 **개별 이벤트 선택** 을 선택하세요."
 
 #: ../../source/integrate/github.rst:52
 msgid "Select the following events:"
-msgstr ""
+msgstr "다음 이벤트를 선택하세요:"
 
 #: ../../source/integrate/github.rst:54
 msgid "Branch or Tag creation"
-msgstr ""
+msgstr "브랜치 또는 태그 생성"
 
 #: ../../source/integrate/github.rst:55
 msgid "Branch or Tag deletion"
-msgstr ""
+msgstr "브랜치 또는 태그 삭제"
 
 #: ../../source/integrate/github.rst:56
 msgid "Releases"
-msgstr ""
+msgstr "릴리스"
 
 #: ../../source/integrate/github.rst:57
 msgid "Issue comments"
-msgstr ""
+msgstr "이슈 댓글"
 
 #: ../../source/integrate/github.rst:58
 msgid "Issues"
-msgstr ""
+msgstr "이슈"
 
 #: ../../source/integrate/github.rst:59
 msgid "Pull requests"
-msgstr ""
+msgstr "풀 리퀘스트"
 
 #: ../../source/integrate/github.rst:60
 msgid "Pull request review"
-msgstr ""
+msgstr "풀 리퀘스트 리뷰"
 
 #: ../../source/integrate/github.rst:61
 msgid "Pull request review comments"
-msgstr ""
+msgstr "풀 리퀘스트 리뷰 댓글"
 
 #: ../../source/integrate/github.rst:62
 msgid "Pushes"
-msgstr ""
+msgstr "푸시"
 
 #: ../../source/integrate/github.rst:63
 msgid "Stars"
-msgstr ""
+msgstr "스타"
 
 #: ../../source/integrate/github.rst:64
 msgid "Workflows"
-msgstr ""
+msgstr "워크플로우"
 
 #: ../../source/integrate/github.rst:66
 msgid "Select **Add Webhook** to save your changes."
-msgstr ""
+msgstr "변경사항을 저장하려면 **웹훅 추가** 를 선택하세요."
 
 #: ../../source/integrate/github.rst:69
 msgid "Mattermost configuration"
-msgstr ""
+msgstr "Mattermost 구성"
 
 #: ../../source/integrate/github.rst:71
 msgid "A Mattermost system admin must perform the following steps in Mattermost."
-msgstr ""
+msgstr "Mattermost 시스템 관리자는 Mattermost에서 다음 단계를 수행해야 합니다."
 
 #: ../../source/integrate/github.rst:73
 msgid ""
@@ -235,12 +251,16 @@ msgid ""
 " and the messages won't include a BOT tag. You can change this account "
 "behavior to include a BOT tag by using one of the following methods:"
 msgstr ""
+"Mattermost 배포에 ``github`` 사용자 계정이 있는지 확인하세요. "
+"계정이 존재하는 경우 기본적으로 채널에 GitHub 메시지를 게시하며, 메시지에는 BOT 태그가 포함되지 않습니다. "
+"다음 방법 중 하나를 사용하여 이 계정 동작을 변경하여 BOT 태그를 포함시킬 수 있습니다:"
 
 #: ../../source/integrate/github.rst:75
 msgid ""
 "Convert the user account to a bot using :ref:`mmctl user convert <manage"
 "/mmctl-command-line-tool:mmctl user convert>`."
 msgstr ""
+":ref:`mmctl user convert <manage/mmctl-command-line-tool:mmctl user convert>` 를 사용하여 사용자 계정을 봇으로 변환하세요."
 
 #: ../../source/integrate/github.rst:76
 msgid ""
@@ -250,48 +270,56 @@ msgid ""
 "configuration-settings:enable bot account creation>` configuration "
 "setting is enabled."
 msgstr ""
+"기존 ``github`` 사용자 이름을 다른 이름으로 변경하세요. "
+":ref:`enable bot account creation <configure/integrations-configuration-settings:enable bot account creation>` 구성 설정이 활성화된 상태에서 "
+"Mattermost 서버가 재시작되면 ``github`` 라는 새로운 봇 계정이 생성됩니다."
 
 #: ../../source/integrate/github.rst:78
 msgid "Install the GitHub integration from the in-product App Marketplace:"
-msgstr ""
+msgstr "제품 내 앱 마켓플레이스에서 GitHub 통합을 설치하세요:"
 
 #: ../../source/integrate/github.rst:80
 msgid ""
 "In Mattermost, from the Product menu |product-list|, select **App "
 "Marketplace**."
 msgstr ""
+"Mattermost에서 제품 메뉴 |product-list| 에서 **앱 마켓플레이스** 를 선택하세요."
 
 #: ../../<rst_prolog>:100
 msgid ""
 "Navigate between Channels and collaborative playbooks using the product "
 "menu icon."
 msgstr ""
+"제품 메뉴 아이콘을 사용하여 채널과 협업 플레이북 사이를 탐색하세요."
 
 #: ../../source/integrate/github.rst:81
 msgid "Search for or scroll to GitHub, and select **Install**."
-msgstr ""
+msgstr "GitHub를 검색하거나 스크롤하여 **설치** 를 선택하세요."
 
 #: ../../source/integrate/github.rst:82
 msgid "Once installed, select **Configure**. You're taken to the System Console."
-msgstr ""
+msgstr "설치가 완료되면 **구성** 을 선택하세요. 시스템 콘솔로 이동합니다."
 
 #: ../../source/integrate/github.rst:83
 msgid ""
 "On the GitHub configuration page, enable and configure GitHub "
 "interoperability as follows, and then select **Save**:"
 msgstr ""
+"GitHub 구성 페이지에서 다음과 같이 GitHub 상호 운용성을 활성화하고 구성한 다음 **저장** 을 선택하세요:"
 
 #: ../../source/integrate/github.rst:85
 msgid ""
 "Enter the **GitHub OAuth Client ID** and **GitHub OAuth Client Secret** "
 "obtained during registration."
 msgstr ""
+"등록 중에 얻은 **GitHub OAuth 클라이언트 ID** 와 **GitHub OAuth 클라이언트 시크릿** 을 입력하세요."
 
 #: ../../source/integrate/github.rst:86
 msgid ""
 "(Optional) **GitHub Organization**: Lock the integration to a single "
 "GitHub organization by specifying the name of your GitHub organization."
 msgstr ""
+"(선택 사항) **GitHub 조직**: GitHub 조직의 이름을 지정하여 통합을 단일 GitHub 조직으로 잠그세요."
 
 #: ../../source/integrate/github.rst:87
 msgid ""
@@ -299,6 +327,8 @@ msgid ""
 "Upload URL** values to your GitHub Enterprise URLs, e.g. "
 "``https://github.example.com``. These values are often the same."
 msgstr ""
+"(GitHub Enterprise 전용): GitHub Enterprise URL(예: ``https://github.example.com``)을 **Enterprise Base URL** 및 **Enterprise Upload URL** 값으로 설정하세요. "
+"이 값들은 종종 동일합니다."
 
 #: ../../source/integrate/github.rst:88
 msgid ""
@@ -306,6 +336,7 @@ msgid ""
 "Sidebar**: Display or hide GitHub notification counters in the Mattermost"
 " sidebar."
 msgstr ""
+"(Mattermost 데스크톱 앱 전용) **왼쪽 사이드바에 알림 카운터 표시**: Mattermost 사이드바에서 GitHub 알림 카운터를 표시하거나 숨깁니다."
 
 #: ../../source/integrate/github.rst:89
 msgid ""
@@ -314,6 +345,7 @@ msgid ""
 "repositories are enabled, and must reconnect their GitHub accounts to "
 "gain access to private repositories."
 msgstr ""
+"(선택 사항) **비공개 저장소 활성화**: 비공개 저장소 작업 기능을 활성화합니다. 비공개 저장소가 활성화되면 영향을 받는 사용자에게 알림이 표시되며, 비공개 저장소에 접근하려면 GitHub 계정을 다시 연결해야 합니다."
 
 #: ../../source/integrate/github.rst:90
 msgid ""
@@ -321,6 +353,7 @@ msgid ""
 "private GitHub repositories by default, when private repositories are "
 "enabled."
 msgstr ""
+"(선택 사항) **기본적으로 비공개 저장소에 연결**: 비공개 저장소가 활성화된 경우 기본적으로 비공개 GitHub 저장소에 연결합니다."
 
 #: ../../source/integrate/github.rst:91
 msgid ""
@@ -328,32 +361,36 @@ msgid ""
 "with previews. You can can enable public repositories, public and private"
 " repositories, or disable this option."
 msgstr ""
+"(선택 사항) **코드 미리보기 활성화**: GitHub 파일의 영구 링크를 미리보기와 함께 확장합니다. 공개 저장소, 공개 및 비공개 저장소를 활성화하거나 이 옵션을 비활성화할 수 있습니다."
 
 #: ../../source/integrate/github.rst:92
 msgid ""
 "(Optional) **Enable Webhook Event Logging**: Log webhook events when log "
 "level set to DEBUG by enabling the  option."
 msgstr ""
+"(선택 사항) **웹훅 이벤트 로깅 활성화**: 이 옵션을 활성화하여 로그 수준이 DEBUG로 설정된 경우 웹훅 이벤트를 로깅합니다."
 
 #: ../../source/integrate/github.rst:93
 msgid ""
 "(Optional) **Show Author in commit notification**: Show commit author "
 "instead of committer in GitHub push event notifications."
 msgstr ""
+"(선택 사항) **커밋 알림에 작성자 표시**: GitHub 푸시 이벤트 알림에서 커미터 대신 커밋 작성자를 표시합니다."
 
 #: ../../source/integrate/github.rst:96
 msgid "Enable"
-msgstr ""
+msgstr "활성화"
 
 #: ../../source/integrate/github.rst:98
 msgid ""
 "Notify your teams that they can `connect their GitHub accounts to "
 "Mattermost <#connect-a-github-account-to-mattermost>`__."
 msgstr ""
+"팀원들에게 `GitHub 계정을 Mattermost에 연결 <#connect-a-github-account-to-mattermost>`__ 할 수 있다는 것을 알리세요."
 
 #: ../../source/integrate/github.rst:101
 msgid "Upgrade"
-msgstr ""
+msgstr "업그레이드"
 
 #: ../../source/integrate/github.rst:103
 msgid ""
@@ -363,10 +400,13 @@ msgid ""
 "/mattermost-plugin-github/releases>`__ for the latest release, available "
 "releases, and compatibiilty considerations."
 msgstr ""
+"새 버전이 출시되면 이 통합을 업데이트하는 것을 권장합니다. "
+"일반적으로 업데이트는 원활하게 이루어지며 Mattermost의 사용자 경험을 방해하지 않습니다. "
+"최신 릴리스, 사용 가능한 릴리스 및 호환성 고려사항은 `Releases 페이지 <https://github.com/mattermost/mattermost-plugin-github/releases>`__ 를 방문하세요."
 
 #: ../../source/integrate/github.rst:106
 msgid "Use"
-msgstr ""
+msgstr "사용"
 
 #: ../../source/integrate/github.rst:108
 msgid ""
@@ -374,6 +414,8 @@ msgid ""
 " in GitHub for Mattermost, and then connect a GitHub account to "
 "Mattermost."
 msgstr ""
+"GitHub 연동 기능을 사용하려는 사용자는 Mattermost용 OAuth 앱을 GitHub에 등록한 다음 "
+"GitHub 계정을 Mattermost에 연결해야 합니다."
 
 #: ../../source/integrate/github.rst:110
 msgid ""
@@ -382,28 +424,32 @@ msgid ""
 "modifies one of your pull requests/issues (includes adding labels or "
 "reopening the issue), or assigns you to an issue on GitHub."
 msgstr ""
+"연결되면 GitHub에서 누군가가 귀하를 멘션하거나, 리뷰를 요청하거나, "
+"귀하의 풀 리퀘스트/이슈에 댓글을 달거나 수정하거나(레이블 추가 또는 이슈 재개 포함), "
+"GitHub에서 이슈에 귀하를 할당할 때 Mattermost의 GitHub 봇으로부터 직접 메시지를 받게 됩니다."
 
 #: ../../source/integrate/github.rst:113
 msgid "Register an OAuth app in GitHub for Mattermost"
-msgstr ""
+msgstr "Mattermost용 OAuth 앱을 GitHub에 등록"
 
 #: ../../source/integrate/github.rst:115
 msgid ""
 "Go to https://github.com/settings/applications/new to register an OAuth "
 "app."
 msgstr ""
+"OAuth 앱을 등록하려면 https://github.com/settings/applications/new 로 이동하세요."
 
 #: ../../source/integrate/github.rst:116
 msgid "In GitHub, set the following values:"
-msgstr ""
+msgstr "GitHub에서 다음 값을 설정하세요:"
 
 #: ../../source/integrate/github.rst:122
 msgid "Submit your changes in GitHub."
-msgstr ""
+msgstr "GitHub에서 변경사항을 제출하세요."
 
 #: ../../source/integrate/github.rst:125
 msgid "Connect a GitHub account to Mattermost"
-msgstr ""
+msgstr "GitHub 계정을 Mattermost에 연결"
 
 #: ../../source/integrate/github.rst:127
 msgid ""
@@ -411,20 +457,22 @@ msgid ""
 "Mattermost channel to link your Mattermost account with your GitHub "
 "account."
 msgstr ""
+"Mattermost 계정을 GitHub 계정과 연결하려면 Mattermost의 모든 채널에서 ``/github connect`` 슬래시 명령어를 실행하세요."
 
 #: ../../source/integrate/github.rst:129
 msgid ""
 "Once connected, run the ``/github help`` slash command to see what you "
 "can do."
 msgstr ""
+"연결되면 ``/github help`` 슬래시 명령어를 실행하여 사용 가능한 기능을 확인하세요."
 
 #: ../../source/integrate/github.rst:132
 msgid "Get started"
-msgstr ""
+msgstr "시작하기"
 
 #: ../../source/integrate/github.rst:134
 msgid "Here are some common slash commands you can get started with:"
-msgstr ""
+msgstr "시작할 수 있는 일반적인 슬래시 명령어는 다음과 같습니다:"
 
 #: ../../source/integrate/github.rst:136
 msgid ""
@@ -432,6 +480,7 @@ msgid ""
 "Mattermost channel to receive notifications for new pull requests, "
 "issues, branch creation, and more in a GitHub repository."
 msgstr ""
+"GitHub 저장소의 새로운 풀 리퀘스트, 이슈, 브랜치 생성 등에 대한 알림을 받기 위해 Mattermost 채널을 구독하려면 ``/github subscriptions add`` 슬래시 명령어를 실행하세요."
 
 #: ../../source/integrate/github.rst:138
 msgid ""
@@ -442,6 +491,9 @@ msgid ""
 "issues,pulls,issue_comments,label:\"Help Wanted\"``. The following flags "
 "are supported:"
 msgstr ""
+"예를 들어, ``mattermost/mattermost-server`` GitHub 저장소에서 **Help Wanted** 라벨이 있는 이슈, 이슈 댓글, "
+"풀 리퀘스트에 대한 알림을 게시하려면 ``/github subscriptions add mattermost/mattermost-server --features issues,pulls,issue_comments,label:\"Help Wanted\"`` 를 사용하세요. "
+"다음 플래그가 지원됩니다:"
 
 #: ../../source/integrate/github.rst:140
 msgid ""
@@ -451,6 +503,8 @@ msgid ""
 "workflow_failure, label:\"labelname\". Defaults to "
 "``pulls,issues,creates,deletes``."
 msgstr ""
+"``--features``: 이슈, 풀 리퀘스트, 풀 리퀘스트 병합, 풀 리퀘스트 생성, 푸시, 생성, 삭제, 이슈 생성, 이슈 댓글, 풀 리퀘스트 리뷰, 릴리스, 워크플로우 성공, "
+"워크플로우 실패, label:\"labelname\" 중 하나 이상의 쉼표로 구분된 목록입니다. 기본값은 ``pulls,issues,creates,deletes`` 입니다."
 
 #: ../../source/integrate/github.rst:141
 msgid ""
@@ -459,6 +513,7 @@ msgid ""
 " and only works for users whose membership is public. Organization "
 "members and collaborators are not the same."
 msgstr ""
+"``--exclude-org-member``: 전달되지 않을 조직 구성원이 트리거한 이벤트입니다. 구성된 조직으로 잠기며 멤버십이 공개된 사용자에게만 작동합니다. 조직 구성원과 협업자는 다릅니다."
 
 #: ../../source/integrate/github.rst:142
 msgid ""
@@ -467,6 +522,8 @@ msgid ""
 "Supported values are ``collapsed``, ``skip-body``, or ``default`` (which "
 "is the same as omitting the flag)."
 msgstr ""
+"``--render-style``: 알림이 지정된 스타일로 전달됩니다(예: 풀 리퀘스트의 본문이 표시되지 않음). "
+"지원되는 값은 ``collapsed``, ``skip-body`` 또는 ``default`` (플래그를 생략한 것과 동일)입니다."
 
 #: ../../source/integrate/github.rst:143
 msgid ""
@@ -474,6 +531,7 @@ msgid ""
 " getting the subscription notifications like ``mattermost/mattermost-"
 "server``. Only supported for subscriptions to an organization."
 msgstr ""
+"``--exclude``: ``mattermost/mattermost-server`` 와 같이 구독 알림을 받지 않을 저장소의 쉼표로 구분된 목록입니다. 조직 구독에서만 지원됩니다."
 
 #: ../../source/integrate/github.rst:145
 msgid ""
@@ -481,12 +539,14 @@ msgid ""
 "in GitHub, including a list of unread messages and pull requests awaiting"
 " your review."
 msgstr ""
+"읽지 않은 메시지와 검토 대기 중인 풀 리퀘스트 목록을 포함하여 GitHub에서 수행할 항목이 있는 메시지를 받으려면 ``/github todo`` 슬래시 명령어를 실행하세요."
 
 #: ../../source/integrate/github.rst:147
 msgid ""
 "Run the ``/github settings`` slash command to update your settings for "
 "notifications and daily reminders."
 msgstr ""
+"알림 및 일일 알림에 대한 설정을 업데이트하려면 ``/github settings`` 슬래시 명령어를 실행하세요."
 
 #: ../../source/integrate/github.rst:149
 msgid ""
@@ -495,6 +555,8 @@ msgid ""
 " setup process, or run one of the following subcommands to revisit a "
 "particular setup step:"
 msgstr ""
+"GitHub와 Mattermost 간의 통합을 구성하려면 ``/github setup`` 슬래시 명령어를 실행하세요. "
+"이 명령어를 실행하여 전체 설정 프로세스를 진행하거나, 특정 설정 단계를 다시 방문하려면 다음 하위 명령어 중 하나를 실행할 수 있습니다:"
 
 #: ../../source/integrate/github.rst:151
 msgid ""
@@ -502,6 +564,7 @@ msgid ""
 "establishing the necessary authorization connection between GitHub and "
 "Mattermost."
 msgstr ""
+"``/github setup oauth``: GitHub에서 OAuth2 애플리케이션을 설정하여 GitHub와 Mattermost 간의 필요한 인증 연결을 설정합니다."
 
 #: ../../source/integrate/github.rst:152
 msgid ""
@@ -509,6 +572,7 @@ msgid ""
 "allowing real-time notifications and updates from GitHub to be sent to "
 "Mattermost channels."
 msgstr ""
+"``/github setup webhook``: GitHub에서 Mattermost로 웹훅을 생성하여 GitHub의 실시간 알림과 업데이트가 Mattermost 채널로 전송되도록 합니다."
 
 #: ../../source/integrate/github.rst:153
 msgid ""
@@ -516,14 +580,15 @@ msgid ""
 "Mattermost, announcing the availability of the GitHub integration for "
 "team members to use."
 msgstr ""
+"``/github setup announce``: Mattermost의 지정된 채널에 메시지를 보내 팀원들이 사용할 수 있는 GitHub 통합의 가용성을 알립니다."
 
 #: ../../source/integrate/github.rst:156
 msgid "Frequently asked questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/integrate/github.rst:159
 msgid "How do I connect a repository instead of an organization?"
-msgstr ""
+msgstr "조직 대신 저장소를 연결하려면 어떻게 해야 하나요?"
 
 #: ../../source/integrate/github.rst:161
 msgid ""
@@ -532,10 +597,12 @@ msgid ""
 "repositories you create webhooks for. The reminder and ``/github todo`` "
 "searches the whole organization, but only show items assigned to you."
 msgstr ""
+"조직 대신 저장소에서 GitHub 웹훅을 설정하세요. 그러면 웹훅을 생성한 저장소에 대해서만 알림과 구독이 전송됩니다. "
+"알림과 ``/github todo`` 는 전체 조직을 검색하지만, 귀하에게 할당된 항목만 표시합니다."
 
 #: ../../source/integrate/github.rst:164
 msgid "How do I send notifications when a certain label is applied?"
-msgstr ""
+msgstr "특정 라벨이 적용될 때 알림을 보내려면 어떻게 해야 하나요?"
 
 #: ../../source/integrate/github.rst:166
 msgid ""
@@ -545,10 +612,12 @@ msgid ""
 "to subscribe to these notifications: ``/github subscriptions add "
 "mattermost/mattermost-plugin-github issues,label:\"Severity/Critical\"``"
 msgstr ""
+"``mattermost/mattermost-plugin-github`` 저장소의 이슈에 **Severity/Critical** 라벨이 적용될 때 Mattermost 채널로 알림을 보내려면, "
+"다음 슬래시 명령어를 실행하여 이러한 알림을 구독하세요: ``/github subscriptions add mattermost/mattermost-plugin-github issues,label:\"Severity/Critical\"``"
 
 #: ../../source/integrate/github.rst:169
 msgid "How does the integration save user data for each connected GitHub user?"
-msgstr ""
+msgstr "통합 기능은 연결된 각 GitHub 사용자의 데이터를 어떻게 저장하나요?"
 
 #: ../../source/integrate/github.rst:171
 msgid ""
@@ -556,10 +625,12 @@ msgid ""
 "generated in Mattermost. Once encrypted, the tokens are saved in the "
 "``PluginKeyValueStore`` table in your Mattermost database."
 msgstr ""
+"GitHub 사용자 토큰은 Mattermost에서 생성된 **At Rest Encryption Key** 로 AES 암호화됩니다. "
+"암호화된 후에는 토큰이 Mattermost 데이터베이스의 ``PluginKeyValueStore`` 테이블에 저장됩니다."
 
 #: ../../source/integrate/github.rst:174
 msgid "Customize"
-msgstr ""
+msgstr "사용자 정의"
 
 #: ../../source/integrate/github.rst:176
 msgid ""
@@ -571,6 +642,9 @@ msgid ""
 " information about developing, customizing, and extending Mattermost "
 "functionality."
 msgstr ""
+"이 통합 기능은 서버와 웹 앱 부분을 모두 포함합니다. Mattermost 기능을 개발, 사용자 정의 및 확장하는 방법에 대한 정보는 "
+"`Mattermost Developer Workflow <https://developers.mattermost.com/extend/plugins/developer-workflow/>`__ 와 "
+"`Mattermost Developer environment setup <https://developers.mattermost.com/extend/plugins/developer-setup/>`_ 를 방문하세요."
 
 #: ../../source/integrate/github.rst:178
 msgid ""
@@ -578,10 +652,12 @@ msgid ""
 "see the setup guide at `e2e/playwright <https://github.com/mattermost"
 "/mattermost-plugin-github/blob/master/e2e/playwright#readme>`_."
 msgstr ""
+"Playwright 테스트를 실행하기 위한 환경을 설정하려면 `e2e/playwright <https://github.com/mattermost/mattermost-plugin-github/blob/master/e2e/playwright#readme>`_ 의 "
+"설정 가이드를 참조하세요."
 
 #: ../../source/integrate/github.rst:181
 msgid "Get help"
-msgstr ""
+msgstr "도움 받기"
 
 #: ../../source/integrate/github.rst:183
 msgid ""
@@ -590,6 +666,8 @@ msgid ""
 "bug, please open a GitHub issue against the `Mattermost GitHub plugin "
 "repository <https://github.com/mattermost/mattermost-plugin-github>`_."
 msgstr ""
+"Mattermost 고객은 `Mattermost support case <https://support.mattermost.com/hc/en-us/requests/new>`_ 를 열 수 있습니다. "
+"버그를 보고하려면 `Mattermost GitHub plugin repository <https://github.com/mattermost/mattermost-plugin-github>`_ 에 GitHub 이슈를 열어주세요."
 
 #: ../../source/integrate/github.rst:185
 msgid ""
@@ -599,6 +677,8 @@ msgid ""
 "`Mattermost Community Server <https://community.mattermost.com/>`_ for "
 "assistance."
 msgstr ""
+"질문, 피드백 및 도움이 필요하시면 `Mattermost Community Server <https://community.mattermost.com/>`_ 의 "
+"`Integrations and Apps channel <https://community.mattermost.com/core/channels/integrations>`_ 에 참여하세요."
 
 #: ../../source/integrate/github.rst:187
 msgid ""
@@ -607,6 +687,8 @@ msgid ""
 "/trouble-shoot/16>`_ to access the global Mattermost Community for "
 "assistance."
 msgstr ""
+"Mattermost Team Edition 및 Free 고객은 도움을 받기 위해 Mattermost `peer-to-peer troubleshooting forum <https://forum.mattermost.com/c/trouble-shoot/16>`_ 에 "
+"방문하여 글로벌 Mattermost 커뮤니티에 접근할 수 있습니다."
 
 #~ msgid "Setup"
 #~ msgstr ""

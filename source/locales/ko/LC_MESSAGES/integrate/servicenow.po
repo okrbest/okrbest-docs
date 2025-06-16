@@ -21,25 +21,27 @@ msgstr ""
 
 #: ../../source/integrate/servicenow.rst:2
 msgid "Connect ServiceNow to Mattermost"
-msgstr ""
+msgstr "Mattermost에 ServiceNow 연결하기"
 
 #: ../../source/_static/badges/allplans-cloud-selfhosted.rst:7
 msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `모든 요금제 <https://mattermost.com/pricing/>`__ 에서 이용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/allplans-cloud-selfhosted.rst:9
 msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
 msgstr ""
+"|deployment-img| `클라우드 <https://mattermost.com/sign-up/>`__ 및 `자체 호스팅 "
+"<https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/integrate/servicenow.rst:7
 msgid ""
@@ -50,30 +52,36 @@ msgid ""
 "changes, in real-time, and automate routine tasks to decrease response "
 "times without leaving Mattermost."
 msgstr ""
+"IT 서비스 관리(ITSM)와 팀 커뮤니케이션 간의 간극을 메워 산만함을 최소화하고 컨텍스트 "
+"전환을 줄이세요. 사고 보고서, 변경 요청, 서비스 티켓을 생성하고 관리하며, "
+"ServiceNow 레코드 변경에 대한 이벤트 기반 알림 구독을 실시간으로 관리하고, "
+"Mattermost를 떠나지 않고도 일상적인 작업을 자동화하여 응답 시간을 단축하세요."
 
 #: ../../source/integrate/servicenow.rst:10
 msgid "Deploy"
-msgstr ""
+msgstr "배포"
 
 #: ../../source/integrate/servicenow.rst:12
 msgid "Setup starts in ServiceNow and finishes in Mattermost."
-msgstr ""
+msgstr "설정은 ServiceNow에서 시작하여 Mattermost에서 완료됩니다."
 
 #: ../../source/integrate/servicenow.rst:15
 msgid "Create an OAuth app in ServiceNow"
-msgstr ""
+msgstr "ServiceNow에서 OAuth 앱 생성하기"
 
 #: ../../source/integrate/servicenow.rst:17
 msgid ""
 "Go to your ServiceNow instance and then to **All > System OAuth > "
 "Application Registry**."
 msgstr ""
+"ServiceNow 인스턴스로 이동한 후 **전체 > 시스템 OAuth > 애플리케이션 레지스트리** 로 "
+"이동하세요."
 
 #: ../../source/integrate/servicenow.rst:18
 msgid ""
 "Select New in the top right corner, and then select **Create an OAuth API"
 " endpoint for external clients**."
-msgstr ""
+msgstr "오른쪽 상단의 New를 선택한 다음 **외부 클라이언트용 OAuth API 엔드포인트 생성** 을 선택하세요."
 
 #: ../../source/integrate/servicenow.rst:19
 msgid ""
@@ -83,16 +91,20 @@ msgid ""
 "with the Mattermost URL you want the ServiceNow events to post to, using "
 "lowercase characters."
 msgstr ""
+"앱 이름을 입력하고 리디렉션 URL을 ``https://<YOUR-MATTERMOST-URL>/plugins/mattermost-plugin-"
+"servicenow/api/v1/oauth2/complete`` 로 설정하세요. ``YOUR-MATTERMOST-URL`` 을 "
+"ServiceNow 이벤트를 게시하려는 Mattermost URL로 소문자를 사용하여 "
+"대체하세요."
 
 #: ../../source/integrate/servicenow.rst:23
 msgid ""
 "A client secret is generated automatically. Copy the secret and the "
 "Client ID. You'll need these values for the Mattermost configuration."
-msgstr ""
+msgstr "클라이언트 시크릿이 자동으로 생성됩니다. 시크릿과 클라이언트 ID를 복사하세요. Mattermost 구성에 이 값들이 필요합니다."
 
 #: ../../source/integrate/servicenow.rst:26
 msgid "Upload the update set in ServiceNow"
-msgstr ""
+msgstr "ServiceNow에 업데이트 세트 업로드하기"
 
 #: ../../source/integrate/servicenow.rst:28
 msgid ""
@@ -104,44 +116,50 @@ msgid ""
 "sets.html>`_. Once created, you can download the update set from "
 "Mattermost and upload it into ServiceNow."
 msgstr ""
+"구독 지원, 레코드 변경, Mattermost로 변경 알림 전송을 위해 ServiceNow 인스턴스를 변경하는 작업은 "
+"Mattermost와 ServiceNow 시스템 관리자가 `업데이트 세트 "
+"<https://docs.servicenow.com/bundle/washingtondc-application-"
+"development/page/build/system-update-sets/concept/system-update-"
+"sets.html>`_ 를 사용하여 수행합니다. 생성되면 Mattermost에서 업데이트 세트를 다운로드하여 "
+"ServiceNow에 업로드할 수 있습니다."
 
 #: ../../source/integrate/servicenow.rst:30
 msgid "In the Mattermost System Console, download the update set XML file."
-msgstr ""
+msgstr "Mattermost 시스템 콘솔에서 업데이트 세트 XML 파일을 다운로드하세요."
 
 #: ../../source/integrate/servicenow.rst:31
 msgid ""
 "In your ServiceNow instance, go to **All > System Update Sets > Retrieved"
 " Update Sets**."
-msgstr ""
+msgstr "ServiceNow 인스턴스에서 **전체 > 시스템 업데이트 세트 > 검색된 업데이트 세트** 로 이동하세요."
 
 #: ../../source/integrate/servicenow.rst:32
 msgid "Select the **Import Update Set from XML** link at the bottom of the page."
-msgstr ""
+msgstr "페이지 하단의 **XML에서 업데이트 세트 가져오기** 링크를 선택하세요."
 
 #: ../../source/integrate/servicenow.rst:33
 msgid ""
 "Select the downloaded XML update set file and upload it. You'll see an "
 "update set named **ServiceNow for Mattermost Notifications**."
-msgstr ""
+msgstr "다운로드한 XML 업데이트 세트 파일을 선택하고 업로드하세요. **ServiceNow for Mattermost Notifications** 라는 이름의 업데이트 세트가 표시됩니다."
 
 #: ../../source/integrate/servicenow.rst:34
 msgid "Select that update set, and then select **Preview Update Set**."
-msgstr ""
+msgstr "해당 업데이트 세트를 선택한 다음 **업데이트 세트 미리보기** 를 선택하세요."
 
 #: ../../source/integrate/servicenow.rst:35
 msgid "Select **Commit Update Set**."
-msgstr ""
+msgstr "**업데이트 세트 커밋** 을 선택하세요."
 
 #: ../../source/integrate/servicenow.rst:36
 msgid ""
 "Confirm the data loss notification, and select **Proceed with Commit**. "
 "Your update set is uploaded and committed to ServiceNow."
-msgstr ""
+msgstr "데이터 손실 알림을 확인하고 **커밋 진행** 을 선택하세요. 업데이트 세트가 ServiceNow에 업로드되고 커밋됩니다."
 
 #: ../../source/integrate/servicenow.rst:39
 msgid "Set up user permissions in ServiceNow"
-msgstr ""
+msgstr "ServiceNow에서 사용자 권한 설정하기"
 
 #: ../../source/integrate/servicenow.rst:41
 msgid ""
@@ -151,197 +169,206 @@ msgid ""
 "admin to add the ``x_830655_mm_std.user`` role to all users who should "
 "have the ability to add or manage subscriptions through Mattermost."
 msgstr ""
+"업데이트 세트가 업로드되면 ``x_830655_mm_std.user`` 라는 새 역할이 생성됩니다. 사용자는 "
+"Mattermost 구독을 추가하거나 관리하려면 ServiceNow에서 이 역할이 있어야 합니다. "
+"Mattermost를 통해 구독을 추가하거나 관리할 수 있는 권한이 있어야 하는 모든 사용자에게 "
+"``x_830655_mm_std.user`` 역할을 추가하려면 ServiceNow 시스템 관리자여야 합니다."
 
 #: ../../source/integrate/servicenow.rst:43
 msgid "In your ServiceNow instance, go to **All > User Administration > Users**."
-msgstr ""
+msgstr "ServiceNow 인스턴스에서 **전체 > 사용자 관리 > 사용자** 로 이동하세요."
 
 #: ../../source/integrate/servicenow.rst:44
 msgid "On the Users page, open a user's profile where you want the role added."
-msgstr ""
+msgstr "사용자 페이지에서 역할을 추가하려는 사용자의 프로필을 엽니다."
 
 #: ../../source/integrate/servicenow.rst:45
 msgid "Select the **Roles** tab in the table, and select **Edit**."
-msgstr ""
+msgstr "테이블에서 **역할** 탭을 선택하고 **편집** 을 선택하세요."
 
 #: ../../source/integrate/servicenow.rst:46
 msgid ""
 "Search for the ``x_830655_mm_std.user`` role, and add that role to the "
 "user's **Roles** list, and select **Save**. That user can now add or "
 "manage Mattermost subscriptions."
-msgstr ""
+msgstr "``x_830655_mm_std.user`` 역할을 검색하여 사용자의 **역할** 목록에 추가하고 **저장** 을 선택하세요. 이제 해당 사용자는 Mattermost 구독을 추가하거나 관리할 수 있습니다."
 
 #: ../../source/integrate/servicenow.rst:49
 msgid "Update the API secret on the change of ServiceNow Webhook Secret"
-msgstr ""
+msgstr "ServiceNow 웹훅 시크릿 변경 시 API 시크릿 업데이트"
 
 #: ../../source/integrate/servicenow.rst:51
 msgid ""
 "In Mattermost, copy the **Webhook Secret** from your Mattermost instance "
 "by going to **System Console > Plugins > ServiceNow**."
-msgstr ""
+msgstr "Mattermost에서 **시스템 콘솔 > 플러그인 > ServiceNow** 로 이동하여 Mattermost 인스턴스의 **웹훅 시크릿** 을 복사하세요."
 
 #: ../../source/integrate/servicenow.rst:52
 msgid ""
 "In your ServiceNow instance, go to **All > "
 "x_830655_mm_std_servicenow_for_mattermost_notifications_auth.list**. "
 "(**Note**: You must enter the complete name and search.)"
-msgstr ""
+msgstr "ServiceNow 인스턴스에서 **전체 > x_830655_mm_std_servicenow_for_mattermost_notifications_auth.list** 로 이동하세요. (**참고**: 전체 이름을 입력하고 검색해야 합니다.)"
 
 #: ../../source/integrate/servicenow.rst:53
 msgid ""
 "On the page, select the row containing your Mattermost Server URL. If "
 "that row doesn't exist, create it manually by selecting **New** located "
 "in the top-right corner, and adding your Mattermost Server URL."
-msgstr ""
+msgstr "페이지에서 Mattermost 서버 URL이 포함된 행을 선택하세요. 해당 행이 없는 경우 오른쪽 상단에 있는 **새로 만들기** 를 선택하고 Mattermost 서버 URL을 추가하여 수동으로 생성하세요."
 
 #: ../../source/integrate/servicenow.rst:54
 msgid ""
 "Update the **API Secret** in the ServiceNow instance with the **Webhook "
 "Secret** from Mattermost, and select **Update**."
-msgstr ""
+msgstr "Mattermost의 **웹훅 시크릿** 으로 ServiceNow 인스턴스의 **API 시크릿** 을 업데이트하고 **업데이트** 를 선택하세요."
 
 #: ../../source/integrate/servicenow.rst:57
 msgid "What changes are made to ServiceNow instance?"
-msgstr ""
+msgstr "ServiceNow 인스턴스에 어떤 변경사항이 적용되나요?"
 
 #: ../../source/integrate/servicenow.rst:59
 msgid ""
 "**GetStates scripted REST API**: Returns different states available for "
 "the records. Records supported: incident, task, change_task, and "
 "cert_follow_on_task"
-msgstr ""
+msgstr "**GetStates scripted REST API**: 레코드에 사용 가능한 다양한 상태를 반환합니다. 지원되는 레코드: incident, task, change_task, cert_follow_on_task"
 
 #: ../../source/integrate/servicenow.rst:60
 msgid "An application with the name **ServiceNow for Mattermost Notifications**."
-msgstr ""
+msgstr "**ServiceNow for Mattermost Notifications** 라는 이름의 애플리케이션."
 
 #: ../../source/integrate/servicenow.rst:62
 msgid ""
 "**ServiceNow for Mattermost Notifications** application handles the "
 "storing of subscription details and sending notifications on the "
 "subscribed events."
-msgstr ""
+msgstr "**ServiceNow for Mattermost Notifications** 애플리케이션은 구독 세부 정보 저장 및 구독된 이벤트에 대한 알림 전송을 처리합니다."
 
 #: ../../source/integrate/servicenow.rst:63
 msgid ""
 "**ServiceNow for Mattermost Notifications** ``Auth`` table to store "
 "different Mattermost server URLs with their webhook secrets."
-msgstr ""
+msgstr "**ServiceNow for Mattermost Notifications** ``Auth`` 테이블은 다양한 Mattermost 서버 URL과 웹훅 시크릿을 저장합니다."
 
 #: ../../source/integrate/servicenow.rst:64
 msgid ""
 "**ServiceNow for Mattermost** ``Subscriptions`` table to store the "
 "subscription details."
-msgstr ""
+msgstr "**ServiceNow for Mattermost** ``Subscriptions`` 테이블은 구독 세부 정보를 저장합니다."
 
 #: ../../source/integrate/servicenow.rst:65
 msgid ""
 "**Business rules** to handle different events (example: new record "
 "created, comment added on record, record state updated, etc.)"
-msgstr ""
+msgstr "다양한 이벤트를 처리하는 **비즈니스 규칙** (예: 새 레코드 생성, 레코드에 댓글 추가, 레코드 상태 업데이트 등)"
 
 #: ../../source/integrate/servicenow.rst:66
 msgid "**Script actions** to send notifications based on the subscription events."
-msgstr ""
+msgstr "구독 이벤트를 기반으로 알림을 전송하는 **스크립트 작업**."
 
 #: ../../source/integrate/servicenow.rst:67
 msgid "**Events registration** to register different record-type events."
-msgstr ""
+msgstr "다양한 레코드 유형 이벤트를 등록하는 **이벤트 등록**."
 
 #: ../../source/integrate/servicenow.rst:70
 msgid "ServiceNow tables accessible in Mattermost"
-msgstr ""
+msgstr "Mattermost에서 접근 가능한 ServiceNow 테이블"
 
 #: ../../source/integrate/servicenow.rst:72
 msgid "``incident``"
-msgstr ""
+msgstr "``incident``"
 
 #: ../../source/integrate/servicenow.rst:73
 msgid "``problem``"
-msgstr ""
+msgstr "``problem``"
 
 #: ../../source/integrate/servicenow.rst:74
 msgid "``change_request``"
-msgstr ""
+msgstr "``change_request``"
 
 #: ../../source/integrate/servicenow.rst:75
 msgid "``kb_knowledge``"
-msgstr ""
+msgstr "``kb_knowledge``"
 
 #: ../../source/integrate/servicenow.rst:76
 msgid "``task``"
-msgstr ""
+msgstr "``task``"
 
 #: ../../source/integrate/servicenow.rst:77
 msgid "``change_task``"
-msgstr ""
+msgstr "``change_task``"
 
 #: ../../source/integrate/servicenow.rst:78
 msgid "``cert_follow_on_task``"
-msgstr ""
+msgstr "``cert_follow_on_task``"
 
 #: ../../source/integrate/servicenow.rst:79
 msgid "``x_830655_mm_std_servicenow_for_mattermost_notifications_auth``"
-msgstr ""
+msgstr "``x_830655_mm_std_servicenow_for_mattermost_notifications_auth``"
 
 #: ../../source/integrate/servicenow.rst:80
 msgid "``x_830655_mm_std_servicenow_for_mattermost_subscriptions``"
-msgstr ""
+msgstr "``x_830655_mm_std_servicenow_for_mattermost_subscriptions``"
 
 #: ../../source/integrate/servicenow.rst:81
 msgid "All the tables extending these tables above"
-msgstr ""
+msgstr "위의 테이블을 확장하는 모든 테이블"
 
 #: ../../source/integrate/servicenow.rst:84
 msgid "Mattermost configuration"
-msgstr ""
+msgstr "Mattermost 구성"
 
 #: ../../source/integrate/servicenow.rst:86
 msgid "A Mattermost system admin must perform the following steps in Mattermost."
-msgstr ""
+msgstr "Mattermost 시스템 관리자는 Mattermost에서 다음 단계를 수행해야 합니다."
 
 #: ../../source/integrate/servicenow.rst:88
 msgid "Install the ServiceNow integration from the in-product App Marketplace:"
-msgstr ""
+msgstr "제품 내 App Marketplace에서 ServiceNow 통합을 설치하세요:"
 
 #: ../../source/integrate/servicenow.rst:92
 msgid ""
 "We recommend making a copy of your webhook and encryption secret, as it "
 "will only be visible to you once."
 msgstr ""
+"웹훅과 암호화 비밀키는 한 번만 표시되므로 복사본을 만드는 것을 권장합니다."
 
 #: ../../source/integrate/servicenow.rst:94
 msgid ""
 "In Mattermost, from the Product menu |product-list|, select **App "
 "Marketplace**."
 msgstr ""
+"Mattermost에서 제품 메뉴 |product-list| 에서 **App Marketplace** 를 선택하세요."
 
 #: ../../<rst_prolog>:100
 msgid ""
 "Navigate between Channels and collaborative playbooks using the product "
 "menu icon."
 msgstr ""
+"제품 메뉴 아이콘을 사용하여 채널과 협업 플레이북 간을 탐색하세요."
 
 #: ../../source/integrate/servicenow.rst:95
 msgid "Search for or scroll to ServiceNow, and select **Install**."
-msgstr ""
+msgstr "ServiceNow를 검색하거나 스크롤하여 **설치** 를 선택하세요."
 
 #: ../../source/integrate/servicenow.rst:96
 msgid "Once installed, select **Configure**. You're taken to the System Console."
-msgstr ""
+msgstr "설치가 완료되면 **구성** 을 선택하세요. 시스템 콘솔로 이동합니다."
 
 #: ../../source/integrate/servicenow.rst:97
 msgid ""
 "On the ServiceNow configuration page, enable and configure ServiceNow "
 "interoperability as follows, and then select **Save**:"
 msgstr ""
+"ServiceNow 구성 페이지에서 다음과 같이 ServiceNow 상호운용성을 활성화하고 구성한 후 **저장** 을 선택하세요:"
 
 #: ../../source/integrate/servicenow.rst:99
 msgid ""
 "**ServiceNow Server Base URL**: Enter the base URL of your ServiceNow "
 "instance."
 msgstr ""
+"**ServiceNow 서버 기본 URL**: ServiceNow 인스턴스의 기본 URL을 입력하세요."
 
 #: ../../source/integrate/servicenow.rst:100
 msgid ""
@@ -352,45 +379,47 @@ msgid ""
 "updating the secret in the ServiceNow instance and start receiving "
 "notifications again."
 msgstr ""
+"**ServiceNow 웹훅 비밀키**: ServiceNow용 웹훅 비밀키를 재생성하세요. 이 키를 재생성하면 구독 알림이 중지됩니다. ServiceNow 인스턴스에서 비밀키를 업데이트하고 "
+"알림을 다시 받기 시작하는 방법에 대한 자세한 내용은 `ServiceNow에서 OAuth 앱 생성 <#create-an-oauth-app-in-servicenow>`__ 문서를 참조하세요."
 
 #: ../../source/integrate/servicenow.rst:101
 msgid ""
 "**ServiceNow OAuth Client ID**: The clientID of your registered OAuth app"
 " in ServiceNow."
-msgstr ""
+msgstr "**ServiceNow OAuth Client ID**: ServiceNow에 등록된 OAuth 앱의 clientID입니다."
 
 #: ../../source/integrate/servicenow.rst:102
 msgid ""
 "**ServiceNow OAuth Client Secret**: The client secret of your registered "
 "OAuth app in ServiceNow."
-msgstr ""
+msgstr "**ServiceNow OAuth Client Secret**: ServiceNow에 등록된 OAuth 앱의 client secret입니다."
 
 #: ../../source/integrate/servicenow.rst:103
 msgid ""
 "**Encryption Secret**: Select **Regenerate** to generate a new encryption"
 " secret. This encryption secret is used to encrypt and decrypt the OAuth "
 "token."
-msgstr ""
+msgstr "**Encryption Secret**: **재생성** 을 선택하여 새로운 암호화 비밀키를 생성하세요. 이 암호화 비밀키는 OAuth 토큰을 암호화하고 복호화하는 데 사용됩니다."
 
 #: ../../source/integrate/servicenow.rst:104
 msgid ""
 "**Download ServiceNow Update Set**: Download the update set XML file to "
 "upload to ServiceNow."
-msgstr ""
+msgstr "**ServiceNow 업데이트 세트 다운로드**: ServiceNow에 업로드할 업데이트 세트 XML 파일을 다운로드하세요."
 
 #: ../../source/integrate/servicenow.rst:107
 msgid "Enable"
-msgstr ""
+msgstr "활성화"
 
 #: ../../source/integrate/servicenow.rst:109
 msgid ""
 "Notify your teams that they can `connect their ServiceNow accounts to "
 "Mattermost <#connect-a-servicenow-account-to-mattermost>`__."
-msgstr ""
+msgstr "팀원들에게 `ServiceNow 계정을 Mattermost에 연결 <#connect-a-servicenow-account-to-mattermost>`__ 할 수 있다고 알려주세요."
 
 #: ../../source/integrate/servicenow.rst:112
 msgid "Upgrade"
-msgstr ""
+msgstr "업그레이드"
 
 #: ../../source/integrate/servicenow.rst:114
 msgid ""
@@ -399,27 +428,28 @@ msgid ""
 "in Mattermost. Visit the `Releases page <https://github.com/mattermost"
 "/mattermost-plugin-servicenow/releases>`__ for the latest release, "
 "available releases, and compatibiilty considerations."
-msgstr ""
+msgstr "새 버전이 출시될 때마다 이 통합을 업데이트하는 것을 권장합니다. 일반적으로 업데이트는 원활하게 이루어지며 Mattermost의 사용자 경험을 방해하지 않습니다. "
+"최신 릴리스, 사용 가능한 릴리스 및 호환성 고려사항은 `릴리스 페이지 <https://github.com/mattermost/mattermost-plugin-servicenow/releases>`__ 를 방문하세요."
 
 #: ../../source/integrate/servicenow.rst:117
 msgid "Use"
-msgstr ""
+msgstr "사용"
 
 #: ../../source/integrate/servicenow.rst:119
 msgid ""
 "Users who want to use ServiceNow interconnectivity must connect a "
 "ServiceNow account to Mattermost."
-msgstr ""
+msgstr "ServiceNow 상호연결성을 사용하려는 사용자는 Mattermost에 ServiceNow 계정을 연결해야 합니다."
 
 #: ../../source/integrate/servicenow.rst:121
 msgid ""
 "Once connected, you'll receive direct messages from the ServiceNow bot in"
 " Mattermost for ServiceNow activity."
-msgstr ""
+msgstr "연결이 완료되면 ServiceNow 활동에 대한 알림을 Mattermost의 ServiceNow 봇으로부터 직접 메시지로 받게 됩니다."
 
 #: ../../source/integrate/servicenow.rst:124
 msgid "Connect a ServiceNow account to Mattermost"
-msgstr ""
+msgstr "ServiceNow 계정을 Mattermost에 연결하기"
 
 #: ../../source/integrate/servicenow.rst:126
 msgid ""
@@ -429,21 +459,23 @@ msgid ""
 "**Allow**. You can disconnect your accounts by running the ``/servicenow "
 "disconnect`` slash command. Alternatively, select the **ServiceNow** icon"
 " in the apps bar on the right to connect your ServiceNow account."
-msgstr ""
+msgstr "Mattermost에서 Mattermost 계정과 ServiceNow 계정을 연결하려면 아무 채널에서나 ``/servicenow connect`` 슬래시 명령어를 실행하세요. "
+"ServiceNow 인스턴스로 이동하여 **허용** 을 선택하세요. 계정 연결을 해제하려면 ``/servicenow disconnect`` 슬래시 명령어를 실행하세요. "
+"또는 오른쪽 앱 바에서 **ServiceNow** 아이콘을 선택하여 ServiceNow 계정을 연결할 수 있습니다."
 
 #: ../../source/integrate/servicenow.rst:128
 msgid ""
 "Once connected, run the ``/servicenow help`` slash command to see what "
 "you can do."
-msgstr ""
+msgstr "연결이 완료되면 ``/servicenow help`` 슬래시 명령어를 실행하여 사용 가능한 기능을 확인하세요."
 
 #: ../../source/integrate/servicenow.rst:131
 msgid "Customize"
-msgstr ""
+msgstr "사용자 지정"
 
 #: ../../source/integrate/servicenow.rst:133
 msgid "This integration contains both a server and web app portion."
-msgstr ""
+msgstr "이 통합은 서버와 웹 앱 부분을 모두 포함합니다."
 
 #: ../../source/integrate/servicenow.rst:135
 msgid ""
@@ -453,7 +485,9 @@ msgid ""
 "**Request Instance** in the top right corner. Once the instance is "
 "created, open the menu from the top right corner, go to **Manage Instance"
 " Password**, and log in to the developer instance in a new tab."
-msgstr ""
+msgstr "ServiceNow는 ServiceNow에서 개발을 원하는 모든 사람에게 개발자 인스턴스를 제공합니다. 개발자는 ServiceNow 개발자 계정에 로그인하고 "
+"오른쪽 상단 모서리에서 **인스턴스 요청** 을 선택하여 ServiceNow 개발자 인스턴스를 얻을 수 있습니다. 인스턴스가 생성되면 오른쪽 상단 모서리에서 "
+"메뉴를 열고 **인스턴스 비밀번호 관리** 로 이동한 다음 새 탭에서 개발자 인스턴스에 로그인하세요."
 
 #: ../../source/integrate/servicenow.rst:137
 msgid ""
@@ -461,7 +495,8 @@ msgid ""
 "servicenow/blob/master/docs/developer_docs.md#development>`_ section of "
 "the Mattermost ServiceNow Plugin GitHub repository for details on "
 "customizing this integration."
-msgstr ""
+msgstr "이 통합을 사용자 지정하는 방법에 대한 자세한 내용은 Mattermost ServiceNow 플러그인 GitHub 저장소의 "
+"`개발 <https://github.com/mattermost/mattermost-plugin-servicenow/blob/master/docs/developer_docs.md#development>`_ 섹션을 참조하세요."
 
 #: ../../source/integrate/servicenow.rst:139
 msgid ""
@@ -471,11 +506,13 @@ msgid ""
 "<https://developers.mattermost.com/extend/plugins/developer-setup/>`_ for"
 " information about developing, customizing, and extending Mattermost "
 "functionality."
-msgstr ""
+msgstr "Mattermost 기능을 개발, 사용자 지정 및 확장하는 방법에 대한 정보는 "
+"`Mattermost 개발자 워크플로우 <https://developers.mattermost.com/extend/plugins/developer-workflow/>`__ 와 "
+"`Mattermost 개발자 환경 설정 <https://developers.mattermost.com/extend/plugins/developer-setup/>`_ 을 참조하세요."
 
 #: ../../source/integrate/servicenow.rst:142
 msgid "Get help"
-msgstr ""
+msgstr "도움 받기"
 
 #: ../../source/integrate/servicenow.rst:144
 msgid ""
@@ -484,7 +521,8 @@ msgid ""
 "bug, please open a GitHub issue against the `Mattermost ServiceNow plugin"
 " repository <https://github.com/mattermost/mattermost-plugin-"
 "servicenow>`_."
-msgstr ""
+msgstr "Mattermost 고객은 `Mattermost 지원 케이스 <https://support.mattermost.com/hc/en-us/requests/new>`_ 를 열 수 있습니다. "
+"버그를 보고하려면 `Mattermost ServiceNow 플러그인 저장소 <https://github.com/mattermost/mattermost-plugin-servicenow>`_ 에 GitHub 이슈를 등록하세요."
 
 #: ../../source/integrate/servicenow.rst:146
 msgid ""
@@ -493,7 +531,8 @@ msgid ""
 "<https://community.mattermost.com/core/channels/integrations>`_ on the "
 "`Mattermost Community Server <https://community.mattermost.com/>`_ for "
 "assistance."
-msgstr ""
+msgstr "질문, 피드백 및 도움이 필요하시면 `Mattermost 커뮤니티 서버 <https://community.mattermost.com/>`_ 의 공개 "
+"`통합 및 앱 채널 <https://community.mattermost.com/core/channels/integrations>`_ 에 참여하세요."
 
 #: ../../source/integrate/servicenow.rst:148
 msgid ""
@@ -501,7 +540,8 @@ msgid ""
 "`peer-to-peer troubleshooting forum <https://forum.mattermost.com/c"
 "/trouble-shoot/16>`_ to access the global Mattermost Community for "
 "assistance."
-msgstr ""
+msgstr "Mattermost Team Edition 및 무료 고객은 글로벌 Mattermost 커뮤니티의 도움을 받기 위해 Mattermost "
+"`피어 투 피어 문제 해결 포럼 <https://forum.mattermost.com/c/trouble-shoot/16>`_ 을 방문할 수 있습니다."
 
 #: ../../source/integrate/servicenow.rst:152
 msgid ""
@@ -509,7 +549,8 @@ msgid ""
 "ServiceNow <https://mattermost.com/video/streamline-incident-response-"
 "with-mattermost-and-servicenow/>`_ to learn how to streamline incident "
 "response."
-msgstr ""
+msgstr "사고 대응을 간소화하는 방법을 알아보려면 `Mattermost와 ServiceNow를 사용한 사고 대응 주문형 웨비나 "
+"<https://mattermost.com/video/streamline-incident-response-with-mattermost-and-servicenow/>`_ 를 시청하세요."
 
 #~ msgid "Setup"
 #~ msgstr ""

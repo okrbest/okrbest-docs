@@ -21,27 +21,27 @@ msgstr ""
 
 #: ../../source/manage/cloud-byok.rst:2
 msgid "Cloud Dedicated Bring Your Own Key"
-msgstr ""
+msgstr "클라우드 전용 Bring Your Own Key"
 
 #: ../../source/_static/badges/ent-cloud-dedicated.rst:7
 msgid ""
 "|plans-img| Available only on `Enterprise <https://mattermost.com"
 "/contact-sales/>`__ plans"
-msgstr ""
+msgstr "|plans-img| `Enterprise <https://mattermost.com/contact-sales/>`__ 플랜에서만 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/ent-cloud-dedicated.rst:9
 msgid ""
 "|deployment-img| Available only for `Cloud Dedicated "
 "<https://mattermost.com/sign-up/>`__ deployments"
-msgstr ""
+msgstr "|deployment-img| `Cloud Dedicated <https://mattermost.com/sign-up/>`__ 배포에서만 사용 가능"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/manage/cloud-byok.rst:7
 msgid ""
@@ -49,6 +49,8 @@ msgid ""
 "autonomy over their encryption key life cycle. BYOK supports encryption "
 "at rest with custom KMS keys that the enterprise provides and maintains."
 msgstr ""
+"Bring Your Own Key(BYOK)는 Enterprise Cloud 고객에게 암호화 키 수명 주기에 대한 자율성을 제공합니다. "
+"BYOK는 기업이 제공하고 관리하는 사용자 정의 KMS 키를 사용하여 저장 데이터 암호화를 지원합니다."
 
 #: ../../source/manage/cloud-byok.rst:9
 msgid ""
@@ -56,58 +58,60 @@ msgid ""
 "which offers enhanced data security and compliance by ensuring that "
 "enterprises have full control over their data encryption processes."
 msgstr ""
+"BYOK는 Mattermost Cloud Enterprise Dedicated 구독이 필요하며, 이는 기업이 데이터 암호화 프로세스를 "
+"완전히 제어할 수 있도록 하여 향상된 데이터 보안 및 규정 준수를 제공합니다."
 
 #: ../../source/manage/cloud-byok.rst:11
 msgid "In Mattermost Cloud Enterprise Dedicated, you can use KMS keys in 2 ways:"
-msgstr ""
+msgstr "Mattermost Cloud Enterprise Dedicated에서는 KMS 키를 2가지 방식으로 사용할 수 있습니다:"
 
 #: ../../source/manage/cloud-byok.rst:13
 msgid "One KMS key for all services; or,"
-msgstr ""
+msgstr "모든 서비스에 하나의 KMS 키 사용; 또는,"
 
 #: ../../source/manage/cloud-byok.rst:18
 msgid "Per-service KMS keys (EBS, RDS, S3)"
-msgstr ""
+msgstr "서비스별 KMS 키 (EBS, RDS, S3)"
 
 #: ../../source/manage/cloud-byok.rst:15
 msgid "Keys do not need to be unique to each service."
-msgstr ""
+msgstr "키는 각 서비스마다 고유할 필요가 없습니다."
 
 #: ../../source/manage/cloud-byok.rst:16
 msgid "All services must be encrypted at rest."
-msgstr ""
+msgstr "모든 서비스는 저장 시 암호화되어야 합니다."
 
 #: ../../source/manage/cloud-byok.rst:17
 msgid "Selective enablement of this feature can be supported."
-msgstr ""
+msgstr "이 기능의 선택적 활성화를 지원할 수 있습니다."
 
 #: ../../source/manage/cloud-byok.rst:18
 msgid ""
 "In cases where a global database is needed, we recommend providing 2 KMS "
 "keys (1 per region)."
-msgstr ""
+msgstr "전역 데이터베이스가 필요한 경우 2개의 KMS 키(리전당 1개)를 제공하는 것을 권장합니다."
 
 #: ../../source/manage/cloud-byok.rst:21
 msgid "Configure BYOK"
-msgstr ""
+msgstr "BYOK 구성"
 
 #: ../../source/manage/cloud-byok.rst:23
 msgid ""
 "Enterprise customer provides their AWS KMS ARN to the Mattermost "
 "Infrastructure SRE team."
-msgstr ""
+msgstr "Enterprise 고객은 AWS KMS ARN을 Mattermost 인프라 SRE 팀에 제공합니다."
 
 #: ../../source/manage/cloud-byok.rst:24
 msgid ""
 "Enterprise customer adds the following blocks to their KMS Policy for the"
 " AWS KMS ARN provided:"
-msgstr ""
+msgstr "Enterprise 고객은 제공된 AWS KMS ARN에 대해 KMS 정책에 다음 블록을 추가합니다:"
 
 #: ../../source/manage/cloud-byok.rst:59
 msgid ""
 "The Mattermost Infrastructure SRE team updates the kops cluster and S3, "
 "RDS resources after the KMS policy is updated on the customer's end."
-msgstr ""
+msgstr "Mattermost 인프라 SRE 팀은 고객 측에서 KMS 정책이 업데이트된 후 kops 클러스터와 S3, RDS 리소스를 업데이트합니다."
 
 #: ../../source/manage/cloud-byok.rst:61
 msgid ""
@@ -116,36 +120,38 @@ msgid ""
 "on behalf of the customer. This path offers less control to customers but"
 " simplifies the setup process."
 msgstr ""
+"또는 Enterprise 고객은 Mattermost가 고객을 대신하여 관리하는 외부 키(non-KMS)를 Mattermost 인프라 SRE 팀에 "
+"제공할 수 있습니다. 이 경로는 고객에게 더 적은 제어권을 제공하지만 설정 프로세스를 단순화합니다."
 
 #: ../../source/manage/cloud-byok.rst:65
 msgid "Requirements"
-msgstr ""
+msgstr "요구사항"
 
 #: ../../source/manage/cloud-byok.rst:67
 msgid ""
 "Customers must own their AWS Account. (In the alternative path mentioned "
 "above this is delegated to Mattermost.)"
-msgstr ""
+msgstr "고객은 AWS 계정을 소유해야 합니다. (위에서 언급한 대체 경로에서는 이 권한이 Mattermost에 위임됩니다.)"
 
 #: ../../source/manage/cloud-byok.rst:68
 msgid "Customers oversee the maintenance life cycle of their custom KMS key."
-msgstr ""
+msgstr "고객은 자신의 맞춤형 KMS 키의 유지 관리 수명 주기를 관리합니다."
 
 #: ../../source/manage/cloud-byok.rst:69
 msgid ""
 "A valid AWS KMS ARN for encrypting storage and databases should be "
 "provided to the Infrastructure SRE team."
-msgstr ""
+msgstr "저장소 및 데이터베이스 암호화를 위한 유효한 AWS KMS ARN을 인프라 SRE 팀에 제공해야 합니다."
 
 #: ../../source/manage/cloud-byok.rst:70
 msgid ""
 "The customer should incorporate the provided policy blocks from the "
 "Infrastructure SRE team into their KMS key policy."
-msgstr ""
+msgstr "고객은 인프라 SRE 팀에서 제공한 정책 블록을 KMS 키 정책에 통합해야 합니다."
 
 #: ../../source/manage/cloud-byok.rst:73
 msgid "Considerations"
-msgstr ""
+msgstr "고려사항"
 
 #: ../../source/manage/cloud-byok.rst:75
 msgid ""
@@ -153,16 +159,18 @@ msgid ""
 " Aurora's encryption `limitations. <https://repost.aws/knowledge-center"
 "/update-encryption-key-rds>`_"
 msgstr ""
+"데이터베이스의 AWS KMS 키를 변경하려면 AWS Aurora의 암호화 `제한 사항 <https://repost.aws/knowledge-center"
+"/update-encryption-key-rds>`_ 으로 인해 다운타임이 필요합니다."
 
 #: ../../source/manage/cloud-byok.rst:76
 msgid ""
 "Proper communication is essential for setting expectations and scheduling"
 " changes."
-msgstr ""
+msgstr "적절한 의사소통은 기대치 설정과 변경 일정 조정에 필수적입니다."
 
 #: ../../source/manage/cloud-byok.rst:79
 msgid "Conclusion"
-msgstr ""
+msgstr "결론"
 
 #: ../../source/manage/cloud-byok.rst:81
 msgid ""
@@ -170,10 +178,11 @@ msgid ""
 "working in highly-regulated industries, using Mattermost Cloud Dedicated "
 "with BYOK ensures full data control."
 msgstr ""
+"규정 준수 요구사항이 있는 대기업이거나 규제가 엄격한 산업에서 일하는 경우, BYOK가 포함된 Mattermost Cloud Dedicated를 "
+"사용하면 데이터를 완전히 제어할 수 있습니다."
 
 #: ../../source/manage/cloud-byok.rst:83
 msgid ""
 "For any further assistance or queries, talk to a `Mattermost Expert "
 "<https://mattermost.com/contact-sales/>`_"
-msgstr ""
-
+msgstr "추가 도움이나 문의사항이 있으면 `Mattermost 전문가 <https://mattermost.com/contact-sales/>`_ 와 상담하세요."

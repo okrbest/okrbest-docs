@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mattermost \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 15:09+0900\n"
+"POT-Creation-Date: 2025-05-26 23:00+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ko\n"
@@ -21,27 +21,29 @@ msgstr ""
 
 #: ../../source/configure/compliance-configuration-settings.rst:2
 msgid "Compliance configuration settings"
-msgstr ""
+msgstr "규정 준수 구성 설정"
 
 #: ../../source/_static/badges/ent-cloud-selfhosted.rst:7
 msgid ""
 "|plans-img| Available on `Enterprise plans "
 "<https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `Enterprise 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/ent-cloud-selfhosted.rst:9
 msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
 msgstr ""
+"|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ 및 `self-"
+"hosted <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/configure/compliance-configuration-settings.rst:7
 msgid ""
@@ -49,28 +51,30 @@ msgid ""
 "System Console by selecting the **Product** |product-list| menu, "
 "selecting **System Console**, and then selecting **Compliance**:"
 msgstr ""
+"**Product** |product-list| 메뉴를 선택하고 **System Console** 을 선택한 다음 "
+"**Compliance** 를 선택하여 System Console에서 다음 규정 준수 구성 옵션을 검토하고 관리하세요:"
 
 #: ../../<rst_prolog>:100
 msgid ""
 "Navigate between Channels and collaborative playbooks using the product "
 "menu icon."
-msgstr ""
+msgstr "제품 메뉴 아이콘을 사용하여 채널과 협업 플레이북 간을 탐색하세요."
 
 #: ../../source/configure/compliance-configuration-settings.rst:9
 msgid "`Data Retention Policies <#data-retention-policies>`__"
-msgstr ""
+msgstr "`데이터 보존 정책 <#data-retention-policies>`__"
 
 #: ../../source/configure/compliance-configuration-settings.rst:10
 msgid "`Compliance Export <#compliance-export>`__"
-msgstr ""
+msgstr "`규정 준수 내보내기 <#compliance-export>`__"
 
 #: ../../source/configure/compliance-configuration-settings.rst:11
 msgid "`Compliance Monitoring <#compliance-monitoring>`__"
-msgstr ""
+msgstr "`규정 준수 모니터링 <#compliance-monitoring>`__"
 
 #: ../../source/configure/compliance-configuration-settings.rst:12
 msgid "`Custom Terms of Service <#custom-terms-of-service>`__"
-msgstr ""
+msgstr "`사용자 정의 서비스 약관 <#custom-terms-of-service>`__"
 
 #: ../../source/configure/compliance-configuration-settings.rst:16
 msgid ""
@@ -81,6 +85,10 @@ msgid ""
 " example, the ``MessageRetentionDays`` value is under "
 "``DataRetentionSettings``."
 msgstr ""
+"자체 호스팅 Mattermost 배포를 관리하는 시스템 관리자는 다음 표에 설명된 대로 ``config.json`` 파일을 편집할 "
+"수 있습니다. 아래의 각 구성 값에는 JSON 인식 도구를 사용하여 ``config.json`` 파일에서 프로그래밍 방식으로 값에 "
+"액세스하기 위한 JSON 경로가 포함되어 있습니다. 예를 들어, ``MessageRetentionDays`` 값은 "
+"``DataRetentionSettings`` 아래에 있습니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:18
 msgid ""
@@ -88,6 +96,9 @@ msgid ""
 "enter: ``cat config/config.json | jq "
 "'.DataRetentionSettings.MessageRetentionDays'``"
 msgstr ""
+"`jq <https://stedolan.github.io/jq/>`__ 와 같은 도구를 사용하는 경우, ``cat "
+"config/config.json | jq '.DataRetentionSettings.MessageRetentionDays'`` 를"
+" 입력하세요."
 
 #: ../../source/configure/compliance-configuration-settings.rst:19
 msgid ""
@@ -95,38 +106,40 @@ msgid ""
 "such as ``DataRetentionSettings``, then within that object, find the key "
 "``MessageRetentionDays``."
 msgstr ""
+"``config.json`` 파일을 수동으로 작업할 때는 ``DataRetentionSettings`` 와 같은 객체를 찾은 후,그"
+" 객체 내에서 ``MessageRetentionDays`` 키를 찾으세요."
 
 #: ../../source/configure/compliance-configuration-settings.rst:24
 msgid "Data retention policies"
-msgstr ""
+msgstr "데이터 보존 정책"
 
 #: ../../source/configure/compliance-configuration-settings.rst:29
 msgid ""
 "Changes to properties in this section require a server restart before "
 "taking effect."
-msgstr ""
+msgstr "이 섹션의 속성을 변경한 경우, 적용되기 전에 서버를 재시작해야 합니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:33
 msgid ""
 "Once a message or a file is deleted, the action is irreversible. Please "
 "be careful when setting up a custom data retention policy."
-msgstr ""
+msgstr "메시지나 파일이 삭제되면 해당 작업은 되돌릴 수 없습니다.사용자 지정 데이터 보존 정책을 설정할 때 주의하세요."
 
 #: ../../source/configure/compliance-configuration-settings.rst:34
 msgid ""
 "From Mattermost v9.5, data retention removes Elasticsearch indexes based "
 "on the day of the retention cut-off time."
-msgstr ""
+msgstr "Mattermost v9.5부터 데이터 보존 정책은 보존 만료일을 기준으로 Elasticsearch 인덱스를 제거합니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:36
 msgid ""
 "Access the following configuration settings in the System Console by "
 "going to **Compliance > Data Retention Policies**."
-msgstr ""
+msgstr "**Compliance > Data Retention Policies** 로 이동하여 시스템 콘솔에서 다음 구성 설정에 접근하세요."
 
 #: ../../source/configure/compliance-configuration-settings.rst:46
 msgid "Global retention policy for messages"
-msgstr ""
+msgstr "메시지에 대한 전역 보존 정책"
 
 #: ../../source/configure/compliance-configuration-settings.rst:48
 msgid ""
@@ -136,6 +149,10 @@ msgid ""
 "settings:global retention policy for messages>` configuration setting to "
 "be set to ``true``."
 msgstr ""
+"모든 팀과 채널에서 Mattermost가 메시지를 얼마나 오래 보관할지 설정합니다. 이 설정은 사용자 지정 보존 정책에는 적용되지 "
+"않습니다. :ref:`global retention policy for messages <configure/compliance-"
+"configuration-settings:global retention policy for messages>` 구성 설정이 "
+"``true`` 로 설정되어 있어야 합니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:50
 msgid ""
@@ -144,12 +161,17 @@ msgid ""
 " in Mattermost. Messages older than the duration you set will be deleted "
 "nightly. The minimum message retention time is one hour."
 msgstr ""
+"기본적으로 메시지는 영구적으로 보관됩니다.**시간(Hours)**, **일(Days)** 또는 **년(Years)** 을 선택하면,"
+" 메시지가 Mattermost에 보관되는 시간(시간, 일, 년)을 설정할 수 있습니다. 설정한 기간보다 오래된 메시지는 매일 밤 "
+"삭제됩니다. 메시지 보존 기간의 최소값은 1시간입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:53
 msgid ""
 "This feature's ``config.json`` setting is ``\"MessageRetentionHours\": "
 "1`` or ``\"MessageRetentionDays\"`` with numerical input."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 숫자 입력이 있는 ``\"MessageRetentionHours\": 1`` 또는 "
+"``\"MessageRetentionDays\"`` 입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:58
 msgid ""
@@ -158,10 +180,13 @@ msgid ""
 "``config.json`` file.  Conversely, when a ``MessageRetentionDays`` value "
 "is configured, the ``MessageRetentionHours`` value must be ``0``."
 msgstr ""
+"Mattermost v9.5부터 ``MessageRetentionHours`` 값이 구성되면 ``config.json`` 파일에서 "
+"``MessageRetentionDays`` 값은 0이어야 합니다. 반대로 ``MessageRetentionDays`` 값이 "
+"구성되면 ``MessageRetentionHours`` 값은 ``0`` 이어야 합니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:68
 msgid "Global retention policy for files"
-msgstr ""
+msgstr "파일에 대한 전역 보존 정책"
 
 #: ../../source/configure/compliance-configuration-settings.rst:70
 msgid ""
@@ -171,6 +196,10 @@ msgid ""
 "settings:global retention policy for files>` configuration setting to be "
 "set to ``true``."
 msgstr ""
+"모든 팀과 채널에서 Mattermost가 파일을 얼마나 오래 보관할지 설정합니다. 이 설정은 사용자 지정 보존 정책에는 적용되지 "
+"않습니다. :ref:`global retention policy for files <configure/compliance-"
+"configuration-settings:global retention policy for files>` 구성 설정이 "
+"``true`` 로 설정되어 있어야 합니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:72
 msgid ""
@@ -179,12 +208,18 @@ msgid ""
 "Mattermost. Files older than the duration you set will be deleted "
 "nightly. The minimum file retention time is one hour."
 msgstr ""
+"기본적으로 파일은 영구적으로 보관됩니다. **시간(Hours)**, **일(Days)** 또는 **년(Years)** 을 선택하면,"
+" 파일이 Mattermost에 보관되는 시간(시간, 일, 년)을 설정할 수 있습니다. 설정한 기간보다 오래된 파일은 매일 밤 "
+"삭제됩니다. 파일 보존 기간의 최소값은 1시간입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:75
+#, fuzzy
 msgid ""
 "This feature's ``config.json`` setting is ``\"FileRetentionHours\": ``1``"
 " or ``\"FileRetentionDays\"`` with numerical input."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 숫자 입력이 있는 ``\"FileRetentionHours\": 1`` 또는 "
+"``\"FileRetentionDays\"`` 입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:80
 msgid ""
@@ -193,10 +228,13 @@ msgid ""
 "Conversely, when a ``FileRetentionDays`` value is configured, the "
 "``FileRetentionHours`` value must be ``0``."
 msgstr ""
+"Mattermost v9.5부터 ``FileRetentionHours`` 값이 구성되면 ``config.json`` 파일에서 "
+"``FileRetentionDays`` 값은 0이어야 합니다. 반대로 ``FileRetentionDays`` 값이 구성되면 "
+"``FileRetentionHours`` 값은 ``0`` 이어야 합니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:90
 msgid "Custom retention policy"
-msgstr ""
+msgstr "사용자 지정 보존 정책"
 
 #: ../../source/configure/compliance-configuration-settings.rst:92
 msgid ""
@@ -205,10 +243,12 @@ msgid ""
 "setting a duration value in days or years, and specifying the teams and "
 "channels that will follow this policy."
 msgstr ""
+"사용자 지정 보존 정책의 이름을 지정하고, 일 또는 년 단위로 기간 값을 설정하며, 이 정책을 따를 팀과 채널을 지정하여 "
+"Mattermost가 특정 팀과 채널에서 메시지와 파일을 얼마나 오래 보관할지 설정합니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:102
 msgid "Data deletion time"
-msgstr ""
+msgstr "데이터 삭제 시간"
 
 #: ../../source/configure/compliance-configuration-settings.rst:104
 msgid ""
@@ -216,42 +256,46 @@ msgid ""
 "time when fewer people are using your system. Must be a 24-hour time "
 "stamp in the form ``HH:MM``."
 msgstr ""
+"일일 예약된 데이터 보존 작업의 시작 시간을 설정합니다. 시스템 사용자가 적은 시간을 선택하세요. ``HH:MM`` 형식의 24시간"
+" 타임스탬프여야 합니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:106
 #: ../../source/configure/compliance-configuration-settings.rst:159
 msgid "This setting is based on the local time of the server."
-msgstr ""
+msgstr "이 설정은 서버의 현지 시간을 기준으로 합니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:109
 msgid ""
 "This feature's ``config.json`` setting is ``\"DeletionJobStartTime\": "
 "\"02:00\"`` with 24-hour timestamp input in the form ``\"HH:MM\"``."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 ``\"HH:MM\"`` 형식의 24시간 타임스탬프 입력이 있는 "
+"``\"DeletionJobStartTime\": \"02:00\"`` 입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:113
 msgid "Run deletion job now"
-msgstr ""
+msgstr "지금 삭제 작업 실행"
 
 #: ../../source/configure/compliance-configuration-settings.rst:115
 msgid ""
 "Start a Data Retention deletion job immediately. You can monitor the "
 "status of the job in the data deletion job table within the Policy Log "
 "section."
-msgstr ""
+msgstr "데이터 보존 삭제 작업을 즉시 시작합니다. 정책 로그 섹션 내의 데이터 삭제 작업 테이블에서 작업 상태를 모니터링할 수 있습니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:120
 msgid "Compliance export"
-msgstr ""
+msgstr "규정 준수 내보내기"
 
 #: ../../source/configure/compliance-configuration-settings.rst:125
 msgid ""
 "Access the following configuration settings in the System Console by "
 "going to **Compliance > Compliance Export**."
-msgstr ""
+msgstr "**Compliance > Compliance Export** 로 이동하여 시스템 콘솔에서 다음 구성 설정에 접근합니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:137
 msgid "Enable compliance export"
-msgstr ""
+msgstr "규정 준수 내보내기 활성화"
 
 #: ../../source/configure/compliance-configuration-settings.rst:139
 msgid ""
@@ -260,20 +304,25 @@ msgid ""
 "scheduled to run once per day. See the :doc:`documentation to learn more "
 "</comply/compliance-export>`."
 msgstr ""
+"**True**: Mattermost는 지난 24시간 동안 게시된 모든 메시지가 포함된 규정 준수 내보내기 파일을 생성합니다. "
+"내보내기 작업은 하루에 한 번 실행되도록 예약됩니다. :doc:`문서를 참조하여 자세히 알아보세요 </comply"
+"/compliance-export>`."
 
 #: ../../source/configure/compliance-configuration-settings.rst:141
 msgid "**False**: Mattermost doesn't generate a compliance export file."
-msgstr ""
+msgstr "**False**: Mattermost는 규정 준수 내보내기 파일을 생성하지 않습니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:144
 msgid ""
 "This feature's ``config.json`` setting is ``\"EnableExport\": false`` "
 "with options ``true`` and ``false``."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 ``true`` 와 ``false`` 옵션이 있는 ``\"EnableExport\":"
+" false`` 입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:155
 msgid "Compliance export time"
-msgstr ""
+msgstr "규정 준수 내보내기 시간"
 
 #: ../../source/configure/compliance-configuration-settings.rst:157
 msgid ""
@@ -281,94 +330,102 @@ msgid ""
 " time when fewer people are using your system. Must be a 24-hour time "
 "stamp in the form ``HH:MM``."
 msgstr ""
+"일일 예약된 규정 준수 내보내기 작업의 시작 시간을 설정합니다. 시스템 사용자가 적은 시간을 선택하세요. ``HH:MM`` 형식의 "
+"24시간 타임스탬프여야 합니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:162
 msgid ""
 "This feature's ``config.json`` setting is ``\"DailyRunTime\": 01:00`` "
 "with 24-hour timestamp input in the form ``\"HH:MM\"``."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 ``\"HH:MM\"`` 형식의 24시간 타임스탬프 입력이 있는 "
+"``\"DailyRunTime\": 01:00`` 입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:173
 msgid "Export file format"
-msgstr ""
+msgstr "내보내기 파일 형식"
 
 #: ../../source/configure/compliance-configuration-settings.rst:175
 msgid ""
 "File format of the compliance export. Corresponds to the system that you "
 "want to import the data into."
-msgstr ""
+msgstr "규정 준수 내보내기의 파일 형식입니다. 데이터를 가져올 시스템에 해당합니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:177
 msgid "Currently supported formats are CSV, Actiance XML, and Global Relay EML."
-msgstr ""
+msgstr "현재 지원되는 형식은 CSV, Actiance XML 및 Global Relay EML입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:179
 msgid "If Global Relay is chosen, the following options will be presented:"
-msgstr ""
+msgstr "Global Relay를 선택하면 다음 옵션이 표시됩니다:"
 
 #: ../../source/configure/compliance-configuration-settings.rst:189
 msgid "Global Relay customer account"
-msgstr ""
+msgstr "Global Relay 고객 계정"
 
 #: ../../source/configure/compliance-configuration-settings.rst:191
 msgid ""
 "Type of Global Relay customer account your organization has. Can be one "
 "of: ``A9/Type 9``, ``A10/Type 10``, or ``Custom``."
 msgstr ""
+"조직이 보유한 Global Relay 고객 계정 유형입니다. ``A9/Type 9``, ``A10/Type 10`` 또는 "
+"``Custom`` 중 하나일 수 있습니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:194
 msgid ""
 "This feature's ``config.json`` setting is ``\"CustomerType\": \"A9\"`` "
 "with options ``\"A9``, ``\"A10\"``, and ``CUSTOM``."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 ``\"A9``, ``\"A10``, ``CUSTOM`` 옵션이 있는 "
+"``\"CustomerType\": \"A9\"`` 입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:205
 msgid "Global Relay SMTP username"
-msgstr ""
+msgstr "Global Relay SMTP 사용자 이름"
 
 #: ../../source/configure/compliance-configuration-settings.rst:207
 msgid "The username for authenticating to the Global Relay SMTP server."
-msgstr ""
+msgstr "Global Relay SMTP 서버 인증에 사용되는 사용자 이름입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:210
 msgid ""
 "This feature's ``config.json`` setting is ``\"SmtpUsername\": \"\"`` with"
 " string input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 문자열 입력이 있는 ``\"SmtpUsername\": \"\"`` 입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:221
 msgid "Global Relay SMTP password"
-msgstr ""
+msgstr "Global Relay SMTP 비밀번호"
 
 #: ../../source/configure/compliance-configuration-settings.rst:223
 msgid "The password associated with the Global Relay SMTP username."
-msgstr ""
+msgstr "Global Relay SMTP 사용자 이름과 연결된 비밀번호입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:226
 msgid ""
 "This feature's ``config.json`` setting is ``\"SmtpPassword\": \"\"`` with"
 " string input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 문자열 입력이 있는 ``\"SmtpPassword\": \"\"`` 입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:237
 msgid "Global Relay email address"
-msgstr ""
+msgstr "Global Relay 이메일 주소"
 
 #: ../../source/configure/compliance-configuration-settings.rst:239
 msgid ""
 "The email address your Global Relay server monitors for incoming "
 "compliance exports."
-msgstr ""
+msgstr "Global Relay 서버가 들어오는 규정 준수 내보내기를 모니터링하는 이메일 주소입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:242
 msgid ""
 "This feature's ``config.json`` setting is ``\"EmailAddress\": \"\"`` with"
 " string input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 문자열 입력이 있는 ``\"EmailAddress\": \"\"`` 입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:253
 msgid "SMTP server name"
-msgstr ""
+msgstr "SMTP 서버 이름"
 
 #: ../../source/configure/compliance-configuration-settings.rst:255
 msgid ""
@@ -376,6 +433,8 @@ msgid ""
 "when a `custom customer account type <#global-relay-customer-account>`__ "
 "is configured."
 msgstr ""
+"`사용자 지정 고객 계정 유형 <#global-relay-customer-account>`__ 이 구성되었을 때 Global "
+"Relay EML 파일을 수신할 SMTP 서버 이름 URL입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:258
 msgid ""
@@ -383,10 +442,13 @@ msgid ""
 "``\".MessageExportSettings.GlobalRelaySettings.CustomSMTPServerName\": "
 "\"\"`` with string input."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 문자열 입력이 있는 "
+"``\".MessageExportSettings.GlobalRelaySettings.CustomSMTPServerName\": "
+"\"\"`` 입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:269
 msgid "SMTP server port"
-msgstr ""
+msgstr "SMTP 서버 포트"
 
 #: ../../source/configure/compliance-configuration-settings.rst:271
 msgid ""
@@ -394,6 +456,8 @@ msgid ""
 "`custom customer account type <#global-relay-customer-account>`__ is "
 "configured. Default is 25."
 msgstr ""
+"`사용자 지정 고객 계정 유형 <#global-relay-customer-account>`__ 이 구성되었을 때 Global "
+"Relay EML 파일을 수신할 SMTP 서버 포트입니다. 기본값은 25입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:274
 msgid ""
@@ -401,84 +465,91 @@ msgid ""
 "``\".MessageExportSettings.GlobalRelaySettings.CustomSMTPPort\": 25`` "
 "with string input."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 문자열 입력이 있는 "
+"``\".MessageExportSettings.GlobalRelaySettings.CustomSMTPPort\": 25`` "
+"입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:278
 msgid "Run compliance export job now"
-msgstr ""
+msgstr "지금 규정 준수 내보내기 작업 실행"
 
 #: ../../source/configure/compliance-configuration-settings.rst:280
 msgid ""
 "This button initiates a compliance export job immediately. You can "
 "monitor the status of the job in the compliance export job table."
-msgstr ""
+msgstr "이 버튼은 규정 준수 내보내기 작업을 즉시 시작합니다. 규정 준수 내보내기 작업 테이블에서 작업 상태를 모니터링할 수 있습니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:285
 msgid "Compliance monitoring"
-msgstr ""
+msgstr "규정 준수 모니터링"
 
 #: ../../source/configure/compliance-configuration-settings.rst:290
 msgid "Settings used to enable and configure Mattermost compliance reports."
-msgstr ""
+msgstr "Mattermost 규정 준수 보고서를 활성화하고 구성하는 데 사용되는 설정입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:292
 msgid ""
 "Access the following configuration settings in the System Console by "
 "going to **Compliance > Compliance Monitoring**."
-msgstr ""
+msgstr "**Compliance > Compliance Monitoring** 으로 이동하여 시스템 콘솔에서 다음 구성 설정에 접근하세요."
 
 #: ../../source/configure/compliance-configuration-settings.rst:304
 msgid "Enable compliance reporting"
-msgstr ""
+msgstr "규정 준수 보고 활성화"
 
 #: ../../source/configure/compliance-configuration-settings.rst:306
 msgid "**True**: Compliance reporting is enabled in Mattermost."
-msgstr ""
+msgstr "**True**: Mattermost에서 규정 준수 보고가 활성화됩니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:308
 msgid "**False**: Compliance reporting is disabled."
-msgstr ""
+msgstr "**False**: 규정 준수 보고가 비활성화됩니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:311
 msgid ""
 "This feature's ``config.json`` setting is ``\"Enable\": false`` with "
 "options ``true`` and ``false``."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 ``true`` 와 ``false`` 옵션이 있는 ``\"Enable\": "
+"false`` 입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:322
 msgid "Compliance report directory"
-msgstr ""
+msgstr "규정 준수 보고 디렉토리"
 
 #: ../../source/configure/compliance-configuration-settings.rst:324
 msgid "Sets the directory where compliance reports are written."
-msgstr ""
+msgstr "규정 준수 보고서가 작성되는 디렉토리를 설정합니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:327
 msgid ""
 "This feature's ``config.json`` setting is ``\"Directory\": \"./data/\"`` "
 "with string input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 문자열 입력이 있는 ``\"Directory\": \"./data/\"`` 입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:340
 msgid "Enable daily report"
-msgstr ""
+msgstr "일일 보고서 활성화"
 
 #: ../../source/configure/compliance-configuration-settings.rst:342
 msgid "**True**: Mattermost generates a daily compliance report."
-msgstr ""
+msgstr "**True**: Mattermost가 일일 규정 준수 보고서를 생성합니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:344
 msgid "**False**: Daily reports are not generated."
-msgstr ""
+msgstr "**False**: 일일 보고서가 생성되지 않습니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:347
 msgid ""
 "This feature's ``config.json`` setting is ``\"EnableDaily\": false`` with"
 " options ``true`` and ``false``."
 msgstr ""
+"이 기능의 ``config.json`` 설정은 ``true`` 와 ``false`` 옵션이 있는 ``\"EnableDaily\": "
+"false`` 입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:358
 msgid "Batch size"
-msgstr ""
+msgstr "배치 크기"
 
 #: ../../source/configure/compliance-configuration-settings.rst:360
 msgid ""
@@ -486,32 +557,34 @@ msgid ""
 " to generate the compliance report. This setting is currently not "
 "available in the System Console and can only be set in ``config.json``."
 msgstr ""
+"규정 준수 보고서를 생성하기 위해 데이터베이스에서 게시물을 읽을 배치의 크기를 설정합니다. 이 설정은 현재 시스템 콘솔에서 사용할 "
+"수 없으며 ``config.json`` 에서만 설정할 수 있습니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:363
 msgid ""
 "This feature's ``config.json`` setting is ``\"BatchSize\": 30000`` with "
 "default value ``30000``."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 기본값 ``30000``이 있는 ``\"BatchSize\": 30000`` 입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:369
 msgid "Custom terms of service"
-msgstr ""
+msgstr "사용자 정의 서비스 약관"
 
 #: ../../source/configure/compliance-configuration-settings.rst:374
 msgid ""
 "Access the following configuration settings in the System Console by "
 "going to **Compliance > Custom Terms of Service**."
-msgstr ""
+msgstr "**Compliance > Custom Terms of Service** 로 이동하여 시스템 콘솔에서 다음 구성 설정에 접근하세요."
 
 #: ../../source/configure/compliance-configuration-settings.rst:386
 msgid "Enable custom terms of service"
-msgstr ""
+msgstr "사용자 정의 서비스 약관 활성화"
 
 #: ../../source/configure/compliance-configuration-settings.rst:389
 msgid ""
 "This configuration setting can only be modified using the System Console "
 "user interface."
-msgstr ""
+msgstr "이 구성 설정은 시스템 콘솔 사용자 인터페이스를 통해서만 수정할 수 있습니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:391
 msgid ""
@@ -521,6 +594,10 @@ msgid ""
 "displayed in account creation and login pages, go to **System Console > "
 "Legal and Support > Terms of Service Link**."
 msgstr ""
+"**True**: 새 사용자는 데스크톱, 웹 또는 모바일에서 Mattermost 팀에 접근하기 전에 서비스 약관에 동의해야 합니다."
+" 기존 사용자는 로그인 또는 페이지 새로고침 후 동의해야 합니다. 계정 생성 및 로그인 페이지에 표시되는 서비스 약관 링크를 "
+"업데이트하려면 **System Console > Legal and Support > Terms of Service Link** 로 "
+"이동하세요."
 
 #: ../../source/configure/compliance-configuration-settings.rst:393
 msgid ""
@@ -528,28 +605,30 @@ msgid ""
 "Service by accessing the link configured via **System Console > Legal and"
 " Support > Terms of Service link**."
 msgstr ""
+"**False**: 계정 생성 또는 로그인 중에 사용자는 **System Console > Legal and Support > "
+"Terms of Service link** 를 통해 구성된 링크에 접근하여 서비스 약관을 검토할 수 있습니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:403
 msgid "Custom terms of service text"
-msgstr ""
+msgstr "사용자 정의 서비스 약관 텍스트"
 
 #: ../../source/configure/compliance-configuration-settings.rst:405
 msgid ""
 "Text that will appear in your custom Terms of Service. Supports Markdown-"
 "formatted text."
-msgstr ""
+msgstr "사용자 정의 서비스 약관에 표시될 텍스트입니다. Markdown 형식의 텍스트를 지원합니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:415
 msgid "Re-acceptance period"
-msgstr ""
+msgstr "재동의 기간"
 
 #: ../../source/configure/compliance-configuration-settings.rst:417
 msgid ""
 "The number of days before Terms of Service acceptance expires, and the "
 "terms must be re-accepted."
-msgstr ""
+msgstr "서비스 약관 동의가 만료되고 약관을 다시 동의해야 하는 일수입니다."
 
 #: ../../source/configure/compliance-configuration-settings.rst:419
 msgid "Defaults to 365 days. 0 indicates the terms do not expire."
-msgstr ""
+msgstr "기본값은 365일입니다. 0은 약관이 만료되지 않음을 나타냅니다."
 

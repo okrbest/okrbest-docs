@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/deploy/server/trouble_mysql.rst:2
 msgid "MySQL installation troubleshooting"
-msgstr ""
+msgstr "MySQL 설치 문제 해결"
 
 #: ../../source/deploy/server/trouble_mysql.rst:4
 msgid ""
@@ -33,6 +33,10 @@ msgid ""
 "database issues that you may encounter when you start up Mattermost for "
 "the first time."
 msgstr ""
+"Mattermost 서버를 실행하기 전에 먼저 데이터베이스를 설치하고 구성해야 합니다. ``/opt/mattermost`` 디렉토리로 이동하여 "
+"``sudo -u mattermost bin/mattermost`` 명령을 입력하여 Mattermost를 시작할 수 있습니다. "
+"Mattermost 서버가 데이터베이스에 연결할 수 없으면 시작에 실패합니다. 이 섹션에서는 Mattermost를 처음 시작할 때 "
+"발생할 수 있는 MySQL 데이터베이스 문제를 다룹니다."
 
 #: ../../source/deploy/server/trouble_mysql.rst:8
 msgid ""
@@ -40,6 +44,8 @@ msgid ""
 "releases. See the :doc:`important upgrade notes </upgrade/important-"
 "upgrade-notes>` documentation for more details."
 msgstr ""
+"특정 Mattermost 릴리스에 대한 추가 데이터베이스 튜닝 가이드가 제공됩니다. 자세한 내용은 "
+":doc:`중요 업그레이드 참고사항 </upgrade/important-upgrade-notes>` 문서를 참조하세요."
 
 #: ../../source/deploy/server/trouble_mysql.rst:9
 msgid ""
@@ -47,6 +53,9 @@ msgid ""
 "configuration-settings:database>` documentation for details on "
 "configuration options specific to MySQL databases."
 msgstr ""
+"MySQL 데이터베이스에 특화된 구성 옵션에 대한 자세한 내용은 "
+":ref:`데이터베이스 구성 설정 <configure/environment-configuration-settings:database>` "
+"문서를 참조하세요."
 
 #: ../../source/deploy/server/trouble_mysql.rst:11
 msgid ""
@@ -59,6 +68,10 @@ msgid ""
 "Mattermost to fail. The troubleshooting tips given here deal with these "
 "specific issues."
 msgstr ""
+"MySQL 설치 방법은 사용하는 Linux 배포판에 따라 다릅니다. 하지만 MySQL이 설치되면 구성 지침은 동일합니다. "
+"모든 배포판에서 ``mattermost`` 데이터베이스와 ``mattermost`` 데이터베이스 사용자를 생성해야 합니다. "
+"이러한 데이터베이스 객체를 생성하지 않거나 Mattermost 구성 파일 ``/opt/mattermost/config/config.json`` 에서 "
+"잘못 참조하면 Mattermost가 실패합니다. 여기서 제공하는 문제 해결 팁은 이러한 특정 문제를 다룹니다."
 
 #: ../../source/deploy/server/trouble_mysql.rst:15
 msgid ""
@@ -67,12 +80,15 @@ msgid ""
 "prompted, enter your password. If MySQL is running you should see output "
 "like the following:"
 msgstr ""
+"진행하기 전에 MySQL 서버가 실행 중인지 확인하세요. ``mysqladmin -u root -p status`` 명령을 실행하여 "
+"확인할 수 있습니다. 프롬프트가 표시되면 비밀번호를 입력하세요. MySQL이 실행 중이면 다음과 같은 출력이 표시됩니다:"
 
 #: ../../source/deploy/server/trouble_mysql.rst:23
 msgid ""
 "If MySQL is not running, review the instructions for installation on your"
 " distribution."
 msgstr ""
+"MySQL이 실행되지 않는 경우 배포판의 설치 지침을 검토하세요."
 
 #: ../../source/deploy/server/trouble_mysql.rst:27
 msgid ""
@@ -81,10 +97,12 @@ msgid ""
 "directly manipulate the MySQL database for a working Mattermost "
 "installation."
 msgstr ""
+"이 섹션에서 사용하는 일부 명령은 데이터베이스를 변경합니다. **Mattermost 설치가 실패한 경우에만 이러한 "
+"명령을 사용하세요.** 작동하는 Mattermost 설치의 경우 MySQL 데이터베이스를 직접 조작하지 마세요."
 
 #: ../../source/deploy/server/trouble_mysql.rst:30
 msgid "The ``mattermost`` database"
-msgstr ""
+msgstr "``mattermost`` 데이터베이스"
 
 #: ../../source/deploy/server/trouble_mysql.rst:32
 msgid ""
@@ -92,6 +110,8 @@ msgid ""
 "fail to create this database or you misname it, you will see an error "
 "such as the following when you attempt to start the Mattermost server:"
 msgstr ""
+"설치 중에 생성되는 데이터베이스의 이름은 ``mattermost`` 입니다. 이 데이터베이스를 생성하지 못하거나 "
+"이름을 잘못 지정하면 Mattermost 서버를 시작하려고 할 때 다음과 같은 오류가 표시됩니다:"
 
 #: ../../source/deploy/server/trouble_mysql.rst:40
 msgid ""
@@ -100,10 +120,13 @@ msgid ""
 "``mattermost`` or you may have incorrectly referenced this database from "
 "the ``/opt/mattermost/config/config.json`` file."
 msgstr ""
+"MySQL이 ``mattermost`` 데이터베이스에 대한 접근을 명시적으로 거부하고 있습니다. 이는 "
+"``mattermost`` 라는 이름의 데이터베이스를 생성하지 못했거나 ``/opt/mattermost/config/config.json`` "
+"파일에서 이 데이터베이스를 잘못 참조했을 수 있음을 의미합니다."
 
 #: ../../source/deploy/server/trouble_mysql.rst:43
 msgid "**Checking that the Database Exists**"
-msgstr ""
+msgstr "**데이터베이스 존재 여부 확인**"
 
 #: ../../source/deploy/server/trouble_mysql.rst:45
 msgid ""
@@ -112,10 +135,13 @@ msgid ""
 " then issue the command ``show databases;``. This command displays all "
 "the databases. You should see something similar to the following:"
 msgstr ""
+"``mattermost`` 데이터베이스가 존재하는지 확인하려면 ``mysql -u root -p`` 를 실행하여 MySQL을 *root* 로 열어주세요. "
+"프롬프트가 표시되면 비밀번호를 입력하고 ``show databases;`` 명령을 실행하세요. 이 명령은 모든 데이터베이스를 표시합니다. "
+"다음과 유사한 내용이 표시되어야 합니다:"
 
 #: ../../source/deploy/server/trouble_mysql.rst:60
 msgid "**No mattermost Database**"
-msgstr ""
+msgstr "**mattermost 데이터베이스 없음**"
 
 #: ../../source/deploy/server/trouble_mysql.rst:62
 msgid ""
@@ -123,12 +149,15 @@ msgid ""
 "``mattermost`` by opening MySQL as root and issuing the command: ``create"
 " database mattermost;``."
 msgstr ""
+"``mattermost`` 데이터베이스가 존재하지 않는 경우, MySQL을 root로 열고 ``create database mattermost;`` "
+"명령을 실행하여 ``mattermost`` 라는 이름의 데이터베이스를 생성하세요."
 
 #: ../../source/deploy/server/trouble_mysql.rst:64
 msgid ""
 "If you accidentally created a database with the wrong name, you can "
 "remove it by issuing the command: :samp:`drop database {misnamed};`."
 msgstr ""
+"실수로 잘못된 이름으로 데이터베이스를 생성한 경우, :samp:`drop database {misnamed};` 명령을 실행하여 제거할 수 있습니다."
 
 #: ../../source/deploy/server/trouble_mysql.rst:66
 msgid ""
@@ -136,10 +165,12 @@ msgid ""
 "navigating to the ``/opt/mattermost`` directory and entering the command "
 "``sudo -u mattermost bin/mattermost``."
 msgstr ""
+"데이터베이스를 생성한 후, ``/opt/mattermost`` 디렉토리로 이동하여 ``sudo -u mattermost bin/mattermost`` "
+"명령을 입력하여 Mattermost 서버를 다시 시작해보세요."
 
 #: ../../source/deploy/server/trouble_mysql.rst:68
 msgid "**The mattermost Database Exists**"
-msgstr ""
+msgstr "**mattermost 데이터베이스 존재**"
 
 #: ../../source/deploy/server/trouble_mysql.rst:70
 msgid ""
@@ -148,12 +179,16 @@ msgid ""
 "``/opt/mattermost/config/config.json`` file. Open this file in a text "
 "editor, and review the value of ``\"DataSource\"``. It should be:"
 msgstr ""
+"``mattermost`` 데이터베이스가 존재하는 경우, ``/opt/mattermost/config/config.json`` 파일에서 "
+"데이터베이스 드라이버를 올바르게 정의했는지 확인하세요. 텍스트 편집기에서 이 파일을 열고 ``\"DataSource\"`` 의 값을 "
+"검토하세요. 다음과 같아야 합니다:"
 
 #: ../../source/deploy/server/trouble_mysql.rst:76
 msgid ""
 "You should also confirm that ``DriverName`` element (found immediately "
 "above the ``DataSource`` element) is set to ``mysql``."
 msgstr ""
+"``DataSource`` 요소 바로 위에 있는 ``DriverName`` 요소가 ``mysql`` 로 설정되어 있는지도 확인해야 합니다."
 
 #: ../../source/deploy/server/trouble_mysql.rst:78
 msgid ""
@@ -161,25 +196,28 @@ msgid ""
 "the ``/opt/mattermost`` directory and entering the command ``sudo -u "
 "mattermost bin/mattermost``."
 msgstr ""
+"오류를 수정한 경우, ``/opt/mattermost`` 디렉토리로 이동하여 ``sudo -u mattermost bin/mattermost`` "
+"명령을 입력하여 Mattermost 서버를 다시 시작하세요."
 
 #: ../../source/deploy/server/trouble_mysql.rst:81
 msgid "The Database User"
-msgstr ""
+msgstr "데이터베이스 사용자"
 
 #: ../../source/deploy/server/trouble_mysql.rst:83
 msgid ""
 "During the installation you should create a MySQL database user from the "
 "*mysql* prompt by issuing the command"
 msgstr ""
+"설치 중에 *mysql* 프롬프트에서 다음 명령을 실행하여 MySQL 데이터베이스 사용자를 생성해야 합니다"
 
 #: ../../source/deploy/server/trouble_mysql.rst
 msgid "samp"
-msgstr ""
+msgstr "samp"
 
 #: ../../source/deploy/server/trouble_mysql.rst:85
 #: ../../source/deploy/server/trouble_mysql.rst:125
 msgid "`create user 'mmuser'@'%' identified by '{mmuser-password}';`."
-msgstr ""
+msgstr "`create user 'mmuser'@'%' identified by '{mmuser-password}';`."
 
 #: ../../source/deploy/server/trouble_mysql.rst:87
 msgid ""
@@ -187,6 +225,7 @@ msgid ""
 "chose. You may also have specified an IP address rather than the wild "
 "card ``%``."
 msgstr ""
+"``mmuser-password`` 값은 선택한 비밀번호의 자리 표시자입니다. 와일드 카드 ``%`` 대신 IP 주소를 지정했을 수도 있습니다."
 
 #: ../../source/deploy/server/trouble_mysql.rst:92
 msgid ""
@@ -197,22 +236,27 @@ msgid ""
 "specific IP address such as ``10.10.10.2``, please adjust your actions "
 "accordingly."
 msgstr ""
+"MySQL 사용자는 사용자 이름과 MySQL에 접근하는 호스트로 완전히 정의됩니다. 이러한 요소는 ``@`` 기호로 구분됩니다. "
+"``%`` 문자는 사용자가 모든 IP 주소에서 MySQL에 접근할 수 있음을 나타내는 와일드 카드입니다. "
+"생성한 사용자가 ``10.10.10.2`` 와 같은 특정 IP 주소에서 MySQL에 접근하는 경우, 그에 따라 작업을 조정하세요."
 
 #: ../../source/deploy/server/trouble_mysql.rst:94
 msgid ""
 "If the user and host combination that you created does not exist, you "
 "will see an error such as:"
 msgstr ""
+"생성한 사용자와 호스트 조합이 존재하지 않는 경우, 다음과 같은 오류가 표시됩니다:"
 
 #: ../../source/deploy/server/trouble_mysql.rst:102
 msgid "**Checking that mmuser Exists**"
-msgstr ""
+msgstr "**mmuser 존재 여부 확인**"
 
 #: ../../source/deploy/server/trouble_mysql.rst:104
 msgid ""
 "To check that this user exists, log in to MySQL as *root*: ``mysql -u "
 "root -p``."
 msgstr ""
+"이 사용자가 존재하는지 확인하려면 *root* 권한으로 MySQL에 로그인하세요: ``mysql -u root -p``."
 
 #: ../../source/deploy/server/trouble_mysql.rst:106
 msgid ""
@@ -220,26 +264,30 @@ msgid ""
 "MySQL. From the ``mysql`` prompt enter the command ``select User, Host "
 "from mysql.user;``. You should see something like the following:"
 msgstr ""
+"메시지가 표시되면 MySQL 설치 시 생성한 root 비밀번호를 입력하세요. ``mysql`` 프롬프트에서 ``select User, Host from mysql.user;`` "
+"명령을 입력하세요. 다음과 같은 내용이 표시되어야 합니다:"
 
 #: ../../source/deploy/server/trouble_mysql.rst:121
 msgid "**User Doesn't Exist**"
-msgstr ""
+msgstr "**사용자가 존재하지 않음**"
 
 #: ../../source/deploy/server/trouble_mysql.rst:123
 msgid ""
 "If ``'mmuser'@'%'`` does not exist, create this user by logging into "
 "MySQL as *root* and issuing the command:"
 msgstr ""
+"``'mmuser'@'%'`` 가 존재하지 않는 경우, *root* 권한으로 MySQL에 로그인하여 다음 명령을 실행하여 이 사용자를 생성하세요:"
 
 #: ../../source/deploy/server/trouble_mysql.rst:127
 msgid ""
 "After creating a user, ensure that this user has rights to the "
 "``mattermost`` database."
 msgstr ""
+"사용자를 생성한 후, 이 사용자가 ``mattermost`` 데이터베이스에 대한 권한을 가지고 있는지 확인하세요."
 
 #: ../../source/deploy/server/trouble_mysql.rst:129
 msgid "**User Exists**"
-msgstr ""
+msgstr "**사용자가 존재함**"
 
 #: ../../source/deploy/server/trouble_mysql.rst:131
 msgid ""
@@ -247,6 +295,8 @@ msgid ""
 "``/opt/mattermost/config/config.json`` file may be incorrect. Open this "
 "file and search for ``DataSource``. Its value should be:"
 msgstr ""
+"``mmuser`` 사용자가 존재하는 경우, ``/opt/mattermost/config/config.json`` 파일의 DataSource 요소가 잘못되었을 수 있습니다. "
+"이 파일을 열고 ``DataSource`` 를 검색하세요. 그 값은 다음과 같아야 합니다:"
 
 #: ../../source/deploy/server/trouble_mysql.rst:137
 msgid ""
@@ -254,20 +304,23 @@ msgid ""
 "the ``/opt/mattermost`` directory and issuing the command: ``sudo -u "
 "mattermost bin/mattermost``."
 msgstr ""
+"오류를 수정한 경우, ``/opt/mattermost`` 디렉토리로 이동하여 ``sudo -u mattermost bin/mattermost`` 명령을 실행하여 "
+"Mattermost 서버를 다시 시작하세요."
 
 #: ../../source/deploy/server/trouble_mysql.rst:140
 msgid "The user password"
-msgstr ""
+msgstr "사용자 비밀번호"
 
 #: ../../source/deploy/server/trouble_mysql.rst:142
 msgid ""
 "Mattermost will fail if you use an incorrect password for ``mmuser``. An "
 "incorrect password displays an error message such as the following:"
 msgstr ""
+"``mmuser`` 에 대해 잘못된 비밀번호를 사용하면 Mattermost가 실패합니다. 잘못된 비밀번호는 다음과 같은 오류 메시지를 표시합니다:"
 
 #: ../../source/deploy/server/trouble_mysql.rst:150
 msgid "**The password in ``config.json``**"
-msgstr ""
+msgstr "**``config.json``의 비밀번호**"
 
 #: ../../source/deploy/server/trouble_mysql.rst:152
 msgid ""
@@ -275,6 +328,8 @@ msgid ""
 " references the ``mmuser`` password. Open this file and search for "
 "``DataSource``. It's value should be:"
 msgstr ""
+"``/opt/mattermost/config/config.json`` 파일의 DataSource 요소는 ``mmuser`` 비밀번호를 참조합니다. "
+"이 파일을 열고 ``DataSource`` 를 검색하세요. 그 값은 다음과 같아야 합니다:"
 
 #: ../../source/deploy/server/trouble_mysql.rst:158
 msgid ""
@@ -282,10 +337,12 @@ msgid ""
 "Mattermost server by navigating to ``/opt/mattermost`` and issuing the "
 "command: ``sudo -u mattermost bin/mattermost``."
 msgstr ""
+"비밀번호가 올바른지 확인하세요. 오류를 수정한 경우, ``/opt/mattermost`` 디렉토리로 이동하여 "
+"``sudo -u mattermost bin/mattermost`` 명령을 실행하여 Mattermost 서버를 다시 시작하세요."
 
 #: ../../source/deploy/server/trouble_mysql.rst:160
 msgid "**Unsure of Password**"
-msgstr ""
+msgstr "**비밀번호 불확실**"
 
 #: ../../source/deploy/server/trouble_mysql.rst:162
 msgid ""
@@ -294,6 +351,9 @@ msgid ""
 "-p``. You will be prompted for your password. If your login fails, you "
 "are not using the correct password."
 msgstr ""
+"``mmuser`` 비밀번호가 올바른지 확실하지 않은 경우, ``mysql -u mmuser -p`` 명령을 실행하여 "
+"``mmuser`` 로 MySQL에 로그인해보세요. 비밀번호를 입력하라는 프롬프트가 표시됩니다. 로그인이 실패하면 "
+"올바른 비밀번호를 사용하지 않은 것입니다."
 
 #: ../../source/deploy/server/trouble_mysql.rst:164
 msgid ""
@@ -302,18 +362,20 @@ msgid ""
 "user. You can do this by logging in to MySQL as ``root`` and issuing the "
 "following commands:"
 msgstr ""
+"새로운 데이터베이스 설치의 경우, 알 수 없는 비밀번호에 대한 가장 쉬운 해결책은 기존 ``mmuser`` 를 제거한 후 "
+"해당 사용자를 다시 생성하는 것입니다. MySQL에 ``root`` 로 로그인하여 다음 명령을 실행하면 됩니다:"
 
 #: ../../source/deploy/server/trouble_mysql.rst:166
 msgid "``drop user mmuser;``"
-msgstr ""
+msgstr "``drop user mmuser;``"
 
 #: ../../source/deploy/server/trouble_mysql.rst:168
 msgid "``flush privileges;``"
-msgstr ""
+msgstr "``flush privileges;``"
 
 #: ../../source/deploy/server/trouble_mysql.rst:170
 msgid "`create user 'mmuser'@'%' identified by '{mmuser-password}';`"
-msgstr ""
+msgstr "`create user 'mmuser'@'%' identified by '{mmuser-password}';`"
 
 #: ../../source/deploy/server/trouble_mysql.rst:172
 msgid ""
@@ -321,10 +383,12 @@ msgid ""
 "``mattermost`` database by following the instructions in the `granting "
 "privileges to mmuser <#granting-privileges-to-mmuser>`__ section below."
 msgstr ""
+"``mmuser`` 를 다시 생성하는 경우, 아래의 `mmuser에 권한 부여 <#granting-privileges-to-mmuser>`__ "
+"섹션의 지침에 따라 이 사용자가 ``mattermost`` 데이터베이스에 대한 권한을 가지고 있는지 확인하세요."
 
 #: ../../source/deploy/server/trouble_mysql.rst:175
 msgid "Insufficient user privileges"
-msgstr ""
+msgstr "사용자 권한 부족"
 
 #: ../../source/deploy/server/trouble_mysql.rst:177
 msgid ""
@@ -332,6 +396,8 @@ msgid ""
 "``mmuser`` may not have sufficient rights to access the ``mattermost`` "
 "database. If this is the case, you may see an error message such as:"
 msgstr ""
+"데이터베이스가 존재하고 사용자 이름과 비밀번호가 올바른 경우에도 ``mmuser`` 가 ``mattermost`` "
+"데이터베이스에 접근할 수 있는 충분한 권한이 없을 수 있습니다. 이 경우 다음과 같은 오류 메시지가 표시될 수 있습니다:"
 
 #: ../../source/deploy/server/trouble_mysql.rst:187
 msgid ""
@@ -342,6 +408,9 @@ msgid ""
 "that you have misidentified the user as ``muser`` in the ``config.json`` "
 "file."
 msgstr ""
+"오류 메시지를 자세히 살펴보세요. 오류 메시지에 표시된 사용자 이름은 ``/opt/mattermost/config/config.json`` "
+"파일의 ``DataSource`` 요소에 식별된 사용자입니다. 예를 들어, 오류 메시지가 ``Access denied for user "
+"'muser'@'%' ...` `라고 표시되면 ``config.json`` 파일에서 사용자를 ``muser`` 로 잘못 식별했음을 알 수 있습니다."
 
 #: ../../source/deploy/server/trouble_mysql.rst:189
 msgid ""
@@ -350,10 +419,13 @@ msgid ""
 "``show databases;``. If this user does not have rights to view the "
 "``mattermost`` database, you will not see it in the output."
 msgstr ""
+"``mmuser``로 MySQL에 로그인하여 ``show databases;`` 명령을 실행하여 ``mmuser``가 "
+"``mattermost`` 데이터베이스에 접근할 수 있는지 확인할 수 있습니다. 이 사용자가 ``mattermost`` "
+"데이터베이스를 볼 수 있는 권한이 없으면 출력에서 볼 수 없습니다."
 
 #: ../../source/deploy/server/trouble_mysql.rst:202
 msgid "**Granting privileges to mmuser**"
-msgstr ""
+msgstr "**mmuser에 권한 부여**"
 
 #: ../../source/deploy/server/trouble_mysql.rst:204
 msgid ""
@@ -362,16 +434,19 @@ msgid ""
 "privileges on mattermost.* to 'mmuser'@'%';`` to grant all rights on "
 "``mattermost`` to ``mmuser``."
 msgstr ""
+"``mattermost`` 데이터베이스가 존재하고 ``mmuser`` 가 이를 볼 수 없는 경우, MySQL에서 나가서 "
+"다시 root로 로그인하세요. ``grant all privileges on mattermost.* to 'mmuser'@'%';`` "
+"명령을 실행하여 ``mattermost`` 에 대한 모든 권한을 ``mmuser`` 에게 부여하세요."
 
 #: ../../source/deploy/server/trouble_mysql.rst:206
 msgid ""
 "Restart the Mattermost server by navigating to the ``/opt/mattermost`` "
 "directory and entering the command ``sudo -u mattermost bin/mattermost``."
-msgstr ""
+msgstr "``/opt/mattermost`` 디렉토리로 이동하여 ``sudo -u mattermost bin/mattermost`` 명령을 입력하여 Mattermost 서버를 다시 시작하세요."
 
 #: ../../source/deploy/server/trouble_mysql.rst:209
 msgid "Server is set to SYSTEM timezone"
-msgstr ""
+msgstr "서버가 SYSTEM 시간대로 설정됨"
 
 #: ../../source/deploy/server/trouble_mysql.rst:211
 msgid ""
@@ -381,24 +456,27 @@ msgid ""
 "populating the ``timezone`` tables on the server. Refer to the following "
 "docs for more information on loading the timezone table:"
 msgstr ""
+"서버가 SYSTEM 시간대로 설정되어 있고 명명된 시간대를 지원하지 않는 경우, MySQL을 사용하는 서버에서 v7.7 이전 버전을 사용하는 "
+"Mattermost 고객은 오류가 발생할 수 있습니다. 이러한 오류는 서버의 ``timezone`` 테이블을 채워서 해결할 수 있습니다. "
+"시간대 테이블 로드에 대한 자세한 내용은 다음 문서를 참조하세요:"
 
 #: ../../source/deploy/server/trouble_mysql.rst:213
 msgid ""
 "`Linux <https://dev.mysql.com/doc/refman/5.7/en/mysql-tzinfo-to-"
 "sql.html>`__"
-msgstr ""
+msgstr "`리눅스 <https://dev.mysql.com/doc/refman/5.7/en/mysql-tzinfo-to-sql.html>`__"
 
 #: ../../source/deploy/server/trouble_mysql.rst:214
 msgid "`Windows <https://dev.mysql.com/downloads/timezones.html>`__"
-msgstr ""
+msgstr "`윈도우 <https://dev.mysql.com/downloads/timezones.html>`__"
 
 #: ../../source/deploy/server/trouble_mysql.rst:217
 msgid "This issue has been addressed from Mattermost v7.8."
-msgstr ""
+msgstr "이 문제는 Mattermost v7.8부터 해결되었습니다."
 
 #: ../../source/deploy/server/trouble_mysql.rst:220
 msgid "Maximum allowed packet"
-msgstr ""
+msgstr "최대 허용 패킷"
 
 #: ../../source/deploy/server/trouble_mysql.rst:222
 msgid ""
@@ -406,6 +484,8 @@ msgid ""
 "to 64MiB. This is to make it consistent with the change in the server-"
 "side default value from MySQL 5.7 to MySQL 8.0."
 msgstr ""
+"Go MySQL 드라이버는 ``maxAllowedPacket`` 크기를 4MiB에서 64MiB로 변경했습니다. 이는 MySQL 5.7에서 "
+"MySQL 8.0으로 서버 측 기본값 변경과 일관성을 유지하기 위한 것입니다."
 
 #: ../../source/deploy/server/trouble_mysql.rst:224
 msgid ""
@@ -415,4 +495,6 @@ msgid ""
 " fetch the server-side value automatically on every new connection which "
 "has a performance overhead."
 msgstr ""
-
+"``max_allowed_packet`` 설정이 64MiB가 아닌 경우, 서버 측 값과 일치하도록 ``maxAllowedPacket`` "
+"매개변수를 추가하여 MySQL 구성 DSN을 업데이트하세요. 또는 성능 오버헤드가 있는 새 연결마다 서버 측 값을 자동으로 가져오도록 "
+"``0`` 값을 설정할 수 있습니다."

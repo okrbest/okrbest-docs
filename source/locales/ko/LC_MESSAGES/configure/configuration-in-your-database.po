@@ -21,25 +21,25 @@ msgstr ""
 
 #: ../../source/configure/configuration-in-your-database.rst:2
 msgid "Store configuration in your database"
-msgstr ""
+msgstr "데이터베이스에 구성 저장"
 
 #: ../../source/_static/badges/allplans-selfhosted.rst:7
 msgid "|plans-img| Available on `all plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `모든 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
-msgstr ""
+msgstr "plans-img"
 
 #: ../../source/_static/badges/allplans-selfhosted.rst:9
 msgid ""
 "|deployment-img| `self-hosted <https://mattermost.com/download/>`__ "
 "deployments"
-msgstr ""
+msgstr "|deployment-img| `자체 호스팅 <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
-msgstr ""
+msgstr "deployment-img"
 
 #: ../../source/configure/configuration-in-your-database.rst:7
 msgid ""
@@ -52,10 +52,13 @@ msgid ""
 "was released, and recommends its use for those on :doc:`High Availability"
 " deployments </scale/high-availability-cluster-based-deployment>`."
 msgstr ""
+"Mattermost 설치의 활성 구성을 위한 단일 진실 공급원으로 데이터베이스를 사용할 수 있습니다. 이는 Mattermost 바이너리가 기본 ``config.json`` 파일을 읽는 것에서 "
+"데이터베이스의 구성 테이블에 저장된 구성 설정을 읽는 것으로 변경됩니다. Mattermost는 이 기능이 출시된 이후부터 `커뮤니티 서버 <https://community.mattermost.com>`__ 를 "
+"이 옵션으로 실행해 왔으며, :doc:`고가용성 배포 </scale/high-availability-cluster-based-deployment>` 를 사용하는 사용자에게 이 기능의 사용을 권장합니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:9
 msgid "Benefits to using this option:"
-msgstr ""
+msgstr "이 옵션 사용의 이점:"
 
 #: ../../source/configure/configuration-in-your-database.rst:11
 msgid ""
@@ -63,18 +66,21 @@ msgid ""
 "Console, even in High Availability deployments and read-only "
 "containerized environments."
 msgstr ""
+"고가용성 배포와 읽기 전용 컨테이너화된 환경에서도 시스템 콘솔에서 직접 구성 변경을 편리하게 관리할 수 있습니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:12
 msgid ""
 "Ensures all servers in a High Availability deployment have the same "
 "configuration, even when new servers are added to the cluster."
 msgstr ""
+"클러스터에 새 서버가 추가되더라도 고가용성 배포의 모든 서버가 동일한 구성을 갖도록 보장합니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:13
 msgid ""
 "Automatically deploys SAML certificates and keys to all servers in the "
 "cluster."
 msgstr ""
+"클러스터의 모든 서버에 SAML 인증서와 키를 자동으로 배포합니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:17
 msgid ""
@@ -82,6 +88,8 @@ msgid ""
 " are 2 different entities. It's possible to store Mattermost "
 "configuration in one database and Mattermost data in another database."
 msgstr ""
+"Mattermost 구성 데이터베이스와 Mattermost 애플리케이션 데이터베이스는 서로 다른 두 개의 엔티티입니다. "
+"하나의 데이터베이스에 Mattermost 구성을 저장하고 다른 데이터베이스에 Mattermost 데이터를 저장할 수 있습니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:19
 msgid ""
@@ -93,10 +101,13 @@ msgid ""
 "a database, or in a file, allows the correct data source name to be "
 "passed to the Mattermost application."
 msgstr ""
+"이를 위해 :ref:`Datasource <configure/environment-configuration-settings:data source>` 구성 설정을 새로운 데이터 소스 이름으로 업데이트해야 합니다. "
+"이는 애플리케이션이 실행 중일 때 수행할 수 있습니다. 구성에 정의된 내용(데이터베이스 또는 파일에 있는지 여부)을 재정의하기 위해 ``MM_SQLSETTINGS_DATASOURCE`` 환경 변수를 명시적으로 설정하면 "
+"올바른 데이터 소스 이름이 Mattermost 애플리케이션에 전달됩니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:22
 msgid "How to migrate configuration to the database"
-msgstr ""
+msgstr "데이터베이스로 구성을 마이그레이션하는 방법"
 
 #: ../../source/configure/configuration-in-your-database.rst:24
 msgid ""
@@ -104,6 +115,7 @@ msgid ""
 "database and updating your ``systemd`` configuration to load it from the "
 "database."
 msgstr ""
+"이 지침은 Mattermost 구성을 데이터베이스로 마이그레이션하고 ``systemd`` 구성을 업데이트하여 데이터베이스에서 로드하는 방법을 다룹니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:28
 msgid ""
@@ -111,6 +123,7 @@ msgid ""
 "``/opt/mattermost``. If you're running Mattermost in a different "
 "directory you'll have to modify the paths to match your environment."
 msgstr ""
+"이 지침은 Mattermost 서버가 ``/opt/mattermost`` 에 설치되어 있다고 가정합니다. 다른 디렉토리에서 Mattermost를 실행 중이라면 환경에 맞게 경로를 수정해야 합니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:29
 msgid ""
@@ -118,10 +131,11 @@ msgid ""
 "deployment, you must complete all of the steps below on each server in "
 "the cluster."
 msgstr ""
+"고가용성 클러스터 기반 배포에서 Mattermost를 실행 중이라면, 클러스터의 각 서버에서 아래 단계를 모두 완료해야 합니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:32
 msgid "Get your database connection string"
-msgstr ""
+msgstr "데이터베이스 연결 문자열 가져오기"
 
 #: ../../source/configure/configuration-in-your-database.rst:34
 msgid ""
@@ -130,6 +144,8 @@ msgid ""
 "value in ``SqlSettings.DataSource``, or your equivalent environment "
 "variable, ``MM_SQLSETTINGS_DATASOURCE``."
 msgstr ""
+"첫 번째 단계는 마스터 데이터베이스 연결 문자열을 가져오는 것입니다. ``config.json`` 파일에 접근하여 ``SqlSettings.DataSource`` 의 값을 복사하거나 "
+"동등한 환경 변수인 ``MM_SQLSETTINGS_DATASOURCE`` 를 사용하는 것을 권장합니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:38
 msgid ""
@@ -138,16 +154,19 @@ msgid ""
 "database in use. For example: "
 "``postgres://mmuser:really_secure_password@localhost:5432/mattermost?sslmode=disable&connect_timeout=10``"
 msgstr ""
+"``SqlSettings.DataSource`` 는 ``postgres://`` 또는 ``mysql://`` 로 시작해야 합니다. 그렇지 않은 경우 사용 중인 데이터베이스에 따라 시작 부분에 추가하세요. "
+"예: ``postgres://mmuser:really_secure_password@localhost:5432/mattermost?sslmode=disable&connect_timeout=10``"
 
 #: ../../source/configure/configuration-in-your-database.rst:39
 msgid ""
 "If you see ``\\u0026``, replace it with ``&``. For example: "
 "``mysql://mmuser:really_secure_password@tcp(127.0.0.1:3306)/mattermost?charset=utf8mb4,utf8&writeTimeout=30s``"
 msgstr ""
+"``\\u0026`` 가 보이면 ``&`` 로 바꾸세요. 예: ``mysql://mmuser:really_secure_password@tcp(127.0.0.1:3306)/mattermost?charset=utf8mb4,utf8&writeTimeout=30s``"
 
 #: ../../source/configure/configuration-in-your-database.rst:42
 msgid "Create an environment file"
-msgstr ""
+msgstr "환경 파일 생성하기"
 
 #: ../../source/configure/configuration-in-your-database.rst:44
 msgid ""
@@ -155,14 +174,15 @@ msgid ""
 "the ``MM_CONFIG`` environment variable to the database connection string."
 " For example:"
 msgstr ""
+"``MM_CONFIG`` 환경 변수를 데이터베이스 연결 문자열로 설정하기 위해 ``/opt/mattermost/config/mattermost.environment`` 파일을 생성하세요. 예:"
 
 #: ../../source/configure/configuration-in-your-database.rst:50
 msgid "Run this command to verify the permissions on your Mattermost directory:"
-msgstr ""
+msgstr "Mattermost 디렉토리의 권한을 확인하려면 다음 명령을 실행하세요:"
 
 #: ../../source/configure/configuration-in-your-database.rst:57
 msgid "Enable local mode"
-msgstr ""
+msgstr "로컬 모드 활성화"
 
 #: ../../source/configure/configuration-in-your-database.rst:59
 msgid ""
@@ -171,20 +191,24 @@ msgid ""
 "command-line-tool:local mode>` documentation for details on activating "
 "and using local mode."
 msgstr ""
+"``EnableLocalMode`` 를 ``true`` 로 설정하여 ``config.json`` 을 편집하세요. "
+"로컬 모드 활성화 및 사용에 대한 자세한 내용은 :ref:`local mode <manage/mmctl-command-line-tool:local mode>` "
+"문서를 참조하세요."
 
 #: ../../source/configure/configuration-in-your-database.rst:62
 msgid "Restart Mattermost"
-msgstr ""
+msgstr "Mattermost 재시작"
 
 #: ../../source/configure/configuration-in-your-database.rst:64
 msgid ""
 "Run the following command to restart the Mattermost server and apply the "
 "configuration change:"
 msgstr ""
+"다음 명령을 실행하여 Mattermost 서버를 재시작하고 구성 변경사항을 적용하세요:"
 
 #: ../../source/configure/configuration-in-your-database.rst:71
 msgid "Migrate configuration from ``config.json``"
-msgstr ""
+msgstr "``config.json`` 에서 구성 마이그레이션"
 
 #: ../../source/configure/configuration-in-your-database.rst:73
 msgid ""
@@ -192,6 +216,8 @@ msgid ""
 "tool:mmctl config migrate>` command to migrate the configuration by "
 "running the following command:"
 msgstr ""
+"다음 명령을 실행하여 :ref:`mmctl config migrate <manage/mmctl-command-line-tool:mmctl config migrate>` "
+"명령으로 구성을 마이그레이션할 수 있습니다:"
 
 #: ../../source/configure/configuration-in-your-database.rst:81
 msgid ""
@@ -199,6 +225,8 @@ msgid ""
 "need to run this command once and migrate the configuration from one "
 "server in the cluster."
 msgstr ""
+"고가용성 클러스터 기반 배포를 사용 중이라면, 이 명령을 한 번만 실행하고 "
+"클러스터의 한 서버에서 구성을 마이그레이션하면 됩니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:82
 msgid ""
@@ -207,12 +235,15 @@ msgid ""
 " :doc:`Environment Variables  </configure/configuration-settings>` "
 "documentation for details."
 msgstr ""
+"구성을 마이그레이션할 때 Mattermost는 현재 셸에 설정된 기존 ``MM_*`` 환경 변수의 "
+"구성을 통합합니다. 자세한 내용은 :doc:`Environment Variables </configure/configuration-settings>` "
+"문서를 참조하세요."
 
 #: ../../source/configure/configuration-in-your-database.rst:83
 msgid ""
 "As with the environment file, you'll have to escape any single quotes in "
 "the database connection string."
-msgstr ""
+msgstr "환경 파일과 마찬가지로 데이터베이스 연결 문자열의 작은따옴표를 이스케이프해야 합니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:84
 msgid ""
@@ -224,6 +255,10 @@ msgid ""
 "re-pull the certificates. Configuration files are stored in the "
 "``configurationfiles`` table in the database."
 msgstr ""
+"기존 SAML 인증서도 데이터베이스로 마이그레이션되어 클러스터의 모든 서버에서 사용할 수 있습니다. 인증서가 만료되면 "
+"시스템 콘솔이나 mmctl을 사용하여 새 인증서를 업로드할 수 있으며, 이는 데이터베이스 업데이트를 트리거합니다. "
+"인증서 파일을 수동으로 교체하려면 Mattermost 서버를 다시 로드하여 인증서를 다시 가져와야 합니다. "
+"구성 파일은 데이터베이스의 ``configurationfiles`` 테이블에 저장됩니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:86
 msgid ""
@@ -233,6 +268,9 @@ msgid ""
 "``ClusterSettings.ReadOnlyConfig`` is ignored, enabling full use of the "
 "System Console."
 msgstr ""
+"데이터베이스의 구성이 활성화되면 구성의 모든 변경 사항이 ``Configurations`` 및 "
+"``ConfigurationFiles`` 테이블에 기록됩니다. 또한 ``ClusterSettings.ReadOnlyConfig`` 는 "
+"무시되어 시스템 콘솔을 완전히 사용할 수 있습니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:88
 msgid ""
@@ -241,36 +279,38 @@ msgid ""
 "``mattermost.environment`` file. These must be on their own line, and you"
 " must escape them properly."
 msgstr ""
+"서버별로 설정해야 하는 구성 설정이 있다면 ``mattermost.environment`` 파일에 "
+"환경 변수로 추가해야 합니다. 이들은 각각 별도의 줄에 있어야 하며, 적절히 이스케이프해야 합니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:91
 msgid "Modify the Mattermost ``systemd`` file"
-msgstr ""
+msgstr "Mattermost ``systemd`` 파일 수정"
 
 #: ../../source/configure/configuration-in-your-database.rst:93
 msgid "Find the ``mattermost.service`` file using the following command:"
-msgstr ""
+msgstr "다음 명령을 사용하여 ``mattermost.service`` 파일을 찾으세요:"
 
 #: ../../source/configure/configuration-in-your-database.rst:99
 msgid ""
 "The second line of output will have the location of the running "
 "``mattermost.service``."
-msgstr ""
+msgstr "출력의 두 번째 줄에 실행 중인 ``mattermost.service`` 의 위치가 표시됩니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:105
 msgid ""
 "Edit this file as *root* to add the below text just above the line that "
 "begins with ``ExecStart``\\ :"
-msgstr ""
+msgstr "*root* 권한으로 이 파일을 편집하여 ``ExecStart`` 로 시작하는 줄 바로 위에 아래 텍스트를 추가하세요:"
 
 #: ../../source/configure/configuration-in-your-database.rst:111
 msgid ""
 "Here's a complete ``mattermost.service`` file with the "
 "``EnvironmentFile`` line added:"
-msgstr ""
+msgstr "``EnvironmentFile`` 줄이 추가된 완전한 ``mattermost.service`` 파일입니다:"
 
 #: ../../source/configure/configuration-in-your-database.rst:138
 msgid "Verify that the configuration was migrated correctly"
-msgstr ""
+msgstr "구성이 올바르게 마이그레이션되었는지 확인"
 
 #: ../../source/configure/configuration-in-your-database.rst:140
 msgid ""
@@ -278,22 +318,25 @@ msgid ""
 "database. Run the following query to verify that you've migrated the "
 "configuration successfully:"
 msgstr ""
+"구성은 데이터베이스의 ``Configurations`` 테이블에 저장됩니다. 구성이 성공적으로 마이그레이션되었는지 확인하려면 다음 쿼리를 실행하세요:"
 
 #: ../../source/configure/configuration-in-your-database.rst:146
 msgid ""
 "There should be exactly one line returned, and the ``Value`` field for "
 "that line should match your ``config.json`` file."
 msgstr ""
+"정확히 한 줄이 반환되어야 하며, 해당 줄의 ``Value`` 필드는 ``config.json`` 파일과 일치해야 합니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:149
 msgid "Reload ``systemd`` files and restart Mattermost"
-msgstr ""
+msgstr "``systemd`` 파일을 다시 로드하고 Mattermost 재시작"
 
 #: ../../source/configure/configuration-in-your-database.rst:151
 msgid ""
 "Run these commands to reload the daemon and restart Mattermost using the "
 "new ``MM_CONFIG`` environment variable."
 msgstr ""
+"새로운 ``MM_CONFIG`` 환경 변수를 사용하여 데몬을 다시 로드하고 Mattermost를 재시작하려면 다음 명령을 실행하세요."
 
 #: ../../source/configure/configuration-in-your-database.rst:160
 msgid ""
@@ -301,14 +344,15 @@ msgid ""
 "manually edit the active configuration row. You should edit or update the"
 " configuration in one of the following ways:"
 msgstr ""
+"데이터베이스에서 구성을 사용하기 시작하면 활성 구성 행을 수동으로 편집하지 마세요. 다음 방법 중 하나로 구성을 편집하거나 업데이트해야 합니다:"
 
 #: ../../source/configure/configuration-in-your-database.rst:162
 msgid "Use the System Console to make changes to the configuration."
-msgstr ""
+msgstr "시스템 콘솔을 사용하여 구성을 변경하세요."
 
 #: ../../source/configure/configuration-in-your-database.rst:163
 msgid "Use ``mmctl`` to make changes to the configuration."
-msgstr ""
+msgstr "``mmctl`` 을 사용하여 구성을 변경하세요."
 
 #: ../../source/configure/configuration-in-your-database.rst:165
 msgid ""
@@ -317,10 +361,13 @@ msgid ""
 "polling the database to process changes to the configuration. Publishing "
 "the changes to the cluster are handled by the application itself."
 msgstr ""
+"Mattermost 서버는 활성 구성을 메모리에 유지하고 변경 사항이 있을 때만 새 구성을 데이터베이스에 기록합니다. "
+"이렇게 하면 구성 변경을 처리하기 위해 데이터베이스를 폴링하는 것을 피할 수 있습니다. "
+"클러스터에 변경 사항을 게시하는 것은 애플리케이션 자체에서 처리합니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:168
 msgid "Rolling back"
-msgstr ""
+msgstr "롤백"
 
 #: ../../source/configure/configuration-in-your-database.rst:170
 msgid ""
@@ -329,14 +376,17 @@ msgid ""
 " line in ``/opt/mattermost/config/mattermost.environment`` and restarting"
 " Mattermost with ``systemctl restart mattermost``."
 msgstr ""
+"데이터베이스의 구성에 문제가 발생하면 ``/opt/mattermost/config/mattermost.environment`` 의 "
+"``MM_CONFIG`` 줄을 주석 처리하고 ``systemctl restart mattermost`` 로 Mattermost를 재시작하여 "
+"``config.json`` 파일로 롤백할 수 있습니다."
 
 #: ../../source/configure/configuration-in-your-database.rst:173
 msgid "Troubleshooting"
-msgstr ""
+msgstr "문제 해결"
 
 #: ../../source/configure/configuration-in-your-database.rst:176
 msgid "Server fails to start"
-msgstr ""
+msgstr "서버 시작 실패"
 
 #: ../../source/configure/configuration-in-your-database.rst:178
 msgid ""
@@ -344,4 +394,4 @@ msgid ""
 "at a file will fail to start the server with an appropriate error "
 "message."
 msgstr ""
-
+"실제로 파일을 가리키지 않으면서 ``--disableconfigwatch`` 플래그를 제공하면 적절한 오류 메시지와 함께 서버 시작이 실패합니다."

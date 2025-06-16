@@ -21,13 +21,13 @@ msgstr ""
 
 #: ../../source/scale/collect-performance-metrics.rst:2
 msgid "Collect performance metrics"
-msgstr ""
+msgstr "성능 메트릭 수집"
 
 #: ../../source/_static/badges/ent-cloud-selfhosted.rst:7
 msgid ""
 "|plans-img| Available on `Enterprise plans "
 "<https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img| `Enterprise 플랜 <https://mattermost.com/pricing/>`__ 에서 사용 가능"
 
 #: ../../<rst_prolog>:2
 msgid "plans-img"
@@ -37,7 +37,7 @@ msgstr ""
 msgid ""
 "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ and `self-"
 "hosted <https://mattermost.com/download/>`__ deployments"
-msgstr ""
+msgstr "|deployment-img| `Cloud <https://mattermost.com/sign-up/>`__ 및 `self-hosted <https://mattermost.com/download/>`__ 배포"
 
 #: ../../<rst_prolog>:4
 msgid "deployment-img"
@@ -51,6 +51,9 @@ msgid ""
 "and is stored in a path you configure. The data is synchronized to either"
 " a cloud-based or local file store every hour, and retained for 15 days."
 msgstr ""
+"시스템 관리자는 이러한 타사 도구를 배포하지 않고도 Prometheus와 동일한 :doc:`성능 모니터링 메트릭 "
+"</scale/performance-monitoring-metrics>` 을 수집하고 저장할 수 있습니다. 데이터는 매분 수집되어 "
+"구성한 경로에 저장됩니다. 데이터는 매시간 클라우드 기반 또는 로컬 파일 저장소에 동기화되며 15일간 보관됩니다."
 
 #: ../../source/scale/collect-performance-metrics.rst:9
 msgid ""
@@ -58,6 +61,8 @@ msgid ""
 "application performance, troubleshoot system stability and performance, "
 "as well as inform route cause analysis."
 msgstr ""
+"수집된 데이터를 Mattermost와 공유하여 애플리케이션 성능을 이해하고, 시스템 안정성과 성능 문제를 해결하며, "
+"근본 원인 분석에 도움을 받을 수 있습니다."
 
 #: ../../source/scale/collect-performance-metrics.rst:13
 msgid ""
@@ -65,28 +70,32 @@ msgid ""
 "tools to monitor performance of your Mattermost deployment </scale"
 "/deploy-prometheus-grafana-for-performance-monitoring>`."
 msgstr ""
+"이미 Prometheus와 Grafana를 배포했나요? :doc:`이러한 도구를 사용하여 Mattermost 배포의 성능을 모니터링 "
+"</scale/deploy-prometheus-grafana-for-performance-monitoring>` 할 수 있습니다."
 
 #: ../../source/scale/collect-performance-metrics.rst:16
 msgid "Mattermost configuration"
-msgstr ""
+msgstr "Mattermost 구성"
 
 #: ../../source/scale/collect-performance-metrics.rst:20
 msgid ""
 "For Mattermost Cloud deployments, no setup is required. See the `usage "
 "<#usage>`__ section below for details on collecting performance metrics."
 msgstr ""
+"Mattermost Cloud 배포의 경우 설정이 필요하지 않습니다. 성능 메트릭 수집에 대한 자세한 내용은 아래 `사용법 "
+"<#usage>`__ 섹션을 참조하세요."
 
 #: ../../source/scale/collect-performance-metrics.rst:22
 msgid ""
 "For a self-hosted Mattermost deployment, a Mattermost system admin must "
 "perform the following steps in Mattermost."
-msgstr ""
+msgstr "자체 호스팅 Mattermost 배포의 경우, Mattermost 시스템 관리자가 Mattermost에서 다음 단계를 수행해야 합니다."
 
 #: ../../source/scale/collect-performance-metrics.rst:24
 msgid ""
 "Log in to your Mattermost :doc:`workspace </guides/use-mattermost>` as a "
 "system admin."
-msgstr ""
+msgstr "시스템 관리자로 Mattermost :doc:`작업 공간 </guides/use-mattermost>` 에 로그인하세요."
 
 #: ../../source/scale/collect-performance-metrics.rst:25
 msgid ""
@@ -95,12 +104,15 @@ msgid ""
 "list| icon and selecting **App Marketplace**. Search for **Metrics** and "
 "select **Install**."
 msgstr ""
+"Mattermost v10.1부터는 **Product** |product-list| 아이콘을 선택하고 **App Marketplace** 를 "
+"선택하여 제품 내 Mattermost Marketplace에서 Metrics 플러그인을 설치할 수 있습니다. **Metrics** 를 "
+"검색하고 **Install** 을 선택하세요."
 
 #: ../../<rst_prolog>:100
 msgid ""
 "Navigate between Channels and collaborative playbooks using the product "
 "menu icon."
-msgstr ""
+msgstr "제품 메뉴 아이콘을 사용하여 채널과 협업 플레이북 사이를 탐색하세요."
 
 #: ../../source/scale/collect-performance-metrics.rst:26
 msgid ""
@@ -108,16 +120,20 @@ msgid ""
 "**Installed Plugins** section, scroll to **Mattermost Metrics Plugin**, "
 "and select **Enable Plugin**."
 msgstr ""
+"**System Console > Plugins > Plugin Management** 로 이동하세요. **Installed Plugins** "
+"섹션에서 **Mattermost Metrics Plugin** 으로 스크롤하고 **Enable Plugin** 을 선택하세요."
 
 #: ../../source/scale/collect-performance-metrics.rst:27
 msgid "Specify the path of the time-series database, and select **Save**."
-msgstr ""
+msgstr "시계열 데이터베이스의 경로를 지정하고 **Save** 를 선택하세요."
 
 #: ../../source/scale/collect-performance-metrics.rst:28
 msgid ""
 "Go to **System Console > Environment > Performance Monitoring**, and set "
 "**Enable Performance Monitoring** to **true**. Select **Save**."
 msgstr ""
+"**System Console > Environment > Performance Monitoring** 으로 이동하여 "
+"**Enable Performance Monitoring**을 **true** 로 설정하세요. **Save** 를 선택하세요."
 
 #: ../../source/scale/collect-performance-metrics.rst:32
 msgid ""
@@ -127,10 +143,14 @@ msgid ""
 "v8.0.1 and later. Go to **System Console > Plugins > Plugin Management > "
 "Upload Plugin**, and upload the plugin binary you downloaded."
 msgstr ""
+"v10.1 이전의 Mattermost 배포의 경우, Mattermost v8.0.1 이상과 호환되는 `플러그인 바이너리 릴리스 "
+"<https://github.com/mattermost/mattermost-plugin-metrics/releases>`__ 의 최신 버전을 다운로드해야 "
+"합니다. **System Console > Plugins > Plugin Management > Upload Plugin** 으로 이동하여 "
+"다운로드한 플러그인 바이너리를 업로드하세요."
 
 #: ../../source/scale/collect-performance-metrics.rst:35
 msgid "Upgrade"
-msgstr ""
+msgstr "업그레이드"
 
 #: ../../source/scale/collect-performance-metrics.rst:37
 msgid ""
@@ -140,16 +160,20 @@ msgid ""
 "/mattermost-plugin-metrics/releases>`__ for the latest release, available"
 " releases, and compatibiilty considerations."
 msgstr ""
+"새 버전이 출시되면 이 기능을 업그레이드하는 것을 권장합니다. 일반적으로 업데이트는 원활하게 이루어지며 "
+"Mattermost의 사용자 경험을 방해하지 않습니다. 최신 릴리스, 사용 가능한 릴리스 및 호환성 고려사항은 "
+"`Releases page <https://github.com/mattermost/mattermost-plugin-metrics/releases>`__ 를 "
+"방문하세요."
 
 #: ../../source/scale/collect-performance-metrics.rst:40
 msgid "Usage"
-msgstr ""
+msgstr "사용법"
 
 #: ../../source/scale/collect-performance-metrics.rst:42
 msgid ""
 "You need to be a Mattermost system admin to collect performance metrics. "
 "Select **Create Dump** to generate dump files."
-msgstr ""
+msgstr "성능 메트릭을 수집하려면 Mattermost 시스템 관리자여야 합니다. 덤프 파일을 생성하려면 **Create Dump** 를 선택하세요."
 
 #: ../../source/scale/collect-performance-metrics.rst:44
 msgid ""
@@ -159,12 +183,15 @@ msgid ""
 " downloaded file is compressed, so to be able to use it, you need to "
 "decompress it first."
 msgstr ""
+"생성된 덤프 파일을 사용하려면 `Dockprom <https://github.com/stefanprodan/dockprom>`__ 저장소를 "
+"클론하면 됩니다. Prometheus 데이터 볼륨을 방금 다운로드한 덤프를 가리키도록 변경하세요. 다운로드한 파일은 "
+"압축되어 있으므로 사용하려면 먼저 압축을 해제해야 합니다."
 
 #: ../../source/scale/collect-performance-metrics.rst:46
 msgid ""
 "The volume configuration for Prometheus should look like the code below "
 "in the ``docker-compose.yml`` file:"
-msgstr ""
+msgstr "Prometheus의 볼륨 구성은 ``docker-compose.yml`` 파일에서 아래 코드와 같아야 합니다:"
 
 #: ../../source/scale/collect-performance-metrics.rst:54
 msgid ""
@@ -172,6 +199,8 @@ msgid ""
 "Repository <https://github.com/stefanprodan/dockprom?tab=readme-ov-"
 "file#install>`__."
 msgstr ""
+"설정이 완료되면 `Dockprom Repository <https://github.com/stefanprodan/dockprom?tab=readme-ov-"
+"file#install>`__ 에 설명된 대로 ``docker-compose`` 를 실행하세요."
 
 #: ../../source/scale/collect-performance-metrics.rst:56
 msgid ""
@@ -179,30 +208,33 @@ msgid ""
 "<https://grafana.com/grafana/dashboards/15582-mattermost-performance-"
 "monitoring-v2/>`_ dashboard by simply importing it into Grafana."
 msgstr ""
+"Grafana에 가져오기만 하면 `Mattermost Performance Monitoring v2 "
+"<https://grafana.com/grafana/dashboards/15582-mattermost-performance-"
+"monitoring-v2/>`_ 대시보드를 사용할 수도 있습니다."
 
 #: ../../source/scale/collect-performance-metrics.rst:58
 msgid "Open Grafana (``<localhost>:3000`` by default) and then log into it."
-msgstr ""
+msgstr "Grafana(기본값 ``<localhost>:3000``)를 열고 로그인하세요."
 
 #: ../../source/scale/collect-performance-metrics.rst:59
 msgid ""
 "Once you log in, go to the **Plus** |plus| icon on the left sidebar, and "
 "then select **Import**."
-msgstr ""
+msgstr "로그인 후 왼쪽 사이드바의 **Plus** |plus| 아이콘으로 이동하여 **Import** 를 선택하세요."
 
 #: ../../<rst_prolog>:31
 msgid "The Plus icon provides access to channel and direct message functionality."
-msgstr ""
+msgstr "Plus 아이콘은 채널 및 다이렉트 메시지 기능에 접근할 수 있게 해줍니다."
 
 #: ../../source/scale/collect-performance-metrics.rst:60
 msgid ""
 "Enter the dashboard ID (``15582``) in the **Grafana.com Dashboard** "
 "field, and then select **Load** to fetch the dashboard."
-msgstr ""
+msgstr "**Grafana.com Dashboard** 필드에 대시보드 ID(``15582``)를 입력하고 **Load** 를 선택하여 대시보드를 가져오세요."
 
 #: ../../source/scale/collect-performance-metrics.rst:63
 msgid "What's collected?"
-msgstr ""
+msgstr "수집되는 항목은 무엇인가요?"
 
 #: ../../source/scale/collect-performance-metrics.rst:65
 msgid ""
@@ -211,4 +243,7 @@ msgid ""
 "/performance-monitoring-metrics:standard go metrics>` that can be used to"
 " monitor your system's performance."
 msgstr ""
-
+"Mattermost는 시스템 성능을 모니터링하는 데 사용할 수 있는 :ref:`사용자 정의 메트릭 "
+"<scale/performance-monitoring-metrics:custom Mattermost metrics>` 및 "
+":ref:`표준 Go 메트릭 <scale/performance-monitoring-metrics:standard go metrics>` 을 "
+"제공합니다."
