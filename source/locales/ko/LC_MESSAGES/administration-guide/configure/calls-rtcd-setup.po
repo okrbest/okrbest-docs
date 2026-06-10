@@ -1,0 +1,452 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:1
+msgid "RTCD Setup and Configuration"
+msgstr ""
+
+#: ../../source/_static/badges/ent-plus.md:6
+msgid ""
+"![plans-img-yellow](/_static/images/badges/flag_icon_yellow.svg) "
+"Available on [Enterprise and Enterprise "
+"Advanced](https://mattermost.com/pricing/) plans"
+msgstr ""
+
+#: ../../source/_static/badges/ent-plus.md:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:6
+msgid ""
+"This guide provides detailed instructions for setting up, configuring, "
+"and validating a Mattermost Calls deployment using the dedicated RTCD "
+"service."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:8
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:10
+msgid "Before deploying RTCD, ensure you have:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:12
+msgid "A Mattermost Enterprise license"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:13
+msgid ""
+"A server or VM with sufficient CPU and network capacity (see the "
+"[Performance baselines](calls-metrics-monitoring.md#performance-"
+"baselines) section for sizing guidance)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:15
+msgid "Network Requirements"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:17
+msgid "The following network connectivity is required:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:102
+msgid "Installation and Deployment"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:104
+msgid ""
+"There are multiple ways to deploy RTCD, depending on your environment. We"
+" recommend the following order based on production readiness and "
+"operational control:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:106
+msgid "Bare Metal or VM Deployment (Recommended)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:108
+msgid ""
+"This is the recommended deployment method for non-Kubernetes production "
+"environments, as it provides the best performance and operational "
+"control. For Kubernetes deployments, see the [Calls Deployment on "
+"Kubernetes](calls-kubernetes.md) guide."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:111
+msgid ""
+"Looking for an automated setup? Check out these community-maintained "
+"[Calls Installation Scripts](https://github.com/bgardner8008/calls-"
+"install-scripts) for quick provisioning of the RTCD service on "
+"Ubuntu/Debian systems."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:114
+msgid "**Download and install the RTCD binary**:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:116
+msgid ""
+"Download the latest release from the [RTCD GitHub "
+"repository](https://github.com/mattermost/rtcd/releases):"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:132
+msgid ""
+"Replace `rtcd-linux-amd64` with the appropriate binary for your system "
+"architecture (e.g., `rtcd-linux-arm64` for ARM64 systems). The binary "
+"should be placed at `/opt/rtcd/rtcd` as this is the expected location "
+"referenced in systemd service files and other documentation."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:135
+msgid "**Create a configuration file** (`/opt/rtcd/rtcd.toml`):"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:137
+msgid ""
+"Mattermost recommends using the official "
+"[config.sample.toml](https://github.com/mattermost/rtcd/blob/master/config/config.sample.toml)"
+" as a starting point. Download this file and use it as your base "
+"configuration."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:139
+msgid "Create a dedicated user for the RTCD service:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:145
+msgid "Create the data directory and set ownership:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:152
+msgid "Create a systemd service file (`/etc/systemd/system/rtcd.service`):"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:172
+msgid "Enable and start the service:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:180
+msgid "Check the service status:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:186
+msgid "Docker Deployment"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:188
+msgid ""
+"Docker deployment is suitable for development, testing, or containerized "
+"production environments:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:190
+msgid "Run the RTCD container with basic configuration:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:202
+msgid ""
+"If you optionally use the `RTCD_API_SECURITY_ALLOWSELFREGISTRATION` "
+"setting, please note that it defaults to `false`. If enabled, it allows "
+"anyone who can connect to the service on the API port (8045) to "
+"successfully initiate calls. Understand the security implications of this"
+" setting before enabling it."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:205
+msgid "For debugging purposes, you can enable more detailed logging:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:217
+msgid "To view the logs:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:223
+msgid ""
+"You can also use a mounted configuration file instead of environment "
+"variables:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:234
+msgid ""
+"For a complete sample configuration file, see the [RTCD "
+"config.sample.toml](https://github.com/mattermost/rtcd/blob/master/config/config.sample.toml)"
+" in the official repository."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:236
+msgid "Kubernetes Deployment"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:238
+msgid ""
+"For detailed information on deploying RTCD in Kubernetes environments, "
+"including Helm chart configurations, resource requirements, and scaling "
+"considerations, see the [Calls Deployment on Kubernetes](calls-"
+"kubernetes.md) guide."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:240
+msgid "Configuration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:242
+msgid "RTCD Configuration File"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:244
+msgid ""
+"The RTCD service uses a TOML configuration file. Mattermost recommends "
+"using the official "
+"[config.sample.toml](https://github.com/mattermost/rtcd/blob/master/config/config.sample.toml)"
+" as your base configuration file."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:247
+msgid ""
+"A notable setting to be aware of is `ice_host_override` under the `[rtc]`"
+" section. You may need to configure this setting explicitly, particularly"
+" when RTCD is deployed behind NAT, in complex network topologies, or when"
+" automatic address discovery via STUN is unreliable. Setting "
+"`ice_host_override` directly to your server's public IP address or "
+"hostname is the preferred approach."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:250
+msgid "TURN Configuration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:252
+msgid ""
+"For clients behind strict firewalls, you may need to configure TURN "
+"servers. In the RTCD configuration file, reference your TURN servers as "
+"follows:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:263
+msgid ""
+"We recommend using [coturn](https://github.com/coturn/coturn) for your "
+"TURN server implementation."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:265
+msgid "System Tuning"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:267
+msgid "For high-volume deployments, tune your Linux system:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:269
+msgid "Add the following to `/etc/sysctl.conf`:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:278
+msgid "Apply the settings:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:284
+msgid "Validation and Testing"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:286
+msgid "After deploying RTCD, validate the installation:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:288
+msgid "**Check service status and version**:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:296
+msgid "**Test UDP connectivity**:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:298
+msgid ""
+"Before testing, ensure the RTCD service is stopped, as it binds to the "
+"same port."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:304
+msgid "On the RTCD server:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:310
+msgid "On a client machine:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:313
+msgid "sudo nmap -sU -p 8443 RTCD_SERVER_IP"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:324
+msgid "**Test TCP connectivity** (if enabled):"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:326
+msgid "Run this check from a client machine:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:332
+msgid "If TCP fallback is enabled and reachable, `nmap` reports as `open`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:334
+msgid "**Monitor metrics**:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:336
+msgid ""
+"Refer to [Calls Metrics and Monitoring](calls-metrics-monitoring.md) for "
+"setting up Calls metrics and monitoring."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:338
+msgid "Horizontal Scaling"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:340
+msgid "To scale RTCD horizontally:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:342
+msgid "**Deploy multiple RTCD instances**:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:344
+msgid "Deploy multiple RTCD servers, each with their own unique IP address."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:346
+msgid "**Configure DNS record**:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:348
+msgid "Set up a DNS record that points to multiple RTCD IP addresses:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:356
+msgid "**Configure health checks**:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:358
+msgid ""
+"Set up health checks to automatically remove unhealthy RTCD instances "
+"from DNS."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:360
+msgid "**Configure Mattermost**:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:362
+msgid ""
+"In the Mattermost System Console, set the **RTCD Service URL** to your "
+"DNS name (e.g., `rtcd.example.com`)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:364
+msgid ""
+"When a call starts, the Mattermost server examines the available RTCD "
+"servers (via the configured DNS record) and starts the call on the RTCD "
+"server with the lowest CPU usage. All participants in the call will "
+"connect to that RTCD server; a single call cannot be shared across "
+"multiple servers."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:366
+msgid "Integration with Mattermost"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:368
+msgid ""
+"Once RTCD is properly set up and validated, configure Mattermost to use "
+"it:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:370
+msgid "Go to **System Console > Plugins > Calls**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:372
+msgid ""
+"Set the **RTCD Service URL** to your RTCD service address (either a "
+"single server or DNS load-balanced hostname). Ensure you provide any "
+"generated credentials formulated in the URI (e.g., "
+"`http://clientID:authKey@rtcd.local`)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:374
+msgid "Save the configuration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:376
+msgid "Test by creating a new call in any Mattermost channel"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:378
+msgid ""
+"Verify that the call is being routed through RTCD by checking the RTCD "
+"logs and metrics"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:380
+msgid "Other Calls Documentation"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:382
+msgid ""
+"[Calls Deployment Guide](calls-deployment-guide.md): Overview of "
+"deployment options and architecture"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:383
+msgid ""
+"[Calls Offloader Setup and Configuration](calls-offloader-setup.md): "
+"Setup guide for call recording and transcription"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:384
+msgid ""
+"[Calls Metrics and Monitoring](calls-metrics-monitoring.md): Guide to "
+"monitoring Calls performance using metrics and observability"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:385
+msgid ""
+"[Calls Deployment on Kubernetes](calls-kubernetes.md): Detailed guide for"
+" deploying Calls in Kubernetes environments"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:386
+msgid ""
+"[Calls Logging](calls-logging.md): Detailed guidance for collecting Calls"
+" logs and client diagnostics"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-rtcd-setup.md:388
+msgid ""
+"For detailed Mattermost Calls configuration options, see the [Calls "
+"Plugin Configuration Settings](plugins-configuration-settings.rst#calls) "
+"documentation."
+msgstr ""
+

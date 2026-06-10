@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:2
+msgid "Attribute-Based Access Control"
+msgstr ""
+
+#: ../../source/_static/badges/entry-adv.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry and Enterprise Advanced "
+"<https://mattermost.com/pricing/>`__ plans"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:16
+msgid ""
+"From Mattermost v10.9, system admins in large or complex organizations "
+"who require Zero Trust Security when handling with sensitive information "
+"can prevent unauthorized access through attribute-based access controls."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:18
+msgid ""
+"Enforcing strict access controls based on user attributes eliminates "
+"manual role adjustment processes that can lead to security risks, "
+"inefficiencies, or inappropriate access, while maintaining security and "
+"compliance by ensuring that only authorized users can access specific "
+"Mattermost channels."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:20
+msgid ""
+"Attribute-based access control (ABAC) can be used with the following "
+"policy types:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:22
+msgid ""
+"**System-wide access policies** (managed by System Admins): Centralized "
+"policies created in the System Console that can be applied across "
+"multiple channels. See :doc:`System-wide attribute-based access policies "
+"</administration-guide/manage/admin/abac-system-wide-policies>`."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:23
+msgid ""
+"**Permission policies** (managed by System Admins): Attribute-based "
+"restrictions on user actions such as file upload and file download. See "
+":ref:`Permission policies <administration-guide/manage/admin/abac-system-"
+"wide-policies:permission policies>`."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:24
+msgid ""
+"**Team-scoped membership policies** (managed by Team Admins): Channel "
+"membership policies that Team Admins can create, edit, and delete "
+"directly from Team Settings for channels in their team. See :ref:`Manage "
+"team-scoped membership policies in Team Settings <administration-"
+"guide/manage/admin/abac-channel-access-rules:manage team-scoped "
+"membership policies in team settings>`."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:25
+msgid ""
+"**Channel-specific access rules** (managed by Channel Admins): Self-"
+"service access rules that Channel Admins can configure directly in "
+"Channel Settings for individual channels. See :doc:`Channel-specific "
+"access rules </administration-guide/manage/admin/abac-channel-access-"
+"rules>`."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:28
+msgid "Before you begin"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:30
+msgid ""
+"Attribute-based access controls require defined user attributes that are "
+"either synchronized from an external system (such as LDAP or SAML) or "
+"manually configured and enabled on your Mattermost server. You'll need to"
+" :doc:`configure user attributes </administration-guide/manage/admin"
+"/user-attributes>` in the System Console first before creating access "
+"policies."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:32
+msgid ""
+"Each attribute becomes a user profile option users can populate, unless "
+"you disable the **Editable by Users** option, available from Mattermost "
+"v11. Admin-managed attributes can be used in addition to the LDAP/SAML "
+"synchronized attributes for attribute-based access control rules."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:34
+msgid ""
+"Once user attributes are defined, go to **System Console > System "
+"Attributes > Attribute-Based Access** to enable attribute-based access "
+"controls for your Mattermost instance. This functionality requires a "
+"Mattermost Enterprise Advanced license."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:36
+msgid ""
+"From Mattermost v10.11, user-managed attributes are excluded from "
+"attribute-based access control (ABAC) rules by default for security "
+"reasons. This prevents access control policies from being circumvented by"
+" users editing their own profile attributes. To include user-managed "
+"attributes in ABAC rules, a system admin must explicitly enable the "
+"``EnableUserManagedAttributes`` configuration setting. See the :ref:`user"
+" attribute <administration-guide/manage/admin/user-attributes:before you "
+"begin>` documentation for details on enabling this feature. This "
+"configuration setting is available only in Enterprise Edition Advanced "
+"and is disabled by default."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:39
+msgid "Configure access policies"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:41
+msgid ""
+"Once enabled, you have multiple ways to configure access policies in "
+"Mattermost:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:43
+msgid "**System Admins can:**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:45
+msgid ""
+"Create :doc:`system-wide access policies </administration-"
+"guide/manage/admin/abac-system-wide-policies>` that can be assigned "
+"across multiple channels in the System Console."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:46
+msgid ""
+"Assign :ref:`individual channel policies <administration-"
+"guide/manage/admin/abac-system-wide-policies:define access controls per "
+"channel>` to specific channels in the System Console."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:47
+msgid ""
+"Define :ref:`permission policies <administration-guide/manage/admin/abac-"
+"system-wide-policies:permission policies>` that restrict actions such as "
+"file upload and file download based on user attributes."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:49
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:53
+msgid "**Team Admins can:**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:51
+msgid ""
+"Create, edit, and delete :ref:`team-scoped channel membership policies "
+"<administration-guide/manage/admin/abac-channel-access-rules:manage team-"
+"scoped membership policies in team settings>` for channels in their team "
+"directly from Team Settings, when granted the "
+"``manage_team_access_rules`` permission."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:55
+msgid ""
+"Create and manage :doc:`team-level channel membership policies "
+"</administration-guide/manage/admin/abac-team-channel-policies>` in Team "
+"Settings, scoping attribute-based rules to one or more private channels "
+"within their team."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:57
+msgid "**Channel Admins can:**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/attribute-based-access-control.rst:59
+msgid ""
+"Configure :doc:`channel-specific access rules </administration-"
+"guide/manage/admin/abac-channel-access-rules>` directly in Channel "
+"Settings without requiring a system admin."
+msgstr ""
+

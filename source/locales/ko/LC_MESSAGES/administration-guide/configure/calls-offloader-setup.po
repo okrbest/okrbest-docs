@@ -1,0 +1,946 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:1
+msgid "Calls Offloader Setup and Configuration"
+msgstr ""
+
+#: ../../source/_static/badges/ent-plus.md:6
+msgid ""
+"![plans-img-yellow](/_static/images/badges/flag_icon_yellow.svg) "
+"Available on [Enterprise and Enterprise "
+"Advanced](https://mattermost.com/pricing/) plans"
+msgstr ""
+
+#: ../../source/_static/badges/ent-plus.md:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:7
+msgid ""
+"This guide provides detailed instructions for setting up, configuring, "
+"and validating the Mattermost calls-offloader service used for call "
+"recording and transcription features."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:9
+msgid "[Overview](#overview)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:10
+msgid "[Prerequisites](#prerequisites)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:11
+msgid "[Installation and deployment](#installation-and-deployment)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:12
+msgid "[Configuration](#configuration)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:13
+msgid "[Validation and testing](#validation-and-testing)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:14
+msgid "[Integration with Mattermost](#integration-with-mattermost)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:15
+msgid "[Troubleshooting](#troubleshooting)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:16
+msgid "[Air-Gapped Deployments](#air-gapped-deployments)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:18
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:377
+msgid "Overview"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:20
+msgid ""
+"The calls-offloader service is a dedicated microservice that handles "
+"resource-intensive tasks for Mattermost Calls, including:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:22
+msgid "**Call recording**: Captures audio and screen sharing content from calls"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:23
+msgid "**Call transcription**: Provides automated transcription of recorded calls"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:24
+msgid ""
+"**Live captions** (Experimental): Real-time transcription during active "
+"calls"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:26
+msgid ""
+"By offloading these tasks to a dedicated service, the main Mattermost "
+"server and RTCD service can focus on core functionality while maintaining"
+" optimal performance."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:28
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:386
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:30
+msgid "Before deploying calls-offloader, ensure you have:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:32
+msgid "A Mattermost Enterprise license"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:33
+msgid ""
+"A properly configured Mattermost Calls deployment (either integrated or "
+"with RTCD)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:34
+msgid "A moderately powerful server with Docker installed and running"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:35
+msgid ""
+"Sufficient storage space for recordings (see [Storage Requirements"
+"](#storage-requirements))"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:37
+msgid "System Requirements"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:39
+msgid ""
+"For detailed system requirements and performance recommendations, refer "
+"to the [calls-offloader performance "
+"documentation](https://github.com/mattermost/calls-"
+"offloader/blob/master/docs/performance.md)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:41
+msgid "Storage Requirements"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:43
+msgid ""
+"Call recordings can consume significant storage space. Based on average "
+"recording sizes with screen sharing on (including one audio track), "
+"storage usage by quality chosen is approximately:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:45
+msgid "**Low**: ~0.5GB/hour (or ~8MB/minute)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:46
+msgid "**Medium**: ~0.7GB/hour (or ~12MB/minute)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:47
+msgid "**High**: ~1.2GB/hour (or ~20MB/minute)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:49
+msgid ""
+"*Note: Audio-only recordings consume approximately 1MB per minute per "
+"participant.*"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:51
+msgid "Installation and Deployment"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:53
+msgid "Bare Metal or VM Deployment"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:56
+msgid ""
+"Looking for an automated setup? Check out these community-maintained "
+"[Calls Installation Scripts](https://github.com/bgardner8008/calls-"
+"install-scripts) for quick provisioning of the Calls Offloader service on"
+" Ubuntu/Debian systems."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:59
+msgid ""
+"Download the latest release from the [calls-offloader GitHub "
+"repository](https://github.com/mattermost/calls-offloader/releases)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:61
+msgid "Create the necessary directories:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:69
+msgid "Create a configuration file (`/opt/calls-offloader/config.toml`):"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:102
+msgid ""
+"Create a systemd service file (`/etc/systemd/system/calls-"
+"offloader.service`):"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:123
+msgid "Enable and start the service:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:131
+msgid "Check the service status:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:137
+msgid "Verify the service is responding:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:145
+msgid "Configuration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:147
+msgid "API Configuration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:149
+msgid "The API section controls how the service accepts requests:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:151
+msgid ""
+"**http.listen_address**: The address and port where the service listens "
+"(default: `:4545`)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:152
+msgid "**http.tls.enable**: Whether to use TLS encryption for the API"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:153
+msgid ""
+"**security.allow_self_registration**: Allow clients to self-register for "
+"job management"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:154
+msgid "**security.enable_admin**: Enable admin functionality"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:155
+msgid ""
+"**security.admin_secret_key**: Secret key for admin authentication "
+"(change from default!)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:157
+msgid "Store Configuration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:159
+msgid "Controls persistent data storage:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:161
+msgid ""
+"**data_source**: Path to directory for storing client (i.e., connecting "
+"Mattermost nodes) IDs and credentials"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:163
+msgid "Jobs Configuration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:165
+msgid "Controls job processing behavior:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:167
+msgid "**api_type**: Job execution backend (`docker` or `kubernetes`)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:168
+msgid ""
+"**max_concurrent_jobs**: Maximum number of simultaneous "
+"recording/transcription jobs"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:169
+msgid ""
+"**failed_jobs_retention_time**: How long to keep failed job data before "
+"cleanup"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:170
+msgid ""
+"**image_registry**: Docker registry for job runner images (typically "
+"`mattermost`)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:172
+msgid "Logger Configuration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:174
+msgid "Controls logging output:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:176
+msgid "**enable_console**: Log to console output"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:177
+msgid "**console_json**: Use JSON format for console logs"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:178
+msgid "**console_level**: Log level for console (DEBUG, INFO, WARN, ERROR)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:179
+msgid "**enable_file**: Log to file"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:180
+msgid "**file_location**: Path to log file"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:181
+msgid "**enable_color**: Use colored output for console logs"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:183
+msgid "Private Network Configuration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:185
+msgid ""
+"When the Mattermost deployment is running in a private network, "
+"additional configuration may be necessary for the jobs spawned by the "
+"calls-offloader service to reach the Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:187
+msgid ""
+"In such cases, you can override the site URL used by recorder jobs or "
+"transcriber jobs to connect to Mattermost by setting the following "
+"environment variables on the Mattermost server:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:189
+msgid ""
+"**MM_CALLS_RECORDER_SITE_URL**: Override the site URL used by recording "
+"jobs"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:190
+msgid ""
+"**MM_CALLS_TRANSCRIBER_SITE_URL**: Override the site URL used by "
+"transcription jobs"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:193
+msgid ""
+"When these Site URL overrides are used, the "
+"`ServiceSettings.AllowCorsFrom` setting on your Mattermost server may "
+"need to be adjusted accordingly to ensure CORS does not block requests."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:195
+msgid ""
+"This override configuration lets the recorder and transcriber jobs "
+"connect to mattermost server using HTTP instead of HTTPS, which should "
+"only be used in a private network."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:198
+msgid "Example configuration:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:200
+msgid ""
+"Create or edit the Mattermost environment file "
+"(`/opt/mattermost/config/mattermost.environment`):"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:207
+msgid ""
+"Then ensure your Mattermost systemd service references this environment "
+"file:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:230
+msgid "This is particularly useful when:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:232
+msgid ""
+"The calls-offloader service runs in a different network segment than "
+"clients"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:233
+msgid "Internal DNS resolution differs from external URLs"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:234
+msgid "You need to use internal load balancer endpoints for job communication"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:236
+msgid "Validation and Testing"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:238
+msgid "After deploying calls-offloader, validate the installation:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:240
+msgid "**Check service status**:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:247
+msgid "**Test API connectivity**:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:249
+msgid "**From the calls-offloader server (localhost test)**:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:257
+msgid "**From the Mattermost server**:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:265
+msgid "If the localhost test works but the Mattermost server test fails, check:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:267
+msgid ""
+"Firewall rules or SELinux policies on the calls-offloader server (port "
+"4545 must be accessible)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:268
+msgid "Network connectivity between Mattermost and calls-offloader servers"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:270
+msgid "**Verify Docker service** (if using docker api_type):"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:277
+msgid "Integration with Mattermost"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:279
+msgid ""
+"Once calls-offloader is properly set up and validated, configure "
+"Mattermost to use it:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:281
+msgid "Go to **System Console > Plugins > Calls**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:283
+msgid "In the **Job Service** section:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:285
+msgid ""
+"Set **Job Service URL** to your calls-offloader service (e.g., `http"
+"://calls-offloader-server:4545`)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:287
+msgid "Enable recording and transcription features as needed:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:289
+msgid "**Enable Call Recordings**: Toggle to allow call recordings"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:290
+msgid "**Enable Call Transcriptions**: Toggle to allow call transcriptions"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:291
+msgid ""
+"**Enable Live Captions** (Experimental): Toggle to allow real-time "
+"transcription"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:293
+msgid "Save the configuration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:295
+msgid "Restart the Calls plugin to re-establish state:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:297
+msgid "Go to **System Console > Plugins > Plugin Management**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:298
+msgid "Find the **Calls** plugin and click **Disable**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:299
+msgid "Wait a few seconds, then click **Enable**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:301
+msgid "Test by starting a call and starting a recording"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:303
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:305
+msgid "Common Issues"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:307
+msgid "**\"failed to create recording job: max concurrent jobs reached\"**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:309
+msgid ""
+"This error occurs when the calls-offloader service has reached its "
+"configured job limit, and it will usually result in a failure message on "
+"the Mattermost Calls plugin side (such as a timeout)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:311
+msgid "Solutions:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:313
+msgid "Increase `max_concurrent_jobs` in the configuration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:314
+msgid "Check if jobs are hanging and restart the service"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:315
+msgid "Monitor system resources and scale up if needed"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:317
+msgid "**Jobs not processing**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:319
+msgid "Check the following:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:321
+msgid ""
+"Verify the calls-offloader service is running: `sudo systemctl status "
+"calls-offloader`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:322
+msgid "Ensure network connectivity between Mattermost and calls-offloader"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:323
+msgid ""
+"Check Docker daemon is running and accessible by the user running the "
+"Calls Offloader service (E.g., user: ``calls-offloader``)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:324
+msgid "Verify authentication configuration matches between services"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:325
+msgid "Review service logs for specific error messages"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:327
+msgid "**Docker permission issues**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:329
+msgid "If using Docker API and seeing permission errors:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:337
+msgid "Debugging Commands"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:339
+msgid "Monitor calls-offloader job containers:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:352
+msgid "Monitor service health:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:359
+msgid "Check service logs:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:369
+msgid "Performance Monitoring"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:371
+msgid ""
+"Monitor calls-offloader performance and resource usage to ensure optimal "
+"operation. See [Calls Metrics and Monitoring](calls-metrics-"
+"monitoring.md) for details on setting up metrics and observability."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:373
+msgid "Air-Gapped Installation of `calls-offloader`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:375
+msgid ""
+"This guide covers deploying `calls-offloader` in an environment without "
+"internet access. The process uses scripts from the [calls-install-"
+"scripts](https://github.com/bgardner8008/calls-install-scripts) "
+"repository and follows a two-phase workflow: preparing a transfer bundle "
+"on an internet-connected machine, then deploying it on the isolated "
+"target machine."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:379
+msgid ""
+"Because `calls-offloader` relies on Docker images for the recorder and "
+"transcriber jobs, an air-gapped deployment requires that those images be "
+"pre-pulled and packaged alongside the `calls-offloader` binary before "
+"being transferred to the target environment."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:381
+msgid "The install scripts handle this in two stages:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:383
+msgid ""
+"**Prepare** (internet-connected machine) — `setup-airgap-offloader.sh` "
+"pulls the required Docker images and downloads the `calls-offloader` "
+"binary, then packages everything into a transfer bundle and generates a "
+"ready-to-run deployment script."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:384
+msgid ""
+"**Deploy** (air-gapped machine) — Transfer the bundle and run the "
+"generated `deploy-airgap-offloader.sh` script, which loads the Docker "
+"images into a local registry and installs the service."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:388
+msgid ""
+"An internet-connected Linux machine with Docker installed (for the "
+"preparation phase)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:389
+msgid "A target air-gapped Linux machine with:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:390
+msgid "systemd"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:391
+msgid "Docker installed"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:392
+msgid "Root or sudo access"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:393
+msgid ""
+"The [calls-install-scripts](https://github.com/bgardner8008/calls-"
+"install-scripts) repository cloned on the internet-connected machine"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:395
+msgid "Phase 1: Prepare the Transfer Bundle"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:397
+msgid ""
+"On the **internet-connected machine**, run `setup-airgap-offloader.sh` "
+"specifying the versions of each component to package:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:192
+msgid "Flag"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:192
+msgid "Description"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:192
+msgid "Default"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:192
+msgid "`--offloader VERSION`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:192
+msgid "`calls-offloader` binary version (e.g. `v0.9.5`)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:192
+msgid "required"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:192
+msgid "`--recorder VERSION`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:192
+msgid "`calls-recorder` Docker image version"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:192
+msgid "`--transcriber VERSION`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:192
+msgid "`calls-transcriber` Docker image version"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:192
+msgid "`--arch amd64|arm64`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:192
+msgid "Target CPU architecture"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:192
+msgid "`amd64`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:414
+msgid "The script will:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:416
+msgid ""
+"Pull the `calls-recorder` and `calls-transcriber` Docker images from "
+"Docker Hub"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:417
+msgid "Download the `calls-offloader` binary from GitHub releases"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:418
+msgid "Save the Docker images as `.tar` archives"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:419
+msgid ""
+"Generate a `deploy-airgap-offloader.sh` deployment script configured for "
+"the selected versions"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:420
+msgid "Produce a transfer bundle containing all of the above"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:422
+msgid "Phase 2: Transfer to the Air-Gapped Machine"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:424
+msgid ""
+"Copy the generated bundle to the target machine using whatever transfer "
+"mechanism is available in your environment (USB drive, secure file "
+"transfer, etc.):"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:430
+msgid "On the air-gapped machine, extract the bundle:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:437
+msgid "Phase 3: Deploy on the Air-Gapped Machine"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:439
+msgid "Run the generated deployment script with root or sudo privileges:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:445
+msgid "This script will:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:447
+msgid "Configure the local Docker daemon to use a local image registry"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:448
+msgid "Load the packaged Docker images into that registry"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:449
+msgid "Install the `calls-offloader` binary to `/usr/local/bin/`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:450
+msgid "Create the `mattermost` system user and add it to the `docker` group"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:451
+msgid "Generate and enable a systemd service unit"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:452
+msgid "Start the service and verify it is running"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:454
+msgid "Once complete, verify the service is up:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:460
+msgid "Connecting to Mattermost"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:462
+msgid ""
+"Configure the Mattermost Calls plugin to use the offloader service via "
+"**System Console > Plugins > Calls > Job service URL**, setting it to "
+"`http://<offloader-host>:4545`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:464
+msgid ""
+"[!NOTE] The first time Mattermost connects to the offloader it will self-"
+"register and store its authentication key in the database, provided "
+"`API_SECURITY_ALLOWSELFREGISTRATION=true` is set (the default in the "
+"deployment script)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:467
+msgid "Private Network Considerations"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:469
+msgid ""
+"In air-gapped environments the recorder and transcriber containers "
+"typically need to reach the Mattermost server via an internal URL. Set "
+"the following environment variables on the **Mattermost server** to "
+"override the site URL used by spawned jobs:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:476
+msgid ""
+"You may also need to add the internal URL to "
+"[`ServiceSettings.AllowCorsFrom`](https://docs.mattermost.com/configure"
+"/integrations-configuration-settings.html#enable-cross-origin-requests-"
+"from) in the Mattermost server configuration."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:478
+msgid ""
+"[!NOTE] In particularly restrictive environments (e.g., VMs with strict "
+"network isolation), set `DOCKER_NETWORK=host` in the `calls-offloader` "
+"service environment so that job containers can reach the Mattermost "
+"server via its local address."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:481
+msgid "Custom Docker Registry"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:483
+msgid ""
+"If your air-gapped environment already has an internal Docker registry, "
+"you can point `install-offloader.sh` at it directly instead of using the "
+"local registry set up by the deployment script:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:492
+msgid ""
+"The `--image-registry` flag sets the registry prefix used when the "
+"offloader pulls recorder and transcriber images for each job."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:494
+msgid "Other Calls Documentation"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:496
+msgid ""
+"[Calls Deployment Guide](calls-deployment-guide.md): Overview of "
+"deployment options and architecture"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:497
+msgid ""
+"[RTCD Setup and Configuration](calls-rtcd-setup.md): Comprehensive guide "
+"for setting up the dedicated RTCD service"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:498
+msgid ""
+"[Calls Metrics and Monitoring](calls-metrics-monitoring.md): Guide to "
+"monitoring Calls performance using metrics and observability"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:499
+msgid ""
+"[Calls Deployment on Kubernetes](calls-kubernetes.md): Detailed guide for"
+" deploying Calls in Kubernetes environments"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:500
+msgid ""
+"[Calls Logging](calls-logging.md): Detailed guidance for collecting Calls"
+" logs and client diagnostics"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-offloader-setup.md:501
+msgid ""
+"[calls-offloader performance documentation](https://github.com/mattermost"
+"/calls-offloader/blob/master/docs/performance.md): Detailed performance "
+"tuning and monitoring recommendations"
+msgstr ""
+

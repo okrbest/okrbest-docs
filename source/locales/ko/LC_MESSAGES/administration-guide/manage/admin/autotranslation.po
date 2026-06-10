@@ -1,0 +1,589 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:2
+msgid "Set up Auto-translation (Beta)"
+msgstr ""
+
+#: ../../source/_static/badges/ent-adv.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Enterprise Advanced "
+"<https://mattermost.com/pricing/>`__ plans"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:7
+msgid ""
+"From Mattermost v11.5, auto-translation automatically translates channel "
+"messages into each user's preferred display language. This enables "
+"multilingual teams to collaborate without language barriers."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:9
+msgid ""
+"Auto-translation uses an asynchronous queue-based architecture. When a "
+"message is posted in a channel with auto-translation enabled, the message"
+" is queued for translation into every configured target language. "
+"Translated messages replace the original display for users whose display "
+"language matches a target language, and they can view the original text "
+"at any time by selecting the translation icon on the message.  A user's "
+"translation target language is determined by their Mattermost display "
+"language (set via **Settings > Display > Language**); decoupling the "
+"translation target from the display language is not currently supported."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:11
+msgid "Two translation provider options are available:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:13
+msgid "**LibreTranslate**: A self-hosted, open-source machine translation engine."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:14
+msgid ""
+"**Agents**: Uses the :doc:`Mattermost Agents plugin </administration-"
+"guide/configure/agents-admin-guide>` with a configured LLM backend."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:17
+msgid "Before you begin"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:19
+msgid "A Mattermost **Enterprise Advanced** license is required."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:20
+msgid "Choose a translation provider and ensure its infrastructure is available:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:22
+msgid ""
+"**LibreTranslate**: A running LibreTranslate server reachable from the "
+"Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:23
+msgid ""
+"**Agents**: The :doc:`Mattermost Agents plugin </administration-"
+"guide/configure/agents-admin-guide>` installed and configured with at "
+"least one LLM service."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:26
+msgid "Set up Auto-translation"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:29
+msgid "Configure a translation provider"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:31
+msgid ""
+"Choose one of the following translation providers and follow the setup "
+"instructions for your choice."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:34
+msgid "Set up LibreTranslate"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:36
+msgid ""
+"`LibreTranslate <https://libretranslate.com/>`__ is a self-hosted, open-"
+"source machine translation engine. See the `LibreTranslate installation "
+"guide <https://docs.libretranslate.com/guides/installation/>`__ for "
+"deployment instructions."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:38
+msgid "Once your LibreTranslate server is running:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:40
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:62
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:76
+msgid "Go to **System Console > Site Configuration > Localization**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:41
+msgid "Set **Translation provider** to ``libretranslate``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:42
+msgid ""
+"Enter the :ref:`LibreTranslate URL <administration-guide/configure/site-"
+"configuration-settings:libretranslate url>` (for example, "
+"``http://libretranslate.internal:5000``)."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:43
+msgid ""
+"If your LibreTranslate instance requires authentication, enter the "
+":ref:`LibreTranslate API key <administration-guide/configure/site-"
+"configuration-settings:libretranslate api key>`."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:44
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:65
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:80
+msgid "Select **Save**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:48
+msgid ""
+"The Mattermost server must be able to reach the LibreTranslate URL over "
+"the network. Ensure firewall rules and DNS resolution allow connectivity "
+"between the Mattermost server and the LibreTranslate instance."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:51
+msgid "Set up the Agents provider"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:53
+msgid ""
+"The Agents provider uses the Mattermost Agents plugin to translate "
+"messages via a configured LLM service."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:55
+msgid "Prerequisites:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:57
+msgid ""
+"The :doc:`Mattermost Agents plugin </administration-guide/configure"
+"/agents-admin-guide>` is installed and enabled."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:58
+msgid "At least one LLM service is configured in the Agents plugin."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:60
+msgid "To configure:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:63
+msgid "Set **Translation provider** to ``agents``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:64
+msgid ""
+"Enter the :ref:`Agents LLM service ID <administration-guide/configure"
+"/site-configuration-settings:agents llm service id>` matching the LLM "
+"service configured in the Agents plugin."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:69
+msgid ""
+"**Choosing between LibreTranslate and Agents**: LibreTranslate is a "
+"lightweight, self-hosted translation engine. The Agents provider uses an "
+"LLM backend and generally produces more accurate translations, especially"
+" for languages such as Japanese, Korean, and Chinese where contextual "
+"understanding improves quality. Consider your translation quality needs "
+"and existing infrastructure when choosing. LibreTranslate does not "
+"support direct translation between all language pairs; for unsupported "
+"combinations it performs a pivot translation through an intermediate "
+"language (typically English), which can reduce accuracy for those pairs."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:71
+msgid ""
+"**Choosing an LLM for the Agents provider**: Smaller, faster models are "
+"recommended for auto-translation. Translation is a well-defined task that"
+" doesn't benefit from the extended reasoning capabilities of larger "
+"models — larger models may actually overthink the task, adding "
+"unnecessary latency without improving quality. Choose a small, low-"
+"latency model that is currently supported by your configured LLM provider"
+" and validated in your environment."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:74
+msgid "Enable auto-translation"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:77
+msgid ""
+"Set :ref:`Enable autotranslation <administration-guide/configure/site-"
+"configuration-settings:enable autotranslation>` to **True**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:78
+msgid ""
+"Select a :ref:`Translation provider <administration-guide/configure/site-"
+"configuration-settings:translation provider>` (``libretranslate`` or "
+"``agents``)."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:79
+msgid ""
+"Configure :ref:`Languages allowed <administration-guide/configure/site-"
+"configuration-settings:languages allowed>` — every message in auto-"
+"translation-enabled channels is translated into each language in this "
+"list."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:84
+msgid ""
+"The languages available in the **Languages allowed** list are controlled "
+"by the **Available languages** setting (``AvailableLocales``) under "
+"**Site Configuration > Localization**. If that field is blank, all "
+"supported languages are available; otherwise only listed languages appear"
+" as selectable auto-translation targets. The "
+"``EnableExperimentalLocales`` setting can make additional locale codes "
+"available. Note that some locales (such as ``zh-Hans``) are in beta — "
+"portions of the Mattermost UI may still display in English, which is a UI"
+" localization limitation and does not affect message translation."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:86
+msgid ""
+"Use the :ref:`Restrict autotranslation in direct and group messages "
+"<administration-guide/configure/site-configuration-settings:restrict "
+"autotranslation in direct and group messages>` setting to control whether"
+" auto-translation can be enabled in direct and group messages."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:88
+msgid ""
+"See the :ref:`auto-translation configuration reference <administration-"
+"guide/configure/site-configuration-settings:autotranslation>` for all "
+"available settings."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:91
+msgid "Enable auto-translation in a channel"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:93
+msgid ""
+"Auto-translation is managed on a per-channel basis and is disabled by "
+"default for all channels. System admins and channel admins can enable or "
+"disable auto-translation for individual channels."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:95
+msgid ""
+"When auto-translation is enabled or disabled in a channel, a system post "
+"notifies channel members of the change."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:99
+msgid ""
+"Enabling auto-translation in a channel only translates new messages going"
+" forward. Existing message history is not retroactively translated."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:102
+msgid "Tune worker performance"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:104
+msgid ""
+"For most deployments the default worker settings are sufficient. If your "
+"deployment has a high message volume, many configured target languages, "
+"or you observe growing translation queue depth, you may need to increase "
+"the worker count. This section explains how to calculate and monitor the "
+"right values."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:107
+msgid "How the translation queue works"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:109
+msgid ""
+"When a message is posted in a channel with auto-translation enabled, it's"
+" added to a per-node translation queue. A worker picks up the post and "
+"translates it sequentially into each configured target language. Each "
+"completed language translation triggers a websocket broadcast to the "
+"channel so users see translations arrive in real time."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:111
+msgid ""
+"In a high availability deployment, each node runs its own pool of workers"
+" and processes its own queue independently."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:114
+msgid "Calculate your worker count"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:116
+msgid "Use the following formula to estimate how many workers each node needs:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:126
+msgid "Where:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:128
+msgid "**posts_per_sec** — average message rate across the server."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:129
+msgid ""
+"**pct_autotranslated** — fraction of posts in auto-translation-enabled "
+"channels (0.0–1.0)."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:130
+msgid "**num_languages** — number of configured target languages."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:131
+msgid ""
+"**avg_provider_latency_ms** — mean response time from the translation "
+"provider in milliseconds."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:132
+msgid "**num_app_nodes** — number of Mattermost application nodes."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:133
+msgid "**1.2** — headroom factor (20%) to absorb traffic bursts."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:135
+msgid ""
+"The following table shows results from load tests with 6,500 concurrent "
+"users, 2 app nodes, ~5 posts/sec, and ~2 s mean provider latency. The "
+"provider latency distribution used in testing was realistic, with buckets"
+" ranging from 500 ms to 10 s weighted toward the 500 ms–1.5 s range, "
+"producing a ~2 s mean."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:141
+msgid "Target languages"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:142
+msgid "% autotranslated"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:143
+msgid "Workers per node"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:144
+msgid "7"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:145
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:148
+msgid "100%"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:146
+msgid "38"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:147
+msgid "6"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:149
+msgid "32"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:150
+msgid "3"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:151
+msgid "75%"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:152
+msgid "8"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:156
+msgid ""
+"In the 6-language test the formula yields 33, but workers were capped at "
+"32 due to the configured maximum. Adjust the :ref:`Translation workers "
+"<administration-guide/configure/site-configuration-settings:translation "
+"workers>` setting to match your calculated value."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:159
+msgid "Scaling considerations"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:161
+msgid ""
+"**Target languages are the biggest multiplier.** Each additional language"
+" increases both worker time per post and the number of websocket "
+"broadcasts per post. Reducing the number of target languages is the most "
+"effective way to reduce load."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:162
+msgid ""
+"**Websocket traffic scales with languages.** Each target language "
+"produces one channel-wide websocket broadcast per translated post. Under "
+"high load, the main symptom of saturation is websocket disconnects caused"
+" by per-connection send queues filling up."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:163
+msgid ""
+"**Provider latency shapes traffic patterns.** Lower latency means "
+"translations complete in quicker bursts, concentrating websocket traffic."
+" Higher latency spreads events over time. Monitor provider response times"
+" and factor them into your capacity planning."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:166
+msgid "Monitor with Prometheus"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:168
+msgid "Mattermost exposes the following Prometheus metrics for auto-translation:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:170
+msgid ""
+"``mattermost_autotranslation_queue_depth_total`` *(Gauge)* — current "
+"tasks waiting in the queue. A steadily rising value means workers can't "
+"keep up with incoming posts."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:171
+msgid ""
+"``mattermost_autotranslation_provider_call_duration_seconds`` "
+"*(Histogram; labels: provider, result)* — translation provider latency. "
+"This is the ``avg_provider_latency_ms`` value used in the formula above. "
+"Calculate the average with the following PromQL query:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:179
+msgid ""
+"``mattermost_autotranslation_worker_task_duration_seconds`` *(Histogram)*"
+" — total time for a worker to process one post across all target "
+"languages."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:182
+msgid "Configuration reference"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:184
+msgid ""
+":ref:`Translation workers <administration-guide/configure/site-"
+"configuration-settings:translation workers>`: The number of concurrent "
+"workers per node. Default is **6**. Increase this value for high-traffic "
+"deployments or decrease it to reduce resource consumption."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:185
+msgid ""
+":ref:`Translation timeout <administration-guide/configure/site-"
+"configuration-settings:translation timeout>`: The maximum time in "
+"milliseconds for a single translation request. Default is **5000** ms (5 "
+"seconds). Increase this value if your translation provider is "
+"experiencing timeouts due to network latency or high load."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:187
+msgid "You can also update the worker count from the command line using mmctl:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:194
+msgid "Frequently asked questions"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:197
+msgid "Why aren't messages being translated?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:199
+msgid ""
+"Verify auto-translation is enabled globally in **System Console > Site "
+"Configuration > Localization**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:200
+msgid "Verify auto-translation is enabled for the specific channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:201
+msgid "Confirm a translation provider is selected and properly configured."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:202
+msgid ""
+"Check that the Mattermost server can reach the translation provider "
+"(LibreTranslate URL or Agents plugin)."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:203
+msgid "Review Mattermost server logs for translation errors."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:206
+msgid "What happens when the translation provider is unavailable?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:208
+msgid ""
+"Messages are still posted normally. Translations that fail due to "
+"provider downtime are skipped, and users see the original untranslated "
+"message. When the provider recovers, new messages are translated as "
+"expected."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:211
+msgid "What languages are supported?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:213
+msgid "Supported languages depend on the translation provider:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:215
+msgid ""
+"**LibreTranslate**: Supports the languages available in your "
+"LibreTranslate deployment. See the `LibreTranslate language list "
+"<https://libretranslate.com/languages>`__ for details."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:216
+msgid ""
+"**Agents**: Language support depends on the capabilities of the "
+"configured LLM. Most modern LLMs support a wide range of languages."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/autotranslation.rst:218
+msgid ""
+"Configure the :ref:`Languages allowed <administration-guide/configure"
+"/site-configuration-settings:languages allowed>` setting to specify which"
+" languages all messages are translated into."
+msgstr ""
+

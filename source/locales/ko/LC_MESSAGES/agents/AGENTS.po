@@ -1,0 +1,396 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/agents/AGENTS.md:1
+msgid "AGENTS.md"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:3
+msgid ""
+"Canonical agent instructions for this repository. Humans should read "
+"`README.md` and `docs/`. `CLAUDE.md` and `mcpserver/CLAUDE.md` are thin "
+"imports — do not duplicate content there."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:5
+msgid "Project"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:7
+msgid ""
+"Mattermost server plugin (`mattermost-ai`) that integrates LLM providers."
+" Go 1.26 backend + React/TypeScript webapp (Node 24.11)."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:9
+msgid "Commands"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:11
+msgid "`make help` lists every documented target with a one-line description."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:13
+msgid ""
+"Pre-PR aggregate (lint + unit tests + e2e shard coverage + i18n/lockfile "
+"drift; **recommended**): `make check`"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:14
+msgid "Lint with auto-fix (also re-extracts i18n strings): `make check-style-fix`"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:15
+msgid "Lint only: `make check-style`"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:16
+msgid "All unit tests: `make test`"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:17
+msgid "Single Go test: `go test -v ./<pkg> -run TestName`"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:18
+msgid ""
+"Build & deploy plugin to a running Mattermost (linux-amd64 only by "
+"default): `make deploy` Set `MAKE_ALL_PLATFORMS=1` only if you're "
+"deploying to a Mac- or Windows-native server."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:20
+msgid ""
+"E2E (self-contained, no env setup needed; slow, defer to CI when "
+"possible): `make e2e`"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:21
+msgid ""
+"Single e2e spec: `cd e2e && npx playwright test tests/path/spec.ts "
+"--reporter=list`"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:22
+msgid ""
+"Prompt evals (non-interactive): `make evals-ci` Provider: "
+"`LLM_PROVIDER=openai|anthropic|azure|openaicompatible|all make evals-ci` "
+"Model: `ANTHROPIC_MODEL=claude-sonnet-4-5-20250929 make evals-ci`"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:25
+msgid ""
+"Streaming benchmarks: `go test -bench=. -benchmem ./llm/... "
+"./streaming/...`"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:27
+msgid ""
+"When `make check` fails, run the underlying targets individually (`make "
+"check-style`, `make test`, `make check-shards`, `make check-i18n`, `make "
+"check-locks`) to isolate which step broke. CI runs the same drift checks;"
+" if i18n or a lockfile is out of sync, those targets regenerate the file "
+"in place — review and commit."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:29
+msgid "Repository layout"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:31
+msgid "Most Go packages live at the **repo root**, not under `server/`."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:33
+msgid "`server/` — plugin entrypoint, lifecycle, configuration adapter."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:34
+msgid "`api/`, `mmapi/` — HTTP handlers; Mattermost API wrappers."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:35
+msgid "`llm/` — LLM provider abstractions and provider implementations."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:36
+msgid ""
+"`mcp/`, `mcpserver/` — MCP client; embedded/HTTP/stdio MCP servers and "
+"tools."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:37
+msgid ""
+"`format/` — formatting of Mattermost entities for LLM consumption (see "
+"Conventions)."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:38
+msgid ""
+"Other top-level feature packages exist (e.g. `bots/`, `channels/`, "
+"`threads/`, `meetings/`, `search/`, `embeddings/`, `streaming/`, "
+"`toolrunner/`, `websearch/`, …). Read the package name and skim the "
+"package source before assuming purpose — note in particular that both "
+"`conversation/` and `conversations/` exist and are not the same."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:39
+msgid "`config/` — plugin configuration types and migration."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:40
+msgid "`webapp/` — React/TypeScript UI bundle (`webapp/src/`)."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:41
+msgid "`e2e/` — Playwright + Testcontainers end-to-end tests."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:42
+msgid "`evals/`, `cmd/evalviewer/` — prompt evaluation harness and TUI."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:43
+msgid "`i18n/` — extracted translation strings."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:44
+msgid "`docs/` — user/admin docs."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:45
+msgid "`public/bridgeclient/` — separate Go module published for other plugins."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:47
+msgid "Conventions"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:49
+msgid ""
+"Linters (golangci-lint, ESLint, gofmt/goimports, header check, "
+"editorconfig) already enforce formatting, imports, error checking, "
+"license headers, and indentation. The rules below are the ones a linter "
+"cannot enforce."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:51
+msgid "File names: `snake_case.go` / `snake_case.ts(x)`."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:52
+msgid ""
+"TypeScript/React: PascalCase components, strict typing, **always styled-"
+"components**, never inline `style={{...}}`."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:53
+msgid ""
+"New user-facing strings must go through i18n (`make i18n-extract` picks "
+"them up)."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:54
+msgid "Go tests must be table-driven when there is more than one case."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:55
+msgid ""
+"Never introduce a new test/mocking library; prefer to test against real "
+"implementations instead."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:56
+msgid ""
+"All formatting of Mattermost entities (posts, users, channels, teams, "
+"members) for LLM consumption or tool output must go through the `format/`"
+" package. Never `fmt.Sprintf` model types inline; add a formatter to "
+"`format/` instead."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:57
+msgid ""
+"E2E shard maintenance: when adding a new spec that should run in CI, "
+"assign it in `e2e/scripts/ci-test-groups.mjs` in the same change. `make "
+"check-shards` validates coverage and is part of `make check`. Mock/non-"
+"real-api tests go in the lightest `e2e-shard-*` group; provider-backed "
+"tests go in the matching `*-real*` group; balance by expected runtime, "
+"not alphabetically."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:58
+msgid ""
+"Test for behavior that could break due to a real bug. Before writing a "
+"test ask: \"If this test fails, does it indicate a real bug in our "
+"code?\" In particular, do not assert on implementation details like "
+"validation order or which error appears first."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:60
+msgid "OpenTelemetry tracing"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:62
+msgid "The plugin emits OpenTelemetry traces. Agent-relevant rules:"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:64
+msgid ""
+"**Thread `ctx context.Context` as the first parameter** through every "
+"entry point → LLM call code path. Don't introduce `context.Background()` "
+"shortcuts in production code; the request-scoped context is what makes "
+"spans correlate."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:65
+msgid ""
+"Existing spans live in `bifrost/` (LLM calls), `llm/tools.go`, "
+"`conversations/tool_handling.go`, `mcp/`, `search/`, `websearch/`, and "
+"`streaming/`. The `otelgin` middleware adds HTTP spans automatically."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:66
+msgid ""
+"To add a span: `ctx, span := telemetry.Tracer().Start(ctx, \"span name\","
+" trace.WithAttributes(...))`, then `defer span.End()`. Record errors with"
+" `span.RecordError(err)` and `span.SetStatus(codes.Error, msg)`. Reuse "
+"attribute keys from `telemetry/attributes.go` instead of inventing new "
+"ones."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:67
+msgid ""
+"When a `*llm.Context` parameter would shadow the `context` package in the"
+" same file, import `\"context\"` as `stdcontext`."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:68
+msgid ""
+"Config fields (`TelemetryOutput`, `OpenTelemetryEndpoint`) and local "
+"Tempo/Grafana setup live in `docs/admin_guide.md`."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:70
+msgid "Never do"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:72
+msgid ""
+"Never edit `webapp/dist/`, `server/dist/`, or `dist/` — regenerate with "
+"the build commands above."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:73
+msgid ""
+"Never hand-edit `webapp/src/i18n/en.json` — `make check-style-fix` re-"
+"extracts it from webapp source. Add the user-facing string at the call "
+"site instead. (Server-side `i18n/en.json` is hand-curated; mmgotool "
+"extraction doesn't apply to this repo's `nicksnyder/go-i18n` setup.)"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:74
+msgid "Never push to `master`; open a PR."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:76
+msgid "Gotchas"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:78
+msgid ""
+"If `make install-go-tools` fails to build `mattermost-govet`, the pinned "
+"commit is incompatible with the active Go toolchain. The Makefile prints "
+"the exact fix: bump `MATTERMOST_GOVET_VERSION` in the Makefile to a newer"
+" commit. This is a real problem to fix, not a warning to ignore."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:79
+msgid ""
+"`postgres/pgvector_test.go` boots its own pgvector container via "
+"`testcontainers-go` (`pgvector/pgvector:pg17`); `go test ./postgres/...` "
+"works on a fresh checkout as long as Docker is available. To run against "
+"an existing pgvector instance for fast iteration, set "
+"`PGVECTOR_TEST_DSN`."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:80
+msgid ""
+"Plugin config is migrated to the plugin DB on activation. For automation,"
+" read/write `GET`/`PUT /plugins/mattermost-ai/admin/config` rather than "
+"patching the Mattermost server config."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:81
+msgid ""
+"The embedded MCP server requires `SiteURL` to be set on the Mattermost "
+"server, and uses in-memory transport (no HTTP). On tool name collisions "
+"across MCP servers, first-registered wins; later duplicates are skipped "
+"with a warning."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:82
+msgid ""
+"`public/bridgeclient/` is a separately published Go module, not HTTP "
+"assets; `HAS_PUBLIC` is intentionally cleared in the Makefile."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:84
+msgid "Pull requests and commits"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:86
+msgid ""
+"Commit subject: one succinct line. Optional Jira prefix (`MM-12345:`) or "
+"short scope (`fix:`, `docs:`, `webapp:`) is fine."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:87
+msgid "Do not add `Co-Authored-By` listing the agent."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:88
+msgid "Use the GitHub PR template for the PR body."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:90
+msgid "Pointers"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:92
+msgid "Read these only when the trigger applies:"
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:94
+msgid ""
+"Working inside `mcpserver/` (config-vs-runtime, search service wiring, "
+"adding optional capabilities): `mcpserver/AGENTS.md`."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:95
+msgid "Configuring providers, agents, or the admin UI: `docs/admin_guide.md`."
+msgstr ""
+
+#: ../../source/agents/AGENTS.md:96
+msgid ""
+"When working on prompt evals or modifying the eval harness: "
+"`cmd/evalviewer/README.md`."
+msgstr ""
+

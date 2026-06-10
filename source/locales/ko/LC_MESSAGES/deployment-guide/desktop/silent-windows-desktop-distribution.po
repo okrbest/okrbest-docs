@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:2
+msgid "Silent Windows desktop distribution"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:7
+msgid ""
+"You can distribute the official Windows desktop app silently to end users"
+" using the MSI installer, pre-configured with server URLs and settings. "
+"For comprehensive MSI installation options including Group Policy "
+"configuration, see the :doc:`MSI installer and Group Policy guide "
+"</deployment-guide/desktop/desktop-msi-installer-and-group-policy-"
+"install>`."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:10
+msgid "Silent MSI installation"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:12
+msgid ""
+"Download the latest Windows MSI installer from the `Mattermost Desktop "
+"releases page on GitHub "
+"<https://github.com/mattermost/desktop/releases/latest>`__."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:14
+msgid ""
+"Move the MSI file to a shared location such as a file server with read-"
+"only permissions."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:16
+msgid ""
+"Use your software deployment tool (SCCM, Intune, PDQ Deploy, etc.) to "
+"deploy the MSI with silent installation parameters:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:18
+msgid "**Silent install:**"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:25
+msgid "Pre-configuration with config.json"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:27
+msgid ""
+"To pre-configure servers and settings, create a ``config.json`` file in "
+"the user's Mattermost data directory before first launch:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:29
+msgid "**Location**: ``%APPDATA%\\Mattermost\\config.json``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:31
+msgid "**Example config.json**:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:65
+msgid "**Batch script for silent install with pre-configuration:**"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:82
+msgid "Windows App: Silently removing the app"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:84
+msgid "The MSI installer can be silently uninstalled using:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:90
+msgid "To find the product code for your installed version:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:96
+msgid "Alternatively, uninstall by searching for the MSI file:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:103
+msgid "Migration from EXE to MSI"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:105
+msgid ""
+"Organizations currently using the Windows EXE installer must migrate to "
+"the MSI installer or Microsoft Store version:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:107
+msgid "**Uninstall existing EXE version** (if desired, optional):"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:113
+msgid "**Install MSI version** using silent installation commands above."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:115
+msgid ""
+"**User data preservation**: User settings and credentials are stored in "
+"``%APPDATA%\\Mattermost`` and will be preserved across the migration."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/silent-windows-desktop-distribution.rst:119
+msgid ""
+"The EXE installer will not receive v6.1.0 or later updates. Plan your "
+"migration accordingly."
+msgstr ""
+

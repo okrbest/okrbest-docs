@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:2
+msgid "Upgrade PostgreSQL"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:7
+msgid ""
+"Mattermost follows the `PostgreSQL community versioning policy "
+"<https://www.postgresql.org/support/versioning/>`_, which provides 5 "
+"years of support per major version. When a PostgreSQL version reaches "
+"end-of-life, Mattermost drops support for it in a subsequent release. See"
+" the :doc:`software and hardware requirements </deployment-guide"
+"/software-hardware-requirements>` documentation for the currently "
+"supported PostgreSQL versions."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:9
+msgid ""
+"When upgrading PostgreSQL, refer to the `official PostgreSQL upgrade "
+"documentation <https://www.postgresql.org/docs/current/upgrading.html>`_ "
+"for comprehensive guidance. This page covers the steps specific to "
+"Mattermost deployments."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:12
+msgid "Before you begin"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:14
+msgid ""
+"**Back up your database.** Always take a full database backup before "
+"upgrading. See the :doc:`backup and disaster recovery </deployment-guide"
+"/backup-disaster-recovery>` documentation."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:16
+msgid ""
+"**Check supported versions.** Confirm the target PostgreSQL version is "
+"supported by your Mattermost release. See :doc:`software and hardware "
+"requirements </deployment-guide/software-hardware-requirements>`."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:18
+msgid ""
+"**Stop Mattermost.** Shut down the Mattermost server before starting the "
+"database upgrade to prevent data writes during the process."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:22
+msgid "Upgrade a bare-metal PostgreSQL server"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:24
+msgid ""
+"There are two main approaches for upgrading PostgreSQL on a bare-metal or"
+" virtual machine:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:26
+msgid ""
+"**pg_upgrade** (in-place): Faster; upgrades the data directory without a "
+"full dump/restore cycle. Recommended for large databases."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:27
+msgid ""
+"**pg_dump / pg_restore** (logical): Simpler and safer for cross-machine "
+"migrations or when in-place upgrade is not possible."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:30
+msgid "Using pg_upgrade"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:32
+msgid ""
+"``pg_upgrade`` allows you to upgrade between major PostgreSQL versions "
+"without a full export. Both the old and new PostgreSQL versions must be "
+"installed side-by-side."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:34
+msgid ""
+"Install the new PostgreSQL version alongside the existing one using your "
+"package manager."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:36
+msgid "Stop the existing PostgreSQL service:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:42
+msgid ""
+"Run ``pg_upgrade`` as the ``postgres`` user, specifying the binary and "
+"data directories for both versions. Replace ``<old_version>`` and "
+"``<new_version>`` with the appropriate version numbers (e.g. ``15`` and "
+"``16``):"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:52
+msgid ""
+"Update your system to start the new PostgreSQL version by default, then "
+"start the service:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:58
+msgid ""
+"For full ``pg_upgrade`` reference, see the `official pg_upgrade "
+"documentation <https://www.postgresql.org/docs/current/pgupgrade.html>`_."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:61
+msgid "Using pg_dump and pg_restore"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:63
+msgid ""
+"This approach exports the entire database, installs the new PostgreSQL "
+"version, and restores the data. It is simpler but requires downtime "
+"proportional to database size."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:65
+msgid ""
+"Export the Mattermost database (replace ``mattermost`` with your database"
+" name and ``mmuser`` with your database user):"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:71
+msgid ""
+"Install the new PostgreSQL version and create the database user and "
+"database:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:78
+msgid "Restore the database into the new PostgreSQL instance:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:85
+msgid "Upgrade PostgreSQL in Docker"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:89
+msgid ""
+"The steps below are written for the official `Mattermost Docker "
+"deployment <https://github.com/mattermost/docker>`_. If you are using a "
+"custom Docker setup, adapt the container and volume names accordingly."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:91
+msgid ""
+"When running PostgreSQL in Docker, ``pg_dump``/``pg_restore`` is the "
+"recommended upgrade approach. In-place ``pg_upgrade`` is complex in "
+"containers because it requires both old and new binaries in the same "
+"container."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:93
+msgid "Stop the Mattermost container:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:99
+msgid ""
+"Dump the database from the running PostgreSQL container (replace "
+"``mattermost``, ``mmuser``, and ``db`` with your database name, user, and"
+" container name):"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:105
+msgid "Stop the existing PostgreSQL container:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:111
+msgid ""
+"Update ``POSTGRES_IMAGE_TAG`` in your ``.env`` file to the new version. "
+"For example:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:117
+msgid ""
+"Recreate the PostgreSQL container so the new image tag from ``.env`` is "
+"applied:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:125
+msgid ""
+"If your volume already contains data from the old major version, "
+"PostgreSQL will refuse to start. In that case, create a new named volume "
+"for the new container, then restore from the dump in the next step."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:127
+msgid ""
+"Recreate the database user and database in the new container, then "
+"restore:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:136
+msgid "After the upgrade"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:138
+msgid ""
+"After upgrading PostgreSQL, run ``ANALYZE VERBOSE`` on the Mattermost "
+"database. This re-populates the ``pg_statistics`` table used by "
+"PostgreSQL to generate optimal query plans. Skipping this step can result"
+" in degraded database performance."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrading-postgres.rst:144
+msgid "Once complete, restart Mattermost:"
+msgstr ""
+

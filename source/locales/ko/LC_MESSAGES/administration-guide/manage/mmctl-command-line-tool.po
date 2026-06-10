@@ -1,0 +1,4459 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2
+msgid "mmctl command line tool"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7
+msgid ""
+"The mmctl is a CLI tool for the Mattermost server which is installed "
+"locally and uses the Mattermost API, but may also be used remotely. "
+"Authentication is done with either login credentials or an authentication"
+" token. This mmctl tool is included and replaces the :doc:`CLI "
+"</administration-guide/manage/command-line-tools>`. The mmctl can "
+"currently be used alongside the Mattermost CLI tool. The Mattermost CLI "
+"tool will be deprecated in a future release."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:9
+msgid ""
+"Being installed locally enables system admins for both self-hosted and "
+"Cloud Mattermost instances to run CLI commands even in instances where "
+"there's no access to the server (e.g., via SSH)."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:11
+#, python-format
+msgid ""
+"This feature was developed to a large extent by community contributions "
+"and we'd like to extend our gratitude to the contributors who have worked"
+" on this project. We are currently accepting pull requests for Help "
+"Wanted issues in the `mattermost-server "
+"<https://github.com/mattermost/mattermost/issues?q=is%3Aissue+is%3Aopen+label%3A%22Help+Wanted%22+label%3AArea%2Fmmctl>`__"
+" repo. You can learn more about the unit test coverage campaign for mmctl"
+" in the `Unit testing mmctl commands <https://mattermost.com/blog/unit-"
+"testing-mmctl-commands/>`__ blog post."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:14
+msgid "mmctl usage notes"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:16
+msgid ""
+"System admins have two ways to run ``mmctl`` commands: by downloading "
+"``mmctl`` from the release URLs, which you can find in the `installation "
+"instructions <#install-mmctl>`__, or by building it directly, for which "
+"you can check the `build instructions <#build-mmctl>`__ below. The source"
+" code lives in the `server/cmd/mmctl directory within the mattermost "
+"repository "
+"<https://github.com/mattermost/mattermost/tree/master/server/cmd/mmctl>`__."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:17
+msgid ""
+"``mmctl`` also comes bundled with the Mattermost distribution, and is "
+"located in the ``bin`` folder of the installation, next to the ``CLI``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:19
+msgid ""
+"We recommend you add the path to the Mattermost ``bin`` folder into your "
+"``$PATH`` environment variable. This ensures that you can run mmctl "
+"commands locally regardless of your current directory location."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:20
+msgid ""
+"If the ``bin`` directory is not added to the ``$PATH`` environment "
+"variable, each time you use mmctl you must be in the ``bin`` directory to"
+" run mmctl commands, and the commands must be prefixed with ``./``. If "
+"you're working from a different directory, make sure you specify the full"
+" path to mmctl when running mmctl commands."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:21
+msgid "Parameters in mmctl commands are order-specific."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:22
+msgid ""
+"You can use the ``--local`` flag with mmctl commands to run them without "
+"authentication by allowing communicating with the server through a Unix "
+"socket. See the `local mode <#local-mode>`__ documentation for activation"
+" and usage details."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:23
+msgid ""
+"If special characters (``!``, ``|``, ``(``, ``)``, ``\\``, ``'``, and "
+"``\"``) are used, the entire argument needs to be surrounded by single "
+"quotes (e.g. ``-password 'mypassword!'``, or the individual characters "
+"need to be escaped out (e.g. ``password mypassword\\!``)."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:24
+msgid ""
+"Team name and channel name refer to the handles, not the display names. "
+"So in the URL ``https://community.mattermost.com/core/channels/town-"
+"square`` team name would be ``core`` and channel name would be ``town-"
+"square``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:27
+msgid "mmctl commands"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:29
+msgid "`mmctl auth`_ - Authentication Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:30
+msgid "`mmctl bot`_ - Bot Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:31
+msgid "`mmctl channel`_ - Channel Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:32
+msgid "`mmctl command`_ - Command Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:33
+msgid "`mmctl cpa`_ - User Attribute Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:34
+msgid ""
+"`mmctl completion`_ - Generate autocompletion scripts for bash, fish, "
+"powershell, and zsh"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:35
+msgid "`mmctl compliance-export`_ - Compliance Export Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:36
+msgid "`mmctl config`_ - Configuration Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:37
+msgid "`mmctl docs`_ - Generate mmctl documentation"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:38
+msgid "`mmctl export`_ - Exports Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:39
+msgid "`mmctl group`_ - Group Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:40
+msgid "`mmctl group channel`_ - Channel Group Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:41
+msgid "`mmctl group team`_ - Team Group Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:42
+msgid "`mmctl group user`_ - Custom User Group Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:43
+msgid "`mmctl import`_ - Import Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:44
+msgid "`mmctl extract`_ - Content Extraction Job Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:45
+msgid "`mmctl integrity`_ - (Deprecated) Database Record Integrity"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:46
+msgid "`mmctl job`_ - Job Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:47
+msgid "`mmctl ldap`_ - LDAP Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:48
+msgid "`mmctl license`_ - License Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:49
+msgid "`mmctl logs`_ - Log Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:50
+msgid "`mmctl oauth`_ - OAuth2 application management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:51
+msgid "`mmctl permissions`_ - Permissions Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:52
+msgid "`mmctl plugin`_ - Plugin Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:53
+msgid "`mmctl post`_ - Post Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:54
+msgid "`mmctl roles`_ - Roles Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:55
+msgid "`mmctl saml`_ - SAML Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:56
+msgid "`mmctl sampledata`_ - Generate sample data"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:57
+msgid "`mmctl system`_ - System Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:58
+msgid "`mmctl team`_ - Team Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:59
+msgid "`mmctl team users`_ - Team User Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:60
+msgid "`mmctl token`_ - Token Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:61
+msgid "`mmctl user`_ - User Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:62
+msgid "`mmctl user preference`_ - Manage User Preferences"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:63
+msgid "`mmctl version`_ - Version Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:64
+msgid "`mmctl webhook`_ - Webhook Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:65
+msgid "`mmctl websocket`_ - Websocket Management"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:67
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:194
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:219
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:258
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:297
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:336
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:378
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:518
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:560
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:595
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:620
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:659
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:700
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:739
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:778
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:819
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:865
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:890
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:931
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:971
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1019
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1059
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1100
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1140
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1181
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1223
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1266
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1307
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1343
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1383
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1410
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1449
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1489
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1524
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1549
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1588
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1640
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1674
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1713
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1763
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1802
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1833
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1860
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1902
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1944
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1986
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2018
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2037
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2063
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2106
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2147
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2192
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2246
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2288
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2330
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2364
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2406
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2443
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2468
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2507
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2548
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2596
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2635
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2674
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2713
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2760
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2799
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2845
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2880
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2917
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2936
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2977
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3020
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3056
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3083
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3122
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3161
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3203
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3236
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3278
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3303
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3342
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3381
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3420
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3459
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3490
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3515
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3554
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3593
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3632
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3660
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3685
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3714
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3748
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3790
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3829
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3870
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3896
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3924
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3963
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4005
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4038
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4077
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4116
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4155
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4199
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4240
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4277
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4308
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4336
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4393
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4424
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4454
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4483
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4508
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4550
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4589
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4621
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4646
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4685
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4724
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4763
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4796
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4826
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4851
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4886
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4915
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4959
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5002
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5050
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5089
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5137
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5171
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5196
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5236
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5275
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5314
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5357
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5397
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5426
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5451
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5500
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5535
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5560
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5616
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5658
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5729
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5757
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5792
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5848
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5896
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5921
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5960
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5999
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6039
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6078
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6118
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6158
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6183
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6224
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6270
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6310
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6349
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6390
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6430
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6469
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6498
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6523
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6562
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6592
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6617
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6656
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6700
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6750
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6776
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6829
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6878
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6937
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6988
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7030
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7070
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7110
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7149
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7198
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7249
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7292
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7337
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7377
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7416
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7511
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7547
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7573
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7614
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7654
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7696
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7737
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7776
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7815
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7854
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7895
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7934
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7967
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8003
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8028
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8074
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8123
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8162
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8201
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8245
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8292
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8325
+msgid "**Options**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:83
+msgid "Install mmctl"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:85
+msgid ""
+"The mmctl tool comes bundled with Mattermost package. For customers that "
+"want to setup it independently from the package, the following methods "
+"are available to install mmctl."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:91
+#, python-brace-format
+msgid ""
+"If you're using a release page for Linux, macOS, or Windows, we recommend"
+" downloading the mmctl builds through their release URL: "
+"``https://releases.mattermost.com/mmctl/${MATTERMOST_VERSION}/${PLATFORM}_${ARCHITECTURE}.tar``"
+" (for windows, substitute the ``.tar`` suffix with ``.zip``)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:93
+msgid ""
+"E.g. to download version ``v10.7.0`` of the mmctl amd64 build for linux, "
+"you can run the following:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:99
+msgid ""
+"Supported platforms, and corresponding supported architectures include "
+"linux (amd64 and arm64), darwin (amd64 and arm64), windows (amd64 only)."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:103
+msgid ""
+"You can build mmctl from a local Git clone to work directly with the "
+"source code, use the latest features, and experiment with custom changes."
+" This workflow is ideal if you need a tailored version of mmctl, want to "
+"fix bugs, or test new updates before they’re officially released."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:113
+msgid ""
+"**On Linux or macOS, this isn't an officially supported method** This "
+"installation channel is managed by the community. Please refer to the "
+"`homebrew/homebrew-core repo <https://github.com/Homebrew/homebrew-"
+"core>`__ for reporting issues."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:115
+msgid "Use this option on Linux and macOS if you have Homebrew installed."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:122
+msgid "Build mmctl"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:126
+msgid ""
+"The ``mmctl`` tool uses ``go`` modules to manage dependencies, so you "
+"need to have installed ``go`` 1.19 or greater on your machine."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:128
+msgid ""
+"After checking out the `mattermost repository "
+"<https://github.com/mattermost/mattermost>`__ locally to your machine, "
+"from the root directory of the project, you can compile the mmctl binary "
+"by running:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:135
+msgid "Local mode"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:137
+msgid "**Local mode is available for self-hosted deployments only.**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:139
+msgid ""
+"Local mode allows platform administrators with access to the Mattermost "
+"server to run mmctl commands against the API without needing to have a "
+"user registered. To ensure secure usage of this API, the server exposes a"
+" local socket that only a user with access to the server's file system "
+"can access. The requests coming from the socket are treated as "
+"authorized, so they can reach the handlers without requiring a user "
+"session."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:141
+msgid ""
+"The API that the socket exposes follows the same specification that can "
+"be found `in the API documentation <https://api.mattermost.com>`_, so "
+"mmctl is able to interact with it without needing any modifications. When"
+" a request comes in through the socket, it is flagged as local by the "
+"server, and this flag is taken into account when checking for session "
+"permissions to correctly authorize the sessions."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:144
+msgid "Activating local mode"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:146
+msgid ""
+"To use local mode, the Mattermost server first needs to :ref:`have local "
+"mode enabled <administration-guide/configure/experimental-configuration-"
+"settings:enable local mode for mmctl>`. When local mode is enabled, a "
+"socket is created at ``/var/tmp/mattermost_local.socket`` by default."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:150
+msgid ""
+"When trying to use local mode with mmctl, ensure you're using the same "
+"user when running the server and mmctl, or clean up the socket file "
+"before switching to a new user. If you encounter an error like ``socket "
+"file \"/var/tmp/mattermost_local.socket\" doesn't exists, please check "
+"the server configuration for local mode``, this can be resolved by "
+"setting this configuration setting to ``true``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:153
+msgid "Using local mode"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:155
+msgid ""
+"From Mattermost v10.8, when no authentication credentials are found in "
+"the authentication configuration, mmctl automatically assumes local mode,"
+" eliminating the need to manually append the ``--local`` flag to the "
+"command you want to use. When valid credentials exist, Mattermost will "
+"continue to validate them as expected."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:157
+msgid ""
+"Prior to Mattermost v10.8, you must append ``--local`` to the command you"
+" want to use, or set the environment variable as ``MMCTL_LOCAL=true``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:159
+msgid ""
+"To use a socket file other than the default, you need to set the "
+"environment variable to ``MMCTL_LOCAL_SOCKET_PATH``. This file must match"
+" the :ref:`server configuration setting <administration-guide/configure"
+"/experimental-configuration-settings:enable local mode socket location>`."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:162
+msgid "Running mmctl tests"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:164
+msgid "**Available for self-hosted deployments only.**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:166
+msgid "mmctl has two types of tests: unit tests and end to end tests."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:168
+msgid ""
+"To execute them, you can run the following commands from the mattermost "
+"project root directory:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:179
+msgid "mmctl auth"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:181
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:203
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:242
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:281
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:320
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:359
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:502
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:544
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:604
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:643
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:684
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:723
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:762
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:803
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:874
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:915
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:954
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1000
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1043
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1084
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1123
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1165
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1205
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1250
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1291
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1325
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1367
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1406
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1433
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1472
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1533
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1572
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1624
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1658
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1697
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1747
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1786
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1842
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1884
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1926
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1968
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2027
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2046
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2089
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2130
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2175
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2230
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2269
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2314
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2354
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2390
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2452
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2491
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2532
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2571
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2619
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2658
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2697
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2737
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2783
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2822
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2870
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2926
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2961
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3000
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3044
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3079
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3106
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3145
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3187
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3226
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3287
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3326
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3365
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3404
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3443
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3499
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3538
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3577
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3616
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3669
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3732
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3774
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3813
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3854
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3879
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3920
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3947
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3989
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4028
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4061
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4100
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4139
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4183
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4224
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4267
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4317
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4365
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4433
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4492
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4534
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4573
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4630
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4669
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4708
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4747
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4786
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4835
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4898
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4941
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4985
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5028
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5073
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5115
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5180
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5220
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5259
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5298
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5337
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5381
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5435
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5474
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5544
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5585
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5641
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5685
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5766
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5819
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5905
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5944
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5983
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6023
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6062
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6102
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6167
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6207
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6251
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6294
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6333
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6374
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6414
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6453
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6507
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6546
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6601
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6640
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6684
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6759
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6799
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6855
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6911
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6971
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7011
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7054
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7094
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7133
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7178
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7221
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7272
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7317
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7360
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7400
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7443
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7537
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7556
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7598
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7638
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7680
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7721
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7760
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7799
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7838
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7879
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7918
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7957
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7990
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8012
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8057
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8107
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8146
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8185
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8229
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8276
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8315
+msgid "**Description**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:183
+msgid ""
+"Manage the credentials and authentication methods of remote Mattermost "
+"instances."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:185
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:587
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:847
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1515
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1827
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2015
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2031
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2220
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2431
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2906
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3261
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3272
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3484
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3657
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3710
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3725
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3858
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4304
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4419
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4479
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4615
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4823
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4878
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5162
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5422
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5530
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5754
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5888
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6147
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6494
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6587
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6725
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7541
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7994
+msgid "Child Commands"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:186
+msgid "`mmctl auth clean`_ - Clean credentials"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:187
+msgid "`mmctl auth current`_ - Display current credentials"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:188
+msgid "`mmctl auth delete`_ - Delete authentication details"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:189
+msgid "`mmctl auth list`_ - List registered credentials"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:190
+msgid "`mmctl auth login`_ - Log into Mattermost instance"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:191
+msgid "`mmctl auth renew`_ - Renew login credentials"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:192
+msgid "`mmctl auth set`_ - Set login credentials"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:201
+msgid "mmctl auth clean"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:205
+msgid "Clean the credentials associated with a Mattermost instance."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:207
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:246
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:285
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:324
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:363
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:506
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:548
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:608
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:647
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:688
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:727
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:766
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:807
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:878
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:919
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:958
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1007
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1047
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1088
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1127
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1169
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1209
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1254
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1295
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1329
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1371
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1437
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1476
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1537
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1576
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1628
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1662
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1701
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1751
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1790
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1896
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1938
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1980
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2050
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2093
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2134
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2179
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2234
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2276
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2318
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2358
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2394
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2456
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2495
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2536
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2584
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2623
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2662
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2701
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2745
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2787
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2826
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2874
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2930
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2965
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3004
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3050
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3110
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3149
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3191
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3230
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3291
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3330
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3369
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3408
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3447
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3503
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3542
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3581
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3620
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3673
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3736
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3778
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3817
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3883
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3951
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3993
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4065
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4104
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4143
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4187
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4228
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4271
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4321
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4379
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4442
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4496
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4538
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4577
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4634
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4673
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4712
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4751
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4790
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4839
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4902
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4945
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4989
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5032
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5077
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5119
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5184
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5224
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5263
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5302
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5341
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5385
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5439
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5478
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5548
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5590
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5645
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5689
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5770
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5823
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5909
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5948
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5987
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6027
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6066
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6106
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6171
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6211
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6258
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6298
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6337
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6378
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6418
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6457
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6511
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6550
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6605
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6644
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6688
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6763
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6803
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6859
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6915
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6975
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7018
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7058
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7098
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7137
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7182
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7229
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7276
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7325
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7364
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7404
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7447
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7560
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7602
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7642
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7684
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7725
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7764
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7803
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7842
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7883
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7922
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7961
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8016
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8061
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8111
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8150
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8189
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8233
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8280
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8319
+msgid "**Format**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:213
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:252
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:291
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:330
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:369
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:512
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:554
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:614
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:653
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:694
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:733
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:772
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:813
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:884
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:925
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:964
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1013
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1053
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1094
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1133
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1175
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1215
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1260
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1301
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1336
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1377
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1443
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1482
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1543
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1582
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1634
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1668
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1707
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1757
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1796
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2056
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2099
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2140
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2185
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2240
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2400
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2462
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2501
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2542
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2590
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2629
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2668
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2707
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2793
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2832
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3297
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3336
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3375
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3414
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3453
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3509
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3548
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3587
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3626
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3679
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3742
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3784
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3823
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3889
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3957
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3999
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4032
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4071
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4110
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4149
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4193
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4234
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4327
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4385
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4448
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4502
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4544
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4583
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4640
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4679
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4718
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4757
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4908
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4951
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4995
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5038
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5083
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5125
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5190
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5230
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5269
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5308
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5347
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5391
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5445
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5484
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5554
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5596
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5651
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5703
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5776
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5829
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5915
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5954
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5993
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6033
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6072
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6112
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6177
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6217
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6264
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6304
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6343
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6384
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6424
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6463
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6517
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6556
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6611
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6650
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6694
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6769
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6809
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6865
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6921
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6981
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7024
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7064
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7104
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7143
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7188
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7235
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7282
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7331
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7370
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7410
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7480
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7567
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7608
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7648
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7690
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7731
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7770
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7809
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7848
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7889
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7928
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8022
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8067
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8117
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8156
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8195
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8239
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8286
+msgid "**Examples**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:225
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:264
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:303
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:342
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:390
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:527
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:566
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:626
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:668
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:706
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:745
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:786
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:828
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:896
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:937
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:983
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1026
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1065
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1106
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1148
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1188
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1231
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1272
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1313
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1350
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1389
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1416
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1455
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1496
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1555
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1605
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1646
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1680
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1730
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1769
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1808
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1867
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1909
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1951
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1993
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2072
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2113
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2158
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2198
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2252
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2297
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2337
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2373
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2412
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2474
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2515
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2554
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2602
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2641
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2680
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2720
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2766
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2805
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2853
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2887
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2944
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2983
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3027
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3062
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3089
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3128
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3170
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3209
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3242
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3309
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3348
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3387
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3426
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3465
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3521
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3560
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3599
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3638
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3691
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3757
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3796
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3837
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3903
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3930
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3972
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4011
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4044
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4083
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4122
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4166
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4207
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4250
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4285
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4348
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4400
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4460
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4517
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4556
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4596
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4652
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4691
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4730
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4769
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4804
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4859
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4921
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4965
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5008
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5056
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5095
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5143
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5203
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5242
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5281
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5320
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5364
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5403
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5457
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5511
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5568
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5624
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5668
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5735
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5802
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5869
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5927
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5966
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6006
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6045
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6085
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6124
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6190
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6234
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6277
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6316
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6357
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6397
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6436
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6475
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6529
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6568
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6623
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6667
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6706
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6782
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6838
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6894
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6954
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6994
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7037
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7077
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7116
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7161
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7204
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7255
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7298
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7343
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7383
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7426
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7520
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7581
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7621
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7663
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7704
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7743
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7782
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7821
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7860
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7901
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7940
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7973
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8040
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8090
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8129
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8168
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8212
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8259
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8298
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8331
+msgid "**Options inherited from parent commands**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:240
+msgid "mmctl auth current"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:244
+msgid "Show the currently stored user credentials."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:279
+msgid "mmctl auth delete"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:283
+msgid "Delete a named credential."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:318
+msgid "mmctl auth list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:322
+msgid "Print a list of registered credentials."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:357
+msgid "mmctl auth login"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:361
+msgid ""
+"Log in to an instance and store credentials. You can log in with `a "
+"personal access token "
+"<https://developers.mattermost.com/integrate/reference/personal-access-"
+"token>`_ instead of using username/password. See `access tokens <#access-"
+"tokens>`__ for details."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:405
+msgid "Password"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:411
+msgid ""
+"The ``login`` command can also work interactively, so if you leave any "
+"required flag empty, ``mmctl`` will ask you for it interactively:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:421
+msgid "MFA"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:423
+msgid "To log in with MFA, use the ``--mfa-token`` flag:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:430
+msgid "Access tokens"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:432
+msgid ""
+"You can generate and use a personal access token to authenticate with a "
+"server, instead of using username and password to log in:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:438
+msgid ""
+"Alternatively, you can log in to your Mattermost server with a username "
+"and password:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:445
+msgid "We can check the currently stored credentials with:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:455
+msgid "And now we can run commands normally:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:471
+msgid "Installing shell completions"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:473
+msgid ""
+"mmctl supports shell completions for bash, fish, powershell, and zsh from"
+" Mattermost v11."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:475
+msgid ""
+"To install the shell completions for **bash**, add the following line to "
+"your ``~/.bashrc`` or ``~/.profile`` file:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:481
+msgid "For **zsh**, add the following line to your ``~/.zshrc`` file:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:487
+msgid "For **fish**, add the following line to your fish configuration:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:493
+msgid "For **powershell**, add the following line to your PowerShell profile:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:500
+msgid "mmctl auth renew"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:504
+msgid "Renew the credentials for a given server."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:542
+msgid "mmctl auth set"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:546
+msgid "Set credentials to use in the following commands."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:580
+msgid ""
+"Authenticate to a server (e.g. >mmctl auth login "
+"``https://test.mattermost.com)``, then enter your username and password "
+"(and MFA token if MFA is enabled on the account)."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:583
+msgid "mmctl bot"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:585
+msgid "Manage bots."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:588
+msgid "`mmctl bot assign`_ - Assign bot ownership"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:589
+msgid "`mmctl bot create`_ - Create a new bot"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:590
+msgid "`mmctl bot disable`_ - Disable a bot"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:591
+msgid "`mmctl bot enable`_ - Enable a bot"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:592
+msgid "`mmctl bot list`_ - List all bots"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:593
+msgid "`mmctl bot update`_ - Update bot configuration"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:602
+msgid "mmctl bot assign"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:606
+msgid "Assign the ownership of a bot to another user."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:641
+msgid "mmctl bot create"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:645
+msgid "Create a bot."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:682
+msgid "mmctl bot disable"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:686
+msgid "Disable an enabled bot."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:721
+msgid "mmctl bot enable"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:725
+msgid "Enable a disabled bot."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:760
+msgid "mmctl bot list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:764
+msgid "List the bot's users."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:801
+msgid "mmctl bot update"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:805
+msgid "Update bot information."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:843
+msgid "mmctl channel"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:845
+msgid "Manage channels."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:848
+msgid "`mmctl channel add`_ - (Deprecated) Add a user to a channel"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:849
+msgid "`mmctl channel archive`_ - Archive a channel"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:850
+msgid "`mmctl channel create`_ - Create a channel"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:851
+msgid "`mmctl channel delete`_ - Delete a channel"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:852
+msgid "`mmctl channel list`_ - List all channels on specified teams"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:853
+msgid ""
+"`mmctl channel make-private`_ - (Deprecated) Set a channel's type to "
+"\"private\""
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:854
+msgid "`mmctl channel modify`_ - Modify a channel's type (private/public)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:855
+msgid "`mmctl channel move`_ - Move channels to the specified team"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:856
+msgid "`mmctl channel remove`_ - (Deprecated) Remove a user from a channel"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:857
+msgid "`mmctl channel rename`_ - Rename a channel"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:858
+msgid "`mmctl channel restore`_ - (Deprecated) Restore a channel from the archive"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:859
+msgid "`mmctl channel search`_ - Search a channel by name"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:860
+msgid "`mmctl channel unarchive`_ - Unarchive a channel"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:861
+msgid "`mmctl channel users`_ - Manage channel users"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:862
+msgid "`mmctl channel users add`_ - Add a user to a channel"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:863
+msgid "`mmctl channel users remove`_ - Remove a user from a channel"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:872
+msgid "mmctl channel archive"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:876
+msgid ""
+"Archive channels along with all related information including posts from "
+"the database. Channels can be specified by ``[team]:[channel]`` (i.e., "
+"``myteam:mychannel``), or by channel ID."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:911
+msgid "mmctl channel add"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:913
+msgid ""
+"This command is deprecated in favor of :ref:`mmctl channel users add "
+"<administration-guide/manage/mmctl-command-line-tool:mmctl channel users "
+"add>`."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:917
+msgid "Add a user to a channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:952
+msgid "mmctl channel create"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:956
+msgid "Create a channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:998
+msgid "mmctl channel delete"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1002
+msgid ""
+"Permanently delete channels along with all related information including "
+"posts from the database."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1005
+msgid ""
+"Requires the :ref:`Enable API Channel Deletion <administration-"
+"guide/configure/environment-configuration-settings:enable api channel "
+"deletion>` configuration setting to be set to ``true``. If this "
+"configuration setting is set to ``false``, attempting to delete the "
+"channel using mmctl fails."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1041
+msgid "mmctl channel list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1045
+msgid ""
+"List all Public, Private, and archived channels on specified teams. "
+"Archived channels are appended with ``(archived)``. Private channels the "
+"user is a member of, or has access to, are appended with ``(private)``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1080
+msgid "mmctl channel make-private"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1082
+msgid ""
+"This command is deprecated in favour of :ref:`mmctl channel modify "
+"<administration-guide/manage/mmctl-command-line-tool:mmctl channel "
+"modify>` and the ``--private`` flag."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1086
+msgid ""
+"Set the type of a channel from Public to Private. Channel can be "
+"specified by ``[team]:[channel]`` (e.g., ``myteam:mychannel``), or by "
+"channel ID."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1121
+msgid "mmctl channel modify"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1125
+msgid ""
+"Change the Public/Private type of a channel. Channel can be specified by "
+"``[team]:[channel]`` (e.g., ``myteam:mychannel``), or by channel ID."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1163
+msgid "mmctl channel move"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1167
+msgid ""
+"Move the provided channels to the specified team. Validate that all users"
+" in the channel belong to the target team. Incoming/outgoing webhooks are"
+" moved along with the channel. Channels can be specified by "
+"``[team]:[channel]`` (e.g., ``myteam:mychannel``), or by channel ID."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1203
+msgid "mmctl channel rename"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1207
+msgid "Rename an existing channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1246
+msgid "mmctl channel remove"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1248
+msgid ""
+"This command is deprecated in favor of :ref:`mmctl channel users remove "
+"<administration-guide/manage/mmctl-command-line-tool:mmctl channel users "
+"remove>`."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1252
+msgid "Remove a user from a channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1287
+msgid "mmctl channel restore"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1289
+msgid ""
+"This command is deprecated in favor of `mmctl channel unarchive`_. Not "
+"used in Mattermost Server version v5.26 and later."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1293
+msgid ""
+"Restore a previously deleted channel. Channels can be specified by "
+"``[team]:[channel]`` (e.g., ``myteam:mychannel``), or by channel ID."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1323
+msgid "mmctl channel search"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1327
+msgid ""
+"Search for channel details by channel name. Channels can be specified by "
+"team (e.g., ``--team myteam mychannel``), or by team ID. Returns channel "
+"name, display name, and channel ID."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1365
+msgid "mmctl channel unarchive"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1369
+msgid ""
+"Unarchive a previously archived channel. Channels can be specified by "
+"``[team]:[channel]`` (e.g., ``myteam:mychannel``), or by channel ID."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1404
+msgid "mmctl channel users"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1408
+msgid "Manage channel users."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1431
+msgid "mmctl channel users add"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1435
+msgid "Add users to a channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1470
+msgid "mmctl channel users remove"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1474
+msgid "Remove users from a channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1511
+msgid "mmctl command"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1513
+msgid "Manage slash commands."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1516
+msgid "`mmctl command archive`_ - Archive a slash command"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1517
+msgid "`mmctl command create`_ - Create a custom command"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1518
+msgid "`mmctl command delete`_ - (Deprecated) Delete a specified slash command"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1519
+msgid "`mmctl command list`_ - List slash commands on specified teams"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1520
+msgid "`mmctl command modify`_ - Modify a slash command"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1521
+msgid "`mmctl command move`_ - Move a slash command to a different team"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1522
+msgid "`mmctl command show`_ - Show a custom slash command"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1531
+msgid "mmctl command archive"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1535
+msgid "Archive a slash command. Commands can be specified by command ID."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1570
+msgid "mmctl command create"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1574
+msgid "Create a custom slash command for the specified team."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1620
+msgid "mmctl command delete"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1622
+msgid "This command is deprecated in favor of `mmctl command archive`_."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1626
+msgid "Delete a slash command. Commands can be specified by command ID."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1656
+msgid "mmctl command list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1660
+msgid "List all commands on specified teams."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1695
+msgid "mmctl command modify"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1699
+msgid "Modify a slash command. Commands can be specified by command ID."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1745
+msgid "mmctl command move"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1749
+msgid ""
+"Move a slash command to a different team. Commands can be specified by "
+"command ID."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1784
+msgid "mmctl command show"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1788
+msgid ""
+"Show a custom slash command. Commands can be specified by command ID. "
+"Returns command ID, team ID, trigger word, display name, and creator "
+"username."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1823
+msgid "mmctl completion"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1825
+msgid ""
+"Generate autocompletion scripts for ``bash``, ``fish``, ``powershell``, "
+"and ``zsh``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1828
+msgid "`mmctl completion bash`_ - Generate the autocompletion script for bash"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1829
+msgid "`mmctl completion fish`_ - Generate the autocompletion script for fish"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1830
+msgid ""
+"`mmctl completion powershell`_ - Generate the autocompletion script for "
+"powershell"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1831
+msgid "`mmctl completion zsh`_ - Generate the autocompletion script for zsh"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1840
+msgid "mmctl completion bash"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1844
+msgid ""
+"Generate the ``bash`` autocompletion scripts. This script depends on the "
+"'bash-completion' package. If it is not installed already, you can "
+"install it via your OS's package manager."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1846
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1854
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1888
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1930
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1972
+msgid "To load completion, run:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1852
+msgid ""
+"To configure your ``bash`` shell to load completions for each session, "
+"add the above line to your ``~/.bashrc``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1882
+msgid "mmctl completion fish"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1886
+msgid "Generate the ``fish`` autocompletion scripts."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1894
+msgid ""
+"To configure your ``fish`` shell to load completions for each session, "
+"add the above line to your fish configuration."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1924
+msgid "mmctl completion powershell"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1928
+msgid "Generate the ``powershell`` autocompletion scripts."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1936
+msgid ""
+"To configure your ``powershell`` shell to load completions for each "
+"session, add the above line to your PowerShell profile."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1966
+msgid "mmctl completion zsh"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1970
+msgid "Generate the ``zsh`` autocompletion scripts."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1978
+msgid ""
+"To configure your ``zsh`` shell to load completions for each session, add"
+" the above line to your ``~/.zshrc``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2008
+msgid "mmctl cpa"
+msgstr ""
+
+#: ../../source/_static/badges/ent-adv.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Enterprise Advanced "
+"<https://mattermost.com/pricing/>`__ plans"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2013
+msgid "Manage User Attributes for extended user profile information."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2016
+msgid "`mmctl cpa field`_ - Manage User Attribute fields"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2025
+msgid "mmctl cpa field"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2029
+msgid "Manage User Attribute fields."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2032
+msgid "`mmctl cpa field create`_ - Create a new User Attribute field"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2033
+msgid "`mmctl cpa field delete`_ - Delete a User Attribute field"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2034
+msgid "`mmctl cpa field edit`_ - Edit a User Attribute field"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2035
+msgid "`mmctl cpa field list`_ - List User Attribute fields"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2044
+msgid "mmctl cpa field create"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2048
+msgid "Create a new User Attribute field."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2087
+msgid "mmctl cpa field delete"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2091
+msgid "Delete an existing User Attribute field."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2128
+msgid "mmctl cpa field edit"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2132
+msgid "Edit an existing User Attribute field."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2173
+msgid "mmctl cpa field list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2177
+msgid "List all User Attribute fields."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2213
+msgid "mmctl compliance-export"
+msgstr ""
+
+#: ../../source/_static/badges/ent-plus.rst:9
+msgid ""
+"|plans-img-yellow| Available on `Enterprise and Enterprise Advanced plans"
+" <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2218
+msgid ""
+"Manage compliance export jobs for archiving channel data to third-party "
+"compliance systems."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2221
+msgid "`mmctl compliance-export cancel`_ - Cancel a compliance export job"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2222
+msgid "`mmctl compliance-export create`_ - Create a new compliance export job"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2223
+msgid "`mmctl compliance-export download`_ - Download a compliance export file"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2224
+msgid ""
+"`mmctl compliance-export list`_ - List compliance export jobs, sorted by "
+"creation date descending (newest first)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2225
+msgid "`mmctl compliance-export show`_ - Show compliance export job"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2228
+msgid "mmctl compliance-export cancel"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2232
+msgid "Cancel an ongoing compliance export job."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2267
+msgid "mmctl compliance-export create"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2271
+msgid ""
+"Create a new compliance export job to archive channel messages, direct "
+"messages, file uploads, and posts from plugins, bots, or webhooks. "
+"Supported export formats include CSV, Actiance XML, and Global Relay EML "
+"for integration with third-party compliance systems."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2273
+msgid ""
+"If ``--date`` is set, the job will run for one day, from 12am to 12am "
+"(minus one millisecond) inclusively."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2274
+msgid ""
+"Running a compliance export job from mmctl will NOT affect the next "
+"scheduled job's ``batch_start_time``. This means that if you run a "
+"compliance export job from mmctl, the next scheduled job will run from "
+"the ``batch_end_time`` of the previous scheduled job, as usual."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2282
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2324
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2971
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3010
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3116
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3155
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3197
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4845
+msgid "**Example**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2312
+msgid "mmctl compliance-export download"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2316
+msgid "Download a compliance export file."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2352
+msgid "mmctl compliance-export list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2356
+msgid ""
+"Lists all compliance export jobs, sorted by creation date descending "
+"(newest first)."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2388
+msgid "mmctl compliance-export show"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2392
+msgid "Show details of a compliance export job."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2427
+msgid "mmctl config"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2429
+msgid "Configuration settings."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2432
+msgid "`mmctl config edit`_ - Edit the configuration settings"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2433
+msgid "`mmctl config export`_ - Export the server configuration"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2434
+msgid "`mmctl config get`_ - Get the value of a configuration setting"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2435
+msgid "`mmctl config migrate`_ - Migrate existing configuration between backends"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2436
+msgid "`mmctl config patch`_ - Patch the configuration"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2437
+msgid "`mmctl config reload`_ - Reload the server configuration"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2438
+msgid "`mmctl config reset`_ - Reset the configuration"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2439
+msgid "`mmctl config set`_ - Set the value of a configuration"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2440
+msgid "`mmctl config show`_ - Write the server configuration to STDOUT"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2441
+msgid ""
+"`mmctl config subpath`_ - Update client asset loading to use the "
+"configured subpath"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2450
+msgid "mmctl config edit"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2454
+msgid ""
+"Open the editor defined in the EDITOR environment variable to modify the "
+"server's configuration. Once complete, save the file, then upload it to "
+"your server."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2489
+msgid "mmctl config export"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2493
+msgid ""
+"Use this command to export the server configuration, which can then be "
+"imported into another server or environment. Masked values are only "
+"exported when the tool is running in `local mode <#local-mode>`__."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2530
+msgid "mmctl config get"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2534
+msgid "Get the value of a configuration setting by its name in dot notation."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2569
+msgid "mmctl config migrate"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2573
+msgid ""
+"Migrate a file-based configuration to (or from) a database-based "
+"configuration. Point the Mattermost server at the target configuration to"
+" start using it. This command only migrates the configuration data from "
+"one type to another."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2577
+msgid ""
+"To change the store type to use the database, a system admin needs to set"
+" a ``MM_CONFIG`` :ref:`environment variable <administration-"
+"guide/configure/configuration-in-your-database:create an environment "
+"file>` and restart the Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2578
+msgid ""
+"The ``migrate`` function requires local mode to be enabled.  To do this, "
+"add the following line to your Mattermost Environment file:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2617
+msgid "mmctl config patch"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2621
+msgid "Patch the server configuration with the specified configuration file."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2656
+msgid "mmctl config reload"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2660
+msgid "Reload the server configuration and apply new settings."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2695
+msgid "mmctl config reset"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2699
+msgid ""
+"Reset the value of a configuration setting by its name in dot notation or"
+" a setting section. Accepts multiple values for array settings."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2735
+msgid "mmctl config set"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2739
+msgid ""
+"Set the value of a config setting by its name in dot notation. Accepts "
+"multiple values for array settings."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2743
+msgid ""
+"Mattermost plugin uploads can't be enabled through the API or using mmctl"
+" in local mode."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2751
+msgid "**4 Examples**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2781
+msgid "mmctl config show"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2785
+msgid "Print the server configuration and write to STDOUT in JSON format."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2820
+msgid "mmctl config subpath"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2824
+msgid ""
+"Update the hard-coded production client asset paths to take into account "
+"Mattermost running on a subpath. This command needs access to the "
+"Mattermost ``assets`` directory to be able to rewrite the paths."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2868
+msgid "mmctl docs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2872
+msgid "Generate mmctl documentation."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2902
+msgid "mmctl export"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2904
+msgid "Manage exports."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2907
+msgid "`mmctl export create`_ - Create an export file"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2908
+msgid "`mmctl export delete`_ - Delete an export file"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2909
+msgid "`mmctl export download`_ - Download export files"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2910
+msgid ""
+"`mmctl export generate-presigned-url`_ - Generate a pre-signed URL for an"
+" export file"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2911
+msgid "`mmctl export job`_ - List, show, and cancel export jobs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2912
+msgid "`mmctl export job cancel`_ - Cancel export job"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2913
+msgid "`mmctl export job list`_ - List export jobs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2914
+msgid "`mmctl export job show`_ - Show export job"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2915
+msgid "`mmctl export list`_ - List export files"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2924
+msgid "mmctl export create"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2928
+msgid "Create an export file including message attachments."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2959
+msgid "mmctl export delete"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2963
+msgid "Delete an export file."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2998
+msgid "mmctl export download"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3002
+msgid "Download export files."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3042
+msgid "mmctl export generate-presigned-url"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3046
+msgid ""
+"Generate a pre-signed URL for an export file in cases where a Mattermost "
+"Cloud export is large and challenging to download from the Mattermost "
+"server."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3048
+msgid ""
+"Requires the ``EnableExportDirectDownload`` feature flag to be set to "
+"``true``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3077
+msgid "mmctl export job"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3081
+msgid "List, show, and export jobs."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3104
+msgid "mmctl export job cancel"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3108
+msgid "Cancel an export job."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3143
+msgid "mmctl export job list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3147
+msgid "List export jobs. Export files include the Job ID in the file name."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3185
+msgid "mmctl export job show"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3189
+msgid "Show export job."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3224
+msgid "mmctl export list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3228
+msgid "List export files. Export files include the job ID in the file name."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3257
+msgid "mmctl group"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3259
+msgid "Manage channel and team groups."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3262
+msgid "`mmctl group channel`_ - Manage channel groups"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3263
+msgid "`mmctl group list-ldap`_ - List LDAP groups"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3264
+msgid "`mmctl group team`_ - Manage team groups"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3265
+msgid "`mmctl group user`_ - Manage custom user groups"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3268
+msgid "mmctl group channel"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3270
+msgid "Management of channel groups"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3273
+msgid "`mmctl group channel disable`_ - Disable group channel constrains"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3274
+msgid "`mmctl group channel enable`_ - Enable group channel constrains"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3275
+msgid "`mmctl group channel list`_ - List channel groups"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3276
+msgid "`mmctl group channel status`_ - Check group status"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3285
+msgid "mmctl group channel disable"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3289
+msgid "Disable group constrains in the specified channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3324
+msgid "mmctl group channel enable"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3328
+msgid "Enable group constrains in the specified channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3363
+msgid "mmctl group channel list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3367
+msgid "List the groups associated with a channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3402
+msgid "mmctl group channel status"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3406
+msgid "Show the group constrain status for the specified channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3441
+msgid "mmctl group list-ldap"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3445
+msgid "List LDAP groups."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3480
+msgid "mmctl group team"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3482
+msgid "Manage team groups."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3485
+msgid "`mmctl group team disable`_ - Disable group team constrains"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3486
+msgid "`mmctl group team enable`_ - Enable group team constrains"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3487
+msgid "`mmctl group team list`_ - List team groups"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3488
+msgid "`mmctl group team status`_ - Check group constrain status"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3497
+msgid "mmctl group team disable"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3501
+msgid "Disable group constrains in the specified team."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3536
+msgid "mmctl group team enable"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3540
+msgid "Enable group constrains in the specified team."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3575
+msgid "mmctl group team list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3579
+msgid "List the groups associated with a team."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3614
+msgid "mmctl group team status"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3618
+msgid "Show the group constrain status for the specified team."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3653
+msgid "mmctl group user"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3655
+msgid "Manage custom user groups."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3658
+msgid "`mmctl group user restore`_ - Restore custom user group"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3667
+msgid "mmctl group user restore"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3671
+msgid "Restore custom user group."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3706
+msgid "mmctl extract"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3708
+msgid "Manage content extraction jobs."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3711
+msgid "`mmctl extract job`_ - List and show content extraction jobs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3712
+msgid "`mmctl extract run`_ - Start a content extraction job"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3721
+msgid "mmctl extract job"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3723
+msgid "List and show content extraction jobs."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3726
+msgid "`mmctl extract job list`_ - List content extraction jobs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3727
+msgid "`mmctl extract job show`_ - Show extract job"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3730
+msgid "mmctl extract job list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3734
+msgid "List content extraction jobs."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3772
+msgid "mmctl extract job show"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3776
+msgid "Show extract job."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3811
+msgid "mmctl extract run"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3815
+msgid "Start a content extraction job."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3852
+msgid "mmctl import"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3856
+msgid "Manage imports."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3859
+msgid "`mmctl import delete`_ - Delete import files"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3860
+msgid "`mmctl import job`_ - List and show import jobs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3861
+msgid "`mmctl import job list`_ - List import jobs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3862
+msgid "`mmctl import job show`_ - Show import job"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3863
+msgid "`mmctl import list`_ - List all import files"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3864
+msgid "`mmctl import list available`_ - List available import files"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3865
+msgid "`mmctl import list incomplete`_ - List incomplete import files uploads"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3866
+msgid "`mmctl import process`_ - Start an import job"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3867
+msgid "`mmctl import upload`_ - Upload import files"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3868
+msgid "`mmctl import validate`_ - Validate an import file"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3877
+msgid "mmctl import delete"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3881
+msgid "Delete import files from the server."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3918
+msgid "mmctl import job"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3922
+msgid "List and show import jobs."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3945
+msgid "mmctl import job list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3949
+msgid "List import jobs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3987
+msgid "mmctl import job show"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:3991
+msgid "Show import job."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4026
+msgid "mmctl import list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4030
+msgid "List all import files."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4059
+msgid "mmctl import list available"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4063
+msgid "List available import files."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4098
+msgid "mmctl import list incomplete"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4102
+msgid "List incomplete import files uploads."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4137
+msgid "mmctl import process"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4141
+msgid "Start an import job."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4164
+msgid ""
+"Use ``--workers`` to reduce concurrency, for example ``--workers 1``, "
+"when running imports against a live server to minimize database load at "
+"the cost of longer import duration."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4181
+msgid "mmctl import upload"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4185
+msgid "Upload import files."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4222
+msgid "mmctl import validate"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4226
+msgid "Validate an import file."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4265
+msgid "mmctl integrity"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4269
+msgid ""
+"This command is deprecated from Mattermost v9.3. Performs a relational "
+"integrity check which returns information about any orphaned record "
+"found. This command can only be run using `local mode <#local-mode>`__."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4300
+msgid "mmctl job"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4302
+msgid "Management of jobs."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4305
+msgid "`mmctl job list`_ - List the latest jobs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4306
+msgid "`mmctl job update`_ - Update the status of a job"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4315
+msgid "mmctl job list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4319
+msgid "List the latest jobs."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4363
+msgid "mmctl job update"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4367
+msgid "Update the status of a job."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4371
+msgid "The following status rules are permitted:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4373
+msgid "``in_progress`` can be changed to ``pending``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4374
+msgid "``in_progress`` or ``pending`` can be changed to ``cancel_requested``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4375
+msgid "``cancel_requested`` can be changed to ``canceled``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4377
+msgid ""
+"These restrictions can be bypassed with ``--force=true``. Bypassing "
+"restrictions can have unexpected consequences on your Mattermost server "
+"and should be used with caution."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4415
+msgid "mmctl ldap"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4417
+msgid "LDAP-related utilities."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4420
+msgid "`mmctl ldap idmigrate`_ - Migrate LDAP IdAttribute to a new value"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4421
+msgid "`mmctl ldap job`_ - List and show LDAP synchronization jobs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4422
+msgid "`mmctl ldap sync`_ - Sync all LDAP users and groups"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4431
+msgid "mmctl ldap idmigrate"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4435
+msgid ""
+"Migrate LDAP ``IdAttribute`` to a new value. Run this utility to change "
+"the value of your ID Attribute without your users losing their accounts. "
+"After running the command, you can change the ID Attribute to the new "
+"value in the System Console. For example, if your current ID Attribute "
+"was ``sAMAccountName`` and you wanted to change it to ``objectGUID``, you"
+" would:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4437
+msgid ""
+"Wait for an off-peak time when your users won’t be impacted by a server "
+"restart."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4438
+msgid "Run the command ``mmctl ldap idmigrate objectGUID``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4439
+msgid ""
+"Update the config within the System Console to the new value "
+"``objectGUID``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4440
+msgid "Restart the Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4475
+msgid "mmctl ldap job"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4477
+msgid "List and show LDAP synchronization jobs."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4480
+msgid "`mmctl ldap job list`_ - LIst LDAP synchronization jobs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4481
+msgid "`mmctl ldap job show`_ - Show LDAP synchronization jobs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4490
+msgid "mmctl ldap job list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4494
+msgid "List LDAP synchronization jobs."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4532
+msgid "mmctl ldap job show"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4536
+msgid "Show LDAP synchronization jobs."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4571
+msgid "mmctl ldap sync"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4575
+msgid "Synchronize all LDAP users and groups now."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4611
+msgid "mmctl license"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4613
+msgid "Manage the Mattermost license."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4616
+msgid "`mmctl license get`_ - Get the current license"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4617
+msgid "`mmctl license remove`_ - Remove the current license"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4618
+msgid "`mmctl license upload`_ - Upload a new license"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4619
+msgid "`mmctl license upload-string`_ - Upload a license from a string"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4628
+msgid "mmctl license get"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4632
+msgid "Get the current Mattermost license."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4667
+msgid "mmctl license remove"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4671
+msgid "Remove the current license and use Mattermost Team Edition."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4706
+msgid "mmctl license upload"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4710
+msgid "Upload a license and replace the current license."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4745
+msgid "mmctl license upload-string"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4749
+msgid "Upload a license from a string. Replaces the current license."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4784
+msgid "mmctl logs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4788
+msgid ""
+"Display logs in a human-readable format. As the log format depends on the"
+" server, the ``--format`` flag cannot be used with this command."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4819
+msgid "mmctl oauth"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4821
+msgid "Manage registered OAuth2 applications."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4824
+msgid "`mmctl oauth list`_ - Remove permissions from a role"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4833
+msgid "mmctl oauth list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4837
+msgid "List all registered OAuth2 applications."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4874
+msgid "mmctl permissions"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4876
+msgid "Manage permissions and roles."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4879
+msgid "`mmctl permissions add`_ - Add permissions to a role"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4880
+msgid "`mmctl permissions remove`_ - Remove permissions from a role"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4881
+msgid "`mmctl permissions reset`_ - Reset default permissions for a role"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4882
+msgid "`mmctl permissions role assign`_ - Assign users to role"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4883
+msgid "`mmctl permissions role show`_ - Show the role information"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4884
+msgid "`mmctl permissions role unassign`_ - Unassign users from a role"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4893
+msgid "mmctl permissions add"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4900
+msgid "Add one or more permissions to an existing role."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4936
+msgid "mmctl permissions remove"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4943
+msgid ""
+"Remove one or more permissions from an existing role. For classified "
+"projects, this command can be used to ensure that team members don't know"
+" about members outside of their project, and :doc:`@mentions </end-user-"
+"guide/collaborate/mention-people>` don't disclose the names of people "
+"outside of a classified project."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4980
+msgid "mmctl permissions reset"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:4987
+msgid ""
+"Reset the given role's permissions to the default settings and overwrite "
+"custom settings."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5023
+msgid "mmctl permissions role assign"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5030
+msgid "Assign users to a role by username."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5071
+msgid "mmctl permissions role show"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5075
+msgid "Show all the information about a role."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5110
+msgid "mmctl permissions role unassign"
+msgstr ""
+
+#: ../../source/_static/badges/pro-plus.rst:9
+msgid ""
+"|plans-img-yellow| Available on `Professional, Enterprise, and Enterprise"
+" Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5117
+msgid "Unassign users from a role by username."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5158
+msgid "mmctl plugin"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5160
+msgid "Manage plugins."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5163
+msgid "`mmctl plugin add`_ - Add plugins"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5164
+msgid "`mmctl plugin delete`_ - Remove plugins"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5165
+msgid "`mmctl plugin disable`_ - Disable plugins"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5166
+msgid "`mmctl plugin enable`_ - Enable plugins"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5167
+msgid "`mmctl plugin install-url`_ - Install plugin from URL"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5168
+msgid "`mmctl plugin list`_ - List plugins"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5169
+msgid "`mmctl plugin marketplace`_ - Manage Marketplace plugins"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5178
+msgid "mmctl plugin add"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5182
+msgid "Add plugins to your Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5218
+msgid "mmctl plugin delete"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5222
+msgid "Delete previously uploaded plugins from your Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5257
+msgid "mmctl plugin disable"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5261
+msgid ""
+"Disable plugins. Disabled plugins are immediately removed from the user "
+"interface and logged out of all sessions."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5296
+msgid "mmctl plugin enable"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5300
+msgid "Enable plugins for use on your Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5335
+msgid "mmctl plugin install-url"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5339
+msgid ""
+"Supply URLs to plugins compressed in a ``.tar.gz`` file. Plugins must be "
+"enabled in the server's config settings."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5379
+msgid "mmctl plugin list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5383
+msgid "List all enabled and disabled plugins installed on your Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5418
+msgid "mmctl plugin marketplace"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5420
+msgid "Manage Marketplace plugins."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5423
+msgid ""
+"`mmctl plugin marketplace install`_ - Install a plugin from the Plugin "
+"Marketplace"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5424
+msgid "`mmctl plugin marketplace list`_ - List plugins on the Plugin Marketplace"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5433
+msgid "mmctl plugin marketplace install"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5437
+msgid ""
+"Install a plugin available on the Plugin Marketplace server. The latest "
+"version of the plugin will be installed."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5472
+msgid "mmctl plugin marketplace list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5476
+msgid ""
+"Get all plugins available from the Plugin Marketplace server, merging "
+"data from locally installed plugins as well as prepackaged plugins "
+"shipped with the server."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5526
+msgid "mmctl post"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5528
+msgid "Manage posts."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5531
+msgid "`mmctl post create`_ - Create a post"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5532
+msgid "`mmctl post delete`_ - Delete a post"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5533
+msgid "`mmctl post list`_ - List posts for a channel"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5542
+msgid "mmctl post create"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5546
+msgid "Create a post."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5583
+msgid "mmctl post delete"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5587
+msgid ""
+"Mark a post as deleted and remove it and all attachments from the client "
+"without permanently deleting it from the database. Permanently delete a "
+"post and all attachments using the ``--permanent`` flag."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5598
+msgid "Mark post as deleted:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5604
+msgid ""
+"Permanently delete a post and its file contents from the database and "
+"filestore:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5610
+msgid ""
+"Permanently delete multiple posts and their file contents from the "
+"database and filestore:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5639
+msgid "mmctl post list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5643
+msgid "List posts for a channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5683
+msgid "mmctl roles"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5687
+msgid ""
+"Promote users to the system admin role, or remove system admin privileges"
+" from users."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5691
+msgid "Promote users to the system admin role:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5697
+msgid "Remove system admin privileges:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5705
+msgid "Promote a user to the system admin role:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5711
+msgid "Promote multiple users to the system admin role:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5717
+msgid "Remove system admin privileges from a user:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5723
+msgid "Remove system admin privileges from multiple users:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5750
+msgid "mmctl saml"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5752
+msgid "SAML-related utilities."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5755
+msgid "`mmctl saml auth-data-reset`_ - Reset AuthData field to Email"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5764
+msgid "mmctl saml auth-data-reset"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5768
+msgid ""
+"Resets the AuthData field for SAML users to their email. Run this utility"
+" after setting the 'id' SAML attribute to an empty value."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5817
+msgid "mmctl sampledata"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5821
+msgid ""
+"Generate a sample data file and store it locally, or directly import it "
+"to the remote server."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5884
+msgid "mmctl system"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5886
+msgid ""
+"System management commands for interacting with the server state and "
+"configuration."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5889
+msgid "`mmctl system clearbusy`_ - Clear the busy state"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5890
+msgid "`mmctl system getbusy`_ - Get the current busy state"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5891
+msgid "`mmctl system setbusy`_ - Set the busy state to ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5892
+msgid "`mmctl system status`_ - Print the status of the server"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5893
+msgid "`mmctl system supportpacket`_ - Download a Support Packet"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5894
+msgid "`mmctl system version`_ - Print the remote server version build number"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5903
+msgid "mmctl system clearbusy"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5907
+msgid "Clear the busy state which re-enables non-critical services."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5942
+msgid "mmctl system getbusy"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5946
+msgid ""
+"Get the server busy state (high load) and timestamp corresponding to when"
+" the server busy flag will be automatically cleared."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5981
+msgid "mmctl system setbusy"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:5985
+msgid ""
+"Set the busy state to ``true`` for the specified number of seconds which "
+"disables non-critical services."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6021
+msgid "mmctl system status"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6025
+msgid ""
+"Print the server status which is calculated using several basic server "
+"healthchecks."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6060
+msgid "mmctl system supportpacket"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6064
+msgid ""
+"Generate and download a Support Packet of the Mattermost server to share "
+"with Mattermost Support."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6100
+msgid "mmctl system version"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6104
+msgid ""
+"Print the server version build number of the currently connected "
+"Mattermost instance."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6139
+msgid "mmctl team"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6141
+msgid "Manage teams."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6145
+msgid ""
+"When specifying team names within mmctl commands, you must use the "
+"``team-URL`` version of the team name, rather than the display name you "
+"see in the channel sidebar. Your ``team-URL`` does not contain spaces. "
+"Run the `mmctl team list <#mmctl-team-list>`__ command to return a list "
+"of all teams on the server in ``team-URL`` format. See the :ref:`team "
+"name and URL selection <end-user-guide/collaborate/organize-using-"
+"teams:team name and url selection>` documentation for details."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6148
+msgid "`mmctl team archive`_ - Archive some teams"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6149
+msgid "`mmctl team create`_ - Create teams"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6150
+msgid "`mmctl team delete`_ - Delete teams"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6151
+msgid "`mmctl team list`_ - List teams"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6152
+msgid "`mmctl team modify`_ - Modify teams"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6153
+msgid "`mmctl team rename`_ - Rename teams"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6154
+msgid "`mmctl team restore`_ - Restore teams"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6155
+msgid "`mmctl team search`_ - Search teams"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6156
+msgid "`mmctl team users`_ - Manage team users"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6165
+msgid "mmctl team archive"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6169
+msgid ""
+"Archive a team along with all related information including posts from "
+"the database."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6205
+msgid "mmctl team create"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6209
+msgid "Create a team."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6249
+msgid "mmctl team delete"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6253
+msgid ""
+"Permanently delete a team along with all related information including "
+"posts from the database."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6256
+msgid ""
+"Requires the :ref:`Enable API Team Deletion <administration-"
+"guide/configure/environment-configuration-settings:enable api team "
+"deletion>` configuration setting to be set to ``true``. If this "
+"configuration setting is set to ``false``, attempting to delete the team "
+"using mmctl fails."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6292
+msgid "mmctl team list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6296
+msgid "List all teams on the server."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6331
+msgid "mmctl team modify"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6335
+msgid "Modify a team's privacy setting to public or private."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6372
+msgid "mmctl team rename"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6376
+msgid "Rename an existing team."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6412
+msgid "mmctl team restore"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6416
+msgid "Restore archived teams."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6451
+msgid "mmctl team search"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6455
+msgid "Search for teams based on name."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6490
+msgid "mmctl team users"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6492
+msgid "Manage team users."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6495
+msgid "`mmctl team users add`_ - Add users to a team"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6496
+msgid "`mmctl team users remove`_ - Remove users from a team"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6505
+msgid "mmctl team users add"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6509
+msgid "Add specified users to a team."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6544
+msgid "mmctl team users remove"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6548
+msgid "Remove specified users from a team."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6583
+msgid "mmctl token"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6585
+msgid "Manage users' access tokens."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6588
+msgid "`mmctl token generate`_ - Generate token for a user"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6589
+msgid "`mmctl token list`_ - List users' tokens"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6590
+msgid "`mmctl token revoke`_ - Revoke tokens for a user"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6599
+msgid "mmctl token generate"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6603
+msgid "Generate token for a user."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6638
+msgid "mmctl token list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6642
+msgid "List the tokens belonging to a user."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6682
+msgid "mmctl token revoke"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6686
+msgid "Revoke tokens for a user."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6721
+msgid "mmctl user"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6723
+msgid "Manage users."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6726
+msgid "`mmctl user activate`_ - Activate a user"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6727
+msgid "`mmctl user change-password`_ - Change a user's password"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6728
+msgid "`mmctl user convert`_ - Convert users to bots or convert bots to users"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6729
+msgid "`mmctl user create`_ - Create user"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6730
+msgid "`mmctl user deactivate`_ - Deactivate user"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6731
+msgid "`mmctl user delete`_ - Delete users"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6732
+msgid ""
+"`mmctl user deleteall`_ - Delete all users and all posts (local command "
+"only)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6733
+msgid "`mmctl user demote`_ - Demote users to guests"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6734
+msgid "`mmctl user edit`_ - Edit user properties"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6735
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7157
+msgid "`mmctl user edit authdata`_ - Edit user authentication data"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6736
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7158
+msgid "`mmctl user edit email`_ - Edit user email address"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6737
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7159
+msgid "`mmctl user edit username`_ - Edit user username"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6738
+msgid "`mmctl user email`_ - (Deprecated) Set user email"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6739
+msgid "`mmctl user invite`_ - Invite user"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6740
+msgid "`mmctl user list`_ - List users"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6741
+msgid ""
+"`mmctl user migrate-auth`_ - Bulk migrate user accounts authentication "
+"type"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6742
+msgid "`mmctl user preference`_ - Manage user preferences"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6743
+msgid "`mmctl user promote`_ - Promote guests to users"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6744
+msgid "`mmctl user reset-password`_ - Reset user password"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6745
+msgid "`mmctl user resetmfa`_ - Reset a user's MFA token"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6746
+msgid "`mmctl user search`_ - Search for a user"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6747
+msgid "`mmctl user username`_ - (Deprecated) Change username of the user"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6748
+msgid "`mmctl user verify`_ - Mark user's email as verified"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6757
+msgid "mmctl user activate"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6761
+msgid "Activate users that have been deactivated."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6797
+msgid "mmctl user change-password"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6801
+msgid ""
+"Change the password of a user to the one provided. If the user is "
+"changing their own password, the flag ``--current`` must indicate the "
+"current password. The flag ``--hashed`` can be used to indicate that the "
+"new password has been introduced as already hashed."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6853
+msgid "mmctl user convert"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6857
+msgid "Convert user accounts to bots, or convert bots to user accounts."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6909
+msgid "mmctl user create"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6913
+msgid "Create a user."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6969
+msgid "mmctl user deactivate"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:6973
+msgid ""
+"Deactivate users. Deactivated users are immediately logged out of all "
+"sessions and are unable to log back in."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7009
+msgid "mmctl user delete"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7013
+msgid ""
+"Permanently delete users along with all related information including "
+"posts from the database."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7016
+msgid ""
+"Requires the :ref:`Enable API User Deletion <administration-"
+"guide/configure/environment-configuration-settings:enable api user "
+"deletion>` configuration setting to be set to ``true``. If this "
+"configuration setting is set to ``false``, attempting to delete the user "
+"using mmctl fails."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7052
+msgid "mmctl user deleteall"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7056
+msgid ""
+"Permanently delete all users and all related information including posts."
+" This command can only be run in `local mode <#local-mode>`__."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7092
+msgid "mmctl user demote"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7096
+msgid "Demote a user to a guest."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7131
+msgid "mmctl user edit"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7135
+msgid ""
+"Edit user properties including username, email, and authentication data. "
+"This command provides a structured way to modify user properties without "
+"direct database access."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7155
+msgid "**Child Commands**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7176
+msgid "mmctl user edit authdata"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7180
+msgid ""
+"Edit user authentication data. This command addresses the common customer"
+" pain point where SAML-authenticated users need to change their "
+"authentication information when SAML configuration uses email as the ID "
+"attribute, eliminating the need for direct database manipulation."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7219
+msgid "mmctl user edit email"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7223
+msgid ""
+"Edit user email address. This command is particularly useful for SAML-"
+"authenticated users who need to change their email addresses when the "
+"SAML configuration uses email as the ID attribute. This provides a safer "
+"alternative to direct database manipulation."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7227
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7323
+msgid ""
+"From Mattermost v10.9, email addresses enclosed in angle brackets (e.g., "
+"``<billy@example.com>``) will be rejected. To avoid issues, ensure all "
+"user emails comply with the plain address format (e.g., "
+"``billy@example.com``). In addition, we strongly recommend taking "
+"proactive steps to audit and update Mattermost user data to align with "
+"this product change, as impacted users may face issues accessing "
+"Mattermost or managing their user profile. You can update these user "
+"emails manually using this mmctl command: ``mmctl user edit email "
+"\"<affecteduser@domain.com>\" affecteduser@domain.com``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7247
+msgid ""
+"This command is especially important for SAML environments where email is"
+" used as the ID attribute. Previously, changing email addresses for SAML "
+"users required direct database manipulation, which posed security and "
+"operational risks."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7270
+msgid "mmctl user edit username"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7274
+msgid ""
+"Edit user username. This command allows changing usernames in a "
+"structured and safe manner without direct database access."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7313
+msgid "mmctl user email"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7315
+msgid ""
+"This command is deprecated in favor of :ref:`mmctl user edit email "
+"<administration-guide/manage/mmctl-command-line-tool:mmctl user edit "
+"email>`."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7319
+msgid "Change the email address associated with a user."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7358
+msgid "mmctl user invite"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7362
+msgid ""
+"Send an email invite to a user to join a team. You can invite a user to "
+"multiple teams by listing them. You can specify teams by name or ID."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7398
+msgid "mmctl user list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7402
+msgid "List all users."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7441
+msgid "mmctl user migrate-auth"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7445
+msgid ""
+"Migrate accounts from one authentication provider to another. For "
+"example, you can upgrade your authentication provider from email to LDAP."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7453
+msgid "**Arguments**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7455
+msgid "**from_auth:**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7456
+msgid ""
+"The authentication service to migrate users accounts from. Supported "
+"options: email, gitlab, google, ldap, office365, saml."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7459
+msgid "**to_auth:**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7460
+msgid ""
+"The authentication service to migrate users to. Supported options: ldap, "
+"saml."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7463
+msgid "**migration-options (ldap):**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7464
+msgid "match_field:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7465
+msgid ""
+"The field that is guaranteed to be the same in both authentication "
+"services. For example, if the users emails are consistent set to email. "
+"Supported options: email, username."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7468
+msgid "**migration-options (saml):**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7469
+msgid "**users_file:**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7470
+msgid ""
+"The path of a json file with the usernames and emails of all users to "
+"migrate to SAML. The username and email must be the same that the SAML "
+"service provider store. And the email must match with the email in "
+"mattermost database."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7486
+msgid "**user.json Example**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7535
+msgid "mmctl user preference"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7539
+msgid "Manage user preferences."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7542
+msgid "`mmctl user preference get`_ - Get a specific user preference"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7543
+msgid "`mmctl user preference list`_ - List user preferences"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7544
+msgid "`mmctl user preference set`_ - Set a specific user preference"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7545
+msgid "`mmctl user preference delete`_ - Delete a specific user preference"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7554
+msgid "mmctl user preference get"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7558
+msgid "Get a specific user preference."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7596
+msgid "mmctl user preference list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7600
+msgid "List user preferences."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7636
+msgid "mmctl user preference set"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7640
+msgid "Set a specific user preference."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7678
+msgid "mmctl user preference delete"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7682
+msgid "Delete a specific user preference."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7719
+msgid "mmctl user promote"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7723
+msgid "Promote a guest to a user."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7758
+msgid "mmctl user reset-password"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7762
+msgid "Send users an email to reset their password."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7797
+msgid "mmctl user resetmfa"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7801
+msgid ""
+"Turn off multi-factor authentication for a user. If MFA enforcement is "
+"enabled, the user will be forced to re-enable MFA as soon as they log in."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7836
+msgid "mmctl user search"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7840
+msgid ""
+"Search for users based on username, email, or user ID. The command "
+"returns user information including usernames, email addresses, first and "
+"last names, and account status. From Mattermost v10.10, output includes "
+"the user's deactivation status to help system admins identify inactive "
+"accounts. From Mattermost v10.11, output includes the user's AuthData "
+"field to help system admins verify authentication sources such as LDAP or"
+" SAML."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7875
+msgid "mmctl user username"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7877
+msgid ""
+"This command is deprecated in favor of :ref:`mmctl user edit username "
+"<administration-guide/manage/mmctl-command-line-tool:mmctl user edit "
+"username>` instead."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7881
+msgid "Change the username of the user."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7916
+msgid "mmctl user verify"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7920
+msgid ""
+"Mark user's email as verified without requiring user to complete email "
+"verification path."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7955
+msgid "mmctl version"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7959
+msgid "Print the version of mmctl."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7988
+msgid "mmctl webhook"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7992
+msgid "Manage webhooks."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7995
+msgid "`mmctl webhook create-incoming`_ - Create an incoming webhook"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7996
+msgid "`mmctl webhook create-outgoing`_ - Create an outgoing webhook"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7997
+msgid "`mmctl webhook delete`_ - Delete webhooks"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7998
+msgid "`mmctl webhook list`_ - List webhooks"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7999
+msgid "`mmctl webhook modify-incoming`_ - Modify an incoming webhook"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8000
+msgid "`mmctl webhook modify-outgoing`_ - Modify an outgoing webhook"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8001
+msgid "`mmctl webhook show`_ - Show a webhook"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8010
+msgid "mmctl webhook create-incoming"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8014
+msgid ""
+"Create an incoming webhook to allow external posting of messages to a "
+"specific channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8055
+msgid "mmctl webhook create-outgoing"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8059
+msgid ""
+"Create an outgoing webhook to allow external posting of messages from a "
+"specific channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8105
+msgid "mmctl webhook delete"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8109
+msgid "Delete a webhook with a given ID."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8144
+msgid "mmctl webhook list"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8148
+msgid "Print a list of all webhooks."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8183
+msgid "mmctl webhook modify-incoming"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8187
+msgid ""
+"Modify an existing incoming webhook by changing its title, description, "
+"channel, or icon URL."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8227
+msgid "mmctl webhook modify-outgoing"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8231
+msgid ""
+"Modify an existing outgoing webhook by changing its title, description, "
+"channel, icon, url, content-type, or triggers."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8274
+msgid "mmctl webhook show"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8278
+msgid "Show the webhook specified by ``[webhookId]``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8313
+msgid "mmctl websocket"
+msgstr ""
+
+#: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8317
+msgid "Display websocket in a human-readable format."
+msgstr ""
+

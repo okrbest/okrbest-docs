@@ -35,6 +35,11 @@ jobs:
           TZ: UTC
         run: make html
 
+      - name: ci/Build docs (ko)
+        env:
+          TZ: UTC
+        run: make html-ko
+
       - name: ci/Persist docs artifacts
         uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882  # v4.4.3
         with:

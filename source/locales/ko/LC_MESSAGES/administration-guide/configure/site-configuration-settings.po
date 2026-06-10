@@ -1,0 +1,4151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2
+msgid "Site configuration settings"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:7
+msgid ""
+"Review and manage the following site configuration options in the System "
+"Console by selecting the **Product** |product-list| menu, selecting "
+"**System Console**, and then selecting **Site Configuration**:"
+msgstr ""
+
+#: ../../<rst_prolog>:100
+msgid ""
+"Navigate between Channels, collaborative playbooks, and boards using the "
+"product menu icon."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:9
+msgid "`Customization <#customization>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:10
+msgid "`Localization <#localization>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:11
+msgid "`Auto-translation <#autotranslation>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:12
+msgid "`Users and Teams <#users-and-teams>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:13
+msgid "`Notifications <#notifications>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:14
+msgid "`System-wide notifications <#system-wide-notifications>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:15
+msgid "`Emoji <#emoji>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:16
+msgid "`Posts <#posts>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:17
+msgid "`File Sharing and Downloads <#file-sharing-and-downloads>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:18
+msgid "`Public Links <#public-links>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:19
+msgid "`Notices <#notices>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:20
+msgid "`Connected Workspaces <#connected-workspaces>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:24
+msgid ""
+"System admins managing a self-hosted Mattermost deployment can edit the "
+"``config.json`` file as described in the following tables. Each "
+"configuration value below includes a JSON path to access the value "
+"programmatically in the ``config.json`` file using a JSON-aware tool. For"
+" example, the ``SiteName`` value is under ``TeamSettings``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:26
+msgid ""
+"If using a tool such as `jq <https://stedolan.github.io/jq/>`__, you'd "
+"enter: ``cat config/config.json | jq '.TeamSettings.SiteName'``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:27
+msgid ""
+"When working with the ``config.json`` file manually, look for an object "
+"such as ``TeamSettings``, then within that object, find the key "
+"``SiteName``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:32
+msgid "Customization"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:34
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Site Configuration > Customization**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:44
+msgid "Site name"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:47
+msgid "Name of the site shown in login screens and user interface."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:49
+msgid "String input. Maximum 30 characters. Default is ``Mattermost``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:47
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:63
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:82
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:101
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:117
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:139
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:156
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:175
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:197
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:216
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:272
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:292
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:312
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:334
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:355
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:376
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:400
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:416
+msgid "System Config path: **Site Configuration > Customization**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:48
+msgid "``config.json`` setting: ``TeamSettings`` > ``SiteName``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:49
+msgid "Environment variable: ``MM_TEAMSETTINGS_SITENAME``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:60
+msgid "Site description"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:63
+msgid ""
+"Text displayed above the login form. When not specified, the phrase \"Log"
+" in\" is displayed."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:65
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1314
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1435
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1979
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2397
+msgid "String input."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:64
+msgid "``config.json`` setting: ``TeamSettings`` > ``CustomDescriptionText``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:65
+msgid "Environment variable: ``MM_TEAMSETTINGS_CUSTOMDESCRIPTIONTEXT``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:79
+msgid "Enable custom branding"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:82
+msgid "**true**: Enables the display of a custom image and text on the login page"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:83
+msgid "**false**: **(Default)** Custom branding is disabled"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:85
+msgid ""
+"See also the `custom brand image <#custom-brand-image>`__ and `custom "
+"brand text <#custom-brand-text>`__ configuration settings for more "
+"branding options."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:83
+msgid ""
+"``config.json`` setting: ``TeamSettings`` > ``EnableCustomBrand``  > "
+"``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:84
+msgid "Environment variable: ``MM_TEAMSETTINGS_ENABLECUSTOMBRAND``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:98
+msgid "Custom brand image"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:101
+msgid ""
+"A JPG image for display on the login page. The image **must** be uploaded"
+" through the System Console. There is no ``config.json`` setting. The "
+"file should be **smaller than 2 MB**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:103
+msgid ""
+"`Enable custom branding <#enable-custom-branding>`__ must be set to "
+"**true** to display the image."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:102
+msgid "``config.json`` setting: N/A"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:103
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2084
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2108
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2500
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2520
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2541
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2561
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2582
+msgid "Environment variable: N/A"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:114
+msgid "Custom brand text"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:117
+msgid ""
+"Text that will be shown below the **Custom brand image** on the login "
+"page. You can format this text using the same :doc:`Markdown formatting "
+"</end-user-guide/collaborate/format-messages>` as in Mattermost messages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:121
+msgid ""
+"String input. Maximum 500 characters. `Enable custom branding <#enable-"
+"custom-branding>`__ must be set to **true** to display the text."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:118
+msgid "``config.json`` setting: ``TeamSettings`` > ``CustomBrandText``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:119
+msgid "Environment variable: ``MM_TEAMSETTINGS_CUSTOMBRANDTEXT``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:136
+msgid "Enable Ask Community link"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:139
+msgid ""
+"**true**: **(Default)** A link to the `Mattermost Community "
+"<https://mattermost.com/community/>`__ appears as **Ask the community** "
+"under the **Help** menu in the channel header."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:140
+msgid "**false**: The link does not appear."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:142
+msgid "The link does not display on mobile apps."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:140
+msgid ""
+"``config.json`` setting: ``SupportSettings`` > ``EnableAskCommunityLink``"
+" > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:141
+msgid "Environment variable: ``MM_SUPPORTSETTINGS_ENABLEASKCOMMUNITYLINK``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:153
+msgid "Help link"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:156
+msgid ""
+"This field sets the URL for the Help link on the login and sign up pages,"
+" as well as the **Help Resources** link under the **Help** menu in the "
+"channel header."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:158
+msgid "String input. Default is ``https://about.mattermost.com/default-help/``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:157
+msgid "``config.json`` setting: ``SupportSettings`` > ``HelpLink``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:158
+msgid "Environment variable: ``MM_SUPPORTSETTINGS_HELPLINK``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:162
+msgid ""
+"If this value is empty, the Help link is hidden on the login and sign up "
+"pages. However, the **Help Resources** link remains available under the "
+"**Help** menu."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:172
+msgid "Terms of Use link"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:175
+msgid ""
+"This field sets the URL for the Terms of Use of a self-hosted site. A "
+"link to the terms appears at the bottom of the sign-up and login pages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:177
+msgid ""
+"The default URL links to a `Terms of Use <https://mattermost.com/terms-"
+"of-use/>`__ page hosted on ``mattermost.com``. This includes the "
+"Mattermost Acceptable Use Policy explaining the terms under which "
+"Mattermost software is provided to end users. If you change the default "
+"link to add your own terms, the new terms **must include a link** to the "
+"default terms so end users are aware of the Mattermost Acceptable Use "
+"Policy."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:179
+msgid "String input. Default is ``https://about.mattermost.com/default-terms/``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:176
+msgid "``config.json`` setting: ``SupportSettings`` > ``TermsOfServiceLink``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:177
+msgid "Environment variable: ``MM_SUPPORTSETTINGS_TERMSOFSERVICELINK``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:183
+msgid ""
+"Customers with a Mattermost subscription may replace or override the "
+"Acceptable Use Policy with their own acceptable use or conduct policies, "
+"based on contractual terms with Mattermost, so long as your own terms "
+"either incorporate the Acceptable Use Policy or include equivalent terms."
+" If you change the default link to add your own terms for using the "
+"service you provide, your new terms must include a `link to the default "
+"terms <https://mattermost.com/terms-of-use/#acceptable-use-policy>`_ so "
+"end users are aware of the Mattermost Acceptable Use Policy for "
+"Mattermost software."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:184
+msgid ""
+"This setting is applicable to self-hosted deployments only and doesn't "
+"change the **Terms of Use** link in the **About Mattermost** window."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:194
+msgid "Privacy Policy link"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:197
+msgid ""
+"This field sets the URL for the Privacy Policy of a self-hosted site. A "
+"link to the policy appears at the bottom of the sign-up and login pages. "
+"If this field is empty, the link does not appear."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:199
+msgid ""
+"String input. Default is ``https://about.mattermost.com/default-privacy-"
+"policy/``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:198
+msgid "``config.json`` setting: ``SupportSettings`` > ``PrivacyPolicyLink``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:199
+msgid "Environment variable: ``MM_SUPPORTSETTINGS_PRIVACYPOLICYLINK``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:203
+msgid ""
+"This setting is applicable to self-hosted deployments only and doesn't "
+"change the **Privacy Policy** link in the **About Mattermost** window."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:213
+msgid "About link"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:216
+msgid ""
+"This field sets the URL for a page containing general information about a"
+" self-hosted site. A link to the About page appears at the bottom of the "
+"sign-up and login pages. If this field is empty the link does not appear."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:218
+msgid "String input. Default is ``https://about.mattermost.com/default-about/``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:217
+msgid "``config.json`` setting: ``SupportSettings`` > ``AboutLink``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:218
+msgid "Environment variable: ``MM_SUPPORTSETTINGS_ABOUTLINK``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:222
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:279
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:299
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:321
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:342
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:363
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:384
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:480
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1569
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1984
+msgid "This setting is applicable to self-hosted deployments only."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:232
+msgid "Forgot Password custom link"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:235
+msgid ""
+"When the **Forgot Password** link is enabled on the Mattermost login "
+"page, users are taken to a custom URL to recover or change their "
+"password."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:238
+msgid "Leave this field blank to use Mattermost's Password Reset workflow."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:235
+msgid "System Config path: **Site Configuration > Forgot password custom link**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:236
+msgid "``config.json`` setting: ``SupportSettings`` > ``ForgetPasswordLink``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:237
+msgid "Environment variable: ``MM_SUPPORTSETTINGS_FORGETPASSWORDLINK``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:242
+msgid ""
+"This configuration setting applies to all Mattermost clients, including "
+"web, desktop app, and mobile app. You can control whether the **Forgot "
+"Password** link is visible or hidden in clients by going to "
+"**Authentication > Password > Enable Forgot Password Link**. See the "
+":ref:`configuration <administration-guide/configure/authentication-"
+"configuration-settings:enable forgot password link>` documentation for "
+"details."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:252
+msgid "Report a Problem"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:254
+msgid ""
+"With self-hosted deployments, you can specify how the **Report a "
+"Problem** option behaves in the Mattermost app via the **Help** menu:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:256
+msgid ""
+"**Default link**: Uses the default Mattermost URL to report a problem. "
+"Customers with a Mattermost subscription are directed to the `Mattermost "
+"Support Portal <https://support.mattermost.com/hc/en-us/requests/new>`_. "
+"Community deployments are directed to `create a new issue on the "
+"Mattermost GitHub repository "
+"<https://github.com/mattermost/mattermost/issues/new>`_."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:257
+msgid ""
+"**Email address**: Enables you to :ref:`enter an email address "
+"<administration-guide/configure/site-configuration-settings:report a "
+"problem email address>` that users will be prompted to send a message to "
+"when they choose **Report a Problem** in Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:258
+msgid ""
+"**Custom link**: Enables you to :ref:`enter a URL <administration-"
+"guide/configure/site-configuration-settings:report a problem link>` that "
+"users will be directed to when they choose **Report a Problem** in "
+"Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:259
+msgid "**Hide link**: Removes the **Report a Problem** option from Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:269
+msgid "Report a Problem link"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:272
+msgid ""
+"This field sets the URL for the **Report a Problem** link in the channel "
+"header **Help** menu. If this field is empty the link does not appear."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:275
+msgid "String input. Default is ``https://mattermost.com/pl/report-a-bug``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:273
+msgid "``config.json`` setting: ``SupportSettings`` > ``ReportAProblemLink``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:274
+msgid "Environment variable: ``MM_SUPPORTSETTINGS_REPORTAPROBLEMLINK``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:289
+msgid "Report a Problem email address"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:292
+msgid ""
+"This field sets the email address for the **Report a Problem** link in "
+"the channel header **Help** menu."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:295
+msgid "String input. Cannot be left blank."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:293
+msgid "``config.json`` setting: ``SupportSettings`` > ``ReportAProblemMail``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:294
+msgid "Environment variable: ``MM_SUPPORTSETTINGS_REPORTAPROBLMEMAIL``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:309
+msgid "Allow mobile app log downloads"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:312
+msgid ""
+"Enable users to download mobile app logs for troubleshooting. When the "
+"**Report a Problem** link is shown, mobile logs can be downloaded as part"
+" of the reporting flow."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:316
+msgid "**true** (**Default**): Users can download mobile app logs."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:317
+msgid "**false** Users can't download mobile app logs."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:313
+msgid "``config.json`` setting: ``SupportSettings`` > ``AllowDownloadLogs``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:314
+msgid "Environment variable: ``MM_SUPPORTSETTINGS_ALLOWDOWNLOADLOGS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:331
+msgid "Mattermost apps download page link"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:334
+msgid ""
+"This field sets the URL for the Download Apps link in the **Product** "
+"menu. If this field is empty, the link does not appear."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:336
+msgid ""
+"If you have an Enterprise App Store, set the link to the appropriate "
+"download page for your Mattermost apps."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:338
+msgid "String input. Default is ``https://mattermost.com/pl/download-apps``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:335
+msgid "``config.json`` setting: ``NativeAppSettings`` > ``AppDownloadLink``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:336
+msgid "Environment variable: ``MM_NATIVEAPPSETTINGS_APPDOWNLOADLINK``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:352
+msgid "Android app download link"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:355
+msgid ""
+"This field sets the URL to download the Mattermost Android app. Users who"
+" access the Mattermost site on a mobile browser will be prompted to "
+"download the app through this link. If this field is empty, the prompt "
+"does not appear."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:357
+msgid "If you have an Enterprise App Store, link to your Android app."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:359
+msgid "String input. Default is ``https://mattermost.com/pl/android-app/``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:356
+msgid ""
+"``config.json`` setting: ``NativeAppSettings`` > "
+"``AndroidAppDownloadLink``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:357
+msgid "Environment variable: ``MM_NATIVEAPPSETTINGS_ANDROIDAPPDOWNLOADLINK``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:373
+msgid "iOS app download link"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:376
+msgid ""
+"This field sets the URL to download the Mattermost iOS app. Users who "
+"access the site on a mobile browser will be prompted to download the app "
+"through this link. If this field is empty, the prompt does not appear."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:378
+msgid "If you use an Enterprise App Store, link to your iOS app."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:380
+msgid "String input. Default is ``https://mattermost.com/pl/ios-app/``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:377
+msgid "``config.json`` setting: ``NativeAppSettings`` > ``IosAppDownloadLink``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:378
+msgid "Environment variable: ``MM_NATIVEAPPSETTINGS_IOSAPPDOWNLOADLINK``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:397
+msgid "Enable desktop app landing page"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:400
+msgid "**true**: **(Default)** Prompts users to use the desktop app."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:401
+msgid "**false**: Doesn't prompt users to use the desktop app."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:401
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > "
+"``EnableDesktopLandingPage`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:402
+msgid "Environment variable: ``MM_SERVICESETTINGS_ENABLEDESKTOPLANDINGPAGE``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:413
+msgid "Minimum desktop app version"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:416
+msgid ""
+"Specify the minimum version of the Mattermost Desktop App required to "
+"connect to this server (e.g., ``5.10.0``). Users connecting with a "
+"Desktop App version below this minimum are shown an update required "
+"screen and cannot use the application until they update."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:420
+msgid ""
+"The update screen includes a download link configured via the "
+":ref:`Mattermost apps download page link <configure/site-configuration-"
+"settings:mattermost apps download page link>` setting."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:424
+msgid ""
+"Must be a valid semantic version (e.g., ``5.0.0``). Leave blank to allow "
+"all Desktop App versions to connect."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:427
+msgid "String input. Default is empty (no minimum enforced)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:417
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > "
+"``MinimumDesktopAppVersion``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:418
+msgid "Environment variable: ``MM_SERVICESETTINGS_MINIMUMDESKTOPAPPVERSION``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:438
+msgid "App custom URL schemes"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:440
+msgid ""
+"This setting isn't available in the System Console and can only be set in"
+" ``config.json``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:442
+msgid ""
+"Define valid custom URL schemes for redirect links provided by custom-"
+"built mobile Mattermost apps. This ensures users are redirected to the "
+"custom-built mobile app and not Mattermost's mobile client."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:444
+msgid ""
+"When configured, after OAuth or SAML user authentication is complete, "
+"custom URL schemes sent by mobile clients are validated to ensure they "
+"don't include default schemes such as ``http`` or ``https``. Mobile users"
+" are then redirected back to the mobile app using the custom scheme URL "
+"provided by the mobile client. We recommend that you update your mobile "
+"client values as well with valid custom URL schemes."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:447
+msgid ""
+"This feature's ``config.json`` setting is "
+"``\"NativeAppSettings.AppCustomURLSchemes\"`` with an array of strings as"
+" input separated by spaces."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:449
+msgid "For example:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:451
+msgid "``MM_NativeAppSettings_AppCustomURLSchemes = mmauth:// mmauthbeta://``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:452
+msgid ""
+"Via mmctl: ``mmctl config set NativeAppSettings.AppCustomURLSchemes "
+"\"mmauth://\" \"mmauthbeta://\"``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:466
+msgid "Mobile external browser"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:469
+msgid ""
+"From Mattermost v10.2 and Mobile v2.2.1, this setting configures the "
+"mobile app to use an external mobile browser to perform SSO "
+"authentication."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:472
+msgid ""
+"**true**:  The mobile app uses the default internal mobile browser to "
+"perform SSO authentication."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:474
+msgid ""
+"**false**: **(Default)** The mobile app uses an external mobile browser "
+"to perform SSO authentication."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:469
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2498
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2518
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2539
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2559
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2580
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2608
+msgid "System Config path: N/A"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:470
+msgid "``config.json`` setting: ``NativeAppSettings.MobileExternalBrowser``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:471
+msgid "Environment variable: ``MM_NATIVEAPPSETTINGS_MOBILEEXTERNALBROWSER``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:481
+msgid ""
+"We recommend enabling this configuration setting when there are issues "
+"with the mobile app SSO redirect flow."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:486
+msgid "Localization"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:488
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Site Configuration > Localization**. Changes to configuration "
+"settings in this section require a server restart before taking effect."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:498
+msgid "Default server language"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:501
+msgid "The default language for system messages and logs."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:503
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:528
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:557
+msgid ""
+"Options: ``\"bg\"``, ``\"de\"``, ``\"en\"``, ``\"en-AU\"``, ``\"es\"``, "
+"``\"fa\"``, ``\"fr\"``, ``\"hu\"``, ``\"it\"``, ``\"ja\"``, ``\"ko\"``, "
+"``\"nl\"``, ``\"pl\"``, ``\"pt-br\"``, ``\"ro\"``, ``\"ru\"``, "
+"``\"sv\"``, ``\"tr\"``, ``\"uk\"``, ``\"vi\"``, ``\"zh-Hans\"``, and "
+"``\"zh-Hant\"``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:508
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:533
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:562
+msgid "Default is ``\"en\"``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:501
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:526
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:550
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:581
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:621
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:639
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:660
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:677
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:695
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:713
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:732
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:753
+msgid "System Config path: **Site Configuration > Localization**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:502
+msgid ""
+"``config.json`` setting: ``LocalizationSettings`` > "
+"``DefaultServerLocale``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:503
+msgid "Environment variable: ``MM_LOCALIZATIONSETTINGS_DEFAULTSERVERLOCALE``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:512
+msgid ""
+"Changing this configuration setting changes the default server language "
+"for users who haven't set a language preference via **Settings**. "
+"Mattermost applies the user's language preference when specified."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:523
+msgid "Default client language"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:526
+msgid ""
+"The default language for new users and pages where the user isn't logged "
+"in."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:527
+msgid ""
+"``config.json`` setting: ``LocalizationSettings`` > "
+"``DefaultClientLocale``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:528
+msgid "Environment variable: ``MM_LOCALIZATIONSETTINGS_DEFAULTCLIENTLOCALE``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:537
+msgid ""
+"Changing this configuration setting changes the default client language "
+"for users who haven't set a language preference via **Settings**. "
+"Mattermost applies the user's language preference when specified."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:547
+msgid "Available languages"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:550
+msgid ""
+"Sets the list of languages users see under **Settings > Display > "
+"Language**. If this field is left blank, users see all supported "
+"languages. Newly supported languages are added automatically. If this "
+"field is not blank, it must contain the **Default client language**, in "
+"addition to any other languages. For example, to limit the language "
+"choices to US English and Español (es), the string would be "
+"``\"en,es\"``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:551
+msgid "``config.json`` setting: ``LocalizationSettings`` > ``AvailableLocales``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:552
+msgid "Environment variable: ``MM_LOCALIZATIONSETTINGS_AVAILABLELOCALES``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:576
+msgid "Enable experimental locales"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:578
+msgid ""
+"Enable work in progress languages in Mattermost to review translations "
+"and identify translation gaps."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:581
+msgid ""
+"**true**: Work in progress languages are available in Mattermost in "
+"addition to officially supported languages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:584
+msgid ""
+"**false**: **(Default)** Only officially supported languages are "
+"available in Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:582
+msgid ""
+"``config.json`` setting: ``LocalizationSettings`` > "
+"``EnableExperimentalLocales`` > ``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:583
+msgid "Environment variable: ``MM_LOCALIZATIONETTINGS_ENABLEEXPERIMENTALLOCALES``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:590
+msgid ""
+"Cloud system admins can request this configuration setting to be enabled "
+"for their instance by contacting their Mattermost Account Manager."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:591
+msgid ""
+"Work in progress languages may be incomplete. Strings missing "
+"translations display in US English."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:592
+msgid ""
+"Currently, only web and desktop app product strings are impacted by this "
+"configuration setting. Server and mobile product strings aren't impacted "
+"by this setting."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:593
+msgid ""
+"See the :ref:`language <end-user-guide/preferences/manage-your-display-"
+"options:language>` documentation for details on selecting a language "
+"preference in Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:600
+msgid "Auto-translation"
+msgstr ""
+
+#: ../../source/_static/badges/ent-adv.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Enterprise Advanced "
+"<https://mattermost.com/pricing/>`__ plans"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:605
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Site Configuration > Localization**. These settings configure "
+"automatic translation of channel messages. See the :doc:`Auto-translation"
+" setup guide </administration-guide/manage/admin/autotranslation>` for "
+"deployment details."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:618
+msgid "Enable auto-translation"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:621
+msgid "Enable or disable automatic translation of channel messages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:623
+msgid "**true**: Autotranslation is available and can be enabled per channel."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:625
+msgid "**false**: **(Default)** Autotranslation is disabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:622
+msgid ""
+"``config.json`` setting: ``AutoTranslationSettings`` > ``Enable`` > "
+"``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:623
+msgid "Environment variable: ``MM_AUTOTRANSLATIONSETTINGS_ENABLE``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:636
+msgid "Translation provider"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:639
+msgid "The translation provider to use for autotranslation."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:641
+msgid ""
+"``libretranslate``: Use a self-hosted LibreTranslate server for "
+"translations."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:643
+msgid ""
+"``agents``: Use the Mattermost Agents plugin with an LLM backend for "
+"translations."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:646
+msgid "Default is ``\"\"`` (no provider selected)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:640
+msgid "``config.json`` setting: ``AutoTranslationSettings`` > ``Provider``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:641
+msgid "Environment variable: ``MM_AUTOTRANSLATIONSETTINGS_PROVIDER``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:657
+msgid "LibreTranslate URL"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:660
+msgid ""
+"The URL of the LibreTranslate server used for translations. The "
+"Mattermost server must be able to reach this URL."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:663
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:681
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:699
+msgid "String value."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:661
+msgid ""
+"``config.json`` setting: ``AutoTranslationSettings`` > ``LibreTranslate``"
+" > ``URL``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:663
+msgid "Environment variable: ``MM_AUTOTRANSLATIONSETTINGS_LIBRETRANSLATE_URL``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:674
+msgid "LibreTranslate API key"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:677
+msgid ""
+"The API key for authenticated access to the LibreTranslate server. Leave "
+"blank if the LibreTranslate server doesn't require authentication."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:678
+msgid ""
+"``config.json`` setting: ``AutoTranslationSettings`` > ``LibreTranslate``"
+" > ``APIKey``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:680
+msgid "Environment variable: ``MM_AUTOTRANSLATIONSETTINGS_LIBRETRANSLATE_APIKEY``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:692
+msgid "Agents LLM service ID"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:695
+msgid ""
+"The service ID of the LLM configured in the Mattermost Agents plugin to "
+"use for translations. Configure LLM services in the Agents plugin "
+"settings."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:696
+msgid ""
+"``config.json`` setting: ``AutoTranslationSettings`` > ``Agents`` > "
+"``LLMServiceID``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:698
+msgid "Environment variable: ``MM_AUTOTRANSLATIONSETTINGS_AGENTS_LLMSERVICEID``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:710
+msgid "Languages allowed"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:713
+msgid ""
+"The languages that all messages in autotranslation-enabled channels are "
+"translated into. Every message is translated into each language in this "
+"list, regardless of who is in the channel. Specify languages as an array "
+"of language codes."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:718
+msgid "Default is ``[\"en\"]``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:714
+msgid "``config.json`` setting: ``AutoTranslationSettings`` > ``TargetLanguages``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:715
+msgid "Environment variable: ``MM_AUTOTRANSLATIONSETTINGS_TARGETLANGUAGES``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:729
+msgid "Translation timeout"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:732
+msgid ""
+"The maximum time in milliseconds to wait for a translation to complete. "
+"If a translation exceeds this timeout, it is skipped."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:736
+msgid "Numerical value. Default is **5000** (5 seconds)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:733
+msgid ""
+"``config.json`` setting: ``AutoTranslationSettings`` > ``TimeoutMs`` > "
+"``5000``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:734
+msgid "Environment variable: ``MM_AUTOTRANSLATIONSETTINGS_TIMEOUTMS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:750
+msgid "Restrict autotranslation in direct and group messages"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:753
+msgid "Restrict autotranslation from being enabled in direct and group messages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:756
+msgid "**true**: Autotranslation can't be enabled in direct or group messages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:758
+msgid ""
+"**false**: **(Default)** Autotranslation can be enabled in direct and "
+"group messages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:754
+msgid ""
+"``config.json`` setting: ``AutoTranslationSettings`` > "
+"``RestrictDMAndGM`` > ``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:755
+msgid "Environment variable: ``MM_AUTOTRANSLATIONSETTINGS_RESTRICTDMANDGM``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:770
+msgid "Translation workers"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:773
+msgid ""
+"The number of concurrent translation workers per node. Higher values "
+"increase translation throughput but use more resources. This setting is "
+"not available in the System Console and can only be set via ``mmctl``, "
+"``config.json``, or environment variable."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:779
+msgid "Numerical value. Default is **6**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:773
+msgid "``config.json`` setting: ``AutoTranslationSettings`` > ``Workers`` > ``6``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:774
+msgid "Environment variable: ``MM_AUTOTRANSLATIONSETTINGS_WORKERS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:785
+msgid "Users and teams"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:787
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Site Configuration > Users and Teams**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:797
+msgid "Max users per team"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:800
+msgid ""
+"The **Max users per team** is the maximum total number of users per team,"
+" including activated and deactivated users."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:803
+msgid ""
+"In Mattermost, a team of people should be a small organization with a "
+"specific goal. In the physical world, a team could sit around a single "
+"table. The default maximum (50) should be enough for most teams, but with"
+" appropriate `hardware <https://docs.mattermost.com/install/ software-"
+"hardware-requirements.html>`__, this limit can be increased to thousands "
+"of users."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:810
+msgid ""
+":doc:`Channels </end-user-guide/collaborate/collaborate-within-channels>`"
+" are another way of organizing communications within teams on various "
+"topics."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:813
+msgid ""
+"Numerical input. Default is **50** self-hosted deployments, and **10000**"
+" for Cloud deployments."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:800
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:828
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:848
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:872
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:894
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:928
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:948
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:991
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1013
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1040
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1059
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1078
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1094
+msgid "System Config path: **Site Configuration > Users and Teams**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:801
+msgid "``config.json`` setting: ``TeamSettings`` > ``MaxUsersPerTeam`` > ``50``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:802
+msgid "Environment variable: ``MM_TEAMSETTINGS_MAXUSERSPERTEAM``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:825
+msgid "Max channels per team"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:828
+msgid ""
+"The maximum number of channels per team, including both active and "
+"archived channels."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:830
+msgid ""
+"Numerical input. Default is **2000** for self-hosted deployments, and "
+"**10000** for Cloud deployments."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:829
+msgid ""
+"``config.json`` setting: ``TeamSettings`` > ``MaxChannelsPerTeam`` > "
+"``2000``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:830
+msgid "Environment variable: ``MM_TEAMSETTINGS_MAXCHANNELSPERTEAM``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:845
+msgid "Enable join/leave messages by default"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:848
+msgid ""
+"Specify the default configuration of system messages displayed when users"
+" join or leave channels."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:851
+msgid "**true**: **(Default)** Join/Leave messages are displayed."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:852
+msgid "**false**: Join/Leave messages are hidden."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:854
+msgid ""
+"Users can override this default by going to **Settings > Advanced > "
+"Enable Join/Leave Messages**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:849
+msgid ""
+"``config.json`` setting: ``TeamSettings`` > "
+"``EnableJoinLeaveMessageByDefault`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:850
+msgid "Environment variable: ``MM_TEAMSETTINGS_ENABLEJOINLEAVEMESSAGEBYDEFAULT``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:869
+msgid "Enable users to open direct message channels with"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:872
+msgid ""
+"This setting determines whether a user can open a direct message channel "
+"with anyone on the Mattermost server or only to members of the same team."
+" This setting only affects the options presented in the user interface. "
+"It does not affect permissions on the backend server."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:874
+msgid ""
+"**Any user on the Mattermost server**: **(Default)** Users can send a "
+"direct message to any user through the **Direct Messages > More** menu. "
+"``config.json`` setting: ``\"any\"``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:876
+msgid ""
+"**Any member of the team**: The **Direct Messages > More** menu only "
+"allows direct messages to users on the same team. Pressing :kbd:`Ctrl` "
+":kbd:`K` on Windows or Linux, or :kbd:`⌘` :kbd:`K` on Mac, only lists "
+"other users on the team currently being viewed. A user who is a member of"
+" multiple teams can only send direct messages to the team that is being "
+"viewed. However, the user can receive messages from other teams, "
+"regardless of the team currently being viewed. ``config.json`` setting: "
+"``\"team\"``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:873
+msgid "``config.json`` setting: ``TeamSettings`` > ``RestrictDirectMessage``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:874
+msgid "Environment variable: ``MM_TEAMSETTINGS_RESTRICTDIRECTMESSAGE``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:891
+msgid "Teammate name display"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:894
+msgid ""
+"This setting determines how names appear in posts and under the **Direct "
+"Messages** list. Users can change this setting in their interface under "
+"**Settings > Display > Teammate Name Display**, unless this setting is "
+"locked by a system admin via the **Lock teammate name display for all "
+"users** configuration setting."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:899
+msgid ""
+"**Show username**: **(Default for self-hosted deployments)** Displays "
+"usernames. ``config.json`` option: ``\"username\"``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:901
+msgid ""
+"**Show nickname if one exists...**: Displays the user's nickname. If the "
+"user doesn't have a nickname, their full name is displayed. If the user "
+"doesn't have a full name, their username is displayed. ``config.json`` "
+"option: ``\"nickname_full_name\"``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:904
+msgid ""
+"**Show first and last name**: **(Default for Cloud deployments)** "
+"Displays user's full name. If the user doesn't have a full name, their "
+"username is displayed. Recommended when using :doc:`SAML "
+"</administration-guide/onboard/sso-saml>` or :doc:`LDAP </administration-"
+"guide/onboard/ad-ldap>` if first name and last name attributes are "
+"configured. ``config.json`` option: ``\"full_name\"``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:895
+msgid ""
+"``config.json`` setting: ``TeamSettings`` > ``TeammateNameDisplay`` > "
+"``username``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:896
+msgid "Environment variable: ``MM_TEAMSETTINGS_TEAMMATENAMEDISPLAY``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:922
+msgid "Lock teammate name display for all users"
+msgstr ""
+
+#: ../../source/_static/badges/ent-plus.rst:9
+msgid ""
+"|plans-img-yellow| Available on `Enterprise and Enterprise Advanced plans"
+" <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:928
+msgid ""
+"This setting controls whether users can change settings under **Settings "
+"> Display > Teammate Name Display**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:930
+msgid "**true**: Users **cannot** change the Teammate Name Display."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:931
+msgid ""
+"**false**: **(Default)** Users can change the Teammate Name Display "
+"setting."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:929
+msgid ""
+"``config.json`` setting: ``TeamSettings`` > ``LockTeammateNameDisplay`` >"
+" ``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:930
+msgid "Environment variable: ``MM_TEAMSETTINGS_LOCKTEAMMATENAMEDISPLAY``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:945
+msgid "Allow users to view archived channels"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:948
+msgid ""
+"**true**: **(Default)** Allows users to access the content of archived "
+"channels of which they were a member."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:949
+msgid "**false**: Users are unable to access content in archived channels."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:949
+msgid ""
+"``config.json`` setting: ``TeamSettings`` > "
+"``ExperimentalViewArchivedChannels`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:950
+msgid "Environment variable: ``MM_TEAMSETTINGS_EXPERIMENTALVIEWARCHIVEDCHANNELS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:954
+msgid ""
+"From Mattermost v11, this configuration setting is always enabled and no "
+"longer configurable. Users can always access archived channels where they"
+" are members."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:955
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1147
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1181
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1206
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1267
+msgid "Cloud admins can't modify this configuration setting."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:968
+msgid "Show email address"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:971
+msgid ""
+"**true**: **(Default)** All users can see the email addresses of every "
+"other user."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:972
+msgid ""
+"**false**: Hides email addresses in the client user interface, except "
+"from system admins and the System Roles with read/write access to "
+"Compliance, Billing, or User Management (users/teams/channels/groups "
+"etc)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:971
+msgid "System Config path: **Site Configuration > Users and teams**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:972
+msgid ""
+"``config.json`` setting: ``PrivacySettings`` > ``ShowEmailAddress`` > "
+"``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:973
+msgid "Environment variable: ``MM_PRIVACYSETTINGS_SHOWEMAILADDRESS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:988
+msgid "Show full name"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:991
+msgid ""
+"**true**: **(Default)** Full names are visible to all users in the client"
+" user interface."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:992
+msgid ""
+"**false**: Hides full names from all users, except system admins. "
+"Username is shown in place of the full name."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:992
+msgid "``config.json`` setting: ``PrivacySettings`` > ``ShowFullName`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:993
+msgid "Environment variable: ``MM_PRIVACYSETTINGS_SHOWFULLNAME``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1007
+msgid "Enable anonymous team and channel URLs"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1013
+msgid ""
+"From Mattermost v11.6.0, when enabled, team and channel URLs are "
+"anonymized, meaning the URL no longer contains the team or channel name. "
+"This prevents team and channel names from being identified through web "
+"addresses."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1017
+msgid ""
+"When this setting is enabled, the team and channel creation workflows no "
+"longer include a step for users to define a URL; teams and channels are "
+"created with an automatically generated anonymous URL. This applies only "
+"to newly created teams and channels; existing teams and channels are not "
+"affected."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1022
+msgid "**true**: Team and channel URLs are anonymized."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1023
+msgid "**false**: Team and channel URLs include the team or channel name."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1014
+msgid "``config.json`` setting: ``PrivacySettings`` > ``UseAnonymousURLs``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1015
+msgid "Environment variable: ``MM_PRIVACYSETTINGS_USEANONYMOUSURLS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1037
+msgid "Enable custom user statuses"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1040
+msgid ""
+"**true**: **(Default)** Users can set status messages and emojis that are"
+" visible to all users."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1041
+msgid "**false**: Users cannot set custom statuses."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1041
+msgid ""
+"``config.json`` setting: ``TeamSettings`` > ``EnableCustomUserStatuses`` "
+"> ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1042
+msgid "Environment variable: ``MM_TEAMSETTINGS_ENABLECUSTOMUSERSTATUSES``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1056
+msgid "Enable last active time"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1059
+msgid ""
+"**true**: **(Default)** Users can see when deactivated users were last "
+"active on a user's profile and in direct message channel headers."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1061
+msgid "**false**: Users can't see when deactivated users were last online."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1060
+msgid ""
+"``config.json`` setting: ``TeamSettings`` > ``EnableLastActiveTime`` > "
+"``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1061
+msgid "Environment variable: ``MM_TEAMSETTINGS_ENABLELASTACTIVETIME``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1075
+msgid "Enable custom user groups"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1078
+msgid ""
+"**true**: **(Default)** Users with appropriate permissions can create "
+"custom user groups, and users can @mention custom user groups in "
+"Mattermost conversations."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1080
+msgid "**false**: Custom user groups cannot be created."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1079
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > ``EnableCustomGroups`` > "
+"``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1080
+msgid "Environment variable: ``MM_SERVICESETTINGS_ENABLECUSTOMGROUPS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1091
+msgid "User statistics update time"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1094
+msgid ""
+"Set the server time for updating the user post statistics, including each"
+" user's total message count, and the timestamp of each user's most "
+"recently sent message."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1097
+msgid ""
+"Must be a 24-hour time stamp in the form ``HH:MM`` based on the local "
+"time of the server. Default is **00:00**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1095
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > "
+"``RefreshPostStatsRunTime`` > ``00:00``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1096
+msgid "Environment variable: ``MM_SERVICESETTINGS_REFRESHPOSTSTATSRUNTIME``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1104
+msgid "Notifications"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1106
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Site Configuration > Notifications**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1119
+msgid "Show @channel, @all, or @here confirmation dialog"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1122
+msgid ""
+"**true**: **(Default)** Requires users to confirm when posting @channel, "
+"@all, @here, or group mentions in channels with more than 5 members."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1123
+msgid "**false**: No confirmation is required."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1122
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1141
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1175
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1197
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1229
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1245
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1261
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1280
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1296
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1312
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1333
+msgid "System Config path: **Site Configuration > Notifications**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1123
+msgid ""
+"``config.json`` setting: ``TeamSettings`` > "
+"``EnableConfirmNotificationsToChannel`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1124
+msgid ""
+"Environment variable: "
+"``MM_TEAMSETTINGS_ENABLECONFIRMNOTIFICATIONSTOCHANNEL``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1138
+msgid "Enable email notifications"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1141
+msgid "**true**: **(Default)** Enables automatic email notifications for posts."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1142
+msgid ""
+"**false**: Disables notifications. A developer may choose this option to "
+"speed development by skipping email setup (see also the **Enable preview "
+"mode banner** setting)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1142
+msgid ""
+"``config.json`` setting: ``EmailSettings`` > ``SendEmailNotifications`` >"
+" ``ture``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1143
+msgid "Environment variable: ``MM_EMAILSETTINGS_SENDEMAILNOTIFICATIONS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1148
+msgid ""
+"If this setting is **false**, and the SMTP server is set up, account-"
+"related emails (such as authentication messages) will be sent regardless "
+"of this setting."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1149
+msgid ""
+"Email invitations and account deactivation emails aren't affected by this"
+" setting."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1150
+msgid ""
+"If you don't plan on :doc:`configuring Mattermost for email "
+"</administration-guide/configure/smtp-email>`, disabling this "
+"configuration setting in larger deployments may improve server "
+"performance in the following areas, particularly in high-traffic "
+"environments where performance is a key concern:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1152
+msgid ""
+"**Reduced Server Load**: Generating and sending emails requires "
+"processing power and resources. By disabling email notifications, you "
+"reduce the load on the server, which can be reallocated to other tasks."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1153
+msgid ""
+"**Decreased I/O Operations**: Sending emails involves input/output (I/O) "
+"operations, such as writing to logs and databases, and handling "
+"communication with the email server. Reducing these I/O operations can "
+"improve overall system efficiency."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1154
+msgid ""
+"**Lowered Network Traffic**: Each email sent contributes to network "
+"traffic. Disabling email notifications decreases the amount of data being"
+" transmitted, which can lead to better performance, especially in "
+"environments with limited bandwidth."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1155
+msgid ""
+"**Faster Response Times**: With fewer background tasks (like sending "
+"emails) to handle, the application can potentially respond to user "
+"requests more quickly, improving perceived performance."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1156
+msgid ""
+"**Resource Allocation**: Resources like CPU cycles, memory, and network "
+"bandwidth that would have been used for sending emails can be used "
+"elsewhere, possibly improving the performance of other critical "
+"components of the system."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1157
+msgid ""
+"However, disabling email notifications can negatively impact user "
+"experience, communication efficiency, and overall productivity. It's "
+"important to balance performance improvements with the needs of your "
+"organization and users."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1172
+msgid "Enable preview mode banner"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1175
+msgid ""
+"**true**: **(Default)** When **Send email notifications** is **false**, "
+"users see the Preview Mode banner. This banner alerts users that email "
+"notifications are disabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1176
+msgid "**false**: Preview Mode banner does not appear."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1176
+msgid ""
+"``config.json`` setting: ``EmailSettings`` > ``EnablePreviewModeBanner`` "
+"> ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1177
+msgid "Environment variable: ``MM_EMAILSETTINGS_ENABLEPREVIEWMODEBANNER``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1194
+msgid "Enable email batching"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1197
+msgid ""
+"**true**: Multiple email notifications for mentions and direct messages "
+"over a given time period are batched into a single email."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1200
+msgid ""
+"**false**: **(Default)** Email notifications are sent for each mention or"
+" direct message."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1198
+msgid ""
+"``config.json`` setting: ``EmailSettings`` > ``EnableEmailBatching`` > "
+"``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1199
+msgid "Environment variable: ``MM_EMAILSETTINGS_ENABLEEMAILBATCHING``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1207
+msgid ""
+"The :ref:`Site Url <administration-guide/configure/environment-"
+"configuration-settings:site url>` and :ref:`SMTP Email Server "
+"<administration-guide/configure/environment-configuration-settings:smtp "
+"server>` must be configured to allow email batching."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1208
+msgid ""
+"Regardless of how this setting is configured, users can :ref:`disable "
+"email-based notifications altogether <end-user-guide/preferences/manage-"
+"your-notifications:email notifications>`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1209
+msgid ""
+"When email batching is enabled, users can :ref:`customize how often to "
+"receive batched notifications <end-user-guide/preferences/manage-your-"
+"notifications:email notifications>`. The default frequency is 15 minutes."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1210
+msgid ""
+"Email batching in :ref:`High Availability Mode <administration-"
+"guide/configure/environment-configuration-settings:enable high "
+"availability mode>` is planned, but not yet supported."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1223
+msgid "Email notification contents"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1229
+msgid ""
+"**Send full message contents**: **(Default)** Email notifications include"
+" the full message contents, along with the name of the sender and the "
+"channel. ``config.json`` setting: ``\"full\"``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1231
+msgid ""
+"**Send generic description with only sender name**: Only the name of the "
+"sender and team name are included in email notifications. Use this option"
+" if Mattermost contains confidential information and policy dictates it "
+"cannot be stored in email. ``config.json`` setting: ``\"generic\"``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1230
+msgid ""
+"``config.json`` setting: ``EmailSettings`` > "
+"``EmailNotificationContentsType``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1231
+msgid "Environment variable: ``MM_EMAILSETTINGS_EMAILNOTIFICATIONCONTENTSTYPE``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1242
+msgid "Notification display name"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1245
+msgid "Display name for email notifications sent from the Mattermost system."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1247
+msgid ""
+"String input. No default setting. This field is required when changing "
+"settings in the System Console."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1246
+msgid "``config.json`` setting: ``EmailSettings`` > ``FeedbackName``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1247
+msgid "Environment variable: ``MM_EMAILSETTINGS_FEEDBACKNAME``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1258
+msgid "Notification from address"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1261
+msgid ""
+"Email address for notification emails from the Mattermost system. This "
+"address should be monitored by a system admin."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1263
+msgid ""
+"String input. Default is ``test@example.com``. This field is required "
+"when changing settings in the System Console."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1262
+msgid "``config.json`` setting: ``EmailSettings`` > ``FeedbackEmail``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1263
+msgid "Environment variable: ``MM_EMAILSETTINGS_FEEDBACKEMAIL``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1277
+msgid "Support email address"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1280
+msgid ""
+"Sets a user support (or feedback) email address that is displayed on "
+"email notifications and during the Getting Started tutorial. This address"
+" should be monitored by a system admin. If no value is set, email "
+"notifications will not contain a way for users to request assistance."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1282
+msgid ""
+"String input. Default is ``feedback@mattermost.com``. This field is "
+"required when changing settings in the System Console."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1281
+msgid "``config.json`` setting: ``SupportSettings`` > ``SupportEmail``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1282
+msgid "Environment variable: ``MM_SUPPORTSETTINGS_SUPPORTEMAIL``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1293
+msgid "Notification reply-to address"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1296
+msgid ""
+"Email address used in the reply-to header when sending notification "
+"emails from the Mattermost system. This address should be monitored by a "
+"system admin."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1298
+msgid "String input. Default is ``test@example.com``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1297
+msgid "``config.json`` setting: ``EmailSettings`` > ``ReplyToAddress``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1298
+msgid "Environment variable: ``MM_EMAILSETTINGS_REPLYTOADDRESS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1309
+msgid "Notification footer mailing address"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1312
+msgid ""
+"Optional setting to include the organization's name and mailing address "
+"in the footer of email notifications. If not set, nothing will appear."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1313
+msgid "``config.json`` setting: ``EmailSettings`` > ``FeedbackOrganization``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1314
+msgid "Environment variable: ``MM_EMAILSETTINGS_FEEDBACKORGANIZATION``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1330
+msgid "Push notification contents"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1333
+msgid ""
+"**Generic description with only sender name**: Push notifications include"
+" the sender's name, but not the channel name or message contents. "
+"``config.json`` setting: ``\"generic_no_channel\"``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1336
+msgid ""
+"**Generic description with sender and channel names**: **(Default)** Push"
+" notifications include the name of the sender and channel, but not the "
+"message contents. ``config.json`` setting: ``\"generic\"``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1340
+msgid ""
+"**Full message content sent in the notification payload**: Includes the "
+"message contents in the push notification payload, which may be sent "
+"through `Apple's Push Notification service "
+"<https://developer.apple.com/documentation/usernotifications>`__ or "
+"`Google's Firebase Cloud Messaging <https://firebase. google.com/docs"
+"/cloud-messaging>`__ . We **highly recommended** this option only be used"
+" with an ``https`` protocol to encrypt the connection and protect "
+"confidential information. ``config.json`` setting: ``\"full\"``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1348
+msgid ""
+"**Full message content fetched from the server on receipt** (*Available "
+"in Mattermost Enterprise*): The notification payload contains no message "
+"content. Instead it contains a unique message ID used to fetch message "
+"content from the Mattermost server when a push notification is received "
+"via a `notification service app extension "
+"<https://developer.apple.com/documentation/usernotifications/ modifying-"
+"content-in-newly-delivered-notifications>`_  on iOS or `an expandable "
+"notification pattern "
+"<https://developer.android.com/develop/ui/views/notifications/expanded>`_"
+" on Android."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1355
+msgid ""
+"If the server cannot be reached, a generic push notification is displayed"
+" without message content or sender name. For customers who wrap the "
+"Mattermost mobile application in a secure container, the container must "
+"fetch the message contents using the unique message ID when push "
+"notifications are received."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1360
+msgid ""
+"If the container is unable to execute the fetch, the push notification "
+"contents cannot be received by the customer's mobile application without "
+"passing the message contents through Apple's or Google's notification "
+"service. ``config.json`` setting: ``\"id_loaded\"``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1334
+msgid "``config.json`` setting: ``EmailSettings`` > ``PushNotificationContents``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1335
+msgid "Environment variable: ``MM_EMAILSETTINGS_PUSHNOTIFICATIONCONTENTS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1376
+msgid "Enable notification monitoring"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1379
+msgid "Enable or disable notification metrics data collection."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1382
+msgid ""
+"**true**: **(Default)** Mattermost notification data collection is "
+"enabled for client-side web and desktop app users."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1385
+msgid "**false**: Mattermost notification data collection is disabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1379
+msgid "System Config path: **Environment > Performance Monitoring**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1380
+msgid ""
+"``config.json`` setting: ``MetricsSettings`` > "
+"``EnableNotificationMetrics`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1381
+msgid "Environment variable: ``MM_METRICSSETTINGS_ENABLENOTIFICATIONMETRICS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1390
+msgid ""
+"See the :ref:`performance monitoring <administration-guide/scale/deploy-"
+"prometheus-grafana-for-performance-monitoring:getting started>` "
+"documentation to learn more about Mattermost Notification Health metrics."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1396
+msgid "System-wide notifications"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1401
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Site Configuration > System-wide notifications**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1414
+msgid "Enable system-wide notifications"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1417
+msgid ""
+"**true**: Enable system-wide notifications to display at the top of the "
+"Mattermost interface for all users across all teams."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1419
+msgid "**false**: **(Default)** Disable system-wide notifications."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1417
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1433
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1449
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1465
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1484
+msgid "System Config path: **Site Configuration > System-wide notifications**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1418
+msgid ""
+"``config.json`` setting: ``AnnouncementSettings`` > "
+"``SystemWideNotifications`` > ``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1419
+msgid "Environment variable: ``MM_ANNOUNCEMENTSETTINGS_SYSTEMWIDENOTIFICATIONS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1430
+msgid "Banner text"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1433
+msgid "The text of the system-wide notification, when enabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1434
+msgid "``config.json`` setting: ``AnnouncementSettings`` > ``BannerText``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1435
+msgid "Environment variable: ``MM_ANNOUNCEMENTSETTINGS_BANNERTEXT``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1446
+msgid "Banner color"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1449
+msgid "The background color of system-wide notifications."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1451
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1467
+msgid "String input of a CSS color value."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1450
+msgid ""
+"``config.json`` setting: ``AnnouncementSettings`` > ``BannerColor`` > "
+"``\"#f2a93b\"``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1451
+msgid "Environment variable: ``MM_ANNOUNCEMENTSETTINGS_BANNERCOLOR``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1462
+msgid "Banner text color"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1465
+msgid "The color of the text in system-wide notifications."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1466
+msgid ""
+"``config.json`` setting: ``AnnouncementSettings`` > ``BannerTextColor`` >"
+" ``\"#333333\"``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1467
+msgid "Environment variable: ``MM_ANNOUNCEMENTSETTINGS_BANNERTEXTCOLOR``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1481
+msgid "Allow banner dismissal"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1484
+msgid ""
+"**true**: **(Default)** Users can dismiss the system-wide notification. "
+"It will re-appear the next time the user logs in, and when the text is "
+"updated by an admin, or when an admin disables system-wide notifications "
+"and reenables them."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1488
+msgid "**false**: Users cannot dismiss the banner."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1485
+msgid ""
+"``config.json`` setting: ``AnnouncementSettings`` > "
+"``AllowBannerDismissal`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1486
+msgid "Environment variable: ``MM_ANNOUNCEMENTSETTINGS_ALLOWBANNERDISMISSAL``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1494
+msgid "Emoji"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1496
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Site Configuration > Emoji**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1509
+msgid "Enable emoji picker"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1512
+msgid ""
+"**true**: **(Default)** Enables an emoji picker when composing messages "
+"and for message reactions."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1513
+msgid "**false**: Disables the emoji picker in message composition and reactions."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1512
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1531
+msgid "System Config path: **Site Configuration > Emoji**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1513
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > ``EnableEmojiPicker`` > "
+"``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1514
+msgid "Environment variable: ``MM_SERVICESETTINGS_ENABLEEMOJIPICKER``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1528
+msgid "Enable custom emoji"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1531
+msgid ""
+"**true**: **(Default)** Allows users to add up to 6000 emojis through a "
+"**Custom Emoji** option in the emoji picker. Emojis can be GIF, PNG, or "
+"JPG files up to 512 KB in size."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1534
+msgid "**false**:  Disables custom emojis."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1532
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > ``EnableCustomEmoji`` > "
+"``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1533
+msgid "Environment variable: ``MM_SERVICESETTINGS_ENABLECUSTOMEMOJI``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1538
+msgid ""
+"While Mattermost supports up to 6000 custom emojis, an increase in custom"
+" emojis can slow your server's performance."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1543
+msgid "Posts"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1545
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Site Configuration > Posts**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1558
+msgid "Automatically follow threads"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1561
+msgid ""
+"**true**: **(Default)** Enables automatic following for all threads that "
+"a user starts, or in which the user participates or is mentioned. A "
+"**Threads** table in the database tracks threads and thread participants."
+" A **ThreadMembership** table tracks followed threads for each user and "
+"whether the thread is read or unread."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1565
+msgid "**false**: Disables automatic following of threads."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1561
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1595
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1623
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1653
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1669
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1686
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1703
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1732
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1755
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1775
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1799
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1826
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1845
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1875
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1897
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1919
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1939
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1955
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1977
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2001
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2035
+msgid "System Config path: **Site Configuration > Posts**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1562
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > ``ThreadAutoFollow`` > "
+"``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1563
+msgid "Environment variable: ``MM_SERVICESETTINGS_THREADAUTOFOLLOW``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1570
+msgid ""
+"This setting **must** be enabled for :doc:`threaded discussions </end-"
+"user-guide/collaborate/organize-conversations>` to function."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1571
+msgid ""
+"Enabling this setting does not automatically follow threads based on "
+"previous user actions. For example, threads a user participated in prior "
+"to enabling this setting won't be automatically followed, unless the user"
+" adds a new comment or is mentioned in the thread."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1588
+msgid "Threaded discussions"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1592
+msgid ""
+"Customers upgrading from a legacy Mattermost release prior to v7.0 must "
+"review the `administrator's guide to enabling threaded discussions "
+"<https://support.mattermost.com/hc/en-"
+"us/articles/6880701948564-Administrator-s-guide-to-enabling-Collapsed-"
+"Reply-Threads>`_ (formerly known as Collapsed Reply Threads) prior to "
+"enabling this functionality."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1595
+msgid ""
+"**Always On**: **(Default)** Enables :doc:`threaded discussions </end-"
+"user-guide/collaborate/organize-conversations>` on the server and for all"
+" users. This is the recommended configuration for optimal user experience"
+" and to ensure consistency in how users read and respond to threaded "
+"conversations. ``config.json`` setting: ``\"always_on\"``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1600
+msgid ""
+"**Default On**: Enables threaded discussions on the server and for all "
+"users."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1601
+msgid ""
+"**Default Off**: Enables threaded discussions on the server but **not** "
+"for users."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1602
+msgid ""
+"**Disabled**: Users cannot enable threaded discussions. ``config.json`` "
+"setting: ``\"disabled\"``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1596
+msgid "``config.json`` setting: ``ServiceSettings`` > ``CollapsedThreads``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1597
+msgid "Environment variable: ``MM_SERVICESETTINGS_COLLAPSEDTHREADS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1616
+msgid "Message priority"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1619
+msgid ""
+"`Mattermost Enterprise or Professional "
+"<https://mattermost.com/pricing>`__ customers can additionally request "
+"message acknowledgements to track that specific, time-sensitive messages "
+"have been seen and actioned. See the :doc:`message priority </end-user-"
+"guide/collaborate/message-priority>` documentation to learn more."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1623
+msgid ""
+"**true**: **(Default)** Enables message priority for all users which "
+"enables them to set a visual indiciator for important or urgent root "
+"messages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1626
+msgid ""
+"**false**: Disables the ability to set message priority and request "
+"acknowledgements."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1624
+msgid "``config.json`` setting: ``ServiceSettings`` > ``PostPriority`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1625
+msgid "Environment variable: ``MM_SERVICESETTINGS_POSTPRIORITY``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1632
+msgid ""
+"Disabling this configuration setting in larger deployments may improve "
+"server performance in the following areas, particularly in environments "
+"where performance and responsiveness are critical:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1634
+msgid ""
+"Simplified Processing: When post priority is enabled, the system has to "
+"manage and prioritize posts based on their designated priority levels. "
+"This adds additional processing overhead as the system must evaluate and "
+"sort posts accordingly. By disabling this feature, all posts are treated "
+"equally, which simplifies the processing logic and reduces the "
+"computational load."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1635
+msgid ""
+"Reduced Latency: With post priority enabled, there might be delays "
+"introduced while the system determines the priority of each post and "
+"processes them in the correct order. Disabling post priority can lead to "
+"more consistent and potentially quicker handling of posts because the "
+"system processes them on a first-come, first-served basis."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1636
+msgid ""
+"Lower Resource Utilization: Managing post priorities can consume "
+"additional system resources such as CPU and memory. Disabling this "
+"feature can free up these resources, allowing the system to allocate them"
+" to other tasks, thereby improving overall performance."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1637
+msgid ""
+"Improved Scalability: In a high-traffic environment, the complexity of "
+"managing post priorities can become more pronounced. Disabling this "
+"feature simplifies the system's operations, making it easier to scale as "
+"the number of users and posts increases."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1650
+msgid "Persistent notifications"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1653
+msgid ""
+"**true**: **(Default)** Users can trigger repeating notifications to "
+"mentioned recipients of urgent messages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1655
+msgid "**false**: Disables the ability to send repeating notifications."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1654
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > "
+"``AllowPersistentNotifications`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1655
+msgid "Environment variable: ``MM_SERVICESETTINGS_ALLOWPERSISTENTNOTIFICATIONS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1666
+msgid "Maximum number of recipients for persistent notifications"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1669
+msgid ""
+"The maximum number of recipients users may send persistent notifications "
+"to."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1672
+msgid "Numerical input. Default is **5**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1670
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > "
+"``PersistentNotificationMaxRecipients`` > ``5``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1671
+msgid ""
+"Environment variable: "
+"``MM_SERVICESETTINGS_PERSISTENTNOTIFICATIONMAXRECIPIENTS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1683
+msgid "Frequency of persistent notifications"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1686
+msgid ""
+"The number of minutes between repeated notifications for urgent messages "
+"sent with persistent notifications."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1689
+msgid "Numerical input. Default is **5**. Minimum is **2**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1687
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > "
+"``PersistentNotificationIntervalMinutes`` > ``5``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1688
+msgid ""
+"Environment variable: "
+"``MM_SERVICESETTINGS_PERSISTENTNOTIFICATIONINTERVALMINUTES``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1700
+msgid "Total number of persistent notifications per post"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1703
+msgid "The maximum number of times users may receive persistent notifications."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1706
+msgid "Numerical input. Default is **6**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1704
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > "
+"``PersistentNotificationMaxCount`` > ``6``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1705
+msgid ""
+"Environment variable: "
+"``MM_SERVICESETTINGS_PERSISTENTNOTIFICATIONMAXCOUNT``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1720
+msgid "Enable burn-on-read messages"
+msgstr ""
+
+#: ../../source/_static/badges/entry-adv.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry and Enterprise Advanced "
+"<https://mattermost.com/pricing/>`__ plans"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1725
+msgid ""
+":ref:`Burn-on-read messages <end-user-guide/collaborate/send-"
+"messages:send burn-on-read messages>` have irreversible behavior:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1727
+msgid "Once a recipient reveals a burn-on-read message, it can't be hidden again."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1728
+msgid ""
+"Once a burn-on-read message expires or is burned, it is permanently "
+"deleted and can't be recovered."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1729
+msgid "Recipients can't reply to, edit, or thread burn-on-read messages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1732
+msgid "Enable or disable burn-on-read messages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1734
+msgid ""
+"**false**: **(Default)** The option to send a burn-on-read message isn't "
+"available."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1735
+msgid ""
+"**true**: Users can send burn-on-read messages in channels, direct "
+"messages, and group messages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1733
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > ``EnableBurnOnRead`` > "
+"``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1734
+msgid "Environment variable: ``MM_SERVICESETTINGS_ENABLEBURNONREAD``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1739
+msgid ""
+"Disabling this feature prevents users from sending new burn-on-read "
+"messages. Once disabled, users can interact with existing burn-on-read "
+"messages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1749
+msgid "Burn-on-read duration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1755
+msgid ""
+"Sets the countdown duration for burn-on-read messages once they are "
+"revealed. After a recipient reveals a burn-on-read message, the message "
+"is deleted for that user after the specified duration. This setting "
+"applies to all burn-on-read messages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1758
+msgid "Numerical input in seconds. Default is **600** seconds (10 minutes)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1756
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > "
+"``BurnOnReadDurationSeconds`` > ``600``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1757
+msgid "Environment variable: ``MM_SERVICESETTINGS_BURNONREADDURATIONSECONDS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1769
+msgid "Maximum time to live for burn-on-read messages"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1775
+msgid ""
+"Sets the maximum duration that burn-on-read messages can exist after they"
+" are sent. The message is deleted after the specified duration, even if "
+"it hasn't been revealed by all recipients."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1778
+msgid "Numerical input in seconds. Default is **604800** seconds (7 days)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1776
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > "
+"``BurnOnReadMaximumTimeToLiveSeconds`` > ``604800``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1777
+msgid ""
+"Environment variable: "
+"``MM_SERVICESETTINGS_BURNONREADMAXIMUMTIMETOLIVESECONDS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1792
+msgid "Enable website link previews"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1796
+msgid ""
+"The server must be connected to the internet to generate previews. This "
+"connection can be established through a :ref:`firewall or outbound proxy "
+"<deployment-guide/server/preparations:outbound proxy configuration>` if "
+"necessary."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1799
+msgid ""
+"**true**: The server generates a preview of the first website, image, or "
+"YouTube video linked in a message. Users can disable website previews, "
+"but not image or YouTube previews, under **Settings > Display > Website "
+"Link Previews**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1800
+msgid ""
+"**false**: **(Default)** All previews are disabled and the server does "
+"not request metadata for any links contained in messages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1800
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > ``EnableLinkPreviews`` > "
+"``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1801
+msgid "Environment variable: ``MM_SERVICESETTINGS_ENABLELINKPREVIEWS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1806
+msgid ""
+"Disabling this configuration setting in larger deployments may improve "
+"server performance in the following areas:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1808
+msgid ""
+"Reduced Network Requests: When link previews are enabled, the system "
+"needs to fetch metadata (such as title, description, or image) from the "
+"linked webpage. This requires additional network requests, which can slow"
+" down the system."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1809
+msgid ""
+"Lower Server Load: Creating link previews involves parsing the content of"
+" the linked pages. If many users are sharing links, the server will have "
+"to perform numerous network requests and process a lot of additional "
+"data, increasing the load on the server."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1810
+msgid ""
+"Less Data Processing: Every link shared needs to be processed to extract "
+"the necessary preview information. This processing consumes CPU and "
+"memory resources, which can otherwise be reserved for other tasks."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1811
+msgid ""
+"Decreased Client-Side Rendering Time: On the client side, rendering link "
+"previews (adding text, images, and layouts) takes time and resources. "
+"Disabling link previews means that clients do not need to render these "
+"elements, leading to faster message display."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1812
+msgid ""
+"Saved Bandwidth: Link previews often include images and other data from "
+"the linked content. By disabling them, you save the bandwidth that would "
+"be used to download these additional resources."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1813
+msgid ""
+"However, disabling link previews can negatively impact user experience, "
+"communication efficiency, and overall productivity. It's important to "
+"balance performance improvements with the needs of your organization and "
+"users."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1823
+msgid "Disable link previews for specific domains"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1826
+msgid "Use this setting to disable previews of links for specific domains."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1828
+msgid ""
+"String input of a comma-separated list of domains, for example: "
+"``\"mattermost.com, images.example.com\"``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1827
+msgid "``config.json`` setting: ``ServiceSettings`` > ``RestrictLinkPreviews``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1828
+msgid "Environment variable: ``MM_SERVICESETTINGS_RESTRICTLINKPREVIEWS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1842
+msgid "Enable message link previews"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1845
+msgid ""
+"**true**: **(Default)** :doc:`Share links to Mattermost messages </end-"
+"user-guide/collaborate/share-links>` will generate a preview for any "
+"users that have access to the original message."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1847
+msgid "**false**: Share links do not generate a preview."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1846
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > "
+"``EnablePermalinkPreviews`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1847
+msgid "Environment variable: ``MM_SERVICESETTINGS_ENABLEPERMALINKPREVIEWS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1852
+msgid ""
+"Disabling this configuration setting in larger deployments may improve "
+"server performance in the following areas, particularly in environments "
+"with high message throughput or limited resources:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1854
+msgid ""
+"Reduced Server Load: When permalink previews are enabled, the server has "
+"to generate preview summaries for each shared link. This generates "
+"additional requests to fetch metadata and may involve parsing web pages, "
+"which increases the processing load on the server."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1855
+msgid ""
+"Less Data Transfer: Permalink previews include additional metadata such "
+"as images, titles, and descriptions. Disabling previews reduces the "
+"amount of data that needs to be transferred, which can decrease bandwidth"
+" usage and improve message load times, particularly for channels with a "
+"high volume of links."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1856
+msgid ""
+"Faster Message Rendering: On the client-side, rendering messages with "
+"multimedia previews takes more time compared to plain text messages. "
+"Disabling previews can reduce rendering complexity and improve client "
+"performance, especially on devices with limited resources."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1857
+msgid ""
+"Network Latency: Fetching metadata for link previews may introduce "
+"network latency, as the server must reach out to external resources. "
+"Disabling this can eliminate these delays, ensuring faster message "
+"processing and display."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1858
+msgid ""
+"Simplified Message Handling: In the absence of previews, messages are "
+"simpler and less resource-intensive to store, retrieve, and display. This"
+" can contribute to overall improved system responsiveness and efficiency."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1859
+msgid ""
+"However, disabling permalink previews can negatively impact user "
+"experience, communication efficiency, and overall productivity. It's "
+"important to balance performance improvements with the needs of your "
+"organization and users."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1872
+msgid "Enable SVGs"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1875
+msgid "**true**: Enables previews of SVG files attached to messages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1876
+msgid "**false**: **(Default)** Disables previews of SVG files."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1876
+msgid "``config.json`` setting: ``ServiceSettings`` > ``EnableSVGs`` > ``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1877
+msgid "Environment variable: ``MM_SERVICESETTINGS_ENABLESVGS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1881
+msgid ""
+"Enabling SVGs is not recommended in environments where not all users are "
+"trusted."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1894
+msgid "Enable LaTeX code block rendering"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1897
+msgid ""
+"**true**: Enables rendering of :ref:`LaTeX in code blocks <end-user-"
+"guide/collaborate/format-messages:math formulas>`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1898
+msgid ""
+"**false**: **(Default)** Disables rendering in blocks. Instead, LaTeX "
+"code is highlighted."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1898
+msgid "``config.json`` setting: ``ServiceSettings`` > ``EnableLatex`` > ``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1899
+msgid "Environment variable: ``MM_SERVICESETTINGS_ENABLELATEX``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1903
+msgid ""
+"Enabling LaTeX rendering is not recommended in environments where not all"
+" users are trusted."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1916
+msgid "Enable inline LaTeX rendering"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1919
+msgid ""
+"**true**: Enables rendering of :ref:`LaTeX in message text <end-user-"
+"guide/collaborate/format-messages:math formulas>`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1921
+msgid ""
+"**false**: **(Default)** Disables inline rendering of LaTeX. Instead, "
+"LaTeX in message text is highlighted. LaTeX can also be rendered in a "
+"code block, if that feature is enabled. See **Enable LaTeX code block "
+"rendering**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1920
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > ``EnableInlineLatex`` > "
+"``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1921
+msgid "Environment variable: ``MM_SERVICESETTINGS_ENABLEINLINELATEX``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1926
+msgid ""
+"Enabling LaTeX rendering isn't recommended in environments where not all "
+"users are trusted."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1936
+msgid "Custom URL schemes"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1939
+msgid ""
+"A list of URL schemes that will automatically create a link in message "
+"text, for example: ``[\"git\", \"smtp\"]``. These schemes always create "
+"links: ``http``, ``https``, ``ftp``, ``tel``, and ``mailto``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1941
+msgid "``config.json`` setting: an array of strings"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1940
+msgid ""
+"``config.json`` setting: ``DisplaySettings`` > ``CustomURLSchemes`` > "
+"``[]``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1941
+msgid "Environment variable: ``MM_DISPLAYSETTINGS_CUSTOMURLSCHEMES``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1952
+msgid "Maximum Markdown nodes"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1955
+msgid ""
+"The maximum number of Markdown elements (such as emojis, links, or table "
+"cells), that can be included in a single piece of text in a message."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1959
+msgid ""
+"Numerical input. Default is **0** which applies a Mattermost-specified "
+"limit."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1956
+msgid ""
+"``config.json`` setting: ``DisplaySettings`` > ``MaxMarkdownNodes`` > "
+"``0``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1957
+msgid "Environment variable: ``MM_DISPLAYSETTINGS_MAXMARKDOWNNODES``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1964
+msgid ""
+"This limit applies to all Mattermost clients, including web, desktop app,"
+" and mobile app."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1974
+msgid "Google API key"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1977
+msgid ""
+"If a key is provided in this setting, Mattermost displays titles of "
+"embedded YouTube videos and detects if a video is no longer available. "
+"Setting a key should also prevent Google from throttling access to "
+"embedded videos that receive a high number of views."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1978
+msgid "``config.json`` setting: ``ServiceSettings`` > ``GoogleDeveloperKey``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1979
+msgid "Environment variable: ``MM_SERVICESETTINGS_GOOGLEDEVELOPERKEY``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1985
+msgid ""
+"This key is used in client-side Javascript, and must have the YouTube "
+"Data API added as a service."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:1998
+msgid "Enable server syncing of message drafts"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2001
+msgid ""
+"Enable or disable the ability to synchronize draft messages across all "
+"supported Mattermost clients."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2004
+msgid ""
+"**true**: **(Default)** Message drafts are saved on the server and may be"
+" accessed from different clients. Users may still disable server "
+"synchronization of draft messages by going to **Settings > Advanced "
+"Settings**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2009
+msgid "**false**: Draft messages are stored locally on each device."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2002
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > ``AllowSyncedDrafts`` > "
+"``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2003
+msgid "Environment variable: ``MM_SERVICESETTINGS_ALLOWSYNCEDDRAFTS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2015
+msgid ""
+"While drafts can be very useful for maintaining work continuity, "
+"especially in collaborative environments, disabling draft synchronization"
+" across devices can lead to noticeable performance improvements by "
+"reducing the computational and data management overhead as follows:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2017
+msgid ""
+"Reduced Data Synchronization: When drafts are enabled and synchronized "
+"across devices, the system needs to handle those data synchronization "
+"operations which can consume significant bandwidth and computing "
+"resources. Disabling draft syncing reduces the load on servers and "
+"networks."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2018
+msgid ""
+"Lower Storage Usage: Storing drafts requires additional database "
+"operations and storage space. Each draft is an extra piece of data that "
+"needs to be saved, managed, and retrieved. Without drafts, the system has"
+" fewer records to keep, which can streamline database operations."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2019
+msgid ""
+"Decreased Client Processing: On the client side, draft management "
+"involves monitoring changes, saving drafts periodically, and handling "
+"conflict resolution if multiple drafts are edited from different devices."
+" Disabling drafts reduces these client-side processes, thus freeing up "
+"memory and CPU resources."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2020
+msgid ""
+"Simplified Architecture: Maintaining synced drafts often requires complex"
+" backend logic to ensure consistency and avoid data conflicts. "
+"Simplifying this architecture by removing draft syncing can lead to more "
+"efficient and faster backend operations."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2021
+msgid ""
+"Improved User Experience: Users may experience faster load times and "
+"reduced latency without the overhead of draft syncing. This can be "
+"particularly noticeable in environments with limited or variable internet"
+" connectivity."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2022
+msgid ""
+"However, disabling draft synchronization can negatively impact user "
+"experience, communication efficiency, and overall productivity. It's "
+"important to balance performance improvements with the needs of your "
+"organization and users."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2032
+msgid "Unique emoji reaction limit"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2035
+msgid ""
+"Limit the number of unique emoji reactions on each message. Increasing "
+"this limit can lead to poor client performance."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2039
+msgid "Numerical input. Default is **50**. Maximum is 500."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2036
+msgid ""
+"``config.json`` setting: ``ServiceSettings`` > "
+"``UniqueEmojiReactionLimitPerPost`` > ``50``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2037
+msgid ""
+"Environment variable: "
+"``MM_SERVICESETTINGS_UNIQUEEMOJIREACTIONLIMITPERPOST``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2045
+msgid "Content flagging"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2050
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Site Configuration > Content Flagging**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2063
+msgid "Enable content flagging"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2066
+msgid "**true**: Enables the Content Flagging feature."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2067
+msgid "**false**: **(Default)** Disables the feature."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2066
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2082
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2106
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2131
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2150
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2169
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2188
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2207
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2230
+msgid "System Config path: **Site Configuration > Content Flagging**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2067
+msgid ""
+"``config.json`` setting: ``ContentFlaggingSettings`` > "
+"``EnableContentFlagging`` > ``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2068
+msgid "Environment variable: ``MM_CONTENTFLAGGINGSETTINGS_ENABLECONTENTFLAGGING``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2079
+msgid "Notification settings"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2082
+msgid "Default notification recipients for each event:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2084
+msgid "Events: flagged, assigned, removed, dismissed"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2085
+msgid "Recipients: reviewers, author, reporter"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2087
+msgid "Default mappings include:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2089
+msgid "flagged = reviewers"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2090
+msgid "assigned = reviewers"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2091
+msgid "removed = reviewers, author, reporter"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2092
+msgid "dismissed = reviewers, reporter"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2083
+msgid ""
+"``config.json`` setting: ``ContentFlaggingSettings`` > "
+"``NotificationSettings`` > ``EventTargetMapping``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2103
+msgid "Additional settings"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2106
+msgid "Specify the reasons for flagging."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2108
+msgid "Default reasons include:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2110
+msgid "Inappropriate content"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2111
+msgid "Sensitive data"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2112
+msgid "Security concern"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2113
+msgid "Harassment or abuse"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2114
+msgid "Spam or phishing"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2107
+msgid ""
+"``config.json`` setting: ``ContentFlaggingSettings`` > "
+"``AdditionalSettings`` > ``Reasons``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2128
+msgid "Require reporters to add comment"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2131
+msgid "**true**: **(Default)** Reporters must add a comment when flagging."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2132
+msgid "**false**: Reporters aren't required to add a comment."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2132
+msgid ""
+"``config.json`` setting: ``ContentFlaggingSettings`` > "
+"``AdditionalSettings`` > ``ReporterCommentRequired`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2133
+msgid ""
+"Environment variable: "
+"``MM_CONTENTFLAGGINGSETTINGS_ADDITIONALSETTINGS_REPORTERCOMMENTREQUIRED``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2147
+msgid "Require reviewers to add comment"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2150
+msgid ""
+"**true**: **(Default)** Reviewers must add a comment when reviewing "
+"flagged content."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2152
+msgid "**false**: Reviewers aren't required to add a comment."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2151
+msgid ""
+"``config.json`` setting: ``ContentFlaggingSettings`` > "
+"``AdditionalSettings`` > ``ReviewerCommentRequired`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2152
+msgid ""
+"Environment variable: "
+"``MM_CONTENTFLAGGINGSETTINGS_ADDITIONALSETTINGS_REVIEWERCOMMENTREQUIRED``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2166
+msgid "Hide message from channel while it is being reviewed"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2169
+msgid ""
+"**true**: **(Default)** Hide flagged content from the channel while under"
+" review."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2171
+msgid "**false**: Keep flagged content visible while under review."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2170
+msgid ""
+"``config.json`` setting: ``ContentFlaggingSettings`` > "
+"``AdditionalSettings`` > ``HideFlaggedContent`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2171
+msgid ""
+"Environment variable: "
+"``MM_CONTENTFLAGGINGSETTINGS_ADDITIONALSETTINGS_HIDEFLAGGEDCONTENT``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2185
+msgid "Same reviewers for all teams"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2188
+msgid "**true**: **(Default)** Use the same set of reviewers across all teams."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2190
+msgid "**false**: Reviewers can be managed per team."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2189
+msgid ""
+"``config.json`` setting: ``ContentFlaggingSettings`` > "
+"``ReviewerSettings`` > ``CommonReviewers`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2190
+msgid ""
+"Environment variable: "
+"``MM_CONTENTFLAGGINGSETTINGS_REVIEWERSETTINGS_COMMONREVIEWERS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2204
+msgid "System administrators as reviewers"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2207
+msgid "**true**: Include system administrators as reviewers."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2209
+msgid ""
+"**false**: **(Default)** System administrators are not included by "
+"default."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2208
+msgid ""
+"``config.json`` setting: ``ContentFlaggingSettings`` > "
+"``ReviewerSettings`` > ``SystemAdminsAsReviewers`` > ``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2209
+msgid ""
+"Environment variable: "
+"``MM_CONTENTFLAGGINGSETTINGS_REVIEWERSETTINGS_SYSTEMADMINSASREVIEWERS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2224
+msgid "Team administrators as reviewers"
+msgstr ""
+
+#: ../../source/_static/badges/entry-ent.rst:9
+msgid ""
+"|plans-img-yellow| Available on `Entry, Enterprise, and Enterprise "
+"Advanced plans <https://mattermost.com/pricing/>`__ (not available on "
+"Professional)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2230
+msgid ""
+"**true**: **(Default)** Include team administrators as reviewers for "
+"their respective teams."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2232
+msgid "**false**: Team administrators aren't included as reviewers."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2231
+msgid ""
+"``config.json`` setting: ``ContentFlaggingSettings`` > "
+"``ReviewerSettings`` > ``TeamAdminsAsReviewers`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2232
+msgid ""
+"Environment variable: "
+"``MM_CONTENTFLAGGINGSETTINGS_REVIEWERSETTINGS_TEAMADMINSASREVIEWERS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2239
+msgid "File sharing and downloads"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2241
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Site Configuration > File Sharing and Downloads**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2254
+msgid "Allow file sharing"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2257
+msgid "**true**: **(Default)** Allows users to attach files to messages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2258
+msgid ""
+"**false**: Prevents users from attaching files (including images) to a "
+"message. This affects users on all clients and devices, including mobile "
+"apps."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2257
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2276
+msgid "System Config path: **Site Configuration > File Sharing and Downloads**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2258
+msgid ""
+"``config.json`` setting: ``FileSettings`` > ``EnableFileAttachments`` > "
+"``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2259
+msgid "Environment variable: ``MM_FILESETTINGS_ENABLEFILEATTACHMENTS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2273
+msgid "Allow file uploads on mobile"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2276
+msgid ""
+"**true**: **(Default)** Allows users to attach files to messages from "
+"mobile apps."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2277
+msgid ""
+"**false**: Prevents users from attaching files (including images) to "
+"messages from mobile apps."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2277
+msgid ""
+"``config.json`` setting: ``FileSettings`` > ``EnableMobileUpload`` > "
+"``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2278
+msgid "Environment variable: ``MM_FILESETTINGS_ENABLEMOBILEUPLOAD``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2292
+msgid "Allow file downloads on mobile"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2295
+msgid "**true**: **(Default)** Enables file downloads on mobile apps."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2296
+msgid ""
+"**false**: Disables file downloads on mobile apps. Users can still "
+"download files from a mobile web browser."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2295
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2319
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2344
+msgid "System Config path: **Site Configuration > File sharing and downloads**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2296
+msgid ""
+"``config.json`` setting: ``FileSettings`` > ``EnableMobileDownload`` > "
+"``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2297
+msgid "Environment variable: ``MM_FILESETTINGS_ENABLEMOBILEDOWNLOAD``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2311
+msgid "Enable secure file preview on mobile"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2316
+msgid ""
+"This setting improves an organization's mobile security posture by "
+"restricting file access while still allowing essential file viewing "
+"capabilities."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2319
+msgid ""
+"**true**: Prevents file downloads, previews, and sharing for most file "
+"types, even when the :ref:`Allow file downloads on mobile "
+"<administration-guide/configure/site-configuration-settings:allow file "
+"downloads on mobile>` configuration setting is enabled. Allows in-app "
+"previews for PDFs, videos, and images only. Files are stored temporarily "
+"in the app's cache and cannot be exported or shared."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2324
+msgid "**false**: **(Default)** Secure file preview mode is disabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2320
+msgid ""
+"``config.json`` setting: ``FileSettings`` > "
+"``MobileEnableSecureFilePreview`` > ``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2321
+msgid "Environment variable: ``MM_FILESETTINGS_MOBILEENABLESECUREFILEPREVIEW``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2338
+msgid "Allow PDF link navigation on mobile"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2344
+msgid ""
+"**true**: **(Default)** Enables tapping links inside PDFs when Secure "
+"File Preview Mode is active. Links will open in the device browser or "
+"supported app."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2347
+msgid ""
+"**false**: Disables link navigation in PDFs when Secure File Preview Mode"
+" is active."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2345
+msgid ""
+"``config.json`` setting: ``FileSettings`` > "
+"``MobileAllowPdfLinkNavigation`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2346
+msgid "Environment variable: ``MM_FILESETTINGS_MOBILEALLOWPDFLINKNAVIGATION``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2353
+msgid ""
+"This setting has no effect when the :ref:`Secure file preview on mobile "
+"<administration-guide/configure/site-configuration-settings:enable secure"
+" file preview on mobile>` configuration setting is disabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2358
+msgid "Public Links"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2360
+msgid ""
+"With self-hosted deployments, you can access the following configuration "
+"settings in the System Console by going to **Site Configuration > Public "
+"Links**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2373
+msgid "Enable public file links"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2376
+msgid ""
+"**true**: Allows users to create :doc:`public links </end-user-"
+"guide/collaborate/share-files-in-messages>` to files attached to "
+"Mattermost messages."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2377
+msgid ""
+"**false**: **(Default)** Prevents users from creating public links to "
+"files and disables all previously created links."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2376
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2395
+msgid "System Config path: **Site Configuration > Public Links**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2377
+msgid ""
+"``config.json`` setting: ``FileSettings`` > ``EnablePublicLink`` > "
+"``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2378
+msgid "Environment variable: ``MM_FILESETTINGS_ENABLEPUBLICLINK``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2382
+msgid ""
+"When set to **false**, anyone who tries to visit a previously created "
+"public link will receive an error message. If the setting is returned to "
+"**true**, previously created links will be accessible, unless the "
+"**Public link salt** has been regenerated."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2392
+msgid "Public link salt"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2395
+msgid ""
+"32-character salt added to the URL of public file links. Changing this "
+"setting will **invalidate** all previously generated links. The salt is "
+"randomly generated when Mattermost is installed, and can be regenerated "
+"by selecting **Regenerate** in the System Console."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2396
+msgid "``config.json`` setting: ``FileSettings`` > ``PublicLinkSalt``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2397
+msgid "Environment variable: ``MM_FILESETTINGS_PUBLICLINKSALT``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2403
+msgid "Notices"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2405
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Site Configuration > Notices**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2418
+msgid "Enable admin notices"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2421
+msgid ""
+"**true**: **(Default)** System admins will receive :doc:`in-product "
+"notices </administration-guide/manage/in-product-notices>` about server "
+"upgrades and administration features."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2423
+msgid ""
+"**false**: System admins will not receive specific notices. Admins will "
+"still receive notices for all users (see **Enable end user notices**)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2421
+msgid "System Config path: **Site Configuration > Notices** -"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2422
+msgid ""
+"``config.json`` setting: ``AnnouncementSettings`` > "
+"``AdminNoticesEnabled`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2423
+msgid "Environment variable: ``MM_ANNOUNCEMENTSETTINGS_ADMINNOTICESENABLED``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2437
+msgid "Enable end user notices"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2440
+msgid ""
+"**true**: **(Default)** All users receive :doc:`in-product notices "
+"</administration-guide/manage/in-product-notices>` about client upgrades "
+"and end user features."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2441
+msgid "**false**: Users will not receive in-product notices."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2440
+msgid "System Config path: **Site Configuration > Notices**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2441
+msgid ""
+"``config.json`` setting: ``AnnouncementSettings`` > "
+"``UserNoticesEnabled`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2442
+msgid "Environment variable: ``MM_ANNOUNCEMENTSETTINGS_USERNOTICESENABLED``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2446
+msgid "Connected workspaces"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2451
+msgid ""
+"The following settings aren't available in the System Console and can "
+"only be set in ``config.json``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2453
+msgid ""
+"When connected workspaces are enabled, system admins can :doc:`create and"
+" manage connected workspaces </administration-guide/onboard/connected-"
+"workspaces>` in the System Console by going to **Site Configuration > "
+"Connected Workspaces**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2463
+msgid "Enable connected workspaces"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2465
+msgid ""
+"Enable the ability to establish secure connections between Mattermost "
+"instances, and invite secured connections to shared channels where users "
+"can participate as they would in any public and private channel."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2467
+msgid ""
+"Connected workspaces requires Mattermost Enterprise servers running v10.2"
+" or later."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2469
+msgid ""
+"By default, both configuration settings are disabled and must be enabled "
+"in order to share channels with secure connections. Enabling connected "
+"workspace functionality requires a server restart."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2471
+msgid "This feature's two ``config.json`` settings include:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2473
+msgid ""
+"``ConnectedWorkspacesSettings.EnableRemoteClusterService: false`` with "
+"options ``true`` and ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2474
+msgid ""
+"``ConnectedWorkspacesSettings.EnableSharedChannels: false`` with options "
+"``true`` and ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2478
+msgid ""
+"Neither setting is available in the System Console and can only be set in"
+" ``config.json`` under ``ConnectedWorkspacesSettings``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2479
+msgid ""
+"System admins for Cloud deployments can submit a request to have these "
+"required configuration settings enabled for their Cloud deployment "
+"instance."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2480
+msgid ""
+"Following an upgrade to Mattermost v10.2 or later, existing configuration"
+" values for shared channels, including ``EnableSharedChannels`` and "
+"``EnableRemoteClusterService`` are automatically converted to connected "
+"workspace configuration settings in the ``config.json`` file. The "
+":ref:`deprecated shared channels experimental settings <administration-"
+"guide/configure/deprecated-configuration-settings:shared channels "
+"settings>` remain in the ``config.json`` file to support backwards "
+"compatibility."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2493
+msgid "Disable shared channel status sync"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2495
+msgid ""
+"Disable member status and availability synchronization between connected "
+"workspaces."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2498
+msgid ""
+"**true**: Channel as well as member status and availability isn't "
+"synchronized."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2499
+msgid ""
+"**false**: **(Default)** Channel as well as channel member status and "
+"availability is synchronized at regular intervals."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2499
+msgid ""
+"``config.json`` setting: ``ConnectedWorkspacesSettings`` > "
+"``DisableSharedChannelsStatusSync`` > ``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2505
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2546
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2567
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2588
+msgid ""
+"Enabling these features can increase the load on your Mattermost server’s"
+" CPU, memory, and database due to frequent updates, database queries, and"
+" API communication. Excessive sync frequency and retries can overwhelm "
+"system resources, potentially causing performance degradation or "
+"instability. Monitor your system carefully when enabling these features."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2515
+msgid "Default maximum posts per sync"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2518
+msgid "Define the default maximum number of mesages to synchronize at a time."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2520
+msgid "Default is **50**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2519
+msgid ""
+"``config.json`` setting: ``ConnectedWorkspacesSettings`` > "
+"``DefaultMaxPostsPerSync`` > ``50``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2534
+msgid "Sync users on connection open"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2536
+msgid ""
+"Automatically synchronize users when a new connection between workspaces "
+"is established. This ensures that remote users are immediately "
+"discoverable for direct and group messages without requiring them to post"
+" in a shared channel first."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2539
+msgid ""
+"**true**: **(Default)** Users are automatically synchronized when a new "
+"connection is established."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2540
+msgid ""
+"**false**: Users are not automatically synchronized when a new connection"
+" is established."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2540
+msgid ""
+"``config.json`` setting: ``ConnectedWorkspacesSettings`` > "
+"``SyncUsersOnConnectionOpen`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2556
+msgid "Global user sync batch size"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2559
+msgid ""
+"The number of users to sync in each batch when performing global user "
+"synchronization between connected workspaces."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2562
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2583
+msgid "Default is **100**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2560
+msgid ""
+"``config.json`` setting: ``ConnectedWorkspacesSettings`` > "
+"``GlobalUserSyncBatchSize`` > ``100``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2577
+msgid "Member sync batch size"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2580
+msgid ""
+"The number of channel members to sync in each batch when synchronizing "
+"channel membership between connected workspaces."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2581
+msgid ""
+"``config.json`` setting: ``ConnectedWorkspacesSettings`` > "
+"``MemberSyncBatchSize`` > ``100``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2593
+msgid "config.json-only settings"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2595
+msgid ""
+"The following self-hosted deployment settings are only configurable in "
+"the ``config.json`` file and are not available in the System Console."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2605
+msgid "Cross-team search"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2608
+msgid "Disable the ability to search across all teams or a specific team."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2611
+msgid ""
+"**true**: **(Default)** Cross-team search is enabled. Searches can be "
+"performed against all channels the user is a member of across all teams, "
+"a specific team, or the current team."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2615
+msgid ""
+"**false**: Cross-team search is disabled. Searches are performed on all "
+"channels the user is member of within the current team only."
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2609
+msgid ""
+"``config.json`` setting: ``ServiceSettings.EnableCrossTeamSearch`` > "
+"``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/site-configuration-settings.rst:2610
+msgid "Environment variable: ``MM_SERVICESETTINGS_ENABLECROSSTEAMSEARCH``"
+msgstr ""
+

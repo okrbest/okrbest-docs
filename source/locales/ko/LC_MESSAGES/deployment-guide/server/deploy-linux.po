@@ -1,0 +1,1588 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/server/deploy-linux.rst:2
+msgid "Deploy Mattermost on Linux"
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-linux.rst:4
+msgid ""
+"Mattermost Server can be deployed on Linux in two broad ways: as a "
+"package-based install on a host you manage, or as a managed cloud "
+"marketplace deployment that provisions a production-ready stack in your "
+"own cloud account."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-linux.rst:6
+msgid ""
+"For package-based installs (Manual Install, Ubuntu, RHEL/CentOS), we "
+"don't recommend deploying Mattermost Server and the database on the same "
+"system in production. These options are best suited to development and "
+"testing. The cloud marketplace options provision a separated production "
+"stack designed to scale."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-linux.rst:8
+msgid "Choose your preferred option below for specific deployment instructions:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:22
+msgid ""
+"You can install the Mattermost Server on any 64-bit Linux system using "
+"the tarball. This is the most flexible installation method, but it comes "
+"with the highest effort, typically favored by advanced system "
+"administrators."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:24
+msgid ""
+"This Mattermost deployment includes the following steps: install "
+"PostgreSQL database, prepare the database, download the Mattermost "
+"server, install the server, and set up the server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:26
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:27
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:28
+msgid "Step 1: Install PostgreSQL database or get database connection credentials"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:28
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:29
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:32
+msgid ""
+"Install PostgreSQL locally on the same server by following the "
+"`PostgreSQL installation <https://www.postgresql.org/download/>`_ "
+"documentation."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:29
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:30
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:33
+msgid ""
+"Use an external PostgreSQL database server. Ensure you have connection "
+"credentials, including hostname, port, database name, username, and "
+"password available."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:30
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:31
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:34
+msgid "Use a managed database service."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:33
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:34
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:37
+msgid "Step 2: Prepare the database"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:35
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:36
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:39
+msgid ""
+"Follow the :ref:`database preparation <deployment-"
+"guide/server/preparations:database preparation>` documentation to set up "
+"your PostgreSQL database for Mattermost."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:39
+msgid "Step 3: Download"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:40
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:41
+msgid ""
+"In a terminal window, ssh onto the system that will host the Mattermost "
+"Server. Using ``wget``, download the Mattermost Server release you want "
+"to install using one of the following commands. Replace ``amd64`` with "
+"the appropriate architecture (e.g., ``arm64`` for ARM-based systems) in "
+"the link as needed."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:56
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:57
+msgid ""
+"If you are looking for an older release, Enterprise and Team Edition "
+"releases can be found in our :doc:`version archive </product-overview"
+"/version-archive>` documentation."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:59
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:60
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:63
+msgid "Step 4: Install Mattermost server"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:62
+msgid ""
+"Install the Mattermost Server by extracting the tarball, creating users "
+"and groups, and setting file/folder permissions."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:70
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:64
+msgid "First extract the tarball:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:70
+msgid ""
+"Move the entire folder to the ``/opt`` directory (or whatever path you "
+"require):"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:82
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:76
+msgid ""
+"Create the default storage folder. By default the Mattermost Server uses "
+"``/opt/mattermost/data`` as the folder for files. This can be changed in "
+"the System Console during setup (even using alternative storage such as "
+"S3):"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:84
+msgid ""
+"If you choose a custom path, ensure this alternate path is used in all "
+"steps that follow."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:92
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:86
+msgid "Set up a user and group called ``mattermost``:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:100
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:94
+msgid ""
+"If you choose a custom user and group name, ensure it is used in all the "
+"steps that follow."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:102
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:96
+msgid "Set the file and folder permissions for your installation:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:108
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:102
+msgid "Give the ``mattermost`` group write permissions to the application folder:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:114
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:108
+msgid ""
+"You will now have the latest Mattermost Server version installed on your "
+"system. Starting and stopping the Mattermost Server is done using "
+"``systemd``."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:116
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:110
+msgid "Create the systemd unit file:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:122
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:116
+msgid ""
+"As root, edit the systemd unit file at "
+"``/lib/systemd/system/mattermost.service`` to add the following lines:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:141
+msgid ""
+"If you are installing the Mattermost server on the same system as your "
+"database, you may want to add both ``After=postgresql.service`` and "
+"``BindsTo=postgresql.service`` to the ``[Unit]`` section of the systemd "
+"unit file."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:145
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:143
+msgid ""
+"Save the file and reload systemd using ``sudo systemctl daemon-reload``. "
+"Mattermost Server is now installed and is ready for setup."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:148
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:146
+msgid "Step 5: Set up the server"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:150
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:148
+msgid ""
+"Before you start the Mattermost Server, you need to edit the "
+"configuration file. A default configuration file is located at "
+"``/opt/mattermost/config/config.json``. We recommend taking a backup of "
+"this default config ahead of making changes:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:156
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:154
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:96
+msgid "Configure the following properties in this file:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:158
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:156
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:98
+msgid ""
+"Under ``SqlSettings``, set ``DriverName`` to ``\"postgres\"``. This is "
+"the default and recommended database for all Mattermost installations."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:159
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:157
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:99
+msgid ""
+"Under ``SqlSettings``, set ``DataSource`` to ``\"postgres://mmuser"
+":<mmuser-password>@<host-name-or-"
+"IP>:5432/mattermost?sslmode=disable&connect_timeout=10\"`` replacing "
+"``mmuser``, ``<mmuser-password>``, ``<host-name-or-IP>`` and "
+"``mattermost`` with your database name."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:160
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:158
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:100
+msgid ""
+"Under ``ServiceSettings``, set ``\"SiteURL\"``: The domain name for the "
+"Mattermost application (e.g. ``https://mattermost.example.com``)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:164
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:160
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:102
+msgid ""
+"We recommend configuring the :ref:`Support Email <administration-"
+"guide/configure/site-configuration-settings:support email address>` under"
+" ``SupportSettings``, set ``\"SupportEmail\"``. This is the email address"
+" your users will contact when they need help."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:166
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:162
+msgid ""
+"After modifying the ``config.json`` configuration file, you can now start"
+" the Mattermost server:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:168
+msgid ""
+"Verify that Mattermost is running: ``curl http://localhost:8065``. You "
+"should see the HTML that’s returned by the Mattermost Server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:170
+msgid ""
+"The final step, depending on your requirements, is to run sudo "
+"``systemctl enable mattermost.service`` so that Mattermost will start on "
+"system boot."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:497
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:173
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:119
+msgid "Step 6: Update the server"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:499
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:175
+msgid ""
+"Updating your Mattermost Server installation when using the tarball "
+"requires several manual steps. See the :doc:`upgrade Mattermost Server "
+"</administration-guide/upgrade/upgrading-mattermost-server>` "
+"documentation for details."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:502
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:178
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:128
+msgid "Remove Mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:180
+msgid ""
+"To remove the Mattermost Server for any reason, you must stop the "
+"Mattermost Server, back up all important files, and then run this "
+"command:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:512
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:188
+msgid ""
+"Depending on your configuration, there are several important folders in "
+"``/opt/mattermost`` to backup. These are ``config``, ``logs``, "
+"``plugins``, ``client/plugins``, and ``data``. We strongly recommend you "
+"back up these locations before running the ``rm`` command."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:514
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:190
+msgid ""
+"You may also remove the Mattermost systemd unit file and the user/group "
+"created for running the application."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:23
+msgid ""
+"You can deploy Mattermost server using our ``.deb`` signed packages using"
+" the Mattermost PPA (Personal Package Archive). This is the quickest way "
+"to install a Mattermost Server that provides automatic updates. This "
+"install method is used for both single and clustered installations, as "
+"you can tools like Packer for a clustered deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:25
+msgid ""
+"This Mattermost deployment includes the following steps: install "
+"PostgreSQL database, prepare the database, add the PPA repository, "
+"install Mattermost server, configure the server, and update the server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:30
+msgid "Mattermost requires a PostgreSQL database. You can either:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:42
+msgid "Step 3: Add the Mattermost Server PPA repository"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:46
+msgid ""
+"The GPG public key has changed. You can `import the new public key "
+"<https://deb.packages.mattermost.com/pubkey.gpg>`_ or run the automatic "
+"Mattermost PPA repository setup script provided below. Depending on your "
+"setup, additional steps may also be required, particularly for "
+"installations that didn't rely on the repository setup script. We "
+"recommend deleting the old key from ``/etc/apt/trusted.gpg.d`` before "
+"adding the apt repository."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:48
+msgid "For Ubuntu Jammy - 22.04 LTS and Ubuntu Noble - 24.04 LTS:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:50
+msgid "``sudo rm /usr/share/keyrings/mattermost-archive-keyring.gpg``"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:52
+msgid ""
+"``curl -sL -o- https://deb.packages.mattermost.com/pubkey.gpg |  gpg "
+"--dearmor | sudo tee /usr/share/keyrings/mattermost-archive-keyring.gpg >"
+" /dev/null``"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:54
+msgid ""
+"In a terminal window, run the following repository setup command to add "
+"the Mattermost Server repositories:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:60
+msgid ""
+"This command configures the repositories needed for a PostgreSQL "
+"database, configures an NGINX web server to act as a proxy, configures "
+"certbot to issue and renew the SSL certificate, and configures the "
+"Mattermost repository so that you can run the install command."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:65
+msgid ""
+"Ahead of installing the Mattermost Server, it's good practice to update "
+"all your repositories and, where required, update existing packages by "
+"running the following command:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:71
+msgid ""
+"After any updates and system reboots are complete, you can install the "
+"Mattermost Server by running:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:77
+msgid ""
+"You now have the latest Mattermost Server version installed on your "
+"system."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:79
+msgid ""
+"The installation path is ``/opt/mattermost``. The package will have added"
+" a user and group named ``mattermost``. The required systemd unit file "
+"has also been created but will not be set to active."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:83
+msgid ""
+"Since the signed package from the Mattermost repository is used for "
+"mulitple installation types, we don't add any dependencies in the systemd"
+" unit file. If you are installing the Mattermost server on the same "
+"system as your database, you may want to add both "
+"``After=postgresql.service`` and ``BindsTo=postgresql.service`` to the "
+"``[Unit]`` section of the systemd unit file."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:86
+msgid "Step 5: Configure the server"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:88
+msgid ""
+"Before you start the Mattermost Server, you need to edit the "
+"configuration file. A sample configuration file is located at "
+"``/opt/mattermost/config/config.defaults.json``."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:90
+msgid "Rename this configuration file with correct permissions:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:104
+msgid ""
+"After modifying the ``config.json`` configuration file, you can now start"
+" the Mattermost Server:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:110
+msgid ""
+"Verify that Mattermost is running: curl ``http://localhost:8065``. You "
+"should see the HTML that's returned by the Mattermost Server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:112
+msgid ""
+"The final step, depending on your requirements, is to run ``sudo "
+"systemctl enable mattermost.service`` so that Mattermost will start on "
+"system boot."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:116
+msgid ""
+"The value of the ``sslmode`` property in the ``DataSource`` configuration"
+" is entirely dependent on your native environment. Please consult the "
+"native environment setup documentation for guidance on its value. The "
+"available options for ``sslmode`` are ``disable`` or ``require``. For "
+"example, if you are using Amazon Lightsail as your data source, you must "
+"set ``sslmode`` to ``require`` to successfully connect to the database."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:121
+msgid ""
+"When a new Mattermost version is released, run: ``sudo apt update && sudo"
+" apt upgrade`` to download and update your Mattermost instance."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:125
+msgid ""
+"When you run the ``sudo apt upgrade`` command, ``mattermost-server`` will"
+" be updated along with any other packages. We strongly recommend you stop"
+" the Mattermost Server before running the ``apt`` command using ``sudo "
+"systemctl stop mattermost``."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-ubuntu.rst:130
+msgid "Run the following command to remove the Mattermost Server:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:23
+msgid ""
+"This Mattermost deployment includes the following steps: install "
+"PostgreSQL database, prepare the database, download the Mattermost "
+"server, install the server, set up the server, and update the server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:38
+msgid "Step 3: Download the latest Mattermost Server tarball"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:61
+msgid ""
+"Ahead of installing the Mattermost Server, we recommend updating all your"
+" repositories and, where required, update existing packages by running "
+"the following commands:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:68
+msgid ""
+"After any updates, and any system reboots, are complete, install the "
+"Mattermost Server by extracting the tarball, creating users and groups, "
+"and setting file/folder permissions."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:76
+msgid ""
+"Now move the entire folder to the ``/opt`` directory (or whatever path "
+"you require):"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:90
+msgid ""
+"If you choose a custom path, ensure this alternate path is used in all "
+"steps that follow.`"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:172
+msgid ""
+"Verify that Mattermost is running: curl ``http://localhost:8065``. You "
+"should see the HTML that’s returned by the Mattermost Server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:174
+msgid ""
+"The final step, depending on your requirements, is to run sudo "
+"``systemctl enable mattermost.service`` so that Mattermost will start on "
+"system boot. If you don't receive an error when starting Mattermost after"
+" the previous step, you are good to go. If you did receive an error, "
+"continue on."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:177
+msgid "Hardened RHEL environments"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:179
+msgid ""
+"When deploying Mattermost on hardened RHEL systems, additional security "
+"configurations may be required. Select the tab below for your specific "
+"security tool:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:184
+msgid ""
+"When deploying Mattermost from RHEL9, which has SELinux running with "
+"enforcing mode enabled by default, additional configuration is required."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:186
+msgid ""
+"SELinux is a security module that provides access control security "
+"policies. It's enabled by default on RHEL and CentOS systems. SELinux can"
+" block access to files, directories, and ports, which can cause issues "
+"when starting Mattermost. To resolve these issues, you'll need to set the"
+" appropriate SELinux contexts for the Mattermost binaries and "
+"directories, and allow Mattermost to bind to ports."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:188
+msgid ""
+"Ensure that SELinux is enabled and in enforcing mode by running the "
+"``sestatus`` command. If it's ``enforcing``, you'll need to configure it "
+"properly."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:191
+msgid "Set bin contexts for /opt/mattermost/bin"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:193
+msgid ""
+"SELinux enforces security contexts for binaries. To label the Mattermost "
+"binaries as safe, you'll need to set them to the below SELinux context."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:200
+msgid "Now, try starting Mattermost again with"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:206
+msgid ""
+"If you don't receive an error, verify that Mattermost is running: curl "
+"``http://localhost:8065``. You should see the HTML that's returned by the"
+" Mattermost Server. You're all set!"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:208
+msgid ""
+"If on starting Mattermost you receive an error, before moving on, check "
+"for the existence of a file in ``/opt/mattermost/logs`` - if "
+"``mattermost.log`` exists in that directory, it's more likely you're "
+"dealing with a configuration issue in ``config.json``. Double check the "
+"previous steps before continuing."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:211
+msgid "Try different contexts for /opt/mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:213
+msgid ""
+"SELinux enforces security contexts for files and directories. To label "
+"your Mattermost directory as safe, you'll need to set an appropriate "
+"SELinux context."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:215
+msgid ""
+"Check current context by running ``ls -Z /opt/mattermost``. When you see "
+"something like ``drwxr-xr-x. root root unconfined_u:object_r:default_t:s0"
+" mattermost`` returned, the ``default_t`` indicates that SELinux doesn't "
+"know what this directory is for."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:216
+msgid ""
+"Set a safe context by assigning a SELinux type that's compatible with web"
+" services or applications by running ``sudo semanage fcontext -a -t "
+"httpd_sys_content_t \"/opt/mattermost(/.*)?\"``. A common one is "
+"``httpd_sys_content_t``, used for serving files. Ensure you match the "
+"directory and its contents recursively. Run the ``sudo restorecon -R "
+"/opt/mattermost`` to apply the changes."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:219
+msgid "Allow Mattermost to bind to ports"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:221
+msgid ""
+"When Mattermost needs specific ports (e.g., 8065), ensure that SELinux "
+"allows it by allowing Mattermost to bind to ports. Run the ``sudo "
+"semanage port -l | grep 8065`` command, and if the port's not listed, "
+"you'll need to add it by running ``sudo semanage port -a -t http_port_t "
+"-p tcp 8065``, replacing the ``8065`` with the required port."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:224
+msgid "Handle custom policies"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:226
+msgid ""
+"If Mattermost requires actions that SELinux blocks, you'll need to "
+"generate a custom policy."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:228
+msgid ""
+"Check for SELinux denials first in the logs by running ``sudo ausearch -m"
+" avc -ts recent``, or by checking the audit log: ``sudo cat "
+"/var/log/audit/audit.log | grep denied``."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:230
+msgid ""
+"If needed, generate a policy module by installing ``audit2allow`` to "
+"generate policies automatically."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:239
+msgid "Test the configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:241
+msgid ""
+"Restart Mattermost to confirm the configuation works as expected by "
+"running ``sudo systemctl restart mattermost``. In the case of failures, "
+"revisit the logs to identify other SELinux-related issues."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:244
+msgid "Need Mattermost working quickly for testing purposes?"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:246
+msgid ""
+"You can change SELinux to permissive mode by running the ``sudo "
+"setenforce 0``. command where policies aren't enforced, only logged."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:247
+msgid ""
+"This command changes the SELinux mode to \"permissive\". While in "
+"permissive mode, policies aren't enforced, and violations are logged "
+"instead of being blocked. This can be helpful for debugging and "
+"troubleshooting issues related to SELinux policies."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:248
+msgid ""
+"Ensure you re-enable enforcing mode once context is working as needed by "
+"running the ``sudo setenforce 1`` command."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:251
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:492
+msgid "Additional resources"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:253
+msgid ""
+"`SELinux User's and Administrator's Guide "
+"<https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/index>`_"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:254
+msgid "`SELinux Project Wiki <https://github.com/SELinuxProject/selinux>`_"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:255
+msgid ""
+"`Introduction to SELinux <https://github.blog/developer-skills"
+"/programming-languages-and-frameworks/introduction-to-selinux/>`_"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:256
+msgid ""
+"`A Sysadmin's Guide to SELinux: 42 Answers to the Big Questions "
+"<https://opensource.com/article/18/7/sysadmin-guide-selinux>`_"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:257
+msgid ""
+"`Mastering SELinux: A Comprehensive Guide to Linux Security "
+"<https://srivastavayushmaan1347.medium.com/mastering-selinux-a"
+"-comprehensive-guide-to-linux-security-8bed9976da88>`_"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:262
+msgid ""
+"When deploying Mattermost on RHEL systems with firewalld enabled, you'll "
+"need to configure firewall rules to allow access to the Mattermost "
+"Server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:264
+msgid ""
+"Firewalld is the default firewall management tool on RHEL systems and "
+"provides a dynamically managed firewall with support for network zones. "
+"By default, it may block incoming connections to Mattermost's port "
+"(8065)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:267
+msgid "Check if firewalld is running"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:273
+msgid "If firewalld is active, configure it to allow Mattermost traffic."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:276
+msgid "Configure firewalld for Mattermost Server"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:278
+msgid "Open port 8065 for Mattermost Server:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:284
+msgid ""
+"If you're using a reverse proxy (e.g., nginx or Apache) on the same "
+"server, also open HTTP and HTTPS ports:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:291
+msgid "Reload firewalld to apply the changes:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:297
+msgid "Verify the configuration:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:303
+msgid ""
+"You should see port 8065/tcp (and optionally http/https services) in the "
+"output."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:307
+msgid ""
+"If you're using a custom port for Mattermost, replace ``8065`` with your "
+"configured port number. The ``--permanent`` flag ensures the rules "
+"persist after system reboots."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:310
+msgid "Configure firewalld for Mattermost Calls (optional)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:312
+msgid ""
+"If you're deploying the Mattermost Calls plugin or the standalone rtcd "
+"service, additional ports need to be opened. See the :doc:`Calls "
+"deployment guide </administration-guide/configure/calls-deployment-"
+"guide>` documentation for details on Calls architecture and deployment "
+"modes."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:314
+msgid "For integrated Calls plugin (running alongside Mattermost):"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:322
+msgid "For standalone rtcd service (requires additional API port):"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:333
+msgid ""
+"Port 8443 (UDP/TCP) is used for RTC media traffic (audio/video/screen "
+"sharing)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:334
+msgid ""
+"Port 8045 (TCP) is used for API communication between Mattermost and rtcd"
+" service"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:335
+msgid "TCP support for RTC requires Calls v0.17+ and rtcd v0.11+"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:336
+msgid ""
+"If you're using custom ports, replace the default port numbers with your "
+"configured values"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:341
+msgid ""
+"When deploying Mattermost on RHEL systems with fapolicyd enabled, you may"
+" encounter \"operation not permitted\" errors in the Mattermost logs."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:343
+msgid ""
+"Fapolicyd (File Access Policy Daemon) is a userspace daemon that "
+"determines access rights to files based on trust. It's commonly enabled "
+"in secure environments to prevent execution of unauthorized binaries. By "
+"default, fapolicyd may block Mattermost binaries and plugins from "
+"executing."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:346
+msgid "Troubleshoot fapolicyd issues"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:348
+msgid ""
+"If you're seeing \"operation not permitted\" errors in your Mattermost "
+"logs, first check if fapolicyd is the cause by temporarily stopping it:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:354
+msgid ""
+"Test your Mattermost deployment. If it works now, fapolicyd is blocking "
+"Mattermost execution and you need to configure it properly."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:356
+msgid "Start fapolicyd in debug mode to identify what's being denied:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:362
+msgid "Look for denial messages in the output. They will look similar to:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:370
+msgid ""
+"Note the rule number that's denying execution - your rule file must be "
+"numbered to come before this rule."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:373
+msgid "Configure fapolicyd to allow Mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:375
+msgid ""
+"Create a rule file for Mattermost. The naming convention is critical - it"
+" must come before the rule that's denying Mattermost. If you're using a "
+"stock fapolicyd configuration, ``80`` works fine:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:381
+msgid "Add the allow rules to the file:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:387
+msgid "Add the following rules to allow Mattermost execution:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:395
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:458
+msgid "Check that the rules are valid and will be applied:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:401
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:464
+msgid "You should see \"Rules have changed and should be updated\" in the output."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:403
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:466
+msgid "Load the new rules:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:409
+msgid "Restart the fapolicyd service:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:415
+msgid "Restart Mattermost to verify it works correctly:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:421
+msgid "Verify that Mattermost is running without errors:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:430
+msgid ""
+"The rule file numbering is critical. Rules are processed in order, and "
+"your allow rules must come before any deny rules. If you continue to see "
+"denials after following these steps, check your deny rule number (from "
+"the debug output) and ensure your rule file number is lower."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:431
+msgid ""
+"If you have plugins that execute binaries (like Playbooks or the Calls "
+"plugin), the fapolicyd rules above allow execution of any binaries within"
+" the ``/opt/mattermost`` directory. If you need more restrictive rules, "
+"you can create specific rules for each plugin binary."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:434
+msgid "Configure fapolicyd for rtcd service (optional)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:436
+msgid ""
+"If you're deploying the standalone rtcd service for Mattermost Calls, "
+"you'll need separate fapolicyd rules for the rtcd binary. The rtcd "
+"service is deployed separately from Mattermost and runs its own binary. "
+"See the :doc:`Calls deployment guide </administration-guide/configure"
+"/calls-deployment-guide>` documentation for details on when and why to "
+"use rtcd."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:438
+msgid ""
+"Create a rule file for rtcd. The naming convention is critical - it must "
+"come before the deny rule (typically 80 works):"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:444
+msgid "Add the allow rules for rtcd:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:450
+msgid ""
+"Add the following rules (adjust paths based on your rtcd installation "
+"directory):"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:472
+msgid "Restart fapolicyd and the rtcd service:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:479
+msgid "Verify that rtcd is running without errors:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:487
+msgid ""
+"The paths shown above assume rtcd is installed in ``/opt/rtcd/``. Adjust "
+"these paths based on your actual rtcd installation directory."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:488
+msgid ""
+"If you continue to see denials after following these steps, run ``sudo "
+"fapolicyd --debug`` to identify the specific paths being denied and "
+"adjust your rules accordingly."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:489
+msgid ""
+"See the :doc:`RTCD setup and configuration </administration-"
+"guide/configure/calls-rtcd-setup>` documentation for installation and "
+"configuration details."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:494
+msgid ""
+"`Mattermost and fapolicyd <https://support.mattermost.com/hc/en-"
+"us/articles/12167526545172-Mattermost-and-fapolicyd>`_ support article"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:504
+msgid ""
+"To remove the Mattermost Server, you must stop the Mattermost Server, "
+"back up all important files, and then run this command:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:3
+msgid ""
+"Mattermost is published as an **Azure Marketplace** solution that "
+"provisions a production-ready Mattermost stack in your own subscription "
+"using Azure-managed services for compute, database, shared file storage, "
+"and load balancing. This option is intended for organizations that want a"
+" resilient Mattermost deployment they can scale and operate within their "
+"existing Azure tenant."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:6
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:8
+msgid ""
+"An active **Azure subscription** with the **Owner** or **Contributor** "
+"role on the subscription (required to purchase and deploy Azure "
+"Marketplace solutions), permission to create resource groups, and "
+"permission to accept **Azure Marketplace** billing terms for the offer."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:9
+msgid ""
+"Familiarity with the **Azure portal** (resource groups, networking, "
+"virtual machines, and Application Gateway)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:10
+msgid ""
+"For multi-node deployments (more than one application instance), a valid "
+"**Mattermost Enterprise license** file. The license is optional for "
+"single-node deployments."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:11
+msgid "If you plan to enable **HTTPS** at deployment time:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:13
+msgid "A **PFX (PKCS#12)** certificate bundle and its password."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:14
+msgid ""
+"A **custom domain (FQDN)** that you will point to the Application Gateway"
+" after deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:17
+msgid "What gets deployed"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:19
+msgid ""
+"The template provisions a self-contained, production-ready stack in the "
+"resource group you select, including:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:21
+msgid ""
+"**Virtual Machine Scale Set (Linux):** Runs Mattermost on Ubuntu Pro "
+"24.04 LTS images published by Mattermost. Instance count and VM size are "
+"driven by the scaling tier you choose."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:22
+msgid ""
+"**Application Gateway with public IP:** Acts as the entry point for "
+"Mattermost traffic, with optional **HTTPS listener** (using your PFX "
+"certificate) and HTTP-to-HTTPS redirection when HTTPS is enabled."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:23
+msgid ""
+"**Azure Database for PostgreSQL Flexible Server:** Managed PostgreSQL "
+"service that stores Mattermost data, with optional **same-zone** or "
+"**zone-redundant** high availability, backup retention and geo-"
+"redundancy."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:24
+msgid ""
+"**Azure Files (NFS) with private endpoint:** Shared storage for "
+"Mattermost data (uploads, plugins, and other shared files), reachable "
+"only from inside the virtual network."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:25
+msgid ""
+"**Virtual network and subnets:** A dedicated VNet for the deployment, "
+"with separate subnets for the Application Gateway, the Mattermost "
+"application instances, the database, and the storage private endpoint."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:26
+msgid ""
+"**NAT gateway:** Provides controlled outbound internet access for the "
+"application instances (for example, to fetch packages and the Mattermost "
+"configuration scripts)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:27
+msgid ""
+"**Private DNS zones:** Used to resolve the PostgreSQL Flexible Server and"
+" Azure Files private endpoint from inside the VNet."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:30
+msgid "Step 1: Select a plan and start creation"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:32
+msgid ""
+"Open the `Mattermost - Azure-Native (VM-based) "
+"<https://marketplace.microsoft.com/en-us/product/azure-"
+"application/mattermost.mattermost-app-vm>`_ offer in the Azure "
+"Marketplace, click **Get it now**, select the plan, and then click "
+"**Create** to open the deployment wizard."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:35
+msgid "Step 2: Basics"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:37
+msgid "On the **Basics** tab, configure the following:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:39
+msgid ""
+"**Subscription:** Choose the Azure subscription where the deployment will"
+" live."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:40
+msgid ""
+"**Resource group:** Select an existing resource group or create a new "
+"one. A **new** resource group keeps the production stack easy to manage "
+"and clean up."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:41
+msgid ""
+"**Region:** Select the deployment region. Choose a region that supports "
+"the PostgreSQL Flexible Server SKUs you plan to use, and that has the "
+"**availability zones** you need if you intend to enable PostgreSQL high "
+"availability."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:42
+msgid ""
+"**Resource name prefix:** Short prefix (2–12 lowercase letters, digits, "
+"or hyphens) used to name the Azure resources created by the template (for"
+" example, ``mm-prod``)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:44
+msgid "An example of the Azure Native Basics setup screen."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:48
+msgid "Step 3: Application"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:50
+msgid ""
+"On the **Application** tab, configure how the Mattermost application is "
+"sized and how administrators access the VMs."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:52
+msgid ""
+"**Scaling tier:** Pick the user scale you are planning for. The wizard "
+"uses this to suggest sensible defaults for the **VMSS instance count**, "
+"**VM size**, and **PostgreSQL SKU**, and to determine whether **read "
+"replicas** are created for the database. The dropdown shows the "
+"recommended node count and VM SKU for each tier. For the underlying "
+"sizing rationale, see :ref:`available reference architectures "
+"<administration-guide/scale/scaling-for-enterprise:available reference "
+"architectures>`."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:53
+msgid ""
+"**VMSS instance count:** Number of Mattermost application nodes (1–5). "
+"Defaults to the suggested value for your scaling tier; adjust if needed."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:54
+msgid ""
+"**Enterprise license file:** Required when the instance count is greater "
+"than 1 (multi-node high-availability clustering). Upload your Mattermost "
+"Enterprise license file. The license is optional for single-node "
+"deployments."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:55
+msgid ""
+"**VM SKU:** Size of each VMSS instance. The wizard surfaces recommended "
+"Linux sizes first; you can select any supported Linux size available in "
+"your region."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:56
+msgid ""
+"**Admin username:** Linux administrator account used to sign in to the VM"
+" instances."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:57
+msgid ""
+"**Authentication type:** Choose **Password** or **SSH public key** for "
+"Linux sign-in. **SSH public key** is recommended for production "
+"deployments."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:58
+msgid ""
+"**Mattermost version:** The Mattermost version to install (for example, "
+"``11.6.2``). See the :doc:`Mattermost release policy </product-overview"
+"/release-policy>` for supported versions."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:60
+msgid "An example of the Azure Native Application setup screen."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:64
+msgid "Step 4: Database"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:66
+msgid ""
+"On the **Database** tab, configure the managed PostgreSQL service and the"
+" shared NFS file share."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:68
+msgid ""
+"**PostgreSQL compute SKU:** Memory-optimized Flexible Server SKU. "
+"Defaults to the SKU recommended for your scaling tier; pick a SKU that is"
+" supported in your region. Available choices are ``Standard_E2ds_v5``, "
+"``Standard_E4ds_v5``, and ``Standard_E8ds_v5``."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:69
+msgid "**PostgreSQL high availability:** Choose how PostgreSQL is made resilient:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:71
+msgid "**Disabled:** Single primary instance. Suitable for small deployments."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:72
+msgid "**Same zone:** Primary and standby in the same availability zone."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:73
+msgid "**Zone redundant:** Primary and standby in different availability zones."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:75
+msgid ""
+"For regional support of Flexible Server SKUs and HA modes, see `Azure "
+"regions for PostgreSQL Flexible Server <https://learn.microsoft.com/en-"
+"us/azure/postgresql/overview#azure-regions>`_."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:77
+msgid ""
+"**Primary availability zone** and **standby availability zone:** Shown "
+"when HA is enabled. For zone-redundant HA, the primary and standby zones "
+"must be different. Pick zones supported in your region for the PostgreSQL"
+" SKU you chose."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:78
+msgid ""
+"**PostgreSQL admin username and password:** Administrator credentials for"
+" the Flexible Server. Avoid reserved names such as ``azure_superuser``. "
+"The password must meet `Azure Flexible Server password complexity "
+"requirements <https://learn.microsoft.com/azure/postgresql/flexible-"
+"server/concepts-security#password>`_."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:79
+msgid ""
+"**Mattermost database user password:** In the **Mattermost database "
+"connection** section, set the password for the dedicated Mattermost "
+"database user that the application nodes use to connect to PostgreSQL. "
+"This is separate from the PostgreSQL administrator credentials. The "
+"password must meet the same complexity rules as the admin password."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:80
+msgid ""
+"**Geo-redundant backup:** Replicates PostgreSQL backups to Azure's paired"
+" region for cross-region disaster recovery. **This setting cannot be "
+"changed after deployment.**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:81
+msgid ""
+"**NFS share size (GiB):** Size of the Azure Files (NFS) share used by "
+"Mattermost for shared application data. Minimum 100 GiB."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:85
+msgid ""
+"Backup retention for PostgreSQL is set to 35 days at deployment time. You"
+" can change retention from the Azure portal after the deployment "
+"completes."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:87
+msgid "An example of the Azure Native Database setup screen."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:91
+msgid "Step 5: Networking"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:93
+msgid ""
+"On the **Networking** tab, configure the virtual network and how "
+"Mattermost is exposed to users."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:95
+msgid ""
+"**VNet address space (CIDR):** The address space for the virtual network "
+"created by the template. Defaults to ``10.0.0.0/22``. Pick a range that "
+"does not overlap with other VNets you plan to peer with."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:96
+msgid ""
+"**Public IP DNS label:**  You must set a **DNS prefix** (label) that is "
+"**globally unique** across Azure public cloud; it forms part of your URL "
+"and allows public access to your workspace. If the label is already "
+"taken, deployment will fail."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:97
+msgid ""
+"**Enable HTTPS on Application Gateway:** When enabled, the Application "
+"Gateway terminates TLS using your PFX certificate and HTTP traffic is "
+"redirected to HTTPS. When disabled, Mattermost is served over HTTP on the"
+" Azure-assigned hostname (suitable for testing, **not recommended for "
+"production**)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:98
+msgid ""
+"**PFX certificate** and **PFX password:** Shown when HTTPS is enabled. "
+"Upload your PKCS#12 bundle and provide the password used to protect it."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:99
+msgid ""
+"**Custom domain (FQDN):** Shown when HTTPS is enabled. The public "
+"hostname Mattermost will use (for example, ``mattermost.example.com``). "
+"After deployment, point this hostname to the Azure-assigned DNS name of "
+"the Application Gateway public IP (typically using a **CNAME** record for"
+" subdomains)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:101
+msgid "An example of the Azure Native Networking setup screen."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:105
+msgid "Step 6: Review and create"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:107
+msgid ""
+"Review your settings, accept any **Marketplace** terms if prompted, then "
+"select **Create**. Provisioning typically takes 20–50 minutes, depending "
+"on your PostgreSQL configuration. Allow a few additional minutes after "
+"Azure reports the deployment as Succeeded before the application is "
+"reachable."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:109
+msgid "**After deployment completes:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:111
+msgid "In the Azure portal, open the **resource group** you used."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:112
+msgid ""
+"Open the **public IP resource attached to your Application Gateway** "
+"(often named ``<prefix>-ag-pip``). Under **Essentials**, note the **DNS "
+"name** (Azure-assigned FQDN)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:113
+msgid "If you deployed **without HTTPS**, your site URL is:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:115
+msgid "``http://<dns-label>.<region>.cloudapp.azure.com``"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:117
+msgid ""
+"If you deployed **with HTTPS**, create a DNS record that points your "
+"**custom domain** to the Azure-assigned DNS name of the Application "
+"Gateway public IP (typically **CNAME** for subdomains; use your "
+"provider's apex-compatible record type if using a root domain). Once DNS "
+"propagates, your site URL is:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:119
+msgid "``https://<your-custom-domain>``"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:121
+msgid ""
+"Congratulations! You've successfully deployed a production-ready "
+"Mattermost stack on Azure."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:124
+msgid "Next steps"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:126
+msgid ""
+"For sizing guidance and reference architectures, see :doc:`high-"
+"availability-cluster-based-deployment </administration-guide/scale/high-"
+"availability-cluster-based-deployment>` and :doc:`server architecture "
+"</administration-guide/scale/server-architecture>`."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:127
+msgid ""
+"For ongoing operations (upgrades, backups, monitoring), follow the "
+"standard Mattermost server administration documentation."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:130
+msgid "Runbooks"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:133
+msgid "Upgrade Mattermost server"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:135
+msgid ""
+"The VM scale set runs a Mattermost **Marketplace VM image** matching the "
+"version you selected in Step 3. Mattermost publishes new image versions "
+"for each supported release. To upgrade, point the VMSS at a newer image "
+"version in your deployment region. Application data stays in "
+"**PostgreSQL** and on the **Azure Files** share; the upgrade rolls "
+"application instances to VMs built from the updated image."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:138
+msgid "Before you upgrade"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:140
+msgid ""
+"Review the :doc:`important upgrade notes </administration-guide/upgrade"
+"/important-upgrade-notes>`, and :doc:`prepare to upgrade "
+"</administration-guide/upgrade/prepare-to-upgrade-mattermost>` for the "
+"target version."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:141
+msgid ""
+"Confirm **PostgreSQL** backups are current and that you can restore if "
+"needed."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:142
+msgid ""
+"Pick a target version from the :doc:`Mattermost release policy </product-"
+"overview/release-policy>`."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:145
+msgid "Upgrade steps"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:147
+msgid "**Update the VMSS** to the new image version:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:156
+msgid ""
+"The VMSS uses a **rolling** upgrade policy and an application health "
+"probe on ``/api/v4/system/ping``, so instances are replaced in batches "
+"while the Application Gateway keeps serving traffic to healthy nodes."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:158
+msgid ""
+"**Monitor the rollout** in the Azure portal: open your VMSS → "
+"**Instances** (or **Rolling upgrades**) and wait until all instances are "
+"healthy and running the new model."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:160
+msgid ""
+"**Verify Mattermost**: Verify Mattermost uses the new version via "
+"**System Console → About**."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-linux.rst:35
+msgid "Secure your Mattermost deployment"
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-linux.rst:37
+msgid ""
+"Configuring TLS and setting up an NGINX proxy ensures secure "
+"communication between clients and your Mattermost server. This setup "
+"allows you to serve HTTPS traffic while proxying requests to Mattermost. "
+"You don’t need TLS enabled within Mattermost itself as NGINX will handle "
+"HTTPS traffic."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-linux.rst:39
+msgid ""
+"Install NGINX on the host server. See the :doc:`set up NGINX proxy "
+"</deployment-guide/server/setup-nginx-proxy>` documentation for details."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-linux.rst:40
+msgid ""
+"Obtain a TLS certificate from a trusted certificate authority (CA) or use"
+" a self-signed certificate for testing purposes."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-linux.rst:41
+msgid ""
+"Configure NGINX with TLS certificates to serve HTTPS traffic. NGINX "
+"serves as a proxy, forwarding requests to the Mattermost application "
+"running locally or on a separate server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-linux.rst:45
+msgid ""
+"See the :doc:`deployment troubleshooting </deployment-guide/deployment-"
+"troubleshooting>` documentation for resolutions to common deployment "
+"issues."
+msgstr ""
+

@@ -1,0 +1,1150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:2
+msgid "Advanced permissions: backend infrastructure"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:7
+msgid ""
+"This document outlines the backend server infrastructure for permissions "
+"in Mattermost and is recommended only for technical Admins or developers "
+"looking to make modifications to their installation."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:10
+msgid "Entity definitions"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:13
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:52
+msgid "Permissions"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:15
+msgid ""
+"A **permission** describes a permitted action which may be carried out on"
+" an object. It describes the action that users may perform in the context"
+" in which they have been assigned the role granting the permission."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:18
+msgid "Roles"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:20
+msgid ""
+"A **role** is something to which permissions are granted, that is then "
+"assigned to users in contexts in order to grant them the assigned "
+"permissions in that context. One user may end up with different sets of "
+"permissions granted by different roles in different contexts."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:23
+msgid "Scope"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:25
+msgid ""
+"Permissions live within a given scope. There are three scopes in the "
+"Mattermost system: System, Team and Channel. Permissions cascade down the"
+" scopes from the context in which they are applied. For example, if a "
+"“Channel” scoped permission is applied to a “Team” context, the "
+"permission applies to any channels within that team. A permission is "
+"considered,"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:27
+msgid ""
+"**System scope** if it makes sense only on the system level. For example,"
+" ``manage_oauth``."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:28
+msgid ""
+"**Team scope** if it makes sense at the team level and system level. For "
+"example, ``create_public_channel``."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:29
+msgid ""
+"**Channel scope** if it makes sense at channel, team and system level. "
+"For example, ``manage_public_channel_properties``."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:32
+msgid "Context"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:34
+msgid ""
+"A **context** is an instance of a scope. For example, a channel called "
+"\"Developers Hangout\" is an instance of channel scope. Contexts have "
+"hierarchical relationships between them that reflect the hierarchical "
+"ordering of scopes. Each context has one parent, and may have multiple "
+"children, with the ultimate parent context being the system context:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:36
+msgid ""
+"A channel context has a parent team context, whose parent is the system "
+"context. For example, the \"Developers Hangout\" channel is the channel "
+"context, with parent team context \"Contributors Team\", with parent "
+"system context."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:37
+msgid ""
+"A team context has a parent system context and child channel contexts. "
+"For example, the \"Contributors Team\" is the team context, with parent "
+"system context, and with children channel contexts such as \"Developers "
+"Hangout\", \"Reception\" and \"Marketing\"."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:39
+msgid ""
+"When determining whether a user is allowed to carry out a given action in"
+" a given context, the union of the permissions of all roles that user has"
+" been assigned in the current context and its parent contexts is "
+"calculated. This enables permissions to cascade down the scope hierarchy."
+" For example, if a users is granted the "
+"``manage_public_channel_properties`` permission in a role in the system "
+"context, then the user has permissions to manage public channel "
+"properties in all channels, in all teams, of which they are a member."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:42
+msgid "Schemes"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:44
+msgid ""
+"Schemes describe the default roles applied to users in a context, and all"
+" child contexts. Schemes are either defined specifically for a context, "
+"or if they are not specified, the relevant parts of the parent context’s "
+"scheme are applied, ultimately climbing the hierarchy to the System "
+"Scheme, which serves the purpose of providing the system-wide defaults. "
+"For example, if Team A does not have a team-scoped scheme defined, the "
+"System Scheme will provide the defaults for all contexts in Team A."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:46
+msgid ""
+"Additionally, the lowest-scoped scheme always takes precedence in the "
+"context. For example, if Team B has a team-scoped scheme, that scheme "
+"takes precedence over the System Scheme defaults for all contexts in Team"
+" B."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:49
+msgid "Data structure"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:54
+msgid ""
+"Permissions in Mattermost are a property of the server code base and are "
+"not created or modified dynamically. The current set of permissions are "
+"as described in the table below."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:56
+msgid "**Mattermost permissions**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:251
+msgid "``Roles`` field"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:253
+msgid ""
+"Roles are applied to objects that represents that user’s membership in a "
+"context. These are referenced in the ``Roles`` field of the ``User``, "
+"``TeamMember``, ``ChannelMember`` and ``Schemes`` Tables."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:255
+msgid ""
+"In the ``TeamMember`` and ``ChannelMember`` tables, it's the ``Roles`` "
+"field that contains custom roles and the ``SchemeAdmin`` and "
+"``SchemeUser`` booleans that indicate the member object should inherit "
+"the respective roles from the relevant scheme, either the default or "
+"custom scheme assigned to the relevant team."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:258
+msgid "``Roles`` table"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:260
+msgid ""
+"Roles are dynamic and user configurable, necessitating a database table "
+"with the following fields:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:262
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:693
+msgid "``Id`` (Autoincrement, Primary Key)"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:263
+msgid "``Name`` (Unique String with Character Constraints, e.g. “team_user”)."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:264
+msgid "``Display Name`` (String)"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:265
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:696
+msgid "``Description`` (String)"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:266
+msgid "``Permissions`` (String): Space-separated permissions names"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:267
+msgid ""
+"``Scheme Managed`` (bool): Indicates whether this role is managed as part"
+" of a scheme."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:268
+msgid ""
+"``BuiltIn`` (bool): Indicates if this role is built-in to the Mattermost "
+"system and not removable by the user."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:271
+msgid "Built-in roles"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:273
+msgid ""
+"The System Scheme is built-in to the product, and its roles are defined "
+"as ``BuiltIn: true`` in the ``Roles`` table. You can use the Mattermost "
+"API to `retrieve a list of permissions by role name "
+"<https://api.mattermost.com/#tag/roles/paths/~1roles~1names/post>`__."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:275
+msgid "The following built-in roles with default permissions are available:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:277
+msgid "*channel_admin*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:279
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:317
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:350
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:507
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:598
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:645
+msgid "manage_private_channel_members"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:280
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:320
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:373
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:520
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:560
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:616
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:636
+msgid "read_public_channel_groups"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:281
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:309
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:321
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:404
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:538
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:545
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:640
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:669
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:675
+msgid "use_channel_mentions"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:282
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:308
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:330
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:413
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:537
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:644
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:667
+msgid "create_post"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:283
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:314
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:451
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:539
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:544
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:630
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:668
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:673
+msgid "use_group_mentions"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:284
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:304
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:315
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:379
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:647
+msgid "add_reaction"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:285
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:318
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:418
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:512
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:570
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:622
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:643
+msgid "read_private_channel_groups"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:286
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:305
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:326
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:346
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:637
+msgid "remove_reaction"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:287
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:327
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:427
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:503
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:593
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:629
+msgid "manage_public_channel_members"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:288
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:406
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:502
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:614
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:635
+msgid "manage_channel_roles"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:289
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:332
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:463
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:649
+msgid "add_bookmark_public_channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:290
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:333
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:464
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:650
+msgid "edit_bookmark_public_channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:291
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:334
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:465
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:651
+msgid "delete_bookmark_public_channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:292
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:335
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:466
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:652
+msgid "order_bookmark_public_channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:293
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:336
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:467
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:653
+msgid "add_bookmark_private_channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:294
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:337
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:468
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:654
+msgid "edit_bookmark_private_channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:295
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:338
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:469
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:655
+msgid "delete_bookmark_private_channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:296
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:339
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:470
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:656
+msgid "order_bookmark_private_channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:297
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:471
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:657
+msgid "manage_channel_banner"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:298
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:472
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:658
+msgid "manage_channel_access_rules"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:300
+msgid "*channel_guest*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:302
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:322
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:433
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:518
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:565
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:596
+msgid "read_channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:303
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:323
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:434
+msgid "read_channel_contents"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:306
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:328
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:432
+msgid "upload_file"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:307
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:331
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:364
+msgid "edit_post"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:311
+msgid "*channel_user*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:313
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:405
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:524
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:611
+msgid "manage_public_channel_properties"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:316
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:368
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:497
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:620
+msgid "delete_private_channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:319
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:443
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:531
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:617
+msgid "delete_public_channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:324
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:414
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:638
+msgid "delete_post"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:325
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:407
+msgid "get_public_link"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:329
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:437
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:508
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:595
+msgid "manage_private_channel_properties"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:341
+msgid "*system_admin*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:343
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:627
+msgid "manage_others_slash_commands"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:344
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:493
+msgid "sysconsole_write_user_management_permissions"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:345
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:509
+msgid "edit_brand"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:347
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:641
+msgid "manage_incoming_webhooks"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:348
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:525
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:594
+msgid "sysconsole_write_user_management_groups"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:349
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:685
+msgid "create_public_channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:351
+msgid "sysconsole_write_authentication"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:352
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:496
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:612
+msgid "join_private_teams"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:353
+msgid "create_post_ephemeral"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:354
+msgid "list_users_without_team"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:355
+msgid "sysconsole_write_reporting"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:356
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:682
+msgid "join_public_channels"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:357
+msgid "invite_guest"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:358
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:506
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:552
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:602
+msgid "list_private_teams"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:359
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:529
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:621
+msgid "sysconsole_write_user_management_channels"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:360
+msgid "manage_others_bots"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:361
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:588
+msgid "read_user_access_token"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:362
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:510
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:606
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:680
+msgid "add_user_to_team"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:363
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:580
+msgid "view_members"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:365
+msgid "demote_to_guest"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:366
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:642
+msgid "delete_others_posts"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:367
+msgid "sysconsole_write_plugins"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:369
+msgid "sysconsole_read_user_management_system_roles"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:370
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:557
+msgid "sysconsole_read_user_management_users"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:371
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:589
+msgid "revoke_user_access_token"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:372
+msgid "read_others_bots"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:374
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:532
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:608
+msgid "sysconsole_write_user_management_teams"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:375
+msgid "sysconsole_write_billing"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:376
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:511
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:613
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:646
+msgid "convert_public_channel_to_private"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:377
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:504
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:618
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:626
+msgid "remove_user_from_team"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:378
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:517
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:604
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:633
+msgid "manage_team"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:380
+msgid "manage_oauth"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:381
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:681
+msgid "list_team_channels"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:382
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:581
+msgid "create_team"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:383
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:499
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:554
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:599
+msgid "read_jobs"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:384
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:679
+msgid "invite_user"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:385
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:484
+msgid "manage_shared_channels"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:386
+msgid "remove_others_reactions"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:387
+msgid "manage_secure_connections"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:388
+msgid "sysconsole_write_user_management_users"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:389
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:553
+msgid "sysconsole_read_experimental"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:390
+msgid "sysconsole_write_compliance"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:391
+msgid "edit_others_posts"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:392
+msgid "assign_bot"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:393
+msgid "manage_bots"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:394
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:631
+msgid "manage_others_outgoing_webhooks"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:395
+msgid "manage_system_wide_oauth"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:396
+msgid "delete_others_emojis"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:397
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:634
+msgid "manage_others_incoming_webhooks"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:398
+msgid "promote_guest"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:399
+msgid "sysconsole_write_experimental"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:400
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:501
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:558
+msgid "sysconsole_read_plugins"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:401
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:488
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:579
+msgid "create_group_channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:402
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:505
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:571
+msgid "sysconsole_read_environment"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:403
+msgid "manage_roles"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:408
+msgid "sysconsole_read_billing"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:409
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:530
+msgid "sysconsole_write_integrations"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:410
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:564
+msgid "download_compliance_export_result"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:411
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:632
+msgid "manage_slash_commands"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:412
+msgid "assign_system_admin_role"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:415
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:489
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:578
+msgid "create_direct_channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:416
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:521
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:568
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:576
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:605
+msgid "list_public_teams"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:417
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:543
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:674
+msgid "create_post_public"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:419
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:569
+msgid "sysconsole_read_integrations"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:420
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:550
+msgid "read_other_users_teams"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:421
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:514
+msgid "manage_jobs"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:422
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:528
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:567
+msgid "sysconsole_read_site"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:423
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:639
+msgid "manage_outgoing_webhooks"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:424
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:513
+msgid "sysconsole_write_environment"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:425
+msgid "manage_system"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:426
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:526
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:562
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:610
+msgid "sysconsole_read_user_management_permissions"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:428
+msgid "sysconsole_write_about"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:429
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:648
+msgid "import_team"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:430
+msgid "sysconsole_write_user_management_system_roles"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:431
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:515
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:551
+msgid "sysconsole_read_reporting"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:435
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:500
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:559
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:615
+msgid "sysconsole_read_user_management_teams"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:436
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:583
+msgid "delete_emojis"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:438
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:498
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:556
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:600
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:663
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:684
+msgid "view_team"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:439
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:523
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:572
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:601
+msgid "sysconsole_read_user_management_groups"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:440
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:686
+msgid "create_private_channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:441
+msgid "create_bot"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:442
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:533
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:577
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:603
+msgid "join_public_teams"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:444
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:516
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:555
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:609
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:683
+msgid "read_public_channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:445
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:494
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:563
+msgid "sysconsole_read_about"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:446
+msgid "read_bots"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:447
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:566
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:597
+msgid "sysconsole_read_authentication"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:448
+msgid "edit_other_users"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:449
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:495
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:561
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:607
+msgid "sysconsole_read_user_management_channels"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:450
+msgid "convert_private_channel_to_public"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:452
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:587
+msgid "create_user_access_token"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:453
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:527
+msgid "sysconsole_write_site"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:454
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:522
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:619
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:628
+msgid "manage_team_roles"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:455
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:549
+msgid "sysconsole_read_compliance"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:456
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:582
+msgid "create_emojis"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:457
+msgid "manage_post_bleve_indexes_job"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:458
+msgid "manage_data_retention_job"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:459
+msgid "manage_compliance_export_job"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:460
+msgid "manage_elasticsearch_post_indexing_job"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:461
+msgid "manage_elasticsearch_post_aggregation_job"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:462
+msgid "manage_ldap_sync_job"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:474
+msgid "*system_custom_group_admin*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:476
+msgid "create"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:477
+msgid "edit"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:478
+msgid "delete"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:479
+msgid "manage members"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:480
+msgid "restore"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:482
+msgid "*system_shared_channel_manager*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:486
+msgid "*system_guest*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:491
+msgid "*system_manager*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:519
+msgid "sysconsole_read_integration"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:535
+msgid "*system_post_all*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:541
+msgid "*system_post_all_public*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:547
+msgid "*system_read_only_admin*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:574
+msgid "*system_user*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:585
+msgid "*system_user_access_token*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:591
+msgid "*system_user_manager*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:624
+msgid "*team_admin*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:659
+msgid "manage_team_access_rules"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:661
+msgid "*team_guest*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:665
+msgid "*team_post_all*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:671
+msgid "*team_post_all_public*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:677
+msgid "*team_user*"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:689
+msgid "``Schemes`` table"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:691
+msgid ""
+"Schemes are dynamic and user configurable, necessitating a database table"
+" with the following fields:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:694
+msgid ""
+"``Name`` (Unique String with Character Constraints, e.g. "
+"“corporate_scheme”)"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:695
+msgid "``Display`` Name"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:697
+msgid "``Scope`` (String): Team or Channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:698
+msgid "``Team Admin Role`` (String): Empty if Channel Scope"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:699
+msgid "``Team User Role`` (String): Empty if Channel Scope"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:700
+msgid "``Team Guest Role`` (String): Empty if Channel Scope"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:701
+msgid "``Channel Admin Role`` (String): Always provided"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:702
+msgid "``Channel User Role`` (String): Always provided"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:703
+msgid "``Channel Guest Role`` (String): Always provided"
+msgstr ""
+

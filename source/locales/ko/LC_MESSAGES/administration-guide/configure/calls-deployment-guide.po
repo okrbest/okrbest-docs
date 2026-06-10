@@ -1,0 +1,2920 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:6
+msgid "RTCD Setup and Configuration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:6
+msgid "Calls Offloader Setup and Configuration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:6
+msgid "Calls Metrics and Monitoring"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:6
+msgid "Deploy Calls on Kubernetes"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:6
+msgid "Calls Logging"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:1
+msgid "Mattermost Calls Deployment Guide"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.md:6
+msgid ""
+"![plans-img-yellow](/_static/images/badges/flag_icon_yellow.svg) "
+"Available on [Entry, Professional, Enterprise, and Enterprise "
+"Advanced](https://mattermost.com/pricing/) plans"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.md:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:17
+msgid ""
+"This guide walks System Administrators step-by-step through deploying "
+"Mattermost Calls, from preparation and network readiness through to pilot"
+" testing and production rollout. You'll find clear decision points, "
+"verification checks, and troubleshooting tips to help you confirm each "
+"phase of the deployment is working before you move on."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:19
+msgid ""
+"No prior experience with Mattermost Calls is required - this guide "
+"assumes you're starting fresh and will introduce essential concepts and "
+"best practices."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:21
+msgid "Calls Overview"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:23
+msgid ""
+"Mattermost Calls offers self-hosted audio calling and screen sharing, "
+"enabling sovereign real-time collaboration fully contained within your "
+"infrastructure. This means no call media or metadata traverses third-"
+"party systems."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:25
+msgid ""
+"Calls is uniquely suited for mission-critical operations across defense, "
+"intelligence, security and critical infrastructure - where data "
+"sovereignty, control, and compliance are non-negotiable. It is designed "
+"to function in isolated networks without internet access, supporting "
+"deployments that demand full airgap compliance."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:27
+msgid "Functionality includes:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:28
+msgid ""
+"**1:1 and Group Calling**: Initiate real-time voice communication between"
+" two or more participants."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:29
+msgid ""
+"**Screen Sharing**: Share your screen during calls to collaborate "
+"visually on tasks, review documents, or troubleshoot live issues."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:30
+msgid ""
+"**Call Recording and Transcription**: Record voice sessions for "
+"asynchronous review. *(Enterprise, Enterprise Advanced)*"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:31
+msgid ""
+"**Live Captioning**: Generate real-time subtitles for accessibility. "
+"*(Enterprise, Enterprise Advanced)*"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:33
+msgid "Deployment Overview"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:35
+msgid ""
+"This guide is organized into sequential deployment phases with numbered "
+"steps. Each phase begins with prerequisites and ends with verification "
+"checks. Before you begin any phase, make sure the listed prerequisites "
+"are met, then move to the next phase only after the verification checks "
+"are passing. This structure helps you catch and fix issues early, when "
+"they are easiest to isolate."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:37
+msgid "**Deployment Phases:**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:39
+msgid "[**Preparation and Networking**](#phase-1-preparation-and-networking)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:41
+msgid ""
+"Choose your deployment architecture, make networking decisions, provision"
+" required servers, and confirm the required network ports and paths are "
+"open before deployment."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:43
+msgid "[**Install and Configure Calls**](#phase-2-install-and-configure-calls)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:45
+msgid ""
+"Complete the installation and configuration for the deployment "
+"architecture you selected in Phase 1. You will only follow one path:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:47
+msgid ""
+"[**Path A: Configure Integrated Calls**](#path-a-configure-integrated-"
+"calls)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:49
+msgid ""
+"Use the built-in Calls service on the Mattermost server for simpler "
+"deployment at small scale."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:51
+msgid ""
+"[**Path B: Install and Configure RTCD**](#path-b-install-and-configure-"
+"rtcd) (Optional)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:53
+msgid ""
+"Use the RTCD (Real-Time Communication Daemon) service for larger scale "
+"production deployments. RTCD offloads media processing tasks from the "
+"Mattermost server for optimized performance and scalability."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:55
+msgid ""
+"[**Install and Configure Recording**](#phase-3-install-and-configure-"
+"recording) (Optional)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:57
+msgid ""
+"Calls Offloader is a service required to deliver recording, transcription"
+" and live captions."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:59
+msgid "[**Pilot Rollout**](#phase-4-pilot-rollout)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:61
+msgid ""
+"Expand testing to a small group of pilot users to watch for client, "
+"network, and environment-specific issues under real usage."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:63
+msgid "[**Production Rollout**](#phase-5-production-rollout)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:65
+msgid ""
+"Rollout to all users in controlled waves with appropriate communication "
+"and monitoring, and be ready to pause or roll back if needed."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:68
+msgid "Deployment Prerequisites"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:70
+msgid ""
+"Use this checklist to confirm you have the infrastructure, skills, and "
+"access required before you begin deploying Calls. Completing these "
+"prerequisites now helps prevent delays caused by missing dependencies "
+"later in the deployment process."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:72
+msgid "Deployment Infrastructure Requirements"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:74
+msgid "You have a running Mattermost server on v10.0+."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:76
+#, python-brace-format
+msgid ""
+"_See {doc}`System Information <../../end-user-guide/collaborate/view-"
+"system-information>` to check your Mattermost edition and version._"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:78
+msgid "Your Mattermost server is configured to use HTTPS."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:80
+#, python-brace-format
+msgid ""
+"_See {doc}`Configure TLS <../../deployment-guide/server/setup-tls>` if "
+"you need to set up HTTPS._"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:82
+msgid ""
+"You know how many active users you have in your current Mattermost "
+"deployment"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:84
+#, python-brace-format
+msgid ""
+"_See {doc}`Site Statistics <../../administration-"
+"guide/manage/statistics>` to access usage metrics._"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:86
+msgid ""
+"You can provision at least one dedicated Linux server or VM if you plan "
+"to use the RTCD service."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:88
+msgid ""
+"_See [Infrastructure Decisions](#infrastructure-decisions) (Step 1.2) if "
+"you're unsure if you need RTCD._"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:90
+msgid ""
+"You can provision a dedicated Linux server or VM for the `calls-"
+"offloader` service if you need recording, transcription, or live "
+"captions."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:91
+msgid ""
+"You are prepared to deploy a TURN server if your users cannot reliably "
+"reach the media service on UDP or TCP `8443`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:93
+msgid ""
+"_See [Networking Decisions](#networking-decisions) (Step 1.3) if you're "
+"unsure if you need a TURN server._"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:95
+#, python-brace-format
+msgid ""
+"You have the appropriate {doc}`Mattermost edition and license "
+"<../../product-overview/editions-and-offerings>` for the features you "
+"need:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:96
+msgid ""
+"**Mattermost Entry or Team Edition**: 1-1 calling and screen sharing (Up "
+"to 40 minutes)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:97
+msgid ""
+"**Mattermost Professional**: Group calling and screen sharing (No time "
+"limit)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:98
+msgid "**Mattermost Enterprise or Enterprise Advanced**: Required for:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:99
+msgid "RTCD service for scale (50+ users) and production reliability."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:100
+msgid "Recording, transcription, or live captions."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:102
+msgid "Skills and Access Requirements"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:104
+msgid ""
+"You are comfortable with basic Linux administration, or you have someone "
+"available who is. You will need to connect to servers over SSH, edit "
+"configuration files, manage systemd services, inspect logs, and run shell"
+" commands."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:105
+msgid "You have System Admin access to your Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:107
+#, python-brace-format
+msgid ""
+"_See {doc}`Mattermost roles <../../end-user-guide/collaborate/learn-"
+"about-roles>` to learn about roles and permissions._"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:109
+msgid "Networking Requirements"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:111
+msgid ""
+"You know how end users will connect to Calls (From private networks, VPN,"
+" or from the public internet)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:113
+msgid ""
+"_This impacts your [networking decisions](#networking-decisions) (Step "
+"1.3)_"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:115
+msgid ""
+"You can open the required inbound and outbound firewall rules, or you can"
+" engage the network or security team that manages them."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:117
+msgid "Validation Resources"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:119
+msgid ""
+"You have two test accounts available for smoke testing during Calls "
+"installation and configuration."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:120
+msgid ""
+"You have a small pilot group (5-10 users) available for validation across"
+" the client types and networks you care about."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:122
+msgid "Contacting Support"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:124
+msgid ""
+"You know how to open a [request](https://support.mattermost.com) with "
+"Mattermost support if you encounter issues."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:126
+#, python-brace-format
+msgid ""
+"_Please include the exact **step number** (e.g. 2A.2.1) that failed, "
+"along with your {doc}`Mattermost support packet <../../administration-"
+"guide/manage/admin/generating-support-packet>` and [Calls logs](calls-"
+"logging.md)._"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:129
+msgid ""
+"If you need expert help deploying Calls, contact your Account Manager or "
+"[talk to a Mattermost expert](https://mattermost.com/contact-sales/) to "
+"learn about professional service offerings."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:134
+msgid "Phase 1: Preparation and Networking"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:136
+msgid "1.1 Prerequisites"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:138
+msgid "Before you start, confirm the following:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:140
+msgid ""
+"You know how many active users you have in your current Mattermost "
+"deployment."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:141
+msgid ""
+"You know whether recording, transcription, or live captions are required "
+"for your deployment."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:142
+msgid ""
+"You can provision additional servers if your chosen architecture requires"
+" RTCD or Recording services."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:143
+msgid ""
+"You can open inbound and outbound network ports on the servers involved "
+"in your deployment."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:145
+msgid ""
+"_If a network or security team manages your firewalls, you'll need to "
+"involve them before continuing._"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:147
+msgid "1.2 Infrastructure Decisions"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:149
+msgid ""
+"Here you will make two important infrastructure decisions: First you'll "
+"choose your media processing architecture, then decide whether you need "
+"recording. Reference topology for each architecture is provided."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:151
+msgid "Media Service: RTCD or Integrated"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:153
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:319
+msgid "**Integrated**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:155
+msgid ""
+"This is the simplest deployment model, since you do not need to provision"
+" a separate service to handle media processing. In Integrated mode, the "
+"Calls plugin runs its built-in media service directly on the Mattermost "
+"server."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:157
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:323
+msgid "**RTCD**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:159
+msgid ""
+"RTCD is a dedicated real-time communications service for Mattermost Calls"
+" that processes call media outside the main Mattermost server. In most "
+"production deployments, **RTCD is the recommended deployment model** "
+"because it improves performance, scalability, and stability by isolating "
+"call traffic and reducing load on the Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:161
+msgid ""
+"To determine if you'll need RTCD, start by answering the following "
+"questions about your deployment:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:163
+msgid "**Are you deploying Calls on Kubernetes?**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:164
+#, python-brace-format
+msgid ""
+"**Yes:** You'll need to deploy RTCD as it's the only supported way to run"
+" Calls. See the {doc}`Kubernetes <../../administration-guide/configure"
+"/calls-kubernetes>` Calls deployment guide for details."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:165
+msgid "**No:** Continue to the next question."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:166
+#, python-brace-format
+msgid ""
+"**What is the *Total User* count of your existing Mattermost "
+"deployment?** _(Check {doc}`Site Statistics <../../administration-"
+"guide/manage/statistics>`)_"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:167
+msgid "**Up to 50:** You can use the **Integrated** deployment model."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:168
+msgid ""
+"**More than 50:** You'll need to deploy RTCD to avoid impacting messaging"
+" performance of the Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:170
+msgid ""
+"Use the tabs below to view the reference architecture for each deployment"
+" model:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:174
+msgid ""
+"An **Integrated** deployment does not require any additional "
+"infrastructure:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:176
+msgid "Integrated Calls deployment"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:181
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:229
+msgid "**When to use it**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:183
+msgid "You are evaluating Calls for the first time."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:184
+msgid "You expect fewer than 50 people to use Calls."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:185
+msgid "You want the simplest possible deployment."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:187
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:207
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:238
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:258
+msgid "**Components**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:189
+msgid ""
+"**Mattermost server**: Calls plugin is pre-installed, and no additional "
+"infrastructure is needed."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:191
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:212
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:243
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:264
+msgid "**License**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:193
+msgid "**Mattermost Entry**: 1:1 Calls + Screen Sharing (Up to 40 minutes)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:194
+msgid ""
+"**Mattermost Professional, Enterprise, or Enterprise Advanced**: Group "
+"Calls + Screen Sharing (No time limit)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:196
+msgid "Recording"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:198
+msgid ""
+"The **Recording** service (`calls-offloader`) can optionally be added to "
+"an **Integrated** Calls deployment if you need to enable recording, "
+"transcription, and live captions."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:200
+msgid ""
+"Reference architecture when using the Recording service with Integrated "
+"Calls:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:202
+msgid "Calls deployment with Integrated Calls and recording"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:209
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:240
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:260
+msgid "**Mattermost server**: Calls plugin is pre-installed."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:210
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:262
+msgid ""
+"**Calls Offloader**: Job service that manages recording, transcription "
+"and live captions."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:214
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:245
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:266
+msgid "**Mattermost Enterprise** or **Enterprise Advanced**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:220
+msgid ""
+"An **RTCD Server** is added as a dedicated media service that processes "
+"all call audio and screen sharing media."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:222
+msgid "Calls deployment with RTCD"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:227
+msgid ""
+"The Mattermost server is still responsible for signaling (setting up, "
+"managing, and ending calls) and channel state (who is joining or leaving,"
+" who has muted, and overall call status), but the call media itself flows"
+" directly between clients and the RTCD server, completely bypassing the "
+"Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:231
+msgid ""
+"Use RTCD if you need optimized performance, scalability, and the best "
+"possible user experience for Mattermost Calls. Specifically:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:233
+msgid ""
+"You want to keep call media traffic off your main Mattermost server to "
+"improve overall server performance and reduce CPU usage spikes."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:234
+msgid ""
+"You need your deployment to easily scale as call volume increases; "
+"additional RTCD servers can be added for load balancing."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:235
+msgid ""
+"You want the lowest possible media latency and highest reliability for "
+"Calls."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:236
+msgid "You are deploying Mattermost on Kubernetes, where RTCD is required."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:241
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:261
+msgid ""
+"**RTCD Server**: Dedicated media service. Clients connect to it directly "
+"for media traffic."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:247
+msgid ""
+"Recording/home/sdh/okrbest/okrbest-docs/source/administration-"
+"guide/configure/calls-deployment-guide.md:247: (INFO/1) Duplicate "
+"implicit target name: \"recording\"."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:249
+msgid ""
+"The **Recording** service (`calls-offloader`) can optionally be added to "
+"an **RTCD** Calls deployment if you need to enable recording, "
+"transcription, and live captions."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:251
+msgid "Reference architecture when using the Recording service with RTCD:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:253
+msgid "Calls deployment with RTCD and recording"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:269
+msgid ""
+"For most production deployments that need recording, RTCD plus `calls-"
+"offloader` is the recommended combination because it keeps call media off"
+" the Mattermost server and scales more predictably."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:274
+msgid "1.3 Networking Decisions"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:276
+msgid "1.3.1 STUN for Public IP Discovery"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:278
+msgid ""
+"STUN is a protocol that helps the media server discover its public IP "
+"address automatically so remote clients can connect to Calls."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:280
+msgid ""
+"Mattermost provides a default STUN server "
+"(`stun.global.calls.mattermost.com`). No call media or signaling traffic "
+"is sent through this service; it is used only for STUN lookups. Use this "
+"decision tree to determine if you need to allow outbound access from your"
+" media server to the Mattermost global STUN service for public IP "
+"discovery."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:283
+msgid ""
+"Your media server is the Mattermost server in the case of an "
+"**Integrated** Calls deployment, or it's the **RTCD server** in the case "
+"of an RTCD Calls deployment."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:286
+msgid "**STUN Decision Tree**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:288
+msgid ""
+"**Are all users and your media server in the same private network, VPN, "
+"or air-gapped environment, with no outside clients?**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:289
+msgid ""
+"**Yes**: You do not need STUN for public IP discovery. You will use the "
+"private address of your media server for configuration in Phase 2."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:290
+msgid "**No**: Continue to the next question."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:292
+msgid ""
+"**Does your media server have a stable public IP address or DNS name that"
+" clients on the public internet can reach?**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:293
+msgid ""
+"**Yes**: You do not need STUN for public IP discovery. You will use the "
+"stable public address of your media server for configuration in Phase 2."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:294
+msgid ""
+"**No**: You will need STUN. You must open outbound UDP 3478 from your "
+"media server to `stun.global.calls.mattermost.com`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:296
+msgid ""
+"If your deployment requires STUN for public IP discovery, note that now "
+"so you can include it when opening ports in Step 1.5."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:298
+msgid "1.3.2 TURN Server"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:300
+msgid ""
+"TURN is a relay service used only when clients cannot reach the Calls "
+"media service directly. If STUN helps clients discover where to connect, "
+"TURN acts as a backup route when direct connectivity is not possible."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:302
+msgid ""
+"Provisioning a TURN server is necessary if both of these conditions are "
+"true:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:304
+msgid ""
+"Clients are on networks that cannot directly reach the RTCD Server or "
+"Calls plugin over UDP (preferred) on port `8443` for media traffic."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:305
+msgid ""
+"Clients are on networks that cannot directly reach the RTCD Server or "
+"Calls plugin over TCP (fallback) on port `8443` for media traffic."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:307
+msgid ""
+"TURN is typically a last resort as it adds latency and infrastructure "
+"complexity. Only plan to deploy TURN if your answers indicate that you "
+"cannot rely on UDP or TCP for media, and users need an alternative route."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:310
+msgid ""
+"TURN is a fallback service, not a default requirement. If clients can "
+"reliably reach the media service over UDP or TCP `8443`, do not deploy "
+"TURN. If you do deploy TURN, only open the TURN listener ports and "
+"transports you actually use, and scope client access according to your "
+"organization's network policy."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:313
+msgid "1.4 Provision Infrastructure"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:315
+msgid ""
+"Now you'll provision the servers or VMs required to support your Calls "
+"deployment. You are only preparing infrastructure here; software "
+"installation and service configuration happen in later phases. This step "
+"matters because you need the IP addresses or DNS names of these servers "
+"before you can finish the networking configurations in the next step."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:317
+msgid ""
+"Infrastructure requirements depend on the deployment infrastructure you "
+"selected in Step 1.2. If you provision additional hardware, write down "
+"the IP addresses or DNS names now because you will use them in Step 1.5:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:321
+msgid ""
+"Since the Mattermost server is handling all media processing, you can "
+"skip this step and proceed to network configuration in Step 1.5."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:325
+msgid ""
+"You will need to provision a new server for RTCD. Use the [performance "
+"baselines](calls-metrics-monitoring.md#performance-baselines) for "
+"benchmark examples of hardware sizing. The RTCD service supports "
+"[horizontal scaling](calls-rtcd-setup.md#horizontal-scaling), but we "
+"recommend starting with one server and then scaling out if your expected "
+"workload requires it."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:327
+msgid "**Recording**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:329
+msgid ""
+"You will need to provision a new server for the `calls-offloader` "
+"service. The recommended starting point is **8 vCPU / 16 GB RAM**, or you"
+" can use these [performance benchmarks](https://github.com/mattermost"
+"/calls-offloader/blob/master/docs/performance.md) to estimate recording "
+"capacity and transcription load."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:331
+msgid "**TURN Server**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:333
+msgid ""
+"If you've determined in Step 1.3.2 that your users cannot reliably reach "
+"the media server over UDP or TCP `8443`, you will need to provision your "
+"TURN server now."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:335
+msgid ""
+"Mattermost recommends installing "
+"[coturn](https://github.com/coturn/coturn)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:337
+msgid "Before moving to Step 1.5, confirm the following:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:339
+msgid "Every required server or VM has been created."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:340
+msgid ""
+"Every required server has the IP address or DNS name you plan to use "
+"later in configuration."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:341
+msgid ""
+"You have administrative access to every required server. (validate with "
+"`ssh <user>@<SERVER_IP>`)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:343
+msgid "1.5 Network Configuration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:345
+msgid ""
+"This section lists the network ports that must be opened for each server "
+"involved in your Calls deployment. The server instances must exist before"
+" you can configure these rules, which is why provisioning in Step 1.4 "
+"comes first."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:347
+msgid "**How you open ports depends on your environment:**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:349
+msgid ""
+"**Cloud deployments (AWS, Azure, GCP):** Configure inbound and outbound "
+"rules in your cloud console security group or network ACL for each "
+"instance."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:350
+msgid ""
+"**On-premises or self-managed VMs:** Use `firewalld` (RHEL, Rocky Linux, "
+"AlmaLinux) or `ufw` (Ubuntu/Debian) commands directly on each server."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:351
+msgid ""
+"**Centrally managed firewall:** If a network team manages your firewall, "
+"share the tables below with them and request the rules before proceeding."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:353
+msgid ""
+"Work through one server at a time so you can verify nothing is missed "
+"before moving on."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:355
+msgid ""
+"**Only open the ports relevant for your chosen deployment architecture "
+"(Integrated or RTCD):**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:360
+msgid "Mattermost server ports"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "Port"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "Protocol"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "Direction"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "Source"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "Destination"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "Notes"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "443"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "TCP"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "Inbound"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "Mattermost clients"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "Mattermost server"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+msgid "HTTPS and WebSocket signaling."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "8443"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "UDP"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+msgid "Media traffic (Integrated mode)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+msgid "Media traffic fallback (Integrated mode)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "3478"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "Outbound"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+msgid "`stun.global.calls.mattermost.com`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:358
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+msgid "(Optional - Step 1.3.1) Public IP discovery using STUN."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:371
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:416
+msgid ""
+"If you use NGINX as a reverse proxy in front of Mattermost, it should not"
+" be used to forward UDP traffic. Port 8443 must be opened directly on the"
+" server running the media service (RTCD or Integrated) - not on NGINX. "
+"Port 443 is the only port NGINX needs to handle for Calls."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:374
+msgid "Recording server ports"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:376
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:421
+msgid "If you deployed a calls-offloader server in Step 1.4, open these ports:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "4545"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "calls-offloader server"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid ""
+"Job service API (Internal only. Restrict this rule to the Mattermost "
+"server or approved application subnet only.)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid ""
+"Recorder and transcriber jobs connect to the media service as call "
+"participants."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "Media traffic fallback."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "Recorder and transcriber jobs post results back to Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:385
+msgid "TURN server ports"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:387
+msgid ""
+"If you deployed a TURN server in Step 1.4, open only the ports required "
+"by the transports you actually configure. If you are using `coturn`, "
+"these are common defaults:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "UDP / TCP"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "TURN server"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "TURN relay."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "5349"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid ""
+"(Optional) If you configure TURN over TLS. Do not open this port unless "
+"you are explicitly using it."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "49152-65535"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:370
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "TURN relay port range required to relay media."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:400
+msgid ""
+"Mattermost server ports/home/sdh/okrbest/okrbest-docs/source"
+"/administration-guide/configure/calls-deployment-guide.md:400: (INFO/1) "
+"Duplicate implicit target name: \"mattermost server ports\"."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:406
+msgid "RTCD server ports"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+msgid "Mattermost clients and calls-offloader server"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:415
+msgid "RTCD server"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+msgid "Media traffic."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+msgid "8045"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:398
+msgid ""
+"RTCD API (Internal only. Restrict this rule to the Mattermost server or "
+"approved application subnet only.)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:419
+msgid ""
+"Recording server ports/home/sdh/okrbest/okrbest-docs/source"
+"/administration-guide/configure/calls-deployment-guide.md:419: (INFO/1) "
+"Duplicate implicit target name: \"recording server ports\"."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:430
+msgid ""
+"TURN server ports/home/sdh/okrbest/okrbest-docs/source/administration-"
+"guide/configure/calls-deployment-guide.md:430: (INFO/1) Duplicate "
+"implicit target name: \"turn server ports\"."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:432
+msgid ""
+"If you deployed a TURN server in Step 1.4, open these ports. If you are "
+"using `coturn`, these are the common defaults:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:442
+msgid "1.6 Networking Checks"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:444
+msgid ""
+"These checks validate firewall rules and network reachability. They do "
+"not require the production Calls, RTCD, or `calls-offloader` services to "
+"be installed yet. To get reliable results before those services exist, "
+"start a temporary listener on the target host before each applicable scan"
+" below. This is especially important for UDP checks, where a blocked port"
+" and an allowed-but-idle port can otherwise look the same."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:446
+msgid ""
+"First, install `nmap` on each source machine or client you will run "
+"checks from, and install `ncat` on each target host where you will start "
+"a temporary listener. For example:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:448
+msgid "Ubuntu or Debian: `sudo apt install nmap ncat`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:449
+msgid "RHEL, Rocky Linux, or AlmaLinux: `sudo dnf install nmap nmap-ncat`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:451
+msgid ""
+"When you execute each check below, `nmap` returns `open`, `closed`, or "
+"`filtered`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:453
+msgid "**Pass**:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:454
+msgid ""
+"`open`: Port is reachable, and the target host was able to bind a "
+"temporary listener on that port."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:456
+msgid "**Fail**:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:457
+msgid ""
+"`closed`: Traffic reached the target host, but nothing is listening on "
+"that port. Confirm the temporary listener is still running, the port is "
+"correct, and the port was not already in use by another process."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:458
+msgid ""
+"`filtered`: Firewall is blocking the port. Revisit your networking "
+"configuration in Step 1.5 before continuing."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:461
+msgid ""
+"In the commands below, replace `TARGET_IP` with the actual IP address of "
+"the server you are testing. Start the server-side `ncat` listener on the "
+"target host first, then run the client-side `nmap` command from the "
+"source machine. Stop the temporary listener with `Ctrl+C` after the check"
+" completes."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:464
+msgid "**Integrated deployments**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:466
+msgid ""
+"Start the temporary listeners on the Mattermost Server, then run `nmap` "
+"from any client machine on the same network as your users:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:544
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "Check"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid "Command"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "`TARGET_IP`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "Description"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "1.6.1"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid ""
+"Mattermost Server: `sudo ncat -u -l -k -p 8443 -c '/bin/cat'`<br>Client: "
+"`sudo nmap -sU -p 8443 TARGET_IP`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "Mattermost server IP"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "Clients can send UDP media to the Mattermost server"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "1.6.2"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid ""
+"Mattermost Server: `sudo ncat -l -k -p 8443`<br>Client: `nmap -p 8443 "
+"TARGET_IP`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "Clients can reach the Mattermost server for TCP media fallback"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:473
+msgid "**RTCD deployments**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:475
+msgid ""
+"Start the temporary listeners on the RTCD Server, then run `nmap` from "
+"any client machine on the same network as your users:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "1.6.3"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid ""
+"RTCD Server: `sudo ncat -u -l -k -p 8443 -c '/bin/cat'`<br>Client: `sudo "
+"nmap -sU -p 8443 TARGET_IP`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "RTCD server IP"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "Clients can send UDP media to the RTCD server"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "1.6.4"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "RTCD Server: `sudo ncat -l -k -p 8443`<br>Client: `nmap -p 8443 TARGET_IP`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "Clients can reach the RTCD server for TCP media fallback"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:482
+msgid ""
+"Start the temporary listener on the RTCD Server, then run `nmap` from the"
+" Mattermost server:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "1.6.5"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid ""
+"RTCD Server: `sudo ncat -l -k -p 8045`<br>Mattermost Server: `nmap -p "
+"8045 TARGET_IP`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "Mattermost can reach the RTCD API"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:488
+msgid "**Recording deployments**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:490
+msgid ""
+"Start the temporary listener on the Recording Server (`calls-offloader`),"
+" then run `nmap` from the Mattermost server:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "1.6.6"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid ""
+"Recording Server: `sudo ncat -l -k -p 4545`<br>Mattermost Server: `nmap "
+"-p 4545 TARGET_IP`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "calls-offloader server IP"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "Mattermost can reach the calls-offloader API"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:496
+msgid ""
+"Start the temporary listeners on the media server (RTCD or Mattermost "
+"server if using Integrated mode), then run `nmap` from the Recording "
+"server (`calls-offloader`):"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "1.6.7"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid ""
+"RTCD or Mattermost Server: `sudo ncat -u -l -k -p 8443 -c "
+"'/bin/cat'`<br>Recording Server: `sudo nmap -sU -p 8443 TARGET_IP`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "RTCD server IP (or Mattermost server IP if using Integrated mode)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid ""
+"Calls Offloader can send UDP media to the media service to join calls for"
+" recording"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "1.6.8"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid ""
+"RTCD or Mattermost Server: `sudo ncat -l -k -p 8443`<br>Recording Server:"
+" `nmap -p 8443 TARGET_IP`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "Calls Offloader can reach the media service for TCP media fallback"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:503
+msgid ""
+"For the next check, use the existing HTTPS listener on your running "
+"Mattermost server instead of starting a temporary `ncat` listener:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "1.6.9"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "Recording Server: `nmap -p 443 TARGET_IP`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "Calls Offloader can post recordings back to Mattermost"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:509
+msgid "**TURN deployments**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:511
+msgid ""
+"Start the temporary listeners on the TURN Server, then run `nmap` from "
+"any client machine on the same network as your users:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "1.6.10"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid ""
+"TURN Server: `sudo ncat -u -l -k -p 3478 -c '/bin/cat'`<br>Client: `sudo "
+"nmap -sU -p 3478 TARGET_IP`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "TURN server IP"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "Clients can reach the TURN server on UDP 3478"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "1.6.11"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "TURN Server: `sudo ncat -l -k -p 3478`<br>Client: `nmap -p 3478 TARGET_IP`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "Clients can reach the TURN server on TCP 3478"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "1.6.12"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid ""
+"TURN Server: `sudo ncat -u -l -k -p 49152 -c '/bin/cat'`<br>Client: `sudo"
+" nmap -sU -p 49152 TARGET_IP`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:460
+msgid "Spot check of the TURN relay port range"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:519
+msgid "1.7 Verification Checks"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:521
+msgid "Before proceeding to Phase 2, confirm all of the following:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:523
+msgid ""
+"You have chosen your deployment architecture and provisioned the required"
+" servers."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:524
+msgid ""
+"You have confirmed your Mattermost license supports the architecture and "
+"features you plan to deploy."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:525
+msgid ""
+"Every required firewall rule and network path for your chosen "
+"architecture has been opened."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:526
+msgid ""
+"Every relevant network check in Step 1.6 returned the expected result "
+"(`open`, but not `closed` or `filtered`)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:527
+msgid ""
+"If you need STUN, outbound UDP `3478` is allowed to "
+"`stun.global.calls.mattermost.com`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:530
+msgid ""
+"**Do not proceed to Phase 2 until all checks in this section relevant to "
+"your deployment architecture are passing. If any check fails, go to "
+"[Appendix A: Troubleshooting](#appendix-a-troubleshooting).**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:535
+msgid "Phase 2: Install and Configure Calls"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:537
+msgid ""
+"Now you will configure Calls following the relevant path for your "
+"deployment architecture. Do not complete both paths for the same "
+"deployment."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:539
+msgid "**Path A** if you are using the **Integrated** Calls deployment model."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:540
+msgid "**Path B** if you are using the **RTCD** Calls deployment model."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:542
+msgid ""
+"Select your path in the tab below to follow the appropriate installation "
+"and configuration instructions:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:546
+msgid "Path A: Configure Integrated Calls"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:548
+msgid "2A.1 Prerequisites"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:550
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:626
+msgid "Phase 1 verification checks passed"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:551
+msgid "Integrated is the base architecture you selected in Step 1.2"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:552
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:630
+msgid "Two test accounts on your Mattermost server"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:553
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:631
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:727
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:879
+msgid "System Admin permissions on your Mattermost server"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:555
+msgid "2A.2 Configure the Calls plugin"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:557
+msgid ""
+"The Calls plugin is prepackaged with Mattermost self-hosted deployments. "
+"Go to **System Console > Plugins > Calls > Settings** and complete the "
+"following steps:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:559
+msgid "**2A.2.1: Enable the plugin**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:561
+msgid ""
+"Set **Enable Plugin** to `true`. This enables editing for the rest of the"
+" configuration settings on the page."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:563
+msgid "**2A.2.2: Enable test mode**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:565
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:659
+msgid ""
+"Set **Test mode** to `on`, so Calls stays restricted during initial "
+"validation. In this mode, System Admins control where Calls is available "
+"and can enable it in specific channels for testing."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:567
+msgid "**2A.2.3: Configure the host media address**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:569
+msgid ""
+"Set **ICE Host Override** to the IP address or DNS name clients will use "
+"to reach the media service. ICE (Interactive Connectivity Establishment) "
+"is the protocol your users' devices use to find a path to the media "
+"server. The ICE Host Override tells Calls which address to advertise to "
+"them. Base this value on the STUN decision tree from Step 1.3.1."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:571
+msgid ""
+"If your users are in a private network, VPN, or air-gapped environment, "
+"set it to the private address of the Mattermost server they can reach."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:572
+msgid "If your Mattermost server has a stable public IP, set it to that IP."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:573
+msgid ""
+"Otherwise, leave it empty for automatic public address discovery using "
+"STUN."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:575
+msgid "**2A.2.4: Configure TURN Servers**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:577
+msgid ""
+"If TURN is being used, replace or extend the **ICE server "
+"configurations** array with your TURN server details:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:589
+msgid ""
+"If your TURN deployment uses short-lived generated credentials, also set "
+"**TURN Static Auth Secret** and **TURN Credentials Expiration**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:591
+msgid "**2A.2.5: Save configuration**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:593
+msgid ""
+"Click **Save** on the Calls settings page. It is also recommended that "
+"you restart the plugin after changing media server settings:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:595
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:904
+msgid "Go to **System Console > Plugins > Plugin Management**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:596
+msgid "Disable **Calls** and wait a few seconds."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:597
+msgid "Enable **Calls** again."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:599
+msgid "2A.3 Verification Checks"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:601
+msgid "Now smoke test your Calls deployment with your test accounts:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:603
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:688
+msgid "Create a test channel such as `calls-test`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:604
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:689
+msgid "Open the **Channel menu**, then select **Enable calls**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:605
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:690
+msgid "Invite your test users into the channel so you can validate a real call."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:544
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "Action"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:544
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "Pass criteria"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:544
+msgid "2A.3.1"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:544
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+msgid "Start a call from the test channel with a second user"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:544
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+msgid "Both users are in the call"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:544
+msgid "2A.3.2"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:544
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+msgid "Speak during the call"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:544
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+msgid "Both users can hear each other clearly"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:544
+msgid "2A.3.3"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:544
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+msgid "Share your screen from a desktop app or supported browser"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:544
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+msgid "Screen sharing is visible to the other user"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:544
+msgid "2A.3.4"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:544
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+msgid "End the call"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:544
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+msgid "The call indicator disappears from the channel"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:615
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:706
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:774
+msgid ""
+"**Do not continue until all of the checks pass. If any check fails, go to"
+" [Appendix A: Troubleshooting](#appendix-a-troubleshooting).**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:622
+msgid "Path B: Install and Configure RTCD"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:624
+msgid "2B.1 Prerequisites"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:627
+msgid "RTCD is the base architecture you selected in Step 1.2"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:628
+msgid ""
+"RTCD server is provisioned (1.4) and RTCD networking checks passed "
+"(1.6.3-1.6.5)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:629
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:726
+msgid ""
+"Mattermost Enterprise or Enterprise Advanced license is active on your "
+"server"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:633
+msgid "2B.2 Install RTCD"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:635
+msgid ""
+"Follow the [RTCD Setup and Configuration](calls-rtcd-setup.md) guide for "
+"the actual installation. The guide covers:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:637
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:733
+msgid "Binary installation"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:638
+msgid "`rtcd.toml` configuration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:639
+msgid "Service setup"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:640
+msgid "TURN configuration (if applicable)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:643
+msgid ""
+"If you are deploying on Kubernetes, also use the [Calls Deployment on "
+"Kubernetes](calls-kubernetes.md) guide for cluster-specific installation "
+"and Helm-based configuration."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:646
+msgid ""
+"Before proceeding, run these checks from the Mattermost server to confirm"
+" RTCD is running and reachable:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+msgid "2B.2.1"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+msgid "`nmap -p 8045 YOUR_RTCD_SERVER`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+msgid "`open` - RTCD is running and accepting connections."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+msgid "2B.2.2"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+msgid "`curl http://YOUR_RTCD_SERVER:8045/version`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid "Returns a JSON version string"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:653
+msgid "2B.3 Connect Mattermost to RTCD"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:655
+msgid ""
+"Once RTCD is installed, configured, and reachable, update the Calls "
+"plugin to use it:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:657
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:749
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:897
+msgid "Go to **System Console > Plugins > Calls > Settings**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:658
+msgid ""
+"Set **Enable Plugin** to `true`. This enables editing for the rest of the"
+" Calls settings on the page."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:660
+msgid ""
+"Set **RTCD Service URL** to your RTCD address. If RTCD credentials were "
+"generated during setup, embed them directly in the URL:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:666
+msgid ""
+"Replace `clientID` and `authKey` with the values generated during RTCD "
+"setup. The first connection to RTCD self-registers the client and stores "
+"the authentication key in the database."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:668
+msgid ""
+"Alternatively, set credentials via environment variables on the "
+"Mattermost server: `MM_CALLS_RTCD_CLIENT_ID` and "
+"`MM_CALLS_RTCD_AUTH_KEY`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:670
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:754
+msgid "Click **Save** and restart the Calls plugin so the change takes effect."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:672
+msgid "2B.4 Configure Calls Monitoring"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:674
+msgid ""
+"Before your pilot, set up Calls monitoring so you can see sessions, "
+"errors, CPU, and memory while real users are testing."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:676
+msgid ""
+"Calls monitoring uses Prometheus (a tool that collects metrics from your "
+"servers) and Grafana (a dashboard that visualizes those metrics). If you "
+"don't have these set up yet, see [Mattermost monitoring setup"
+"](../../administration-guide/scale/deploy-prometheus-grafana-for-"
+"performance-monitoring.md) before continuing. If you already have "
+"Prometheus and Grafana running, add the following scrape targets and "
+"import the dashboard:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:678
+msgid "**RTCD metrics**: `http://YOUR_RTCD_SERVER:8045/metrics`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:679
+msgid ""
+"**Calls plugin metrics**: "
+"`http://YOUR_MATTERMOST_SERVER:8067/plugins/com.mattermost.calls/metrics`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:680
+msgid "**Grafana dashboard**: Import dashboard ID `23225`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:682
+msgid ""
+"See [Calls Metrics and Monitoring](calls-metrics-monitoring.md) for full "
+"configuration details."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:684
+msgid "2B.5 Verification Checks"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:686
+msgid "Now smoke test your RTCD deployment with your test accounts:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+msgid "2B.5.1"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+msgid "2B.5.2"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+msgid "2B.5.3"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:642
+msgid "2B.5.4"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:699
+msgid "If these checks fail, try these troubleshooting techniques first:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:701
+msgid ""
+"Re-run checks `2B.2.1` and `2B.2.2` to confirm RTCD is listening and "
+"responding."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:702
+msgid ""
+"Confirm **RTCD Service URL** is correct and includes credentials if your "
+"RTCD setup requires them."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:703
+msgid ""
+"Check that the Mattermost server can reach RTCD on port `8045`, and "
+"review RTCD logs before changing other settings."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:714
+msgid "Phase 3: Install and Configure Recording"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:717
+msgid ""
+"Now we will install and configure the `calls-offloader` job service that "
+"handles call recording, transcription, and live captions."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:719
+msgid ""
+"**You can skip this phase if you do not need recording, transcription, or"
+" live captions.**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:721
+msgid "3.1 Prerequisites"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:723
+msgid ""
+"`calls-offloader` server is provisioned (1.4) and relevant networking "
+"checks passed (1.6.6-1.6.9)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:724
+msgid ""
+"If you are using Integrated mode: Phase 2A verification checks passed "
+"(2A.3.1-2A.3.4)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:725
+msgid ""
+"If you are using RTCD: Phase 2B verification checks passed "
+"(2B.5.1-2B.5.4)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:729
+msgid "3.2 Install calls-offloader"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:731
+msgid ""
+"Follow the [Calls Offloader Setup and Configuration](calls-offloader-"
+"setup.md) guide for installation. The guide covers:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:734
+msgid "`config.toml` configuration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:735
+msgid "Systemd service setup"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:736
+msgid "Docker-backed jobs"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:737
+msgid "Private network overrides"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:738
+msgid "Air-gapped installation"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:740
+msgid ""
+"Before proceeding, run these checks from the Mattermost server to confirm"
+" `calls-offloader` is running and reachable:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid "3.2.1"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid "`nmap -p 4545 YOUR_OFFLOADER_SERVER`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid "`open` - calls-offloader is running and accepting connections."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid "3.2.2"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid "`curl http://YOUR_OFFLOADER_SERVER:4545/version`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:747
+msgid "3.3 Connect calls-offloader to Mattermost"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:750
+msgid ""
+"Set **Job Service URL** to the calls-offloader address, for example `http"
+"://calls-offloader.internal:4545` on a trusted internal network."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:751
+msgid "Enable **Call Recordings** if needed."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:752
+msgid ""
+"Enable **Call Transcriptions** if needed. Transcriptions require "
+"recordings to be enabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:753
+msgid ""
+"Enable **Live Captions** if needed. Live captions require both recordings"
+" and transcriptions to be enabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:756
+msgid "3.4 Verification Checks"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:758
+msgid "Now smoke test recording-related features with your test accounts:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid "3.4.1"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid "Start recording as a call host"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid "Recording starts without error."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid "3.4.2"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid "End the call or stop the recording"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid "An MP4 file appears in the call thread after processing completes."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid "3.4.3"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid "With transcription enabled, end a recorded call"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid ""
+"An MP4 file and transcript file appear in the call thread after "
+"processing completes."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid "3.4.4"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid "With live captions enabled, start a recorded call"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:705
+msgid ""
+"Captions appear during the call within 1-3 seconds after participants "
+"speak."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:767
+msgid "If a recording-related check fails, isolate the problem before retrying:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:769
+msgid ""
+"**3.4.1 or 3.4.2 fails**: Confirm the **Job Service URL** is correct, the"
+" `calls-offloader` service is running, and the Mattermost server can "
+"reach port `4545`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:770
+msgid ""
+"**3.4.3 fails**: Confirm recordings are enabled first, then confirm "
+"transcription is enabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:771
+msgid ""
+"**3.4.4 fails**: Confirm both recordings and transcriptions are enabled "
+"before testing live captions."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:779
+msgid "Phase 4: Pilot Rollout"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:781
+msgid ""
+"Now that the technical configuration is complete and validated, run a "
+"small pilot with real users before broad rollout. The goal is to confirm "
+"Calls works reliably across the clients and locations your organization "
+"uses, and that your servers stay healthy under normal usage."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:783
+msgid "4.1 Prerequisites"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:785
+msgid ""
+"If using Integrated mode: Phase 2A verification checks passed "
+"(2A.3.1-2A.3.4)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:786
+msgid "If using RTCD: Phase 2B verification checks passed (2B.5.1-2B.5.4)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:787
+msgid "If using Recording: Phase 3 verification checks passed (3.4.1-3.4.4)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:788
+msgid "5 to 10 volunteer pilot users from different locations"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:789
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:880
+msgid "Access to the metrics dashboard and logs on your Calls infrastructure"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:790
+msgid ""
+"Pilot users have current [Mattermost desktop and mobile "
+"apps](https://mattermost.com/apps/)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:792
+msgid "4.2 Preparation and Communication"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:794
+msgid ""
+"For a successful pilot, make sure pilot users know what to test, how to "
+"start a call, and how to report problems."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:796
+msgid ""
+"After inviting your pilot users into the `calls-test` channel, post a "
+"short message there so everyone is testing the same things. A template is"
+" provided below:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:836
+msgid "4.3 Verification Checks"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:838
+msgid "**Monitoring**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "4.3.1"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "Check your metrics dashboard during a pilot call"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "Active sessions and participants are visible and counted correctly"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "4.3.2"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid ""
+"If using RTCD, check RTCD error metrics after pilot calls "
+"(`rtcd_rtc_errors_total`)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "No elevated error counts"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "4.3.3"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid ""
+"If using RTCD, check CPU and memory metrics during a pilot call "
+"(`rtcd_process_cpu_seconds_total`, `rtcd_process_resident_memory_bytes`)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "No CPU or memory spikes observed"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "4.3.4"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid ""
+"Review Mattermost logs, plus RTCD and calls-offloader logs if those "
+"services are deployed"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "No recurring `ERROR` lines, and no unexpected `WARN` patterns"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:847
+msgid "**Production readiness**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:849
+msgid ""
+"Collect feedback from your pilot users after 3-5 business days and use it"
+" to evaluate production readiness:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "Requirement"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "4.3.5"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "Audio quality rated acceptable by 80%+ of pilot users"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "4.3.6"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "No blocking issues found in the pilot test cases"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "4.3.7"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:773
+msgid "All pilot users confirm readiness for production rollout"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:857
+msgid "If the pilot users find issues, do not expand the rollout yet:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:859
+msgid "Fix the issue in the smallest possible scope."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:860
+msgid "Repeat the affected pilot test case."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:861
+msgid "Stay in pilot until the failing scenario is consistently passing."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:863
+msgid ""
+"You can also run `/call stats` in the Mattermost message area after a "
+"failed test for additional diagnostic clues."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:866
+msgid ""
+"**Do not continue to a production rollout until all relevant checks are "
+"passing. If any check fails, go to [Appendix A: "
+"Troubleshooting](#appendix-a-troubleshooting).**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:871
+msgid "Phase 5: Production Rollout"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:873
+msgid "Now you will execute a broader rollout to all users in production."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:875
+msgid "5.1 Prerequisites"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:877
+msgid "Phase 4 production readiness checks passed (4.3.1-4.3.7)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:878
+msgid "Rollback plan documented and understood"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:882
+msgid "5.2 Rollback plan"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:884
+msgid ""
+"You should be familiar with your rollback options before you begin the "
+"staged production rollout. If something goes wrong, choose the smallest "
+"rollback that solves the problem:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:886
+msgid "**Per-channel rollback**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:888
+msgid "Disables Calls in specific channels."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:890
+msgid "Navigate to the impacted channel."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:891
+msgid "Select the **Channel menu**, then select **Disable calls**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:893
+msgid "**Test mode rollback**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:895
+msgid "Restricts Calls to channels where it has been enabled by a System Admin."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:898
+msgid "Set **Test Mode** to `on`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:900
+msgid "**Full rollback**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:902
+msgid "Disables Calls completely for everyone."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:905
+msgid "**Disable** the Calls plugin."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:907
+msgid ""
+"If you have an existing conferencing tool, keep it available until Calls "
+"is stable in production."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:909
+msgid "5.3 Preparation and Communication"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:911
+msgid ""
+"Before announcing Calls to users, create a `calls-support` public "
+"channel. This gives users a clear place to report issues and gives your "
+"admins a single place to track rollout problems."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:913
+msgid ""
+"Also prepare a short announcement to share in an all-hands channel or "
+"similar high-visibility location. A template is provided below:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:950
+msgid "5.4 Rollout Stages"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:952
+msgid ""
+"We recommend enabling Calls in stages instead of enabling it everywhere "
+"at once. This way you can watch real usage, catch problems early, and "
+"rollback cleanly if needed."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Stage"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Channels / departments"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Suggested timeline"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Rollback approach"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Stage 1"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "IT and Admin channels"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Days 1-3"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Per-channel rollback"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Stage 2"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Engineering or power user channels"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Days 4-7"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Stage 3"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Full organization"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Day 8+"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Test mode (if issues are isolated) or full rollback"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:960
+msgid ""
+"If a rollout stage introduces problems, pause the rollout, use the "
+"rollback option listed for that stage, fix the issue, and repeat the same"
+" stage before moving to the next one."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:962
+msgid "5.5 Monitor and optimize"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:964
+msgid ""
+"Once Calls is live, monitor it actively for the first two weeks and tune "
+"based on what you see."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:966
+msgid "**5.5.1: Watch server health during peak call hours**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:968
+msgid ""
+"Monitor CPU and memory on the media server (RTCD or Mattermost server) "
+"daily during peak usage. If CPU utilization consistently exceeds 70%, "
+"consider increasing hardware specs, or adding RTCD nodes before the next "
+"rollout stage."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:970
+msgid "**5.5.2: Review logs daily**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:972
+msgid ""
+"Check Mattermost, RTCD, and calls-offloader logs each day for recurring "
+"`ERROR` or `WARN` lines. Address any patterns before they become user-"
+"facing problems."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:974
+msgid "**5.5.3: Tune Max Call Participants**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:976
+msgid ""
+"If you see resource pressure during large calls, lower **Max Call "
+"Participants** in **System Console > Plugins > Calls**. By default, there"
+" is no participant limit (configured as `0`, which means unlimited). A "
+"practical ceiling for most deployments is `50`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:978
+msgid "**5.5.4: Track user-reported issues**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:980
+msgid "Monitor `~calls-support` for recurring complaints."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:982
+msgid ""
+"Check [Appendix A: Troubleshooting](#appendix-a-troubleshooting) for "
+"common issues and fixes."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:986
+msgid "Appendix A: Troubleshooting"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:988
+msgid "A.1 The call button is missing"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Cause"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Fix"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "The Calls plugin is disabled"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Go to **System Console > Plugins > Plugin Management** and enable Calls"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "The deployment is in test mode"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid ""
+"Go to **System Console > Plugins > Calls > Settings** and check the "
+"deployment state - Calls must be enabled in specific channels by System "
+"Admins in test mode"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Calls is not enabled for the channel"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid ""
+"When test mode is enabled, open the **channel menu** and select **Enable "
+"calls**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "The user is on an older client"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Ask the user to update to the current Mattermost desktop or mobile app"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:997
+msgid "A.2 Calls start but audio does not work"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "UDP `8443` is blocked"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid ""
+"Repeat the UDP connectivity check from Phase 1 (check 1.6.1 or 1.6.3) and"
+" confirm the firewall rule is applied"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "TCP `8443` is also blocked and fallback is failing"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid ""
+"Repeat the TCP check (1.6.2 or 1.6.4) - clients need at least one path to"
+" the media service"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "The wrong media address is being advertised"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid ""
+"Re-check `ICE Host Override` in Phase 2A (Integrated) or "
+"`ice_host_override` in `rtcd.toml` in Phase 2B (RTCD) - the address must "
+"be reachable by clients"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Browser or desktop microphone permissions were denied"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid ""
+"Ask the user to check browser or OS microphone permissions and reload the"
+" app"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:1006
+msgid "A.3 Remote users cannot join from outside the network"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "External firewall rules are blocking UDP `8443`"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid ""
+"Confirm external reachability to UDP `8443` on the media server - cloud "
+"security groups and on-prem firewalls both need to allow inbound traffic "
+"from the internet"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "The advertised media address is a private IP"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid ""
+"Set `ICE Host Override` (Integrated) or `ice_host_override` in "
+"`rtcd.toml` to the correct public IP or use STUN (1.3.1)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Client networks are too restrictive for direct UDP or TCP"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Deploy a TURN server and add it to **ICE server configurations**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:1014
+msgid "A.4 Recording, transcription, or captions are failing"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "calls-offloader is not running"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid ""
+"Run `nmap -p 4545 YOUR_OFFLOADER_SERVER` from the Mattermost server - if "
+"the result is `closed`, the service is not running; check the systemd "
+"service logs"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "Mattermost cannot reach the Job Service URL"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid ""
+"Run `curl http://YOUR_OFFLOADER_SERVER:4545/version` from the Mattermost "
+"server and confirm it returns a version string"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid "The offloader service account cannot use Docker"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-deployment-guide.md:865
+msgid ""
+"Confirm the service account is in the `docker` group on the calls-"
+"offloader server"
+msgstr ""
+

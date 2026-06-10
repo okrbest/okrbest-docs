@@ -1,0 +1,549 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/transport-encryption.rst:2
+msgid "Configuring transport encryption"
+msgstr ""
+
+#: ../../source/_static/badges/ent-plus.rst:9
+msgid ""
+"|plans-img-yellow| Available on `Enterprise and Enterprise Advanced plans"
+" <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:7
+msgid ""
+"The components of the Mattermost setup are shown in the following "
+"diagram, including the transport encryption used. Aside from the "
+"encryption between the nodes of the Mattermost cluster, all transports "
+"rely on TLS encryption."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:11
+msgid ""
+"The transport between the Application servers is not used by default and "
+"requires additional setup steps. Enhancing the core product to include "
+"automatic encryption between cluster nodes is in progress and planned for"
+" a later release."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:13
+msgid ""
+"Components of the Mattermost setup where all transports rely on TLS "
+"encryption."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:17
+msgid "Configuring proxy to Mattermost transport encryption"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:19
+msgid ""
+"Mattermost is able to encrypt the traffic between the proxy and the "
+"application server using TLS."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:22
+#: ../../source/deployment-guide/transport-encryption.rst:133
+#: ../../source/deployment-guide/transport-encryption.rst:254
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:24
+#: ../../source/deployment-guide/transport-encryption.rst:135
+msgid "Operational Mattermost server or cluster."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:25
+msgid "Authentication credentials for Mattermost user on application server."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:28
+#: ../../source/deployment-guide/transport-encryption.rst:141
+#: ../../source/deployment-guide/transport-encryption.rst:267
+msgid "Example environment"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:30
+msgid ""
+"In this scenario there is one Mattermost application server and one NGINX"
+" server, both running Ubuntu 20.04, with the following IPs:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:32
+#: ../../source/deployment-guide/transport-encryption.rst:145
+#: ../../source/deployment-guide/transport-encryption.rst:271
+msgid "**transport-encryption-mattermost1:** 10.10.250.146"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:33
+msgid "**transport-encryption-nginx:** 10.10.250.107"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:36
+msgid "Configuring NGINX"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:38
+msgid ""
+"On the NGINX server, connect to both servers with a sudo or root user. "
+"Open the Mattermost proxy configuration and search for the following line"
+" twice:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:44
+msgid "Change the protocol from ``http`` to ``https``:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:50
+msgid ""
+"Afterwards do not reload the NGINX server yet to minimize the downtime of"
+" the service."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:53
+#: ../../source/deployment-guide/transport-encryption.rst:193
+msgid "Configuring Mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:55
+msgid ""
+"On the Mattermost server, change to the config directory of Mattermost "
+"and generate a self-signed certificate that will be used to encrypt the "
+"traffic between the proxy server and the application server."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:57
+msgid "**Note:** Alternatively you can sign a certificate from your company's CA."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:67
+msgid ""
+"Once complete, open the file ``config.json`` and modify the values "
+"``ConnectionSecurity``, ``TLSCertFile`` and ``TLSKeyFile`` in the "
+"``ServiceSettings`` section."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:69
+msgid "**Before**"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:88
+msgid "**After**"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:107
+msgid "Restart the Mattermost server and ensure it's up and running:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:121
+msgid ""
+"Finally, on the **NGINX server**, reload the configuration to ensure that"
+" requests are sent on HTTPS:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:128
+msgid "Configuring database transport encryption"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:130
+msgid ""
+"Mattermost is able to encrypt the traffic between the database and the "
+"application using TLS. This guide describes the setup steps for a single,"
+" separate MySQL server."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:136
+msgid "Operational MySQL server."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:137
+msgid "Confirmed connectivity between Mattermost and MySQL server."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:138
+msgid "Authentication credentials for Mattermost user on MySQL server."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:143
+msgid ""
+"In this scenario there is one Mattermost application server and one MySQL"
+" server, both running Ubuntu 20.04, with the following IPs:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:146
+msgid "**transport-encryption-mysql1:** 10.10.250.148"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:149
+msgid "Configuring MySQL"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:151
+msgid "As a first step, connect to both servers with a sudo or root user."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:153
+msgid "Execute the following command to prepare the server for SSL connections:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:159
+msgid ""
+"This generates self-signed certificates in ``/var/lib/mysql/`` that the "
+"MySQL server uses to encrypt the connection. If you would like to use "
+"certificates from your company CA, please follow the MySQL documentation "
+"for configuration steps."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:161
+msgid ""
+"**Note:** Optionally, it can be enforced that all connections must be "
+"made via a local socket connection or TLS. To do this, open "
+"``/etc/mysql/mysql.conf.d/mysqld.cnf`` and append the following line to "
+"the file:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:167
+msgid ""
+"Any connection to the MySQL server must now be made with secure transport"
+" enabled."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:169
+msgid "Last but not least, restart the server and confirm it is up and running:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:195
+msgid ""
+"On the Mattermost server, open the file ``config.json`` and look for the "
+"``DataSource`` value in the ``SqlSettings`` section. It should look "
+"similar to this:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:201
+msgid ""
+"At the end of the line, we can configure that TLS must be turned on with "
+"the ``tls`` flag which supports the following values:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:203
+msgid "true (Require TLS + a trusted certificate)"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:204
+msgid "false"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:205
+msgid "skip-verify (Require TLS + accept self-signed)"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:206
+msgid "preferred (Try TLS, fallback to unencrypted)"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:208
+msgid ""
+"In our case we need to use ``skip-verify`` since we use a self-signed "
+"certificate. The configuration setting will now look like this:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:214
+msgid ""
+"If you're running Mattermost in a cluster, be sure to update the value on"
+" each node of the cluster. If you are using configuration in the "
+"database, be sure to update the ``systemd`` unit file and enable TLS for "
+"the configuration store."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:216
+msgid ""
+"Once complete, restart the Mattermost server and ensure the system is "
+"operational:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:247
+msgid "Configuring cluster transport encryption"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:249
+msgid ""
+"Mattermost is able to encrypt the messages sent within the cluster of a "
+"deployment using SSH tunneling. The guide walks through the deployment of"
+" this solution on Ubuntu 20.04, but it can be adapted for any Linux "
+"operating system."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:251
+msgid ""
+"While this document only describes the configuration of a three-node "
+"cluster, it is by no means limited to that number."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:256
+msgid "SSH port whitelisted between each node of the deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:257
+msgid "Active ufw/iptables on each node."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:258
+msgid "Access to the root/sudo user of each node for configuration."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:259
+msgid "A configured Mattermost cluster."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:260
+msgid "Mattermost running with a dedicated service user."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:261
+msgid "Mattermost service is stopped on each cluster node."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:264
+msgid ""
+"Support on the application level is currently in development and, when "
+"available, will deprecate this document."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:269
+msgid ""
+"In this scenario there are three application nodes in our environment "
+"with the following hostname/IP mapping:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:272
+msgid "**transport-encryption-mattermost2:** 10.10.250.231"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:273
+msgid "**transport-encryption-mattermost3:** 10.10.250.165"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:276
+msgid "Preparations"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:278
+msgid "Connect to each Mattermost server with a sudo or root user."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:279
+msgid ""
+"Make a note of the IP from each cluster member used for the internal "
+"communication."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:280
+msgid ""
+"Ensure ``AllowTcpForwarding`` is enabled in ``/etc/ssh/sshd_config`` of "
+"each cluster node."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:283
+msgid "SSH authentication"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:285
+msgid ""
+"On each node, generate a SSH key-pair for the service account. In our "
+"scenario this is called ``mattermost``:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:303
+msgid ""
+"The location of the SSH key itself is irrelevant if company policies "
+"require the usage of another storage location."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:305
+msgid ""
+"Next, ensure that the SSH public key of each node is added to the "
+"``authorized_keys`` file of the other nodes of the cluster. To do so, "
+"copy the contents of ``/home/mattermost/.ssh/id_rsa.pub`` of nodes 2 and "
+"3, and add it to ``/home/mattermost/.ssh/authorized_keys`` of node 1."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:307
+msgid ""
+"Repeat this step for each node of the cluster. As a result, each node "
+"should be able to establish an SSH connection to the other nodes of the "
+"cluster."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:311
+msgid ""
+"This service account can be separate from the service account already "
+"used for the Mattermost ``systemd`` service itself. It's important that "
+"this service account is allowed to create a SSH tunnel with port "
+"forwarding, but it doesn't require any additional permissions."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:314
+msgid "ufw configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:316
+msgid ""
+"As a next step, allow SSH access from each of the other member nodes, "
+"e.g.:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:318
+msgid "mattermost1 allows from mattermost2 and mattermost3"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:319
+msgid "mattermost2 allows from mattermost1 and mattermost3"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:320
+msgid "mattermost3 allows from mattermost1 and mattermost2"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:322
+msgid ""
+"To do so, we add an exception in the firewall. The commands for "
+"``mattermost1`` look as follows:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:344
+msgid ""
+"Repeat the same steps on the other nodes, replacing the IPs with the ones"
+" from the other member nodes. Do so for each member node, excluding the "
+"node itself."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:346
+msgid ""
+"Next, open ``/etc/ufw/after.rules`` and add the following block to the "
+"bottom of the file:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:362
+msgid ""
+"Two lines always belong to a single node, so in a deployment with four "
+"nodes:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:373
+msgid ""
+"Please be aware that the ports on the right side must be unique, so if "
+"you have a cluster of six nodes, use 8075 and 8074 with 1 to 5 in front "
+"of it. If the cluster is of bigger size, additional ports must be used."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:375
+msgid ""
+"Ensure that your operating system has IP forwarding enabled using the "
+"following command:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:381
+msgid ""
+"After that, reload the ufw rules and confirm that the iptable rules were "
+"successfully created:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:402
+msgid ""
+"Repeat those steps for every node on the cluster. At the end of this "
+"section the following should be configured:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:404
+msgid "SSH access enabled in firewall from each cluster node to another."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:405
+msgid "Per node 2 iptables rules for port 8074 and 8075."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:406
+msgid "IP forwarding enabled."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:409
+msgid "SSH configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:411
+msgid ""
+"As a next step, ensure that the SSH tunnels are created as part of the "
+"Mattermost service start. To do so, create a file called ``pre_start.sh``"
+" in ``/opt/mattermost/bin`` on ``mattermost1``:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:423
+msgid ""
+"We're ignoring the error from the SSH connection itself in case a tunnel "
+"is already active. Otherwise the Mattermost server would fail to start."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:424
+msgid "Please make sure to back up this script in case of a version upgrade."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:426
+msgid "Afterwards, set the executable bit on the shell script:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:432
+msgid ""
+"Open the systemd unit file of Mattermost and search for ``Type=Notify``. "
+"After this, enter a ``ExecStartPre`` script that will be executed before "
+"Mattermost itself is started:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:440
+msgid "Reload the systemd daemon afterwards:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:446
+msgid ""
+"Repeat the same steps on each of the member nodes and adapt the node IPs "
+"and amount of entries for your environment."
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:449
+msgid "Cluster start"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:451
+msgid ""
+"Once each node is configured, restart the service on each cluster and "
+"confirm that it's running using the command below:"
+msgstr ""
+
+#: ../../source/deployment-guide/transport-encryption.rst:465
+msgid ""
+"Next, open the Mattermost System Console and confirm that each node is "
+"reporting successfully in the High Availability section."
+msgstr ""
+

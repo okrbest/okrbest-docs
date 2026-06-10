@@ -1,0 +1,1178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:2
+msgid "Delegated granular administration"
+msgstr ""
+
+#: ../../source/_static/badges/ent-plus.rst:9
+msgid ""
+"|plans-img-yellow| Available on `Enterprise and Enterprise Advanced plans"
+" <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:7
+msgid ""
+"Mattermost supports the creation and customization of system "
+"administration roles with specific granular permissions and System "
+"Console access. This allows senior administrators in large organizations "
+"to delegate and de-centralize specialized administration and "
+"administrative tasks with specific admin roles."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:9
+msgid ""
+"These admin roles permit granular access to specific areas of the System "
+"Console and related API endpoints. These roles enable users to perform "
+"certain administrative tasks without requiring access to all system "
+"administration areas. These system roles never supersede the user's "
+"original role or the user's permissions configured by the Permissions "
+"scheme."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:12
+msgid ""
+"Even when a role is set to **No Access** or **Read Only** for a System "
+"Console page, granting **Can Edit** on any System Console page enables "
+"access to the underlying configuration endpoint (``PUT "
+"/api/v4/config/patch``). This means a user with write access in one area "
+"can modify configuration values across all areas. Administrators should "
+"assign **Can Edit** permissions with caution."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:15
+msgid "Available roles"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:17
+msgid ""
+"A system admin can configure the following delegated granular "
+"administration roles in the System Console. Each role has a set of "
+"default permissions, which can be adjusted as needed."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:19
+msgid ""
+"**System Manager:** This role can be configured to have read/write "
+"permissions in different management areas."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:20
+msgid ""
+"**User Manager:** This role can be configured to have read/write to all "
+"the user management areas and to authentication"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:21
+msgid ""
+"**Custom Group Manager** This role has permissions to :doc:`create, edit,"
+" restore, and delete custom user groups </end-user-guide/collaborate"
+"/organize-using-custom-user-groups>`. This role can be used to assign "
+"individual users the ability to manage custom groups when **Custom "
+"Groups** permissions are removed for **All Members** via **System Console"
+" > Permissions > Edit Scheme > Custom Groups**."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:22
+msgid ""
+"**Shared Channel Manager** This role has the ``manage_shared_channels`` "
+"permission, allowing assigned users to share and unshare channels with "
+"existing connections to remote servers."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:23
+msgid ""
+"**Viewer:** The Viewer role can view all areas of the System Console, and"
+" can be configured with write access where needed."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:25
+msgid ""
+"When a user is assigned a system role, they have role-based access to the"
+" System Console and the underlying API endpoints. Each role has a "
+"different set of default permissions, and what users can access or view "
+"depends on the role they've been assigned."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:27
+msgid ""
+"The table below lists the default permissions for each role. Admins "
+"should carefully review and configure these settings to align with their "
+"organization's needs. Particular caution should be exercised with "
+"Permissions write access, as it enables modifications to the permissions "
+"of any role, except for the delegated granular administrator roles."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:30
+msgid "**System role**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:30
+msgid "**Read/Write access**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:30
+msgid "**Read Only access**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:32
+msgid "System Manager"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:32
+msgid "User Management - Groups - Teams - Channels - Permissions"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:37
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:190
+msgid "Environment"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:38
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:242
+msgid "Site Configuration"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:39
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:317
+msgid "Integrations"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:32
+msgid "Edition/License"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:33
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:158
+msgid "Reporting"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:34
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:42
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:282
+msgid "Authentication"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:35
+msgid "Plugins"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:41
+msgid "User Manager"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:41
+msgid "User Management - Groups - Teams - Channels"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:41
+msgid "(User Management) Permissions"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:46
+msgid "Custom Group Manager"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:46
+msgid "Custom User Groups"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:46
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:48
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:51
+msgid "N/A"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:48
+msgid "Shared Channel Manager"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:48
+msgid "Shared Channels"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:51
+msgid "Viewer"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:51
+msgid "All pages within the System Console"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:55
+msgid "Assign admin roles"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:57
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:103
+msgid "There are two ways to assign roles:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:59
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:105
+msgid ""
+"In the System Console under **User Management > Delegated Granular "
+"Administration**."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:60
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:106
+msgid ""
+"Using the :doc:`mmctl tool </administration-guide/manage/mmctl-command-"
+"line-tool>`. This can be done either locally or remotely."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:99
+msgid "Edit privileges of admin roles (advanced)"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:101
+msgid ""
+"System admins can grant read/write access to other areas of the System "
+"Console, as well as remove read/write access (including default access), "
+"for all system roles except the Custom Group Manager and Shared Channel "
+"Manager roles."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:109
+msgid "**You want to**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:109
+msgid "**Using the System Console**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:109
+msgid "**Using mmctl**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:111
+msgid "Edit role privileges"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:111
+msgid ""
+"Go to **System Console > User Management > Delegated Granular "
+"Administration**, then select the **System Manager**, **User Manager**, "
+"or **Viewer** role."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:113
+msgid ""
+"For each set of privileges, select the access level as **Can edit**, "
+"**Read only**, or **No access**."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:117
+msgid ""
+"If you set privilege subsections to different access levels, then the "
+"privilege access level displays as **Mixed Access**."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:111
+msgid ""
+"``mmctl permissions add [role_name] [permission...]`` ``mmctl permissions"
+" reset system_read_only_admin``"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:120
+msgid ""
+"Grant write access to the Authentication section of the System Console "
+"for all users with the User Manager role"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:120
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:128
+msgid ""
+"Go to **System Console > User Management > Delegated Granular "
+"Administration**, then select the **User Manager** role."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:121
+msgid ""
+"Under **Privileges > Authentication** select **Can edit**, then select "
+"**Save**."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:120
+msgid ""
+"``mmctl permissions add system_user_manager "
+"sysconsole_write_authentication``"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:124
+msgid ""
+"Grant read-only access to the Authentication section of the System "
+"Console for all users with the User Manager role"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:124
+msgid ""
+"Go to **System Console > User Management > Delegated Granular "
+"Administration**. then select the **User Manager** role."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:125
+msgid ""
+"Under **Privileges > Authentication** select **Read only**, then select "
+"**Save**."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:124
+msgid ""
+"``mmctl permissions remove system_user_manager "
+"sysconsole_read_authentication``"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:128
+msgid ""
+"Remove write access to the Authentication section of the System Console "
+"for all users with the User Manager role"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:129
+msgid ""
+"Under **Privileges > Authentication** select **No access**, then choose "
+"**Save**."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:128
+msgid ""
+"``mmctl permissions remove system_user_manager "
+"sysconsole_write_authentication``"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:132
+msgid "Reset a role to its default set of permissions"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:132
+msgid "This is completed using the mmctl tool only."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:132
+msgid ""
+"``mmctl permissions reset [role_name]`` For example, to reset the "
+"permissions of the ``system_read_only_admin`` role: ``mmctl permissions "
+"reset system_read_only_admin``"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:138
+msgid "Admin roles and privileges"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:141
+msgid "Roles"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:143
+msgid "``system_manager``"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:144
+msgid "``system_user_manager``"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:145
+msgid "``system_custom_group_admin``"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:146
+msgid "``system_shared_channel_manager``"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:147
+msgid "``system_read_only_admin``"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:150
+msgid "Privileges"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:153
+msgid "System Console section"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:153
+msgid "Permissions"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:155
+msgid "About"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:155
+msgid "PERMISSION_SYSCONSOLE_READ_ABOUT_EDITION_AND_LICENSE"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:156
+msgid "PERMISSION_SYSCONSOLE_WRITE_ABOUT_EDITION_AND_LICENSE"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:158
+msgid "**Site Statistics**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:159
+msgid "PERMISSION_SYSCONSOLE_READ_REPORTING_SITE_STATISTICS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:160
+msgid "PERMISSION_SYSCONSOLE_WRITE_REPORTING_SITE_STATISTICS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:162
+msgid "**Team Statistics**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:163
+msgid "PERMISSION_SYSCONSOLE_READ_REPORTING_TEAM_STATISTICS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:164
+msgid "PERMISSION_SYSCONSOLE_WRITE_REPORTING_TEAM_STATISTICS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:166
+msgid "**Server Logs**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:167
+msgid "PERMISSION_SYSCONSOLE_READ_REPORTING_SERVER_LOGS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:168
+msgid "PERMISSION_SYSCONSOLE_WRITE_REPORTING_SERVER_LOGS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:170
+msgid "User Management"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:170
+msgid "**Users**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:171
+msgid "PERMISSION_SYSCONSOLE_READ_USERMANAGEMENT_USERS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:172
+msgid "PERMISSION_SYSCONSOLE_WRITE_USERMANAGEMENT_USERS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:174
+msgid "**Groups**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:175
+msgid "PERMISSION_SYSCONSOLE_READ_USERMANAGEMENT_GROUPS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:176
+msgid "PERMISSION_SYSCONSOLE_WRITE_USERMANAGEMENT_GROUPS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:178
+msgid "**Teams**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:179
+msgid "PERMISSION_SYSCONSOLE_READ_USERMANAGEMENT_TEAMS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:180
+msgid "PERMISSION_SYSCONSOLE_WRITE_USERMANAGEMENT_TEAMS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:182
+msgid "**Channels**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:183
+msgid "PERMISSION_SYSCONSOLE_READ_USERMANAGEMENT_CHANNELS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:184
+msgid "PERMISSION_SYSCONSOLE_WRITE_USERMANAGEMENT_CHANNELS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:186
+msgid "**Permissions**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:187
+msgid "PERMISSION_SYSCONSOLE_READ_USERMANAGEMENT_PERMISSIONS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:188
+msgid "PERMISSION_SYSCONSOLE_WRITE_USERMANAGEMENT_PERMISSIONS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:190
+msgid "**Web Server**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:191
+msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_WEB_SERVER"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:192
+msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_WEB_SERVER"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:194
+msgid "**Database**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:195
+msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_DATABASE"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:196
+msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_DATABASE"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:198
+msgid "**Elasticsearch**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:199
+msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_ELASTICSEARCH"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:200
+msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_ELASTICSEARCH"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:202
+msgid "**File Storage**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:203
+msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_FILE_STORAGE"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:204
+msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_FILE_STORAGE"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:206
+msgid "**Image Proxy**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:207
+msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_IMAGE_PROXY"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:208
+msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_IMAGE_PROXY"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:210
+msgid "**SMTP**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:211
+msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_SMTP"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:212
+msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_SMTP"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:214
+msgid "**Push Notification Server**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:215
+msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_PUSH_NOTIFICATION_SERVER"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:216
+msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_PUSH_NOTIFICATION_SERVER"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:218
+msgid "**High Availability**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:219
+msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_HIGH_AVAILABILITY"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:220
+msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_HIGH_AVAILABILITY"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:222
+msgid "**Rate Limiting**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:223
+msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_RATE_LIMITING"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:224
+msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_RATE_LIMITING"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:226
+msgid "**Logging**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:227
+msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_LOGGING"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:228
+msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_LOGGING"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:230
+msgid "**Session Lengths**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:231
+msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_SESSION_LENGTHS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:232
+msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_SESSION_LENGTHS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:234
+msgid "**Performance Monitoring**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:235
+msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_PERFORMANCE_MONITORING"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:236
+msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_PERFORMANCE_MONITORING"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:238
+msgid "**Developer**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:239
+msgid "PERMISSION_SYSCONSOLE_READ_ENVIRONMENT_DEVELOPER"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:240
+msgid "PERMISSION_SYSCONSOLE_WRITE_ENVIRONMENT_DEVELOPER"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:242
+msgid "**Customization**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:243
+msgid "PERMISSION_SYSCONSOLE_READ_SITE_CUSTOMIZATION"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:244
+msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_CUSTOMIZATION"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:246
+msgid "**Localization**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:247
+msgid "PERMISSION_SYSCONSOLE_READ_SITE_LOCALIZATION"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:248
+msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_LOCALIZATION"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:250
+msgid "**Users and Teams**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:251
+msgid "PERMISSION_SYSCONSOLE_READ_SITE_USERS_AND_TEAMS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:252
+msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_USERS_AND_TEAMS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:254
+msgid "**Notifications**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:255
+msgid "PERMISSION_SYSCONSOLE_READ_SITE_NOTIFICATIONS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:256
+msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_NOTIFICATIONS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:258
+msgid "**Announcement Banner**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:259
+msgid "PERMISSION_SYSCONSOLE_READ_SITE_ANNOUNCEMENT_BANNER"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:260
+msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_ANNOUNCEMENT_BANNER"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:262
+msgid "**Emoji**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:263
+msgid "PERMISSION_SYSCONSOLE_READ_SITE_EMOJI"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:264
+msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_EMOJI"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:266
+msgid "**Posts**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:267
+msgid "PERMISSION_SYSCONSOLE_READ_SITE_POSTS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:268
+msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_POSTS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:270
+msgid "**File Sharing and Downloads**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:271
+msgid "PERMISSION_SYSCONSOLE_READ_SITE_FILE_SHARING_AND_DOWNLOADS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:272
+msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_FILE_SHARING_AND_DOWNLOADS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:274
+msgid "**Public Links**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:275
+msgid "PERMISSION_SYSCONSOLE_READ_SITE_PUBLIC_LINKS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:276
+msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_PUBLIC_LINKS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:278
+msgid "**Notices**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:279
+msgid "PERMISSION_SYSCONSOLE_READ_SITE_NOTICES"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:280
+msgid "PERMISSION_SYSCONSOLE_WRITE_SITE_NOTICES"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:282
+msgid "**Signup**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:283
+msgid "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_SIGNUP"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:284
+msgid "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_SIGNUP"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:286
+msgid "**Email**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:287
+msgid "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_EMAIL"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:288
+msgid "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_EMAIL"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:290
+msgid "**Password**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:291
+msgid "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_PASSWORD"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:292
+msgid "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_PASSWORD"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:294
+msgid "**MFA**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:295
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:299
+msgid "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_MFA"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:296
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:300
+msgid "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_MFA"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:298
+msgid "**AD/LDAP**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:302
+msgid "**SAML 2.0**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:303
+msgid "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_SAML"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:304
+msgid "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_SAML"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:306
+msgid "**OpenID Connect**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:307
+msgid "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_OPENID"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:308
+msgid "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_OPENID"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:310
+msgid "**Guest Access**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:311
+msgid "PERMISSION_SYSCONSOLE_READ_AUTHENTICATION_GUEST_ACCESS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:312
+msgid "PERMISSION_SYSCONSOLE_WRITE_AUTHENTICATION_GUEST_ACCESS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:314
+msgid "Plugin"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:314
+msgid "PERMISSION_SYSCONSOLE_READ_PLUGINS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:315
+msgid "PERMISSION_SYSCONSOLE_WRITE_PLUGINS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:317
+msgid "**Integration Management**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:318
+msgid "PERMISSION_SYSCONSOLE_READ_INTEGRATIONS_INTEGRATION_MANAGEMENT"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:319
+msgid "PERMISSION_SYSCONSOLE_WRITE_INTEGRATIONS_INTEGRATION_MANAGEMENT"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:321
+msgid "**Bot Accounts**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:322
+msgid "PERMISSION_SYSCONSOLE_READ_INTEGRATIONS_BOT_ACCOUNTS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:323
+msgid "PERMISSION_SYSCONSOLE_WRITE_INTEGRATIONS_BOT_ACCOUNTS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:325
+msgid "**GIF (Beta)**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:326
+msgid "PERMISSION_SYSCONSOLE_READ_INTEGRATIONS_GIF"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:327
+msgid "PERMISSION_SYSCONSOLE_WRITE_INTEGRATIONS_GIF"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:329
+msgid "**CORS**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:330
+msgid "PERMISSION_SYSCONSOLE_READ_INTEGRATIONS_CORS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:331
+msgid "PERMISSION_SYSCONSOLE_WRITE_INTEGRATIONS_CORS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:333
+msgid "Compliance"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:333
+msgid "**Data Retention Policy**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:334
+msgid "PERMISSION_SYSCONSOLE_READ_COMPLIANCE_DATA_RETENTION_POLICY"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:335
+msgid "PERMISSION_SYSCONSOLE_WRITE_COMPLIANCE_DATA_RETENTION_POLICY"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:337
+msgid "**Compliance Export**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:338
+msgid "PERMISSION_SYSCONSOLE_READ_COMPLIANCE_COMPLIANCE_EXPORT"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:339
+msgid "PERMISSION_SYSCONSOLE_WRITE_COMPLIANCE_COMPLIANCE_EXPORT"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:341
+msgid "**Compliance Monitoring**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:342
+msgid "PERMISSION_SYSCONSOLE_READ_COMPLIANCE_COMPLIANCE_MONITORING"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:343
+msgid "PERMISSION_SYSCONSOLE_WRITE_COMPLIANCE_COMPLIANCE_MONITORING"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:345
+msgid "**Custom Terms of Service**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:346
+msgid "PERMISSION_SYSCONSOLE_READ_COMPLIANCE_CUSTOM_TERMS_OF_SERVICE"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:347
+msgid "PERMISSION_SYSCONSOLE_WRITE_COMPLIANCE_CUSTOM_TERMS_OF_SERVICE"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:349
+msgid "Experimental"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:349
+msgid "**Features**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:350
+msgid "PERMISSION_SYSCONSOLE_READ_EXPERIMENTAL_FEATURES"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:351
+msgid "PERMISSION_SYSCONSOLE_WRITE_EXPERIMENTAL_FEATURES"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:353
+msgid "**Feature Flags**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:354
+msgid "PERMISSION_SYSCONSOLE_READ_EXPERIMENTAL_FEATURE_FLAGS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:355
+msgid "PERMISSION_SYSCONSOLE_WRITE_EXPERIMENTAL_FEATURE_FLAGS"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:357
+msgid "**Bleve**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:358
+msgid "PERMISSION_SYSCONSOLE_READ_EXPERIMENTAL_BLEVE"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:359
+msgid "PERMISSION_SYSCONSOLE_WRITE_EXPERIMENTAL_BLEVE"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:363
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:366
+msgid ""
+"Can a User Manager or System Manager reset an administrator’s email or "
+"password without their knowledge?"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:368
+msgid ""
+"This is not possible with the default privileges of these roles. The "
+"ability to reset passwords or email addresses of administrators is "
+"limited to system admins."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:371
+msgid "Can a User Manager or System Manager access the configuration file?"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:373
+msgid ""
+"Yes. However, they will only have access to read actual values and modify"
+" values in accordance with their permissions. If appropriate read "
+"permissions do not exist, the default key values will be displayed."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:376
+msgid "Are all actions of admin roles logged?"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:378
+msgid "Every change made by any admin is included in the audit log."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:381
+msgid "Can a System Manager change their own permissions or elevate their role?"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:383
+msgid ""
+"No. System Managers can't elevate their role, and aren't able to elevate "
+"other members' roles."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:386
+msgid ""
+"Can any of the new roles view API keys/passwords or other sensitive "
+"information within the System Console (such as SMTP, AWS, Elastic "
+"Search)?"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:388
+msgid ""
+"No, password information is only visible to system admins and is "
+"obfuscated for other roles."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:391
+msgid ""
+"If download links for compliance exports are enabled in the System "
+"Console, can a Read Only Admin download the reports?"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:393
+msgid ""
+"Only roles that are explicitly granted access to **System Console > "
+"Compliance** have access to download compliance reports."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:396
+msgid "Can any of the new roles force-join Private channels?"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:398
+msgid ""
+"Yes at this time they can, however, we will be improving on this behavior"
+" in the future with a prompt that lets them know they are entering a "
+"private channel. We are also planning on adding a permission which would "
+"remove the ability to access Private channels."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:401
+msgid "Can I create a new role or clone an existing role?"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:403
+msgid "No, but we are actively seeking feedback on this capability."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:406
+msgid "Can I use an LDAP filter to assign these roles?"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:408
+msgid "No, but we are considering this functionality for a future enhancement."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:411
+msgid "Can I rename the roles?"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:413
+msgid "This is being considered for future development."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:416
+msgid ""
+"Can a System Manager or User Manager demote or deactivate another Admin "
+"or Manager?"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:418
+msgid ""
+"A System or User Manager can demote or deactivate another System or User "
+"Manager, but can't demote or deactivate a system admin."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:421
+msgid "Can a System Manager or User Manager assign or unassign admin roles?"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/delegated-granular-administration.rst:423
+msgid "Only the system admin has access to edit system roles."
+msgstr ""
+

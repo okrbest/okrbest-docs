@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/agents/cursor_cloud_supplement.md:1
+msgid "Cursor Cloud supplement"
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:3
+msgid ""
+"The rules below apply only when running inside a Cursor Cloud VM. The "
+"cloud VM update script appends this file to `AGENTS.md` at provisioning "
+"time, so the rest of the agent context is the same as a local checkout. "
+"Local developers and other agents should ignore this section — it is not "
+"relevant outside the cloud VM. Anything that already lives in `AGENTS.md`"
+" must not be repeated here; only cloud-VM-specific bootstrap, "
+"credentials, and artifact-handling rules belong below."
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:11
+msgid "Cloud VM tooling"
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:13
+msgid ""
+"Repeatable installs (Docker, Node, npm dependencies, `agent-browser`, AWS"
+" CLI, Playwright Chromium) belong in the Cursor Cloud VM update script, "
+"not in this file. The cloud image additionally provides:"
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:17
+msgid "`agent-browser` — browser automation for agents without a desktop."
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:18
+msgid ""
+"AWS CLI — uploads non-sensitive reproduction artifacts to "
+"`AWS_S3_BUCKET_NAME`."
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:21
+msgid "Running Mattermost + plugin locally in the cloud VM"
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:23
+msgid ""
+"A local Mattermost Enterprise instance is needed for plugin development. "
+"Use the development image and a companion PostgreSQL container:"
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:49
+msgid ""
+"The development image provides an Entry license for local testing; "
+"`MM_LICENSE` is not required."
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:52
+msgid "Deploying the plugin into the cloud VM container"
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:62
+msgid ""
+"Always clean `server/dist` first — a previous full `make dist` may have "
+"left other-platform binaries that bloat the upload."
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:65
+msgid "Configuring an Anthropic agent via API"
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:67
+msgid ""
+"After deploying the plugin and starting Mattermost, configure an "
+"Anthropic service and create a user agent using the `ANTHROPIC_API_KEY` "
+"environment variable. Do not use `/api/v4/config/patch` for plugin config"
+" — write to `PUT /plugins/mattermost-ai/admin/config`."
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:111
+msgid ""
+"After this, `@claudeagent` is available for DMs and mentions. Config "
+"schema lives in `config/config.go` and `llm/configuration.go`; the agent "
+"API request shape is `CreateAgentRequest` in `api/api_agents.go`."
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:115
+msgid ""
+"Verify embedded MCP tools are discoverable: `GET /plugins/mattermost-"
+"ai/admin/mcp/tools` (admin auth required)."
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:118
+msgid "Uploading PR artifacts to S3"
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:120
+msgid ""
+"All screenshots and walkthrough videos captured during development must "
+"be uploaded to S3 and linked in the PR description so reviewers see "
+"visual evidence of changes. Never include secrets, credentials, or API "
+"keys in screenshots or videos — retake or redact instead."
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:125
+msgid ""
+"Required env vars (provided as cloud secrets): `AWS_ACCESS_KEY_ID`, "
+"`AWS_SECRET_ACCESS_KEY`, `AWS_S3_BUCKET_NAME`."
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:148
+msgid ""
+"Add image artifacts to the PR description as Markdown images "
+"(`![alt](url)`) so they render inline. Use plain links for non-image "
+"artifacts. Upload before creating or updating the PR description."
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:152
+msgid "Cloud-VM-specific gotchas"
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:154
+msgid ""
+"The Mattermost server port comes from the Docker port mapping above "
+"(`8065`); if you re-run with a different `-p` flag, look it up with "
+"`docker port mm-server`."
+msgstr ""
+
+#: ../../source/agents/cursor_cloud_supplement.md:157
+msgid ""
+"Outbound LLM traffic from the container respects `HTTP_PROXY` / "
+"`HTTPS_PROXY` on the Mattermost process environment if the cloud VM "
+"routes egress through a proxy."
+msgstr ""
+

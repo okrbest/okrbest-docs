@@ -1,0 +1,181 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/configure/bleve-search.rst:2
+msgid "Bleve search"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:8
+msgid "**From Mattermost v11, Bleve search has been deprecated.**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:10
+msgid ""
+"**For v11.0 and later**: Use :doc:`Elasticsearch </administration-"
+"guide/scale/elasticsearch-setup>` or :doc:`OpenSearch </administration-"
+"guide/scale/opensearch-setup>` for :doc:`enterprise search "
+"</administration-guide/scale/enterprise-search>` capabilities"
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:11
+msgid ""
+"**For pre-v11.0 deployments**: This documentation remains relevant for "
+"existing installations that continue using Bleve."
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:13
+msgid ""
+"Bleve is a search engine that uses Lucene-style full-text search and "
+"indexing. This style of search and indexing helps overcome limitations of"
+" the default database search such as challenges with characters and "
+"advanced search capabilities."
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:17
+msgid ""
+"Experimental Bleve search uses the scorch index type on newly-created "
+"indexes. This new index type features efficiency improvements and indexes"
+" that use significantly less disk space. Go to **System Console > "
+"Experimental > Bleve** and select **Purge Index** to run a purge "
+"operation. When that's complete, select **Index Now** to reindex. Bleve "
+"remains compatible with existing indexes, so currently indexed data will "
+"continue to work if a purge and reindex isn't run."
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:20
+msgid "Configuring Bleve in Mattermost"
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:23
+msgid ""
+"The following steps are only valid for Mattermost versions prior to "
+"v11.0. For v11.0 and later, consider using Elasticsearch or OpenSearch "
+"instead."
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:25
+msgid ""
+"Follow these steps to configure the Mattermost server to use Bleve and "
+"generate required indexes. Once the configuration is saved, new posts "
+"made to the database will be automatically indexed with Bleve."
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:27
+msgid ""
+"**Note:** During indexing, search results may be incomplete until the "
+"indexing job is complete."
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:29
+msgid "Open **System Console > Experimental > Bleve**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:30
+msgid ""
+"Set **Enable Bleve Indexing** to **true** to enable the other settings on"
+" the page."
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:31
+msgid ""
+"Set the directory path to use for storing Bleve indexes (e.g.: "
+"``/var/opt/mattermost/bleveindexes``). The user running Mattermost should"
+" have permissions to access the directory. See our :ref:`configuration "
+"settings <administration-guide/configure/deprecated-configuration-"
+"settings:bleve settings>`  documentation for details."
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:32
+msgid "Save the configuration."
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:33
+msgid ""
+"Select **Index Now**. All users, channels, and posts in the database will"
+" be indexed oldest to newest."
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:34
+msgid "Set **Enable Bleve for search queries** to **true**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:35
+msgid "Set **Enable Bleve for autocomplete queries** to **true**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:39
+msgid ""
+"Search results for files shared before upgrading to Mattermost Server "
+"v5.35 may be incomplete until an extraction command is run using the "
+":ref:`mmctl <administration-guide/manage/mmctl-command-line-tool:mmctl "
+"extract>`. After running this command, the search index must be rebuilt. "
+"Go to **System Console > Experimental > Bleve > Bulk Indexing**, then "
+"select **Index Now** to rebuild the search index to include older file "
+"contents."
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:42
+msgid "Using Bleve search"
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:45
+msgid "This section applies only to Mattermost versions prior to v11.0."
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:47
+msgid "The following conditions are applied when using Bleve search:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:49
+msgid ""
+"**Unquoted terms:** Search terms that contain non-alphanumeric "
+"characters/special characters outside of quotation marks are removed. For"
+" example, using ``abcd \"**\" && abc`` as a search term will return "
+"results for a search for ``abcd \"**\" abc`` as the ``&&`` characters "
+"weren't within the quotation marks."
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:50
+msgid "**Wildcard search:** Wildcard search (e.g., ``abc*``) is supported."
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:53
+msgid "How does search work with Bleve disabled?"
+msgstr ""
+
+#: ../../source/administration-guide/configure/bleve-search.rst:55
+msgid ""
+"Mattermost performs full text searches against the database unless you "
+"have an :ref:`Enterprise license <product-overview/editions-and-"
+"offerings:mattermost enterprise>` and :doc:`enterprise search "
+"</administration-guide/scale/enterprise-search>` configured."
+msgstr ""
+

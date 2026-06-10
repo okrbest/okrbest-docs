@@ -1,0 +1,2859 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2
+msgid "Plugins configuration settings"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:7
+msgid ""
+"Review and manage the following plugin configuration options in the "
+"System Console by selecting the **Product** |product-list| menu, "
+"selecting **System Console**, and then selecting **Plugins**:"
+msgstr ""
+
+#: ../../<rst_prolog>:100
+msgid ""
+"Navigate between Channels, collaborative playbooks, and boards using the "
+"product menu icon."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:9
+msgid "`Plugin management <#plugin-management>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:10
+msgid "`Calls <#calls>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:11
+msgid "`AI Agents <#ai-agents>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:12
+msgid "`GitLab <#gitlab>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:13
+msgid "`GitHub <#github>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:14
+msgid "`Jira <#jira>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:15
+msgid "`Legal Hold <#legal-hold>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:16
+msgid "`Microsoft Calendar Integration <#microsoft-calendar>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:17
+msgid "`MS Teams <#ms-teams>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:18
+msgid "`Performance metrics <#performance-metrics>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:19
+msgid "`Collaborative playbooks <#collaborative-playbooks>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:20
+msgid "`User satisfaction surveys <#user-satisfaction-surveys>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:21
+msgid "`ServiceNow <#servicenow>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:22
+msgid "`Zoom <#zoom>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:23
+msgid "`config.json-only settings <#config-json-only-settings>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:27
+msgid ""
+"System admins managing a self-hosted Mattermost deployment can edit the "
+"``config.json`` file as described in the following tables. Each "
+"configuration value below includes a JSON path to access the value "
+"programmatically in the ``config.json`` file using a JSON-aware tool. For"
+" example, the ``Enable`` value is under ``PluginSettings``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:29
+msgid ""
+"If using a tool such as `jq <https://stedolan.github.io/jq/>`__, you'd "
+"enter: ``cat config/config.json | jq '.PluginSettings.Enable'``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:30
+msgid ""
+"When working with the ``config.json`` file manually, look for an object "
+"such as ``PluginSettings``, then within that object, find the key "
+"``Enable``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:35
+msgid "Plugin management"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:37
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Plugins > Plugin Management**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:49
+msgid "Enable plugins"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:52
+msgid ""
+"**true**: **(Default)** Enables plugins on your Mattermost server. See "
+"the `Use plugins with Mattermost "
+"<https://developers.mattermost.com/integrate/plugins/using-and-managing-"
+"plugins/>`__ documentation for details."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:53
+msgid "**false**: Disables plugins on your Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:52
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:82
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:107
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:128
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:153
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:171
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:193
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:210
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:227
+msgid "System Config path: **Plugins > Plugin Management**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:53
+msgid "``config.json`` setting: ``PluginSettings`` > ``Enable`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:54
+msgid "Environment variable: ``MM_PLUGINSETTINGS_ENABLE``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:59
+msgid ""
+"Disabling this configuration setting in larger deployments may improve "
+"server performance in the following areas:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:61
+msgid ""
+"Resource Consumption: Plugins consume system resources such as CPU, "
+"memory, and disk. Disabling them frees up these resources, allowing the "
+"core Mattermost application to run more efficiently."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:62
+msgid ""
+"Reduced Complexity: Each plugin can add additional logic and processing "
+"requirements. By reducing the number of active plugins, you lower the "
+"complexity and potential points of failure in the system."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:63
+msgid ""
+"Faster Load Times: Disabling plugins can lead to faster server startup "
+"and lower latency during user interactions, as there are fewer components"
+" for the system to initialize and manage."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:64
+msgid ""
+"Stability: Some plugins may have bugs or performance issues that can "
+"affect the overall performance and stability of the Mattermost instance. "
+"Disabling problematic or under-utilized plugins can enhance the stability"
+" of the system."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:65
+msgid ""
+"Maintenance and Updates: Managing fewer plugins reduces the overhead "
+"associated with maintaining and updating them, which can contribute to "
+"smoother operation and less downtime"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:66
+msgid ""
+"However, plugins are often essential for integrating Mattermost with "
+"other services and workflows. It's important to balance performance "
+"improvements with the needs of your organization and users."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:79
+msgid "Require plugin signature"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:82
+msgid ""
+"**true**: Enables plugin signature validation for managed and unmanaged "
+"plugins."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:83
+msgid ""
+"**false**: **(Default)** Disables plugin signature validation for managed"
+" and unmanaged plugins."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:83
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``RequirePluginSignature`` "
+"> ``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:84
+msgid "Environment variable: ``MM_PLUGINSETTINGS_REQUIREPLUGINSIGNATURE``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:88
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:134
+msgid "This setting is applicable to self-hosted deployments only."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:89
+msgid ""
+"From Mattermost server v10.11, pre-packaged plugins require signature "
+"validation on startup. Distributions that bundle custom pre-packaged "
+"plugins must configure custom public keys via "
+"``PluginSettings.SignaturePublicKeyFiles`` to validate their signatures."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:90
+msgid ""
+"**Mattermost server v10.10 and earlier**: Pre-packaged plugins are not "
+"subject to signature validation."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:91
+msgid ""
+"Plugins installed through the Marketplace are always subject to signature"
+" validation at the time of download."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:92
+msgid ""
+"Enabling this configuration will result in `plugin file uploads <#upload-"
+"plugin>`__ being disabled in the System Console."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:104
+msgid "Automatic prepackaged plugins"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:107
+msgid ""
+"**true**: **(Default)** Mattermost automatically installs and upgrades "
+"any enabled pre-packaged plugins. If a newer version is installed, no "
+"changes are made."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:108
+msgid ""
+"**false**: Mattermost does not automatically install or upgrade pre-"
+"packaged plugins. Pre-packaged plugins may be installed manually from the"
+" Marketplace, even when offline."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:108
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > "
+"``AutomaticPrepackagedPlugins`` > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:109
+msgid "Environment variable: ``MM_PLUGINSETTINGS_AUTOMATICPREPACKAGEDPLUGINS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:113
+msgid ""
+"**Prepackaged Plugin Installation Behavior**: When system administrators "
+"drop plugin files (with their ``.sig`` signature files) into the "
+"``prepackaged_plugins`` directory, the plugins won't install "
+"automatically. Prepackaging makes the plugin available for \"offline\" "
+"installation. The plugin will automatically install only when a system "
+"admin pre-configures the ``config.json`` with that plugin enabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:125
+msgid "Upload Plugin"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:128
+msgid ""
+"**true**:  Enables you to upload plugins from the local computer to the "
+"Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:129
+msgid ""
+"**false**: **(Default)** Disables uploading of plugins from the local "
+"computer to the Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:129
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``EnableUploads`` > "
+"``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:130
+msgid "Environment variable: ``MM_PLUGINSETTINGS_ENABLEUPLOADS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:135
+msgid ""
+"When plugin uploads are enabled, the error ``Received invlaid response "
+"from the server`` when uploading a plugin file typically indicates that "
+"the :ref:`MaxFileSize <administration-guide/configure/environment-"
+"configuration-settings:maximum file size>` configuration setting isn't "
+"large enough to support the plugin file upload. Additional proxy setting "
+"updateds may also be required."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:138
+msgid ""
+"The ability to upload plugin files is disabled when the `Require plugin "
+"signature <#require-plugin-signature>`__ configuration setting is "
+"enabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:150
+msgid "Enable Marketplace"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:153
+msgid ""
+"**true**: **(Default)** Enables the plugin Marketplace on your Mattermost"
+" server for all system admins."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:154
+msgid ""
+"**false**: Disables the plugin Marketplace on your Mattermost server for "
+"all system admins."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:154
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``EnableMarketplace`` > "
+"``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:155
+msgid "Environment variable: ``MM_PLUGINSETTINGS_ENABLEMARKETPLACE``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:168
+msgid "Enable remote Marketplace"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:171
+msgid ""
+"**true**: **(Default)** Mattermost attempts to connect to the endpoint "
+"set in **Marketplace URL**. If the connection fails, an error is "
+"displayed, and the Marketplace only shows pre-packaged and installed "
+"plugins."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:173
+msgid ""
+"**false**:  Mattermost does not attempt to connect to a remote "
+"Marketplace. The Marketplace shows only pre-packaged and installed "
+"plugins. Use this setting if your Mattermost server cannot connect to the"
+" Internet."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:172
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``EnableRemoteMarketplace``"
+" > ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:173
+msgid "Environment variable: ``MM_PLUGINSETTINGS_ENABLEREMOTEMARKETPLACE``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:178
+msgid ""
+"From Mattermost v9.1, set this configuration setting value to ``true`` to"
+" access a configured remote marketplace URL."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:179
+msgid ""
+"For Mattermost v9.0, the ``MM_FEATUREFLAGS_STREAMLINEDMARKETPLACE`` "
+"feature flag must be set to ``false``, and this configuration setting "
+"must be set to ``true`` to access a configured remote marketplace URL."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:180
+msgid ""
+"Each Mattermost host must have network access to the endpoint set in "
+"MarketplaceURL."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:190
+msgid "Marketplace URL"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:193
+msgid "This setting stores the URL for the remote Markeplace."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:196
+msgid "String input. Default is **https://api.integrations.mattermost.com**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:194
+msgid "``config.json`` setting: ``PluginSettings`` > ``MarketplaceURL``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:195
+msgid "Environment variable: ``MM_PLUGINSETTINGS_MARKETPLACEURL``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:207
+msgid "Installed plugin state"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:210
+msgid ""
+"This setting is a list of installed plugins and their status as enabled "
+"or disabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:213
+msgid ""
+"The ``config.json`` setting is an object. The object keys are plugin IDs,"
+" e.g. ``com.mattermost.apps``. Each key maps to an object that contains "
+"an ``Enable`` key that can be set as ``true`` or ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:211
+msgid "``config.json`` setting: ``PluginSettings`` > ``PluginStates``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:212
+msgid "Environment variable: ``MM_PLUGINSETTINGS_PLUGINSTATES``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:224
+msgid "Plugin settings"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:227
+msgid "This setting contains plugin-specific data."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:230
+msgid ""
+"The ``config.json`` setting is an object. The object keys are plugin IDs,"
+" e.g. ``com.mattermost.apps``. Each key maps to an object that contains "
+"plugin-specific data."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:228
+msgid "``config.json`` setting: ``PluginSettings`` > ``Plugins``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:229
+msgid "Environment variable: ``MM_PLUGINSETTINGS_PLUGINS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:236
+msgid "Calls"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:238
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Plugins > Calls**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:250
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1080
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1817
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2025
+msgid "Enable plugin"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:253
+msgid "**true**: (Default) Enables the Calls plugin on your Mattermost workspace."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:254
+msgid "**false**: Disables the Calls plugin on your Mattermost workspace."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:253
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:269
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:289
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:309
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:331
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:355
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:373
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:392
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:421
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:447
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:475
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:499
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:556
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:577
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:601
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:625
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:648
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:675
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:701
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:729
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:753
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:779
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:805
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:829
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:856
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:883
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:907
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:931
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:955
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:977
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1000
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1023
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1047
+msgid "System Config path: **Plugins > Calls**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:254
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``PluginStates`` > "
+"``com.mattermost.calls`` > ``Enable``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:255
+msgid ""
+"Environment variable: "
+"``MM_PLUGINSETTINGS_PLUGINSTATES_COM_MATTERMOST_CALLS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:266
+msgid "RTC server address (UDP)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:269
+msgid ""
+"This setting controls the IP address the RTC server listens for UDP "
+"connections. All calls UDP traffic will be served through this IP."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:271
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:291
+msgid ""
+"Changing this setting requires a plugin restart to take effect. If left "
+"unset (default value) the service will listen on all the available "
+"interfaces."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:270
+msgid ""
+"``config.json`` setting: ``PluginSettings`` ``Plugins`` > "
+"``com.mattermost.calls`` > ``udpserveraddress``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:271
+msgid "Environment variable: ``MM_CALLS_UDP_SERVER_ADDRESS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:276
+msgid ""
+"This setting is applicable to self-hosted deployments only, and only when"
+" not running calls through the standalone ``rtcd`` service."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:286
+msgid "RTC server address (TCP)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:289
+msgid ""
+"This setting controls the IP address the RTC server listens for TCP "
+"connections. All calls TCP traffic will be served through this IP."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:290
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``tcpserveraddress``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:291
+msgid "Environment variable: ``MM_CALLS_TCP_SERVER_ADDRESS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:296
+msgid ""
+"This setting is available starting in plugin version 0.17, and is only "
+"applicable for self-hosted deployments when not running calls through the"
+" standalone ``rtcd`` service."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:306
+msgid "RTC server port (UDP)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:309
+msgid ""
+"This setting controls the UDP port listened on by the RTC server. All "
+"calls UDP traffic will be served through this port."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:312
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:334
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:605
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:628
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:680
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:980
+msgid "Changing this setting requires a plugin restart to take effect."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:314
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:336
+msgid "Default is **8443**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:310
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``udpserverport``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:311
+msgid "Environment variable: ``MM_CALLS_UDP_SERVER_PORT``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:318
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:404
+msgid ""
+"This setting is only applicable for self-hosted deployments when not "
+"running calls through the standalone ``rtcd`` service."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:328
+msgid "RTC server port (TCP)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:331
+msgid ""
+"This setting controls the TCP port listened on by the RTC server. All "
+"calls TCP traffic will be served through this port."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:332
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``tcpserverport``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:333
+msgid "Environment variable: ``MM_CALLS_TCP_SERVER_PORT``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:340
+msgid ""
+"This setting is available starting in plugin version 0.17, and is only "
+"applicable for self-hosted deplyoments when not running calls through the"
+" standalone ``rtcd`` service."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:350
+msgid "Enable on specific channels"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:352
+msgid ""
+"*Admins can't configure this setting from Mattermost v7.7; it's hidden "
+"and always enabled for self-hosted deployments*"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:355
+msgid ""
+"**true**: Channel admins can enable or disable calls on specific "
+"channels. Participants in DMs/GMs can also enable or disable calls."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:356
+msgid ""
+"**false**: Only system admins can enable or disable calls on specific "
+"channels."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:356
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``allowenablecalls``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:357
+msgid "Environment variable: ``MM_CALLS_ALLOW_ENABLE_CALLS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:368
+msgid "Test mode"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:370
+msgid ""
+"*This setting was called Enable on all channels until Mattermost v7.7. It"
+" was renamed to defaultenabled in code and Test Mode in-product and is "
+"only applicable to self-hosted deployments.*"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:373
+msgid ""
+"**false**: Test mode is enabled and only system admins can start calls in"
+" channels."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:374
+msgid ""
+"**true**: Live mode is enabled and all team members can start calls in "
+"channels."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:374
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``defaultenabled``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:375
+msgid "Environment variable: ``MM_CALLS_DEFAULT_ENABLED``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:379
+msgid ""
+"Use this setting as a system admin to confirm calls work as expected. "
+"When **false**, users attempting to start calls are prompted to contact a"
+" system admin, and system admins are prompted to confirm that calls are "
+"working as expected before switching to live mode."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:389
+msgid "ICE host override"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:392
+msgid ""
+"This setting can be used to override the host addresses that get "
+"advertised to clients when connecting to calls. The accepted formats are "
+"the following:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:396
+msgid "A single IP address (e.g. ``10.0.0.1``)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:397
+msgid "A single hostname or FQDN (e.g. ``calls.myserver.tld``)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:398
+msgid ""
+"(starting in v0.17.0) A comma separated list of externalAddr/internalAddr"
+" mappings (e.g. ``10.0.0.1/172.0.0.1,10.0.0.2/172.0.0.2``)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:400
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:453
+msgid ""
+"This is an optional field. Changing this setting requires a plugin "
+"restart to take effect."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:393
+msgid ""
+"``config.json`` setting:  ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``icehostoverride``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:394
+msgid "Environment variable: ``MM_CALLS_ICE_HOST_OVERRIDE``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:405
+msgid ""
+"Depending on the network infrastructure (e.g. instance behind a NAT "
+"device) it may be necessary to set this field to the client facing "
+"external IP for clients to connect. When empty or unset, the RTC service "
+"will attempt to find the instance's public IP through STUN."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:406
+msgid ""
+"A hostname (e.g. domain name) can be specified in this setting, but an IP"
+" address will be passed to clients. This means that a DNS resolution "
+"happens on the Mattermost instance which could result in a different IP "
+"address from the one the clients would see, causing connectivity to fail."
+" When in doubt, we recommend using an IP address directly or confirming "
+"that the resolution on the host side reflects the one on the client."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:418
+msgid "ICE host port override"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:421
+msgid ""
+"This setting can be used to override the port used in the ICE host "
+"candidates that get advertised to clients when connecting to calls."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:425
+msgid ""
+"This can be useful in case there are additional network components (e.g. "
+"NLBs) in front of the RTC server that may route the calls traffic through"
+" a different port. Changing this setting requires a plugin restart to "
+"take effect."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:422
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``icehostportoverride``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:423
+msgid "Environment variable: ``MM_CALLS_ICE_HOST_PORT_OVERRIDE``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:430
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:457
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:483
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:509
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:564
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:586
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:610
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:633
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:685
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:708
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:737
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:760
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:786
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:812
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:836
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:890
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:914
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:938
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:962
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:984
+msgid "This setting is applicable only to self-hosted deployments."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:431
+msgid "This value will apply to both UDP and TCP host candidates."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:441
+msgid "RTCD service URL"
+msgstr ""
+
+#: ../../source/_static/badges/ent-plus.rst:9
+msgid ""
+"|plans-img-yellow| Available on `Enterprise and Enterprise Advanced plans"
+" <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:447
+msgid ""
+"The URL to a running `rtcd <https://github.com/mattermost/rtcd>`__ "
+"service instance that will host the calls."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:451
+msgid ""
+"When set (non empty) all the calls will be handled by this external "
+"service."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:448
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``rtcdserviceurl``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:449
+msgid "Environment variable: ``MM_CALLS_RTCD_SERVICE_URL``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:458
+msgid ""
+"The environment variable ``MM_CALLS_RTCD_URL`` is deprecated in favor of "
+"``MM_CALLS_RTCD_SERVICE_URL``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:459
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:461
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:709
+msgid ""
+"The client will self-register the first time it connects to the service "
+"and store the authentication key in the database. If no client ID is "
+"explicitly provided, the diagnostic ID of the Mattermost installation "
+"will be used."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:460
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:462
+msgid ""
+"The service URL supports credentials in the form "
+"``http://clientID:authKey@hostname``. Alternatively these can be passed "
+"through environment overrides to the Mattermost server, namely "
+"``MM_CALLS_RTCD_CLIENT_ID`` and ``MM_CALLS_RTCD_AUTH_KEY``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:472
+msgid "Max call participants"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:475
+msgid ""
+"This setting limits the number of participants that can join a single "
+"call."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:479
+msgid "Default is **0** (no limit)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:476
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``maxcallparticipants``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:477
+msgid "Environment variable: ``MM_CALLS_MAX_CALL_PARTICIPANTS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:484
+msgid ""
+"The environment variable ``MM_CALLS_MAX_PARTICIPANTS`` is deprecated in "
+"favor of ``MM_CALLS_MAX_CALL_PARTICIPANTS``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:485
+msgid ""
+"This setting is optional, but the recommended maximum number of "
+"participants is **50**. Call participant limits greatly depends on "
+"instance resources. See the :doc:`Calls deployment guide "
+"</administration-guide/configure/calls-deployment-guide>` documentation "
+"for details."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:496
+msgid "ICE servers configurations"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:499
+msgid ""
+"This setting stores a list of ICE servers (STUN/TURN) in JSON format to "
+"be used by the service."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:503
+msgid ""
+"This is an optional field. Changing this setting may require a plugin "
+"restart to take effect."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:505
+#, python-brace-format
+msgid ""
+"Default is ``[{\"urls\": "
+"[\"stun:stun.global.calls.mattermost.com:3478\"]}]``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:500
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``iceserversconfigs``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:501
+msgid "Environment variable: ``MM_CALLS_ICE_SERVERS_CONFIGS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:510
+msgid ""
+"The configurations above, containing STUN and TURN servers, are sent to "
+"the clients and used to generate local candidates."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:511
+msgid ""
+"If hosting calls through the plugin (i.e. not using the |rtcd_service|) "
+"any configured STUN server may also be used to find the instance's public"
+" IP when none is provided through the |ice_host_override_link| option."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:515
+msgid "**Example**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:534
+msgid "**Example (Using generated TURN credentials)**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:543
+msgid ""
+"To get TURN generated credentials to work you must provide a secret "
+"through the *TURN static auth secret* setting below."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:553
+msgid "TURN static auth secret"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:556
+msgid "A static secret used to generate short-lived credentials for TURN servers."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:559
+msgid "This is an optional field."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:557
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``turnstaticauthsecret``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:558
+msgid "Environment variable: ``MM_CALLS_TURN_STATIC_AUTH_SECRET``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:574
+msgid "TURN credentials expiration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:577
+msgid ""
+"The expiration, in minutes, of the short-lived credentials generated for "
+"TURN servers."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:581
+msgid "Default is **1440** (one day)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:578
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``turncredentialsexpirationminutes``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:579
+msgid "Environment variable: ``MM_CALLS_TURN_CREDENTIALS_EXPIRATION_MINUTES``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:598
+msgid "Server side TURN"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:601
+msgid ""
+"**true**: The RTC server will use the configured TURN candidates for "
+"server-initiated connections."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:602
+msgid "**false**: TURN will be used only on the client-side."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:602
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``serversideturn``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:603
+msgid "Environment variable: ``MM_CALLS_SERVER_SIDE_TURN``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:622
+msgid "Allow screen sharing"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:625
+msgid "**true**: Call participants will be allowed to share their screen."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:626
+msgid "**false**: Call participants won't be allowed to share their screen."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:626
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``allowscreensharing``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:627
+msgid "Environment variable: ``MM_CALLS_ALLOW_SCREEN_SHARING``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:645
+msgid "Enable simulcast for screen sharing (Experimental)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:648
+msgid ""
+"**true**: Enables simulcast for screen sharing. This can help to improve "
+"screen sharing quality."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:649
+msgid "**false**: Disables simulcast for screen sharing."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:649
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``enablesimulcast``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:650
+msgid "Environment variable: ``MM_CALLS_ENABLE_SIMULCAST``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:655
+msgid "This experimental setting is applicable only to self-hosted deployments."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:656
+msgid ""
+"This functionality requires Calls plugin version >= v0.16.0 and ``rtcd`` "
+"version >= v0.10.0 (when in use)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:657
+msgid ""
+"Avoid enabling both this experimental configuration setting and the "
+"`Enable AV1 <#enable-av1-experimental>`__ experimental configuration "
+"setting at the same time."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:669
+msgid "Enable call recordings"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:675
+msgid "**true**: Allows call hosts to record meeting video and audio."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:676
+msgid ""
+"**false**: **(Default)** Call recording functionality is not available to"
+" hosts."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:678
+msgid ""
+"Recordings include the entire call window view along with participants' "
+"audio track and any shared screen video. Recordings are stored in "
+"Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:676
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``enablerecordings``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:677
+msgid "Environment variable: ``MM_CALLS_ENABLE_RECORDINGS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:695
+msgid "Job service URL"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:701
+msgid ""
+"The URL to a running job service where all the processing related to "
+"recordings happens. The recorded files produced are stored in Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:703
+msgid ""
+"This is a required field. Changing this setting requires a plugin restart"
+" to take effect."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:702
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``jobserviceurl``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:703
+msgid "Environment variable: ``MM_CALLS_JOB_SERVICE_URL``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:710
+msgid ""
+"The service URL supports credentials in the form "
+"``http://clientID:authKey@hostname``. Alternatively these can be passed "
+"through environment overrides to the Mattermost server, namely "
+"``MM_CALLS_JOB_SERVICE_CLIENT_ID`` and ``MM_CALLS_JOB_SERVICE_AUTH_KEY``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:712
+msgid ""
+"As of Calls v0.25 it's possible to override the site URL used by jobs to "
+"connect by setting the ``MM_CALLS_RECORDER_SITE_URL`` or "
+"``MM_CALLS_TRANSCRIBER_SITE_URL`` environment variables respectively. "
+"This can be helpful to avoid the jobs from connecting through the public "
+"Site URL configured in Mattermost and thus potentially bypass the public "
+"network."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:723
+msgid "Maximum call recording duration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:729
+msgid "The maximum duration of a call recording in minutes."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:732
+msgid "The default is **60**. The maximum is **180**. This is a required value."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:730
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``maxrecordingduration``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:731
+msgid "Environment variable: ``MM_CALLS_MAX_RECORDING_DURATION``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:747
+msgid "Call recording quality"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:753
+msgid ""
+"The audio and video quality of call recordings. Available options are: "
+"*Low*, *Medium* and *High*."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:756
+msgid "The default is **Medium**. This is a required value."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:754
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``recordingquality``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:755
+msgid "Environment variable: ``MM_CALLS_RECORDING_QUALITY``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:761
+msgid ""
+"The quality setting will affect the performance of the job service and "
+"the file size of recordings. Refer to the :doc:`Calls deployment guide "
+"</administration-guide/configure/calls-deployment-guide>` documentation "
+"for more information."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:773
+msgid "Enable call transcriptions"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:779
+msgid "**true**: Enables automatic transcriptions of calls."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:780
+msgid "**false**: **(Default)** Call transcriptions functionality is disabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:782
+msgid ""
+"Transcriptions are generated from the call participants' audio tracks and"
+" the resulting files are attached to the call thread when the recording "
+"ends. Captions will be optionally rendered on top of the recording file "
+"video player."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:780
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``enabletranscriptions``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:781
+msgid "Environment variable: ``MM_CALLS_ENABLE_TRANSCRIPTIONS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:787
+msgid ""
+"The ability to enable call transcriptions in Mattermost calls is "
+"currently in :ref:`Beta <administration-guide/manage/feature-"
+"labels:beta>`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:788
+msgid ""
+"This server-side configuration setting is available from plugin version "
+"0.22."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:789
+msgid ""
+"Call transcriptions require :ref:`call recordings <administration-"
+"guide/configure/plugins-configuration-settings:enable call recordings>` "
+"to be enabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:799
+msgid "Transcriber model size"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:805
+msgid ""
+"The speech-to-text model size to use. Heavier models will produce more "
+"accurate results at the expense of processing time and resources usage. "
+"Available options are: *Tiny*, *Base* and *Small*."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:808
+msgid "The default is **Base**. This is a required value."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:806
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``transcribermodelsize``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:807
+msgid "Environment variable: ``MM_CALLS_TRANSCRIBER_MODEL_SIZE``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:813
+msgid ""
+"This setting is available starting in plugin version 0.22. The model size"
+" setting will affect the performance of the job service. Refer to the "
+":doc:`Calls deployment guide </administration-guide/configure/calls-"
+"deployment-guide>` documentation for more information."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:823
+msgid "Call transcriber threads"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:829
+msgid ""
+"The number of threads used by the post-call transcriber. This must be in "
+"the range [1, numCPUs]."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:832
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:934
+msgid "The default is 2. This is a required value."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:830
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``transcribernumthread``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:831
+msgid "Environment variable: ``MM_CALLS_TRANSCRIBER_NUM_THREADS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:837
+msgid ""
+"The call transcriber threads setting will affect the performance of the "
+"job service. Refer to the :doc:`Calls deployment guide </administration-"
+"guide/configure/calls-deployment-guide>` documentation for more "
+"information. This setting is available starting in plugin version 0.26.2."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:850
+msgid "Enable live captions"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:856
+msgid "**true**: Enables live captioning of calls."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:857
+msgid "**false**: **(Default)** Live captions functionality is disabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:859
+msgid ""
+"Live captions are generated from the call participants' audio tracks and "
+"the resulting captions can be optionally displayed on the call clients by"
+" selecting the **[cc]** option."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:857
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``enablelivecaptions``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:858
+msgid "Environment variable: ``MM_CALLS_ENABLE_LIVE_CAPTIONS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:865
+msgid ""
+"The ability to enable live call captions in Mattermost calls is currently"
+" in :ref:`Beta <administration-guide/manage/feature-labels:beta>`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:866
+msgid ""
+"This server-side configuration setting is available starting in plugin "
+"version 0.26.2."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:867
+msgid ""
+"Live captions require :ref:`call recordings <administration-"
+"guide/configure/plugins-configuration-settings:enable call recordings>` "
+"and :ref:`call transcriptions <administration-guide/configure/plugins-"
+"configuration-settings:enable call transcriptions>` to be enabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:877
+msgid "Live captions: Model size"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:883
+msgid ""
+"The speech-to-text model size to use for live captions. While heavier "
+"models can produce more accurate results, live captioning requires the "
+"transcriber to process up to ten seconds of audio within two seconds. "
+"Therefore a maximum of size `base` is recommended. Available options are:"
+" *Tiny*, *Base* and *Small*."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:886
+msgid "The default is **Tiny**. This is a required value."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:884
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``livecaptionsmodelsize``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:885
+msgid "Environment variable: ``MM_CALLS_LIVE_CAPTIONS_MODEL_SIZE``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:891
+msgid ""
+"This setting is available starting in plugin version 0.26.2. The model "
+"size setting will affect the performance of the job service. Refer to the"
+" `performance and scalability recommendations "
+"<https://github.com/mattermost/calls-"
+"offloader/blob/master/docs/performance.md>`_ documentation for more "
+"information."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:901
+msgid "Live captions: Number of transcribers used per call"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:907
+msgid ""
+"The number of separate live captions transcribers for each call. Each "
+"transcribes one audio stream at a time. The product of "
+"LiveCaptionsNumTranscribers * LiveCaptionsNumThreadsPerTranscriber must "
+"be in the range [1, numCPUs]."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:910
+msgid "The default is 1. This is a required value."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:908
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``livecaptionsnumtranscribers``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:909
+msgid "Environment variable: ``MM_CALLS_LIVE_CAPTIONS_NUM_TRANSCRIBERS``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:915
+msgid ""
+"This setting is available starting in plugin version 0.26.2. The live "
+"captions number of transcribers setting will affect the performance of "
+"the job service. Refer to the `performance and scalability "
+"recommendations <https://github.com/mattermost/calls-"
+"offloader/blob/master/docs/performance.md>`_ documentation for more "
+"information."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:925
+msgid "Live captions: Number of threads per transcriber"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:931
+msgid ""
+"The number of threads per live-captions transcriber. The product of "
+"``LiveCaptionsNumTranscribers`` * "
+"``LiveCaptionsNumThreadsPerTranscriber`` must be in the range [1, "
+"numCPUs]."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:932
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``livecaptionsnumthreadspertranscriber``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:933
+msgid ""
+"Environment variable: "
+"``MM_CALLS_LIVE_CAPTIONS_NUM_THREADS_PER_TRANSCRIBER``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:939
+msgid ""
+"This setting is available starting in plugin version 0.26.2. The live "
+"captions number of threads per transcriber setting will affect the "
+"performance of the job service. Refer to the `performance and scalability"
+" recommendations <https://github.com/mattermost/calls-"
+"offloader/blob/master/docs/performance.md>`_ documentation for more "
+"information"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:949
+msgid "Live captions language"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:955
+msgid ""
+"The language passed to the live captions transcriber. Should be a "
+"2-letter ISO 639 Set 1 language code, e.g. 'en'."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:958
+msgid "If blank, the lange will be set to 'en' (English) as default."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:956
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``livecaptionslanguage``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:957
+msgid "Environment variable: ``MM_CALLS_LIVE_CAPTIONS_LANGUAGE``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:974
+msgid "(Experimental) Enable IPv6"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:977
+msgid ""
+"**true**: The RTC service will work in dual-stack mode, listening for "
+"IPv6 connections and generating candidates in addition to IPv4 ones."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:978
+msgid ""
+"**false**: **(Default)** The RTC service will only listen for IPv4 "
+"connections."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:978
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``enableipv6``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:979
+msgid "Environment variable: ``MM_CALLS_ENABLE_IPV6``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:985
+msgid ""
+"This setting is available starting in plugin version 0.17, and is only "
+"applicable when not running calls through the standalone ``rtcd`` "
+"service."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:997
+msgid "Enable call ringing"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1000
+msgid ""
+"**true**: Ringing functionality is enabled. Direct and group message "
+"participants receive a desktop app alert and a ringing notification when "
+"a call starts."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1003
+msgid "**false**: **(Default**) Ringing functionality is disabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1001
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``enableringing``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1002
+msgid "Environment variable: ``MM_CALLS_ENABLE_RINGING``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1008
+msgid ""
+"The ability to enable call ringing in Mattermost calls is in :ref:`Beta "
+"<administration-guide/manage/feature-labels:beta>`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1021
+msgid "Enable AV1 (Experimental)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1023
+msgid ""
+"**true**: Enables the ability to use the AV1 codec to encode screen "
+"sharing tracks. Can result in improved screen sharing quality via clients"
+" that support AV1 encoding."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1026
+msgid "**false**: **(Default**) AV1 codec is disabled for screen sharing tracks."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1024
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``enableAV1``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1025
+msgid "Environment variable: ``MM_CALLS_ENABLE_AV1``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1032
+msgid ""
+"Avoid enabling both this experimental configuration setting and the "
+"`Enable simulcast for screen sharing <#enable-simulcast-for-screen-"
+"sharing-experimental>`__ experimental configuration setting at the same "
+"time."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1044
+msgid "Enable DC signaling (Experimental)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1047
+msgid ""
+"**true**: Clients will use WebRTC data channels for signaling of media "
+"tracks (i.e., voice, screen). This can result in a more efficient and "
+"less race-prone process, especially in case of poor network connections."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1050
+msgid ""
+"**false**: **(Default**) Clients will use WebSockets for signaling media "
+"tracks."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1048
+msgid ""
+"``config.json`` setting: ``PluginSettings`` > ``Plugins`` > "
+"``com.mattermost.calls`` > ``enabledcsignaling``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1049
+msgid "Environment variable: ``MM_CALLS_ENABLE_DC_SIGNALING``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1056
+msgid ""
+"Version v0.18.0 or higher of the |rtcd_service| is required for this "
+"functionality to work when hosting calls through the dedicated WebRTC "
+"service."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1057
+msgid ""
+"Use caution when enabling this experimental configuration setting since "
+"it determines how the system handles part of the setup for WebRTC-based "
+"calls. Enabling this configuration setting may make the call setup a bit "
+"faster or more reliable in certain situations."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1062
+msgid "AI Agents"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1066
+msgid "Mattermost Agents is formerly known as Mattermost Copilot."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1068
+msgid ""
+"Access the following Mattermost Agents configuration settings in the "
+"System Console by going to **Plugins > Agents**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1083
+msgid "**true**: Enables the Agents plugin on your Mattermost workspace."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1084
+msgid "**false**: **(Default)** Disables the Agents plugin."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1083
+msgid "System Config path: **Plugins > Agents**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1084
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1100
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1117
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1134
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1151
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1169
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1186
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1203
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1221
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1239
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1259
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1280
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1298
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1317
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1335
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1357
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1381
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1403
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1423
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1442
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1461
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1477
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1496
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1520
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1540
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1556
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1573
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1591
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1607
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1626
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1644
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1662
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1680
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1698
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1821
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1843
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1859
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1875
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1891
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1911
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1932
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1954
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1973
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1991
+msgid "``config.json`` setting: N/A"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1085
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1101
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1118
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1135
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1152
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1170
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1187
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1204
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1222
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1240
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1260
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1281
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1299
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1318
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1336
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1358
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1382
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1404
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1424
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1443
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1462
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1478
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1497
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1521
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1541
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1557
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1574
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1592
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1608
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1627
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1645
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1663
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1681
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1699
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1822
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1844
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1860
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1876
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1892
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1912
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1933
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1955
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1974
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1992
+msgid "Environment variable: N/A"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1096
+msgid "Display name"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1099
+msgid ""
+"The bot's display name in Mattermost used to distinguish the bot from "
+"other bots in the system."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1102
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1119
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1242
+msgid "String input."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1099
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1116
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1133
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1150
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1168
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1185
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1202
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1220
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1238
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1258
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1279
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1297
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1316
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1334
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1356
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1380
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1402
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1422
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1441
+msgid "System Config path: **Plugins > Agents > Add an AI Bot**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1113
+msgid "Agent username"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1116
+msgid "The bot's username that can be used to @mention the bot in a channel."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1130
+msgid "Agent avatar"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1133
+msgid "Upload an image to use as the agent's avatar in Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1136
+msgid "Image upload interface."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1147
+msgid "Service"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1150
+msgid "Select the LLM service provider to use for AI assistance."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1153
+msgid ""
+"Available options: **OpenAI**, **OpenAI Compatible**, **Azure**, "
+"**Anthropic**, and **Ask Sage**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1165
+msgid "Username"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1168
+msgid "The username used to authenticate with the **Ask Sage** LLM service."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1171
+msgid "String input required."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1182
+msgid "Password"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1185
+msgid "The password used to authenticate with the **Ask Sage** LLM service."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1188
+msgid "String input required. This value is encrypted when stored."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1199
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1587
+msgid "API URL"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1202
+msgid ""
+"The endpoint that Mattermost will use to communicate with the LLM's API. "
+"Required for **OpenAI Compatible** and **Azure** LLM services."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1206
+msgid "String input (URL format)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1217
+msgid "API key"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1220
+msgid ""
+"The key used to authenticate requests to the LLM's API. Required for "
+"**OpenAI**, **OpenAI Compatible**, and **Anthropic** LLM services."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1224
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1558
+msgid "String input. This value is encrypted when stored."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1235
+msgid "Organization ID"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1238
+msgid ""
+"Ensures that requests are billed and processed under the correct "
+"organization, where applicable. Supported for **OpenAI**, **OpenAI "
+"Compatible**, and **Azure** LLM services."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1255
+msgid "Send user ID"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1258
+msgid ""
+"**true**: Includes unique user identifiers in API requests to the LLM for"
+" analytics, personalization, and auditing purposes."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1260
+msgid "**false**: **(Default)** Does not include user identifiers."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1262
+msgid "Review LLM data privacy policies before enabling this setting."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1266
+msgid ""
+"We recommend reviewing LLM data privacy policies to confirm whether "
+"transmitting user information is acceptable and secure within your "
+"organization's regulatory framework. Do not enable when you need to "
+"conform to strict privacy regulations (e.g., GDPR) that limit sharing "
+"user-identifiable data with external services."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1276
+msgid "Default model"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1279
+msgid ""
+"The specific LLM that will be used to process queries if no other model "
+"is explicitly selected. Supported for all LLM services."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1283
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1576
+msgid "String input (model name)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1294
+msgid "Input token limit"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1297
+msgid ""
+"The maximum number of tokens (chunks of text, including words, "
+"punctuation, or special characters) that the selected LLM can process in "
+"a single prompt or request."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1301
+msgid ""
+"Numerical value. Directly impacts the size of user queries that can be "
+"handled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1313
+msgid "Output token limit"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1316
+msgid ""
+"The maximum number of tokens (chunks of text, including words, "
+"punctuation, or special characters) that the LLM can generate in its "
+"response to a query."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1320
+msgid "Numerical value. Must be greater than 0 for **Anthropic** LLM services."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1331
+msgid "Streaming timeout"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1334
+msgid ""
+"Determines how long the system will wait for a response from the LLM when"
+" using streaming (real-time) output mode. Supported for **OpenAI**, "
+"**OpenAI Compatible**, and **Azure** LLM services."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1338
+msgid ""
+"Numerical value (in seconds). If the LLM takes longer than the configured"
+" timeout, the connection is terminated."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1343
+msgid ""
+"Streaming allows LLMs to display the response gradually as it's being "
+"generated, creating a smoother and more interactive experience for users."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1353
+msgid "Custom instructions"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1356
+msgid ""
+"Preset specific contextual or behavioral guidance for the LLM. Helps "
+"tailor the model's responses to align with your organization's needs, "
+"tone, or expectations. Supported for all LLM services."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1360
+msgid ""
+"Text input. Instructions that the model will implicitly follow for every "
+"interaction, providing consistency and adaptability."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1365
+msgid ""
+"Custom instructions can include behavioral guidance, tone preferences, "
+"contextual functions, and organizational preferences. This ensures "
+"responses adhere to your organization's language and tone guidelines and "
+"aligns the model's behavior with specific roles or purposes."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1377
+msgid "Enable vision"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1380
+msgid ""
+"**true**: Enables the LLM to process and generate responses that "
+"incorporate image-related input or output. Supported for **OpenAI**, "
+"**OpenAI Compatible**, **Azure**, and **Anthropic** LLM services."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1383
+msgid "**false**: **(Default)** Disables vision capabilities."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1387
+msgid ""
+"This feature is in :ref:`Beta <administration-guide/manage/feature-"
+"labels:beta>`. When enabled, the LLM can interact with prompts that "
+"include image-related input, such as image analysis, visual-related "
+"assistance, and visual outputs, where supported."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1399
+msgid "Enable tools"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1402
+msgid ""
+"**true**: Enables the LLM to leverage additional tools or plugins to "
+"enhance its capabilities. Supported for **OpenAI**, **OpenAI "
+"Compatible**, **Azure**, and **Anthropic** LLM services."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1405
+msgid "**false**: **(Default)** Disables tool capabilities."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1409
+msgid ""
+"When enabled, advanced features beyond basic query processing allow the "
+"LLM to perform specialized tasks like retrieving data, integrating with "
+"external APIs, or performing computations, where supported."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1419
+msgid "Channel access"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1422
+msgid ""
+"Determines whether the bot can consume the contents of a given channel "
+"and provide answers only from content available in the channel. Supported"
+" for all LLM services."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1426
+msgid ""
+"Available options: **Allow for all channels**, **Allow for selected "
+"channels**, **Block selected channels**, and **Block all channels**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1438
+msgid "User access"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1441
+msgid ""
+"Determines whether users who chat with this bot can get private "
+"assistance about content across all channels the user has access to. "
+"Supported for all LLM services."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1445
+msgid ""
+"Available options: **Allow for all users**, **Allow for selected users**,"
+" and **Block selected users**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1457
+msgid "Default agent"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1460
+msgid ""
+"Select the default bot to use for AI functions when multiple agents are "
+"configured. Based on defined agents."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1460
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1476
+msgid "System Config path: **Plugins > Agents > AI Functions**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1473
+msgid "Allowed upstream hostnames"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1476
+msgid ""
+"Comma-separated list of hostnames that LLMs are allowed to contact when "
+"using tools. Supports wildcards like ``*.mydomain.com``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1479
+msgid "Example: ``mattermost.atlassian.net`` to allow JIRA tool use."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1492
+msgid "Enable LLM trace"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1495
+msgid ""
+"**true**: Enables tracing of LLM requests and outputs full conversation "
+"data to the logs. Supported for all LLM services."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1497
+msgid "**false**: **(Default)** Disables LLM request tracing."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1495
+msgid "System Config path: **Plugins > Agents > Debug**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1501
+msgid ""
+"Use this setting for debugging purposes only. When enabled, it may log "
+"sensitive conversation data."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1513
+msgid "Enable embedding search"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1519
+msgid ""
+"**Composite**: Enables experimental embedding search capabilities for "
+"semantic search across Mattermost content using pgvector and OpenAI-"
+"compatible endpoints."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1522
+msgid "**Disabled**: **(Default)** Disables embedding search capabilities."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1519
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1539
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1555
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1572
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1590
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1606
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1625
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1643
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1661
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1679
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1697
+msgid "System Config path: **Plugins > Agents > Embedding Search**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1526
+msgid ""
+"Embedding search requires an Enterprise license and is available as an "
+":ref:`experimental <administration-guide/manage/feature-"
+"labels:experimental>` feature. You must also enable the ``pgvector`` "
+"extension in your PostgreSQL database. Performance may vary with large "
+"datasets."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1536
+msgid "Embedding provider type"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1539
+msgid ""
+"Select the provider for generating embeddings for semantic search. "
+"Available options: **OpenAI** and **OpenAI Compatible**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1552
+msgid "API Key"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1555
+msgid ""
+"The API key used to authenticate requests to the embedding provider's "
+"API. Required for **OpenAI Compatible** embedding providers."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1569
+msgid "Model"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1572
+msgid ""
+"The specific embedding model to use for generating vector representations"
+" of content. Must be compatible with the selected embedding provider."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1590
+msgid "The endpoint URL for the **OpenAI-compatible** embedding API."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1592
+msgid "Required string input (URL format)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1603
+msgid "Dimensions"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1606
+msgid ""
+"The dimensionality of the embedding vectors, which must match the chosen "
+"embedding model. Common values include 1536 for OpenAI text-embedding-"
+"ada-002 and 3072 for text-embedding-3-large."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1610
+msgid ""
+"Numerical input. Common values are 768, 1024, or 1536, depending on the "
+"model."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1622
+msgid "Chunking strategy"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1625
+msgid ""
+"The method used to split content into smaller chunks for embedding "
+"generation. Available options: **Sentences**, **Paragraphs**, **Fixed "
+"Size**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1629
+msgid "Choose based on your content type and search requirements."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1640
+msgid "Chunk size"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1643
+msgid ""
+"The maximum size of each content chunk in characters. Recommended range "
+"is 512-1024 characters. The optimal value varies by chunking strategy."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1647
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1665
+msgid "Numerical input."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1658
+msgid "Chunk overlap"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1661
+msgid ""
+"The number of tokens that consecutive chunks share for better context "
+"continuity. Recommended range is 20-50 characters for **Fixed Size** "
+"chunking."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1676
+msgid "Minimum chunk size ratio"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1679
+msgid ""
+"The minimum ratio for chunk size validation to ensure sentence and "
+"paragraph chunks meet size requirements. Used to filter out chunks that "
+"are too small releative to the configured chunk size."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1683
+msgid "Numerical input (decimal ratio)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1694
+msgid "Reindex all posts"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1697
+msgid ""
+"Select **Reindex Posts** to trigger a complete reindexing of all posts "
+"for embedding search. Use this control to rebuild the search index when "
+"changing embeddingproviders, models, or chunking configurations."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1702
+msgid "Monitor indexing progress during the reindexing process."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1715
+msgid "GitLab"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1717
+msgid ""
+"See the :doc:`Connect GitLab to Mattermost </integrations-guide/gitlab>` "
+"product documentation for details."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1729
+msgid "GitHub"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1731
+msgid ""
+"See the :doc:`Connect GitHub to Mattermost </integrations-guide/github>` "
+"product documentation for details."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1743
+msgid "Jira"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1745
+msgid ""
+"See the :doc:`Connect Jira to Mattermost </integrations-guide/jira>` "
+"product documentation for available :ref:`Mattermost configuration "
+"options <integrations-guide/jira:mattermost configuration>`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1757
+msgid "Legal hold"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1762
+msgid ""
+"See the :doc:`Legal holds </administration-guide/comply/legal-hold>` "
+"product documentation for details."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1774
+msgid "Microsoft Calendar Integration"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1776
+msgid ""
+"See the :doc:`Connect Microsoft Calendar Integration to Mattermost "
+"</integrations-guide/microsoft-calendar>` product documentation for "
+"available :ref:`Mattermost configuration options <integrations-guide"
+"/microsoft-calendar:enable and configure the microsoft calendar "
+"integration in mattermost>`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1788
+msgid "Microsoft Teams Meetings"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1790
+msgid ""
+"See the :doc:`Connect Microsoft Teams Meetings to Mattermost "
+"</integrations-guide/microsoft-teams-meetings>` product documentation for"
+" available :ref:`Mattermost configuration options <integrations-guide"
+"/microsoft-teams-meetings:enable and configure the microsoft teams "
+"meetings integration in mattermost>`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1797
+msgid "MS Teams"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1799
+msgid ""
+"Mattermost for Microsoft Teams enables you to break through siloes in a "
+"mixed Mattermost and Teams environment by forwarding real-time chat "
+"notifications from Teams to Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1803
+msgid ""
+"Download our `Mattermost for Microsoft Teams datasheet "
+"<https://mattermost.com/mattermost-for-microsoft-teams-datasheet/>`_ to "
+"learn how Mattermost helps your organization get more from your Microsoft"
+" tools."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1805
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Plugins > MS Teams**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1820
+msgid "Enable the Mattermost for Microsoft Teams plugin for all Mattermost teams."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1823
+msgid "**true**: Enables MS Teams plugin on your Mattermost workspace."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1824
+msgid "**false**: **(Default)** Disables the MS Teams plugin."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1820
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1842
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1858
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1874
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1890
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1910
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1931
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1953
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1972
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1990
+msgid "System Config path: **Plugins > MS Teams**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1828
+msgid ""
+"Use the `Enabled Teams <#enabled-teams>`__ configuration option to "
+"specify which Mattermost teams synchronize direct and group messages with"
+" Microsoft Teams chats."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1839
+msgid "Tenant ID"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1842
+msgid "Specify the Microsoft Teams Tenant ID from the Azure portal."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1855
+msgid "Client ID"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1858
+msgid ""
+"Specify the Microsoft Teams Client ID of your registered OAuth app in the"
+" Azure portal."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1871
+msgid "Client secret"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1874
+msgid "Specify the client secret of your registered OAuth app in Azure portal."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1876
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1893
+msgid "Alpha-numeric value."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1887
+msgid "At rest encryption key"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1890
+msgid ""
+"Regenerate a new encryption secret. This encryption secret will be used "
+"to encrypt and decrypt the OAuth token."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1897
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1916
+msgid "Select **Regenerate** to generate a new key."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1907
+msgid "Webhook secret"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1910
+msgid ""
+"Generate the webhook secret that Microsoft Teams will use to send "
+"messages to Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1928
+msgid "Use the evaluation API pay model"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1931
+msgid ""
+"Enable this only for testing purposes. You need the pay model to be able "
+"to support enough message notifications to work in a real world scenario."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1935
+msgid "**true**: Enables the evaluation API pay model."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1936
+msgid "**false**: **(Default)** Disables the evaluation API pay model."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1950
+msgid "Sync notifications"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1953
+msgid ""
+"Notify connected users in Mattermost on receipt of a chat or group chat "
+"from Microsoft Teams."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1956
+msgid ""
+"**true**: **(Default)** Sync notifications of chat messages for any "
+"connected user that enables the feature."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1958
+msgid "**false**: Do not sync notifications."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1969
+msgid "Maximum size of attachments to support complete one time download"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1972
+msgid ""
+"Specify the maximum file size, in mebibytes (MiB), of attachments that "
+"can be loaded into memory. Attachment files larger than this value will "
+"be streamed from Microsoft Teams to Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1976
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1993
+msgid "Numerical value. Default is **20** MiB."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1987
+msgid "Buffer size for streaming files"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1990
+msgid ""
+"Specify the buffer size, in mebibytes (MiB), for streaming attachment "
+"files from Microsoft Teams to Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:1999
+msgid "Performance metrics"
+msgstr ""
+
+#: ../../source/_static/badges/entry-ent.rst:9
+msgid ""
+"|plans-img-yellow| Available on `Entry, Enterprise, and Enterprise "
+"Advanced plans <https://mattermost.com/pricing/>`__ (not available on "
+"Professional)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2004
+msgid ""
+"See the :doc:`Monitor performance metrics </administration-guide/scale"
+"/collect-performance-metrics>` product documentation for available "
+":ref:`Mattermost configuration options <administration-guide/scale"
+"/collect-performance-metrics:mattermost configuration>`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2009
+msgid "Collaborative playbooks"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2011
+msgid ""
+"Use collaborative playbooks in Mattermost to provide structure, "
+"monitoring and automation for repeatable, team-based processes integrated"
+" with the Mattermost platform."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2013
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Plugins > Collaborative playbooks**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2028
+msgid ""
+"**true**: **(Default)** Enables collaborative Playbooks on your "
+"Mattermost workspace."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2029
+msgid "**false**: Disables collaborative Playbooks on your Mattermost workspace."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2028
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2044
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2062
+msgid "System Config path: **Plugins > Collaborative playbooks**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2029
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2045
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2063
+msgid "``config.json`` setting:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2030
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2046
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2064
+msgid "Environment variable:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2041
+msgid "Enabled teams"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2044
+msgid ""
+"Enable collaborative playbooks for all Mattermost teams, or for only "
+"selected teams."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2059
+msgid "Enable experimental features"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2062
+msgid ""
+"**true**: Enables experimental playbooks features on your Mattermost "
+"workspace."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2063
+msgid ""
+"**false**: Disables experimental playbooks features on your Mattermost "
+"workspace."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2077
+msgid "ServiceNow"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2079
+msgid ""
+"See the :doc:`Connect ServiceNow to Mattermost </integrations-"
+"guide/servicenow>` product documentation for available :ref:`Mattermost "
+"configuration options <integrations-guide/servicenow:mattermost "
+"configuration>`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2092
+msgid "Zoom"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2094
+msgid ""
+"See the :doc:`Connect Zoom to Mattermost </integrations-guide/zoom>` "
+"product documentation for available :ref:`Mattermost configuration "
+"options <integrations-guide/zoom:mattermost configuration>`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2099
+msgid "config.json-only settings"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2101
+msgid ""
+"The following self-hosted deployment settings are only configurable in "
+"the ``config.json`` file and are not available in the System Console."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2111
+msgid "Signature public key files"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2113
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2139
+msgid ""
+"This setting isn't available in the System Console and can only be set in"
+" ``config.json``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2115
+msgid ""
+"In addition to the Mattermost plugin signing key built into the server, "
+"each public key specified here is trusted to validate plugin signatures."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2118
+msgid ""
+"From Mattermost v10.11, pre-packaged plugins require signature validation"
+" on startup. Distributions that bundle custom pre-packaged plugins "
+"**must** configure this setting with their custom public keys to ensure "
+"proper validation of their signed plugins. Use "
+"``PluginSettings.SignaturePublicKeyFiles`` to define custom plugin "
+"signing keys."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2120
+msgid "When bundling custom plugins:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2122
+msgid ""
+"Drop both the plugin files and their corresponding ``.sig`` signature "
+"files into the ``prepackaged_plugins`` directory."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2123
+msgid ""
+"Add your custom public key using this configuration setting to validate "
+"the signatures."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2126
+#, python-brace-format
+msgid ""
+"This feature's ``config.json`` setting is ``\"SignaturePublicKeyFiles\": "
+"{}`` with string array input consisting of contents that are relative or "
+"absolute paths to signature files."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2137
+msgid "Chimera OAuth proxy URL"
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2141
+msgid ""
+"Specify the `Chimera <https://github.com/mattermost/chimera>`__ URL used "
+"by Mattermost plugins to connect with pre-created OAuth applications."
+msgstr ""
+
+#: ../../source/administration-guide/configure/plugins-configuration-settings.rst:2144
+#, python-brace-format
+msgid ""
+"This feature's ``config.json`` setting is ``\"ChimeraOAuthProxyUrl\": "
+"{}`` with string input."
+msgstr ""
+

@@ -1,0 +1,736 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:24
+msgid ""
+"This Mattermost deployment includes the following steps: install "
+"PostgreSQL database, prepare the database, download the Mattermost "
+"server, install the server, set up the server, and update the server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:27
+msgid "Step 1: Install PostgreSQL database or get database connection credentials"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:29
+msgid ""
+"Install PostgreSQL locally on the same server by following the "
+"`PostgreSQL installation <https://www.postgresql.org/download/>`_ "
+"documentation."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:30
+msgid ""
+"Use an external PostgreSQL database server. Ensure you have connection "
+"credentials, including hostname, port, database name, username, and "
+"password available."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:31
+msgid "Use a managed database service."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:34
+msgid "Step 2: Prepare the database"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:36
+msgid ""
+"Follow the :ref:`database preparation <deployment-"
+"guide/server/preparations:database preparation>` documentation to set up "
+"your PostgreSQL database for Mattermost."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:39
+msgid "Step 3: Download the latest Mattermost Server tarball"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:41
+msgid ""
+"In a terminal window, ssh onto the system that will host the Mattermost "
+"Server. Using ``wget``, download the Mattermost Server release you want "
+"to install using one of the following commands. Replace ``amd64`` with "
+"the appropriate architecture (e.g., ``arm64`` for ARM-based systems) in "
+"the link as needed."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:57
+msgid ""
+"If you are looking for an older release, Enterprise and Team Edition "
+"releases can be found in our :doc:`version archive </product-overview"
+"/version-archive>` documentation."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:60
+msgid "Step 4: Install Mattermost server"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:62
+msgid ""
+"Ahead of installing the Mattermost Server, we recommend updating all your"
+" repositories and, where required, update existing packages by running "
+"the following commands:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:69
+msgid ""
+"After any updates, and any system reboots, are complete, install the "
+"Mattermost Server by extracting the tarball, creating users and groups, "
+"and setting file/folder permissions."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:71
+msgid "First extract the tarball:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:77
+msgid ""
+"Now move the entire folder to the ``/opt`` directory (or whatever path "
+"you require):"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:83
+msgid ""
+"Create the default storage folder. By default the Mattermost Server uses "
+"``/opt/mattermost/data`` as the folder for files. This can be changed in "
+"the System Console during setup (even using alternative storage such as "
+"S3):"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:91
+msgid ""
+"If you choose a custom path, ensure this alternate path is used in all "
+"steps that follow.`"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:93
+msgid "Set up a user and group called ``mattermost``:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:101
+msgid ""
+"If you choose a custom user and group name, ensure it is used in all the "
+"steps that follow."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:103
+msgid "Set the file and folder permissions for your installation:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:109
+msgid "Give the ``mattermost`` group write permissions to the application folder:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:115
+msgid ""
+"You will now have the latest Mattermost Server version installed on your "
+"system. Starting and stopping the Mattermost Server is done using "
+"``systemd``."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:117
+msgid "Create the systemd unit file:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:123
+msgid ""
+"As root, edit the systemd unit file at "
+"``/lib/systemd/system/mattermost.service`` to add the following lines:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:146
+msgid ""
+"Save the file and reload systemd using ``sudo systemctl daemon-reload``. "
+"Mattermost Server is now installed and is ready for setup."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:149
+msgid "Step 5: Set up the server"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:151
+msgid ""
+"Before you start the Mattermost Server, you need to edit the "
+"configuration file. A default configuration file is located at "
+"``/opt/mattermost/config/config.json``. We recommend taking a backup of "
+"this default config ahead of making changes:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:157
+msgid "Configure the following properties in this file:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:159
+msgid ""
+"Under ``SqlSettings``, set ``DriverName`` to ``\"postgres\"``. This is "
+"the default and recommended database for all Mattermost installations."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:160
+msgid ""
+"Under ``SqlSettings``, set ``DataSource`` to ``\"postgres://mmuser"
+":<mmuser-password>@<host-name-or-"
+"IP>:5432/mattermost?sslmode=disable&connect_timeout=10\"`` replacing "
+"``mmuser``, ``<mmuser-password>``, ``<host-name-or-IP>`` and "
+"``mattermost`` with your database name."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:161
+msgid ""
+"Under ``ServiceSettings``, set ``\"SiteURL\"``: The domain name for the "
+"Mattermost application (e.g. ``https://mattermost.example.com``)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:165
+msgid ""
+"We recommend configuring the :ref:`Support Email <administration-"
+"guide/configure/site-configuration-settings:support email address>` under"
+" ``SupportSettings``, set ``\"SupportEmail\"``. This is the email address"
+" your users will contact when they need help."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:167
+msgid ""
+"After modifying the ``config.json`` configuration file, you can now start"
+" the Mattermost server:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:173
+msgid ""
+"Verify that Mattermost is running: curl ``http://localhost:8065``. You "
+"should see the HTML that’s returned by the Mattermost Server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:175
+msgid ""
+"The final step, depending on your requirements, is to run sudo "
+"``systemctl enable mattermost.service`` so that Mattermost will start on "
+"system boot. If you don't receive an error when starting Mattermost after"
+" the previous step, you are good to go. If you did receive an error, "
+"continue on."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:178
+msgid "Hardened RHEL environments"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:180
+msgid ""
+"When deploying Mattermost on hardened RHEL systems, additional security "
+"configurations may be required. Select the tab below for your specific "
+"security tool:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:185
+msgid ""
+"When deploying Mattermost from RHEL9, which has SELinux running with "
+"enforcing mode enabled by default, additional configuration is required."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:187
+msgid ""
+"SELinux is a security module that provides access control security "
+"policies. It's enabled by default on RHEL and CentOS systems. SELinux can"
+" block access to files, directories, and ports, which can cause issues "
+"when starting Mattermost. To resolve these issues, you'll need to set the"
+" appropriate SELinux contexts for the Mattermost binaries and "
+"directories, and allow Mattermost to bind to ports."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:189
+msgid ""
+"Ensure that SELinux is enabled and in enforcing mode by running the "
+"``sestatus`` command. If it's ``enforcing``, you'll need to configure it "
+"properly."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:192
+msgid "Set bin contexts for /opt/mattermost/bin"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:194
+msgid ""
+"SELinux enforces security contexts for binaries. To label the Mattermost "
+"binaries as safe, you'll need to set them to the below SELinux context."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:201
+msgid "Now, try starting Mattermost again with"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:207
+msgid ""
+"If you don't receive an error, verify that Mattermost is running: curl "
+"``http://localhost:8065``. You should see the HTML that's returned by the"
+" Mattermost Server. You're all set!"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:209
+msgid ""
+"If on starting Mattermost you receive an error, before moving on, check "
+"for the existence of a file in ``/opt/mattermost/logs`` - if "
+"``mattermost.log`` exists in that directory, it's more likely you're "
+"dealing with a configuration issue in ``config.json``. Double check the "
+"previous steps before continuing."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:212
+msgid "Try different contexts for /opt/mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:214
+msgid ""
+"SELinux enforces security contexts for files and directories. To label "
+"your Mattermost directory as safe, you'll need to set an appropriate "
+"SELinux context."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:216
+msgid ""
+"Check current context by running ``ls -Z /opt/mattermost``. When you see "
+"something like ``drwxr-xr-x. root root unconfined_u:object_r:default_t:s0"
+" mattermost`` returned, the ``default_t`` indicates that SELinux doesn't "
+"know what this directory is for."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:217
+msgid ""
+"Set a safe context by assigning a SELinux type that's compatible with web"
+" services or applications by running ``sudo semanage fcontext -a -t "
+"httpd_sys_content_t \"/opt/mattermost(/.*)?\"``. A common one is "
+"``httpd_sys_content_t``, used for serving files. Ensure you match the "
+"directory and its contents recursively. Run the ``sudo restorecon -R "
+"/opt/mattermost`` to apply the changes."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:220
+msgid "Allow Mattermost to bind to ports"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:222
+msgid ""
+"When Mattermost needs specific ports (e.g., 8065), ensure that SELinux "
+"allows it by allowing Mattermost to bind to ports. Run the ``sudo "
+"semanage port -l | grep 8065`` command, and if the port's not listed, "
+"you'll need to add it by running ``sudo semanage port -a -t http_port_t "
+"-p tcp 8065``, replacing the ``8065`` with the required port."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:225
+msgid "Handle custom policies"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:227
+msgid ""
+"If Mattermost requires actions that SELinux blocks, you'll need to "
+"generate a custom policy."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:229
+msgid ""
+"Check for SELinux denials first in the logs by running ``sudo ausearch -m"
+" avc -ts recent``, or by checking the audit log: ``sudo cat "
+"/var/log/audit/audit.log | grep denied``."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:231
+msgid ""
+"If needed, generate a policy module by installing ``audit2allow`` to "
+"generate policies automatically."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:240
+msgid "Test the configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:242
+msgid ""
+"Restart Mattermost to confirm the configuation works as expected by "
+"running ``sudo systemctl restart mattermost``. In the case of failures, "
+"revisit the logs to identify other SELinux-related issues."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:245
+msgid "Need Mattermost working quickly for testing purposes?"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:247
+msgid ""
+"You can change SELinux to permissive mode by running the ``sudo "
+"setenforce 0``. command where policies aren't enforced, only logged."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:248
+msgid ""
+"This command changes the SELinux mode to \"permissive\". While in "
+"permissive mode, policies aren't enforced, and violations are logged "
+"instead of being blocked. This can be helpful for debugging and "
+"troubleshooting issues related to SELinux policies."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:249
+msgid ""
+"Ensure you re-enable enforcing mode once context is working as needed by "
+"running the ``sudo setenforce 1`` command."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:252
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:493
+msgid "Additional resources"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:254
+msgid ""
+"`SELinux User's and Administrator's Guide "
+"<https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/index>`_"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:255
+msgid "`SELinux Project Wiki <https://github.com/SELinuxProject/selinux>`_"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:256
+msgid ""
+"`Introduction to SELinux <https://github.blog/developer-skills"
+"/programming-languages-and-frameworks/introduction-to-selinux/>`_"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:257
+msgid ""
+"`A Sysadmin's Guide to SELinux: 42 Answers to the Big Questions "
+"<https://opensource.com/article/18/7/sysadmin-guide-selinux>`_"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:258
+msgid ""
+"`Mastering SELinux: A Comprehensive Guide to Linux Security "
+"<https://srivastavayushmaan1347.medium.com/mastering-selinux-a"
+"-comprehensive-guide-to-linux-security-8bed9976da88>`_"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:263
+msgid ""
+"When deploying Mattermost on RHEL systems with firewalld enabled, you'll "
+"need to configure firewall rules to allow access to the Mattermost "
+"Server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:265
+msgid ""
+"Firewalld is the default firewall management tool on RHEL systems and "
+"provides a dynamically managed firewall with support for network zones. "
+"By default, it may block incoming connections to Mattermost's port "
+"(8065)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:268
+msgid "Check if firewalld is running"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:274
+msgid "If firewalld is active, configure it to allow Mattermost traffic."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:277
+msgid "Configure firewalld for Mattermost Server"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:279
+msgid "Open port 8065 for Mattermost Server:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:285
+msgid ""
+"If you're using a reverse proxy (e.g., nginx or Apache) on the same "
+"server, also open HTTP and HTTPS ports:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:292
+msgid "Reload firewalld to apply the changes:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:298
+msgid "Verify the configuration:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:304
+msgid ""
+"You should see port 8065/tcp (and optionally http/https services) in the "
+"output."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:308
+msgid ""
+"If you're using a custom port for Mattermost, replace ``8065`` with your "
+"configured port number. The ``--permanent`` flag ensures the rules "
+"persist after system reboots."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:311
+msgid "Configure firewalld for Mattermost Calls (optional)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:313
+msgid ""
+"If you're deploying the Mattermost Calls plugin or the standalone rtcd "
+"service, additional ports need to be opened. See the :doc:`Calls "
+"deployment guide </administration-guide/configure/calls-deployment-"
+"guide>` documentation for details on Calls architecture and deployment "
+"modes."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:315
+msgid "For integrated Calls plugin (running alongside Mattermost):"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:323
+msgid "For standalone rtcd service (requires additional API port):"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:334
+msgid ""
+"Port 8443 (UDP/TCP) is used for RTC media traffic (audio/video/screen "
+"sharing)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:335
+msgid ""
+"Port 8045 (TCP) is used for API communication between Mattermost and rtcd"
+" service"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:336
+msgid "TCP support for RTC requires Calls v0.17+ and rtcd v0.11+"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:337
+msgid ""
+"If you're using custom ports, replace the default port numbers with your "
+"configured values"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:342
+msgid ""
+"When deploying Mattermost on RHEL systems with fapolicyd enabled, you may"
+" encounter \"operation not permitted\" errors in the Mattermost logs."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:344
+msgid ""
+"Fapolicyd (File Access Policy Daemon) is a userspace daemon that "
+"determines access rights to files based on trust. It's commonly enabled "
+"in secure environments to prevent execution of unauthorized binaries. By "
+"default, fapolicyd may block Mattermost binaries and plugins from "
+"executing."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:347
+msgid "Troubleshoot fapolicyd issues"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:349
+msgid ""
+"If you're seeing \"operation not permitted\" errors in your Mattermost "
+"logs, first check if fapolicyd is the cause by temporarily stopping it:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:355
+msgid ""
+"Test your Mattermost deployment. If it works now, fapolicyd is blocking "
+"Mattermost execution and you need to configure it properly."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:357
+msgid "Start fapolicyd in debug mode to identify what's being denied:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:363
+msgid "Look for denial messages in the output. They will look similar to:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:371
+msgid ""
+"Note the rule number that's denying execution - your rule file must be "
+"numbered to come before this rule."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:374
+msgid "Configure fapolicyd to allow Mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:376
+msgid ""
+"Create a rule file for Mattermost. The naming convention is critical - it"
+" must come before the rule that's denying Mattermost. If you're using a "
+"stock fapolicyd configuration, ``80`` works fine:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:382
+msgid "Add the allow rules to the file:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:388
+msgid "Add the following rules to allow Mattermost execution:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:396
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:459
+msgid "Check that the rules are valid and will be applied:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:402
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:465
+msgid "You should see \"Rules have changed and should be updated\" in the output."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:404
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:467
+msgid "Load the new rules:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:410
+msgid "Restart the fapolicyd service:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:416
+msgid "Restart Mattermost to verify it works correctly:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:422
+msgid "Verify that Mattermost is running without errors:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:431
+msgid ""
+"The rule file numbering is critical. Rules are processed in order, and "
+"your allow rules must come before any deny rules. If you continue to see "
+"denials after following these steps, check your deny rule number (from "
+"the debug output) and ensure your rule file number is lower."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:432
+msgid ""
+"If you have plugins that execute binaries (like Playbooks or the Calls "
+"plugin), the fapolicyd rules above allow execution of any binaries within"
+" the ``/opt/mattermost`` directory. If you need more restrictive rules, "
+"you can create specific rules for each plugin binary."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:435
+msgid "Configure fapolicyd for rtcd service (optional)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:437
+msgid ""
+"If you're deploying the standalone rtcd service for Mattermost Calls, "
+"you'll need separate fapolicyd rules for the rtcd binary. The rtcd "
+"service is deployed separately from Mattermost and runs its own binary. "
+"See the :doc:`Calls deployment guide </administration-guide/configure"
+"/calls-deployment-guide>` documentation for details on when and why to "
+"use rtcd."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:439
+msgid ""
+"Create a rule file for rtcd. The naming convention is critical - it must "
+"come before the deny rule (typically 80 works):"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:445
+msgid "Add the allow rules for rtcd:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:451
+msgid ""
+"Add the following rules (adjust paths based on your rtcd installation "
+"directory):"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:473
+msgid "Restart fapolicyd and the rtcd service:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:480
+msgid "Verify that rtcd is running without errors:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:488
+msgid ""
+"The paths shown above assume rtcd is installed in ``/opt/rtcd/``. Adjust "
+"these paths based on your actual rtcd installation directory."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:489
+msgid ""
+"If you continue to see denials after following these steps, run ``sudo "
+"fapolicyd --debug`` to identify the specific paths being denied and "
+"adjust your rules accordingly."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:490
+msgid ""
+"See the :doc:`RTCD setup and configuration </administration-"
+"guide/configure/calls-rtcd-setup>` documentation for installation and "
+"configuration details."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:495
+msgid ""
+"`Mattermost and fapolicyd <https://support.mattermost.com/hc/en-"
+"us/articles/12167526545172-Mattermost-and-fapolicyd>`_ support article"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:498
+msgid "Step 6: Update the server"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:500
+msgid ""
+"Updating your Mattermost Server installation when using the tarball "
+"requires several manual steps. See the :doc:`upgrade Mattermost Server "
+"</administration-guide/upgrade/upgrading-mattermost-server>` "
+"documentation for details."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:503
+msgid "Remove Mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:505
+msgid ""
+"To remove the Mattermost Server, you must stop the Mattermost Server, "
+"back up all important files, and then run this command:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:513
+msgid ""
+"Depending on your configuration, there are several important folders in "
+"``/opt/mattermost`` to backup. These are ``config``, ``logs``, "
+"``plugins``, ``client/plugins``, and ``data``. We strongly recommend you "
+"back up these locations before running the ``rm`` command."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-rhel.rst:515
+msgid ""
+"You may also remove the Mattermost systemd unit file and the user/group "
+"created for running the application."
+msgstr ""
+

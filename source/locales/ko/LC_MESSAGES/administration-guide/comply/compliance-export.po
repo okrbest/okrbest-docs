@@ -1,0 +1,558 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/comply/compliance-export.rst:2
+msgid "Compliance export"
+msgstr ""
+
+#: ../../source/_static/badges/ent-plus.rst:9
+msgid ""
+"|plans-img-yellow| Available on `Enterprise and Enterprise Advanced plans"
+" <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:7
+msgid ""
+"Mattermost Enterprise customers can archive history or transfer message "
+"data to third-party systems for auditing and compliance purposes with "
+"compliance exports. Supported integrations include `Smarsh (Actiance) "
+"Vantage <#actiance-xml>`__, `Global Relay <#global-relay-eml>`__, and "
+"`Proofpoint <#proofpoint>`__."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:9
+msgid ""
+"From Mattermost v10.5, compliance exports include performance "
+"improvements for large daily data sets with changes affecting output "
+"formats, system performance, and logic. Compliance exports provide "
+"compliance teams complete information to reconstruct the state of a "
+"channel, and to determine who had visibility on an initial message, or "
+"when the message was edited or deleted. Compliance teams can track a "
+"message by its MessageId as it is edited or deleted, and across batches "
+"and exports periods."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:12
+msgid "Overview"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:14
+msgid ""
+"Compliance exports are produced from the System Console, and contain all "
+"messages including:"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:16
+msgid "Messages sent in direct message channels"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:17
+msgid "File uploads"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:18
+msgid "Posts from plugins"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:19
+msgid "Posts from bots/webhooks"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:21
+msgid ""
+"Exports include information on channel member history at the time the "
+"message was posted."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:24
+msgid "Set up guide"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:26
+msgid ""
+"Use the following guides to configure exports for `CSV <#csv>`__, `Smarsh"
+" / Actiance XML <#actiance-xml>`__, `Global Relay EML <#global-relay-"
+"eml>`__, or `Proofpoint <#proofpoint>`__."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:30
+msgid ""
+"For self-hosted deployments, compliance exports are written to the "
+"``exports`` subdirectory of the configured filestore in the chosen "
+"format. This will either be in the :ref:`Local Storage directory "
+"<administration-guide/configure/environment-configuration-settings:file "
+"storage>` or the Mattermost S3 bucket if S3 storage is configured."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:31
+msgid ""
+"Alternatively, you can specify an alternate filestore target and generate"
+" an S3 presigned URL for compliance exports. See the :ref:`dedicated "
+"export filestore target <administration-guide/configure/environment-"
+"configuration-settings:enable dedicated export filestore target>` "
+"configuration settings documentation for details."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:32
+msgid ""
+"Compliance exports don't contain posts sent before the feature was "
+"enabled. For self-hosted deployments, you can export past history via the"
+" ``export`` :doc:`command line tool <../manage/command-line-tools>`."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:35
+msgid "CSV"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:37
+#: ../../source/administration-guide/comply/compliance-export.rst:92
+#: ../../source/administration-guide/comply/compliance-export.rst:151
+#: ../../source/administration-guide/comply/compliance-export.rst:170
+msgid "Go to **System Console > Compliance > Compliance Export**."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:38
+#: ../../source/administration-guide/comply/compliance-export.rst:93
+msgid "Set **Enable Compliance Exports** to **true**."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:39
+msgid ""
+"Set the **Compliance Export time**. This is the start time of the daily "
+"scheduled compliance export job and must be a 24-hour time stamp in the "
+"form ``HH:MM``. Choose a time when fewer people are using your system."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:40
+msgid "Set the export file format to **CSV**."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:41
+#: ../../source/administration-guide/comply/compliance-export.rst:96
+#: ../../source/administration-guide/comply/compliance-export.rst:159
+#: ../../source/administration-guide/comply/compliance-export.rst:176
+msgid "Select **Save**."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:46
+msgid "You can review export job status in the System Console."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:48
+#: ../../source/administration-guide/comply/compliance-export.rst:107
+msgid ""
+"When the daily compliance export job is finished, a parent directory is "
+"created named based on when the export was started and the "
+"``startTimestamp`` and ``endTimestamp`` of the export, e.g, "
+"``administration-guide/comply/compliance-"
+"export-2024-08-13-05h08m-1723105062492-1723109100075``. That parent "
+"directory contains 1 zip file for each batch, named based on the batch "
+"number and the start and end timestamps of the messages in that batch, "
+"e.g, ``batch001-1723105062492-1723106622163.zip``. Each zip file contains"
+" the same information available in previous Mattermost server releases."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:50
+#: ../../source/administration-guide/comply/compliance-export.rst:109
+msgid "Working from the same example above, the directory would look like this:"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:59
+#: ../../source/administration-guide/comply/compliance-export.rst:118
+msgid "And each batch would look like this:"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:69
+msgid "Updated CSV export fields"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:71
+msgid ""
+"**Post Creation Time** is always the ``CreateAt`` for messages and "
+"attachments, or ``JoinTime`` and ``LeaveTime`` for participant join and "
+"leave events, respectively."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:73
+msgid ""
+"**Update Time** indicates that the message has been updated, and this is "
+"the ``updateAt`` time."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:74
+msgid ""
+"**Updated Type** helps differentiate what kind of update it was as one of"
+" the following:"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:76
+msgid ""
+"**EditedNewMsg** indicates that the message has been edited, and this is "
+"the new message (post-edit) content."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:77
+msgid ""
+"**EditedOriginalMsg** indicates that the message has been edited, and "
+"this the original message (pre-edit) content. This message will have "
+"another field ``EditedNewMsgId``, which is the Id of the message which "
+"holds the post-edited message contents."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:78
+msgid ""
+"**UpdatedNoMsgChange** indicates that message's content hasn't changed, "
+"but the post was updated for some reason, such as reaction, replied-to, a"
+" reply was edited, or a reply was deleted."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:79
+msgid "**Deleted** indicates that this message was deleted."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:80
+msgid ""
+"**FileDeleted** indicates that this message is recording that a file was "
+"deleted."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:84
+msgid ""
+"The daily compliance export job creates a ``.zip`` file with a unique job"
+" identifier of all messages posted in the last 24 hours. You can unzip "
+"the file to easily transform the default ``.csv`` format into a desired "
+"format for your third-party archive system."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:86
+msgid ""
+"For a sample CSV output, `download a CSV export file here "
+"<https://github.com/mattermost/docs/blob/master/source/samples/csv_export.zip>`__."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:89
+msgid "Actiance XML"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:90
+msgid ""
+"Actiance XML is the supported format for the 'Smarsh Vantage product "
+"<https://central.smarsh.com/s/product/vantage>`_."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:94
+#: ../../source/administration-guide/comply/compliance-export.rst:153
+#: ../../source/administration-guide/comply/compliance-export.rst:172
+msgid ""
+"Set the **Compliance Export time**. This is the start time of the daily "
+"scheduled compliance export job and must be a 24-hour time stamp in the "
+"form HH:MM. Choose a time when fewer people are using your system."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:95
+msgid "Set the export file format to **Actiance XML**."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:100
+msgid "In Actiance XML exports, channel type is prepended to the channel names."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:105
+msgid ""
+"You can review export job status in the System Console. Once you've "
+"selected Actiance XML as your file format, you can set up an integration "
+"with Actiance Vantage archive system."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:127
+msgid "Updated Actiance XML export fields"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:129
+msgid ""
+"If an XML field is empty, it won't be exported. This is a change from "
+"previous Mattermost releases, where empty XML nodes were exported."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:131
+msgid "``MessageId`` is the unique ``messageId``."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:132
+msgid "``DateTimeUTC`` is always the post's ``CreateAt`` time."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:133
+msgid ""
+"``UpdatedDateTimeUTC`` indicates that the message has been updated, and "
+"this is the ``updateAt`` time."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:134
+msgid "``UpdatedType`` helps differentiate what kind of update it was, including:"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:136
+msgid ""
+"``EditedNewMsg`` indicates that this message has been edited, and this is"
+" the new message (post-edit) content."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:137
+msgid ""
+"``EditedOriginalMsg`` indicates that this message has been edited, and "
+"this the original message (pre-edit) content. This message will have "
+"another field ``EditedNewMsgId``, which is the Id of the message which "
+"holds the post-edited message contents."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:138
+msgid ""
+"``UpdatedNoMsgChange`` indicates that this message's content hasn't "
+"changed, but the post was updated for some reason, such as a reaction, "
+"replied-to, a reply was edited, or a reply was deleted."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:139
+msgid "``Deleted`` indicates that the message was deleted."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:140
+msgid ""
+"``FileDeleted`` indicates that the message is recording that a file was "
+"deleted."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:144
+msgid ""
+"The daily compliance export job creates a ``.zip`` file with a unique job"
+" identifier of all messages posted in the last 24 hours. Once you've "
+"selected Actiance XML as your file format, you can set up an integration "
+"with Actiance Vantage archive system. For a sample Actiance output, "
+"`download an Actiance XML export file here "
+"<https://github.com/mattermost/docs/blob/master/source/samples/actiance_export.xml>`__."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:147
+msgid "Global Relay EML"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:149
+msgid ""
+"For more information on Global Relay archive system, visit `their website"
+" <https://www.globalrelay.com/>`_."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:152
+#: ../../source/administration-guide/comply/compliance-export.rst:171
+msgid "Set **Enable Compliance Export** to **true**."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:154
+#: ../../source/administration-guide/comply/compliance-export.rst:173
+msgid "Set the **Export Format** to **GlobalRelay EML**."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:155
+msgid ""
+"Select **A9/Type 9**, **A10/Type 10**, or **Custom** for the **Global "
+"Relay Customer Account**. This is the type of Global Relay customer "
+"account your organization has."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:157
+msgid ""
+"For **A9/Type 9** and **A10/Type 10** types, set the **Global Relay SMTP "
+"username**, **Global Relay SMTP password**, and **Global Relay SMTP email"
+" address**, provided by Global Relay."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:158
+msgid ""
+"For a **Custom** type, set the **Global Relay SMTP username**, **Global "
+"Relay SMTP password**, **Global Relay SMTP email address**, **SMTP Server"
+" Name**, and the **SMTP Server Port**, provided by Global Relay. "
+"**Custom** type can be used to integrate with Proofpoint."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:163
+msgid ""
+"Messages larger than 250 MB will have their attachments removed because "
+"they are too large to send to Global Relay. An error is added to the "
+"server logs with id ``global_relay_attachments_removed``. It includes the"
+" post ID the attachments were removed from, as well as the attachment "
+"IDs. A `ticket is queued to better handle large messages "
+"<https://mattermost.atlassian.net/browse/MM-10038>`__."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:165
+msgid ""
+"Once you've selected Global Relay EML as your file format, you can set up"
+" an integration with Global Relay archive system. For more information, "
+"see `Global Relay Archive <https://www.globalrelay.com/products/archive-"
+"data-compliance/>`_."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:168
+msgid "Proofpoint"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:174
+msgid ""
+"Select **Custom** for the **Global Relay Customer Account** to integrate "
+"with Proofpoint."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:175
+msgid ""
+"Set the **SMTP username**, **SMTP password**, **SMTP email address**, "
+"**SMTP Server Name**, and the **SMTP Server Port**, provided by "
+"Proofpoint."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:178
+msgid ""
+"See the `Global Relay <#global-relay-eml>`__ section for details on "
+"updated Global Relay export fields. Now you can set up an integration "
+"with the Proofpoint archive system. For more information, visit the "
+"`Proofpoint Archive webiste <https://www.proofpoint.com/us/products"
+"/archiving-and-compliance/archive>`__."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:181
+msgid "Frequently Asked Questions (FAQ)"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:184
+msgid "Are Playbooks and Boards data included in compliance exports?"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:186
+msgid ""
+"No. Compliance exports only include channel messages, direct messages, "
+"file uploads, and posts from plugins/bots/webhooks. Data from Mattermost "
+"Playbooks (including run activities, status updates, and retrospectives) "
+"and Mattermost Boards (including cards, comments, and board activities) "
+"are not included in the compliance export functionality. Organizations "
+"requiring compliance archiving of Playbooks and Boards data should "
+"consider separate data retention strategies for these features."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:189
+msgid "How do I export past history?"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:191
+msgid ""
+"Run the ``export`` :doc:`command line tool <../manage/command-line-"
+"tools>`. You can specify an ``exportFrom`` option to export data from a "
+"specified timestamp. All posts that were made after this timestamp will "
+"be exported."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:194
+msgid "How do I download compliance export jobs using mmctl?"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:196
+msgid ""
+"From Mattermost Server v10.11, system administrators can download "
+"compliance export jobs using the :ref:`mmctl compliance_export download "
+"<administration-guide/manage/mmctl-command-line-tool:mmctl compliance-"
+"export download>` command. This provides a command-line interface for "
+"retrieving completed compliance export jobs by job ID."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:199
+msgid "What happens if I export data manually?"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:201
+msgid ""
+"If the compliance export job is run automatically, manually via the "
+"System Console, or manually via the CLI (without the ``--exportFrom`` "
+"option), it exports all posts that were made since the last post that the"
+" previous execution of the job exported. If this is the first time that "
+"the job has ever run, all posts that were made since the feature was "
+"enabled will be exported."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:203
+msgid ""
+"If the ``--exportFrom`` option is specified with the CLI command, all "
+"posts that have been made since the supplied timestamp will be exported."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:205
+msgid ""
+"When run manually via the System Console, ``.csv`` and Actiance XML files"
+" are written to the ``exports`` subdirectory of the configured "
+":ref:`Local Storage Directory <administration-guide/configure"
+"/environment-configuration-settings:local storage directory>`.  Files "
+"will be written to a folder with names based on an epoch time range. "
+"Global Relay EML export format files will be mailed to the configured "
+"email address when run manually."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:208
+msgid "Is there a maximum row limit for CSV files?"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:210
+msgid ""
+"No. There's no limit to the number of rows within Compliance Monitoring "
+"CSV files."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:213
+msgid "How do I know if a compliance export job fails?"
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:215
+msgid ""
+"Mattermost provides the status of each compliance export job in **System "
+"Console > Compliance > Compliance Export**. Here, you can see if the job "
+"succeeded or failed, including the number of messages and files exported."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:217
+msgid ""
+"In addition, any failures are returned in the server logs for self-hosted"
+" deployments. The error log begins with the string ``Failed job`` and "
+"includes a ``job_id key/value`` pair. Compliance export job failures are "
+"identified with worker name ``MessageExportWorker``. You can optionally "
+"create a script that programmatically queries for such failures and "
+"notifies the appropriate system."
+msgstr ""
+
+#: ../../source/administration-guide/comply/compliance-export.rst:221
+msgid ""
+"This compliance export feature replaces legacy Compliance Reporting "
+"Oversight functionality. We recommend Enterprise customers migrate to the"
+" new system. For a sample CSV output of the new compliance export system,"
+" `download a CSV export file here "
+"<https://github.com/mattermost/docs/blob/master/source/samples/csv_export.zip>`__."
+msgstr ""
+

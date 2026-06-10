@@ -1,0 +1,331 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:2
+msgid "Deploy for Out-of-Band (OOB) Communications"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:4
+msgid ""
+"When a critical incident disrupts an organization’s primary "
+"infrastructure—due to a cyberattack, cloud outage, or internal failure—a "
+"secure, independent communication channel becomes essential. Mattermost "
+"can serve as that channel by operating in an Out-of-Band (OOB) "
+"environment: isolated, pre-provisioned, and ready to support incident "
+"response and business continuity teams."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:6
+msgid ""
+"This document outlines architectural guidance for deploying Mattermost in"
+" an OOB scenario across `generic <#generic-oob-architecture>`__, `AWS "
+"<#aws-based-oob-deployment>`__, and `Azure <#azure-based-oob-"
+"deployment>`__ environments."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:9
+msgid "Generic OOB architecture"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:11
+msgid ""
+"This platform-agnostic design establishes a fallback communication "
+"system, decoupled from primary networks and identity providers."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:13
+msgid "Generic OOB Architecture"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:18
+msgid "Architecture components"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:20
+msgid ""
+"**Users (Cybersecurity, IR Teams)**: Pre-authorized personnel trained to "
+"access and use the OOB platform during emergencies. Credentials and "
+"access methods should be provisioned in advance."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:21
+msgid ""
+"**Secure Access Layer**: A firewall or access gateway protecting entry "
+"into the OOB environment. May include network policies, IP allowlists, or"
+" WAFs."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:22
+msgid ""
+"**Secondary IdP / Emergency Auth**: A dedicated identity provider not "
+"dependent on the organization’s primary SSO or IdP (e.g., a minimal Azure"
+" AD tenant, Okta org, or locally stored credentials with MFA)."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:23
+msgid ""
+"**VPN / Bastion Host**: A hardened jumpbox or independent VPN granting "
+"access to internal OOB components and Kubernetes control plane."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:24
+msgid ""
+"**Failover DNS Manager**: Services like Cloudflare Load Balancer, Azure "
+"Traffic Manager, or Route 53 to monitor primary system health and reroute"
+" DNS to the OOB ingress."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:25
+msgid ""
+"**Ingress Controller**: e.g., ingress-nginx to handle HTTP(S) routing "
+"within the cluster, directing traffic to Mattermost Web, API, and "
+"WebSocket endpoints."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:26
+msgid ""
+"**Mattermost Operator & App**: Automates lifecycle of Mattermost "
+"instances in Kubernetes; ensures updates, scaling, and configuration "
+"consistency."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:27
+msgid ""
+"**PostgreSQL Database**: Persistent storage for channels, messages, "
+"users, and configurations; can be self-hosted or managed externally with "
+"hardened access."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:28
+msgid "**Backups**:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:30
+msgid ""
+"**Velero**: Backs up Kubernetes resources to external object store (S3, "
+"Blob)."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:31
+msgid ""
+"**pg_dump / Cloud-native backup**: Regular logical exports or managed "
+"backups."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:32
+msgid ""
+"**Object Storage**: Durable, versioned storage (e.g., S3, Azure Blob) for"
+" snapshots and dumps."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:35
+msgid "AWS-based OOB deployment"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:37
+msgid ""
+"Deploying Mattermost in AWS leverages managed services and strong "
+"isolation capabilities."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:39
+msgid "AWS OOB Deployment diagram"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:44
+msgid "AWS components"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:46
+msgid ""
+"**Amazon EKS**: Managed Kubernetes for Mattermost Operator and "
+"application, with HA and auto-scaling."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:47
+msgid ""
+"**Route 53**: DNS service for health-checked failover to the OOB "
+"environment."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:48
+msgid ""
+"**Amazon Aurora PostgreSQL**: High-performance managed PostgreSQL with "
+"automated failovers."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:49
+msgid ""
+"**Amazon S3**: Object storage for Velero snapshots, configurations, and "
+"database backups (with versioning and cross-region replication)."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:50
+msgid ""
+"**IAM Roles**: Scoped roles for EKS nodes and Velero using IRSA, "
+"enforcing least-privilege."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:54
+msgid "Use separate AWS accounts or VPCs for full isolation."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:55
+msgid "Configure Route 53 health checks against public or synthetic endpoints."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:56
+msgid "Encrypt secrets and enforce least-privilege IAM policies."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:59
+msgid "Azure-Based OOB deployment"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:61
+msgid ""
+"For Azure customers, AKS and related services provide a robust OOB "
+"platform for Mattermost."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:63
+msgid "Azure OOB Deployment diagram"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:68
+msgid "Azure components"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:70
+msgid ""
+"**Azure Kubernetes Service (AKS)**: Runs Mattermost workloads with native"
+" autoscaling and Azure AD integration."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:71
+msgid ""
+"**Azure DNS + Traffic Manager**: Global traffic routing and DNS failover "
+"based on endpoint health."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:72
+msgid ""
+"**Azure Database for PostgreSQL**: Managed DB service with automated "
+"backups and patching."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:73
+msgid ""
+"**Azure Blob Storage**: Destination for Velero snapshots and DB dumps; "
+"supports lifecycle policies and secure access."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:74
+msgid ""
+"**Azure AD (Secondary Tenant)**: Acts as the IdP for OOB; deployed in a "
+"separate directory with scoped permissions and MFA."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:78
+msgid "Deploy in a dedicated subscription for security and billing separation."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:79
+msgid "Use Azure Monitor for health checks and Traffic Manager probes."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:80
+msgid ""
+"Harden AKS node pools and isolate workloads with namespaces and network "
+"policies."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:83
+msgid "Operational guidelines"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:89
+msgid "**Domain**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:90
+msgid "**Recommendation**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:91
+msgid "Access Control"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:92
+msgid ""
+"Isolate authentication from primary infrastructure. Use MFA, secure "
+"vaults, and emergency tokens. Preload user accounts in the secondary IdP."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:93
+msgid "DNS Failover"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:94
+msgid ""
+"Employ TTL-aware health checks via Route 53 or Traffic Manager. Monitor "
+"critical HTTP(S) or TCP endpoints."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:95
+msgid "Backup Strategy"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:96
+msgid ""
+"Schedule frequent Velero and database backups. Store in versioned, "
+"encrypted object storage."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:97
+msgid "Disaster Recovery Drills"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:98
+msgid ""
+"Conduct quarterly failover exercises: DNS switching, Mattermost access, "
+"and data restores."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:99
+msgid "Security"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:100
+msgid ""
+"Treat OOB as Tier 0. Use hardened OS images, audit logging, strict RBAC, "
+"and centralized monitoring. Rotate secrets regularly."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:102
+msgid ""
+"Mattermost can be an effective OOB communication platform when deployed "
+"with isolation, automation, and operational readiness. Whether on AWS, "
+"Azure, or a generic environment, prioritize independence, simplicity, and"
+" resilience. Pair these designs with standard IR playbooks and routine "
+"failover testing to build a confident, secure response capability."
+msgstr ""
+

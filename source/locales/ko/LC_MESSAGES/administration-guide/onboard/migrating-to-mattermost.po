@@ -1,0 +1,304 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:2
+msgid "Migration guide"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:7
+msgid ""
+"Migrations help you move your Mattermost deployment or data from one "
+"environment to another with minimal disruption. Whether you’re "
+"transitioning your Mattermost server to new infrastructure, restructuring"
+" your database, or moving from another collaboration platform like Slack,"
+" this guide provides step-by-step instructions for each supported path. "
+"Use the sections below to quickly find the scenario that matches your "
+"needs and follow the recommended process to ensure a smooth migration."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:9
+msgid ""
+"`Book a live demo <https://mattermost.com/request-demo/>`_  or `talk to a"
+" Mattermost expert <https://mattermost.com/contact-sales/>`_ to explore "
+"tailored solutions for your organization's secure collaboration needs. Or"
+" try Mattermost yourself with a `1-hour preview <https://mattermost.com"
+"/sign-up/>`_ for instant access to a live sandbox environment."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:12
+msgid "Move Mattermost to a new server"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:14
+msgid ""
+"The following instructions migrate Mattermost from one server to another "
+"by backing up and restoring the Mattermost database and ``config.json`` "
+"file. For these instructions, ``SOURCE`` refers to the Mattermost server "
+"*from which* your system will be migrated and ``DESTINATION`` refers to "
+"the Mattermost server *to which* your system will be migrated."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:16
+msgid ""
+"Back up your SOURCE Mattermost server. See :doc:`Backup and Disaster "
+"Recovery documentation </deployment-guide/backup-disaster-recovery>`."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:17
+msgid ""
+"Upgrade your SOURCE Mattermost server to the latest major build version. "
+"See :doc:`Upgrading Mattermost Server documentation </administration-"
+"guide/upgrade/upgrading-mattermost-server>`."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:18
+msgid ""
+"Install the latest major build of Mattermost server as your "
+"``DESTINATION``."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:20
+msgid ""
+"Make sure your new instance is properly configured and tested. The "
+"database type (MySQL or PostgreSQL) and version of ``SOURCE`` and "
+"``DESTINATION`` deployments need to match."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:21
+msgid ""
+"Stop the ``DESTINATION`` server using ``sudo stop mattermost``, then back"
+" up the database and ``config.json`` file."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:23
+msgid ""
+"Migrate database from ``SOURCE`` to ``DESTINATION``. Backup the database "
+"from the ``SOURCE`` Mattermost server and restore it in place of the "
+"database to which the ``DESTINATION`` server is connected."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:24
+msgid ""
+"Migrate ``config.json`` from ``SOURCE`` to ``DESTINATION``. Copy "
+"``config.json`` file from ``SOURCE`` deployment to ``DESTINATION``."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:25
+msgid ""
+"If you use local storage (``FileSettings.DriverName`` is set to "
+"``local``), migrate ``./data`` from ``SOURCE`` to ``DESTINATION``."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:27
+msgid ""
+"Copy the ``./data`` directory from ``SOURCE`` deployment to "
+"``DESTINATION``."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:28
+msgid "If you use a directory other than ``./data``, copy that directory instead."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:30
+msgid ""
+"Start the ``DESTINATION`` deployment by running ``sudo start "
+"mattermost``. Then go to the **System Console**, make a minor change, and"
+" save it to upgrade your ``config.json`` schema to the latest version "
+"using default values for any new settings added."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:31
+msgid ""
+"Test that the system is working by going to the URL of an existing team. "
+"You may need to refresh your Mattermost browser page in order to get the "
+"latest updates from the upgrade."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:33
+msgid ""
+"Once your migration is complete and verified, you can optionally "
+":ref:`upgrade the Team Edition of Mattermost to Enterprise Edition using "
+"the upgrade guide <administration-guide/upgrade/upgrading-mattermost-"
+"server:upgrade team edition to enterprise edition>`."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:36
+msgid "Move from Slack"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:38
+msgid ""
+"See the :doc:`Migrate from Slack </administration-guide/onboard/migrate-"
+"from-slack>` documentation for details on migrating from Slack to "
+"Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:41
+msgid "Move from Jabber"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:43
+msgid ""
+"BrightScout helped a major U.S. Federal Agency rapidly migrate from "
+"Jabber to Mattermost and open sourced their Extract, Transform and Load "
+"(ETL) tool at https://github.com/Brightscout/mattermost-etl. Read more "
+"about their `case study <https://mattermost.com/blog/u-s-federal-agency-"
+"migrates-from-jabber-to-mattermost-the-open-source-way/>`__ online."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:46
+msgid "Move from Pidgin"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:48
+msgid ""
+"In some cases, people are using Pidgin clients with different backends to"
+" communicate. To continue using Pidgin with a Mattermost backend, "
+"consider using `Mattermost ETL tool <https://github.com/Brightscout"
+"/mattermost-etl>`__, created by BrightScout, to migrate data from your "
+"existing backend into Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:50
+msgid ""
+"Then use the `Pidgin-Mattermost plugin <https://github.com/EionRobb"
+"/purple-mattermost>`__ (complete with an installer for end user machines)"
+" to continue to support legacy Pidgin users while offering a whole new "
+"Mattermost experience on web, mobile, and PC."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:53
+msgid "Move from Bitnami"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:55
+msgid ""
+"Bitnami uses MySQL, and renames the Mattermost database tables by "
+"converting the names to all lower case. For example, in non-Bitnami "
+"installations, the Users table is named ``Users``, but in Bitnami, the "
+"table is ``users`` (with a lowercase ``u``). As a result, when you "
+"migrate your data from Bitnami to a non-Bitnami installation, you must "
+"modify the MySQL startup script so that it starts MySQL in lowercase "
+"table mode."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:57
+msgid ""
+"You can modify the script by adding the ``--lower-case-table-names=1`` "
+"switch to the MySQL start command. The location of the start-up script "
+"generally depends on how you installed MySQL, whether by using the "
+"package manager for the operating system, or by manually installing "
+"MySQL. You must modify the start-up script before migrating the data."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:59
+msgid ""
+"For more information about letter case in MySQL table names and the "
+"``--lower-case-table-names`` switch, see the `Identifier Case Sensitivity"
+" <https://dev.mysql.com/doc/refman/5.7/en/identifier-case-"
+"sensitivity.html>`__ topic in the MySQL documentation."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:62
+msgid "Move from bespoke messaging solutions"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:64
+msgid ""
+"Mattermost is often selected to replace bespoke solutions by IT and "
+"DevOps teams as a stable, enterprise-grade, commercially-supported "
+"solution on an open source platform that meets and exceeds the "
+"flexibility and innovation of bespoke solutions."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:66
+msgid ""
+"Migrating from bespoke messengers to Mattermost can be challenging. "
+"Because of the difficulty of upgrading and maintaining bespoke solutions,"
+" the format for storing data is unpredictable, and the community around "
+"any single legacy release is small."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:68
+msgid "If your data in the bespoke messenger is vital, consider:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:70
+msgid ""
+":doc:`Mattermost bulk load tool </administration-guide/onboard/bulk-"
+"loading-data>`: Use the Mattermost bulk load tool to ETL from your "
+"bespoke system to Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:71
+msgid ""
+"`Mattermost ETL framework from BrightScout "
+"<https://github.com/Brightscout/mattermost-etl>`__: Consider the "
+"Mattermost ETL framework from BrightScout to custom-configure an adapter "
+"to plug in to the Bulk Load tool mentioned above."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:72
+msgid ""
+"**Legacy Slack import:** If you only recently switched from Slack to a "
+"bespoke tool, consider going back to import the data and users from the "
+"old Slack instance directly into Mattermost, leveraging the extensive "
+"support for Slack-import provided."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:73
+msgid ""
+"**Export to Slack, then import to Mattermost:** `Export Flowdock, "
+"Campfire, Chatwork, Hall, or CSV files to Slack "
+"<https://slack.com/help/articles/217872578-Import-data-from-one-Slack-"
+"workspace-to-another>`_ and then export to a Slack export file and import"
+" the file into Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:75
+msgid "If your data in the bespoke messenger is not vital, consider:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:77
+msgid ""
+"**Parallel systems:** Running Mattermost in parallel with your bespoke "
+"system until the majority of workflow and collaboration has moved to "
+"Mattermost"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrating-to-mattermost.rst:78
+msgid ""
+"**Hard switch:** Announce a \"hard switch\" to Mattermost after a period "
+"of time of running both systems in parallel. Often this has been done due"
+" to security concerns in bespoke products or products nearing end-of-"
+"life."
+msgstr ""
+

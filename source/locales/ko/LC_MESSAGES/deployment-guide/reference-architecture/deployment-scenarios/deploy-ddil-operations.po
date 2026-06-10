@@ -1,0 +1,466 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:2
+msgid "Deploy for Enterprise to Edge DDIL Operations"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:5
+msgid "Overview"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:7
+msgid ""
+"Disconnected, Denied, Intermittent, and Limited (DDIL) network conditions"
+" present unique challenges for enterprise-to-edge operations. Field "
+"operations, remote deployments, and edge environments often become "
+"temporarily isolated from the internet, interrupting direct access to "
+"Microsoft 365 services such as Teams and Outlook."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:9
+msgid ""
+"Mattermost enables resilient collaboration by remaining fully operational"
+" in DDIL environments. Mission users continue to access self-hosted "
+"messaging collaboration, workflow automation, and mission planning within"
+" their mobile tactical network. No internet connectivity is required for "
+"enhanced collaboration functions, including mission tuned AI agents "
+"powered by self-hosted LLMs, and audio and screen sharing services."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:11
+msgid ""
+"When connectivity is restored, mission users regain access to M365 "
+"enterprise systems in addition to collaboration continuity with "
+"enterprise users through the :doc:`embedded Mattermost experience "
+"</integrations-guide/mattermost-mission-collaboration-for-m365>` inside "
+"their Microsoft Teams and Outlook applications. All mission activity "
+"during the period of disconnection becomes available across enterprise "
+"and tactical environments when connectivity returns."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:13
+msgid ""
+"Traditional cloud-only solutions fail in these scenarios, while fully "
+"disconnected systems don't integrate with enterprise tools during normal "
+"operations. This deployment architecture :doc:`extends sovereign "
+"collaboration with Microsoft Teams and Outlook </deployment-guide"
+"/reference-architecture/deployment-scenarios/deploy-sovereign-"
+"collaboration>` to the tactical edge, providing a hybrid solution that "
+"enables enterprise integration and fully disconnected tactical "
+"collaboration."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:15
+msgid ""
+"Mattermost diagram displays the deployment components and relationships "
+"outlined in detail in this document."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:19
+msgid ""
+"Consider `talking to a Mattermost expert <https://mattermost.com/contact-"
+"sales/>`__ if your organization needs support deploying Mattermost and "
+"supporting services for DDIL operations."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:22
+msgid "Architecture components"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:24
+msgid ""
+"This hybrid deployment architecture provides optimal collaboration in "
+"both connected and disconnected states, including:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:26
+msgid ""
+"**Enterprise Network:** Network containing enterprise services and "
+"continuous access to Microsoft 365. The network may have a firewall or "
+"access gateway protecting egress and ingress, such as network policies, "
+"IP allowlists, or WAFs depending on your networking configurations."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:28
+msgid ""
+"**Enterprise Users:** Users within the enterprise network boundary "
+"accessing client applications for M365 services and Mattermost."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:30
+msgid ""
+"**Tactical Network:** Operates independently during internet "
+"disconnections, hosting a self-contained Mattermost deployment to ensure "
+"mission users maintain collaboration capabilities."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:32
+msgid ""
+"**Mission Users:** Tactical or edge users who may be intermittently "
+"disconnected from enterprise systems and Microsoft services."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:34
+msgid "**Identity Providers:**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:36
+msgid ""
+"**Microsoft Entra ID:** Enterprise users authenticate to M365 "
+"applications and Mattermost using :doc:`single sign-on Entra ID "
+"</administration-guide/onboard/sso-entraid>` via OpenID Connect (OIDC) or"
+" SAML. This provider only works with functioning internet access."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:38
+msgid ""
+"**Alternative Local Identity Provider:** Deployed within the tactical "
+"network to provide authentication services for mission users during "
+"disconnected periods when M365 is unreachable. The local IdP serves as "
+"the primary authentication source for Mattermost and maintains an "
+"independent user directory that operates without internet connectivity."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:40
+msgid "**Client Applications:**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:42
+msgid ""
+"**Microsoft 365 Desktop Apps:** Teams and Outlook with :doc:`embedded "
+"Mattermost application. </integrations-guide/mattermost-mission-"
+"collaboration-for-m365>`"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:44
+msgid ""
+"When internet connected: Enables seamless enterprise-to-edge "
+"collaboration within a familiar interface."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:46
+msgid ""
+"When internet disconnected: Microsoft services are unreachable, but "
+"embedded Mattermost application remains fully operational for tactical "
+"teams."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:48
+msgid ""
+"**Mattermost Desktop Apps:** Access Mattermost via :doc:`desktop "
+"</deployment-guide/desktop/desktop-app-deployment>` or web apps in "
+"addition to the embedded views from Teams and Outlook. *(Optional - not "
+"shown)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:50
+msgid ""
+"**Mattermost Mobile Apps:** Access Mattermost via :doc:`iPhone and "
+"Android apps </deployment-guide/mobile/mobile-app-deployment>`, with "
+"support for :doc:`ID-only push notifications </deployment-guide/mobile"
+"/host-your-own-push-proxy-service>` to ensure compliance with data "
+"sovereignty requirements. *(Optional when connectivity permits - not "
+"shown)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:52
+msgid ""
+"**Mattermost Deployment:** Mattermost deployed for sovereign tactical "
+"collaboration on local infrastructure, such as `Azure Local "
+"<https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-"
+"operations-overview>`_, supporting data residency regulations and "
+":doc:`disconnected operations </deployment-guide/reference-architecture"
+"/deployment-scenarios/air-gapped-deployment>`. See :doc:`reference "
+"architecture </administration-guide/scale/server-architecture>` "
+"documentation for Mattermost deployment configurations based on expected "
+"scale."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:54
+msgid ""
+"**Mattermost Server:** Core application server handling tactical "
+"collaboration workloads, including:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:56
+msgid ""
+":doc:`Messaging Collaboration </end-user-guide/messaging-collaboration>`:"
+" DDIL-ready 1:1, group messaging, and structured channel collaboration "
+"with :doc:`rich integration capabilities </integrations-guide"
+"/integrations-guide-index>` and :ref:`enterprise-grade search "
+"<administration-guide/scale/scaling-for-enterprise:enterprise search>`."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:58
+msgid ""
+":doc:`Workflow Automation </end-user-guide/workflow-automation>`: "
+"Playbooks provide structure, monitoring and automation for repeatable "
+"processes built-in to your local Mattermost deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:60
+msgid ""
+":doc:`Project Tracking </end-user-guide/project-task-management>`: Boards"
+" enables project management capabilities built-in to your local "
+"Mattermost deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:62
+msgid ""
+":doc:`AI Agents </administration-guide/configure/agents-admin-guide>`: AI"
+" Agents run against a local LLM hosted within your tactical network."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:64
+msgid ""
+":doc:`Audio & Screenshare </administration-guide/configure/calls-"
+"deployment-guide>`: Calls offers native real-time self-hosted audio calls"
+" and screen sharing within your tactical network."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:66
+msgid ""
+"**Proxy Server:** The :doc:`proxy server </deployment-guide/server/setup-"
+"nginx-proxy>` handles HTTP(S) routing within the cluster, directing "
+"traffic between the server and clients accessing Mattermost services. "
+"NGINX is recommended for load balancing with support for WebSocket "
+"connections, health check endpoints, and sticky sessions. The proxy layer"
+" provides SSL termination and distributes client traffic across "
+"application servers."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:68
+msgid ""
+"**PostgreSQL Database:** Stores persistent application data on a "
+":doc:`PostgreSQL v13+ database </deployment-guide/server/preparations>` "
+"hosted locally within your tactical network."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:70
+msgid ""
+"**Object Storage:** File uploads, images, and attachments are stored "
+"outside the application node on an :doc:`S3-compatible store "
+"</deployment-guide/server/preparations>` or network/local storage, hosted"
+" locally within your tactical network."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:72
+msgid ""
+"**Recording Instance:** ``calls-offloader`` job service, configured using"
+" the :doc:`Calls Offloader Setup and Configuration </administration-"
+"guide/configure/calls-offloader-setup>` guide, to offload heavy "
+"processing tasks from Mattermost Calls to self-hosted infrastructure "
+"within your tactical network, such as recordings, transcriptions, and "
+"live captioning. *(Optional)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:74
+msgid ""
+"**Self-hosted integrations:** :doc:`Custom apps, plugins, and webhooks "
+"</integrations-guide/integrations-guide-index>` can be deployed within "
+"your tactical network. *(Optional - not shown)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:76
+msgid ""
+"**Self-hosted LLM:** Locally hosted :doc:`OpenAI compatible LLM "
+"</agents/docs/providers>` for agentic powered collaboration within your "
+"tactical network. *(Optional)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:78
+msgid ""
+"**Microsoft Global Network:** `World-wide network "
+"<https://learn.microsoft.com/en-us/azure/networking/microsoft-global-"
+"network>`_ of Microsoft data centers, delivering public cloud services "
+"when internet connectivity permits."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:81
+msgid "Operational Best Practices"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:83
+msgid ""
+"The following best practices and deployment configurations help ensure "
+"that Mattermost remains compliant and operationally resilient in "
+"contested environments."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:86
+msgid "User Authentication"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:88
+msgid ""
+"DDIL environments require authentication infrastructure that remains "
+"fully operational without internet connectivity. Relying solely on cloud-"
+"based identity providers like Microsoft Entra ID creates a critical "
+"single point of failure when tactical networks become disconnected. To "
+"ensure mission users maintain authentication capabilities, deploy a "
+"locally hosted identity provider within the tactical network."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:90
+msgid ""
+"**Enterprise Users:** Access Teams and Outlook by authenticating to "
+"Microsoft 365 via Entra ID, and their M365 session also provides access "
+"to the embedded Mattermost experience when the tactical network is "
+"internet connected."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:92
+msgid ""
+"**Mission users:** Authenticate to Mattermost using a local IdP, such as "
+":doc:`Keycloak </administration-guide/onboard/sso-saml-keycloak>` (open-"
+"source IdP with OIDC/SAML support), Active Directory with ADFS, or "
+"OpenLDAP with an OIDC bridge. When internet connected, the local IdP can "
+"optionally federate with Microsoft Entra ID to synchronize user accounts,"
+" credentials, and group memberships to enable access to Microsoft "
+"applications."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:94
+msgid ""
+"User accounts must be provisioned in the local IdP before disconnection "
+"occurs to ensure authentication services remain available throughout DDIL"
+" conditions."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:97
+msgid "Sovereign AI"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:99
+msgid ""
+"Deploy an :doc:`OpenAI compatible LLM </administration-guide/configure"
+"/agents-admin-guide>` on tactical infrastructure to ensure AI "
+"capabilities remain fully sovereign and operational in disconnected "
+"scenarios. A self-hosted LLM can power :ref:`message and call "
+"summarization, semantic search <end-user-guide/agents:analyze threads and"
+" channels>`, and :ref:`mission-tuned AI agents <administration-"
+"guide/configure/agents-admin-guide:agent configuration>` without relying "
+"on public cloud AI services. This guarantees compliance with strict data "
+"handling mandates and enables AI-enhanced workflows to function locally, "
+"even during extended disconnections."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:102
+msgid "Self-hosted audio & screensharing"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:104
+msgid ""
+"Effective collaboration at the tactical edge requires all voice and "
+"screen sharing capabilities remain operational without reliance on the "
+"internet or third-party services. Deploy :doc:`Mattermost Calls "
+"</administration-guide/configure/calls-deployment-guide>` in a self-"
+"hosted configuration, including:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:106
+msgid ""
+"The ``rtcd`` service, configured using the :doc:`RTCD Setup and "
+"Configuration </administration-guide/configure/calls-rtcd-setup>` guide, "
+"provides scalable, low-latency media routing hosted on-premises. Run "
+"multiple ``rtcd`` nodes for redundancy."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:107
+msgid ""
+"The ``calls-offloader`` service, configured using the :doc:`Calls "
+"Offloader Setup and Configuration </administration-guide/configure/calls-"
+"offloader-setup>` guide, offloads heavy processing tasks like recording, "
+"transcription and live captioning to a locally hosted compliance-approved"
+" job server."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:110
+msgid "High availability and fault tolerance"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:112
+msgid ""
+"Deploy Mattermost in a :doc:`cluster-based architecture </administration-"
+"guide/scale/high-availability-cluster-based-deployment>` to ensure "
+"continued availability during outages or hardware failures. High "
+"availability requires redundant infrastructure across each critical "
+"component:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:114
+msgid ""
+"Application servers: Scale horizontally across multiple nodes with a load"
+" balancer distributing client traffic."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:115
+msgid ""
+"Search service: :ref:`Elasticsearch or AWS OpenSearch Service "
+"<administration-guide/scale/scaling-for-enterprise:enterprise search>` "
+"provides optimized search performance with dedicated indexing for large-"
+"scale deployments."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:116
+msgid ""
+"Object storage: Configure S3-compatible backends with erasure coding or "
+"replication for durability. All application servers must access shared "
+"file storage (NAS or S3) to ensure consistent data availability."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:117
+msgid "Calls services: Run multiple ``rtcd`` and offloader nodes for resilience."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:120
+msgid "Compliance and retention"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:122
+msgid ""
+"Sovereign environments often require strict enforcement of retention "
+"policies, legal hold, and export controls. Configure Mattermost's built-"
+"in compliance features to meet organizational mandates."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:124
+msgid ""
+"Enable :doc:`compliance export </administration-guide/comply/compliance-"
+"export>` and :doc:`monitoring </administration-guide/comply/compliance-"
+"monitoring>` to produce auditable exports of message data and user "
+"activity logs."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:125
+msgid ""
+"Configure :doc:`message retention </administration-guide/comply/data-"
+"retention-policy>` and :doc:`legal hold </administration-guide/comply"
+"/legal-hold>` policies to align with applicable regulations."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-operations.rst:126
+msgid ""
+"Integrate with your organization's :doc:`eDiscovery </administration-"
+"guide/comply/electronic-discovery>` and archiving systems as required."
+msgstr ""
+

@@ -1,0 +1,309 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:62
+msgid "Active/passive DR on AWS"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:2
+msgid "Backup and disaster recovery"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:7
+msgid ""
+"Options to protect your Mattermost server from different types of "
+"failures range from simple backups to sophisticated disaster recovery "
+"deployments and automation."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:10
+msgid "Backup"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:12
+msgid ""
+"The state of your Mattermost server is contained in multiple data stores "
+"that need to be backed up and restored separately to fully recover your "
+"system from failure."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:14
+msgid "To back up your Mattermost server:"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:16
+msgid ""
+"Back up your Mattermost database using standard procedures depending on "
+"your database version. `PostgreSQL SQL Dump backup documentation "
+"<https://www.postgresql.org/docs/10/backup-dump.html>`__ is available "
+"online. Use the navigation at the top of the page to select your "
+"PostgreSQL version."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:18
+msgid ""
+"Back up your server settings stored in ``config/config.json``. If you are"
+" using SAML configuration for Mattermost, your SAML certificate files "
+"will be saved in the ``config`` directory. Therefore, we recommend "
+"backing up the entire directory."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:20
+msgid "Back up files stored by your users with one of the following options:"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:22
+msgid ""
+"If you use local storage using the default ``./data`` directory, back up "
+"this directory."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:23
+msgid ""
+"If you use local storage using a non-default directory specified in the "
+"``Directory`` setting in ``config.json``, back up files in that location."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:24
+msgid ""
+"If you store your files in S3, you can typically keep the files where "
+"they are located without backup."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:28
+msgid ""
+"To make a clean backup, you must stop Mattermost during the duration of "
+"the backup, otherwise the database and files may become out of sync."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:30
+msgid ""
+"To restore a Mattermost instance from backup, restore your database, "
+"``config.json`` file, and optionally the locally stored user files into "
+"the locations from which they were backed up."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:33
+msgid "Disaster recovery"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:35
+msgid ""
+"An appropriate disaster recovery plan weighs the benefits of mitigating "
+"specific risks against the cost and complexity of setting up disaster "
+"recovery infrastructure and automation."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:39
+msgid "**High availability (HA) vs. disaster recovery (DR)**"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:41
+msgid ""
+"HA and DR are distinct concepts that are often confused. HA refers to a "
+"clustered deployment within a single site that eliminates single points "
+"of failure and keeps Mattermost running through individual component "
+"outages (e.g., a failed app node or database replica). DR addresses the "
+"broader scenario of an entire site or region becoming unavailable, and "
+"typically requires a secondary deployment in a separate data center or "
+"cloud region."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:43
+msgid ""
+"Mattermost supports active/passive DR, where a secondary site is kept in "
+"sync but only activated during a failover. Mattermost does not support "
+"active/active deployments, where both sites serve live traffic "
+"simultaneously."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:46
+msgid "Automated backup"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:48
+msgid ""
+"Automating backups for a Mattermost server provides a copy of the "
+"server's state at a particular point in time, which can be restored if a "
+"failure in the future leads to loss of data. Options include:"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:50
+msgid ""
+"Automation to periodically back up the Mattermost server, which may "
+"include all the components listed above or a subset depending on what you"
+" choose to protect."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:51
+msgid ""
+"Automation to restore a server from backup, or deploy a new server, to "
+"reduce recovery time."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:52
+msgid ""
+"Automation to verify a backup has been successfully produced to protect "
+"against backup automation failures."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:53
+msgid ""
+"Storing backups off-site, to protect against physical loss of onsite "
+"systems."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:55
+msgid ""
+"Recovering from a failure using a backup is typically a manual process "
+"and will incur downtime. The alternative is to automate recovery using a "
+"high availability deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:58
+msgid "Active/passive DR deployment"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:60
+msgid ""
+"For step-by-step instructions on setting up Mattermost in an "
+"active/passive DR configuration across two data centers, including how to"
+" replicate the database, file storage, and search indices, and how to "
+"perform a failover, see the platform-specific guide:"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:68
+msgid "Failover from Single Sign-On outage"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:70
+msgid ""
+"When using Single Sign-on with Mattermost Enterprise Edition, an outage "
+"to your SSO provider can cause a partial outage on your Mattermost "
+"instance."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:72
+msgid "**What happens during an SSO outage?**"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:74
+msgid ""
+"**Most people can still log in.** By default, when a user logs in to "
+"Mattermost they receive a session token lasting 30 days (the duration can"
+" be configured in the System Console). During an SSO outage, users with "
+"valid session tokens can continue using Mattermost uninterrupted."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:75
+msgid ""
+"**Some people can't log in.** During an SSO outage, there are two "
+"situations under which a user cannot log in:"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:77
+msgid "Users whose session token expires during the outage."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:78
+msgid "Users trying to log in to new devices."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:80
+msgid ""
+"In each case, the user cannot reach the SSO provider, and cannot log in. "
+"In either case, several mitigations are available:"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:83
+msgid "Configure your SSO provider for High Availability"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:85
+msgid ""
+"If you're using a self-hosted Single Sign-on provider, several options "
+"are available for `High Availability configurations that protect your "
+"system from unplanned outages <https://learn.microsoft.com/en-us"
+"/microsoft-identity-manager/pam/high-availability-disaster-recovery-"
+"considerations-bastion-environment>`_."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:87
+msgid ""
+"For SaaS-based authentication providers, while you still have a "
+"dependency on service uptime, you can set up redundancy in source systems"
+" from which data is being pulled. For example, with the OneLogin SaaS-"
+"based authentication service, you can set up High Availability LDAP "
+"connectivity to further reduce the chances of an outage."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:90
+msgid "Set up your own IDP to provide an automated or manual SSO failover option"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:92
+msgid ""
+"Create a custom Identity Provider for SAML authentication that connects "
+"to both an active and a standby authentication option, that can be "
+"manually or automatically switched in case of an outage."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:94
+msgid ""
+"In this configuration, security should be carefully reviewed to prevent "
+"the standby SSO option from weakening your authentication protocols."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:97
+msgid "Set up a manual failover plan for SSO outages"
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:99
+msgid ""
+"When users are unable to reach your organization's SSO provider during an"
+" outage, an error message directing them to contact your support link "
+"(defined in your System Console settings) is displayed."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:101
+msgid ""
+"Once IT is contacted about an SSO outage, they can temporarily change a "
+"user's account from SSO to email-password using the System Console, and "
+"the end user can use their email and password to claim the account until "
+"the SSO outage is over and the account can be converted back to SSO."
+msgstr ""
+
+#: ../../source/deployment-guide/backup-disaster-recovery.rst:103
+msgid ""
+"When the outage is over, it's critical to switch everyone back to SSO "
+"from email-password to maintain consistency and security."
+msgstr ""
+

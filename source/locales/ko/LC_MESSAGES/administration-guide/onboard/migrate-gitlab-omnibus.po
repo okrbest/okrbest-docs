@@ -1,0 +1,298 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:2
+msgid "Migrating from GitLab Omnibus to Mattermost Standalone"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:5
+msgid "Overview"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:7
+msgid ""
+"GitLab has announced the `deprecation of Mattermost from the GitLab "
+"Omnibus package <https://docs.gitlab.com/update/deprecations/#mattermost-"
+"bundled-with-linux-package>`__ with GitLab 19.0. As part of this "
+"transition, GitLab will continue to support Mattermost **up to version "
+"10.11 ESR** within the Omnibus installation until the final removal date."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:9
+msgid ""
+"To ensure continuity and long-term support, organizations using "
+"Mattermost within GitLab Omnibus should plan to migrate to a **standalone"
+" Mattermost installation**. This approach provides ongoing access to the "
+"latest Mattermost releases, security updates, and enterprise capabilities"
+" independent of GitLab’s release cycle."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:11
+msgid ""
+"Migrating to a standalone deployment also enables greater flexibility in "
+"managing infrastructure, upgrading PostgreSQL, and scaling Mattermost "
+"independently to meet performance and compliance requirements."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:14
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:16
+msgid "Before you begin:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:18
+msgid "Administrative (root or sudo) access to the GitLab Omnibus server."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:19
+msgid "A new standalone **PostgreSQL** server prepared and accessible."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:20
+msgid "Sufficient disk space for the Mattermost database dump."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:21
+msgid "A planned maintenance window, as Mattermost downtime is required."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:22
+msgid ""
+"A current full backup of your Mattermost instance, including database and"
+" file storage."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:25
+msgid "Migration Steps"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:27
+msgid ""
+"Follow the steps below to safely migrate from GitLab Omnibus to a "
+"standalone Mattermost installation."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:30
+msgid ""
+"The following procedure assumes your Mattermost database name is "
+"``mattermost_production`` and your PostgreSQL user is ``mmuser``. Adjust "
+"as needed for your environment."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:33
+msgid "Step 1: Create a Database Dump from GitLab Omnibus"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:35
+msgid ""
+"Use the GitLab Omnibus PostgreSQL tools to create a dump of the "
+"Mattermost database. Run this command on the GitLab server:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:42
+msgid "This will create a compressed SQL dump file of your Mattermost database."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:45
+msgid "Step 2: Prepare the New PostgreSQL Server"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:47
+msgid ""
+"Set up your new PostgreSQL server following the official :ref:`Mattermost"
+" database preparation guidelines <deployment-"
+"guide/server/preparations:database preparation>`. This includes:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:49
+msgid ""
+"Installing the correct PostgreSQL version supported by your Mattermost "
+"server."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:50
+msgid "Creating a new Mattermost database and user with appropriate permissions."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:53
+msgid "Step 3: Transfer and Restore the Database Dump"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:55
+msgid ""
+"Transfer the database dump file to your new PostgreSQL server, then "
+"restore it:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:61
+msgid ""
+"Verify that the database restoration completes successfully without "
+"errors."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:64
+msgid "Step 4: Update Mattermost Configuration"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:66
+msgid ""
+"On your standalone Mattermost server, update the ``config.json`` file to "
+"point to the new PostgreSQL server. Locate the ``SqlSettings.DataSource``"
+" parameter and update it as follows:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:76
+msgid ""
+"Ensure that credentials, hostnames, and connection settings match your "
+"new PostgreSQL configuration."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:79
+msgid "Step 5: Migrate the Mattermost Application and Data"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:81
+msgid ""
+"To move Mattermost application files from the GitLab server to a new "
+"standalone server:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:83
+msgid ""
+"**Install the same or newer version** of Mattermost on the new server. "
+"See the :ref:`Server Deployment Planning <deployment-guide/server/server-"
+"deployment-planning:deployment options>`."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:84
+msgid ""
+"**Copy your existing configuration and data** from the GitLab Omnibus "
+"instance:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:96
+msgid "Ensure permissions are correctly set on the new server:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:103
+msgid "Step 6: Start Mattermost"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:105
+msgid "Start the Mattermost service on your new standalone installation:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:111
+msgid "Mattermost will now connect to your standalone PostgreSQL database."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:114
+msgid "Step 7: Verify the Migration"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:116
+msgid "After starting Mattermost, perform the following checks:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:118
+msgid ""
+"Confirm that Mattermost starts successfully with no database connection "
+"errors."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:119
+msgid "Review server logs for any startup or connection issues."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:120
+msgid ""
+"Log into Mattermost and verify that all teams, channels, and users are "
+"present."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:121
+msgid "Post test messages and upload files to confirm functionality."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:122
+msgid "Validate user authentication and permissions."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:123
+msgid "Confirm that database queries are directed to the new PostgreSQL server."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:126
+msgid "Important Considerations"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:128
+msgid ""
+"Always maintain a **full backup** of your Mattermost database before "
+"migration."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:129
+msgid "Schedule a **maintenance window** to minimize user disruption."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:130
+msgid "Validate performance and monitoring configurations post-migration."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:131
+msgid ""
+"Ensure that your new PostgreSQL server follows Mattermost’s security and "
+"tuning best practices."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:134
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:136
+msgid "If you encounter errors during the migration:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:138
+msgid "Review PostgreSQL logs for permission or connection issues."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:139
+msgid ""
+"Verify that the Mattermost PostgreSQL user has full access to the "
+"restored database."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:140
+msgid ""
+"Ensure that the ``config.json`` file contains the correct database "
+"connection string."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:141
+msgid ""
+"Restart the Mattermost service and check ``mattermost.log`` for detailed "
+"errors."
+msgstr ""
+

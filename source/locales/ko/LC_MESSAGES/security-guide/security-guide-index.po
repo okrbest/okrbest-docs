@@ -1,0 +1,687 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/security-guide/security-guide-index.rst:2
+msgid "Security Guide"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:4
+msgid ""
+"Mattermost offers a comprehensive set of security features to protect "
+"information in its mobile applications. These features, ranging from "
+"encryption and authentication to device management and user education, "
+"provide a secure environment for team collaboration and communication. By"
+" prioritizing security, Mattermost ensures that customers can trust the "
+"mobile application to safeguard their data and privacy."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:19
+msgid "Data-in-Transit Encryption"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:21
+msgid ""
+"Mattermost can be configured to use Transport Layer Security (TLS) to "
+"encrypt data transmitted over the network. TLS provides a secure channel "
+"for data exchange, protecting it from eavesdropping and tampering during "
+"transmission. This encryption ensures that only the intended recipients "
+"can access the content, preventing unauthorized parties from intercepting"
+" or reading the information."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:23
+msgid ""
+"Mattermost administrators who wish to configure access settings for "
+"private and public networks can do so with 3rd party infrastructure using"
+" a :doc:`reverse proxy </deployment-guide/server/setup-tls>`. This "
+"ensures that devices connected to secure networks can safely access the "
+"application while restricting access from untrusted networks. Learn more "
+"about Mattermost :ref:`data-in-transit encryption <deployment-guide"
+"/encryption-options:encryption-in-transit>`."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:26
+msgid "Data-at-Rest Encryption"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:28
+msgid ""
+"Encryption-at-rest ensures that messages, files, and other data stored in"
+" the Mattermost database and file storage are protected from unauthorized"
+" access by safeguarding data on physical storage media (e.g., disks) by "
+"encrypting it, making it inaccessible without the appropriate encryption "
+"keys. Learn more about Mattermost :ref:`data-at-rest encryption "
+"<deployment-guide/encryption-options:encryption-at-rest>`."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:30
+msgid ""
+"Encryption-at-rest also available for files stored in Amazon's "
+"proprietary S3 system using server-side encryption with :ref:`Amazon "
+"S3-managed keys <administration-guide/configure/environment-"
+"configuration-settings:enable server-side encryption for amazon s3>` "
+"(Mattermost Enterprise) when users choose not to use open source options."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:32
+msgid ""
+"We strongly recommend regularly rotating and securely storing encryption "
+"keys using tools, enabling logging and monitoring for access to encrypted"
+" data, and ensuring that backup data is encrypted."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:35
+msgid "Authentication and Access Control"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:38
+msgid "Single Sign-On (SSO)"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:40
+msgid ""
+"The mobile application integrates with Single Sign-On providers, allowing"
+" users to authenticate using their existing credentials from other "
+"trusted systems. This reduces the risk of password-related security "
+"breaches and streamlines the login process. Learn more about Mattermost "
+":doc:`SSO </administration-guide/manage/admin/user-provisioning>`."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:43
+msgid "Multi-Factor Authentication (MFA)"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:45
+msgid ""
+"An additional layer of security beyond username and password. Customers "
+"can :doc:`enable and enforce MFA </administration-guide/onboard/multi-"
+"factor-authentication>` to protect accounts from unauthorized access, "
+"even if login credentials are compromised."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:48
+msgid "User Password Requirements"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:50
+msgid ""
+"System administrators can configure user password settings to help "
+"safeguard the platform against a range of common attack vectors while "
+"maintaining usability and compliance with enterprise security policies:"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:52
+msgid ""
+"Enforcing longer passwords ensures a baseline level of strength for every"
+" user's credentials. Learn more about configuring a :ref:`minimum "
+"password length <administration-guide/configure/authentication-"
+"configuration-settings:minimum password length>`."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:53
+msgid ""
+"Enforcing character complexity protects against attackers exploiting weak"
+" or overly simple passwords by enforcing passwords that resist dictionary"
+" attacks and common password vulnerabilities. Learn more about "
+"configuring :ref:`password requirements <administration-guide/configure"
+"/authentication-configuration-settings:password requirements>`."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:54
+msgid ""
+"Limiting the number of failed authentication attempts before locking the "
+"account temporarily or permanently mitigates brute-force, where attackers"
+" attempt to guess passwords by repeatedly entering potential "
+"combinations. Learn more about configuring the :ref:`maximum number of "
+"login attempts <administration-guide/configure/authentication-"
+"configuration-settings:maximum login attempts>`."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:55
+msgid ""
+"Enabling the forgot password flow adds a layer of convenience by ensuring"
+" users can reset their password when needed while preventing users from "
+"being locked out due to legitimate loss of credentials. Learn more about "
+":ref:`enabling a password reset workflow <administration-guide/configure"
+"/authentication-configuration-settings:enable forgot password link>`."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:58
+msgid "Session Management"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:60
+msgid ""
+"System administrators can configure session management settings, "
+"including session length, session cache, and idle timeout to ensure user "
+"sessions are managed effectively and securely. Session fixation attacks "
+"are mitigated as Mattermost sets a new session cookie with each login. "
+"Learn more about :ref:`session management configuration settings "
+"<administration-guide/configure/environment-configuration-"
+"settings:session lengths>`."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:63
+msgid "Protection Against Brute Force Attacks"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:65
+msgid ""
+"System administrators can :doc:`rate limit Mattermost APIs "
+"</administration-guide/configure/environment-configuration-settings>` "
+"based on query frequency, memory store size, remote address, and headers."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:68
+msgid "Remote Session Revocation & Password Reset"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:70
+msgid ""
+"System administrators can remotely :doc:`revoke user sessions </end-user-"
+"guide/preferences/manage-your-security-preferences>` across web, mobile "
+"devices, and desktop apps. User passwords can be remotely :ref:`reset "
+"<administration-guide/configure/user-management-configuration-"
+"settings:reset user's password>` to enhance security."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:73
+msgid ""
+"Admins can also enforce re-login after a specified period of time by "
+"defining :ref:`session lengths <administration-guide/configure"
+"/environment-configuration-settings:session lengths>` and by "
+":ref:`revoking user sessions <administration-guide/configure/user-"
+"management-configuration-settings:revoke a user's session>` to force "
+"users to log back into the system immediately."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:76
+msgid "Role-Based Access Control (ABAC)"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:78
+msgid ""
+"Administrators can set granular permissions to control access to "
+"sensitive information within the application. This feature ensures that "
+"users only have access to the data necessary for their roles, minimizing "
+"the risk of accidental or intentional data exposure. Learn more about "
+"Mattermost :doc:`role-based access control </end-user-guide/collaborate"
+"/learn-about-roles>`."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:81
+msgid "Cross-Origin Requests Control"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:83
+msgid ""
+"Choose whether to restrict or enable :ref:`cross-origin requests "
+"<administration-guide/configure/integrations-configuration-"
+"settings:enable cross-origin requests from>` for enhanced control."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:86
+msgid "Public Link Management"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:88
+msgid ""
+"Public links for account creation, file, and image shares can be "
+"invalidated by :ref:`regenerating salts <administration-guide/configure"
+"/site-configuration-settings:public link salt>` to ensure security."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:90
+msgid ""
+"Public links can also be disabled by setting the :ref:`public link salt "
+"<administration-guide/configure/site-configuration-settings:public link "
+"salt>` to an empty string. This prevents the creation of new public links"
+" and invalidates existing ones."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:93
+msgid "LLM Context Management"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:95
+msgid ""
+"Mattermost Agents are designed to ensure that only necessary information "
+"is sent to the Large Language Model (LLM) for generating accurate "
+"responses in Mattermost. Learn how Mattermost :doc:`Agents manages LLM "
+"context </end-user-guide/collaborate/agents-context-management>` and how "
+"to ensure data privacy."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:98
+msgid "Audit Logs and Monitoring"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:100
+msgid ""
+"Mattermost writes logs to both the console and to a log file in a "
+"machine-readable JSON format. Customers with a Mattermost subscription "
+"can additionally log directly to syslog and TCP socket destination "
+"targets. Learn more about :doc:`Mattermost logging </administration-"
+"guide/manage/logging>`."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:103
+msgid "Activity Monitoring"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:105
+msgid ""
+"Mattermost stores a complete history of messages, including edits and "
+"deletes, along with all files uploaded. User interface actions for "
+"deleting messages and channels only remove the data from the user "
+"interface; the data is retained within your database. If your compliance "
+"guidelines require it, you can disable users' ability to edit and delete "
+"their messages after they are posted. Learn more about :doc:`Mattermost "
+"permissions </administration-guide/onboard/advanced-permissions>`."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:107
+msgid ""
+"The Mattermost mobile app generates audit logs that record user "
+"activities and system events. These logs enable administrators to monitor"
+" access and identify potential security threats, ensuring timely "
+"detection and response to suspicious behavior."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:110
+msgid "Regular Security Updates"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:113
+msgid "Patch Management"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:115
+msgid ""
+"Mattermost regularly releases security updates to address vulnerabilities"
+" and enhance the application's security posture. Users are encouraged to "
+"keep their mobile applications up to date to benefit from the latest "
+"security improvements. Learn more about Mattermost :doc:`releases and the"
+" release life cycle </product-overview/releases-lifecycle>`."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:118
+msgid "Community and Expert Contributions"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:120
+msgid ""
+"Being an open-core platform, Mattermost benefits from contributions from "
+"the security community and experts. These contributions help identify and"
+" mitigate potential security risks, ensuring that the mobile application "
+"remains robust and secure. Learn more about `contributing to Mattermost "
+"<https://mattermost.com/contribute/>`_."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:122
+msgid ""
+"`Book a live demo <https://mattermost.com/request-demo/>`_  or `talk to a"
+" Mattermost expert <https://mattermost.com/contact-sales/>`_ to explore "
+"tailored solutions for your organization's secure collaboration needs. Or"
+" try Mattermost yourself with a `1-hour preview <https://mattermost.com"
+"/sign-up/>`_ for instant access to a live sandbox environment."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:125
+msgid "Compliance Considerations"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:127
+msgid ""
+"Mattermost can be deployed as part of regulated environments where "
+"compliance with industry standards is essential."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:129
+msgid ""
+"HIPAA: Review our guidance on :doc:`deploying Mattermost as part of a "
+"HIPAA-compliant IT infrastructure </security-guide/hipaa-compliance>`, "
+"with key considerations for protecting electronic protected health "
+"information (ePHI)."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:130
+msgid ""
+"FINRA: Learn how :doc:`Mattermost supports organizations in meeting the "
+"cybersecurity requirements of FINRA </security-guide/finra-compliance>`."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:133
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:136
+msgid ""
+"What are the trust benefits of Mattermost compared to third-party SaaS "
+"systems that let customers manage their own encryption keys?"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:138
+msgid ""
+"**Encryption doesn't mean a third-party SaaS vendor can't read your "
+"data.** A third-party vendor who provides encryption keys to the database"
+" that stores a customer's data at rest may still be able to read a "
+"customer's data while its in transit."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:140
+msgid ""
+"For example, performing a search on message histories requires access to "
+"unencrypted messages in order to match the search term to words in your "
+"unencrypted message history."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:142
+msgid ""
+"As another example, a customer's data encryption key is unlikely to be "
+"deployed to the mobile devices of end users; therefore, when a third-"
+"party system sends a push notification to an end user's mobile device, "
+"the unencrypted text is available to the third party."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:144
+msgid ""
+"In contrast, Mattermost is hosted by the customer. Not only can data be "
+"encrypted at rest and in-transit with keys generated by the customer "
+"(which no vendors ever touch), unencrypted data for search and mobile "
+"notifications is handled by systems under your IT team's control."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:146
+msgid ""
+"If it’s unclear from the vendor’s documentation whether or not your data "
+"can be read, ask them directly."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:148
+msgid ""
+"**Moreover, high trust enterprises need more than encryption - they need "
+"privacy, total data ownership, auditability, and control of their "
+"infrastructure.**"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:150
+msgid ""
+"*Privacy* means a third-party service cannot monitor the identity, IP "
+"address, location, or access patterns of your employees, nor their "
+"activity on your system, nor provide that information either "
+"intentionally through a court order (which you may never be informed "
+"about) or unintentionally through a data breach."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:152
+msgid ""
+"*Total data ownership* means a third party cannot prevent you from "
+"accessing your data at any time. It means no third party can read your "
+"data, analyze it or monetize it. It means that should you end your "
+"commercial relationship, you maintain your records with any backups. It "
+"also means you can delete your data at any time and verify that no "
+"additional copies remain."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:154
+msgid ""
+"*Audibility* means being able to fully observe, monitor, and trace the "
+"operations of your systems."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:156
+msgid ""
+"*Control of infrastructure* means being able to operate and customize "
+"your system to the specific needs of your business, including the ability"
+" to run on public and private networks, as well as on-prem, and "
+"interoperate with critical legacy systems with full observability and "
+"transparency down to reading the source code."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:158
+msgid ""
+"As an open source self-hosted system, Mattermost provides privacy, total "
+"data ownership, and control of infrastructure required by high trust "
+"teams."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:161
+msgid ""
+"What are the fundamental security challenges with Massive, Multi-Tenant "
+"Applications (MMTA)?"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:163
+msgid ""
+"The key risk of allowing confidential data to enter a Massively Multi-"
+"Tenant Applications (MMTA) is having the system breached, never knowing "
+"your data has been compromised, and having stolen data used to breach "
+"your other systems."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:165
+msgid ""
+"Marketers from MMTA vendors pay highly credentialed security "
+"professionals to offer \"Death Star Logic\" to gain a customer’s trust: "
+"\"MMTA's SaaS offering is the most secure system in the galaxy because it"
+" outspends its customers on security investments, therefore the MMTA is "
+"more secure than a customer's self-hosted infrastructure.\""
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:167
+msgid ""
+"The problem with Death Star Logic is that it omits the fact that hosting "
+"confidential data from thousands of enterprise customers makes it the "
+"prime target for cyber attacks, which increases risk to customers for "
+"four key reasons:"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:169
+msgid "**1) Over time, MMTA vendors become Nation State Targets**"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:171
+msgid ""
+"The effort behind a cyber attack is proportional to the value of "
+"breaching the system. As the value of the data held by an MMTA vendor "
+"increases, so does the scale of its cyber threats."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:173
+msgid ""
+"Vendors become \"Nation State Targets\" when the value of the breaching "
+"their system is so high it attracts the attention of the cyberwarfare "
+"branches of hostile nations. From there, even the smallest errors in "
+"system security can result in a significant breach."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:175
+msgid "**2) MMTA systems can't protect customers from unknown vulnerabilities**"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:177
+msgid ""
+"A single bug in an MMTA system can put all customers at risk. For "
+"example, `Slack reported a bug that exposed message histories and files "
+"for nearly four million users <https://www.wired.com/2017/03/hack-brief-"
+"slack-bug-everyones-worst-office-nightmare/>`_ (2017), and `a bug left "
+"400 million Microsoft accounts exposed to account takeover "
+"<https://hackread.com/critical-bug-in-microsoft-left-400m-accounts-"
+"exposed/>`_ (2018)."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:179
+msgid ""
+"For multi-tenant systems, bugs in infrastructure can present "
+"vulnerabilities as well. For example, in 2018 researchers discovered that"
+" chip-level exploits like `Meltdown and Spectre "
+"<https://www.wired.com/story/intel-meltdown-spectre-storm/>`__, which had"
+" been around for decades, could make it possible for malicious code run "
+"by one tenant to affect the operations of another tenant that shared the "
+"same CPU."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:181
+msgid ""
+"Keeping MMTA systems secure depends on the ability of internal and "
+"external security researches to continually stay ahead of cyber-"
+"attackers."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:183
+msgid "**3) Customers don't know when breaches occur**"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:185
+msgid ""
+"When an MMTA is breached, it is most likely from an unknown bug or an "
+"unknown vulnerability. Because of this, it may not be clear that a system"
+" has been breached, and customers may not be notified. Moreover, "
+"following a breach, there's often no way for the customer's security team"
+" to audit the MMTA vendor and understand how their confidential data may "
+"have been accessed or stolen."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:187
+msgid ""
+"The end result is confidential information passing through an MMTA may be"
+" used to exploit other systems the customer operates, with no way to "
+"trace the root of the breach to mitigate it in future."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:189
+msgid ""
+"As an example, when `OneLogin reported a security breach that allowed the"
+" attacker to decrypt encrypted data impacting 2000 customers and 70 SaaS "
+"apps <https://krebsonsecurity.com/2017/06/onelogin-breach-exposed-"
+"ability-to-decrypt-data/>`_ (2017), details were vague and there was "
+"little customers could do to analyze their risk or reduce risk in future."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:191
+msgid ""
+"In contrast, an open source, self-hosted collaboration solution remains "
+"within the layers of physical security and network security enterprises "
+"use to protect their most valuable assets, with full access to logging "
+"and system histories to know when, where and how an attack might have "
+"occurred."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:193
+msgid ""
+"Moreover, as a single-tenant solution, the strength of cyberattacks is "
+"typically limited to the breach value of just your confidential data and "
+"not the aggregate breach value of all customer data held by an MMTA. "
+"Plus, the sum of security investments your company makes to protect "
+"systems in its private networks accrues to your collaboration system - "
+"and for banks, this could be hundreds of millions of dollars a year."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:195
+msgid "**4) MMTA systems risk cross-bleeding your data**"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:197
+msgid ""
+"MMTA also runs the risk of bugs or misconfigurations in a vendor’s multi-"
+"tenant system bleeding your data into another customer’s space, or vice "
+"versa. Bleeds can occur via logging systems, in application logic, "
+"middleware, and data layer errors. In 2019, `Facebook admitted to "
+"accidentally storing hundreds of millions of user passwords in clear text"
+" for years due to a configuration oversight "
+"<https://krebsonsecurity.com/2019/03/facebook-stored-hundreds-of-"
+"millions-of-user-passwords-in-plain-text-for-years/>`__."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:200
+msgid ""
+"Why does Mattermost disclose whether or not an account exists when a user"
+" enters an incorrect password?"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:202
+msgid ""
+"Mattermost's core design principle is to be \"fast, obvious, forgiving\" "
+"and, telling users that they made a mistake in entering their password, "
+"is in service of our principle of prioritizing user interests."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:204
+msgid ""
+"When using username-password authentication, especially with AD/LDAP, "
+"there's the possibility of usernames being email addresses, Mattermost "
+"username, AD/LDAP username and ID, or other AD/LDAP attributes and our "
+"design principle intends to help end users understand whether their login"
+" error came from having the wrong password or the wrong email/username."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:206
+msgid ""
+"We believe this design increases productivity, speeds up user adoption, "
+"and reduces help desk tickets and support costs - and that these benefits"
+" outweigh the trade-offs."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:208
+msgid ""
+"The trade-off with this design is that if physical security is not in "
+"effect, network security is not in effect (i.e., no VPN or a malicious "
+"user within the private network), and username-password authentication is"
+" used, an attacker may be able to enumerate email addresses or usernames "
+"by sending HTTP requests to the system, up to the maximum number of "
+"requests per second defined in Mattermost's :doc:`API rate limiting "
+"settings </administration-guide/configure/environment-configuration-"
+"settings>`."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:210
+msgid ""
+"For organizations who choose to deploy in such a configuration, please "
+"consider the following mitigations:"
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:212
+msgid ""
+"Instead of username-password, use a Single Sign-On (SSO) provider in "
+"Mattermost Enterprise Edition like OneLogin, Okta, or ADFS, or use the "
+"open source GitLab SSO option available with Mattermost Team Edition."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:213
+msgid ""
+"Per the recommended install instructions, use a VPN client to apply "
+"network security to your deployment."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:214
+msgid ""
+"Enable monitoring and alerting from your proxy server to detect and "
+"isolate malicious behavior reaching your deployment."
+msgstr ""
+
+#: ../../source/security-guide/security-guide-index.rst:216
+msgid ""
+"Above all, make sure to subscribe to the `Mattermost Security Bulletin "
+"<https://mattermost.com/security-updates/#sign-up>`__ and apply security "
+"patches as recommended."
+msgstr ""
+

@@ -1,0 +1,755 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:2
+msgid "Desktop app troubleshooting"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:5
+msgid "Broken shortcuts after upgrading to v6.1.0 (Windows MSI only)"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:7
+msgid ""
+"After upgrading to Mattermost Desktop v6.1.0 using the Windows MSI "
+"installer from an older release, the desktop or taskbar shortcut shows "
+"the wrong icon or fails to launch. This is due to a one-time icon "
+"handling change in the Windows MSI installer to improve shortcut "
+"reliability for future upgrades."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:9
+msgid ""
+"This issue doesn't block app usage and only affects Windows MSI installer"
+" upgrades from pre-v6.1.0 versions. Users can launch Mattermost from the "
+"Start Menu or a working desktop shortcut.Future upgrades to v6.1.1 and "
+"later will not require shortcut recreation."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:11
+msgid "To resolve this issue, recreate the shortcut:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:13
+msgid ""
+"Right-click the broken shortcut on the taskbar and select **Unpin from "
+"taskbar**."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:14
+msgid ""
+"Launch Mattermost Desktop from the Start Menu or a working desktop "
+"shortcut."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:15
+msgid ""
+"Right-click the Mattermost icon in the taskbar while the application is "
+"running."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:16
+msgid "Select **Pin to taskbar**."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:18
+msgid "The new shortcut will work correctly for all future upgrades."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:20
+msgid ""
+"Organizations standardizing on Windows installations can choose between "
+"Windows Store (recommended for automatic updates) or MSI packages "
+"(traditional deployment). The MSI method includes this one-time shortcut "
+"adjustment; the Windows Store method doesn't."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:23
+msgid "Where is configuration stored locally?"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:25
+msgid ""
+"The location of the Mattermost desktop app configuration file depends on "
+"the platform where you're running Mattermost (and, in the case of macOS, "
+"how you've chosen to install the app):"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:27
+msgid "Windows: ``Users\\<username>\\AppData\\Roaming\\Mattermost``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:28
+msgid ""
+"macOS installer: ``/Users/<username>/Library/Application "
+"Support/Mattermost``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:29
+msgid ""
+"macOS App Store: "
+"``/Users/<username>/Library/Containers/Mattermost.Desktop/Data/Library/Application"
+" Support/Mattermost`` (via Finder: ``~/Library/Application "
+"Support/Mattermost`` as the extension is hidden)"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:30
+msgid "Linux: ``~/.config/Mattermost``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:34
+msgid ""
+"Local configuration data is not automatically removed when uninstalling "
+"the desktop app. If you wish to remove all data, you must manually remove"
+" the files from the applicable location noted above."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:35
+msgid ""
+"Prior to uninstalling, you can choose to log out of any active sessions. "
+"You can terminate active sessions from another Mattermost session in "
+"**Profile > Security > View and Logout of Active Sessions**, then select "
+"**Log Out**. Desktop app sessions are labeled as **Native Desktop App**."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:38
+msgid "Update notifications not appearing"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:40
+msgid ""
+"If you're not seeing in-app update notifications when new versions are "
+"available:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:42
+msgid ""
+"**Check your internet connection**: Ensure outbound HTTPS communication "
+"to ``mattermost.com`` is allowed."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:44
+msgid ""
+"**Manually check for updates**: Go to **Help > Check for Updates** or "
+"**Settings > General > Check for Updates Now** to trigger an immediate "
+"check."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:46
+msgid "**Verify update notifications are enabled**:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:48
+msgid ""
+"On Windows: Go to **… > File > Settings** and ensure **Automatically "
+"check for updates** is enabled."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:49
+msgid ""
+"On macOS: Go to **Mattermost > Settings** and ensure **Automatically "
+"check for updates** is enabled."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:51
+msgid ""
+"**Check Group Policy settings** (Enterprise deployments): Your system "
+"administrator may have disabled update notifications via the "
+"``EnableAutoUpdates`` Group Policy. Contact your IT department for "
+"clarification."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:53
+msgid ""
+"**Version previously skipped**: If you selected **Skip This Version** for"
+" the current release, manually check for updates to see it again."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:56
+msgid "Update required screen"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:58
+msgid ""
+"From Mattermost server v11.6.0, system admins can set a minimum Desktop "
+"App version in **System Console > Site Configuration > Customization > "
+"Minimum desktop app version**. If your Desktop App version is below the "
+"configured minimum, you will see an update required screen and cannot "
+"access Mattermost until you update."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:60
+msgid ""
+"The screen includes a **Download** button that links to the apps download"
+" page configured by your admin. Select **Download** to go to that page, "
+"then follow the :ref:`manual update steps <deployment-guide/desktop"
+"/desktop-troubleshooting:how to manually update mattermost desktop>` for "
+"your platform."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:62
+msgid ""
+"If you believe your app is already up to date, contact your system admin "
+"to confirm the configured minimum version."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:65
+msgid "How to manually update Mattermost Desktop"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:67
+msgid ""
+"From v6.1.0, Mattermost Desktop updates are manual. Follow these steps "
+"for your platform:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:69
+msgid "**macOS (App Store)**:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:71
+msgid "Open the App Store application."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:72
+msgid "Go to **Updates** section."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:73
+msgid "Find Mattermost Desktop and select **Update**."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:75
+msgid "**macOS (DMG installation)**:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:77
+msgid ""
+"Download the latest DMG from https://mattermost.com/download or the "
+"`GitHub releases page "
+"<https://github.com/mattermost/desktop/releases/latest>`__."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:78
+msgid "Open the downloaded DMG file."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:79
+msgid ""
+"Drag the Mattermost application to your Applications folder, replacing "
+"the existing version."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:80
+msgid "Restart Mattermost Desktop."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:82
+msgid "**Windows (Microsoft Store)**:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:84
+msgid "Open the Microsoft Store application."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:85
+msgid "Go to **Library > Get updates**."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:86
+msgid "Find Mattermost and select **Update**."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:88
+msgid "**Windows (MSI installation)**:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:90
+msgid ""
+"Download the latest MSI installer from the `GitHub releases page "
+"<https://github.com/mattermost/desktop/releases/latest>`__."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:91
+msgid "Run the MSI installer."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:92
+msgid ""
+"Follow the installation prompts (it will upgrade your existing "
+"installation)."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:94
+msgid "**Linux**:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:96
+msgid ""
+"Visit the `GitHub releases page "
+"<https://github.com/mattermost/desktop/releases/latest>`__."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:97
+msgid ""
+"Download the appropriate package for your distribution (AppImage, .deb, "
+".rpm, Flatpak, etc.)."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:98
+msgid "Install using your package manager or standard installation method."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:102
+msgid ""
+"For AppImage users: Simply download the new AppImage file and replace the"
+" old one. Make sure to make it executable: ``chmod +x mattermost-"
+"desktop-*.AppImage``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:105
+msgid "How do I access logs?"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:107
+msgid ""
+"From Mattermost desktop v5.3, you can access logs via **Help > Show "
+"logs**, which opens the file manager window showing the location of the "
+"log file."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:110
+msgid "How do I download app diagnostics?"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:112
+msgid ""
+"From Mattermost desktop v5.3, you can download a diagnostics text file "
+"via **Help > Run diagnostics**, which can be attached to a Support "
+"ticket."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:115
+msgid "Deep links open in the wrong workspace in multi-view"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:117
+msgid ""
+"If you experience deep links opening in the wrong workspace, ensure all "
+"relevant workspaces are pre-provisioned via the Group Policy "
+"``DefaultServerList``. See the :ref:`multi-view and group policies "
+"<deployment-guide/desktop/desktop-msi-installer-and-group-policy-install"
+":multi-view and Group Policies>` documentation for details."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:119
+msgid ""
+"Verify that workspace URLs match exactly (including protocol and "
+"subdomain) so links route to the intended workspace."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:120
+msgid ""
+"Edit the workspace list to correct or remove stale entries, then retry "
+"the link."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:123
+msgid "High CPU or memory when multiple workspaces open"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:125
+msgid ""
+"Verify the device is powerful enough to run several workspaces "
+"concurrently. Close unused tabs and pop-out windows to reduce load."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:127
+msgid ""
+"Check the :doc:`desktop app advanced settings </end-user-"
+"guide/preferences/customize-desktop-app-experience>`. Toggle **Use GPU "
+"hardware acceleration** off on systems with unstable drivers."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:130
+msgid ""
+"Desktop App displays white screen while launching and doesn't load the "
+"page"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:132
+msgid ""
+"Delete the local ``Mattermost desktop app`` configuration file. See the "
+"`Where is configuration stored locally? <#where-is-configuration-stored-"
+"locally>`__ section above for file location details."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:133
+msgid "Reinstall the application."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:138
+msgid "Upgrade to v6.1.0 fails or installs duplicate version (Windows MSI)"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:140
+msgid ""
+"After installing v6.1.0 MSI, the old version still appears, both versions"
+" are present, or the upgrade doesn't seem to work. This is because you "
+"had a per-user installation from v5.9 to v6.0.4. From v6.1.0, the MSI "
+"installer defaults to per-machine (system-wide) installation. MSI "
+"installers cannot automatically upgrade across different installation "
+"contexts (per-user to per-machine)."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:142
+msgid "To check your installation type before upgrading, open File Explorer."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:144
+msgid ""
+"If Mattermost is in ``C:\\Program Files\\Mattermost`` or ``C:\\Program "
+"Files (x86)\\Mattermost``: Per-machine install (upgrade will work "
+"normally)"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:145
+msgid ""
+"If Mattermost is in ``C:\\Users\\<YourName>\\AppData\\Local\\...``: Per-"
+"user install (requires manual uninstall before v6.1.0)"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:147
+msgid ""
+"To resolve this issue, you must manually uninstall the old version before"
+" installing v6.1.0:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:149
+msgid "Uninstall both versions:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:151
+msgid "Go to **Settings > Apps** or **Control Panel > Programs and Features**."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:152
+msgid "Uninstall all Mattermost Desktop entries."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:154
+msgid ""
+"Download the v6.1.0 MSI installer again from the `releases page "
+"<https://github.com/mattermost/desktop/releases>`__."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:155
+msgid ""
+"Install v6.1.0 with administrator privileges (it will install to "
+"``C:\\Program Files\\Mattermost``)."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:156
+msgid "Future upgrades will work normally."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:159
+msgid "\"Installation has failed\" dialog"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:161
+msgid ""
+"The app data might be corrupted. Remove all the files in "
+"``%LOCALAPPDATA%\\mattermost``, then try reinstalling the app."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:164
+msgid "\"The application \"Mattermost\" can't be opened\" dialog"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:166
+msgid ""
+"On macOS Catalina, this dialog can be triggered if the Mac Archive "
+"Utility is the default method for decompressing files. In this case using"
+" a third-party tool such as `Keka <https://www.keka.io>`_ or `Unarchiver "
+"<https://macpaw.com/the-unarchiver>`_ may resolve the problem."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:169
+msgid "Desktop App window is black and doesn't load the page"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:171
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:184
+msgid "Ensure you have installed the latest desktop app version available."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:172
+msgid ""
+"Clear your cache and reload the app from **View > Clear Cache and "
+"Reload** or press :kbd:`Ctrl` :kbd:`Shift` :kbd:`R` on Windows or Linux, "
+"or :kbd:`⌘` :kbd:`⇧` :kbd:`R` on Mac."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:173
+msgid "Quit the app and restart it to see if the issue clears."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:174
+msgid "Disable GPU hardware acceleration."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:176
+msgid ""
+"On Windows or Linux, select **File > Settings** and clear the **Use GPU "
+"hardware acceleration** option."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:177
+msgid ""
+"On macOS, select **Mattermost > Settings** and clear the **Use GPU "
+"hardware acceleration** option."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:179
+msgid ""
+"If you are using a special video driver, such as Optimus, try disabling "
+"it to see if the problem is resolved."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:182
+msgid "Desktop App window is white and doesn't load the page"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:185
+#, python-format
+msgid ""
+"Delete the ``%userprofile%\\AppData\\Roaming\\Mattermost`` directory on "
+"your local machine."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:186
+msgid "Reinstall the desktop app."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:189
+msgid "Desktop App is not visible, but the Mattermost icon is in the Task Bar"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:191
+msgid ""
+"This issue can occur on Windows in a multiple-monitor setup. When you "
+"disconnect the monitor that Mattermost is displayed on, Mattermost "
+"continues to display at screen coordinates that no longer exist."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:193
+msgid ""
+"To resolve this issue, you can reset the desktop app screen location by "
+"deleting the screen location file. When the file is not present, the "
+"desktop app displays on the primary monitor by default."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:195
+msgid "To reset the desktop app screen location:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:197
+msgid ""
+"If the desktop app is running, right-click the Mattermost icon in the "
+"task bar, then select **Close Window**."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:198
+msgid ""
+"Open Windows File Explorer, and go to the ``%APPDATA%\\Mattermost`` "
+"folder."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:199
+msgid "Delete the file ``bounds-info.json``."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:202
+msgid "Desktop App constantly refreshes the page"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:204
+msgid ""
+"This issue can occur when ``localStorage`` has an unexpected state. To "
+"resolve the issue:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:206
+msgid ""
+"Windows: Open Windows File Explorer, go to the ``%APPDATA%\\Mattermost`` "
+"folder, then delete the ``Local Storage`` folder."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:207
+msgid ""
+"Mac: Open Finder, go to the ``~/Library/Application Support/Mattermost`` "
+"folder, then delete the ``Local Storage`` folder."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:208
+msgid ""
+"Linux: Open the File Manager, go to the ``~/.config/Mattermost`` folder, "
+"then delete the ``Local Storage`` folder. Linux file managers may hide "
+"folders starting with a period by default. You can delete them from the "
+"terminal using ``rm -rf ~/.config/Mattermost``."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:211
+msgid "Desktop App constantly asks to log in to Mattermost server"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:213
+msgid ""
+"This issue can occur after a crash or unexpected shutdown of the desktop "
+"app that causes the app data to be corrupted. To resolve the issue:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:215
+msgid ""
+"Windows: Open Windows File Explorer, go to the ``%APPDATA%\\Mattermost`` "
+"folder, then delete the ``IndexedDB`` folder and the ``Cookies`` and "
+"``Cookies-journal`` files."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:216
+msgid ""
+"Mac: Open Finder, go to the ``~/Library/Application Support/Mattermost`` "
+"folder, then delete the ``IndexedDB`` folder and the ``Cookies`` and "
+"``Cookies-journal`` files."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:217
+msgid ""
+"Linux: Open the file manager, go to the ``~/.config/Mattermost`` folder, "
+"then delete the ``IndexedDB`` folder and the ``Cookies`` and ``Cookies-"
+"journal`` files. Linux file managers may hide folders starting with a "
+"period by default. You can delete them from the terminal using ``rm -rf "
+"~/.config/Mattermost``."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:220
+msgid "\"Internal error: BrowserWindow 'unresponsive' event has been emitted\""
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:222
+msgid ""
+"Selecting **Show Details** on the dialog provides logs. Ways to resolve "
+"the issue:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:224
+msgid ""
+"Clear the cache via **View > Clear Cache and Reload** or press "
+":kbd:`Ctrl` :kbd:`Shift` :kbd:`R` on Windows or Linux, or :kbd:`⌘` "
+":kbd:`⇧` :kbd:`R` on Mac."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:225
+msgid ""
+"Go to App Settings via **File > Settings** (or by pressing :kbd:`Ctrl` "
+":kbd:`,` on Windows or Linux, or :kbd:`⌘` :kbd:`,` on Mac) and unselect "
+"hardware acceleration."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:228
+msgid ""
+"Desktop app not responsive within Citrix Virtual Apps or Desktop "
+"Environment"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:230
+msgid ""
+"Append ``Mattermost.exe;`` to the Registry Key "
+"``HKLM\\SYSTEM\\CurrentControlSet\\Services\\CtxUvi\\UviProcessExcludes``"
+" and reboot the system."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:232
+msgid ""
+"For further assistance, review the `Troubleshooting forum "
+"<https://forum.mattermost.com/c/trouble-shoot/16>`_ for previously "
+"reported errors, or `join the Mattermost user community for "
+"troubleshooting help <https://mattermost.com/community/>`_."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:235
+msgid "Can I uninstall the desktop app I installed using snap on Linux?"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:237
+msgid ""
+"Yes. Run the following command from a terminal window: ``sudo snap remove"
+" mattermost-desktop``."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:240
+msgid "Report Desktop App issues"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:242
+msgid ""
+"When reporting issues found in the Mattermost desktop app, it's helpful "
+"to include the contents of the Developer Tools Console along with `the "
+"information on this page <https://support.mattermost.com/hc/en-"
+"us/articles/360060662492-Opening-a-Support-Ticket-for-Self-Managed-"
+"Deployments>`_."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:244
+msgid "To access the Developer Tools Console:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:246
+msgid ""
+"In the menu bar, go to **View > Developer Tools > Developer Tools for "
+"Current Tab**."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:247
+msgid "Select the **Console** tab."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:248
+msgid "Right-click the log entry, then select **Save As**."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:249
+msgid "Save the file, then send it along with a description of your issue."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:250
+msgid "Close the console to disable the Developer Tools."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-troubleshooting.rst:252
+msgid ""
+"You can open an additional set of developer tools for each server you "
+"have added to the desktop app. The tools can be opened by pasting this "
+"command in the Developer Tools Console you opened with the steps "
+"described above:"
+msgstr ""
+

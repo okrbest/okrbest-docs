@@ -1,0 +1,792 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:2
+msgid "Compliance configuration settings"
+msgstr ""
+
+#: ../../source/_static/badges/ent-plus.rst:9
+msgid ""
+"|plans-img-yellow| Available on `Enterprise and Enterprise Advanced plans"
+" <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:7
+msgid ""
+"Review and manage the following compliance configuration options in the "
+"System Console by selecting the **Product** |product-list| menu, "
+"selecting **System Console**, and then selecting **Compliance**:"
+msgstr ""
+
+#: ../../<rst_prolog>:100
+msgid ""
+"Navigate between Channels, collaborative playbooks, and boards using the "
+"product menu icon."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:9
+msgid "`Data Retention Policies <#data-retention-policies>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:10
+msgid "`Compliance Export <#administration-guide/comply/compliance-export>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:11
+msgid "`Compliance Monitoring <#compliance-monitoring>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:12
+msgid "`Custom Terms of Service <#custom-terms-of-service>`__"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:16
+msgid ""
+"System admins managing a self-hosted Mattermost deployment can edit the "
+"``config.json`` file as described in the following tables. Each "
+"configuration value below includes a JSON path to access the value "
+"programmatically in the ``config.json`` file using a JSON-aware tool. For"
+" example, the ``MessageRetentionHours`` value is under "
+"``DataRetentionSettings``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:18
+msgid ""
+"If using a tool such as `jq <https://stedolan.github.io/jq/>`__, you'd "
+"enter: ``cat config/config.json | jq "
+"'.DataRetentionSettings.MessageRetentionHours'``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:19
+msgid ""
+"When working with the ``config.json`` file manually, look for an object "
+"such as ``DataRetentionSettings``, then within that object, find the key "
+"``MessageRetentionHours``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:24
+msgid "Data retention policies"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:26
+msgid ""
+"Changes to properties in this section require a server restart before "
+"taking effect."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:30
+msgid ""
+"Once a message or a file is deleted, the action is irreversible. Please "
+"be careful when setting up a custom data retention policy."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:31
+msgid ""
+"From Mattermost v9.5, data retention removes Elasticsearch indexes based "
+"on the day of the retention cut-off time."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:33
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Compliance > Data Retention Policies**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:43
+msgid "Global retention policy for messages"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:45
+msgid ""
+"Set how long Mattermost keeps messages across all teams and channels. "
+"This value is not used for any teams and channels that have a custom "
+"retention policy applied . Requires the :ref:`global retention policy for"
+" messages <administration-guide/configure/compliance-configuration-"
+"settings:global retention policy for messages>` configuration setting to "
+"be set to ``true``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:47
+msgid ""
+"By default, messages are kept forever. If **Hours**, **Days**, or "
+"**Years** is chosen, set how many hours, days, or years messages are kept"
+" in Mattermost. Messages older than the duration you set will be deleted "
+"nightly. The minimum message retention time is one hour."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:49
+msgid ""
+"The global retention time for messages can be superseded on a team or "
+"channel level by creating custom policies with unique post retention "
+"times See the `Custom retention policy <#custom-retention-policy>`__ "
+"section below for details."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:52
+msgid ""
+"This feature's ``config.json`` setting is ``\"MessageRetentionHours\": "
+"1`` with numerical input."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:57
+msgid ""
+"From Mattermost v9.5, ``MessageRetentionDays`` has been deprecated in "
+"favor of ``MessageRetentionHours``. See :doc:`deprecated configuration "
+"settings </administration-guide/configure/deprecated-configuration-"
+"settings>` for details."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:67
+msgid "Global retention policy for files"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:69
+msgid ""
+"Set how long Mattermost keeps files across all teams and channels. Custom"
+" policies on team and channel level don't apply to file attachments. The "
+"global retention time for files will be used even if a custom policy for "
+"messages is in place. Requires the :ref:`global retention policy for "
+"files <administration-guide/configure/compliance-configuration-"
+"settings:global retention policy for files>` configuration setting to be "
+"set to ``true``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:71
+msgid ""
+"By default, files are kept forever. If **Hours**, **Days**, or **Years** "
+"is chosen, set how many hours, days, or years files are kept in "
+"Mattermost. Files older than the duration you set will be deleted "
+"nightly. The minimum file retention time is one hour."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:74
+msgid ""
+"This feature's ``config.json`` setting is ``\"FileRetentionHours\": 1`` "
+"with numerical input."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:79
+msgid ""
+"From Mattermost v9.5, ``FileRetentionDays`` has been deprecated in favor "
+"of ``FileRetentionHours``. See :doc:`deprecated configuration settings "
+"</administration-guide/configure/deprecated-configuration-settings>` for "
+"details."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:89
+msgid "Preserve pinned posts"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:91
+msgid ""
+"From Mattermost v10.10, controls whether pinned posts are preserved when "
+"data retention policies delete messages. When enabled, pinned posts won't"
+" be deleted by data retention policies, even if they exceed the "
+"configured retention period."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:93
+msgid ""
+"**True**: Pinned posts are preserved and won't be deleted by data "
+"retention policies."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:95
+msgid ""
+"**False**: **(Default)** Pinned posts are deleted according to the "
+"configured data retention policy."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:98
+msgid ""
+"This feature's ``config.json`` setting is "
+"``\"DataRetentionSettings.PreservePinnedPosts\": false`` with options "
+"``true`` and ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:103
+msgid ""
+"This global configuration setting must be enabled with mmctl using the "
+":ref:`mmctl config set <administration-guide/manage/mmctl-command-line-"
+"tool:mmctl config set>` command."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:104
+msgid ""
+"This configuration setting applies to team and channel policies as well "
+"as data retention, and can't be overridden in those more granular team or"
+" channel policies."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:105
+msgid "Files attached to the pinned message aren't preserved."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:106
+msgid ""
+"Only the pinned post is preserved. If it's attached to a thread or if "
+"it's the root post of a thread, the other threaded messages aren't "
+"preserved."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:116
+msgid "Custom retention policy"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:118
+msgid ""
+"Set how long Mattermost keeps messages across specific teams and channels"
+" by specifying a name for the custom retention policy, setting a duration"
+" value in days or years, and specifying the teams and channels that will "
+"follow this policy. The attachment retention time cannot be set on custom"
+" policy levels and the global retention time for attachments is always "
+"applied."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:128
+msgid "Data deletion time"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:130
+msgid ""
+"Set the start time of the daily scheduled data retention job. Choose a "
+"time when fewer people are using your system. Must be a 24-hour time "
+"stamp in the form ``HH:MM``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:132
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:326
+msgid "This setting is based on the local time of the server."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:135
+msgid ""
+"This feature's ``config.json`` setting is ``\"DeletionJobStartTime\": "
+"\"02:00\"`` with 24-hour timestamp input in the form ``\"HH:MM\"``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:139
+msgid "Run deletion job now"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:141
+msgid ""
+"Start a Data Retention deletion job immediately. You can monitor the "
+"status of the job in the data deletion job table within the Policy Log "
+"section."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:151
+msgid "Time between batches"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:153
+msgid ""
+"The time in milliseconds between batches processed during data retention "
+"job execution. This setting helps control the rate at which data is "
+"deleted to reduce database load during retention operations."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:155
+msgid ""
+"Default is 100 milliseconds. Possible values are any non-negative integer"
+" (≥ 0)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:158
+msgid ""
+"This feature's ``config.json`` setting is "
+"``\"TimeBetweenBatchesMilliseconds\": 100`` with numerical input."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:169
+msgid "Retention IDs batch size"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:171
+msgid ""
+"The number of retention IDs to process in a single batch during data "
+"retention job execution. This setting controls how many items are "
+"processed together for optimal performance."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:173
+msgid "Default is 100. Possible values are any non-negative integer (≥ 0)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:176
+msgid ""
+"This feature's ``config.json`` setting is ``\"RetentionIdsBatchSize\": "
+"100`` with numerical input."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:187
+msgid "Boards retention days"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:189
+msgid ""
+"Set how long Mattermost keeps boards data. When set to a value greater "
+"than 0, boards data older than the specified number of days will be "
+"deleted during retention job execution only when boards deletion is "
+"enabled via ``EnableBoardsDeletion``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:191
+msgid "Default is 365 days. Possible values are any non-negative integer (≥ 0)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:194
+msgid ""
+"This feature's ``config.json`` setting is ``\"BoardsRetentionDays\": "
+"365`` with numerical input."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:207
+msgid "Enable message deletion"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:209
+msgid "**True**: Message deletion is enabled during data retention job execution."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:211
+msgid "**False**: Messages are not deleted during data retention job execution."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:214
+msgid ""
+"This feature's ``config.json`` setting is ``\"EnableMessageDeletion\": "
+"false`` with options ``true`` and ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:219
+msgid ""
+"When ``EnableMessageDeletion`` is set to ``false``, messages will not be "
+"deleted regardless of other retention policy settings."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:231
+msgid "Enable file deletion"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:233
+msgid "**True**: File deletion is enabled during data retention job execution."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:235
+msgid "**False**: Files are not deleted during data retention job execution."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:238
+msgid ""
+"This feature's ``config.json`` setting is ``\"EnableFileDeletion\": "
+"false`` with options ``true`` and ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:243
+msgid ""
+"When ``EnableFileDeletion`` is set to ``false``, files will not be "
+"deleted regardless of other retention policy settings."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:255
+msgid "Enable boards deletion"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:257
+msgid "**True**: Boards deletion is enabled during data retention job execution."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:259
+msgid "**False**: Boards data is not deleted during data retention job execution."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:262
+msgid ""
+"This feature's ``config.json`` setting is ``\"EnableBoardsDeletion\": "
+"false`` with options ``true`` and ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:267
+msgid ""
+"When ``EnableBoardsDeletion`` is set to ``false``, boards data will not "
+"be deleted regardless of other retention policy settings."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:277
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:540
+msgid "Batch size"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:279
+msgid ""
+"The number of records to process in a single batch during data retention "
+"job execution. This setting controls how many records are processed "
+"together for optimal performance."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:281
+msgid "Default is 3000. Possible values are any non-negative integer (≥ 0)."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:284
+msgid ""
+"This feature's ``config.json`` setting is ``\"BatchSize\": 3000`` with "
+"numerical input."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:290
+msgid "Compliance export"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:292
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Compliance > Compliance Export**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:304
+msgid "Enable compliance export"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:306
+msgid ""
+"**True**: Mattermost will generate a compliance export file that contains"
+" all messages that were posted in the last 24 hours. The export task is "
+"scheduled to run once per day. See the :doc:`documentation to learn more "
+"</administration-guide/comply/compliance-export>`."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:308
+msgid "**False**: Mattermost doesn't generate a compliance export file."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:311
+msgid ""
+"This feature's ``config.json`` setting is ``\"EnableExport\": false`` "
+"with options ``true`` and ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:322
+msgid "Compliance export time"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:324
+msgid ""
+"Set the start time of the daily scheduled compliance export job. Choose a"
+" time when fewer people are using your system. Must be a 24-hour time "
+"stamp in the form ``HH:MM``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:329
+msgid ""
+"This feature's ``config.json`` setting is ``\"DailyRunTime\": 01:00`` "
+"with 24-hour timestamp input in the form ``\"HH:MM\"``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:340
+msgid "Export file format"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:342
+msgid ""
+"File format of the compliance export. Corresponds to the system that you "
+"want to import the data into."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:344
+msgid "Currently supported formats are CSV, Actiance XML, and Global Relay EML."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:346
+msgid "If Global Relay is chosen, the following options will be presented:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:356
+msgid "Global Relay customer account"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:358
+msgid ""
+"Type of Global Relay customer account your organization has. Can be one "
+"of: ``A9/Type 9``, ``A10/Type 10``, or ``Custom``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:361
+msgid ""
+"This feature's ``config.json`` setting is ``\"CustomerType\": \"A9\"`` "
+"with options ``\"A9``, ``\"A10\"``, and ``CUSTOM``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:372
+msgid "Global Relay SMTP username"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:374
+msgid "The username for authenticating to the Global Relay SMTP server."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:377
+msgid ""
+"This feature's ``config.json`` setting is ``\"SmtpUsername\": \"\"`` with"
+" string input."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:388
+msgid "Global Relay SMTP password"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:390
+msgid "The password associated with the Global Relay SMTP username."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:393
+msgid ""
+"This feature's ``config.json`` setting is ``\"SmtpPassword\": \"\"`` with"
+" string input."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:404
+msgid "Global Relay email address"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:406
+msgid ""
+"The email address your Global Relay server monitors for incoming "
+"compliance exports."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:409
+msgid ""
+"This feature's ``config.json`` setting is ``\"EmailAddress\": \"\"`` with"
+" string input."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:420
+msgid "SMTP server name"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:422
+msgid ""
+"The SMTP server name URL that will receive your Global Relay EML file "
+"when a `custom customer account type <#global-relay-customer-account>`__ "
+"is configured."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:425
+msgid ""
+"This feature's ``config.json`` setting is "
+"``\".MessageExportSettings.GlobalRelaySettings.CustomSMTPServerName\": "
+"\"\"`` with string input."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:436
+msgid "SMTP server port"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:438
+msgid ""
+"The SMTP server port that will receive your Global Relay EML file when a "
+"`custom customer account type <#global-relay-customer-account>`__ is "
+"configured. Default is ``\"25\"``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:441
+msgid ""
+"This feature's ``config.json`` setting is "
+"``\".MessageExportSettings.GlobalRelaySettings.CustomSMTPPort\": \"25\"``"
+" with string input."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:452
+msgid "Message export batch size"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:454
+msgid ""
+"This setting isn't available in the System Console and can only be set in"
+" ``config.json``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:456
+msgid ""
+"Determines how many new posts are batched together to a compliance export"
+" file."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:459
+msgid ""
+"This feature's ``config.json`` setting is ``\"BatchSize\": 10000`` with "
+"numerical input."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:463
+msgid "Run compliance export job now"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:465
+msgid ""
+"This button initiates a compliance export job immediately. You can "
+"monitor the status of the job in the compliance export job table."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:470
+msgid "Compliance monitoring"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:472
+msgid "Settings used to enable and configure Mattermost compliance reports."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:474
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Compliance > Compliance Monitoring**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:486
+msgid "Enable compliance reporting"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:488
+msgid "**True**: Compliance reporting is enabled in Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:490
+msgid "**False**: Compliance reporting is disabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:493
+msgid ""
+"This feature's ``config.json`` setting is ``\"Enable\": false`` with "
+"options ``true`` and ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:504
+msgid "Compliance report directory"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:506
+msgid "Sets the directory where compliance reports are written."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:509
+msgid ""
+"This feature's ``config.json`` setting is ``\"Directory\": \"./data/\"`` "
+"with string input."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:522
+msgid "Enable daily report"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:524
+msgid "**True**: Mattermost generates a daily compliance report."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:526
+msgid "**False**: Daily reports are not generated."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:529
+msgid ""
+"This feature's ``config.json`` setting is ``\"EnableDaily\": false`` with"
+" options ``true`` and ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:542
+msgid ""
+"Set the size of the batches in which posts will be read from the database"
+" to generate the compliance report. This setting is currently not "
+"available in the System Console and can only be set in ``config.json``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:545
+msgid ""
+"This feature's ``config.json`` setting is ``\"BatchSize\": 30000`` with "
+"default value ``30000``."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:551
+msgid "Custom terms of service"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:553
+msgid ""
+"Access the following configuration settings in the System Console by "
+"going to **Compliance > Custom Terms of Service**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:565
+msgid "Enable custom terms of service"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:568
+msgid ""
+"This configuration setting can only be modified using the System Console "
+"user interface."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:570
+msgid ""
+"**True**: New users must accept the Terms of Service before accessing any"
+" Mattermost teams on desktop, web, or mobile. Existing users must accept "
+"them after login or a page refresh. To update the Terms of Service link "
+"displayed in account creation and login pages, go to **System Console > "
+"Legal and Support > Terms of Service Link**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:572
+msgid ""
+"**False**: During account creation or login, users can review Terms of "
+"Service by accessing the link configured via **System Console > Legal and"
+" Support > Terms of Service link**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:582
+msgid "Custom terms of service text"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:584
+msgid ""
+"Text that will appear in your custom Terms of Service. Supports Markdown-"
+"formatted text."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:594
+msgid "Re-acceptance period"
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:596
+msgid ""
+"The number of days before Terms of Service acceptance expires, and the "
+"terms must be re-accepted."
+msgstr ""
+
+#: ../../source/administration-guide/configure/compliance-configuration-settings.rst:598
+msgid "Defaults to 365 days. 0 indicates the terms do not expire."
+msgstr ""
+

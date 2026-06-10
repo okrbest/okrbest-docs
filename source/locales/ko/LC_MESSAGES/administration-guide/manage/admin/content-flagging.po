@@ -1,0 +1,392 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:2
+msgid "Data Spillage Handling"
+msgstr ""
+
+#: ../../source/_static/badges/entry-adv.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry and Enterprise Advanced "
+"<https://mattermost.com/pricing/>`__ plans"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:7
+msgid ""
+"Data Spillage Handling helps prevent accidental data spillage and helps "
+"system administrators respond quickly to potential leaks without "
+"disrupting collaboration. Enabling this feature empowers Mattermost users"
+" to report messages that may contain sensitive, regulated, or "
+"inappropriate information, and enables designated content reviewers to "
+"assess and take appropriate action by removing or dismissing quarantined "
+"messages."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:9
+msgid ""
+"By making every team member a first line of defense against sensitive-"
+"data exposure, Data Spillage Handling strengthens mission-critical, "
+"secure deployments and supports compliance with organizational and "
+"regulatory data-handling standards."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:12
+msgid "Before you begin"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:14
+msgid ""
+"You must be a System Admin in Mattermost. You need to identify who will "
+"be content reviewers for quarantined messages, and you need to decide "
+"whether quarantined messages should be hidden from users in Mattermost "
+"while under review."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:17
+msgid "Enable"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:19
+msgid ""
+"Data Spillage Handling isn't enabled by default. To enable Data Spillage "
+"Handling:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:21
+msgid "Go to **System Console > Site Configuration > Data Spillage Handling**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:22
+msgid "Set **Enable Data Spillage Handling** to **True**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:24
+msgid ""
+"Alternatively, you can configure Data Spillage Handling via the "
+":ref:`config.json file or through environment variables <administration-"
+"guide/configure/site-configuration-settings:content flagging>`."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:27
+msgid "Configure"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:29
+msgid "Under **Content Reviewers**, define who should review quarantined content:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:31
+msgid ""
+"**Same reviewers for all teams**: Set to **True** to apply one global "
+"reviewer list across all teams, or **False** to configure reviewers per "
+"team."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:32
+msgid ""
+"**Reviewers**: Start typing to search for users to assign as content "
+"reviewers."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:36
+msgid ""
+"Choose reviewers carefully. Assigning reviewer roles grants access to "
+"potentially sensitive information and may expose data from private "
+"channels."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:38
+msgid ""
+"A global reviewer can view quarantined messages from all teams and "
+"channels, including private channels they’re not a member of."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:39
+msgid ""
+"Team-specific reviewers can view quarantined messages from their assigned"
+" teams, including private channels within those teams they’re not members"
+" of."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:41
+msgid "**Additional reviewers**: Optionally include:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:43
+msgid ""
+"**System Administrators**: System admins receive quarantined messages for"
+" all teams they are part of."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:44
+msgid ""
+"**Team Administrators**: Team admins receive quarantined messages for "
+"their respective teams."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:46
+msgid ""
+"Under **Notification Settings**, specify who receives updates at each "
+"stage of the quarantine workflow when content is quarantined or reviewed:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:48
+msgid "**Notify when content is quarantined**: Reviewer(s), Author."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:49
+msgid "**Notify when a reviewer is assigned**: Reviewer(s)."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:50
+msgid "**Notify when content is removed**: Reviewer(s), Author, Reporter."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:51
+msgid "**Notify on dismissal**: Reviewer(s), Author, Reporter."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:53
+msgid ""
+"All notifications are sent via the **Data Spillage Bot** as direct "
+"messages."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:55
+msgid ""
+"Under **Additional Settings**, configure how the quarantine workflow "
+"behaves:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:57
+msgid ""
+"**Reasons for quarantine**: Define the preset categories that appear in "
+"the quarantine dialog for users (for example: **Classification "
+"mismatch**, **Need-to-know violation**, **Personally identifiable "
+"information (PII) exposure**, **Operational security (OPSEC) concern**, "
+"**Controlled Unclassified Information (CUI) violation**)."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:58
+msgid ""
+"**Require reporters to add comment**: Set to **True** to require users to"
+" add a short explanation when quarantining a message."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:59
+msgid ""
+"**Require reviewers to add comment**: Set to **True** to require "
+"reviewers to add a comment when resolving a quarantine."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:60
+msgid ""
+"**Hide message from channel while it is being reviewed**: Set to **True**"
+" to automatically hide quarantined messages from the channel until "
+"reviews are complete. If a root post is quarantined, the entire thread is"
+" hidden."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:63
+msgid ""
+"We recommend enabling **Hide message from channel while it is being "
+"reviewed** and require comments from both reporters and reviewers to "
+"maintain transparency, accountability, and an auditable record of "
+"actions."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:66
+msgid "Monitor quarantined messages"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:68
+msgid ""
+"When :doc:`a user quarantines a message </end-user-guide/collaborate"
+"/flag-messages>`, the **Data Spillage Bot** sends a direct message to all"
+" content reviewers."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:70
+msgid ""
+"Direct messages from the **Data Spillage Bot** is a centralized "
+"moderation queue, where reviewers can view, assign, and act on "
+"quarantined messages without leaving Mattermost. Reviewers can use it to "
+"monitor potential data spills, coordinate response, and maintain an "
+"auditable record of review activity."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:72
+msgid ""
+"Each quarantined message appears as a card-formatted message that "
+"includes:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:74
+msgid "**Quarantined by**: The user who reported the message."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:75
+msgid ""
+"**Status**: The current state of the review. All quarantined content "
+"starts in **Pending** status."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:76
+msgid ""
+"**Reason**: The reason selected by the reporter (for example, "
+"**Classification mismatch**, **Need-to-know violation**)."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:77
+msgid ""
+"**Message preview**: A snippet of the quarantined message, including the "
+"author, timestamp, and original channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:78
+msgid ""
+"**Reviewer**: The user currently assigned to review the message "
+"(initially **Unassigned**)."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:79
+msgid ""
+"**Channel**: The name of the channel where the message was originally "
+"posted."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:80
+msgid "**Team**: The team context for the quarantined message."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:81
+msgid "**Comment**: Any reporter-provided context."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:82
+msgid ""
+"**Post ID**: The system identifier for the original message for auditing "
+"purposes."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:84
+msgid "Reviewers can select **View details** to take action as follows:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:86
+msgid "Assign a **Reviewer** responsible for reviewing the quarantined message."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:87
+msgid ""
+"**Remove message**: Permanently delete the quarantined message from its "
+"original channel for all users. The status of the quarantined message "
+"changes to **Removed**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:88
+msgid ""
+"**Keep message**: Dismiss the quarantine and restore the message if it "
+"was hidden. The status of the quarantined message changes to "
+"**Retained**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:89
+msgid "**Add a comment**: Record the reason for the decision when required."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:91
+msgid ""
+"Once an action is taken, the **Status** field updates automatically. The "
+"**Data Spillage Bot** sends follow-up notifications to the reporter, "
+"author, and other reviewers based on how Data Spillage Handling is "
+"configured."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:94
+msgid "Deleted messages"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:96
+msgid ""
+"When a reviewer permanently removes a quarantined message, the message "
+"and all associated data are deleted from the database and can't be "
+"recovered, including:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:98
+msgid ""
+"Message content and properties: The text of the message and any "
+"associated post properties."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:99
+msgid ""
+"File metadata: Information about files attached to the message (e.g., "
+"file names, IDs, and links to storage)."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:100
+msgid ""
+"File metadata from edit history: Information about files attached to "
+"earlier versions of the message."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:101
+msgid "Edit history: All previous versions of the message and their timestamps."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:102
+msgid ""
+"Uploaded files: The actual files stored in Mattermost’s file storage "
+"(local, S3, etc.)."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:103
+msgid "Priority data: Any message priority or importance settings."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:104
+msgid "Acknowledgements: Records of users who acknowledged the message."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:105
+msgid "Reminders: Any reminders created for the message."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:108
+msgid "Best practice recommendations"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/content-flagging.rst:110
+msgid ""
+"Before rolling out Data Spillage Handling organization-wide, we recommend"
+" communicating that the feature protects both users and the organization "
+"from accidental data spillage. Start with a pilot team to validate "
+"reviewer notifications and workflows, integrate the process with existing"
+" data-handling or incident-response playbooks, and require reporter and "
+"reviewer comments to ensure every decision is transparent and auditable."
+msgstr ""
+

@@ -1,0 +1,263 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:4
+msgid ""
+"With self-hosted deployments, rate limiting prevents your Mattermost "
+"server from being overloaded with too many requests, and decreases the "
+"risk and impact of third-party applications or malicious attacks on your "
+"server."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:6
+msgid ""
+"Configure rate limiting settings by going to **System Console > "
+"Environment > Rate Limiting**, or by editing the ``config.json`` file as "
+"described in the following tables. Changes to configuration settings in "
+"this section require a server restart before taking effect."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:10
+msgid ""
+"Mattermost rate limiting configuration settings are intended for small "
+"deployments of Mattermost up to a few hundred users, and is not intended "
+"for larger, Enterprise-scale deployments."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:22
+msgid "Enable rate limiting"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:25
+msgid ""
+"Enable or disable rate limiting to throttle APIs to a specified number of"
+" requests per second."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:28
+msgid ""
+"**true**: APIs are throttled at the rate specified by the `Maximum "
+"queries per second <#maximum-queries-per-second>`__ configuration "
+"setting."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:31
+msgid "**false**: **(Default)** API access isn’t throttled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:25
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:45
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:66
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:87
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:114
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:135
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:156
+msgid "System Config path: **Environment > Rate Limiting**"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:26
+msgid "``config.json`` setting: ``RateLimitSettings`` > ``Enable`` > ``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:27
+msgid "Environment variable: ``MM_RATELIMITSETTINGS_ENABLE``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:42
+msgid "Maximum queries per second"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:45
+msgid ""
+"Throttle the API at this number of requests per second when `rate "
+"limiting <#enable-rate-limiting>`__ is enabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:48
+msgid "Numerical input. Default is **10**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:50
+msgid ""
+"Increase this value to accept more requests each second, and decrease "
+"this value to allow fewer requests."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:46
+msgid "``config.json`` setting: ``RateLimitSettings`` > ``PerSec`` > ``10``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:47
+msgid "Environment variable: ``MM_RATELIMITSETTINGS_PERSEC``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:63
+msgid "Maximum burst size"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:66
+msgid ""
+"The maximum number of requests allowed beyond the per second query limit "
+"when `rate limiting <#enable-rate-limiting>`__ is enabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:70
+msgid "Numerical input. Default is **100**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:72
+msgid ""
+"Increase this value to allow for more concurrent requests to be handled, "
+"and decrease this value to limit this capacity."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:67
+msgid "``config.json`` setting: ``RateLimitSettings`` > ``MaxBurst`` > ``100``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:68
+msgid "Environment variable: ``MM_RATELIMITSETTINGS_MAXBURST``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:84
+msgid "Memory store size"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:87
+msgid ""
+"The maximum number of user sessions connected to the system as determined"
+" by vary rate limit settings when `rate limiting <#enable-rate-"
+"limiting>`__ is enabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:91
+msgid ""
+"Numerical input. Default is **10000**. Typically set to the number of "
+"users in the system."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:94
+msgid ""
+"We recommend setting this value to the expected number of users. A higher"
+" value may result in underutilized resources, and a lower value may "
+"result in user sessions/tokens expiring too frequently."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:88
+msgid ""
+"``config.json`` setting: ``RateLimitSettings`` > ``MemoryStoreSize`` > "
+"``10000``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:89
+msgid "Environment variable: ``MM_RATELIMITSETTINGS_MEMORYSTORESIZE``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:111
+msgid "Vary rate limit by remote address"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:114
+msgid ""
+"Configure Mattermost to rate limit API access by IP address when `rate "
+"limiting <#enable-rate-limiting>`__ is enabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:117
+msgid ""
+"**true**: **(Default)** Rate limit API access by IP address. Recommended "
+"when using a proxy."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:119
+msgid "**false**: Rate limiting does not vary by IP address."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:115
+msgid ""
+"``config.json`` setting: ``RateLimitSettings`` > ``VaryByRemoteAddr`` > "
+"``true``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:116
+msgid "Environment variable: ``MM_RATELIMITSETTINGS_VARYBYREMOTEADDR``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:132
+msgid "Vary rate limit by user"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:135
+msgid ""
+"Configure Mattermost to rate limit API access by authentication token or "
+"not when `rate limiting <#enable-rate-limiting>`__ is enabled."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:139
+msgid ""
+"**true**: Rate limit API access by user authentication token. Recommended"
+" when using a proxy."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:141
+msgid ""
+"**false**: **(Default)** Rate limiting does not vary by user "
+"authentication token."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:136
+msgid ""
+"``config.json`` setting: ``RateLimitSettings`` > ``VaryByUser`` > "
+"``false``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:137
+msgid "Environment variable: ``MM_RATELIMITSETTINGS_VARYBYUSER``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:153
+msgid "Vary rate limit by HTTP header"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:156
+msgid ""
+"Configure Mattermost to vary rate limiting API access by the HTTP header "
+"field specified. Recommended when you’re using a proxy."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:160
+msgid "When configuring NGINX, set this to **X-Real-IP**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:161
+msgid "When configuring AmazonELB, set this to **X-Forwarded-For**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:157
+msgid ""
+"``config.json`` setting: ``RateLimitSettings`` > ``VaryByHeader`` > "
+"``\"\"``"
+msgstr ""
+
+#: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:158
+msgid "Environment variable: ``MM_RATELIMITSETTINGS_VARYBYHEADER``"
+msgstr ""
+

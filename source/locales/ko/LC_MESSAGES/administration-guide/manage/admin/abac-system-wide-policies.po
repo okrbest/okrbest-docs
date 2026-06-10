@@ -1,0 +1,390 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:2
+msgid "System-wide attribute-based access policies"
+msgstr ""
+
+#: ../../source/_static/badges/entry-adv.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry and Enterprise Advanced "
+"<https://mattermost.com/pricing/>`__ plans"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:7
+msgid ""
+"Use this guide to create and manage organization-wide attribute-based "
+"access policies in the System Console. For channel-level rules managed by"
+" Channel Admins, see :doc:`Channel-specific access rules "
+"</administration-guide/manage/admin/abac-channel-access-rules>`."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:10
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:12
+msgid ""
+":doc:`Attribute-based access controls (ABAC) </administration-"
+"guide/manage/admin/attribute-based-access-control>` require defined user "
+"attributes. First :doc:`configure user attributes </administration-"
+"guide/manage/admin/user-attributes>` in the System Console."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:13
+msgid ""
+"Then go to **System Console > System Attributes > Attribute-Based "
+"Access** to enable attribute-based access controls for your Mattermost "
+"instance. This functionality requires a Mattermost Enterprise Advanced "
+"license."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:15
+msgid ""
+"From Mattermost v10.11, user-managed attributes are excluded from "
+"attribute-based access control (ABAC) rules by default for security "
+"reasons. This prevents access control policies from being circumvented by"
+" users editing their own profile attributes. To include user-managed "
+"attributes in ABAC rules, a system admin must explicitly enable the "
+"``EnableUserManagedAttributes`` configuration setting. See the :ref:`user"
+" attribute <administration-guide/manage/admin/user-attributes:before you "
+"begin>` documentation for details on enabling this feature. This "
+"configuration setting is available only in Enterprise Edition Advanced "
+"and is disabled by default."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:18
+msgid "Define access control policies"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:20
+msgid ""
+"You can add multiple rules to a single policy, and each rule can include "
+"multiple attribute values."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:22
+msgid ""
+"In the System Console, go to **System Attributes > Attribute-Based "
+"Access** and select **Add Policy**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:23
+msgid ""
+"Enter a unique policy name. Parent access control policy names must be "
+"unique; if you enter a name that's already in use, Mattermost displays a "
+"user-friendly error message and prevents the policy from being saved "
+"until you choose a different name."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:24
+msgid ""
+"Choose whether to automatically add users who match your configured "
+"attribute values as new members. Automatic synchronization is disabled by"
+" default."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:26
+msgid ""
+"**True**: Automatically maintains channel membership according to the "
+"defined rules as user attributes change."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:27
+msgid ""
+"**False** (**Default**): Only removes members and restricts adding them "
+"to the channel if they don’t match defined rules. Users are not "
+"automatically added."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:29
+msgid ""
+"Regardless of whether this configuration setting, users who no longer "
+"match the configured attribute values in the future will be removed from "
+"the channel after the next channel synchronization."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:31
+msgid "Define the attribute-based access rules to restrict channel membership."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:35
+msgid ""
+"Simple Mode is ideal for simple and straightforward access control "
+"scenarios. Each row is a single condition that must be met for a user to "
+"comply with the policy. Simple Mode only supports simple conditions "
+"without nested logic or mixed logical operators. All rules are combined "
+"with a logical AND operator ``&&``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:37
+msgid ""
+"Select **Add attribute** and select the attribute you want to use for "
+"access control."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:38
+msgid ""
+"Specify how you want the attribute to match the user profile. You can "
+"choose from the following options:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:40
+msgid "**Is**: The attribute must be an exact match of the value."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:41
+msgid "**Is not**: The attribute must not contain specified value."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:42
+msgid "**In**: The attribute must match at least one value."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:43
+msgid "**Starts with**: The attribute value must start with the specified value."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:44
+msgid "**Ends with**: The attribute value must end with the specified value."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:45
+msgid ""
+"**Contains**: The attribute value must exist somewhere with the specified"
+" value."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:47
+msgid ""
+"Specify the attribute values that users must have to be granted access to"
+" the channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:51
+msgid ""
+"Advanced Mode is ideal for complex access control scenarios that require "
+"CEL syntax to combine multiple conditions with logical operators that "
+"support rules like ``user.<attribute> == <value>``, using ``&&`` / ``||``"
+" (and/or) for multiple conditions, and ``()`` to group conditions. The "
+"CEL Expression Editor provides real-time syntax validation and feedback, "
+"as well as context-aware autocomplete for attributes, operators, and "
+"attribute values."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:53
+msgid ""
+"You can also start defining rules in Simple Mode and then switch to "
+"Advanced Mode to refine the rules further as needed. However, you'll be "
+"blocked from switching from Advanced back to Simple Mode if one of the "
+"following are true:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:55
+msgid "Mixed logical operators are used between conditions."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:56
+msgid "Nested logic/grouping (parentheses) are present."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:57
+msgid "Unsupported operators or expressions are detected."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:59
+msgid "The syntax structure is ``user.<attribute> <operator> <value>``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:61
+msgid ""
+"As you type, autocompletes show available attributes. As you select "
+"attributes, autocomplete suggests appropriate CEL operators. After "
+"selecting an operator, when attribute values are pre-defined, "
+"autocomplete suggests values to choose from. Mattermost will explicitly "
+"indicate issues such as missing operators, incorrect syntax, or "
+"incomplete conditions."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:63
+msgid ""
+"Select the **Validate syntax** bar to check the syntax of your rule. If "
+"the syntax is valid, the bar will turn green and display a message "
+"indicating that the syntax is valid. If there are any issues, the bar "
+"will turn red and display an error message."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:66
+msgid "Test rules"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:68
+msgid ""
+"Select **Test access rule** to test the rule against your user base to "
+"return how many users would be granted access to the channel based on the"
+" current rule. Test your rules to ensure the intended scope and avoid "
+"unexpected access changes."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:71
+msgid "Manage rules"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:73
+msgid ""
+"You can apply changes to existing rules or remove rules at any time using"
+" either Simple Mode or Advanced Mode. Select **Save** to save your "
+"changes."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:76
+msgid "Assign policies to private channels"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:78
+msgid ""
+"Specify the private channel that your access control policy applies to by"
+" selecting **Add channels** to search for and select the channels you "
+"want. You can assign the policy to multiple channels at once, or you can "
+"`assign it to individual channels <#define-access-controls-per-"
+"channel>`__ later. Select **Save** to save your changes."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:82
+msgid ""
+"Private channels with attribute-based access control policies can't have "
+"guest users invited to them. Only users who match the defined attribute "
+"criteria can be added to ABAC-controlled channels, ensuring strict "
+"adherence to access control policies."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:85
+msgid "Delete policies"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:87
+msgid ""
+"To delete a policy, select the **Delete** button next to the policy you "
+"want to remove. You can only delete policies that are not currently "
+"assigned to any channels. If a policy is assigned to channels, you must "
+"first remove it from those channels before you can delete it."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:90
+msgid "Define access controls per channel"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:92
+msgid ""
+"You can assign an existing access control policy to a private channels "
+"for more granular control over channel membership. This is useful when "
+"you need to apply different rules for different channels."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:94
+msgid ""
+"In the System Console, go to **User Management > Channels** to select the"
+" private channel you want to configure, and select **Edit**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:95
+msgid ""
+"In the **Channel Management** section, enable the **Enable attribute-"
+"based channel access** option."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:96
+msgid ""
+"Under **Access policy**, select **Link to a policy** to select an "
+"existing policy."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:100
+msgid ""
+"You can also assign ABAC rules to a channel directly from a channel's "
+"details page in the System Console under **Channel Management** by "
+"enabling the **Enable attribute-based channel access** option. Under "
+"**Access policy**, select **Link to a policy** to select an existing "
+"policy."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:103
+msgid "Remove channel policies"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:105
+msgid ""
+"Disable the policy for the channel by selecting **Remove Policy**. You "
+"can then link the channel to a different policy if preferred."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:108
+msgid "Permission policies"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:110
+msgid ""
+"From Mattermost v11.7, System Admins can define attribute-based "
+"**permission policies** that restrict specific user actions in addition "
+"to channel membership. Permission policies use the same attribute-based "
+"rules as access policies, but they apply to user actions rather than "
+"channel access."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:112
+msgid ""
+"Permission policies can be used to restrict the following actions based "
+"on user attributes:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:114
+msgid ""
+"**File upload**: Prevent users who don't match the defined attribute "
+"rules from uploading file attachments."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:115
+msgid ""
+"**File download**: Prevent users who don't match the defined attribute "
+"rules from downloading file attachments."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:117
+msgid ""
+"When a permission policy applies, users who don't match the configured "
+"attribute values can't perform the restricted action. Users may see file "
+"attachments as unavailable or redacted in messages they would otherwise "
+"have access to. See :ref:`Restricted file attachments <end-user-"
+"guide/collaborate/share-files-in-messages:restricted file attachments>` "
+"for the end-user-facing behavior."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:119
+msgid ""
+"Permission policies follow the same unique-name requirement as access "
+"policies: each parent permission policy must have a unique name, and "
+"Mattermost surfaces a user-friendly error if a duplicate name is entered."
+msgstr ""
+

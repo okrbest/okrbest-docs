@@ -1,0 +1,538 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/integrations-guide/zoom.rst:2
+msgid "Connect Zoom to Mattermost"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:8
+msgid ""
+"Reduce friction and time lost to coordinating meetings and switching "
+"between apps by integrating Zoom with Mattermost. Make it easy for your "
+"teams to start spontaneous video calls directly from Mattermost channels."
+" Receive Zoom cloud recordings and transcripts directly in Mattermost "
+"once they're available."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:11
+msgid "Deploy"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:13
+msgid "Setup starts in Zoom and configuration ends in Mattermost."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:16
+msgid "Register an OAuth app in Zoom"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:18
+msgid "A Zoom system admin must perform the following steps in Zoom."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:20
+msgid ""
+"Zoom supports OAuth authentication, and there are 2 types of OAuth Zoom "
+"Apps you can register: **Account-Level** and **User-Level**. You can use "
+"either type based on your organization's security and preferences."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:22
+msgid ""
+"**Account-Level**: Individual users in Mattermost are verified by "
+"checking their Mattermost email and requesting their Personal Meeting ID "
+"via the Zoom API. The user's email address in both Mattermost and Zoom "
+"must match. Create a User Level Zoom app instead if you prefer that each "
+"user to authorize individually."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:23
+msgid ""
+"**User-Managed**: Individual users in Mattermost are required to "
+"authorize the Mattermost App to access their Zoom account. Create an "
+"Account-Level app instead if you prefer that an admin authorizes access "
+"on behalf of the whole Zoom organization."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:27
+msgid ""
+"For Account-Level apps, only Zoom users associated with the Zoom Account "
+"that created the app can use this integration. You can add users from the"
+" **Manage Users** section in the Zoom Account settings."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:31
+msgid ""
+"Complete the following steps to create an account-level Zoom app for "
+"Mattermost."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:33
+#: ../../source/integrations-guide/zoom.rst:46
+msgid "Go to https://marketplace.zoom.us/ and log in as an admin."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:34
+msgid "In the top right, select **Develop** and then select **Build App**."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:35
+#: ../../source/integrations-guide/zoom.rst:48
+msgid ""
+"On top, select **Development**. We would choose **Production** if we were"
+" publishing to marketplace, but we won't be doing that here."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:36
+#: ../../source/integrations-guide/zoom.rst:49
+msgid ""
+"You can edit the name of your app from top left side by clicking on edit "
+"icon."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:37
+msgid "Choose **Admin-managed app** as the app type."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:38
+#: ../../source/integrations-guide/zoom.rst:51
+msgid ""
+"Next you'll find your **Client ID** and **Client Secret**. Please copy "
+"this as these will be needed when you set up Mattermost to use the "
+"plugin."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:39
+#: ../../source/integrations-guide/zoom.rst:52
+msgid ""
+"Enter a valid **Redirect URL for OAuth** "
+"\\(`https://SITEURL/plugins/zoom/oauth2/complete`\\) and add the same URL"
+" under **Add Allow List**. Note that `SITEURL` should be your Mattermost "
+"server URL."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:40
+#: ../../source/integrations-guide/zoom.rst:53
+msgid ""
+"To add user scopes to the app, select **Scopes**, and add the following "
+"scopes: ``meeting:read:meeting`` (retrieve meeting details), "
+"``meeting:write:meeting`` (create and update meetings), "
+"``user:read:user`` (read user profile info), "
+"``cloud_recording:read:recording`` (access cloud recording files), "
+"``archiving:read:list_archived_files`` (list archived files)."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:44
+msgid ""
+"Complete the following steps to create a user-managed Zoom app for "
+"Mattermost."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:47
+msgid "In the top right select **Develop** and then **Build App**."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:50
+msgid "Choose **User-managed app** as the app type."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:56
+msgid "Configure webhook events"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:58
+msgid ""
+"When a Zoom meeting ends, the original post shared in the channel can be "
+"automatically changed to indicate the meeting has ended and how long it "
+"lasted. To enable this functionality, create a webhook subscription in "
+"Zoom that tells the Mattermost server every time a meeting ends. The "
+"Mattermost server then updates the original Zoom message."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:60
+msgid ""
+"While editing the app in Zoom, select **Access** under the **Features** "
+"tab on the left."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:61
+msgid ""
+"Select **Add New Event Subscription**, and give it a name, such as ``Zoom"
+" for Mattermost``."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:62
+msgid ""
+"Select the **Add Events** button and add: **All Recordings have "
+"completed**, **Recording Transcript files have completed**, **Start "
+"Meeting**, and **End Meeting**."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:63
+msgid ""
+"Enter a valid **Event notification endpoint URL** "
+"``https://SITEURL/plugins/zoom/webhook?secret=WEBHOOKSECRET``, replacing "
+"``SITEURL`` with your Mattermost URL. ``WEBHOOKSECRET`` is generated "
+"during `Mattermost configuration <#mattermost-configuration>`__."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:64
+msgid "Select **Save** to save the webhook configuration."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:65
+msgid ""
+"Verify the webhook is active by selecting **Test Event** in the Zoom "
+"webhook configuration. Confirm that Mattermost returns an HTTP 200 "
+"response or that the Mattermost plugin logs show a successful delivery. "
+"Also confirm that the **Secret Token** shown in the UI matches the "
+"``WEBHOOKSECRET`` value used in the **Event notification endpoint URL** "
+"from step 4."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:66
+msgid ""
+"Copy the **Secret Token** value at the top of the page for use in the "
+"next section."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:69
+msgid "Mattermost configuration"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:71
+msgid "A Mattermost system admin must perform the following steps in Mattermost."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:73
+msgid "Install the Zoom integration from the in-product App Marketplace:"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:77
+msgid ""
+"We recommend making a copy of your webhook secret and encryption key, as "
+"it will only be visible to you once."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:79
+msgid ""
+"In Mattermost, from the Product menu |product-list|, select **App "
+"Marketplace**."
+msgstr ""
+
+#: ../../<rst_prolog>:100
+msgid ""
+"Navigate between Channels, collaborative playbooks, and boards using the "
+"product menu icon."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:80
+msgid "Search for or scroll to Zoom, and select **Install**."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:81
+msgid ""
+"Once installed, select **Configure**. You'll be taken to the System "
+"Console."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:82
+msgid ""
+"On the Zoom configuration page, enable and configure Zoom "
+"interoperability as follows, and then select **Save**."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:83
+msgid ""
+"For self-hosted Zoom deployments, enter the **Zoom URL** and **Zoom API "
+"URL** for the Zoom server when you're using a self-hosted private cloud "
+"or on-premises Zoom server, such as ``https://YOUR-ZOOM.com`` and "
+"``https://api.YOUR-ZOOM.com/v2`` respectively, replacing ``YOUR-ZOOM`` "
+"with your Zoom server URL. Leave this field blank if you're using Zoom's "
+"vendor-hosted SaaS service."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:84
+msgid ""
+"If you've created an `account level Zoom app for Mattermost <#register-"
+"an-oauth-app-in-zoom>`__, set **OAuth by Account Level App** to **true**."
+" Leave this value as **false** if you've created a user level Zoom app "
+"for Mattermost."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:85
+msgid ""
+"Connect your users to Zoom using OAuth. Enter the **Client ID** and "
+"**Client Secret** generated when `registering the oauth app in Zoom "
+"<#register-an-oauth-app-in-zoom>`__."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:86
+msgid ""
+"Select **Regenerate** next to the **At Rest Token Encryption Key** field "
+"to generate an AES encryption key. You just need to generate this value, "
+"and won't use it anywhere else."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:87
+msgid ""
+"If you're configuring webhook events, select **Regenerate** next to the "
+"**Webhook Secret** field. This is the ``WEBHOOKSECRET`` value to use in "
+"your webhook URL pointing to Mattermost."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:88
+msgid ""
+"Paste the **Secret Token** from the Zoom webhook configuration page into "
+"the plugin setting **Zoom Webhook Secret**."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:89
+msgid ""
+"(Optional) Enable **Restrict Meeting Creation** to restrict users from "
+"creating meetings in public channels."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:90
+msgid "Select **Save** to save your changes."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:94
+msgid "Enable"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:96
+msgid ""
+"Notify your teams that they can `connect their Zoom accounts to "
+"Mattermost <#usage>`__."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:98
+msgid ""
+"To subscribe a channel to a recurring Zoom meeting (a meeting scheduled "
+"to repeat on a regular basis, such as daily or weekly, or with no fixed "
+"time using Zoom's **Recurrence** option), use the following slash "
+"command: ``/zoom subscription add [meeting ID]``. You can find the "
+"meeting ID in the Zoom desktop or web client by opening the meeting's "
+"details page, or from the meeting invitation email. The channel will "
+"receive a notification when the meeting starts, along with an access "
+"link. If cloud recordings are enabled and the meeting was recorded, the "
+"recording and transcript are posted as replies to the initial message "
+"once they are available."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:101
+#: ../../source/integrations-guide/zoom.rst:146
+msgid "Upgrade"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:103
+#: ../../source/integrations-guide/zoom.rst:148
+msgid ""
+"We recommend updating this integration when new versions are released. "
+"Generally, updates are seamless and don't interrupt the user experience "
+"in Mattermost. Visit the `Releases page <https://github.com/mattermost"
+"/mattermost-plugin-zoom/releases>`__ for information on the latest "
+"release, previous releases, and compatibility considerations."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:106
+msgid "Usage"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:108
+msgid ""
+"You need a paid Zoom account to start a Zoom call within Mattermost. The "
+"first time you create a Zoom meeting, you may be prompted to connect your"
+" account. Follow the instructions to connect your Zoom account using your"
+" credentials."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:110
+msgid ""
+"Start a call by selecting the Zoom icon in the right pane, or by running "
+"the ``/zoom start`` slash command in any channel or thread. All channel "
+"members can then join the meeting. The meeting host is the person who "
+"started the call."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:112
+msgid "Join the meeting by selecting the call invitation in the channel."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:114
+msgid ""
+"Run the ``/zoom settings`` slash command to set your preference for using"
+" your Zoom personal meeting ID as a meeting host. You can choose to "
+"always use your personal meeting ID, always use a new unique meeting id, "
+"or set Mattermost to prompt you for your preference each time you start a"
+" call."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:116
+msgid ""
+"Subscribe a Mattermost channel to a recurring Zoom meeting with ``/zoom "
+"subscription add [meeting ID]``. Cloud recordings and transcripts must be"
+" enabled in your paid Zoom account in order to receive them in "
+"Mattermost. To enable this, sign in to the `Zoom web portal "
+"<https://zoom.us/>`_ as an account owner or admin, go to **Account "
+"Management > Account Settings**, select the **Recording** tab, and enable"
+" **Allow hosts to record and save the session in the cloud**. Then, under"
+" **Advanced cloud recording settings**, select the **Audio Transcript** "
+"checkbox. Alternatively, enable these settings at the user level and "
+"assign recording permission to the meeting host. See `Zoom's cloud "
+"recording settings documentation "
+"<https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0064676>`_"
+" and `audio transcription documentation "
+"<https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0065911>`_"
+" for step-by-step guidance. Once enabled, you'll receive a notification "
+"in Mattermost when the recording and transcript are available for "
+"recorded meetings."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:118
+msgid ""
+"If you create a new meeting using the Zoom button in the Mattermost RHS, "
+"then the recording and transcript are similarly posted as replies to the "
+"initial message once they are available, if cloud recordings are enabled "
+"and the meeting was recorded."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:120
+msgid "Additional slash commands:"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:122
+msgid "``/zoom help`` - Display available commands"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:123
+msgid ""
+"``/zoom channel-settings`` - Set whether meetings in the current channel "
+"use your personal meeting ID or unique meeting ID"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:124
+msgid "``/zoom channel-settings list`` - List all channel preferences"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:125
+msgid "``/zoom subscription list`` - List all subscribed channels"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:126
+msgid ""
+"``/zoom subscription add [meeting ID]`` - Subscribe a Mattermost channel "
+"to a recurring Zoom meeting"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:127
+msgid ""
+"``/zoom subscription remove [meeting ID]`` - Unsubscribe a Mattermost "
+"channel from a recurring Zoom meeting"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:129
+msgid "For User-Managed apps only:"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:131
+msgid "``/zoom connect`` - Connect your Zoom account to Mattermost"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:132
+msgid "``/zoom disconnect`` - Disconnect your Zoom account from Mattermost"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:136
+msgid "Customize"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:138
+msgid ""
+"This `integration <https://github.com/mattermost/mattermost-plugin-"
+"zoom>`_ contains both a server and web app portion."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:140
+msgid ""
+"Server: Inside the ``/server`` directory, you'll find the Go files that "
+"make up the server-side of the integration. Within there, build the "
+"plugin like you would any other Go application."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:141
+msgid ""
+"Web App: Inside the ``/webapp`` directory, you will find the JS and React"
+" files that make up the client-side of the plugin. Within there, modify "
+"files and components as necessary. Test your syntax by running ``npm run "
+"build``."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:143
+msgid ""
+"Visit the `Mattermost Developer Workflow "
+"<https://developers.mattermost.com/extend/plugins/developer-workflow/>`__"
+" and `Mattermost Developer environment setup "
+"<https://developers.mattermost.com/extend/plugins/developer-setup/>`_ for"
+" information about developing, customizing, and extending Mattermost "
+"functionality."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:151
+msgid "Get help"
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:153
+msgid ""
+"Mattermost customers can open a `Mattermost support case "
+"<https://support.mattermost.com/hc/en-us/requests/new>`_. To report a "
+"bug, please open a GitHub issue against the `Mattermost Zoom plugin "
+"repository <https://github.com/mattermost/mattermost-plugin-zoom>`_."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:155
+msgid ""
+"For questions, feedback, and assistance, join our public `Integrations "
+"and Apps channel "
+"<https://community.mattermost.com/core/channels/integrations>`_ on the "
+"`Mattermost Community Server <https://community.mattermost.com/>`_ for "
+"assistance."
+msgstr ""
+
+#: ../../source/integrations-guide/zoom.rst:157
+msgid ""
+"Mattermost Team Edition and Free customers can visit the Mattermost "
+"`peer-to-peer troubleshooting forum <https://forum.mattermost.com/c"
+"/trouble-shoot/16>`_ to access the global Mattermost Community for "
+"assistance."
+msgstr ""
+

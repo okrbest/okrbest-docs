@@ -1,0 +1,440 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:-1
+msgid "robots"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:-1
+msgid "noindex"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:8
+msgid ""
+"This guide provides step-by-step instructions for deploying Mattermost "
+"using Docker containers."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:12
+msgid ""
+"Mattermost server deployment using Docker is officially supported on "
+"Linux operating systems only."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:13
+msgid ""
+"macOS and Windows Docker deployments are supported for testing and "
+"development purposes only."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:14
+msgid ""
+"Docker is not ideal for High Availability (HA) because it lacks key "
+"features including automatic failover, shared storage, and load "
+"balancing. Docker also has challenges managing multiple nodes and "
+"recovering from failures. We recommend :doc:`deploying on Kubernetes "
+"</deployment-guide/server/deploy-kubernetes>` for HA for these features "
+"to ensure reliability."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:17
+msgid "Install Docker"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:19
+msgid ""
+"If you don't have Docker installed, follow the instructions below based "
+"on your operating system. You'll need `Docker Engine "
+"<https://docs.docker.com/engine/install/>`__ and `Docker Compose "
+"<https://docs.docker.com/compose/install/>`_ (release 1.28 or later)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:22
+msgid "Deploy Mattermost on Docker"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:24
+msgid ""
+"This section provides a quick start guide for deploying Mattermost on "
+"Docker by leveraging `Docker Compose "
+"<https://docs.docker.com/compose/install/>`_."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:28
+msgid ""
+"The deployment configuration results in two separate containers: a "
+"container for the database and a container for the application. An "
+"optional third container results when using NGINX for reverse proxy."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:29
+msgid ""
+"Encountering issues with your Docker deployment? See the :doc:`Docker "
+"deployment troubleshooting </deployment-guide/server/docker-"
+"troubleshooting>` documentation for details."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:32
+msgid "In a terminal window, clone the repository and enter the directory."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:39
+msgid ""
+"Create your ``.env`` file by copying and adjusting the ``env.example`` "
+"file."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:47
+msgid ""
+"At a minimum, you must edit the ``DOMAIN`` value in the ``.env`` file to "
+"correspond to the domain for your Mattermost server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:48
+msgid ""
+"We recommend configuring the :ref:`Support Email <administration-"
+"guide/configure/site-configuration-settings:support email address>` via "
+"``MM_SUPPORTSETTINGS_SUPPORTEMAIL``. This is the email address your users"
+" will contact when they need help."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:50
+msgid "Create the required directories and set their permissions."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:57
+msgid ""
+"*(Optional)* Configure TLS for NGINX. If you're not using the included "
+"NGINX reverse proxy, you can skip this step."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:61
+msgid ""
+"**Resource limits:** If you're using a custom ``docker-compose.yml`` file"
+" that sets `pids_limit`, we recommend using ``mem_limit`` instead to "
+"constrain resources while allowing normal connection scaling. Low "
+"``pids_limit`` values can prevent the container from creating enough "
+"processes or threads, which may lead to unstable behavior under load. The"
+" current default in ``docker-compose.yml`` is set to ``mem_limit: 4G``."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:64
+msgid "Create a new certificate and key"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:70
+msgid ""
+"To include the certificate and key, uncomment the following lines in your"
+" ``.env`` file and ensure they point to the appropriate files."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:78
+msgid "Use a pre-existing certificate and key"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:86
+msgid ""
+"To include the certificate and key, ensure the following lines in your "
+"``.env`` file points to the appropriate files."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:93
+msgid "Deploy Mattermost."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:96
+msgid "Deploy without using the included NGINX"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:102
+msgid ""
+"To access your new Mattermost deployment, navigate to "
+"``http://<YOUR_MM_DOMAIN>:8065/`` in your browser."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:104
+#: ../../source/deployment-guide/server/containers/install-docker.rst:119
+msgid "To shut down your deployment:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:111
+msgid "Deploy using the included NGINX"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:117
+msgid ""
+"To access your new Mattermost deployment via HTTPS, navigate to "
+"``https://<YOUR_MM_DOMAIN>/`` in your browser."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:125
+msgid ""
+"Create your first Mattermost system admin user, :doc:`invite more users "
+"</end-user-guide/collaborate/manage-channel-members>`, and explore the "
+"Mattermost platform."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:128
+msgid "Configure SSO With GitLab (Optional)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:130
+msgid ""
+"To use SSO with GitLab with a self-signed certificate, you have to add "
+"the PKI chain for your authority. This is required to avoid the ``Token "
+"request failed: certificate signed by unknown authority`` error."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:132
+msgid ""
+"To add the PKI chain, uncomment the following line in your ``.env`` file,"
+" and ensure it points to your ``pki_chain.pem`` file:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:138
+msgid ""
+"Then uncomment the following line in your ``docker-compose.yml`` file, "
+"and ensure it points to the same ``pki_chain.pem`` file:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:145
+msgid "Upgrade from mattermost-docker"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:147
+msgid ""
+"The `mattermost-docker <https://github.com/mattermost/mattermost-"
+"docker>`__ GitHub repository is deprecated. Visit the `mattermost/docker "
+"<https://github.com/mattermost/docker>`_ GitHub repository to access the "
+"official Docker deployment solution for Mattermost."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:149
+msgid ""
+"To migrate from an existing ``mattermost/mattermost-prod-app`` image, we "
+"recommend migrating to either ``mattermost/mattermost-enterprise-"
+"edition`` or ``mattermost/mattermost-team-edition`` images, which are the"
+" official images supported by Mattermost. These images support PostgreSQL"
+" v11+ databases, which we know has been a long-running challenge for the "
+"community, and you will not lose any features or functionality by moving "
+"to these new images."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:151
+msgid ""
+"For additional help or questions, please refer to `this issue "
+"<https://github.com/mattermost/mattermost-docker/issues/489>`__."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:154
+msgid "Install a different version of Mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:156
+msgid "Shut down your deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:158
+msgid ""
+"Run ``git pull`` to fetch any recent changes to the repository, paying "
+"attention to any potential ``env.example`` changes."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:160
+msgid ""
+"Adjust the ``MATTERMOST_IMAGE_TAG`` in the ``.env`` file to point your "
+"desired `enterprise <https://hub.docker.com/r/mattermost/mattermost-"
+"enterprise-edition/tags?page=1&ordering=last_updated>`__ or `team "
+"<https://hub.docker.com/r/mattermost/mattermost-team-"
+"edition/tags?page=1&ordering=last_updated>`__ image version."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:164
+msgid ""
+"**For production environments**, we recommend using specific version tags"
+" such as ``MATTERMOST_IMAGE_TAG=release-10.5`` rather than generic tags "
+"like ``MATTERMOST_IMAGE_TAG=release-10``. Generic ``release-x`` tags are "
+"intended for development use only and do not automatically receive new "
+"patch releases within that major version. Using specific version tags "
+"ensures a more reproducible and deterministic environment for your "
+"production deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:166
+msgid "Redeploy Mattermost."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:169
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:172
+msgid "Troubleshooting your Docker deployment"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:174
+msgid ""
+"If deploying on an M1 Mac and encountering permission issues in the "
+"Docker container, `redo the third step <#create-the-required-directores-"
+"and-set-their-permissions>`__ and skip this command:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:180
+msgid ""
+"If having issues deploying on Docker generally, ensure the docker daemon "
+"is enabled and running:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:186
+msgid "To remove all data and settings for your Mattermost deployment:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:193
+msgid "Troubleshooting PostgreSQL"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:195
+msgid ""
+"For quick start deployments, you can change the Postgres username and/or "
+"password (recommended) in the ``.env`` file. If your database is managed "
+"externally, you'll need to change the password in your database "
+"management tool. Then, update the ``.env`` file with the new credentials."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:197
+msgid "Troubleshooting TLS & NGINX"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:199
+msgid ""
+"For an in-depth guide to configuring the TLS certificate and key for "
+"Nginx, please refer to `this document in the repository "
+"<https://github.com/mattermost/docker/blob/main/docs/issuing-letsencrypt-"
+"certificate.md>`__."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:202
+msgid "Trial Mattermost using Docker Preview"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:204
+msgid ""
+"Looking for a way to evaluate Mattermost on a single local machine using "
+"Docker? We recommend using the `Mattermost Docker Preview Image "
+"<https://github.com/mattermost/mattermost-docker-preview>`_ to install "
+"Mattermost in Preview Mode."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:208
+msgid ""
+"This local image is self-contained (i.e., it has an internal database and"
+" works out of the box). Dropping a container using this image removes "
+"data and configuration as expected. You can see the :doc:`configuration "
+"settings </administration-guide/configure/configuration-settings>` "
+"documentation to learn more about customizing your trial deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:209
+msgid ""
+"**Preview Mode** shouldn't be used in a production environment, as it "
+"uses a known password string, contains other non-production configuration"
+" settings, has email disabled, keeps no persistent data (all data lives "
+"inside the container), and doesn't support upgrades."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:210
+msgid ""
+"If you are planning to use the calling functionality in **Preview Mode** "
+"on a non-local environment, you should ensure that the server is running "
+"on a secure (HTTPs) connection and that the :ref:`network requirements "
+"<administration-guide/configure/calls-rtcd-setup:network requirements>` "
+"to run calls are met."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:212
+msgid "Install `Docker <https://www.docker.com/get-started/>`__."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:214
+msgid "Once you have Docker, run the following command in a terminal window:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:220
+msgid ""
+"When Docker is done fetching the image, navigate to "
+"``http://localhost:8065/`` in your browser to preview Mattermost."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:221
+msgid ""
+"Select **Don't have an account** in the top right corner of the screen to"
+" create an account for your preview instance. If you don't see this "
+"option, ensure that the :ref:`Enable open server <administration-"
+"guide/configure/authentication-configuration-settings:enable open "
+"server>` configuration setting is enabled. This setting is disabled for "
+"self-hosted Mattermost deployments by default."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:222
+msgid "Log in to your preview instance with your user credentials."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:225
+msgid "Troubleshooting your preview deployment"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:227
+msgid ""
+"The **Preview Mode** Docker instance for Mattermost is designed for "
+"product evaluation, and sets ``SendEmailNotifications=false`` so the "
+"product can function without enabling email. See the :doc:`Configuration "
+"Settings </administration-guide/configure/configuration-settings>` "
+"documentation to customize your deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:229
+msgid ""
+"To update your Mattermost preview image and container, you must first "
+"stop and delete your existing **mattermost-preview** container by running"
+" the following commands:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:237
+msgid ""
+"Once the new image is pulled and the container is stopped and deleted you"
+" need to run the ``docker run`` command from above."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:240
+msgid "On Linux, include ``sudo`` in front of all ``docker`` commands."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:242
+msgid "To access a shell inside the container, run the following command:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/install-docker.rst:250
+msgid ""
+"See the :doc:`deployment troubleshooting </deployment-guide/deployment-"
+"troubleshooting>` documentation for resolutions to common deployment "
+"issues."
+msgstr ""
+

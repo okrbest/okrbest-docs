@@ -1,0 +1,273 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:23
+msgid ""
+"You can install the Mattermost Server on any 64-bit Linux system using "
+"the tarball. This is the most flexible installation method, but it comes "
+"with the highest effort, typically favored by advanced system "
+"administrators."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:25
+msgid ""
+"This Mattermost deployment includes the following steps: install "
+"PostgreSQL database, prepare the database, download the Mattermost "
+"server, install the server, and set up the server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:28
+msgid "Step 1: Install PostgreSQL database or get database connection credentials"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:30
+msgid ""
+"Install PostgreSQL locally on the same server by following the "
+"`PostgreSQL installation <https://www.postgresql.org/download/>`_ "
+"documentation."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:31
+msgid ""
+"Use an external PostgreSQL database server. Ensure you have connection "
+"credentials, including hostname, port, database name, username, and "
+"password available."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:32
+msgid "Use a managed database service."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:35
+msgid "Step 2: Prepare the database"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:37
+msgid ""
+"Follow the :ref:`database preparation <deployment-"
+"guide/server/preparations:database preparation>` documentation to set up "
+"your PostgreSQL database for Mattermost."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:40
+msgid "Step 3: Download"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:42
+msgid ""
+"In a terminal window, ssh onto the system that will host the Mattermost "
+"Server. Using ``wget``, download the Mattermost Server release you want "
+"to install using one of the following commands. Replace ``amd64`` with "
+"the appropriate architecture (e.g., ``arm64`` for ARM-based systems) in "
+"the link as needed."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:58
+msgid ""
+"If you are looking for an older release, Enterprise and Team Edition "
+"releases can be found in our :doc:`version archive </product-overview"
+"/version-archive>` documentation."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:61
+msgid "Step 4: Install Mattermost server"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:63
+msgid ""
+"Install the Mattermost Server by extracting the tarball, creating users "
+"and groups, and setting file/folder permissions."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:65
+msgid "First extract the tarball:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:71
+msgid ""
+"Move the entire folder to the ``/opt`` directory (or whatever path you "
+"require):"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:77
+msgid ""
+"Create the default storage folder. By default the Mattermost Server uses "
+"``/opt/mattermost/data`` as the folder for files. This can be changed in "
+"the System Console during setup (even using alternative storage such as "
+"S3):"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:85
+msgid ""
+"If you choose a custom path, ensure this alternate path is used in all "
+"steps that follow."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:87
+msgid "Set up a user and group called ``mattermost``:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:95
+msgid ""
+"If you choose a custom user and group name, ensure it is used in all the "
+"steps that follow."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:97
+msgid "Set the file and folder permissions for your installation:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:103
+msgid "Give the ``mattermost`` group write permissions to the application folder:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:109
+msgid ""
+"You will now have the latest Mattermost Server version installed on your "
+"system. Starting and stopping the Mattermost Server is done using "
+"``systemd``."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:111
+msgid "Create the systemd unit file:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:117
+msgid ""
+"As root, edit the systemd unit file at "
+"``/lib/systemd/system/mattermost.service`` to add the following lines:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:142
+msgid ""
+"If you are installing the Mattermost server on the same system as your "
+"database, you may want to add both ``After=postgresql.service`` and "
+"``BindsTo=postgresql.service`` to the ``[Unit]`` section of the systemd "
+"unit file."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:144
+msgid ""
+"Save the file and reload systemd using ``sudo systemctl daemon-reload``. "
+"Mattermost Server is now installed and is ready for setup."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:147
+msgid "Step 5: Set up the server"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:149
+msgid ""
+"Before you start the Mattermost Server, you need to edit the "
+"configuration file. A default configuration file is located at "
+"``/opt/mattermost/config/config.json``. We recommend taking a backup of "
+"this default config ahead of making changes:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:155
+msgid "Configure the following properties in this file:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:157
+msgid ""
+"Under ``SqlSettings``, set ``DriverName`` to ``\"postgres\"``. This is "
+"the default and recommended database for all Mattermost installations."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:158
+msgid ""
+"Under ``SqlSettings``, set ``DataSource`` to ``\"postgres://mmuser"
+":<mmuser-password>@<host-name-or-"
+"IP>:5432/mattermost?sslmode=disable&connect_timeout=10\"`` replacing "
+"``mmuser``, ``<mmuser-password>``, ``<host-name-or-IP>`` and "
+"``mattermost`` with your database name."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:159
+msgid ""
+"Under ``ServiceSettings``, set ``\"SiteURL\"``: The domain name for the "
+"Mattermost application (e.g. ``https://mattermost.example.com``)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:161
+msgid ""
+"We recommend configuring the :ref:`Support Email <administration-"
+"guide/configure/site-configuration-settings:support email address>` under"
+" ``SupportSettings``, set ``\"SupportEmail\"``. This is the email address"
+" your users will contact when they need help."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:163
+msgid ""
+"After modifying the ``config.json`` configuration file, you can now start"
+" the Mattermost server:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:169
+msgid ""
+"Verify that Mattermost is running: ``curl http://localhost:8065``. You "
+"should see the HTML that’s returned by the Mattermost Server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:171
+msgid ""
+"The final step, depending on your requirements, is to run sudo "
+"``systemctl enable mattermost.service`` so that Mattermost will start on "
+"system boot."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:174
+msgid "Step 6: Update the server"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:176
+msgid ""
+"Updating your Mattermost Server installation when using the tarball "
+"requires several manual steps. See the :doc:`upgrade Mattermost Server "
+"</administration-guide/upgrade/upgrading-mattermost-server>` "
+"documentation for details."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:179
+msgid "Remove Mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:181
+msgid ""
+"To remove the Mattermost Server for any reason, you must stop the "
+"Mattermost Server, back up all important files, and then run this "
+"command:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:189
+msgid ""
+"Depending on your configuration, there are several important folders in "
+"``/opt/mattermost`` to backup. These are ``config``, ``logs``, "
+"``plugins``, ``client/plugins``, and ``data``. We strongly recommend you "
+"back up these locations before running the ``rm`` command."
+msgstr ""
+
+#: ../../source/deployment-guide/server/linux/deploy-tar.rst:191
+msgid ""
+"You may also remove the Mattermost systemd unit file and the user/group "
+"created for running the application."
+msgstr ""
+

@@ -1,0 +1,240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/agents/cmd/evalviewer/README.md:1
+msgid "Eval Viewer"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:3
+msgid ""
+"A CLI tool to run evaluations and display results in a TUI (Terminal User"
+" Interface)."
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:5
+msgid "Installation"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:7
+msgid "From Local Repository (Recommended)"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:13
+msgid ""
+"After installation, the `evalviewer` command will be available in your "
+"PATH."
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:15
+msgid "Usage"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:17
+msgid "Run Command (Recommended)"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:18
+msgid ""
+"Run go test with `GOEVALS=1` environment variable set, then automatically"
+" find and display the evaluation results in a TUI."
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:20
+msgid "All arguments after 'run' are passed directly to 'go test'."
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:33
+msgid "The run command will:"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:34
+#: ../../source/agents/cmd/evalviewer/README.md:71
+msgid "Clean up any existing evals.jsonl file"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:35
+#: ../../source/agents/cmd/evalviewer/README.md:72
+msgid "Execute go test with GOEVALS=1"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:36
+msgid "Search for evals.jsonl in current and parent directories"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:37
+msgid "Launch the TUI to display results"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:39
+msgid "View Command"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:40
+msgid "Display evaluation results from an existing evals.jsonl file in a TUI."
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:54
+msgid "Check Command (CI Mode)"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:55
+msgid ""
+"Run evaluations and check results without the interactive TUI. Exits with"
+" status code 1 if any evaluations fail. This is designed for CI/CD "
+"pipelines."
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:57
+msgid "All arguments after 'check' are passed directly to 'go test'."
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:70
+msgid "The check command will:"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:73
+msgid "Display test output in real-time"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:74
+msgid "Print a summary of evaluation results"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:75
+msgid "Exit with status code 1 if any evaluations failed"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:77
+msgid "Environment Variables"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:79
+msgid ""
+"The evalviewer and evaluation tests support multiple LLM providers. "
+"Configure which providers to use and their settings with these "
+"environment variables:"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:81
+msgid "Provider Selection"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:83
+msgid "**`LLM_PROVIDER`**: Choose which provider(s) to run evaluations with"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:84
+msgid ""
+"Values: `openai`, `anthropic`, `azure`, `all`, or comma-separated (e.g., "
+"`openai,azure`)"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:85
+msgid "Default: `all` (runs all providers)"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:87
+msgid "OpenAI Configuration"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:89
+msgid "**`OPENAI_API_KEY`**: Your OpenAI API key (required for OpenAI)"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:90
+msgid "**`OPENAI_MODEL`**: Model to use (overrides code default)"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:92
+msgid "Anthropic Configuration"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:94
+msgid "**`ANTHROPIC_API_KEY`**: Your Anthropic API key (required for Anthropic)"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:95
+msgid "**`ANTHROPIC_MODEL`**: Model to use (overrides code default)"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:97
+msgid "Azure OpenAI Configuration"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:99
+msgid "**`AZURE_OPENAI_API_KEY`**: Your Azure OpenAI API key (required for Azure)"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:100
+msgid ""
+"**`AZURE_OPENAI_ENDPOINT`**: Your Azure OpenAI endpoint URL (required for"
+" Azure)"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:101
+msgid ""
+"**`AZURE_OPENAI_MODEL`**: Model deployment name to use (overrides code "
+"default)"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:103
+msgid "Grader Configuration"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:105
+msgid ""
+"The grader LLM is used to evaluate the quality of responses from the main"
+" LLM. By default, it uses OpenAI. You can configure a different provider "
+"or model for grading:"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:107
+msgid ""
+"**`GRADER_LLM_PROVIDER`**: Provider to use for grading (e.g., `openai`, "
+"`anthropic`, `azure`)"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:108
+msgid "Default: `openai`"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:109
+msgid ""
+"Uses the same API key environment variables as the main LLM (e.g., "
+"`OPENAI_API_KEY`, `ANTHROPIC_API_KEY`)"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:110
+msgid "**`GRADER_LLM_MODEL`**: Model to use for grading"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:111
+msgid "For each provider, uses its code default model unless specified"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:113
+msgid "Examples"
+msgstr ""
+
+#: ../../source/agents/cmd/evalviewer/README.md:141
+msgid "If a provider's API key is not set, an error will be thrown."
+msgstr ""
+

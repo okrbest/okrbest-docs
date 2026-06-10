@@ -1,0 +1,595 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/server/preparations.rst:6
+msgid "Review software and hardware requirements"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:6
+msgid "Set up an NGINX proxy"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:6
+msgid "Set up TLS"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:6
+msgid "Use an image proxy"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:2
+msgid "Prepare your Mattermost Server environment"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:4
+msgid ""
+"This guide outlines the key preparation steps required before installing "
+"the Mattermost Server, focusing on setting up the database and file "
+"storage systems."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:16
+msgid ""
+"Before installing Mattermost Server, review the following preparation "
+"requirements:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:18
+msgid ""
+":doc:`Review software and hardware requirements </deployment-guide"
+"/software-hardware-requirements>` - Ensure your system meets the minimum "
+"requirements for Mattermost deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:19
+msgid ""
+":doc:`Set up an NGINX proxy </deployment-guide/server/setup-nginx-proxy>`"
+" - Configure NGINX as a reverse proxy for enhanced security and "
+"performance."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:20
+msgid ""
+":doc:`Set up TLS </deployment-guide/server/setup-tls>` - Enable secure "
+"communication with SSL/TLS encryption."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:21
+msgid ""
+":doc:`Use an image proxy </deployment-guide/server/image-proxy>` - "
+"Configure image proxy for enhanced privacy and security."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:24
+msgid "Database preparation"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:26
+msgid ""
+"PostgreSQL v14+ is required for Mattermost server installations. "
+":doc:`MySQL database support </deployment-guide/server/prepare-"
+"mattermost-mysql-database>` is being deprecated starting with Mattermost "
+"v11. See the :doc:`PostgreSQL migration </deployment-guide/postgres-"
+"migration>` documentation for guidance on migrating from MySQL to "
+"PostgreSQL."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:28
+msgid ""
+"Create an PostgreSQL server instance. See the `PostgreSQL documentation "
+"<https://www.postgresql.org/download/>`_ for details. When the "
+"installation is complete, the PostgreSQL server is running, and a Linux "
+"user account called postgres has been created."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:30
+msgid "Create the Mattermost database and user:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:32
+msgid "Access PostgreSQL by running:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:38
+msgid "Create the database:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:44
+msgid ""
+"If this steps fails with an error message like ``invalid LC_COLLATE "
+"locale name: \"en_US.UTF-8\"``, you need to generate the locale first "
+"using ``locale-gen en_US.UTF-8``."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:46
+msgid "Create the Mattermost user with a secure password:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:52
+msgid "Grant database access to the user:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:58
+msgid "If using PostgreSQL v15.x or later, additional grants are required:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:68
+msgid ""
+"Configure PostgreSQL for remote connections (if database is on a separate"
+" server):"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:70
+msgid "Edit ``postgresql.conf`` to allow remote connections:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:74
+#, python-brace-format
+msgid "Edit ``/etc/postgresql/{version}/main/postgresql.conf``:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:82
+#, python-brace-format
+msgid "Edit ``/var/lib/pgsql/{version}/data/postgresql.conf``:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:88
+msgid "Configure client authentication by editing ``pg_hba.conf``:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:90
+#, python-brace-format
+msgid "Add the following line, replacing ``{mattermost-server-IP}``:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:96
+msgid "Restart the PostgreSQL service to apply the configuration changes:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:112
+msgid ""
+"If you are upgrading a major version of PostgreSQL, see :doc:`Upgrade "
+"PostgreSQL </administration-guide/upgrade/upgrading-postgres>` for the "
+"full upgrade procedure and post-upgrade steps."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:114
+msgid ""
+"Once you've completed the database preparation, return to the :doc:`Linux"
+" deployment </deployment-guide/server/deploy-linux>` documentation to "
+"continue with your Mattermost server installation."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:117
+msgid "File storage preparation"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:119
+msgid ""
+"Mattermost requires a file storage system for storing user files, images,"
+" and attachments. You have several options, including:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:121
+msgid "S3-compatibile object storage (recommended)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:122
+#: ../../source/deployment-guide/server/preparations.rst:148
+msgid "Network file storage"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:123
+#: ../../source/deployment-guide/server/preparations.rst:156
+msgid "Local file storage"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:126
+msgid "S3-compatible object storage (Recommended)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:128
+msgid ""
+"For production environments, we recommend using S3-compatible object "
+"storage such as:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:130
+msgid "Amazon S3"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:131
+msgid "Digital Ocean Spaces"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:132
+msgid "Other S3-compatible services"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:134
+msgid "When using S3 storage, you'll need:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:136
+msgid "A bucket created specifically for Mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:137
+msgid "Access credentials (Access Key and Secret Key)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:138
+msgid "Appropriate bucket policies configured"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:139
+msgid "The following information for configuration:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:141
+msgid "Bucket name"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:142
+msgid "Region (if applicable)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:143
+msgid "Access Key"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:144
+msgid "Secret Key"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:145
+msgid "Endpoint URL (for non-AWS S3 services)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:150
+msgid ""
+"For production environments that cannot use S3-compatible object storage,"
+" we recommend using a Network Addressable Storage (NAS) solution with "
+"Network File System (NFS)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:152
+msgid ""
+"You'll need to prepare an NFS server with a dedicated share for "
+"Mattermost (e.g. `/mnt/mattermost_data`) and mount it on all servers that"
+" will be running Mattermost."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:158
+msgid ""
+"For simple deployments, you can use local file storage. However, we don't"
+" recommend this for production environments or multi-node deployments."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:160
+msgid "Create a directory for file storage:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:166
+msgid "Set appropriate permissions:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:173
+msgid "(Optional) Use an image proxy"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:175
+msgid ""
+"Using an :doc:`image proxy </deployment-guide/server/image-proxy>` means "
+"that all requests for images made by Mattermost clients will go through "
+"the proxy instead of contacting third-party servers directly. This helps "
+"protect user privacy by preventing third-party servers from tracking who "
+"views an image. This also prevents the use of tracking pixels (invisible "
+"images that do the same thing without the user even seeing an image)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:177
+msgid ""
+"Certain proxy servers also provide a layer of caching which can make "
+"loading images faster and more reliable. This caching also helps preserve"
+" posts by protecting them from dead images."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:180
+msgid "Network preparation"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:182
+msgid ""
+"The following table outlines the network ports and protocols required for"
+" Mattermost server:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:185
+msgid "Service Name"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:185
+msgid "Config Setting"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:185
+msgid "Port (default)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:185
+msgid "Protocol"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:185
+msgid "Direction"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:185
+msgid "Info"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:187
+msgid "HTTP/Websocket"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:187
+msgid "ServiceSettings.ListenAddress"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:187
+msgid "8065/80/443 (TLS)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:187
+#: ../../source/deployment-guide/server/preparations.rst:193
+#: ../../source/deployment-guide/server/preparations.rst:195
+#: ../../source/deployment-guide/server/preparations.rst:199
+#: ../../source/deployment-guide/server/preparations.rst:203
+msgid "TCP"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:187
+#: ../../source/deployment-guide/server/preparations.rst:191
+#: ../../source/deployment-guide/server/preparations.rst:193
+msgid "Inbound"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:187
+msgid ""
+"External (no proxy) / Internal (with proxy) Usually this requires port 80"
+" and 443 when running HTTPS."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:191
+msgid "Cluster"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:191
+msgid "ClusterSettings.GossipPort"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:191
+msgid "8074"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:191
+#: ../../source/deployment-guide/server/preparations.rst:197
+#: ../../source/deployment-guide/server/preparations.rst:201
+msgid "TCP/UDP"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:191
+msgid "Internal"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:193
+msgid "Metrics"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:193
+msgid "MetricsSettings.ListenAddress"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:193
+msgid "8067"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:193
+msgid "External (no proxy) / Internal (with proxy)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:195
+msgid "Database"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:195
+msgid "SqlSettings.DataSource"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:195
+msgid "5432 (PostgreSQL) / 3306 (MySQL)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:195
+#: ../../source/deployment-guide/server/preparations.rst:197
+#: ../../source/deployment-guide/server/preparations.rst:199
+#: ../../source/deployment-guide/server/preparations.rst:201
+#: ../../source/deployment-guide/server/preparations.rst:203
+msgid "Outbound"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:195
+msgid "Usually internal (recommended)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:197
+msgid "LDAP"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:197
+msgid "LdapSettings.LdapPort"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:197
+msgid "389"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:199
+msgid "S3 Storage"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:199
+msgid "FileSettings.AmazonS3Endpoint"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:199
+#: ../../source/deployment-guide/server/preparations.rst:203
+msgid "443 (TLS)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:201
+msgid "SMTP"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:201
+msgid "EmailSettings.SMTPPort"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:201
+msgid "10025"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:203
+msgid "Push Notifications"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:203
+msgid "EmailSettings.PushNotificationServer"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:208
+msgid "All outbound ports may vary based on your specific configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:209
+msgid ""
+"Mattermost can be configured to use an outbound proxy for any HTTP/HTTPS "
+"traffic (see below)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:210
+msgid "Calls service may require additional ports"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:213
+msgid "Outbound proxy configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:215
+msgid ""
+"If your deployment requires using an outbound proxy, you can configure "
+"Mattermost using environment variables:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:217
+msgid "Configure the proxy settings in your service configuration:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:225
+msgid "For authenticated proxies, include credentials in the URL:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:232
+msgid ""
+"The ``NO_PROXY`` variable can include: - IP addresses (e.g., ``1.2.3.4``)"
+" - CIDR ranges (e.g., ``1.2.3.4/8``) - Domain names (e.g., "
+"``example.com``) - Subdomains (e.g., ``.example.com``)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:240
+msgid ""
+"When using an HTTPS proxy, ensure your Mattermost server has the proxy's "
+"root certificate configured to avoid connection issues."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:242
+msgid "Example systemd Service Configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:278
+msgid "System requirements"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:280
+msgid "Ensure your system meets these minimum requirements:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:282
+msgid "Operating System: 64-bit Linux distribution"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:283
+msgid "Hardware: 1 vCPU/core with 2GB RAM (supports up to 1,000 users)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:284
+msgid "Storage: Minimum 10GB available space"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:285
+msgid "Database: PostgreSQL v14+"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:286
+msgid "Network: Reliable internet connection with sufficient bandwidth"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:288
+msgid ""
+"See the :doc:`software and hardware requirements </deployment-guide"
+"/software-hardware-requirements>` documentation for additional "
+"requirements."
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:291
+msgid "Next steps"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:293
+msgid ""
+"Once you've completed these preparation steps, you can proceed with "
+"installing the Mattermost server. Choose your preferred installation "
+"method:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:295
+msgid ":doc:`Deploy with Kubernetes </deployment-guide/server/deploy-kubernetes>`"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:296
+msgid ":doc:`Deploy on Linux </deployment-guide/server/deploy-linux>`"
+msgstr ""
+
+#: ../../source/deployment-guide/server/preparations.rst:297
+msgid ":doc:`Deploy with Containers </deployment-guide/server/deploy-containers>`"
+msgstr ""
+

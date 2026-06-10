@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/agents/mcpserver/AGENTS.md:1
+msgid "mcpserver/AGENTS.md"
+msgstr ""
+
+#: ../../source/agents/mcpserver/AGENTS.md:3
+msgid ""
+"Scoped instructions for the `mcpserver/` package. Root rules in "
+"`/AGENTS.md` still apply; only deviations and package-specific gotchas "
+"live here."
+msgstr ""
+
+#: ../../source/agents/mcpserver/AGENTS.md:5
+msgid "Architecture"
+msgstr ""
+
+#: ../../source/agents/mcpserver/AGENTS.md:7
+msgid "Configuration vs runtime services"
+msgstr ""
+
+#: ../../source/agents/mcpserver/AGENTS.md:9
+msgid "Config structs are declarative — strings, ints, bools only."
+msgstr ""
+
+#: ../../source/agents/mcpserver/AGENTS.md:10
+msgid "Never put runtime service instances inside a config struct."
+msgstr ""
+
+#: ../../source/agents/mcpserver/AGENTS.md:11
+msgid "Pass runtime services directly as parameters to constructors."
+msgstr ""
+
+#: ../../source/agents/mcpserver/AGENTS.md:13
+msgid "Server types and the search service"
+msgstr ""
+
+#: ../../source/agents/mcpserver/AGENTS.md:15
+msgid ""
+"**`InMemoryServer`** (embedded in the plugin) takes `searchService "
+"tools.SemanticSearchService` directly. The plugin passes "
+"`*search.Search`, which implements `SemanticSearchService`."
+msgstr ""
+
+#: ../../source/agents/mcpserver/AGENTS.md:16
+msgid ""
+"**HTTP / Stdio / PluginHandlers** (external servers) build their own "
+"`HTTPSemanticSearchService` internally; that service calls back to the "
+"plugin's `/api/v1/search/raw` endpoint."
+msgstr ""
+
+#: ../../source/agents/mcpserver/AGENTS.md:18
+msgid "Type sharing"
+msgstr ""
+
+#: ../../source/agents/mcpserver/AGENTS.md:20
+msgid ""
+"Do not duplicate types from the `search` package inside "
+"`mcpserver/tools`. The `SemanticSearchService` interface uses "
+"`search.Options` and `search.RAGResult` directly."
+msgstr ""
+
+#: ../../source/agents/mcpserver/AGENTS.md:21
+msgid ""
+"HTTP serialization DTOs (e.g., `httpSearchRequest`, `httpSearchResult` in"
+" `search_http.go`) are intentionally separate from domain types and stay "
+"in their respective files."
+msgstr ""
+
+#: ../../source/agents/mcpserver/AGENTS.md:22
+msgid ""
+"If you only need a subset of fields, accept the full type and ignore the "
+"unused fields rather than introducing a parallel struct."
+msgstr ""
+
+#: ../../source/agents/mcpserver/AGENTS.md:24
+msgid "Adding a new optional capability"
+msgstr ""
+
+#: ../../source/agents/mcpserver/AGENTS.md:26
+msgid "Define the interface in `tools/`, reusing types from their source package."
+msgstr ""
+
+#: ../../source/agents/mcpserver/AGENTS.md:27
+msgid "For embedded servers: add the parameter to `NewInMemoryServer`."
+msgstr ""
+
+#: ../../source/agents/mcpserver/AGENTS.md:28
+msgid ""
+"For external servers: add a plugin HTTP endpoint plus an HTTP client "
+"implementation that calls it."
+msgstr ""
+

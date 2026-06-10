@@ -1,0 +1,1043 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:1
+msgid "Upgrading to Mattermost Agents V2"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:3
+msgid ""
+"This guide describes how to upgrade the Mattermost Agents plugin "
+"(formerly Mattermost AI) from a v1.x release to v2.0.0. It covers the "
+"supported version path, the migrations that run automatically on first "
+"start of v2.0.0, the breaking changes and default-behavior flips that "
+"admins should know about before the upgrade window, and the verification "
+"steps to confirm the upgrade succeeded."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:5
+msgid ""
+"If you are running a fresh installation of v2.0.0 (no prior data, no "
+"prior `config.bots` entries), you do not need this guide — install the "
+"plugin and configure it using the [Admin Guide](admin_guide.md)."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:7
+msgid "1. Who this guide is for"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:9
+msgid "You are the right reader if all of the following apply:"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:11
+msgid "You currently run the Mattermost AI / Mattermost Agents plugin at v1.x."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:12
+msgid "You administer the Mattermost server (System Admin) and own its database."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:13
+msgid "You are planning to install v2.0.0."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:15
+msgid ""
+"If you are upgrading the Mattermost server itself, refer to the standard "
+"Mattermost upgrade documentation in addition to this guide. The plugin "
+"upgrade does not change Mattermost server requirements beyond those "
+"listed in the [Admin Guide](admin_guide.md#prerequisites)."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:17
+msgid "2. Pre-flight checklist"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:19
+msgid ""
+"Complete every item before starting the upgrade. Do not skip the database"
+" backup."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:21
+msgid ""
+"**Confirm your current plugin version.** Go to **System Console > Plugin "
+"Management** and note the installed version of Mattermost AI / Mattermost"
+" Agents."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:22
+msgid ""
+"**Confirm your Mattermost server version.** v2.0.0 requires Mattermost "
+"Server v10.0 or later. The optional external MCP HTTP server requires "
+"Mattermost Server v11.2 or later."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:23
+msgid ""
+"**Back up the Mattermost database.** v2.0.0 runs schema migrations on "
+"first start (see [Section 4](#4-what-gets-migrated-automatically)). Some "
+"migrations are not safely reversible (see [Section 8](#8-rollback-"
+"considerations)). In particular, migration 000007 drops the legacy "
+"`LLM_PostMeta` table without migrating its contents into the new "
+"conversation-entities tables — v1.x conversation titles cannot be "
+"recovered after the upgrade except from this backup. See [Section 5](#5"
+"-breaking-changes) for the full list of v1.x data that does not survive "
+"the upgrade."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:24
+msgid ""
+"**Back up `config.json`.** The legacy bot migration removes entries from "
+"stored plugin configuration after copying them into the database. Keeping"
+" a pre-upgrade copy of `config.json` is the simplest way to recover "
+"original bot definitions if you need to roll back."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:25
+msgid ""
+"**Verify your license is current.** Multi-agent configurations, fine-"
+"grained access controls, MCP support, and embedding search require an "
+"Entry, Enterprise, or Enterprise Advanced license. See [License "
+"requirements](/administration-guide/configure/agents-admin-guide.html"
+"#license-requirements)."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:26
+msgid ""
+"**Capture a list of currently configured bots.** From your existing "
+"System Console > Plugins > Agents (or AI Bots) page, note the username, "
+"display name, service binding, and access rules of each bot. After the "
+"upgrade, you can compare this list against the migrated agents on the new"
+" **Agents** product page."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:27
+msgid ""
+"**Identify any external integrations that read the `LLM_PostMeta` table "
+"directly.** That table is dropped by migration 000007. To our knowledge, "
+"no documented integration depends on this table."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:28
+msgid ""
+"**Schedule a maintenance window.** The plugin must be stopped and "
+"restarted, and the migrations must complete before users resume traffic. "
+"Typical windows in non-HA environments complete in minutes; HA clusters "
+"should plan additional time for migration coordination (see [Section "
+"9](#9-ha-specific-notes))."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:30
+msgid "3. Version sequence"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:32
+msgid ""
+"The supported upgrade path is to upgrade Mattermost to the latest v11.6 "
+"patch release before upgrading to Mattermost v11.7, which includes Agents"
+" v2.0.0."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:34
+msgid ""
+"**Why this matters:** Mattermost v11.6 is the tested source release for "
+"the Agents v2.0.0 upgrade. Upgrade to Mattermost v11.6 first if you are "
+"running an earlier Mattermost or plugin version."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:36
+msgid "4. What gets migrated automatically"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:38
+msgid ""
+"When v2.0.0 starts for the first time on an existing install, the plugin "
+"runs three database migrations and one in-process data migration. They "
+"are coordinated for HA via cluster mutex and a system-table flag, and are"
+" designed to be re-run safely."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:40
+msgid "4.1 Schema migrations (`store/migrations/`)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Migration"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Source PR"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "What it does"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "`000005_create_user_agents_table`"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "#589"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid ""
+"Creates the `Agents_UserAgents` table that stores agent identity, "
+"instructions, channel/user/team access lists, agent admins, MCP tool "
+"grants, and lifecycle timestamps. Creates supporting indexes; index "
+"creation is idempotent (PR #689)."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "`000006_user_agent_bot_fields`"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid ""
+"Adds bot-specific columns to `Agents_UserAgents`: `Model`, "
+"`EnableVision`, `DisableTools`, `EnabledNativeTools`, `ReasoningEnabled`,"
+" `ReasoningEffort`, `ThinkingBudget`, `StructuredOutputEnabled`. "
+"Backfills existing rows with `EnableVision=false`, `DisableTools=false`, "
+"`ReasoningEnabled=true`."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "`000007_create_conversations_table`"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "#602"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid ""
+"Creates the `LLM_Conversations` and `LLM_Turns` tables that back the new "
+"conversation-entities runtime. **Drops the legacy `LLM_PostMeta` table.**"
+" Note: conversation titles stored in `LLM_PostMeta` from v1.x are not "
+"automatically migrated; v2.0.0 builds its conversation history as users "
+"interact with agents after the upgrade."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:48
+msgid "4.2 Legacy bot migration (`server/legacy_bot_migration.go`)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:50
+msgid ""
+"After the schema migrations run, the plugin performs a one-time migration"
+" of legacy `config.bots` entries into `Agents_UserAgents`:"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:52
+msgid ""
+"The plugin acquires the cluster mutex `ai_legacy_bots_migration` so only "
+"one node performs the migration in HA deployments."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:53
+msgid ""
+"The plugin checks the `legacy_config_bots_migrated` flag in the "
+"`Agents_System` table. If set, the migration is a no-op."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:54
+msgid ""
+"For each entry in `config.bots`, the plugin verifies that a corresponding"
+" Mattermost bot account already exists. If any required Mattermost bot "
+"row is missing, the migration is **deferred** without setting the "
+"completion flag (it will retry on the next config update or restart)."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:55
+msgid "Each `config.bots` entry is copied into `Agents_UserAgents` with:"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:56
+msgid "A new agent ID and timestamps assigned by the store."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:57
+msgid "`BotUserID` linked to the existing Mattermost bot account."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:58
+msgid "`CreatorID` left empty (migrated agents do not have a creator)."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:59
+msgid "`AdminUserIDs` cleared. Migrated agents are managed by system admins."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:60
+msgid ""
+"`AutoEnableNewMCPTools = true` so migrated agents preserve the v1.x "
+"behavior of having access to every MCP tool, including ones added later."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:61
+msgid ""
+"The plugin clears `config.bots` from stored configuration to prevent "
+"duplicate bot registration on subsequent restarts."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:62
+msgid "The plugin sets `legacy_config_bots_migrated = true`."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:64
+msgid "4.3 What changes in the System Console"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:66
+msgid ""
+"**AI Bots** → redirects to the new top-level **Agents** product page. The"
+" legacy AI Bots editor is replaced by the **Agents** management UI (list "
+"page plus a three-tab agent editor: Configuration, Access, MCPs)."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:67
+msgid ""
+"**Enable MCP Client** and **Enable Embedded Server** toggles are removed "
+"(PR #617). MCP and the embedded Mattermost MCP server are always on."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:68
+msgid ""
+"The **Use Responses API** toggle is removed for the **OpenAI** service "
+"type. OpenAI direct always uses the Responses API. The toggle remains for"
+" **OpenAI Compatible** and **Azure OpenAI** services."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:70
+msgid "5. Breaking changes"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:72
+msgid ""
+"The following changes can affect deployments that depend on prior "
+"behavior. Review each item before the upgrade."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:74
+msgid "5.0 v1.x data that does not survive the upgrade"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:76
+msgid ""
+"The upgrade removes some v1.x data without migrating it forward. Confirm "
+"your database backup is good before starting the procedure in [Section "
+"7](#7-step-by-step-upgrade-procedure)."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:78
+msgid ""
+"**v1.x conversation titles (`LLM_PostMeta` table contents).** Migration "
+"000007 drops the `LLM_PostMeta` table without copying its rows into the "
+"new `LLM_Conversations` / `LLM_Turns` schema. Conversation titles that "
+"v1.x stored against root post IDs are not visible in v2.0.0 and cannot be"
+" reconstructed from `LLM_Conversations` after the upgrade — restore from "
+"the pre-upgrade database backup if you need that data."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:80
+msgid "5.1 `config.bots` is no longer the source of truth for agent definitions"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:82
+msgid ""
+"After the legacy bot migration runs, `config.bots` is cleared from stored"
+" plugin configuration. Editing `config.json` to add or modify agents will"
+" not have an effect — agent CRUD is now performed against "
+"`Agents_UserAgents` via the **Agents** page. Any tooling that drives "
+"agent definitions by writing to `config.bots` must be updated to call the"
+" agent API or use the **Agents** page."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:84
+msgid "5.2 The `LLM_PostMeta` table is dropped"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:86
+msgid ""
+"Migration 000007 drops `LLM_PostMeta` after creating the new "
+"`LLM_Conversations` and `LLM_Turns` tables. The drop runs without copying"
+" row contents forward, so v1.x conversation titles stored in "
+"`LLM_PostMeta` are not preserved (see [Section 5.0](#50-v1x-data-that-"
+"does-not-survive-the-upgrade)). Any external integration that reads from "
+"`LLM_PostMeta` will break after the upgrade. To our knowledge, no public "
+"integration depends on this table."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:88
+msgid "5.3 MCP cannot be globally disabled"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:90
+msgid ""
+"The **Enable MCP Client** and **Enable Embedded Server** System Console "
+"toggles are removed. To restrict MCP usage, disable individual tools or "
+"change tool approval policies under **System Console > Plugins > Agents >"
+" Model Context Protocol (MCP) > Tools**, or restrict an agent's MCP "
+"access via the agent's **MCPs** tab."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:92
+msgid "5.4 OpenAI direct always uses the Responses API"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:94
+msgid ""
+"Services with type **OpenAI** unconditionally route through the OpenAI "
+"Responses API. If you require legacy Chat Completions behavior, configure"
+" an **OpenAI Compatible** service pointing at the OpenAI endpoint and "
+"turn **Use Responses API** off for that service."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:96
+msgid "5.5 Standalone MCP server binary scope clarified"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:98
+msgid ""
+"The standalone `mattermost-mcp-server` binary (separate process, stdio "
+"transport) is documented as **development and local use only** and is not"
+" supported in production deployments. Production environments should rely"
+" on the embedded Mattermost MCP server and, when external clients are "
+"required, the HTTP MCP server endpoint configured from the System "
+"Console."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:100
+msgid "5.6 Removed in-product capabilities"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Removed"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Replacement"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Built-in GitHub and Jira issue tools"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "MCP-backed providers"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Built-in Mattermost search/user tools"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Embedded Mattermost MCP server (`search_posts`, `search_users`)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Prompt hint buttons"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Custom prompt templates"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Ephemeral OAuth-prompt messages in threads"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid ""
+"**Connect** button in the agent's **MCPs** tab and the Agents RHS "
+"**Tools** menu"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "`Minimum Size Ratio` chunking option (embedding search)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Removed; not replaced"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "`LLM_PostMeta` DB table"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "`LLM_Conversations` + `LLM_Turns`"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "`config.bots` plugin-config entries"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "DB-backed `Agents_UserAgents`"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:112
+msgid "6. Default behavior changes"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:114
+msgid ""
+"Defaults that ship with v2.0.0 differ from v1.x in the following ways. "
+"None of these defaults change the behavior of an agent that was already "
+"explicitly configured before the upgrade — they apply to **new** agents "
+"and to capabilities that were not previously toggled."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Setting"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "v1.x default"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "v2.0.0 default"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Scope of change"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "MCP client"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Disabled / opt-in"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "**Always on**"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "All deployments"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Embedded Mattermost MCP server"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "OpenAI direct: Responses API"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Toggle, off-by-default"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "**Always on (no toggle)**"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "OpenAI service type only"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Native web search (per agent)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Off"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "**On for new agents**"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid ""
+"Capable providers: OpenAI, Azure OpenAI, Anthropic, Google Gemini, Google"
+" Vertex AI. Native tools are filtered out at request time for Bedrock, "
+"Cohere, Mistral, and Scale-backed services."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Extended reasoning / thinking (per agent)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid ""
+"**On for new and migrated agents** (migration 000006 backfills "
+"`ReasoningEnabled=true`)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Capable providers (same scope as native web search)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Structured output (per agent)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid ""
+"**Off** (default `false` in both migration 000006 and the Agents UI's "
+"`emptyDraft`, for both new and migrated agents)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Capable providers: OpenAI, OpenAI Compatible, Azure OpenAI, Anthropic"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:125
+msgid ""
+"**Migrated agents and native web search.** The migration 000006 backfill "
+"leaves `EnabledNativeTools = '[]'` for existing agent rows. Agents that "
+"were migrated from `config.bots` therefore do not automatically gain "
+"native web search at upgrade time. To enable native web search for a "
+"migrated agent, edit the agent on the **Agents** page and turn on "
+"**Enable Web Search** under the **Configuration** tab."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:127
+msgid ""
+"**Reasoning is on by default for migrated agents.** Migration 000006 "
+"backfills `ReasoningEnabled = true` for existing rows. If your "
+"environment relies on agents *not* using extended thinking — for example,"
+" to reduce token spend or to keep latency predictable for a particular "
+"agent — explicitly turn off **Reasoning Enabled** on each affected agent "
+"after the upgrade."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:129
+msgid ""
+"**Anthropic structured output and extended thinking are mutually "
+"exclusive.** When Anthropic structured output is enabled, the UI disables"
+" extended thinking for that agent — the two cannot be active "
+"simultaneously."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:131
+msgid "7. Step-by-step upgrade procedure"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:133
+msgid "7.1 Primary path: Upgrade Mattermost"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:135
+msgid ""
+"Use this path when you receive Agents through the Mattermost server "
+"packaging."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:137
+msgid "**Take backups.**"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:138
+msgid "Back up the Mattermost database."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:139
+msgid ""
+"Back up `config.json` (or your equivalent stored plugin configuration "
+"source)."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:140
+msgid ""
+"If your deployment includes indexed vector data on a separate volume, "
+"snapshot it as well."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:141
+msgid ""
+"**Upgrade to the latest Mattermost v11.6 patch release.** Mattermost "
+"v11.6 is the tested source release for the Agents v2.0.0 upgrade."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:142
+msgid ""
+"**Confirm the v11.6 upgrade is healthy.** Verify Mattermost starts "
+"cleanly and that Mattermost AI / Mattermost Agents is enabled."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:143
+msgid "**Upgrade Mattermost to v11.7.** Mattermost v11.7 includes Agents v2.0.0."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:144
+msgid ""
+"**Watch the logs.** On startup, Agents v2.0.0 runs migrations 000005, "
+"000006, and 000007, then performs the legacy bot migration described in "
+"[Section 4](#4-what-gets-migrated-automatically). In server logs, "
+"confirm:"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:145
+msgid "Plugin start messages."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:146
+msgid "Migration log entries for each of 000005, 000006, 000007."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:147
+msgid ""
+"The log message `Migrated legacy config bots to self-service agents "
+"table` (one-time; only when at least one `config.bots` entry was present "
+"at startup)."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:148
+msgid ""
+"No fatal migration errors. If any error occurs, see [Section "
+"11](#11-troubleshooting)."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:149
+msgid ""
+"**Open the Agents page.** From the Mattermost product menu, navigate to "
+"the top-level **Agents** product entry. Confirm that each agent you noted"
+" in [Section 2 step 6](#2-pre-flight-checklist) is present. Migrated "
+"agents have no creator listed; system admins can edit and delete them "
+"from the row overflow menu."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:150
+msgid "**Spot-check migrated agent configuration.**"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:151
+msgid ""
+"Open the agent. Confirm the **Configuration** tab shows the expected "
+"display name, username, service, model, and custom instructions."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:152
+msgid ""
+"Confirm the **Access** tab shows the channel, user, team, and admin "
+"restrictions you expect."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:153
+msgid ""
+"Confirm the **MCPs** tab shows **Automatically enable all MCP tools** "
+"turned on (this preserves the v1.x behavior)."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:154
+msgid "**Re-enable user traffic.** End the maintenance window."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:156
+msgid "7.2 Secondary path: Upload the plugin bundle"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:158
+msgid ""
+"Use this path only when you manage the Agents plugin bundle separately "
+"from the Mattermost server package."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:160
+msgid ""
+"**Take backups.** Back up the Mattermost database, `config.json`, and any"
+" separate indexed-vector storage."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:161
+msgid ""
+"**Disable the plugin.** From **System Console > Plugin Management**, "
+"locate **Mattermost AI** / **Mattermost Agents** and select **Disable**. "
+"This prevents new traffic during the bundle swap."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:162
+msgid ""
+"**Upload the v2.0.0 bundle.** Download the v2.0.0 plugin bundle "
+"(`.tar.gz`) from the [GitHub releases page](https://github.com/mattermost"
+"/mattermost-plugin-agents/releases). In **System Console > Plugin "
+"Management**, select **Upload Plugin** and upload the bundle. If a "
+"previous version is shown alongside the new bundle, remove the old "
+"version after confirming the new one is selected."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:163
+msgid ""
+"**Re-enable the plugin.** Set the plugin to **Enabled**. On startup, "
+"v2.0.0 runs migrations 000005, 000006, and 000007, then performs the "
+"legacy bot migration described in [Section 4](#4-what-gets-migrated-"
+"automatically)."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:164
+msgid ""
+"**Complete the same post-upgrade checks.** Watch the logs, confirm "
+"migrated agents are present, and spot-check migrated agent configuration "
+"as described in [Section 7.1](#71-primary-path-upgrade-mattermost)."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:166
+msgid "8. Rollback considerations"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:168
+msgid ""
+"Some v2.0.0 migrations cannot be cleanly reversed in production. Plan "
+"accordingly."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Change"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Reversible?"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Notes"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Migration 000005 (`Agents_UserAgents` table)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Yes (drops table)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid ""
+"Down migration drops the table and supporting indexes. Any agents created"
+" or edited from the v2 UI between upgrade and rollback are lost."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Migration 000006 (bot fields on `Agents_UserAgents`)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Yes (drops columns)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Down migration drops the added columns."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Migration 000007 (`LLM_Conversations`, `LLM_Turns`, drop `LLM_PostMeta`)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "**Partial**"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid ""
+"Down migration drops `LLM_Conversations` and `LLM_Turns` and recreates an"
+" empty `LLM_PostMeta`. `LLM_PostMeta` content (v1.x conversation titles) "
+"cannot be recovered after migration 000007 drops the table — restore from"
+" backup if you need that data."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "Legacy bot migration (`config.bots` cleared)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid "**Manual**"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md
+msgid ""
+"The v2 plugin clears `config.bots` after migration. To roll back, restore"
+" the pre-upgrade `config.json` from your pre-flight backup."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:177
+msgid "The supported rollback path is therefore:"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:179
+msgid "Disable the v2.0.0 plugin."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:180
+msgid "Restore the database from the pre-upgrade backup."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:181
+msgid "Restore `config.json` from the pre-upgrade backup."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:182
+msgid "Reinstall the prior v1.x plugin bundle and re-enable."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:184
+msgid ""
+"Do not attempt a rollback that runs only the down migrations — "
+"`LLM_PostMeta` content (v1.x conversation titles) cannot be recovered "
+"after migration 000007 drops the table; restore from backup if you need "
+"that data."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:186
+msgid "9. HA-specific notes"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:188
+msgid ""
+"In HA deployments, complete the upgrade during a maintenance window and "
+"allow the cluster to start normally. Agents coordinates the schema "
+"migrations and legacy bot migration so only one node performs the data "
+"migration work."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:190
+msgid ""
+"After startup, check logs from all nodes for migration errors and confirm"
+" the **Agents** page shows the expected migrated agents. If one node "
+"reports migration errors while another node succeeds, stop the rollout, "
+"preserve the logs, and contact Mattermost Support before retrying."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:192
+msgid "10. Verification checklist"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:194
+msgid "Tick through this list before ending the upgrade window."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:196
+msgid ""
+"Plugin status in **System Console > Plugin Management** shows v2.0.0 "
+"enabled with no errors."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:197
+msgid ""
+"Server logs show successful execution of migrations 000005, 000006, "
+"000007."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:198
+msgid ""
+"Server logs show `Migrated legacy config bots to self-service agents "
+"table` (or no legacy bots existed in the source install)."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:199
+msgid ""
+"The top-level **Agents** product page is reachable from the Mattermost "
+"product menu."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:200
+msgid ""
+"Every bot that existed in v1.x appears as an agent in the **Agents** list"
+" with the same display name, username, and service binding."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:201
+msgid ""
+"Editing a migrated agent shows the expected access rules and "
+"**Automatically enable all MCP tools** turned on."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:202
+msgid ""
+"**System Console > Plugins > Agents > AI Bots** redirects to the "
+"**Agents** product page."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:203
+msgid ""
+"**System Console > Plugins > Agents > Model Context Protocol (MCP)** does"
+" not show **Enable MCP Client** or **Enable Embedded Server** toggles."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:204
+msgid ""
+"Embedding search status (if previously enabled) shows healthy in **System"
+" Console > Plugins > Agents > Embedding Search**, and any prior reindex "
+"job is no longer stuck."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:206
+msgid "11. Troubleshooting"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:208
+msgid ""
+"If the upgrade fails, stop the rollout and preserve the Mattermost server"
+" logs from every node. Restore the database and `config.json` from the "
+"pre-upgrade backups if you need to return service to the prior version."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:210
+msgid ""
+"If migrations fail, the legacy bot migration does not complete, or "
+"migrated agents do not appear on the **Agents** page after startup, "
+"contact Mattermost Support with the server version, Agents plugin "
+"version, migration log entries, and whether the deployment is single-node"
+" or HA."
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:212
+msgid "12. Where to get help"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:214
+msgid ""
+"**Issue tracker:** [github.com/mattermost/mattermost-plugin-"
+"agents/issues](https://github.com/mattermost/mattermost-plugin-"
+"agents/issues)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:215
+msgid ""
+"**Release notes:** [github.com/mattermost/mattermost-plugin-"
+"agents/releases](https://github.com/mattermost/mattermost-plugin-"
+"agents/releases)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:216
+msgid "**Admin guide:** [admin_guide.md](admin_guide.md)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:217
+msgid "**Provider configuration guide:** [providers.md](providers.md)"
+msgstr ""
+
+#: ../../source/agents/docs/upgrading_to_2.0.md:218
+msgid ""
+"**Mattermost support channels:** customers with a support contract should"
+" open a case through the standard Mattermost support process and "
+"reference this upgrade guide."
+msgstr ""
+

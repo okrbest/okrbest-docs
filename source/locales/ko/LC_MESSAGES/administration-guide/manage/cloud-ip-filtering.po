@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:2
+msgid "Cloud IP Filtering"
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:4
+msgid ""
+"IP filtering is a powerful security feature that allows system admins to "
+"control access to their workspace by defining approved IP ranges. Only "
+"users within these specified IP ranges can access the workspace, ensuring"
+" enhanced security for your workspace."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:6
+msgid "**IP filtering requires a subscription to Mattermost Cloud Enterprise.**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:9
+msgid "Configure IP filtering"
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:11
+msgid ""
+"**Log in as system admin**: As a system admin, access the System Console "
+"of your workspace by selecting the **Product** |product-list| menu and "
+"selecting **System Console**."
+msgstr ""
+
+#: ../../<rst_prolog>:100
+msgid ""
+"Navigate between Channels, collaborative playbooks, and boards using the "
+"product menu icon."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:12
+msgid "**Go to Site Configuration**: Go to the **Site Configuration** section."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:13
+msgid ""
+"**Access IP Filtering Settings**: Under **Site Configuration**, select "
+"**IP Filtering** to access the IP Filtering settings."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:15
+msgid ""
+"An example of the System Console interface where admins can configure IP "
+"filtering."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:19
+msgid "About CIDR notation"
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:21
+msgid ""
+"CIDR (Classless Inter-Domain Routing) notation is used to specify a range"
+" of IP addresses. It consists of an IP address followed by a forward "
+"slash and a number indicating the network's prefix length. For example:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:23
+msgid ""
+"``192.168.0.0/24`` represents the IP range from ``192.168.0.0`` to "
+"``192.168.0.255``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:24
+msgid ""
+"The ``/24`` signifies that the first 24 bits are the network address, "
+"leaving 8 bits for host addresses."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:28
+msgid ""
+"For a more in-depth explanation of CIDR notation, refer to `this article "
+"<https://aws.amazon.com/what-is/cidr/>`_."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:31
+msgid "Configure IP filters"
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:34
+msgid "Enable/disable IP filtering"
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:36
+msgid "System admins have the option to enable or disable IP filtering:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:38
+msgid ""
+"**Enable:** To activate IP filtering, ensure at least one IP range is "
+"added to the whitelist."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:39
+msgid ""
+"**Disable:** Temporarily disable IP filtering by removing all IP ranges "
+"from the whitelist, or by flipping the global IP Filtering toggle in the "
+"System Console."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:41
+msgid ""
+"An example of enabling and disabling Mattermost IP filtering in the "
+"System Console."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:45
+msgid "Add an IP range"
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:47
+msgid "To add an IP range to the whitelist, follow these steps:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:49
+msgid ""
+"Select the **Add Filter** button within the IP Filtering settings page in"
+" the System Console."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:50
+msgid "Enter the IP range using CIDR notation. For example, ``192.168.1.0/24``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:51
+msgid ""
+"Provide a descriptive name or label for the IP range to ease "
+"identification in the future."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:52
+msgid "Save the changes."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:54
+msgid "An example of adding an IP filter range for a Mattermost Cloud deployment."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:59
+msgid ""
+"The System Console will restrict you from saving changes if the IP "
+"address you are accessing your workspace on is not within the ranges you "
+"have specified at the time you save your changes."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:61
+msgid ""
+"An example of the Mattermost System Console blocking changes to IP "
+"filtering."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:65
+msgid "Edit or remove an existing IP range"
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:67
+msgid "To edit or remove an existing IP range from the whitelist:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:69
+msgid ""
+"Locate the IP range you want to modify within the **IP Filtering** "
+"settings."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:70
+msgid ""
+"Hover over the rule you'd like to edit or delete, and select the "
+"respective edit or delete option beside the IP range."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:71
+msgid "Make necessary changes or confirm the removal of the IP range."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:72
+msgid "Save your changes by selecting **Save**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:75
+msgid "Unable to access your workspace?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:77
+msgid ""
+"If you are unable to access your workspace due to previously set IP "
+"filters, and you need to regain access to your workspace, `contact our "
+"support team <https://mattermost.com/support/>`_."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:81
+msgid ""
+"Going through this process will disable **all** existing rules applied to"
+" your workspace. This means that any IP address will now be able to "
+"access it."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:84
+msgid "Conclusion"
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:86
+msgid ""
+"By configuring IP filters using CIDR notation, system admins can "
+"effectively manage access to the workspace, enhancing security by "
+"allowing access only from specified IP ranges."
+msgstr ""
+
+#: ../../source/administration-guide/manage/cloud-ip-filtering.rst:88
+msgid ""
+"For any further assistance or queries, `contact our support team "
+"<https://mattermost.com/support/>`_."
+msgstr ""
+

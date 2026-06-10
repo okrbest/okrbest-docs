@@ -1,0 +1,1024 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:2
+msgid "Migrate from Slack"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:8
+msgid "Overview"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:10
+msgid ""
+"Mattermost provides a reliable migration path from Slack, enabling you to"
+" bring your organization’s collaboration history into a secure, self-"
+"hosted Mattermost environment. The migration process supports full "
+"workspaces, including users, channels and message history, direct "
+"messages, and threads so your teams can continue working without losing "
+"valuable context."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:12
+msgid ""
+"This process generally involves preparing your environment, exporting "
+"data from Slack, converting that data into a compatible format, and then "
+"importing it into Mattermost. Migrating from Slack is a multi-step "
+"process that can be complex, particularly for larger organizations or "
+"those with multiple Slack workspaces."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:14
+msgid ""
+"Additionally, please consider that Slack's data control policies or "
+"export capabilities may change at any time, or they may charge fees to "
+"customers for exporting data stored in Slack. Support for negotiating "
+"export of customer IP from Slack Enterprise can be requested by "
+"contacting a `Mattermost Expert <https://mattermost.com/contact-"
+"sales/>`_."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:16
+msgid "`Preparations <#preparations>`__:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:18
+msgid "Answer key scoping questions."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:19
+msgid "Gather environment and export details."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:20
+msgid "Validate Mattermost server capacity and configuration."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:21
+msgid "Back up your Mattermost environment before importing."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:23
+msgid "`Export Slack data <#export-slack-data>`__:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:25
+msgid "Generate an export from Slack."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:27
+msgid ""
+"`Transform the export for Mattermost <#transform-the-export-for-"
+"mattermost>`__:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:29
+msgid "Validate the Slack export using ``mmetl check slack``."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:31
+msgid "Use the ``mmetl`` tool to parse and transform Slack exports."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:33
+msgid "`Import into Mattermost <#import-data-into-mattermost>`__:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:35
+msgid "Upload and process transformed archives with ``mmctl``."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:37
+msgid "Validate and test:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:39
+msgid "Confirm channel and user data imported correctly."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:40
+msgid "Run database queries to fix any unread states."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:42
+msgid "Go live:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:44
+msgid "Communicate the cutover plan to users."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:47
+msgid "Migration timeline"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:49
+msgid ""
+"These instructions outline a *best effort* migration path designed to "
+"preserve the majority of your messages, files, and workspace structure. "
+"Mattermost provides tools and guidance to help streamline the process, "
+"but manual adjustments during the data transformation and import steps "
+"are often required. Successful migration depends on careful planning and "
+"dedicating sufficient time, technical resources, and technical skills to "
+"the effort."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:51
+msgid ""
+"Depending on the size and complexity of your Slack environment, a full "
+"migration can take anywhere from several days to multiple weeks of "
+"dedicated effort. Larger organizations with multiple workspaces, "
+"extensive message history, and many files should expect the process to "
+"require significant iteration and testing before completion. It’s "
+"important to plan for this timeline in advance by allocating the "
+"necessary resources, scheduling time for trial imports in a development "
+"environment, and coordinating across teams. Building in extra time for "
+"adjustments during the transformation and import steps will help ensure a"
+" smoother transition and reduce disruption to your users."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:53
+msgid ""
+"Scoping the migration appropriately during the preparation step can "
+"significantly reduce processing time and allow for faster iteration. "
+"Before beginning, carefully consider what data is essential to bring over"
+" to Mattermost. Many organizations find that not every channel or file "
+"needs to be migrated, and focusing only on what is truly needed can save "
+"substantial processing time and manual effort. By setting clear "
+"boundaries early, you’ll minimize the amount of data that requires manual"
+" intervention and testing, which in turn shortens the migration timeline "
+"and helps avoid unnecessary complexity."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:56
+msgid ""
+"Consider `talking to a Mattermost expert <https://mattermost.com/contact-"
+"sales/>`_ if your organization needs support migrating from Slack to "
+"Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:59
+msgid "Migrations Steps"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:64
+msgid "1. Preparations"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:66
+msgid ""
+"Before beginning the migration, it’s important to properly prepare your "
+"environment. Careful preparation helps reduce processing time, allows for"
+" faster iteration, and minimizes the chance of running into avoidable "
+"issues during the import."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:68
+msgid ""
+"This document assumes you already have a Mattermost Server deployed that "
+"is ready to accept your Slack data. If not, consider the recommendations "
+"in this section in conjunction with the appropriate :ref:`deployment "
+"documentation <deployment-guide/server/server-deployment-"
+"planning:deployment options>` to make informed decisions about your "
+"supporting database and file storage infrastructure."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:71
+msgid "Scope definition"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:73
+msgid "Start by defining the scope of your migration:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:75
+msgid ""
+"**Slack edition**: Migrating from Slack Enterprise Grid involves "
+"additional `steps and planning <#faq>`_."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:76
+msgid ""
+"**Data history**: Decide how much history is necessary to import. "
+"Importing a smaller time window (e.g., the last six months) can "
+"significantly reduce complexity and processing time."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:77
+msgid ""
+"**Export size**: Consider the size of your Slack export file as you "
+"progress through this guide. File size directly impacts how long the "
+"import will take - for example, files under ~25 GB often complete within "
+"a day, while exports over 100 GB can take several days, significantly "
+"lengthening the time between iterations and the overall timeline to "
+"complete the migration."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:78
+msgid ""
+"**File attachments**: Consider whether you can exclude very large or non-"
+"critical attachments (for example, public software download packages, "
+"videos, or outdated media assets) to reduce import size and speed up "
+"processing."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:81
+msgid "Infrastructure considerations"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:83
+msgid ""
+"The environment where you run the import can significantly affect "
+"performance:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:85
+msgid ""
+"**Test environment**: Always run the migration in a development or "
+"staging environment first. Most migrations require multiple iterations "
+"before a production import is successful."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:86
+msgid ""
+"**Operating system**: The ``mmetl`` tool is supported on Linux and macOS."
+" Windows is not supported, and we do not recommend using Windows "
+"Subsystem for Linux (WSL) since the file system is not performant enough "
+"for the heavier processes involved in migration."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:87
+msgid ""
+"**Storage requirements**: Ensure your server can store both the Slack "
+"export archive and the fully unpacked data. As a best practice, plan for "
+"at least three times the size of your Slack export in available server "
+"storage."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:88
+msgid ""
+"**File Storage**: Imports into S3 file storage typically complete faster "
+"than imports into local storage or NFS. For large imports, we recommend "
+"using AWS S3 or another S3-compatible storage service for best "
+"performance."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:91
+msgid "Mattermost server considerations"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:93
+msgid ""
+"Carefully preparing your environment and making these adjustments up "
+"front will help ensure the migration proceeds smoothly and reduces the "
+"need for repeated trial-and-error."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:95
+msgid ""
+"**Fresh server**: The most reliable imports happen on a fresh Mattermost "
+"installation. If importing into an existing server, never import over an "
+"existing team."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:97
+msgid ""
+"**Server version**: Make sure you are running the latest supported "
+"version of :doc:`Mattermost </product-overview/mattermost-server-"
+"releases>` to benefit from the most up-to-date functionality and fixes."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:99
+msgid ""
+"**Backups**: When importing into an already existing Mattermost "
+"environment, back up both the Mattermost database and the data directory "
+"before starting. If an import fails, you’ll need to roll back or reset."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:101
+msgid ""
+"If merging multiple Slack workspaces into a single team is the desired "
+"end-result, we recommend completing the import to separate teams, "
+"validating the results, then using :ref:`mmctl <administration-"
+"guide/manage/mmctl-command-line-tool:mmctl channel move>` to move "
+"channels between teams."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:103
+msgid ""
+"**Configuration settings**: Adjust the following settings before starting"
+" the import:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:105
+msgid ""
+"``TeamSettings.MaxChannelsPerTeam``: Set this to a number much higher "
+"than the number of channels you are migrating."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:106
+msgid ""
+"``TeamSettings.MaxUsersPerTeam``: Set this to a number much higher than "
+"the number of users you are migrating."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:107
+msgid ""
+"**Team Settings > Allow any user with an account on this server to join "
+"this team**: Ensure this is enabled for the team receiving the import."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:108
+msgid ""
+"``EmailSettings.EnableSignUpWithEmail`` and "
+"``EmailSettings.EnableSignInWithEmail``: Both must be set to ``true``"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:109
+msgid ""
+"``FileSettings.MaxFileSize``: Set this higher than the largest file in "
+"your Slack export."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:110
+msgid ""
+"``ElasticsearchSettings.EnableIndexing``, ``ElasticsearchSettings > "
+"EnableSearching`` and ``ElasticsearchSettings.EnableAutocomplete``: All "
+"must be set to ``false`` during the import to prevent performance issues."
+" After the import, you can purge and reindex before enabling "
+"Elasticsearch."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:115
+msgid "2. Export Slack data"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:117
+msgid ""
+"Slack offers two ways to `export your data from their product "
+"<https://slack.com/help/articles/201658943-Export-your-workspace-data>`_."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:119
+msgid ""
+"**Public channels export** - Contains only public channel messages and "
+"file links. Available on all Slack plans. Generate this from **Slack > "
+"Admin > Workspace settings > Security > Import & export data > Export**."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:120
+msgid ""
+"**All channels and conversations export** - Contains all messages "
+"including public channels, private channels, DMs, and group messages. "
+"Available on Business+ (requires application approval from the workspace "
+"primary owner) and Enterprise Grid plans."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:122
+msgid "You will receive a zip file containing the following contents:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:124
+msgid "Channels (``channels.json``)"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:125
+msgid "Users (``users.json``)"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:126
+msgid "Direct messages (``dms.json``) (All channels export)"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:127
+msgid "Private channels (``groups.json``) (All channels export)"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:128
+msgid "Group direct messages (``mpims.json``) (All channels export)"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:129
+msgid "App activity logs (``integration_logs.json``)"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:130
+msgid "Folders containing posts for every public channel"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:131
+msgid "Folders containing posts for every private channel (All channels export)"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:135
+msgid ""
+"Refer to the `Slack help article "
+"<https://slack.com/help/articles/220556107-How-to-read-Slack-data-"
+"exports>`__ for additional details on zip file contents."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:136
+msgid ""
+"As a proprietary SaaS service, Slack is able to change its export format "
+"quickly and without notice."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:137
+msgid ""
+"Workspaces on the Slack Free plan can only export file links from the "
+"last 90 days."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:141
+msgid ""
+"Avoid unzipping and rezipping the Slack export. Doing so can modify the "
+"directory structure of the archive which could cause issues with the "
+"import process."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:146
+msgid "3. Transform the export for Mattermost"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:148
+msgid ""
+"Now that you have a Slack export file, let's convert it into Mattermost's"
+" bulk import format using the import preparation tool ``mmetl``."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:150
+msgid ""
+"`Download the latest release of mmetl "
+"<https://github.com/mattermost/mmetl/releases/>`__ for your OS and "
+"architecture. Run ``mmetl help`` to learn more about using the tool."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:153
+msgid "Validate the Slack export"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:155
+msgid ""
+"Before transforming, validate the integrity of your Slack export using "
+"the ``mmetl check`` command:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:161
+msgid ""
+"This checks for structural issues in the export archive and reports any "
+"problems that may cause the transform or import to fail."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:164
+msgid "Run the transform"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:166
+msgid ""
+"Run the command below to create a Mattermost bulk import file. Replace "
+"``<TEAM-NAME>`` with the name of your team in Mattermost. Note that the "
+"name needs to be one word and lowercase (i.e. if you named your team ``My"
+" Team``, ``<TEAM-NAME>`` would be ``my-team``)."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:170
+msgid ""
+"The team must already exist on your Mattermost server before importing, "
+"and **Allow any user with an account on this server to join this team** "
+"must be enabled for that team."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:176
+msgid ""
+"The tool outputs a `.jsonl <https://jsonlines.org/examples>`__ file "
+"containing all of your users, channels, and posts. It also creates a "
+"``data`` folder that contains all of your attachments. It doesn't matter "
+"what you name the ``.jsonl`` file. You can name it what you want with the"
+" ``--output`` flag as shown above. It just needs to be a ``.jsonl`` file."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:179
+msgid "Useful transform flags"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:181
+msgid ""
+"The ``mmetl transform slack`` command supports several optional flags "
+"that can help with common migration scenarios:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:183
+msgid ""
+"``--skip-attachments`` / ``-a``: Skip copying attachments from the import"
+" file. Useful for faster iteration when testing the import process before"
+" including attachments."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:184
+msgid "``--allow-download`` / ``-l``: Allow downloading attachments from URLs."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:185
+msgid ""
+"``--default-email-domain <DOMAIN>``: When a user's email is missing from "
+"the export, generate one from their username and the provided domain "
+"(e.g., ``--default-email-domain example.com``)."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:186
+msgid ""
+"``--skip-empty-emails``: Allow users with empty email addresses to be "
+"included in the output. Note that this results in invalid import data "
+"that will need to be manually corrected before importing."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:187
+msgid ""
+"``--discard-invalid-props`` / ``-p``: Discard posts with invalid "
+"properties. By default, such posts are kept but imported without their "
+"properties."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:190
+msgid "Debug transform"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:192
+msgid ""
+"The ``mmetl transform`` process produces a ``transform-slack.log`` file "
+"that records INFO level output by default."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:194
+msgid ""
+"If you run the import commands with the ``--debug`` flag, the log will "
+"include additional ``DEBUG`` level entries. These entries provide more "
+"granular detail on each phase of the process, which can help identify "
+"where the transformation may be slowing down or failing."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:197
+msgid "MMETL parsing phases"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:199
+msgid ""
+"When parsing a Slack export file with the ``mmetl`` tool, the process "
+"runs through four phases. You can track progress by monitoring the log "
+"output during each phase. Understanding these phases helps set "
+"expectations for how long the parsing step may take."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:201
+msgid "**1. Reading the import file**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:203
+msgid ""
+"In this phase, ``mmetl`` reads through the Slack export file. Example log"
+" line:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:205
+#, python-brace-format
+msgid ""
+"``{\"file\":\"parse.go:359\",\"level\":\"info\",\"msg\":\"Processing file"
+" 1 of 10335: aluminum-white-"
+"lightbulb/\",\"time\":\"2024-03-11T20:41:09-04:00\"}``"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:207
+msgid ""
+"This step usually takes 5–10 minutes depending on the size of the export "
+"archive."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:209
+msgid "**2. Converting user mentions**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:211
+msgid ""
+"During this phase, ``mmetl`` converts Slack user mentions into "
+"Mattermost-compatible format. Example log line:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:213
+#, python-brace-format
+msgid ""
+"``{\"file\":\"parse.go:224\",\"level\":\"debug\",\"msg\":\"Slack Import: "
+"converting user mentions for channel touchscreen-headphones-sleek. 1 of "
+"400\",\"time\":\"2024-03-11T20:41:10-04:00\"}``"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:215
+msgid ""
+"This step can be time-consuming on large imports and may take several "
+"hours."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:217
+msgid "**3. Converting channel mentions**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:219
+msgid "In this phase, channel references are updated. Example log line:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:221
+#, python-brace-format
+msgid ""
+"``{\"file\":\"parse.go:259\",\"level\":\"debug\",\"msg\":\"Slack Import: "
+"converting channel mentions for channel robust-smart-home-device-matrix. "
+"95 of 400\",\"time\":\"2024-03-11T20:41:48-04:00\"}``"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:223
+msgid ""
+"This step typically completes in about half the time required for user "
+"mentions."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:225
+msgid "**4. Converting post markup**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:227
+msgid ""
+"Finally, Slack message formatting is converted into Mattermost-compatible"
+" Markdown. Example log line:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:229
+#, python-brace-format
+msgid ""
+"``{\"file\":\"parse.go:330\",\"level\":\"debug\",\"msg\":\"Slack Import: "
+"converting markdown for channel vertex-robust-vacuum. 120 of "
+"400\",\"time\":\"2024-03-11T20:41:58-04:00\"}``"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:231
+msgid "This is the fastest step and usually completes quickly."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:236
+msgid "4. Import data into Mattermost"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:238
+msgid ""
+"You can upload the export through Mattermost's API from the server or "
+"from another computer using mmctl commands. The server will save the "
+"import in its file store before running the import (e.g. AWS S3), so "
+"there will be time spent uploading/downloading the file in this case."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:240
+msgid ""
+"The migration is idempotent, meaning that you can run multiple imports "
+"that contain the same posts, and there won't be duplicated created posts "
+"in Mattermost. Each post is imported with the correct user/author and "
+"``created_at`` value from your Slack instance."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:242
+msgid ""
+"Ensure you have the Mattermost command line tool ``mmctl`` installed. "
+"This allows you to perform different tasks that communicate to "
+"Mattermost's API. You'll also want to :ref:`configure authentication "
+"<administration-guide/manage/mmctl-command-line-tool:mmctl auth>` for the"
+" tool."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:244
+msgid ""
+"To prepare our files to be uploaded to the server, we need to put both "
+"the ``.jsonl`` file and ``data`` folder together into a zip file."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:250
+msgid ""
+"Validate the import file locally before uploading. This checks the file "
+"structure and content without needing to upload it to the server:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:256
+msgid ""
+"Then we can upload the zip file to our Mattermost server. These files can"
+" be very large, so getting them onto the server can be challenging. You "
+"have two primary options for this step:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:258
+msgid "You can use the ``mmctl`` tool:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:264
+msgid ""
+"Alternatively, you can move the file directly to the data directory under"
+" ``data/import`` and give it a unique name."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:266
+msgid "Run this command to list the available imports:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:272
+msgid ""
+"Run this command to process the import. Replace ``<IMPORT FILE NAME>`` "
+"with the name you got from the ``mmctl import list available`` command:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:278
+msgid ""
+"Finally, run this command to view the status of the import process job. "
+"If the job status shows as ``pending``, then wait before running the "
+"command again. The ``--json`` flag is required to view the possible error"
+" message. Replace ``<JOB ID>`` with the id you got from the ``mmctl "
+"import job list`` command:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:285
+msgid "Debug imports"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:287
+msgid ""
+"You can use the ``mmctl import job show`` command to view any relevant "
+"errors that may have occurred."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:290
+msgid "Fixing unread channels and threads"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:292
+msgid ""
+"After importing, all messages may appear as unread for users. To resolve "
+"this issue, run the following SQL queries directly against the Mattermost"
+" database:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:329
+msgid "Address placeholder emails"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:331
+msgid ""
+"During the import process, the emails and usernames from Slack are used "
+"to create new Mattermost accounts. If emails are not present in the Slack"
+" export archive, then placeholder values will be generated and the system"
+" admin will need to update these manually. We recommend administrators "
+"search the final import ``jsonl`` file for ``user`` lines with "
+"``@example.com`` in the email property to address and resolve the missing"
+" information prior to import."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:334
+msgid "Email verification behavior"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:336
+msgid ""
+"The email verification process during Slack import depends on who "
+"performs the import:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:338
+msgid "**System administrator imports:**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:340
+msgid "Email addresses are automatically verified during the import process."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:341
+msgid ""
+"Users can immediately use the **Password Reset** feature to set their "
+"password."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:342
+msgid "No email verification steps are required before password reset."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:344
+msgid "**Non-administrator imports:**"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:346
+msgid "Email addresses remain unverified after import."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:347
+msgid ""
+"Users must first verify their email addresses before they can reset their"
+" password."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:348
+msgid "Additional email verification steps are required before account access."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:351
+msgid "Account activation"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:353
+msgid ""
+"Slack users activate their new Mattermost accounts by using Mattermost's "
+"**Password Reset** screen with their email addresses from Slack to set "
+"new passwords for their Mattermost accounts. See the instructions on how "
+"to :ref:`migrate user authenticatation to LDAP or SAML <administration-"
+"guide/manage/mmctl-command-line-tool:mmctl user migrate-auth>`."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:355
+msgid ""
+"For imports performed by System Admins: Users can immediately use the "
+"**Password Reset** feature (no email verification is required)."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:356
+msgid ""
+"For imports performed by non-administrators: Users must first verify "
+"their email addresses, then use the **Password Reset** feature."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:358
+msgid ""
+"Once logged in, Mattermost users will have access to previous Slack "
+"messages in the public channels imported from Slack."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:361
+msgid "FAQ"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:364
+msgid "What additional considerations are there for Slack Enterprise Grid?"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:366
+msgid ""
+"Slack Enterprise Grid combines multiple workspaces under a single "
+"management plane and the associated export reflects that complexity. An "
+"Enterprise Grid export is a single archive containing all workspaces and "
+"shared channels."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:368
+msgid ""
+"Mattermost does not support shared channels between teams, so Slack "
+"Shared Channels must be mapped to a single team in Mattermost. We can "
+"create this mapping by determining the originating teams in Slack and "
+"creating a ``team.json`` mapping file for use with ``mmetl``. Because of "
+"the manual effort required to identify and map team IDs, Enterprise Grid "
+"migrations are typically more time-consuming than single-workspace "
+"migrations. Plan additional time and resources to complete this step "
+"successfully."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:371
+msgid "Export structure"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:373
+msgid ""
+"At the root level, you’ll see shared channels that span across Slack "
+"workspaces, and under ``/teams/`` you’ll find per-workspace data such as "
+"channels and users files. A typical structure looks like:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:410
+msgid "Mapping shared channels to Mattermost teams"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:412
+msgid "Download the full Enterprise Grid export from Slack."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:414
+msgid ""
+"To determine where each shared channel belongs in Mattermost, look for a "
+"``team`` attribute on the first post in each shared channel. These "
+"``team`` values map the channel back to its originating workspace in "
+"Slack. This is where each shared channel will live in Mattermost once "
+"imported."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:431
+msgid ""
+"Create a ``teams.json`` file that maps Slack team IDs to each ``team`` "
+"attribute you found above. For example:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:440
+msgid ""
+"Run the ``mmetl grid-transform`` command to split the Enterprise Grid "
+"export into per-team files:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:446
+msgid ""
+"This process outputs a new archive for each team defined in "
+"``teams.json``. Once split, you can continue the standard Mattermost "
+"import process on each file."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:449
+msgid ""
+"Are there features of Slack that are not supported for migration to "
+"Mattermost?"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:451
+msgid ""
+"The Slack import process focuses on preserving core collaboration data "
+"such as messages, files, channels, and users. However, certain Slack "
+"features are not supported by the Mattermost product and thus will not be"
+" migrated using the import tools in this document:"
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:453
+msgid ""
+"**Slack apps and integrations**: Installed apps, bots, slash commands, "
+"webhooks, workflow builder and other integrations do not migrate. Most "
+"integrations supported by Slack can be recreated using the "
+":doc:`integration and automation </integrations-guide/integrations-guide-"
+"index>` options in Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:454
+msgid "**Starred conversations**: Starred conversations are not preserved."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:455
+msgid ""
+"**User groups**: User groups from Slack are not preserved, however they "
+"can be recreated in Mattermost using the :doc:`Custom Groups </end-user-"
+"guide/collaborate/organize-using-custom-user-groups>` feature."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:456
+msgid ""
+"**Threaded conversations**: Slack threads are mostly supported, however "
+"some threading relationships may not always be preserved given the "
+"differences in how Mattermost and Slack threading works."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:457
+msgid ""
+"**Canvases**: Canvases are not supported in Mattermost and will not be "
+"migrated."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:458
+msgid ""
+"**User presence and profiles**: User status (online/away), profile "
+"pictures, and custom profile fields do not carry over. Users will need to"
+" update their profiles in Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:459
+msgid ""
+"**Channel memberships for deactivated users**: Deactivated or deleted "
+"Slack users are not migrated to Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/onboard/migrate-from-slack.rst:461
+msgid ""
+"Because of these limitations, some manual reconfiguration is typically "
+"required after the import, especially for workflows and integrations. "
+"Support from a `Mattermost expert is available <https://mattermost.com"
+"/contact-sales/>`_ for your Slack migration."
+msgstr ""
+

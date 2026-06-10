@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/integrations-guide/faq.rst:2
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:5
+msgid "What is meant by no-code, low-code, and pro-code?"
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:10
+msgid "No-code"
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:12
+msgid ""
+"Integration or automation can be achieved without writing any code. All "
+"configuration is done via user-friendly interfaces or by installing pre-"
+"made components. This is ideal for non-technical users or admins."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:14
+msgid ""
+"For example, installing a plugin from the marketplace or using a drag-"
+"and-drop automation tool would be considered no-code. The heavy lifting "
+"is pre-built and you just need to configure it."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:19
+msgid "Low-code"
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:21
+msgid ""
+"Minimal coding or scripting is needed to implement the integration. Low-"
+"code solutions might require writing a few lines of script or simple "
+"configuration in code-like logic, but not building a full software "
+"application."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:23
+msgid ""
+"In Mattermost’s context, something like setting up a webhook with a small"
+" custom script, or tweaking an automation template would be considered "
+"low-code. It typically assumes some technical knowledge, but far less "
+"than full-scale development. Utilizing templates or online AI tooling can"
+" likely meet the need for most low-code integration requirements."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:28
+msgid "Pro-code"
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:30
+msgid ""
+"These kinds of integrations require a professional software developer to "
+"write code and sometimes build underlying infrastructure. These "
+"integrations offer maximum flexibility at the cost of technical "
+"complexity, for example building a custom Mattermost plugin or writing a "
+"complex bot program using the Mattermost API in a custom application."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:32
+msgid ""
+"Pro-code integrations are essentially software projects – you’ll use "
+"developer tools, work with source code, and follow software development "
+"practices to build and maintain them."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:35
+msgid "What does Slack-compatible mean?"
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:37
+msgid ""
+"Slack compatible means that Mattermost accepts integrations that have a "
+"payload in the same format as Slack's legacy \"Message Attachment\" "
+"payload. If you have a Slack integration, you should be able to set it up"
+" in Mattermost without changing the format of the message being sent "
+"over."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:40
+msgid "What if I have a webhook from somewhere other than Slack?"
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:42
+msgid ""
+"If you have an integration that outputs a payload in a different format, "
+"you need an intermediary service to act as a translation layer to change "
+"it to the format Mattermost uses. These intermediary services could be "
+"no-code or low-code integrations with n8n, Zapier, or Make, but they "
+"could also be pro-code integrations leveraging something like AWS Lambda "
+"or other hosted services."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:44
+msgid ""
+"There’s currently no general standard for webhook communication between "
+"services, so translating your webhooks is necessary otherwise Mattermost "
+"won't understand the data you're sending."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:47
+msgid "What are attachments?"
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:49
+msgid ""
+"When \"attachments\" are mentioned in Mattermost integrations "
+"documentation, it refers to Slack's message attachments functionality. "
+"These \"attachments\" can be optionally added as an array in the data "
+"sent by an integration, and are used to customize the formatting of the "
+"message."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:51
+msgid ""
+"Mattermost doesn't currently support the ability to attach files to a "
+"post made via webhook. You can use the API to attach files to a message "
+"if needed."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:54
+msgid "Where can I find existing integrations?"
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:56
+msgid ""
+"Visit the `Mattermost Marketplace <https://mattermost.com/marketplace>`__"
+" to access open source integrations to common tools like Jira, Jenkins, "
+"and GitLab, along with interactive bot applications, and other "
+"communication tools that are freely available for use and customization."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:58
+msgid ""
+"Alternatively, within Mattermost, when logged in as an Administrator, you"
+" can click on the \"Marketplace\" option in the main menu and easily "
+"install plugins or apps from there."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:61
+msgid "Where should I install my integrations?"
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:63
+msgid ""
+"For self-hosted deployments in small setups, you might host integrations "
+"on the same server on which Mattermost is installed. For larger "
+"deployments, you can set up a separate server for integrations, or add "
+"them to the server on which the external application is hosted."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:65
+msgid ""
+"For example, if you're self-hosting a Jira server you could deploy a Jira"
+" integration on the Jira server itself. When self-hosting restrictions "
+"are less strict, AWS, Heroku, and other public cloud options could also "
+"be used."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:68
+msgid "Where can I get more information about integrations?"
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:70
+msgid ""
+"Join our `Developers channel "
+"<https://community.mattermost.com/core/channels/developers>`_  on the "
+"Mattermost Community server  for technical discussions, and visit our "
+"`Integrations channel "
+"<https://community.mattermost.com/core/channels/integrations>`_ for all "
+"integrations and plugins discussions."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:73
+msgid ""
+"Can I use webhooks to be notified when new integrations are available on "
+"the Mattermost Marketplace?"
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:75
+msgid ""
+"Yes! A `bash script "
+"<https://gist.github.com/mickmister/543a49584146af18ba5e5f82dd86ea93>`_ "
+"is available that checks for new integrations in the Mattermost "
+"Marketplace, and triggers a post through a Mattermost `incoming webhook "
+"<https://developers.mattermost.com/integrate/webhooks/incoming/>`_ "
+"request. The script downloads the latest listing, compares it with a "
+"locally stored version of the listing, and, if a new plugin is "
+"identified, a notification is pushed to a Mattermost channel."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:78
+msgid ""
+"Can I use Mattermost to add messaging functionality to my proprietary "
+"SaaS service?"
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:80
+msgid ""
+"Mattermost is an open source, self-hosted alternative to proprietary SaaS"
+" services that lock in the data of users and customers."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:82
+msgid ""
+"While you're welcome to use the Mattermost source code under its open "
+"source license, Mattermost, Inc. does not offer support or technical "
+"advice for proprietary SaaS projects that result in customers potentially"
+" being paywalled from their data should they stop paying SaaS fees."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:84
+msgid ""
+"To learn more about why we strongly believe that users and customers "
+"should always have access to their data, please read `why we created "
+"Mattermost <https://mattermost.com/about-us/>`_."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:87
+msgid "Can I customize the source code?"
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:89
+msgid ""
+"Yes. As an open source project, we support your ability to modify the "
+"source code for the server or web app to make changes and customizations "
+"to meet your specific needs."
+msgstr ""
+
+#: ../../source/integrations-guide/faq.rst:91
+msgid ""
+"Learn about `forking our open source repositories "
+"<https://developers.mattermost.com/integrate/other-"
+"integrations/customization/>`_ and `customizing the Mattermost source "
+"code "
+"<https://developers.mattermost.com/integrate/customization/customization/>`_"
+" for your specific operational needs."
+msgstr ""
+

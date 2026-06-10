@@ -1,0 +1,743 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/agents/mcpserver/README.md:1
+msgid "Mattermost MCP Server"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:3
+msgid ""
+"A Model Context Protocol (MCP) server that provides AI agents and "
+"automation tools with secure access to Mattermost channels, users, and "
+"content."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:5
+msgid ""
+"**Standalone binary:** The `mattermost-mcp-server` process (for example, "
+"stdio transport for local clients) is intended for **development and "
+"local tooling only** and is **not** supported for production deployments."
+" For production, use the Agents plugin’s embedded MCP and the in-server "
+"integration described in the [admin guide](../docs/admin_guide.md"
+"#mattermost-mcp-server)."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:7
+msgid "Features"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:9
+msgid ""
+"**MCP Protocol Support**: Implements the Model Context Protocol for "
+"standardized AI agent communication"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:10
+msgid "**Authentication**: Personal Access Token (PAT) authentication"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:11
+msgid ""
+"**Transport** (development use): Configurable transport layer (stdio "
+"JSON-RPC for desktop clients, HTTP with SSE for web applications). The "
+"standalone binary note at the top of this file also applies. For "
+"production, use the Agents plugin’s embedded MCP and the [admin "
+"guide](../docs/admin_guide.md#mattermost-mcp-server)."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:12
+msgid ""
+"**Comprehensive Mattermost Integration**: Read posts, channels, search, "
+"create content"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:13
+msgid "**Dual Mode Operation**: Runs standalone or embedded in the AI plugin"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:15
+msgid "Tools Available"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:17
+msgid "The MCP server exposes the following tools to AI agents:"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:19
+msgid "`read_post`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:20
+msgid "Read a specific post and its thread from Mattermost."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:22
+#: ../../source/agents/mcpserver/README.md:29
+#: ../../source/agents/mcpserver/README.md:37
+#: ../../source/agents/mcpserver/README.md:46
+#: ../../source/agents/mcpserver/README.md:58
+#: ../../source/agents/mcpserver/README.md:69
+#: ../../source/agents/mcpserver/README.md:77
+#: ../../source/agents/mcpserver/README.md:85
+#: ../../source/agents/mcpserver/README.md:92
+#: ../../source/agents/mcpserver/README.md:98
+#: ../../source/agents/mcpserver/README.md:128
+msgid "**Parameters:**"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:23
+msgid "`post_id` (required): The ID of the post to read"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:24
+msgid ""
+"`include_thread` (optional): Whether to include the entire thread "
+"(default: true)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:26
+msgid "`read_channel`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:27
+msgid "Read recent posts from a Mattermost channel."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:30
+msgid "`channel_id` (required): The ID of the channel to read from"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:31
+msgid "`limit` (optional): Number of posts to retrieve (default: 20, max: 100)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:32
+msgid "`since` (optional): Only get posts since this timestamp (ISO 8601 format)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:34
+msgid "`search_posts`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:35
+msgid "Search for posts in Mattermost."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:38
+msgid "`query` (required): The search query"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:39
+msgid "`team_id` (optional): Team ID to limit search scope"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:40
+msgid "`channel_id` (optional): Channel ID to limit search to a specific channel"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:41
+msgid "`limit` (optional): Number of results to return (default: 20, max: 100)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:43
+msgid "`create_post`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:44
+msgid "Create a new post in Mattermost."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:47
+msgid "`channel_id` (required): The ID of the channel to post in"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:48
+msgid "`message` (required): The message content"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:49
+msgid "`root_id` (optional): Root post ID for replies"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:50
+msgid "`props` (optional): Post properties"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:51
+#: ../../source/agents/mcpserver/README.md:132
+msgid ""
+"`attachments` (optional): Array of file paths or URLs to attach to the "
+"post"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:52
+#: ../../source/agents/mcpserver/README.md:108
+#: ../../source/agents/mcpserver/README.md:114
+#: ../../source/agents/mcpserver/README.md:133
+msgid ""
+"**Note**: File paths only work with Claude Code; Claude Desktop cannot "
+"access local files"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:53
+#: ../../source/agents/mcpserver/README.md:134
+msgid ""
+"**File Path Format**: Use relative paths like `document.pdf` or "
+"`folder/image.png` (files are accessed from the `mcpserver/data/` "
+"directory)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:55
+msgid "`create_channel`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:56
+msgid "Create a new channel in Mattermost."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:59
+msgid "`name` (required): The channel name (URL-friendly)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:60
+msgid "`display_name` (required): The channel display name"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:61
+msgid "`type` (required): Channel type - 'O' for public, 'P' for private"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:62
+msgid "`team_id` (required): The team ID where the channel will be created"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:63
+msgid "`purpose` (optional): Channel purpose"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:64
+msgid "`header` (optional): Channel header"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:66
+msgid "`get_channel_info`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:67
+msgid ""
+"Get information about a channel. If you have a channel ID, use that for "
+"fastest lookup. If the user provides a human-readable name, try "
+"channel_display_name first (what users see in the UI), then channel_name "
+"(URL name) as fallback."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:70
+msgid "`channel_id`: The exact channel ID (fastest, most reliable method)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:71
+msgid ""
+"`channel_display_name` + `team_id`: The human-readable display name users"
+" see (e.g. 'General Discussion')"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:72
+msgid ""
+"`channel_name` + `team_id`: The URL-friendly channel name (e.g. 'general-"
+"discussion')"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:74
+msgid "`get_team_info`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:75
+msgid ""
+"Get information about a team. If you have a team ID, use that for fastest"
+" lookup. If the user provides a human-readable name, try "
+"team_display_name first (what users see in the UI), then team_name (URL "
+"name) as fallback."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:78
+msgid "`team_id`: The exact team ID (fastest, most reliable method)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:79
+msgid ""
+"`team_display_name`: The human-readable display name users see (e.g. "
+"'Engineering Team')"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:80
+msgid "`team_name`: The URL-friendly team name (e.g. 'engineering-team')"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:82
+msgid "`search_users`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:83
+msgid "Search for existing users by username, email, or name."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:86
+msgid "`term` (required): Search term (username, email, first name, or last name)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:87
+msgid ""
+"`limit` (optional): Maximum number of results to return (default: 20, "
+"max: 100)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:89
+msgid "`get_channel_members`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:90
+msgid "Get all members of a specific channel with their details."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:93
+msgid "`channel_id` (required): ID of the channel to get members for"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:95
+msgid "`get_team_members`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:96
+msgid "Get all members of a specific team with their details."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:99
+msgid "`team_id` (required): ID of the team to get members for"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:101
+msgid "Development Tools (Dev Mode Only)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:103
+msgid "The following tools are only available when the `-dev` flag is enabled:"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:105
+msgid "`create_user`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:106
+msgid "Create a new user account for testing scenarios."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:107
+msgid ""
+"**Parameters:** `username`, `email`, `password`, `first_name` (optional),"
+" `last_name` (optional), `nickname` (optional), `profile_image` "
+"(optional): File path or URL to set as profile image (supports .jpeg, "
+".jpg, .png, .gif)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:109
+msgid ""
+"**File Path Format**: Use relative paths like `avatar.jpg` (files are "
+"accessed from the `mcpserver/data/` directory)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:111
+msgid "`create_team`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:112
+msgid "Create a new team."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:113
+msgid ""
+"**Parameters:** `name`, `display_name`, `type` (O for open, I for invite "
+"only), `description` (optional), `team_icon` (optional): File path or URL"
+" to set as team icon (supports .jpeg, .jpg, .png, .gif)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:115
+msgid ""
+"**File Path Format**: Use relative paths like `team-logo.png` (files are "
+"accessed from the `mcpserver/data/` directory)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:117
+msgid "`add_user_to_team`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:118
+msgid "Add a user to a team."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:119
+msgid "**Parameters:** `user_id`, `team_id`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:121
+msgid "`add_user_to_channel`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:122
+msgid "Add a user to a channel."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:123
+msgid "**Parameters:** `user_id`, `channel_id`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:125
+msgid "`create_post_as_user`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:126
+msgid ""
+"Create a post as a specific user using username/password login. Simply "
+"provide the username and password of created users."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:129
+msgid "`username` (required), `password` (required)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:130
+msgid "`channel_id` (required), `message` (required)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:131
+msgid "`root_id` (optional), `props` (optional)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:136
+msgid "Installation and Usage"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:138
+msgid "Build"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:140
+msgid "**Build the server:**"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:150
+msgid "**Set up authentication:**"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:151
+msgid ""
+"Create a Personal Access Token in Mattermost (User Settings > Security > "
+"Personal Access Tokens)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:152
+msgid "Note your Mattermost server URL"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:154
+msgid "Configuration Options"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:156
+msgid "**Required:**"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:157
+msgid "`--server-url`: Mattermost server URL (or set `MM_SERVER_URL` env var)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:158
+msgid ""
+"`--token`: Personal Access Token (or set `MM_ACCESS_TOKEN` env var for "
+"stdio transport)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:160
+msgid "**Optional:**"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:161
+msgid ""
+"`--internal-server-url`: Internal Mattermost server URL for API "
+"communication (or set `MM_INTERNAL_SERVER_URL` env var). Use this when "
+"the MCP server runs on the same machine as Mattermost to enable localhost"
+" communication while providing external URLs for OAuth clients."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:162
+msgid "`--transport`: Transport type ('stdio' or 'http', default: 'stdio')"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:163
+msgid ""
+"`--logfile`: Path to log file (logs to file in addition to stderr, JSON "
+"format)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:164
+msgid "`--debug`: Enable debug logging (recommended for troubleshooting)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:165
+msgid ""
+"`--dev`: Enable development mode with additional tools for setting up "
+"test data"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:166
+msgid "`--version`: Show version information"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:168
+msgid ""
+"**HTTP Transport Options** (when `--transport=http` — development and "
+"local use only, not for production; see the intro):"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:169
+msgid "`--http-port`: Port for HTTP server (default: 8080)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:170
+msgid ""
+"`--http-bind-addr`: Bind address for HTTP server (default: 127.0.0.1 for "
+"security, use specific IP for external access)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:171
+msgid ""
+"`--site-url`: Public URL where clients will access the MCP server (used "
+"for OAuth metadata and origin validation)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:173
+msgid "**Notes**:"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:174
+msgid "Token validation occurs at startup for fast failure detection"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:175
+msgid ""
+"Logging output goes to stderr to avoid interfering with JSON-RPC "
+"communication on stdout"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:176
+msgid ""
+"File logging (when `--logfile` is used) outputs structured JSON logs in "
+"addition to stderr"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:177
+msgid "Debug logging includes tool call tracing and detailed operation logs"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:179
+msgid "Integration with AI Clients"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:181
+msgid "Claude Code Integration"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:187
+msgid "Claude Desktop Integration"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:189
+msgid "To use with Claude Desktop, add the server to your MCP configuration:"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:191
+msgid "**macOS/Linux**: `~/.config/claude/claude_desktop_config.json`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:193
+msgid "**Windows**: `%APPDATA%\\Claude\\claude_desktop_config.json`"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:210
+msgid "HTTP Transport Integration (development and local use)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:212
+msgid ""
+"For HTTP-based MCP clients and web applications, the server supports HTTP"
+" transport with OAuth authentication. The standalone binary is for "
+"development; for production, use the Agents plugin’s embedded MCP and the"
+" [admin guide](../docs/admin_guide.md#mattermost-mcp-server) integration."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:214
+msgid "**Basic HTTP server setup:**"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:223
+msgid "**External access via specific network interface:**"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:234
+#: ../../source/agents/mcpserver/README.md:304
+msgid "**Environment variables:**"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:241
+msgid "**Available endpoints:**"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:242
+msgid "`/mcp`: Main MCP communication endpoint (SSE and streamable HTTP)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:243
+msgid "`/sse`: Server-Sent Events endpoint (backwards compatibility)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:244
+msgid "`/message`: Message endpoint for SSE transport (backwards compatibility)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:245
+msgid "`/.well-known/oauth-protected-resource`: OAuth metadata endpoint"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:247
+msgid "Development Mode"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:249
+msgid ""
+"Development mode (`--dev` flag) enables additional tools for setting up "
+"realistic test data and user scenarios. This is particularly useful for "
+"Mattermost developers who need to bootstrap development environments or "
+"create sophisticated test scenarios."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:251
+msgid "**Enable development mode:**"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:256
+msgid ""
+"**Security Note:** Development mode should only be used in development "
+"environments with admin-level access tokens, never in production."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:258
+msgid "File Operations"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:260
+msgid ""
+"The STDIO MCP server supports file attachments and uploads for various "
+"tools. Files are managed through a dedicated data directory for security "
+"and organization."
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:262
+msgid "Data Directory"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:264
+msgid ""
+"All local file operations use the `mcpserver/data/` directory within your"
+" project:"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:279
+msgid "Supported Tools with File Operations"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:281
+msgid "**`create_post`**: Attach files to posts using the `attachments` parameter"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:282
+msgid "**`create_post_as_user`**: Attach files when posting as specific users"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:283
+msgid ""
+"**`create_user`**: Set profile images using the `profile_image` parameter"
+" (dev mode)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:284
+msgid ""
+"**`create_team`**: Set team icons using the `team_icon` parameter (dev "
+"mode)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:286
+msgid "File Management"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:288
+msgid ""
+"**Place files in the data directory**: Copy your files to "
+"`mcpserver/data/` or subdirectories within it"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:289
+msgid ""
+"**Reference with relative paths**: Use paths relative to the data "
+"directory (e.g., `report.pdf` for `mcpserver/data/report.pdf`)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:290
+msgid ""
+"**Organize as needed**: Create subdirectories for better organization "
+"(e.g., `documents/`, `images/`)"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:292
+msgid "Advanced Configuration: Internal Server URL"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:294
+msgid ""
+"When the MCP server runs on the same machine as your Mattermost server, "
+"you can optimize performance and security by using the internal server "
+"URL option:"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:312
+msgid "**When to use:**"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:313
+msgid "MCP server deployed on the same server as Mattermost"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:314
+msgid "Docker containers on the same network"
+msgstr ""
+
+#: ../../source/agents/mcpserver/README.md:315
+msgid "Local development environments"
+msgstr ""
+

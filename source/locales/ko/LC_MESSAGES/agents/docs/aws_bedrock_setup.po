@@ -1,0 +1,628 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:1
+msgid "Configure Mattermost Agents with AWS Bedrock"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:3
+msgid ""
+"This guide walks you through setting up the Mattermost Agents plugin with"
+" [Amazon Bedrock](https://aws.amazon.com/bedrock/) as the LLM provider. "
+"When running Mattermost on AWS EC2 infrastructure, you can use IAM "
+"instance profiles for seamless, credential-free authentication."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:5
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:7
+msgid "Before you begin, ensure you have:"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:9
+msgid "A Mattermost server (v10.11 or later) running on an AWS EC2 instance"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:10
+msgid "An active Mattermost Enterprise license"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:11
+msgid "AWS CLI configured with permissions to create IAM resources"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:12
+msgid "Access to the Mattermost System Console as a system administrator"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:14
+msgid "Enabling model access"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:16
+msgid ""
+"Before creating IAM resources, ensure the models you want to use are "
+"enabled in your AWS account."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:18
+msgid "Anthropic Claude models"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:20
+msgid ""
+"Anthropic requires a one-time use case submission (First Time Use or FTU "
+"form) before you can invoke their models via Bedrock. This is required "
+"once per AWS account, or once on the organization management account if "
+"using AWS Organizations."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:22
+msgid "**Via AWS Console:**"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:24
+msgid ""
+"Open the [AWS Bedrock Model "
+"Catalog](https://console.aws.amazon.com/bedrock/home#/model-catalog)"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:25
+msgid "Look for the banner prompting you to **Submit use case details**"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:26
+msgid ""
+"Fill in your company name, website, intended users, industry, and use "
+"case, then submit"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:28
+msgid "**Via AWS CLI:**"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:41
+msgid "Inference profiles for newer Claude models"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:43
+msgid ""
+"Newer Anthropic models (such as Claude Sonnet latest) cannot be invoked "
+"using their base model ID — you must use a Cross-Region Inference Profile"
+" ID instead. If you attempt to use the raw model ID, you will see:"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:51
+msgid ""
+"Use the **inference** profile prefix in the **Default Model** field in "
+"Mattermost:"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Model"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Inference Profile ID"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Claude Sonnet 4.6 (US routing)"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "`us.anthropic.claude-sonnet-4-6`"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Claude Sonnet 4.6 (global routing)"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "`global.anthropic.claude-sonnet-4-6`"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:58
+msgid "Other Bedrock models"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:60
+msgid ""
+"For Amazon (Nova, Titan), Meta (Llama), Mistral, and other non-Anthropic "
+"models:"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:62
+msgid "Go to the Bedrock console → **Model access**"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:63
+msgid "Select the models you want to enable"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:64
+msgid "Select **Request model access**"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:66
+msgid "Most non-Anthropic models do not require an FTU form."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:68
+msgid "Step 1: Create IAM resources for Bedrock access"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:70
+msgid ""
+"Create an IAM policy, role, and instance profile that grants your "
+"Mattermost EC2 instances permission to call Amazon Bedrock."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:72
+msgid "Create the IAM policy"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:74
+msgid "Create a policy that allows the required Bedrock API actions:"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:95
+msgid "Replace `<YOUR_ACCOUNT_ID>` with your 12-digit AWS account ID."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:97
+msgid ""
+"**Note:** Although the Mattermost Agents plugin uses the Bedrock Converse"
+" API internally, the correct IAM action names are `bedrock:InvokeModel` "
+"and `bedrock:InvokeModelWithResponseStream` — `bedrock:Converse` and "
+"`bedrock:ConverseStream` are not valid IAM policy actions. The "
+"`inference-profile/*` resource ARN is required for Anthropic Claude "
+"models, which use Cross-Region Inference Profiles. **Tip:** To restrict "
+"access to specific models, replace the wildcard ARNs with model-specific "
+"ARNs. For Anthropic Claude models, you need entries in both the "
+"`foundation-model` and `inference-profile` resources. For example: "
+"`arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-sonnet-4-6`"
+" and `arn:aws:bedrock:us-east-1:<YOUR_ACCOUNT_ID>:inference-"
+"profile/us.anthropic.claude-sonnet-4-6`."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:100
+msgid "Create the IAM role and instance profile"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:102
+msgid ""
+"Create an IAM role that EC2 instances can assume, then attach the Bedrock"
+" policy:"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:131
+msgid "Replace `<YOUR_ACCOUNT_ID>` with your AWS account ID."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:133
+msgid "Attach the instance profile to your EC2 instances"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:135
+msgid ""
+"If your Mattermost server is already running, attach the instance profile"
+" to the running instance:"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:143
+msgid ""
+"For new deployments, specify the instance profile when launching the EC2 "
+"instance or configure it in your infrastructure-as-code (Terraform, "
+"CloudFormation, etc.)."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:145
+msgid ""
+"**Note:** If you have multiple Mattermost app server instances, attach "
+"the instance profile to all of them."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:147
+msgid "Step 2: Install the Agents plugin"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:149
+msgid ""
+"The Mattermost Agents plugin may be pre-packaged with your Mattermost "
+"installation. Check your current version and upgrade if needed."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:151
+msgid "Go to **System Console > Plugins > Plugin Management**."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:152
+msgid ""
+"If the **Agents** plugin is listed, check its version. Version **1.9.0 or"
+" later** is required for native AWS Bedrock support with IAM instance "
+"profiles."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:153
+msgid ""
+"If the plugin is not installed or needs upgrading: a. Download the latest"
+" release from the [Mattermost Agents plugin releases "
+"page](https://github.com/mattermost/mattermost-plugin-agents/releases). "
+"b. Upload the `.tar.gz` file under **Upload Plugin** in Plugin "
+"Management. c. Once uploaded, select **Enable** to activate the plugin."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:158
+msgid "Alternatively, install via `mmctl` on the server:"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:167
+msgid "Step 3: Configure the Bedrock service"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:169
+msgid "Go to **System Console > Plugins > Agents**."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:170
+msgid "Under **Services**, select **Add a Service**."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:171
+#: ../../source/agents/docs/aws_bedrock_setup.md:206
+msgid "Configure the following fields:"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Field"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Value"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "**Service Name**"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "A descriptive name (e.g., `AWS Bedrock`)"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "**Service Type**"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Select `AWS Bedrock`"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "**AWS Region**"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "The AWS region where Bedrock is available (e.g., `us-east-1`)"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "**Default Model**"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "The Bedrock model identifier (e.g., `us.anthropic.claude-sonnet-4-6`)"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "**AWS Access Key ID**"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Leave empty when using IAM instance profiles"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "**AWS Secret Access Key**"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "**API Key**"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid ""
+"Optional. Bedrock console API key (base64 encoded). Suitable for short-"
+"term testing only—keys expire after 12 hours. Leave empty when using IAM "
+"instance profiles or IAM user credentials, as those methods take "
+"precedence."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:183
+#: ../../source/agents/docs/aws_bedrock_setup.md:216
+msgid "Select **Save**."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:185
+msgid ""
+"**Tip:** When running on EC2 with an IAM instance profile, leave the "
+"credential fields empty. The AWS SDK automatically discovers credentials "
+"from the instance metadata service. This is the recommended approach for "
+"production deployments on AWS."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:187
+msgid "Available Bedrock models"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:189
+msgid ""
+"Amazon Bedrock provides access to models from multiple providers. Common "
+"model identifiers include:"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Identifier"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Anthropic Claude Sonnet 4.6"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Amazon Nova Pro"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "`amazon.nova-pro-v1:0`"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Amazon Nova Lite"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "`amazon.nova-lite-v1:0`"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Amazon Nova Micro"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "`amazon.nova-micro-v1:0`"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:198
+msgid ""
+"**Note:** For Anthropic Claude models, use the inference profile ID (with"
+" `us.` or `global.` prefix) rather than the raw model ID. See [Enabling "
+"model access](#enabling-model-access) above."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:200
+msgid ""
+"Check [Amazon Bedrock model "
+"availability](https://docs.aws.amazon.com/bedrock/latest/userguide"
+"/models-supported.html) for the full list of supported models and "
+"regional availability."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:202
+msgid "Step 4: Create an AI agent"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:204
+msgid "Open the top-level **Agents** product page in Mattermost."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:205
+msgid "Select **Add an Agent**."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "**Agent Username**"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "The username for the bot (e.g., `ai`)"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "**Display Name**"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "The display name shown in conversations (e.g., `AI Assistant`)"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "**Service**"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Select the Bedrock service you created in Step 3"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "**Custom Instructions**"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Optional system prompt for the agent's behavior"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "**Enable Vision**"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Enable to allow the agent to process images"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:218
+msgid "Step 5: Verify the setup"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:220
+msgid "**Verify IAM credentials**: SSH into your Mattermost EC2 instance and run:"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:226
+msgid "This should return `MattermostBedrockRole` (or your role name)."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:228
+msgid ""
+"**Test the agent**: In Mattermost, start a direct message with the AI "
+"agent bot (e.g., `@ai`) and send a test message. The agent should respond"
+" using the configured Bedrock model."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:230
+msgid ""
+"**Check logs**: If the agent doesn't respond, review the Mattermost "
+"server logs for errors:"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:236
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Issue"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Resolution"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid ""
+"`AccessDeniedException: not authorized to perform "
+"bedrock:InvokeModelWithResponseStream`"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid ""
+"Ensure the IAM policy includes `bedrock:InvokeModel` and "
+"`bedrock:InvokeModelWithResponseStream`. Note that `bedrock:Converse` is "
+"not a valid IAM action. Also ensure the `inference-profile/*` ARN is "
+"included if using Anthropic Claude models."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid ""
+"`ValidationException: Invocation of model ID ... with on-demand "
+"throughput isn't supported`"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid ""
+"You are using a raw model ID for a model that requires a Cross-Region "
+"Inference Profile. Use the inference profile ID instead (e.g., "
+"`us.anthropic.claude-sonnet-4-6` instead of `anthropic.claude-"
+"sonnet-4-6`)."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "`ThrottlingException: Too many tokens per day`"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid ""
+"Your account may have a zero on-demand quota for this model. Check "
+"[Service "
+"Quotas](https://docs.aws.amazon.com/bedrock/latest/userguide/quotas.html)"
+" in the AWS console for your target region. New accounts may need to open"
+" an AWS Support ticket or try a different region."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "`failed to load AWS config`"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid ""
+"Verify the IAM instance profile is attached to the EC2 instance. Check "
+"with `curl http://169.254.169.254/latest/meta-data/iam/security-"
+"credentials/`."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Agent responds with \"An error occurred while accessing the LLM\""
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid ""
+"Check the server logs for the specific error. Common causes: incorrect "
+"model ID, model not available in the selected region, or insufficient IAM"
+" permissions."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid "Plugin won't enable"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md
+msgid ""
+"Ensure you have a valid Mattermost Enterprise license and the plugin "
+"version is compatible with your server version."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:247
+msgid "Authentication options"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:249
+msgid ""
+"While IAM instance profiles are recommended for EC2 deployments, the "
+"Agents plugin supports three authentication methods for Bedrock:"
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:251
+msgid ""
+"**IAM instance profile** (recommended for EC2): No credentials needed. "
+"The AWS SDK uses the EC2 metadata service automatically."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:252
+msgid ""
+"**IAM user credentials**: Enter the `AWS Access Key ID` and `AWS Secret "
+"Access Key` in the service configuration. Useful for non-EC2 deployments."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:253
+msgid ""
+"**Bedrock API key**: Enter a Bedrock console-generated API key in the "
+"`API Key` field. Suitable for short-term testing (keys expire after 12 "
+"hours)."
+msgstr ""
+
+#: ../../source/agents/docs/aws_bedrock_setup.md:255
+msgid ""
+"Credentials are evaluated in the order listed above. If IAM credential "
+"fields are populated, they take precedence over the API key and the "
+"default credential chain."
+msgstr ""
+

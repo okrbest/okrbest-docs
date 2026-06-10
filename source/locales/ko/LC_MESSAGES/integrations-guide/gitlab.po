@@ -1,0 +1,593 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/integrations-guide/gitlab.rst:2
+msgid "Connect GitLab to Mattermost"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:7
+msgid ""
+"Minimize distractions and reduce context switching between your GitLab "
+"code repositories and your communication platform by integrating GitLab "
+"with Mattermost. You control which events trigger notifications beyond "
+"default events, including merges, issue comments, merge request comments,"
+" pipelines, pull reviews, and many more. Help your teams stay focused and"
+" productive with daily task summaries, real-time updates and "
+"notifications on new and closed merge requests, new and closed issues, "
+"and tag creation events, directly from Mattermost channel subscriptions."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:9
+msgid ""
+"Mattermost supports both Software-as-a-Service (SaaS) and on-premises "
+"versions of GitLab."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:11
+msgid "An example of the GitLab integration for Mattermost."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:15
+msgid "Deploy"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:17
+msgid ""
+"A Mattermost system admin must perform the following steps to deploy the "
+"GitLab integration."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:20
+msgid "Install the integration"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:22
+msgid ""
+"In Mattermost, from the Product menu |product-list|, select **App "
+"Marketplace**."
+msgstr ""
+
+#: ../../<rst_prolog>:100
+msgid ""
+"Navigate between Channels, collaborative playbooks, and boards using the "
+"product menu icon."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:23
+msgid "Search for or scroll to GitLab, and select **Install**."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:26
+msgid "Set up the integration"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:28
+msgid ""
+"You can configure the GitLab integration using either the built-in setup "
+"wizard (recommended) or by following the manual configuration steps."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:32
+msgid ""
+"The recommended way to configure the GitLab integration is using the "
+"built-in setup wizard. The wizard guides you through each step of the "
+"configuration process, including creating the OAuth app in GitLab."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:34
+msgid "In any Mattermost channel, run the ``/gitlab setup`` slash command."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:35
+msgid "Follow the interactive prompts to complete the setup."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:37
+msgid "The wizard walks you through:"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:39
+msgid "Creating and configuring an OAuth app in GitLab"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:40
+msgid "Configuring the plugin settings in Mattermost"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:41
+msgid "Announcing the integration to your team"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:43
+msgid ""
+"You can also run individual setup steps at any time using the following "
+"subcommands:"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:45
+msgid "``/gitlab setup oauth``: Configure the OAuth2 application in GitLab."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:46
+msgid ""
+"``/gitlab setup announce``: Announce the integration availability to "
+"designated channels."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:50
+msgid ""
+"If you prefer to configure the integration manually instead of using the "
+"setup wizard, follow the steps below."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:52
+msgid "**Register an OAuth app in GitLab**"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:54
+msgid ""
+"Go to ``https://gitlab.com/-/profile/applications`` or "
+"``https://gitlab.YOURDOMAIN.com/-/profile/applications``, replacing "
+"``YOURDOMAIN.COM`` with your GitLab URL, to register an OAuth app with "
+"GitLab."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:55
+#: ../../source/integrations-guide/gitlab.rst:154
+msgid "Set the following values:"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:57
+msgid "**Name**: ``Mattermost GitLab Plugin - <YOUR COMPANY NAME>``"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:58
+msgid ""
+"**Redirect URI**: ``https://YOUR-MATTERMOST-"
+"URL.COM/plugins/com.github.manland.mattermost-plugin-"
+"gitlab/oauth/complete``, replacing ``YOUR-MATTERMOST-URL.COM`` with your "
+"Mattermost URL. This value must match the Mattermost server URL you use "
+"to log in."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:60
+msgid "Select ``api`` and ``read_user`` in **Scopes**."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:61
+msgid ""
+"Save your changes. Copy the **Application ID** and **Secret** fields in "
+"the resulting screen."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:63
+msgid "**Configure the integration in Mattermost**"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:65
+msgid ""
+"In Mattermost, go to **System Console > Plugins > GitLab** and configure "
+"the following settings, then select **Save**:"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:67
+msgid ""
+"Enter the **GitLab URL**, **GitLab OAuth Client ID**, and **GitLab OAuth "
+"Client Secret** you obtained when registering the OAuth app in GitLab."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:68
+msgid ""
+"Generate a **Webhook Secret** and **At Rest Encryption Key** by selecting"
+" **Generate**."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:69
+msgid ""
+"(Optional) **GitLab Group**: Lock the integration to a single GitLab "
+"group."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:70
+msgid ""
+"(Optional) **Enable Private Repositories**: Enable the ability to work "
+"with private repositories. Affected users are notified once private "
+"repositories are enabled, and must reconnect their GitLab accounts to "
+"gain access to private repositories."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:71
+msgid ""
+"(Optional) **Enable Child Pipeline Notifications**: When enabled, allows "
+"notifications for child pipeline events in addition to parent pipeline "
+"events. When disabled, only parent pipeline notifications are sent. This "
+"setting helps reduce notification noise in environments with complex "
+"CI/CD pipeline structures that use child pipelines extensively."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:72
+msgid ""
+"(Optional) **Enable Code Previews**: Control automatic expansion of "
+"GitLab file permalinks with code previews. Options include:"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:74
+msgid ""
+"**Enable for public projects** (Default): Shows previews only for public "
+"GitLab repositories."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:75
+msgid ""
+"**Enable for public and private projects**: Shows previews for both "
+"public and private repositories."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:78
+msgid ""
+"This setting has the potential to leak confidential code into public "
+"channels in cases where users with access to private GitLab repositories "
+"post permalinks in public Mattermost channels. The plugin automatically "
+"generates previews using the poster's GitLab permissions, allowing other "
+"channel members without access to view the confidential code."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:80
+msgid "**Disable**: Completely disables code preview functionality."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:82
+msgid "**Supported Permalink Types:**"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:84
+msgid "Single line permalinks: Shows target line plus 3 lines of context"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:85
+msgid "File permalinks: Shows file information (no code preview)"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:86
+msgid "Line range permalinks: Shows file information (no code preview)"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:88
+msgid "**Preview Limits:**"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:90
+msgid ""
+"Maximum 10 lines displayed per preview (single line permalinks may show "
+"fewer preview lines due to context limits)"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:93
+msgid "Upgrade"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:95
+msgid ""
+"We recommend updating this integration as new versions are released. "
+"Generally, updates are seamless and don't interrupt the user experience "
+"in Mattermost. Visit the `Releases page <https://github.com/mattermost"
+"/mattermost-plugin-gitlab/releases>`__ for the latest release, available "
+"releases, and compatibility considerations."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:98
+msgid "Enable"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:100
+msgid ""
+"Once you setup the integration, notify your teams that they can `connect "
+"their GitLab accounts to Mattermost <#connect-a-gitlab-account-to-"
+"mattermost>`__."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:103
+msgid "Use"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:105
+msgid ""
+"Users who want to use GitLab interconnectivity must connect their GitLab "
+"account to Mattermost."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:107
+msgid ""
+"Once connected, you'll receive direct messages from the GitLab bot in "
+"Mattermost when someone mentions you, requests a review, comments on, or "
+"modifies one of your merge requests/issues, or assigns you to an issue on"
+" GitLab."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:110
+msgid "Connect a GitLab account to Mattermost"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:112
+msgid ""
+"Run the ``/gitlab connect`` slash command in any Mattermost channel to "
+"link your Mattermost account with your GitLab account."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:114
+msgid ""
+"Disconnect a GitLab account by running the ``/gitlab disconnect`` slash "
+"command. Run the ``/gitlab me`` slash command to review which account is "
+"connected to GitLab."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:116
+msgid ""
+"Once connected, run the ``/gitlab help`` slash command to see what you "
+"can do."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:119
+msgid "Get started"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:121
+msgid ""
+"Run the  ``/gitlab todo`` slash command to get a list of to-do's, "
+"assigned issues, assigned merge requests and merge requests awaiting your"
+" review. Alternatively, use the options located in the left sidebar."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:123
+msgid ""
+"Run the ``/gitlab webhook`` slash command to have GitLab send events to "
+"Mattermost. For example: ``/gitlab webhook add group[/project]``"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:126
+msgid "Channel subscriptions"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:128
+msgid ""
+"Run the ``/gitlab subscriptions list`` to review all of your "
+"subscriptions."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:130
+msgid ""
+"Run the ``/gitlab subscriptions add group[/project] [features]`` slash "
+"command to subscribe a Mattermost channel and receive posts for new merge"
+" requests, issues, or other features, from a GitLab project. To "
+"unsubscribe and stop receiving posts, run the ``/gitlab subscriptions "
+"delete group[/project]`` slash command."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:132
+msgid "The following features are supported for channel subscriptions:"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:134
+msgid "``merges`` - Get notified when merge requests are merged"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:135
+msgid "``issues`` - Get notified when issues are created"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:136
+msgid "``pushes`` - Get notified when commits are pushed to a branch"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:137
+msgid "``issue_comments`` - Get notified when comments are made on issues"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:138
+msgid ""
+"``merge_request_comments`` - Get notified when comments are made on merge"
+" requests"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:139
+msgid "``tag`` - Get notified when tags are created"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:140
+msgid ""
+"``pipeline`` - Get notified about pipeline events (includes child "
+"pipeline events if enabled in plugin configuration)"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:141
+msgid "``wiki`` - Get notified about wiki page events"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:142
+msgid "``releases`` - Get notified when releases are created"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:143
+msgid "``deployments`` - Get notified about deployment events"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:145
+msgid ""
+"For example, to subscribe to release and deployment events: ``/gitlab "
+"subscriptions add group[/project] releases,deployments``"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:147
+msgid ""
+"For each project you want to receive notifications for or subscribe to, "
+"create a webhook in a channel where you want to watch events sent from "
+"GitLab by running the ``/gitlab webhook`` slash command. For example: "
+"``/gitlab webhook add group[/project]``"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:151
+msgid "For GitLab versions prior to 1.2:"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:153
+msgid ""
+"In GitLab, go to the project you want to subscribe to, and select "
+"**Settings > Integrations** in the sidebar."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:156
+msgid ""
+"**URL**: ``https://YOUR-MATTERMOST-URL.COM/plugins/com.github.manland"
+".mattermost-plugin-gitlab/webhook``, replacing ``https://YOUR-MATTERMOST-"
+"URL.COM`` with your Mattermost URL. Ensure that you add "
+"``/plugins/com.github.manland.mattermost-plugin-gitlab/webhook`` to the "
+"URL, or the webhook won't work."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:157
+msgid "**Secret Token**: Copy the webhook secret you generated earlier."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:158
+msgid "Select all the events in **Triggers**."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:159
+msgid "Add the webhook."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:162
+msgid "Create issues and manage comments"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:164
+msgid ""
+"You can create GitLab issues and manage issue comments directly from "
+"Mattermost using slash commands and interactive modals."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:167
+msgid "Create a GitLab issue"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:169
+msgid ""
+"Run the ``/gitlab issue create`` slash command to open an interactive "
+"modal where you can create a new GitLab issue. The modal allows you to "
+"perform the following actions:"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:171
+msgid "Set the issue title and description"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:172
+msgid "Assign labels"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:173
+msgid "Set the assignee"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:174
+msgid "Choose the milestone"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:175
+msgid "Select the target project"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:178
+msgid "Attach comments to existing issues"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:180
+msgid ""
+"Run the ``/gitlab issue comment [issue-number]`` slash command to attach "
+"a comment to an existing GitLab issue. This opens an interactive modal "
+"where you can compose and submit your comment directly from Mattermost."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:183
+msgid "Update settings"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:185
+msgid ""
+"Run the ``/gitlab settings [setting] [value]`` slash command to update "
+"your preferences for the integration:"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:187
+msgid "Turn personal notifications on or off."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:188
+msgid "Turn reminders on or off when you connect initially each day."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:191
+msgid "Get help"
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:193
+msgid ""
+"Mattermost customers can open a `Mattermost support case "
+"<https://support.mattermost.com/hc/en-us/requests/new>`_. To report a "
+"bug, please open a GitHub issue against the `Mattermost GitLab plugin "
+"repository <https://github.com/mattermost/mattermost-plugin-gitlab>`_."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:195
+msgid ""
+"For questions, feedback, and assistance, join our public `Integrations "
+"and Apps channel "
+"<https://community.mattermost.com/core/channels/integrations>`_ on the "
+"`Mattermost Community Server <https://community.mattermost.com/>`_ for "
+"assistance."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:197
+msgid ""
+"Mattermost Team Edition and Free customers can visit the Mattermost "
+"`peer-to-peer troubleshooting forum <https://forum.mattermost.com/c"
+"/trouble-shoot/16>`_ to access the global Mattermost Community for "
+"assistance."
+msgstr ""
+
+#: ../../source/integrations-guide/gitlab.rst:201
+msgid ""
+"Watch `this on-demand webinar on release management with Mattermost and "
+"GitLab <https://mattermost.com/webinar/release-management-with-gitlab/>`_"
+" to learn how to streamline and standardize your release processes, while"
+" reducing the amount of effort required to ship your latest releases."
+msgstr ""
+

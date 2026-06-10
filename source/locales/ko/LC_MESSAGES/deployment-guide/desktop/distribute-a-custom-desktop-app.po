@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:2
+msgid "Distribute a custom desktop app"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:7
+msgid ""
+"You can customize and distribute your own Mattermost desktop application "
+"by configuring `src/common/config/buildConfig.ts "
+"<https://github.com/mattermost/desktop/blob/master/src/common/config/buildConfig.ts>`__."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:9
+msgid ""
+"Configure the desktop app's ``buildConfig.ts`` file. You can configure "
+"the following parameters to customize the user experience, including "
+"`defaultTeams <#defaultTeams>`__, `helpLink <#helpLink>`__, and "
+"`enableServerManagement <#enableServerManagement>`__."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:11
+msgid ""
+"Follow the `Mattermost Desktop Development Guide "
+"<https://developers.mattermost.com/contribute/more-info/desktop"
+"/developer-setup/>`__ to build the application."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:12
+msgid "Distribute the application to your users."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:15
+msgid "``defaultTeams``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:17
+msgid ""
+"List of server URLs and their display names added to the desktop app by "
+"default, which the user cannot modify. Users can still add servers "
+"`through the Server Management page <#enableservermanagement>`_ unless "
+"``enableServerManagement`` is set to ``false``. Expects an array of key-"
+"value pairs."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:19
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:39
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:51
+msgid "Example:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:35
+msgid "``helpLink``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:37
+msgid ""
+"The URL of the help documentation in **Help > Learn More** menu bar item."
+" If none is specified, the menu option is hidden. Expects a string."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:47
+msgid "``enableServerManagement``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:49
+msgid ""
+"Controls whether users can add, edit, or remove servers on the app "
+"settings page. If set to false, at least one server must be specified for"
+" ``defaultTeams`` or else users cannot interact with any servers. Expects"
+" a boolean, true or false."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:58
+msgid "Managed resources"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:60
+msgid ""
+":doc:`Custom builds </deployment-guide/desktop/distribute-a-custom-"
+"desktop-app>` of the Mattermost desktop app support managed resources "
+"which are services available on the same hostname and protocol as the "
+"Mattermost server."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:62
+msgid ""
+"To configure managed resources, add their path to the "
+"``managedResources`` field in your configuration file. Selecting a "
+"managed resource opens it as a pop-up window in the desktop app."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:64
+msgid ""
+"Additionally, you must configure the :ref:Managed Resource Paths "
+"<administration-guide/configure/environment-configuration-"
+"settings:managed resource paths>` server configuration setting. For "
+"example, adding the ``/video`` path:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:72
+msgid ""
+"Below are examples of server URLs with valid and invalid managed resource"
+" URLs:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:74
+msgid "Server: ``https://mattermost.my.org``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:76
+msgid "Valid: ``https://mattermost.my.org/video``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:77
+msgid "Valid: ``https://mattermost.my.org/conference``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:78
+msgid "Invalid: ``http://mattermost.my.org/video`` (different protocol)"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:79
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:86
+msgid "Invalid: ``https://conference.my.org`` (different origin)"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:81
+msgid "Server: ``https://my.org/mattermost``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:83
+msgid "Valid: ``https://my.org/video``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:84
+msgid "Valid: ``https://my.org/conference``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/distribute-a-custom-desktop-app.rst:85
+msgid "Invalid: ``http://my.org/video`` (different protocol)"
+msgstr ""
+

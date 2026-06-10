@@ -1,0 +1,992 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:2
+msgid "Configure Microsoft Intune Mobile Application Management (MAM)"
+msgstr ""
+
+#: ../../source/_static/badges/entry-adv.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry and Enterprise Advanced "
+"<https://mattermost.com/pricing/>`__ plans"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:7
+msgid ""
+"You can configure the Mattermost Mobile App on iOS to enforce Microsoft "
+"Intune App Protection Policies (MAM) so organizational data remains "
+"protected on Bring Your Own Device (BYOD) and mixed-use devices without "
+"requiring device enrollment (MDM)."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:9
+msgid ""
+"This guide documents the required configuration to enable Intune MAM "
+"successfully on iOS."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:12
+msgid "Read This First"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:14
+msgid ""
+"Intune MAM enforcement in Mattermost is identity-based and applies only "
+"to the sign-in method selected as the enforced **Auth Provider** in "
+"**System Console > Environment > Mobile Security**."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:16
+msgid ""
+"The enforced authentication provider must resolve users using Azure AD "
+"``objectId`` (``IdAttribute = objectId``)."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:17
+msgid ""
+"MSAL access tokens must include the ``oid`` claim, and it must match the "
+"same Azure AD ``objectId`` (confirm identity alignment: ``objectId ↔ "
+"oid``)."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:21
+msgid ""
+"If Intune MAM enrollment fails due to a technical error, the affected "
+"Mattermost server is removed from the mobile app and cached data for that"
+" server is wiped from the device."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:24
+msgid "Unsupported Scenarios"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:26
+msgid "This guide doesn't apply when:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:28
+msgid "You require Intune MAM on Android devices."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:29
+msgid ""
+"You want Intune MAM enforcement for a sign-in method not backed by "
+"Microsoft Entra ID."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:30
+msgid ""
+"The enforced authentication provider cannot resolve users to Azure AD "
+"``objectId``."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:31
+msgid ""
+"You require a rollout model where users can bypass or defer Intune MAM "
+"for the enforced sign-in method."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:33
+msgid ""
+"Other authentication methods, such as guest access, may still be enabled "
+"separately, but they aren't evaluated by Intune MAM."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:36
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:38
+msgid "Confirm the following before continuing:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:40
+msgid "Microsoft Entra ID is used for authentication."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:41
+msgid "You can commit to Azure AD ``objectId`` as the authoritative identity."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:42
+msgid "Mattermost Enterprise Advanced licensing is available for the server."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:43
+msgid "Target users are licensed for Microsoft Intune."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:44
+msgid ""
+"You can register applications and grant tenant-wide admin consent in "
+"Microsoft Entra."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:45
+msgid ""
+"If enforcing Intune MAM on SAML, users already exist in Mattermost "
+"(mobile sign-in does not create users for SAML)."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:49
+msgid ""
+"In this guide, OpenID Connect (OIDC) refers to the Microsoft Entra sign-"
+"in method used by the Mattermost Mobile App via MSAL."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:52
+msgid "Configuration Overview"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:54
+msgid ""
+"Successful Intune MAM enforcement requires coordinated configuration "
+"across:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:56
+msgid ""
+"**Microsoft Entra ID** – app registration, scope, API permissions, admin "
+"consent"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:57
+msgid "**Microsoft Intune** – iOS App Protection Policies"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:58
+msgid "**Mattermost Server** – MAM enablement and provider selection"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:59
+msgid "**Mattermost Mobile App (iOS)** – enrollment and enforcement"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:61
+msgid "Complete the steps below in order."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:64
+msgid "Setup Summary"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:66
+msgid "Confirm identity requirements and alignment (``objectId ↔ oid``)."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:67
+msgid "Configure Microsoft Entra (server-referenced application)."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:68
+msgid "Configure Intune App Protection Policies."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:69
+msgid "Enable Intune MAM in Mattermost and select the enforced provider."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:70
+msgid "Deploy the official Mattermost iOS app."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:71
+msgid "Validate enrollment and enforcement."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:74
+msgid "Values You’ll Need Later"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:76
+msgid "Capture these during setup:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:79
+msgid "Value"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:79
+msgid "Where to get it"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:79
+msgid "Where you use it"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:81
+msgid "Directory (tenant) ID"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:81
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:83
+msgid "Entra app registration overview"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:81
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:83
+msgid "Mattermost System Console"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:83
+msgid "Application (client) ID"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:85
+msgid "Application ID URI"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:85
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:88
+msgid "Entra app > Expose an API"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:85
+msgid ""
+"Used to form the ``api://<APPLICATION-ID>/login.mattermost`` scope "
+"reference in Authorized client applications"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:88
+msgid "``login.mattermost`` scope"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:88
+msgid "Authorized client applications"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:90
+msgid "Mobile client application ID"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:90
+msgid "Provided by Mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:90
+msgid "Entra app > Authorized client applications"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:92
+msgid "iOS bundle IDs (prod/beta)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:92
+msgid "This guide"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:92
+msgid "Intune App Protection Policies"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:96
+msgid "Step 1: Identity Configuration for Intune MAM"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:100
+msgid ""
+"This step defines the required identity model for the authentication "
+"provider selected for Intune MAM enforcement."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:103
+msgid "Required Identity Model"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:105
+msgid ""
+"Microsoft Intune MAM for Mattermost requires Azure AD ``objectId`` as the"
+" authoritative user identifier. The following is non-negotiable."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:107
+msgid "``IdAttribute`` must equal ``objectId`` for the enforced provider."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:108
+msgid "MSAL access tokens must include the ``oid`` claim."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:109
+msgid ""
+"Confirm identity alignment (``objectId ↔ oid``) before enabling Intune "
+"MAM."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:112
+msgid "Confirm Identity Alignment (objectId ↔ oid)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:116
+msgid "For the same user, the following values must match:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:118
+msgid "Azure AD ``objectId``"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:119
+msgid "MSAL access token ``oid`` claim"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:120
+msgid "SAML ``objectidentifier`` (if applicable)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:121
+msgid "LDAP ``msDS-aadObjectId`` (if applicable)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:123
+msgid "Any mismatch prevents enrollment."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:126
+msgid "Identity Enforcement by Authentication Method"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:128
+msgid "**OIDC (Mobile sign-in via MSAL)**"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:130
+msgid "Mattermost uses the MSAL access token for identity and enrollment."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:131
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:351
+msgid "Confirm identity alignment (``objectId ↔ oid``)."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:133
+msgid "**SAML (Entra-backed)**"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:135
+msgid "``SamlSettings.IdAttribute`` must map to ``objectidentifier``."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:136
+msgid "Email, UPN, and ``immutableID`` aren't supported."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:137
+msgid "Users must already exist in Mattermost before mobile sign-in."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:139
+msgid "**LDAP (Entra ID Domain Services)**"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:141
+msgid "Use ``msDS-aadObjectId``."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:142
+msgid "Do not use ``objectGUID``."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:145
+msgid "Runtime Enforcement Behavior"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:147
+msgid "When Intune MAM is enabled for a provider:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:149
+msgid "Enforcement occurs during active sessions, not only at login."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:150
+msgid ""
+"If Intune MAM becomes newly required due to policy, licensing, or "
+"configuration changes, enrollment may be triggered immediately."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:151
+msgid "Users can’t bypass enforcement for the enforced provider."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:154
+msgid "Pre-flight Checklist"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:156
+msgid "Licensed Intune test user available"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:157
+msgid "Ability to grant tenant-wide admin consent"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:158
+msgid "Enforced provider identified (OIDC or SAML)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:159
+msgid "``IdAttribute = objectId`` configured"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:160
+msgid "Identity alignment verified (``objectId ↔ oid``)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:161
+msgid "Official Mattermost iOS app deployed"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:162
+msgid ""
+"Target bundle IDs known: ``com.mattermost.rn`` (Production), "
+"``com.mattermost.rnbeta`` (Beta)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:165
+msgid "Step 2: Microsoft Entra Configuration for Intune MAM"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:169
+msgid ""
+"You register a single-tenant Microsoft Entra application that is "
+"referenced by Mattermost Server. This application validates MSAL access "
+"tokens and supports Intune MAM enrollment."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:171
+msgid ""
+"You don't register the Mattermost Mobile app itself. Redirect URI "
+"configuration isn't required."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:174
+msgid "Entra Application Registration"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:176
+msgid "Go to **Identity > Applications > App registrations**"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:177
+msgid "Select **New registration**"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:178
+msgid "Configure:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:180
+msgid "**Name**: Mattermost Mobile (Intune MAM)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:181
+msgid "**Supported account types**: Single tenant"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:183
+msgid "Register the app"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:184
+msgid "Copy:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:186
+msgid "**Application (client) ID**"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:187
+msgid "**Directory (tenant) ID**"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:190
+msgid "Expose the API and Create the Scope"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:192
+msgid "Go to **Expose an API**"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:193
+msgid ""
+"Confirm **Application ID URI** is set (for example, ``api://<APPLICATION-"
+"ID>``)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:194
+msgid "Add a scope named ``login.mattermost``"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:195
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:210
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:246
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:261
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:279
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:300
+msgid "Save your changes."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:198
+msgid "Authorize the Official Mobile Client"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:200
+msgid ""
+"Authorize the official Mattermost Mobile client application ID (provided "
+"by Mattermost) to request the ``login.mattermost`` scope."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:202
+msgid "In the Entra app registration, go to **Expose an API**."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:203
+msgid ""
+"Under **Authorized client applications**, select **Add a client "
+"application**."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:204
+msgid ""
+"Add the official Mattermost Mobile client application ID (provided by "
+"Mattermost) as:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:206
+msgid "Beta: ``64e9952b-20eb-46dc-92ad-99089ed24903``"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:207
+msgid "Production: ``9ac649f1-4f77-44d6-9792-b2f54ab3c9a7``"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:209
+msgid "Authorize the ``api://<APPLICATION-ID>/login.mattermost`` scope."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:213
+msgid "API Permissions and Admin Consent"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:217
+msgid "Go to **API permissions**."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:218
+msgid "Select **Add a permission**."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:219
+msgid "Add the following **Microsoft Graph** delegated permissions:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:221
+msgid "Microsoft Graph → ``email`` (Delegated)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:222
+msgid "Microsoft Graph → ``profile`` (Delegated)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:224
+msgid "Select **Grant admin consent** for your tenant."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:226
+msgid ""
+"These are the permissions the customer admin must grant for the Entra "
+"application referenced by Mattermost Server."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:228
+msgid ""
+"If these permissions are missing or lack tenant-wide admin consent, "
+"enrollment can fail with an Entra permissions/admin-consent error (for "
+"example, ``AADSTS650057``) or a user-visible **Consent Denied** message "
+"during first sign-in."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:231
+msgid "Configure MSAL tokens and required claims"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:233
+msgid ""
+"Before enabling Intune MAM, ensure the Entra app registration issues "
+"access tokens with the claims Mattermost expects during mobile sign-in."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:235
+msgid "In the Entra app registration, go to **Token configuration**."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:236
+msgid "Select **Add optional claim**."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:237
+msgid "Under **Token type**, select **Access**."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:238
+msgid "Add the following optional claims:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:240
+msgid "``email``"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:241
+msgid "``family_name``"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:242
+msgid "``given_name``"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:243
+msgid "``preferred_username``"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:244
+msgid "``upn``"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:250
+msgid ""
+"Mattermost Intune MAM enforcement uses the MSAL access token. If required"
+" claims are missing, sign-in and/or enrollment may fail."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:253
+msgid "Enable MSAL v2 access tokens"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:255
+msgid "Open the app **Manifest**."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:256
+msgid "Set the token version to ``2``:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:258
+msgid ""
+"If your manifest shows ``api.requestedAccessTokenVersion``, set it to "
+"``2``."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:259
+msgid "Otherwise set ``accessTokenAcceptedVersion`` to ``2``."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:264
+msgid "Step 3: Configure Intune App Protection Policies"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:266
+msgid "Go to **Intune admin center > Apps > App protection policies**."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:267
+msgid "Create a policy:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:269
+msgid "**Platform**: iOS/iPadOS"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:270
+msgid "**Targeted app**: Managed apps"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:272
+msgid "Add the Mattermost app by bundle ID:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:274
+msgid "``com.mattermost.rn`` (Production)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:275
+msgid "``com.mattermost.rnbeta`` (Beta)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:277
+msgid "Configure protection settings."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:278
+msgid "Assign to Entra ID user groups."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:281
+msgid "Separate policies are required for Production and Beta apps."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:284
+msgid "Step 4: Configure Mattermost Server for Intune MAM"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:288
+msgid "Go to **System Console > Environment > Mobile Security**"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:289
+msgid "Set **Enable Microsoft Intune MAM** to **True**"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:290
+msgid "Select **Auth Provider**:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:292
+msgid "OpenID Connect (Entra-backed)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:293
+msgid "SAML 2.0 (Entra-backed)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:295
+msgid "Enter:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:297
+msgid "**Tenant ID**"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:298
+msgid "**Application (Client) ID**"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:302
+msgid ""
+"The enforced provider must resolve identity using ``IdAttribute = "
+"objectId``."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:305
+msgid "Step 5: Deploy the Mattermost iOS App"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:307
+msgid "Download and install the official Mattermost iOS app using:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:309
+msgid "Apple App Store (Production)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:310
+msgid "TestFlight (Beta)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:312
+msgid "Wrapped, re-signed, or privately distributed apps aren't supported."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:315
+msgid "Step 6: Validate Enrollment"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:317
+msgid "Validate with a licensed test user on iOS."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:319
+msgid "Confirm:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:321
+msgid "Enrollment completes successfully"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:322
+msgid "Enforcement applies at sign-in and mid-session"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:323
+msgid "Identity alignment is correct (``objectId ↔ oid``)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:326
+msgid "Expected Behavior During Mobile Sign-In"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:328
+msgid "User signs in via MSAL."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:329
+msgid "Mattermost validates the access token."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:330
+msgid "Intune MAM enrollment is triggered."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:331
+msgid "App Protection Policies are applied."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:333
+msgid ""
+"If enrollment is required but cannot complete, access is blocked until "
+"enrollment succeeds."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:336
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:340
+msgid "Most failures are caused by:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:342
+msgid "Identity mismatch (``objectId ↔ oid``)"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:343
+msgid "``IdAttribute`` not set to ``objectId``"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:344
+msgid "Missing Entra API permissions or admin consent"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:345
+msgid "App Protection Policy not targeting the user or app"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:346
+msgid "Unsupported client or platform"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:349
+msgid "Quick Diagnostics"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:352
+msgid "Confirm ``IdAttribute = objectId``."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:353
+msgid "Confirm Entra permissions and admin consent."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:354
+msgid "Confirm Auth Provider selection."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:355
+msgid "Confirm Intune policy targeting."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:357
+msgid "If the user declines enrollment, retry is allowed."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:360
+msgid "Intune MAM Errors"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:362
+msgid ""
+"The errors below may occur during mobile sign-in or when Intune MAM "
+"enforcement is triggered mid-session. Some errors are shown in the "
+"Mattermost Mobile App, while others are silent and must be diagnosed "
+"using Mattermost server logs."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:366
+msgid ""
+"In the table below, **Fallback: Web SSO** means the mobile app uses the "
+"**non-Intune** version of the configured sign-in method (SAML or OpenID "
+"Connect) as if Intune MAM were not enabled."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:852
+msgid "Consent During First Login"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:854
+msgid "If a user’s first mobile sign-in fails with **Consent Denied** or:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:856
+msgid ""
+"``You denied consent for Intune management. The affected accounts have "
+"been unenrolled and signed out.``"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:858
+msgid ""
+"Treat this as missing tenant-wide admin consent for the Entra app "
+"registration referenced by Mattermost Server. See the **Consent Denied** "
+"entry in the `Intune MAM Errors`_ table above for remediation steps."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:860
+msgid "To resolve this:"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:862
+msgid "In the Microsoft Entra admin center, go to **Enterprise applications**."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:863
+msgid "Search for **Mattermost Mobile** or **Mattermost Mobile Beta**."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:864
+msgid ""
+"Go to **Permissions** and add/grant **tenant-wide admin consent** for the"
+" Intune MAM permissions (for example, "
+"``https://msmamservice.api.application/.default`` and Microsoft Mobile "
+"Application Management → ``user_impersonation`` (Delegated))."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:865
+msgid "Have the user retry mobile sign-in."
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:868
+msgid "Rollout and Recovery Guidance"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:870
+msgid "Pilot with a small group first"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:871
+msgid "Validate identity alignment before broad rollout"
+msgstr ""
+
+#: ../../source/deployment-guide/mobile/configure-microsoft-intune-mam.rst:872
+msgid "Expect enforcement to occur mid-session if requirements change"
+msgstr ""
+

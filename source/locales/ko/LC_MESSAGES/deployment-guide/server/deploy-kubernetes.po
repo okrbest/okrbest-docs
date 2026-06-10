@@ -1,0 +1,1309 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:2
+msgid "Deploy Mattermost on Kubernetes"
+msgstr ""
+
+#: ../../source/_static/badges/entry-ent.rst:9
+msgid ""
+"|plans-img-yellow| Available on `Entry, Enterprise, and Enterprise "
+"Advanced plans <https://mattermost.com/pricing/>`__ (not available on "
+"Professional)"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:7
+msgid ""
+"Mattermost server can be deployed on various Kubernetes platforms, "
+"providing a scalable and robust infrastructure for your team "
+"communication needs. This guide covers deployment options for major cloud"
+" providers and general Kubernetes installations."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:11
+msgid ""
+"To learn how to safely upgrade your deployment in Kubernetes for High "
+"Availability with Active/Active support, see the :doc:`Upgrading "
+"Mattermost in Kubernetes and High Availability Environments "
+"</administration-guide/upgrade/upgrade-mattermost-kubernetes-ha>` "
+"documenation."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:14
+msgid "Platform"
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:16
+msgid "Choose your preferred platform below for specific deployment instructions:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:3
+msgid ""
+"You can use the Mattermost Kubernetes Operator to deploy Mattermost on "
+"Kubernetes using S3-compatible storage and a managed database service. "
+"While the operator supports a range of configurations, we strongly "
+"recommend using a cloud-native approach for production environments."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:6
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:8
+msgid "Before you begin, ensure you have the following:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:10
+msgid ""
+"A functioning Kubernetes cluster (see the `Kubernetes setup guide "
+"<https://kubernetes.io/docs/setup/>`__). Your cluster should be running a"
+" `supported Kubernetes version <https://kubernetes.io/releases/>`__."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:11
+msgid ""
+"The `kubectl` command-line tool installed on your local machine (see the "
+"`kubectl installation guide "
+"<https://kubernetes.io/docs/reference/kubectl/>`__)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:12
+msgid ""
+"A fundamental understanding of Kubernetes concepts, such as deployments, "
+"pods, and applying manifests."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:13
+msgid ""
+"Sufficient Kubernetes resources allocated based on your expected user "
+"load. Consult the :ref:`scaling for Enterprise <administration-"
+"guide/scale/scaling-for-enterprise:available reference architectures>` "
+"documentation for resource requirements at different scales."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:23
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:18
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:16
+msgid "Installation steps"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:18
+msgid ""
+"The installation process involves setting up necessary operators and then"
+" deploying Mattermost itself."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:21
+msgid "Step 1: Install the NGINX Ingress Controller"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:23
+msgid ""
+"Follow the instructions in the `Kubernetes deployment documentation "
+"<https://kubernetes.github.io/ingress-nginx/deploy/>`_ to install the "
+"NGINX ingress controller on your Kubernetes cluster. Mattermost "
+"recommends installing the Nginx Operator via helm, regardless of platform"
+" you are installing to."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:26
+msgid "Step 2: Install the Mattermost Operator"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:28
+msgid "The Mattermost Kubernetes Operator can be installed using Helm."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:30
+msgid ""
+"Install Helm (version 3.13.0 or later). See the `Helm quickstart "
+"documentation <https://helm.sh/docs/using_helm/>`_ for installation "
+"instructions."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:32
+msgid "Add the Mattermost Helm repository:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:38
+msgid ""
+"Create a file named ``config.yaml`` and populate it with the contents of "
+"the `Mattermost operator values file <https://github.com/mattermost"
+"/mattermost-helm/blob/master/charts/mattermost-operator/values.yaml>`_. "
+"This file allows for customization of the operator."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:40
+msgid "Create a namespace for the Mattermost Operator:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:46
+msgid ""
+"Install the Mattermost Operator. If you don't specify a version, the "
+"latest version of the Mattermost Operator will be installed. We recommend"
+" using the latest version of the Mattermost Operator."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:52
+msgid "For example:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:58
+msgid "To use your custom ``config.yaml`` file:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:65
+msgid "Step 3: Deploy Mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:69
+msgid "A Mattermost Enterprise license is required for multi-server deployments."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:70
+msgid ""
+"For single-server deployments without an Enterprise license, add "
+"``Replicas: 1`` to the ``spec`` section in step 2 below. See the "
+":doc:`high availability documentation </administration-guide/scale/high-"
+"availability-cluster-based-deployment>` for more on highly-available "
+"deployments."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:72
+msgid ""
+"**(Mattermost Enterprise only)** Create a Mattermost license secret. "
+"Create a file named ``mattermost-license-secret.yaml`` with the following"
+" content, replacing ``[LICENSE_FILE_CONTENTS]`` with your actual license:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:84
+msgid ""
+"Create a Mattermost installation manifest file named ``mattermost-"
+"installation.yaml``. File names in this guide are suggestions; you can "
+"use different names. Use the following template, adjusting the values as "
+"needed:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:102
+msgid "Key fields in the manifest include:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:104
+msgid "``metadata.name``: The name of your Mattermost deployment in Kubernetes."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:105
+msgid ""
+"``spec.size``: The size of your installation (e.g., \"100users\", "
+"\"1000users\", etc.)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:106
+msgid "``spec.ingress.host``: The DNS name for your Mattermost installation."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:107
+msgid ""
+"``spec.version``: The Mattermost version. See the :doc:`server version "
+"archive </product-overview/version-archive>` for available versions. You "
+"should use a :doc:`supported version </product-overview/release-policy>` "
+"of Mattermost in conjunction with the latest version of the Mattermost "
+"Operator."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:108
+msgid ""
+"``spec.licenseSecret``: The name of the Kubernetes secret containing your"
+" license (required for Enterprise)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:110
+msgid ""
+"For a full list of configurable fields, see the `example manifest "
+"<https://github.com/mattermost/mattermost-"
+"operator/blob/master/docs/examples/mattermost_full.yaml>`_ and the "
+"`Custom Resource Definition <https://github.com/mattermost/mattermost-"
+"operator/blob/master/config/crd/bases/installation.mattermost.com_mattermosts.yaml>`_."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:112
+msgid ""
+"Create a file named ``mattermost-database-secret.yaml`` for database "
+"credentials. This secret must be in the same namespace as the Mattermost "
+"installation."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:126
+msgid "Example for AWS Aurora with PostgreSQL:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:141
+msgid "Step 4: Create the Filestore Secret"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:143
+msgid ""
+"Create a file named ``mattermost-filestore-secret.yaml`` to store the "
+"credentials for your object storage service (e.g., AWS S3 or any "
+"S3-compatible service). This secret must be created in the same namespace"
+" where you intend to install Mattermost. The file should contain the "
+"following YAML structure:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
+msgid "Key"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
+msgid "Description"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
+msgid "Required"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
+msgid "accesskey"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
+msgid "Base64-encoded access key for your storage service."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
+msgid "Yes"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
+msgid "secretkey"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
+msgid "Base64-encoded secret key for your storage service."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
+msgid "metadata.name"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
+msgid "The name of the Kubernetes secret."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:165
+msgid ""
+"The ``accesskey`` and ``secretkey`` values must be **base64-encoded**. Do"
+" not enter the raw keys directly. Use a command-line tool or online "
+"encoder to generate the base64 strings."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:167
+msgid "**Example (AWS S3):**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:181
+msgid "Step 5: Configure the Mattermost Installation Manifest"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:183
+msgid ""
+"Modify the ``mattermost-installation.yaml`` file (created in step 2) to "
+"connect Mattermost to your external database and object storage. Refer to"
+" the supported fields for guidance on where to add these configurations "
+"within the YAML structure."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:185
+msgid "Connect to the database:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:187
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:198
+msgid "Add the following to the ``spec`` section of your manifest:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:196
+msgid "Connect to Object Storage:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:209
+msgid ""
+"If you are using Amazon S3, it's recommended to enable server-side "
+"encryption (SSE) and SSL. Add the following environment variables to the "
+"``mattermostEnv`` section:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:220
+msgid "Review Mattermost Resource Status"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:222
+msgid ""
+"After a Mattermost installation has been created with the Operator, you "
+"can review its status with the following:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:228
+msgid ""
+"The ``kubectl describe`` command can be used to obtain more information "
+"about the Mattermost server pods:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:234
+msgid "**Follow logs**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:236
+msgid "The following command can be used to follow logs on any kubernetes pod:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:242
+msgid ""
+"If the ``-n [namespace]`` is omitted, then the default namespace of the "
+"current context is used. We recommend specifying the namespace based on "
+"your deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:244
+msgid ""
+"This command can be used to review the Mattermost Operator or Mattermost "
+"server logs as needed."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:248
+msgid ""
+"If you're new to Kubernetes or prefer a managed solution, consider using "
+"a service like `Amazon EKS <https://aws.amazon.com/eks/>`_, `Azure "
+"Kubernetes Service <https://azure.microsoft.com/en-ca/products"
+"/kubernetes-service/>`_, `Google Kubernetes Engine "
+"<https://cloud.google.com/kubernetes-engine/>`_, or `DigitalOcean "
+"Kubernetes <https://www.digitalocean.com/products/kubernetes/>`_. While "
+"this guidance focuses on using external, managed services for your "
+"database and file storage, the Mattermost Operator *does* offer the "
+"flexibility to use other solutions. For example, you could choose to "
+"deploy a PostgreSQL database within your Kubernetes cluster using the "
+"CloudNative PG operator (or externally however you wish), or use any "
+"self-hosted S3-compatible storage service."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:249
+msgid ""
+"While using managed cloud services is generally simpler to maintain and "
+"our recommended approach for production deployments, using self-managed "
+"S3-compatible storage services and CloudNative PG for PostgreSQL are also"
+" valid options if you have the expertise to manage them."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:250
+msgid ""
+"If you choose to use self-managed components, you'll need to adapt the "
+"instructions accordingly, pointing to your internal services instead."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:251
+msgid ""
+"To customize your production deployment, refer to the :doc:`configuration"
+" settings documentation </administration-guide/configure/configuration-"
+"settings>`."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:252
+msgid ""
+"If you encounter issues during deployment, consult the :doc:`deployment "
+"troubleshooting guide </deployment-guide/deployment-troubleshooting>`."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:39
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:255
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:258
+msgid "What is the Operator's version compatibility with Mattermost Server?"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:260
+msgid ""
+"While generally speaking, the Operator should be compatible with most, or"
+" all versions of Mattermost Server, we recommend always using the latest "
+"version of the Operator in conjunction with a :doc:`supported version "
+"</product-overview/release-policy>` of Mattermost Server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:3
+msgid ""
+"You can use a supported `Azure Marketplace Container Offer "
+"<https://azuremarketplace.microsoft.com/en-us/marketplace/apps/mattermost"
+".mattermost-operator>`__ to install Mattermost on your existing Azure "
+"infrastructure."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:6
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:6
+msgid "Before you begin"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:8
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:8
+msgid "Before deploying, make sure you have the following:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:10
+msgid ""
+"**An AKS cluster**: with the `Application Gateway Ingress Controller "
+"(AGIC) add-on <https://learn.microsoft.com/en-us/azure/application-"
+"gateway/tutorial-ingress-controller-add-on-new>`_ enabled or another "
+"Ingress controller deployed."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:12
+msgid ""
+"**PostgreSQL v13.0+ database**: `Azure Database for PostgreSQL - Flexible"
+" Server with Private Access <https://learn.microsoft.com/en-"
+"us/azure/postgresql/>`_ is recommended. Deploy one by following `this "
+"Microsoft quick start guide <https://learn.microsoft.com/en-"
+"us/azure/postgresql/flexible-server/quickstart-create-server-portal>`_."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:14
+msgid ""
+"**Private Network Connectivity**: Verify that there is network "
+"connectivity between your AKS cluster and the PostgreSQL database."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:16
+msgid ""
+"**Valid DNS name and TLS certificate**: You must have access to a DNS "
+"zone and provide a valid TLS key and certificate for the Ingress "
+"Controller."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:18
+msgid ""
+"**Node Capacity**: At least 2 AKS nodes for high availability when "
+"deploying for 100 users or more."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:20
+msgid ""
+"**License Key**: Trial or Enterprise license to test high availability "
+"and other Enterprise features."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:25
+msgid ""
+"The installation process includes deploying Mattermost and updating the "
+"server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:28
+msgid "Step 1: Deploy Mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:30
+msgid ""
+"Deploy Mattermost from the `Azure Marketplace Container Offer "
+"<https://azuremarketplace.microsoft.com/en-us/marketplace/apps/mattermost"
+".mattermost-operator>`_ and select **Get it now**."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:32
+msgid ""
+"Alternatively, you can go to the ``Extensions + Applications`` section of"
+" your AKS cluster and install the Mattermost offering from there. Visit "
+"the `Microsoft cluster extensions documentation "
+"<https://learn.microsoft.com/en-gb/azure/aks/cluster-extensions?tabs"
+"=azure-cli>`_ to learn more."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:34
+msgid ""
+"Choose the **Resource Group** and the **Region** of your installed AKS "
+"and PostgreSQL database."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:36
+msgid "An example of the Azure AKS Project details screen."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:39
+msgid "Choose your AKS cluster."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:41
+msgid "An example of the Azure AKS cluster setup screen."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:44
+msgid ""
+"Fill in the details for your PostgreSQL database. Ensure the user "
+"specified has full access."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:46
+msgid "An example of the Azure AKS Database setup screen."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:50
+msgid ""
+"Specify Deployment Details including Deployment Name and Deployment Size."
+" You will need to configure file storage for your Mattermost instance. We"
+" recommend using an S3-compatible storage service or an NFS-compatible "
+"server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:52
+msgid "An example of the Azure AKS Deployment Details setup screen."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:55
+msgid ""
+"Configure Mattermost installation hostname and Ingress details. The AGIC "
+"add-on is used in the following example to show the ingress annotations "
+"required."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:57
+msgid ""
+"You can use any pre-installed Ingress Controller in your cluster as long "
+"as it supports Kubernetes Ingress and TLS termination."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:64
+msgid "Additionally, we recommend considering:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:66
+msgid "Enforcing a minimum TLS version (e.g., TLS 1.2)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:67
+msgid ""
+"Deploying a Web Application Firewall (WAF) for additional protection, if "
+"supported by your ingress controller."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:68
+msgid "Limiting access using Kubernetes Network Policies."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:70
+msgid "An example of the Azure AKS Networking Details setup screen."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:73
+msgid ""
+"Ensure that everything is running. You should be able to check the "
+"installed plugin from the **AKS Extensions + Applications** page under "
+"the **Settings** menu."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:75
+msgid ""
+"When the deployment is complete, obtain the hostname or IP address of "
+"your Mattermost deployment using the following command:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:81
+msgid ""
+"Use your IP address from the ``ADDRESS`` column, and create a DNS record "
+"in your domain registration service."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:83
+msgid ""
+"Access your working Mattermost installation at the URL you’ve determined "
+"in your DNS record."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:85
+msgid ""
+"Learn more about administrating your Mattermost server by visiting the "
+":doc:`Administration Guide </administration-guide/administration-guide-"
+"index>`."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:88
+msgid "Step 2: Upgrade Mattermost via your AKS cluster"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:90
+msgid ""
+"Visit the ``Extensions + Applications`` section of your AKS cluster where"
+" your Mattermost installation is deployed."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:91
+msgid ""
+"You can enable minor version auto upgrades since these are not updating "
+"Mattermost version"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:92
+msgid ""
+"Expand the ``Configuration Settings`` table and add the below "
+"configuration and the version you want to install as a value."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:101
+msgid "Select **Save** and wait for the upgrade."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:104
+msgid "Looking for a sovereign deployment on Azure Local?"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:106
+msgid ""
+"For organizations requiring on-premises deployments with data "
+"sovereignty, **Azure Local** (formerly Azure Stack HCI) provides a hybrid"
+" cloud platform that enables you to run Mattermost on-premises while "
+"maintaining integration with Microsoft Teams and M365."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:108
+msgid ""
+"We recommend engaging **Mattermost Professional Services** for Azure "
+"Local deployments to ensure optimal configuration and compliance with "
+"your security requirements. `Talk to an Expert <https://mattermost.com"
+"/contact-sales/>`_ to discuss your Azure Local deployment needs."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:112
+msgid ""
+"You are responsible for Azure costs associated with any infrastructure "
+"you spin up to host a Mattermost server, and Azure credits cannot be "
+"applied towards the purchase of a Mattermost license."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:3
+msgid ""
+"You can use the supported `Oracle Cloud Marketplace listing "
+"<https://cloudmarketplace.oracle.com/marketplace/en_US/listing/188386963>`_"
+" to install Mattermost Enterprise Edition on Oracle Cloud Infrastructure "
+"(OCI) using Oracle Kubernetes Engine (OKE)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:10
+msgid "**Oracle Cloud Account** with appropriate permissions"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:11
+msgid ""
+"**Permissions** to create/manage OKE, Compute, Networking, Database, "
+"Resource Manager, and Secrets"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:12
+msgid "**Compartment** for deployment"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:13
+msgid "**Domain Name and TLS Certificate** for secure access"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:14
+msgid "**Mattermost License Key** (Trial or Enterprise)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:15
+msgid ""
+"**Node Capacity**: At least 2 OKE nodes for high availability when "
+"deploying for 100 users or more"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:20
+msgid ""
+"The installation process includes deploying Mattermost and configuring "
+"the necessary components."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:23
+msgid "Step 1: Start from Oracle Cloud Marketplace"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:25
+msgid "Go to the Mattermost listing and select **Launch Stack**."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:27
+msgid "Oracle Cloud Marketplace listing for Mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:31
+msgid "Step 2: Stack Information"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:33
+msgid ""
+"On the **Create stack** page, review the information, and then set the "
+"name, compartment, and Terraform version."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:35
+msgid "Stack information page"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:39
+msgid "Step 3: Configure Variables"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:41
+msgid ""
+"Set all the details for your Mattermost deployment. Each section is "
+"important for a successful and secure installation."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:44
+msgid "OKE Cluster Configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:46
+msgid "**Create new OKE Cluster:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:48
+msgid "Check this if you want to create a new Kubernetes cluster."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:49
+msgid ""
+"If you already have a cluster, you can uncheck and select your existing "
+"one."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:50
+msgid "**Kubernetes Version:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:52
+msgid "Choose the latest stable version unless you have a specific requirement."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:53
+msgid "**Node Pool Shape (Flex/Fixed):**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:55
+msgid ""
+"Select a shape that fits your workload. For production, use at least 2 "
+"OCPUs and 16GB RAM per node."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:56
+msgid "**Number of Nodes:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:58
+msgid ""
+"Minimum 2 for high availability. For testing, 1 is enough. For production"
+" environments, always use at least 2 nodes and enable high availability."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:59
+msgid "**Operating System:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:61
+msgid "Oracle Linux 8 is recommended for best compatibility."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:64
+msgid "OKE Network Configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:66
+msgid "**Worker Node Visibility:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:68
+msgid ""
+"Private is more secure for production. Public is easier for testing. For "
+"production environments, use private nodes and restrict access to the API"
+" endpoint."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:69
+msgid "**API Endpoint Visibility:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:71
+msgid ""
+"Public allows you to manage the cluster from anywhere. Private is more "
+"secure but requires VPN or bastion."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:72
+msgid "**Create new Virtual Cloud Network (VCN):**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:74
+msgid "Check this to create a new network, or uncheck to use an existing one."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:75
+msgid "**VCN CIDR Block:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:77
+msgid ""
+"Set a unique network range (e.g., ``10.20.0.0/16``). Avoid overlap with "
+"other networks."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:80
+msgid "OKE Worker Nodes"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:82
+msgid "**Enable Cluster Autoscaler:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:84
+msgid "Allows the cluster to automatically add or remove nodes based on usage."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:85
+msgid "**Initial/Min Number of Worker Nodes:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:87
+msgid ""
+"Set the minimum number of nodes. For high availability, use at least 2. "
+"Autoscaling helps manage costs and performance automatically."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:88
+msgid "**Node Shape:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:90
+msgid "Choose a shape (e.g., ``VM.Standard.E4.Flex``) and set OCPUs and memory."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:91
+msgid "**Auto Generate SSH Key:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:93
+msgid "Enable this if you do not have your own SSH key for node access."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:94
+msgid "**Image OS and Version:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:96
+msgid "Oracle Linux 8 is recommended."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:99
+msgid "PostgreSQL Configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:101
+msgid "**Admin Username:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:103
+msgid "The main user for your PostgreSQL database (e.g., ``admin1``)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:104
+msgid "**Password Type:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:106
+msgid ""
+"``PLAIN_TEXT`` for testing, ``SECRET`` for production (uses Oracle "
+"Vault). Always use Oracle Vault for production passwords."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:107
+msgid "**Password/Secret Name:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:109
+msgid "Enter a strong password or the name of a secret in Oracle Vault."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:110
+msgid "**Database Password:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:112
+msgid "Required if not using a secret."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:115
+msgid "General Configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:117
+msgid "**Cluster Name Prefix:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:119
+msgid "Used to identify all resources (e.g., ``mm-oke``)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:120
+msgid "**Show Advanced Options:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:122
+msgid ""
+"Enable for more control (encryption keys, SSH keys, etc.). Use advanced "
+"options if you need custom encryption or want to manage your own SSH "
+"keys."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:123
+msgid "**PostgreSQL Deployment Strategy:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:125
+msgid "Use \"Database For PostgreSQL\" for managed service."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:126
+msgid "**Object Storage for File Storage:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:128
+msgid "Enable to use OCI Object Storage for Mattermost files."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:129
+msgid "**Mattermost Version:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:131
+msgid "Use the latest stable version."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:132
+msgid "**Namespace:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:134
+msgid "Default is ``mattermost``."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:135
+msgid "**License Key:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:137
+msgid "Upload or paste your Mattermost license."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:138
+msgid "**Helm Repository:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:140
+msgid "Default is ``https://helm.mattermost.com``."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:143
+msgid "Step 4: Review and Apply"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:145
+msgid ""
+"Check all your settings and select **Create** to start the deployment. "
+"Monitor the Resource Manager job and logs."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:147
+msgid "Resource Manager job monitor"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:151
+msgid "Step 5: After Deployment"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:153
+msgid ""
+"When the job is finished, your OKE cluster, PostgreSQL database, and "
+"Mattermost will be ready. To find the Mattermost web address, run:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:159
+msgid ""
+"Copy the address and create a DNS record for your domain. Open your "
+"browser and go to your Mattermost URL."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:162
+msgid "Step 6: Upgrade Mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:164
+msgid "To upgrade your Mattermost installation:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:166
+msgid "Access your OKE cluster through the Oracle Cloud Console"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:167
+msgid "Navigate to the Mattermost operator deployment"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:168
+msgid "Update the Mattermost version in the configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:169
+msgid "Apply the changes and wait for the upgrade to complete"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:173
+msgid "**Tips for Success**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:175
+msgid "Make sure you have all the permissions you need before you start."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:176
+msgid "Use Oracle Vault to store passwords and sensitive data."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:177
+msgid "Use private nodes and secure your network for production."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:178
+msgid ""
+"Always monitor logs from the Resource Manager and pods using ``kubectl "
+"logs`` for more specific error messages."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:179
+msgid ""
+"For more details, see the official `OCI Database with PostgreSQL "
+"documentation <https://www.oracle.com/cloud/postgresql/>`_ and `OKE "
+"documentation <https://docs.oracle.com/en-"
+"us/iaas/Content/ContEng/Concepts/contengoverview.htm>`_."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:182
+msgid "Common Errors and How to Avoid Them"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:184
+msgid "**Error: Kubernetes API not reachable**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:186
+msgid ""
+"*Cause:* API endpoint is private and you're not connected to the VCN via "
+"VPN or Bastion."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:187
+msgid ""
+"*Solution:* Ensure you have access to the network or make the endpoint "
+"public for testing."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:189
+msgid "**Error: Stack creation fails with missing permissions**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:191
+msgid "*Cause:* IAM policies are not set properly for the user or group."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:192
+msgid ""
+"*Solution:* Ensure you have permissions for Resource Manager, OKE, "
+"Networking, and Secrets."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:194
+msgid "**Error: No ingress returned by kubectl**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:196
+msgid "*Cause:* Mattermost Ingress might not be ready or was misconfigured."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:197
+msgid ""
+"*Solution:* Check with ``kubectl describe ingress`` and validate DNS, "
+"TLS, and Helm values."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:199
+msgid "**Error: PostgreSQL password rejected**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:201
+msgid "*Cause:* Password not set or mismatched with Oracle Vault."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:202
+msgid "*Solution:* Re-check the password value or Vault secret used during setup."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:206
+msgid ""
+"You are responsible for Oracle Cloud Infrastructure costs for the "
+"resources you create. Oracle Cloud credits cannot be used to buy a "
+"Mattermost license."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:208
+msgid ""
+"Learn more about managing your Mattermost server by visiting the "
+":doc:`Administration Guide </administration-guide/administration-guide-"
+"index>`."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:42
+msgid ""
+"Why are my pods failing with a ``CrashLoopBackOff`` error after adding a "
+"custom CA certificate to my Docker image?"
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:44
+msgid ""
+"You may see a ``CrashLoopBackOff`` error after adding a custom CA "
+"certificate to your Docker image's ``/etc/ssl/certs`` directory and "
+"deploying it to your Kubernetes environment via the Mattermost Enterprise"
+" Edition Helm Chart. This issue typically arises because the custom CA "
+"certificate is not being recognized by the system's certificate trust "
+"store, leading to TLS handshake failures when the application attempts to"
+" connect to services that require the custom CA."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:46
+msgid ""
+"While core functionality may remain operational, you may notice the "
+"following symptoms:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:48
+msgid ""
+"Pods stuck in a crashloop with the error message: backoff - restarting "
+"failed container in pod."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:49
+msgid ""
+"Debugging commands like ``kubectl describe`` and ``kubectl logs`` provide"
+" little to no valuable information."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:50
+msgid "Integrations may be blocked."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:53
+msgid "Can I resolve this issue without rebuilding the Docker image?"
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:55
+msgid ""
+"Yes. We recommend using Kubernetes-native solutions to manage custom CA "
+"certificates to simplify deployment processes and minimize disruptions "
+"caused by image rebuilds. You can inject the certificate directly into "
+"the pod using Kubernetes resources instead of modifying the Docker image "
+"to manage custom CA certificates dynamically without needing to rebuild "
+"and redeploy your Docker image every time the certificate changes."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:57
+msgid ""
+"Use a Kubernetes secret to store your custom CA certificate and then "
+"mount it into the pod:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:59
+msgid "Create a Kubernetes secret with your custom CA certificate."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:60
+msgid ""
+"Mount the certificate into the pod using the Helm chart’s configuration "
+"options. This method simplifies management and avoids the need to rebuild"
+" your Docker image for future certificate updates."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:62
+msgid ""
+"Alternatively, to dynamically inject certificates without modifying the "
+"Docker image, use an ``initContainer`` to copy the certificate into the "
+"pod's filesystem and update the certificate trust store before the main "
+"container starts."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:65
+msgid "How to troubleshoot the root cause of the ``CrashLoopBackOff`` error?"
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:67
+msgid "Use ``kubectl describe pods`` to check detailed event logs."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:69
+msgid ""
+"Consider logging tools like Grafana to aggregate and analyze logs for "
+"additional insights."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:72
+msgid "Where is data stored in a self-hosted Kubernetes deployment?"
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:74
+msgid ""
+"Where data is stored depends on the backend database (such as RDS, Azure "
+"Postgres, self-hosted PostgreSQL), and the backend filestore (such as AWS"
+" S3, other S3-compatible services, or a mounted volume) configured during"
+" deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:76
+msgid ""
+"For volume mounts, we recommend using an NFS volume to provide filestores"
+" as a \"local\" directory to the Mattermost server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/deploy-kubernetes.rst:78
+msgid ""
+"Not all types of `Kubernetes persistent volumes "
+"<https://kubernetes.io/docs/concepts/storage/persistent-volumes/#types-"
+"of-persistent-volumes>`_ have been tested with Mattermost, and some may "
+"have limitations or specific configurations that may require additional "
+"setup to ensure proper permissions and access. We recommend system admins"
+" review documentation for their preferred persistent volume types and "
+"test to ensure compatibility with Mattermost."
+msgstr ""
+

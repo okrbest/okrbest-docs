@@ -1,0 +1,696 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:2
+msgid "Deploy in Air-Gapped Environments"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:4
+msgid ""
+"An air-gapped environment is one that is isolated from the public "
+"internet, requiring all necessary components to be available locally. "
+"This guide outlines what you'll need to deploy Mattermost in a self-"
+"hosted air-gapped environment, focusing on appropriate preparation, "
+"deployment guidance and configurations required for a successful "
+"deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:7
+msgid "Overview"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:9
+msgid ""
+"At a high level, deploying Mattermost in an air-gapped environment "
+"requires preparing all necessary software, container images, and "
+"configuration resources in advance, since the target system has no direct"
+" internet access; transferring these artifacts to the isolated network "
+"using secure media; and then installing, configuring, and validating the "
+"deployment within the air-gapped environment. This is a summary of the "
+"steps involved:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:11
+msgid "**Select your preferred Mattermost deployment option:**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:13
+msgid ""
+"This step is often dictated by the infrastruture already running in your "
+"air-gapped environment. If you're deploying from scratch, we recommend "
+"reviewing our :ref:`server deployment documentation <deployment-"
+"guide/server/server-deployment-planning:deployment options>` to select "
+"the optimal option given your organizations needs."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:15
+msgid "**Setup a private container registry or package mirror:**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:17
+msgid ""
+"Ideally the air-gapped environment already has a private container "
+"registry or package mirror available. If not, we recommend following `our"
+" frequently asked questions <#frequently-asked-questions>`__ or "
+"referencing online resources specific to your environment."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:19
+msgid "**Prepare your Bill of Materials:**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:21
+msgid ""
+"Depending on your deployment method method, you'll need to download, tag,"
+" and push required materials into your private registry or mirror."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:23
+msgid "**Transfer materials into the air-gapped environment:**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:25
+msgid ""
+"If the private registry cannot access the public internet, you can "
+"prepare an archive of the registry data on your internet connected "
+"machine and securely transfer it using approved data transfer methods - "
+"for example, burning to a disk."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:27
+msgid "**Install Mattermost Server**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:29
+msgid ""
+"Once you have all the necessary resources in your air-gapped environment,"
+" you can move forward with deployment following the instructions for "
+":doc:`Linux </deployment-guide/server/deploy-linux>`, :doc:`Kubernetes "
+"</deployment-guide/server/deploy-kubernetes>`, or :doc:`Docker "
+"</deployment-guide/server/deploy-containers>`."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:31
+msgid "**Install Mattermost Desktop Apps**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:33
+msgid ""
+"Since air-gapped devices cannot access the publicly available app stores,"
+" you'll need to install the apps directly from the latest `packages "
+"available on our GitHub release page "
+"<https://github.com/mattermost/desktop/releases>`_. You'll find "
+":doc:`installation instructions </deployment-guide/desktop/desktop-app-"
+"deployment>` in our documentation based on your desired deployment "
+"method."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:35
+msgid "**Configure Mattermost for air-gapped operation**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:37
+msgid ""
+"The `configuration settings <#server-configuration>`__ recommended in "
+"this document accomodate for the lack of internet access to operate "
+"Mattermost in an air-gapped environment."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:41
+msgid ""
+"Consider `talking to a Mattermost expert <https://mattermost.com/contact-"
+"sales/>`__ if your organization needs support deploying Mattermost and "
+"supporting services in an air-gapped environment."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:44
+msgid "Bill of Materials"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:46
+msgid ""
+"On an internet connected machine, you must gather all required packages, "
+"container images, and dependencies needed for the installation process. "
+"The resources you'll need will depend on your deployment method, "
+"specifically:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:50
+msgid ""
+"Using our provided tarball is recommeded as the simplest installation "
+"method for air-gapped environments. You can install the Mattermost Server"
+" in a few minutes on any air-gapped 64-bit Linux system."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:52
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:71
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:90
+msgid "**Prerequisites**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:54
+msgid ""
+":doc:`Mattermost tarball </product-overview/version-archive>`. We "
+"recommend using the latest :ref:`ESR <product-overview/release-"
+"policy:extended support releases>` for extended support where server "
+"upgrades may be infrequent."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:55
+msgid ""
+"Database: PostgreSQL `installation packages "
+"<https://www.postgresql.org/download/>`_ or container images for your "
+"Linux distribution"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:56
+msgid ""
+"File Storage: Local filesystem storage is sufficient for deployments "
+"under 2,000 users. For larger deployments requiring high availability, we"
+" recommend using an S3-compatible object storage solution or an NFS "
+"(Network File System) server for shared storage needs."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:57
+msgid ""
+"Load balancer: If you already have a load balancer running in your air-"
+"gapped environment you can skip this resource, otherwise we recommend "
+"deploying :doc:`NGINX </deployment-guide/server/setup-nginx-proxy>` from "
+"these `Linux packages <https://nginx.org/en/linux_packages.html>`_."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:58
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:77
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:95
+msgid ""
+"Desktop app: Download the `required package "
+"<https://github.com/mattermost/desktop/releases>`_ based on your "
+"deployment method."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:60
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:79
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:97
+msgid ""
+"**(Optional) Supporting Services** Consider downloading these additional "
+"resources if you plan to enable these optional components:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:63
+msgid ""
+":doc:`Mattermost Calls </administration-guide/configure/calls-deployment-"
+"guide>`: `mattermost-calls-offloader <https://github.com/mattermost"
+"/calls-offloader/releases>`__ (required for recording, transcription and "
+"live captions) and `mattermost-rtcd "
+"<https://github.com/mattermost/rtcd/releases>`__ (required for "
+"performance and scalability)."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:64
+msgid ""
+"`Elasticsearch <https://www.elastic.co/downloads/elasticsearch>`__ can be"
+" `deployed <https://www.elastic.co/docs/deploy-manage/deploy/self-managed"
+"/installing-elasticsearch>`__ for enhanced search performance at scale."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:65
+msgid ""
+"`Prometheus <https://prometheus.io/download/>`_ and `Grafana "
+"<https://grafana.com/grafana/download>`__ for monitoring and "
+"observability"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:69
+msgid ""
+"Kubernetes is recommended for a highly scalable and robust deployment if "
+"your organization is already running a Kubernetes cluster in the air-"
+"gapped environment."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:73
+msgid ""
+"`Mattermost Operator <https://github.com/mattermost/mattermost-"
+"helm/tree/master/charts/mattermost-operator>`_ and `values "
+"<https://github.com/mattermost/mattermost-helm/blob/master/charts"
+"/mattermost-operator/values.yaml>`__"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:74
+msgid ""
+"Database: We recommend options such as the `Postgres Operator "
+"<https://access.crunchydata.com/documentation/postgres-"
+"operator/latest/quickstart>`_ from Crunchy Data, `CloudNativePG <https"
+"://cloudnative-pg.io/documentation/1.27/installation_upgrade/>`__ or "
+"`pgEdge <https://github.com/pgEdge/pgedge-helm>`__."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:75
+msgid ""
+"File Storage: We recommend using an S3-compatible storage service or a "
+"mounted NFS volume for shared storage needs."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:76
+msgid ""
+"Load balancer: If you already have a load balancer running in your air-"
+"gapped environment you can skip this resource, otherwise we recommend "
+"deploying :doc:`NGINX </deployment-guide/server/setup-nginx-proxy>`, "
+"using the `NGINX Ingress Controller operator <https://docs.nginx.com"
+"/nginx-ingress-controller/installation/installing-nic/installation-with-"
+"operator/>`__."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:82
+msgid ""
+":doc:`Mattermost Calls </administration-guide/configure/calls-deployment-"
+"guide>` helm charts: `mattermost-calls-offloader "
+"<https://github.com/mattermost/mattermost-helm/tree/master/charts"
+"/mattermost-calls-offloader>`__ and `values "
+"<https://github.com/mattermost/mattermost-helm/blob/master/charts"
+"/mattermost-calls-offloader/values.yaml>`__ (required for recording, "
+"transcription and live captions), `mattermost-rtcd "
+"<https://github.com/mattermost/mattermost-helm/tree/master/charts"
+"/mattermost-rtcd>`__ and `values <https://github.com/mattermost"
+"/mattermost-helm/blob/master/charts/mattermost-rtcd/values.yaml>`__ "
+"(required for performance and scalability)."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:83
+msgid ""
+"`Elasticsearch <https://www.elastic.co/docs/deploy-manage/deploy/cloud-"
+"on-k8s>`__ can be `deployed in air-gapped k8 environments "
+"<https://www.elastic.co/guide/en/cloud-on-k8s/2.8/k8s-air-gapped.html>`__"
+" for enhanced search performance at scale."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:84
+msgid ""
+"`Prometheus <https://github.com/prometheus-operator/prometheus-"
+"operator>`__ and `Grafana <https://github.com/grafana/grafana-"
+"operator>`__ operators for monitoring and observability"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:88
+msgid ""
+"Docker can be used if you don't have a running Kubernetes cluster in the "
+"air-gapped environment, but want to use containers for simplified "
+"installation and dependency management. Docker is not recommended for "
+"production environments at high scale, as it doesn’t support clustered "
+"deployments or High Availability (HA) configurations out-of-the-box."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:92
+msgid ""
+"`Mattermost Enterprise Edition <https://hub.docker.com/r/mattermost"
+"/mattermost-enterprise-edition>`__ image."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:93
+msgid "Database: `PostgreSQL <https://hub.docker.com/_/postgres>`__ image."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:94
+msgid ""
+"Load balancer: If you already have a load balancer running in your air-"
+"gapped environment you can skip this resource, otherwise we recommend "
+"deploying :doc:`NGINX </deployment-guide/server/setup-nginx-proxy>` from "
+"this `images <https://hub.docker.com/_/nginx>`__."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:100
+msgid ""
+":doc:`Mattermost Calls </administration-guide/configure/calls-deployment-"
+"guide>` images: `calls-offloader <https://hub.docker.com/r/mattermost"
+"/calls-offloader>`__ (required for recording, transcription and live "
+"captions) and `rtcd <https://hub.docker.com/r/mattermost/rtcd>`__ "
+"(required for performance and scalability)."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:101
+msgid ""
+"`Elasticsearch <https://hub.docker.com/_/elasticsearch>`__ image for "
+"enhanced search performance at scale."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:102
+msgid ""
+"`Prometheus <https://hub.docker.com/r/prom/prometheus>`__ and `Grafana "
+"<https://hub.docker.com/r/grafana/grafana>`__ images for monitoring and "
+"observability."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:105
+msgid "Mattermost Plugins"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:107
+msgid ""
+"Mattermost includes a number of :doc:`pre-built integrations "
+"</integrations-guide/popular-integrations>` for mission-critical tools. "
+"If you'd like to use any plugins beyond those that are pre-built in the "
+"Mattermost package you'll need to download the plugin binaries from the "
+"`Mattermost Marketplace <https://mattermost.com/marketplace/>`_. Once you"
+" have Mattermost deployed, these plugin binaries can be uploaded directly"
+" in the System Console."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:110
+msgid "SSL/TLS Certificates and Keys"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:112
+msgid ""
+"If your deployment requires SSL, ensure you have the necessary "
+"certificates. This includes certificates and keys for enabling HTTPS with"
+" Mattermost, as well as any CA files or certificates needed to access "
+"internal services such as LDAP or SAML."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:115
+msgid "Local Documentation"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:117
+msgid ""
+"Mattermost documenation can be `built locally "
+"<https://github.com/mattermost/docs?tab=readme-ov-file#build-locally>`__ "
+"so you'll have access to installation and configuration documentation in "
+"the air-gapped environment. Otherwise, you can download the necessary "
+"deployment and configuration documents directly from the `GitHub docs "
+"repository <https://github.com/mattermost/docs>`__."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:119
+msgid ""
+"**Prerequisites** The following software is required to build the "
+"documentation locally:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:122
+msgid "Git `[download] <https://git-scm.com/downloads>`__"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:123
+msgid "Python 3.11 or later `[download] <https://www.python.org/downloads>`__"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:124
+msgid "Pipenv `[download] <https://pipenv.pypa.io>`__"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:125
+msgid "GNU Make 3.82 or later `[download] <https://ftp.gnu.org/gnu/make/>`__"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:128
+msgid "Server configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:130
+msgid ""
+"After successful deployment, you'll need to configure Mattermost for air-"
+"gapped operation. The following sections describe these configuration "
+"options and offers recommendations for settings."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:133
+msgid "Mobile push notifications"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:135
+msgid ""
+"Mattermost can use mobile push notifications to notify users of new "
+"messages and activity. These notifications require a server component to "
+"be deployed to send the notifications to the mobile devices. By default, "
+"Mattermost will use the public push notification service which is not "
+"available in an air-gapped environment. We recommend :ref:`disabling push"
+" notifications <administration-guide/configure/environment-configuration-"
+"settings:enable push notifications>` in **System Console > Environment > "
+"Push Notification Server**."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:138
+msgid "Email"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:140
+msgid ""
+"Unless you have setup an internal air-gapped email service, we recommend "
+"disabling email invitations and email verification from **System Console "
+"> Authentication > Signup**."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:143
+msgid "Website link previews"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:145
+msgid ""
+"Website link previews require a connection to the internet to fetch the "
+"content of the links. We recommend :ref:`disabling website link previews "
+"<administration-guide/configure/site-configuration-settings:enable "
+"website link previews>` in **System Console > Site Configuration > "
+"Posts**."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:148
+msgid "GIF picker"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:150
+msgid ""
+"The GIF picker relies on a third-party service which has a dependency on "
+"external internet access. You can disable it in **System Console > "
+"Integrations > GIF**."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:153
+msgid "Notices"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:155
+msgid ""
+":doc:`In-product notices </administration-guide/manage/in-product-"
+"notices>` require internet access to periodcally inform administrators "
+"and end users of new product improvements, features, and releases. You "
+"can disable notices in **System Console > Site Configuration > Notices**."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:158
+msgid "Telemetry"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:160
+msgid ""
+"To avoid log errors we recommend disabling :doc:`Telemetry-related "
+"features </administration-guide/manage/telemetry>`, including the "
+"security update check, and error and diagnostics reporting features."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:163
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:166
+msgid ""
+"What if my air-gapped environment doesn't have a private container "
+"registry or package mirror?"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:167
+msgid ""
+"A private container registry securely stores the Docker images necessary "
+"for air-gapped deployments, ensuring compliance with data isolation "
+"requirements. Similarly, a private package mirror stores operating system"
+" packages necessary for air-gapped deployments in Ubuntu or RHEL/CentOS "
+"Linux environments. Setting up a local registry or mirror is a critical "
+"step in deploying Mattermost to ensure all images, dependencies and "
+"packages are available to you in the air-gapped environment. The steps "
+"below outline the process required to setup a local registry or mirror, "
+"depending on the deployment method you are using. These steps are a rough"
+" guide, and can be supplemented with online resources depending on your "
+"specific deployment needs."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:172
+msgid "**(Ubuntu) Set up a private Debian package mirror**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:174
+msgid ""
+"We will use Aptly to create a local mirror, although you can also use "
+"other options such as debmirror."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:176
+msgid "**Install Aptly** (on an internet-connected machine):"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:183
+msgid "**Create GPG key for signing packages**:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:189
+msgid "**Create a mirror configuration**:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:195
+msgid "**Update the mirror to download packages**:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:201
+msgid "**Create and publish a snapshot**:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:208
+msgid "**Serve the repository**:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:214
+msgid "**Client configuration:** Configure apt to use your local mirror:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:223
+msgid "**(RHEL/CentOS) Set up a private RHEL package mirror**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:225
+msgid "We will use reprosync for a local mirror."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:227
+msgid "**Install required tools** (on an internet-connected RHEL system):"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:233
+msgid "**Download packages**:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:241
+msgid "**Create repository metadata**:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:248
+msgid "**Set up a web server**:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:256
+msgid "**Client configuration:** Disable existing repositories:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:264
+msgid "**Client configuration:** Create new repository files:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:284
+msgid "**Client configuration:** Clear cache and test:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:294
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:375
+msgid "**Set up a self-hosted private container registry**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:296
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:377
+msgid "**Install Docker Registry**:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:302
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:383
+msgid "**Configure persistent storage**:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:310
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:391
+msgid "**Add TLS security** (recommended):"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:312
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:393
+msgid "Generate self-signed certificates:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:320
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:401
+msgid "Run the registry with TLS:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:332
+msgid "**Configure Kubernetes to use private image registries**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:334
+msgid ""
+"When using Kubernetes in an air-gapped environment, you need to configure"
+" it to use your private registry."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:336
+msgid "**Create a kubernetes secret for registry authentication**:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:346
+msgid "**Reference the secret in pod specifications**:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:361
+msgid "**For Helm deployments**, specify the registry in ``values.yaml``:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:413
+msgid "**Populate your private registry**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:415
+msgid ""
+"Ensure the required images from the `Bill of Materials <bill-of-"
+"materials>`__ are downloaded and pushed to the private registry."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:417
+msgid "**Configure Docker to use private image registries**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:419
+msgid "Configure Docker on all hosts to trust and use your private registry."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:421
+msgid "**Add your registry to Docker's trusted registries**:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:423
+msgid "Edit or create ``/etc/docker/daemon.json``:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:431
+msgid "For registries using self-signed certificates:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:438
+msgid "**Restart Docker daemon**:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:444
+msgid "**Test the configuration**:"
+msgstr ""
+

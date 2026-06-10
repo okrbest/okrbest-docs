@@ -1,0 +1,1599 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/manage/logging.rst:2
+msgid "Mattermost logging"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:9
+msgid ""
+"**From Mattermost v11, notification log settings have been consolidated "
+"into the standard console logs and mattermost.log file**. You can no "
+"longer disable notification logging without using advanced logging "
+"settings, as the main log level setting now controls both server and "
+"notification logs."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:11
+msgid ""
+"You can use the ``AdvancedLoggingJSON`` configuration with discrete "
+"notification log levels: ``NotificationError``, ``NotificationWarn``, "
+"``NotificationInfo``, ``NotificationDebug``, and ``NotificationTrace`` to"
+" split notification logs into separate files and reduce troubleshooting "
+"noise. See the section below on `advanced logging <#advanced-logging>`__ "
+"for details."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:13
+msgid ""
+"Mattermost provides independent logging systems that can be configured "
+"separately with separate log files and rotation policies to meet "
+"different operational and compliance needs:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:1
+msgid "Logging Type & Capture"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:1
+msgid "Production Recommendation"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:1
+msgid "Configuration Priority"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:1
+msgid "**Log Settings**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:3
+msgid ""
+"All general Mattermost server operations, errors, startup/initialization,"
+" API calls, and system events. From v11.0, also includes notification "
+"subsystem events."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:1
+msgid "Always enabled. Console: INFO, File: INFO"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:1
+msgid "**High** - Essential for operations"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:1
+msgid "**Audit Log Settings**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:3
+msgid ""
+"Security and compliance events, user actions, API access, authentication "
+"events, and administrative changes."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:1
+msgid "Enable if compliance is required"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:1
+msgid "**Medium** - Based on regulatory needs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:1
+msgid ""
+"**Notification Log Settings** *(applicable to v10.12 and earlier releases"
+" only)*"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:3
+msgid ""
+"Notification subsystem events, push notifications, email delivery, mobile"
+" notification processing."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:1
+msgid "Enable for notification troubleshooting"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:1
+msgid "**Low** - Enable when debugging issues"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:29
+msgid ""
+"By default, all Mattermost plans write logs to both the console and to "
+"the ``mattermost.log`` file in a machine-readable JSON format for log "
+"aggregation tools. Mattermost Enterprise and Professional customers can "
+"additionally log directly to syslog and TCP socket destination targets. "
+"Audit logging is designed to be asynchronous to minimize performance "
+"impact."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:31
+msgid ""
+"System admins can customize the following logging options based on your "
+"business practices and needs by going to **System Console > Environment >"
+" Logging** or by editing the ``config.json`` file directly."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:35
+msgid ""
+"From Mattermost v11.3, AdvancedLoggingJSON configuration includes "
+"enhanced validation that enforces proper separation between standard and "
+"audit log levels:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:37
+msgid ""
+"Standard logging configurations reject audit-specific log levels "
+"(``audit-api``, ``audit-content``, ``audit-permissions``, ``audit-cli``)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:38
+msgid ""
+"Audit logging configurations reject standard log levels (``debug``, "
+"``info``, ``warn``, ``error``, ``fatal``, ``panic``, etc.)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:39
+msgid ""
+"Configuration validation occurs at startup and when updating settings, "
+"preventing invalid log level combinations"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:42
+msgid "Console logs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:44
+msgid ""
+"Console logs feature verbose debug level log messages for general "
+"activities that are written to the console using the standard output "
+"stream (stdout). You can customize console logs for general activities."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:46
+msgid ""
+"From Mattermost v11.0, notification logs are automatically included in "
+"the main console logs. See the :ref:`Logging configuration settings "
+"<administration-guide/configure/environment-configuration-settings:output"
+" logs to console>` for details."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:49
+msgid "File logs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:51
+msgid ""
+"File logs feature info level log messages for general activities "
+"including errors and information around startup, and initialization and "
+"webhook debug messages. The file is stored in ``./logs/mattermost.log``, "
+"rotated at 100 MB, and archived to a separate file in the same directory."
+" You can customize file logs for general activities."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:53
+msgid ""
+"From Mattermost v11.0, notification logs are automatically included in "
+"the main ``mattermost.log`` file. See the :ref:`Logging configuration "
+"settings <administration-guide/configure/environment-configuration-"
+"settings:output logs to file>` for details."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:57
+msgid ""
+"Download the ``mattermost.log`` file locally by going to **System Console"
+" > Reporting > Server Logs**, and selecting **Download Logs**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:59
+msgid ""
+"You can optionally output log records to any combination of `console "
+"<#console-target-configuration-options>`__, `local file <#file-target-"
+"configuration-options>`__, `syslog <#syslog-target-configuration-"
+"options>`__, and `TCP socket <#tcp-target-configuration-options>`__ "
+"targets, each featuring additional customization. See `Advanced Logging "
+"<#advanced-logging>`__ for details."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:62
+msgid "Define logging output"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:64
+msgid ""
+"Define logging output for general activities in JSON format in the System"
+" Console by going to **Environment > Logging > Advanced Logging** or by "
+"editing the ``config.json`` file directly."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:66
+msgid "You can use the sample JSON below as a starting point."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:208
+msgid "Audit logging"
+msgstr ""
+
+#: ../../source/_static/badges/ent-plus.rst:9
+msgid ""
+"|plans-img-yellow| Available on `Enterprise and Enterprise Advanced plans"
+" <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:213
+msgid ""
+"By default, Mattermost doesn't write audit logs locally to a file on the "
+"server, and the ability to enable audit logging in Mattermost is "
+"currently in :ref:`Beta <administration-guide/manage/feature-"
+"labels:beta>`."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:215
+msgid ""
+"You can enable and customize advanced audit logging in Mattermost to "
+"record activities and events performed within Mattermost, such as user "
+"access to the Mattermost REST API or mmctl. Audit logs are recorded "
+"asynchronously to reduce latency to the caller, and are stored separately"
+" from general logging. During short spans of inability to write to "
+"targets, the audit records buffer in memory with a configurable maximum "
+"record cap. Based on typical audit record volumes, it could take many "
+"minutes to fill the buffer. After that, the records are dropped, and the "
+"record drop event is logged."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:219
+msgid ""
+"From Mattermost v7.2, audit logging is a breaking change from previous "
+"releases in cases where customers looking to parse previous audit logs "
+"with the new format. The format and content of an audit log record has "
+"changed to become standardized for all events using a :doc:`standard JSON"
+" schema </administration-guide/comply/embedded-json-audit-log-schema>`. "
+"Existing tools which ingest or parse audit log records may need to be "
+"modified."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:221
+msgid ""
+"From Mattermost v9.3, you can enable and customize advanced logging for "
+"AD/LDAP events separately from other logging."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:225
+msgid ""
+"Go to **System Console > Compliance > Audit Logging** to customize audit "
+"logging. You can use the sample JSON below as a starting point."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:227
+msgid ""
+"You can customize console logs for :ref:`general <administration-"
+"guide/configure/environment-configuration-settings:log settings>` "
+"activities. From v11.0, :ref:`notification <administration-"
+"guide/configure/environment-configuration-settings:notification logging>`"
+" logs are automatically included unless advanced logging is configured."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:229
+msgid ""
+"Additionally, you can also output audit log records to any combination of"
+" `console <#console-target-configuration-options>`__, `local file <#file-"
+"target-configuration-options>`__, `syslog <#syslog-target-configuration-"
+"options>`__, and `TCP socket <#tcp-target-configuration-options>`__ "
+"targets, each featuring additional customization. See `Advanced Logging "
+"<#advanced-logging>`__ below for details."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:233
+msgid ""
+"From Mattermost v10.11, go to **System Console > Compliance > Audit "
+"Logging** to customize audit logging. You can use the sample JSON below "
+"as a starting point. Prior to Mattermost v10.11, customize audit logging "
+"by going to **System Console > Experimental > Features > Audit Logging**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:237
+msgid ""
+"From Mattermost v10.11, Cloud deployments include certificate-based audit"
+" logging capabilities not available within self-hosted deployments."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:238
+msgid ""
+"Cloud-based deployments use the following self-hosted audit logging "
+"default values:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:240
+msgid "FileEnabled: false"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:241
+msgid "FileMaxSizeMB: 100"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:242
+msgid "FileMaxAgeDays: 0 (no limit)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:243
+msgid "FileMaxBackups: 0 (retain all)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:244
+msgid "FileCompress: false"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:245
+msgid "FileMaxQueueSize: 1000"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:247
+msgid ""
+"Cloud deployments can't configure local file-based audit logging, and all"
+" file-related settings are hidden."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:252
+msgid "Log path restrictions"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:254
+msgid ""
+"From Mattermost v11.4, log file paths are validated to ensure they remain"
+" within a designated logging root directory. This security enhancement "
+"prevents log files from being written to or read from unauthorized "
+"locations on the file system."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:257
+msgid "Configure the logging root directory"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:259
+msgid ""
+"From Mattermost v11.4, use the ``MM_LOG_PATH`` environment variable to "
+"define the root directory for all log files:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:265
+msgid ""
+"If ``MM_LOG_PATH`` isn't set, Mattermost uses the default ``logs`` "
+"directory relative to the Mattermost binary location."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:268
+msgid "Log path validation"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:270
+msgid "All log file paths configured via the following settings are validated:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:272
+msgid ""
+"``LogSettings.FileLocation`` - main :ref:`server log file location "
+"<administration-guide/configure/environment-configuration-settings:file "
+"log directory>`"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:273
+msgid ""
+"``LogSettings.AdvancedLoggingJSON`` - all :ref:`file targets in advanced "
+"logging configuration <administration-guide/configure/environment-"
+"configuration-settings:output logs to multiple targets>`"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:274
+msgid ""
+"``ExperimentalAuditSettings.AdvancedLoggingJSON`` - all :ref:`file "
+"targets in audit logging configuration <administration-guide/configure"
+"/environment-configuration-settings:output audit logs to multiple "
+"targets>`"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:276
+msgid "**How validation works**:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:278
+msgid "Paths are resolved to absolute paths"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:279
+msgid "Symlinks are resolved to their actual locations"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:280
+msgid "The resolved path is validated against the logging root directory"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:281
+msgid ""
+"Paths outside the root directory generate error logs and are excluded "
+"from downloads"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:283
+msgid "**Validation occurs**:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:285
+msgid "When accessing log files via **System Console > Reporting > Server Logs**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:286
+msgid "When generating support packets"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:287
+msgid "During configuration changes (warnings are logged for invalid paths)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:289
+msgid ""
+"When a log file path is outside the allowed root directory, Mattermost "
+"logs an error and excludes the file from support packet downloads: "
+"``\"Blocked attempt to read log file outside allowed root\"``. The error "
+"message includes the file path, configuration section, and validation "
+"failure details."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:292
+msgid "Configuration requirements"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:294
+msgid ""
+"**If using default logging**: No action required. Logs are stored in the "
+"default ``logs`` directory."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:296
+msgid ""
+"**If using custom log paths**: Ensure all log file paths in "
+"``AdvancedLoggingJSON`` point to locations within your logging root "
+"directory."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:298
+msgid "**Valid configuration example**:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:304
+msgid "In ``config.json``:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:326
+msgid ""
+"This configuration is valid because ``/var/log/mattermost/errors.log`` is"
+" within the ``/var/log/mattermost`` root."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:328
+msgid "**Invalid configuration example**:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:330
+msgid "If ``MM_LOG_PATH=/var/log/mattermost``, this configuration fails:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:343
+msgid ""
+"This fails because ``/tmp/logs/app.log`` is outside the "
+"``/var/log/mattermost`` root directory."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:345
+msgid ""
+"See the :ref:`troubleshooting <deployment-"
+"guide/server/troubleshooting:log files not accessible>` documentation for"
+" troubleshooting steps if logs aren't appearing in the System Console or "
+"support packets due to log path issues."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:350
+msgid "Advanced logging"
+msgstr ""
+
+#: ../../source/_static/badges/entry-ent.rst:9
+msgid ""
+"|plans-img-yellow| Available on `Entry, Enterprise, and Enterprise "
+"Advanced plans <https://mattermost.com/pricing/>`__ (not available on "
+"Professional)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:355
+msgid ""
+"System admins can output log and audit records for general and audit "
+"activities to any combination of `console <#console-target-configuration-"
+"options>`__, `local file <#file-target-configuration-options>`__, `syslog"
+" <#syslog-target-configuration-options>`__, and `TCP socket <#tcp-target-"
+"configuration-options>`__ targets."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:359
+msgid ""
+"From Mattermost v11.0, notification activities are included in general "
+"logs by default, but can be separated using the new discrete notification"
+" log levels. Each output target features additional configuration options"
+" you can customize for your Mattermost deployment."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:360
+msgid ""
+"From Mattermost v9.11, system admins can configure advanced logging JSON "
+"options using the ``mmctl config set`` command. See the :ref:`mmctl "
+"config set <administration-guide/manage/mmctl-command-line-tool:mmctl "
+"config set>` documentation for an example slash command."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:361
+msgid ""
+"From Mattermost v9.3, system admins can configure advanced logging "
+"options in the System Console using multi-line JSON by going to "
+"**Environment > Logging**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:362
+msgid ""
+"Alternatively, admins can configure advanced logging within the "
+"``AdvancedLoggingJSON`` section of the ``config.json`` file using multi-"
+"line JSON or escaped JSON as a string."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:363
+msgid ""
+"Mattermost Team Edition customers can output audit log records to the "
+"console or a file."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:365
+msgid "Advanced logging options can be configured to:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:367
+msgid "Enable trace logging for AD/LDAP to troubleshoot authentication issues."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:368
+msgid ""
+"Capture errors and panics in a separate, monitored file that triggers "
+"alerts."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:369
+msgid ""
+"Capture production debug and error logs in a separate file with log file "
+"rotation to reproduce issues, while enforcing a cap on the amount of disk"
+" space the debug logs are allowed to use."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:370
+msgid "Audit every API endpoint accessed during a user workflow."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:373
+msgid "Define advanced log output"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:378
+msgid ""
+"In the example below, file output is written to ``./logs/audit.log`` in "
+"plain text and includes all audit log levels & events. Older logs are "
+"kept for 1 day, and up to a total of 10 backup log files are kept at a "
+"time. Logs are rotated using gzip when the maximum size of the log file "
+"reaches 500 MB. A maximum of 1000 audit records can be queued/buffered "
+"while writing to the file."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:381
+#: ../../source/administration-guide/manage/logging.rst:475
+msgid "v11 or later"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:429
+#: ../../source/administration-guide/manage/logging.rst:537
+msgid "v10.12 or earlier"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:460
+msgid ""
+"Advanced logging configuration can be pointed to a filespec to another "
+"configuration file, rather than multi-line JSON, to keep the config.json "
+"file tidy:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:466
+msgid "The separate configuration file includes the multi-line JSON instead."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:468
+msgid ""
+"In the example below, the first output is written to the console in plain"
+" text and includes all audit log levels, events, and command outputs. A "
+"pipe ``|`` delimiter is placed between fields."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:470
+msgid ""
+"A second output is written to ``./logs/audit.log`` in plain text in a "
+"machine-readable JSON format and includes all audit log levels, events, "
+"and command outputs. Older logs are kept for 1 day, and up to a total of "
+"10 backup log files are kept at a time. Logs are rotated using GZIP when "
+"the maximum size of the log file reaches 500 MB. A maximum of 1000 audit "
+"records can be queued/buffered while writing to the file."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:472
+msgid "Contents of ``audit_log_config.json`` file:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:580
+msgid "Specify destination targets"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:582
+msgid ""
+"Log records can be sent to any combination of `console <#console-target-"
+"configuration-options>`__, `local file <#file-target-configuration-"
+"options>`__, `syslog <#syslog-target-configuration-options>`__, and `TCP "
+"socket <#tcp-target-configuration-options>`__ targets. Log targets have "
+"been chosen based on support for the vast majority of log aggregators and"
+" other log analysis tools, without needing additional software installed."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:584
+msgid "System admins can define multiple log targets to:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:586
+msgid "Mirror log output to files and log aggregators for redundancy."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:587
+msgid ""
+"Log certain entries to specific destinations. For example, all ``audit-"
+"content`` records can be routed to a different destination than the other"
+" levels."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:588
+msgid ""
+"Admins can also temporarily disable log targets by setting its ``type`` "
+"to ``none``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:591
+msgid "Configure format preferences"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:593
+msgid ""
+"System admins can control log formatting per target by configuring the "
+"``format_options`` section."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:596
+msgid "Plain log format configuration options"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:599
+#: ../../source/administration-guide/manage/logging.rst:630
+#: ../../source/administration-guide/manage/logging.rst:651
+#: ../../source/administration-guide/manage/logging.rst:663
+#: ../../source/administration-guide/manage/logging.rst:736
+#: ../../source/administration-guide/manage/logging.rst:760
+#: ../../source/administration-guide/manage/logging.rst:785
+msgid "**Key**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:599
+#: ../../source/administration-guide/manage/logging.rst:630
+#: ../../source/administration-guide/manage/logging.rst:651
+#: ../../source/administration-guide/manage/logging.rst:663
+#: ../../source/administration-guide/manage/logging.rst:736
+#: ../../source/administration-guide/manage/logging.rst:760
+#: ../../source/administration-guide/manage/logging.rst:785
+msgid "**Type**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:599
+#: ../../source/administration-guide/manage/logging.rst:630
+#: ../../source/administration-guide/manage/logging.rst:651
+#: ../../source/administration-guide/manage/logging.rst:663
+#: ../../source/administration-guide/manage/logging.rst:690
+#: ../../source/administration-guide/manage/logging.rst:705
+#: ../../source/administration-guide/manage/logging.rst:736
+#: ../../source/administration-guide/manage/logging.rst:760
+#: ../../source/administration-guide/manage/logging.rst:785
+msgid "**Description**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:601
+#: ../../source/administration-guide/manage/logging.rst:632
+msgid "disable_timestamp"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:601
+#: ../../source/administration-guide/manage/logging.rst:603
+#: ../../source/administration-guide/manage/logging.rst:605
+#: ../../source/administration-guide/manage/logging.rst:607
+#: ../../source/administration-guide/manage/logging.rst:609
+#: ../../source/administration-guide/manage/logging.rst:623
+#: ../../source/administration-guide/manage/logging.rst:632
+#: ../../source/administration-guide/manage/logging.rst:634
+#: ../../source/administration-guide/manage/logging.rst:636
+#: ../../source/administration-guide/manage/logging.rst:638
+#: ../../source/administration-guide/manage/logging.rst:640
+#: ../../source/administration-guide/manage/logging.rst:669
+#: ../../source/administration-guide/manage/logging.rst:748
+#: ../../source/administration-guide/manage/logging.rst:766
+#: ../../source/administration-guide/manage/logging.rst:770
+#: ../../source/administration-guide/manage/logging.rst:791
+#: ../../source/administration-guide/manage/logging.rst:795
+msgid "bool"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:601
+#: ../../source/administration-guide/manage/logging.rst:632
+msgid "Disables output of the timestamp. Default is ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:603
+#: ../../source/administration-guide/manage/logging.rst:634
+msgid "disable_level"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:603
+msgid "Disables output of the level name. Default is ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:605
+#: ../../source/administration-guide/manage/logging.rst:636
+msgid "disable_msg"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:605
+#: ../../source/administration-guide/manage/logging.rst:636
+msgid "Disables output of the message text. Default is ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:607
+#: ../../source/administration-guide/manage/logging.rst:638
+msgid "disable_fields"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:607
+#: ../../source/administration-guide/manage/logging.rst:638
+msgid "Disables output of all fields. Default is ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:609
+#: ../../source/administration-guide/manage/logging.rst:640
+msgid "disables_stacktrace"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:609
+#: ../../source/administration-guide/manage/logging.rst:640
+msgid "Disables output of stack traces. Default is ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:611
+#: ../../source/administration-guide/manage/logging.rst:642
+#: ../../source/administration-guide/manage/logging.rst:656
+msgid "enable_caller"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:611
+#: ../../source/administration-guide/manage/logging.rst:613
+#: ../../source/administration-guide/manage/logging.rst:619
+#: ../../source/administration-guide/manage/logging.rst:621
+#: ../../source/administration-guide/manage/logging.rst:642
+#: ../../source/administration-guide/manage/logging.rst:644
+#: ../../source/administration-guide/manage/logging.rst:653
+#: ../../source/administration-guide/manage/logging.rst:656
+#: ../../source/administration-guide/manage/logging.rst:667
+#: ../../source/administration-guide/manage/logging.rst:738
+#: ../../source/administration-guide/manage/logging.rst:762
+#: ../../source/administration-guide/manage/logging.rst:768
+#: ../../source/administration-guide/manage/logging.rst:773
+#: ../../source/administration-guide/manage/logging.rst:787
+#: ../../source/administration-guide/manage/logging.rst:793
+msgid "string"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:611
+#: ../../source/administration-guide/manage/logging.rst:642
+#: ../../source/administration-guide/manage/logging.rst:656
+msgid ""
+"Enables output of the file and line number that emitted a log record.  "
+"Default is ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:613
+msgid "delim"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:613
+msgid "Delimiter placed between fields. Default is single space."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:615
+msgid "min_level_len"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:615
+#: ../../source/administration-guide/manage/logging.rst:617
+#: ../../source/administration-guide/manage/logging.rst:665
+#: ../../source/administration-guide/manage/logging.rst:671
+#: ../../source/administration-guide/manage/logging.rst:740
+#: ../../source/administration-guide/manage/logging.rst:742
+#: ../../source/administration-guide/manage/logging.rst:745
+#: ../../source/administration-guide/manage/logging.rst:764
+#: ../../source/administration-guide/manage/logging.rst:789
+msgid "number"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:615
+msgid ""
+"Minimum level name length. When level names are less than the minimum, "
+"level names are padded with spaces. Default is ``0``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:617
+msgid "min_msg_len"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:617
+msgid ""
+"Minimum message length. When message text is less than the minimum, "
+"message text is padded with spaces. Default is ``0``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:619
+#: ../../source/administration-guide/manage/logging.rst:644
+msgid "timestamp_format"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:619
+#: ../../source/administration-guide/manage/logging.rst:644
+msgid ""
+"Format for timestamps. Default is `RFC3339 <https://www.rfc-"
+"editor.org/rfc/rfc3339>`__."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:621
+msgid "line_end"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:621
+msgid "Alternative end of line character(s). Default is ``n``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:623
+msgid "enable_color"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:623
+msgid "Enables color for targets that support color output. Default is ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:627
+msgid "JSON log format configuration options"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:634
+msgid "Disables output of the log level display name. Default is ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:648
+msgid "GELF log format configuration options"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:653
+msgid "hostname"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:653
+msgid ""
+"Outputs a custom hostname in log records. If omitted, hostname is taken "
+"from the operating system."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:660
+msgid "Configure log levels and events"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:665
+msgid "id"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:665
+msgid "Unique identifier of the log level."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:667
+msgid "name"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:667
+msgid "Name of the log level."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:669
+msgid "stacktrace"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:669
+msgid "Outputs a stack trace. Default is ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:671
+msgid "color"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:671
+msgid ""
+"The ANSI color code used to output parts of the log record. Supported "
+"values include:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:674
+msgid "Black: ``30``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:675
+msgid "Red: ``31``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:676
+msgid "Green: ``32``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:677
+msgid "Yellow: ``33``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:678
+msgid "Blue: ``34``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:679
+msgid "Magenta: ``35``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:680
+msgid "Cyan: ``36``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:681
+msgid "White: ``37``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:685
+msgid "Log levels"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:687
+msgid "The following log levels support audit logs:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:690
+#: ../../source/administration-guide/manage/logging.rst:705
+msgid "**ID**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:690
+#: ../../source/administration-guide/manage/logging.rst:705
+msgid "**Name**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:692
+msgid "100"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:692
+msgid "``audit-api``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:692
+msgid "API events"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:694
+msgid "101"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:694
+msgid "``audit-content``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:694
+msgid ""
+"Content changes. This log level can generate considerably more records "
+"than the other audit log levels."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:697
+msgid "102"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:697
+msgid "``audit-permissions``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:697
+msgid "Permission changes"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:699
+msgid "103"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:699
+msgid "``audit-cli``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:699
+msgid "CLI operations"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:702
+msgid "The following log levels support application logs:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:707
+msgid "140"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:707
+msgid "``LDAPError``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:707
+msgid "AD/LDAP authentication errors"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:709
+msgid "141"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:709
+msgid "``LDAPWarn``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:709
+msgid "AD/LDAP authentication warnings"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:711
+msgid "142"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:711
+msgid "``LDAPInfo``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:711
+msgid "AD/LDAP authentication information logs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:713
+msgid "143"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:713
+msgid "``LDAPDebug``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:713
+msgid "AD/LDAP authentication debug logs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:715
+msgid "144"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:715
+msgid "``LDAPTrace``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:715
+msgid ""
+"AD/LDAP authentication trace logs. Replaces ``LdapSetings.trace`` from "
+"Mattermost v9.3."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:720
+msgid "Configure target-specific settings"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:723
+msgid "Console target configuration options"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:725
+msgid "Console targets can be either ``stdout`` or ``stderr``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:727
+msgid ""
+"The standard output stream, ``stout``, is typically used for command "
+"output that prints the results of a command to the user."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:728
+msgid ""
+"The standard error stream, ``sterr``, is typically used to print any "
+"errors that occur when a program is running."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:731
+msgid "File target configuration options"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:733
+msgid ""
+"File targets support rotation and compression triggered by size and/or "
+"duration."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:738
+msgid "filename"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:738
+msgid ""
+"Full path to the output file. From v11.4, should be within the directory "
+"specified by ``MM_LOG_PATH``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:740
+msgid "max_size"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:740
+msgid ""
+"Maximum size, in megabytes (MB), the log file can grow before it gets "
+"rotated. Default is ``100`` MB."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:742
+msgid "max_age"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:742
+msgid ""
+"Maximum number of days to retain old log files based on the timestamp "
+"encoded in the filename. Default is ``0`` which disables the removal of "
+"old log files."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:745
+msgid "max_backups"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:745
+msgid ""
+"Maximum number of old log files to retain. Default is ``0`` which retains"
+" all old log files. **Note**: Configuring ``max_age`` can result in old "
+"log files being deleted regardless of this configuration value."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:748
+msgid "compress"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:748
+msgid ""
+"Compress rotated log files using `gzip "
+"<https://www.gnu.org/software/gzip/>`__. Default is ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:752
+msgid "Syslog target configuration options"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:757
+msgid ""
+"Syslog targets support local and remote syslog servers, with or without "
+"TLS transport. Syslog target support requires Mattermost Enterprise."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:762
+#: ../../source/administration-guide/manage/logging.rst:787
+msgid "host"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:762
+#: ../../source/administration-guide/manage/logging.rst:787
+msgid "IP or domain name of the server receiving the log records."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:764
+#: ../../source/administration-guide/manage/logging.rst:789
+msgid "port"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:764
+#: ../../source/administration-guide/manage/logging.rst:789
+msgid "Port number for the server receiving the log records."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:766
+#: ../../source/administration-guide/manage/logging.rst:791
+msgid "tls"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:766
+#: ../../source/administration-guide/manage/logging.rst:791
+msgid ""
+"Create a TLS connection to the server receiving the log records. Default "
+"is ``false``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:768
+#: ../../source/administration-guide/manage/logging.rst:793
+msgid "cert"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:768
+#: ../../source/administration-guide/manage/logging.rst:793
+msgid ""
+"Path to a cert file (.pem) to be used when establishing a TLS connection "
+"to the server."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:770
+#: ../../source/administration-guide/manage/logging.rst:795
+msgid "insecure"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:770
+#: ../../source/administration-guide/manage/logging.rst:795
+msgid ""
+"Mattermost accepts any certificate presented by the server, and any host "
+"name in that certificate. Default is ``false``. **Note**: Should only be "
+"used in testing environments, and shouldn’t be used in production "
+"environments."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:773
+msgid "tag"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:773
+msgid "Syslog tag field."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:777
+msgid "TCP target configuration options"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:782
+msgid ""
+"The TCP socket targets can be configured with an IP address or domain "
+"name, port, and optional TLS certificate. TCP socket target support "
+"requires Mattermost Enterprise. You can :download:`download a sample JSON"
+" file </samples/sample-logger-config.json>` of the configuration to use "
+"as a starting point."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:802
+msgid "Cluster job execution debug messages"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:807
+msgid ""
+"From Mattermost v11.4, debug-level log messages are available to help "
+"system admins understand cluster job execution behavior in :doc:`high "
+"availability </administration-guide/scale/high-availability-cluster-"
+"based-deployment>` deployments for specific Recurring Tasks."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:809
+msgid "These debug messages apply only to the following Recurring Tasks:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:811
+msgid "Scheduled Posts"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:812
+msgid "Post Reminders"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:813
+msgid "DND Status Reset"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:817
+msgid ""
+"These debug messages aren't available for other job types such as "
+"Elasticsearch indexing, SAML sync, LDAP sync, data retention, or "
+"compliance exports. The absence of these debug messages for other job "
+"types doesn't indicate a problem with job execution."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:818
+msgid ""
+"These messages are only visible when debug logging is enabled. See `How "
+"do I enable debug logging? <#how-do-i-enable-debug-logging>`__ for "
+"details."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:819
+msgid ""
+"In a cluster deployment, only the leader node executes these Recurring "
+"Tasks. Non-leader nodes skip these specific jobs and log debug messages "
+"to indicate this is expected behavior."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:822
+msgid "Debug messages for job startup"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:824
+msgid ""
+"When a non-leader node starts up, it skips initialization for these "
+"specific Recurring Tasks and logs one of the following debug messages:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:826
+msgid "``Skipping scheduled posts job startup since this is not the leader node``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:827
+msgid ""
+"``Skipping unset DND status job startup since this is not the leader "
+"node``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:828
+msgid "``Skipping post reminder job startup since this is not the leader node``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:830
+msgid ""
+"These messages indicate normal operation. In a high availability cluster,"
+" these Recurring Tasks should only run on the leader node to prevent "
+"duplicate execution."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:833
+msgid "Debug messages for leadership changes"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:835
+msgid ""
+"When a node loses leadership status while these Recurring Tasks are "
+"running, it cancels the running tasks and logs:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:837
+msgid "``This is no longer leader node. Cancelling the [job name] task``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:839
+msgid ""
+"Where ``[job name]`` is one of: ``scheduled posts``, ``DND status "
+"reset``, or ``post reminder``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:841
+msgid ""
+"This indicates the cluster is performing leader election correctly. The "
+"new leader node will take over execution of these Recurring Tasks."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:844
+msgid "Troubleshooting with cluster job debug messages"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:846
+msgid ""
+"If you're investigating why Recurring Tasks (Scheduled Posts, Post "
+"Reminders, or DND Status Reset) aren't running on a specific node:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:848
+msgid "Enable debug logging if not already enabled."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:849
+msgid "Check the logs for the debug messages listed above."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:850
+msgid ""
+"If you see these messages, the node is correctly identified as a non-"
+"leader and is behaving as expected."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:851
+msgid "These Recurring Tasks will be running on the leader node instead."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:855
+msgid ""
+"These debug messages only apply to Recurring Tasks. For other job types "
+"(Elasticsearch indexing, SAML sync, LDAP sync, data retention, compliance"
+" exports), different logging mechanisms apply. The absence of these "
+"specific debug messages for other job types is expected and does not "
+"indicate a problem."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:857
+msgid ""
+"For more information about leader election and cluster configuration, see"
+" :doc:`High Availability cluster-based deployment </administration-"
+"guide/scale/high-availability-cluster-based-deployment>`."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:862
+msgid "Frequently asked questions"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:865
+msgid "How do I enable debug logging?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:867
+msgid ""
+"As a Mattermost system admin, go to **System Console > Environment > "
+"Logging > File Log Level**, and set it to **DEBUG**. Then save your "
+"changes."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:869
+msgid ""
+"A screenshot of the System Console page where Mattermost system admins "
+"can enable and disable debug logging."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:872
+msgid ""
+"Debug logging can cause log files to expand substantially, and may "
+"adversely impact server performance. Keep an eye on your server logs, or "
+"only enable it temporarily, or in development environments, but not "
+"production enviornments."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:875
+msgid "Does Mattermost have an audit log besides the system ``auditd``?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:877
+msgid "Yes. See the `audit logging <#audit-logging>`__ documentation for details."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:880
+msgid ""
+"When syslog is configured as the target, does it contain the IP address "
+"of the emitter of the data (i.e., the Mattermost app node)?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:882
+msgid ""
+"Yes. That is a function of the syslog daemon (receiver). Typically, all "
+"the log lines are prefixed with a timestamp and the hostname of the node "
+"sending the data. For example, a log line starts with: ``Nov 28 10:56:59 "
+"tower kernel: [1072437.431123]  ....``, where ``tower`` is the hostname "
+"of the server that generated the log line."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:885
+msgid ""
+"Once audit logs are enabled, can audit logging track events where an "
+"admin disables or modifies the audit log settings?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:887
+msgid ""
+"Yes, though it depends on how audit logs are configured. Audit log config"
+" can be specified via REST API, mmctl, System Console, file on disk, and "
+"using environment variables. When changes are made via the REST API or "
+"System Console, there is an audit record. However, the Mattermost server "
+"can't capture changes to a configuration file or via environment "
+"variables."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:890
+msgid ""
+"Do server logs show any information about a service or similar "
+"stopping/updating when auditing would be disabled?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:892
+msgid ""
+"Yes. When updating the audit log configuration via REST API, mmctl, or "
+"System Console, the last event of the audit log should be about the admin"
+" user updating the config of the server, which helps your security team "
+"identify which actions took place in the system and by whom."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:895
+msgid "How do I omit incoming webhook details from the logs?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:897
+msgid ""
+"See :ref:`enable-webhook-debugging <administration-guide/configure"
+"/environment-configuration-settings:enable webhook debugging>`"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:900
+msgid "How do I adjust the maximum log field size?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:902
+msgid ""
+"See :ref:`maximum-field-size <administration-guide/configure/environment-"
+"configuration-settings:maximum field size>`"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:905
+msgid "How can I configure Advanced logging via environment variables?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:907
+msgid ""
+"The ``MM_LOGSETTINGS_ADVANCEDLOGGINGJSON`` environment variable is used "
+"to configure Advanced logging . You can use ``jq`` to generate the JSON "
+"payload, e.g."
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:933
+msgid "How can I turn on trace logging for LDAP?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:935
+msgid ""
+"Please use the following JSON configuration as as starting point to "
+"enable trace logging for LDAP:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:979
+msgid "How do I configure centralized logging for Mattermost?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/logging.rst:981
+msgid ""
+"Mattermost recommends centralized logging using Grafana Loki and the "
+"OpenTelemetry Collector. See the :doc:`Deploy Grafana Loki for "
+"centralized logging </administration-guide/scale/deploy-grafana-loki-for-"
+"centralized-logging>` guide for details on how to set up log aggregation,"
+" useful LogQL queries, and Grafana dashboards."
+msgstr ""
+

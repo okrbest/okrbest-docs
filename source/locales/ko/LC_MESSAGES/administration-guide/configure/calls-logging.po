@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/configure/calls-logging.md:1
+msgid "Calls Logging"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.md:6
+msgid ""
+"![plans-img-yellow](/_static/images/badges/flag_icon_yellow.svg) "
+"Available on [Entry, Professional, Enterprise, and Enterprise "
+"Advanced](https://mattermost.com/pricing/) plans"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.md:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-logging.md:6
+msgid ""
+"When troubleshooting Mattermost Calls, gathering the appropriate log "
+"files for analysis is critical. The required logs include:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-logging.md:8
+msgid "RTCD logs"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-logging.md:10
+msgid ""
+"The location of the RTCD log file is determined by the settings in your "
+"RTCD `config.toml` file. If you are running Calls using the integrated "
+"RTCD, these logs are included within the standard Mattermost server logs."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-logging.md:12
+msgid "Client logs"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-logging.md:14
+msgid ""
+"You can retrieve basic client logs by running the `/call logs` slash "
+"command to output the log for the most recent call. However, capturing "
+"the JavaScript console logs is often more helpful. The method for "
+"capturing these logs depends on your client:"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-logging.md:16
+msgid ""
+"**Desktop App:** While a call is in progress, navigate to **View > "
+"Developer Tools > Developer Tools for Call Widget**. Next to the "
+"**Filter** field, select **Verbose** from the log level drop-down menu to"
+" view the debug output. To save the log, right-click within the console "
+"and select **Save as...**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-logging.md:18
+msgid ""
+"![Developer Tools for Call Widget](../../images/developer-tools-call-"
+"widget.png)"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-logging.md:18
+msgid "Developer Tools for Call Widget"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-logging.md:20
+msgid ""
+"**Chrome browser:** Select the **More menu** (three vertical dots) next "
+"to the address bar, then go to **More Tools > Developer Tools**. Select "
+"the **Console** tab to view the output. Next to the **Filter** field, "
+"select **Verbose** from the log level drop-down menu to view the debug "
+"output. To save the log, right-click within the console and select **Save"
+" as...**."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-logging.md:22
+msgid "Client statistics"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-logging.md:24
+msgid ""
+"You can gather client call statistics by running the `/call stats` slash "
+"command. While you can run this command during an active call, it is best"
+" to run it immediately after a call concludes. This command provides "
+"valuable information regarding the negotiated connection between the "
+"client and RTCD, as well as statistics on media packets sent and lost."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-logging.md:26
+msgid "Mattermost server logs"
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-logging.md:28
+msgid ""
+"The Mattermost server logs often contain entries related to the Calls "
+"plugin. If you are using an external RTCD instance, these logs are "
+"generally less critical than the RTCD and client logs."
+msgstr ""
+
+#: ../../source/administration-guide/configure/calls-logging.md:31
+msgid ""
+"Interpreting RTCD and client logs can be challenging, as the Interactive "
+"Connectivity Establishment (ICE) negotiation during call setup often logs"
+" expected and benign failure or error messages. We strongly recommend "
+"providing the complete set of logs to Mattermost Support for analysis."
+msgstr ""
+

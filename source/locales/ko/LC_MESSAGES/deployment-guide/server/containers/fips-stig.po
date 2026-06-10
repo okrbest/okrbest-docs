@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/server/containers/fips-stig.rst:-1
+msgid "robots"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/fips-stig.rst:-1
+msgid "noindex"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/fips-stig.rst:8
+msgid ""
+"From Mattermost v11, each release provides two variants: a FIPS-compliant"
+" build and a non-FIPS build. This ensures that organizations with strict "
+"compliance requirements can adopt the FIPS version while others can "
+"continue with the standard release, both staying in sync with "
+"Mattermost’s overall product lifecycle."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/fips-stig.rst:10
+msgid ""
+"Mattermost FIPS-compliant Docker images are built using Chainguard’s "
+"FIPS-certified base containers. These images help organizations meet "
+"stringent security requirements by ensuring compliance with the Federal "
+"Information Processing Standards (FIPS)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/fips-stig.rst:12
+msgid ""
+"On top of this foundation, Mattermost product code itself is aligned with"
+" FIPS requirements, using only FIPS-approved cryptographic algorithms. "
+"This ensures that both the underlying container base and the application "
+"layer meet compliance expectations."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/fips-stig.rst:14
+msgid ""
+"In addition, the Chainguard base images are STIG-hardened and rigorously "
+"scanned against the DISA General Purpose Operating System SRG, providing "
+"a robust and secure operational posture."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/fips-stig.rst:17
+msgid "Mattermost FIPS Overview"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/fips-stig.rst:19
+msgid ""
+"Mattermost’s FIPS-compliant images are built using two Chainguard base "
+"images:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/fips-stig.rst:21
+msgid ""
+"`Build-Time Image <https://images.chainguard.dev/directory/image/go-msft-"
+"fips/overview>`_: Ensures compiled Mattermost binaries invoke OpenSSL "
+"through CGO for FIPS-compliance during compilation."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/fips-stig.rst:22
+msgid ""
+"`Runtime Image <https://images.chainguard.dev/directory/image/glibc-"
+"openssl-fips/overview>`_: Enforces FIPS compliance in the runtime "
+"environment using strict OpenSSL configurations."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/fips-stig.rst:24
+msgid ""
+"All application-level code uses only FIPS-approved algorithms, ensuring "
+"that cryptographic requirements are consistently enforced across every "
+"layer of the system."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/fips-stig.rst:28
+msgid ""
+"The Mattermost FIPS image includes only prepackaged Boards, Playbooks, "
+"and Agents. Additional plugins can be added to the Mattermost FIPS image,"
+" but they will run in non-FIPS mode."
+msgstr ""
+
+#: ../../source/deployment-guide/server/containers/fips-stig.rst:29
+msgid ""
+"Existing Docker or Kubernetes-based deployments can change the image from"
+" ``mattermost/mattermost-enterprise-edition`` to ``mattermost/mattermost-"
+"enterprise-fips-edition``."
+msgstr ""
+

@@ -1,0 +1,578 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:2
+msgid "Incoming Webhooks"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:7
+msgid "**Technical complexity:** :ref:`No-code <no-code>`"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:9
+msgid ""
+"Send or receive real-time data from external tools. Webhooks require "
+"minimal coding and are easy to set up with virtually any tool or platform"
+" because they use lightweight HTTP POST requests with JSON payloads."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:11
+msgid ""
+"Using incoming webhooks in Mattermost requires only basic setup. You "
+"generate a webhook URL using the Mattermost interface, then point another"
+" service to send data to that address. No coding is required if your "
+"external service triggering the events is able to send data via webhooks "
+"or HTTP POST requests, which most modern applications and platforms "
+"support. Setting this up usually involves pasting the Mattermost webhook "
+"URL into the service’s settings and selecting what type of events you "
+"want it to send."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:14
+msgid "Example Use Cases"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:16
+msgid "Here are some example use cases for incoming webhooks in Mattermost:"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:18
+msgid "**Monitoring alerts**"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:20
+msgid ""
+"Send real-time alerts from monitoring systems (such as Prometheus or "
+"Datadog) into a dedicated Mattermost channel so your team is immediately "
+"notified about system issues or downtime."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:22
+msgid "**Build and deployment notifications**"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:24
+msgid ""
+"Post automated updates from CI/CD pipelines (such as Jenkins or GitLab "
+"CI) to a channel, keeping developers informed of build status, test "
+"results, and deployment progress."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:26
+msgid "**Customer support updates**"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:28
+msgid ""
+"Forward new support ticket notifications from systems like Zendesk or "
+"ServiceNow into a support channel, ensuring the team can respond quickly "
+"to incoming requests."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:31
+msgid "Create"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:33
+msgid ""
+"In Mattermost, go to **Product Menu > Integrations**. If you don't have "
+"the **Integrations** option, incoming webhooks may not be enabled on your"
+" Mattermost server or may be disabled for non-admins. A System Admin can "
+"enable them from **System Console > Integrations > Integration "
+"Management**."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:35
+msgid "Mattermost menu options showing the ability to work with integrations."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:38
+msgid "From the Integrations page, select **Incoming Webhooks**."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:40
+#: ../../source/integrations-guide/incoming-webhooks.rst:45
+msgid "Dialog box showing the option to add an incoming webhook."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:43
+msgid "Select **Add Incoming Webhook**."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:48
+msgid ""
+"Enter a name and description for the webhook, and then select the "
+"channel. You can optionally limit bot posts to a specific channel by "
+"selecting **Lock to this channel**, or you can allow the webhook to post "
+"to any public channel or private channel the incoming webhook creator is "
+"a member of. Note that administrators can enforce channel locking for all"
+" incoming webhooks through **System Console > Integrations > Integration "
+"Management**. Select **Save**."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:50
+msgid "Dialog box showing the incoming webhook details."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:53
+msgid ""
+"5. Select **Done** to confirm. Mattermost generates a unique webhook URL,"
+" which will look something like this: ``https://your-mattermost-"
+"server.com/hooks/xxx-generatedkey-xxx``. Treat this URL as a secret. "
+"Anyone who has it will be able to post messages to your Mattermost "
+"instance."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:56
+msgid "Dialog box showing the incoming webhook URL."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:60
+msgid "Use"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:62
+msgid ""
+"To post a message, your application needs to send an HTTP POST request to"
+" the webhook URL with a JSON payload in the request body."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:68
+msgid ""
+"A successful request will receive an HTTP 200 response with `ok` in the "
+"response body."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:70
+msgid ""
+"For compatibility with Slack incoming webhooks, if no ``Content-Type`` "
+"header is set, the request body must be prefixed with ``payload=``."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:73
+msgid "Post Examples"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:75
+msgid "Here are some examples of simple messages posted using incoming webhooks:"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:77
+msgid ""
+"Example of a GitHub notification posted to Mattermost using an incoming "
+"webhook."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:81
+msgid ""
+"Example of a Jira notification posted to Mattermost using an incoming "
+"webhook."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:85
+msgid ""
+"Example of a Mattermost notification posted to Mattermost using an "
+"incoming webhook."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:89
+msgid ""
+"Example of a Fastlane notification posted to Mattermost using an incoming"
+" webhook."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:93
+msgid ""
+"Example of a Weblate notification posted to Mattermost using an incoming "
+"webhook."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:98
+msgid "Parameters"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:100
+msgid "The JSON payload can contain the following parameters:"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:106
+msgid "Parameter"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:107
+msgid "Required"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:108
+msgid "Description"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:109
+msgid "``text``"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:110
+msgid "Yes (if ``attachments`` is not set)"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:111
+msgid ""
+":doc:`Markdown-formatted </end-user-guide/collaborate/format-messages>` "
+"message. Use ``@<username>``, ``@channel``, and ``@here`` for "
+"notifications."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:112
+msgid "``channel``"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:113
+#: ../../source/integrations-guide/incoming-webhooks.rst:116
+#: ../../source/integrations-guide/incoming-webhooks.rst:119
+#: ../../source/integrations-guide/incoming-webhooks.rst:122
+#: ../../source/integrations-guide/incoming-webhooks.rst:128
+#: ../../source/integrations-guide/incoming-webhooks.rst:131
+#: ../../source/integrations-guide/incoming-webhooks.rst:134
+msgid "No"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:114
+msgid ""
+"Overrides the default channel. Use the channel's name (e.g., ``town-"
+"square``), not the display name. Use ``@<username>`` to send a Direct "
+"Message. The webhook can post to any public channel, and any private "
+"channel the creator is a member of."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:115
+msgid "``username``"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:117
+msgid ""
+"Overrides the default username. The :ref:`Enable integrations to override"
+" usernames <administration-guide/configure/integrations-configuration-"
+"settings:enable integrations to override usernames>` setting must be "
+"enabled."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:118
+msgid "``icon_url``"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:120
+msgid ""
+"Overrides the default profile picture URL. The :ref:`Enable integrations "
+"to override profile picture icons <administration-guide/configure"
+"/integrations-configuration-settings:enable integrations to override "
+"profile picture icons>` setting must be enabled."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:121
+msgid "``icon_emoji``"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:123
+msgid ""
+"Overrides the ``icon_url`` with an emoji. Use the emoji name (e.g., "
+"``:tada:``). The :ref:`Enable integrations to override profile picture "
+"icons <administration-guide/configure/integrations-configuration-"
+"settings:enable integrations to override profile picture icons>` setting "
+"must be enabled."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:124
+msgid "``attachments``"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:125
+msgid "Yes (if ``text`` is not set)"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:126
+msgid ""
+"An array of `message attachment "
+"<https://developers.mattermost.com/integrate/reference/message-"
+"attachments/>`_ objects for richer formatting."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:127
+msgid "``type``"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:129
+msgid ""
+"Sets the post type, mainly for use by plugins. If set, must begin with "
+"``custom_``."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:130
+msgid "``props``"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:132
+msgid ""
+"A JSON object for storing metadata. The ``card`` property can be used to "
+"display extra Markdown-formatted text in the post's info panel (RHS). "
+"This is available in Mattermost v5.14 and later, and is not yet supported"
+" on mobile."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:133
+msgid "``priority``"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:135
+msgid ""
+"Sets the priority of the message. See `message priorities "
+"<https://developers.mattermost.com/integrate/reference/message-"
+"priority/>`_."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:138
+msgid "Example with Parameters"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:149
+msgid "This renders as:"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:151
+msgid ""
+"Example of a webhook post with a custom username, icon, and formatted "
+"text."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:156
+msgid "Example with Card Prop"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:158
+msgid ""
+"Using the ``card`` property inside ``props`` will display an info icon on"
+" the post. Clicking the icon opens the right-hand sidebar to display the "
+"content."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:171
+msgid ""
+"Example of a post with a card property displaying more information in the"
+" sidebar."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:175
+msgid "Slack Compatibility"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:177
+msgid ""
+"Mattermost provides compatibility with Slack's webhook format to make "
+"migration easier."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:180
+msgid "Translating Slack's Data Format"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:182
+msgid "Mattermost automatically translates JSON payloads from Slack format:"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:184
+msgid "``<https://mattermost.com/>`` is rendered as a link."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:185
+msgid "``<https://mattermost.com/|Click here>`` is rendered as linked text."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:186
+msgid "``<userid>`` triggers a user mention."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:187
+msgid "``<!channel>``, ``<!here>``, or ``<!all>`` trigger channel-wide mentions."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:189
+msgid ""
+"You can also send a direct message by overriding the channel name with "
+"``@username``, e.g., ``\"channel\": \"@jim\"``."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:192
+msgid "Using Mattermost Webhooks in GitLab"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:194
+msgid ""
+"You can use GitLab's built-in Slack integration to send notifications to "
+"Mattermost:"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:196
+msgid "In GitLab, go to **Settings > Services** and select **Slack**."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:197
+msgid "Paste the Mattermost incoming webhook URL."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:198
+msgid "Optionally, set a **Username**. Leave the **Channel** field blank."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:199
+msgid "Select **Save** and test the integration."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:202
+msgid "Known Slack Compatibility Issues"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:204
+msgid "Referencing channels using ``<#CHANNEL_ID>`` is not supported."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:205
+msgid "``<!everyone>`` and ``<!group>`` are not supported."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:206
+msgid "``*bold*`` formatting is not supported; use ``**bold**`` instead."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:207
+msgid "Webhooks cannot send a direct message to the user who created the webhook."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:210
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:212
+msgid ""
+"To debug incoming webhooks, a System Admin can enable **Webhook "
+"Debugging** and set the **Console Log Level** to **DEBUG** in **System "
+"Console > Logging**."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:214
+msgid "Common error messages include:"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:216
+msgid ""
+"**Couldn't find the channel**: The channel specified in the ``channel`` "
+"parameter does not exist."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:217
+msgid "**Couldn't find the user**: The user specified does not exist."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:218
+msgid "**Unable to parse incoming data**: The JSON payload is malformed."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:220
+msgid ""
+"If your integration posts the JSON payload as plain text instead of a "
+"rendered message, ensure the request includes the ``Content-Type: "
+"application/json`` header."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:223
+msgid "Do More with Incoming Webhooks"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:225
+msgid ""
+"Transform basic message posts into rich, interactive notifications by "
+"including buttons, menus, and other interactive elements in your webhook "
+"messages, making them more engaging and useful for your team."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:227
+msgid ""
+"`Message Attachments "
+"<https://developers.mattermost.com/integrate/reference/message-"
+"attachments/>`_: Present rich, structured summaries such as status, "
+"priority, fields, links, or images for faster triage and comprehension. "
+"(Slack‑compatible schema.)"
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:228
+msgid ""
+"`Interactive Messages "
+"<https://developers.mattermost.com/integrate/plugins/interactive-"
+"messages>`_: Make notifications actionable with buttons or menus such as "
+"Acknowledge, Assign, or Escalate that enable an immediate user response "
+"without switching tools or context."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:229
+msgid ""
+"`Interactive Dialogs <https://developers.mattermost.com/integrate/plugins"
+"/interactive-dialogs/>`_: Guide users to successful outcomes when "
+"interactions need structured input or confirmation (for example, "
+"“Acknowledge with note” or “Assign to user”). Improve data quality with "
+"required fields, minimum/maximum input lengths, server‑driven "
+"user/channel pickers, validated defaults, inline field errors, "
+"placeholders, and help text that help users enter the right data the "
+"first time."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:230
+msgid ""
+"`Message Priority <https://developers.mattermost.com/integrate/reference"
+"/message-priority/>`_: Set ``priority`` to elevate critical posts and "
+"optionally request acknowledgements or persistent notifications."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:234
+msgid ""
+"Need a dedicated identity, permissions scoping, or need to post outside "
+"of webhook/command flows? Use a `bot account "
+"<https://developers.mattermost.com/integrate/reference/bot-accounts/>`_ "
+"if you need a more permanent solution than using overrides for simple "
+"branding."
+msgstr ""
+
+#: ../../source/integrations-guide/incoming-webhooks.rst:235
+msgid ""
+"If your system later needs to call Mattermost APIs (e.g., post follow-"
+"ups, open dialogs), authenticate with a bot user `personal access token "
+"<https://developers.mattermost.com/integrate/reference/personal-access-"
+"token/>`_. We recommend avoiding human/System Admin personal access "
+"tokens for automations and rotating and storing tokens securely."
+msgstr ""
+

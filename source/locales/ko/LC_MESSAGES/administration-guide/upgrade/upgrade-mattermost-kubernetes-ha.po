@@ -1,0 +1,567 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:2
+msgid "Upgrade Mattermost in Kubernetes and High Availability environments"
+msgstr ""
+
+#: ../../source/_static/badges/ent-plus.rst:9
+msgid ""
+"|plans-img-yellow| Available on `Enterprise and Enterprise Advanced plans"
+" <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:7
+msgid ""
+"This guide provides a resilient and comprehensive strategy for upgrading "
+"Mattermost deployments managed via Kubernetes and the Mattermost "
+"Operator, including High Availability (HA) and optional Active/Active "
+"failover configurations. It outlines best practices to ensure zero "
+"downtime, minimize service risk, and provide robust fallback mechanisms."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:10
+msgid "Architecture overview"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:13
+msgid "Kubernetes-based deployment"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:15
+msgid ""
+"Mattermost uses :doc:`Kubernetes </deployment-guide/server/deploy-"
+"kubernetes>` for container orchestration, deployed and managed via Helm "
+"charts and the :ref:`Mattermost Operator <install-mattermost-operator>`. "
+"This model enables scalable, highly available, and automatically managed "
+"application lifecycles."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:17
+msgid ""
+"The Mattermost Operator handles the upgrade process automatically, "
+"ensuring that pods are updated incrementally and that traffic is routed "
+"correctly throughout the upgrade. If an error occurs during the upgrade, "
+"the Operator will not apply any changes, allowing you to investigate and "
+"resolve the issue or manually roll back without impacting the live "
+"environment. See the :doc:`Downgrade Mattermost Server </administration-"
+"guide/upgrade/downgrading-mattermost-server>` documentation for rollback "
+"details."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:19
+msgid ""
+"Health monitoring ensures that only healthy pods are replaced, and new "
+"pods are brought online only after passing health checks. New pods are "
+"deployed with the updated version, while old pods are gracefully "
+"terminated."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:22
+msgid "High Availability"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:24
+msgid ""
+"In :doc:`High Availability (HA) cluster-based deployments "
+"</administration-guide/scale/high-availability-cluster-based-"
+"deployment>`, Mattermost runs multiple application servers in a cluster. "
+"This configuration ensures that if one server fails, others can continue "
+"to serve requests without downtime. User traffic load balancing is "
+"managed with services such as NGINX Ingress or HAProxy. :ref:`PostgreSQL "
+"<deployment-guide/server/preparations:database preparation>` and "
+":ref:`file storage <deployment-guide/server/preparations:file storage "
+"preparation>` are deployed with replication for redundancy and failover."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:27
+msgid "Active/Active deployments"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:29
+msgid ""
+"An Active/Active configuration is optional and consists of two or more "
+"Mattermost clusters running concurrently across geographically "
+"distributed regions or availability zones. Each cluster is capable of "
+"serving live user traffic and processing requests independently while "
+"remaining in sync with shared backend components such as the database and"
+" file storage."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:31
+msgid "Key benefits for enterprise customers include:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:33
+msgid ""
+"**Resilience and uptime**: If a site becomes unavailable due to "
+"maintenance or an outage, another site can continue to serve users with "
+"minimal disruption."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:34
+msgid ""
+"**Geographic distribution**: Users connect to the nearest cluster for "
+"lower latency and faster response times."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:35
+msgid ""
+"**Load distribution**: Workload can be balanced between clusters to "
+"improve performance and system scalability."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:37
+msgid ""
+"These deployments require careful configuration management and "
+"coordination to ensure data consistency, upgrade safety, and seamless "
+"traffic failover. These clusters must maintain configuration/data "
+"consistency and require coordinated upgrades. See the :ref:`Active/Active"
+" upgrade considerations <active-active-upgrade-considerations>` section "
+"for recommendations."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:40
+msgid "Step 1: Prepare"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:42
+msgid ""
+"This phase ensures your environment is healthy, backed up, and ready for "
+"an upgrade. Follow each step carefully to avoid disruptions and to ensure"
+" rollback readiness."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:46
+msgid ""
+"**Backup your data**: Always back up your database and file storage "
+"before starting an upgrade. This ensures you can restore to a previous "
+"state in case of issues during the upgrade process."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:47
+msgid ""
+"**Upgrade safely**: The Mattermost Operator performs upgrade validation "
+"checks before rollout. If checks fail, the upgrade is blocked and no "
+"changes are applied. If checks pass, the Operator upgrades pods "
+"incrementally to maintain uptime."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:50
+msgid "Pre-upgrade checklist"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:52
+msgid ""
+"**Cluster health**: Ensure all nodes are in a ready state and all pods "
+"are running without errors. This step is crucial to avoid issues during "
+"the upgrade process. Use the following commands to check cluster health:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:59
+msgid ""
+"**Helm setup**: Verify that Helm is installed and configured correctly in"
+" your Kubernetes cluster. Ensure you have the latest version of the "
+"Mattermost Operator Helm chart. Use the following commands to check Helm "
+"setup:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:66
+msgid ""
+"**Confirm Mattermost Operator version**: Make sure the image version "
+"matches the latest supported release from the Helm repository. Use the "
+"following command to check the current image version of the Mattermost "
+"Operator:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:72
+msgid ""
+"**Verify available resources**: Ensure your Kubernetes cluster has "
+"sufficient CPU and memory resources to handle the upgrade process. Use "
+"the following commands to check resource availability:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:79
+msgid "Back up database and file storage."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:81
+msgid ""
+"Use ``pg_dump`` or volume snapshots to create a full backup to a secure, "
+"external location (e.g., S3 or NFS). Validate the backup can be restored."
+" See the :doc:`Backup and Disaster Recovery </deployment-guide/backup-"
+"disaster-recovery>` documentation for details."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:83
+msgid ""
+"**Ensure configuration consistency**: Validate that ``values.yaml``, "
+"secrets, and other configuration files are version-controlled and "
+"consistent across all clusters (required for `Active/Active deployments "
+"<#active-active-upgrade-considerations>`__). Use tools like GitOps or "
+"configuration management systems to ensure all clusters have the same "
+"configuration."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:85
+msgid ""
+"We strongly recommend performing a dry run by testing the upgrade in a "
+"staging environment that mirrors production to catch misconfigurations "
+"early."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:88
+msgid "Step 2: Perform the upgrade"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:90
+msgid ""
+"This step involves updating the Mattermost Operator and Mattermost server"
+" to a new version. The Operator manages the upgrade process, ensuring "
+"that pods are updated incrementally and that traffic is routed correctly "
+"throughout the upgrade."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:92
+msgid ""
+"We recommend having a separate Mattermost custom resource. See the "
+":doc:`Deploy Mattermost on Kubernetes </deployment-guide/server/deploy-"
+"kubernetes>` documentation for details."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:94
+msgid ""
+"In the separate resource, update the ``version`` field in your "
+"``mattermost-installation.yaml`` file by replacing the ``<new-version-"
+"tag>`` with the specific version you are upgrading to:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:105
+msgid ""
+"Alternatively, if you're using Helm ``values.yaml`` directly, update it "
+"with the desired Mattermost version:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:113
+msgid "Apply the updated configuration:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:115
+msgid "For Mattermost custom resource deployments:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:121
+msgid "For Helm values deployments:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:128
+msgid ""
+"Monitor the rollout by tracking upgrade progress and logs with the "
+"following commands:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:135
+msgid ""
+"New pods are started with the updated version. Old pods are gracefully "
+"terminated after health checks pass, and traffic remains uninterrupted "
+"due to rolling upgrade behavior. NGINX, HAProxy, or Ingress "
+"configurations continue routing traffic seamlessly during the upgrade "
+"process."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:140
+msgid "Step 3: Active/Active upgrade considerations"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:142
+msgid ""
+"When your deployment includes an Active/Active configuration with multi-"
+"cluster or multi-region deployments, you must ensure that all clusters "
+"are upgraded in a coordinated manner to maintain data consistency and "
+"service availability."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:144
+msgid "For coordinated site upgrades, we recommend the following steps:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:146
+msgid ""
+"Use your global load balancer or DNS to route traffic away from the site "
+"being upgraded."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:147
+msgid ""
+"Upgrade one site at a time while directing traffic to the other. This "
+"minimizes downtime and allows for validation of the upgrade process."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:148
+msgid ""
+"Confirm replication health for databases and storage before proceeding to"
+" the next site."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:149
+msgid "Monitor performance and logs before resuming traffic to the upgraded site."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:151
+msgid ""
+"To prevent split-brain scenarios during upgrades and ensure data "
+"consistency:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:153
+msgid ""
+"Use a global load balancer or DNS to direct traffic exclusively to the "
+"active site."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:154
+msgid ""
+"Disable writes on the site being upgraded until the upgrade is complete "
+"and validated."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:155
+msgid "Confirm that only one site is actively writing data at any time."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:156
+msgid ""
+"Monitor logs for signs of replication lag, file synchronization issues, "
+"or data divergence."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:157
+msgid ""
+"Validate the health of data replication channels before and after each "
+"site upgrade."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:160
+msgid "Step 4: Validate"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:162
+msgid "After the upgrade:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:164
+msgid ""
+"Confirm that all pods are healthy and running the expected version using "
+"the following command:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:170
+msgid "Perform product smoke tests:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:172
+msgid ""
+"Log in to the Mattermost web interface and navigate across teams and "
+"channels."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:173
+msgid "Test core functionalities such as posting messages and uploading files."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:174
+msgid ""
+"Verify that all integrations, webhooks, and plugins are functioning as "
+"expected."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:175
+msgid "Check for error messages in the logs."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:177
+msgid ""
+"Use monitoring tools to confirm application health and performance. See "
+"the :doc:`Performance monitoring with Prometheus and Grafana "
+"</administration-guide/scale/deploy-prometheus-grafana-for-performance-"
+"monitoring>` documentation or the :doc:`Metrics plugin </administration-"
+"guide/scale/performance-monitoring-metrics>` documentation for details on"
+" collecting and reviewing performance metrics."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:180
+msgid "Rollback strategy"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:182
+msgid ""
+"In case of upgrade issues, rollback should be performed by modifying the "
+"custom resource and setting the Mattermost version back to its original "
+"value."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:184
+msgid ""
+"For Mattermost custom resource deployments, update the ``version`` field "
+"in your ``mattermost-installation.yaml`` file to the previous version:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:195
+msgid "Then apply the rollback:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:201
+msgid "Alternatively, for Helm values deployments, use Helm's rollback command:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:207
+msgid ""
+"Restore your PostgreSQL database and file store backups if needed. Refer "
+"to the :doc:`Backup and Disaster Recovery </deployment-guide/backup-"
+"disaster-recovery>` documentation for detailed guidance."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:210
+msgid "Frequently asked questions"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:213
+msgid "How can I confirm an upgrade was successful?"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:215
+msgid "A successful upgrade is indicated by:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:217
+msgid "All pods running the expected image version"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:218
+msgid "No errors in pod logs"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:219
+msgid "Functional smoke tests passing (login, messaging, file upload, etc.)"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:220
+msgid "No anomalies in monitoring dashboards"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:223
+msgid "What should I monitor post-upgrade?"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:225
+msgid "We recommend monitoring the following key metrics after an upgrade:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:227
+msgid "Pod health and restarts"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:228
+msgid "Application logs for errors or warnings"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:229
+msgid "Database replication health (if HA or Active/Active)"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:230
+msgid "Performance metrics (latency, error rate) via Prometheus/Grafana"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:233
+msgid "How can I test upgrades without impacting production?"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:235
+msgid ""
+"We strongly recommend deploying a separate staging environment that "
+"mirrors production, and running a full end-to-end upgrade simulation "
+"before upgrading live production clusters."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:238
+msgid "Can I upgrade the Operator and Mattermost server at the same time?"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:240
+msgid ""
+"Upgrade the Operator first. Validate it’s stable before upgrading the "
+"Mattermost server version."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:243
+msgid "Do I need to upgrade the database separately?"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:245
+msgid ""
+"Mattermost does not upgrade the database schema by default. You must "
+"manually apply database schema updates if required by a newer Mattermost "
+"version. Review the :doc:`Mattermost Server changelog </product-"
+"overview/mattermost-v10-changelog>` for any migration steps."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:248
+msgid "What if my pods don’t become ready after the upgrade?"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:250
+msgid ""
+"Check the Operator logs and pod events using ``kubectl`` to identify and "
+"resolve issues. Look for common issues such as resource constraints, "
+"configuration errors, or network connectivity problems."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:255
+msgid ""
+"What version compatibility should I be aware of between the Mattermost "
+"Operator and the application server?"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:257
+msgid ""
+"Running an older Operator version may not support newer Mattermost "
+"features or upgrade flows. Always check the `Helm chart release notes "
+"<https://github.com/mattermost/mattermost-helm/tree/master/charts"
+"/mattermost-operator>`_ for version compatibility between the Operator "
+"and the Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:260
+msgid "Can I automate this upgrade process using GitOps or CI/CD?"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/upgrade-mattermost-kubernetes-ha.rst:262
+msgid ""
+"Yes. You can manage upgrades using tools like ArgoCD or FluxCD to apply "
+"Helm changes from version-controlled ``values.yaml`` files. Ensure "
+"changes are peer-reviewed and validated in staging before promotion."
+msgstr ""
+

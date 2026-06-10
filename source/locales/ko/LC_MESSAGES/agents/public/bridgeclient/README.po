@@ -1,0 +1,223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/agents/public/bridgeclient/README.md:1
+msgid "Mattermost AI Plugin - LLM Bridge Client"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:3
+msgid ""
+"Go client library for Mattermost plugins and the server to interact with "
+"the AI plugin's LLM Bridge API."
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:5
+msgid "Quick Start"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:7
+msgid "From a Plugin"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:34
+msgid "From Mattermost Server"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:61
+msgid "API Methods"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:63
+msgid "Non-Streaming"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:73
+msgid ""
+"`allowed_tools` is supported only on agent endpoints. Service endpoints "
+"reject it."
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:75
+msgid "Streaming"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:99
+msgid "Multi-turn Conversations"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:112
+msgid "Agent tool allowlist"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:114
+msgid ""
+"Use tool names exactly as returned by `GetAgentTools` (each entry in "
+"`allowed_tools` is a string tool name)."
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:128
+msgid "When `AllowedTools` is provided:"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:129
+msgid "only tools in the list may run"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:130
+msgid "tool execution is auto-run (no approval flow)"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:131
+msgid ""
+"tools must come from enabled MCP servers or embedded MCP servers (built-"
+"in agent tools are not exposed for bridge allowlists)"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:132
+msgid "empty lists and blank tool names are rejected by the bridge API"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:134
+msgid "Permission Checking"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:136
+msgid ""
+"By default, the bridge does not check permissions. To enable permission "
+"checking, include `UserID` and optionally `ChannelID` in your request:"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:151
+msgid ""
+"If not using built-in permission checks, your plugin must verify "
+"permissions before making requests."
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:153
+msgid "Token Usage Dimensions"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:155
+msgid ""
+"Bridge callers can optionally provide `Operation` and `OperationSubType` "
+"in `CompletionRequest` to customize token usage categorization in logs."
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:157
+msgid "If omitted, the bridge keeps current defaults:"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:159
+msgid "`Operation`: `bridge_agent` or `bridge_service` (based on endpoint)"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:160
+msgid "`OperationSubType`: `streaming` or `nostream` (based on request mode)"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:172
+msgid "Agent vs Service"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:174
+msgid ""
+"**Agent**: Target a specific bot by its Bot ID (the immutable Mattermost "
+"Bot User ID)"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:175
+msgid "Uses bot's custom configuration, tools, and prompts"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:176
+msgid "Get bot IDs via the `GetAgents()` discovery endpoint"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:178
+msgid ""
+"**Service**: Target an LLM service by ID or name (e.g., \"openai\", "
+"\"anthropic\")"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:179
+msgid "Uses any bot configured with that service"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:180
+msgid "Useful when bot-specific configuration doesn't matter"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:182
+msgid "Discovery Endpoints"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:184
+msgid ""
+"The bridge API provides discovery endpoints to help clients find "
+"available agents and services before making completion requests."
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:186
+msgid "Get Available Agents"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:204
+msgid "Get Available Services"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:219
+msgid "Get Eligible Tools for an Agent"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:233
+msgid ""
+"This endpoint returns only tools that are currently eligible for "
+"`AllowedTools`. Eligible tools come from enabled MCP servers and embedded"
+" MCP servers. If no eligible tools are available, this returns an empty "
+"list."
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:237
+msgid "You can optionally pass `userID` to apply user-level permission filtering:"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:243
+msgid ""
+"If `userID` does not have access to the agent, the request fails with a "
+"permission error."
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:245
+msgid "Discovery with User Permissions"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:247
+msgid ""
+"Like completion endpoints, discovery endpoints support optional user "
+"filtering:"
+msgstr ""
+
+#: ../../source/agents/public/bridgeclient/README.md:257
+msgid ""
+"This is useful for showing users only the agents and services they have "
+"permission to use."
+msgstr ""
+

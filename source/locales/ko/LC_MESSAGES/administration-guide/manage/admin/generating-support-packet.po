@@ -1,0 +1,784 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:2
+msgid "Generate a Support Packet"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:7
+msgid ""
+"The Support Packet is used to help customers diagnose and troubleshoot "
+"issues. Use the System Console or the :ref:`mmctl system supportpacket "
+"<administration-guide/manage/mmctl-command-line-tool:mmctl system "
+"supportpacket>` command to generate a zip file that includes "
+"configuration information, logs, plugin details, and data on external "
+"dependencies across all nodes in a high-availability cluster. "
+"Confidential data, such as passwords, are automatically stripped."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:10
+msgid "Generate"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:14
+msgid ""
+"Before generating a Support Packet, go to **System Console > Environment "
+"> Logging** and ensure **Output logs to file** is set to **true**, and "
+"set **File Log Level** to **DEBUG**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:15
+msgid ""
+"From Mattermost v11.4, support packet generation is recorded in the audit"
+" log (when :ref:`audit logging is enabled and configured <administration-"
+"guide/manage/logging:audit logging>`). The audit event includes the "
+"username, timestamp, success/failure status, whether logs were included, "
+"plugin packets requested, and the output filename. This audit trail helps"
+" track access to potentially sensitive log data for compliance purposes."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:19
+msgid ""
+"Go to the System Console, and select **Commercial Support** from the "
+"System Console menu."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:21
+msgid "Example of available System Console menu options."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:24
+msgid ""
+"Select **Download Support Packet**. A zip file is downloaded to the local"
+" machine. You'll be notified if any packet files are unavailable during "
+"packet generation. See the ``warning.txt`` file for details."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:28
+msgid ""
+"Run the :ref:`mmctl system supportpacket <administration-guide/manage"
+"/mmctl-command-line-tool:mmctl system supportpacket>` command to generate"
+" and download a Support Packet to share with Mattermost Support."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:40
+msgid "Sanitize confidential data"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:42
+msgid ""
+"Please sanitize any confidential data you wish to exclude before sharing "
+"the packet with Mattermost."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:44
+msgid ""
+"When present, the following information is automatically sanitized during"
+" packet generation: ``LdapSettings.BindPassword``, "
+"``FileSettings.PublicLinkSalt``, "
+"``FileSettings.AmazonS3SecretAccessKey``, ``EmailSettings.SMTPPassword``,"
+" ``GitLabSettings.Secret``, ``GoogleSettings.Secret``, "
+"``Office365Settings.Secret``, ``OpenIdSettings.Secret``, "
+"``SqlSettings.DataSource``, ``SqlSettings.AtRestEncryptKey``, "
+"``ElasticsearchSettings.Password``, ``All "
+"SqlSettings.DataSourceReplicas``, ``All "
+"SqlSettings.DataSourceSearchReplicas``, "
+"``MessageExportSettings.GlobalRelaySettings.SmtpPassword``, "
+"``ServiceSettings.SplitKey``, "
+"``FileSettings.ExportAmazonS3SecretAccessKey``, "
+"``ServiceSettings.GoogleDeveloperKey``, and "
+"``ServiceSettings.GiphySdkKey`` (from Mattermost v11.6.0)."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:48
+msgid "Plugins may not be sanitized during packet generation."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:50
+msgid ""
+"From Mattermost v10.1, plugins can mark their configuration as hidden. If"
+" a plugin marks its configuration as hidden, the configuration is "
+"sanitized during packet generation."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:51
+msgid ""
+"Otherwise, ensure you sanitize any additional confidential details in the"
+" ``plugin.json`` file before sharing it with Mattermost. Replace details "
+"with example strings that contain the same special characters if "
+"possible, as special characters are common causes of configuration "
+"errors."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:54
+msgid "Share the packet with Mattermost"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:56
+msgid ""
+"Add the generated Support Packet to a `standard support request "
+"<https://support.mattermost.com/hc/en-us/requests/new>`_, or share with "
+"with the Mattermost team you're working with."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:60
+msgid ""
+"Disable debug logging once you've generated the Support Packet. Debug "
+"logging can cause log files to expand substantially, and may adversely "
+"impact server performance. We recommend enabling it temporarily, or in "
+"development environments, but not production environments."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:63
+msgid "Contents of a Support Packet"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:65
+msgid ""
+"The contents of a Mattermost Support Packet can differ by server version."
+" Select the tab that corresponds to your Mattermost version to see the "
+"files included in the Support Packet."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:71
+msgid "Cluster-wide files"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:73
+msgid ""
+"The following cluster-wide files are located in the root directory of the"
+" Support Packet:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:75
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:124
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:167
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:212
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:242
+msgid "`metadata.yaml <#metadata>`__"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:76
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:125
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:168
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:217
+msgid "``plugins.json`` (all active and inactive plugins)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:77
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:126
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:169
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:218
+msgid "``sanitized_config.json`` (sanitized copy of the Mattermost configuration)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:78
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:127
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:170
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:219
+msgid "``stats.yaml`` (Mattermost usage statistics)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:79
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:128
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:171
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:220
+msgid "``jobs.yaml`` (last runs of important jobs)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:80
+msgid "``diagnostics.yaml`` (system and plugin diagnostics)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:81
+msgid "``permissions.yaml`` (role and scheme information)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:82
+msgid ""
+"``postgres_schema_dump.sql`` (PostgreSQL database schema information "
+"including tables, indexes, constraints, and other metadata to assist with"
+" database configuration diagnosis)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:83
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:132
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:174
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:224
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:249
+msgid ""
+"``warning.txt`` (present when issues are encountered during packet "
+"generation)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:84
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:133
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:175
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:225
+msgid ""
+"``tsdb_dump.tar.gz`` (present when the Metrics plugin is installed and "
+"the **Performance metrics** option is selected when generating the "
+"Support Packet)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:87
+msgid "Node-specific files"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:89
+msgid "The following node-specific files are located in node subdirectories:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:91
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:137
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:179
+msgid "``<node-id>/mattermost.log`` (Mattermost logs for each node)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:92
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:138
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:180
+msgid "``<node-id>/audit.log`` (Mattermost audit logs for each node)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:93
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:139
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:181
+msgid "``<node-id>/ldap.log`` (AD/LDAP logs for each node)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:94
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:140
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:182
+msgid "``<node-id>/notifications.log`` (notifications logs for each node)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:95
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:141
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:183
+msgid ""
+"``<node-id>/cpu.prof`` (`Go performance metrics <#go-performance-"
+"metrics>`__ for each node)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:96
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:142
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:184
+msgid ""
+"``<node-id>/heap.prof`` (`Go performance metrics <#go-performance-"
+"metrics>`__ for each node)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:97
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:143
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:185
+msgid ""
+"``<node-id>/goroutines`` (`Go performance metrics <#go-performance-"
+"metrics>`__ for each node)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:100
+msgid "Diagnostics highlights"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:102
+msgid ""
+"The Support Packet ``diagnostics.yaml`` file includes system and plugin "
+"diagnostics to support troubleshooting and configuration validation."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:105
+msgid "Plugin diagnostic data"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:107
+msgid ""
+"The following additional plugin diagnostic data is available when the "
+"plugin is enabled and operational:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:109
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:147
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:189
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:229
+msgid "GitHub: ``/github/diagnostics.yaml``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:110
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:148
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:190
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:230
+msgid "GitLab: ``/com.github.manland.mattermost-plugin-gitlab/diagnostics.yaml``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:111
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:149
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:191
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:231
+msgid "Jira: ``/jira/diagnostics.yaml``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:112
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:150
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:192
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:232
+msgid "Calls: ``/com.mattermost.calls/diagnostics.yaml``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:113
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:151
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:193
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:233
+msgid "Boards: ``/focalboard/diagnostics.yaml``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:114
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:152
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:194
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:234
+msgid "Playbooks: ``/playbooks/diagnostics.yaml``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:115
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:153
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:195
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:235
+msgid "MSCalendar: ``/com.mattermost.mscalendar/diagnostics.yaml``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:116
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:154
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:196
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:236
+msgid "Google Calendar: ``/com.mattermost.gcal/diagnostics.yaml``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:120
+msgid ""
+"From v10.11, Support Packets include PostgreSQL database schema dump "
+"information that provides comprehensive metadata to help diagnose "
+"database configuration issues, performance problems, collation "
+"mismatches, and other database-related issues."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:122
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:165
+msgid "**Cluster-wide files (root directory):**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:129
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:172
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:221
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:247
+msgid "``diagnostics.yaml`` (core plugin diagnostics data)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:130
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:173
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:222
+msgid "``permissions.yaml`` (role & scheme information)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:131
+msgid ""
+"``postgres_schema_dump.sql`` (PostgreSQL database schema information "
+"including tables, indexes, constraints, and other database metadata to "
+"assist with database configuration diagnosis)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:135
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:177
+msgid "**Cluster-specific files (in node subdirectories):**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:145
+msgid ""
+"The following additional plugin diagnostic data is included in the "
+"generated Support Packet when the plugin is enabled and operational:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:158
+msgid ""
+"From Mattermost v10.10, Support Packets from :doc:`high availability "
+"</administration-guide/scale/high-availability-cluster-based-deployment>`"
+" deployments organize cluster-specific files (such as log files) in "
+"subdirectories named after each cluster node, while cluster-wide files "
+"remain in the root directory."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:160
+msgid ""
+"Support packet file organization has been improved to make it easier to "
+"identify cluster-wide versus cluster-specific files:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:162
+msgid ""
+"**Cluster-wide files** (identical across all nodes in a :doc:`high-"
+"availability cluster </administration-guide/scale/high-availability-"
+"cluster-based-deployment>`) remain in the root directory of the support "
+"packet."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:163
+msgid ""
+"**Cluster-specific files** (unique per node) are now organized in "
+"subdirectories named after each cluster node."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:187
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:227
+msgid ""
+"The following additional plugin diagnostic data is included in the "
+"generated support packet when the plugin is enabled and operational:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:200
+msgid ""
+"Prior to v10.10, each node in the cluster of a high availability "
+"deployment has its own ``mattermost.log`` file and advanced logging files"
+" included directly in the Support Packet."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:202
+msgid "From v10.5, the following Support Packet data has changed:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:204
+msgid ""
+"The ``support_packet.yaml`` file has been removed and split into "
+"``diagnostics.yaml`` and ``stats.yaml`` files."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:205
+msgid ""
+"All fields in ``diagnostics.yaml`` have been moved into their own objects"
+" for improved readability."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:206
+msgid "Field names are normalized."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:207
+msgid ""
+"New data includes server statistics, logs, permissions, and extended job "
+"list details."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:208
+msgid "Mattermost-supported plugin diagnostic data is included where applicable."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:210
+msgid "The contents of a support packet include:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:213
+msgid "``mattermost.log`` (Mattermost logs)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:214
+msgid "``audit.log`` (Mattermost audit logs)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:215
+msgid "``ldap.log`` (AD/LDAP logs)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:216
+msgid "``notifications.log`` (notifications logs)"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:223
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:248
+msgid ""
+"`Go performance metrics <#go-performance-metrics>`__, including: "
+"``cpu.prof``, ``heap.prof``, and ``goroutines``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:240
+msgid ""
+"From Mattermost v10.4, a new ``diagnostics.yaml`` file includes "
+"Mattermost Calls diagostics data, including plugin version, calls and "
+"active session counts, as well as average duration and participant "
+"counts."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:243
+msgid "``mattermost.log``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:244
+msgid "``plugins.json``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:245
+msgid "``sanitized_config.json``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:246
+msgid "``support_packet.yaml``"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:253
+msgid ""
+"LDAP groups are not included during Support Packet generation. Only "
+"``LDAP Version`` and ``LDAP Vendor`` are included when present. These "
+"values are included in the ``support_packet.yaml`` file."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:254
+msgid ""
+"From Mattermost v9.11, ``LDAP Vendor`` errors are included in the Support"
+" Packet. If fetching the LDAP Vendor name fails, the Support Packet "
+"generation includes the error in ``warning.txt``. If no LDAP Vendor name "
+"is found, the Support Packet lists them as ``unknown``."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:257
+msgid "Metadata"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:259
+msgid ""
+"From Mattermost v9.11, generated Support Packets include a "
+"``metadata.yaml`` file that contains the following information."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:262
+msgid "**Field name**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:262
+msgid "**Required/Optional**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:262
+msgid "**Description**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:262
+msgid "**Example**"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:264
+msgid "version"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:264
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:267
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:270
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:273
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:276
+msgid "Required"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:264
+msgid ""
+"Version of the schema that the current metadata file is compatible with. "
+"Current version is 1."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:264
+msgid "1"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:267
+msgid "type"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:267
+msgid ""
+"The type of the packet. Each type of Support Packet can be mapped to a "
+"specific component generating the Support Packet."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:267
+msgid "mattermost"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:270
+msgid "generated_at"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:270
+msgid "The date and time the packet was created. Value is in epoch (ms)."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:270
+msgid "1707473288731"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:273
+msgid "server_version"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:273
+msgid ""
+"Version of the server that the Support Packet was generated at. Semver is"
+" expected."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:273
+msgid "9.1.1"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:276
+msgid "server_id"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:276
+msgid "Unique identifier of the server. Expected to be 26 characters or longer."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:276
+msgid "9qpiszyjr3g8bxda35abcd1234"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:279
+msgid "license_id"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:279
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:283
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:287
+msgid "Optional"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:279
+msgid ""
+"Unique identifier of the current server's license. Expected to be 26 "
+"characters or longer. This field is empty when there's no license."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:279
+msgid "abcdejisd67yigqhmkz4ho1234"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:283
+msgid "customer_id"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:283
+msgid ""
+"The id of the customer, as defined in the license file. Expected to be 26"
+" characters or longer. Empty when there's no license."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:283
+msgid "a1b2c3d4qbbr5cpkbpbmef123h"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:287
+msgid "extras"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:287
+msgid ""
+"Key/value of any additional information, specific to the plugin/component"
+" that generated the file. Can be useful for identifying the contents of "
+"the data. Consider adding plugin (or component) versions in order to set "
+"expectation regarding the contents of this object."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:291
+msgid "extras.plugin_id"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:291
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:293
+msgid "Required for plugins"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:291
+msgid "The ID of the plugin."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:293
+msgid "extras.plugin_version"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:293
+msgid "The version of the plugin."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:296
+msgid "For example:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:312
+msgid "Go performance metrics"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:314
+msgid "The Support Packet contains 3 go runtime profiling files:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:316
+msgid "``cpu.prof`` contains a 5-second CPU profile"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:317
+msgid "``heap.prof`` contains a heap profile"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:318
+msgid "``goroutines`` contains a dump of all the running go routines"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:320
+msgid ""
+"These files can be read using `pprof "
+"<https://golang.google.cn/cmd/pprof/>`_."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:322
+msgid ""
+"Use ``go tool pprof -web X`` to open a visualization of the profile in "
+"your browser, replacing ``X`` with the profile's file name."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:325
+msgid "Load metric"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/generating-support-packet.rst:327
+msgid ""
+"From Mattermost v10.10, the **Load Metric** field under **Product Menu > "
+"About Mattermost** displays monthly active users relative to the total "
+"number of licensed users. This value gives Mattermost support teams a "
+"contextual reference point for understanding deployment active usage for "
+"troubleshooting and guidance. It isn’t a comprehensive performance "
+"monitoring tool or health indicator, but serves as a supplementary data "
+"point when traditional diagnostic methods aren’t available."
+msgstr ""
+

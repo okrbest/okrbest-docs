@@ -1,0 +1,624 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/integrations-guide/github.rst:2
+msgid "Connect GitHub to Mattermost"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:7
+msgid ""
+"Minimize distractions and reduce context switching between your GitHub "
+"code repositories and your communication platform by integrating GitHub "
+"with Mattermost. Help your teams stay focused and productive with real-"
+"time updates on commits, pull requests, issues, and more directly from "
+"Mattermost channels."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:9
+msgid "An example of the GitHub integration for Mattermost."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:13
+msgid "Deploy"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:15
+msgid ""
+"A Mattermost system admin must perform the following steps to deploy the "
+"GitHub integration."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:18
+msgid "Install the integration"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:20
+msgid ""
+"In Mattermost, from the Product menu |product-list|, select **App "
+"Marketplace**."
+msgstr ""
+
+#: ../../<rst_prolog>:100
+msgid ""
+"Navigate between Channels, collaborative playbooks, and boards using the "
+"product menu icon."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:21
+msgid "Search for or scroll to GitHub, and select **Install**."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:24
+msgid "Set up the integration"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:26
+msgid ""
+"You can configure the GitHub integration using either the built-in setup "
+"wizard (recommended) or by following the manual configuration steps."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:30
+msgid ""
+"The recommended way to configure the GitHub integration is using the "
+"built-in setup wizard. The wizard guides you through each step of the "
+"configuration process, including creating the OAuth app and webhook in "
+"GitHub."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:32
+msgid "In any Mattermost channel, run the ``/github setup`` slash command."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:33
+msgid "Follow the interactive prompts to complete the setup."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:35
+msgid "The wizard walks you through:"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:37
+msgid "Creating and configuring an OAuth app in GitHub"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:38
+msgid "Setting up the webhook connection between GitHub and Mattermost"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:39
+msgid "Announcing the integration to your team"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:41
+msgid ""
+"You can also run individual setup steps at any time using the following "
+"subcommands:"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:43
+msgid "``/github setup oauth``: Configure the OAuth2 application in GitHub."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:44
+msgid "``/github setup webhook``: Create a webhook from GitHub to Mattermost."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:45
+msgid ""
+"``/github setup announce``: Announce the integration availability to "
+"designated channels."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:49
+msgid ""
+"If you prefer to configure the integration manually instead of using the "
+"setup wizard, follow the steps below."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:51
+msgid "**Register an OAuth app in GitHub**"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:53
+msgid ""
+"Go to https://github.com/settings/applications/new to register an OAuth "
+"app with GitHub."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:54
+#: ../../source/integrations-guide/github.rst:75
+msgid "Set the following values:"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:56
+msgid "**Application name**: ``Mattermost GitHub Plugin - <YOUR COMPANY NAME>``"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:57
+msgid ""
+"**Homepage URL**: ``https://github.com/mattermost/mattermost-plugin-"
+"github``"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:58
+msgid ""
+"**Authorization callback URL**: ``https://YOUR-MATTERMOST-"
+"URL.COM/plugins/github/oauth/complete``, replacing ``https://YOUR-"
+"MATTERMOST-URL.COM`` with your Mattermost URL. This value must match the "
+"Mattermost server URL you use to log in."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:60
+msgid "Save your changes."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:61
+msgid ""
+"Select **Generate a new client secret**, and enter your GitHub password "
+"to continue."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:62
+msgid "Copy the **Client ID** and **Client Secret** in the resulting screen."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:63
+msgid ""
+"In Mattermost, go to **System Console > Plugins > GitHub**, and "
+"regenerate both a **Webhook Secret** and **At Rest Encryption Key** by "
+"selecting **Regenerate** next to each field. You'll need a copy of the "
+"**Webhook Secret** value to create a webhook in GitHub."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:67
+msgid ""
+"We recommend making a copy of your webhook secret and encryption key, as "
+"it will only be visible to you once."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:69
+msgid "**Create a webhook in GitHub**"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:71
+msgid ""
+"Create a webhook in GitHub for each GitHub organization you want to set "
+"up."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:73
+msgid ""
+"In GitHub, go to the **Settings** page where you want to send "
+"notifications from, then select **Webhooks** in the sidebar."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:74
+msgid "Select **Add Webhook**."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:77
+msgid ""
+"**Payload URL**: ``https://YOUR-MATTERMOST-"
+"URL.COM/plugins/github/webhook``. Replace ``https://YOUR-MATTERMOST-"
+"URL.COM`` with your Mattermost URL."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:78
+msgid "**Content Type**: ``application/json``"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:79
+msgid "**Secret**: The **Webhook Secret** value you copied earlier."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:81
+msgid ""
+"Under **Which events would you like to trigger this webhook?**, select "
+"**Let me select individual events**."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:82
+msgid "Select the following events:"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:84
+msgid "Branch or Tag creation"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:85
+msgid "Branch or Tag deletion"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:86
+msgid "Discussions"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:87
+msgid "Discussion comments"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:88
+msgid "Issue comments"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:89
+msgid "Issues"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:90
+msgid "Pull requests"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:91
+msgid "Pull request review"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:92
+msgid "Pull request review comments"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:93
+msgid "Pushes"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:94
+msgid "Releases"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:95
+msgid "Stars"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:96
+msgid "Workflows"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:98
+msgid "Select **Add Webhook** to save your changes."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:100
+msgid "**Configure the integration in Mattermost**"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:102
+msgid ""
+"Confirm whether your Mattermost deployment has a ``github`` user account."
+" If it exists, that account posts GitHub messages in channels by default,"
+" and the messages won't include a BOT tag. You can change this account "
+"behavior to include a BOT tag by using one of the following methods:"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:104
+msgid ""
+"Convert the user account to a bot using :ref:`mmctl user convert "
+"<administration-guide/manage/mmctl-command-line-tool:mmctl user "
+"convert>`."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:105
+msgid ""
+"Change the existing ``github`` username to something else. A new bot "
+"account called ``github`` is created the Mattermost server is restarted "
+"when the :ref:`enable bot account creation <administration-"
+"guide/configure/integrations-configuration-settings:enable bot account "
+"creation>` configuration setting is enabled."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:107
+msgid ""
+"In Mattermost, go to **System Console > Plugins > GitHub** and configure "
+"the following settings, then select **Save**:"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:109
+msgid ""
+"Enter the **GitHub OAuth Client ID** and **GitHub OAuth Client Secret** "
+"obtained during registration."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:110
+msgid ""
+"(Optional) **GitHub Organization**: Lock the integration to GitHub "
+"organizations by specifying a comma seperated list of your GitHub "
+"organizations."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:111
+msgid ""
+"(GitHub Enterprise Only): Set **Enterprise Base URL** and **Enterprise "
+"Upload URL** values to your GitHub Enterprise URLs, e.g. "
+"``https://github.example.com``. These values are often the same."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:112
+msgid ""
+"(Mattermost desktop app only) **Display Notification Counters in Left "
+"Sidebar**: Display or hide GitHub notification counters in the Mattermost"
+" sidebar."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:113
+msgid ""
+"(Optional) **Enable Private Repositories**: Enable the ability to work "
+"with private repositories. Affected users are notified once private "
+"repositories are enabled, and must reconnect their GitHub accounts to "
+"gain access to private repositories."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:114
+msgid ""
+"(Optional) **Connect to private Repositories by default**: Connect to "
+"private GitHub repositories by default, when private repositories are "
+"enabled."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:115
+msgid ""
+"(Optional) **Enable Code Previews**: Expand permalinks to GitHub files "
+"with previews. You can can enable public repositories, public and private"
+" repositories, or disable this option."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:116
+msgid ""
+"(Optional) **Enable Webhook Event Logging**: Log webhook events when log "
+"level set to DEBUG by enabling the  option."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:117
+msgid ""
+"(Optional) **Show Author in commit notification**: Show commit author "
+"instead of committer in GitHub push event notifications."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:120
+msgid "Upgrade"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:122
+msgid ""
+"We recommend updating this integration as new versions are released. "
+"Generally, updates are seamless and don't interrupt the user experience "
+"in Mattermost. Visit the `Releases page <https://github.com/mattermost"
+"/mattermost-plugin-github/releases>`__ for the latest release, available "
+"releases, and compatibiilty considerations."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:125
+msgid "Enable"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:127
+msgid ""
+"Once you setup the integration, notify your teams that they can `connect "
+"their GitHub accounts to Mattermost <#connect-a-github-account-to-"
+"mattermost>`__."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:130
+msgid "Use"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:132
+msgid ""
+"Users who want to use GitHub interconnectivity must connect their GitHub "
+"account to Mattermost."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:134
+msgid ""
+"Once connected, you'll receive direct messages from the GitHub bot in "
+"Mattermost when someone mentions you, requests a review, comments on, "
+"modifies one of your pull requests/issues (includes adding labels or "
+"reopening the issue), or assigns you to an issue on GitHub."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:137
+msgid "Connect a GitHub account to Mattermost"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:139
+msgid ""
+"In Mattermost, run the ``/github connect`` slash command in any "
+"Mattermost channel to link your Mattermost account with your GitHub "
+"account."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:141
+msgid ""
+"Once connected, run the ``/github help`` slash command to see what you "
+"can do."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:144
+msgid "Get started"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:146
+msgid "Here are some common slash commands you can get started with:"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:148
+msgid ""
+"Run the ``/github subscriptions add`` slash command to subscribe a "
+"Mattermost channel to receive notifications for new pull requests, "
+"issues, branch creation, and more in a GitHub repository."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:150
+msgid ""
+"For example, to post notifications for issues, issue comments, and pull "
+"requests matching the label **Help Wanted** from the ``mattermost"
+"/mattermost-server`` GitHub repository, use: ``/github subscriptions add "
+"mattermost/mattermost-server --features "
+"issues,pulls,issue_comments,label:\"Help Wanted\"``. The following flags "
+"are supported:"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:152
+msgid ""
+"``--features``: A comma-delimited list of one or more of: issues, pulls, "
+"pulls_merged, pulls_created, pushes, creates, deletes, issue_creations, "
+"issue_comments, pull_reviews, releases, workflow_success, "
+"workflow_failure, discussions, discussion_comments, label:\"labelname\". "
+"Defaults to ``pulls,issues,creates,deletes``."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:153
+msgid ""
+"``--exclude-org-member``: The events triggered by organization members "
+"that won't be delivered. It will be locked to the organization configured"
+" and only works for users whose membership is public. Organization "
+"members and collaborators are not the same."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:154
+msgid ""
+"``--include-only-org-members``: events triggered only by organization "
+"members will be delivered. It will be locked to the organization provided"
+" in the plugin configuration and it will only work for users whose "
+"membership is public. Note that organization members and collaborators "
+"are not the same."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:155
+msgid ""
+"``--render-style``: Notifications are delivered in the specified style "
+"(for example, the body of a pull request will not be displayed). "
+"Supported values are ``collapsed``, ``skip-body``, or ``default`` (which "
+"is the same as omitting the flag)."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:156
+msgid ""
+"``--exclude``: A comma-separated list of the repositories to exclude from"
+" getting the subscription notifications like ``mattermost/mattermost-"
+"server``. Only supported for subscriptions to an organization."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:158
+msgid ""
+"Run the ``/github todo`` slash command to get a message with items to do "
+"in GitHub, including a list of unread messages and pull requests awaiting"
+" your review."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:160
+msgid ""
+"Run the ``/github settings`` slash command to update your settings for "
+"notifications and daily reminders."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:162
+msgid ""
+"Run the ``/github mute`` slash command to manage muted GitHub users. You "
+"won't receive notifications for comments in your pull requests and issues"
+" from muted users."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:164
+msgid ""
+"Run the ``/github default-repo`` slash command to set a default "
+"repository for the current channel. This repository will be auto-filled "
+"in the Create GitHub Issue modal for convenience."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:167
+msgid "Frequently asked questions"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:170
+msgid "How do I connect a repository instead of an organization?"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:172
+msgid ""
+"Set up your GitHub webhook from the repository instead of the "
+"organization. Notifications and subscriptions will then be sent only for "
+"repositories you create webhooks for. The reminder and ``/github todo`` "
+"searches the whole organization, but only show items assigned to you."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:175
+msgid "How do I send notifications when a certain label is applied?"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:177
+msgid ""
+"If you want to send notifications to a Mattermost channel when "
+"**Severity/Critical** label is applied to any issue in the ``mattermost"
+"/mattermost-plugin-github`` repository, run the following slash command "
+"to subscribe to these notifications: ``/github subscriptions add "
+"mattermost/mattermost-plugin-github issues,label:\"Severity/Critical\"``"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:180
+msgid "How does the integration save user data for each connected GitHub user?"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:182
+msgid ""
+"GitHub user tokens are AES-encrypted with an **At Rest Encryption Key** "
+"generated in Mattermost. Once encrypted, the tokens are saved in the "
+"``PluginKeyValueStore`` table in your Mattermost database."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:185
+msgid "Get help"
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:187
+msgid ""
+"Mattermost customers can open a `Mattermost support case "
+"<https://support.mattermost.com/hc/en-us/requests/new>`_. To report a "
+"bug, please open a GitHub issue against the `Mattermost GitHub plugin "
+"repository <https://github.com/mattermost/mattermost-plugin-github>`_."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:189
+msgid ""
+"For questions, feedback, and assistance, join our pubic `Integrations and"
+" Apps channel "
+"<https://community.mattermost.com/core/channels/integrations>`_ on the "
+"`Mattermost Community Server <https://community.mattermost.com/>`_ for "
+"assistance."
+msgstr ""
+
+#: ../../source/integrations-guide/github.rst:191
+msgid ""
+"Mattermost Team Edition and Free customers can visit the Mattermost "
+"`peer-to-peer troubleshooting forum <https://forum.mattermost.com/c"
+"/trouble-shoot/16>`_ to access the global Mattermost Community for "
+"assistance."
+msgstr ""
+

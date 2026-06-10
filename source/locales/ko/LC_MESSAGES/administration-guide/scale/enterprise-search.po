@@ -1,0 +1,619 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:13
+msgid "Elasticsearch setup"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:13
+msgid "AWS OpenSearch setup"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:2
+msgid "Enterprise search"
+msgstr ""
+
+#: ../../source/_static/badges/ent-plus.rst:9
+msgid ""
+"|plans-img-yellow| Available on `Enterprise and Enterprise Advanced plans"
+" <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:7
+msgid ""
+"Mattermost database search starts to show performance degradation at "
+"around 2 million posts, on a server with 32 GB RAM and 4 CPUs. If you "
+"anticipate your Mattermost server reaching more than 2.5 million posts, "
+"we recommend enabling `Elasticsearch <#elasticsearch>`__ or `AWS "
+"OpenSearch Service <#aws-opensearch-service>`__ for optimum search "
+"performance **before** reaching 3 million posts. Both tools are highly "
+"capable and can handle enterprise-scale workloads. The choice between "
+"them depends on the following factors:"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:9
+msgid ""
+"**Licensing and cost**: AWS OpenSearch may be preferable for "
+"organizations avoiding proprietary licensing or opting for cost-effective"
+" solutions."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:10
+msgid ""
+"**Feature requirements**: Elasticsearch's proprietary features (e.g., "
+"advanced analytics, security suites) may be preferred by organizations "
+"needing powerful out-of-the-box functionality."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:11
+msgid ""
+"**Infrastructure alignment**: AWS OpenSearch aligns well with AWS-centric"
+" environments, while Elasticsearch offers broader integrations."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:22
+msgid "Elasticsearch"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:24
+msgid ""
+"Elasticsearch is a well-established and widely used search engine with a "
+"large ecosystem and community support that provides enterprise-scale "
+"deployments with optimized search performance, dedicated indexing, and "
+"usage resourcing via cluster support for fast, predicable search results."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:26
+msgid ""
+"Mattermost's implementation uses `Elasticsearch "
+"<https://www.elastic.co>`_ as a distributed, RESTful search engine "
+"supporting highly efficient database searches in a :doc:`cluster "
+"environment </administration-guide/scale/high-availability-cluster-based-"
+"deployment>`. Learn more about :doc:`setting up and configuring "
+"Mattermost for an Elasticsearch server </administration-guide/scale"
+"/elasticsearch-setup>`."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:29
+msgid "AWS OpenSearch Service"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:31
+msgid ""
+"AWS OpenSearch Service is the official path forward from Elasticsearch "
+"v7.10.x for AWS customers. It's a fully managed service that makes it "
+"easy to deploy, operate, and scale OpenSearch clusters in the AWS Cloud "
+"to provide a simple and cost-effective way to search, analyze, and "
+"visualize data in real time."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:33
+msgid ""
+"The AWS OpenSearch Service is built on the open-source OpenSearch "
+"project, which is a community-driven fork of Elasticsearch. Learn more "
+"about :doc:`setting up and configuring Mattermost for an OpenSearch "
+"server </administration-guide/scale/opensearch-setup>`."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:36
+msgid "Supported paths"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:38
+msgid ""
+"Review the following support paths for enterprise search based on the "
+"version you're using:"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:42
+msgid ""
+"`Elasticsearch v9 "
+"<https://www.elastic.co/guide/en/elasticsearch/reference/current"
+"/elasticsearch-intro.html>`__ is supported from Mattermost v11.7. We "
+"recommend upgrading to Elasticsearch v9 for the latest features and "
+"security updates. See the `Elasticsearch upgrade "
+"<https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-"
+"upgrade.html>`_ documentation for upgrade details, and see the "
+":doc:`Elasticsearch setup </administration-guide/scale/elasticsearch-"
+"setup>` documentation for details on configuring your Mattermost "
+"deployment to use Elasticsearch."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:46
+msgid ""
+"`Elasticsearch v8 "
+"<https://www.elastic.co/guide/en/elasticsearch/reference/8.19"
+"/elasticsearch-intro.html>`__ is supported from Mattermost v9.11. We "
+"recommend upgrading to Elasticsearch v9 for the latest features and "
+"security updates. See the `Elasticsearch upgrade "
+"<https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-"
+"upgrade.html>`_ documentation for upgrade details, and see the "
+":doc:`Elasticsearch setup </administration-guide/scale/elasticsearch-"
+"setup>` documentation for details on configuring your Mattermost "
+"deployment to use Elasticsearch."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:50
+msgid ""
+"Elasticsearch v7.17 is no longer supported as of Mattermost v11.7. If "
+"you're still using Elasticsearch v7, you must upgrade to Elasticsearch v8"
+" or v9."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:54
+msgid ""
+"AWS OpenSearch Service is the official path forward from Elasticsearch "
+"v7.10.x for AWS customers to provide a simple and cost-effective way to "
+"search, analyze, and visual data in real time. It's essentially a "
+"continuation of Elasticsearch v7.10.x but maintained as open source by "
+"AWS. It provides long-term support, active development, and compatibility"
+" with AWS clients, libraries, and managed services."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:56
+msgid ""
+"See the **AWS Elasticsearch v7.10.x** tab on this page for details on "
+"upgrading to AWS OpenSearch, and see the :doc:`AWS OpenSearch setup "
+"</administration-guide/scale/opensearch-setup>` documentation for details"
+" on configuring your Mattermost deployment to use AWS OpenSearch."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:60
+msgid ""
+"If you're using Elasticsearch v7.10.x under AWS’s managed services, you "
+"can't use newer Elasticsearch clients like the v8 or v9 client without "
+"changing backend infrastructure. If you're using AWS Elasticsearch "
+"v7.10.x, you must `upgrade to AWS OpenSearch <https://docs.aws.amazon.com"
+"/opensearch-service/latest/developerguide/version-migration.html>`_ for "
+"future compatibility."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:62
+msgid ""
+"The migration path from Elasticsearch v7.10.x to OpenSearch has been "
+"designed to be straightforward, minimizing effort:"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:64
+msgid "Disable \"compatibility mode\" in OpenSearch."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:65
+msgid "Upgrade Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:66
+msgid ""
+"Update the Mattermost ``ElasticsearchSettings.Backend`` configuration "
+"setting value from ``elasticsearch`` to ```opensearch``` manually or "
+"using :ref:`mmctl <administration-guide/manage/mmctl-command-line-"
+"tool:mmctl config set>`. This value cannot be changed using the System "
+"Console. See the Mattermost search :ref:`backend type <administration-"
+"guide/configure/environment-configuration-settings:backend type>` "
+"configuration setting documentation for additional details."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:67
+msgid "Restart the Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:70
+msgid "Frequently asked questions (FAQ)"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:73
+msgid "Do I need to use Elasticsearch or AWS OpenSearch?"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:75
+msgid ""
+"No. Enterprise search engines are designed for large Enterprise "
+"deployments to run highly efficient database searches in a cluster "
+"environment. The default Mattermost database search starts to show "
+"performance degradation at around 2.5 million posts, depending on the "
+"specifications for the database server. If you expect your Mattermost "
+"server to have more than 2.5 million posts, we recommend using "
+"Elasticsearch or AWS OpenSearch for optimum search performance."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:78
+msgid ""
+"Should I install Elasticsearch or OpenSearch on the same machine as "
+"Mattermost Server?"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:80
+msgid ""
+"No. We strongly recommend that you install Elasticsearch or AWS "
+"OpenSearch on a dedicated machine that's separate from the Mattermost "
+"server."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:83
+msgid "What types of indexes are created?"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:85
+msgid ""
+"Mattermost creates three types of indexes: users, channels, and posts. "
+"Users and channels have one index each. Posts are aggregated by date, "
+"into multiple indexes."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:88
+msgid "Can I pause an search indexing job?"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:90
+msgid ""
+"Yes. From Mattermost v6.7, the search indexing job is resumable. Stopping"
+" a server while the search indexing job is running puts the job in "
+"pending status. The job resumes when the server restarts. System admins "
+"can cancel an indexing job through the System Console."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:93
+msgid "Can an index rollover policy be defined?"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:95
+msgid ""
+"The :ref:`AggregatePostsAfterDays <administration-guide/configure"
+"/environment-configuration-settings:aggregate search indexes>` "
+"configuration setting defines a cutoff value. All posts preceding this "
+"value are reindexed and aggregated into new and bigger indexes. The "
+"default setting is 365 days."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:98
+msgid "Are there any new search features offered with Elasticsearch?"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:100
+msgid ""
+"The current implementation of Elasticsearch matches the search features "
+"currently available with database search. The Mattermost team is working "
+"on extending the Elasticsearch feature set with file name and content "
+"search, date filters, and operators and modifiers."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:103
+msgid "Are my files stored in Elasticsearch or OpenSearch?"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:105
+msgid "No, files and attachments are not stored."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:108
+msgid "How do I monitor system health of an Elasticsearch server?"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:110
+msgid ""
+"You can use this Prometheus exporter to monitor `various metrics "
+"<https://github.com/justwatchcom/elasticsearch_exporter#metrics>`__ about"
+" Elasticsearch: `justwatchcom/elasticsearch_exporter "
+"<https://github.com/justwatchcom/elasticsearch_exporter>`__."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:112
+msgid ""
+"You can also refer to this `article about Elasticsearch performance "
+"monitoring <https://www.datadoghq.com/blog/monitor-elasticsearch-"
+"performance-metrics/#key-elasticsearch-performance-metrics-to-"
+"monitor>`__. It's not written specifically for Prometheus, which "
+":doc:`Mattermost's performance monitoring </administration-guide/scale"
+"/deploy-prometheus-grafana-for-performance-monitoring>` system uses, but "
+"has several tips and best practices."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:115
+msgid "What form of data is sent to Elasticsearch or OpenSearch?"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:117
+msgid ""
+"Mattermost communicates with Elasticsearch or OpenSearch through its REST"
+" API using JSON messages for indexing and querying entities."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:120
+msgid "How much data is sent to Elasticsearch or OpenSearch and when?"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:122
+msgid ""
+"Every time a message is published, a channel is created, or a user "
+"changes, (either because their properties change e.g.: change of the "
+"first name or because they join/leave a channel), the data associated "
+"with that event is sent to Elasticsearch or OpenSearch."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:124
+msgid ""
+"If search via Elasticsearch or OpenSearch is enabled, every search will "
+"generate a query. If autocompletion is enabled, every user or channel "
+"autocompletion associated with writing a message or user search will "
+"generate a query."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:127
+msgid "How do I know if a search job fails?"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:129
+msgid ""
+"Mattermost provides the status of each Elasticsearch or OpenSearch "
+"indexing job in **System Console > Environment > Elasticsearch**. Here "
+"you can see if the job succeeded or failed, including the details of the "
+"error."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:131
+msgid ""
+"Failures are returned in the server logs. The error log begins with the "
+"string ``Failed job`` and includes a job_id key/value pair. Search job "
+"failures are identified with worker name "
+"``EnterpriseElasticsearchAggregator`` and "
+"``EnterpriseElasticsearchIndexer``. You can optionally create a script "
+"that programmatically queries for such failures and notifies the "
+"appropriate system."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:134
+msgid "How do I diagnose enterprise search connection issues?"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:136
+msgid ""
+"From Mattermost v11, :doc:`Support Packet generation </administration-"
+"guide/manage/admin/generating-support-packet>` automatically tests the "
+"connection to your configured Elasticsearch or AWS OpenSearch server and "
+"includes any connection errors in the Support Packet. This provides "
+"valuable diagnostic information including server version, installed "
+"plugins, and specific error details if the connection fails."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:138
+msgid ""
+"The enterprise search connection test results appear in the Support "
+"Packet and can help identify configuration issues such as network "
+"connectivity problems, authentication failures, or server availability "
+"issues. If connection errors are present, they will be clearly documented"
+" with specific error messages to aid in troubleshooting."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:141
+msgid "How does Mattermost handle Elasticsearch or OpenSearch outages?"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:143
+msgid ""
+"From Mattermost v11.7, the server includes an automatic health monitor "
+"for Elasticsearch and OpenSearch connections. The health monitor runs "
+"periodic health checks and automatically manages the connection "
+"lifecycle:"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:145
+msgid ""
+"**Health checks**: The server checks the health of the search engine "
+"cluster every 60 seconds. After 3 consecutive health check failures, the "
+"engine is stopped and search falls back to the database."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:146
+msgid ""
+"**Fast-fail on first failure**: On the very first health check failure, "
+"the engine is immediately marked as unhealthy and search requests are "
+"routed to the database. This happens before the consecutive failure "
+"threshold is reached, so users experience minimal disruption."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:147
+msgid ""
+"**Automatic retry**: When the search engine is unavailable, the server "
+"retries connecting with exponential backoff, starting at 15 seconds and "
+"doubling up to a maximum of 5 minutes between attempts."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:148
+msgid ""
+"**Automatic recovery**: When the search engine becomes available again, "
+"the server automatically reconnects and resumes using it for search "
+"queries. No manual intervention or server restart is required."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:149
+msgid ""
+"**Configuration changes**: Changes to Elasticsearch or OpenSearch "
+"configuration settings, or license changes, immediately trigger the "
+"health monitor to re-evaluate the connection state."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:150
+msgid ""
+"**Monitoring**: A ``mattermost_search_engine_status`` Prometheus metric "
+"reports the health of the search engine (``1`` = healthy or not "
+"configured, ``0`` = configured but unavailable). Use this metric to "
+":doc:`set up alerts </administration-guide/scale/performance-alerting>` "
+"for search engine outages. See :doc:`performance monitoring metrics "
+"</administration-guide/scale/performance-monitoring-metrics>` for "
+"details."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:152
+msgid "During an outage, you may see the following log messages:"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:158
+msgid "Level"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:159
+msgid "Log message"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:160
+msgid "Meaning"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:161
+msgid "Error"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:162
+msgid "``Search engine health check failed repeatedly; stopping engine``"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:163
+msgid ""
+"The failure threshold was reached and the engine has been stopped. Search"
+" falls back to the database."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:164
+#: ../../source/administration-guide/scale/enterprise-search.rst:167
+#: ../../source/administration-guide/scale/enterprise-search.rst:170
+msgid "Warn"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:165
+msgid "``Search engine health check failed``"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:166
+msgid ""
+"An individual health check failed. Includes a ``consecutive_failures`` "
+"count."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:168
+msgid "``Search engine health check failed: it is now marked as unhealthy``"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:169
+msgid ""
+"A previously healthy engine failed a health check and has been marked "
+"unhealthy. Search requests will fall back to the database immediately."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:171
+msgid "``Search engine watcher: Start() failed, will retry``"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:172
+msgid ""
+"A reconnection attempt failed. Includes a ``next_backoff`` field "
+"indicating the time until the next retry."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:173
+#: ../../source/administration-guide/scale/enterprise-search.rst:176
+#: ../../source/administration-guide/scale/enterprise-search.rst:179
+msgid "Info"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:174
+msgid "``Search engine health check succeeded: it is now marked as healthy``"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:175
+msgid ""
+"The engine passed a health check after being unhealthy and is now "
+"handling search requests again."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:177
+msgid "``Search engine watcher: engine started successfully``"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:178
+msgid "The engine has recovered and is active again."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:180
+msgid "``Search engine watcher: engine disabled, parking``"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:181
+msgid ""
+"The health monitor is idle because the search engine is disabled in "
+"configuration."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:184
+msgid "My search indexes won't complete, what should I do?"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:186
+msgid ""
+"If you have an search indexing job that's paused, it's likely your "
+"Elasticsearch or OpenSearch server has restarted. If you restart that "
+"server, you must also restart Mattermost to ensure jobs are completed. If"
+" restarting the Mattermost server does not resolve the issue, `customers "
+"with a Mattermost subscription can contact Mattermost Support "
+"<https://mattermost.com/support/>`__ for assistance."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:189
+msgid "Do I need to purge first then bulk index each time?"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:191
+msgid ""
+"Yes. Every time you choose to remove old data (purge), you must follow it"
+" up with a bulk index operation to repopulate them with new data. When "
+"you purge (delete) indices, you are removing the existing data from "
+"Elasticsearch. After purging, if you want to repopulate the indices with "
+"fresh data, you perform a bulk index operation to rebuild the indices "
+"efficiently. The bulk API allows for indexing, deleting, or updating "
+"multiple documents in a single request, which is faster and more "
+"efficient than processing documents one by one."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:194
+msgid "Required Permissions For Mattermost Service Account"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:195
+msgid ""
+"In \"least privilege\" environments you may need to further constrain the"
+" service account permissions to limit the access your Elasticsearch or "
+"AWS OpenSearch service account has."
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:197
+msgid ""
+"The following JSON provides an example of a \"least privilege\" "
+"permission set that allows Mattermost to operate correctly with "
+"Elasticsearch or AWS OpenSearch:"
+msgstr ""
+
+#: ../../source/administration-guide/scale/enterprise-search.rst:225
+msgid "A simpler, more flexible, and resilient variant of the above would be:"
+msgstr ""
+

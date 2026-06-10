@@ -1,0 +1,392 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:2
+msgid "Deploy for Sovereign Collaboration in Microsoft"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:5
+msgid "Overview"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:7
+msgid ""
+"Agencies and critical infrastructure organizations often face strict data"
+" sovereignty requirements that restrict the use of public cloud services "
+"for sensitive collaboration."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:9
+msgid ""
+"Deploying Mattermost for sovereign collaboration within Microsoft Teams "
+"and Outlook enables secure, compliant, and resilient communication while "
+"maintaining workflow continuity inside familiar Microsoft interfaces. "
+"Users access both Teams channels and Mattermost channels :doc:`from "
+"within the Microsoft ecosystem </integrations-guide/mattermost-mission-"
+"collaboration-for-m365>`, providing a single-pane-of-glass experience and"
+" eliminating application switching."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:11
+msgid ""
+"Mattermost can be hosted on-premises or in sovereign clouds, such as "
+"Azure GovCloud or Azure Local, ensuring that messages, files, recordings,"
+" and transcriptions remain in compliance-approved systems with encryption"
+" and strict policy enforcement."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:13
+msgid ""
+"Unified authentication with Microsoft Entra-ID extends your Microsoft "
+"enterprise IT investments while delivering the compliance, control, and "
+"resilience required for mission-critical operations or out-of-band "
+"scenarios."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:15
+msgid ""
+"This document outlines architectural guidance for enabling sovereign "
+"collaboration within your Microsoft ecosystem."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:17
+msgid ""
+"Mattermost diagram displays the deployment components and relationships "
+"outlined in detail in this document."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:21
+msgid ""
+"Consider `talking to a Mattermost expert <https://mattermost.com/contact-"
+"sales/>`__ if your organization needs support deploying Mattermost and "
+"supporting services for soverign collaboration within your Microsoft "
+"ecosystem."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:24
+msgid "Architecture components"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:26
+msgid "The deployment architecture includes the following components:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:28
+msgid ""
+"**Users:** Enterprise users within the network boundary accessing client "
+"applications for M365 services and Mattermost."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:30
+msgid ""
+"**Microsoft Entra ID (Identity Provider):** Users authenticate to M365 "
+"applications and Mattermost using :doc:`single sign-on Entra ID "
+"</administration-guide/onboard/sso-entraid>` via OpenID Connect (OIDC) or"
+" SAML."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:32
+msgid "**Client Applications:**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:34
+msgid ""
+"**Microsoft 365 Desktop Apps:** Teams and Outlook with :doc:`embedded "
+"Mattermost application </integrations-guide/mattermost-mission-"
+"collaboration-for-m365>` for seamless collaboration within a familiar "
+"interface while enforcing regulatory compliance."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:36
+msgid ""
+"**Mattermost Desktop Apps:** Access Mattermost via :doc:`desktop "
+"</deployment-guide/desktop/desktop-app-deployment>` or web apps in "
+"addition to the embedded views from Teams and Outlook. *(Optional - not "
+"shown)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:38
+msgid ""
+"**Mattermost Mobile Apps:** Access Mattermost via :doc:`iPhone and "
+"Android apps </deployment-guide/mobile/mobile-app-deployment>`, with "
+"support for :doc:`ID-only push notifications </deployment-guide/mobile"
+"/host-your-own-push-proxy-service>` to ensure compliance with data "
+"sovereignty requirements. *(Optional - not shown)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:40
+msgid ""
+"**Mattermost Deployment:** Mattermost deployed for sovereign "
+"collaboration on enterprise-controlled infrastructure or private cloud, "
+"such as :doc:`Azure </deployment-guide/server/deploy-kubernetes>` or "
+"`Azure Local <https://learn.microsoft.com/en-us/azure/azure-local/manage"
+"/disconnected-operations-overview>`_, to maintain compliance with STIG, "
+"FedRAMP, and NIST 800-53 standards. See :doc:`reference architecture "
+"</administration-guide/scale/server-architecture>` documentation for "
+"Mattermost deployment configurations based on expected scale."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:42
+msgid ""
+"**Mattermost Server:** Core application server handling collaboration "
+"workloads, including:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:44
+msgid ""
+":doc:`Messaging Collaboration </end-user-guide/messaging-collaboration>`:"
+" DDIL-ready 1:1, group messaging, and structured channel collaboration "
+"with :doc:`rich integration capabilities </integrations-guide"
+"/integrations-guide-index>` and :ref:`enterprise-grade search "
+"<administration-guide/scale/scaling-for-enterprise:enterprise search>`."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:46
+msgid ""
+":doc:`Workflow Automation </end-user-guide/workflow-automation>`: "
+"Playbooks provide structure, monitoring and automation for repeatable "
+"processes built-in to your sovereign Mattermost deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:48
+msgid ""
+":doc:`Project Tracking </end-user-guide/project-task-management>`: Boards"
+" enables project management capabilities built-in to your sovereign "
+"Mattermost deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:50
+msgid ""
+":doc:`AI Agents </administration-guide/configure/agents-admin-guide>`: AI"
+" Agents run against Azure OpenAI endpoints or a self-hosted LLM that is "
+"OpenAI-compatible."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:52
+msgid ""
+":doc:`Audio & Screenshare </administration-guide/configure/calls-"
+"deployment-guide>`: Calls offers native real-time self-hosted audio calls"
+" and screen sharing within your own network."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:54
+msgid ""
+"**Proxy Server:** The :doc:`proxy server </deployment-guide/server/setup-"
+"nginx-proxy>` handles HTTP(S) routing within the cluster, directing "
+"traffic between the server and clients accessing Mattermost services. "
+"NGINX is recommended for load balancing with support for WebSocket "
+"connections, health check endpoints, and sticky sessions. The proxy layer"
+" provides SSL termination and distributes client traffic across "
+"application servers."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:56
+msgid ""
+"**PostgreSQL Database:** Stores persistent application data on a "
+":doc:`PostgreSQL v13+ database </deployment-guide/server/preparations>`, "
+"such as `Azure Database for PostgreSQL <https://azure.microsoft.com/en-"
+"us/products/postgresql>`_."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:58
+msgid ""
+"**Object Storage:** File uploads, images, and attachments are stored "
+"outside the application node on an :doc:`S3-compatible store "
+"</deployment-guide/server/preparations>` or an NFS (Network File System) "
+"server. `Azure Blob Storage <https://azure.microsoft.com/en-"
+"us/products/storage/blobs>`_ can be used, but needs an S3-compatible "
+"proxy for Mattermost to interface with."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:60
+msgid ""
+"**Recording Instance:** ``calls-offloader`` job service, configured using"
+" the :doc:`Calls Offloader Setup and Configuration </administration-"
+"guide/configure/calls-offloader-setup>` guide, to offload heavy "
+"processing tasks from Mattermost Calls, such as recordings, "
+"transcriptions, and live captioning, to enterprise-controlled "
+"infrastructure or private cloud. *(Optional)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:62
+msgid ""
+"**Self-hosted integrations:** :doc:`Custom apps, plugins, and webhooks "
+"</integrations-guide/integrations-guide-index>` can be deployed within "
+"the enterprise boundary. *(Optional - not shown)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:64
+msgid ""
+"**Secure Access Layer:** A firewall or access gateway protecting entry "
+"into the enterprise network. This may include network policies, IP "
+"allowlists, or WAFs depending on your networking configurations. "
+"*(Optional)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:66
+msgid ""
+"**Microsoft Global Network:** `World-wide network "
+"<https://learn.microsoft.com/en-us/azure/networking/microsoft-global-"
+"network>`_ of Microsoft data centers, delivering public cloud services "
+"including M365 and Azure OpenAI."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:68
+msgid ""
+"**Azure OpenAI Service:** :doc:`LLM service </agents/docs/providers>` "
+"used for summarization, ai-enhanced search, and agent-assisted workflows,"
+" hosted within the Microsoft Global Network. *(Optional)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:71
+msgid "Operational Best Practices"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:73
+msgid ""
+"The following best practices and deployment configurations help ensure "
+"that Mattermost remains compliant, resilient, and fully sovereign when "
+"deployed alongside Microsoft 365."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:76
+msgid "High availability and fault tolerance"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:78
+msgid ""
+"Deploy Mattermost in a :doc:`cluster-based architecture </administration-"
+"guide/scale/high-availability-cluster-based-deployment>` to ensure "
+"continued availability during outages or hardware failures. High "
+"availability requires redundant infrastructure across each critical "
+"component:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:80
+msgid ""
+"Application servers: Scale horizontally across multiple nodes with a load"
+" balancer distributing client traffic."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:81
+msgid ""
+"Database layer: Use PostgreSQL replication or managed HA services with "
+"automatic failover."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:82
+msgid ""
+"Search service: :ref:`Elasticsearch or AWS OpenSearch Service "
+"<administration-guide/scale/scaling-for-enterprise:enterprise search>` "
+"provides optimized search performance with dedicated indexing for large-"
+"scale deployments."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:83
+msgid ""
+"Object storage: Configure S3-compatible backends with erasure coding or "
+"replication for durability. All application servers must access shared "
+"file storage (NAS or S3) to ensure consistent data availability."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:84
+msgid ""
+"Calls services: Run multiple ``rtcd`` and ``calls-offloader`` nodes for "
+"resilience."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:87
+msgid "Sovereign audio & screensharing"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:89
+msgid ""
+"Data sovereignty compliance may require that all voice and screen sharing"
+" traffic remain within enterprise-controlled infrastructure and does not "
+"traverse third-party services. Deploy :doc:`Mattermost Calls "
+"</administration-guide/configure/calls-deployment-guide>` in a self-"
+"hosted configuration to ensure that Microsoft Teams users and Mattermost "
+"users collaborate without media ever leaving the sovereign network."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:91
+msgid ""
+"The ``rtcd`` service, configured using the :doc:`RTCD Setup and "
+"Configuration </administration-guide/configure/calls-rtcd-setup>` guide, "
+"provides scalable, low-latency media routing hosted on-premises. Run "
+"multiple ``rtcd`` nodes for redundancy."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:92
+msgid ""
+"The ``calls-offloader`` service, configured using the :doc:`Calls "
+"Offloader Setup and Configuration </administration-guide/configure/calls-"
+"offloader-setup>` guide, offloads heavy processing tasks like recording, "
+"transcription and live captioning to a compliance-approved job server."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:95
+msgid "Compliance and retention"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:97
+msgid ""
+"Sovereign environments often require strict enforcement of retention "
+"policies, legal hold, and export controls. Configure Mattermost's built-"
+"in compliance features to meet agency or sectoral mandates."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:99
+msgid ""
+"Enable :doc:`compliance export </administration-guide/comply/compliance-"
+"export>` and :doc:`monitoring </administration-guide/comply/compliance-"
+"monitoring>` to produce auditable exports of message data and user "
+"activity logs."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:100
+msgid ""
+"Configure :doc:`message retention </administration-guide/comply/data-"
+"retention-policy>` and :doc:`legal hold </administration-guide/comply"
+"/legal-hold>` policies to align with applicable regulations."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:101
+msgid ""
+"Integrate with your organization's :doc:`eDiscovery </administration-"
+"guide/comply/electronic-discovery>` and archiving systems as required."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:104
+msgid "Mobile notifications"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:106
+msgid ""
+"To prevent sensitive message content from being transmitted to external "
+"notification services such as Apple Push Notification Service (APNS) and "
+"Firebase Cloud Messaging (FCM), configure Mattermost to use :doc:`ID-only"
+" push notifications </deployment-guide/mobile/host-your-own-push-proxy-"
+"service>`. In this configuration, only a message identifier is sent to "
+"public push notification services and the client retrieves the content "
+"securely from the Mattermost server over an encrypted channel."
+msgstr ""
+

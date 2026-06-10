@@ -1,0 +1,462 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:2
+msgid "Team-level channel membership policies"
+msgstr ""
+
+#: ../../source/_static/badges/entry-adv.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry and Enterprise Advanced "
+"<https://mattermost.com/pricing/>`__ plans"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:7
+msgid ""
+"Team Admins can create and manage attribute-based membership policies for"
+" private channels within their team, directly from Team Settings, without"
+" requiring System Admin involvement. For organization-wide policies "
+"managed by System Admins, see :doc:`System-wide attribute-based access "
+"policies </administration-guide/manage/admin/abac-system-wide-policies>`."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:9
+msgid "With team-level channel membership policies, Team Admins can:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:11
+msgid ""
+"Create policies that apply attribute-based access rules to one or more "
+"private channels within their team."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:12
+msgid ""
+"Control which users can join or stay in those channels based on their "
+"profile attributes."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:13
+msgid ""
+"Manage auto-sync membership, so channels stay up to date as user "
+"attributes change."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:16
+msgid "Use cases"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:18
+msgid ""
+"**Team-wide project access**: Restrict all private project channels to "
+"members with a specific project attribute."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:19
+msgid ""
+"**Department isolation**: Ensure only users from a specific department "
+"can join the team's private channels."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:20
+msgid ""
+"**Clearance tiers**: Apply clearance-level requirements consistently "
+"across multiple channels in the team without System Admin involvement for"
+" each change."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:23
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:25
+msgid ""
+":doc:`Attribute-Based Access Control (ABAC) </administration-"
+"guide/manage/admin/attribute-based-access-control>` must be enabled by a "
+"System Admin in **System Console > System Attributes > Attribute-Based "
+"Access**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:26
+msgid ""
+"You need Team Admin permissions for the team. The "
+"``manage_team_access_rules`` permission is included in the Team Admin "
+"role by default."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:27
+msgid ""
+"Team-level membership policies apply only to private channels within the "
+"team."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:30
+msgid "Access Team Settings"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:32
+msgid "Select the team name in the sidebar to open the team menu."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:33
+msgid "Select **Team Settings**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:34
+msgid ""
+"Navigate to the **Membership Policies** tab. This tab is only visible "
+"when ABAC is enabled system-wide and you have Team Admin permissions."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:38
+msgid ""
+"System Admins also have access to the **Membership Policies** tab in Team"
+" Settings and see the same policies as Team Admins."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:41
+msgid "Manage membership policies"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:43
+msgid ""
+"The **Membership Policies** tab shows policies scoped to the team. Each "
+"policy displays its name and the number of private channels it applies "
+"to."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:45
+msgid ""
+"Team Admins only see policies whose access rules their own user "
+"attributes satisfy. If a policy has rules that exclude the Team Admin's "
+"attributes (for example, a policy requiring ``Department=Engineering`` "
+"and the Team Admin has ``Department=Finance``), that policy will not "
+"appear in their list. This is a self-inclusion safety mechanism to "
+"prevent admins from being locked out of policies they manage."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:48
+msgid "Create a policy"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:50
+msgid "In the **Membership Policies** tab, select **Add policy**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:51
+msgid "Enter a unique policy name."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:52
+msgid "Define access rules under **Access rules**:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:54
+msgid "Select **Add attribute** to add a condition."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:55
+msgid ""
+"For each condition, choose the user attribute, the matching operator "
+"(**Is**, **Is not**, **In**, **Contains**), and the required value."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:56
+msgid ""
+"Add multiple conditions as needed. All conditions are combined with a "
+"logical AND, so users must satisfy all of them."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:58
+msgid "Assign channels under **Assigned channels**:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:60
+msgid ""
+"Select **Add channels** to search for and select private channels within "
+"the team."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:61
+msgid ""
+"Channels already assigned to this policy are excluded from the search "
+"results to prevent duplicates."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:62
+msgid ""
+"A channel can be assigned to multiple policies simultaneously; all "
+"policies are enforced independently."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:64
+msgid ""
+"Optionally, toggle **Auto-add members** per channel to control whether "
+"users matching the rules are automatically added to that channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:66
+msgid "Select **Save** to apply the policy."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:70
+msgid ""
+"Self-exclusion prevention is enforced during save. If your defined rules "
+"would exclude your own user account, Mattermost will block the save and "
+"display an error. Adjust your rules to include your own attributes before"
+" saving."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:73
+msgid "Edit a policy"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:75
+msgid ""
+"Select a policy row in the list, or use the three-dot menu and select "
+"**Edit**, to open the policy editor. You can update the policy name, "
+"access rules, and channel assignments. Select **Save** to apply changes."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:77
+msgid ""
+"When saving changes that affect existing channel membership, a "
+"confirmation dialog shows how many users will be added or removed. "
+"Confirm to proceed."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:80
+msgid "Delete a policy"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:82
+msgid ""
+"You can only delete a policy that has no channels assigned to it. To "
+"delete a policy:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:84
+msgid ""
+"Open the policy editor and remove all assigned channels using the "
+"**Remove** link next to each channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:85
+msgid ""
+"Once all channels are removed, select **Delete policy** at the bottom of "
+"the editor."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:86
+msgid "Confirm the deletion."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:89
+msgid "Auto-add members"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:91
+msgid ""
+"Each channel assigned to a policy has an independent **Auto-add members**"
+" toggle:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:93
+msgid ""
+"**Enabled**: Users matching the policy rules are automatically added to "
+"the channel. If a user loses the required attributes and later regains "
+"them, they are automatically re-added."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:94
+msgid ""
+"**Disabled** (default): The policy enforces rules as a gate, removing "
+"users who no longer qualify, but does not automatically add new "
+"qualifying users."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:96
+msgid ""
+"Regardless of this setting, users who no longer satisfy the access rules "
+"are always removed during the next synchronization."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:100
+msgid ""
+"If a system-wide policy has auto-sync enabled for a channel, Team Admins "
+"cannot disable it for that channel. If a system-wide policy has auto-sync"
+" disabled, Team Admins can choose to enable it."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:103
+msgid "Policy inheritance and combination"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:105
+msgid ""
+"When both a system-wide policy and a team-level policy apply to the same "
+"channel, both must be satisfied. Team-level policies are **additive** and"
+" cannot relax or override restrictions set by System Admins."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:107
+msgid "System-wide policies are managed in the System Console."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:108
+msgid "Team-level policies are managed in Team Settings."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:109
+msgid ""
+"Users must meet the rules of all applicable policies to access the "
+"channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:112
+msgid "Cross-team policies"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:114
+msgid ""
+"A policy that has private channels from more than one team is considered "
+"a cross-team policy. Cross-team policies are not visible in any team's "
+"**Membership Policies** tab — they are managed exclusively through the "
+"System Console."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:116
+msgid ""
+"If a System Admin adds a channel from another team to a policy that was "
+"previously scoped to one team, that policy will no longer appear in any "
+"team's **Membership Policies** tab."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:119
+msgid "Synchronization"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:121
+msgid ""
+"When you save a policy or modify channel assignments, Mattermost creates "
+"a membership synchronization job. Changes are applied as soon as the job "
+"completes. Synchronization also runs automatically every 30 minutes to "
+"handle attribute changes from external systems such as LDAP or SAML."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:124
+msgid "Troubleshooting and FAQs"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:127
+msgid "Why can't I see the Membership Policies tab in Team Settings?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:129
+msgid "The **Membership Policies** tab is only visible when:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:131
+msgid "You have Team Admin permissions."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:132
+msgid ""
+"ABAC is enabled system-wide by a System Admin in **System Console > "
+"System Attributes > Attribute-Based Access**."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:135
+msgid "Why can't I see a policy that I know exists?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:137
+msgid ""
+"There are two reasons a policy may not appear in your **Membership "
+"Policies** tab:"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:139
+msgid ""
+"**Cross-team policy**: The policy includes private channels from more "
+"than one team. Cross-team policies are not visible in Team Settings for "
+"anyone and must be managed through the System Console."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:140
+msgid ""
+"**Self-inclusion filter**: Your own user attributes do not satisfy the "
+"policy's access rules. For example, if a policy requires "
+"``Department=Engineering`` and your profile has ``Department=Finance``, "
+"you will not see that policy. A System Admin or another Team Admin whose "
+"attributes do satisfy the rules would need to manage it instead."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:143
+msgid "What happens when I save rules that would exclude me?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:145
+msgid ""
+"Mattermost validates your access rules against your own user attributes "
+"before saving. If the rules would remove you from any assigned channel, "
+"the save is blocked and an error is shown. Adjust the rules to include "
+"your own attributes, or reset them using the **Undo** option in the save "
+"panel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:148
+msgid "Can I assign a channel to more than one team-level policy?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:150
+msgid ""
+"Yes. A private channel can be assigned to multiple membership policies. "
+"Each policy's rules are applied independently, and users must satisfy all"
+" of them to access the channel."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:153
+msgid "Can Team Admins override system-wide policies?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:155
+msgid ""
+"No. Team-level policies are always additive. Users must satisfy both the "
+"system-wide policy and the team-level policy to access a channel. Team "
+"Admins cannot weaken or bypass restrictions set by System Admins."
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:158
+msgid "How are membership changes communicated to users?"
+msgstr ""
+
+#: ../../source/administration-guide/manage/admin/abac-team-channel-policies.rst:160
+msgid ""
+"Users receive standard Mattermost notifications when they are removed "
+"from or added to channels due to policy changes, consistent with other "
+"membership change notifications."
+msgstr ""
+

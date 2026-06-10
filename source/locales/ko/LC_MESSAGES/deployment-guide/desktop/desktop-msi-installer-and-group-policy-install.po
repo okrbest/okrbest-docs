@@ -1,0 +1,673 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:2
+msgid "Desktop MSI installer and group policy guide"
+msgstr ""
+
+#: ../../source/_static/badges/all-commercial.rst:7
+msgid ""
+"|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
+"Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:7
+msgid ""
+"This page provides guidance on installing the desktop app MSI and use "
+"Group Policies in Windows for Mattermost Enterprise or Professional. The "
+"MSI installer package can be downloaded `here "
+"<https://github.com/mattermost/desktop/releases/latest>`_."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:11
+msgid ""
+"**Per-machine installation from v6.1.0**: From Mattermost Desktop v6.1.0,"
+" the Windows MSI installer defaults to per-machine (system-wide) "
+"installation to meet enterprise compliance requirements. This changes "
+"deployment strategies and upgrade paths. See the `Deployment "
+"considerations for v6.1.0+ <#deployment-considerations-for-v6-1-0>`__ "
+"section below for details."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:14
+msgid "Windows distribution options"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:16
+msgid ""
+"From desktop v6.1, organizations deploying on Windows have 2 primary "
+"distribution options:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:18
+msgid ""
+"**Windows Store**: Primary option for automatic updates. Recommended for "
+"most users. The Windows Store version handles updates automatically "
+"through the Microsoft Store infrastructure."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:19
+msgid ""
+"**MSI installer**: Direct download option for traditional deployment "
+"methods. This guide covers MSI deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:21
+msgid ""
+"The desktop v6.1 app includes in-app update notifications that check the "
+"Mattermost website for new versions. All distribution channels (Windows "
+"Store, MSI, Mac App Store, Flathub, APT/RPM) release simultaneously to "
+"ensure users receive consistent update notifications regardless of their "
+"installation method."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:24
+msgid "Upgrading to v6.1.0 with MSI installer"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:26
+msgid ""
+"Users upgrading from earlier Desktop app versions using the MSI installer"
+" may need to recreate taskbar shortcuts once after the upgrade. The "
+"v6.1.0 installer uses a more reliable method for shortcut icons that "
+"prevents shortcuts from breaking during future upgrades. This fixes a "
+"long-standing issue where shortcuts could break during MSI upgrades. This"
+" is a one-time action for the upgrade to v6.1.0. Future upgrades to "
+"v6.1.2 and later won't require shortcut recreation. Windows Store "
+"deployments aren't affected by this change."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:28
+msgid ""
+"We recommend telling your users in advance that they may need to re-pin "
+"the taskbar shortcut after upgrading to desktop app v6.1. Desktop "
+"shortcuts are typically unaffected while taskbar shortcuts are most "
+"commonly impacted."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:30
+msgid ""
+"If a user reports a broken shortcut after upgrading to v6.1.0, the user "
+"should:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:32
+msgid ""
+"Right-click the broken shortcut on the taskbar and select **Unpin from "
+"taskbar**."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:33
+msgid "Launch Mattermost Desktop from the Start Menu."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:34
+msgid "Right-click the Mattermost icon in the taskbar."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:35
+msgid "Select **Pin to taskbar**."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:38
+msgid "Download group policy and MSI installer files"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:40
+msgid ""
+"Using a newly created Windows VM or dedicated Windows computer, make sure"
+" to use a Windows version that supports ``Edit group policy`` out of the "
+"box (i.e. Windows 10 Pro or Enterprise)."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:42
+msgid ""
+"When downloading group policy and MIS installer files, ensure to use a "
+"Windows version that supports Edit group policy."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:45
+msgid ""
+"Navigate to the `Mattermost Desktop "
+"<https://github.com/mattermost/desktop>`__ repository on `GitHub.com "
+"<https://github.com/>`__."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:47
+msgid "Go to the mattermost/desktop repository on GitHub."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:50
+msgid ""
+"Navigate to the release page for `version v6.2.0 "
+"<https://github.com/mattermost/desktop/releases/latest>`__ and download "
+"the appropriate installer for your version of Windows (32-bit vs. "
+"64-bit)."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:52
+msgid ""
+"Download the `source.zip "
+"<https://github.com/mattermost/desktop/archive/v6.2.0.zip>`__ file as "
+"well to extract group policy files."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:54
+msgid ""
+"In the mattermost/desktop repository on GitHub, go to the release page "
+"for the latest desktop release, then download the installer for your "
+"version of Windows. Download the source.zip file as well to extract group"
+" policy files."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:58
+msgid "Install group policy files locally"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:60
+msgid ""
+"The following group policies are available supporting a state option of "
+"Not Configured, Enabled, or Disabled:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:63
+msgid "Group policy"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:63
+msgid "Description"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:63
+msgid "Mattermost release"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:63
+msgid "Setting"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:65
+msgid "Enable Server Management"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:65
+msgid "If disabled, management of servers in the app settings are disabled."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:65
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:68
+msgid "v4.3 or later"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:65
+msgid "``EnableServerManagement``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:68
+msgid "Default Server List"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:68
+msgid "Define one or more default, permanent servers."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:68
+msgid "``DefaultServerList``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:70
+msgid "Update Notifications"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:70
+msgid "If disabled, in-app update notifications are not shown."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:70
+msgid "v5.1 or later"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:70
+msgid "``EnableAutoUpdates``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:73
+msgid ""
+"Browse to the folder the above files were downloaded to and unzip the "
+"``desktop-6.2.0.zip`` file in place."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:75
+msgid ""
+"Go to the install download directory on your machine and unzip the ZIP "
+"file."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:78
+msgid ""
+"Navigate to the unzipped ``desktop-6.2.0\\resources\\windows\\gpo`` "
+"folder and copy the contents."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:80
+msgid "Go to the \\resources\\windows\\gpo directory and copy its contents."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:83
+msgid ""
+"Navigate to the ``C:\\Windows\\PolicyDefinitions`` folder and paste the "
+"files copied in the last step."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:85
+msgid ""
+"Go to the Windows\\PolicyDefinitions directory and paste the files you "
+"copied in the previous step."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:88
+msgid ""
+"Verify the ``mattermost.admx`` file is in the "
+"``C:\\Windows\\PolicyDefinitions`` folder."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:90
+msgid ""
+"Verify the mattermost.admx file is present in the "
+"Windows\\PolicyDefinitions directory."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:93
+msgid ""
+"Verify the ``mattermost.adml`` file is in the "
+"``C:\\Windows\\PolicyDefinitions\\en-US`` folder."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:95
+msgid ""
+"Verify the mattermost.adml file is present in the "
+"Windows\\PolicyDefinitions\\en-US directory."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:100
+msgid ""
+"``\\\\FQDNDomain\\sysvol\\FQDNDomain\\Policies\\PolicyDefinitions`` can "
+"be used instead of ``C:\\Windows\\PolicyDefinitions`` if available."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:101
+msgid ""
+"``\\\\FQDNDomain\\sysvol\\FQDNDomain\\Policies\\PolicyDefinitions\\en-"
+"US`` can be used instead of ``C:\\Windows\\PolicyDefinitions\\en-US`` if "
+"available."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:103
+msgid "**Disable update notifications**"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:105
+msgid ""
+"Update notifications can be disabled by configuring the supported group "
+"policy. Changes to group policies require you to restart Mattermost for "
+"those changes to take effect."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:108
+msgid "Configure Mattermost using group policy settings"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:110
+msgid ""
+"Run the ``Edit group policy`` application by selecting **Start**, typing "
+"``gpedit`` into the search field, then selecting the resulting **Edit "
+"group policy** search option."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:112
+msgid ""
+"When configuring Mattermost using group policy settings, run the Edit "
+"group policy application by going to Start, typing gpedit into the search"
+" field, then selecting the resulting Edit group policy search option."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:115
+msgid ""
+"In the **Edit group policy** window, navigate to ``Local Computer "
+"Policy\\Computer Configuration\\Administrative Templates\\Mattermost``. "
+"In this example, double-click on ``DefaultServerList`` to set one or more"
+" default servers that will appear on app launch."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:117
+msgid ""
+"In the Edit group policy window, go to Local Computer Policy > Computer "
+"Configuration > Administrative Templates > Mattermost. To set one or more"
+" default servers to appear on app launch, for example, double-click on "
+"DefaultServerList to begin."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:120
+msgid ""
+"In the resulting window for **DefaultServerList**, select **Enabled** to "
+"turn the feature on, then select the **Show…** button in the **Options:**"
+" section of the window to add default servers."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:122
+msgid ""
+"In the DefaultServerList window, enable the feature, then select Show...,"
+" located under Options, to add the default servers."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:125
+msgid ""
+"In the resulting window, add desired Mattermost servers using a memorable"
+" name (i.e., Community) and the web URL of the Mattermost server (i.e., "
+"https://community.mattermost.com)."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:127
+msgid "Select **OK** twice, then close the **Edit group policy** app."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:129
+msgid ""
+"Add the default servers by name and by URL, then select OK twice to close"
+" the Edit group policy application."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:133
+msgid "Deployment considerations for v6.1.0+"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:135
+msgid ""
+"From Mattermost Desktop v6.1.0, the Windows MSI installer defaults to "
+"per-machine (system-wide) installation to meet enterprise compliance "
+"requirements. The application installs to ``C:\\Program "
+"Files\\Mattermost`` with registry keys in ``HKLM`` (HKEY_LOCAL_MACHINE), "
+"and requires administrator privileges for deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:137
+msgid ""
+"Users upgrading from v5.9 to v6.0.4 with per-user installations must "
+"manually uninstall the old version before installing v6.1.0 to avoid "
+"duplicate installs. See :ref:`Desktop troubleshooting <upgrade-to-v6-1-0"
+"-fails-or-installs-duplicate-version-windows-msi>` for detailed upgrade "
+"instructions."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:140
+msgid "Multi-view and Group Policies"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:142
+msgid ""
+"From desktop v6.0, users can run multiple Mattermost workspaces at the "
+"same time in the desktop app. Use existing methods to pre-provision "
+"multiple workspaces for users, as follows:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:144
+msgid ""
+"On Windows, seed the approved list using the ``DefaultServerList`` Group "
+"Policy."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:145
+msgid ""
+"For scripted installs, seed ``config.json`` on first run to include "
+"multiple entries in the ``teams`` array. See the :doc:`Silent Windows "
+"desktop distribution </deployment-guide/desktop/silent-windows-desktop-"
+"distribution>` documentation for details."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:146
+msgid ""
+"To prevent users from adding or removing workspaces, use the existing "
+"``EnableServerManagement`` Group Policy."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:147
+msgid "Disable ``EnableAutoUpdates`` to turn off update notifications."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:150
+msgid "Verify group policy settings have been applied"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:152
+msgid ""
+"Open up the Registry Editor by selecting **Start**, typing ``Registry "
+"Editor`` in the search field, then selecting the **Registry Editor** "
+"option in the search results."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:154
+msgid ""
+"When verifying group policy settings, open the Registery Editor by going "
+"to Start, typing Registry Editor into the search field, then selecting "
+"the resulting Registry Editor search option."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:157
+msgid ""
+"In the **Registry Editor** window, navigate to "
+"``Computer\\HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Mattermost\\DefaultServerList``"
+" and verify the servers you added using the **Edit group policy** app are"
+" listed."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:159
+msgid "Once verified, close the **Registry Editor**."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:161
+msgid ""
+"Go to Computer > HKEY_LOCAL_MACHINE > SOFTWARE > Policies > Mattermost > "
+"DefaultServerList to veryfiy the servers you added, then close the "
+"Registry Editor."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:165
+msgid "Install the Mattermost Desktop App using the MSI installer"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:169
+msgid ""
+"If the desktop app is running when you install via the MSI, Mattermost "
+"prompts you to close the app manually. After acknkowledging the prompt, "
+"select **Retry** to continue the MSI installation."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:170
+msgid ""
+"Avoid selecting **Ignore**. If you do, force close the desktop app using "
+"Task Manager, ensure the ``Mattermost.exe`` process is stopped, and then "
+"restart the MSI installation."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:172
+msgid ""
+"Within the folder the MSI installer was downloaded to, double-click on "
+"the MSI installer to begin the Mattermost Desktop installation process."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:174
+msgid ""
+"Go to the folder where you downloaded the Mattermost Desktop App, and "
+"double-click on the MSI file to begin the installation process."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:177
+msgid ""
+"Installation of the MSI requires admin permission, so accept the "
+"resulting request to allow the installer to make changes to your device."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:179
+msgid ""
+"You'll be prompted to allow the Mattermost Desktop App to make changes to"
+" your system. You must select Yes to continue with the installation "
+"process."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:182
+msgid "Select **Finish** when the installation is complete."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:184
+msgid "When the installation is complete, select Finish."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:188
+msgid "Verify group policy settings in the installed desktop app"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:190
+msgid "Launch the newly installed Mattermost app from the **Start** menu."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:192
+msgid ""
+"Verify the app loads the first server you defined in the **Edit group "
+"policy** app."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:194
+msgid ""
+"Verify group policy settings in the Mattermost Desktop App by opening the"
+" app from the Start menu, and verifying that the app loads the first "
+"server you defined in the Edit group policy."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:198
+msgid "Advanced MSI options"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:202
+msgid ""
+"You must be a system admin to run these commands, or you must run them "
+"from an admin command prompt or PowerShell."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:205
+msgid "Silent installation"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:207
+msgid "Perform a silent installation of the MSI by running the following command:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:211
+msgid ""
+"Ensure the desktop app is closed before proceeding with a silent "
+"installation. Because it's a silent installation, Mattermost won't prompt"
+" you to close the desktop app."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:213
+msgid "**Command Prompt:** ``msiexec /i mattermost-desktop-v6.2.0-x64.msi /qn``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:215
+msgid ""
+"**PowerShell:** ``Start-Process -FilePath "
+"\"$env:systemroot\\system32\\msiexec.exe\" -ArgumentList '/i mattermost-"
+"desktop-v6.2.0-x64.msi /qn'``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:218
+msgid "Replace ``<version>`` with the actual version number (e.g., ``v6.2.0``)."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:219
+msgid ""
+"From v6.1.0, the MSI installs per-machine by default, requiring "
+"administrator privileges."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:221
+msgid ""
+"From version v5.9.0 of the Mattermost desktop app, the following silent "
+"MSI installation options are also available."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:224
+msgid "Specify an install directory"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:226
+msgid ""
+"Use the ``APPLICATIONFOLDER`` parameter to specify an installation "
+"directory for the MSI installation:"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:228
+msgid ""
+"**Command Prompt:** ``msiexec /i mattermost-desktop-v6.2.0-x64.msi "
+"APPLICATIONFOLDER=\"<install directory>\"``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:229
+msgid ""
+"**PowerShell:** ``Start-Process -FilePath "
+"\"$env:systemroot\\system32\\msiexec.exe\" -ArgumentList '/i mattermost-"
+"desktop-v6.2.0-x64.msi APPLICATIONFOLDER=\"<install directory>\"'``"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:231
+msgid ""
+"Change this command as new versions of the Mattermost Desktop App are "
+"released."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:234
+msgid "macOS managed configuration (MDM)"
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:236
+msgid ""
+"From Mattermost Desktop v6.2.0, admins can manage supported Desktop App "
+"configuration on macOS using managed preferences delivered through an MDM"
+" solution, in addition to the Windows group policy support described "
+"above. macOS managed preferences support the same configuration items as "
+"the Windows group policies listed in the `Install group policy files "
+"locally <#install-group-policy-files-locally>`__ section, including "
+"predefined server lists, server management controls, and update "
+"notification controls."
+msgstr ""
+
+#: ../../source/deployment-guide/desktop/desktop-msi-installer-and-group-policy-install.rst:238
+msgid ""
+"To apply managed configuration on macOS, deploy a configuration profile "
+"that sets the supported keys to client Macs through your MDM solution. "
+"The Mattermost Desktop App reads managed preference values on launch; "
+"restart the app after changing managed configuration for new values to "
+"take effect."
+msgstr ""
+

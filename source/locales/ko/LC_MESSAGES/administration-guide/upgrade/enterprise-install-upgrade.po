@@ -1,0 +1,275 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:2
+msgid "Upgrade Team Edition to Enterprise Edition"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:4
+msgid ""
+"If you're evaluating Mattermost using Team Edition, you'll need to "
+"upgrade to Mattermost Enterprise Edition before you can start a trial or "
+"upload a license that enables Enterprise features. The open source "
+"Mattermost Team Edition is functionally identical to the commercial "
+"Enterprise Edition, but there is no ability to start a trial or unlock "
+"paid features."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:7
+msgid "Upgrade to Enterprise Edition"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:10
+msgid "Check your edition and version"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:12
+msgid ""
+"Open **Product menu > About Mattermost** to check your edition and "
+"version from the web or desktop interface."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:14
+msgid ""
+"**Mattermost Entry** indicates you're using the licensed edition of "
+"Mattermost without a paid license."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:15
+msgid ""
+"**Mattermost Professional** indicates you're using the licensed edition "
+"of Mattermost with a paid professional license."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:16
+msgid ""
+"**Mattermost Enterprise** indicates you're using the licensed edition of "
+"Mattermost with a paid enterprise license."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:17
+msgid ""
+"**Mattermost Enterprise Advanced** indicates you're using the licensed "
+"edition of Mattermost with a paid enterprise advanced license."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:18
+msgid ""
+"**Mattermost Team Edition** indicates you're using the open source "
+"version and need to upgrade to a licensed edition before a license key "
+"can be applied."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:21
+msgid "Upgrade via System Console (Recommended)"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:23
+msgid ""
+"Most standalone servers can upgrade Team Edition to Enterprise Edition in"
+" minutes using the built-in conversion tool in the System Console, and "
+"this is our recommended approach."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:25
+msgid ""
+"Go to **Product menu > System Console > Edition and License** and select "
+"**Upgrade to Enterprise Edition**."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:27
+msgid ""
+"During the upgrade process, the Mattermost Enterprise Edition binary file"
+" that matches your current server version is downloaded, decompressed, "
+"and extracted. The Team Edition binary is then replaced by the Enterprise"
+" Edition version."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:30
+msgid ""
+"If you're using a modified version of Mattermost, using this tool will "
+"overwrite your changes and replace them with the official Enterprise "
+"Edition binary."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:32
+msgid ""
+"Once this process is complete, you're prompted to restart your server. "
+"The Mattermost version listed in **Product menu > System Console > "
+"Edition and License** will change from **Team Edition** to **Mattermost "
+"Entry**, and you can now upload a professional, enterprise, or enterprise"
+" advanced license to unlock paid features."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:35
+msgid "Upgrade manually"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:37
+msgid ""
+"You can alternatively replace the Mattermost Team Edition binary with a "
+"Mattermost Enterprise Edition binary when running a regularly scheduled "
+"server upgrade via this :doc:`upgrade procedure </administration-"
+"guide/upgrade/upgrading-mattermost-server>`."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:39
+msgid ""
+"We recommend backing up Mattermost prior to upgrading. The "
+":doc:`migration guide </administration-guide/onboard/migrating-to-"
+"mattermost>` documentation outlines the process required to back up and "
+"restore your database."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:42
+msgid "Upgrade to Enterprise Edition in GitLab Omnibus"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:44
+msgid ""
+"GitLab Omnibus runs the open source Mattermost Team Edition. To upgrade "
+"to Mattermost Enterprise Edition, follow these steps:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:46
+msgid ""
+"Disable the built-in Mattermost instance on GitLab Omnibus by going to "
+"``/etc/gitlab/gitlab.rb`` and setting the following line to ``false``:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:52
+msgid "Then run the following command to apply the updated setting:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:58
+msgid "Install Mattermost using one of the guides above."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:59
+msgid ""
+"Migrate the database used by GitLab Mattermost for your new Enterprise "
+"Edition instance."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:60
+msgid ""
+"(Optional) Set up `GitLab slash command integration "
+"<https://docs.gitlab.com/ee/user/project/integrations/mattermost_slash_commands.html>`_"
+" with your Mattermost instance."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:63
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:66
+msgid "Permissions and limitations"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:68
+msgid ""
+"If you're using a package manager, such as Gitlab Omnibus, to manage your"
+" Mattermost installation, the Mattermost system user won't have "
+"sufficient permissions to perform the upgrade. If this is the case, "
+"you'll need to change the file permissions manually."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:70
+msgid ""
+"Changing the permissions in this way doesn't affect your Mattermost "
+"deployment or impact any data. The permission change is done solely for "
+"the upgrade."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:72
+msgid ""
+"To change the permissions using the command line on the Mattermost "
+"server, you need access to the command line tool as *mattermost* user:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:74
+msgid ""
+"Open the command line tool on the Mattermost server and ``cd`` to the "
+"Mattermost installation directory."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:75
+msgid ""
+"Run the following commands, replacing ``<PathToBinaryFile>`` with the "
+"appropriate path - typically ``/opt/mattermost/bin/mattermost``) to "
+"change the ownership of the binary file to *mattermost* user and grant "
+"write access:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:82
+msgid "In the Mattermost System Console, retry the upgrade."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:83
+msgid ""
+"When the upgrade is complete, return to the command prompt on the "
+"Mattermost server and run the following command to restore the file "
+"permissions, replacing ``<OriginalFileOwner>`` with the appropriate "
+"value:"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:91
+msgid "Mattermost has reverted to Team Edition"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:93
+msgid ""
+"On a managed deployment, if you upgraded Team Edition to Enterprise "
+"Edition, and then upgraded again, the upgrade will have overwritten "
+"Enterprise Edition with the latest version of Team Edition."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:95
+msgid ""
+"You can convert to Enterprise Edition again by following the steps above."
+" If you plan to use Mattermost Enterprise Edition permanently, we "
+"recommend migrating your server to a self-hosted deployment."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:98
+msgid "Incompatible system architecture"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:100
+msgid ""
+"This System Console tool is only compatible with Linux systems using "
+"x86-64 architecture. If you're running Mattermost on a different "
+"architecture, follow the `manual upgrade process <#upgrade-manually>`__ "
+"instead."
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:103
+msgid "Can't retrieve Enterprise Edition binary file"
+msgstr ""
+
+#: ../../source/administration-guide/upgrade/enterprise-install-upgrade.rst:105
+msgid ""
+"If the upgrade fails due to file retrieval failure, unavailable binary, "
+"or connectivity error, please check your proxy settings and try again. If"
+" the problem persists, follow the `manual upgrade process <#upgrade-"
+"manually>`__ instead."
+msgstr ""
+

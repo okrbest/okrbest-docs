@@ -1,0 +1,521 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:4
+msgid ""
+"You can use the supported `Oracle Cloud Marketplace listing "
+"<https://cloudmarketplace.oracle.com/marketplace/en_US/listing/188386963>`_"
+" to install Mattermost Enterprise Edition on Oracle Cloud Infrastructure "
+"(OCI) using Oracle Kubernetes Engine (OKE)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:7
+msgid "Before you begin"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:9
+msgid "Before deploying, make sure you have the following:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:11
+msgid "**Oracle Cloud Account** with appropriate permissions"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:12
+msgid ""
+"**Permissions** to create/manage OKE, Compute, Networking, Database, "
+"Resource Manager, and Secrets"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:13
+msgid "**Compartment** for deployment"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:14
+msgid "**Domain Name and TLS Certificate** for secure access"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:15
+msgid "**Mattermost License Key** (Trial or Enterprise)"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:16
+msgid ""
+"**Node Capacity**: At least 2 OKE nodes for high availability when "
+"deploying for 100 users or more"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:19
+msgid "Installation steps"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:21
+msgid ""
+"The installation process includes deploying Mattermost and configuring "
+"the necessary components."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:24
+msgid "Step 1: Start from Oracle Cloud Marketplace"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:26
+msgid "Go to the Mattermost listing and select **Launch Stack**."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:28
+msgid "Oracle Cloud Marketplace listing for Mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:32
+msgid "Step 2: Stack Information"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:34
+msgid ""
+"On the **Create stack** page, review the information, and then set the "
+"name, compartment, and Terraform version."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:36
+msgid "Stack information page"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:40
+msgid "Step 3: Configure Variables"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:42
+msgid ""
+"Set all the details for your Mattermost deployment. Each section is "
+"important for a successful and secure installation."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:45
+msgid "OKE Cluster Configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:47
+msgid "**Create new OKE Cluster:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:49
+msgid "Check this if you want to create a new Kubernetes cluster."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:50
+msgid ""
+"If you already have a cluster, you can uncheck and select your existing "
+"one."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:51
+msgid "**Kubernetes Version:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:53
+msgid "Choose the latest stable version unless you have a specific requirement."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:54
+msgid "**Node Pool Shape (Flex/Fixed):**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:56
+msgid ""
+"Select a shape that fits your workload. For production, use at least 2 "
+"OCPUs and 16GB RAM per node."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:57
+msgid "**Number of Nodes:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:59
+msgid ""
+"Minimum 2 for high availability. For testing, 1 is enough. For production"
+" environments, always use at least 2 nodes and enable high availability."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:60
+msgid "**Operating System:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:62
+msgid "Oracle Linux 8 is recommended for best compatibility."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:65
+msgid "OKE Network Configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:67
+msgid "**Worker Node Visibility:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:69
+msgid ""
+"Private is more secure for production. Public is easier for testing. For "
+"production environments, use private nodes and restrict access to the API"
+" endpoint."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:70
+msgid "**API Endpoint Visibility:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:72
+msgid ""
+"Public allows you to manage the cluster from anywhere. Private is more "
+"secure but requires VPN or bastion."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:73
+msgid "**Create new Virtual Cloud Network (VCN):**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:75
+msgid "Check this to create a new network, or uncheck to use an existing one."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:76
+msgid "**VCN CIDR Block:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:78
+msgid ""
+"Set a unique network range (e.g., ``10.20.0.0/16``). Avoid overlap with "
+"other networks."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:81
+msgid "OKE Worker Nodes"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:83
+msgid "**Enable Cluster Autoscaler:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:85
+msgid "Allows the cluster to automatically add or remove nodes based on usage."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:86
+msgid "**Initial/Min Number of Worker Nodes:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:88
+msgid ""
+"Set the minimum number of nodes. For high availability, use at least 2. "
+"Autoscaling helps manage costs and performance automatically."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:89
+msgid "**Node Shape:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:91
+msgid "Choose a shape (e.g., ``VM.Standard.E4.Flex``) and set OCPUs and memory."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:92
+msgid "**Auto Generate SSH Key:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:94
+msgid "Enable this if you do not have your own SSH key for node access."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:95
+msgid "**Image OS and Version:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:97
+msgid "Oracle Linux 8 is recommended."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:100
+msgid "PostgreSQL Configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:102
+msgid "**Admin Username:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:104
+msgid "The main user for your PostgreSQL database (e.g., ``admin1``)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:105
+msgid "**Password Type:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:107
+msgid ""
+"``PLAIN_TEXT`` for testing, ``SECRET`` for production (uses Oracle "
+"Vault). Always use Oracle Vault for production passwords."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:108
+msgid "**Password/Secret Name:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:110
+msgid "Enter a strong password or the name of a secret in Oracle Vault."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:111
+msgid "**Database Password:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:113
+msgid "Required if not using a secret."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:116
+msgid "General Configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:118
+msgid "**Cluster Name Prefix:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:120
+msgid "Used to identify all resources (e.g., ``mm-oke``)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:121
+msgid "**Show Advanced Options:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:123
+msgid ""
+"Enable for more control (encryption keys, SSH keys, etc.). Use advanced "
+"options if you need custom encryption or want to manage your own SSH "
+"keys."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:124
+msgid "**PostgreSQL Deployment Strategy:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:126
+msgid "Use \"Database For PostgreSQL\" for managed service."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:127
+msgid "**Object Storage for File Storage:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:129
+msgid "Enable to use OCI Object Storage for Mattermost files."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:130
+msgid "**Mattermost Version:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:132
+msgid "Use the latest stable version."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:133
+msgid "**Namespace:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:135
+msgid "Default is ``mattermost``."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:136
+msgid "**License Key:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:138
+msgid "Upload or paste your Mattermost license."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:139
+msgid "**Helm Repository:**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:141
+msgid "Default is ``https://helm.mattermost.com``."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:144
+msgid "Step 4: Review and Apply"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:146
+msgid ""
+"Check all your settings and select **Create** to start the deployment. "
+"Monitor the Resource Manager job and logs."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:148
+msgid "Resource Manager job monitor"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:152
+msgid "Step 5: After Deployment"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:154
+msgid ""
+"When the job is finished, your OKE cluster, PostgreSQL database, and "
+"Mattermost will be ready. To find the Mattermost web address, run:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:160
+msgid ""
+"Copy the address and create a DNS record for your domain. Open your "
+"browser and go to your Mattermost URL."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:163
+msgid "Step 6: Upgrade Mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:165
+msgid "To upgrade your Mattermost installation:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:167
+msgid "Access your OKE cluster through the Oracle Cloud Console"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:168
+msgid "Navigate to the Mattermost operator deployment"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:169
+msgid "Update the Mattermost version in the configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:170
+msgid "Apply the changes and wait for the upgrade to complete"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:174
+msgid "**Tips for Success**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:176
+msgid "Make sure you have all the permissions you need before you start."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:177
+msgid "Use Oracle Vault to store passwords and sensitive data."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:178
+msgid "Use private nodes and secure your network for production."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:179
+msgid ""
+"Always monitor logs from the Resource Manager and pods using ``kubectl "
+"logs`` for more specific error messages."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:180
+msgid ""
+"For more details, see the official `OCI Database with PostgreSQL "
+"documentation <https://www.oracle.com/cloud/postgresql/>`_ and `OKE "
+"documentation <https://docs.oracle.com/en-"
+"us/iaas/Content/ContEng/Concepts/contengoverview.htm>`_."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:183
+msgid "Common Errors and How to Avoid Them"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:185
+msgid "**Error: Kubernetes API not reachable**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:187
+msgid ""
+"*Cause:* API endpoint is private and you're not connected to the VCN via "
+"VPN or Bastion."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:188
+msgid ""
+"*Solution:* Ensure you have access to the network or make the endpoint "
+"public for testing."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:190
+msgid "**Error: Stack creation fails with missing permissions**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:192
+msgid "*Cause:* IAM policies are not set properly for the user or group."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:193
+msgid ""
+"*Solution:* Ensure you have permissions for Resource Manager, OKE, "
+"Networking, and Secrets."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:195
+msgid "**Error: No ingress returned by kubectl**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:197
+msgid "*Cause:* Mattermost Ingress might not be ready or was misconfigured."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:198
+msgid ""
+"*Solution:* Check with ``kubectl describe ingress`` and validate DNS, "
+"TLS, and Helm values."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:200
+msgid "**Error: PostgreSQL password rejected**"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:202
+msgid "*Cause:* Password not set or mismatched with Oracle Vault."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:203
+msgid "*Solution:* Re-check the password value or Vault secret used during setup."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:207
+msgid ""
+"You are responsible for Oracle Cloud Infrastructure costs for the "
+"resources you create. Oracle Cloud credits cannot be used to buy a "
+"Mattermost license."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:209
+msgid ""
+"Learn more about managing your Mattermost server by visiting the "
+":doc:`Administration Guide </administration-guide/administration-guide-"
+"index>`."
+msgstr ""
+

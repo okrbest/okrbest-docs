@@ -1,0 +1,342 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:2
+msgid "Elasticsearch server setup"
+msgstr ""
+
+#: ../../source/_static/badges/ent-plus.rst:9
+msgid ""
+"|plans-img-yellow| Available on `Enterprise and Enterprise Advanced plans"
+" <https://mattermost.com/pricing/>`__"
+msgstr ""
+
+#: ../../<rst_prolog>:6
+msgid "plans-img-yellow"
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:7
+msgid ""
+"Elasticsearch allows you to search large volumes of data quickly, in near"
+" real-time, by creating and managing an index of post data. The indexing "
+"process can be managed from the System Console after setting up and "
+"connecting an Elasticsearch server. The post index is stored on the "
+"Elasticsearch server and updated constantly after new posts are made. In "
+"order to index existing posts, a bulk index of the entire post database "
+"must be generated."
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:9
+msgid ""
+"Deploying Elasticsearch includes the following two steps: `setting up "
+"Elasticsearch <#set-up-elasticsearch>`__, and `configuring Mattermost "
+"<#configure-mattermost>`_."
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:12
+msgid "Set up Elasticsearch"
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:14
+msgid ""
+"We highly recommend that you set up Elasticsearch server on a dedicated "
+"machine separate from the Mattermost Server."
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:16
+msgid ""
+"Download and install the latest release of `Elasticsearch v9 "
+"<https://www.elastic.co/guide/en/elasticsearch/reference/current/install-"
+"elasticsearch.html>`_ or `Elasticsearch v8 "
+"<https://www.elastic.co/guide/en/elasticsearch/reference/8.19/install-"
+"elasticsearch.html>`_. See the Elasticsearch documentation for "
+"installation details."
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:18
+msgid "Set up Elasticsearch with ``systemd`` by running the following commands:"
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:26
+msgid ""
+"Confirm Elasticsearch is working on the server by running the following "
+"command:"
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:32
+msgid "Get your network interface name by running the following command:"
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:38
+msgid ""
+"Edit the Elasticsearch configuration file in ``vi`` by running the "
+"following command:"
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:44
+msgid ""
+"In this file, replace the ``network.host`` value of ``_eth0_`` with your "
+"network interface name, and save your changes."
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:46
+msgid ""
+"Ensure you set ``action.destructive_requires_name`` to ``false`` in "
+"``elasticsearch.yml`` to allow for wildcard operations to work."
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:48
+msgid "Restart Elasticsearch by running the following commands:"
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:55
+msgid "Confirm the ports are listenings by running the following command:"
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:61
+msgid ""
+"You should see the following ports, including  the ones listening on "
+"ports 9200 and 9300. Confirm these are listening on your server's IP "
+"address."
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:63
+msgid "Create an Elasticsearch directory and give it the proper permissions."
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:65
+msgid ""
+"Install the `icu-analyzer plugin "
+"<https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-"
+"icu.html>`__ to the ``/usr/share/elasticsearch/plugins`` directory by "
+"running the following command:"
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:71
+msgid ""
+"**(Optional) CJK language analyzer plugins**: To improve search for "
+"Korean, Japanese, or Chinese content, install one or more of the "
+"following language-specific analyzer plugins: ``analysis-nori`` (Korean),"
+" ``analysis-kuromoji`` (Japanese), and ``analysis-smartcn`` (Chinese)."
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:79
+msgid "After installing the CJK plugins, restart Elasticsearch to load them:"
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:85
+msgid ""
+"Then enable the :ref:`EnableCJKAnalyzers <administration-guide/configure"
+"/environment-configuration-settings:enable cjk analyzers>` configuration "
+"setting. See :doc:`Enabling Chinese, Japanese, and Korean Search "
+"</administration-guide/configure/enabling-chinese-japanese-korean-"
+"search>` for additional CJK search configuration options."
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:88
+msgid ""
+"If you enable CJK analyzers on a server with existing indexed content, "
+"you must purge and rebuild the search index in **System Console > "
+"Environment > Elasticsearch** for the CJK analyzers to take effect on "
+"existing posts."
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:90
+msgid ""
+"Test the connection from Mattermost to Elasticsearch by running the "
+"following command:"
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:97
+msgid "Configure Mattermost"
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:99
+msgid ""
+"Follow these steps to configure Mattermost to use your Elasticsearch "
+"server and to generate the post index:"
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:101
+msgid "Go to **System Console > Environment > Elasticsearch**."
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:102
+msgid ""
+"Set **Enable Elasticsearch Indexing** to ``true`` to enable the other the"
+" settings on the page. Once the configuration is saved, new posts made to"
+" the database are automatically indexed on the Elasticsearch server."
+msgstr ""
+
+#: ../../source/administration-guide/scale/elasticsearch-setup.rst:103
+msgid "Ensure **Backend type** is set to ``elasticsearch``."
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:6
+msgid "Set server connection details"
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:8
+msgid ""
+"(Optional) Enter **Server Username** used to access the enterprise search"
+" server."
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:9
+msgid "(Optional) Enter **Server Password** associated with the username."
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:10
+msgid ""
+"Set **Enable Cluster Sniffing** (Optional). Sniffing finds and connects "
+"to all data nodes in your cluster automatically."
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:14
+msgid ""
+"Do not enable cluster sniffing when using cloud-hosted search providers "
+"such as Elastic Cloud or Amazon OpenSearch Service. Cloud providers "
+"typically hide search cluster nodes behind a proxy, so sniffed node "
+"addresses may be unreachable from your network. The provider handles "
+"connection pooling for you, making sniffing unnecessary and potentially "
+"disruptive."
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:16
+msgid ""
+"Optional CA and client certificate configuration settings are available "
+"for use with basic authentication credentials or to replace them. See the"
+" :ref:`Enterprise search configuration settings <administration-"
+"guide/configure/environment-configuration-settings:enterprise search>` "
+"documentation for details."
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:17
+msgid ""
+"Select **Test Connection** and then select **Save**. If the server "
+"connection is unsuccessful you won't be able to save the configuration or"
+" enable searching with Elasticsearch or AWS OpenSearch."
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:21
+msgid ""
+"From Mattermost v11, enterprise search server connections are tested "
+"during :doc:`Support Packet generation </administration-"
+"guide/manage/admin/generating-support-packet>`. Any connection errors "
+"encountered during Support Packet generation are automatically included "
+"in the packet to help diagnose configuration issues."
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:24
+msgid "Build the post index of existing messages"
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:26
+msgid ""
+"Select **Index Now**. This process can take up to a few hours depending "
+"on the size of the post database and number of messages. The progress "
+"percentage can be seen as the index is created. To avoid downtime, set "
+"**Enable Elasticsearch for search queries** to ``false`` so that database"
+" search is available during the indexing process."
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:29
+msgid "Enable enterprise search"
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:31
+msgid ""
+"Ensure bulk indexing is complete before enabling enterprise search, "
+"otherwise search results will be incomplete."
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:33
+msgid ""
+"Set **Enable Elasticsearch for search queries** to ``true``, and setting "
+"**Enable Elasticsearch for autocomplete** to ``true``. Save your "
+"configuration updates and restart the Mattermost server."
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:37
+msgid ""
+"For high post volume deployments, we strongly encourage you to read and "
+"properly configure the Mattermost :ref:`LiveIndexingBatchSize "
+"<administration-guide/configure/environment-configuration-settings:live "
+"indexing batch size>` configuration setting."
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:42
+msgid ""
+"For high post volume deployments, we also strongly recommend *disabling* "
+"Database Search once Elasticsearch or AWS OpenSearch is fully configured "
+"and running. The Mattermost Server will fall back on Database search if "
+"Elasticsearch or OpenSearch are unavailable, which can lead to "
+"performance degradation on high post volume deployments. From Mattermost "
+"v11.7, the server proactively detects outages through periodic health "
+"checks and falls back to database search on the first health check "
+"failure, rather than waiting for requests to time out. See the "
+":ref:`outage handling FAQ <administration-guide/scale/enterprise-"
+"search:how does mattermost handle elasticsearch or opensearch outages?>` "
+"for details."
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:44
+msgid ""
+"Once the configuration is saved, new posts made to the database are "
+"automatically indexed on the Elasticsearch or AWS OpenSearch server."
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:47
+msgid "Enterprise search limitations"
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:49
+msgid ""
+"Elasticsearch and AWS OpenSearch uses a standard selection of \"stop "
+"words\" to keep search results relevant. Results for the following words "
+"will not be returned: \"a\", \"an\", \"and\", \"are\", \"as\", \"at\", "
+"\"be\", \"but\", \"by\", \"for\", \"if\", \"in\", \"into\", \"is\", "
+"\"it\", \"no\", \"not\", \"of\", \"on\", \"or\", \"such\", \"that\", "
+"\"the\", \"their\", \"then\", \"there\", \"these\", \"they\", \"this\", "
+"\"to\", \"was\", \"will\", and \"with\"."
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:50
+msgid ""
+"Searching stop words in quotes returns more results than just the "
+"searched terms (`ticket "
+"<https://mattermost.atlassian.net/browse/MM-7216>`__)."
+msgstr ""
+
+#: ../../source/administration-guide/scale/common-configure-mattermost-for-enterprise-search.rst:51
+msgid ""
+"By default, search results are limited to a user's team and channel "
+"membership. This is enforced by the Mattermost server. The entities are "
+"indexed in Elasticsearch or AWS OpenSearch in a way that allows "
+"Mattermost to filter them when querying, so the Mattermost server narrows"
+" down the results on every Elasticsearch or AWS OpenSearch request "
+"applying those filters. From Mattermost v11.6, admins can :ref:`allow "
+"searching public channels without membership <administration-"
+"guide/configure/environment-configuration-settings:allow searching public"
+" channels without membership>` so that users can find messages in public "
+"channels they haven't joined, scoped to teams they belong to."
+msgstr ""
+

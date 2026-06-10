@@ -1,6 +1,6 @@
 # Makefile for Sphinx documentation
 #
-.PHONY: Makefile help python-deps linkcheck livehtml python-deps test compass-icons
+.PHONY: Makefile help python-deps linkcheck livehtml python-deps test compass-icons gettext-pot update-po-ko stat-ko html-ko livehtml-ko package-ko
 
 # Check Make version (we need at least GNU Make 3.82). Fortunately,
 # 'undefine' directive has been introduced exactly in GNU Make 3.82.
@@ -102,6 +102,53 @@ else
 endif
 	curl --no-progress-meter -o source/_static/css/compass-icons.css https://mattermost.github.io/compass-icons/css/compass-icons.css
 	curl --no-progress-meter -o "source/_static/font/compass-icons.#1" "https://mattermost.github.io/compass-icons/font/compass-icons.{eot,woff2,woff,ttf,svg}"
+
+# --- Korean translation (gettext) -------------------------------------------
+#
+# NOTE: deliberately no LANG variable here. LANG is a standard POSIX locale
+# environment variable (e.g. en_US.UTF-8) that make inherits from the shell,
+# so `LANG ?= en` silently picks up the locale string and breaks the build.
+# These targets are Linux/macOS only.
+#
+# SPHINXINTL is the standalone sphinx-intl CLI (install: `uv tool install
+# sphinx-intl` or `pip install --user sphinx-intl`). It is intentionally NOT
+# in the Pipfile: the upstream awscli pin (docutils<=0.19) conflicts with
+# sphinx-intl's sphinx dependency (docutils>=0.20) inside the dev category.
+# Only update-po-ko/stat-ko need it; html-ko does not (Sphinx compiles
+# .po -> .mo itself at build time).
+
+SPHINXINTL ?= sphinx-intl
+LOCALESDIR  = $(SOURCEDIR)/locales
+POTDIR      = $(BUILDDIR)/gettext
+
+# Extract translatable strings into .pot templates under build/gettext/.
+gettext-pot:
+	@mkdir -p "$(BUILDDIR)"
+	@$(SPHINXBUILD) -b gettext "$(SOURCEDIR)" "$(POTDIR)" $(SPHINXOPTS) $(O) -w "$(BUILDDIR)/warnings-gettext.log"
+
+# Create/refresh Korean .po catalogs (msgmerge with fuzzy matching;
+# preserves existing translations).
+update-po-ko: gettext-pot
+	@$(SPHINXINTL) update -p "$(POTDIR)" -d "$(LOCALESDIR)" -l ko
+
+# Per-file translation progress (translated / fuzzy / untranslated).
+stat-ko:
+	@$(SPHINXINTL) stat -d "$(LOCALESDIR)" -l ko
+
+# Korean HTML into build/html/ko/ (en stays at build/html/). Separate
+# doctrees dir is REQUIRED: doctree caches are language-specific.
+html-ko:
+	@mkdir -p "$(BUILDDIR)"
+	@$(SPHINXBUILD) -b html -D language=ko "$(SOURCEDIR)" "$(BUILDDIR)/html/ko" -d "$(BUILDDIR)/doctrees-ko" $(SPHINXOPTS2) $(O) -w "$(BUILDDIR)/warnings-ko.log"
+
+# Live-reload Korean preview; --watch picks up .po edits.
+livehtml-ko:
+	@mkdir -p "$(BUILDDIR)"
+	@$(SPHINXAUTOBUILD) "$(SOURCEDIR)" "$(BUILDDIR)/html/ko" -d "$(BUILDDIR)/doctrees-ko" -D language=ko --watch "$(LOCALESDIR)" $(SPHINXOPTS) $(AUTOBUILDOPTS) $(O)
+
+# Package the Korean site as a tarball for deployment.
+package-ko: html-ko
+	@tar -czf "$(BUILDDIR)/okrbest-docs-ko.tgz" -C "$(BUILDDIR)/html/ko" .
 
 # Catch-all target: route all unknown targets to Sphinx using the
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).

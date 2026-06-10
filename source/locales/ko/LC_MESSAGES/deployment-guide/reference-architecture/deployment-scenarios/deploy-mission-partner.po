@@ -1,0 +1,706 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:2
+msgid "Deploy for Mission Partner Collaboration"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:5
+msgid "Overview"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:7
+msgid ""
+"Mission partner collaboration extends :doc:`sovereign collaboration "
+"</deployment-guide/reference-architecture/deployment-scenarios/deploy-"
+"sovereign-collaboration>` and :doc:`edge deployment </deployment-guide"
+"/reference-architecture/deployment-scenarios/deploy-ddil-operations>` "
+"models to enable joint and allied operations across organizations using "
+"Mattermost, Microsoft 365 and legacy platforms. The solution architecture"
+" outlined in this document delivers a secure, sovereign, and intelligent "
+"mission environment that is federated across enterprise and coalition "
+"partner networks, enabling interoperability while maintaining compliance "
+"and control."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:9
+msgid ""
+"Joint mission collaboration is achieved through federation using "
+":doc:`connected workspaces </administration-guide/onboard/connected-"
+"workspaces>`, `Matrix connectors <https://mattermost.com/marketplace"
+"/mattermost-matrix-connector/>`_, :doc:`guest accounts </administration-"
+"guide/onboard/guest-accounts>`, and `auto-translation "
+"<https://github.com/mattermost/mattermost-plugin-channel-translations>`_ "
+"for fast, accurate comprehension across globally distributed teams. "
+"Additionally, integrating external data feeds, workflow automation, and "
+"sovereign AI enables allied and partner users to collaborate at mission "
+"speed while enforcing zero-trust policies and maintaining data "
+"sovereignty."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:11
+msgid ""
+"Mattermost deployments may be hosted on-premises or in sovereign clouds, "
+"enabling allies and partners to retain control over sensitive data while "
+"extending interoperability to coalition partner enterprise networks."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:14
+msgid "Collaboration challenges"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:16
+msgid "Multi-agency collaborations face complex communication challenges:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:18
+msgid ""
+"**Platform diversity:** Organizations often use different platforms, "
+"including Microsoft 365, Mattermost, and Matrix - with some using Teams "
+"for enterprise productivity :doc:`supplemented with Mattermost "
+"</deployment-guide/reference-architecture/deployment-scenarios/deploy-"
+"sovereign-collaboration>` for sovereign collaboration, data residency, "
+"and offline resilience."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:19
+msgid ""
+"**External access:** External partners need controlled access without "
+"full organizational membership."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:20
+msgid "**Language barriers:** Organizations may speak different languages."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:21
+msgid ""
+"**Compliance:** Data residency and compliance requirements vary across "
+"organizations."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:24
+msgid "Solution Architecture"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:26
+msgid ""
+"Traditional solutions require everyone to adopt the same platform or use "
+"insecure external tools. Mattermost powers a multi-layer approach "
+"addressing these collaboration challenges and diverse organizational "
+"needs, including:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:28
+msgid ""
+"**Mattermost ↔ Mattermost Collaboration:** Organizations with Mattermost "
+"deployments establish secure connections and share specific channels "
+"using :doc:`connected workspaces </administration-guide/onboard"
+"/connected-workspaces>` over standard HTTPS/VPN."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:30
+msgid ""
+"**External users ↔ Mattermost Collaboration:** Users from external "
+"organizations receive Mattermost :doc:`guest accounts </administration-"
+"guide/onboard/guest-accounts>` with least-privilege access. External "
+"users in Microsoft environments may access Mattermost using the "
+":doc:`embedded application </integrations-guide/mattermost-mission-"
+"collaboration-for-m365>` in their Teams and Outlook clients."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:32
+msgid ""
+"**Matrix / XMPP ↔ Mattermost Collaboration:** Organizations using legacy "
+"XMPP systems or Matrix servers connect to Mattermost via the `Matrix "
+"bridge plugin <https://github.com/mattermost/mattermost-plugin-matrix-"
+"bridge>`_ for bidirectional communication."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:34
+msgid ""
+"**Automatic Language Translation:** The AI-powered `automatic translation"
+" plugin <https://github.com/mattermost/mattermost-plugin-channel-"
+"translations>`_ enables seamless communication across language barriers "
+"in channels with distributed teams."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:37
+msgid ""
+"Mattermost diagram displays the deployment components and relationships "
+"outlined in detail in this document."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:41
+msgid ""
+"Consider `talking to a Mattermost expert <https://mattermost.com/contact-"
+"sales/>`__ if your organization needs support deploying Mattermost and "
+"supporting services for mission partner collaboration."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:44
+msgid "Architecture components"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:46
+msgid "The deployment architecture includes the following components:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:48
+msgid ""
+"**Allied or Partner Networks:** Globally distributed and segregated "
+"networks for each allied or partner organization."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:50
+msgid ""
+"Networks may have a firewall or access gateway protecting egress and "
+"ingress, such as network policies, IP allowlists, or WAFs depending on "
+"networking configurations."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:51
+msgid ""
+"Networks may :doc:`operate in contested environments </deployment-guide"
+"/reference-architecture/deployment-scenarios/deploy-ddil-operations>` "
+"where internet connectivity is intermittent."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:53
+msgid ""
+"**Users:** Enterprise, allied, and coalition partner users accessing "
+"client applications for Mattermost and/or Microsoft 365."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:55
+msgid ""
+"**Microsoft Entra ID (Identity Provider):** Partnered organizations using"
+" Microsoft 365 services may use :doc:`single sign-on Entra ID "
+"</administration-guide/onboard/sso-entraid>` for unified authentication "
+"to M365 and Mattermost applications. *(Optional)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:57
+msgid "**Federation Services:**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:59
+msgid ""
+"**Connected workspaces:** :doc:`Federated collaboration </administration-"
+"guide/onboard/connected-workspaces>` across partner networks, with "
+"seamless synchronization of messages, threads, and files."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:60
+msgid ""
+"**Guest Accounts:** :doc:`Secure participation </administration-"
+"guide/onboard/guest-accounts>` of external mission partners with least-"
+"privilege access. *(Optional)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:61
+msgid ""
+"**Matrix & XMPP Interoperability:** `Federation with legacy partner "
+"systems <https://github.com/mattermost/mattermost-plugin-matrix-bridge>`_"
+" for cross-domain coalition collaboration. *(Optional)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:63
+msgid "**Client Applications:**"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:65
+msgid ""
+"**Mattermost Desktop Apps:** Access Mattermost directly by deploying "
+":doc:`desktop </deployment-guide/desktop/desktop-app-deployment>` or web "
+"apps in your organization."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:66
+msgid ""
+"**Mattermost Mobile Apps:** Access Mattermost via :doc:`iPhone and "
+"Android apps </deployment-guide/mobile/mobile-app-deployment>`, with "
+"support for :doc:`ID-only push notifications </deployment-guide/mobile"
+"/host-your-own-push-proxy-service>` to ensure compliance with data "
+"sovereignty requirements. *(Optional - not shown)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:67
+msgid ""
+"**Microsoft 365 Desktop Apps:** For partnered organizations using "
+"Microsoft 365 services, Teams and Outlook can be deployed with the "
+":doc:`embedded Mattermost application </integrations-guide/mattermost-"
+"mission-collaboration-for-m365>` for cross-domain partner collaboration "
+"within a familiar interface. *(Optional)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:69
+msgid ""
+"**Mattermost Deployments:** Mattermost deployed for sovereign "
+"collaboration on private cloud or local infrastructure, such as "
+":doc:`Azure </deployment-guide/server/deploy-kubernetes>` or `Azure Local"
+" <https://learn.microsoft.com/en-us/azure/azure-local/manage"
+"/disconnected-operations-overview>`_, to maintain compliance with STIG, "
+"FedRAMP, and NIST 800-53 standards. See :doc:`reference architecture "
+"</administration-guide/scale/server-architecture>` documentation for "
+"Mattermost deployment configurations based on expected scale."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:71
+msgid ""
+"**Mattermost Server:** Core application server handling collaboration "
+"workloads, including:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:73
+msgid ""
+":doc:`Messaging Collaboration </end-user-guide/messaging-collaboration>`:"
+" Sovereign 1:1, group messaging, and structured channel collaboration."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:74
+msgid ""
+":doc:`Workflow Automation </end-user-guide/workflow-automation>`: "
+"Playbooks provide structure, monitoring and automation for repeatable "
+"processes built-in to your sovereign Mattermost deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:75
+msgid ""
+":doc:`Project Tracking </end-user-guide/project-task-management>`: Boards"
+" enables project management capabilities built-in to your local "
+"Mattermost deployment. Boards enables project management capabilities "
+"built-in to your sovereign Mattermost deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:76
+msgid ""
+":doc:`AI Agents </administration-guide/configure/agents-admin-guide>`: AI"
+" Agents run against Azure OpenAI endpoints or a self-hosted LLM that is "
+"OpenAI-compatible."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:77
+msgid ""
+":doc:`Audio & Screenshare </administration-guide/configure/calls-"
+"deployment-guide>`: Calls offers native real-time self-hosted audio calls"
+" and screen sharing within your own network."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:79
+msgid ""
+"**Proxy Server:** The :doc:`proxy server </deployment-guide/server/setup-"
+"nginx-proxy>` handles HTTP(S) routing within the cluster, directing "
+"traffic between the server and clients accessing Mattermost services, "
+"including requests from users in :doc:`connected organizations "
+"</administration-guide/onboard/connected-workspaces>`. NGINX is "
+"recommended for load balancing with support for WebSocket connections, "
+"health check endpoints, and sticky sessions. The proxy layer provides SSL"
+" termination and distributes client traffic across application servers."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:81
+msgid ""
+"**PostgreSQL Database:** Stores persistent application data on a "
+":doc:`PostgreSQL v13+ database </deployment-guide/server/preparations>`, "
+"such as `Azure Database for PostgreSQL <https://azure.microsoft.com/en-"
+"us/products/postgresql>`_."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:83
+msgid ""
+"**Object Storage:** File uploads, images, and attachments are stored "
+"outside the application node on an :doc:`S3-compatible store "
+"</deployment-guide/server/preparations>` or an NFS (Network File System) "
+"server. `Azure Blob Storage <https://azure.microsoft.com/en-"
+"us/products/storage/blobs>`_ can be used, but needs an S3-compatible "
+"proxy for Mattermost to interface with."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:85
+msgid ""
+"**Recording Instance:** ``calls-offloader`` job service, configured using"
+" the :doc:`Calls Offloader Setup and Configuration </administration-"
+"guide/configure/calls-offloader-setup>` guide, to offload heavy "
+"processing tasks from Mattermost Calls, such as recordings, "
+"transcriptions, and live captioning, to local infrastructure or private "
+"cloud. *(Optional)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:87
+msgid ""
+"**Integration framework:** :doc:`Custom apps, plugins, and webhooks "
+"</integrations-guide/integrations-guide-index>` can be deployed for real-"
+"time data integrations and alerting. *(Optional - not shown)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:89
+msgid ""
+"**Self-hosted LLM:** Locally hosted :doc:`OpenAI compatible LLM "
+"</agents/docs/providers>` for agentic powered collaboration. *(Optional)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:91
+msgid ""
+"**Microsoft Global Network:** `World-wide network "
+"<https://learn.microsoft.com/en-us/azure/networking/microsoft-global-"
+"network>`_ of Microsoft data centers, delivering public cloud services "
+"including M365 and Azure OpenAI. *(Optional)*"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:94
+msgid "Operational Best Practices"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:96
+msgid ""
+"The following best practices and deployment configurations help ensure "
+"that Mattermost remains secure, resilient, and interoperable across "
+"federated mission partner environments."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:99
+msgid "Network Configuration"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:101
+msgid ""
+"When external access is enabled through various federation capabilities, "
+"it is recommended to deploy Mattermost in a DMZ rather than on the "
+"internal network. This approach provides defense-in-depth and preserves "
+"security boundaries by isolating each connected server deployment from "
+"the enterprise network."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:103
+msgid ""
+"**DMZ Deployment:** Position Mattermost application servers in the DMZ "
+"network segment, allowing both internal users and external partner "
+"federation traffic to access the collaboration platform through "
+"controlled network boundaries."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:104
+msgid ""
+"**VPN Termination:** Terminate site-to-site VPN connections at the "
+"network perimeter or DMZ layer, enabling encrypted partner connectivity "
+"without exposing internal network infrastructure. VPN tunnels establish "
+"secure communication channels between partner organizations over the "
+"internet."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:105
+msgid ""
+"**Firewall Segmentation:** Deploy ingress and egress firewall rules to "
+"control traffic flow between the DMZ, internal network, and external "
+"partner networks. Restrict database and object storage access to only "
+"originate from the DMZ segment where Mattermost servers reside."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:106
+msgid ""
+"**Federation Traffic Isolation:** Partner federation traffic (Connected "
+"workspaces synchronize over HTTPS port 443/TCP) remains isolated within "
+"the DMZ, protecting internal systems while enabling partner collaboration"
+" and enforcing zero-trust principles across organizational boundaries."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:109
+msgid "Resilient federation for joint operations"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:111
+msgid ""
+":doc:`Connected workspaces </administration-guide/onboard/connected-"
+"workspaces>` allow federated collaboration across multiple organizations "
+"and networks while maintaining local data control of each Mattermost "
+"deployment. Messages, threads, and files are securely synchronized "
+"between environments, ensuring mission continuity for multinational "
+"operations without requiring partners to join a single centralized "
+"deployment."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:113
+msgid ""
+"Enforce :ref:`zero-trust access <administration-guide/onboard/connected-"
+"workspaces:create a secure connection>` and ensure that only authorized "
+"mission partners can view or contribute to shared collaboration channels."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:114
+msgid ""
+"Configure `auto-translation <https://github.com/mattermost/mattermost-"
+"plugin-channel-translations>`_ in shared channels for seamless "
+"multilingual cross-domain collaboration."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:115
+msgid ""
+"Mattermost instances can operate independently during outages or "
+"intermittent connectivity and sync conversations once connectivity "
+"returns."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:117
+msgid ""
+"Many mission partners continue to operate on legacy systems such as "
+"Matrix and XMPP. To enable joint operations without forcing migration, "
+"Mattermost supports `secure interoperability "
+"<https://github.com/mattermost/mattermost-plugin-matrix-bridge>`_ with "
+"these environments for continuity of coalition communications while "
+"allowing modernized workflows to extend across federated networks."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:119
+msgid ""
+"Synchronize Mattermost channels with Matrix or XMPP rooms, allowing "
+"messages, threads, and attachments to flow across systems in real-time. "
+"Each organization maintains control of its data and infrastructure, while"
+" interoperability is enabled through federation bridges rather than "
+"centralized services."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:122
+msgid "Controlled external access"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:124
+msgid ""
+"Mission partner collaboration may require involving external users such "
+"as allied forces, contractors, or coalition partners that do not have "
+"Mattermost deployments themselves. :doc:`Guest accounts </administration-"
+"guide/onboard/guest-accounts>` provide a controlled mechanism to enable "
+"these users to participate in joint mission operations while maintaining "
+"strict compliance and security boundaries."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:126
+msgid ""
+"Guest accounts are restricted to specific teams and channels. This "
+"ensures external users only have access to mission-critical resources "
+"necessary for their role."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:127
+msgid ""
+"Guests can be granted access to shared channels, enabling collaboration "
+"with additional trusted organizations through :doc:`connected workspaces "
+"</administration-guide/onboard/connected-workspaces>`."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:128
+msgid ""
+"Guest users can be provided VPN credentials that allow them to connect "
+"specifically to the DMZ network segment where Mattermost resides. This "
+"architecture ensures external guests can access the collaboration "
+"platform without gaining access to internal corporate resources, files, "
+"or systems."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:131
+msgid "Zero-trust access controls"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:133
+msgid ""
+"Mission partner collaboration environments should adopt zero-trust "
+"principles by implementing :doc:`attribute-based access control (ABAC) "
+"</administration-guide/manage/admin/attribute-based-access-control>` to "
+"ensure access to mission channels is governed by dynamic attributes such "
+"as role, clearance, location, and mission context."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:135
+msgid ""
+"Restrict channel access based on :doc:`user attributes </administration-"
+"guide/manage/admin/user-attributes>` rather than static groups."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:136
+msgid ""
+"Continuously audit ABAC policies to ensure compliance with multinational "
+"operational and legal requirements."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:139
+msgid "Sovereign AI"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:141
+msgid ""
+"AI capabilities enhance mission collaboration with summarization, "
+"translation, semantic search, and decision support. Sovereign AI ensures "
+"these capabilities remain fully under organizational control, without "
+"reliance on public cloud services or external data processing. Deploying "
+"AI in a self-hosted or compliance-approved environment enables secure, "
+"mission-ready augmentation."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:143
+msgid ""
+"Deploy :doc:`OpenAI compatible language models </administration-"
+"guide/configure/agents-admin-guide>` on local or private cloud "
+"infrastructure to maintain data sovereignty and ensure offline "
+"availability."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:144
+msgid ""
+"Configure :ref:`custom agents <administration-guide/configure/agents-"
+"admin-guide:agent configuration>` for summarization, workflow automation,"
+" and decision support while enforcing organizational compliance policies."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:145
+msgid ""
+"Enable multilingual collaboration in shared channels using sovereign AI "
+"services to provide `real-time translations "
+"<https://github.com/mattermost/mattermost-plugin-channel-translations>`_ "
+"across partner organizations."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:146
+msgid ""
+"Embed AI into operational playbooks for automated task execution, "
+"situational summaries, and proactive recommendations."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:147
+msgid ""
+"Allow authorized users from partner organizations to securely access "
+"locally hosted LLMs through shared channels in :doc:`connected workspaces"
+" </administration-guide/onboard/connected-workspaces>`."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:150
+msgid "High availability and fault tolerance"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:152
+msgid ""
+"Deploy Mattermost in a :doc:`cluster-based architecture </administration-"
+"guide/scale/high-availability-cluster-based-deployment>` to ensure "
+"continued availability during outages or hardware failures. High "
+"availability requires redundant infrastructure across each critical "
+"component:"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:154
+msgid ""
+"Application servers: Scale horizontally across multiple nodes with a load"
+" balancer distributing client traffic."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:155
+msgid ""
+"Search service: :ref:`Elasticsearch or AWS OpenSearch Service "
+"<administration-guide/scale/scaling-for-enterprise:enterprise search>` "
+"provides optimized search performance with dedicated indexing for large-"
+"scale deployments."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:156
+msgid ""
+"Object storage: Configure S3-compatible backends with erasure coding or "
+"replication for durability. All application servers must access shared "
+"file storage (NAS or S3) to ensure consistent data availability."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:157
+msgid "Calls services: Run multiple ``rtcd`` and offloader nodes for resilience."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:160
+msgid "Sovereign audio & screensharing"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:162
+msgid ""
+"Deploy :doc:`Mattermost Calls </administration-guide/configure/calls-"
+"deployment-guide>` in a self-hosted configuration to ensure voice and "
+"screen sharing capabilities remain operational without reliance on the "
+"internet, and that media traffic does not traverse non-compliant third-"
+"party services."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:164
+msgid ""
+"The ``rtcd`` service, configured using the :doc:`RTCD Setup and "
+"Configuration </administration-guide/configure/calls-rtcd-setup>` guide, "
+"provides scalable, low-latency media routing hosted on-premises. Run "
+"multiple ``rtcd`` nodes for redundancy."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:165
+msgid ""
+"The ``calls-offloader`` service, configured using the :doc:`Calls "
+"Offloader Setup and Configuration </administration-guide/configure/calls-"
+"offloader-setup>` guide, offloads heavy processing tasks like recording, "
+"transcription and live captioning to a compliance-approved job server."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:168
+msgid "Compliance and retention"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:170
+msgid ""
+"Sovereign environments often require strict enforcement of retention "
+"policies, legal hold, and export controls. Configure Mattermost's built-"
+"in compliance features to meet organizational mandates."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:172
+msgid ""
+"Enable :doc:`compliance export </administration-guide/comply/compliance-"
+"export>` and :doc:`monitoring </administration-guide/comply/compliance-"
+"monitoring>` to produce auditable exports of message data and user "
+"activity logs."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:173
+msgid ""
+"Configure :doc:`message retention </administration-guide/comply/data-"
+"retention-policy>` and :doc:`legal hold </administration-guide/comply"
+"/legal-hold>` policies to align with applicable regulations."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:174
+msgid ""
+"Integrate with your organization's :doc:`eDiscovery </administration-"
+"guide/comply/electronic-discovery>` and archiving systems as required."
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:177
+msgid "Mobile notifications"
+msgstr ""
+
+#: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:179
+msgid ""
+"To prevent sensitive message content from being transmitted to external "
+"notification services such as Apple Push Notification Service (APNS) and "
+"Firebase Cloud Messaging (FCM), configure Mattermost to use :doc:`ID-only"
+" push notifications </deployment-guide/mobile/host-your-own-push-proxy-"
+"service>`. In this mode, only a message identifier is sent to public push"
+" notification services, and the client retrieves the content securely "
+"from the Mattermost server over an encrypted channel."
+msgstr ""
+

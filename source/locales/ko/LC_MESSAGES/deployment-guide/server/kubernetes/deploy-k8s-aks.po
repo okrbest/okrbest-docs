@@ -1,0 +1,269 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2026 Mattermost
+# This file is distributed under the same license as the Mattermost package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mattermost \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-11 03:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:4
+msgid ""
+"You can use a supported `Azure Marketplace Container Offer "
+"<https://azuremarketplace.microsoft.com/en-us/marketplace/apps/mattermost"
+".mattermost-operator>`__ to install Mattermost on your existing Azure "
+"infrastructure."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:7
+msgid "Before you begin"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:9
+msgid "Before deploying, make sure you have the following:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:11
+msgid ""
+"**An AKS cluster**: with the `Application Gateway Ingress Controller "
+"(AGIC) add-on <https://learn.microsoft.com/en-us/azure/application-"
+"gateway/tutorial-ingress-controller-add-on-new>`_ enabled or another "
+"Ingress controller deployed."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:13
+msgid ""
+"**PostgreSQL v13.0+ database**: `Azure Database for PostgreSQL - Flexible"
+" Server with Private Access <https://learn.microsoft.com/en-"
+"us/azure/postgresql/>`_ is recommended. Deploy one by following `this "
+"Microsoft quick start guide <https://learn.microsoft.com/en-"
+"us/azure/postgresql/flexible-server/quickstart-create-server-portal>`_."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:15
+msgid ""
+"**Private Network Connectivity**: Verify that there is network "
+"connectivity between your AKS cluster and the PostgreSQL database."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:17
+msgid ""
+"**Valid DNS name and TLS certificate**: You must have access to a DNS "
+"zone and provide a valid TLS key and certificate for the Ingress "
+"Controller."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:19
+msgid ""
+"**Node Capacity**: At least 2 AKS nodes for high availability when "
+"deploying for 100 users or more."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:21
+msgid ""
+"**License Key**: Trial or Enterprise license to test high availability "
+"and other Enterprise features."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:24
+msgid "Installation steps"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:26
+msgid ""
+"The installation process includes deploying Mattermost and updating the "
+"server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:29
+msgid "Step 1: Deploy Mattermost"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:31
+msgid ""
+"Deploy Mattermost from the `Azure Marketplace Container Offer "
+"<https://azuremarketplace.microsoft.com/en-us/marketplace/apps/mattermost"
+".mattermost-operator>`_ and select **Get it now**."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:33
+msgid ""
+"Alternatively, you can go to the ``Extensions + Applications`` section of"
+" your AKS cluster and install the Mattermost offering from there. Visit "
+"the `Microsoft cluster extensions documentation "
+"<https://learn.microsoft.com/en-gb/azure/aks/cluster-extensions?tabs"
+"=azure-cli>`_ to learn more."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:35
+msgid ""
+"Choose the **Resource Group** and the **Region** of your installed AKS "
+"and PostgreSQL database."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:37
+msgid "An example of the Azure AKS Project details screen."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:40
+msgid "Choose your AKS cluster."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:42
+msgid "An example of the Azure AKS cluster setup screen."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:45
+msgid ""
+"Fill in the details for your PostgreSQL database. Ensure the user "
+"specified has full access."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:47
+msgid "An example of the Azure AKS Database setup screen."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:51
+msgid ""
+"Specify Deployment Details including Deployment Name and Deployment Size."
+" You will need to configure file storage for your Mattermost instance. We"
+" recommend using an S3-compatible storage service or an NFS-compatible "
+"server."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:53
+msgid "An example of the Azure AKS Deployment Details setup screen."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:56
+msgid ""
+"Configure Mattermost installation hostname and Ingress details. The AGIC "
+"add-on is used in the following example to show the ingress annotations "
+"required."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:58
+msgid ""
+"You can use any pre-installed Ingress Controller in your cluster as long "
+"as it supports Kubernetes Ingress and TLS termination."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:65
+msgid "Additionally, we recommend considering:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:67
+msgid "Enforcing a minimum TLS version (e.g., TLS 1.2)."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:68
+msgid ""
+"Deploying a Web Application Firewall (WAF) for additional protection, if "
+"supported by your ingress controller."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:69
+msgid "Limiting access using Kubernetes Network Policies."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:71
+msgid "An example of the Azure AKS Networking Details setup screen."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:74
+msgid ""
+"Ensure that everything is running. You should be able to check the "
+"installed plugin from the **AKS Extensions + Applications** page under "
+"the **Settings** menu."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:76
+msgid ""
+"When the deployment is complete, obtain the hostname or IP address of "
+"your Mattermost deployment using the following command:"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:82
+msgid ""
+"Use your IP address from the ``ADDRESS`` column, and create a DNS record "
+"in your domain registration service."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:84
+msgid ""
+"Access your working Mattermost installation at the URL you’ve determined "
+"in your DNS record."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:86
+msgid ""
+"Learn more about administrating your Mattermost server by visiting the "
+":doc:`Administration Guide </administration-guide/administration-guide-"
+"index>`."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:89
+msgid "Step 2: Upgrade Mattermost via your AKS cluster"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:91
+msgid ""
+"Visit the ``Extensions + Applications`` section of your AKS cluster where"
+" your Mattermost installation is deployed."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:92
+msgid ""
+"You can enable minor version auto upgrades since these are not updating "
+"Mattermost version"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:93
+msgid ""
+"Expand the ``Configuration Settings`` table and add the below "
+"configuration and the version you want to install as a value."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:102
+msgid "Select **Save** and wait for the upgrade."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:105
+msgid "Looking for a sovereign deployment on Azure Local?"
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:107
+msgid ""
+"For organizations requiring on-premises deployments with data "
+"sovereignty, **Azure Local** (formerly Azure Stack HCI) provides a hybrid"
+" cloud platform that enables you to run Mattermost on-premises while "
+"maintaining integration with Microsoft Teams and M365."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:109
+msgid ""
+"We recommend engaging **Mattermost Professional Services** for Azure "
+"Local deployments to ensure optimal configuration and compliance with "
+"your security requirements. `Talk to an Expert <https://mattermost.com"
+"/contact-sales/>`_ to discuss your Azure Local deployment needs."
+msgstr ""
+
+#: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:113
+msgid ""
+"You are responsible for Azure costs associated with any infrastructure "
+"you spin up to host a Mattermost server, and Azure credits cannot be "
+"applied towards the purchase of a Mattermost license."
+msgstr ""
+
