@@ -1,0 +1,33 @@
+# 번역 담당 현황
+
+**선점(claim) 절차**: 아래 표에서 원하는 행의 담당자 칸에 본인 이름을 적고 상태를 `진행 중`으로 변경 →
+`ko(claim): <디렉토리> — <이름>` 으로 커밋 → **즉시 push** (다른 작업자에게 선점 공표).
+push가 거부되면 `git pull --rebase origin feat/ko` 후 다시 push — 표 충돌 시 양쪽 행을 모두 살려 병합합니다.
+
+| 디렉토리 | 규모(파일/문자열) | 담당자 | 상태 | 시작일 |
+|---|---|---|---|---|
+| end-user-guide/ | 97 / ~4,500 | | 미배정 | |
+| deployment-guide/ | 61 / ~4,700 | | 미배정 | |
+| administration-guide/comply/ | 8 / ~1,100 | | 미배정 | |
+| administration-guide/configure/ | 34 / ~6,900 | | 미배정 | |
+| administration-guide/manage/ | 37 / ~2,800 | | 미배정 | |
+| administration-guide/onboard/ | 34 / ~2,900 | | 미배정 | |
+| administration-guide/scale/ | 28 / ~1,400 | | 미배정 | |
+| administration-guide/upgrade/ | 13 / ~1,500 | | 미배정 | |
+| administration-guide/ (루트 4파일) | 4 / 소량 | | 미배정 | |
+| integrations-guide/ | 21 / ~1,400 | | 미배정 | |
+| security-guide/ | 8 / ~330 | | 미배정 | |
+| use-case-guide/ | 10 / ~320 | | 미배정 | |
+| get-help/ | 4 / 149 | 메인테이너 | 완료(파일럿) | 2026-06-13 |
+| product-overview/ (체인지로그 제외) | ~15 / 소량 | | 미배정 | |
+| recipes/ | 1 / 38 | | 미배정 | |
+| 루트 index.po + sphinx.po | 2 / 39 | 메인테이너 | 진행 중 | 2026-06-11 |
+
+번역 제외(담당 불필요): product-overview 체인지로그류, agents/, _generated/, _static/, samples/, scripts/
+— 사유는 [TRANSLATION_GUIDE.md](TRANSLATION_GUIDE.md) 3·6절 참조.
+
+## 메인테이너 메모
+
+원문(msgid) 오류·낡은 내용 발견 시 아래에 기록하세요. 원문은 직접 수정하지 않습니다.
+
+- (예시) `end-user-guide/xxx.po:123` — msgid의 메뉴 경로가 현재 UI와 다름
