@@ -142,9 +142,13 @@ html-ko:
 	@$(SPHINXBUILD) -b html -D language=ko "$(SOURCEDIR)" "$(BUILDDIR)/html/ko" -d "$(BUILDDIR)/doctrees-ko" $(SPHINXOPTS2) $(O) -w "$(BUILDDIR)/warnings-ko.log"
 
 # Live-reload Korean preview; --watch picks up .po edits.
+# --ignore "*.mo" is REQUIRED: Sphinx rewrites compiled .mo files inside
+# source/locales on every build, which the watcher would otherwise see as a
+# source change, triggering an infinite full-rebuild loop (and eventual OOM).
+# On low-memory machines run: make livehtml-ko SPHINXOPTS="-j 2"
 livehtml-ko:
 	@mkdir -p "$(BUILDDIR)"
-	@$(SPHINXAUTOBUILD) "$(SOURCEDIR)" "$(BUILDDIR)/html/ko" -d "$(BUILDDIR)/doctrees-ko" -D language=ko --watch "$(LOCALESDIR)" $(SPHINXOPTS) $(AUTOBUILDOPTS) $(O)
+	@$(SPHINXAUTOBUILD) "$(SOURCEDIR)" "$(BUILDDIR)/html/ko" -d "$(BUILDDIR)/doctrees-ko" -D language=ko --watch "$(LOCALESDIR)" --ignore "*.mo" $(SPHINXOPTS) $(AUTOBUILDOPTS) $(O)
 
 # Package the Korean site as a tarball for deployment.
 package-ko: html-ko
