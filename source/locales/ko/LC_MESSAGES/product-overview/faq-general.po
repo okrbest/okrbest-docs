@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/product-overview/faq-general.rst:2
 msgid "General Mattermost"
-msgstr ""
+msgstr "Mattermost 일반"
 
 #: ../../source/product-overview/faq-general.rst:5
 msgid "Why was Mattermost created?"
-msgstr ""
+msgstr "Mattermost는 왜 만들어졌나요?"
 
 #: ../../source/product-overview/faq-general.rst:7
 msgid ""
@@ -33,12 +33,15 @@ msgid ""
 "services. For more information, please see the article `Why we built "
 "Mattermost <https://mattermost.com/about-us/>`_."
 msgstr ""
+"Mattermost는 독점적인 SaaS 서비스의 대안을 제공하기 위해 만들어졌습니다. "
+"자세한 내용은 `Why we built Mattermost <https://mattermost.com/about-us/>`_ "
+"문서를 참고하세요."
 
 #: ../../source/product-overview/faq-general.rst:10
 msgid ""
 "Why does the open source repository contain code specific to the "
 "commercial version of Mattermost?"
-msgstr ""
+msgstr "오픈소스 리포지토리에 Mattermost 상용 버전 전용 코드가 포함된 이유는 무엇인가요?"
 
 #: ../../source/product-overview/faq-general.rst:12
 msgid ""
@@ -49,10 +52,15 @@ msgid ""
 "offerings:mattermost team edition>` to ensure upgrade and downgrade "
 "across editions happens without data loss."
 msgstr ""
+":ref:`Mattermost 상용 버전 <product-overview/editions-and-"
+"offerings:mattermost enterprise edition>`\\ 은 데이터를 가두지 않도록(lock-in "
+"방지) 설계되었습니다. 상용 버전의 일부는 :ref:`오픈소스 버전 <product-"
+"overview/editions-and-offerings:mattermost team edition>`\\ 과 공유되어 "
+"에디션 간 업그레이드·다운그레이드 시 데이터 손실이 없도록 보장합니다."
 
 #: ../../source/product-overview/faq-general.rst:15
 msgid "Does Mattermost support 508 Compliance?"
-msgstr ""
+msgstr "Mattermost는 508 컴플라이언스를 지원하나요?"
 
 #: ../../source/product-overview/faq-general.rst:17
 msgid ""
@@ -62,10 +70,14 @@ msgid ""
 "organizations, including US federal agencies and the Department of "
 "Defense."
 msgstr ""
+"예. 자세한 내용은 :doc:`접근성 컴플라이언스 정책 </product-overview"
+"/accessibility-compliance-policy>` 문서를 참고하세요. Mattermost Enterprise "
+"Edition은 미국 연방 기관과 국방부를 포함한 여러 미국 공공 부문 조직에서 "
+"구매했습니다."
 
 #: ../../source/product-overview/faq-general.rst:20
 msgid "What's the largest Mattermost deployment you have?"
-msgstr ""
+msgstr "가장 큰 Mattermost 배포 규모는 어느 정도인가요?"
 
 #: ../../source/product-overview/faq-general.rst:22
 msgid ""
@@ -75,6 +87,10 @@ msgid ""
 "Mattermost for DevOps workflows, remote work, mission-critical and rapid "
 "response, and to address email overload."
 msgstr ""
+"최대 계약 규모는 등록 사용자 25만 명 이상입니다. 가장 일반적인 대규모 "
+"엔터프라이즈 배포 규모는 10,000~40,000명 수준으로, DevOps 워크플로, 원격 근무, "
+"미션 크리티컬·신속 대응 업무, 이메일 과부하 해소를 위해 Mattermost를 사용하는 "
+"개발·운영 조직입니다."
 
 #: ../../source/product-overview/faq-general.rst:24
 msgid ""
@@ -86,6 +102,11 @@ msgid ""
 "lunchtime when people are messaging to meet for a meal. Our monthly "
 "releases are tested at 20 million posts in the database."
 msgstr ""
+"동시 사용자 60,000명, 데이터베이스 글 6,000만 건 규모의 성능 테스트를 "
+"수행했으며, 조직의 시간대 분포에 따라 최대 동시 사용률 안전 계수는 10:1에서 "
+"3:1 사이입니다. 단일 시간대의 최대 동시 사용량은 일반적으로 업무 시작 "
+"시간대(오전 9시경)와 식사 약속을 잡는 점심시간에 발생합니다. 월간 릴리스는 "
+"데이터베이스 글 2,000만 건 기준으로 테스트됩니다."
 
 #: ../../source/product-overview/faq-general.rst:26
 msgid ""
@@ -94,12 +115,15 @@ msgid ""
 "your Mattermost deployment can achieve the stated scale benchmarks ahead "
 "of production deployment."
 msgstr ""
+"Mattermost는 프로덕션 배포 전에 배포 환경이 명시된 규모 벤치마크를 달성할 수 "
+"있는지 확인할 수 있도록 문서화가 잘된 오픈소스 `부하 테스트 시뮬레이터 "
+"<https://github.com/mattermost/mattermost-load-test>`__\\ 를 제공합니다."
 
 #: ../../source/product-overview/faq-general.rst:29
 msgid ""
 "What happens if I have more than 10,000 messages in my database and have "
 "upgraded to Entry?"
-msgstr ""
+msgstr "데이터베이스에 메시지가 10,000건 넘게 있는 상태에서 Entry로 전환하면 어떻게 되나요?"
 
 #: ../../source/product-overview/faq-general.rst:31
 msgid ""
@@ -109,10 +133,15 @@ msgid ""
 "Entry limitations. Migrating to Team Edition will also unlock full "
 "history of channels, but will limit what features are available."
 msgstr ""
+"Entry는 채널 기록과 검색에서 최종 사용자 인터페이스에 표시되는 메시지 수를 "
+"제한합니다. 모든 기록은 데이터베이스에 보존됩니다. Mattermost 유료 버전으로 "
+"업그레이드하면 이 제한을 비롯한 Entry의 여러 제한이 해제됩니다. Team "
+"Edition으로 이전해도 채널 전체 기록이 해제되지만 사용 가능한 기능이 "
+"제한됩니다."
 
 #: ../../source/product-overview/faq-general.rst:34
 msgid "What are the limitations for embargoed countries?"
-msgstr ""
+msgstr "수출 금지(제재) 대상 국가에는 어떤 제한이 있나요?"
 
 #: ../../source/product-overview/faq-general.rst:36
 msgid ""
@@ -120,10 +149,12 @@ msgid ""
 "sanctions from the United States government, we must pause interactions "
 "with your organization until the sanctions are lifted."
 msgstr ""
+"Mattermost에 관심을 가져 주셔서 감사합니다. 최근 미국 정부의 제재로 인해 "
+"제재가 해제될 때까지 귀하의 조직과의 상호 작용을 중단해야 합니다."
 
 #: ../../source/product-overview/faq-general.rst:38
 msgid "This includes:"
-msgstr ""
+msgstr "여기에는 다음이 포함됩니다:"
 
 #: ../../source/product-overview/faq-general.rst:40
 msgid ""
@@ -131,12 +162,17 @@ msgid ""
 "to your organization. If you have a Mattermost license key, or a trial "
 "key, we ask that you do not use it."
 msgstr ""
+"귀하의 조직에 대한 Mattermost 라이선스 키의 판매, 발급, 갱신을 중단해야 "
+"합니다. Mattermost 라이선스 키나 평가판 키를 보유하고 있더라도 사용하지 않기를 "
+"요청합니다."
 
 #: ../../source/product-overview/faq-general.rst:41
 msgid ""
 "We are not permitted to provide you technical support for our software. "
 "Moreover, we cannot answer questions about our software."
 msgstr ""
+"당사 소프트웨어에 대한 기술 지원을 제공할 수 없으며, 소프트웨어에 대한 "
+"질문에도 답변할 수 없습니다."
 
 #: ../../source/product-overview/faq-general.rst:42
 msgid ""
@@ -146,6 +182,10 @@ msgid ""
 "Inc., including any versions that have been provided online to the "
 "general public."
 msgstr ""
+"업데이트, 업그레이드, 클라우드 호스팅 버전을 포함한 당사 소프트웨어를 귀하의 "
+"조직에 제공할 수 없습니다. 일반 대중에게 온라인으로 제공된 버전을 포함하여 "
+"Mattermost, Inc.가 제공하는 어떠한 소프트웨어나 온라인 서비스도 사용하지 "
+"않기를 요청합니다."
 
 #: ../../source/product-overview/faq-general.rst:44
 msgid ""
@@ -154,10 +194,13 @@ msgid ""
 "interest once again. Please reach out to compliance@mattermost.com for "
 "any questions around current export limitations."
 msgstr ""
+"불편을 드려 깊이 사과드립니다. 당사는 미국 법률을 준수해야 합니다. 제재가 "
+"해제된 후 다시 지원할 수 있기를 바랍니다. 현재 수출 제한에 대한 질문은 "
+"compliance@mattermost.com으로 문의하세요."
 
 #: ../../source/product-overview/faq-general.rst:47
 msgid "How do I report illicit use of Mattermost software?"
-msgstr ""
+msgstr "Mattermost 소프트웨어의 불법 사용은 어떻게 신고하나요?"
 
 #: ../../source/product-overview/faq-general.rst:49
 msgid ""
@@ -165,6 +208,9 @@ msgid ""
 "rights, break laws or policies is explicitly against our `Terms of Use "
 "<https://mattermost.com/terms-of-use/>`__."
 msgstr ""
+"타인에게 해를 끼치거나 권리를 침해하거나 법률·정책을 위반하기 위한 Mattermost "
+"소프트웨어의 불법 사용은 당사의 `이용 약관 <https://mattermost.com/terms-of-"
+"use/>`__\\ 에 명백히 위배됩니다."
 
 #: ../../source/product-overview/faq-general.rst:51
 msgid ""
@@ -174,6 +220,10 @@ msgid ""
 "case, please get in touch with us at ``compliance@mattermost.com`` to "
 "report the issue for us to investigate."
 msgstr ""
+"불법 사용이 ``“mattermost.com”``\\ 으로 끝나는 웹 주소에서 발생하고 있다면, "
+"의심되는 가해자가 당사 Mattermost, Inc.가 관리하는 Mattermost 소프트웨어를 "
+"사용하고 있다는 의미입니다. 이 경우 ``compliance@mattermost.com``\\ 으로 "
+"연락하여 문제를 신고해 주시면 조사하겠습니다."
 
 #: ../../source/product-overview/faq-general.rst:53
 msgid ""
@@ -186,4 +236,11 @@ msgid ""
 "`Terms of Use <https://mattermost.com/terms-of-use/>`__ policy for "
 "Mattermost software."
 msgstr ""
+"불법 사용이 다른 웹 주소에서 발생하고 있다면, 의심되는 가해자가 Mattermost, "
+"Inc.가 아닌 다른 개인이나 회사가 관리하는 Mattermost 소프트웨어를 사용하고 "
+"있을 수 있습니다. 이 경우 https://www.whois.com/ 같은 조회 서비스로 신고용 "
+"연락 이메일을 찾아 해당 웹 주소를 관리하는 개인이나 회사에 연락해야 합니다. "
+"Mattermost 소프트웨어에 대한 당사의 `이용 약관 "
+"<https://mattermost.com/terms-of-use/>`__ 정책의 근거 자료로 이 FAQ 링크를 "
+"활용할 수 있습니다."
 
