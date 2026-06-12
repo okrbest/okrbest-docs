@@ -15,6 +15,8 @@ Mattermost 제품 문서(Sphinx 8.2 + Furo, pipenv)의 okrbest 포크.
    msgid 전체가 코드·식별자·치환자 이름이면 msgstr를 비워 둔다(영어 폴백).
 3. **합니다체** + TRANSLATION_GUIDE.md 8절 용어집 준수 (okrbest 제품 한국어 UI 기준 —
    예: System Console → 관리자 도구, Direct Message → 개인 메시지).
+   **제품 지칭 "Mattermost"는 "OKR.BEST"로 리브랜딩** — 단 외부 Mattermost 서비스
+   링크·원저작사·앱명·에디션명은 유지 (가이드 6-1절).
 4. [ASSIGNMENTS.md](ASSIGNMENTS.md)에서 **본인이 맡은 디렉토리의 파일만** 편집한다.
 5. `agents/`, `_generated/`, `_static/`, product-overview 체인지로그류는 **번역하지 않는다**.
 6. **`make update-po-ko` 절대 실행 금지**(메인테이너 전용). `source/` 원문도 수정 금지.

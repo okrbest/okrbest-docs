@@ -192,11 +192,35 @@ Markdown(.md) 원문의 `[텍스트](URL)`도 동일: 텍스트만 번역, URL �
 | `_generated/` 카탈로그 | 자동 생성 사본 |
 | `_static/badges/` 카탈로그 | msgid가 치환자 이름 — 번역 금지 (5-3절) |
 | product-overview 체인지로그류 | 정책상 보류 (3절) |
-| 제품명 "Mattermost" | 고유명사 — 음차(매터모스트) 금지 |
 | 설정 키(`SiteURL` 등), 환경 변수, CLI 명령, 파일 경로, URL, 버전 번호 | 식별자 — 변경 시 동작 깨짐 |
 | 라이선스명, 법적 고지 원문 | 법적 정확성 |
 
 기능명(Channels, Playbooks, Boards 등)은 **제외 대상이 아니라 한국어화 대상**입니다 — 7절 용어집을 따릅니다.
+
+### 6-1. 브랜딩: Mattermost → OKR.BEST
+
+이 문서 사이트는 OKR.BEST 제품용입니다. 제품 포크의 UI 번역과 동일하게,
+**사용자가 쓰는 제품·플랫폼을 지칭하는 "Mattermost"는 "OKR.BEST"로 옮깁니다.**
+
+```po
+# msgid: "Set up your Mattermost server."
+# ✅ msgstr "OKR.BEST 서버를 설정합니다."
+# msgid: "Get the help you need with Mattermost."
+# ✅ msgstr "OKR.BEST에 필요한 도움을 받으세요."
+```
+
+**"Mattermost"를 유지하는 경우** (치환하면 사실관계·링크가 틀어짐):
+
+| 유지 대상 | 예 |
+|---|---|
+| URL·링크 타겟·코드·식별자 | `https://mattermost.com/...` (5절 마크업 규칙상 원래 불변) |
+| **외부 Mattermost 서비스로 연결되는 링크의 텍스트·서비스 고유명** — 클릭하면 실제 Mattermost사 서비스가 열림 | Mattermost Academy, Mattermost 커뮤니티 서버, Mattermost 헬프 센터, Mattermost 지원 약관, Mattermost 포럼, Mattermost 제품/개발자 문서(README 포함) |
+| 오픈소스 프로젝트·원저작사 지칭 | 기여 안내 문서의 "Mattermost에 기여", "Mattermost, Inc.", 평가 계약·법적 문서명 |
+| 제3자 스토어 등록 앱명 | Mattermost for Microsoft 365, Community for Mattermost |
+| 에디션·요금제명 | Mattermost Enterprise / Professional / Free (구매·지원이 mattermost.com 기준) |
+
+판단 기준: **그 문장이 "지금 독자가 쓰는 제품"을 말하면 OKR.BEST, "Mattermost사(社)의
+외부 자원·원본 프로젝트"를 말하면 Mattermost.** 애매하면 유지하고 ASSIGNMENTS.md 메모에 남기세요.
 
 ## 7. 문체 규칙
 
@@ -207,8 +231,8 @@ Markdown(.md) 원문의 `[텍스트](URL)`도 동일: 텍스트만 번역, URL �
 | 합니다체 | ~할 수 있습니다 / ~하세요(지시) | ~할 수 있어요 / ~함 |
 | 평서 종결 | 채널을 생성합니다. | 채널을 생성한다. |
 | 외래어 표기 | 라이선스, 아카이브, 릴리스 | 라이센스, 아카이브, 릴리즈 |
-| 영한 띄어쓰기 | Docker 컨테이너, Mattermost 서버 | Docker컨테이너 |
-| 조사 직결 | Mattermost는, API를, ``true``로 | Mattermost 는 |
+| 영한 띄어쓰기 | Docker 컨테이너, OKR.BEST 서버 | Docker컨테이너 |
+| 조사 직결 | OKR.BEST는, API를, ``true``로 | OKR.BEST 는 |
 | "you" 처리 | (주어 생략) 채널을 만들 수 있습니다 | 당신은 채널을 만들 수… |
 | 명령형 지시 | 저장을 선택하세요 | 저장을 선택하십시오(과격식) |
 
@@ -227,7 +251,7 @@ Markdown(.md) 원문의 `[텍스트](URL)`도 동일: 텍스트만 번역, URL �
 
 | 영어 | 한국어 | 비고 |
 |---|---|---|
-| Mattermost | Mattermost | 번역·음차 금지 |
+| Mattermost (제품 지칭) | **OKR.BEST** | 리브랜딩 — 예외는 6-1절 |
 | channel | 채널 | |
 | Direct Message (DM) | 개인 메시지 | ⚠️ "다이렉트 메시지" 아님 |
 | Group Message | 그룹 메시지 | |
