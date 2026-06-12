@@ -22,14 +22,21 @@ claude        # 첫 실행 시 로그인 안내를 따름
 > ⚠️ **반드시 리포 루트(okrbest-docs/)에서 `claude`를 실행하세요.**
 > 다른 디렉토리에서 실행하면 `/translate` 스킬과 번역 규칙(CLAUDE.md)이 로드되지 않습니다.
 
-검증 도구 준비(권장 — `/translate`가 커밋 전 검증에 사용):
+검증 도구 준비(권장 — `/translate`가 커밋 전 검증에 사용). 둘 중 **하나만** 해당됩니다:
+
+**경우 A** — pipenv와 Python 3.12가 이미 설치되어 있으면 이 한 줄로 끝:
 
 ```bash
 pipenv install --dev
-# pipenv가 없거나 Python 3.12가 없으면:
-#   uv python install 3.12
-#   uv tool install pipenv
-#   pipenv install --dev --python "$(uv python find 3.12)"
+```
+
+**경우 B** — pipenv 또는 Python 3.12가 없으면 아래 3줄을 **순서대로** 실행합니다
+(경우 A의 명령은 실행하지 않습니다 — 마지막 줄이 그 역할을 대신합니다):
+
+```bash
+uv python install 3.12
+uv tool install pipenv
+pipenv install --dev --python "$(uv python find 3.12)"
 ```
 
 ## 2. 담당 디렉토리 선점 (claim)
