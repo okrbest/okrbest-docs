@@ -6,7 +6,7 @@ push가 거부되면 `git pull --rebase origin feat/ko` 후 다시 push — 표 
 
 | 디렉토리 | 규모(파일/문자열) | 담당자 | 상태 | 시작일 |
 |---|---|---|---|---|
-| end-user-guide/ | 97 / ~4,500 | | 미배정 | |
+| end-user-guide/ | 97 / ~4,500 | ux-builder | 진행 중 | 2026-06-13 |
 | deployment-guide/ | 61 / ~4,700 | | 미배정 | |
 | administration-guide/comply/ | 8 / ~1,100 | | 미배정 | |
 | administration-guide/configure/ | 34 / ~6,900 | | 미배정 | |
@@ -21,7 +21,7 @@ push가 거부되면 `git pull --rebase origin feat/ko` 후 다시 push — 표 
 | get-help/ | 4 / 149 | 메인테이너 | 완료(파일럿) | 2026-06-13 |
 | product-overview/ (체인지로그 제외) | 27 / ~1,000 | 메인테이너 | 진행 중 | 2026-06-13 |
 | recipes/ | 1 / 38 | | 미배정 | |
-| 루트 index.po + sphinx.po | 2 / 39 | 메인테이너 | 진행 중 | 2026-06-11 |
+| 루트 index.po + sphinx.po | 2 / 39 | 메인테이너 | 완료 | 2026-06-11 |
 
 번역 제외(담당 불필요): product-overview 체인지로그류, agents/, _generated/, _static/, samples/, scripts/
 — 사유는 [TRANSLATION_GUIDE.md](TRANSLATION_GUIDE.md) 3·6절 참조.
