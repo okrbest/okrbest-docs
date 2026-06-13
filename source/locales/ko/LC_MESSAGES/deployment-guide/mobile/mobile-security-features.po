@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:2
 msgid "Mobile security features"
-msgstr ""
+msgstr "모바일 보안 기능"
 
 #: ../../source/_static/badges/ent-adv.rst:7
 msgid ""
@@ -40,16 +40,21 @@ msgid ""
 "details our continuous security practices to maintain an up-to-date "
 "security posture."
 msgstr ""
+"이 문서에서는 모바일 애플리케이션에 구현된 주요 보안 기능의 개요를 설명하고, "
+"각 제어 수단의 중요성을 설명하며, 최신 보안 태세를 유지하기 위한 지속적인 보안 "
+"관행을 자세히 다룹니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:10
 msgid "Jailbreak and root detection"
-msgstr ""
+msgstr "탈옥 및 루팅 탐지"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:12
 msgid ""
 "Mattermost leverages built-in checks from the Expo framework to identify "
 "jailbroken (iOS) and rooted (Android) devices:"
 msgstr ""
+"OKR.BEST는 Expo 프레임워크의 내장 검사를 활용하여 탈옥된(iOS) 기기와 "
+"루팅된(Android) 기기를 식별합니다:"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:14
 msgid ""
@@ -58,6 +63,9 @@ msgid ""
 "common indicator that the device has been rooted to allow unauthorized "
 "elevated access."
 msgstr ""
+"**Android**\\ 에서는 앱이 ``/system/xbin/su``\\ 의 ``su`` 바이너리와 같이 "
+"알려진 탈옥/루팅 바이너리의 존재를 확인합니다. 이는 무단 권한 상승 접근을 "
+"허용하기 위해 기기가 루팅되었음을 나타내는 일반적인 지표입니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:15
 msgid ""
@@ -65,6 +73,9 @@ msgid ""
 "(e.g., Cydia), modified system paths, and testing whether the app can "
 "alter protected system files—all signs that the device may be jailbroken."
 msgstr ""
+"**iOS**\\ 에서 탐지 과정은 비정상적인 앱(예: Cydia), 변경된 시스템 경로를 "
+"확인하고 앱이 보호된 시스템 파일을 변경할 수 있는지 테스트하는 것을 "
+"포함합니다. 이 모두는 기기가 탈옥되었을 수 있다는 신호입니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:17
 msgid ""
@@ -73,6 +84,9 @@ msgid ""
 " jailbreak/root protection>` documentation for details on enabling this "
 "feature."
 msgstr ""
+"이 기능을 활성화하는 방법에 대한 자세한 내용은 :ref:`탈옥/루팅 보호 구성 설정 "
+"<administration-guide/configure/environment-configuration-settings:enable "
+"jailbreak/root protection>` 문서를 참고하세요."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:21
 msgid ""
@@ -83,10 +97,15 @@ msgid ""
 "source code to remove them entirely, allowing app usage on "
 "rooted/jailbroken devices."
 msgstr ""
+"클라이언트 측 탐지 방법은 완벽하지 않으며, 루팅 또는 탈옥 접근 권한을 가진 "
+"충분히 의지가 있는 사용자에 의해 우회될 수 있습니다. 작정한 사용자는 리버스 "
+"엔지니어링을 통해 이러한 검사를 비활성화하거나 수정하여 오탐/미탐을 "
+"발생시키거나, 심지어 소스 코드를 수정하고 다시 컴파일하여 이를 완전히 제거함으로써 "
+"루팅/탈옥된 기기에서 앱을 사용할 수 있습니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:24
 msgid "Biometric authentication"
-msgstr ""
+msgstr "생체 인증"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:26
 msgid ""
@@ -95,6 +114,10 @@ msgid ""
 "required before accessing specific servers, and the Mattermost mobile app"
 " mandates that a device PIN or biometric lock is active."
 msgstr ""
+"OKR.BEST는 iOS Face ID/Touch ID 및 Android의 Biometric API와 통합됩니다. 서버 "
+"관리자가 활성화하면 특정 서버에 접근하기 전에 생체 인증 검사가 요구되며, "
+"OKR.BEST 모바일 앱은 기기 PIN 또는 생체 잠금이 활성화되어 있을 것을 "
+"요구합니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:28
 msgid ""
@@ -103,6 +126,9 @@ msgid ""
 " biometric authentication>` documentation for details on enabling this "
 "feature and the user workflows in which users must authenticate."
 msgstr ""
+"이 기능을 활성화하는 방법과 사용자가 인증해야 하는 사용자 워크플로에 대한 자세한 "
+"내용은 :ref:`생체 인증 구성 설정 <administration-guide/configure/environment-"
+"configuration-settings:enable biometric authentication>` 문서를 참고하세요."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:32
 msgid ""
@@ -113,10 +139,14 @@ msgid ""
 "security, and availability of biometric authentication depend entirely on"
 " the device and its underlying platform."
 msgstr ""
+"Face ID나 지문 인식과 같은 생체 인증은 기기의 운영 체제에서 처리됩니다. "
+"OKR.BEST는 생체 기능을 제공하거나 보증하지 않습니다. OS가 생체 입력이 "
+"일치한다고 판단하면 앱의 잠금이 해제됩니다. 생체 인증의 정확성, 보안, 가용성은 "
+"전적으로 기기와 그 기반 플랫폼에 따라 달라집니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:35
 msgid "Screenshot and screen recording prevention"
-msgstr ""
+msgstr "스크린샷 및 화면 녹화 방지"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:37
 msgid ""
@@ -127,6 +157,10 @@ msgid ""
 "captures, Mattermost significantly reduces the risk of data leakage via "
 "visual content."
 msgstr ""
+"스크린샷과 화면 녹화를 방지하면 민감한 정보가 실수로 또는 악의적으로 공유되는 "
+"것을 보호할 수 있습니다. 이 제어 수단은 기밀 통신과 데이터가 앱의 안전한 범위 "
+"내에 유지되도록 보장하는 데 필수적입니다. 무단 화면 캡처를 차단함으로써 "
+"OKR.BEST는 시각적 콘텐츠를 통한 데이터 유출 위험을 크게 줄입니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:39
 msgid ""
@@ -135,12 +169,17 @@ msgid ""
 "any sensitive information, while screenshots will capture no content at "
 "all."
 msgstr ""
+"**iOS**\\ 에서는 앱이 화면 캡처 시도를 감지합니다. 화면 녹화의 경우 즉시 화면에 "
+"흐림 오버레이를 적용하여 민감한 정보를 가리며, 스크린샷은 아무런 콘텐츠도 "
+"캡처하지 않습니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:41
 msgid ""
 "On **Android**, the app utilizes the FLAG_SECURE flag to block screen "
 "captures and recordings."
 msgstr ""
+"**Android**\\ 에서는 앱이 FLAG_SECURE 플래그를 활용하여 화면 캡처와 녹화를 "
+"차단합니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:43
 msgid ""
@@ -149,6 +188,9 @@ msgid ""
 "settings:prevent screen capture>` documentation for details on enabling "
 "this feature."
 msgstr ""
+"이 기능을 활성화하는 방법에 대한 자세한 내용은 :ref:`화면 캡처 방지 구성 설정 "
+"<administration-guide/configure/environment-configuration-settings:prevent "
+"screen capture>` 문서를 참고하세요."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:47
 msgid ""
@@ -159,10 +201,15 @@ msgid ""
 "mobile OS-level capabilities but cannot guarantee absolute prevention of "
 "visual data capture through other means."
 msgstr ""
+"이 기능은 OKR.BEST 앱이 실행 중인 모바일 기기에서 화면 녹화와 스크린샷 캡처를 "
+"방지합니다. 화면을 향한 다른 휴대폰이나 카메라와 같은 외부 기기로부터의 녹화는 "
+"제어하거나 방지할 수 없습니다. OKR.BEST는 모바일 OS 수준의 기능을 통해 이러한 "
+"보호를 제공하지만, 다른 수단을 통한 시각적 데이터 캡처를 절대적으로 방지한다고 "
+"보장할 수는 없습니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:50
 msgid "Secure file previews"
-msgstr ""
+msgstr "안전한 파일 미리보기"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:52
 msgid ""
@@ -173,6 +220,11 @@ msgid ""
 " and restricting downloads, Mattermost significantly reduces the risk of "
 "data leakage while maintaining essential file-viewing capabilities."
 msgstr ""
+"파일 다운로드를 방지하면 민감한 정보가 실수로 또는 악의적으로 공유되는 것을 "
+"보호할 수 있습니다. 이 제어 수단은 기밀 문서와 미디어가 앱의 안전한 범위 내에 "
+"유지되도록 보장하는 데 필수적입니다. 지원되는 파일 형식에 대해 앱 내 "
+"미리보기를 활성화하고 다운로드를 제한함으로써, OKR.BEST는 필수적인 파일 보기 "
+"기능을 유지하면서 데이터 유출 위험을 크게 줄입니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:54
 msgid ""
@@ -183,10 +235,15 @@ msgid ""
 "navigation on mobile>` configuration settings documentation for details "
 "on enabling these features."
 msgstr ""
+"이 기능들을 활성화하는 방법에 대한 자세한 내용은 :ref:`안전한 파일 미리보기 "
+"<administration-guide/configure/environment-configuration-settings:enable "
+"secure file preview on mobile>` 및 :ref:`PDF 링크 이동 관리 <administration-"
+"guide/configure/environment-configuration-settings:allow pdf link "
+"navigation on mobile>` 구성 설정 문서를 참고하세요."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:57
 msgid "Microsoft Intune Mobile Application Management (MAM)"
-msgstr ""
+msgstr "Microsoft Intune 모바일 애플리케이션 관리(MAM)"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:59
 msgid ""
@@ -194,6 +251,8 @@ msgid ""
 "level data protection on iOS devices without requiring full device "
 "enrollment in a mobile device management (MDM) solution."
 msgstr ""
+"OKR.BEST는 Microsoft Intune MAM을 지원하여, 모바일 기기 관리(MDM) 솔루션에 기기 "
+"전체를 등록하지 않고도 iOS 기기에서 ID 기반의 앱 수준 데이터 보호를 적용합니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:63
 msgid ""
@@ -201,6 +260,9 @@ msgid ""
 " **iOS** only. We recommend using Android for Work profiles until Android"
 " Intune support is available."
 msgstr ""
+"OKR.BEST에 대한 Microsoft Intune MAM 적용은 현재 **iOS**\\ 에서만 지원됩니다. "
+"Android Intune 지원이 제공될 때까지는 Android for Work 프로필 사용을 "
+"권장합니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:65
 msgid ""
@@ -210,42 +272,49 @@ msgid ""
 "Your Own Device (BYOD) and mixed-use devices while preserving user "
 "privacy."
 msgstr ""
+"Intune MAM은 Microsoft Entra ID를 ID 권한으로 사용하여 OKR.BEST 모바일 앱에 보안 "
+"정책을 직접 적용합니다. 이를 통해 조직은 사용자 개인정보를 보호하면서 BYOD(Bring "
+"Your Own Device) 및 혼합 용도 기기에서 기업 또는 임무상 민감한 데이터를 보호할 "
+"수 있습니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:67
 msgid "Key security capabilities enabled through Intune MAM include:"
-msgstr ""
+msgstr "Intune MAM을 통해 제공되는 주요 보안 기능은 다음과 같습니다:"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:69
 msgid "**Mandatory enrollment** before accessing Mattermost on mobile"
-msgstr ""
+msgstr "모바일에서 OKR.BEST에 접근하기 전 **필수 등록**"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:70
 msgid "**Identity-based enforcement** using Microsoft Entra ID"
-msgstr ""
+msgstr "Microsoft Entra ID를 사용한 **ID 기반 적용**"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:71
 msgid ""
 "**Selective wipe** of Mattermost work data without affecting personal "
 "apps or device data"
 msgstr ""
+"개인 앱이나 기기 데이터에 영향을 주지 않고 OKR.BEST 업무 데이터를 "
+"**선택적으로 삭제**"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:72
 msgid "**Clipboard, file sharing, and data transfer restrictions**"
-msgstr ""
+msgstr "**클립보드, 파일 공유, 데이터 전송 제한**"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:73
 msgid "**Screenshot and screen recording prevention**"
-msgstr ""
+msgstr "**스크린샷 및 화면 녹화 방지**"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:74
 msgid "**Managed browser enforcement** and controlled link handling"
-msgstr ""
+msgstr "**관리 브라우저 적용** 및 제어된 링크 처리"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:75
 msgid ""
 "**Immediate enforcement** when policies or licensing change, including "
 "during active sessions"
 msgstr ""
+"활성 세션 중을 포함해 정책이나 라이선스가 변경될 때 **즉시 적용**"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:77
 msgid ""
@@ -254,6 +323,9 @@ msgid ""
 "enrollment fails, or required policies are not met, access to protected "
 "content is blocked automatically."
 msgstr ""
+"Intune MAM 적용은 **OKR.BEST 워크스페이스별**\\ 로 적용되며 런타임에 지속적으로 "
+"평가됩니다. 기기가 규정을 준수하지 않게 되거나, 등록이 실패하거나, 필요한 "
+"정책이 충족되지 않으면 보호된 콘텐츠에 대한 접근이 자동으로 차단됩니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:79
 msgid ""
@@ -261,6 +333,8 @@ msgid ""
 "prevention (DLP) controls to mobile users without assuming ownership or "
 "management of the underlying device."
 msgstr ""
+"이 접근 방식을 통해 조직은 기반 기기의 소유나 관리를 떠맡지 않고도 제로 트러스트 "
+"및 데이터 손실 방지(DLP) 제어를 모바일 사용자에게 확장할 수 있습니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:81
 msgid ""
@@ -268,10 +342,12 @@ msgid ""
 "guide/mobile/configure-microsoft-intune-mam>` for deployment and "
 "configuration details."
 msgstr ""
+"배포 및 구성에 대한 자세한 내용은 :doc:`Microsoft Intune MAM 구성 가이드 "
+"</deployment-guide/mobile/configure-microsoft-intune-mam>`\\ 를 참고하세요."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:84
 msgid "Mobile data isolation"
-msgstr ""
+msgstr "모바일 데이터 격리"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:86
 msgid ""
@@ -280,26 +356,32 @@ msgid ""
 "This isolation is achieved through a combination of OS-level security "
 "features, app sandboxing, and secure data storage practices."
 msgstr ""
+"OKR.BEST 모바일 애플리케이션은 민감한 데이터가 안전하게 저장되고 기기의 다른 "
+"애플리케이션과 격리되도록 설계되었습니다. 이러한 격리는 OS 수준의 보안 기능, 앱 "
+"샌드박싱, 안전한 데이터 저장 관행의 조합을 통해 달성됩니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:88
 msgid "Mattermost stores 3 types of data within the mobile app:"
-msgstr ""
+msgstr "OKR.BEST는 모바일 앱 내에 세 가지 유형의 데이터를 저장합니다:"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:90
 msgid ""
 "**SQLite Database**: For offline access to posts and channels that the "
 "user has viewed."
 msgstr ""
+"**SQLite 데이터베이스**: 사용자가 본 게시물과 채널에 대한 오프라인 접근용입니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:91
 msgid ""
 "**Cached Files**: For temporary storage (e.g., PDFs) of viewed files. "
 "They are periodically purged."
 msgstr ""
+"**캐시된 파일**: 열람한 파일(예: PDF)의 임시 저장용입니다. 주기적으로 "
+"삭제됩니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:92
 msgid "**Logs**: Minimal logs kept for troubleshooting purposes."
-msgstr ""
+msgstr "**로그**: 문제 해결 목적으로 보관하는 최소한의 로그입니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:94
 msgid ""
@@ -309,6 +391,10 @@ msgid ""
 "device is lost or stolen. This encryption protects sensitive data, such "
 "as messages and files, from unauthorized access."
 msgstr ""
+"Apple iOS 및 Android 기기용 OKR.BEST 모바일 앱은 네이티브 OS 보안 아키텍처를 "
+"사용하여 모바일 기기의 저장 데이터를 암호화함으로써, 기기를 분실하거나 "
+"도난당하더라도 저장된 정보가 안전하게 유지되도록 보장합니다. 이 암호화는 메시지와 "
+"파일 같은 민감한 데이터를 무단 접근으로부터 보호합니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:96
 msgid ""
@@ -318,10 +404,14 @@ msgid ""
 "storage </deployment-guide/mobile/secure-mobile-file-storage>` for "
 "Mattermost mobile applications."
 msgstr ""
+"OKR.BEST 모바일 앱이 저장하는 데이터는 앱의 비공개 저장소 컨테이너 내에만 "
+"존재합니다. 이 저장 위치는 각 플랫폼의 엄격한 샌드박싱 모델로 격리됩니다. "
+"OKR.BEST 모바일 애플리케이션의 :doc:`안전한 파일 저장 </deployment-guide/mobile"
+"/secure-mobile-file-storage>`\\ 에 대해 자세히 알아보세요."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:99
 msgid "Security measures"
-msgstr ""
+msgstr "보안 조치"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:101
 msgid ""
@@ -335,6 +425,15 @@ msgid ""
 "other applications. This is why TikTok, and any other application is "
 "blocked from accessing Mattermost data."
 msgstr ""
+"**OS 샌드박싱 및 앱 접근 격리**: OKR.BEST의 데이터는 앱 전용 샌드박스 내에 "
+"제한됩니다(`Apple의 iOS 샌드박싱 "
+"<https://support.apple.com/guide/security/security-of-runtime-process-"
+"sec15bfe098e/web>`_ 및 `Android의 샌드박싱 "
+"<https://source.android.com/docs/security/app-sandbox>`_ 지침 참고). 이 "
+"샌드박싱 메커니즘은 SQLite 데이터베이스, 캐시된 파일, 로그 등 저장된 모든 "
+"데이터가 격리되어 다른 애플리케이션이 접근할 수 없도록 보장합니다. 이것이 "
+"TikTok을 비롯한 다른 애플리케이션이 OKR.BEST 데이터에 접근하지 못하도록 "
+"차단되는 이유입니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:103
 msgid ""
@@ -345,6 +444,11 @@ msgid ""
 "sandbox directory remains accessible only to the app unless explicitly "
 "shared by the user."
 msgstr ""
+"**iOS**\\ 는 컨테이너화된 파일 시스템과 엄격한 프로세스 격리에 의존하는 엄격한 "
+"샌드박싱 모델을 사용합니다. 각 앱은 자체 샌드박스 내에서 작동하며, 홈 "
+"디렉토리는 설치 중에 무작위로 할당됩니다. 그 결과 OKR.BEST 앱의 샌드박스 "
+"디렉토리에 저장된 데이터는 사용자가 명시적으로 공유하지 않는 한 해당 앱만 접근할 "
+"수 있습니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:105
 msgid ""
@@ -355,16 +459,23 @@ msgid ""
 " other apps—unless the device is rooted, or the user explicitly shares "
 "the data."
 msgstr ""
+"**Android**\\ 는 각 앱에 자체 Linux 사용자 ID와 전용 비공개 디렉토리를 "
+"할당하여 범위 지정 저장소(scoped storage)를 사용합니다. 이 모델은 다른 "
+"애플리케이션이 명시적 권한 없이 앱의 비공개 디렉토리에 접근하는 것을 방지합니다. "
+"그 결과 기기가 루팅되거나 사용자가 데이터를 명시적으로 공유하지 않는 한 OKR.BEST "
+"앱의 데이터는 다른 앱이 접근할 수 없습니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:107
 msgid "**Cache invalidation**: Cached files are periodically deleted."
-msgstr ""
+msgstr "**캐시 무효화**: 캐시된 파일은 주기적으로 삭제됩니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:109
 msgid ""
 "**No Google or Apple Cloud backup**: Mattermost files are not backed up "
 "during normal cloud backup procedures."
 msgstr ""
+"**Google 또는 Apple 클라우드 백업 없음**: OKR.BEST 파일은 일반적인 클라우드 "
+"백업 절차 중에 백업되지 않습니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:111
 msgid ""
@@ -372,6 +483,9 @@ msgid ""
 "appropriate manifest settings), ensuring that all Mattermost files remain"
 " strictly on-device."
 msgstr ""
+"**Android**\\ 에서는 애플리케이션이 (적절한 매니페스트 설정을 사용해) 백업을 "
+"명시적으로 비활성화하여 모든 OKR.BEST 파일이 기기에만 엄격히 유지되도록 "
+"보장합니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:113
 msgid ""
@@ -380,24 +494,29 @@ msgid ""
 " its files in the ``Library/Caches`` directory, which is excluded from "
 "iCloud backups."
 msgstr ""
+"**iOS**\\ 에서는 운영 체제가 앱의 ``Documents`` 폴더에 저장된 파일을 자동으로 "
+"백업하지만, OKR.BEST는 의도적으로 iCloud 백업에서 제외되는 ``Library/Caches`` "
+"디렉토리에 파일을 저장합니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:115
 msgid ""
 "**Controlled data export**: Data only leaves Mattermost through explicit "
 "user actions such as:"
 msgstr ""
+"**제어된 데이터 내보내기**: 데이터는 다음과 같은 명시적 사용자 동작을 통해서만 "
+"OKR.BEST를 벗어납니다:"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:117
 msgid "Manually exporting a file."
-msgstr ""
+msgstr "파일을 수동으로 내보내기."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:118
 msgid "Takes a screenshot (if not blocked by policy or with a secondary camera)."
-msgstr ""
+msgstr "스크린샷 촬영(정책으로 차단되지 않은 경우 또는 보조 카메라 사용 시)."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:119
 msgid "Sharing content using OS features (e.g., share sheet)."
-msgstr ""
+msgstr "OS 기능(예: 공유 시트)을 사용한 콘텐츠 공유."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:123
 msgid ""
@@ -408,6 +527,10 @@ msgid ""
 "integrity is compromised, an attacker may bypass standard security "
 "measures."
 msgstr ""
+"이 기능은 강력한 OS 수준 샌드박싱 및 저장소 제어를 통해 저장된 데이터에 대한 직접 "
+"접근을 제한합니다. 그러나 공격자가 다른 방법을 사용하는 경우 무단 추출을 막을 "
+"수는 없습니다. 예를 들어 시스템 무결성이 손상된 탈옥된(iOS) 또는 루팅된(Android) "
+"기기에서는 공격자가 표준 보안 조치를 우회할 수 있습니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:125
 msgid ""
@@ -416,10 +539,14 @@ msgid ""
 "storage. Mattermost uses mobile OS-level safeguards but cannot guarantee "
 "absolute prevention of such unauthorized data access."
 msgstr ""
+"마찬가지로 제로데이 또는 알려진 OS 취약점, 혹은 권한 취약점을 악용하는 악성 앱을 "
+"악용하면 기기 저장소에 대한 접근 권한을 얻을 수 있습니다. OKR.BEST는 모바일 OS "
+"수준의 보호 장치를 사용하지만 이러한 무단 데이터 접근을 절대적으로 방지한다고 "
+"보장할 수는 없습니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:128
 msgid "Security compliance"
-msgstr ""
+msgstr "보안 준수"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:130
 msgid ""
@@ -428,6 +555,9 @@ msgid ""
 "guarantees that new mobile features undergo comprehensive security "
 "reviews and that any issues are addressed before release."
 msgstr ""
+"**보안 SDLC**: 모바일 앱은 모든 OKR.BEST 구성 요소와 동일한 보안 소프트웨어 개발 "
+"수명 주기(SDLC) 프로세스를 따릅니다. 이는 새로운 모바일 기능이 포괄적인 보안 "
+"검토를 거치고 모든 문제가 릴리스 전에 해결되도록 보장합니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:132
 msgid ""
@@ -436,6 +566,10 @@ msgid ""
 "rigorously assess the application. Additionally, established remediation "
 "SLAs ensure that any security issues are resolved promptly."
 msgstr ""
+"**취약점 관리**: OKR.BEST 모바일 앱은 Mattermost의 공개 버그 바운티 프로그램에 "
+"포함되어 있어, 보안 연구자들이 애플리케이션을 엄격하게 평가하도록 "
+"초대합니다. 또한 정해진 시정 SLA를 통해 모든 보안 문제가 신속하게 해결되도록 "
+"보장합니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:134
 msgid ""
@@ -444,22 +578,26 @@ msgid ""
 " that any newly disclosed vulnerabilities are quickly identified and "
 "addressed within defined SLAs."
 msgstr ""
+"**지속적인 종속성 검사**: OKR.BEST는 Snyk Open Source를 사용하여 모든 종속성을 "
+"매일 검사합니다. 이러한 지속적인 접근 방식은 새로 공개된 취약점을 신속하게 "
+"식별하고 정해진 SLA 내에 해결하도록 보장합니다."
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:136
 msgid ""
 "**BESPIN compliance**: Mattermost adheres to strict security evaluations "
 "including:"
 msgstr ""
+"**BESPIN 준수**: OKR.BEST는 다음을 포함한 엄격한 보안 평가를 따릅니다:"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:138
 msgid "Device Protection Profiles (NIAP Evaluation)"
-msgstr ""
+msgstr "기기 보호 프로필(NIAP 평가)"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:139
 msgid "Security Dependency & Code Analysis"
-msgstr ""
+msgstr "보안 종속성 및 코드 분석"
 
 #: ../../source/deployment-guide/mobile/mobile-security-features.rst:140
 msgid "Code Complexity & Testing Standards"
-msgstr ""
+msgstr "코드 복잡성 및 테스트 표준"
 
