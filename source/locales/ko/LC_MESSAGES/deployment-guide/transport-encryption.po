@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/deployment-guide/transport-encryption.rst:2
 msgid "Configuring transport encryption"
-msgstr ""
+msgstr "전송 암호화 구성"
 
 #: ../../source/_static/badges/ent-plus.rst:9
 msgid ""
 "|plans-img-yellow| Available on `Enterprise and Enterprise Advanced plans"
 " <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Enterprise 및 Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -40,6 +42,9 @@ msgid ""
 "encryption between the nodes of the Mattermost cluster, all transports "
 "rely on TLS encryption."
 msgstr ""
+"OKR.BEST 설정의 구성 요소가 사용된 전송 암호화와 함께 다음 다이어그램에 "
+"표시되어 있습니다. OKR.BEST 클러스터 노드 간 암호화를 제외하면 모든 전송은 "
+"TLS 암호화에 의존합니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:11
 msgid ""
@@ -48,49 +53,56 @@ msgid ""
 "automatic encryption between cluster nodes is in progress and planned for"
 " a later release."
 msgstr ""
+"애플리케이션 서버 간 전송은 기본적으로 사용되지 않으며 추가 설정 단계가 "
+"필요합니다. 클러스터 노드 간 자동 암호화를 코어 제품에 포함하는 개선 작업이 "
+"진행 중이며 이후 릴리스에 계획되어 있습니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:13
 msgid ""
 "Components of the Mattermost setup where all transports rely on TLS "
 "encryption."
-msgstr ""
+msgstr "모든 전송이 TLS 암호화에 의존하는 OKR.BEST 설정의 구성 요소."
 
 #: ../../source/deployment-guide/transport-encryption.rst:17
 msgid "Configuring proxy to Mattermost transport encryption"
-msgstr ""
+msgstr "프록시-OKR.BEST 전송 암호화 구성"
 
 #: ../../source/deployment-guide/transport-encryption.rst:19
 msgid ""
 "Mattermost is able to encrypt the traffic between the proxy and the "
 "application server using TLS."
 msgstr ""
+"OKR.BEST는 TLS를 사용해 프록시와 애플리케이션 서버 간 트래픽을 암호화할 수 "
+"있습니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:22
 #: ../../source/deployment-guide/transport-encryption.rst:133
 #: ../../source/deployment-guide/transport-encryption.rst:254
 msgid "Prerequisites"
-msgstr ""
+msgstr "사전 요건"
 
 #: ../../source/deployment-guide/transport-encryption.rst:24
 #: ../../source/deployment-guide/transport-encryption.rst:135
 msgid "Operational Mattermost server or cluster."
-msgstr ""
+msgstr "운영 중인 OKR.BEST 서버 또는 클러스터."
 
 #: ../../source/deployment-guide/transport-encryption.rst:25
 msgid "Authentication credentials for Mattermost user on application server."
-msgstr ""
+msgstr "애플리케이션 서버의 OKR.BEST 사용자에 대한 인증 자격 증명."
 
 #: ../../source/deployment-guide/transport-encryption.rst:28
 #: ../../source/deployment-guide/transport-encryption.rst:141
 #: ../../source/deployment-guide/transport-encryption.rst:267
 msgid "Example environment"
-msgstr ""
+msgstr "예시 환경"
 
 #: ../../source/deployment-guide/transport-encryption.rst:30
 msgid ""
 "In this scenario there is one Mattermost application server and one NGINX"
 " server, both running Ubuntu 20.04, with the following IPs:"
 msgstr ""
+"이 시나리오에는 하나의 OKR.BEST 애플리케이션 서버와 하나의 NGINX 서버가 있으며, "
+"둘 다 Ubuntu 20.04를 실행하고 다음 IP를 사용합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:32
 #: ../../source/deployment-guide/transport-encryption.rst:145
@@ -104,7 +116,7 @@ msgstr ""
 
 #: ../../source/deployment-guide/transport-encryption.rst:36
 msgid "Configuring NGINX"
-msgstr ""
+msgstr "NGINX 구성"
 
 #: ../../source/deployment-guide/transport-encryption.rst:38
 msgid ""
@@ -112,21 +124,25 @@ msgid ""
 "Open the Mattermost proxy configuration and search for the following line"
 " twice:"
 msgstr ""
+"NGINX 서버에서 sudo 또는 root 사용자로 두 서버에 모두 연결합니다. OKR.BEST "
+"프록시 구성을 열고 다음 줄을 두 번 검색합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:44
 msgid "Change the protocol from ``http`` to ``https``:"
-msgstr ""
+msgstr "프로토콜을 ``http``\\ 에서 ``https``\\ 로 변경합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:50
 msgid ""
 "Afterwards do not reload the NGINX server yet to minimize the downtime of"
 " the service."
 msgstr ""
+"이후 서비스 다운타임을 최소화하기 위해 아직 NGINX 서버를 다시 로드하지 "
+"마세요."
 
 #: ../../source/deployment-guide/transport-encryption.rst:53
 #: ../../source/deployment-guide/transport-encryption.rst:193
 msgid "Configuring Mattermost"
-msgstr ""
+msgstr "OKR.BEST 구성"
 
 #: ../../source/deployment-guide/transport-encryption.rst:55
 msgid ""
@@ -134,10 +150,13 @@ msgid ""
 "and generate a self-signed certificate that will be used to encrypt the "
 "traffic between the proxy server and the application server."
 msgstr ""
+"OKR.BEST 서버에서 OKR.BEST의 config 디렉토리로 이동하여 프록시 서버와 "
+"애플리케이션 서버 간 트래픽을 암호화하는 데 사용할 자체 서명 인증서를 "
+"생성합니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:57
 msgid "**Note:** Alternatively you can sign a certificate from your company's CA."
-msgstr ""
+msgstr "**참고:** 또는 회사의 CA에서 인증서에 서명할 수도 있습니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:67
 msgid ""
@@ -145,28 +164,33 @@ msgid ""
 "``ConnectionSecurity``, ``TLSCertFile`` and ``TLSKeyFile`` in the "
 "``ServiceSettings`` section."
 msgstr ""
+"완료되면 ``config.json`` 파일을 열고 ``ServiceSettings`` 섹션의 "
+"``ConnectionSecurity``, ``TLSCertFile``, ``TLSKeyFile`` 값을 "
+"수정합니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:69
 msgid "**Before**"
-msgstr ""
+msgstr "**변경 전**"
 
 #: ../../source/deployment-guide/transport-encryption.rst:88
 msgid "**After**"
-msgstr ""
+msgstr "**변경 후**"
 
 #: ../../source/deployment-guide/transport-encryption.rst:107
 msgid "Restart the Mattermost server and ensure it's up and running:"
-msgstr ""
+msgstr "OKR.BEST 서버를 다시 시작하고 정상적으로 실행 중인지 확인합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:121
 msgid ""
 "Finally, on the **NGINX server**, reload the configuration to ensure that"
 " requests are sent on HTTPS:"
 msgstr ""
+"마지막으로 **NGINX 서버**\\ 에서 요청이 HTTPS로 전송되도록 구성을 다시 "
+"로드합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:128
 msgid "Configuring database transport encryption"
-msgstr ""
+msgstr "데이터베이스 전송 암호화 구성"
 
 #: ../../source/deployment-guide/transport-encryption.rst:130
 msgid ""
@@ -174,24 +198,28 @@ msgid ""
 "application using TLS. This guide describes the setup steps for a single,"
 " separate MySQL server."
 msgstr ""
+"OKR.BEST는 TLS를 사용해 데이터베이스와 애플리케이션 간 트래픽을 암호화할 수 "
+"있습니다. 이 가이드는 단일 별도 MySQL 서버에 대한 설정 단계를 설명합니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:136
 msgid "Operational MySQL server."
-msgstr ""
+msgstr "운영 중인 MySQL 서버."
 
 #: ../../source/deployment-guide/transport-encryption.rst:137
 msgid "Confirmed connectivity between Mattermost and MySQL server."
-msgstr ""
+msgstr "OKR.BEST와 MySQL 서버 간 연결 확인."
 
 #: ../../source/deployment-guide/transport-encryption.rst:138
 msgid "Authentication credentials for Mattermost user on MySQL server."
-msgstr ""
+msgstr "MySQL 서버의 OKR.BEST 사용자에 대한 인증 자격 증명."
 
 #: ../../source/deployment-guide/transport-encryption.rst:143
 msgid ""
 "In this scenario there is one Mattermost application server and one MySQL"
 " server, both running Ubuntu 20.04, with the following IPs:"
 msgstr ""
+"이 시나리오에는 하나의 OKR.BEST 애플리케이션 서버와 하나의 MySQL 서버가 있으며, "
+"둘 다 Ubuntu 20.04를 실행하고 다음 IP를 사용합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:146
 msgid "**transport-encryption-mysql1:** 10.10.250.148"
@@ -199,15 +227,15 @@ msgstr ""
 
 #: ../../source/deployment-guide/transport-encryption.rst:149
 msgid "Configuring MySQL"
-msgstr ""
+msgstr "MySQL 구성"
 
 #: ../../source/deployment-guide/transport-encryption.rst:151
 msgid "As a first step, connect to both servers with a sudo or root user."
-msgstr ""
+msgstr "첫 단계로, sudo 또는 root 사용자로 두 서버에 모두 연결합니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:153
 msgid "Execute the following command to prepare the server for SSL connections:"
-msgstr ""
+msgstr "SSL 연결을 위해 서버를 준비하려면 다음 명령을 실행합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:159
 msgid ""
@@ -216,6 +244,9 @@ msgid ""
 "certificates from your company CA, please follow the MySQL documentation "
 "for configuration steps."
 msgstr ""
+"이 명령은 MySQL 서버가 연결을 암호화하는 데 사용하는 자체 서명 인증서를 "
+"``/var/lib/mysql/``\\ 에 생성합니다. 회사 CA의 인증서를 사용하려면 MySQL "
+"문서의 구성 단계를 따르세요."
 
 #: ../../source/deployment-guide/transport-encryption.rst:161
 msgid ""
@@ -224,16 +255,19 @@ msgid ""
 "``/etc/mysql/mysql.conf.d/mysqld.cnf`` and append the following line to "
 "the file:"
 msgstr ""
+"**참고:** 선택적으로 모든 연결이 로컬 소켓 연결 또는 TLS를 통해 이루어지도록 "
+"강제할 수 있습니다. 이렇게 하려면 ``/etc/mysql/mysql.conf.d/mysqld.cnf``\\ 를 "
+"열고 파일에 다음 줄을 추가합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:167
 msgid ""
 "Any connection to the MySQL server must now be made with secure transport"
 " enabled."
-msgstr ""
+msgstr "이제 MySQL 서버에 대한 모든 연결은 보안 전송이 활성화된 상태로 이루어져야 합니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:169
 msgid "Last but not least, restart the server and confirm it is up and running:"
-msgstr ""
+msgstr "마지막으로 서버를 다시 시작하고 정상적으로 실행 중인지 확인합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:195
 msgid ""
@@ -241,16 +275,20 @@ msgid ""
 "``DataSource`` value in the ``SqlSettings`` section. It should look "
 "similar to this:"
 msgstr ""
+"OKR.BEST 서버에서 ``config.json`` 파일을 열고 ``SqlSettings`` 섹션의 "
+"``DataSource`` 값을 찾습니다. 다음과 비슷하게 보일 것입니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:201
 msgid ""
 "At the end of the line, we can configure that TLS must be turned on with "
 "the ``tls`` flag which supports the following values:"
 msgstr ""
+"줄 끝에서 ``tls`` 플래그로 TLS를 켜도록 구성할 수 있으며, 이 플래그는 다음 "
+"값을 지원합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:203
 msgid "true (Require TLS + a trusted certificate)"
-msgstr ""
+msgstr "true(TLS + 신뢰할 수 있는 인증서 필요)"
 
 #: ../../source/deployment-guide/transport-encryption.rst:204
 msgid "false"
@@ -258,17 +296,19 @@ msgstr ""
 
 #: ../../source/deployment-guide/transport-encryption.rst:205
 msgid "skip-verify (Require TLS + accept self-signed)"
-msgstr ""
+msgstr "skip-verify(TLS 필요 + 자체 서명 허용)"
 
 #: ../../source/deployment-guide/transport-encryption.rst:206
 msgid "preferred (Try TLS, fallback to unencrypted)"
-msgstr ""
+msgstr "preferred(TLS 시도, 실패 시 비암호화로 폴백)"
 
 #: ../../source/deployment-guide/transport-encryption.rst:208
 msgid ""
 "In our case we need to use ``skip-verify`` since we use a self-signed "
 "certificate. The configuration setting will now look like this:"
 msgstr ""
+"여기서는 자체 서명 인증서를 사용하므로 ``skip-verify``\\ 를 사용해야 합니다. "
+"이제 구성 설정은 다음과 같이 보일 것입니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:214
 msgid ""
@@ -277,16 +317,19 @@ msgid ""
 "database, be sure to update the ``systemd`` unit file and enable TLS for "
 "the configuration store."
 msgstr ""
+"클러스터에서 OKR.BEST를 실행 중이라면 클러스터의 각 노드에서 값을 갱신해야 "
+"합니다. 데이터베이스에 저장된 구성을 사용하는 경우 ``systemd`` 유닛 파일을 "
+"갱신하고 구성 저장소에 TLS를 활성화해야 합니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:216
 msgid ""
 "Once complete, restart the Mattermost server and ensure the system is "
 "operational:"
-msgstr ""
+msgstr "완료되면 OKR.BEST 서버를 다시 시작하고 시스템이 정상 작동하는지 확인합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:247
 msgid "Configuring cluster transport encryption"
-msgstr ""
+msgstr "클러스터 전송 암호화 구성"
 
 #: ../../source/deployment-guide/transport-encryption.rst:249
 msgid ""
@@ -295,48 +338,57 @@ msgid ""
 " this solution on Ubuntu 20.04, but it can be adapted for any Linux "
 "operating system."
 msgstr ""
+"OKR.BEST는 SSH 터널링을 사용해 배포의 클러스터 내에서 전송되는 메시지를 "
+"암호화할 수 있습니다. 이 가이드는 Ubuntu 20.04에서 이 솔루션을 배포하는 "
+"과정을 설명하지만, 모든 Linux 운영 체제에 맞게 조정할 수 있습니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:251
 msgid ""
 "While this document only describes the configuration of a three-node "
 "cluster, it is by no means limited to that number."
 msgstr ""
+"이 문서는 3노드 클러스터 구성만 설명하지만, 결코 그 수에 국한되지 "
+"않습니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:256
 msgid "SSH port whitelisted between each node of the deployment."
-msgstr ""
+msgstr "배포의 각 노드 간 SSH 포트가 허용 목록에 추가됨."
 
 #: ../../source/deployment-guide/transport-encryption.rst:257
 msgid "Active ufw/iptables on each node."
-msgstr ""
+msgstr "각 노드에서 활성화된 ufw/iptables."
 
 #: ../../source/deployment-guide/transport-encryption.rst:258
 msgid "Access to the root/sudo user of each node for configuration."
-msgstr ""
+msgstr "구성을 위한 각 노드의 root/sudo 사용자 접근 권한."
 
 #: ../../source/deployment-guide/transport-encryption.rst:259
 msgid "A configured Mattermost cluster."
-msgstr ""
+msgstr "구성된 OKR.BEST 클러스터."
 
 #: ../../source/deployment-guide/transport-encryption.rst:260
 msgid "Mattermost running with a dedicated service user."
-msgstr ""
+msgstr "전용 서비스 사용자로 실행 중인 OKR.BEST."
 
 #: ../../source/deployment-guide/transport-encryption.rst:261
 msgid "Mattermost service is stopped on each cluster node."
-msgstr ""
+msgstr "각 클러스터 노드에서 OKR.BEST 서비스가 중지됨."
 
 #: ../../source/deployment-guide/transport-encryption.rst:264
 msgid ""
 "Support on the application level is currently in development and, when "
 "available, will deprecate this document."
 msgstr ""
+"애플리케이션 수준의 지원은 현재 개발 중이며, 제공되면 이 문서는 지원 "
+"중단됩니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:269
 msgid ""
 "In this scenario there are three application nodes in our environment "
 "with the following hostname/IP mapping:"
 msgstr ""
+"이 시나리오에는 환경에 세 개의 애플리케이션 노드가 있으며 다음 호스트명/IP "
+"매핑을 사용합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:272
 msgid "**transport-encryption-mattermost2:** 10.10.250.231"
@@ -348,39 +400,45 @@ msgstr ""
 
 #: ../../source/deployment-guide/transport-encryption.rst:276
 msgid "Preparations"
-msgstr ""
+msgstr "준비"
 
 #: ../../source/deployment-guide/transport-encryption.rst:278
 msgid "Connect to each Mattermost server with a sudo or root user."
-msgstr ""
+msgstr "sudo 또는 root 사용자로 각 OKR.BEST 서버에 연결합니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:279
 msgid ""
 "Make a note of the IP from each cluster member used for the internal "
 "communication."
-msgstr ""
+msgstr "내부 통신에 사용되는 각 클러스터 구성원의 IP를 기록해 둡니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:280
 msgid ""
 "Ensure ``AllowTcpForwarding`` is enabled in ``/etc/ssh/sshd_config`` of "
 "each cluster node."
 msgstr ""
+"각 클러스터 노드의 ``/etc/ssh/sshd_config``\\ 에서 ``AllowTcpForwarding``\\ 이 "
+"활성화되어 있는지 확인합니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:283
 msgid "SSH authentication"
-msgstr ""
+msgstr "SSH 인증"
 
 #: ../../source/deployment-guide/transport-encryption.rst:285
 msgid ""
 "On each node, generate a SSH key-pair for the service account. In our "
 "scenario this is called ``mattermost``:"
 msgstr ""
+"각 노드에서 서비스 계정용 SSH 키 쌍을 생성합니다. 이 시나리오에서는 이를 "
+"``mattermost``\\ 라고 합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:303
 msgid ""
 "The location of the SSH key itself is irrelevant if company policies "
 "require the usage of another storage location."
 msgstr ""
+"회사 정책상 다른 저장 위치를 사용해야 하는 경우 SSH 키 자체의 위치는 상관이 "
+"없습니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:305
 msgid ""
@@ -389,6 +447,10 @@ msgid ""
 "copy the contents of ``/home/mattermost/.ssh/id_rsa.pub`` of nodes 2 and "
 "3, and add it to ``/home/mattermost/.ssh/authorized_keys`` of node 1."
 msgstr ""
+"다음으로, 각 노드의 SSH 공개 키가 클러스터의 다른 노드들의 "
+"``authorized_keys`` 파일에 추가되었는지 확인합니다. 이를 위해 노드 2와 3의 "
+"``/home/mattermost/.ssh/id_rsa.pub`` 내용을 복사하여 노드 1의 "
+"``/home/mattermost/.ssh/authorized_keys``\\ 에 추가합니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:307
 msgid ""
@@ -396,6 +458,8 @@ msgid ""
 "should be able to establish an SSH connection to the other nodes of the "
 "cluster."
 msgstr ""
+"클러스터의 각 노드에 대해 이 단계를 반복합니다. 그 결과 각 노드는 클러스터의 "
+"다른 노드들과 SSH 연결을 설정할 수 있어야 합니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:311
 msgid ""
@@ -404,34 +468,39 @@ msgid ""
 "this service account is allowed to create a SSH tunnel with port "
 "forwarding, but it doesn't require any additional permissions."
 msgstr ""
+"이 서비스 계정은 OKR.BEST ``systemd`` 서비스 자체에 이미 사용 중인 서비스 "
+"계정과 별도일 수 있습니다. 이 서비스 계정이 포트 포워딩으로 SSH 터널을 만들 "
+"수 있어야 한다는 점이 중요하지만, 추가 권한은 필요하지 않습니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:314
 msgid "ufw configuration"
-msgstr ""
+msgstr "ufw 구성"
 
 #: ../../source/deployment-guide/transport-encryption.rst:316
 msgid ""
 "As a next step, allow SSH access from each of the other member nodes, "
 "e.g.:"
-msgstr ""
+msgstr "다음 단계로, 다른 각 구성원 노드로부터의 SSH 접근을 허용합니다. 예:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:318
 msgid "mattermost1 allows from mattermost2 and mattermost3"
-msgstr ""
+msgstr "mattermost1은 mattermost2와 mattermost3으로부터 허용"
 
 #: ../../source/deployment-guide/transport-encryption.rst:319
 msgid "mattermost2 allows from mattermost1 and mattermost3"
-msgstr ""
+msgstr "mattermost2는 mattermost1과 mattermost3으로부터 허용"
 
 #: ../../source/deployment-guide/transport-encryption.rst:320
 msgid "mattermost3 allows from mattermost1 and mattermost2"
-msgstr ""
+msgstr "mattermost3은 mattermost1과 mattermost2로부터 허용"
 
 #: ../../source/deployment-guide/transport-encryption.rst:322
 msgid ""
 "To do so, we add an exception in the firewall. The commands for "
 "``mattermost1`` look as follows:"
 msgstr ""
+"이를 위해 방화벽에 예외를 추가합니다. ``mattermost1``\\ 의 명령은 다음과 "
+"같습니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:344
 msgid ""
@@ -439,18 +508,22 @@ msgid ""
 " from the other member nodes. Do so for each member node, excluding the "
 "node itself."
 msgstr ""
+"다른 노드들에서도 IP를 다른 구성원 노드의 IP로 바꿔 같은 단계를 반복합니다. "
+"노드 자체를 제외한 각 구성원 노드에 대해 수행합니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:346
 msgid ""
 "Next, open ``/etc/ufw/after.rules`` and add the following block to the "
 "bottom of the file:"
 msgstr ""
+"다음으로 ``/etc/ufw/after.rules``\\ 를 열고 파일 맨 아래에 다음 블록을 "
+"추가합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:362
 msgid ""
 "Two lines always belong to a single node, so in a deployment with four "
 "nodes:"
-msgstr ""
+msgstr "두 줄은 항상 단일 노드에 해당하므로, 4노드 배포에서는:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:373
 msgid ""
@@ -458,40 +531,46 @@ msgid ""
 "you have a cluster of six nodes, use 8075 and 8074 with 1 to 5 in front "
 "of it. If the cluster is of bigger size, additional ports must be used."
 msgstr ""
+"오른쪽의 포트는 고유해야 하므로, 6노드 클러스터라면 앞에 1부터 5까지 붙여 "
+"8075와 8074를 사용하세요. 클러스터가 더 크면 추가 포트를 사용해야 합니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:375
 msgid ""
 "Ensure that your operating system has IP forwarding enabled using the "
 "following command:"
-msgstr ""
+msgstr "다음 명령으로 운영 체제에 IP 포워딩이 활성화되어 있는지 확인합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:381
 msgid ""
 "After that, reload the ufw rules and confirm that the iptable rules were "
 "successfully created:"
 msgstr ""
+"그 후 ufw 규칙을 다시 로드하고 iptable 규칙이 정상적으로 생성되었는지 "
+"확인합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:402
 msgid ""
 "Repeat those steps for every node on the cluster. At the end of this "
 "section the following should be configured:"
 msgstr ""
+"클러스터의 모든 노드에 대해 이 단계를 반복합니다. 이 섹션이 끝나면 다음이 "
+"구성되어 있어야 합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:404
 msgid "SSH access enabled in firewall from each cluster node to another."
-msgstr ""
+msgstr "각 클러스터 노드에서 다른 노드로의 SSH 접근이 방화벽에서 활성화됨."
 
 #: ../../source/deployment-guide/transport-encryption.rst:405
 msgid "Per node 2 iptables rules for port 8074 and 8075."
-msgstr ""
+msgstr "노드당 포트 8074와 8075에 대한 2개의 iptables 규칙."
 
 #: ../../source/deployment-guide/transport-encryption.rst:406
 msgid "IP forwarding enabled."
-msgstr ""
+msgstr "IP 포워딩 활성화됨."
 
 #: ../../source/deployment-guide/transport-encryption.rst:409
 msgid "SSH configuration"
-msgstr ""
+msgstr "SSH 구성"
 
 #: ../../source/deployment-guide/transport-encryption.rst:411
 msgid ""
@@ -499,20 +578,25 @@ msgid ""
 "Mattermost service start. To do so, create a file called ``pre_start.sh``"
 " in ``/opt/mattermost/bin`` on ``mattermost1``:"
 msgstr ""
+"다음 단계로, OKR.BEST 서비스 시작 시 SSH 터널이 생성되도록 합니다. 이를 위해 "
+"``mattermost1``\\ 의 ``/opt/mattermost/bin``\\ 에 ``pre_start.sh``\\ 라는 "
+"파일을 생성합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:423
 msgid ""
 "We're ignoring the error from the SSH connection itself in case a tunnel "
 "is already active. Otherwise the Mattermost server would fail to start."
 msgstr ""
+"터널이 이미 활성화되어 있는 경우를 대비해 SSH 연결 자체에서 발생하는 오류는 "
+"무시합니다. 그렇지 않으면 OKR.BEST 서버가 시작에 실패합니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:424
 msgid "Please make sure to back up this script in case of a version upgrade."
-msgstr ""
+msgstr "버전 업그레이드에 대비해 이 스크립트를 반드시 백업하세요."
 
 #: ../../source/deployment-guide/transport-encryption.rst:426
 msgid "Afterwards, set the executable bit on the shell script:"
-msgstr ""
+msgstr "그 후 셸 스크립트에 실행 권한 비트를 설정합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:432
 msgid ""
@@ -520,30 +604,39 @@ msgid ""
 "After this, enter a ``ExecStartPre`` script that will be executed before "
 "Mattermost itself is started:"
 msgstr ""
+"OKR.BEST의 systemd 유닛 파일을 열고 ``Type=Notify``\\ 를 검색합니다. 그 뒤에 "
+"OKR.BEST 자체가 시작되기 전에 실행될 ``ExecStartPre`` 스크립트를 "
+"입력합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:440
 msgid "Reload the systemd daemon afterwards:"
-msgstr ""
+msgstr "그 후 systemd 데몬을 다시 로드합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:446
 msgid ""
 "Repeat the same steps on each of the member nodes and adapt the node IPs "
 "and amount of entries for your environment."
 msgstr ""
+"각 구성원 노드에서 같은 단계를 반복하고, 노드 IP와 항목 수를 환경에 맞게 "
+"조정합니다."
 
 #: ../../source/deployment-guide/transport-encryption.rst:449
 msgid "Cluster start"
-msgstr ""
+msgstr "클러스터 시작"
 
 #: ../../source/deployment-guide/transport-encryption.rst:451
 msgid ""
 "Once each node is configured, restart the service on each cluster and "
 "confirm that it's running using the command below:"
 msgstr ""
+"각 노드를 구성한 후, 각 클러스터에서 서비스를 다시 시작하고 아래 명령으로 "
+"실행 중인지 확인합니다:"
 
 #: ../../source/deployment-guide/transport-encryption.rst:465
 msgid ""
 "Next, open the Mattermost System Console and confirm that each node is "
 "reporting successfully in the High Availability section."
 msgstr ""
+"다음으로 OKR.BEST 관리자 도구를 열고 고가용성 섹션에서 각 노드가 정상적으로 "
+"보고하는지 확인합니다."
 
