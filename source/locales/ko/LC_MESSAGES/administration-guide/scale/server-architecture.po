@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/administration-guide/scale/server-architecture.rst:2
 msgid "Deployment Architecture at Scale"
-msgstr ""
+msgstr "대규모 배포 아키텍처"
 
 #: ../../source/administration-guide/scale/server-architecture.rst:4
 msgid ""
@@ -34,6 +34,12 @@ msgid ""
 "documentation for reference architecture guidance at scale, including "
 "hardware and infrastructure requirements."
 msgstr ""
+"다음 다이어그램은 다양한 규모의 :ref:`고가용성 OKR.BEST 배포 <administration-"
+"guide/scale/high-availability-cluster-based-deployment:deployment guide>`\\ 에 "
+"권장되는 아키텍처 구성을 자세히 보여줍니다. 하드웨어 및 인프라 요구 사항은 사용량과 "
+"정책에 따라 크게 달라집니다. 하드웨어 및 인프라 요구 사항을 포함한 대규모 참조 "
+"아키텍처 지침은 :doc:`엔터프라이즈를 위한 확장 </administration-guide/scale/scaling-"
+"for-enterprise>` 문서를 참고하세요."
 
 #: ../../source/administration-guide/scale/server-architecture.rst:6
 msgid ""
@@ -46,6 +52,13 @@ msgid ""
 "requirement is not met, an outage of one component can result in an "
 "overload of the remaining components, causing a complete system outage."
 msgstr ""
+"OKR.BEST의 고가용성은 이러한 구성 요소 중 하나에 장애가 발생해도 시스템 운영이 "
+"중단되지 않도록 중복된 OKR.BEST 애플리케이션 서버, 중복된 데이터베이스 서버, 중복된 "
+"로드 밸런서를 실행하는 것으로 구성됩니다. 한 구성 요소에 장애가 발생하면 나머지 "
+"애플리케이션 서버, 데이터베이스 서버, 로드 밸런서가 시스템의 전체 부하를 감당할 수 "
+"있도록 적절히 크기를 산정하고 구성해야 합니다. 이 요건이 충족되지 않으면 한 구성 "
+"요소의 중단이 나머지 구성 요소의 과부하로 이어져 전체 시스템 중단을 초래할 수 "
+"있습니다."
 
 #: ../../source/administration-guide/scale/server-architecture.rst:10
 msgid ""
@@ -54,6 +67,9 @@ msgid ""
 "reside within the same datacenter to ensure proper functionality and "
 "performance."
 msgstr ""
+"OKR.BEST는 여러 데이터센터에 걸친 고가용성 배포를 지원하지 않습니다. 적절한 기능과 "
+"성능을 보장하려면 고가용성 클러스터의 모든 노드가 동일한 데이터센터 내에 있어야 "
+"합니다."
 
 #: ../../source/administration-guide/scale/server-architecture.rst:12
 msgid ""
@@ -65,10 +81,15 @@ msgid ""
 "Downtime for a server restart is around 5 seconds. For a database schema "
 "update, downtime can be up to 30 seconds."
 msgstr ""
+"시스템 구성 요소를 올바른 순서로 업데이트하면 대부분의 구성 변경과 닷 릴리스 보안 "
+"업데이트를 서비스 중단 없이 적용할 수 있습니다. 서버 재시작이 필요한 구성 설정 "
+"변경과 데이터베이스 스키마 변경이 수반되는 서버 버전 업그레이드에는 짧은 다운타임이 "
+"필요합니다. 서버 재시작 다운타임은 약 5초입니다. 데이터베이스 스키마 업데이트의 경우 "
+"다운타임이 최대 30초까지 걸릴 수 있습니다."
 
 #: ../../source/administration-guide/scale/server-architecture.rst:15
 msgid "Designed for scale"
-msgstr ""
+msgstr "확장을 위한 설계"
 
 #: ../../source/administration-guide/scale/server-architecture.rst:17
 msgid ""
@@ -83,6 +104,13 @@ msgid ""
 "for-enterprise>` documentation for more information on scaling Mattermost"
 " deployments."
 msgstr ""
+"OKR.BEST는 많은 동시 사용자를 처리할 수 있도록 설계되었으며, 아키텍처는 필요에 따라 "
+"확장하거나 축소할 수 있습니다. 또한 아키텍처는 유연하게 설계되어 필요에 따라 새 구성 "
+"요소나 서비스를 추가할 수 있습니다. 다음 다이어그램은 5,000명, 10,000명, 25,000명, "
+"50,000명 사용자 규모의 OKR.BEST 배포에 권장되는 아키텍처를 보여줍니다. 다이어그램은 "
+"사용자 수별로 구성되며 일반 다이어그램과 각 다이어그램의 AWS 및 Azure 버전을 "
+"포함합니다. OKR.BEST 배포 확장에 관한 자세한 내용은 :doc:`엔터프라이즈를 위한 확장 "
+"</administration-guide/scale/scaling-for-enterprise>` 문서를 참고하세요."
 
 #: ../../source/administration-guide/scale/server-architecture.rst:19
 msgid ""
@@ -90,18 +118,25 @@ msgid ""
 "across all critical components. The proxy, database, file storage, and "
 "Elasticsearch layers can be replaced by cloud services."
 msgstr ""
+"각 일반 다이어그램은 모든 핵심 구성 요소에 걸친 완전한 고가용성 배포를 나타냅니다. "
+"프록시, 데이터베이스, 파일 저장소, Elasticsearch 계층은 클라우드 서비스로 대체할 수 "
+"있습니다."
 
 #: ../../source/administration-guide/scale/server-architecture.rst:20
 msgid ""
 "Each AWS diagram represents a full High Availability deployment on Amazon"
 " Web Services making full use of the available services."
 msgstr ""
+"각 AWS 다이어그램은 사용 가능한 서비스를 최대한 활용한 Amazon Web Services 상의 "
+"완전한 고가용성 배포를 나타냅니다."
 
 #: ../../source/administration-guide/scale/server-architecture.rst:21
 msgid ""
 "Each Azure diagram represents a full High Availability deployment on "
 "Microsoft Azure making full use of the available services."
 msgstr ""
+"각 Azure 다이어그램은 사용 가능한 서비스를 최대한 활용한 Microsoft Azure 상의 "
+"완전한 고가용성 배포를 나타냅니다."
 
 #: ../../source/administration-guide/scale/server-architecture.rst:22
 msgid ""
@@ -109,4 +144,7 @@ msgid ""
 "notification service <administration-guide/configure/environment-"
 "configuration-settings:hosted push notifications service (hpns)>`."
 msgstr ""
+"푸시 프록시는 OKR.BEST :ref:`호스팅 푸시 알림 서비스 <administration-"
+"guide/configure/environment-configuration-settings:hosted push notifications "
+"service (hpns)>`\\ 로 대체할 수 있습니다."
 
