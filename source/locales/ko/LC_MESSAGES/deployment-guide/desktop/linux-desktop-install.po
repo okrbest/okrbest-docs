@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:2
 msgid "Install desktop app on Linux"
-msgstr ""
+msgstr "Linux에 데스크톱 앱 설치"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:7
 msgid "This page describes how to install the Mattermost desktop app on Linux."
-msgstr ""
+msgstr "이 페이지에서는 Linux에 OKR.BEST 데스크톱 앱을 설치하는 방법을 설명합니다."
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:12
 msgid ""
@@ -44,6 +44,9 @@ msgid ""
 "Automatic app updates are supported and enabled. When a new version of "
 "the desktop app is released, your app updates automatically."
 msgstr ""
+"Debian 9 및 Ubuntu 20.04 LTS 이상 릴리스에 대해 ``.deb`` 패키지(베타)와 공식 "
+"APT 저장소가 모두 제공됩니다. 자동 앱 업데이트가 지원되며 활성화되어 있습니다. "
+"데스크톱 앱의 새 버전이 릴리스되면 앱이 자동으로 업데이트됩니다."
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:16
 msgid ""
@@ -58,22 +61,30 @@ msgid ""
 "also be required, particularly for installations that don't rely on the "
 "repository setup script."
 msgstr ""
+"GPG 공개 키가 변경되었습니다. 이전에 시스템에 저장소를 설정한 적이 있다면 `새 "
+"키를 다운로드 <https://deb.packages.mattermost.com/pubkey.gpg>`_\\ 해야 "
+"합니다. 설정 스크립트를 실행할 때 ``UPDATE_GPG_KEY=yes`` 환경 변수를 설정하면 "
+"시스템의 이전 키를 새 키로 덮어쓰도록 구성할 수 있습니다. 그러면 설치의 첫 "
+"단계가 다음과 같이 됩니다: ``curl -fsS -o- "
+"https://deb.packages.mattermost.com/setup-repo.sh | sudo "
+"UPDATE_GPG_KEY=yes bash``. 설정에 따라, 특히 저장소 설정 스크립트에 의존하지 "
+"않는 설치의 경우 추가 단계가 필요할 수도 있습니다."
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:18
 msgid "At the command line, set up the Mattermost repository on your system:"
-msgstr ""
+msgstr "명령줄에서 시스템에 OKR.BEST 저장소를 설정합니다:"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:24
 msgid "Install the Mattermost desktop app:"
-msgstr ""
+msgstr "OKR.BEST 데스크톱 앱을 설치합니다:"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:30
 msgid "Update the Mattermost desktop app:"
-msgstr ""
+msgstr "OKR.BEST 데스크톱 앱을 업데이트합니다:"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:37
 msgid "Snapcraft Package"
-msgstr ""
+msgstr "Snapcraft 패키지"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:39
 msgid ""
@@ -83,16 +94,21 @@ msgid ""
 "see `Install snapd <https://snapcraft.io/docs/installing-snapd>`_ on the "
 "Snapcraft website for details."
 msgstr ""
+"Snapcraft가 설치된 시스템에서는 snap을 사용할 수 있습니다. Snapcraft는 Ubuntu "
+"16.04 이상에 기본으로 설치되어 있지만, 대부분의 다른 Linux 배포판에서는 수동으로 "
+"설치할 수 있습니다. Snapcraft 설치는 자세한 내용을 위해 Snapcraft 웹사이트의 "
+"`Install snapd <https://snapcraft.io/docs/installing-snapd>`_\\ 를 "
+"참고하세요."
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:41
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:62
 msgid "At the command line, execute the following command:"
-msgstr ""
+msgstr "명령줄에서 다음 명령을 실행합니다:"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:47
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:68
 msgid "Run Mattermost as a desktop app."
-msgstr ""
+msgstr "OKR.BEST를 데스크톱 앱으로 실행합니다."
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:50
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:77
@@ -102,12 +118,17 @@ msgid ""
 "**More** |more-icon-vertical| icon located in the top left corner of the "
 "desktop app, then selecting **Help > Version...**."
 msgstr ""
+"데스크톱 앱 왼쪽 상단에 있는 **More** |more-icon-vertical| 아이콘을 선택한 다음 "
+"**Help > Version...**\\ 을 선택하여 데스크톱 앱의 현재 버전을 확인할 수 "
+"있습니다."
 
 #: ../../<rst_prolog>:50
 msgid ""
 "Use the More icon in the top left corner to access Mattermost desktop "
 "apps customization settings."
 msgstr ""
+"왼쪽 상단의 More 아이콘을 사용해 OKR.BEST 데스크톱 앱 사용자 지정 설정에 "
+"접근하세요."
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:55
 msgid ""
@@ -115,10 +136,12 @@ msgid ""
 "Automatic app updates aren't supported. You must update your app "
 "manually."
 msgstr ""
+"CentOS 및 RHEL 7, 8용 베타 ``.rpm`` 패키지가 제공됩니다. 자동 앱 업데이트는 "
+"지원되지 않습니다. 앱을 수동으로 업데이트해야 합니다."
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:58
 msgid "Install the Mattermost desktop app"
-msgstr ""
+msgstr "OKR.BEST 데스크톱 앱 설치"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:60
 msgid ""
@@ -127,10 +150,14 @@ msgid ""
 "<https://releases.mattermost.com/desktop/6.2.0/mattermost-"
 "desktop-6.2.0-linux-x86_64.rpm>`_"
 msgstr ""
+"64비트 시스템용 OKR.BEST 데스크톱 앱의 최신 버전을 다운로드하세요: "
+"`mattermost-desktop-6.2.0-linux-x86_64.rpm "
+"<https://releases.mattermost.com/desktop/6.2.0/mattermost-"
+"desktop-6.2.0-linux-x86_64.rpm>`_"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:70
 msgid "To manually update the desktop app, run the following command:"
-msgstr ""
+msgstr "데스크톱 앱을 수동으로 업데이트하려면 다음 명령을 실행합니다:"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:82
 msgid ""
@@ -139,6 +166,9 @@ msgid ""
 "sandboxed environment and includes runtime dependencies. The Flatpak "
 "version is currently in **beta**."
 msgstr ""
+"OKR.BEST 데스크톱 v6.1부터 Linux 시스템용 Flatpak 패키지가 제공됩니다. "
+"Flatpak은 샌드박스 환경을 제공하고 런타임 종속성을 포함하는 범용 Linux 패키지 "
+"형식입니다. Flatpak 버전은 현재 **베타**\\ 입니다."
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:86
 msgid ""
@@ -147,32 +177,39 @@ msgid ""
 "and Electron BaseApp 25.08. Wayland display server support is enabled by "
 "default."
 msgstr ""
+"Flatpak을 사용하려면 시스템에 Flatpak 런타임이 설치되어 있어야 합니다. OKR.BEST "
+"데스크톱 Flatpak 패키지는 Freedesktop Platform/SDK 25.08과 Electron BaseApp "
+"25.08을 사용합니다. Wayland 디스플레이 서버 지원이 기본으로 활성화되어 "
+"있습니다."
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:89
 msgid "Available architectures"
-msgstr ""
+msgstr "사용 가능한 아키텍처"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:91
 msgid "Flatpak packages are available for:"
-msgstr ""
+msgstr "다음에 대해 Flatpak 패키지가 제공됩니다:"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:93
 msgid "**x86_64** (Intel/AMD 64-bit processors)"
-msgstr ""
+msgstr "**x86_64**(Intel/AMD 64비트 프로세서)"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:94
 msgid "**aarch64** (ARM 64-bit processors)"
-msgstr ""
+msgstr "**aarch64**(ARM 64비트 프로세서)"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:97
 msgid "Install Flatpak"
-msgstr ""
+msgstr "Flatpak 설치"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:99
 msgid ""
 "Ensure Flatpak is installed on your system. If not, see the `Flatpak "
 "setup guide <https://flatpak.org/setup/>`_ for your distribution."
 msgstr ""
+"시스템에 Flatpak이 설치되어 있는지 확인하세요. 설치되어 있지 않다면 사용 중인 "
+"배포판에 맞는 `Flatpak 설정 가이드 <https://flatpak.org/setup/>`_\\ 를 "
+"참고하세요."
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:101
 msgid ""
@@ -180,44 +217,51 @@ msgid ""
 "architecture from the `Desktop App's Github releases page "
 "<https://github.com/mattermost/desktop/releases>`_:"
 msgstr ""
+"`데스크톱 앱의 Github 릴리스 페이지 "
+"<https://github.com/mattermost/desktop/releases>`_\\ 에서 사용 중인 "
+"아키텍처에 맞는 최신 OKR.BEST 데스크톱 Flatpak 패키지를 다운로드하세요:"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:103
 #, python-brace-format
 msgid "For x86_64: ``mattermost-desktop-{VERSION}-linux-x86_64.flatpak``"
-msgstr ""
+msgstr "x86_64의 경우: ``mattermost-desktop-{VERSION}-linux-x86_64.flatpak``"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:104
 #, python-brace-format
 msgid "For aarch64: ``mattermost-desktop-{VERSION}-linux-aarch64.flatpak``"
-msgstr ""
+msgstr "aarch64의 경우: ``mattermost-desktop-{VERSION}-linux-aarch64.flatpak``"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:106
 msgid "Install the Flatpak package:"
-msgstr ""
+msgstr "Flatpak 패키지를 설치합니다:"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:114
 msgid "Run Mattermost as a desktop app:"
-msgstr ""
+msgstr "OKR.BEST를 데스크톱 앱으로 실행합니다:"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:121
 msgid "Considerations"
-msgstr ""
+msgstr "고려 사항"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:123
 msgid ""
 "The Flatpak version runs in a sandboxed environment, which may affect "
 "certain integrations or file access patterns."
 msgstr ""
+"Flatpak 버전은 샌드박스 환경에서 실행되므로 특정 통합이나 파일 접근 패턴에 "
+"영향을 줄 수 있습니다."
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:124
 msgid "Automatic app updates are handled through the Flatpak update mechanism."
-msgstr ""
+msgstr "자동 앱 업데이트는 Flatpak 업데이트 메커니즘을 통해 처리됩니다."
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:125
 msgid ""
 "The application requires access to Flathub or a compatible Flatpak "
 "repository for runtime dependencies."
 msgstr ""
+"이 애플리케이션은 런타임 종속성을 위해 Flathub 또는 호환되는 Flatpak 저장소에 "
+"대한 접근이 필요합니다."
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:133
 msgid ""
@@ -228,6 +272,11 @@ msgid ""
 " are supported and enabled on AppImage binary builds. When a new version "
 "of the desktop app is released, your app updates automatically."
 msgstr ""
+"데스크톱 앱은 대부분의 Linux 배포판에서 사용할 수 있는 두 가지 형식, 즉 압축 "
+"tarball과 AppImage 바이너리로 제공됩니다. 둘 다 `데스크톱 앱의 Github 릴리스 "
+"페이지 <https://github.com/mattermost/desktop/releases>`_\\ 에서 다운로드할 수 "
+"있습니다. AppImage 바이너리 빌드에서는 자동 앱 업데이트가 지원되며 활성화되어 "
+"있습니다. 데스크톱 앱의 새 버전이 릴리스되면 앱이 자동으로 업데이트됩니다."
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:135
 msgid ""
@@ -235,10 +284,12 @@ msgid ""
 "`AppImage Quickstart documentation page "
 "<https://docs.appimage.org/introduction/quickstart.html>`_."
 msgstr ""
+"AppImage 바이너리 사용 방법에 대한 안내는 `AppImage 빠른 시작 문서 페이지 "
+"<https://docs.appimage.org/introduction/quickstart.html>`_\\ 를 참고하세요."
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:138
 msgid "Install the Desktop App's compressed tarball"
-msgstr ""
+msgstr "데스크톱 앱의 압축 tarball 설치"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:140
 msgid ""
@@ -247,6 +298,10 @@ msgid ""
 "<https://releases.mattermost.com/desktop/6.2.0/mattermost-"
 "desktop-6.2.0-linux-x64.tar.gz>`_"
 msgstr ""
+"64비트 시스템용 OKR.BEST 데스크톱 앱의 최신 버전을 다운로드하세요: "
+"`mattermost-desktop-6.2.0-linux-x64.tar.gz "
+"<https://releases.mattermost.com/desktop/6.2.0/mattermost-"
+"desktop-6.2.0-linux-x64.tar.gz>`_"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:142
 msgid ""
@@ -255,14 +310,19 @@ msgid ""
 "permissions: ``sudo chown root:root chrome-sandbox && sudo chmod 4755 "
 "chrome-sandbox``"
 msgstr ""
+"압축을 편리한 위치에 풀고, 압축을 푼 디렉토리의 ``chrome-sandbox``\\ 에 필요한 "
+"소유권과 권한을 부여하세요: ``sudo chown root:root chrome-sandbox && sudo "
+"chmod 4755 chrome-sandbox``"
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:144
 msgid "Execute ``mattermost-desktop`` located inside the extracted directory."
-msgstr ""
+msgstr "압축을 푼 디렉토리 안에 있는 ``mattermost-desktop``\\ 을 실행합니다."
 
 #: ../../source/deployment-guide/desktop/linux-desktop-install.rst:146
 msgid ""
 "To create a Desktop launcher, open the file ``README.md``, and follow the"
 " instructions in the **Desktop launcher** section."
 msgstr ""
+"데스크톱 실행기를 만들려면 ``README.md`` 파일을 열고 **Desktop launcher** "
+"섹션의 안내를 따르세요."
 
