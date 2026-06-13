@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:2
 msgid "Deploy for Mission Partner Collaboration"
-msgstr ""
+msgstr "임무 파트너 협업을 위한 배포"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:5
 msgid "Overview"
-msgstr ""
+msgstr "개요"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:7
 msgid ""
@@ -40,6 +40,14 @@ msgid ""
 "partner networks, enabling interoperability while maintaining compliance "
 "and control."
 msgstr ""
+"임무 파트너 협업은 :doc:`주권적 협업 </deployment-guide/reference-architecture"
+"/deployment-scenarios/deploy-sovereign-collaboration>` 및 :doc:`엣지 배포 "
+"</deployment-guide/reference-architecture/deployment-scenarios/deploy-ddil-"
+"operations>` 모델을 확장하여, OKR.BEST, Microsoft 365, 레거시 플랫폼을 사용하는 "
+"조직 전반에 걸쳐 연합 및 동맹 작전을 가능하게 합니다. 이 문서에서 설명하는 솔루션 "
+"아키텍처는 엔터프라이즈 및 연합 파트너 네트워크 전반에 페더레이션되어 규정 준수와 "
+"제어를 유지하면서 상호 운용성을 가능하게 하는 안전하고 주권적이며 지능적인 임무 "
+"환경을 제공합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:9
 msgid ""
@@ -55,6 +63,14 @@ msgid ""
 "speed while enforcing zero-trust policies and maintaining data "
 "sovereignty."
 msgstr ""
+"연합 임무 협업은 :doc:`연결된 워크스페이스 </administration-guide/onboard"
+"/connected-workspaces>`, `Matrix 커넥터 <https://mattermost.com/marketplace"
+"/mattermost-matrix-connector/>`_, :doc:`게스트 계정 </administration-guide"
+"/onboard/guest-accounts>`, 그리고 전 세계에 분산된 팀 전반에서 빠르고 정확한 "
+"이해를 위한 `자동 번역 <https://github.com/mattermost/mattermost-plugin-channel-"
+"translations>`_\\ 을 사용한 페더레이션을 통해 달성됩니다. 또한 외부 데이터 피드, "
+"워크플로 자동화, 주권적 AI를 통합하면 동맹 및 파트너 사용자가 제로 트러스트 "
+"정책을 시행하고 데이터 주권을 유지하면서 임무 속도로 협업할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:11
 msgid ""
@@ -62,14 +78,17 @@ msgid ""
 "enabling allies and partners to retain control over sensitive data while "
 "extending interoperability to coalition partner enterprise networks."
 msgstr ""
+"OKR.BEST 배포는 온프레미스 또는 주권 클라우드에 호스팅할 수 있어, 동맹과 파트너가 "
+"민감한 데이터에 대한 제어권을 유지하면서 연합 파트너 엔터프라이즈 네트워크로 상호 "
+"운용성을 확장할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:14
 msgid "Collaboration challenges"
-msgstr ""
+msgstr "협업 과제"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:16
 msgid "Multi-agency collaborations face complex communication challenges:"
-msgstr ""
+msgstr "다기관 협업은 복잡한 통신 과제에 직면합니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:18
 msgid ""
@@ -80,26 +99,33 @@ msgid ""
 "sovereign-collaboration>` for sovereign collaboration, data residency, "
 "and offline resilience."
 msgstr ""
+"**플랫폼 다양성:** 조직은 종종 Microsoft 365, OKR.BEST, Matrix 등 서로 다른 "
+"플랫폼을 사용하며, 일부는 엔터프라이즈 생산성을 위해 Teams를 사용하고 주권적 "
+"협업, 데이터 거주지, 오프라인 복원력을 위해 :doc:`OKR.BEST로 보완 </deployment-"
+"guide/reference-architecture/deployment-scenarios/deploy-sovereign-"
+"collaboration>`\\ 합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:19
 msgid ""
 "**External access:** External partners need controlled access without "
 "full organizational membership."
 msgstr ""
+"**외부 접근:** 외부 파트너는 조직의 정식 멤버십 없이 제어된 접근이 필요합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:20
 msgid "**Language barriers:** Organizations may speak different languages."
-msgstr ""
+msgstr "**언어 장벽:** 조직마다 서로 다른 언어를 사용할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:21
 msgid ""
 "**Compliance:** Data residency and compliance requirements vary across "
 "organizations."
 msgstr ""
+"**규정 준수:** 데이터 거주지 및 규정 준수 요구 사항은 조직마다 다릅니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:24
 msgid "Solution Architecture"
-msgstr ""
+msgstr "솔루션 아키텍처"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:26
 msgid ""
@@ -108,6 +134,9 @@ msgid ""
 "addressing these collaboration challenges and diverse organizational "
 "needs, including:"
 msgstr ""
+"전통적인 솔루션은 모두가 동일한 플랫폼을 채택하거나 안전하지 않은 외부 도구를 "
+"사용하도록 요구합니다. OKR.BEST는 이러한 협업 과제와 다양한 조직의 요구를 "
+"해결하는 다계층 접근 방식을 구동하며, 다음을 포함합니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:28
 msgid ""
@@ -116,6 +145,9 @@ msgid ""
 "using :doc:`connected workspaces </administration-guide/onboard"
 "/connected-workspaces>` over standard HTTPS/VPN."
 msgstr ""
+"**OKR.BEST ↔ OKR.BEST 협업:** OKR.BEST 배포를 보유한 조직은 표준 HTTPS/VPN을 "
+"통해 :doc:`연결된 워크스페이스 </administration-guide/onboard/connected-"
+"workspaces>`\\ 를 사용하여 안전한 연결을 구축하고 특정 채널을 공유합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:30
 msgid ""
@@ -126,6 +158,11 @@ msgid ""
 ":doc:`embedded application </integrations-guide/mattermost-mission-"
 "collaboration-for-m365>` in their Teams and Outlook clients."
 msgstr ""
+"**외부 사용자 ↔ OKR.BEST 협업:** 외부 조직의 사용자는 최소 권한 접근이 적용된 "
+"OKR.BEST :doc:`게스트 계정 </administration-guide/onboard/guest-accounts>`\\ 을 "
+"받습니다. Microsoft 환경의 외부 사용자는 Teams 및 Outlook 클라이언트의 "
+":doc:`내장 애플리케이션 </integrations-guide/mattermost-mission-collaboration-"
+"for-m365>`\\ 을 사용하여 OKR.BEST에 접근할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:32
 msgid ""
@@ -134,6 +171,10 @@ msgid ""
 "bridge plugin <https://github.com/mattermost/mattermost-plugin-matrix-"
 "bridge>`_ for bidirectional communication."
 msgstr ""
+"**Matrix / XMPP ↔ OKR.BEST 협업:** 레거시 XMPP 시스템이나 Matrix 서버를 "
+"사용하는 조직은 양방향 통신을 위해 `Matrix 브리지 플러그인 "
+"<https://github.com/mattermost/mattermost-plugin-matrix-bridge>`_\\ 을 통해 "
+"OKR.BEST에 연결합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:34
 msgid ""
@@ -142,12 +183,17 @@ msgid ""
 "translations>`_ enables seamless communication across language barriers "
 "in channels with distributed teams."
 msgstr ""
+"**자동 언어 번역:** AI 기반 `자동 번역 플러그인 "
+"<https://github.com/mattermost/mattermost-plugin-channel-translations>`_\\ 은 "
+"분산된 팀이 있는 채널에서 언어 장벽을 넘어 매끄러운 통신을 가능하게 합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:37
 msgid ""
 "Mattermost diagram displays the deployment components and relationships "
 "outlined in detail in this document."
 msgstr ""
+"OKR.BEST 다이어그램은 이 문서에서 자세히 설명하는 배포 구성 요소와 관계를 "
+"보여줍니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:41
 msgid ""
@@ -155,20 +201,25 @@ msgid ""
 "sales/>`__ if your organization needs support deploying Mattermost and "
 "supporting services for mission partner collaboration."
 msgstr ""
+"조직이 임무 파트너 협업을 위해 OKR.BEST 및 지원 서비스를 배포하는 데 도움이 "
+"필요하다면 `Mattermost 전문가와 상담 <https://mattermost.com/contact-"
+"sales/>`__\\ 하는 것을 고려하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:44
 msgid "Architecture components"
-msgstr ""
+msgstr "아키텍처 구성 요소"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:46
 msgid "The deployment architecture includes the following components:"
-msgstr ""
+msgstr "이 배포 아키텍처는 다음 구성 요소를 포함합니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:48
 msgid ""
 "**Allied or Partner Networks:** Globally distributed and segregated "
 "networks for each allied or partner organization."
 msgstr ""
+"**동맹 또는 파트너 네트워크:** 각 동맹 또는 파트너 조직을 위한 전 세계에 분산되고 "
+"분리된 네트워크입니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:50
 msgid ""
@@ -176,6 +227,8 @@ msgid ""
 "ingress, such as network policies, IP allowlists, or WAFs depending on "
 "networking configurations."
 msgstr ""
+"네트워크는 네트워킹 구성에 따라 네트워크 정책, IP 허용 목록, WAF 등 이그레스와 "
+"인그레스를 보호하는 방화벽이나 접근 게이트웨이를 가질 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:51
 msgid ""
@@ -183,12 +236,17 @@ msgid ""
 "/reference-architecture/deployment-scenarios/deploy-ddil-operations>` "
 "where internet connectivity is intermittent."
 msgstr ""
+"네트워크는 인터넷 연결이 간헐적인 :doc:`경쟁 환경에서 운영 </deployment-guide"
+"/reference-architecture/deployment-scenarios/deploy-ddil-operations>`\\ 될 수 "
+"있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:53
 msgid ""
 "**Users:** Enterprise, allied, and coalition partner users accessing "
 "client applications for Mattermost and/or Microsoft 365."
 msgstr ""
+"**사용자:** OKR.BEST 및/또는 Microsoft 365용 클라이언트 애플리케이션에 접근하는 "
+"엔터프라이즈, 동맹, 연합 파트너 사용자입니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:55
 msgid ""
@@ -197,10 +255,14 @@ msgid ""
 "</administration-guide/onboard/sso-entraid>` for unified authentication "
 "to M365 and Mattermost applications. *(Optional)*"
 msgstr ""
+"**Microsoft Entra ID(ID 공급자):** Microsoft 365 서비스를 사용하는 파트너 "
+"조직은 M365 및 OKR.BEST 애플리케이션에 대한 통합 인증을 위해 :doc:`Entra ID 싱글 "
+"사인온 </administration-guide/onboard/sso-entraid>`\\ 을 사용할 수 있습니다. "
+"*(선택 사항)*"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:57
 msgid "**Federation Services:**"
-msgstr ""
+msgstr "**페더레이션 서비스:**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:59
 msgid ""
@@ -208,6 +270,9 @@ msgid ""
 "guide/onboard/connected-workspaces>` across partner networks, with "
 "seamless synchronization of messages, threads, and files."
 msgstr ""
+"**연결된 워크스페이스:** 메시지, 스레드, 파일의 매끄러운 동기화와 함께 파트너 "
+"네트워크 전반에 걸친 :doc:`페더레이션 협업 </administration-guide/onboard"
+"/connected-workspaces>`\\ 입니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:60
 msgid ""
@@ -215,6 +280,8 @@ msgid ""
 "guide/onboard/guest-accounts>` of external mission partners with least-"
 "privilege access. *(Optional)*"
 msgstr ""
+"**게스트 계정:** 최소 권한 접근이 적용된 외부 임무 파트너의 :doc:`안전한 참여 "
+"</administration-guide/onboard/guest-accounts>`\\ 입니다. *(선택 사항)*"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:61
 msgid ""
@@ -222,10 +289,13 @@ msgid ""
 "systems <https://github.com/mattermost/mattermost-plugin-matrix-bridge>`_"
 " for cross-domain coalition collaboration. *(Optional)*"
 msgstr ""
+"**Matrix 및 XMPP 상호 운용성:** 도메인 간 연합 협업을 위한 `레거시 파트너 "
+"시스템과의 페더레이션 <https://github.com/mattermost/mattermost-plugin-matrix-"
+"bridge>`_\\ 입니다. *(선택 사항)*"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:63
 msgid "**Client Applications:**"
-msgstr ""
+msgstr "**클라이언트 애플리케이션:**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:65
 msgid ""
@@ -233,6 +303,8 @@ msgid ""
 ":doc:`desktop </deployment-guide/desktop/desktop-app-deployment>` or web "
 "apps in your organization."
 msgstr ""
+"**OKR.BEST 데스크톱 앱:** 조직에 :doc:`데스크톱 </deployment-guide/desktop"
+"/desktop-app-deployment>` 또는 웹 앱을 배포하여 OKR.BEST에 직접 접근합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:66
 msgid ""
@@ -242,6 +314,10 @@ msgid ""
 "/host-your-own-push-proxy-service>` to ensure compliance with data "
 "sovereignty requirements. *(Optional - not shown)*"
 msgstr ""
+"**OKR.BEST 모바일 앱:** :doc:`iPhone 및 Android 앱 </deployment-guide/mobile"
+"/mobile-app-deployment>`\\ 을 통해 OKR.BEST에 접근하며, 데이터 주권 요구 사항 "
+"준수를 보장하기 위해 :doc:`ID 전용 푸시 알림 </deployment-guide/mobile/host-"
+"your-own-push-proxy-service>`\\ 을 지원합니다. *(선택 사항 - 표시되지 않음)*"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:67
 msgid ""
@@ -251,6 +327,10 @@ msgid ""
 "mission-collaboration-for-m365>` for cross-domain partner collaboration "
 "within a familiar interface. *(Optional)*"
 msgstr ""
+"**Microsoft 365 데스크톱 앱:** Microsoft 365 서비스를 사용하는 파트너 조직의 "
+"경우, 익숙한 인터페이스 내에서 도메인 간 파트너 협업을 위한 :doc:`내장 OKR.BEST "
+"애플리케이션 </integrations-guide/mattermost-mission-collaboration-for-"
+"m365>`\\ 과 함께 Teams 및 Outlook을 배포할 수 있습니다. *(선택 사항)*"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:69
 msgid ""
@@ -263,18 +343,29 @@ msgid ""
 "</administration-guide/scale/server-architecture>` documentation for "
 "Mattermost deployment configurations based on expected scale."
 msgstr ""
+"**OKR.BEST 배포:** STIG, FedRAMP, NIST 800-53 표준 준수를 유지하기 위해 "
+":doc:`Azure </deployment-guide/server/deploy-kubernetes>` 또는 `Azure Local "
+"<https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-"
+"operations-overview>`_ 같은 프라이빗 클라우드나 로컬 인프라에서 주권적 협업을 "
+"위해 배포된 OKR.BEST입니다. 예상 규모를 기준으로 한 OKR.BEST 배포 구성은 "
+":doc:`참조 아키텍처 </administration-guide/scale/server-architecture>` 문서를 "
+"참고하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:71
 msgid ""
 "**Mattermost Server:** Core application server handling collaboration "
 "workloads, including:"
 msgstr ""
+"**OKR.BEST 서버:** 협업 워크로드를 처리하는 핵심 애플리케이션 서버이며, 다음을 "
+"포함합니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:73
 msgid ""
 ":doc:`Messaging Collaboration </end-user-guide/messaging-collaboration>`:"
 " Sovereign 1:1, group messaging, and structured channel collaboration."
 msgstr ""
+":doc:`메시지 협업 </end-user-guide/messaging-collaboration>`: 주권적 1:1, 그룹 "
+"메시지, 구조화된 채널 협업입니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:74
 msgid ""
@@ -282,6 +373,9 @@ msgid ""
 "Playbooks provide structure, monitoring and automation for repeatable "
 "processes built-in to your sovereign Mattermost deployment."
 msgstr ""
+":doc:`워크플로 자동화 </end-user-guide/workflow-automation>`: Playbooks는 주권적 "
+"OKR.BEST 배포에 기본 내장되어 반복 가능한 프로세스에 대한 구조, 모니터링, "
+"자동화를 제공합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:75
 msgid ""
@@ -290,6 +384,9 @@ msgid ""
 "Mattermost deployment. Boards enables project management capabilities "
 "built-in to your sovereign Mattermost deployment."
 msgstr ""
+":doc:`프로젝트 추적 </end-user-guide/project-task-management>`: Boards는 로컬 "
+"OKR.BEST 배포에 기본 내장된 프로젝트 관리 기능을 제공합니다. Boards는 주권적 "
+"OKR.BEST 배포에 기본 내장된 프로젝트 관리 기능을 제공합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:76
 msgid ""
@@ -297,6 +394,9 @@ msgid ""
 " Agents run against Azure OpenAI endpoints or a self-hosted LLM that is "
 "OpenAI-compatible."
 msgstr ""
+":doc:`AI 에이전트 </administration-guide/configure/agents-admin-guide>`: AI "
+"에이전트는 Azure OpenAI 엔드포인트 또는 OpenAI 호환 셀프 호스팅 LLM에 대해 "
+"실행됩니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:77
 msgid ""
@@ -304,6 +404,9 @@ msgid ""
 "deployment-guide>`: Calls offers native real-time self-hosted audio calls"
 " and screen sharing within your own network."
 msgstr ""
+":doc:`오디오 및 화면 공유 </administration-guide/configure/calls-deployment-"
+"guide>`: Calls는 자체 네트워크 내에서 네이티브 실시간 셀프 호스팅 오디오 통화와 "
+"화면 공유를 제공합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:79
 msgid ""
@@ -316,6 +419,13 @@ msgid ""
 "health check endpoints, and sticky sessions. The proxy layer provides SSL"
 " termination and distributes client traffic across application servers."
 msgstr ""
+"**프록시 서버:** :doc:`프록시 서버 </deployment-guide/server/setup-nginx-"
+"proxy>`\\ 는 클러스터 내 HTTP(S) 라우팅을 처리하여 :doc:`연결된 조직 "
+"</administration-guide/onboard/connected-workspaces>`\\ 의 사용자 요청을 포함해 "
+"OKR.BEST 서비스에 접근하는 서버와 클라이언트 간의 트래픽을 전달합니다. WebSocket "
+"연결, 상태 점검 엔드포인트, 고정 세션을 지원하는 부하 분산에는 NGINX를 "
+"권장합니다. 프록시 계층은 SSL 종료를 제공하고 클라이언트 트래픽을 애플리케이션 "
+"서버 전반에 분산합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:81
 msgid ""
@@ -324,6 +434,10 @@ msgid ""
 "such as `Azure Database for PostgreSQL <https://azure.microsoft.com/en-"
 "us/products/postgresql>`_."
 msgstr ""
+"**PostgreSQL 데이터베이스:** `Azure Database for PostgreSQL "
+"<https://azure.microsoft.com/en-us/products/postgresql>`_ 같은 "
+":doc:`PostgreSQL v13 이상 데이터베이스 </deployment-guide/server/preparations>`"
+"\\ 에 영구 애플리케이션 데이터를 저장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:83
 msgid ""
@@ -334,6 +448,11 @@ msgid ""
 "us/products/storage/blobs>`_ can be used, but needs an S3-compatible "
 "proxy for Mattermost to interface with."
 msgstr ""
+"**오브젝트 스토리지:** 파일 업로드, 이미지, 첨부 파일은 :doc:`S3 호환 저장소 "
+"</deployment-guide/server/preparations>` 또는 NFS(Network File System) 서버의 "
+"애플리케이션 노드 외부에 저장됩니다. `Azure Blob Storage "
+"<https://azure.microsoft.com/en-us/products/storage/blobs>`_\\ 를 사용할 수 "
+"있지만, OKR.BEST가 연동하려면 S3 호환 프록시가 필요합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:85
 msgid ""
@@ -344,6 +463,11 @@ msgid ""
 "transcriptions, and live captioning, to local infrastructure or private "
 "cloud. *(Optional)*"
 msgstr ""
+"**녹화 인스턴스:** :doc:`Calls Offloader 설정 및 구성 </administration-"
+"guide/configure/calls-offloader-setup>` 가이드를 사용해 구성한 ``calls-"
+"offloader`` 작업 서비스로, 녹화, 전사, 실시간 자막 같은 무거운 처리 작업을 "
+"OKR.BEST Calls에서 로컬 인프라나 프라이빗 클라우드로 오프로드합니다. *(선택 "
+"사항)*"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:87
 msgid ""
@@ -351,12 +475,17 @@ msgid ""
 "</integrations-guide/integrations-guide-index>` can be deployed for real-"
 "time data integrations and alerting. *(Optional - not shown)*"
 msgstr ""
+"**통합 프레임워크:** 실시간 데이터 통합과 알림을 위해 :doc:`사용자 지정 앱, "
+"플러그인, 웹훅 </integrations-guide/integrations-guide-index>`\\ 을 배포할 수 "
+"있습니다. *(선택 사항 - 표시되지 않음)*"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:89
 msgid ""
 "**Self-hosted LLM:** Locally hosted :doc:`OpenAI compatible LLM "
 "</agents/docs/providers>` for agentic powered collaboration. *(Optional)*"
 msgstr ""
+"**셀프 호스팅 LLM:** 에이전트 기반 협업을 위한 로컬 호스팅 :doc:`OpenAI 호환 LLM "
+"</agents/docs/providers>`\\ 입니다. *(선택 사항)*"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:91
 msgid ""
@@ -365,10 +494,14 @@ msgid ""
 "network>`_ of Microsoft data centers, delivering public cloud services "
 "including M365 and Azure OpenAI. *(Optional)*"
 msgstr ""
+"**Microsoft 글로벌 네트워크:** M365와 Azure OpenAI를 포함한 퍼블릭 클라우드 "
+"서비스를 제공하는 Microsoft 데이터 센터의 `전 세계 네트워크 "
+"<https://learn.microsoft.com/en-us/azure/networking/microsoft-global-"
+"network>`_\\ 입니다. *(선택 사항)*"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:94
 msgid "Operational Best Practices"
-msgstr ""
+msgstr "운영 모범 사례"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:96
 msgid ""
@@ -376,10 +509,13 @@ msgid ""
 "that Mattermost remains secure, resilient, and interoperable across "
 "federated mission partner environments."
 msgstr ""
+"다음 모범 사례와 배포 구성은 페더레이션된 임무 파트너 환경 전반에서 OKR.BEST가 "
+"안전하고 복원력 있으며 상호 운용 가능한 상태를 유지하도록 보장하는 데 도움이 "
+"됩니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:99
 msgid "Network Configuration"
-msgstr ""
+msgstr "네트워크 구성"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:101
 msgid ""
@@ -389,6 +525,10 @@ msgid ""
 "security boundaries by isolating each connected server deployment from "
 "the enterprise network."
 msgstr ""
+"다양한 페더레이션 기능을 통해 외부 접근이 활성화되는 경우, OKR.BEST를 내부 "
+"네트워크가 아닌 DMZ에 배포할 것을 권장합니다. 이 접근 방식은 심층 방어를 "
+"제공하고 각 연결된 서버 배포를 엔터프라이즈 네트워크로부터 격리하여 보안 경계를 "
+"보존합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:103
 msgid ""
@@ -397,6 +537,9 @@ msgid ""
 "federation traffic to access the collaboration platform through "
 "controlled network boundaries."
 msgstr ""
+"**DMZ 배포:** OKR.BEST 애플리케이션 서버를 DMZ 네트워크 세그먼트에 배치하여, 내부 "
+"사용자와 외부 파트너 페더레이션 트래픽이 모두 제어된 네트워크 경계를 통해 협업 "
+"플랫폼에 접근할 수 있도록 합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:104
 msgid ""
@@ -406,6 +549,9 @@ msgid ""
 "secure communication channels between partner organizations over the "
 "internet."
 msgstr ""
+"**VPN 종료:** 사이트 간 VPN 연결을 네트워크 경계 또는 DMZ 계층에서 종료하여 내부 "
+"네트워크 인프라를 노출하지 않고 암호화된 파트너 연결을 가능하게 합니다. VPN "
+"터널은 인터넷을 통해 파트너 조직 간에 안전한 통신 채널을 구축합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:105
 msgid ""
@@ -414,6 +560,10 @@ msgid ""
 "partner networks. Restrict database and object storage access to only "
 "originate from the DMZ segment where Mattermost servers reside."
 msgstr ""
+"**방화벽 세분화:** 인그레스 및 이그레스 방화벽 규칙을 배포하여 DMZ, 내부 "
+"네트워크, 외부 파트너 네트워크 간의 트래픽 흐름을 제어합니다. 데이터베이스와 "
+"오브젝트 스토리지 접근은 OKR.BEST 서버가 위치한 DMZ 세그먼트에서만 시작되도록 "
+"제한합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:106
 msgid ""
@@ -422,10 +572,14 @@ msgid ""
 "the DMZ, protecting internal systems while enabling partner collaboration"
 " and enforcing zero-trust principles across organizational boundaries."
 msgstr ""
+"**페더레이션 트래픽 격리:** 파트너 페더레이션 트래픽(연결된 워크스페이스는 HTTPS "
+"포트 443/TCP를 통해 동기화)은 DMZ 내에 격리되어, 내부 시스템을 보호하는 동시에 "
+"파트너 협업을 가능하게 하고 조직 경계 전반에 걸쳐 제로 트러스트 원칙을 "
+"시행합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:109
 msgid "Resilient federation for joint operations"
-msgstr ""
+msgstr "연합 작전을 위한 복원력 있는 페더레이션"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:111
 msgid ""
@@ -437,6 +591,11 @@ msgid ""
 "operations without requiring partners to join a single centralized "
 "deployment."
 msgstr ""
+":doc:`연결된 워크스페이스 </administration-guide/onboard/connected-"
+"workspaces>`\\ 는 각 OKR.BEST 배포의 로컬 데이터 제어를 유지하면서 여러 조직과 "
+"네트워크 전반에 걸쳐 페더레이션 협업을 가능하게 합니다. 메시지, 스레드, 파일은 "
+"환경 간에 안전하게 동기화되어, 파트너가 단일 중앙 집중식 배포에 합류할 필요 없이 "
+"다국적 작전의 임무 연속성을 보장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:113
 msgid ""
@@ -444,6 +603,9 @@ msgid ""
 "workspaces:create a secure connection>` and ensure that only authorized "
 "mission partners can view or contribute to shared collaboration channels."
 msgstr ""
+":ref:`제로 트러스트 접근 <administration-guide/onboard/connected-"
+"workspaces:create a secure connection>`\\ 을 시행하고, 승인된 임무 파트너만 공유 "
+"협업 채널을 보거나 기여할 수 있도록 보장하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:114
 msgid ""
@@ -451,6 +613,9 @@ msgid ""
 "plugin-channel-translations>`_ in shared channels for seamless "
 "multilingual cross-domain collaboration."
 msgstr ""
+"매끄러운 다국어 도메인 간 협업을 위해 공유 채널에서 `자동 번역 "
+"<https://github.com/mattermost/mattermost-plugin-channel-translations>`_\\ 을 "
+"구성하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:115
 msgid ""
@@ -458,6 +623,8 @@ msgid ""
 "intermittent connectivity and sync conversations once connectivity "
 "returns."
 msgstr ""
+"OKR.BEST 인스턴스는 장애나 간헐적 연결 중에도 독립적으로 작동할 수 있으며, 연결이 "
+"복구되면 대화를 동기화합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:117
 msgid ""
@@ -468,6 +635,11 @@ msgid ""
 "these environments for continuity of coalition communications while "
 "allowing modernized workflows to extend across federated networks."
 msgstr ""
+"많은 임무 파트너는 Matrix와 XMPP 같은 레거시 시스템에서 계속 운영합니다. "
+"마이그레이션을 강요하지 않고 연합 작전을 가능하게 하기 위해, OKR.BEST는 이러한 "
+"환경과의 `안전한 상호 운용성 <https://github.com/mattermost/mattermost-plugin-"
+"matrix-bridge>`_\\ 을 지원하여 연합 통신의 연속성을 보장하면서 현대화된 "
+"워크플로가 페더레이션 네트워크 전반으로 확장되도록 합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:119
 msgid ""
@@ -477,10 +649,14 @@ msgid ""
 " interoperability is enabled through federation bridges rather than "
 "centralized services."
 msgstr ""
+"OKR.BEST 채널을 Matrix 또는 XMPP 룸과 동기화하여 메시지, 스레드, 첨부 파일이 "
+"실시간으로 시스템 간에 흐르도록 합니다. 각 조직은 자체 데이터와 인프라에 대한 "
+"제어권을 유지하며, 상호 운용성은 중앙 집중식 서비스가 아닌 페더레이션 브리지를 "
+"통해 가능해집니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:122
 msgid "Controlled external access"
-msgstr ""
+msgstr "제어된 외부 접근"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:124
 msgid ""
@@ -491,6 +667,11 @@ msgid ""
 "these users to participate in joint mission operations while maintaining "
 "strict compliance and security boundaries."
 msgstr ""
+"임무 파트너 협업에는 자체 OKR.BEST 배포가 없는 동맹군, 계약업체, 연합 파트너 같은 "
+"외부 사용자를 참여시켜야 할 수 있습니다. :doc:`게스트 계정 </administration-"
+"guide/onboard/guest-accounts>`\\ 은 엄격한 규정 준수와 보안 경계를 유지하면서 "
+"이러한 사용자가 연합 임무 작전에 참여할 수 있게 하는 제어된 메커니즘을 "
+"제공합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:126
 msgid ""
@@ -498,6 +679,8 @@ msgid ""
 "ensures external users only have access to mission-critical resources "
 "necessary for their role."
 msgstr ""
+"게스트 계정은 특정 팀과 채널로 제한됩니다. 이를 통해 외부 사용자는 자신의 역할에 "
+"필요한 미션 크리티컬 리소스에만 접근할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:127
 msgid ""
@@ -505,6 +688,9 @@ msgid ""
 "with additional trusted organizations through :doc:`connected workspaces "
 "</administration-guide/onboard/connected-workspaces>`."
 msgstr ""
+"게스트에게 공유 채널 접근 권한을 부여하여 :doc:`연결된 워크스페이스 "
+"</administration-guide/onboard/connected-workspaces>`\\ 를 통해 신뢰할 수 있는 "
+"추가 조직과의 협업을 가능하게 할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:128
 msgid ""
@@ -514,10 +700,13 @@ msgid ""
 "platform without gaining access to internal corporate resources, files, "
 "or systems."
 msgstr ""
+"게스트 사용자에게 OKR.BEST가 위치한 DMZ 네트워크 세그먼트에 특정하여 연결할 수 "
+"있는 VPN 자격 증명을 제공할 수 있습니다. 이 아키텍처는 외부 게스트가 내부 기업 "
+"리소스, 파일, 시스템에 접근하지 않고 협업 플랫폼에 접근할 수 있도록 보장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:131
 msgid "Zero-trust access controls"
-msgstr ""
+msgstr "제로 트러스트 접근 제어"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:133
 msgid ""
@@ -527,22 +716,30 @@ msgid ""
 "ensure access to mission channels is governed by dynamic attributes such "
 "as role, clearance, location, and mission context."
 msgstr ""
+"임무 파트너 협업 환경은 :doc:`속성 기반 접근 제어(ABAC) </administration-"
+"guide/manage/admin/attribute-based-access-control>`\\ 를 구현하여 제로 트러스트 "
+"원칙을 채택해야 하며, 이를 통해 임무 채널에 대한 접근이 역할, 보안 등급, 위치, "
+"임무 맥락 같은 동적 속성에 의해 통제되도록 보장해야 합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:135
 msgid ""
 "Restrict channel access based on :doc:`user attributes </administration-"
 "guide/manage/admin/user-attributes>` rather than static groups."
 msgstr ""
+"정적 그룹이 아닌 :doc:`사용자 속성 </administration-guide/manage/admin/user-"
+"attributes>`\\ 을 기준으로 채널 접근을 제한하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:136
 msgid ""
 "Continuously audit ABAC policies to ensure compliance with multinational "
 "operational and legal requirements."
 msgstr ""
+"다국적 운영 및 법적 요구 사항 준수를 보장하기 위해 ABAC 정책을 지속적으로 "
+"감사하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:139
 msgid "Sovereign AI"
-msgstr ""
+msgstr "주권적 AI"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:141
 msgid ""
@@ -553,6 +750,10 @@ msgid ""
 "AI in a self-hosted or compliance-approved environment enables secure, "
 "mission-ready augmentation."
 msgstr ""
+"AI 기능은 요약, 번역, 의미 기반 검색, 의사 결정 지원으로 임무 협업을 향상합니다. "
+"주권적 AI는 이러한 기능이 퍼블릭 클라우드 서비스나 외부 데이터 처리에 의존하지 "
+"않고 완전히 조직의 제어 아래 유지되도록 보장합니다. 셀프 호스팅 또는 규정 승인 "
+"환경에 AI를 배포하면 안전하고 임무에 즉시 활용 가능한 증강이 가능합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:143
 msgid ""
@@ -561,6 +762,9 @@ msgid ""
 "infrastructure to maintain data sovereignty and ensure offline "
 "availability."
 msgstr ""
+"데이터 주권을 유지하고 오프라인 가용성을 보장하기 위해 로컬 또는 프라이빗 "
+"클라우드 인프라에 :doc:`OpenAI 호환 언어 모델 </administration-guide/configure"
+"/agents-admin-guide>`\\ 을 배포하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:144
 msgid ""
@@ -568,6 +772,9 @@ msgid ""
 "admin-guide:agent configuration>` for summarization, workflow automation,"
 " and decision support while enforcing organizational compliance policies."
 msgstr ""
+"조직의 규정 준수 정책을 시행하면서 요약, 워크플로 자동화, 의사 결정 지원을 위해 "
+":ref:`사용자 지정 에이전트 <administration-guide/configure/agents-admin-"
+"guide:agent configuration>`\\ 를 구성하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:145
 msgid ""
@@ -576,12 +783,17 @@ msgid ""
 "<https://github.com/mattermost/mattermost-plugin-channel-translations>`_ "
 "across partner organizations."
 msgstr ""
+"주권적 AI 서비스를 사용하여 파트너 조직 전반에 `실시간 번역 "
+"<https://github.com/mattermost/mattermost-plugin-channel-translations>`_\\ 을 "
+"제공함으로써 공유 채널에서 다국어 협업을 활성화하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:146
 msgid ""
 "Embed AI into operational playbooks for automated task execution, "
 "situational summaries, and proactive recommendations."
 msgstr ""
+"자동화된 작업 실행, 상황 요약, 선제적 권장 사항을 위해 운영 플레이북에 AI를 "
+"내장하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:147
 msgid ""
@@ -589,10 +801,13 @@ msgid ""
 "locally hosted LLMs through shared channels in :doc:`connected workspaces"
 " </administration-guide/onboard/connected-workspaces>`."
 msgstr ""
+"파트너 조직의 승인된 사용자가 :doc:`연결된 워크스페이스 </administration-guide"
+"/onboard/connected-workspaces>`\\ 의 공유 채널을 통해 로컬 호스팅 LLM에 안전하게 "
+"접근할 수 있도록 허용하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:150
 msgid "High availability and fault tolerance"
-msgstr ""
+msgstr "고가용성 및 내결함성"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:152
 msgid ""
@@ -602,12 +817,18 @@ msgid ""
 "availability requires redundant infrastructure across each critical "
 "component:"
 msgstr ""
+"장애나 하드웨어 결함 중에도 지속적인 가용성을 보장하려면 OKR.BEST를 :doc:`클러스터 "
+"기반 아키텍처 </administration-guide/scale/high-availability-cluster-based-"
+"deployment>`\\ 로 배포하세요. 고가용성을 위해서는 각 핵심 구성 요소에 이중화 "
+"인프라가 필요합니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:154
 msgid ""
 "Application servers: Scale horizontally across multiple nodes with a load"
 " balancer distributing client traffic."
 msgstr ""
+"애플리케이션 서버: 클라이언트 트래픽을 분산하는 부하 분산기와 함께 여러 노드에 "
+"걸쳐 수평으로 확장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:155
 msgid ""
@@ -616,6 +837,9 @@ msgid ""
 "provides optimized search performance with dedicated indexing for large-"
 "scale deployments."
 msgstr ""
+"검색 서비스: :ref:`Elasticsearch 또는 AWS OpenSearch Service <administration-"
+"guide/scale/scaling-for-enterprise:enterprise search>`\\ 는 대규모 배포를 위한 "
+"전용 인덱싱으로 최적화된 검색 성능을 제공합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:156
 msgid ""
@@ -623,14 +847,17 @@ msgid ""
 "replication for durability. All application servers must access shared "
 "file storage (NAS or S3) to ensure consistent data availability."
 msgstr ""
+"오브젝트 스토리지: 내구성을 위해 소거 코딩 또는 복제를 갖춘 S3 호환 백엔드를 "
+"구성하세요. 일관된 데이터 가용성을 보장하려면 모든 애플리케이션 서버가 공유 파일 "
+"저장소(NAS 또는 S3)에 접근할 수 있어야 합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:157
 msgid "Calls services: Run multiple ``rtcd`` and offloader nodes for resilience."
-msgstr ""
+msgstr "Calls 서비스: 복원력을 위해 여러 ``rtcd`` 및 offloader 노드를 실행합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:160
 msgid "Sovereign audio & screensharing"
-msgstr ""
+msgstr "주권적 오디오 및 화면 공유"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:162
 msgid ""
@@ -640,6 +867,10 @@ msgid ""
 "internet, and that media traffic does not traverse non-compliant third-"
 "party services."
 msgstr ""
+"음성 및 화면 공유 기능이 인터넷에 의존하지 않고 작동하며 미디어 트래픽이 규정을 "
+"준수하지 않는 서드파티 서비스를 경유하지 않도록 보장하려면 :doc:`OKR.BEST Calls "
+"</administration-guide/configure/calls-deployment-guide>`\\ 를 셀프 호스팅 "
+"구성으로 배포하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:164
 msgid ""
@@ -648,6 +879,10 @@ msgid ""
 "provides scalable, low-latency media routing hosted on-premises. Run "
 "multiple ``rtcd`` nodes for redundancy."
 msgstr ""
+":doc:`RTCD 설정 및 구성 </administration-guide/configure/calls-rtcd-setup>` "
+"가이드를 사용해 구성한 ``rtcd`` 서비스는 온프레미스에 호스팅되는 확장 가능하고 "
+"지연 시간이 짧은 미디어 라우팅을 제공합니다. 이중화를 위해 여러 ``rtcd`` 노드를 "
+"실행하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:165
 msgid ""
@@ -656,10 +891,14 @@ msgid ""
 "offloader-setup>` guide, offloads heavy processing tasks like recording, "
 "transcription and live captioning to a compliance-approved job server."
 msgstr ""
+":doc:`Calls Offloader 설정 및 구성 </administration-guide/configure/calls-"
+"offloader-setup>` 가이드를 사용해 구성한 ``calls-offloader`` 서비스는 녹화, "
+"전사, 실시간 자막 같은 무거운 처리 작업을 규정 승인 작업 서버로 "
+"오프로드합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:168
 msgid "Compliance and retention"
-msgstr ""
+msgstr "규정 준수 및 보존"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:170
 msgid ""
@@ -667,6 +906,9 @@ msgid ""
 "policies, legal hold, and export controls. Configure Mattermost's built-"
 "in compliance features to meet organizational mandates."
 msgstr ""
+"주권적 환경에서는 보존 정책, 법적 보존(legal hold), 내보내기 제어를 엄격하게 "
+"시행해야 하는 경우가 많습니다. 조직의 의무를 충족하도록 OKR.BEST의 기본 내장 규정 "
+"준수 기능을 구성하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:172
 msgid ""
@@ -675,6 +917,10 @@ msgid ""
 "monitoring>` to produce auditable exports of message data and user "
 "activity logs."
 msgstr ""
+"메시지 데이터와 사용자 활동 로그의 감사 가능한 내보내기를 생성하려면 :doc:`규정 "
+"준수 내보내기 </administration-guide/comply/compliance-export>` 및 "
+":doc:`모니터링 </administration-guide/comply/compliance-monitoring>`\\ 을 "
+"활성화하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:173
 msgid ""
@@ -682,16 +928,21 @@ msgid ""
 "retention-policy>` and :doc:`legal hold </administration-guide/comply"
 "/legal-hold>` policies to align with applicable regulations."
 msgstr ""
+"적용 가능한 규정에 맞도록 :doc:`메시지 보존 </administration-guide/comply/data-"
+"retention-policy>` 및 :doc:`법적 보존 </administration-guide/comply/legal-"
+"hold>` 정책을 구성하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:174
 msgid ""
 "Integrate with your organization's :doc:`eDiscovery </administration-"
 "guide/comply/electronic-discovery>` and archiving systems as required."
 msgstr ""
+"필요에 따라 조직의 :doc:`eDiscovery </administration-guide/comply/electronic-"
+"discovery>` 및 아카이빙 시스템과 통합하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:177
 msgid "Mobile notifications"
-msgstr ""
+msgstr "모바일 알림"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-mission-partner.rst:179
 msgid ""
@@ -703,4 +954,10 @@ msgid ""
 " notification services, and the client retrieves the content securely "
 "from the Mattermost server over an encrypted channel."
 msgstr ""
+"민감한 메시지 내용이 Apple Push Notification Service(APNS)나 Firebase Cloud "
+"Messaging(FCM) 같은 외부 알림 서비스로 전송되는 것을 방지하려면, OKR.BEST가 "
+":doc:`ID 전용 푸시 알림 </deployment-guide/mobile/host-your-own-push-proxy-"
+"service>`\\ 을 사용하도록 구성하세요. 이 모드에서는 메시지 식별자만 퍼블릭 푸시 "
+"알림 서비스로 전송되며, 클라이언트는 암호화된 채널을 통해 OKR.BEST 서버에서 "
+"내용을 안전하게 가져옵니다."
 
