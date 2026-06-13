@@ -1915,6 +1915,8 @@ msgid ""
 "**Supported service types:** `openai`, `anthropic`, `azure`, "
 "`openaicompatible`, `asage`, `cohere`, `mistral`, `scale`"
 msgstr ""
+"**지원되는 서비스 유형:** `openai`, `anthropic`, `azure`, `openaicompatible`, "
+"`asage`, `cohere`, `mistral`, `scale`"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:477
 msgid ""
@@ -1923,46 +1925,55 @@ msgid ""
 "plugin startup. After legacy bot migration completes, stored "
 "`config.bots` entries are removed to avoid duplicate bot registration."
 msgstr ""
+"**레거시 형식:** 봇을 `config.bots`에 저장했거나 봇 내에 서비스 객체를 포함했던 이전 "
+"구성은 플러그인 시작 시 마이그레이션됩니다. 레거시 봇 마이그레이션이 완료되면, 중복 봇 "
+"등록을 방지하기 위해 저장된 `config.bots` 항목이 제거됩니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:479
 msgid "Troubleshooting"
-msgstr ""
+msgstr "문제 해결"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:481
 msgid "Logging"
-msgstr ""
+msgstr "로깅"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:483
 msgid "Enhanced logging can help diagnose issues:"
-msgstr ""
+msgstr "향상된 로깅은 문제 진단에 도움이 됩니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:485
 msgid ""
 "Check server logs for entries with the structured logging field "
 "`plugin_ai` set to `mattermost-ai`."
 msgstr ""
+"구조화된 로깅 필드 `plugin_ai`가 `mattermost-ai`로 설정된 항목을 서버 로그에서 "
+"확인하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:486
 msgid ""
 "Enable **LLM Trace** in the plugin configuration to see detailed "
 "request/response information for all LLM interactions."
 msgstr ""
+"모든 LLM 상호작용에 대한 상세한 요청/응답 정보를 보려면 플러그인 구성에서 **LLM "
+"Trace**를 활성화하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:487
 msgid ""
 "Enable debug logging in the plugin configuration for additional "
 "diagnostic information."
-msgstr ""
+msgstr "추가 진단 정보를 위해 플러그인 구성에서 디버그 로깅을 활성화하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:488
 msgid ""
 "For production environments, disable debug logging and LLM Trace after "
 "troubleshooting to reduce log volume."
 msgstr ""
+"프로덕션 환경에서는 로그 양을 줄이기 위해 문제 해결 후 디버그 로깅과 LLM Trace를 "
+"비활성화하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:490
 msgid "Tool execution failures"
-msgstr ""
+msgstr "도구 실행 실패"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:492
 msgid ""
@@ -1970,6 +1981,8 @@ msgid ""
 "may continue with a follow-up model turn so it can recover, explain the "
 "failure, or answer without that tool."
 msgstr ""
+"도구 호출이 실패해도 에이전트가 항상 즉시 멈추는 것은 아닙니다. 복구하거나, 실패를 "
+"설명하거나, 해당 도구 없이 답변할 수 있도록 후속 모델 턴으로 계속할 수 있습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:494
 msgid ""
@@ -1979,6 +1992,10 @@ msgid ""
 "error and ask the user for guidance or any missing information such as "
 "permissions, identifiers, or configuration details."
 msgstr ""
+"끝없는 재시도를 방지하기 위해, 플러그인은 **연속 3회 도구 시도 실패** 제한을 "
+"적용합니다. 그 이후에는 해당 시퀀스에 대해 더 이상 도구 호출이 이루어지지 않으며, "
+"모델은 최근 오류를 설명하고 권한, 식별자 또는 구성 세부 정보 같은 누락된 정보나 안내를 "
+"사용자에게 요청하도록 지시받습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:496
 msgid ""
@@ -1988,10 +2005,14 @@ msgid ""
 "and third-party authorization, and confirm the user can access the "
 "underlying Mattermost resources the tool targets."
 msgstr ""
+"사용자가 반복적인 도구 실패를 보고하면, **LLM Trace**와 디버그 로깅을 사용해 도구 "
+"오류와 업스트림 응답을 점검하세요. 또한 API 키, 엔드포인트, MCP 연결, 제3자 인증 같은 "
+"통합 구성을 확인하고, 사용자가 도구가 대상으로 하는 기반 OKR.BEST 리소스에 접근할 수 "
+"있는지 확인하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:498
 msgid "Integrations"
-msgstr ""
+msgstr "통합"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:500
 msgid ""
@@ -2001,10 +2022,14 @@ msgid ""
 "there. Native provider web search in public and private channels is "
 "controlled separately by **Allow native web search in channels**."
 msgstr ""
+"통합은 기본적으로 개인 메시지에서 사용할 수 있습니다. 실험적 설정인 **Enable Channel "
+"Mention Tool Calling**을 활성화하면, 공개 채널에서 에이전트를 @멘션할 때 해당 "
+"채널에서도 도구 호출이 허용될 수 있습니다. 공개 및 비공개 채널의 네이티브 공급자 웹 "
+"검색은 **Allow native web search in channels**로 별도로 제어됩니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:502
 msgid "Model Context Protocol (MCP) Integration"
-msgstr ""
+msgstr "Model Context Protocol(MCP) 통합"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:504
 msgid ""
@@ -2012,6 +2037,8 @@ msgid ""
 "exposed by MCP servers, including the embedded Mattermost tools and "
 "optional remote servers."
 msgstr ""
+"Model Context Protocol(MCP) 통합을 통해 에이전트는 내장 OKR.BEST 도구와 선택적 원격 "
+"서버를 포함해 MCP 서버가 노출하는 도구를 사용할 수 있습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:506
 msgid ""
@@ -2021,16 +2048,21 @@ msgid ""
 "Console. Agent-level MCP access is configured separately on each agent's "
 "**MCPs** tab."
 msgstr ""
+"MCP 클라이언트와 내장 OKR.BEST MCP 서버는 항상 활성화되어 있습니다. 관리자는 관리자 "
+"도구의 MCP UI에서 원격 MCP 서버, 연결 시간 초과, 도구별 활성화 상태 및 승인 정책을 "
+"관리합니다. 에이전트 수준의 MCP 접근은 각 에이전트의 **MCPs** 탭에서 별도로 "
+"구성됩니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:510
 msgid ""
 "Navigate to **System Console > Plugins > Agents > Model Context Protocol "
 "(MCP)**."
 msgstr ""
+"**관리자 도구 > 플러그인 > Agents > Model Context Protocol (MCP)**로 이동합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:511
 msgid "Use the **Configuration** tab for:"
-msgstr ""
+msgstr "**Configuration** 탭을 다음 용도로 사용합니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:513
 msgid ""
@@ -2038,24 +2070,31 @@ msgid ""
 "external MCP clients. See [Mattermost MCP Server](#mattermost-mcp-"
 "server)."
 msgstr ""
+"**Enable Mattermost MCP Server (HTTP)**: 외부 MCP 클라이언트를 위한 선택적 HTTP "
+"엔드포인트. [Mattermost MCP Server](#mattermost-mcp-server)를 참고하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:514
 msgid ""
 "**Connection Idle Timeout (minutes)**: Timeout for inactive user MCP "
 "connections (default: 30 minutes)."
 msgstr ""
+"**Connection Idle Timeout (minutes)**: 비활성 사용자 MCP 연결의 시간 초과(기본값: "
+"30분)."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:515
 msgid ""
 "Remote MCP servers, including URL, custom headers, OAuth client settings,"
 " and per-server enablement."
 msgstr ""
+"URL, 사용자 정의 헤더, OAuth 클라이언트 설정, 서버별 활성화를 포함한 원격 MCP 서버."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:517
 msgid ""
 "Use the **Tools** tab to review discovered tools and set each tool's "
 "enabled state and approval policy."
 msgstr ""
+"**Tools** 탭을 사용해 검색된 도구를 검토하고 각 도구의 활성화 상태와 승인 정책을 "
+"설정합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:518
 msgid ""
@@ -2063,6 +2102,9 @@ msgid ""
 "**MCPs** tab to choose whether that agent can use all MCP tools "
 "automatically or only a selected set of tools."
 msgstr ""
+"**Agents** 페이지에서 에이전트를 생성하거나 편집할 때, **MCPs** 탭을 사용해 해당 "
+"에이전트가 모든 MCP 도구를 자동으로 사용할지 또는 선택된 도구 집합만 사용할지 "
+"선택합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:520
 msgid ""
@@ -2071,50 +2113,56 @@ msgid ""
 " are per-user, this live refresh applies only to the user who completed "
 "the connect or disconnect action."
 msgstr ""
+"**Tools** 탭은 현재 사용자가 OAuth 기반 MCP 서버를 연결하거나 연결 해제한 후 자동으로 "
+"새로 고쳐집니다. MCP OAuth 연결은 사용자별이므로, 이 실시간 새로 고침은 연결 또는 연결 "
+"해제 작업을 완료한 사용자에게만 적용됩니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:522
 msgid ""
 "You can't disable MCP entirely from the System Console. To limit access, "
 "disable individual tools or change their policy in the **Tools** tab."
 msgstr ""
+"관리자 도구에서 MCP를 완전히 비활성화할 수는 없습니다. 접근을 제한하려면 **Tools** "
+"탭에서 개별 도구를 비활성화하거나 정책을 변경하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:525
 msgid "Add MCP servers"
-msgstr ""
+msgstr "MCP 서버 추가"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:527
 msgid ""
 "On the **Configuration** tab, select **Add Remote MCP Server** to "
 "configure a new server."
 msgstr ""
+"**Configuration** 탭에서 **Add Remote MCP Server**를 선택해 새 서버를 구성합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:528
 msgid "Configure server settings:"
-msgstr ""
+msgstr "서버 설정을 구성합니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:530
 msgid "**Server URL**: The endpoint URL for your MCP server."
-msgstr ""
+msgstr "**Server URL**: MCP 서버의 엔드포인트 URL."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:531
 msgid ""
 "**Custom Headers**: Additional headers required by your MCP server "
 "(optional)."
-msgstr ""
+msgstr "**Custom Headers**: MCP 서버에 필요한 추가 헤더(선택)."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:532
 msgid ""
 "**Server Name**: Descriptive name for the server (auto-generated if not "
 "provided)."
-msgstr ""
+msgstr "**Server Name**: 서버에 대한 설명 이름(제공하지 않으면 자동 생성)."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:534
 msgid "Select **Save** to add the server."
-msgstr ""
+msgstr "서버를 추가하려면 **Save**를 선택합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:536
 msgid "Configure OAuth-backed servers for agents"
-msgstr ""
+msgstr "에이전트용 OAuth 기반 서버 구성"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:538
 msgid ""
@@ -2126,6 +2174,12 @@ msgid ""
 "after you connect or disconnect, so you don't need to reopen it to see "
 "updated server status."
 msgstr ""
+"**Agents** 페이지에서 에이전트를 생성하거나 편집할 때, 전체 페이지 에이전트 편집기의 "
+"**MCPs** 탭에는 해당 에이전트가 사용할 수 있는 MCP 서버가 나열됩니다. OAuth 기반 "
+"서버가 아직 사용자 계정에 연결되어 있지 않으면, 해당 행에 **Connect** 버튼이 표시되어 "
+"편집기를 벗어나지 않고 공급자 로그인 절차를 완료할 수 있습니다. MCPs 탭은 연결 또는 "
+"연결 해제 후 자동으로 새로 고쳐지므로, 업데이트된 서버 상태를 보기 위해 다시 열 필요가 "
+"없습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:540
 msgid ""
@@ -2134,6 +2188,9 @@ msgid ""
 "agent in this state grants the agent access to every tool that server "
 "exposes after a user connects to that provider."
 msgstr ""
+"연결 해제된 OAuth 기반 서버가 현재 도구를 노출하지 않더라도, 에이전트를 구성하는 동안 "
+"해당 서버를 켤 수 있습니다. 이 상태로 에이전트를 저장하면, 사용자가 해당 공급자에 "
+"연결한 후 그 서버가 노출하는 모든 도구에 대한 접근 권한이 에이전트에 부여됩니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:542
 msgid ""
@@ -2141,6 +2198,9 @@ msgid ""
 "setting. When enabled, the agent can use every currently available MCP "
 "tool as well as MCP tools added later."
 msgstr ""
+"**Automatically enable all MCP tools** 옵션은 가장 광범위한 설정입니다. 활성화하면 "
+"에이전트는 현재 사용 가능한 모든 MCP 도구와 이후에 추가되는 MCP 도구를 사용할 수 "
+"있습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:544
 msgid ""
@@ -2149,34 +2209,43 @@ msgid ""
 "still follows the policy configured in the **Tools** tab and each user's "
 "Mattermost and provider permissions."
 msgstr ""
+"에이전트에 대해 서버나 도구를 활성화하면 에이전트가 사용할 수 있는 항목이 제어되지만, "
+"도구 승인 정책을 우회하지는 않습니다. 도구 실행은 여전히 **Tools** 탭에 구성된 정책과 "
+"각 사용자의 OKR.BEST 및 공급자 권한을 따릅니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:546
 msgid "Management"
-msgstr ""
+msgstr "관리"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:548
 msgid ""
 "**Connection Management**: The system automatically manages user "
 "connections to MCP servers"
 msgstr ""
+"**연결 관리**: 시스템이 MCP 서버에 대한 사용자 연결을 자동으로 관리합니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:549
 msgid ""
 "**Idle Cleanup**: Inactive client connections are automatically closed "
 "after the configured timeout"
 msgstr ""
+"**유휴 정리**: 비활성 클라이언트 연결은 구성된 시간 초과 후 자동으로 닫힙니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:550
 msgid ""
 "**Per-User Connections**: Each user gets their own connection to MCP "
 "servers for security and isolation"
 msgstr ""
+"**사용자별 연결**: 보안과 격리를 위해 각 사용자는 MCP 서버에 대한 고유한 연결을 "
+"갖습니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:551
 msgid ""
 "**Tool Policies**: Use the **Tools** tab to allow, require approval for, "
 "or disable individual tools"
 msgstr ""
+"**도구 정책**: **Tools** 탭을 사용해 개별 도구를 허용하거나, 승인을 요구하거나, "
+"비활성화합니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:552
 msgid ""
@@ -2184,10 +2253,13 @@ msgid ""
 "allowed for the selected agent. Tool use is still subject to admin tool "
 "policies and the user's Mattermost permissions"
 msgstr ""
+"**에이전트 범위 지정**: 오른쪽 사이드바(RHS)의 **Tools** 팝오버에는 선택한 에이전트에 "
+"허용된 MCP 제공자만 표시됩니다. 도구 사용은 여전히 관리자 도구 정책과 사용자의 "
+"OKR.BEST 권한을 따릅니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:554
 msgid "OAuth-backed MCP servers"
-msgstr ""
+msgstr "OAuth 기반 MCP 서버"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:556
 msgid ""
@@ -2199,6 +2271,12 @@ msgid ""
 "user's stored token with `DELETE /plugins/mattermost-ai/mcp/oauth/<server"
 " name>`."
 msgstr ""
+"일부 MCP 서버는 OKR.BEST 사용자별 OAuth를 요구합니다. 이러한 서버의 경우, 플러그인은 "
+"`needsOAuth`와 `authURL`을 Agents 웹앱에 노출하여 UI가 인증이 필요한 시점과 절차를 "
+"시작할 위치를 표시할 수 있도록 합니다. 웹앱은 플러그인 경로 `GET /plugins"
+"/mattermost-ai/mcp/oauth/<server name>/start`를 통해 OAuth를 시작하며, `DELETE "
+"/plugins/mattermost-ai/mcp/oauth/<server name>`로 현재 사용자의 저장된 토큰을 지울 "
+"수 있습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:558
 msgid ""
@@ -2207,6 +2285,9 @@ msgid ""
 "**Connect** when the signed-in user is not authenticated, and "
 "**Disconnect** when an OAuth session applies."
 msgstr ""
+"**Agents 패널(웹 및 데스크톱):** Agents 오른쪽 사이드바에서 새 대화를 시작하고 "
+"**Tools**를 엽니다. OAuth 기반 서버는 로그인한 사용자가 인증되지 않았을 때 "
+"**Connect**를, OAuth 세션이 적용 중일 때 **Disconnect**를 표시합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:560
 msgid ""
@@ -2217,6 +2298,11 @@ msgid ""
 "administrator account. Each end user must authenticate separately, even "
 "after an admin has connected in the System Console."
 msgstr ""
+"**관리자 도구(관리 도구 구성):** **관리자 도구 > 플러그인 > Agents > MCP "
+"Servers**에서 OAuth 기반 서버를 펼치면, 해당 서버의 도구 목록을 가져오고 도구별 승인 "
+"정책을 구성하려면 인증해야 함을 알 수 있습니다. 이 로그인은 사용자의 관리자 계정에만 "
+"적용됩니다. 관리자가 관리자 도구에서 연결한 후에도 각 최종 사용자는 별도로 인증해야 "
+"합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:562
 msgid ""
@@ -2225,6 +2311,9 @@ msgid ""
 "**Tools** menu to view connection state and run **Connect** or "
 "**Disconnect**."
 msgstr ""
+"**대화:** 플러그인은 더 이상 MCP OAuth를 요청하기 위해 채널 내 또는 스레드 내 임시 "
+"메시지를 게시하지 않습니다. 사용자는 Agents 웹앱의 **Tools** 메뉴를 사용해 연결 "
+"상태를 확인하고 **Connect** 또는 **Disconnect**를 실행해야 합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:564
 msgid ""
@@ -2232,6 +2321,9 @@ msgid ""
 "app or other clients that do not use the Agents webapp. Users need "
 "Mattermost web or desktop to connect OAuth-backed MCP servers."
 msgstr ""
+"**모바일 및 기타 클라이언트:** MCP OAuth는 모바일 앱이나 Agents 웹앱을 사용하지 않는 "
+"기타 클라이언트에서는 시작되지 않습니다. OAuth 기반 MCP 서버에 연결하려면 OKR.BEST "
+"웹이나 데스크톱이 필요합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:566
 msgid ""
@@ -2240,10 +2332,13 @@ msgid ""
 "matches the origin of the configured MCP server **Server URL**. This "
 "prevents cross-origin metadata injection during discovery."
 msgstr ""
+"**사용자 정의 MCP OAuth 설정:** OAuth 시작 URL에 `resource_metadata` 쿼리 "
+"매개변수가 포함된 경우, 그 출처가 구성된 MCP 서버 **Server URL**의 출처와 일치할 때만 "
+"허용됩니다. 이는 검색 중 교차 출처 메타데이터 주입을 방지합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:568
 msgid "Atlassian MCP server authorization"
-msgstr ""
+msgstr "Atlassian MCP 서버 인증"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:570
 msgid ""
@@ -2252,76 +2347,85 @@ msgid ""
 "Mattermost domain. This configuration must be completed in Atlassian's "
 "admin console."
 msgstr ""
+"사용자가 Atlassian MCP 서버에 연결할 때, 조직 관리자가 OKR.BEST 도메인을 인증해야 "
+"하는 인증 오류가 발생할 수 있습니다. 이 구성은 Atlassian의 관리 콘솔에서 완료해야 "
+"합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:572
 msgid "**To authorize your Mattermost domain:**"
-msgstr ""
+msgstr "**OKR.BEST 도메인을 인증하려면:**"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:574
 msgid ""
 "Go to [admin.atlassian.com](https://admin.atlassian.com) and select your "
 "organization."
 msgstr ""
+"[admin.atlassian.com](https://admin.atlassian.com)으로 이동하여 조직을 "
+"선택합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:575
 msgid "Go to **Apps > AI settings > Rovo MCP server**."
-msgstr ""
+msgstr "**Apps > AI settings > Rovo MCP server**로 이동합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:576
 msgid ""
 "Select **Add domain** and enter your Mattermost domain with the path "
 "wildcard: `https://your-instance.mattermost.cloud/**`"
 msgstr ""
+"**Add domain**을 선택하고 경로 와일드카드와 함께 OKR.BEST 도메인을 입력합니다: "
+"`https://your-instance.mattermost.cloud/**`"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:577
 msgid "Select **Save**."
-msgstr ""
+msgstr "**Save**를 선택합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:579
 msgid ""
 "**Important:** The `/**` path wildcard is required. Example domain "
 "patterns:"
-msgstr ""
+msgstr "**중요:** `/**` 경로 와일드카드가 필요합니다. 예시 도메인 패턴:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:580
 msgid "Single instance: `https://your-company.mattermost.cloud/**`"
-msgstr ""
+msgstr "단일 인스턴스: `https://your-company.mattermost.cloud/**`"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:581
 msgid "All subdomains: `https://*.mattermost.cloud/**`"
-msgstr ""
+msgstr "모든 하위 도메인: `https://*.mattermost.cloud/**`"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:582
 msgid "Custom domain: `https://chat.yourcompany.com/**`"
-msgstr ""
+msgstr "사용자 정의 도메인: `https://chat.yourcompany.com/**`"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:584
 msgid ""
 "After adding the domain, wait 1-2 minutes for changes to propagate before"
 " users retry the connection."
 msgstr ""
+"도메인을 추가한 후, 사용자가 연결을 다시 시도하기 전에 변경 사항이 전파되도록 1~2분 "
+"기다리세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:586
 msgid "**Troubleshooting:**"
-msgstr ""
+msgstr "**문제 해결:**"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:587
 msgid ""
 "Verify you have Organization Admin permissions (Site Admin is "
 "insufficient)"
-msgstr ""
+msgstr "Organization Admin 권한이 있는지 확인하세요(Site Admin으로는 부족함)"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:588
 msgid "Confirm you're configuring the organization that owns the Atlassian site"
-msgstr ""
+msgstr "Atlassian 사이트를 소유한 조직을 구성하고 있는지 확인하세요"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:589
 msgid "Ensure the domain includes `https://` and the `/**` wildcard"
-msgstr ""
+msgstr "도메인에 `https://`와 `/**` 와일드카드가 포함되어 있는지 확인하세요"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:590
 msgid "Check for typos in the domain"
-msgstr ""
+msgstr "도메인에 오타가 없는지 확인하세요"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:592
 msgid ""
@@ -2329,6 +2433,9 @@ msgid ""
 "settings](https://support.atlassian.com/security-and-access-policies/docs"
 "/control-atlassian-rovo-mcp-server-settings/)."
 msgstr ""
+"자세한 내용은 [MCP 서버 설정에 대한 Atlassian "
+"문서](https://support.atlassian.com/security-and-access-policies/docs"
+"/control-atlassian-rovo-mcp-server-settings/)를 참고하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:594
 msgid ""
@@ -2340,10 +2447,15 @@ msgid ""
 "this only with appropriate trust boundaries and security mitigations in "
 "place."
 msgstr ""
+"**참고:** 기본적으로 플러그인은 AI가 생성한 Markdown 링크(예: JIRA 티켓 링크)를 클릭 "
+"가능한 링크로 렌더링하지 않습니다. 잠재적 피싱 및 데이터 유출 위험을 줄이기 위해 URL은 "
+"일반 텍스트로 표시됩니다. 관리자가 **Render AI-generated links**(`allowUnsafeLinks`)를 "
+"활성화하면 AI가 생성한 링크가 클릭 가능해질 수 있으므로, 적절한 신뢰 경계와 보안 완화 "
+"조치가 마련된 경우에만 활성화하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:596
 msgid "Mattermost MCP Server"
-msgstr ""
+msgstr "OKR.BEST MCP Server"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:598
 msgid ""
@@ -2353,6 +2465,10 @@ msgid ""
 " messages, search content, create posts, and manage channels and teams "
 "programmatically."
 msgstr ""
+"OKR.BEST MCP Server를 통해 AI 에이전트와 외부 애플리케이션은 Model Context "
+"Protocol(MCP)을 통해 OKR.BEST 인스턴스와 상호작용할 수 있습니다. 이는 AI "
+"어시스턴트가 메시지를 읽고, 콘텐츠를 검색하고, 글을 작성하고, 채널과 팀을 프로그래밍 "
+"방식으로 관리할 수 있게 하는 표준화된 프로토콜입니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:600
 msgid ""
@@ -2364,10 +2480,15 @@ msgid ""
 "Console, HTTP endpoint for external clients, and agent MCP settings "
 "below)."
 msgstr ""
+"**독립 실행형 MCP 서버(별도 프로세스 / stdio):** OKR.BEST 서버 외부에서 독립 실행형 "
+"`mattermost-mcp-server` 바이너리를 실행하는 것은 **개발 및 로컬 사용 전용**이며 "
+"프로덕션용이 **아닙니다**. 프로덕션 배포는 내장 OKR.BEST MCP 서버와 이 플러그인의 "
+"지원되는 구성(관리자 도구, 외부 클라이언트용 HTTP 엔드포인트, 아래의 에이전트 MCP "
+"설정)을 사용해야 합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:602
 msgid "Overview"
-msgstr ""
+msgstr "개요"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:604
 msgid "The Mattermost MCP Server provides:"
