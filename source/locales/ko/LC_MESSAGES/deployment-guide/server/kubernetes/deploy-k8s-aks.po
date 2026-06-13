@@ -26,14 +26,18 @@ msgid ""
 ".mattermost-operator>`__ to install Mattermost on your existing Azure "
 "infrastructure."
 msgstr ""
+"지원되는 `Azure Marketplace Container Offer "
+"<https://azuremarketplace.microsoft.com/en-us/marketplace/apps/mattermost"
+".mattermost-operator>`__\\ 를 사용하여 기존 Azure 인프라에 OKR.BEST를 설치할 수 "
+"있습니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:7
 msgid "Before you begin"
-msgstr ""
+msgstr "시작하기 전에"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:9
 msgid "Before deploying, make sure you have the following:"
-msgstr ""
+msgstr "배포하기 전에 다음을 갖추고 있는지 확인하세요:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:11
 msgid ""
@@ -42,6 +46,10 @@ msgid ""
 "gateway/tutorial-ingress-controller-add-on-new>`_ enabled or another "
 "Ingress controller deployed."
 msgstr ""
+"**AKS 클러스터**: `Application Gateway Ingress Controller(AGIC) 추가 기능 "
+"<https://learn.microsoft.com/en-us/azure/application-gateway/tutorial-"
+"ingress-controller-add-on-new>`_\\ 이 활성화되어 있거나 다른 Ingress "
+"controller가 배포되어 있어야 합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:13
 msgid ""
@@ -51,12 +59,19 @@ msgid ""
 "Microsoft quick start guide <https://learn.microsoft.com/en-"
 "us/azure/postgresql/flexible-server/quickstart-create-server-portal>`_."
 msgstr ""
+"**PostgreSQL v13.0 이상 데이터베이스**: `Private Access가 적용된 Azure Database "
+"for PostgreSQL - Flexible Server <https://learn.microsoft.com/en-"
+"us/azure/postgresql/>`_\\ 를 권장합니다. `이 Microsoft 빠른 시작 가이드 "
+"<https://learn.microsoft.com/en-us/azure/postgresql/flexible-"
+"server/quickstart-create-server-portal>`_\\ 에 따라 하나를 배포하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:15
 msgid ""
 "**Private Network Connectivity**: Verify that there is network "
 "connectivity between your AKS cluster and the PostgreSQL database."
 msgstr ""
+"**사설 네트워크 연결**: AKS 클러스터와 PostgreSQL 데이터베이스 간에 네트워크 "
+"연결이 있는지 확인하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:17
 msgid ""
@@ -64,32 +79,38 @@ msgid ""
 "zone and provide a valid TLS key and certificate for the Ingress "
 "Controller."
 msgstr ""
+"**유효한 DNS 이름과 TLS 인증서**: DNS 영역에 접근할 수 있어야 하며 Ingress "
+"Controller용 유효한 TLS 키와 인증서를 제공해야 합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:19
 msgid ""
 "**Node Capacity**: At least 2 AKS nodes for high availability when "
 "deploying for 100 users or more."
 msgstr ""
+"**노드 용량**: 100명 이상을 위해 배포하는 경우 고가용성을 위한 최소 2개의 AKS "
+"노드."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:21
 msgid ""
 "**License Key**: Trial or Enterprise license to test high availability "
 "and other Enterprise features."
 msgstr ""
+"**라이선스 키**: 고가용성과 기타 Enterprise 기능을 테스트하기 위한 평가판 또는 "
+"Enterprise 라이선스."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:24
 msgid "Installation steps"
-msgstr ""
+msgstr "설치 단계"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:26
 msgid ""
 "The installation process includes deploying Mattermost and updating the "
 "server."
-msgstr ""
+msgstr "설치 과정은 OKR.BEST를 배포하고 서버를 업데이트하는 것을 포함합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:29
 msgid "Step 1: Deploy Mattermost"
-msgstr ""
+msgstr "1단계: OKR.BEST 배포"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:31
 msgid ""
@@ -97,6 +118,10 @@ msgid ""
 "<https://azuremarketplace.microsoft.com/en-us/marketplace/apps/mattermost"
 ".mattermost-operator>`_ and select **Get it now**."
 msgstr ""
+"`Azure Marketplace Container Offer "
+"<https://azuremarketplace.microsoft.com/en-us/marketplace/apps/mattermost"
+".mattermost-operator>`_\\ 에서 OKR.BEST를 배포하고 **Get it now**\\ 를 "
+"선택합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:33
 msgid ""
@@ -106,34 +131,42 @@ msgid ""
 "<https://learn.microsoft.com/en-gb/azure/aks/cluster-extensions?tabs"
 "=azure-cli>`_ to learn more."
 msgstr ""
+"또는 AKS 클러스터의 ``Extensions + Applications`` 섹션으로 이동하여 거기서 "
+"OKR.BEST 제품을 설치할 수도 있습니다. 자세한 내용은 `Microsoft 클러스터 확장 문서 "
+"<https://learn.microsoft.com/en-gb/azure/aks/cluster-extensions?tabs=azure-"
+"cli>`_\\ 를 방문하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:35
 msgid ""
 "Choose the **Resource Group** and the **Region** of your installed AKS "
 "and PostgreSQL database."
 msgstr ""
+"설치된 AKS와 PostgreSQL 데이터베이스의 **Resource Group**\\ 과 **Region**\\ 을 "
+"선택합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:37
 msgid "An example of the Azure AKS Project details screen."
-msgstr ""
+msgstr "Azure AKS Project 세부 정보 화면의 예시입니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:40
 msgid "Choose your AKS cluster."
-msgstr ""
+msgstr "AKS 클러스터를 선택합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:42
 msgid "An example of the Azure AKS cluster setup screen."
-msgstr ""
+msgstr "Azure AKS 클러스터 설정 화면의 예시입니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:45
 msgid ""
 "Fill in the details for your PostgreSQL database. Ensure the user "
 "specified has full access."
 msgstr ""
+"PostgreSQL 데이터베이스의 세부 정보를 입력합니다. 지정한 사용자가 전체 접근 "
+"권한을 갖고 있는지 확인하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:47
 msgid "An example of the Azure AKS Database setup screen."
-msgstr ""
+msgstr "Azure AKS Database 설정 화면의 예시입니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:51
 msgid ""
@@ -142,10 +175,13 @@ msgid ""
 " recommend using an S3-compatible storage service or an NFS-compatible "
 "server."
 msgstr ""
+"Deployment Name과 Deployment Size를 포함한 배포 세부 정보를 지정합니다. OKR.BEST "
+"인스턴스의 파일 저장소를 구성해야 합니다. S3 호환 스토리지 서비스나 NFS 호환 "
+"서버 사용을 권장합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:53
 msgid "An example of the Azure AKS Deployment Details setup screen."
-msgstr ""
+msgstr "Azure AKS Deployment Details 설정 화면의 예시입니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:56
 msgid ""
@@ -153,34 +189,40 @@ msgid ""
 "add-on is used in the following example to show the ingress annotations "
 "required."
 msgstr ""
+"OKR.BEST 설치 호스트 이름과 Ingress 세부 정보를 구성합니다. 다음 예시에서는 필요한 "
+"ingress 주석을 보여주기 위해 AGIC 추가 기능을 사용합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:58
 msgid ""
 "You can use any pre-installed Ingress Controller in your cluster as long "
 "as it supports Kubernetes Ingress and TLS termination."
 msgstr ""
+"Kubernetes Ingress와 TLS 종료를 지원하는 한, 클러스터에 사전 설치된 모든 Ingress "
+"Controller를 사용할 수 있습니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:65
 msgid "Additionally, we recommend considering:"
-msgstr ""
+msgstr "추가로 다음을 고려할 것을 권장합니다:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:67
 msgid "Enforcing a minimum TLS version (e.g., TLS 1.2)."
-msgstr ""
+msgstr "최소 TLS 버전 적용(예: TLS 1.2)."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:68
 msgid ""
 "Deploying a Web Application Firewall (WAF) for additional protection, if "
 "supported by your ingress controller."
 msgstr ""
+"ingress controller가 지원하는 경우, 추가 보호를 위한 웹 애플리케이션 "
+"방화벽(WAF) 배포."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:69
 msgid "Limiting access using Kubernetes Network Policies."
-msgstr ""
+msgstr "Kubernetes 네트워크 정책을 사용한 접근 제한."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:71
 msgid "An example of the Azure AKS Networking Details setup screen."
-msgstr ""
+msgstr "Azure AKS Networking Details 설정 화면의 예시입니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:74
 msgid ""
@@ -188,24 +230,31 @@ msgid ""
 "installed plugin from the **AKS Extensions + Applications** page under "
 "the **Settings** menu."
 msgstr ""
+"모든 것이 실행 중인지 확인하세요. **Settings** 메뉴 아래의 **AKS Extensions + "
+"Applications** 페이지에서 설치된 플러그인을 확인할 수 있어야 합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:76
 msgid ""
 "When the deployment is complete, obtain the hostname or IP address of "
 "your Mattermost deployment using the following command:"
 msgstr ""
+"배포가 완료되면 다음 명령을 사용하여 OKR.BEST 배포의 호스트 이름이나 IP 주소를 "
+"가져옵니다:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:82
 msgid ""
 "Use your IP address from the ``ADDRESS`` column, and create a DNS record "
 "in your domain registration service."
 msgstr ""
+"``ADDRESS`` 열의 IP 주소를 사용하여 도메인 등록 서비스에 DNS 레코드를 "
+"생성하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:84
 msgid ""
 "Access your working Mattermost installation at the URL you’ve determined "
 "in your DNS record."
 msgstr ""
+"DNS 레코드에서 정한 URL에서 작동 중인 OKR.BEST 설치에 접근하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:86
 msgid ""
@@ -213,36 +262,44 @@ msgid ""
 ":doc:`Administration Guide </administration-guide/administration-guide-"
 "index>`."
 msgstr ""
+":doc:`관리 가이드 </administration-guide/administration-guide-index>`\\ 를 "
+"방문하여 OKR.BEST 서버 관리에 대해 자세히 알아보세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:89
 msgid "Step 2: Upgrade Mattermost via your AKS cluster"
-msgstr ""
+msgstr "2단계: AKS 클러스터를 통해 OKR.BEST 업그레이드"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:91
 msgid ""
 "Visit the ``Extensions + Applications`` section of your AKS cluster where"
 " your Mattermost installation is deployed."
 msgstr ""
+"OKR.BEST 설치가 배포된 AKS 클러스터의 ``Extensions + Applications`` 섹션을 "
+"방문합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:92
 msgid ""
 "You can enable minor version auto upgrades since these are not updating "
 "Mattermost version"
 msgstr ""
+"이러한 업그레이드는 OKR.BEST 버전을 업데이트하지 않으므로 마이너 버전 자동 "
+"업그레이드를 활성화할 수 있습니다"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:93
 msgid ""
 "Expand the ``Configuration Settings`` table and add the below "
 "configuration and the version you want to install as a value."
 msgstr ""
+"``Configuration Settings`` 표를 펼치고 아래 구성과 설치하려는 버전을 값으로 "
+"추가합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:102
 msgid "Select **Save** and wait for the upgrade."
-msgstr ""
+msgstr "**Save**\\ 를 선택하고 업그레이드를 기다립니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:105
 msgid "Looking for a sovereign deployment on Azure Local?"
-msgstr ""
+msgstr "Azure Local의 주권적 배포를 찾고 있나요?"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:107
 msgid ""
@@ -251,6 +308,9 @@ msgid ""
 " cloud platform that enables you to run Mattermost on-premises while "
 "maintaining integration with Microsoft Teams and M365."
 msgstr ""
+"데이터 주권을 갖춘 온프레미스 배포가 필요한 조직을 위해, **Azure Local**(이전 "
+"명칭 Azure Stack HCI)은 Microsoft Teams 및 M365와의 통합을 유지하면서 OKR.BEST를 "
+"온프레미스에서 실행할 수 있게 해주는 하이브리드 클라우드 플랫폼을 제공합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:109
 msgid ""
@@ -259,6 +319,10 @@ msgid ""
 "your security requirements. `Talk to an Expert <https://mattermost.com"
 "/contact-sales/>`_ to discuss your Azure Local deployment needs."
 msgstr ""
+"최적의 구성과 보안 요구 사항 준수를 보장하기 위해 Azure Local 배포에는 "
+"**Mattermost Professional Services**\\ 를 활용할 것을 권장합니다. Azure Local "
+"배포 요구 사항을 논의하려면 `전문가와 상담 <https://mattermost.com/contact-"
+"sales/>`_\\ 하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-aks.rst:113
 msgid ""
@@ -266,4 +330,6 @@ msgid ""
 "you spin up to host a Mattermost server, and Azure credits cannot be "
 "applied towards the purchase of a Mattermost license."
 msgstr ""
+"OKR.BEST 서버를 호스팅하기 위해 가동하는 모든 인프라와 관련된 Azure 비용은 "
+"사용자의 책임이며, Azure 크레딧은 OKR.BEST 라이선스 구매에 적용할 수 없습니다."
 
