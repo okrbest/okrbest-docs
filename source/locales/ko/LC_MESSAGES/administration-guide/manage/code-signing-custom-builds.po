@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:2
 msgid "Code signing custom builds"
-msgstr ""
+msgstr "사용자 지정 빌드 코드 서명"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다."
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -40,108 +42,120 @@ msgid ""
 " on how to code sign a build using your own certificates for Windows, "
 "Mac, and Linux."
 msgstr ""
+"코드 서명은 사용자 지정 ``Mattermost`` 빌드의 진위성과 무결성을 보장하는 필수 프로세스입니다. 이 "
+"가이드는 Windows, Mac, Linux에서 자체 인증서를 사용해 빌드에 코드 서명하는 단계를 제공합니다."
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:11
 msgid ""
 "Make sure to follow each operating system's guidelines and best practices"
 " for signing applications."
 msgstr ""
+"애플리케이션 서명에 대한 각 운영 체제의 지침과 모범 사례를 반드시 따르세요."
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:14
 msgid "Prerequisites"
-msgstr ""
+msgstr "사전 요구 사항"
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:18
 msgid ""
 "**Code Signing Certificate**: Obtain a certificate from a Certificate "
 "Authority (CA) or use a self-signed certificate if suitable."
 msgstr ""
+"**코드 서명 인증서**: 인증 기관(CA)에서 인증서를 받거나 적합한 경우 자체 서명 인증서를 사용합니다."
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:19
 msgid "**SignTool**: Available as part of the Windows SDK."
-msgstr ""
+msgstr "**SignTool**: Windows SDK의 일부로 제공됩니다."
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:23
 msgid "**GPG Key**: Create a GPG key if you don't have one."
-msgstr ""
+msgstr "**GPG 키**: GPG 키가 없으면 생성합니다."
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:24
 msgid ""
 "**GnuPG**: Install `GnuPG <https://gnupg.org/howtos/card-"
 "howto/en/ch02.html>`_ if not already installed."
 msgstr ""
+"**GnuPG**: 아직 설치되어 있지 않다면 `GnuPG <https://gnupg.org/howtos/card-howto/en/ch02.html>`_\\ 를 "
+"설치합니다."
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:28
 msgid ""
 "**Developer ID Application Certificate**: Obtain from Apple. It requires "
 "an Apple Developer account."
 msgstr ""
+"**Developer ID Application 인증서**: Apple에서 받습니다. Apple Developer 계정이 필요합니다."
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:29
 msgid ""
 "**Xcode**: Ensure `Xcode <https://developer.apple.com/xcode/>`_ is "
 "installed."
 msgstr ""
+"**Xcode**: `Xcode <https://developer.apple.com/xcode/>`_\\ 가 설치되어 있는지 확인합니다."
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:32
 msgid "Process"
-msgstr ""
+msgstr "프로세스"
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:36
 msgid ""
 "**Install SignTool**: Install the Windows SDK to access the ``SignTool`` "
 "utility."
 msgstr ""
+"**SignTool 설치**: ``SignTool`` 유틸리티에 접근하려면 Windows SDK를 설치합니다."
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:38
 msgid ""
 "**Obtain a Code Signing Certificate**: Purchase or create a certificate "
 "(``.pfx`` file) via a CA."
 msgstr ""
+"**코드 서명 인증서 받기**: CA를 통해 인증서(``.pfx`` 파일)를 구매하거나 생성합니다."
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:40
 msgid ""
 "**Import the Certificate**: Open the ``.pfx`` file and import it into the"
 " Windows Certificate Store."
 msgstr ""
+"**인증서 가져오기**: ``.pfx`` 파일을 열고 Windows 인증서 저장소로 가져옵니다."
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:42
 msgid "**Sign the Executable**"
-msgstr ""
+msgstr "**실행 파일 서명**"
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:44
 msgid "Open the command prompt as Administrator."
-msgstr ""
+msgstr "명령 프롬프트를 관리자 권한으로 엽니다."
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:45
 msgid "Use ``SignTool`` to sign your executable:"
-msgstr ""
+msgstr "``SignTool``\\ 을 사용해 실행 파일에 서명합니다:"
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:53
 msgid ""
 "**Create or Import Your GPG Key**: If you don't have a GPG key, create "
 "one:"
 msgstr ""
+"**GPG 키 생성 또는 가져오기**: GPG 키가 없으면 하나 생성합니다:"
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:59
 msgid "Alternatively, import an existing GPG key, if you have one:"
-msgstr ""
+msgstr "또는 기존 GPG 키가 있다면 가져옵니다:"
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:65
 msgid "**Sign the Package**: Use ``dpkg-sig`` to sign a Debian package:"
-msgstr ""
+msgstr "**패키지 서명**: ``dpkg-sig``\\ 를 사용해 Debian 패키지에 서명합니다:"
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:71
 msgid "Use ``rpmsign`` to sign an RPM package:"
-msgstr ""
+msgstr "``rpmsign``\\ 을 사용해 RPM 패키지에 서명합니다:"
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:77
 msgid "**Verify the Signature**: Verify the signature of a ``.deb`` package:"
-msgstr ""
+msgstr "**서명 확인**: ``.deb`` 패키지의 서명을 확인합니다:"
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:83
 msgid "Verify the signature of an ``.rpm`` package:"
-msgstr ""
+msgstr "``.rpm`` 패키지의 서명을 확인합니다:"
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:91
 msgid ""
@@ -149,44 +163,52 @@ msgid ""
 "Application`` certificate in your Apple Developer account and download "
 "it."
 msgstr ""
+"**코드 서명 인증서 받기**: Apple Developer 계정에서 ``Developer ID Application`` 인증서를 생성하고 "
+"다운로드합니다."
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:93
 msgid ""
 "**Import the Certificate**: Double-click the certificate to import it "
 "into the Keychain."
 msgstr ""
+"**인증서 가져오기**: 인증서를 두 번 클릭해 키체인으로 가져옵니다."
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:95
 msgid ""
 "**Sign the Application**: Use the ``codesign`` tool from Xcode to sign "
 "your application:"
 msgstr ""
+"**애플리케이션 서명**: Xcode의 ``codesign`` 도구를 사용해 애플리케이션에 서명합니다:"
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:101
 msgid ""
 "[Optional] **Verify the Signature**: Verify the signature to ensure "
 "everything is correctly signed:"
 msgstr ""
+"[선택 사항] **서명 확인**: 모든 항목이 올바르게 서명되었는지 확인하려면 서명을 검증합니다:"
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:109
 msgid "Summary"
-msgstr ""
+msgstr "요약"
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:111
 msgid ""
 "**Windows**: Use ``SignTool`` from the Windows SDK with your imported "
 "code signing certificate."
 msgstr ""
+"**Windows**: 가져온 코드 서명 인증서와 함께 Windows SDK의 ``SignTool``\\ 을 사용합니다."
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:112
 msgid ""
 "**Mac**: Use ``codesign`` and ``spctl`` tools from Xcode with your Apple "
 "Developer ID certificate."
 msgstr ""
+"**Mac**: Apple Developer ID 인증서와 함께 Xcode의 ``codesign`` 및 ``spctl`` 도구를 사용합니다."
 
 #: ../../source/administration-guide/manage/code-signing-custom-builds.rst:113
 msgid ""
 "**Linux**: Use ``GnuPG`` to create/sign with your GPG key, ``dpkg-sig`` "
 "for ``.deb`` packages, and ``rpmsign`` for ``.rpm`` packages."
 msgstr ""
-
+"**Linux**: GPG 키로 생성/서명하려면 ``GnuPG``\\ 를 사용하고, ``.deb`` 패키지에는 ``dpkg-sig``\\ 를, "
+"``.rpm`` 패키지에는 ``rpmsign``\\ 을 사용합니다."

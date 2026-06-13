@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:2
 msgid "User satisfaction surveys"
-msgstr ""
+msgstr "사용자 만족도 설문"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다."
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -40,6 +42,9 @@ msgid ""
 "<https://mattermost.com/privacy-policy/>`_ for information on the "
 "collection and use of information received through our services."
 msgstr ""
+"피드백은 사용자로부터 직접 의견을 듣고 사용자 만족도를 측정하며 제품 품질을 개선하는 데 사용됩니다. "
+"서비스를 통해 수신한 정보의 수집 및 사용에 대한 자세한 내용은 `개인정보 처리방침 "
+"<https://mattermost.com/privacy-policy/>`_\\ 을 참고하세요."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:11
 msgid ""
@@ -51,14 +56,19 @@ msgid ""
 " for enhanced customization options, and local data storage, without "
 "telemetry data transmission back to Mattermost."
 msgstr ""
+"**Mattermost 사용자 만족도 설문은 Mattermost v10.11부터 사용 중단 예정입니다**. 새 OKR.BEST "
+"배포에는 더 이상 사전 패키지 플러그인으로 포함되지 않습니다. 이 플러그인을 활성화한 기존 배포는 계속 "
+"작동하지만, 향상된 사용자 지정 옵션과 로컬 데이터 저장을 제공하고 Mattermost로 텔레메트리 데이터를 "
+"전송하지 않는 :doc:`사용자 설문 </administration-guide/configure/manage-user-surveys>`\\ 으로 마이그레이션하는 "
+"것을 강력히 권장합니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:14
 msgid "Administration"
-msgstr ""
+msgstr "관리"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:17
 msgid "Is the survey enabled by default?"
-msgstr ""
+msgstr "설문이 기본적으로 활성화되어 있나요?"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:19
 msgid ""
@@ -69,6 +79,9 @@ msgid ""
 "guide/manage/telemetry>` disabled, meaning no surveys or data collection "
 "occurs."
 msgstr ""
+"**Mattermost Server v10.11 이전 버전**: 사용자 만족도 설문은 사전 패키지 플러그인이며, 모든 서버에서 "
+"기본적으로 활성화됩니다. 그러나 :doc:`오류 및 진단 보고 </administration-guide/manage/telemetry>`\\ 가 "
+"비활성화된 서버에서는 플러그인이 활성화되지 않으므로 설문이나 데이터 수집이 발생하지 않습니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:21
 msgid ""
@@ -78,10 +91,13 @@ msgid ""
 "integration </administration-guide/configure/manage-user-surveys>` "
 "instead."
 msgstr ""
+"**Mattermost Server v10.11 이상**: 새 배포에는 사용자 만족도 설문 플러그인이 더 이상 사전 패키지 "
+"플러그인으로 포함되지 않습니다. 대신 :doc:`Mattermost 사용자 설문 통합 </administration-guide/configure/manage-user-"
+"surveys>`\\ 을 사용하는 것이 좋습니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:24
 msgid "How can surveys be disabled?"
-msgstr ""
+msgstr "설문을 어떻게 비활성화할 수 있나요?"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:26
 msgid ""
@@ -89,6 +105,8 @@ msgid ""
 "> Plugins > Plugin Management** will disable surveys and all data "
 "collection by the plugin."
 msgstr ""
+"**관리자 도구 > 플러그인 > 플러그인 관리**\\ 에서 **사용자 만족도 설문** 플러그인을 비활성화하면 "
+"설문과 플러그인의 모든 데이터 수집이 비활성화됩니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:30
 msgid ""
@@ -97,52 +115,60 @@ msgid ""
 " still enabled, surveys won't be scheduled but users can still send "
 "written feedback by messaging Surveybot."
 msgstr ""
+"**관리자 도구 > 플러그인 > 사용자 만족도 설문**\\ 의 플러그인 구성에서 설문이 비활성화되었지만 "
+"플러그인 자체는 여전히 활성화된 경우 설문은 예약되지 않지만 사용자는 Surveybot에 메시지를 보내 "
+"서면 피드백을 제출할 수 있습니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:31
 msgid ""
 "When the plugin or surveys in the plugin configuration are disabled, they"
 " remain disabled for subsequent server upgrades."
 msgstr ""
+"플러그인 또는 플러그인 구성의 설문이 비활성화되면 이후 서버 업그레이드에서도 비활성화 상태가 유지됩니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:34
 msgid "When is the survey scheduled?"
-msgstr ""
+msgstr "설문은 언제 예약되나요?"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:36
 msgid ""
 "Users will receive surveys 21 days after every server upgrade, assuming "
 "the following conditions are true:"
 msgstr ""
+"다음 조건이 참이면 사용자는 각 서버 업그레이드 후 21일 뒤에 설문을 받습니다:"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:38
 msgid ""
 "User Satisfaction Surveys plugin is enabled in **System Console > Plugins"
 " > Plugin Management**."
 msgstr ""
+"**관리자 도구 > 플러그인 > 플러그인 관리**\\ 에서 사용자 만족도 설문 플러그인이 활성화되어 있습니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:39
 msgid ""
 "Surveys are enabled in the plugin configuration in **System Console > "
 "Plugins > User Satisfaction Surveys**."
 msgstr ""
+"**관리자 도구 > 플러그인 > 사용자 만족도 설문**\\ 의 플러그인 구성에서 설문이 활성화되어 있습니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:40
 msgid "User account is greater than 21 days old."
-msgstr ""
+msgstr "사용자 계정이 생성된 지 21일이 넘었습니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:41
 msgid "User has not completed a survey in the last 90 days."
-msgstr ""
+msgstr "사용자가 지난 90일 동안 설문을 완료하지 않았습니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:42
 msgid "User has not been sent a survey in the last 90 days."
-msgstr ""
+msgstr "사용자에게 지난 90일 동안 설문이 발송되지 않았습니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:43
 msgid ""
 "Current server version is greater than the server version of the last "
 "survey, excluding dot releases."
 msgstr ""
+"현재 서버 버전이 점 릴리스를 제외하고 마지막 설문 시점의 서버 버전보다 높습니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:45
 msgid ""
@@ -150,10 +176,12 @@ msgid ""
 " survey every 90 days, assuming the server is upgraded within that time "
 "period."
 msgstr ""
+"위 조건은 해당 기간 안에 서버가 업그레이드된다고 가정할 때 사용자가 최대 빈도로 90일마다 설문을 "
+"받게 됨을 의미합니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:48
 msgid "How will I be notified when a survey is scheduled?"
-msgstr ""
+msgstr "설문이 예약되면 어떻게 알림을 받나요?"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:50
 msgid ""
@@ -161,6 +189,7 @@ msgid ""
 "message from \"Surveybot\" mentioning the scheduled date the survey will "
 "be triggered."
 msgstr ""
+"시스템 관리자는 설문이 트리거될 예약 날짜를 언급하는 \"Surveybot\"의 이메일 알림과 제품 내 개인 메시지를 받습니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:52
 msgid ""
@@ -169,14 +198,17 @@ msgid ""
 "upgrade. System admins are notified about upcoming surveys by email "
 "notification and through an in-product message from a system bot."
 msgstr ""
+"관리자 도구에서 사용자 만족도 설문이 활성화되면 OKR.BEST는 각 서버 업그레이드 후 사용자 만족도 "
+"설문을 발송합니다. 시스템 관리자는 예정된 설문에 대해 이메일 알림과 시스템 봇의 제품 내 메시지를 "
+"통해 알림을 받습니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:56
 msgid "Survey Data"
-msgstr ""
+msgstr "설문 데이터"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:59
 msgid "How is the survey received?"
-msgstr ""
+msgstr "설문은 어떻게 수신되나요?"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:61
 msgid ""
@@ -184,6 +216,8 @@ msgid ""
 "product direct messages from \"Surveybot\" on their next login or page "
 "refresh in Mattermost."
 msgstr ""
+"서버에서 설문이 트리거되면 모든 사용자는 다음에 OKR.BEST에 로그인하거나 페이지를 새로 고칠 때 "
+"\"Surveybot\"의 제품 내 개인 메시지를 받습니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:63
 msgid ""
@@ -192,6 +226,9 @@ msgid ""
 "experience. Selecting a score and providing feedback are optional, and "
 "the survey can be ignored without interrupting usage of Mattermost."
 msgstr ""
+"사용자는 OKR.BEST를 추천할 가능성을 0~10점으로 선택하고 경험에 대한 서면 피드백을 제공할 수 "
+"있습니다. 점수 선택과 피드백 제공은 선택 사항이며, OKR.BEST 사용을 중단하지 않고 설문을 무시할 "
+"수 있습니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:65
 msgid ""
@@ -200,10 +237,13 @@ msgid ""
 "refresh Mattermost. The in-product message asks users to rate how likely "
 "they'd recommend Mattermost."
 msgstr ""
+"OKR.BEST가 사용자 만족도 설문을 발송하면 모든 사용자는 다음에 OKR.BEST에 로그인하거나 새로 고칠 "
+"때 시스템 봇의 제품 내 메시지를 받습니다. 제품 내 메시지는 사용자가 OKR.BEST를 추천할 가능성을 "
+"평가하도록 요청합니다."
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:69
 msgid "What data is collected?"
-msgstr ""
+msgstr "어떤 데이터가 수집되나요?"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:71
 msgid ""
@@ -213,66 +253,69 @@ msgid ""
 " the collection and use of information received through our services. The"
 " following **non-personally identifiable information** is collected:"
 msgstr ""
+"데이터는 사용자가 설문 질문에 응답하여 점수를 선택하거나 서면 피드백을 제공할 때만 수집됩니다. "
+"서비스를 통해 수신한 정보의 수집 및 사용에 대한 자세한 내용은 `개인정보 처리방침 "
+"<https://mattermost.com/privacy-policy/>`_\\ 을 참고하세요. 다음 **비개인 식별 정보**\\ 가 수집됩니다:"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:73
 msgid "Survey information:"
-msgstr ""
+msgstr "설문 정보:"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:74
 msgid "Score (0-10) submitted by the user"
-msgstr ""
+msgstr "사용자가 제출한 점수(0~10)"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:75
 msgid "Written feedback submitted by the user (if applicable)"
-msgstr ""
+msgstr "사용자가 제출한 서면 피드백(해당하는 경우)"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:76
 msgid "Timestamp of the survey submission"
-msgstr ""
+msgstr "설문 제출 타임스탬프"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:77
 msgid "Server information:"
-msgstr ""
+msgstr "서버 정보:"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:78
 msgid "Server/Web App version the survey was submitted on"
-msgstr ""
+msgstr "설문이 제출된 서버/웹 앱 버전"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:79
 msgid "Installation date of the server"
-msgstr ""
+msgstr "서버 설치 날짜"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:80
 msgid "Diagnostic ID used for error and diagnostics reporting"
-msgstr ""
+msgstr "오류 및 진단 보고에 사용되는 진단 ID"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:81
 msgid "License ID used for error and diagnostics reporting (if applicable)"
-msgstr ""
+msgstr "오류 및 진단 보고에 사용되는 라이선스 ID(해당하는 경우)"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:82
 msgid "Enterprise or Professional (if applicable)"
-msgstr ""
+msgstr "Enterprise 또는 Professional(해당하는 경우)"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:83
 msgid "User information:"
-msgstr ""
+msgstr "사용자 정보:"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:84
 msgid "User role (system admin, team admin, or member)"
-msgstr ""
+msgstr "사용자 역할(시스템 관리자, 팀 관리자 또는 구성원)"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:85
 msgid "Account creation timestamp"
-msgstr ""
+msgstr "계정 생성 타임스탬프"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:86
 msgid "User ID of the surveyed user"
-msgstr ""
+msgstr "설문 대상 사용자의 사용자 ID"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:89
 msgid "Will this data be sent through my firewall?"
-msgstr ""
+msgstr "이 데이터가 방화벽을 통해 전송되나요?"
 
 #: ../../source/administration-guide/manage/user-satisfaction-surveys.rst:91
 msgid ""
@@ -280,4 +323,5 @@ msgid ""
 " from the User Satisfaction Surveys plugin is not sent unless outbound "
 "connections are allowed or specifically configured for this plugin."
 msgstr ""
-
+"OKR.BEST가 방화벽이 있는 비공개 네트워크에서 셀프 호스팅되는 경우, 아웃바운드 연결이 허용되었거나 "
+"이 플러그인에 대해 특별히 구성되지 않는 한 사용자 만족도 설문 플러그인의 데이터는 전송되지 않습니다."

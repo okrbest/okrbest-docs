@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:2
 msgid "Cloud IP Filtering"
-msgstr ""
+msgstr "Cloud IP 필터링"
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:4
 msgid ""
@@ -30,14 +30,17 @@ msgid ""
 "users within these specified IP ranges can access the workspace, ensuring"
 " enhanced security for your workspace."
 msgstr ""
+"IP 필터링은 시스템 관리자가 승인된 IP 범위를 정의하여 워크스페이스 접근을 제어할 수 있게 하는 "
+"강력한 보안 기능입니다. 지정된 IP 범위 내의 사용자만 워크스페이스에 접근할 수 있으므로 "
+"워크스페이스 보안이 강화됩니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:6
 msgid "**IP filtering requires a subscription to Mattermost Cloud Enterprise.**"
-msgstr ""
+msgstr "**IP 필터링에는 Mattermost Cloud Enterprise 구독이 필요합니다.**"
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:9
 msgid "Configure IP filtering"
-msgstr ""
+msgstr "IP 필터링 구성"
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:11
 msgid ""
@@ -45,32 +48,37 @@ msgid ""
 "of your workspace by selecting the **Product** |product-list| menu and "
 "selecting **System Console**."
 msgstr ""
+"**시스템 관리자로 로그인**: 시스템 관리자로서 **제품** |product-list| 메뉴를 선택한 다음 "
+"**관리자 도구**\\ 를 선택해 워크스페이스의 관리자 도구에 접근합니다."
 
 #: ../../<rst_prolog>:100
 msgid ""
 "Navigate between Channels, collaborative playbooks, and boards using the "
 "product menu icon."
 msgstr ""
+"제품 메뉴 아이콘을 사용해 채널, 협업 플레이북, 보드 간에 이동합니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:12
 msgid "**Go to Site Configuration**: Go to the **Site Configuration** section."
-msgstr ""
+msgstr "**사이트 설정으로 이동**: **사이트 설정** 섹션으로 이동합니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:13
 msgid ""
 "**Access IP Filtering Settings**: Under **Site Configuration**, select "
 "**IP Filtering** to access the IP Filtering settings."
 msgstr ""
+"**IP 필터링 설정 접근**: **사이트 설정** 아래에서 **IP 필터링**\\ 을 선택해 IP 필터링 설정에 접근합니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:15
 msgid ""
 "An example of the System Console interface where admins can configure IP "
 "filtering."
 msgstr ""
+"관리자가 IP 필터링을 구성할 수 있는 관리자 도구 인터페이스의 예입니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:19
 msgid "About CIDR notation"
-msgstr ""
+msgstr "CIDR 표기법 정보"
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:21
 msgid ""
@@ -78,42 +86,48 @@ msgid ""
 " of IP addresses. It consists of an IP address followed by a forward "
 "slash and a number indicating the network's prefix length. For example:"
 msgstr ""
+"CIDR(Classless Inter-Domain Routing) 표기법은 IP 주소 범위를 지정하는 데 사용됩니다. IP 주소 뒤에 "
+"슬래시와 네트워크의 접두사 길이를 나타내는 숫자가 이어지는 형식입니다. 예:"
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:23
 msgid ""
 "``192.168.0.0/24`` represents the IP range from ``192.168.0.0`` to "
 "``192.168.0.255``."
 msgstr ""
+"``192.168.0.0/24``\\ 는 ``192.168.0.0``부터 ``192.168.0.255``까지의 IP 범위를 나타냅니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:24
 msgid ""
 "The ``/24`` signifies that the first 24 bits are the network address, "
 "leaving 8 bits for host addresses."
 msgstr ""
+"``/24``\\ 는 처음 24비트가 네트워크 주소이고 나머지 8비트가 호스트 주소임을 의미합니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:28
 msgid ""
 "For a more in-depth explanation of CIDR notation, refer to `this article "
 "<https://aws.amazon.com/what-is/cidr/>`_."
 msgstr ""
+"CIDR 표기법에 대한 더 자세한 설명은 `이 문서 <https://aws.amazon.com/what-is/cidr/>`_\\ 를 참고하세요."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:31
 msgid "Configure IP filters"
-msgstr ""
+msgstr "IP 필터 구성"
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:34
 msgid "Enable/disable IP filtering"
-msgstr ""
+msgstr "IP 필터링 활성화/비활성화"
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:36
 msgid "System admins have the option to enable or disable IP filtering:"
-msgstr ""
+msgstr "시스템 관리자는 IP 필터링을 활성화하거나 비활성화할 수 있습니다:"
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:38
 msgid ""
 "**Enable:** To activate IP filtering, ensure at least one IP range is "
 "added to the whitelist."
 msgstr ""
+"**활성화:** IP 필터링을 활성화하려면 허용 목록에 IP 범위가 하나 이상 추가되어 있는지 확인합니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:39
 msgid ""
@@ -121,44 +135,49 @@ msgid ""
 "from the whitelist, or by flipping the global IP Filtering toggle in the "
 "System Console."
 msgstr ""
+"**비활성화:** 허용 목록에서 모든 IP 범위를 제거하거나 관리자 도구에서 전역 IP 필터링 토글을 "
+"전환해 IP 필터링을 일시적으로 비활성화합니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:41
 msgid ""
 "An example of enabling and disabling Mattermost IP filtering in the "
 "System Console."
 msgstr ""
+"관리자 도구에서 OKR.BEST IP 필터링을 활성화하고 비활성화하는 예입니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:45
 msgid "Add an IP range"
-msgstr ""
+msgstr "IP 범위 추가"
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:47
 msgid "To add an IP range to the whitelist, follow these steps:"
-msgstr ""
+msgstr "허용 목록에 IP 범위를 추가하려면 다음 단계를 따릅니다:"
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:49
 msgid ""
 "Select the **Add Filter** button within the IP Filtering settings page in"
 " the System Console."
 msgstr ""
+"관리자 도구의 IP 필터링 설정 페이지에서 **필터 추가** 버튼을 선택합니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:50
 msgid "Enter the IP range using CIDR notation. For example, ``192.168.1.0/24``."
-msgstr ""
+msgstr "CIDR 표기법으로 IP 범위를 입력합니다. 예: ``192.168.1.0/24``"
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:51
 msgid ""
 "Provide a descriptive name or label for the IP range to ease "
 "identification in the future."
 msgstr ""
+"나중에 쉽게 식별할 수 있도록 IP 범위에 설명적인 이름이나 라벨을 제공합니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:52
 msgid "Save the changes."
-msgstr ""
+msgstr "변경 사항을 저장합니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:54
 msgid "An example of adding an IP filter range for a Mattermost Cloud deployment."
-msgstr ""
+msgstr "Mattermost Cloud 배포에 IP 필터 범위를 추가하는 예입니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:59
 msgid ""
@@ -166,44 +185,49 @@ msgid ""
 "address you are accessing your workspace on is not within the ranges you "
 "have specified at the time you save your changes."
 msgstr ""
+"변경 사항을 저장할 때 워크스페이스에 접근 중인 IP 주소가 지정한 범위에 포함되지 않으면 관리자 "
+"도구에서 변경 사항 저장이 제한됩니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:61
 msgid ""
 "An example of the Mattermost System Console blocking changes to IP "
 "filtering."
 msgstr ""
+"Mattermost 관리자 도구가 IP 필터링 변경을 차단하는 예입니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:65
 msgid "Edit or remove an existing IP range"
-msgstr ""
+msgstr "기존 IP 범위 편집 또는 제거"
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:67
 msgid "To edit or remove an existing IP range from the whitelist:"
-msgstr ""
+msgstr "허용 목록에서 기존 IP 범위를 편집하거나 제거하려면:"
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:69
 msgid ""
 "Locate the IP range you want to modify within the **IP Filtering** "
 "settings."
 msgstr ""
+"**IP 필터링** 설정에서 수정하려는 IP 범위를 찾습니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:70
 msgid ""
 "Hover over the rule you'd like to edit or delete, and select the "
 "respective edit or delete option beside the IP range."
 msgstr ""
+"편집하거나 삭제하려는 규칙 위에 마우스를 올리고 IP 범위 옆의 해당 편집 또는 삭제 옵션을 선택합니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:71
 msgid "Make necessary changes or confirm the removal of the IP range."
-msgstr ""
+msgstr "필요한 변경 사항을 적용하거나 IP 범위 제거를 확인합니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:72
 msgid "Save your changes by selecting **Save**."
-msgstr ""
+msgstr "**저장**\\ 을 선택해 변경 사항을 저장합니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:75
 msgid "Unable to access your workspace?"
-msgstr ""
+msgstr "워크스페이스에 접근할 수 없나요?"
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:77
 msgid ""
@@ -211,6 +235,8 @@ msgid ""
 "filters, and you need to regain access to your workspace, `contact our "
 "support team <https://mattermost.com/support/>`_."
 msgstr ""
+"이전에 설정한 IP 필터 때문에 워크스페이스에 접근할 수 없고 접근 권한을 복구해야 하는 경우 "
+"`지원 팀에 문의 <https://mattermost.com/support/>`_\\ 하세요."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:81
 msgid ""
@@ -218,10 +244,12 @@ msgid ""
 " your workspace. This means that any IP address will now be able to "
 "access it."
 msgstr ""
+"이 프로세스를 진행하면 워크스페이스에 적용된 기존 규칙이 **모두** 비활성화됩니다. 즉 모든 IP "
+"주소에서 워크스페이스에 접근할 수 있게 됩니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:84
 msgid "Conclusion"
-msgstr ""
+msgstr "결론"
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:86
 msgid ""
@@ -229,10 +257,12 @@ msgid ""
 "effectively manage access to the workspace, enhancing security by "
 "allowing access only from specified IP ranges."
 msgstr ""
+"CIDR 표기법을 사용해 IP 필터를 구성하면 시스템 관리자가 워크스페이스 접근을 효과적으로 관리할 수 "
+"있으며, 지정된 IP 범위에서만 접근을 허용하여 보안을 강화할 수 있습니다."
 
 #: ../../source/administration-guide/manage/cloud-ip-filtering.rst:88
 msgid ""
 "For any further assistance or queries, `contact our support team "
 "<https://mattermost.com/support/>`_."
 msgstr ""
-
+"추가 지원이나 문의가 필요하면 `지원 팀에 문의 <https://mattermost.com/support/>`_\\ 하세요."
