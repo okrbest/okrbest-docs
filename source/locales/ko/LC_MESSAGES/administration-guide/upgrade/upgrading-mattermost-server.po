@@ -22,13 +22,15 @@ msgstr ""
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:2
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:77
 msgid "Upgrade Mattermost Server"
-msgstr ""
+msgstr "OKR.BEST 서버 업그레이드"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced "
+"플랜 <https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -40,7 +42,7 @@ msgid ""
 "However, the upgrade can take longer depending on several factors, "
 "including the size and complexity of your installation, and the version "
 "that you're upgrading from."
-msgstr ""
+msgstr "대부분의 경우 몇 분 안에 OKR.BEST 서버를 업그레이드할 수 있습니다. 그러나 설치의 크기와 복잡성, 업그레이드하는 기준 버전 등 여러 요인에 따라 업그레이드에 더 오래 걸릴 수 있습니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:9
 msgid ""
@@ -48,86 +50,86 @@ msgid ""
 "`comprehensive upgrade guide <#comprehensive-upgrade-guide>`__ below. If "
 "you're an experienced system admin familiar with the upgrade process, see"
 " the `quick start checklist <#quick-start>`__."
-msgstr ""
+msgstr "첫 OKR.BEST 업그레이드라면 아래 `종합 업그레이드 가이드 <#comprehensive-upgrade-guide>`__\ 를 읽는 것을 권장합니다. 업그레이드 프로세스에 익숙한 숙련된 시스템 관리자라면 `빠른 시작 체크리스트 <#quick-start>`__\ 를 참고하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:12
 msgid "Quick start"
-msgstr ""
+msgstr "빠른 시작"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:14
 msgid ""
 "Experienced system admins looking for a quick overview of the Mattermost "
 "upgrade process can use the following 4-step checklist below:"
-msgstr ""
+msgstr "OKR.BEST 업그레이드 프로세스의 빠른 개요를 원하는 숙련된 시스템 관리자는 아래 4단계 체크리스트를 사용할 수 있습니다:"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:16
 msgid ""
 "Ensure you have a complete backup of your system before proceeding, "
 "including database and application."
-msgstr ""
+msgstr "진행하기 전에 데이터베이스와 애플리케이션을 포함한 시스템의 전체 백업이 있는지 확인하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:18
 msgid ""
 "**System requirements**: Verify that your server and PostgreSQL version "
 "meets :doc:`Mattermost requirements </deployment-guide/software-hardware-"
 "requirements>`."
-msgstr ""
+msgstr "**시스템 요구 사항**: 서버와 PostgreSQL 버전이 :doc:`OKR.BEST 요구 사항 </deployment-guide/software-hardware-requirements>`\ 을 충족하는지 확인하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:20
 msgid "**Preparation steps**"
-msgstr ""
+msgstr "**준비 단계**"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:22
 msgid "Download the latest server version."
-msgstr ""
+msgstr "최신 서버 버전을 다운로드합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:23
 msgid "Extract the new files to a temporary location (``/tmp``)"
-msgstr ""
+msgstr "새 파일을 임시 위치(``/tmp``)에 추출합니다"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:24
 msgid "Identify the current Mattermost directory (default: ``/opt/mattermost``)"
-msgstr ""
+msgstr "현재 OKR.BEST 디렉토리를 확인합니다(기본값: ``/opt/mattermost``)"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:26
 msgid "**Upgrade process**"
-msgstr ""
+msgstr "**업그레이드 프로세스**"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:28
 msgid "Stop the Mattermost service: ``sudo systemctl stop mattermost``"
-msgstr ""
+msgstr "OKR.BEST 서비스를 중지합니다: ``sudo systemctl stop mattermost``"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:29
 msgid "Remove old application files (preserve config, data, logs, plugins)."
-msgstr ""
+msgstr "이전 애플리케이션 파일을 제거합니다(config, data, logs, plugins 보존)."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:30
 msgid "Copy new files to the install directory."
-msgstr ""
+msgstr "새 파일을 설치 디렉토리로 복사합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:31
 msgid "Change file ownership: ``sudo chown -R mattermost:mattermost mattermost``"
-msgstr ""
+msgstr "파일 소유권을 변경합니다: ``sudo chown -R mattermost:mattermost mattermost``"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:32
 msgid ""
 "Set capabilities for low port usage if needed: ``sudo setcap "
 "cap_net_bind_service=+ep ./mattermost/bin/mattermost``"
-msgstr ""
+msgstr "필요한 경우 낮은 포트 사용을 위한 기능을 설정합니다: ``sudo setcap cap_net_bind_service=+ep ./mattermost/bin/mattermost``"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:33
 msgid "Start the Mattermost service: ``sudo systemctl start mattermost``"
-msgstr ""
+msgstr "OKR.BEST 서비스를 시작합니다: ``sudo systemctl start mattermost``"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:34
 msgid "Remove temporary upgrade files."
-msgstr ""
+msgstr "임시 업그레이드 파일을 제거합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:36
 msgid ""
 "For detailed instructions and additional considerations, see the complete"
 " upgrade guide below."
-msgstr ""
+msgstr "자세한 안내와 추가 고려 사항은 아래 전체 업그레이드 가이드를 참고하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:42
 msgid ""
@@ -136,19 +138,19 @@ msgid ""
 "Mattermost in Kubernetes and High Availability Environments "
 "</administration-guide/upgrade/upgrade-mattermost-kubernetes-ha>` "
 "documenation."
-msgstr ""
+msgstr "고가용성 및 Active/Active 지원을 위해 Kubernetes에서 배포를 안전하게 업그레이드하는 방법은 :doc:`Kubernetes 및 고가용성 환경에서 OKR.BEST 업그레이드 </administration-guide/upgrade/upgrade-mattermost-kubernetes-ha>` 문서를 참고하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:45
 msgid "Comprehensive upgrade guide"
-msgstr ""
+msgstr "종합 업그레이드 가이드"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:48
 msgid "Before you begin"
-msgstr ""
+msgstr "시작하기 전에"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:50
 msgid "**Read these instructions carefully from start to finish.**"
-msgstr ""
+msgstr "**이 안내를 처음부터 끝까지 주의 깊게 읽으세요.**"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:53
 msgid ""
@@ -161,7 +163,7 @@ msgid ""
 "/elasticsearch-setup>` or :doc:`OpenSearch </administration-guide/scale"
 "/opensearch-setup>` for :doc:`enterprise search </administration-"
 "guide/scale/enterprise-search>` capabilities."
-msgstr ""
+msgstr "**OKR.BEST v11.0으로 업그레이드하기 전에**: 현재 Bleve 검색(**관리자 도구 > 실험적 기능 > Bleve**\ 에 있음)을 사용 중이라면 업그레이드 전에 ``DisableDatabaseSearch``\ 가 ``false``\ 로 설정되어 있는지 확인하세요. 그렇지 않으면 업그레이드 후 검색이 작동하지 않습니다. Bleve 검색은 v11.0에서 제거되었습니다. 엔터프라이즈 검색 기능을 위해서는 :doc:`엔터프라이즈 검색 </administration-guide/scale/enterprise-search>` 기능을 위한 :doc:`Elasticsearch </administration-guide/scale/elasticsearch-setup>` 또는 :doc:`OpenSearch </administration-guide/scale/opensearch-setup>`\ 로의 마이그레이션을 고려하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:55
 msgid ""
@@ -174,11 +176,11 @@ msgid ""
 "documented below before starting a Mattermost upgrade. If you have "
 "questions or concerns, you can ask on the Mattermost forum at "
 "https://forum.mattermost.com/."
-msgstr ""
+msgstr "OKR.BEST 업그레이드를 시작하기 전에 :doc:`업그레이드 준비 방법 </administration-guide/upgrade/prepare-to-upgrade-mattermost>`\ 을 이해하고, 모든 :doc:`소프트웨어 및 하드웨어 요구 사항 </deployment-guide/software-hardware-requirements>`\ 을 숙지하며, :doc:`중요 업그레이드 참고 사항 </administration-guide/upgrade/important-upgrade-notes>`\ 을 읽고, 아래에 문서화된 업그레이드 프로세스의 각 단계를 이해해야 합니다. 질문이나 우려 사항이 있으면 https://forum.mattermost.com/ 의 Mattermost 포럼에서 문의할 수 있습니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:57
 msgid "**Gather the following information before starting the upgrade:**"
-msgstr ""
+msgstr "**업그레이드를 시작하기 전에 다음 정보를 수집하세요:**"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:59
 #, python-brace-format
@@ -186,23 +188,23 @@ msgid ""
 "**Existing install directory - {install-path}**: If you don't know where "
 "Mattermost Server is installed, use the ``whereis mattermost`` command to"
 " find standard binary places and $PATH."
-msgstr ""
+msgstr "**기존 설치 디렉토리 - {install-path}**: OKR.BEST 서버가 어디에 설치되어 있는지 모르면 ``whereis mattermost`` 명령어를 사용해 표준 바이너리 위치와 $PATH를 찾으세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:61
 msgid ""
 "This command won't return anything if ``/opt/mattermost/bin`` wasn't "
 "added to the PATH."
-msgstr ""
+msgstr "``/opt/mattermost/bin``\ 이 PATH에 추가되지 않았으면 이 명령어는 아무것도 반환하지 않습니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:62
 msgid ""
 "Alternatively, you can use the ``find / -executable -type f -iname "
 "mattermost 2> /dev/null`` command to find the ``mattermost`` binary."
-msgstr ""
+msgstr "또는 ``find / -executable -type f -iname mattermost 2> /dev/null`` 명령어를 사용해 ``mattermost`` 바이너리를 찾을 수 있습니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:63
 msgid "The output should be similar to ``/opt/mattermost/bin/mattermost``."
-msgstr ""
+msgstr "출력은 ``/opt/mattermost/bin/mattermost``\ 와 비슷해야 합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:64
 #, python-brace-format
@@ -210,27 +212,27 @@ msgid ""
 "The install directory is everything before the first occurrence of the "
 "string ``/mattermost``. In this example, the ``{install-path}`` is "
 "``/opt``."
-msgstr ""
+msgstr "설치 디렉토리는 ``/mattermost`` 문자열이 처음 나타나기 전까지의 모든 부분입니다. 이 예에서 ``{install-path}``\ 는 ``/opt``\ 입니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:65
 msgid ""
 "If that command doesn't produce any results, it's likely because your "
 "version is older; try ``whereis platform`` instead."
-msgstr ""
+msgstr "해당 명령어가 결과를 내지 않으면 버전이 오래되었기 때문일 가능성이 높습니다. 대신 ``whereis platform``\ 을 시도하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:66
 msgid ""
 "**Location and size of your local storage directory**: The local storage "
 "directory contains all the files that users have attached to their "
 "messages."
-msgstr ""
+msgstr "**로컬 저장소 디렉토리의 위치와 크기**: 로컬 저장소 디렉토리에는 사용자가 메시지에 첨부한 모든 파일이 들어 있습니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:68
 msgid ""
 "If you don't know its location, open the System Console and go to "
 "**Environment > File Storage**, then read the value in **Local Storage "
 "Directory**."
-msgstr ""
+msgstr "위치를 모르면 관리자 도구를 열고 **환경 > 파일 저장소**\ 로 이동한 다음 **로컬 저장소 디렉토리**\ 의 값을 확인하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:69
 #, python-brace-format
@@ -238,7 +240,7 @@ msgid ""
 "Paths are relative to the ``mattermost`` directory. For example, if the "
 "local storage directory is ``./data/`` then the absolute path is "
 "``{install-path}/mattermost/data``."
-msgstr ""
+msgstr "경로는 ``mattermost`` 디렉토리를 기준으로 합니다. 예를 들어 로컬 저장소 디렉토리가 ``./data/``\ 이면 절대 경로는 ``{install-path}/mattermost/data``\ 입니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:70
 msgid ""
@@ -246,7 +248,7 @@ msgid ""
 "the same server as your database, we recommend a minimum 2GB of free disk"
 " space to allow for extraction, copy, and cleanup, and a minimum of twice"
 " the size of your Mattermost installation available for the database."
-msgstr ""
+msgstr "**데이터베이스 디스크 공간**: 데이터베이스와 동일한 서버에서 OKR.BEST 배포를 업그레이드하는 경우, 추출, 복사, 정리를 위해 최소 2GB의 여유 디스크 공간과 데이터베이스를 위해 OKR.BEST 설치 크기의 최소 두 배를 사용할 수 있도록 권장합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:74
 msgid ""
@@ -256,53 +258,53 @@ msgid ""
 "detailed record of the changes that will be applied to your database. "
 "This can make it easier to revert those changes if you need to downgrade "
 "later."
-msgstr ""
+msgstr "업그레이드 시 데이터베이스에 적용될 변경 사항을 자세히 기록하려면 :ref:`mattermost db migrate --save-plan <administration-guide/manage/command-line-tools:mattermost db migrate>` CLI 명령어를 사용해 마이그레이션 계획을 생성하는 것을 고려하세요. 이렇게 하면 나중에 다운그레이드해야 할 경우 해당 변경 사항을 더 쉽게 되돌릴 수 있습니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:79
 msgid ""
 "In a terminal window on the server that hosts Mattermost, change to your "
 "home directory. Delete any files and directories that might still exist "
 "from a previous download."
-msgstr ""
+msgstr "OKR.BEST를 호스팅하는 서버의 터미널 창에서 홈 디렉토리로 이동합니다. 이전 다운로드에서 남아 있을 수 있는 파일과 디렉토리를 삭제합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:85
 msgid ""
 "Download `the latest version of Mattermost Server "
 "<https://mattermost.com/download/>`__ based on your Mattermost edition."
-msgstr ""
+msgstr "OKR.BEST 에디션에 따라 `Mattermost 서버 최신 버전 <https://mattermost.com/download/>`__\ 을 다운로드합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:89
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:97
 msgid ""
 "In the following command, replace ``X.X.X`` with the version that you "
 "want to download:"
-msgstr ""
+msgstr "다음 명령어에서 ``X.X.X``\ 를 다운로드하려는 버전으로 바꿉니다:"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:103
 msgid ""
 "Confirm no other Mattermost zip folders exist in your ``/tmp`` directory."
 " If another version's zip file does exist, delete or rename the file."
-msgstr ""
+msgstr "``/tmp`` 디렉토리에 다른 OKR.BEST zip 폴더가 없는지 확인합니다. 다른 버전의 zip 파일이 있으면 해당 파일을 삭제하거나 이름을 바꿉니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:109
 msgid ""
 "If anything except the new release is returned above, rename this file or"
 " delete it completely."
-msgstr ""
+msgstr "위에서 새 릴리스 외에 다른 것이 반환되면 이 파일의 이름을 바꾸거나 완전히 삭제하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:111
 msgid "Extract the Mattermost Server files."
-msgstr ""
+msgstr "OKR.BEST 서버 파일을 추출합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:117
 msgid ""
 "The ``transform`` option adds a suffix to the topmost extracted directory"
 " so it does not conflict with the usual install directory."
-msgstr ""
+msgstr "``transform`` 옵션은 가장 상위의 추출된 디렉토리에 접미사를 추가하여 일반적인 설치 디렉토리와 충돌하지 않도록 합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:119
 msgid "Stop your Mattermost server."
-msgstr ""
+msgstr "OKR.BEST 서버를 중지합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:125
 msgid ""
@@ -310,26 +312,26 @@ msgid ""
 "your database before continuing with the upgrade. In case of an "
 "unexpected failure, you should be in a position to load a previous "
 "database snapshot."
-msgstr ""
+msgstr "데이터와 애플리케이션을 백업합니다. 업그레이드를 계속하기 전에 데이터베이스가 제대로 백업되었는지 확인하세요. 예기치 않은 장애가 발생할 경우 이전 데이터베이스 스냅샷을 로드할 수 있는 상태여야 합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:127
 msgid ""
 "Back up your database using your organization’s standard procedures for "
 "backing up the database."
-msgstr ""
+msgstr "데이터베이스 백업에 대한 조직의 표준 절차를 사용해 데이터베이스를 백업합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:129
 msgid ""
 "Back up your application by copying into an archive folder (e.g. "
 "``mattermost-back-YYYY-MM-DD-HH-mm``)."
-msgstr ""
+msgstr "애플리케이션을 아카이브 폴더(예: ``mattermost-back-YYYY-MM-DD-HH-mm``)에 복사하여 백업합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:136
 msgid ""
 "Remove all files **except** data and custom directories from within the "
 "current ``mattermost`` directory. We strongly recommend reading the "
 "important note below before executing the following command."
-msgstr ""
+msgstr "현재 ``mattermost`` 디렉토리 내에서 data 및 사용자 정의 디렉토리를 **제외한** 모든 파일을 제거합니다. 다음 명령어를 실행하기 전에 아래 중요 참고 사항을 읽는 것을 적극 권장합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:144
 msgid ""
@@ -340,21 +342,21 @@ msgid ""
 " or other custom information, but can also include a different "
 "directories configured for local storage other than ``data``, as well as "
 "custom directories used to store attachments."
-msgstr ""
+msgstr "기본적으로 업그레이드 시 다음 하위 디렉토리가 보존됩니다: ``config``, ``logs``, ``plugins``, ``client/plugins``, ``data``. 사용자 정의 디렉토리와 OKR.BEST에 추가한 다른 모든 디렉토리는 기본적으로 보존되지 않습니다. 일반적으로 이는 TLS 키나 기타 사용자 정의 정보이지만, ``data`` 외에 로컬 저장소용으로 구성된 다른 디렉토리와 첨부 파일 저장에 사용되는 사용자 정의 디렉토리도 포함될 수 있습니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:146
 msgid "Before continuing with your upgrade, we strongly recommend that you:"
-msgstr ""
+msgstr "업그레이드를 계속하기 전에 다음을 적극 권장합니다:"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:148
 msgid ""
 "Run ``ls`` on your Mattermost install directory to identify all default "
 "folders that exist prior to upgrading."
-msgstr ""
+msgstr "업그레이드 전에 존재하는 모든 기본 폴더를 식별하려면 OKR.BEST 설치 디렉토리에서 ``ls``\ 를 실행합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:150
 msgid "A default Mattermost installation has the following files and directories:"
-msgstr ""
+msgstr "기본 OKR.BEST 설치에는 다음 파일과 디렉토리가 있습니다:"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:158
 msgid ""
@@ -362,7 +364,7 @@ msgid ""
 "and preserving only the specified directories and their contents by "
 "running the following command. It's the same command listed above, but it"
 " omits ``sudo xargs rm -r``:"
-msgstr ""
+msgstr "다음 명령어를 실행하여 ``mattermost`` 폴더의 내용을 삭제하고 지정된 디렉토리와 그 내용만 보존하는 드라이 런을 수행합니다. 이는 위에 나열된 것과 동일한 명령어이지만 ``sudo xargs rm -r``\ 를 생략합니다:"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:164
 msgid ""
@@ -371,7 +373,7 @@ msgid ""
 "mattermost/yourFolderHere`` to the command above to avoid having to "
 "manually copy the TLSCert/TLSKey files from the backup into the new "
 "install."
-msgstr ""
+msgstr "``/opt/mattermost`` 폴더 내에 TLSCert/TLSKey 파일이나 기타 정보를 저장하는 경우, 백업에서 TLSCert/TLSKey 파일을 새 설치로 수동으로 복사하지 않아도 되도록 위 명령어에 ``-o -path mattermost/yourFolderHere``\ 를 추가해야 합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:170
 msgid ""
@@ -379,18 +381,18 @@ msgid ""
 "/bleve-search>`, and the directory exists *within* the ``mattermost`` "
 "directory, the index directory path won't be preserved using the command "
 "above."
-msgstr ""
+msgstr ":doc:`Bleve 검색 </administration-guide/configure/bleve-search>`\ 을 사용 중이고 디렉토리가 ``mattermost`` 디렉토리 *안에* 있는 경우, 위 명령어를 사용하면 인덱스 디렉토리 경로가 보존되지 않습니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:172
 msgid ""
 "You can either move the bleve index directory out from the ``mattermost``"
 " directory before upgrading or, following an upgrade, you can copy the "
 "contents of the bleve index directory from the ``backup`` directory."
-msgstr ""
+msgstr "업그레이드 전에 bleve 인덱스 디렉토리를 ``mattermost`` 디렉토리 밖으로 옮기거나, 업그레이드 후 ``backup`` 디렉토리에서 bleve 인덱스 디렉토리의 내용을 복사할 수 있습니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:173
 msgid "You can then store that directory or re-index as preferred."
-msgstr ""
+msgstr "그런 다음 원하는 대로 해당 디렉토리를 저장하거나 다시 인덱싱할 수 있습니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:174
 msgid ""
@@ -398,7 +400,7 @@ msgid ""
 "versions. See our :ref:`Configuration Settings <administration-"
 "guide/configure/deprecated-configuration-settings:bleve settings>` "
 "documentation for details on configuring the bleve index directory."
-msgstr ""
+msgstr "bleve 인덱스는 OKR.BEST 버전 간에 다시 인덱싱하지 않고 마이그레이션할 수 있습니다. bleve 인덱스 디렉토리 구성에 관한 자세한 내용은 :ref:`구성 설정 <administration-guide/configure/deprecated-configuration-settings:bleve settings>` 문서를 참고하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:176
 msgid ""
@@ -406,11 +408,11 @@ msgid ""
 "ready to execute the full command that includes ``xargs rm -r`` to delete"
 " the files. Note that the following example includes ``-o -path "
 "mattermost/yourFolderHere``:"
-msgstr ""
+msgstr "위의 모든 단계를(해당하는 경우) 완료했으면 파일을 삭제하기 위해 ``xargs rm -r``\ 가 포함된 전체 명령어를 실행할 준비가 된 것입니다. 다음 예에는 ``-o -path mattermost/yourFolderHere``\ 가 포함되어 있음에 유의하세요:"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:182
 msgid "Copy the new files to your install directory."
-msgstr ""
+msgstr "새 파일을 설치 디렉토리로 복사합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:190
 msgid ""
@@ -418,11 +420,11 @@ msgid ""
 "important. The ``n`` (no-clobber) flag preserves existing configurations "
 "and logs in your installation path. The trailing ``.`` on source ensures "
 "all installation files are copied."
-msgstr ""
+msgstr "``n``(no-clobber) 플래그와 소스 끝의 ``.``\ 가 매우 중요합니다. ``n``(no-clobber) 플래그는 설치 경로의 기존 구성과 로그를 보존합니다. 소스 끝의 ``.``\ 는 모든 설치 파일이 복사되도록 보장합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:192
 msgid "Change ownership of the new files after copying them. For example:"
-msgstr ""
+msgstr "복사한 후 새 파일의 소유권을 변경합니다. 예:"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:200
 #, python-brace-format
@@ -430,14 +432,14 @@ msgid ""
 "If you didn't use ``mattermost`` as the owner and group of the install "
 "directory, run ``sudo chown -hR {owner}:{group} {install-"
 "path}/mattermost``."
-msgstr ""
+msgstr "설치 디렉토리의 소유자와 그룹으로 ``mattermost``\ 를 사용하지 않았다면 ``sudo chown -hR {owner}:{group} {install-path}/mattermost``\ 를 실행하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:201
 #, python-brace-format
 msgid ""
 "If you're uncertain what owner or group was defined, use the ``ls -l "
 "{install-path}/mattermost/bin/mattermost`` command to obtain them."
-msgstr ""
+msgstr "어떤 소유자나 그룹이 정의되었는지 확실하지 않으면 ``ls -l {install-path}/mattermost/bin/mattermost`` 명령어를 사용해 확인하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:203
 msgid ""
@@ -445,15 +447,15 @@ msgid ""
 "have TLS set up on your Mattermost server, you **must** activate the "
 "``CAP_NET_BIND_SERVICE`` capability to allow the new Mattermost binary to"
 " bind to ports lower than 1024. For example:"
-msgstr ""
+msgstr "서버를 제공하는 데 포트 80 또는 443을 사용하려는 경우, 그리고/또는 OKR.BEST 서버에 TLS가 설정되어 있는 경우, 새 OKR.BEST 바이너리가 1024보다 낮은 포트에 바인딩할 수 있도록 ``CAP_NET_BIND_SERVICE`` 기능을 **반드시** 활성화해야 합니다. 예:"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:209
 msgid "Start your Mattermost server."
-msgstr ""
+msgstr "OKR.BEST 서버를 시작합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:215
 msgid "Remove the temporary files."
-msgstr ""
+msgstr "임시 파일을 제거합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:222
 msgid ""
@@ -463,7 +465,7 @@ msgid ""
 "**Config File MD5** columns in the high availability section of the "
 "System Console should be green. If they're yellow, please ensure that all"
 " nodes have the same server version and the same configuration."
-msgstr ""
+msgstr ":doc:`고가용성 </administration-guide/scale/high-availability-cluster-based-deployment>` 배포를 사용 중이라면 클러스터의 모든 노드에 위 단계를 적용해야 합니다. 완료되면 관리자 도구의 고가용성 섹션에 있는 **Config File MD5** 열이 녹색이어야 합니다. 노란색이면 모든 노드가 동일한 서버 버전과 동일한 구성을 가지고 있는지 확인하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:224
 msgid ""
@@ -472,32 +474,32 @@ msgid ""
 "setting, and reverting it. This will enable the **Save** button for that "
 "page. Then, select **Save**. This will not change any configuration, but "
 "sends the existing configuration to all nodes in the cluster."
-msgstr ""
+msgstr "계속 노란색으로 표시되면 관리자 도구를 열고 설정을 변경한 다음 되돌려 클러스터 전체에 구성 전파를 트리거하세요. 그러면 해당 페이지의 **저장** 버튼이 활성화됩니다. 그런 다음 **저장**\ 을 선택합니다. 이는 어떤 구성도 변경하지 않지만 기존 구성을 클러스터의 모든 노드로 보냅니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:226
 msgid ""
 "After the server is upgraded, users might need to refresh their browsers "
 "to experience any new features."
-msgstr ""
+msgstr "서버가 업그레이드된 후 사용자는 새 기능을 사용하려면 브라우저를 새로 고쳐야 할 수 있습니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:229
 msgid "Upgrade Team Edition to Enterprise Edition"
-msgstr ""
+msgstr "Team Edition을 Enterprise Edition으로 업그레이드"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:231
 msgid ""
 "To upgrade from the Team Edition to the Enterprise Edition, follow the "
 "normal upgrade instructions provided above, making sure that you download"
 " the Enterprise Edition of Mattermost Server in Step 2."
-msgstr ""
+msgstr "Team Edition에서 Enterprise Edition으로 업그레이드하려면 위에 제공된 일반 업그레이드 안내를 따르되, 2단계에서 OKR.BEST 서버의 Enterprise Edition을 다운로드하는지 확인하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:234
 msgid "Upload a license key"
-msgstr ""
+msgstr "라이선스 키 업로드"
 
 #: ../../source/administration-guide/upgrade/upgrading-mattermost-server.rst:236
 msgid ""
 "When Enterprise Edition is running, open **System Console > About > "
 "Editions and License** and upload your license key."
-msgstr ""
+msgstr "Enterprise Edition이 실행 중이면 **관리자 도구 > 정보 > 라이선스와 에디션**\ 을 열고 라이선스 키를 업로드합니다."
 
