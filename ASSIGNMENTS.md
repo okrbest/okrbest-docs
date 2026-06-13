@@ -7,7 +7,7 @@ push가 거부되면 `git pull --rebase origin feat/ko` 후 다시 push — 표 
 | 디렉토리 | 규모(파일/문자열) | 담당자 | 상태 | 시작일 |
 |---|---|---|---|---|
 | end-user-guide/ | 97 / ~4,500 | ux-builder | 진행 중 | 2026-06-13 |
-| deployment-guide/ | 61 / ~4,700 | | 미배정 | |
+| deployment-guide/ | 61 / ~4,700 | 메인테이너 | 진행 중 | 2026-06-13 |
 | administration-guide/comply/ | 8 / ~1,100 | ux-builder | 진행 중 | 2026-06-13 |
 | administration-guide/configure/ | 34 / ~6,900 | ux-builder | 진행 중 | 2026-06-13 |
 | administration-guide/manage/ | 37 / ~2,800 | ux-builder | 진행 중 | 2026-06-13 |
