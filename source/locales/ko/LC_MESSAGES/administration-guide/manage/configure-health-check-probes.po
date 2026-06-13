@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/configure-health-check-probes.rst:2
 msgid "Configure server health check probes"
-msgstr ""
+msgstr "서버 헬스 체크 프로브 구성"
 
 #: ../../source/_static/badges/entry-ent.rst:9
 msgid ""
@@ -29,6 +29,8 @@ msgid ""
 "Advanced plans <https://mattermost.com/pricing/>`__ (not available on "
 "Professional)"
 msgstr ""
+"|plans-img-yellow| `Entry, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다(Professional에서는 사용할 수 없음)."
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -39,6 +41,7 @@ msgid ""
 "This page describes how to configure health check probes for a Mattermost"
 " server."
 msgstr ""
+"이 페이지에서는 OKR.BEST 서버의 헬스 체크 프로브를 구성하는 방법을 설명합니다."
 
 #: ../../source/administration-guide/manage/configure-health-check-probes.rst:9
 msgid ""
@@ -46,6 +49,8 @@ msgid ""
 "don't, you can :doc:`install Mattermost on various distributions "
 "</deployment-guide/deployment-guide-index>`."
 msgstr ""
+"시작하기 전에 실행 중인 OKR.BEST 서버가 있어야 합니다. 없다면 :doc:`다양한 배포판에 "
+"OKR.BEST 설치 </deployment-guide/deployment-guide-index>`\\ 를 진행할 수 있습니다."
 
 #: ../../source/administration-guide/manage/configure-health-check-probes.rst:13
 msgid ""
@@ -53,22 +58,24 @@ msgid ""
 "guide/scale/high-availability-cluster-based-deployment>` requires "
 "Mattermost Enterprise."
 msgstr ""
+":doc:`고가용성 OKR.BEST 클러스터 지원 </administration-guide/scale/high-availability-cluster-"
+"based-deployment>`\\ 에는 Mattermost Enterprise가 필요합니다."
 
 #: ../../source/administration-guide/manage/configure-health-check-probes.rst:15
 msgid "You can perform a health check with the following 2 methods:"
-msgstr ""
+msgstr "다음 2가지 방법으로 헬스 체크를 수행할 수 있습니다:"
 
 #: ../../source/administration-guide/manage/configure-health-check-probes.rst:17
 msgid "`ping the APIv4 endpoint <#ping-the-apiv4-endpoint>`__"
-msgstr ""
+msgstr "`APIv4 엔드포인트 ping <#ping-the-apiv4-endpoint>`__"
 
 #: ../../source/administration-guide/manage/configure-health-check-probes.rst:18
 msgid "`ping the Mattermost server <#ping-the-mattermost-server>`__"
-msgstr ""
+msgstr "`OKR.BEST 서버 ping <#ping-the-mattermost-server>`__"
 
 #: ../../source/administration-guide/manage/configure-health-check-probes.rst:21
 msgid "Ping the APIv4 endpoint"
-msgstr ""
+msgstr "APIv4 엔드포인트 ping"
 
 #: ../../source/administration-guide/manage/configure-health-check-probes.rst:23
 #, python-format
@@ -77,6 +84,9 @@ msgid ""
 "<https://api.mattermost.com/#tag/system%2Fpaths%2F~1system~1ping%2Fget>`_"
 " to check for system health."
 msgstr ""
+"시스템 상태를 확인하려면 `GET /system/ping APIv4 엔드포인트 "
+"<https://api.mattermost.com/#tag/system%2Fpaths%2F~1system~1ping%2Fget>`_\\ 를 사용할 수 "
+"있습니다."
 
 #: ../../source/administration-guide/manage/configure-health-check-probes.rst:25
 msgid ""
@@ -84,18 +94,24 @@ msgid ""
 "up and healthy based on the configuration setting "
 "``GoRoutineHealthThreshold``."
 msgstr ""
+"아래에 샘플 요청이 포함되어 있습니다. 이 엔드포인트는 ``GoRoutineHealthThreshold`` 구성 설정을 "
+"기준으로 서버가 실행 중이고 정상인지 확인합니다."
 
 #: ../../source/administration-guide/manage/configure-health-check-probes.rst:27
 msgid ""
 "If ``GoRoutineHealthThreshold`` and the number of goroutines on the "
 "server exceeds that threshold, the server is considered unhealthy."
 msgstr ""
+"``GoRoutineHealthThreshold``가 설정되어 있고 서버의 goroutine 수가 해당 임계값을 초과하면 서버는 "
+"비정상으로 간주됩니다."
 
 #: ../../source/administration-guide/manage/configure-health-check-probes.rst:28
 msgid ""
 "If ``GoRoutineHealthThreshold`` is not set or the number of goroutines is"
 " below the threshold the server is considered healthy."
 msgstr ""
+"``GoRoutineHealthThreshold``가 설정되지 않았거나 goroutine 수가 임계값 미만이면 서버는 정상으로 "
+"간주됩니다."
 
 #: ../../source/administration-guide/manage/configure-health-check-probes.rst:30
 msgid ""
@@ -103,16 +119,20 @@ msgid ""
 "<https://kubernetes.io/docs/tasks/configure-pod-container/configure-"
 "liveness-readiness-startup-probes/>`_."
 msgstr ""
+"이 엔드포인트는 `Kubernetes <https://kubernetes.io/docs/tasks/configure-pod-container/configure-"
+"liveness-readiness-startup-probes/>`_ 같은 스케줄러에도 제공할 수 있습니다."
 
 #: ../../source/administration-guide/manage/configure-health-check-probes.rst:43
 msgid "Ping the Mattermost server"
-msgstr ""
+msgstr "OKR.BEST 서버 ping"
 
 #: ../../source/administration-guide/manage/configure-health-check-probes.rst:45
 msgid ""
 "The `Mattermost Probe <https://github.com/csduarte/mattermost-probe>`_ "
 "constantly pings a Mattermost server using a variety of probes."
 msgstr ""
+"`Mattermost Probe <https://github.com/csduarte/mattermost-probe>`_ 는 다양한 프로브를 사용해 "
+"OKR.BEST 서버에 지속적으로 ping을 보냅니다."
 
 #: ../../source/administration-guide/manage/configure-health-check-probes.rst:47
 msgid ""
@@ -120,10 +140,12 @@ msgid ""
 " and receiving messages, joining channels, pinging a login page, and "
 "searching of users and channels."
 msgstr ""
+"이러한 프로브는 메시지 송수신, 채널 참여, 로그인 페이지 ping, 사용자 및 채널 검색을 포함한 "
+"핵심 기능을 검증하도록 구성할 수 있습니다."
 
 #: ../../source/administration-guide/manage/configure-health-check-probes.rst:49
 msgid ""
 "The project is contributed by the Mattermost open source community. "
 "Suggestions and contributions for the project are welcome."
 msgstr ""
-
+"이 프로젝트는 Mattermost 오픈소스 커뮤니티에서 기여했습니다. 프로젝트에 대한 제안과 기여를 환영합니다."

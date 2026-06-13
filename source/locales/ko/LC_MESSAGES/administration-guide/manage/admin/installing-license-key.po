@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:2
 msgid "Install a license key"
-msgstr ""
+msgstr "라이선스 키 설치"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다."
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -38,20 +40,22 @@ msgid ""
 "You can use the System Console or the mmctl tools to add or change a "
 "Mattermost license key."
 msgstr ""
+"관리자 도구 또는 mmctl 도구를 사용해 OKR.BEST 라이선스 키를 추가하거나 변경할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:11
 msgid "Go go **System Console > About > Edition and License**."
-msgstr ""
+msgstr "**관리자 도구 > 정보 > 라이선스와 에디션**\\ 으로 이동합니다."
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:12
 msgid "Upload your license key file."
-msgstr ""
+msgstr "라이선스 키 파일을 업로드합니다."
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:14
 msgid ""
 "Once the key is uploaded and installed, the details of your license are "
 "displayed."
 msgstr ""
+"키가 업로드되고 설치되면 라이선스 세부 정보가 표시됩니다."
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:18
 msgid ""
@@ -63,6 +67,10 @@ msgid ""
 "based-deployment>` environment, the new license file must be updated to "
 "every node."
 msgstr ""
+":ref:`mmctl license upload <administration-guide/manage/mmctl-command-line-tool:mmctl license upload>` "
+"명령을 사용해 새 라이선스를 업로드하거나 기존 라이선스 파일을 새 파일로 교체합니다. 완료되면 "
+"OKR.BEST 서버를 다시 시작합니다. :doc:`고가용성 </administration-guide/scale/high-availability-cluster-"
+"based-deployment>` 환경에서 실행 중인 경우 새 라이선스 파일을 모든 노드에 업데이트해야 합니다."
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:26
 msgid ""
@@ -71,12 +79,15 @@ msgid ""
 "guide/configure/environment-configuration-settings:license file "
 "location>`."
 msgstr ""
+"Mattermost v10.11부터 :ref:`환경 변수 <administration-guide/configure/environment-configuration-settings:license file "
+"location>`\\ 를 사용해 라이선스를 설정한 경우 라이선스 추가 옵션이 비활성화됩니다."
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:27
 msgid ""
 "Enterprise customers with the Premier Support add-on can request a "
 "staging license for testing."
 msgstr ""
+"Premier Support 추가 기능이 있는 Enterprise 고객은 테스트용 스테이징 라이선스를 요청할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:28
 msgid ""
@@ -84,6 +95,8 @@ msgid ""
 " the configuration for Enterprise settings; however, these features won't"
 " function until an Enterprise or Professional license key is applied."
 msgstr ""
+"Mattermost Enterprise 또는 Professional 라이선스 키를 제거해도 Enterprise 설정 구성은 제거되지 않습니다. "
+"그러나 Enterprise 또는 Professional 라이선스 키가 적용될 때까지 이러한 기능은 작동하지 않습니다."
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:29
 msgid ""
@@ -93,6 +106,9 @@ msgid ""
 "installed to prevent multi-node clusters from failing. An Enterprise "
 "license is required for High Availability to work."
 msgstr ""
+":doc:`고가용성 </administration-guide/scale/high-availability-cluster-based-deployment>`\\ 을 사용하는 경우 "
+"다중 노드 클러스터 장애를 방지하려면 클러스터의 모든 서버에 동일한 Enterprise 라이선스가 올바르게 "
+"설치되어 있는지 확인하는 것이 중요합니다. 고가용성이 작동하려면 Enterprise 라이선스가 필요합니다."
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:30
 msgid ""
@@ -100,6 +116,8 @@ msgid ""
 "for Professional, Professional features retain their configuration "
 "settings in Enterprise."
 msgstr ""
+"이전에 Professional 라이선스가 적용된 서버에 Enterprise 라이선스 키를 적용하면 Professional 기능은 "
+"Enterprise에서 구성 설정을 유지합니다."
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:31
 msgid ""
@@ -107,10 +125,12 @@ msgid ""
 " Enterprise, Enterprise features retain their configuration but will no "
 "longer be accessible for use."
 msgstr ""
+"이전에 Enterprise 라이선스가 적용된 서버에 Professional 라이선스를 적용하면 Enterprise 기능은 구성을 "
+"유지하지만 더 이상 사용할 수 없습니다."
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:34
 msgid "Change an existing license key"
-msgstr ""
+msgstr "기존 라이선스 키 변경"
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:36
 msgid ""
@@ -121,6 +141,9 @@ msgid ""
 "license is for a seat count that's greater than or equal to your current "
 "total number of Mattermost users."
 msgstr ""
+"현재 라이선스 키가 만료될 때까지 기다리지 않고 Mattermost의 새 라이선스로 교체할 수 있습니다. "
+"서버는 시작일이 아니라 시트 수와 라이선스 종료일만 확인하므로 새 라이선스를 받는 즉시 적용할 수 "
+"있습니다. 단, 새 라이선스의 시트 수가 현재 OKR.BEST 전체 사용자 수 이상인지 확인하세요."
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:40
 msgid ""
@@ -132,18 +155,23 @@ msgid ""
 "a 1:1 ratio with licensed seats, and generate warnings instead of hard "
 "enforcement when that allowance is exceeded."
 msgstr ""
+"새 키를 업로드하기 전에 라이선스 사용량을 검토하려면 **관리자 도구 > 보고 > 사이트 통계**\\ 로 "
+"이동합니다. **전체 활성화된 사용자** 필드는 라이선스 검증에 사용되는 기본 유료 시트 수를 "
+"표시합니다. 정확히 하나의 채널에만 속한 게스트는 기본 유료 시트 수와 별도로 추적되고, 라이선스 "
+"시트와 1:1 비율까지 무료이며, 허용량을 초과해도 강제 차단 대신 경고를 생성하므로 **단일 채널 "
+"게스트**\\ 를 별도로 검토하세요."
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:42
 msgid "Follow these steps to change your license key:"
-msgstr ""
+msgstr "라이선스 키를 변경하려면 다음 단계를 따릅니다:"
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:44
 msgid "Go to **System Console > About > Edition and License**."
-msgstr ""
+msgstr "**관리자 도구 > 정보 > 라이선스와 에디션**\\ 으로 이동합니다."
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:45
 msgid "From Mattermost v6.7, simply upload your new license key file."
-msgstr ""
+msgstr "Mattermost v6.7부터는 새 라이선스 키 파일을 업로드하기만 하면 됩니다."
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:49
 msgid ""
@@ -151,10 +179,12 @@ msgid ""
 "Enterprise License and Downgrade Server** to clear the license from the "
 "server and refresh the System Console first before uploading the new key."
 msgstr ""
+"v6.7보다 이전 Mattermost 릴리스를 실행 중인 경우 새 키를 업로드하기 전에 먼저 **Enterprise 라이선스 "
+"제거 및 서버 다운그레이드**\\ 를 선택해 서버에서 라이선스를 지우고 관리자 도구를 새로 고칩니다."
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:52
 msgid "License key storage"
-msgstr ""
+msgstr "라이선스 키 저장소"
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:54
 msgid ""
@@ -163,6 +193,8 @@ msgid ""
 "what keys are on your server by running ``select * from "
 "mattermost.Licenses;``."
 msgstr ""
+"라이선스 키를 OKR.BEST 서버에 업로드하면 SQL 데이터베이스의 ``mattermost.Licenses``에 저장됩니다. "
+"``select * from mattermost.Licenses;``\\ 를 실행해 서버에 어떤 키가 있는지 확인할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/installing-license-key.rst:56
 msgid ""
@@ -172,4 +204,7 @@ msgid ""
 " try Mattermost yourself with a `1-hour preview <https://mattermost.com"
 "/sign-up/>`_ for instant access to a live sandbox environment."
 msgstr ""
-
+"조직의 안전한 협업 요구 사항에 맞춘 솔루션을 살펴보려면 `라이브 데모 예약 "
+"<https://mattermost.com/request-demo/>`_ 또는 `Mattermost 전문가와 상담 "
+"<https://mattermost.com/contact-sales/>`_\\ 을 이용하세요. 또는 라이브 샌드박스 환경에 즉시 접근할 수 "
+"있는 `1시간 미리보기 <https://mattermost.com/sign-up/>`_\\ 로 Mattermost를 직접 사용해 볼 수 있습니다."
