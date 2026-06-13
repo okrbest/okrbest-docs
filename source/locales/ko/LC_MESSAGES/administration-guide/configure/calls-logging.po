@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-logging.md:1
 msgid "Calls Logging"
-msgstr ""
+msgstr "통화 로깅"
 
 #: ../../source/_static/badges/all-commercial.md:6
 msgid ""
@@ -38,22 +38,22 @@ msgstr ""
 msgid ""
 "When troubleshooting Mattermost Calls, gathering the appropriate log "
 "files for analysis is critical. The required logs include:"
-msgstr ""
+msgstr "OKR.BEST 통화(Calls) 문제를 해결할 때, 분석을 위해 적절한 로그 파일을 수집하는 것이 중요합니다. 필요한 로그는 다음과 같습니다:"
 
 #: ../../source/administration-guide/configure/calls-logging.md:8
 msgid "RTCD logs"
-msgstr ""
+msgstr "RTCD 로그"
 
 #: ../../source/administration-guide/configure/calls-logging.md:10
 msgid ""
 "The location of the RTCD log file is determined by the settings in your "
 "RTCD `config.toml` file. If you are running Calls using the integrated "
 "RTCD, these logs are included within the standard Mattermost server logs."
-msgstr ""
+msgstr "RTCD 로그 파일의 위치는 RTCD `config.toml` 파일의 설정에 따라 결정됩니다. 통합 RTCD를 사용하여 통화를 실행하는 경우, 이러한 로그는 표준 OKR.BEST 서버 로그에 포함됩니다."
 
 #: ../../source/administration-guide/configure/calls-logging.md:12
 msgid "Client logs"
-msgstr ""
+msgstr "클라이언트 로그"
 
 #: ../../source/administration-guide/configure/calls-logging.md:14
 msgid ""
@@ -61,7 +61,7 @@ msgid ""
 "command to output the log for the most recent call. However, capturing "
 "the JavaScript console logs is often more helpful. The method for "
 "capturing these logs depends on your client:"
-msgstr ""
+msgstr "`/call logs` 슬래시 명령을 실행하여 가장 최근 통화의 로그를 출력함으로써 기본 클라이언트 로그를 가져올 수 있습니다. 그러나 JavaScript 콘솔 로그를 캡처하는 것이 더 유용한 경우가 많습니다. 이러한 로그를 캡처하는 방법은 클라이언트에 따라 다릅니다:"
 
 #: ../../source/administration-guide/configure/calls-logging.md:16
 msgid ""
@@ -70,17 +70,17 @@ msgid ""
 "**Filter** field, select **Verbose** from the log level drop-down menu to"
 " view the debug output. To save the log, right-click within the console "
 "and select **Save as...**."
-msgstr ""
+msgstr "**Desktop App:** 통화가 진행 중인 동안, **View > Developer Tools > Developer Tools for Call Widget**로 이동합니다. **Filter** 필드 옆에서 로그 수준 드롭다운 메뉴에서 **Verbose**를 선택하여 디버그 출력을 확인합니다. 로그를 저장하려면 콘솔 내에서 마우스 오른쪽 버튼을 클릭하고 **Save as...**를 선택합니다."
 
 #: ../../source/administration-guide/configure/calls-logging.md:18
 msgid ""
 "![Developer Tools for Call Widget](../../images/developer-tools-call-"
 "widget.png)"
-msgstr ""
+msgstr "![통화 위젯용 개발자 도구](../../images/developer-tools-call-widget.png)"
 
 #: ../../source/administration-guide/configure/calls-logging.md:18
 msgid "Developer Tools for Call Widget"
-msgstr ""
+msgstr "통화 위젯용 개발자 도구"
 
 #: ../../source/administration-guide/configure/calls-logging.md:20
 msgid ""
@@ -90,11 +90,11 @@ msgid ""
 "select **Verbose** from the log level drop-down menu to view the debug "
 "output. To save the log, right-click within the console and select **Save"
 " as...**."
-msgstr ""
+msgstr "**Chrome browser:** 주소 표시줄 옆의 **More menu**(세로 점 3개)를 선택한 다음, **More Tools > Developer Tools**로 이동합니다. **Console** 탭을 선택하여 출력을 확인합니다. **Filter** 필드 옆에서 로그 수준 드롭다운 메뉴에서 **Verbose**를 선택하여 디버그 출력을 확인합니다. 로그를 저장하려면 콘솔 내에서 마우스 오른쪽 버튼을 클릭하고 **Save as...**를 선택합니다."
 
 #: ../../source/administration-guide/configure/calls-logging.md:22
 msgid "Client statistics"
-msgstr ""
+msgstr "클라이언트 통계"
 
 #: ../../source/administration-guide/configure/calls-logging.md:24
 msgid ""
@@ -103,18 +103,18 @@ msgid ""
 " to run it immediately after a call concludes. This command provides "
 "valuable information regarding the negotiated connection between the "
 "client and RTCD, as well as statistics on media packets sent and lost."
-msgstr ""
+msgstr "`/call stats` 슬래시 명령을 실행하여 클라이언트 통화 통계를 수집할 수 있습니다. 활성 통화 중에 이 명령을 실행할 수도 있지만, 통화가 종료된 직후에 실행하는 것이 가장 좋습니다. 이 명령은 클라이언트와 RTCD 간의 협상된 연결에 관한 유용한 정보와 전송 및 손실된 미디어 패킷에 대한 통계를 제공합니다."
 
 #: ../../source/administration-guide/configure/calls-logging.md:26
 msgid "Mattermost server logs"
-msgstr ""
+msgstr "OKR.BEST 서버 로그"
 
 #: ../../source/administration-guide/configure/calls-logging.md:28
 msgid ""
 "The Mattermost server logs often contain entries related to the Calls "
 "plugin. If you are using an external RTCD instance, these logs are "
 "generally less critical than the RTCD and client logs."
-msgstr ""
+msgstr "OKR.BEST 서버 로그에는 통화 플러그인과 관련된 항목이 포함되는 경우가 많습니다. 외부 RTCD 인스턴스를 사용하는 경우, 이러한 로그는 일반적으로 RTCD 및 클라이언트 로그보다 덜 중요합니다."
 
 #: ../../source/administration-guide/configure/calls-logging.md:31
 msgid ""
@@ -122,5 +122,5 @@ msgid ""
 "Connectivity Establishment (ICE) negotiation during call setup often logs"
 " expected and benign failure or error messages. We strongly recommend "
 "providing the complete set of logs to Mattermost Support for analysis."
-msgstr ""
+msgstr "통화 설정 중 ICE(Interactive Connectivity Establishment) 협상이 예상되는 무해한 실패 또는 오류 메시지를 기록하는 경우가 많기 때문에, RTCD 및 클라이언트 로그를 해석하는 것은 어려울 수 있습니다. 분석을 위해 전체 로그 세트를 Mattermost Support에 제공할 것을 강력히 권장합니다."
 
