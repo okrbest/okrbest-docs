@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:2
 msgid "Deploy in Air-Gapped Environments"
-msgstr ""
+msgstr "폐쇄망(Air-Gapped) 환경에 배포"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:4
 msgid ""
@@ -32,10 +32,14 @@ msgid ""
 "deployment guidance and configurations required for a successful "
 "deployment."
 msgstr ""
+"폐쇄망(air-gapped) 환경은 공용 인터넷에서 격리되어 모든 필수 구성 요소가 로컬에 "
+"준비되어 있어야 하는 환경입니다. 이 가이드는 셀프 호스팅 폐쇄망 환경에 OKR.BEST를 "
+"배포하는 데 필요한 사항을 설명하며, 성공적인 배포에 필요한 적절한 준비, 배포 "
+"안내, 구성에 중점을 둡니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:7
 msgid "Overview"
-msgstr ""
+msgstr "개요"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:9
 msgid ""
@@ -47,10 +51,15 @@ msgid ""
 "deployment within the air-gapped environment. This is a summary of the "
 "steps involved:"
 msgstr ""
+"개략적으로, 폐쇄망 환경에 OKR.BEST를 배포하려면 대상 시스템에 직접적인 인터넷 "
+"접근이 없으므로 필요한 모든 소프트웨어, 컨테이너 이미지, 구성 리소스를 미리 "
+"준비하고, 이러한 아티팩트를 보안 매체를 사용해 격리된 네트워크로 전송한 다음, "
+"폐쇄망 환경 내에서 배포를 설치·구성·검증해야 합니다. 다음은 관련 단계의 "
+"요약입니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:11
 msgid "**Select your preferred Mattermost deployment option:**"
-msgstr ""
+msgstr "**원하는 OKR.BEST 배포 옵션을 선택합니다:**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:13
 msgid ""
@@ -60,10 +69,14 @@ msgid ""
 "guide/server/server-deployment-planning:deployment options>` to select "
 "the optimal option given your organizations needs."
 msgstr ""
+"이 단계는 종종 폐쇄망 환경에서 이미 실행 중인 인프라에 의해 결정됩니다. 처음부터 "
+"배포하는 경우, 조직의 요구에 맞는 최적의 옵션을 선택하기 위해 :ref:`서버 배포 "
+"문서 <deployment-guide/server/server-deployment-planning:deployment options>`"
+"\\ 를 검토할 것을 권장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:15
 msgid "**Setup a private container registry or package mirror:**"
-msgstr ""
+msgstr "**비공개 컨테이너 레지스트리 또는 패키지 미러를 설정합니다:**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:17
 msgid ""
@@ -72,20 +85,25 @@ msgid ""
 " frequently asked questions <#frequently-asked-questions>`__ or "
 "referencing online resources specific to your environment."
 msgstr ""
+"이상적으로는 폐쇄망 환경에 이미 비공개 컨테이너 레지스트리나 패키지 미러가 "
+"준비되어 있는 것이 좋습니다. 그렇지 않다면 `자주 묻는 질문 <#frequently-asked-"
+"questions>`__\\ 을 따르거나 환경에 맞는 온라인 리소스를 참고할 것을 권장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:19
 msgid "**Prepare your Bill of Materials:**"
-msgstr ""
+msgstr "**자재 명세서(Bill of Materials)를 준비합니다:**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:21
 msgid ""
 "Depending on your deployment method method, you'll need to download, tag,"
 " and push required materials into your private registry or mirror."
 msgstr ""
+"배포 방법에 따라 필요한 자재를 다운로드하고 태그를 지정한 다음 비공개 "
+"레지스트리나 미러로 푸시해야 합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:23
 msgid "**Transfer materials into the air-gapped environment:**"
-msgstr ""
+msgstr "**자재를 폐쇄망 환경으로 전송합니다:**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:25
 msgid ""
@@ -94,10 +112,13 @@ msgid ""
 "machine and securely transfer it using approved data transfer methods - "
 "for example, burning to a disk."
 msgstr ""
+"비공개 레지스트리가 공용 인터넷에 접근할 수 없다면, 인터넷에 연결된 머신에서 "
+"레지스트리 데이터의 아카이브를 준비한 다음 승인된 데이터 전송 방법(예: 디스크에 "
+"굽기)을 사용해 안전하게 전송할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:27
 msgid "**Install Mattermost Server**"
-msgstr ""
+msgstr "**OKR.BEST 서버 설치**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:29
 msgid ""
@@ -107,10 +128,14 @@ msgid ""
 "</deployment-guide/server/deploy-kubernetes>`, or :doc:`Docker "
 "</deployment-guide/server/deploy-containers>`."
 msgstr ""
+"폐쇄망 환경에 필요한 모든 리소스를 갖추면 :doc:`Linux </deployment-guide/server"
+"/deploy-linux>`, :doc:`Kubernetes </deployment-guide/server/deploy-"
+"kubernetes>`, :doc:`Docker </deployment-guide/server/deploy-containers>` 안내에 "
+"따라 배포를 진행할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:31
 msgid "**Install Mattermost Desktop Apps**"
-msgstr ""
+msgstr "**OKR.BEST 데스크톱 앱 설치**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:33
 msgid ""
@@ -122,10 +147,15 @@ msgid ""
 "deployment>` in our documentation based on your desired deployment "
 "method."
 msgstr ""
+"폐쇄망 기기는 공개적으로 제공되는 앱 스토어에 접근할 수 없으므로, `GitHub 릴리스 "
+"페이지에서 제공되는 최신 패키지 <https://github.com/mattermost/desktop/releases>"
+"`_\\ 에서 직접 앱을 설치해야 합니다. 원하는 배포 방법에 따른 :doc:`설치 안내 "
+"</deployment-guide/desktop/desktop-app-deployment>`\\ 는 문서에서 찾을 수 "
+"있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:35
 msgid "**Configure Mattermost for air-gapped operation**"
-msgstr ""
+msgstr "**폐쇄망 운영을 위해 OKR.BEST 구성**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:37
 msgid ""
@@ -133,6 +163,8 @@ msgid ""
 "this document accomodate for the lack of internet access to operate "
 "Mattermost in an air-gapped environment."
 msgstr ""
+"이 문서에서 권장하는 `구성 설정 <#server-configuration>`__\\ 은 폐쇄망 환경에서 "
+"OKR.BEST를 운영하기 위한 인터넷 접근 부재를 고려한 것입니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:41
 msgid ""
@@ -140,10 +172,13 @@ msgid ""
 "sales/>`__ if your organization needs support deploying Mattermost and "
 "supporting services in an air-gapped environment."
 msgstr ""
+"조직이 폐쇄망 환경에 OKR.BEST 및 지원 서비스를 배포하는 데 도움이 필요하다면 "
+"`Mattermost 전문가와 상담 <https://mattermost.com/contact-sales/>`__\\ 하는 "
+"것을 고려하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:44
 msgid "Bill of Materials"
-msgstr ""
+msgstr "자재 명세서(Bill of Materials)"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:46
 msgid ""
@@ -152,6 +187,9 @@ msgid ""
 "The resources you'll need will depend on your deployment method, "
 "specifically:"
 msgstr ""
+"인터넷에 연결된 머신에서 설치 과정에 필요한 모든 패키지, 컨테이너 이미지, "
+"종속성을 수집해야 합니다. 필요한 리소스는 배포 방법에 따라 다르며, 구체적으로 "
+"다음과 같습니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:50
 msgid ""
@@ -159,12 +197,15 @@ msgid ""
 "method for air-gapped environments. You can install the Mattermost Server"
 " in a few minutes on any air-gapped 64-bit Linux system."
 msgstr ""
+"폐쇄망 환경에서 가장 간단한 설치 방법으로 제공된 tarball을 사용하는 것을 "
+"권장합니다. 폐쇄망 64비트 Linux 시스템이라면 어디에서나 몇 분 안에 OKR.BEST 서버를 "
+"설치할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:52
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:71
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:90
 msgid "**Prerequisites**"
-msgstr ""
+msgstr "**사전 요구 사항**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:54
 msgid ""
@@ -173,6 +214,9 @@ msgid ""
 "policy:extended support releases>` for extended support where server "
 "upgrades may be infrequent."
 msgstr ""
+":doc:`OKR.BEST tarball </product-overview/version-archive>`. 서버 업그레이드가 "
+"드물 수 있는 환경에서는 확장 지원을 위해 최신 :ref:`ESR <product-overview"
+"/release-policy:extended support releases>`\\ 을 사용할 것을 권장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:55
 msgid ""
@@ -180,6 +224,8 @@ msgid ""
 "<https://www.postgresql.org/download/>`_ or container images for your "
 "Linux distribution"
 msgstr ""
+"데이터베이스: PostgreSQL `설치 패키지 "
+"<https://www.postgresql.org/download/>`_ 또는 Linux 배포판용 컨테이너 이미지"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:56
 msgid ""
@@ -188,6 +234,9 @@ msgid ""
 " recommend using an S3-compatible object storage solution or an NFS "
 "(Network File System) server for shared storage needs."
 msgstr ""
+"파일 저장소: 2,000명 미만의 배포에는 로컬 파일 시스템 저장소로 충분합니다. "
+"고가용성이 필요한 더 큰 규모의 배포에는 공유 저장소 요구를 위해 S3 호환 오브젝트 "
+"스토리지 솔루션이나 NFS(Network File System) 서버 사용을 권장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:57
 msgid ""
@@ -196,6 +245,10 @@ msgid ""
 "deploying :doc:`NGINX </deployment-guide/server/setup-nginx-proxy>` from "
 "these `Linux packages <https://nginx.org/en/linux_packages.html>`_."
 msgstr ""
+"부하 분산기: 폐쇄망 환경에 이미 실행 중인 부하 분산기가 있다면 이 리소스는 "
+"건너뛸 수 있으며, 그렇지 않다면 이 `Linux 패키지 "
+"<https://nginx.org/en/linux_packages.html>`_\\ 에서 :doc:`NGINX </deployment-"
+"guide/server/setup-nginx-proxy>`\\ 를 배포할 것을 권장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:58
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:77
@@ -205,6 +258,8 @@ msgid ""
 "<https://github.com/mattermost/desktop/releases>`_ based on your "
 "deployment method."
 msgstr ""
+"데스크톱 앱: 배포 방법에 따라 `필요한 패키지 "
+"<https://github.com/mattermost/desktop/releases>`_\\ 를 다운로드하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:60
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:79
@@ -213,6 +268,8 @@ msgid ""
 "**(Optional) Supporting Services** Consider downloading these additional "
 "resources if you plan to enable these optional components:"
 msgstr ""
+"**(선택 사항) 지원 서비스** 이러한 선택적 구성 요소를 활성화할 계획이라면 다음 "
+"추가 리소스를 다운로드하는 것을 고려하세요:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:63
 msgid ""
@@ -223,6 +280,10 @@ msgid ""
 "<https://github.com/mattermost/rtcd/releases>`__ (required for "
 "performance and scalability)."
 msgstr ""
+":doc:`OKR.BEST Calls </administration-guide/configure/calls-deployment-"
+"guide>`: `mattermost-calls-offloader <https://github.com/mattermost/calls-"
+"offloader/releases>`__(녹화, 전사, 실시간 자막에 필요) 및 `mattermost-rtcd "
+"<https://github.com/mattermost/rtcd/releases>`__(성능 및 확장성에 필요)."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:64
 msgid ""
@@ -230,6 +291,10 @@ msgid ""
 " `deployed <https://www.elastic.co/docs/deploy-manage/deploy/self-managed"
 "/installing-elasticsearch>`__ for enhanced search performance at scale."
 msgstr ""
+"대규모에서 향상된 검색 성능을 위해 `Elasticsearch "
+"<https://www.elastic.co/downloads/elasticsearch>`__\\ 를 `배포 "
+"<https://www.elastic.co/docs/deploy-manage/deploy/self-managed/installing-"
+"elasticsearch>`__\\ 할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:65
 msgid ""
@@ -237,6 +302,8 @@ msgid ""
 "<https://grafana.com/grafana/download>`__ for monitoring and "
 "observability"
 msgstr ""
+"모니터링 및 가관측성을 위한 `Prometheus <https://prometheus.io/download/>`_ 및 "
+"`Grafana <https://grafana.com/grafana/download>`__"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:69
 msgid ""
@@ -244,6 +311,8 @@ msgid ""
 "your organization is already running a Kubernetes cluster in the air-"
 "gapped environment."
 msgstr ""
+"조직이 폐쇄망 환경에서 이미 Kubernetes 클러스터를 실행 중이라면, 확장성이 매우 "
+"뛰어나고 견고한 배포를 위해 Kubernetes를 권장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:73
 msgid ""
@@ -252,6 +321,10 @@ msgid ""
 "<https://github.com/mattermost/mattermost-helm/blob/master/charts"
 "/mattermost-operator/values.yaml>`__"
 msgstr ""
+"`Mattermost Operator <https://github.com/mattermost/mattermost-"
+"helm/tree/master/charts/mattermost-operator>`_ 및 `values "
+"<https://github.com/mattermost/mattermost-helm/blob/master/charts"
+"/mattermost-operator/values.yaml>`__"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:74
 msgid ""
@@ -261,12 +334,19 @@ msgid ""
 "://cloudnative-pg.io/documentation/1.27/installation_upgrade/>`__ or "
 "`pgEdge <https://github.com/pgEdge/pgedge-helm>`__."
 msgstr ""
+"데이터베이스: Crunchy Data의 `Postgres Operator "
+"<https://access.crunchydata.com/documentation/postgres-"
+"operator/latest/quickstart>`_, `CloudNativePG <https://cloudnative-"
+"pg.io/documentation/1.27/installation_upgrade/>`__ 또는 `pgEdge "
+"<https://github.com/pgEdge/pgedge-helm>`__\\ 와 같은 옵션을 권장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:75
 msgid ""
 "File Storage: We recommend using an S3-compatible storage service or a "
 "mounted NFS volume for shared storage needs."
 msgstr ""
+"파일 저장소: 공유 저장소 요구를 위해 S3 호환 스토리지 서비스나 마운트된 NFS "
+"볼륨 사용을 권장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:76
 msgid ""
@@ -277,6 +357,11 @@ msgid ""
 "/nginx-ingress-controller/installation/installing-nic/installation-with-"
 "operator/>`__."
 msgstr ""
+"부하 분산기: 폐쇄망 환경에 이미 실행 중인 부하 분산기가 있다면 이 리소스는 "
+"건너뛸 수 있으며, 그렇지 않다면 `NGINX Ingress Controller operator "
+"<https://docs.nginx.com/nginx-ingress-controller/installation/installing-"
+"nic/installation-with-operator/>`__\\ 를 사용하여 :doc:`NGINX </deployment-"
+"guide/server/setup-nginx-proxy>`\\ 를 배포할 것을 권장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:82
 msgid ""
@@ -292,6 +377,16 @@ msgid ""
 "/mattermost-helm/blob/master/charts/mattermost-rtcd/values.yaml>`__ "
 "(required for performance and scalability)."
 msgstr ""
+":doc:`OKR.BEST Calls </administration-guide/configure/calls-deployment-"
+"guide>` helm 차트: `mattermost-calls-offloader "
+"<https://github.com/mattermost/mattermost-helm/tree/master/charts"
+"/mattermost-calls-offloader>`__ 및 `values "
+"<https://github.com/mattermost/mattermost-helm/blob/master/charts"
+"/mattermost-calls-offloader/values.yaml>`__(녹화, 전사, 실시간 자막에 필요), "
+"`mattermost-rtcd <https://github.com/mattermost/mattermost-"
+"helm/tree/master/charts/mattermost-rtcd>`__ 및 `values "
+"<https://github.com/mattermost/mattermost-helm/blob/master/charts"
+"/mattermost-rtcd/values.yaml>`__(성능 및 확장성에 필요)."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:83
 msgid ""
@@ -300,6 +395,10 @@ msgid ""
 "<https://www.elastic.co/guide/en/cloud-on-k8s/2.8/k8s-air-gapped.html>`__"
 " for enhanced search performance at scale."
 msgstr ""
+"대규모에서 향상된 검색 성능을 위해 `Elasticsearch "
+"<https://www.elastic.co/docs/deploy-manage/deploy/cloud-on-k8s>`__\\ 를 "
+"`폐쇄망 k8 환경에 배포 <https://www.elastic.co/guide/en/cloud-on-k8s/2.8/k8s-"
+"air-gapped.html>`__\\ 할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:84
 msgid ""
@@ -307,6 +406,9 @@ msgid ""
 "operator>`__ and `Grafana <https://github.com/grafana/grafana-"
 "operator>`__ operators for monitoring and observability"
 msgstr ""
+"모니터링 및 가관측성을 위한 `Prometheus <https://github.com/prometheus-"
+"operator/prometheus-operator>`__ 및 `Grafana <https://github.com/grafana"
+"/grafana-operator>`__ operator"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:88
 msgid ""
@@ -316,16 +418,22 @@ msgid ""
 "production environments at high scale, as it doesn’t support clustered "
 "deployments or High Availability (HA) configurations out-of-the-box."
 msgstr ""
+"폐쇄망 환경에 실행 중인 Kubernetes 클러스터가 없지만 간소화된 설치 및 종속성 "
+"관리를 위해 컨테이너를 사용하고 싶다면 Docker를 사용할 수 있습니다. Docker는 "
+"기본적으로 클러스터 배포나 고가용성(HA) 구성을 지원하지 않으므로 대규모 운영 "
+"환경에는 권장되지 않습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:92
 msgid ""
 "`Mattermost Enterprise Edition <https://hub.docker.com/r/mattermost"
 "/mattermost-enterprise-edition>`__ image."
 msgstr ""
+"`Mattermost Enterprise Edition <https://hub.docker.com/r/mattermost"
+"/mattermost-enterprise-edition>`__ 이미지."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:93
 msgid "Database: `PostgreSQL <https://hub.docker.com/_/postgres>`__ image."
-msgstr ""
+msgstr "데이터베이스: `PostgreSQL <https://hub.docker.com/_/postgres>`__ 이미지."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:94
 msgid ""
@@ -334,6 +442,10 @@ msgid ""
 "deploying :doc:`NGINX </deployment-guide/server/setup-nginx-proxy>` from "
 "this `images <https://hub.docker.com/_/nginx>`__."
 msgstr ""
+"부하 분산기: 폐쇄망 환경에 이미 실행 중인 부하 분산기가 있다면 이 리소스는 "
+"건너뛸 수 있으며, 그렇지 않다면 이 `이미지 <https://hub.docker.com/_/nginx>`__"
+"\\ 에서 :doc:`NGINX </deployment-guide/server/setup-nginx-proxy>`\\ 를 배포할 "
+"것을 권장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:100
 msgid ""
@@ -343,12 +455,18 @@ msgid ""
 "captions) and `rtcd <https://hub.docker.com/r/mattermost/rtcd>`__ "
 "(required for performance and scalability)."
 msgstr ""
+":doc:`OKR.BEST Calls </administration-guide/configure/calls-deployment-"
+"guide>` 이미지: `calls-offloader <https://hub.docker.com/r/mattermost/calls-"
+"offloader>`__(녹화, 전사, 실시간 자막에 필요) 및 `rtcd "
+"<https://hub.docker.com/r/mattermost/rtcd>`__(성능 및 확장성에 필요)."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:101
 msgid ""
 "`Elasticsearch <https://hub.docker.com/_/elasticsearch>`__ image for "
 "enhanced search performance at scale."
 msgstr ""
+"대규모에서 향상된 검색 성능을 위한 `Elasticsearch "
+"<https://hub.docker.com/_/elasticsearch>`__ 이미지."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:102
 msgid ""
@@ -356,10 +474,13 @@ msgid ""
 "<https://hub.docker.com/r/grafana/grafana>`__ images for monitoring and "
 "observability."
 msgstr ""
+"모니터링 및 가관측성을 위한 `Prometheus "
+"<https://hub.docker.com/r/prom/prometheus>`__ 및 `Grafana "
+"<https://hub.docker.com/r/grafana/grafana>`__ 이미지."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:105
 msgid "Mattermost Plugins"
-msgstr ""
+msgstr "OKR.BEST 플러그인"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:107
 msgid ""
@@ -371,10 +492,16 @@ msgid ""
 " have Mattermost deployed, these plugin binaries can be uploaded directly"
 " in the System Console."
 msgstr ""
+"OKR.BEST에는 미션 크리티컬 도구를 위한 여러 :doc:`사전 빌드된 통합 "
+"</integrations-guide/popular-integrations>`\\ 이 포함되어 있습니다. OKR.BEST "
+"패키지에 사전 빌드된 것 외의 플러그인을 사용하려면 `Mattermost Marketplace "
+"<https://mattermost.com/marketplace/>`_\\ 에서 플러그인 바이너리를 "
+"다운로드해야 합니다. OKR.BEST를 배포한 후에는 이러한 플러그인 바이너리를 관리자 "
+"도구에서 직접 업로드할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:110
 msgid "SSL/TLS Certificates and Keys"
-msgstr ""
+msgstr "SSL/TLS 인증서 및 키"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:112
 msgid ""
@@ -383,10 +510,13 @@ msgid ""
 " Mattermost, as well as any CA files or certificates needed to access "
 "internal services such as LDAP or SAML."
 msgstr ""
+"배포에 SSL이 필요하다면 필요한 인증서를 갖추고 있는지 확인하세요. 여기에는 "
+"OKR.BEST에서 HTTPS를 활성화하기 위한 인증서와 키는 물론, LDAP나 SAML 같은 내부 "
+"서비스에 접근하는 데 필요한 모든 CA 파일이나 인증서가 포함됩니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:115
 msgid "Local Documentation"
-msgstr ""
+msgstr "로컬 문서"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:117
 msgid ""
@@ -397,32 +527,38 @@ msgid ""
 "deployment and configuration documents directly from the `GitHub docs "
 "repository <https://github.com/mattermost/docs>`__."
 msgstr ""
+"OKR.BEST 문서는 `로컬에서 빌드 <https://github.com/mattermost/docs?tab=readme-"
+"ov-file#build-locally>`__\\ 할 수 있으므로 폐쇄망 환경에서도 설치 및 구성 문서에 "
+"접근할 수 있습니다. 그렇지 않으면 `GitHub docs 저장소 "
+"<https://github.com/mattermost/docs>`__\\ 에서 필요한 배포 및 구성 문서를 직접 "
+"다운로드할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:119
 msgid ""
 "**Prerequisites** The following software is required to build the "
 "documentation locally:"
 msgstr ""
+"**사전 요구 사항** 문서를 로컬에서 빌드하려면 다음 소프트웨어가 필요합니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:122
 msgid "Git `[download] <https://git-scm.com/downloads>`__"
-msgstr ""
+msgstr "Git `[다운로드] <https://git-scm.com/downloads>`__"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:123
 msgid "Python 3.11 or later `[download] <https://www.python.org/downloads>`__"
-msgstr ""
+msgstr "Python 3.11 이상 `[다운로드] <https://www.python.org/downloads>`__"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:124
 msgid "Pipenv `[download] <https://pipenv.pypa.io>`__"
-msgstr ""
+msgstr "Pipenv `[다운로드] <https://pipenv.pypa.io>`__"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:125
 msgid "GNU Make 3.82 or later `[download] <https://ftp.gnu.org/gnu/make/>`__"
-msgstr ""
+msgstr "GNU Make 3.82 이상 `[다운로드] <https://ftp.gnu.org/gnu/make/>`__"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:128
 msgid "Server configuration"
-msgstr ""
+msgstr "서버 구성"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:130
 msgid ""
@@ -430,10 +566,12 @@ msgid ""
 "gapped operation. The following sections describe these configuration "
 "options and offers recommendations for settings."
 msgstr ""
+"배포에 성공한 후에는 폐쇄망 운영을 위해 OKR.BEST를 구성해야 합니다. 다음 섹션에서는 "
+"이러한 구성 옵션을 설명하고 설정에 대한 권장 사항을 제시합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:133
 msgid "Mobile push notifications"
-msgstr ""
+msgstr "모바일 푸시 알림"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:135
 msgid ""
@@ -446,10 +584,17 @@ msgid ""
 "settings:enable push notifications>` in **System Console > Environment > "
 "Push Notification Server**."
 msgstr ""
+"OKR.BEST는 모바일 푸시 알림을 사용해 사용자에게 새 메시지와 활동을 알릴 수 "
+"있습니다. 이러한 알림을 모바일 기기로 보내려면 서버 구성 요소가 배포되어 있어야 "
+"합니다. 기본적으로 OKR.BEST는 폐쇄망 환경에서 사용할 수 없는 공용 푸시 알림 "
+"서비스를 사용합니다. **관리자 도구 > Environment > Push Notification "
+"Server**\\ 에서 :ref:`푸시 알림을 비활성화 <administration-guide/configure"
+"/environment-configuration-settings:enable push notifications>`\\ 할 것을 "
+"권장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:138
 msgid "Email"
-msgstr ""
+msgstr "이메일"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:140
 msgid ""
@@ -457,10 +602,12 @@ msgid ""
 "disabling email invitations and email verification from **System Console "
 "> Authentication > Signup**."
 msgstr ""
+"내부 폐쇄망 이메일 서비스를 설정하지 않았다면 **관리자 도구 > Authentication > "
+"Signup**\\ 에서 이메일 초대와 이메일 인증을 비활성화할 것을 권장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:143
 msgid "Website link previews"
-msgstr ""
+msgstr "웹사이트 링크 미리보기"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:145
 msgid ""
@@ -470,10 +617,14 @@ msgid ""
 "website link previews>` in **System Console > Site Configuration > "
 "Posts**."
 msgstr ""
+"웹사이트 링크 미리보기는 링크의 내용을 가져오기 위해 인터넷 연결이 필요합니다. "
+"**관리자 도구 > Site Configuration > Posts**\\ 에서 :ref:`웹사이트 링크 "
+"미리보기를 비활성화 <administration-guide/configure/site-configuration-"
+"settings:enable website link previews>`\\ 할 것을 권장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:148
 msgid "GIF picker"
-msgstr ""
+msgstr "GIF 선택기"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:150
 msgid ""
@@ -481,10 +632,12 @@ msgid ""
 "external internet access. You can disable it in **System Console > "
 "Integrations > GIF**."
 msgstr ""
+"GIF 선택기는 외부 인터넷 접근에 의존하는 서드파티 서비스에 의존합니다. **관리자 "
+"도구 > Integrations > GIF**\\ 에서 비활성화할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:153
 msgid "Notices"
-msgstr ""
+msgstr "알림(Notices)"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:155
 msgid ""
@@ -493,10 +646,14 @@ msgid ""
 "and end users of new product improvements, features, and releases. You "
 "can disable notices in **System Console > Site Configuration > Notices**."
 msgstr ""
+":doc:`제품 내 알림 </administration-guide/manage/in-product-notices>`\\ 은 "
+"관리자와 최종 사용자에게 새로운 제품 개선 사항, 기능, 릴리스를 주기적으로 알리기 "
+"위해 인터넷 접근이 필요합니다. **관리자 도구 > Site Configuration > "
+"Notices**\\ 에서 알림을 비활성화할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:158
 msgid "Telemetry"
-msgstr ""
+msgstr "텔레메트리"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:160
 msgid ""
@@ -504,16 +661,20 @@ msgid ""
 "features </administration-guide/manage/telemetry>`, including the "
 "security update check, and error and diagnostics reporting features."
 msgstr ""
+"로그 오류를 방지하기 위해 보안 업데이트 확인, 오류 및 진단 보고 기능을 포함한 "
+":doc:`텔레메트리 관련 기능 </administration-guide/manage/telemetry>`\\ 을 "
+"비활성화할 것을 권장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:163
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:166
 msgid ""
 "What if my air-gapped environment doesn't have a private container "
 "registry or package mirror?"
 msgstr ""
+"폐쇄망 환경에 비공개 컨테이너 레지스트리나 패키지 미러가 없으면 어떻게 하나요?"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:167
 msgid ""
@@ -529,168 +690,183 @@ msgid ""
 " guide, and can be supplemented with online resources depending on your "
 "specific deployment needs."
 msgstr ""
+"비공개 컨테이너 레지스트리는 폐쇄망 배포에 필요한 Docker 이미지를 안전하게 "
+"저장하여 데이터 격리 요구 사항 준수를 보장합니다. 마찬가지로 비공개 패키지 미러는 "
+"Ubuntu 또는 RHEL/CentOS Linux 환경에서 폐쇄망 배포에 필요한 운영 체제 패키지를 "
+"저장합니다. 로컬 레지스트리나 미러를 설정하는 것은 폐쇄망 환경에서 모든 이미지, "
+"종속성, 패키지를 사용할 수 있도록 OKR.BEST를 배포하는 데 있어 매우 중요한 "
+"단계입니다. 아래 단계는 사용 중인 배포 방법에 따라 로컬 레지스트리나 미러를 "
+"설정하는 데 필요한 과정을 설명합니다. 이 단계는 대략적인 가이드이며, 구체적인 "
+"배포 요구에 따라 온라인 리소스로 보완할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:172
 msgid "**(Ubuntu) Set up a private Debian package mirror**"
-msgstr ""
+msgstr "**(Ubuntu) 비공개 Debian 패키지 미러 설정**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:174
 msgid ""
 "We will use Aptly to create a local mirror, although you can also use "
 "other options such as debmirror."
 msgstr ""
+"로컬 미러를 만들기 위해 Aptly를 사용하지만, debmirror 같은 다른 옵션을 사용할 "
+"수도 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:176
 msgid "**Install Aptly** (on an internet-connected machine):"
-msgstr ""
+msgstr "**Aptly 설치**(인터넷에 연결된 머신에서):"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:183
 msgid "**Create GPG key for signing packages**:"
-msgstr ""
+msgstr "**패키지 서명을 위한 GPG 키 생성**:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:189
 msgid "**Create a mirror configuration**:"
-msgstr ""
+msgstr "**미러 구성 생성**:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:195
 msgid "**Update the mirror to download packages**:"
-msgstr ""
+msgstr "**패키지를 다운로드하도록 미러 업데이트**:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:201
 msgid "**Create and publish a snapshot**:"
-msgstr ""
+msgstr "**스냅샷 생성 및 게시**:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:208
 msgid "**Serve the repository**:"
-msgstr ""
+msgstr "**저장소 제공**:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:214
 msgid "**Client configuration:** Configure apt to use your local mirror:"
-msgstr ""
+msgstr "**클라이언트 구성:** 로컬 미러를 사용하도록 apt를 구성합니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:223
 msgid "**(RHEL/CentOS) Set up a private RHEL package mirror**"
-msgstr ""
+msgstr "**(RHEL/CentOS) 비공개 RHEL 패키지 미러 설정**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:225
 msgid "We will use reprosync for a local mirror."
-msgstr ""
+msgstr "로컬 미러를 위해 reprosync를 사용합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:227
 msgid "**Install required tools** (on an internet-connected RHEL system):"
-msgstr ""
+msgstr "**필요한 도구 설치**(인터넷에 연결된 RHEL 시스템에서):"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:233
 msgid "**Download packages**:"
-msgstr ""
+msgstr "**패키지 다운로드**:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:241
 msgid "**Create repository metadata**:"
-msgstr ""
+msgstr "**저장소 메타데이터 생성**:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:248
 msgid "**Set up a web server**:"
-msgstr ""
+msgstr "**웹 서버 설정**:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:256
 msgid "**Client configuration:** Disable existing repositories:"
-msgstr ""
+msgstr "**클라이언트 구성:** 기존 저장소를 비활성화합니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:264
 msgid "**Client configuration:** Create new repository files:"
-msgstr ""
+msgstr "**클라이언트 구성:** 새 저장소 파일을 생성합니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:284
 msgid "**Client configuration:** Clear cache and test:"
-msgstr ""
+msgstr "**클라이언트 구성:** 캐시를 지우고 테스트합니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:294
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:375
 msgid "**Set up a self-hosted private container registry**"
-msgstr ""
+msgstr "**셀프 호스팅 비공개 컨테이너 레지스트리 설정**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:296
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:377
 msgid "**Install Docker Registry**:"
-msgstr ""
+msgstr "**Docker Registry 설치**:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:302
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:383
 msgid "**Configure persistent storage**:"
-msgstr ""
+msgstr "**영구 저장소 구성**:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:310
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:391
 msgid "**Add TLS security** (recommended):"
-msgstr ""
+msgstr "**TLS 보안 추가**(권장):"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:312
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:393
 msgid "Generate self-signed certificates:"
-msgstr ""
+msgstr "자체 서명 인증서를 생성합니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:320
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:401
 msgid "Run the registry with TLS:"
-msgstr ""
+msgstr "TLS와 함께 레지스트리를 실행합니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:332
 msgid "**Configure Kubernetes to use private image registries**"
-msgstr ""
+msgstr "**비공개 이미지 레지스트리를 사용하도록 Kubernetes 구성**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:334
 msgid ""
 "When using Kubernetes in an air-gapped environment, you need to configure"
 " it to use your private registry."
 msgstr ""
+"폐쇄망 환경에서 Kubernetes를 사용할 때는 비공개 레지스트리를 사용하도록 구성해야 "
+"합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:336
 msgid "**Create a kubernetes secret for registry authentication**:"
-msgstr ""
+msgstr "**레지스트리 인증을 위한 kubernetes 시크릿 생성**:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:346
 msgid "**Reference the secret in pod specifications**:"
-msgstr ""
+msgstr "**파드 사양에서 시크릿 참조**:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:361
 msgid "**For Helm deployments**, specify the registry in ``values.yaml``:"
-msgstr ""
+msgstr "**Helm 배포의 경우**, ``values.yaml``\\ 에서 레지스트리를 지정합니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:413
 msgid "**Populate your private registry**"
-msgstr ""
+msgstr "**비공개 레지스트리 채우기**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:415
 msgid ""
 "Ensure the required images from the `Bill of Materials <bill-of-"
 "materials>`__ are downloaded and pushed to the private registry."
 msgstr ""
+"`자재 명세서 <bill-of-materials>`__\\ 의 필요한 이미지가 다운로드되어 비공개 "
+"레지스트리로 푸시되었는지 확인하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:417
 msgid "**Configure Docker to use private image registries**"
-msgstr ""
+msgstr "**비공개 이미지 레지스트리를 사용하도록 Docker 구성**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:419
 msgid "Configure Docker on all hosts to trust and use your private registry."
 msgstr ""
+"모든 호스트의 Docker가 비공개 레지스트리를 신뢰하고 사용하도록 구성하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:421
 msgid "**Add your registry to Docker's trusted registries**:"
-msgstr ""
+msgstr "**레지스트리를 Docker의 신뢰할 수 있는 레지스트리에 추가**:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:423
 msgid "Edit or create ``/etc/docker/daemon.json``:"
-msgstr ""
+msgstr "``/etc/docker/daemon.json``\\ 을 편집하거나 생성합니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:431
 msgid "For registries using self-signed certificates:"
-msgstr ""
+msgstr "자체 서명 인증서를 사용하는 레지스트리의 경우:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:438
 msgid "**Restart Docker daemon**:"
-msgstr ""
+msgstr "**Docker 데몬 재시작**:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment.rst:444
 msgid "**Test the configuration**:"
-msgstr ""
+msgstr "**구성 테스트**:"
 
