@@ -26,6 +26,9 @@ msgid ""
 "with the highest effort, typically favored by advanced system "
 "administrators."
 msgstr ""
+"tarball을 사용해 모든 64비트 Linux 시스템에 OKR.BEST 서버를 설치할 수 "
+"있습니다. 이는 가장 유연한 설치 방법이지만 가장 많은 노력이 필요하며, 보통 "
+"숙련된 시스템 관리자가 선호합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:25
 msgid ""
@@ -33,10 +36,12 @@ msgid ""
 "PostgreSQL database, prepare the database, download the Mattermost "
 "server, install the server, and set up the server."
 msgstr ""
+"이 OKR.BEST 배포는 다음 단계를 포함합니다: PostgreSQL 데이터베이스 설치, "
+"데이터베이스 준비, OKR.BEST 서버 다운로드, 서버 설치, 서버 설정."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:28
 msgid "Step 1: Install PostgreSQL database or get database connection credentials"
-msgstr ""
+msgstr "1단계: PostgreSQL 데이터베이스 설치 또는 데이터베이스 연결 자격 증명 확보"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:30
 msgid ""
@@ -44,6 +49,8 @@ msgid ""
 "`PostgreSQL installation <https://www.postgresql.org/download/>`_ "
 "documentation."
 msgstr ""
+"`PostgreSQL 설치 <https://www.postgresql.org/download/>`_ 문서를 따라 동일한 "
+"서버에 PostgreSQL을 로컬로 설치합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:31
 msgid ""
@@ -51,14 +58,17 @@ msgid ""
 "credentials, including hostname, port, database name, username, and "
 "password available."
 msgstr ""
+"외부 PostgreSQL 데이터베이스 서버를 사용합니다. 호스트 이름, 포트, "
+"데이터베이스 이름, 사용자 이름, 비밀번호를 포함한 연결 자격 증명을 갖추고 "
+"있는지 확인하세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:32
 msgid "Use a managed database service."
-msgstr ""
+msgstr "관리형 데이터베이스 서비스를 사용합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:35
 msgid "Step 2: Prepare the database"
-msgstr ""
+msgstr "2단계: 데이터베이스 준비"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:37
 msgid ""
@@ -66,10 +76,12 @@ msgid ""
 "guide/server/preparations:database preparation>` documentation to set up "
 "your PostgreSQL database for Mattermost."
 msgstr ""
+":ref:`데이터베이스 준비 <deployment-guide/server/preparations:database "
+"preparation>` 문서를 따라 OKR.BEST용 PostgreSQL 데이터베이스를 설정합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:40
 msgid "Step 3: Download"
-msgstr ""
+msgstr "3단계: 다운로드"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:42
 msgid ""
@@ -79,6 +91,10 @@ msgid ""
 "the appropriate architecture (e.g., ``arm64`` for ARM-based systems) in "
 "the link as needed."
 msgstr ""
+"터미널 창에서 OKR.BEST 서버를 호스팅할 시스템에 ssh로 접속합니다. "
+"``wget``\\ 을 사용해 다음 명령 중 하나로 설치할 OKR.BEST 서버 릴리스를 "
+"다운로드합니다. 필요에 따라 링크의 ``amd64``\\ 를 적절한 아키텍처(예: ARM "
+"기반 시스템의 경우 ``arm64``)로 교체하세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:58
 msgid ""
@@ -86,26 +102,30 @@ msgid ""
 "releases can be found in our :doc:`version archive </product-overview"
 "/version-archive>` documentation."
 msgstr ""
+"이전 릴리스를 찾는 경우, Enterprise 및 Team Edition 릴리스는 :doc:`버전 "
+"아카이브 </product-overview/version-archive>` 문서에서 찾을 수 있습니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:61
 msgid "Step 4: Install Mattermost server"
-msgstr ""
+msgstr "4단계: Mattermost 서버 설치"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:63
 msgid ""
 "Install the Mattermost Server by extracting the tarball, creating users "
 "and groups, and setting file/folder permissions."
 msgstr ""
+"tarball을 추출하고, 사용자와 그룹을 생성하고, 파일/폴더 권한을 설정하여 "
+"OKR.BEST 서버를 설치합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:65
 msgid "First extract the tarball:"
-msgstr ""
+msgstr "먼저 tarball을 추출합니다:"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:71
 msgid ""
 "Move the entire folder to the ``/opt`` directory (or whatever path you "
 "require):"
-msgstr ""
+msgstr "전체 폴더를 ``/opt`` 디렉토리(또는 원하는 경로)로 옮깁니다:"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:77
 msgid ""
@@ -114,30 +134,37 @@ msgid ""
 "the System Console during setup (even using alternative storage such as "
 "S3):"
 msgstr ""
+"기본 저장 폴더를 생성합니다. 기본적으로 OKR.BEST 서버는 파일 폴더로 "
+"``/opt/mattermost/data``\\ 를 사용합니다. 이는 설정 중 관리자 도구에서 변경할 "
+"수 있습니다(S3 같은 대체 저장소를 사용하는 것도 가능):"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:85
 msgid ""
 "If you choose a custom path, ensure this alternate path is used in all "
 "steps that follow."
 msgstr ""
+"사용자 정의 경로를 선택하는 경우, 이후 모든 단계에서 이 대체 경로가 사용되도록 "
+"하세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:87
 msgid "Set up a user and group called ``mattermost``:"
-msgstr ""
+msgstr "``mattermost``\\ 라는 사용자와 그룹을 설정합니다:"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:95
 msgid ""
 "If you choose a custom user and group name, ensure it is used in all the "
 "steps that follow."
 msgstr ""
+"사용자 정의 사용자·그룹 이름을 선택하는 경우, 이후 모든 단계에서 이 이름이 "
+"사용되도록 하세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:97
 msgid "Set the file and folder permissions for your installation:"
-msgstr ""
+msgstr "설치 환경의 파일 및 폴더 권한을 설정합니다:"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:103
 msgid "Give the ``mattermost`` group write permissions to the application folder:"
-msgstr ""
+msgstr "``mattermost`` 그룹에 애플리케이션 폴더에 대한 쓰기 권한을 부여합니다:"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:109
 msgid ""
@@ -145,16 +172,20 @@ msgid ""
 "system. Starting and stopping the Mattermost Server is done using "
 "``systemd``."
 msgstr ""
+"이제 시스템에 최신 OKR.BEST 서버 버전이 설치됩니다. OKR.BEST 서버의 시작과 "
+"중지는 ``systemd``\\ 를 사용해 수행합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:111
 msgid "Create the systemd unit file:"
-msgstr ""
+msgstr "systemd 유닛 파일을 생성합니다:"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:117
 msgid ""
 "As root, edit the systemd unit file at "
 "``/lib/systemd/system/mattermost.service`` to add the following lines:"
 msgstr ""
+"root 권한으로 ``/lib/systemd/system/mattermost.service``\\ 의 systemd 유닛 "
+"파일을 편집하여 다음 줄을 추가합니다:"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:142
 msgid ""
@@ -163,16 +194,21 @@ msgid ""
 "``BindsTo=postgresql.service`` to the ``[Unit]`` section of the systemd "
 "unit file."
 msgstr ""
+"OKR.BEST 서버를 데이터베이스와 동일한 시스템에 설치하는 경우, systemd 유닛 "
+"파일의 ``[Unit]`` 섹션에 ``After=postgresql.service``\\ 와 "
+"``BindsTo=postgresql.service``\\ 를 모두 추가하는 것이 좋습니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:144
 msgid ""
 "Save the file and reload systemd using ``sudo systemctl daemon-reload``. "
 "Mattermost Server is now installed and is ready for setup."
 msgstr ""
+"파일을 저장하고 ``sudo systemctl daemon-reload``\\ 를 사용해 systemd를 다시 "
+"로드합니다. 이제 OKR.BEST 서버가 설치되어 설정할 준비가 되었습니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:147
 msgid "Step 5: Set up the server"
-msgstr ""
+msgstr "5단계: 서버 설정"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:149
 msgid ""
@@ -181,16 +217,21 @@ msgid ""
 "``/opt/mattermost/config/config.json``. We recommend taking a backup of "
 "this default config ahead of making changes:"
 msgstr ""
+"OKR.BEST 서버를 시작하기 전에 구성 파일을 편집해야 합니다. 기본 구성 파일은 "
+"``/opt/mattermost/config/config.json``\\ 에 있습니다. 변경하기 전에 이 기본 "
+"구성을 백업할 것을 권장합니다:"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:155
 msgid "Configure the following properties in this file:"
-msgstr ""
+msgstr "이 파일에서 다음 속성을 구성합니다:"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:157
 msgid ""
 "Under ``SqlSettings``, set ``DriverName`` to ``\"postgres\"``. This is "
 "the default and recommended database for all Mattermost installations."
 msgstr ""
+"``SqlSettings``\\ 에서 ``DriverName``\\ 을 ``\"postgres\"``\\ 로 설정합니다. "
+"이는 모든 OKR.BEST 설치의 기본이자 권장 데이터베이스입니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:158
 msgid ""
@@ -200,12 +241,19 @@ msgid ""
 "``mmuser``, ``<mmuser-password>``, ``<host-name-or-IP>`` and "
 "``mattermost`` with your database name."
 msgstr ""
+"``SqlSettings``\\ 에서 ``DataSource``\\ 를 ``\"postgres://mmuser:<mmuser-"
+"password>@<host-name-or-"
+"IP>:5432/mattermost?sslmode=disable&connect_timeout=10\"``\\ 로 설정하되, "
+"``mmuser``, ``<mmuser-password>``, ``<host-name-or-IP>``, "
+"``mattermost``\\ 를 데이터베이스 이름으로 교체합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:159
 msgid ""
 "Under ``ServiceSettings``, set ``\"SiteURL\"``: The domain name for the "
 "Mattermost application (e.g. ``https://mattermost.example.com``)."
 msgstr ""
+"``ServiceSettings``\\ 에서 ``\"SiteURL\"``\\ 을 설정합니다: OKR.BEST "
+"애플리케이션의 도메인 이름(예: ``https://mattermost.example.com``)입니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:161
 msgid ""
@@ -214,18 +262,26 @@ msgid ""
 " ``SupportSettings``, set ``\"SupportEmail\"``. This is the email address"
 " your users will contact when they need help."
 msgstr ""
+"``SupportSettings``\\ 에서 ``\"SupportEmail\"``\\ 을 설정하여 :ref:`지원 "
+"이메일 <administration-guide/configure/site-configuration-settings:support "
+"email address>`\\ 을 구성할 것을 권장합니다. 이는 사용자가 도움이 필요할 때 "
+"연락하는 이메일 주소입니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:163
 msgid ""
 "After modifying the ``config.json`` configuration file, you can now start"
 " the Mattermost server:"
 msgstr ""
+"``config.json`` 구성 파일을 수정한 후 이제 OKR.BEST 서버를 시작할 수 "
+"있습니다:"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:169
 msgid ""
 "Verify that Mattermost is running: ``curl http://localhost:8065``. You "
 "should see the HTML that’s returned by the Mattermost Server."
 msgstr ""
+"OKR.BEST가 실행 중인지 확인합니다: ``curl http://localhost:8065``. OKR.BEST "
+"서버가 반환하는 HTML이 보일 것입니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:171
 msgid ""
@@ -233,10 +289,12 @@ msgid ""
 "``systemctl enable mattermost.service`` so that Mattermost will start on "
 "system boot."
 msgstr ""
+"요구 사항에 따라 마지막 단계는 시스템 부팅 시 OKR.BEST가 시작되도록 sudo "
+"``systemctl enable mattermost.service``\\ 를 실행하는 것입니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:174
 msgid "Step 6: Update the server"
-msgstr ""
+msgstr "6단계: 서버 업데이트"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:176
 msgid ""
@@ -245,10 +303,13 @@ msgid ""
 "</administration-guide/upgrade/upgrading-mattermost-server>` "
 "documentation for details."
 msgstr ""
+"tarball을 사용할 때 OKR.BEST 서버 설치를 업데이트하려면 여러 수동 단계가 "
+"필요합니다. 자세한 내용은 :doc:`OKR.BEST 서버 업그레이드 </administration-"
+"guide/upgrade/upgrading-mattermost-server>` 문서를 참고하세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:179
 msgid "Remove Mattermost"
-msgstr ""
+msgstr "Mattermost 제거"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:181
 msgid ""
@@ -256,6 +317,8 @@ msgid ""
 "Mattermost Server, back up all important files, and then run this "
 "command:"
 msgstr ""
+"어떤 이유로든 OKR.BEST 서버를 제거하려면, OKR.BEST 서버를 중지하고 모든 중요 "
+"파일을 백업한 다음 이 명령을 실행해야 합니다:"
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:189
 msgid ""
@@ -264,10 +327,16 @@ msgid ""
 "``plugins``, ``client/plugins``, and ``data``. We strongly recommend you "
 "back up these locations before running the ``rm`` command."
 msgstr ""
+"구성에 따라 ``/opt/mattermost``\\ 에는 백업해야 할 중요한 폴더가 여럿 "
+"있습니다. ``config``, ``logs``, ``plugins``, ``client/plugins``, "
+"``data``\\ 입니다. ``rm`` 명령을 실행하기 전에 이 위치들을 백업할 것을 강력히 "
+"권장합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-tar.rst:191
 msgid ""
 "You may also remove the Mattermost systemd unit file and the user/group "
 "created for running the application."
 msgstr ""
+"애플리케이션 실행을 위해 생성한 OKR.BEST systemd 유닛 파일과 사용자/그룹도 "
+"제거할 수 있습니다."
 
