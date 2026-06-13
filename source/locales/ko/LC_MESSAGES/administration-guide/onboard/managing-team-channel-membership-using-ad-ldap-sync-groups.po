@@ -6,6 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
+"AD/LDAP 동기화 그룹을 사용해 팀 또는 비공개 채널 멤버십 관리"
 "Project-Id-Version: Mattermost \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-11 03:43+0900\n"
@@ -24,12 +25,15 @@ msgid ""
 "Using AD/LDAP synchronized groups to manage team or private channel "
 "membership"
 msgstr ""
+"AD/LDAP 동기화 그룹을 사용해 팀 또는 비공개 채널 멤버십 관리"
 
 #: ../../source/_static/badges/ent-plus.rst:9
 msgid ""
 "|plans-img-yellow| Available on `Enterprise and Enterprise Advanced plans"
 " <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Enterprise 및 Enterprise Advanced 플랜 <https://mattermost.com/pricing/>`__ "
+"에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -44,6 +48,9 @@ msgid ""
 "be added and removed based on their membership to the synchronized "
 "AD/LDAP group."
 msgstr ""
+"OKR.BEST에서 :doc:`동기화된 AD/LDAP 그룹 </administration-guide/onboard/ad-ldap-"
+"groups-synchronization>`\\ 으로 만든 그룹은 비공개 팀과 비공개 채널의 멤버십을 관리하는 데 사용할 수 있습니다. "
+"팀 또는 비공개 채널이 동기화된 그룹으로 관리되면 사용자는 동기화된 AD/LDAP 그룹의 멤버십을 기준으로 추가 및 제거됩니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:11
 msgid ""
@@ -53,6 +60,8 @@ msgid ""
 "are added to the synchronized AD/LDAP group and they will be removed from"
 " the team when removed from the AD/LDAP group."
 msgstr ""
+"예를 들어 개발자 팀에 동기화하려는 개발 팀이 포함된 AD/LDAP 그룹이 있을 수 있습니다. 이 기능을 사용하면 새 개발자가 "
+"동기화된 AD/LDAP 그룹에 추가될 때 팀에 추가되고, AD/LDAP 그룹에서 제거될 때 팀에서도 제거됩니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:13
 msgid ""
@@ -62,60 +71,65 @@ msgid ""
 " so that users outside of the synchronized group are prevented from being"
 " added to the channel mistakenly."
 msgstr ""
+"마찬가지로 조율과 업데이트를 위해 비공개 채널에 동기화하려는 리더십 팀이 포함된 AD/LDAP 그룹이 있을 수 있습니다. 이 기능은 "
+"동기화된 그룹 외부의 사용자가 실수로 채널에 추가되지 않도록 채널 멤버십을 제어하는 데 도움이 됩니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:15
 msgid ""
 "On teams that are managed by synchronized groups, users outside of the "
 "group are restricted from:"
 msgstr ""
+"동기화된 그룹으로 관리되는 팀에서는 그룹 외부 사용자가 다음 작업을 할 수 없습니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:17
 msgid "Invitation through a team invite link"
-msgstr ""
+msgstr "팀 초대 링크를 통한 초대"
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:18
 msgid "Invitation through an email invite"
-msgstr ""
+msgstr "이메일 초대를 통한 초대"
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:20
 msgid ""
 "Similarly on private channels that are managed by synchronized groups, "
 "users outside of the group are restricted from:"
 msgstr ""
+"마찬가지로 동기화된 그룹으로 관리되는 비공개 채널에서는 그룹 외부 사용자가 다음 작업을 할 수 없습니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:22
 msgid "Invitation through a mention"
-msgstr ""
+msgstr "멘션을 통한 초대"
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:23
 msgid "Invitation through the ``/invite`` slash command"
-msgstr ""
+msgstr "``/invite`` 슬래시 명령어를 통한 초대"
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:24
 msgid "Being added to the channel with **Add members**"
-msgstr ""
+msgstr "**Add members**\\ 로 채널에 추가"
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:26
 msgid ""
 "Users can remove themselves from teams and private channels managed by "
 "synchronized groups."
 msgstr ""
+"사용자는 동기화된 그룹으로 관리되는 팀과 비공개 채널에서 스스로 나갈 수 있습니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:29
 msgid "Managing membership of a team or channel with synchronized groups"
-msgstr ""
+msgstr "동기화된 그룹으로 팀 또는 채널 멤버십 관리"
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:31
 msgid "To manage membership of a private team with synchronized groups:"
-msgstr ""
+msgstr "동기화된 그룹으로 비공개 팀 멤버십을 관리하려면:"
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:33
 msgid "Navigate to **System Console > User Management > Teams**."
-msgstr ""
+msgstr "**관리자 도구 > 사용자 관리 > 팀**\\ 으로 이동합니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:34
 msgid "Select the team you want to manage with group synchronization."
-msgstr ""
+msgstr "그룹 동기화로 관리하려는 팀을 선택합니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:35
 msgid ""
@@ -123,12 +137,15 @@ msgid ""
 " join this team** is enabled or if specific email domains are set, they "
 "will be disabled by the sync group members feature."
 msgstr ""
+"**팀 관리** 아래에서 **그룹 구성원 동기화**\\ 를 활성화합니다. **누구나 이 팀에 참여 가능**\\ 이 활성화되어 있거나 "
+"특정 이메일 도메인이 설정되어 있으면 그룹 구성원 동기화 기능에 의해 비활성화됩니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:36
 msgid ""
 "Add one or more groups to the team. If there are groups already "
 "associated to default users into the team, they will already be present."
 msgstr ""
+"팀에 하나 이상의 그룹을 추가합니다. 팀의 기본 사용자와 이미 연결된 그룹이 있으면 해당 그룹은 이미 표시됩니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:37
 msgid ""
@@ -136,6 +153,7 @@ msgid ""
 "part of groups who will be removed from the team on the next "
 "synchronization."
 msgstr ""
+"다음 동기화 때 팀에서 제거될 그룹에 속하지 않은 사용자가 있는지 화면 바닥글의 알림을 검토합니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:38
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:53
@@ -143,12 +161,14 @@ msgid ""
 "Select **Save**. Members will be updated on the next scheduled AD/LDAP "
 "synchronization."
 msgstr ""
+"**Save**\\ 를 선택합니다. 구성원은 다음 예약된 AD/LDAP 동기화 때 업데이트됩니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:40
 msgid ""
 "Alternatively you can use the mmctl tools to set the team to be managed "
 "by groups:"
 msgstr ""
+"또는 mmctl 도구를 사용해 팀이 그룹으로 관리되도록 설정할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:42
 msgid ""
@@ -160,12 +180,18 @@ msgid ""
 "teams and channels and confirming whether if there is already a group "
 "associated to the team."
 msgstr ""
+"팀에 이미 연결된 그룹이 하나 이상 있는지 확인합니다. **관리자 도구 > 사용자 관리 > 그룹 > 그룹 설정**\\ 에서 그룹의 "
+"기본 팀을 보고 추가할 수 있습니다. 기본 팀과 채널을 추가하는 방법과 팀에 이미 연결된 그룹이 있는지 확인하는 방법에 대한 자세한 "
+"내용은 :ref:`mmctl group team list <administration-guide/manage/mmctl-command-line-tool:mmctl "
+"group team list>` 문서를 참조하세요."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:43
 msgid ""
 "Ensure **Team Settings > General > Allow any user with an account on this"
 " server to join this team** is set to ``No``."
 msgstr ""
+"**팀 설정 > 일반 > 이 서버에 계정이 있는 모든 사용자가 이 팀에 참여하도록 허용**\\ 이 ``No``\\ 로 설정되어 "
+"있는지 확인합니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:44
 msgid ""
@@ -173,30 +199,34 @@ msgid ""
 " running the :ref:`mmctl group team enable <administration-guide/manage"
 "/mmctl-command-line-tool:mmctl group team enable>` command."
 msgstr ""
+":ref:`mmctl group team enable <administration-guide/manage/mmctl-command-line-tool:mmctl group team enable>` "
+"명령을 실행하여 팀 멤버십이 동기화된 그룹으로 관리되도록 변환합니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:46
 msgid "To manage membership of a private channel with synchronized groups:"
-msgstr ""
+msgstr "동기화된 그룹으로 비공개 채널 멤버십을 관리하려면:"
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:48
 msgid "Navigate to **System Console > User Management > Channels**."
-msgstr ""
+msgstr "**관리자 도구 > 사용자 관리 > 채널**\\ 로 이동합니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:49
 msgid "Select the channel you want to manage with group synchronization."
-msgstr ""
+msgstr "그룹 동기화로 관리하려는 채널을 선택합니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:50
 msgid ""
 "Under **Channel Management**, enable **Sync Group Members**. Please "
 "ensure the channel is set to ``private``."
 msgstr ""
+"**채널 관리** 아래에서 **그룹 구성원 동기화**\\ 를 활성화합니다. 채널이 ``private``\\ 로 설정되어 있는지 확인하세요."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:51
 msgid ""
 "Add one or more groups to the channel. If there are groups already "
 "associated to default users in the channel, they'll already be present."
 msgstr ""
+"채널에 하나 이상의 그룹을 추가합니다. 채널의 기본 사용자와 이미 연결된 그룹이 있으면 해당 그룹은 이미 표시됩니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:52
 msgid ""
@@ -204,12 +234,14 @@ msgid ""
 "part of groups who will be removed from the channel on the next "
 "synchronization."
 msgstr ""
+"다음 동기화 때 채널에서 제거될 그룹에 속하지 않은 사용자가 있는지 화면 바닥글의 알림을 검토합니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:55
 msgid ""
 "Alternatively you can use the mmctl tool to set a private channel to be "
 "managed by groups:"
 msgstr ""
+"또는 mmctl 도구를 사용해 비공개 채널이 그룹으로 관리되도록 설정할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:57
 msgid ""
@@ -223,6 +255,11 @@ msgid ""
 "the :ref:`mmctl group channel list <administration-guide/manage/mmctl-"
 "command-line-tool:mmctl group channel list>` command."
 msgstr ""
+"채널에 이미 연결된 그룹이 하나 이상 있는지 확인합니다. **관리자 도구 > 사용자 관리 > 그룹 > 그룹 설정**\\ 에서 그룹의 "
+"기본 채널을 보고 추가할 수 있습니다. 기본 팀과 채널을 추가하는 방법에 대한 자세한 내용은 :ref:`AD/LDAP "
+"<administration-guide/onboard/ad-ldap-groups-synchronization:add default teams or channels for the group>` "
+"문서를 참조하세요. 또한 :ref:`mmctl group channel list <administration-guide/manage/mmctl-command-"
+"line-tool:mmctl group channel list>` 명령을 실행하여 채널에 이미 연결된 그룹이 있는지 mmctl로 확인할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:58
 msgid ""
@@ -231,10 +268,12 @@ msgid ""
 "guide/manage/mmctl-command-line-tool:mmctl group channel enable>` "
 "command."
 msgstr ""
+":ref:`mmctl group channel enable <administration-guide/manage/mmctl-command-line-tool:mmctl group channel enable>` "
+"명령을 실행하여 팀 멤버십이 동기화된 그룹으로 관리되도록 변환합니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:61
 msgid "Add or remove groups from teams"
-msgstr ""
+msgstr "팀에서 그룹 추가 또는 제거"
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:63
 msgid ""
@@ -246,6 +285,10 @@ msgid ""
 "prevented from changing the team to public by enabling **Team Settings > "
 "Allow any user with an account on this server to join this team**."
 msgstr ""
+"팀 관리가 동기화된 그룹으로 관리되도록 변환되면 팀 관리자 또는 시스템 관리자는 **메인 메뉴 > 팀에 그룹 추가**\\ 에서 "
+"추가 그룹을 추가할 수 있습니다. 이렇게 하면 다음 AD/LDAP 동기화 때 사용자가 추가되고, 이후 동기화에서 그룹의 새 사용자가 "
+"팀에 추가됩니다. 팀 관리자는 **팀 설정 > 이 서버에 계정이 있는 모든 사용자가 이 팀에 참여하도록 허용**\\ 을 활성화하여 "
+"팀을 공개로 변경할 수 없게 됩니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:65
 msgid ""
@@ -253,16 +296,19 @@ msgid ""
 "**Main Menu > Manage Groups**. This will disassociate the group from the "
 "team. Users are removed on the next AD/LDAP synchronization."
 msgstr ""
+"팀 관리자 또는 시스템 관리자는 **메인 메뉴 > 그룹 관리**\\ 에서 팀의 그룹을 제거할 수도 있습니다. 이렇게 하면 그룹과 "
+"팀의 연결이 해제됩니다. 사용자는 다음 AD/LDAP 동기화 때 제거됩니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:67
 msgid ""
 "The system admin can also remove groups from  **System Console > User "
 "Management > Teams > Team Configuration > Synced Groups**."
 msgstr ""
+"시스템 관리자는 **관리자 도구 > 사용자 관리 > 팀 > 팀 설정 > 동기화된 그룹**\\ 에서도 그룹을 제거할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:70
 msgid "Add or remove groups from private channels"
-msgstr ""
+msgstr "비공개 채널에서 그룹 추가 또는 제거"
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:72
 msgid ""
@@ -272,6 +318,9 @@ msgid ""
 " on the next AD/LDAP synchronization and any new users to the group will "
 "be added to the channel on subsequent synchronizations."
 msgstr ""
+"채널 관리가 동기화된 그룹으로 관리되도록 변환되면 팀 관리자 또는 시스템 관리자는 **채널 메뉴 > 채널에 그룹 추가**\\ 에서 "
+"추가 그룹을 추가할 수 있습니다. 이렇게 하면 다음 AD/LDAP 동기화 때 사용자가 추가되고, 이후 동기화에서 그룹의 새 사용자가 "
+"채널에 추가됩니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:74
 msgid ""
@@ -279,16 +328,19 @@ msgid ""
 "**Main Menu > Manage Groups**. This will disassociate the group from the "
 "team. Users are removed on the next AD/LDAP synchronization."
 msgstr ""
+"팀 관리자와 시스템 관리자는 **메인 메뉴 > 그룹 관리**\\ 에서 팀의 그룹을 제거할 수도 있습니다. 이렇게 하면 그룹과 팀의 "
+"연결이 해제됩니다. 사용자는 다음 AD/LDAP 동기화 때 제거됩니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:76
 msgid ""
 "The system admin can also remove groups from  **System Console > User "
 "Management > Channels > Channel Configuration > Synced Groups**."
 msgstr ""
+"시스템 관리자는 **관리자 도구 > 사용자 관리 > 채널 > 채널 설정 > 동기화된 그룹**\\ 에서도 그룹을 제거할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:79
 msgid "Managing members"
-msgstr ""
+msgstr "구성원 관리"
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:81
 msgid ""
@@ -298,6 +350,8 @@ msgid ""
 "synchronized groups are prevented from being added through the "
 "``/invite`` and mention flows within a channel."
 msgstr ""
+"사용자가 해당 팀 또는 채널의 멤버십을 관리하는 동기화된 AD/LDAP 그룹에서 제거되면 팀 또는 비공개 채널에서도 자동으로 "
+"제거됩니다. 또한 동기화된 그룹에 속하지 않은 사용자는 채널 내 ``/invite`` 및 멘션 흐름을 통해 추가될 수 없습니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:83
 msgid ""
@@ -307,6 +361,9 @@ msgid ""
 " by using the ``/invite`` slash command or by mentioning the user in a "
 "channel."
 msgstr ""
+"팀 또는 비공개 채널이 동기화된 그룹으로 관리되는 경우 사용자는 팀 또는 비공개 채널에서 스스로 나갈 수 있습니다. 팀 또는 "
+"비공개 채널의 구성원을 관리할 권한이 있는 사용자는 ``/invite`` 슬래시 명령어를 사용하거나 채널에서 사용자를 멘션하여 해당 "
+"사용자를 다시 추가할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:85
 msgid ""
@@ -314,6 +371,8 @@ msgid ""
 " group, they can be manually added back to the team or private channel as"
 " noted above."
 msgstr ""
+"사용자가 동기화된 그룹에서 제거된 뒤 나중에 그룹에 다시 추가되면, 위에서 설명한 대로 팀 또는 비공개 채널에 수동으로 다시 추가할 "
+"수 있습니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:88
 msgid ""
@@ -321,10 +380,11 @@ msgid ""
 " once they remove themselves or are removed by the LDAP synchronized "
 "group."
 msgstr ""
+"사용자가 스스로 나가거나 LDAP 동기화 그룹에 의해 제거되면 AD/LDAP 동기화를 통해 자동으로 다시 추가되지 않습니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:91
 msgid "Disabling group synchronized management of teams and private channels"
-msgstr ""
+msgstr "팀 및 비공개 채널의 그룹 동기화 관리 비활성화"
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:93
 msgid ""
@@ -334,6 +394,9 @@ msgid ""
 "<administration-guide/manage/mmctl-command-line-tool:mmctl group team "
 "disable>` command."
 msgstr ""
+"팀에서 동기화된 그룹에 의한 구성원 관리를 제거하려면 **관리자 도구 > 사용자 관리 > 팀 > 팀 관리** 아래에서 **그룹 "
+"구성원 동기화**\\ 를 비활성화하거나 :ref:`mmctl group team disable <administration-"
+"guide/manage/mmctl-command-line-tool:mmctl group team disable>` 명령을 실행합니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:95
 msgid ""
@@ -343,14 +406,17 @@ msgid ""
 "disable <administration-guide/manage/mmctl-command-line-tool:mmctl group "
 "channel disable>` command."
 msgstr ""
+"채널에서 동기화된 그룹에 의한 구성원 관리를 제거하려면 **관리자 도구 > 사용자 관리 > 채널 > 채널 관리** 아래에서 "
+"**그룹 구성원 동기화**\\ 를 비활성화하거나 :ref:`mmctl group channel disable <administration-"
+"guide/manage/mmctl-command-line-tool:mmctl group channel disable>` 명령을 실행합니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:98
 msgid "Frequently asked questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:100
 msgid "**Why aren’t public channels supported with this feature?**"
-msgstr ""
+msgstr "**이 기능에서 공개 채널을 지원하지 않는 이유는 무엇인가요?**"
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:102
 msgid ""
@@ -363,12 +429,17 @@ msgid ""
 " <administration-guide/onboard/ad-ldap-groups-synchronization:add default"
 " teams or channels for the group>`."
 msgstr ""
+"공개 채널은 모든 구성원이 찾아보고 참여할 수 있습니다. 동기화된 그룹으로 멤버십을 관리하면 공개 채널이 팀의 사용자에게 접근 "
+"가능한 상태가 되는 기능이 제거됩니다. 비공개 채널은 일반적으로 더 통제된 멤버십 관리가 필요하므로 이 기능은 비공개 채널에 "
+"적용됩니다. 그룹은 :ref:`이 문서 <administration-guide/onboard/ad-ldap-groups-synchronization:add default teams or channels for the group>`"
+"\\ 에 설명된 대로 공개 팀과 공개 채널에 할당할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:104
 msgid ""
 "**Does a team with its membership managed by groups have any effect on "
 "Public channel access?**"
 msgstr ""
+"**그룹으로 멤버십이 관리되는 팀은 공개 채널 액세스에 영향을 주나요?**"
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:106
 msgid ""
@@ -376,12 +447,15 @@ msgid ""
 "discover and join public channels. Private channels can also be managed "
 "by synchronized groups when a team is managed by synchronized groups."
 msgstr ""
+"팀에 동기화된 그룹의 구성원인 사용자만 공개 채널을 찾아보고 참여할 수 있습니다. 팀이 동기화된 그룹으로 관리되는 경우 비공개 "
+"채널도 동기화된 그룹으로 관리할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:108
 msgid ""
 "**Why don't users get readded to teams or channels once they have been "
 "removed from and then later re-added to the LDAP group?**"
 msgstr ""
+"**사용자가 LDAP 그룹에서 제거된 뒤 나중에 다시 추가되면 팀이나 채널에 다시 추가되지 않는 이유는 무엇인가요?**"
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:110
 msgid ""
@@ -392,6 +466,9 @@ msgid ""
 "ability for admins to re-add users who have been removed, and even "
 "prevent users from leaving a team or channel."
 msgstr ""
+"그룹 제거 구현은 현재 사용자가 스스로 나간 경우와 LDAP 동기화 프로세스에 의해 제거된 경우를 구분하지 않습니다. 설계는 팀 "
+"또는 채널에서 스스로 나간 사용자를 기준으로 최적화되어 있습니다. 향후 관리자가 제거된 사용자를 다시 추가하고, 사용자가 팀 또는 "
+"채널에서 나가지 못하게 하는 기능을 추가할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/managing-team-channel-membership-using-ad-ldap-sync-groups.rst:112
 msgid ""
@@ -401,4 +478,5 @@ msgid ""
 " be re-added to those teams and channels upon becoming subsequently re-"
 "accessible to Mattermost."
 msgstr ""
-
+"또한 필터 기준으로 OKR.BEST에 접근할 수 없는 LDAP 사용자는 그룹과 그룹 동기화된 팀 및 채널에서 제거됩니다. 팀과 "
+"채널에서 제거된 경우 이후 OKR.BEST에 다시 접근 가능해져도 해당 팀과 채널에 다시 추가되지 않습니다."
