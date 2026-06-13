@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:2
 msgid "Deploy Prometheus and Grafana for performance monitoring"
-msgstr ""
+msgstr "성능 모니터링을 위한 Prometheus 및 Grafana 배포"
 
 #: ../../source/_static/badges/entry-ent.rst:9
 msgid ""
@@ -29,6 +29,9 @@ msgid ""
 "Advanced plans <https://mattermost.com/pricing/>`__ (not available on "
 "Professional)"
 msgstr ""
+"|plans-img-yellow| `Entry, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다(Professional에서는 "
+"사용할 수 없음)"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -46,6 +49,13 @@ msgid ""
 " up performance alerts </administration-guide/scale/performance-"
 "alerting>` on your Grafana dashboard."
 msgstr ""
+"성능 모니터링 지원을 통해 관리자는 `Prometheus <https://prometheus.io/>`_ 및 "
+"`Grafana <https://grafana.com/>`__\\ 와의 통합으로 대규모 엔터프라이즈 배포의 시스템 "
+"상태를 추적할 수 있습니다. 이러한 통합은 여러 OKR.BEST 서버에서 데이터를 수집할 수 "
+"있게 하며, OKR.BEST를 :doc:`고가용성 모드 </administration-guide/scale/high-"
+"availability-cluster-based-deployment>`\\ 로 실행하는 경우 특히 유용합니다. 시스템 "
+"상태를 추적하기 시작하면 Grafana 대시보드에서 :doc:`성능 알림을 설정 "
+"</administration-guide/scale/performance-alerting>`\\ 할 수 있습니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:9
 msgid ""
@@ -54,6 +64,9 @@ msgid ""
 "`deploying Prometheus <#install-prometheus>`_ and `Grafana <#install-"
 "grafana>`_."
 msgstr ""
+"관리자는 `Prometheus 배포 <#install-prometheus>`_\\ 와 `Grafana <#install-"
+"grafana>`_ 배포를 통해 OKR.BEST 애플리케이션의 다양한 데이터 포인트를 `OpenMetrics "
+"<https://openmetrics.io>`_ 형식으로 수집하고 저장할 수 있습니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:13
 msgid ""
@@ -61,10 +74,13 @@ msgid ""
 "performance metrics using the Mattermost Metrics plugin </administration-"
 "guide/scale/collect-performance-metrics>`."
 msgstr ""
+"Prometheus와 Grafana를 배포하고 싶지 않나요? :doc:`OKR.BEST Metrics 플러그인을 "
+"사용해 성능 지표를 수집 </administration-guide/scale/collect-performance-"
+"metrics>`\\ 할 수도 있습니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:16
 msgid "Install Prometheus"
-msgstr ""
+msgstr "Prometheus 설치"
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:20
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:84
@@ -74,6 +90,9 @@ msgid ""
 "servers, and configure Prometheus to pull all metrics from Mattermost and"
 " other connected servers."
 msgstr ""
+"Prometheus와 Grafana를 OKR.BEST와 동일한 서버에 설치할 수도 있지만, 이러한 통합은 "
+"별도의 서버에 설치하고 Prometheus가 OKR.BEST 및 기타 연결된 서버에서 모든 지표를 "
+"가져오도록 구성하는 것을 권장합니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:22
 msgid ""
@@ -83,12 +102,18 @@ msgid ""
 "installation instructions, see the `Prometheus install guides "
 "<https://prometheus.io/docs/prometheus/latest/getting_started/>`_."
 msgstr ""
+"`Prometheus용 미리 컴파일된 바이너리를 다운로드 "
+"<https://prometheus.io/download/>`_\\ 합니다. 바이너리는 Darwin, Linux, Windows를 "
+"포함한 많은 인기 배포판에 제공됩니다. 설치 방법은 `Prometheus 설치 가이드 "
+"<https://prometheus.io/docs/prometheus/latest/getting_started/>`_\\ 를 "
+"참고하세요."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:24
 msgid ""
 "The following settings are recommended in the Prometheus configuration "
 "file named ``prometheus.yml``:"
 msgstr ""
+"``prometheus.yml``\\ 이라는 Prometheus 구성 파일에서 다음 설정을 권장합니다:"
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:59
 msgid ""
@@ -96,6 +121,8 @@ msgid ""
 " address and port to scrape the data. It connects to ``/metrics`` using "
 "HTTP."
 msgstr ""
+"데이터를 스크랩하려면 ``<hostname1>:<port>`` 매개변수를 OKR.BEST 호스트 IP 주소와 "
+"포트로 바꿉니다. HTTP를 사용해 ``/metrics``\\ 에 연결합니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:61
 msgid ""
@@ -106,22 +133,31 @@ msgid ""
 "guide/configure/environment-configuration-settings:performance "
 "monitoring>` documentation for details."
 msgstr ""
+"OKR.BEST 관리자 도구에서 **환경 > 성능 모니터링**\\ 으로 이동해 **성능 모니터링 "
+"활성화**\\ 를 **true**\\ 로 설정한 다음, **수신 주소**(포트만, 예: ``8067``)를 "
+"지정하고 **저장**\\ 을 선택합니다. 자세한 내용은 :ref:`구성 설정 <administration-"
+"guide/configure/environment-configuration-settings:performance monitoring>` "
+"문서를 참고하세요."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:63
 msgid ""
 "Enable performance monitoring options in the System Console by going to "
 "Environment > Performance Monitoring, then specifying a listen address."
 msgstr ""
+"관리자 도구에서 환경 > 성능 모니터링으로 이동한 뒤 수신 주소를 지정하여 성능 "
+"모니터링 옵션을 활성화합니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:67
 msgid "To test that the server is running, go to ``<ip>:<port>/metrics``."
-msgstr ""
+msgstr "서버가 실행 중인지 테스트하려면 ``<ip>:<port>/metrics``\\ 로 이동합니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:70
 msgid ""
 "A Mattermost Enterprise license is required to connect to ``/metrics`` "
 "using HTTP."
 msgstr ""
+"HTTP를 사용해 ``/metrics``\\ 에 연결하려면 Mattermost Enterprise 라이선스가 "
+"필요합니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:72
 msgid ""
@@ -130,6 +166,10 @@ msgid ""
 "by Prometheus "
 "<https://prometheus.io/docs/prometheus/latest/getting_started/>`_."
 msgstr ""
+"마지막으로 ``vi prometheus.yml``\\ 을 실행해 Prometheus 구성을 완료합니다. "
+"Prometheus 서비스를 시작하는 방법은 `Prometheus에서 제공하는 종합 가이드 "
+"<https://prometheus.io/docs/prometheus/latest/getting_started/>`_\\ 를 "
+"참고하세요."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:74
 msgid ""
@@ -138,16 +178,21 @@ msgid ""
 " create graphs, we'll focus on creating metric and analytics dashboards "
 "in Grafana."
 msgstr ""
+"서비스가 시작되면 ``<localhost>:<port>/graph``\\ 에서 데이터에 접근할 수 있습니다. "
+"Prometheus 서비스를 사용해 그래프를 만들 수도 있지만, 여기서는 Grafana에서 지표 및 "
+"분석 대시보드를 만드는 데 집중합니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:77
 msgid ""
 "For troubleshooting advice, check the `Prometheus FAQ page "
 "<https://prometheus.io/docs/introduction/faq/>`_."
 msgstr ""
+"문제 해결 조언은 `Prometheus FAQ 페이지 "
+"<https://prometheus.io/docs/introduction/faq/>`_\\ 를 확인하세요."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:80
 msgid "Install Grafana"
-msgstr ""
+msgstr "Grafana 설치"
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:86
 msgid ""
@@ -159,6 +204,11 @@ msgid ""
 "<https://grafana.com/docs/grafana/latest/setup-"
 "grafana/installation/debian/>`_"
 msgstr ""
+"Ubuntu 또는 Debian에서 `Grafana용 미리 컴파일된 바이너리를 다운로드 "
+"<https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/>`_"
+"\\ 합니다. 바이너리는 Redhat, Windows, Mac을 포함한 다른 배포판에도 제공됩니다. 설치 "
+"방법은 `Grafana 설치 가이드 <https://grafana.com/docs/grafana/latest/setup-"
+"grafana/installation/debian/>`_\\ 를 참고하세요"
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:88
 msgid ""
@@ -167,44 +217,54 @@ msgid ""
 "<https://grafana.com/docs/grafana/latest/setup-"
 "grafana/installation/debian/>`_ to learn more."
 msgstr ""
+"Grafana 패키지는 서비스로 설치되므로 서버를 쉽게 시작할 수 있습니다. 자세한 내용은 "
+"`설치 가이드 <https://grafana.com/docs/grafana/latest/setup-"
+"grafana/installation/debian/>`_\\ 를 참고하세요."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:90
 msgid ""
 "The default HTTP port is ``3000`` and default username and password are "
 "``admin``."
 msgstr ""
+"기본 HTTP 포트는 ``3000``\\ 이며 기본 사용자 이름과 비밀번호는 ``admin``\\ 입니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:92
 msgid ""
 "Add a Mattermost data source with the following settings as defined in "
 "the screenshot below"
 msgstr ""
+"아래 스크린샷에 정의된 다음 설정으로 Mattermost 데이터 소스를 추가합니다"
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:94
 msgid "Mattermost data source configuration settings for a Grafana installation."
-msgstr ""
+msgstr "Grafana 설치를 위한 Mattermost 데이터 소스 구성 설정입니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:99
 msgid ""
 "For troubleshooting advice, check the `Grafana Troubleshooting page "
 "<https://grafana.com/docs/grafana/latest/troubleshooting/>`_."
 msgstr ""
+"문제 해결 조언은 `Grafana 문제 해결 페이지 "
+"<https://grafana.com/docs/grafana/latest/troubleshooting/>`_\\ 를 확인하세요."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:100
 msgid ""
 "For user guides and tutorials, check the `Grafana documentation to learn "
 "more <https://grafana.com/docs/grafana/latest/>`_."
 msgstr ""
+"사용자 가이드와 튜토리얼은 `Grafana 문서 "
+"<https://grafana.com/docs/grafana/latest/>`_\\ 를 확인하세요."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:103
 msgid "Getting started"
-msgstr ""
+msgstr "시작하기"
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:105
 msgid ""
 "To help you get started, you can download three sample dashboards shared "
 "in Grafana:"
 msgstr ""
+"시작하는 데 도움이 되도록 Grafana에 공유된 샘플 대시보드를 다운로드할 수 있습니다:"
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:109
 msgid ""
@@ -212,6 +272,9 @@ msgid ""
 "/export-import/>`_ to learn how to import Grafana dashboards either from "
 "the UI or from the HTTP API."
 msgstr ""
+"UI 또는 HTTP API에서 Grafana 대시보드를 가져오는 방법은 `이 Grafana 가이드 "
+"<https://grafana.com/docs/grafana/v7.5/dashboards/export-import/>`_\\ 를 "
+"참고하세요."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:111
 msgid ""
@@ -221,6 +284,10 @@ msgid ""
 "monitoring including application, cluster, job server, and system "
 "metrics."
 msgstr ""
+"`Mattermost Performance Monitoring v2 "
+"<https://grafana.com/grafana/dashboards/15582-mattermost-performance-"
+"monitoring-v2/>`_: 애플리케이션, 클러스터, 작업 서버, 시스템 지표를 포함한 성능 "
+"모니터링을 위한 상세 차트가 들어 있습니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:112
 msgid ""
@@ -234,6 +301,14 @@ msgid ""
 "configuration-settings:enable notification monitoring>` through the "
 "System Console."
 msgstr ""
+"`Mattermost Notification Health Monitoring "
+"<https://grafana.com/grafana/dashboards/21305-mattermost-notification-"
+"health/>`_: OKR.BEST에서 전송된 다양한 유형의 알림을 추적하는 데 사용할 수 있습니다. "
+"OKR.BEST 알림 상태 모니터링에 접근하고 활성화하려면 기능 플래그 "
+"``NotificationMonitoring``\\ 을 ``true``\\ 로 설정해야 합니다. 시스템 관리자는 관리자 "
+"도구를 통해 :ref:`알림 모니터링 데이터 수집을 비활성화 <administration-"
+"guide/configure/site-configuration-settings:enable notification monitoring>`\\ 할 "
+"수 있습니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:113
 msgid ""
@@ -242,6 +317,9 @@ msgid ""
 "contains detailed metrics for client-side performance, including web "
 "vitals and Mattermost-specifc metrics."
 msgstr ""
+"`Mattermost Web App Performance Metrics "
+"<https://grafana.com/grafana/dashboards/21460-web-app-metrics/>`_: 웹 바이탈과 "
+"OKR.BEST 고유 지표를 포함한 클라이언트 측 성능에 대한 상세 지표가 들어 있습니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:114
 msgid ""
@@ -250,6 +328,10 @@ msgid ""
 "which contains detailed metrics for client-side desktop performance, "
 "including CPU and memory usage metrics."
 msgstr ""
+"`Mattermost Desktop App Performance Metrics "
+"<https://grafana.com/grafana/dashboards/22736-desktop-app-metrics/>`_: CPU 및 "
+"메모리 사용량 지표를 포함한 클라이언트 측 데스크톱 성능에 대한 상세 지표가 들어 "
+"있습니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:115
 msgid ""
@@ -258,6 +340,10 @@ msgid ""
 "metrics/>`_, which contains detailed metrics for client-side mobile "
 "performance, including web vitals and Mattermost-specifc metrics."
 msgstr ""
+"`Mattermost Mobile App Performance Metrics "
+"<https://grafana.com/grafana/dashboards/21695-mobile-performance-metrics/>`_: "
+"웹 바이탈과 OKR.BEST 고유 지표를 포함한 클라이언트 측 모바일 성능에 대한 상세 지표가 "
+"들어 있습니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:116
 msgid ""
@@ -266,6 +352,9 @@ msgid ""
 "performance/>`_, which contains detailed metrics on the queries involved "
 "in our threaded discussions feature."
 msgstr ""
+"`Mattermost Threaded Discussion Metrics "
+"<https://grafana.com/grafana/dashboards/15581-collapsed-reply-threads-"
+"performance/>`_: 스레드 토론 기능과 관련된 쿼리에 대한 상세 지표가 들어 있습니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:117
 msgid ""
@@ -274,6 +363,9 @@ msgid ""
 "metrics/>`_, which contains key metrics for monitoring performance and "
 "system health."
 msgstr ""
+"`Mattermost Performance KPI Metrics "
+"<https://grafana.com/grafana/dashboards/2539-mattermost-performance-kpi-"
+"metrics/>`_: 성능과 시스템 상태를 모니터링하기 위한 핵심 지표가 들어 있습니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:118
 msgid ""
@@ -283,10 +375,14 @@ msgid ""
 "emails sent or files uploaded, which may be important to monitor in some "
 "deployments."
 msgstr ""
+"`Mattermost Performance Monitoring (Bonus Metrics) "
+"<https://grafana.com/grafana/dashboards/2545-mattermost-performance-"
+"monitoring-bonus-metrics/>`_: 일부 배포에서 모니터링이 중요할 수 있는, 전송된 "
+"이메일이나 업로드된 파일 등의 추가 지표가 들어 있습니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:121
 msgid "What's collected?"
-msgstr ""
+msgstr "무엇이 수집되나요?"
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:123
 msgid ""
@@ -296,20 +392,26 @@ msgid ""
 "monitoring-metrics:standard go metrics>` that can be used to monitor your"
 " system's performance."
 msgstr ""
+"OKR.BEST는 시스템 성능을 모니터링하는 데 사용할 수 있는 :ref:`사용자 정의 지표 "
+"<administration-guide/scale/performance-monitoring-metrics:custom Mattermost "
+"metrics>`\\ 와 :ref:`표준 Go 지표 <administration-guide/scale/performance-"
+"monitoring-metrics:standard go metrics>`\\ 를 제공합니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:126
 msgid "Next steps"
-msgstr ""
+msgstr "다음 단계"
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:128
 msgid "Once you've set up performance monitoring, you may want to:"
-msgstr ""
+msgstr "성능 모니터링을 설정한 후에는 다음을 수행할 수 있습니다:"
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:130
 msgid ""
 ":doc:`Set up performance alerts </administration-guide/scale/performance-"
 "alerting>` to be notified when metrics exceed thresholds."
 msgstr ""
+"지표가 임계값을 초과할 때 알림을 받으려면 :doc:`성능 알림을 설정 </administration-"
+"guide/scale/performance-alerting>`\\ 합니다."
 
 #: ../../source/administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring.rst:131
 msgid ""
@@ -317,4 +419,7 @@ msgid ""
 "guide/scale/deploy-grafana-loki-for-centralized-logging>` to search and "
 "correlate logs with metric spikes."
 msgstr ""
+"로그를 검색하고 지표 급증과 연관 지으려면 :doc:`중앙 집중식 로깅을 위한 Grafana "
+"Loki 배포 </administration-guide/scale/deploy-grafana-loki-for-centralized-"
+"logging>`\\ 를 수행합니다."
 
