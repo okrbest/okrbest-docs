@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:2
 msgid "OpenID Connect Single Sign-On"
-msgstr ""
+msgstr "OpenID Connect 싱글 사인온"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다."
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -44,14 +46,19 @@ msgid ""
 "well as others, as a Single Sign-on (SSO) service for team creation, "
 "account creation, and user login."
 msgstr ""
+"OKR.BEST는 :doc:`GitLab </administration-guide/onboard/sso-gitlab>`, :doc:`Google Apps "
+"</administration-guide/onboard/sso-google>`, :doc:`Entra ID </administration-guide/onboard/sso-entraid>`에 "
+"대한 OpenID Connect 지원을 제공합니다. OpenID Connect를 사용하면 사용자는 Keycloak, Atlassian Crowd, Apple, "
+"Microsoft, Salesforce, Auth0, Ory.sh, Facebook, Okta, OneLogin, Azure AD 등으로의 로그인을 팀 생성, "
+"계정 생성, 사용자 로그인을 위한 싱글 사인온(SSO) 서비스로 사용할 수도 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:9
 msgid "Follow these steps to configure a service provider using OpenID Connect."
-msgstr ""
+msgstr "OpenID Connect를 사용해 서비스 공급자를 구성하려면 다음 단계를 따르세요."
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:12
 msgid "Step 1: Create an OpenID Connect Application"
-msgstr ""
+msgstr "1단계: OpenID Connect 애플리케이션 생성"
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:14
 msgid ""
@@ -59,6 +66,8 @@ msgid ""
 "application. Most OpenID Connect service providers require authorization "
 "of all redirect URIs."
 msgstr ""
+"OpenID Connect 애플리케이션을 만드는 방법은 서비스 공급자 문서를 따르세요. 대부분의 OpenID Connect 서비스 "
+"공급자는 모든 리디렉션 URI의 승인을 요구합니다."
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:15
 #, python-brace-format
@@ -67,6 +76,8 @@ msgid ""
 "url}/signup/openid/complete`` For example: "
 "``http://domain.com/signup/openid/complete``"
 msgstr ""
+"적절한 필드에 ``{your-mattermost-url}/signup/openid/complete``를 입력합니다. 예: "
+"``http://domain.com/signup/openid/complete``"
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:16
 msgid ""
@@ -74,46 +85,50 @@ msgid ""
 "**Client Secret** values to a temporary location. You will enter these "
 "values when you configure Mattermost."
 msgstr ""
+"**Discovery Endpoint**, **Client ID**, **Client Secret** 값을 임시 위치에 복사해 붙여넣습니다. "
+"OKR.BEST를 구성할 때 이 값을 입력합니다."
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:19
 msgid "Step 2: Configure Mattermost for an OpenID Connect SSO"
-msgstr ""
+msgstr "2단계: OpenID Connect SSO용 OKR.BEST 구성"
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:21
 msgid ""
 "Log in to Mattermost, then go to **System Console > Authentication > "
 "OpenID Connect**."
 msgstr ""
+"OKR.BEST에 로그인한 다음 **관리자 도구 > 인증 > OpenID Connect**\\ 로 이동합니다."
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:22
 msgid "Select **OpenID Connect (Other)** as the service provider."
-msgstr ""
+msgstr "서비스 공급자로 **OpenID Connect (Other)**\\ 를 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:23
 msgid "Enter the **Discovery Endpoint**."
-msgstr ""
+msgstr "**Discovery Endpoint**\\ 를 입력합니다."
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:24
 msgid "Enter the **Client ID**."
-msgstr ""
+msgstr "**Client ID**\\ 를 입력합니다."
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:25
 msgid "Enter the **Client Secret**."
-msgstr ""
+msgstr "**Client Secret**\\ 을 입력합니다."
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:26
 msgid ""
 "Specify a **Button Name** and **Button Color** for the OpenID Connect "
 "option on the Mattermost login page."
 msgstr ""
+"OKR.BEST 로그인 페이지의 OpenID Connect 옵션에 대한 **버튼 이름** 및 **버튼 색상**\\ 을 지정합니다."
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:27
 msgid "Select **Save**."
-msgstr ""
+msgstr "**저장**\\ 을 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:28
 msgid "Restart your Mattermost server to see the changes take effect."
-msgstr ""
+msgstr "변경 사항이 적용되는 것을 확인하려면 OKR.BEST 서버를 다시 시작합니다."
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:31
 msgid ""
@@ -122,6 +137,9 @@ msgid ""
 "through the Mattermost API: first name, last name, or username. OpenID "
 "Connect must be the authoritative source for these user attributes."
 msgstr ""
+"OKR.BEST가 사용자 인증에 OpenID Connect를 사용하도록 구성된 경우 Mattermost API를 통해 다음 사용자 속성 "
+"변경을 수행할 수 없습니다: 이름, 성 또는 사용자 ID. OpenID Connect가 이러한 사용자 속성의 권한 있는 소스여야 "
+"합니다."
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:32
 msgid ""
@@ -132,6 +150,10 @@ msgid ""
 " configuration settings <administration-guide/configure/authentication-"
 "configuration-settings:openid connect>` for details."
 msgstr ""
+"관리자는 OpenID 토큰의 ``preferred_username`` 클레임을 OKR.BEST 사용자 ID로 사용하도록 OKR.BEST를 구성할 수 "
+"있습니다. **관리자 도구 > 인증 > OpenID Connect** 아래 공급자 설정에서 **preferred username 사용** 옵션을 "
+"활성화합니다. 자세한 내용은 :ref:`인증 구성 설정 <administration-guide/configure/authentication-configuration-"
+"settings:openid connect>`을 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:33
 msgid ""
@@ -142,14 +164,18 @@ msgid ""
 "<administration-guide/onboard/delegated-granular-administration:edit "
 "privileges of admin roles (advanced)>` documentation for details."
 msgstr ""
+"**Discovery Endpoint** 설정은 임의 호스트의 연결성과 가용성을 확인하는 데 사용될 수 있습니다. 이 점이 우려되는 "
+"시스템 관리자는 사용자 정의 관리자 역할을 사용해 이러한 설정을 수정할 수 있는 접근을 제한할 수 있습니다. "
+"자세한 내용은 :ref:`위임된 세분화 관리 <administration-guide/onboard/delegated-granular-administration:edit privileges "
+"of admin roles (advanced)>` 문서를 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:36
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:39
 msgid "How can I use LDAP attributes or Groups with OpenID?"
-msgstr ""
+msgstr "OpenID에서 LDAP 속성 또는 그룹을 어떻게 사용할 수 있나요?"
 
 #: ../../source/administration-guide/onboard/sso-openidconnect.rst:41
 msgid ""
@@ -160,4 +186,7 @@ msgid ""
 "suggest using SAML or LDAP as the login provider. Some OpenID providers "
 "can use SAML instead, like Keycloak."
 msgstr ""
-
+"현재 LDAP 데이터는 OpenID와 호환되지 않습니다. 현재 LDAP에 의존해 사용자의 팀, 채널, 그룹 또는 속성을 "
+"관리하고 있다면 OpenID로 로그인한 사용자에게는 이를 자동으로 수행할 수 없습니다. 각 사용자에게 LDAP 동기화가 "
+"필요한 경우 로그인 공급자로 SAML 또는 LDAP를 사용하는 것이 좋습니다. Keycloak처럼 일부 OpenID 공급자는 대신 "
+"SAML을 사용할 수 있습니다."

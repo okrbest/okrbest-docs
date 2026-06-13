@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/multi-factor-authentication.rst:4
 msgid "Multi-factor authentication"
-msgstr ""
+msgstr "다중 인증"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다."
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -39,6 +41,8 @@ msgid ""
 "authentication applied to your Mattermost server that applies to all "
 "users on all teams within your Mattermost workspace."
 msgstr ""
+"다중 인증(MFA)은 OKR.BEST 서버에 적용되는 보조 사용자 인증 계층이며, OKR.BEST 워크스페이스 내 모든 "
+"팀의 모든 사용자에게 적용됩니다."
 
 #: ../../source/administration-guide/onboard/multi-factor-authentication.rst:11
 msgid ""
@@ -49,6 +53,9 @@ msgid ""
 "Mattermost is not behind a firewall and doesn't have access to existing "
 "MFA infrastructure."
 msgstr ""
+"MFA를 활성화하면 사용자는 OKR.BEST에 로그인하기 위해 사용자 ID와 비밀번호 외에 안전한 일회용 코드를 "
+"제공해야 합니다. MFA는 특정 보안 및 컴플라이언스 정책이 있는 조직에 유용합니다. OKR.BEST가 방화벽 "
+"뒤에 있지 않고 기존 MFA 인프라에 접근할 수 없는 조직에서도 사용할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/multi-factor-authentication.rst:13
 msgid ""
@@ -56,6 +63,8 @@ msgid ""
 "password or Active Directory/LDAP authentication to log in to the "
 "Mattermost server."
 msgstr ""
+"OKR.BEST는 OKR.BEST 서버에 로그인하기 위한 이메일-비밀번호 또는 Active Directory/LDAP 인증 외에 "
+"스마트폰 기반 MFA 검사를 제공합니다."
 
 #: ../../source/administration-guide/onboard/multi-factor-authentication.rst:15
 msgid ""
@@ -65,6 +74,9 @@ msgid ""
 " app. After the app is installed, the device does not require internet "
 "access."
 msgstr ""
+"지원되는 기기에는 FreeOTP, Google Authenticator, Microsoft Authenticator, 1Password, LastPass 또는 "
+"유사한 앱 같은 소프트웨어 기반 인증 앱을 설치할 수 있는 iOS, Android 또는 기타 기기가 포함됩니다. 앱이 "
+"설치된 후에는 기기에 인터넷 접근이 필요하지 않습니다."
 
 #: ../../source/administration-guide/onboard/multi-factor-authentication.rst:19
 msgid ""
@@ -72,10 +84,12 @@ msgid ""
 "ensure that your server system time is accurate. If there is a "
 "discrepancy, users may not be able to log in successfully."
 msgstr ""
+"MFA 구현은 시간 기반 일회용 비밀번호(TOTP)에 의존하므로 서버 시스템 시간이 정확한지 확인하세요. 시간 "
+"차이가 있으면 사용자가 정상적으로 로그인하지 못할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/multi-factor-authentication.rst:22
 msgid "Enabling MFA"
-msgstr ""
+msgstr "MFA 활성화"
 
 #: ../../source/administration-guide/onboard/multi-factor-authentication.rst:24
 msgid ""
@@ -83,6 +97,8 @@ msgid ""
 "Authentication > MFA**, then setting **Enable Multi-factor "
 "Authentication** to **true**."
 msgstr ""
+"시스템 관리자는 **관리자 도구 > 인증 > MFA**\\ 로 이동한 다음 **다중 인증 활성화**\\ 를 **true**\\ 로 "
+"설정하여 이 옵션을 활성화할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/multi-factor-authentication.rst:26
 msgid ""
@@ -91,10 +107,12 @@ msgid ""
 "preferences>` on their account by selecting **Profile > Security > Multi-"
 "factor Authentication** from their profile picture."
 msgstr ""
+"활성화되면 사용자는 프로필 사진에서 **프로필 > 보안 > 다중 인증**\\ 을 선택하여 자신의 계정에 "
+":doc:`다중 인증 설정 </end-user-guide/preferences/manage-your-security-preferences>`을 구성할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/multi-factor-authentication.rst:29
 msgid "Disabling MFA"
-msgstr ""
+msgstr "MFA 비활성화"
 
 #: ../../source/administration-guide/onboard/multi-factor-authentication.rst:31
 msgid ""
@@ -104,6 +122,9 @@ msgid ""
 "authentication on their account via **Profile > Security > Multi-factor "
 "Authentication**."
 msgstr ""
+"시스템 관리자는 **관리자 도구 > 인증 > MFA**\\ 로 이동하여 이 옵션을 비활성화할 수 있습니다. **다중 인증 "
+"활성화**\\ 가 **false**\\ 로 설정되면 사용자는 **프로필 > 보안 > 다중 인증**\\ 을 통해 자신의 계정에서 "
+"다중 인증 사용 또는 비활성화를 선택할 수 없습니다."
 
 #: ../../source/administration-guide/onboard/multi-factor-authentication.rst:33
 #, python-brace-format
@@ -113,10 +134,12 @@ msgid ""
 "<https://api.mattermost.com/#tag/users/paths/~1users~1{user_id}~1mfa/put>`__"
 " for details."
 msgstr ""
+"API를 사용해 사용자 계정의 MFA를 비활성화할 수 있습니다. 자세한 내용은 `Mattermost API Reference "
+"<https://api.mattermost.com/#tag/users/paths/~1users~1{user_id}~1mfa/put>`__\\ 를 참조하세요."
 
 #: ../../source/administration-guide/onboard/multi-factor-authentication.rst:36
 msgid "Enforcing MFA"
-msgstr ""
+msgstr "MFA 적용"
 
 #: ../../source/administration-guide/onboard/multi-factor-authentication.rst:38
 msgid ""
@@ -125,6 +148,9 @@ msgid ""
 "LDAP accounts. Go to **System Console > Authentication > MFA**, then set "
 "**Enforce Multi-factor Authentication** to **true**."
 msgstr ""
+"관리자는 이메일 및 LDAP 계정 로그인에 MFA 요구사항을 적용하여 다중 인증(MFA) 컴플라이언스 요구사항을 "
+"충족할 수 있습니다. **관리자 도구 > 인증 > MFA**\\ 로 이동한 다음 **다중 인증 적용**\\ 을 **true**\\ 로 "
+"설정합니다."
 
 #: ../../source/administration-guide/onboard/multi-factor-authentication.rst:40
 msgid ""
@@ -134,12 +160,16 @@ msgid ""
 "access the site until MFA setup is complete. Any new users will be "
 "required to set up MFA during the sign up process."
 msgstr ""
+"MFA 적용이 **true**\\ 로 설정되면 MFA를 설정하지 않은 이메일 또는 LDAP 인증 사용자는 OKR.BEST에 로그인할 때 "
+"MFA 설정 페이지로 이동됩니다. MFA 설정이 완료될 때까지 사이트에 접근할 수 없습니다. 모든 신규 사용자는 "
+"회원가입 과정에서 MFA를 설정해야 합니다."
 
 #: ../../source/administration-guide/onboard/multi-factor-authentication.rst:42
 msgid ""
 "Users will not be able to remove MFA from their account while enforcement"
 " is on."
 msgstr ""
+"적용이 켜져 있는 동안 사용자는 자신의 계정에서 MFA를 제거할 수 없습니다."
 
 #: ../../source/administration-guide/onboard/multi-factor-authentication.rst:46
 msgid ""
@@ -147,4 +177,5 @@ msgid ""
 "set up is complete. We recommended that you turn on enforcement during "
 "non-peak hours when people are less likely to be using Mattermost."
 msgstr ""
-
+"MFA 적용을 켜면 설정이 완료될 때까지 사용자가 사이트에 접근하지 못합니다. OKR.BEST 사용자가 적은 비피크 "
+"시간대에 적용을 켜는 것이 좋습니다."

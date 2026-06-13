@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:2
 msgid "SSL client certificate setup"
-msgstr ""
+msgstr "SSL 클라이언트 인증서 설정"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다."
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -38,6 +40,8 @@ msgid ""
 "Follow these steps to configure SSL client certificates for your browser "
 "and the Mattermost desktop apps on Windows, macOS, and Linux."
 msgstr ""
+"Windows, macOS, Linux에서 브라우저와 Mattermost 데스크톱 앱용 SSL 클라이언트 인증서를 구성하려면 다음 "
+"단계를 따르세요."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:9
 msgid ""
@@ -46,6 +50,9 @@ msgid ""
 "NGINX configuration as a proxy with SSL and HTTP/2, and a valid SSL "
 "certificate such as Let's Encrypt."
 msgstr ""
+"시작하기 전에 SSL 및 HTTP/2를 사용하는 프록시로 NGINX를 구성하고 Let's Encrypt 같은 유효한 SSL 인증서를 "
+"포함하여, 시스템에 :doc:`OKR.BEST를 설치하는 공식 가이드 </deployment-guide/deployment-guide-index>`를 "
+"따르세요."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:11
 msgid ""
@@ -53,12 +60,15 @@ msgid ""
 "``example.mattermost.com``, and the user account is ``mmuser`` with email"
 " ``mmuser@mattermost.com`` and password ``mmuser-password``."
 msgstr ""
+"이 가이드에서는 OKR.BEST 서버 도메인 이름이 ``example.mattermost.com``이고, 사용자 계정은 이메일 "
+"``mmuser@mattermost.com`` 및 비밀번호 ``mmuser-password``를 사용하는 ``mmuser``라고 가정합니다."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:14
 msgid ""
 "Generating the client certificates in this section is optional if you "
 "have already generated them before."
 msgstr ""
+"이전에 클라이언트 인증서를 이미 생성했다면 이 섹션의 클라이언트 인증서 생성은 선택 사항입니다."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:15
 msgid ""
@@ -70,16 +80,20 @@ msgid ""
 " message links>` and :doc:`inviting people </end-user-guide/collaborate"
 "/invite-people>`."
 msgstr ""
+"보안, 개인정보 보호, 컴플라이언스를 위해, 그리고 :ref:`메시지 링크 공유 <end-user-guide/collaborate/share-links:share "
+"message links>` 및 :doc:`사용자 초대 </end-user-guide/collaborate/invite-people>`처럼 사용자의 로컬 클립보드를 "
+"사용해 데이터를 복사하는 OKR.BEST 제품 기능이 동작하지 못하게 할 수 있는 브라우저 제한을 피하기 위해 SSL "
+"인증서(또는 자체 서명 인증서)를 구성하는 것을 강력히 권장합니다."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:16
 msgid ""
 "SSL client certificates are not yet supported on the Mattermost mobile "
 "apps."
-msgstr ""
+msgstr "SSL 클라이언트 인증서는 아직 Mattermost 모바일 앱에서 지원되지 않습니다."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:19
 msgid "Set up mutual TLS authentication for the web app"
-msgstr ""
+msgstr "웹 앱에 대한 상호 TLS 인증 설정"
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:21
 msgid ""
@@ -89,22 +103,26 @@ msgid ""
 "connection, the NGINX proxy server requests and validates a client "
 "certificate provided by the web app."
 msgstr ""
+"`인증 기관(CA) 키 <https://en.wikipedia.org/wiki/Certificate_authority>`__ 및 클라이언트 인증서에 "
+"서명할 인증서를 만듭니다. TLS 연결을 설정할 때 NGINX 프록시 서버는 웹 앱에서 제공하는 클라이언트 인증서를 "
+"요청하고 검증합니다."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:45
 msgid ""
 "Create the client side key for ``mmuser`` with a passphrase, and the "
 "certificate signing request:"
 msgstr ""
+"암호문과 함께 ``mmuser``의 클라이언트 측 키 및 인증서 서명 요청을 만듭니다."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:71
 msgid ""
 "Sign the user's client certificate with the previously created CA "
 "certificate:"
-msgstr ""
+msgstr "앞서 만든 CA 인증서로 사용자의 클라이언트 인증서에 서명합니다."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:77
 msgid "Check the newly generated client certificate for ``mmuser``:"
-msgstr ""
+msgstr "새로 생성된 ``mmuser``용 클라이언트 인증서를 확인합니다."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:83
 msgid ""
@@ -112,22 +130,26 @@ msgid ""
 "following lines, so that the NGINX proxy server requests and verifies the"
 " client certificate:"
 msgstr ""
+"``/etc/nginx/sites-available/mattermost`` 파일을 열고 NGINX 프록시 서버가 클라이언트 인증서를 요청하고 "
+"검증하도록 다음 줄을 수정합니다."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:108
 msgid ""
 "Confirm the CA key for ``mmuser`` works by the following curl command to "
 "the proxy:"
-msgstr ""
+msgstr "프록시에 대한 다음 curl 명령으로 ``mmuser``의 CA 키가 작동하는지 확인합니다."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:114
 msgid "You should see the Mattermost login page. If you see:"
-msgstr ""
+msgstr "Mattermost 로그인 페이지가 표시되어야 합니다. 다음이 표시되면:"
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:116
 msgid ""
 "``No required SSL certificate was sent``, something went wrong. Review "
 "the above steps and try again."
 msgstr ""
+"``No required SSL certificate was sent``가 표시되면 문제가 발생한 것입니다. 위 단계를 검토하고 다시 "
+"시도하세요."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:117
 msgid ""
@@ -135,38 +157,45 @@ msgid ""
 "make sure the passphrase is included together with the certificate, "
 "because curl doesn't prompt for it separately."
 msgstr ""
+"``Error reading X.509 key or certificate file: Decryption has failed.``가 표시되면 curl이 암호문을 별도로 "
+"묻지 않으므로 인증서와 함께 암호문이 포함되어 있는지 확인하세요."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:119
 msgid ""
 "Generate a PKCS12 file from the CA key and certificate, to install the "
 "certificate into your client machine for your browser to use:"
 msgstr ""
+"브라우저에서 사용할 수 있도록 클라이언트 머신에 인증서를 설치하기 위해 CA 키와 인증서에서 PKCS12 파일을 "
+"생성합니다."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:129
 msgid "Repeat steps 2-7 above for other users as needed."
-msgstr ""
+msgstr "필요에 따라 다른 사용자에 대해 위 2~7단계를 반복합니다."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:131
 msgid ""
 "Import the generated ``.p12`` file in step 7 into your key chain. In the "
 "Chrome browser on macOS:"
 msgstr ""
+"7단계에서 생성한 ``.p12`` 파일을 키체인으로 가져옵니다. macOS의 Chrome 브라우저에서는 다음과 같이 합니다."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:133
 msgid ""
 "Go to **Settings > Advanced > Privacy and security > Manage "
 "certificates**. This opens the Keychain Access app."
 msgstr ""
+"**설정 > 고급 > 개인정보 및 보안 > 인증서 관리**\\ 로 이동합니다. 그러면 키체인 접근 앱이 열립니다."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:134
 msgid ""
 "Go to **File > Import Items** and select the ``mmuser-mattermost.p12`` "
 "file."
 msgstr ""
+"**파일 > 항목 가져오기**\\ 로 이동하고 ``mmuser-mattermost.p12`` 파일을 선택합니다."
 
 #: ../../source/administration-guide/onboard/ssl-client-certificate.rst:136
 msgid ""
 "Go to ``https://example.mattermost.com``. You should see a popup for the "
 "client certificate request."
 msgstr ""
-
+"``https://example.mattermost.com``으로 이동합니다. 클라이언트 인증서 요청 팝업이 표시되어야 합니다."

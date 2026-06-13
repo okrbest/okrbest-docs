@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/certificate-based-authentication.rst:2
 msgid "Certificate-based authentication (Experimental)"
-msgstr ""
+msgstr "인증서 기반 인증(실험적)"
 
 #: ../../source/_static/badges/ent-plus.rst:9
 msgid ""
 "|plans-img-yellow| Available on `Enterprise and Enterprise Advanced plans"
 " <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Enterprise 및 Enterprise Advanced 플랜 <https://mattermost.com/pricing/>`__"
+"\\ 에서 사용할 수 있습니다."
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -41,6 +43,9 @@ msgid ""
 "settings:enable client-side certification>` to start the server. Enabling"
 " this setting will prevent the server from starting."
 msgstr ""
+"**실험적 인증서 기반 인증은 Mattermost v11.0부터 사용 중단되었습니다.** Mattermost v11부터 서버를 시작하려면 "
+"이 기능을 :ref:`비활성화 <administration-guide/configure/experimental-configuration-settings:enable client-side "
+"certification>`해야 합니다. 이 설정을 활성화하면 서버가 시작되지 않습니다."
 
 #: ../../source/administration-guide/onboard/certificate-based-authentication.rst:10
 msgid ""
@@ -49,6 +54,8 @@ msgid ""
 "access to Mattermost and provide an additional layer of security to "
 "access the system."
 msgstr ""
+"v11 이전에는 인증서 기반 인증(CBA)을 OKR.BEST에 접근 권한을 부여하기 전에 사용자 또는 기기를 식별하고 "
+"시스템 접근에 추가 보안 계층을 제공하는 실험적 기능으로 사용할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/certificate-based-authentication.rst:12
 msgid ""
@@ -57,6 +64,9 @@ msgid ""
 "NGINX configuration as a proxy with SSL and HTTP/2, and a valid SSL "
 "certificate such as Let's Encrypt."
 msgstr ""
+"시작하기 전에 SSL 및 HTTP/2를 사용하는 프록시로 NGINX를 구성하고 Let's Encrypt 같은 유효한 SSL 인증서를 "
+"포함하여, 시스템에 :doc:`OKR.BEST를 설치하는 공식 가이드 </deployment-guide/deployment-guide-index>`를 "
+"따르세요."
 
 #: ../../source/administration-guide/onboard/certificate-based-authentication.rst:14
 msgid ""
@@ -65,10 +75,13 @@ msgid ""
 " personal device (BYOD) and their life cycle management with a service "
 "like `OpenSSL <https://www.openssl.org/>`__."
 msgstr ""
+"그런 다음 아래 단계에 따라 브라우저와 Mattermost Desktop Apps용 사용자 CBA를 구성합니다. `OpenSSL "
+"<https://www.openssl.org/>`__ 같은 서비스를 사용해 각 개인 기기(BYOD)의 인증서 배포와 수명 주기 관리를 "
+"관리할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/certificate-based-authentication.rst:17
 msgid "Set up mutual TLS authentication for the Web App"
-msgstr ""
+msgstr "웹 앱에 대한 상호 TLS 인증 설정"
 
 #: ../../source/administration-guide/onboard/certificate-based-authentication.rst:19
 msgid ""
@@ -76,16 +89,19 @@ msgid ""
 "/ssl-client-certificate>` is the first step to set up certificate-based "
 "authentication."
 msgstr ""
+":doc:`상호 TLS 인증 설정 </administration-guide/onboard/ssl-client-certificate>`은 인증서 기반 인증을 "
+"설정하는 첫 단계입니다."
 
 #: ../../source/administration-guide/onboard/certificate-based-authentication.rst:22
 msgid "Set up Mattermost server to log in with a client certificate"
-msgstr ""
+msgstr "클라이언트 인증서로 로그인하도록 OKR.BEST 서버 설정"
 
 #: ../../source/administration-guide/onboard/certificate-based-authentication.rst:24
 msgid ""
 "Make sure your Mattermost server is licensed with a valid Enterprise "
 "license."
 msgstr ""
+"OKR.BEST 서버에 유효한 Enterprise 라이선스가 적용되어 있는지 확인합니다."
 
 #: ../../source/administration-guide/onboard/certificate-based-authentication.rst:25
 msgid ""
@@ -93,6 +109,8 @@ msgid ""
 "``ClientSideCertEnable`` to ``true`` and ``ClientSideCertCheck`` to one "
 "of the following values:"
 msgstr ""
+"``config.json`` 파일의 ``ExperimentalSettings``에서 ``ClientSideCertEnable``을 ``true``로 설정하고 "
+"``ClientSideCertCheck``를 다음 값 중 하나로 설정합니다."
 
 #: ../../source/administration-guide/onboard/certificate-based-authentication.rst:27
 msgid ""
@@ -100,6 +118,8 @@ msgid ""
 " is retrieved from the certificate and is used to log in without a "
 "password."
 msgstr ""
+"``primary`` - 클라이언트 측 인증서가 확인되면 인증서에서 사용자의 이메일을 가져와 비밀번호 없이 로그인하는 데 "
+"사용합니다."
 
 #: ../../source/administration-guide/onboard/certificate-based-authentication.rst:28
 msgid ""
@@ -107,18 +127,20 @@ msgid ""
 "email is retrieved from the certificate and matched against the one "
 "supplied by the user."
 msgstr ""
+"``secondary`` - 클라이언트 측 인증서가 확인되면 인증서에서 사용자의 이메일을 가져와 사용자가 제공한 이메일과 "
+"일치하는지 확인합니다."
 
 #: ../../source/administration-guide/onboard/certificate-based-authentication.rst:30
 msgid "If they match, the user logs in with regular email/password credentials."
-msgstr ""
+msgstr "일치하면 사용자는 일반 이메일/비밀번호 자격 증명으로 로그인합니다."
 
 #: ../../source/administration-guide/onboard/certificate-based-authentication.rst:32
 msgid "The ``config.json`` file should then have the following lines"
-msgstr ""
+msgstr "그러면 ``config.json`` 파일에는 다음 줄이 있어야 합니다."
 
 #: ../../source/administration-guide/onboard/certificate-based-authentication.rst:41
 msgid "Restart the Mattermost server."
-msgstr ""
+msgstr "OKR.BEST 서버를 다시 시작합니다."
 
 #: ../../source/administration-guide/onboard/certificate-based-authentication.rst:43
 msgid ""
@@ -126,4 +148,5 @@ msgid ""
 "should require the x.509 cert to have an ``emailAddress`` equal to the "
 "Mattermost user's email."
 msgstr ""
-
+"``https://example.mattermost.com``으로 이동해 로그인을 시도합니다. 서버는 x.509 인증서에 OKR.BEST "
+"사용자의 이메일과 동일한 ``emailAddress``가 있어야 한다고 요구해야 합니다."

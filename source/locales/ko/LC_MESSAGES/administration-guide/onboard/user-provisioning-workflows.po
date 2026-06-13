@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:4
 msgid "Provisioning workflows"
-msgstr ""
+msgstr "프로비저닝 워크플로"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다."
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -38,12 +40,13 @@ msgid ""
 "This document provides an overview of user provisioning and "
 "deprovisioning workflows in Mattermost."
 msgstr ""
+"이 문서는 OKR.BEST의 사용자 프로비저닝 및 프로비저닝 해제 워크플로에 대한 개요를 제공합니다."
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:11
 msgid ""
 "There are currently 3 recommended user provisioning workflows in "
 "Mattermost:"
-msgstr ""
+msgstr "현재 OKR.BEST에는 다음 3가지 권장 사용자 프로비저닝 워크플로가 있습니다."
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:13
 msgid ""
@@ -57,6 +60,11 @@ msgid ""
 "system admins to add everyone to additional channels specified by the "
 "organization."
 msgstr ""
+"**온디맨드:** 아래 설명된 방법 중 하나를 사용해 사용자 계정을 미리 프로비저닝하지 않은 경우, 사용자가 "
+"처음 로그인할 때 새 사용자 계정이 프로비저닝됩니다. 사용자가 로그인하면 참여할 공개 팀을 선택하라는 "
+"메시지가 표시되고(모든 사용자는 하나 이상의 팀에 속해야 함), 이후 Town Square 채널에 자동으로 "
+"추가됩니다. OKR.BEST에는 시스템 관리자가 조직에서 지정한 추가 채널에 모든 사용자를 추가할 수 있게 하는 "
+":ref:`기본 채널 설정 <administration-guide/configure/experimental-configuration-settings:default channels>`도 있습니다."
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:14
 msgid ""
@@ -67,6 +75,10 @@ msgid ""
 "creation of Teams, Channels, Users, and Posts (with file attachments). It"
 " can also be used to migrate users and content from an existing system."
 msgstr ""
+"**대량 가져오기를 통한 사전 프로비저닝:** OKR.BEST에는 새 사용자가 OKR.BEST에 처음 로그인하기 전에 팀과 "
+"채널에 추가하여 미리 프로비저닝하는 데 사용할 수 있는 :doc:`대량 데이터 로드 도구 </administration-guide/onboard/"
+"bulk-loading-data>`가 있습니다. 이 도구는 팀, 채널, 사용자, 글(파일 첨부 포함) 생성을 자동화합니다. "
+"기존 시스템에서 사용자와 콘텐츠를 마이그레이션하는 데도 사용할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:15
 msgid ""
@@ -76,22 +88,28 @@ msgid ""
 "model is commonly used by enterprises that have central account "
 "provisioning applications."
 msgstr ""
+"**Mattermost API:** Mattermost `RESTful API <https://api.mattermost.com>`__\\ 를 사용해 새 사용자 "
+"계정을 미리 프로비저닝하고 팀 및 채널에서 사용자를 추가하거나 제거할 수 있습니다. 이 모델은 중앙 계정 "
+"프로비저닝 애플리케이션이 있는 엔터프라이즈에서 일반적으로 사용됩니다."
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:18
 msgid "Mattermost user identifier"
-msgstr ""
+msgstr "OKR.BEST 사용자 식별자"
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:20
 msgid ""
 "The user identifier used to uniquely identify users in Mattermost depends"
 " on the method of authentication:"
 msgstr ""
+"OKR.BEST에서 사용자를 고유하게 식별하는 데 사용하는 사용자 식별자는 인증 방법에 따라 다릅니다."
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:22
 msgid ""
 "**Email/password**: Email address or username. Created by the user or "
 "previously described account pre-provisioning process."
 msgstr ""
+"**이메일/비밀번호**: 이메일 주소 또는 사용자 ID입니다. 사용자가 만들거나 앞서 설명한 계정 사전 "
+"프로비저닝 프로세스에서 생성됩니다."
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:23
 msgid ""
@@ -100,6 +118,8 @@ msgid ""
 "changes, it will create a new Mattermost account unassociated with their "
 "old one."
 msgstr ""
+"**AD/LDAP**: OKR.BEST에서 사용할 AD/LDAP 서버의 고유하고 변경되지 않는 ID 속성을 구성합니다. 사용자의 ID "
+"속성이 변경되면 이전 계정과 연결되지 않은 새 OKR.BEST 계정이 생성됩니다."
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:24
 msgid ""
@@ -107,14 +127,16 @@ msgid ""
 "instead of email to bind the user. We recommend choosing an ID that is "
 "unique and will not change over time."
 msgstr ""
+"**SAML 2.0**: 구성 중에 선택합니다. 사용자를 바인딩하기 위해 이메일 대신 ID 속성을 사용할 수 있습니다. "
+"고유하고 시간이 지나도 변경되지 않는 ID를 선택하는 것이 좋습니다."
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:27
 msgid "User deprovisioning"
-msgstr ""
+msgstr "사용자 프로비저닝 해제"
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:29
 msgid "Users in Mattermost can be deactivated in the following ways:"
-msgstr ""
+msgstr "OKR.BEST의 사용자는 다음 방법으로 비활성화할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:31
 msgid ""
@@ -123,6 +145,9 @@ msgid ""
 "synchronization. Learn more in :ref:`AD/LDAP documentation "
 "<administration-guide/onboard/ad-ldap:how do i deactivate users?>`."
 msgstr ""
+"**AD/LDAP 동기화**: AD/LDAP 사용자는 동기화를 통해 디렉토리 서버의 상태에 따라 OKR.BEST에서 비활성화될 수 "
+"있습니다. 자세한 내용은 :ref:`AD/LDAP 문서 <administration-guide/onboard/ad-ldap:how do i deactivate users?>`를 "
+"참조하세요."
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:32
 msgid ""
@@ -132,6 +157,9 @@ msgid ""
 "management-configuration-settings:deactivate users>` documentation for "
 "details."
 msgstr ""
+"**관리자 도구**: **관리자 도구 > 사용자**\\ 의 사용자 관리 화면에서 시스템 관리자는 이메일/비밀번호 로그인 사용자를 "
+"비활성화할 수 있습니다. 자세한 내용은 :ref:`사용자 비활성화 <administration-guide/configure/user-management-"
+"configuration-settings:deactivate users>` 문서를 참조하세요."
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:33
 msgid ""
@@ -139,6 +167,8 @@ msgid ""
 "`API documentation to learn more "
 "<https://api.mattermost.com/#operation/DeleteUser>`__."
 msgstr ""
+"**RESTful API** Mattermost API를 사용해 사용자를 비활성화할 수 있습니다. 자세한 내용은 `API 문서 "
+"<https://api.mattermost.com/#operation/DeleteUser>`__\\ 를 참조하세요."
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:34
 msgid ""
@@ -146,6 +176,8 @@ msgid ""
 "deactivate <administration-guide/manage/mmctl-command-line-tool:mmctl "
 "user deactivate>` command to deactivate users."
 msgstr ""
+"**명령줄 인터페이스**: 사용자를 비활성화하려면 Mattermost :ref:`mmctl user deactivate "
+"<administration-guide/manage/mmctl-command-line-tool:mmctl user deactivate>` 명령을 사용할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:36
 msgid ""
@@ -154,6 +186,9 @@ msgid ""
 "<administration-guide/manage/mmctl-command-line-tool:mmctl user delete>` "
 "tools to delete a user and all of their content."
 msgstr ""
+"비활성화된 후에도 사용자는 OKR.BEST 데이터베이스에 계속 존재하며 해당 메시지는 OKR.BEST에서 계속 볼 수 "
+"있습니다. 사용자와 모든 콘텐츠를 삭제하려면 :ref:`mmctl <administration-guide/manage/mmctl-command-line-tool:mmctl user "
+"delete>` 도구를 사용할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:38
 msgid ""
@@ -161,6 +196,8 @@ msgid ""
 ":ref:`availability <end-user-guide/preferences/set-your-status-"
 "availability:set your availability>` is automatically set to offline."
 msgstr ""
+"Mattermost v10.10부터 사용자가 비활성화되면 계정의 :ref:`접속 가능 상태 <end-user-guide/preferences/set-your-"
+"status-availability:set your availability>`가 자동으로 오프라인으로 설정됩니다."
 
 #: ../../source/administration-guide/onboard/user-provisioning-workflows.rst:42
 msgid ""
@@ -168,4 +205,5 @@ msgid ""
 "identifier, the user’s email address or name (along with other "
 "attributes) can be updated without breaking the user’s account."
 msgstr ""
-
+"AD/LDAP 또는 SAML 2.0을 통해 선택한 ID 속성이 고유 식별자인 한, 사용자의 계정을 손상하지 않고 이메일 "
+"주소나 이름(및 기타 속성)을 업데이트할 수 있습니다."
