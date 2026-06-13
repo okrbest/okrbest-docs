@@ -500,6 +500,9 @@ msgid ""
 " services keep the **Use Responses API** setting so you can disable it "
 "for endpoints that still require legacy Chat Completions compatibility."
 msgstr ""
+"OpenAI 서비스는 항상 Responses API를 사용합니다. OpenAI Compatible 및 Azure "
+"서비스는 **Use Responses API** 설정을 유지하므로, 여전히 레거시 Chat Completions "
+"호환성이 필요한 엔드포인트에 대해서는 이를 비활성화할 수 있습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:101
 msgid ""
@@ -507,10 +510,13 @@ msgid ""
 "Guide](https://docs.mattermost.com/agents/docs/providers.html) for "
 "detailed provider-specific configuration."
 msgstr ""
+"공급자별 상세 구성은 [공급자 "
+"가이드](https://docs.mattermost.com/agents/docs/providers.html)를 "
+"참고하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:103
 msgid "Agent configuration"
-msgstr ""
+msgstr "에이전트 구성"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:105
 msgid ""
@@ -521,6 +527,11 @@ msgid ""
 "configuration. See [license requirements](#license-requirements) for "
 "details on features that require a license."
 msgstr ""
+"**Agents** 제품 페이지에서 에이전트를 생성하고 관리합니다. 최상위 **Agents** 제품 "
+"항목 또는 **AI Actions > Manage agents**에서 엽니다. 에이전트는 **관리자 도구 > "
+"플러그인 > Agents**에 구성된 서비스 인벤토리를 사용하며, 여러 에이전트가 동일한 서비스 "
+"구성을 재사용할 수 있습니다. 라이선스가 필요한 기능에 대한 자세한 내용은 [라이선스 요구 "
+"사항](#license-requirements)을 참고하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:107
 msgid ""
@@ -529,28 +540,33 @@ msgid ""
 "available for **Edit** and **Delete**. Use **Back to agents** to return "
 "to the list."
 msgstr ""
+"에이전트를 관리할 수 있는 경우, Agents 목록에서 해당 행을 선택하면 전체 페이지 구성 "
+"화면이 바로 열립니다. **Edit** 및 **Delete**는 오버플로 메뉴에서 계속 사용할 수 "
+"있습니다. 목록으로 돌아가려면 **Back to agents**를 사용합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:109
 msgid ""
 "When you create or edit an agent, use the three tabs in the full-page "
 "agent configuration view:"
 msgstr ""
+"에이전트를 생성하거나 편집할 때는 전체 페이지 에이전트 구성 화면의 세 가지 탭을 "
+"사용합니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:111
 msgid ""
 "**Configuration** for identity, model selection, instructions, and core "
 "capabilities"
-msgstr ""
+msgstr "신원, 모델 선택, 지침, 핵심 기능을 위한 **Configuration**"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:112
 msgid ""
 "**Access** for channel, team, and user restrictions, plus delegated agent"
 " admins"
-msgstr ""
+msgstr "채널, 팀, 사용자 제한 및 위임된 에이전트 관리자를 위한 **Access**"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:113
 msgid "**MCPs** for the agent's allowed MCP tools"
-msgstr ""
+msgstr "에이전트가 허용하는 MCP 도구를 위한 **MCPs**"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:115
 msgid ""
@@ -559,10 +575,13 @@ msgid ""
 "Mattermost shows a **Discard changes?** confirmation with **Discard** and"
 " **Keep editing**."
 msgstr ""
+"저장하지 않은 변경 사항이 있는 상태에서 **Back to agents**, **Cancel**을 선택하거나 "
+"Escape를 눌러 에이전트 구성 화면을 나가려고 하면, OKR.BEST는 **Discard**와 **Keep "
+"editing** 옵션이 있는 **Discard changes?** 확인 창을 표시합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:117
 msgid "Configuration tab"
-msgstr ""
+msgstr "Configuration 탭"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Display Name**"
@@ -570,7 +589,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "User-facing name shown in Mattermost"
-msgstr ""
+msgstr "OKR.BEST에 표시되는 사용자 대상 이름"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Agent Username**"
@@ -581,6 +600,8 @@ msgid ""
 "The Mattermost username for the agent. @mentions use this name. Set it "
 "when creating the agent; it can't be changed later."
 msgstr ""
+"에이전트의 OKR.BEST 사용자 ID입니다. @멘션은 이 이름을 사용합니다. 에이전트를 생성할 "
+"때 설정하며, 나중에 변경할 수 없습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Agent Avatar**"
@@ -588,7 +609,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Custom image for the agent"
-msgstr ""
+msgstr "에이전트의 사용자 정의 이미지"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Service**"
@@ -596,7 +617,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Select a configured Service from the dropdown"
-msgstr ""
+msgstr "드롭다운에서 구성된 서비스를 선택합니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Model**"
@@ -604,7 +625,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "(Optional) Override the service's default model for this agent"
-msgstr ""
+msgstr "(선택) 이 에이전트에 대해 서비스의 기본 모델을 재정의합니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Custom Instructions**"
@@ -612,7 +633,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Custom instructions that define the agent's personality and capabilities"
-msgstr ""
+msgstr "에이전트의 성격과 기능을 정의하는 사용자 정의 지침"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Enable Vision**"
@@ -623,6 +644,8 @@ msgid ""
 "Enable Vision to allow the agent to process images. Requires a compatible"
 " model and service."
 msgstr ""
+"에이전트가 이미지를 처리할 수 있도록 Enable Vision을 켭니다. 호환되는 모델과 서비스가 "
+"필요합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Enable Tools**"
@@ -634,10 +657,13 @@ msgid ""
 "Disable this only for models or use cases where tool calling shouldn't be"
 " available. Some features won't work without tools."
 msgstr ""
+"통합 및 기타 도구 기반 기능에 대한 도구 사용을 활성화합니다. 도구 호출이 제공되지 "
+"않아야 하는 모델이나 사용 사례에서만 비활성화하세요. 일부 기능은 도구 없이는 작동하지 "
+"않습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:130
 msgid "LLM Specific Agent Settings"
-msgstr ""
+msgstr "LLM별 에이전트 설정"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:132
 msgid ""
@@ -645,6 +671,8 @@ msgid ""
 "Compatible and Azure, whether **Use Responses API** is enabled on that "
 "service."
 msgstr ""
+"일부 기능은 선택한 서비스 유형에 따라 다르며, OpenAI Compatible 및 Azure의 경우 해당 "
+"서비스에서 **Use Responses API**가 활성화되어 있는지에 따라 달라집니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Enable Web Search**"
@@ -659,6 +687,11 @@ msgid ""
 "Agent to leverage the provider's native web search tool to respond with "
 "recent information."
 msgstr ""
+"Anthropic, OpenAI, Google Gemini, Google Vertex AI에서 사용할 수 있습니다. OpenAI "
+"Compatible 및 Azure의 경우, 서비스에서 **Use Responses API**가 활성화되어 있을 때 이 "
+"설정을 사용할 수 있습니다. Gemini과 Vertex는 이를 공급자의 Responses API를 통한 "
+"Google Search 그라운딩으로 매핑합니다. 에이전트가 공급자의 네이티브 웹 검색 도구를 "
+"활용해 최신 정보로 응답할 수 있게 합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Reasoning Enabled**"
@@ -673,6 +706,11 @@ msgid ""
 "maps a token budget to `thinkingConfig.thinkingBudget` and an effort "
 "level to `thinkingConfig.thinkingLevel` on Gemini 3.0+."
 msgstr ""
+"Anthropic, OpenAI, Google Gemini, Google Vertex AI에서 사용할 수 있습니다. OpenAI "
+"Compatible 및 Azure의 경우, 서비스에서 **Use Responses API**가 활성화되어 있을 때 이 "
+"설정을 사용할 수 있습니다. 복잡한 작업을 위한 확장 사고 또는 추론 기능을 활성화합니다. "
+"Gemini / Vertex의 경우, Bifrost는 토큰 예산을 `thinkingConfig.thinkingBudget`에, "
+"effort 수준을 Gemini 3.0+의 `thinkingConfig.thinkingLevel`에 매핑합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Structured Output**"
@@ -685,6 +723,9 @@ msgid ""
 "structured JSON matching that schema. Compatible model support is still "
 "required."
 msgstr ""
+"Anthropic, OpenAI, OpenAI Compatible, Azure에서 사용할 수 있습니다. 활성화하고 "
+"요청에 JSON 스키마를 제공하면, 모델이 해당 스키마와 일치하는 구조화된 JSON을 "
+"반환합니다. 호환되는 모델 지원이 여전히 필요합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:140
 msgid ""
@@ -692,12 +733,17 @@ msgid ""
 "where the selected provider supports those features. For providers that "
 "don't support native tools, native tool selections are ignored."
 msgstr ""
+"새 에이전트는 선택한 공급자가 해당 기능을 지원하는 경우 네이티브 웹 검색과 구조화된 "
+"출력을 기본적으로 활성화합니다. 네이티브 도구를 지원하지 않는 공급자의 경우, 네이티브 "
+"도구 선택은 무시됩니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:142
 msgid ""
 "For Anthropic services, **Structured Output** and extended thinking can't"
 " be used at the same time."
 msgstr ""
+"Anthropic 서비스의 경우, **Structured Output**과 확장 사고는 동시에 사용할 수 "
+"없습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:144
 msgid ""
@@ -705,56 +751,69 @@ msgid ""
 "an **OpenAI Compatible** service and turn **Use Responses API** off for "
 "that service instead of using the **OpenAI** service type."
 msgstr ""
+"Responses API 경로 없이 OpenAI 방식의 엔드포인트가 필요한 경우, **OpenAI** 서비스 "
+"유형을 사용하는 대신 **OpenAI Compatible** 서비스를 사용하고 해당 서비스에 대해 "
+"**Use Responses API**를 끄세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:146
 msgid "Access tab"
-msgstr ""
+msgstr "Access 탭"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:148
 msgid "Use this tab to control who can interact with and manage the agent:"
-msgstr ""
+msgstr "이 탭을 사용해 누가 에이전트와 상호작용하고 관리할 수 있는지 제어합니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:150
 msgid "**Channel access** controls which channels the agent can be mentioned in"
-msgstr ""
+msgstr "**Channel access**는 에이전트를 멘션할 수 있는 채널을 제어합니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:151
 msgid "**User access** controls which users can interact with the agent"
-msgstr ""
+msgstr "**User access**는 에이전트와 상호작용할 수 있는 사용자를 제어합니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:152
 msgid ""
 "**Agent admins** can edit and delete the agent; the agent creator is "
 "always an admin"
 msgstr ""
+"**Agent admins**는 에이전트를 편집하고 삭제할 수 있으며, 에이전트 생성자는 항상 "
+"관리자입니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:154
 msgid "MCPs tab"
-msgstr ""
+msgstr "MCPs 탭"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:156
 msgid ""
 "Use this tab to control which MCP tools the agent can use. This tab is "
 "available only when **Enable Tools** is turned on."
 msgstr ""
+"이 탭을 사용해 에이전트가 사용할 수 있는 MCP 도구를 제어합니다. 이 탭은 **Enable "
+"Tools**가 켜져 있을 때만 사용할 수 있습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:158
 msgid ""
 "**Automatically enable all MCP tools** gives the agent access to every "
 "currently available MCP tool and any MCP tools added later."
 msgstr ""
+"**Automatically enable all MCP tools**는 현재 사용 가능한 모든 MCP 도구와 이후에 "
+"추가되는 모든 MCP 도구에 대한 접근 권한을 에이전트에 부여합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:159
 msgid ""
 "When **Automatically enable all MCP tools** is off, select the specific "
 "MCP tools the agent may use."
 msgstr ""
+"**Automatically enable all MCP tools**가 꺼져 있으면, 에이전트가 사용할 수 있는 특정 "
+"MCP 도구를 선택합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:160
 msgid ""
 "If a previously selected MCP tool is no longer available, it is removed "
 "from the agent configuration when you save."
 msgstr ""
+"이전에 선택한 MCP 도구를 더 이상 사용할 수 없게 되면, 저장할 때 에이전트 구성에서 "
+"제거됩니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:162
 msgid ""
@@ -762,6 +821,8 @@ msgid ""
 "display name. Deleting an agent deactivates the linked Mattermost bot "
 "account."
 msgstr ""
+"에이전트의 표시명을 업데이트하면 연결된 OKR.BEST 봇의 표시명도 업데이트됩니다. "
+"에이전트를 삭제하면 연결된 OKR.BEST 봇 계정이 비활성화됩니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:164
 msgid ""
@@ -770,10 +831,13 @@ msgid ""
 "page. Migrated agents don't have a creator and can be managed by system "
 "admins."
 msgstr ""
+"이전에 플러그인 구성에 저장되어 있던 레거시 봇은 시작 시 데이터베이스 기반 에이전트로 "
+"마이그레이션된 후 **Agents** 페이지에서 관리됩니다. 마이그레이션된 에이전트는 생성자가 "
+"없으며 시스템 관리자가 관리할 수 있습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:166
 msgid "Custom instructions"
-msgstr ""
+msgstr "사용자 정의 지침"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:168
 msgid ""
@@ -781,6 +845,8 @@ msgid ""
 " every request. Use this to give your agents extra context or "
 "instructions."
 msgstr ""
+"사용자 정의 지침 필드에 입력한 텍스트는 모든 요청의 프롬프트에 포함됩니다. 이를 사용해 "
+"에이전트에 추가 컨텍스트나 지침을 제공하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:170
 msgid ""
@@ -791,10 +857,14 @@ msgid ""
 "instructions for each individual agent, you can create a more tailored AI"
 " experience for your specific needs."
 msgstr ""
+"예를 들어, 조직 고유의 약어를 나열하면 에이전트가 조직의 용어를 이해하고 사용자가 "
+"정의를 물어볼 수 있습니다. 또는 특정 성격을 채택하거나 특정 워크플로를 따르도록 하는 "
+"등 특수한 지침을 제공할 수도 있습니다. 개별 에이전트마다 지침을 사용자 정의하면 특정 "
+"요구에 더 맞춤화된 AI 경험을 만들 수 있습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:172
 msgid "Built-in web search configuration"
-msgstr ""
+msgstr "내장 웹 검색 구성"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:174
 msgid ""
@@ -803,10 +873,13 @@ msgid ""
 " own search. Prefer native provider web search when your service supports"
 " it."
 msgstr ""
+"내장 웹 검색 도구는 모델이나 배포가 공급자 자체 검색을 사용하지 않을 때 에이전트가 "
+"인터넷에서 최신 정보를 가져올 수 있게 합니다. 서비스가 지원하는 경우 공급자의 네이티브 "
+"웹 검색을 우선 사용하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:176
 msgid "When to use built-in web search"
-msgstr ""
+msgstr "내장 웹 검색을 사용하는 경우"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:178
 msgid ""
@@ -817,18 +890,23 @@ msgid ""
 "it's strongly recommended to use the provider's native implementation "
 "instead. Native web search tools typically offer:"
 msgstr ""
+"내장 웹 검색은 네이티브 웹 검색 기능이 없는 LLM 모델을 위한 것입니다. 선택한 모델이 "
+"이미 네이티브 웹 검색을 제공하는 경우(예: OpenAI, Anthropic, Google Gemini, Google "
+"Vertex AI, 또는 **Use Responses API**가 활성화된 OpenAI Compatible/Azure 서비스), "
+"대신 공급자의 네이티브 구현을 사용하는 것이 강력히 권장됩니다. 네이티브 웹 검색 도구는 "
+"일반적으로 다음을 제공합니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:180
 msgid "Better integration with the model"
-msgstr ""
+msgstr "모델과의 더 나은 통합"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:181
 msgid "More reliable search results"
-msgstr ""
+msgstr "더 신뢰할 수 있는 검색 결과"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:182
 msgid "Optimized performance"
-msgstr ""
+msgstr "최적화된 성능"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:184
 msgid ""
@@ -836,42 +914,48 @@ msgid ""
 "see the [LLM Specific Agent Settings](#llm-specific-agent-settings) "
 "section above."
 msgstr ""
+"지원되는 공급자의 네이티브 웹 검색 구성에 대한 자세한 내용은 위의 [LLM별 에이전트 "
+"설정](#llm-specific-agent-settings) 섹션을 참고하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:186
 msgid "Provider comparison"
-msgstr ""
+msgstr "공급자 비교"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:188
 msgid ""
 "Mattermost supports two web search providers, each with varying "
 "capabilities:"
-msgstr ""
+msgstr "OKR.BEST는 두 가지 웹 검색 공급자를 지원하며, 각각 기능이 다릅니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:190
 msgid "Brave Search (Recommended)"
-msgstr ""
+msgstr "Brave Search(권장)"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:192
 msgid "Brave Search offers a superior experience for AI-powered search:"
-msgstr ""
+msgstr "Brave Search는 AI 기반 검색에서 뛰어난 경험을 제공합니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:194
 msgid ""
 "**Purpose-built for AI**: Brave's Search API is specifically designed and"
 " optimized for LLM integrations"
 msgstr ""
+"**AI 전용 설계**: Brave의 Search API는 LLM 통합을 위해 특별히 설계·최적화되었습니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:195
 msgid ""
 "**Better content extraction**: Returns pre-processed, LLM-ready summaries"
 " with citations"
 msgstr ""
+"**더 나은 콘텐츠 추출**: 인용이 포함된, 사전 처리된 LLM 친화적 요약을 반환합니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:196
 msgid ""
 "**Fewer tool calls**: Often provides complete answers without requiring "
 "follow-up web page fetches or scraping"
 msgstr ""
+"**더 적은 도구 호출**: 후속 웹 페이지 가져오기나 스크래핑 없이도 완전한 답변을 "
+"제공하는 경우가 많습니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:198
 msgid ""
@@ -881,6 +965,10 @@ msgid ""
 " suspension. The Pro AI plan is specifically licensed for AI/LLM use "
 "cases."
 msgstr ""
+"**중요**: 관리자는 이 기능을 사용할 때 Brave의 **Pro AI plan**을 구독해야 합니다. "
+"Brave의 일반 Search API(비AI 등급)를 사용하면 Brave의 서비스 약관을 위반하며 계정이 "
+"정지될 수 있습니다. Pro AI plan은 AI/LLM 사용 사례에 대해 특별히 라이선스가 "
+"부여됩니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:200
 msgid "Google Custom Search"
@@ -891,6 +979,8 @@ msgid ""
 "Google Custom Search provides access to Google's search index but has "
 "several important limitations:"
 msgstr ""
+"Google Custom Search는 Google의 검색 인덱스에 대한 접근을 제공하지만 몇 가지 중요한 "
+"제한이 있습니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:204
 msgid ""
@@ -898,6 +988,8 @@ msgid ""
 " API, which doesn't provide the same quality of results as searching "
 "directly on google.com"
 msgstr ""
+"**제1자 통합이 아님**: OKR.BEST는 Google의 Custom Search API를 사용하며, 이는 "
+"google.com에서 직접 검색하는 것과 동일한 품질의 결과를 제공하지 않습니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:205
 msgid ""
@@ -905,10 +997,13 @@ msgid ""
 "must scrape web pages to extract content for the agent. Many websites "
 "block automated scraping or return limited content to bots"
 msgstr ""
+"**웹 스크래핑에 의존**: 검색 결과를 받은 후, OKR.BEST는 에이전트를 위해 콘텐츠를 "
+"추출하려고 웹 페이지를 스크래핑해야 합니다. 많은 웹사이트가 자동 스크래핑을 차단하거나 "
+"봇에 제한된 콘텐츠를 반환합니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:206
 msgid "**Rate limits**: Google Custom Search has strict daily quota limits"
-msgstr ""
+msgstr "**속도 제한**: Google Custom Search에는 엄격한 일일 할당량 제한이 있습니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:208
 msgid ""
