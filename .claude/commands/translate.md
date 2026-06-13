@@ -15,6 +15,9 @@ okrbest-docs의 한국어 번역 작업을 수행한다. 대상: $ARGUMENTS
 다음은 **거부하고 이유를 보고한 뒤 중단**한다:
 - `source/locales/ko/LC_MESSAGES/` 외부 경로 또는 .po가 아닌 파일
 - `agents/` 또는 `_generated/` 아래 경로 → "영문 유지가 의도된 설계입니다 (TRANSLATION_GUIDE.md 6절)"
+  **예외 화이트리스트**: `agents/docs/providers.po`, `agents/docs/aws_bedrock_setup.po`, `agents/docs/sovereign_ai.po` 3개는
+  agents-admin-guide toctree에 노출되는 사용자 문서이며 유일한 번역 카탈로그가 이 경로 아래에 있으므로 **번역 대상**이다.
+  (admin_guide·user_guide 본문은 이 트리가 아니라 부모 카탈로그 `end-user-guide/agents.po`·`administration-guide/configure/agents-admin-guide.po`에서 번역한다.)
 - `_static/` 아래 경로 → "msgid가 치환자 이름이라 번역 금지 대상입니다"
 - product-overview의 체인지로그류 파일(`*changelog*`, `*-releases*`, `release-policy*`, `unsupported-legacy-releases*` 등 버전 이력 문서) → "정책상 보류 대상입니다 (가이드 3절)"
 

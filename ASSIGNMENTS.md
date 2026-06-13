@@ -25,6 +25,9 @@ push가 거부되면 `git pull --rebase origin feat/ko` 후 다시 push — 표 
 
 번역 제외(담당 불필요): product-overview 체인지로그류, agents/, _generated/, _static/, samples/, scripts/
 — 사유는 [TRANSLATION_GUIDE.md](TRANSLATION_GUIDE.md) 3·6절 참조.
+**예외**: `agents/docs/providers.po`·`aws_bedrock_setup.po`·`sovereign_ai.po` 3개는 사이트 노출 사용자 문서라
+번역 대상(가이드 6-2절, 담당: ux-builder). admin_guide·user_guide는 부모 카탈로그
+`end-user-guide/agents.po`·`administration-guide/configure/agents-admin-guide.po`에서 번역.
 
 ## 메인테이너 메모
 

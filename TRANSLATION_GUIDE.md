@@ -188,8 +188,8 @@ Markdown(.md) 원문의 `[텍스트](URL)`도 동일: 텍스트만 번역, URL �
 
 | 대상 | 이유 |
 |---|---|
-| `agents/` 카탈로그 전체 | 서브모듈(영문 플러그인 문서) — 영어 유지가 설계 |
-| `_generated/` 카탈로그 | 자동 생성 사본 |
+| `agents/` 카탈로그 (아래 예외 제외) | 서브모듈(영문 플러그인 문서) — 영어 유지가 설계 |
+| `_generated/` 카탈로그 | 자동 생성 사본 (실제 화면은 부모 카탈로그가 구동 — 아래 6-2절) |
 | `_static/badges/` 카탈로그 | msgid가 치환자 이름 — 번역 금지 (5-3절) |
 | product-overview 체인지로그류 | 정책상 보류 (3절) |
 | 설정 키(`SiteURL` 등), 환경 변수, CLI 명령, 파일 경로, URL, 버전 번호 | 식별자 — 변경 시 동작 깨짐 |
@@ -221,6 +221,28 @@ Markdown(.md) 원문의 `[텍스트](URL)`도 동일: 텍스트만 번역, URL �
 
 판단 기준: **그 문장이 "지금 독자가 쓰는 제품"을 말하면 OKR.BEST, "Mattermost사(社)의
 외부 자원·원본 프로젝트"를 말하면 Mattermost.** 애매하면 유지하고 ASSIGNMENTS.md 메모에 남기세요.
+
+### 6-2. Agents 문서 예외 (서브모듈이지만 번역 대상)
+
+`source/agents/`는 서브모듈이라 카탈로그 전체를 제외하는 것이 기본이지만, 일부는 **실제 OKR.BEST
+사이트 내비게이션에 노출되는 사용자/관리자 문서**입니다. 렌더링 경로에 따라 번역 위치가 다릅니다:
+
+| 사이트 페이지 | 원문 연결 방식 | **번역할 카탈로그** |
+|---|---|---|
+| 엔드유저 → AI 에이전트 | `end-user-guide/agents.rst`가 `user_guide.md`를 `include` | **`end-user-guide/agents.po`** (제외 아님) |
+| 관리자 → Agents 관리 가이드 | `agents-admin-guide.rst`가 `admin_guide.md`를 `include` | **`administration-guide/configure/agents-admin-guide.po`** (제외 아님) |
+| ↳ LLM 공급자 설정 | `agents-admin-guide` toctree의 standalone 페이지 | **`agents/docs/providers.po`** ✅예외 |
+| ↳ AWS Bedrock 설정 | 〃 | **`agents/docs/aws_bedrock_setup.po`** ✅예외 |
+| ↳ 소버린 AI 구현 | 〃 | **`agents/docs/sovereign_ai.po`** ✅예외 |
+
+- `include`되는 문서(admin_guide·user_guide)의 번역 문자열은 **삽입되는 부모 페이지 카탈로그**에 들어 있습니다.
+  따라서 `agents/docs/admin_guide.po`·`user_guide.po`와 `_generated/agents/docs/*.po`는 사이트에 안 보이는
+  **고아 중복본**이므로 번역하지 마세요(헛수고). 부모 카탈로그 2개를 번역하면 됩니다.
+- toctree의 standalone 페이지 3개(`providers`·`aws_bedrock_setup`·`sovereign_ai`)는 부모가 없으므로
+  유일한 카탈로그가 `agents/docs/` 아래에 있습니다 — 이 3개만 예외로 번역합니다.
+  (이 `.po`들은 서브모듈이 아니라 메인 리포의 `locales/`에 있어 서브모듈 갱신으로 덮어쓰이지 않습니다.)
+- `agents/`의 나머지(`README`·`AGENTS.md`·`CLAUDE.md`·`mcpserver/`·`.claude/`·`skills/`·`usage_tips`·
+  `upgrading_to_2.0`·`features/*` 등)는 toctree 참조가 없는 저장소·개발용 파일이므로 계속 제외합니다.
 
 ## 7. 문체 규칙
 

@@ -19,6 +19,9 @@ Mattermost 제품 문서(Sphinx 8.2 + Furo, pipenv)의 okrbest 포크.
    링크·원저작사·앱명·에디션명은 유지 (가이드 6-1절).
 4. [ASSIGNMENTS.md](ASSIGNMENTS.md)에서 **본인이 맡은 디렉토리의 파일만** 편집한다.
 5. `agents/`, `_generated/`, `_static/`, product-overview 체인지로그류는 **번역하지 않는다**.
+   단 예외: `agents/docs/providers.po`·`aws_bedrock_setup.po`·`sovereign_ai.po` 3개는 사이트에 노출되는
+   사용자 문서라 번역 대상이다 (가이드 6-2절). admin_guide·user_guide 본문은 부모 카탈로그
+   `end-user-guide/agents.po`·`administration-guide/configure/agents-admin-guide.po`에서 번역한다.
 6. **`make update-po-ko` 절대 실행 금지**(메인테이너 전용). `source/` 원문도 수정 금지.
 7. 커밋 전 `pipenv run python scripts/validate-ko-po.py <파일>` 통과 필수.
    커밋 메시지: `ko(<디렉토리>): <파일> 번역 (<N>건)`. push는 사람이 직접.
