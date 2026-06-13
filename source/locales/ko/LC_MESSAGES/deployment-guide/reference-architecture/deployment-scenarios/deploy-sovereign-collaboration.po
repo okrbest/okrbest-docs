@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:2
 msgid "Deploy for Sovereign Collaboration in Microsoft"
-msgstr ""
+msgstr "Microsoft 내 주권적 협업을 위한 배포"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:5
 msgid "Overview"
-msgstr ""
+msgstr "개요"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:7
 msgid ""
@@ -33,6 +33,8 @@ msgid ""
 " sovereignty requirements that restrict the use of public cloud services "
 "for sensitive collaboration."
 msgstr ""
+"기관과 핵심 인프라 조직은 종종 민감한 협업에 퍼블릭 클라우드 서비스 사용을 "
+"제한하는 엄격한 데이터 주권 요구 사항에 직면합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:9
 msgid ""
@@ -44,6 +46,12 @@ msgid ""
 "collaboration-for-m365>`, providing a single-pane-of-glass experience and"
 " eliminating application switching."
 msgstr ""
+"Microsoft Teams 및 Outlook 내에서 주권적 협업을 위해 OKR.BEST를 배포하면 익숙한 "
+"Microsoft 인터페이스 안에서 워크플로 연속성을 유지하면서 안전하고 규정을 준수하며 "
+"복원력 있는 통신이 가능합니다. 사용자는 :doc:`Microsoft 에코시스템 내에서 "
+"</integrations-guide/mattermost-mission-collaboration-for-m365>` Teams 채널과 "
+"OKR.BEST 채널에 모두 접근하여, 단일 화면(single-pane-of-glass) 경험을 누리고 "
+"애플리케이션 전환을 없앱니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:11
 msgid ""
@@ -52,6 +60,9 @@ msgid ""
 " and transcriptions remain in compliance-approved systems with encryption"
 " and strict policy enforcement."
 msgstr ""
+"OKR.BEST는 온프레미스 또는 Azure GovCloud나 Azure Local 같은 주권 클라우드에 "
+"호스팅할 수 있어, 메시지, 파일, 녹화, 전사가 암호화 및 엄격한 정책 시행과 함께 "
+"규정 승인 시스템 내에 유지되도록 보장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:13
 msgid ""
@@ -60,18 +71,25 @@ msgid ""
 "resilience required for mission-critical operations or out-of-band "
 "scenarios."
 msgstr ""
+"Microsoft Entra-ID를 통한 통합 인증은 Microsoft 엔터프라이즈 IT 투자를 확장하는 "
+"동시에 미션 크리티컬 운영이나 대역 외 시나리오에 필요한 규정 준수, 제어, 복원력을 "
+"제공합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:15
 msgid ""
 "This document outlines architectural guidance for enabling sovereign "
 "collaboration within your Microsoft ecosystem."
 msgstr ""
+"이 문서는 Microsoft 에코시스템 내에서 주권적 협업을 가능하게 하기 위한 아키텍처 "
+"지침을 설명합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:17
 msgid ""
 "Mattermost diagram displays the deployment components and relationships "
 "outlined in detail in this document."
 msgstr ""
+"OKR.BEST 다이어그램은 이 문서에서 자세히 설명하는 배포 구성 요소와 관계를 "
+"보여줍니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:21
 msgid ""
@@ -80,20 +98,25 @@ msgid ""
 "supporting services for soverign collaboration within your Microsoft "
 "ecosystem."
 msgstr ""
+"조직이 Microsoft 에코시스템 내에서 주권적 협업을 위해 OKR.BEST 및 지원 서비스를 "
+"배포하는 데 도움이 필요하다면 `Mattermost 전문가와 상담 "
+"<https://mattermost.com/contact-sales/>`__\\ 하는 것을 고려하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:24
 msgid "Architecture components"
-msgstr ""
+msgstr "아키텍처 구성 요소"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:26
 msgid "The deployment architecture includes the following components:"
-msgstr ""
+msgstr "이 배포 아키텍처는 다음 구성 요소를 포함합니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:28
 msgid ""
 "**Users:** Enterprise users within the network boundary accessing client "
 "applications for M365 services and Mattermost."
 msgstr ""
+"**사용자:** M365 서비스 및 OKR.BEST용 클라이언트 애플리케이션에 접근하는 네트워크 "
+"경계 내의 엔터프라이즈 사용자입니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:30
 msgid ""
@@ -102,10 +125,13 @@ msgid ""
 "</administration-guide/onboard/sso-entraid>` via OpenID Connect (OIDC) or"
 " SAML."
 msgstr ""
+"**Microsoft Entra ID(ID 공급자):** 사용자는 OpenID Connect(OIDC) 또는 SAML을 "
+"통해 :doc:`Entra ID 싱글 사인온 </administration-guide/onboard/sso-entraid>`\\ "
+"을 사용하여 M365 애플리케이션과 OKR.BEST에 인증합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:32
 msgid "**Client Applications:**"
-msgstr ""
+msgstr "**클라이언트 애플리케이션:**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:34
 msgid ""
@@ -114,6 +140,9 @@ msgid ""
 "collaboration-for-m365>` for seamless collaboration within a familiar "
 "interface while enforcing regulatory compliance."
 msgstr ""
+"**Microsoft 365 데스크톱 앱:** 규제 준수를 시행하면서 익숙한 인터페이스 내에서 "
+"매끄러운 협업을 위한 :doc:`내장 OKR.BEST 애플리케이션 </integrations-guide"
+"/mattermost-mission-collaboration-for-m365>`\\ 을 갖춘 Teams 및 Outlook입니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:36
 msgid ""
@@ -122,6 +151,9 @@ msgid ""
 "addition to the embedded views from Teams and Outlook. *(Optional - not "
 "shown)*"
 msgstr ""
+"**OKR.BEST 데스크톱 앱:** Teams 및 Outlook의 내장 뷰 외에도 :doc:`데스크톱 "
+"</deployment-guide/desktop/desktop-app-deployment>` 또는 웹 앱을 통해 "
+"OKR.BEST에 접근합니다. *(선택 사항 - 표시되지 않음)*"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:38
 msgid ""
@@ -131,6 +163,10 @@ msgid ""
 "/host-your-own-push-proxy-service>` to ensure compliance with data "
 "sovereignty requirements. *(Optional - not shown)*"
 msgstr ""
+"**OKR.BEST 모바일 앱:** :doc:`iPhone 및 Android 앱 </deployment-guide/mobile"
+"/mobile-app-deployment>`\\ 을 통해 OKR.BEST에 접근하며, 데이터 주권 요구 사항 "
+"준수를 보장하기 위해 :doc:`ID 전용 푸시 알림 </deployment-guide/mobile/host-"
+"your-own-push-proxy-service>`\\ 을 지원합니다. *(선택 사항 - 표시되지 않음)*"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:40
 msgid ""
@@ -143,12 +179,21 @@ msgid ""
 "</administration-guide/scale/server-architecture>` documentation for "
 "Mattermost deployment configurations based on expected scale."
 msgstr ""
+"**OKR.BEST 배포:** STIG, FedRAMP, NIST 800-53 표준 준수를 유지하기 위해 "
+":doc:`Azure </deployment-guide/server/deploy-kubernetes>` 또는 `Azure Local "
+"<https://learn.microsoft.com/en-us/azure/azure-local/manage/disconnected-"
+"operations-overview>`_ 같은 엔터프라이즈 제어 인프라나 프라이빗 클라우드에서 "
+"주권적 협업을 위해 배포된 OKR.BEST입니다. 예상 규모를 기준으로 한 OKR.BEST 배포 "
+"구성은 :doc:`참조 아키텍처 </administration-guide/scale/server-architecture>` "
+"문서를 참고하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:42
 msgid ""
 "**Mattermost Server:** Core application server handling collaboration "
 "workloads, including:"
 msgstr ""
+"**OKR.BEST 서버:** 협업 워크로드를 처리하는 핵심 애플리케이션 서버이며, 다음을 "
+"포함합니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:44
 msgid ""
@@ -158,6 +203,10 @@ msgid ""
 "/integrations-guide-index>` and :ref:`enterprise-grade search "
 "<administration-guide/scale/scaling-for-enterprise:enterprise search>`."
 msgstr ""
+":doc:`메시지 협업 </end-user-guide/messaging-collaboration>`: :doc:`풍부한 통합 "
+"기능 </integrations-guide/integrations-guide-index>` 및 :ref:`엔터프라이즈급 "
+"검색 <administration-guide/scale/scaling-for-enterprise:enterprise search>`\\ "
+"을 갖춘 DDIL 대비 1:1, 그룹 메시지, 구조화된 채널 협업입니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:46
 msgid ""
@@ -165,6 +214,9 @@ msgid ""
 "Playbooks provide structure, monitoring and automation for repeatable "
 "processes built-in to your sovereign Mattermost deployment."
 msgstr ""
+":doc:`워크플로 자동화 </end-user-guide/workflow-automation>`: Playbooks는 주권적 "
+"OKR.BEST 배포에 기본 내장되어 반복 가능한 프로세스에 대한 구조, 모니터링, "
+"자동화를 제공합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:48
 msgid ""
@@ -172,6 +224,8 @@ msgid ""
 " enables project management capabilities built-in to your sovereign "
 "Mattermost deployment."
 msgstr ""
+":doc:`프로젝트 추적 </end-user-guide/project-task-management>`: Boards는 주권적 "
+"OKR.BEST 배포에 기본 내장된 프로젝트 관리 기능을 제공합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:50
 msgid ""
@@ -179,6 +233,9 @@ msgid ""
 " Agents run against Azure OpenAI endpoints or a self-hosted LLM that is "
 "OpenAI-compatible."
 msgstr ""
+":doc:`AI 에이전트 </administration-guide/configure/agents-admin-guide>`: AI "
+"에이전트는 Azure OpenAI 엔드포인트 또는 OpenAI 호환 셀프 호스팅 LLM에 대해 "
+"실행됩니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:52
 msgid ""
@@ -186,6 +243,9 @@ msgid ""
 "deployment-guide>`: Calls offers native real-time self-hosted audio calls"
 " and screen sharing within your own network."
 msgstr ""
+":doc:`오디오 및 화면 공유 </administration-guide/configure/calls-deployment-"
+"guide>`: Calls는 자체 네트워크 내에서 네이티브 실시간 셀프 호스팅 오디오 통화와 "
+"화면 공유를 제공합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:54
 msgid ""
@@ -197,6 +257,11 @@ msgid ""
 " provides SSL termination and distributes client traffic across "
 "application servers."
 msgstr ""
+"**프록시 서버:** :doc:`프록시 서버 </deployment-guide/server/setup-nginx-"
+"proxy>`\\ 는 클러스터 내 HTTP(S) 라우팅을 처리하여 OKR.BEST 서비스에 접근하는 "
+"서버와 클라이언트 간의 트래픽을 전달합니다. WebSocket 연결, 상태 점검 "
+"엔드포인트, 고정 세션을 지원하는 부하 분산에는 NGINX를 권장합니다. 프록시 계층은 "
+"SSL 종료를 제공하고 클라이언트 트래픽을 애플리케이션 서버 전반에 분산합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:56
 msgid ""
@@ -205,6 +270,10 @@ msgid ""
 "such as `Azure Database for PostgreSQL <https://azure.microsoft.com/en-"
 "us/products/postgresql>`_."
 msgstr ""
+"**PostgreSQL 데이터베이스:** `Azure Database for PostgreSQL "
+"<https://azure.microsoft.com/en-us/products/postgresql>`_ 같은 "
+":doc:`PostgreSQL v13 이상 데이터베이스 </deployment-guide/server/preparations>`"
+"\\ 에 영구 애플리케이션 데이터를 저장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:58
 msgid ""
@@ -215,6 +284,11 @@ msgid ""
 "us/products/storage/blobs>`_ can be used, but needs an S3-compatible "
 "proxy for Mattermost to interface with."
 msgstr ""
+"**오브젝트 스토리지:** 파일 업로드, 이미지, 첨부 파일은 :doc:`S3 호환 저장소 "
+"</deployment-guide/server/preparations>` 또는 NFS(Network File System) 서버의 "
+"애플리케이션 노드 외부에 저장됩니다. `Azure Blob Storage "
+"<https://azure.microsoft.com/en-us/products/storage/blobs>`_\\ 를 사용할 수 "
+"있지만, OKR.BEST가 연동하려면 S3 호환 프록시가 필요합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:60
 msgid ""
@@ -225,6 +299,11 @@ msgid ""
 "transcriptions, and live captioning, to enterprise-controlled "
 "infrastructure or private cloud. *(Optional)*"
 msgstr ""
+"**녹화 인스턴스:** :doc:`Calls Offloader 설정 및 구성 </administration-"
+"guide/configure/calls-offloader-setup>` 가이드를 사용해 구성한 ``calls-"
+"offloader`` 작업 서비스로, 녹화, 전사, 실시간 자막 같은 무거운 처리 작업을 "
+"OKR.BEST Calls에서 엔터프라이즈 제어 인프라나 프라이빗 클라우드로 오프로드합니다. "
+"*(선택 사항)*"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:62
 msgid ""
@@ -232,6 +311,9 @@ msgid ""
 "</integrations-guide/integrations-guide-index>` can be deployed within "
 "the enterprise boundary. *(Optional - not shown)*"
 msgstr ""
+"**셀프 호스팅 통합:** :doc:`사용자 지정 앱, 플러그인, 웹훅 </integrations-guide"
+"/integrations-guide-index>`\\ 은 엔터프라이즈 경계 내에 배포할 수 있습니다. "
+"*(선택 사항 - 표시되지 않음)*"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:64
 msgid ""
@@ -240,6 +322,9 @@ msgid ""
 "allowlists, or WAFs depending on your networking configurations. "
 "*(Optional)*"
 msgstr ""
+"**보안 접근 계층:** 엔터프라이즈 네트워크로의 진입을 보호하는 방화벽 또는 접근 "
+"게이트웨이입니다. 네트워킹 구성에 따라 네트워크 정책, IP 허용 목록, WAF를 포함할 "
+"수 있습니다. *(선택 사항)*"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:66
 msgid ""
@@ -248,6 +333,10 @@ msgid ""
 "network>`_ of Microsoft data centers, delivering public cloud services "
 "including M365 and Azure OpenAI."
 msgstr ""
+"**Microsoft 글로벌 네트워크:** M365와 Azure OpenAI를 포함한 퍼블릭 클라우드 "
+"서비스를 제공하는 Microsoft 데이터 센터의 `전 세계 네트워크 "
+"<https://learn.microsoft.com/en-us/azure/networking/microsoft-global-"
+"network>`_\\ 입니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:68
 msgid ""
@@ -255,10 +344,13 @@ msgid ""
 "used for summarization, ai-enhanced search, and agent-assisted workflows,"
 " hosted within the Microsoft Global Network. *(Optional)*"
 msgstr ""
+"**Azure OpenAI Service:** Microsoft 글로벌 네트워크 내에 호스팅되어 요약, AI 강화 "
+"검색, 에이전트 지원 워크플로에 사용되는 :doc:`LLM 서비스 "
+"</agents/docs/providers>`\\ 입니다. *(선택 사항)*"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:71
 msgid "Operational Best Practices"
-msgstr ""
+msgstr "운영 모범 사례"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:73
 msgid ""
@@ -266,10 +358,13 @@ msgid ""
 "that Mattermost remains compliant, resilient, and fully sovereign when "
 "deployed alongside Microsoft 365."
 msgstr ""
+"다음 모범 사례와 배포 구성은 Microsoft 365와 함께 배포할 때 OKR.BEST가 규정을 "
+"준수하고 복원력 있으며 완전히 주권적인 상태를 유지하도록 보장하는 데 도움이 "
+"됩니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:76
 msgid "High availability and fault tolerance"
-msgstr ""
+msgstr "고가용성 및 내결함성"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:78
 msgid ""
@@ -279,18 +374,26 @@ msgid ""
 "availability requires redundant infrastructure across each critical "
 "component:"
 msgstr ""
+"장애나 하드웨어 결함 중에도 지속적인 가용성을 보장하려면 OKR.BEST를 :doc:`클러스터 "
+"기반 아키텍처 </administration-guide/scale/high-availability-cluster-based-"
+"deployment>`\\ 로 배포하세요. 고가용성을 위해서는 각 핵심 구성 요소에 이중화 "
+"인프라가 필요합니다:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:80
 msgid ""
 "Application servers: Scale horizontally across multiple nodes with a load"
 " balancer distributing client traffic."
 msgstr ""
+"애플리케이션 서버: 클라이언트 트래픽을 분산하는 부하 분산기와 함께 여러 노드에 "
+"걸쳐 수평으로 확장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:81
 msgid ""
 "Database layer: Use PostgreSQL replication or managed HA services with "
 "automatic failover."
 msgstr ""
+"데이터베이스 계층: PostgreSQL 복제 또는 자동 장애 조치를 갖춘 관리형 HA 서비스를 "
+"사용합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:82
 msgid ""
@@ -299,6 +402,9 @@ msgid ""
 "provides optimized search performance with dedicated indexing for large-"
 "scale deployments."
 msgstr ""
+"검색 서비스: :ref:`Elasticsearch 또는 AWS OpenSearch Service <administration-"
+"guide/scale/scaling-for-enterprise:enterprise search>`\\ 는 대규모 배포를 위한 "
+"전용 인덱싱으로 최적화된 검색 성능을 제공합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:83
 msgid ""
@@ -306,16 +412,21 @@ msgid ""
 "replication for durability. All application servers must access shared "
 "file storage (NAS or S3) to ensure consistent data availability."
 msgstr ""
+"오브젝트 스토리지: 내구성을 위해 소거 코딩 또는 복제를 갖춘 S3 호환 백엔드를 "
+"구성하세요. 일관된 데이터 가용성을 보장하려면 모든 애플리케이션 서버가 공유 파일 "
+"저장소(NAS 또는 S3)에 접근할 수 있어야 합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:84
 msgid ""
 "Calls services: Run multiple ``rtcd`` and ``calls-offloader`` nodes for "
 "resilience."
 msgstr ""
+"Calls 서비스: 복원력을 위해 여러 ``rtcd`` 및 ``calls-offloader`` 노드를 "
+"실행합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:87
 msgid "Sovereign audio & screensharing"
-msgstr ""
+msgstr "주권적 오디오 및 화면 공유"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:89
 msgid ""
@@ -326,6 +437,11 @@ msgid ""
 "hosted configuration to ensure that Microsoft Teams users and Mattermost "
 "users collaborate without media ever leaving the sovereign network."
 msgstr ""
+"데이터 주권 준수를 위해서는 모든 음성 및 화면 공유 트래픽이 엔터프라이즈 제어 "
+"인프라 내에 유지되고 서드파티 서비스를 경유하지 않아야 할 수 있습니다. Microsoft "
+"Teams 사용자와 OKR.BEST 사용자가 미디어를 주권 네트워크 밖으로 내보내지 않고 "
+"협업하도록 보장하려면 :doc:`OKR.BEST Calls </administration-guide/configure"
+"/calls-deployment-guide>`\\ 를 셀프 호스팅 구성으로 배포하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:91
 msgid ""
@@ -334,6 +450,10 @@ msgid ""
 "provides scalable, low-latency media routing hosted on-premises. Run "
 "multiple ``rtcd`` nodes for redundancy."
 msgstr ""
+":doc:`RTCD 설정 및 구성 </administration-guide/configure/calls-rtcd-setup>` "
+"가이드를 사용해 구성한 ``rtcd`` 서비스는 온프레미스에 호스팅되는 확장 가능하고 "
+"지연 시간이 짧은 미디어 라우팅을 제공합니다. 이중화를 위해 여러 ``rtcd`` 노드를 "
+"실행하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:92
 msgid ""
@@ -342,10 +462,14 @@ msgid ""
 "offloader-setup>` guide, offloads heavy processing tasks like recording, "
 "transcription and live captioning to a compliance-approved job server."
 msgstr ""
+":doc:`Calls Offloader 설정 및 구성 </administration-guide/configure/calls-"
+"offloader-setup>` 가이드를 사용해 구성한 ``calls-offloader`` 서비스는 녹화, "
+"전사, 실시간 자막 같은 무거운 처리 작업을 규정 승인 작업 서버로 "
+"오프로드합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:95
 msgid "Compliance and retention"
-msgstr ""
+msgstr "규정 준수 및 보존"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:97
 msgid ""
@@ -353,6 +477,9 @@ msgid ""
 "policies, legal hold, and export controls. Configure Mattermost's built-"
 "in compliance features to meet agency or sectoral mandates."
 msgstr ""
+"주권적 환경에서는 보존 정책, 법적 보존(legal hold), 내보내기 제어를 엄격하게 "
+"시행해야 하는 경우가 많습니다. 기관 또는 부문별 의무를 충족하도록 OKR.BEST의 기본 "
+"내장 규정 준수 기능을 구성하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:99
 msgid ""
@@ -361,6 +488,10 @@ msgid ""
 "monitoring>` to produce auditable exports of message data and user "
 "activity logs."
 msgstr ""
+"메시지 데이터와 사용자 활동 로그의 감사 가능한 내보내기를 생성하려면 :doc:`규정 "
+"준수 내보내기 </administration-guide/comply/compliance-export>` 및 "
+":doc:`모니터링 </administration-guide/comply/compliance-monitoring>`\\ 을 "
+"활성화하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:100
 msgid ""
@@ -368,16 +499,21 @@ msgid ""
 "retention-policy>` and :doc:`legal hold </administration-guide/comply"
 "/legal-hold>` policies to align with applicable regulations."
 msgstr ""
+"적용 가능한 규정에 맞도록 :doc:`메시지 보존 </administration-guide/comply/data-"
+"retention-policy>` 및 :doc:`법적 보존 </administration-guide/comply/legal-"
+"hold>` 정책을 구성하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:101
 msgid ""
 "Integrate with your organization's :doc:`eDiscovery </administration-"
 "guide/comply/electronic-discovery>` and archiving systems as required."
 msgstr ""
+"필요에 따라 조직의 :doc:`eDiscovery </administration-guide/comply/electronic-"
+"discovery>` 및 아카이빙 시스템과 통합하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:104
 msgid "Mobile notifications"
-msgstr ""
+msgstr "모바일 알림"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-sovereign-collaboration.rst:106
 msgid ""
@@ -389,4 +525,10 @@ msgid ""
 "public push notification services and the client retrieves the content "
 "securely from the Mattermost server over an encrypted channel."
 msgstr ""
+"민감한 메시지 내용이 Apple Push Notification Service(APNS)나 Firebase Cloud "
+"Messaging(FCM) 같은 외부 알림 서비스로 전송되는 것을 방지하려면, OKR.BEST가 "
+":doc:`ID 전용 푸시 알림 </deployment-guide/mobile/host-your-own-push-proxy-"
+"service>`\\ 을 사용하도록 구성하세요. 이 구성에서는 메시지 식별자만 퍼블릭 푸시 "
+"알림 서비스로 전송되며, 클라이언트는 암호화된 채널을 통해 OKR.BEST 서버에서 "
+"내용을 안전하게 가져옵니다."
 
