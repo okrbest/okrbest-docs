@@ -28,10 +28,15 @@ msgid ""
 " resilient Mattermost deployment they can scale and operate within their "
 "existing Azure tenant."
 msgstr ""
+"OKR.BEST는 컴퓨팅, 데이터베이스, 공유 파일 저장소, 부하 분산을 위한 Azure 관리형 "
+"서비스를 사용하여 사용자 구독 내에 운영 준비가 된 OKR.BEST 스택을 프로비저닝하는 "
+"**Azure Marketplace** 솔루션으로 게시되어 있습니다. 이 옵션은 기존 Azure 테넌트 "
+"내에서 확장하고 운영할 수 있는 복원력 있는 OKR.BEST 배포를 원하는 조직을 위한 "
+"것입니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:7
 msgid "Prerequisites"
-msgstr ""
+msgstr "사전 요구 사항"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:9
 msgid ""
@@ -40,12 +45,18 @@ msgid ""
 "Marketplace solutions), permission to create resource groups, and "
 "permission to accept **Azure Marketplace** billing terms for the offer."
 msgstr ""
+"구독에 대한 **소유자(Owner)** 또는 **기여자(Contributor)** 역할(Azure "
+"Marketplace 솔루션을 구매하고 배포하는 데 필요)과, 리소스 그룹을 생성할 권한, "
+"해당 제품의 **Azure Marketplace** 청구 약관에 동의할 권한을 갖춘 활성 **Azure "
+"구독**."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:10
 msgid ""
 "Familiarity with the **Azure portal** (resource groups, networking, "
 "virtual machines, and Application Gateway)."
 msgstr ""
+"**Azure 포털**\\ 에 대한 이해(리소스 그룹, 네트워킹, 가상 머신, Application "
+"Gateway)."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:11
 msgid ""
@@ -53,30 +64,35 @@ msgid ""
 "**Mattermost Enterprise license** file. The license is optional for "
 "single-node deployments."
 msgstr ""
+"다중 노드 배포(애플리케이션 인스턴스가 둘 이상)의 경우 유효한 **OKR.BEST "
+"Enterprise 라이선스** 파일. 단일 노드 배포에서는 라이선스가 선택 사항입니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:12
 msgid "If you plan to enable **HTTPS** at deployment time:"
-msgstr ""
+msgstr "배포 시점에 **HTTPS**\\ 를 활성화할 계획이라면:"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:14
 msgid "A **PFX (PKCS#12)** certificate bundle and its password."
-msgstr ""
+msgstr "**PFX(PKCS#12)** 인증서 번들과 그 비밀번호."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:15
 msgid ""
 "A **custom domain (FQDN)** that you will point to the Application Gateway"
 " after deployment."
 msgstr ""
+"배포 후 Application Gateway로 연결할 **사용자 지정 도메인(FQDN)**."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:18
 msgid "What gets deployed"
-msgstr ""
+msgstr "배포되는 항목"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:20
 msgid ""
 "The template provisions a self-contained, production-ready stack in the "
 "resource group you select, including:"
 msgstr ""
+"이 템플릿은 선택한 리소스 그룹에 자체 완결형의 운영 준비가 된 스택을 "
+"프로비저닝하며, 다음을 포함합니다:"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:22
 msgid ""
@@ -84,6 +100,9 @@ msgid ""
 "24.04 LTS images published by Mattermost. Instance count and VM size are "
 "driven by the scaling tier you choose."
 msgstr ""
+"**가상 머신 스케일 세트(Linux):** OKR.BEST가 게시한 Ubuntu Pro 24.04 LTS "
+"이미지에서 OKR.BEST를 실행합니다. 인스턴스 수와 VM 크기는 선택한 확장 등급에 따라 "
+"결정됩니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:23
 msgid ""
@@ -91,6 +110,9 @@ msgid ""
 "Mattermost traffic, with optional **HTTPS listener** (using your PFX "
 "certificate) and HTTP-to-HTTPS redirection when HTTPS is enabled."
 msgstr ""
+"**공용 IP가 있는 Application Gateway:** OKR.BEST 트래픽의 진입점 역할을 하며, "
+"HTTPS가 활성화되면 선택적 **HTTPS 리스너**(PFX 인증서 사용)와 HTTP에서 HTTPS로의 "
+"리디렉션을 제공합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:24
 msgid ""
@@ -99,6 +121,9 @@ msgid ""
 "**zone-redundant** high availability, backup retention and geo-"
 "redundancy."
 msgstr ""
+"**Azure Database for PostgreSQL Flexible Server:** OKR.BEST 데이터를 저장하는 "
+"관리형 PostgreSQL 서비스로, 선택적 **동일 영역(same-zone)** 또는 **영역 "
+"중복(zone-redundant)** 고가용성, 백업 보존, 지역 중복을 제공합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:25
 msgid ""
@@ -106,6 +131,9 @@ msgid ""
 "Mattermost data (uploads, plugins, and other shared files), reachable "
 "only from inside the virtual network."
 msgstr ""
+"**사설 엔드포인트가 있는 Azure Files(NFS):** OKR.BEST 데이터(업로드, 플러그인, "
+"기타 공유 파일)를 위한 공유 저장소로, 가상 네트워크 내부에서만 접근할 수 "
+"있습니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:26
 msgid ""
@@ -113,6 +141,9 @@ msgid ""
 "with separate subnets for the Application Gateway, the Mattermost "
 "application instances, the database, and the storage private endpoint."
 msgstr ""
+"**가상 네트워크 및 서브넷:** 배포 전용 VNet으로, Application Gateway, OKR.BEST "
+"애플리케이션 인스턴스, 데이터베이스, 저장소 사설 엔드포인트를 위한 별도의 서브넷을 "
+"갖습니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:27
 msgid ""
@@ -120,16 +151,20 @@ msgid ""
 "application instances (for example, to fetch packages and the Mattermost "
 "configuration scripts)."
 msgstr ""
+"**NAT 게이트웨이:** 애플리케이션 인스턴스에 제어된 아웃바운드 인터넷 접근을 "
+"제공합니다(예: 패키지와 OKR.BEST 구성 스크립트를 가져오기 위해)."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:28
 msgid ""
 "**Private DNS zones:** Used to resolve the PostgreSQL Flexible Server and"
 " Azure Files private endpoint from inside the VNet."
 msgstr ""
+"**사설 DNS 영역:** VNet 내부에서 PostgreSQL Flexible Server와 Azure Files 사설 "
+"엔드포인트를 확인하는 데 사용됩니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:31
 msgid "Step 1: Select a plan and start creation"
-msgstr ""
+msgstr "1단계: 플랜 선택 및 생성 시작"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:33
 msgid ""
@@ -139,20 +174,24 @@ msgid ""
 "Marketplace, click **Get it now**, select the plan, and then click "
 "**Create** to open the deployment wizard."
 msgstr ""
+"Azure Marketplace에서 `Mattermost - Azure-Native (VM-based) "
+"<https://marketplace.microsoft.com/en-us/product/azure-"
+"application/mattermost.mattermost-app-vm>`_ 제품을 열고, **Get it now**\\ 을 "
+"클릭하고, 플랜을 선택한 다음 **Create**\\ 를 클릭하여 배포 마법사를 엽니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:36
 msgid "Step 2: Basics"
-msgstr ""
+msgstr "2단계: 기본 사항"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:38
 msgid "On the **Basics** tab, configure the following:"
-msgstr ""
+msgstr "**Basics** 탭에서 다음을 구성합니다:"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:40
 msgid ""
 "**Subscription:** Choose the Azure subscription where the deployment will"
 " live."
-msgstr ""
+msgstr "**구독:** 배포가 위치할 Azure 구독을 선택합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:41
 msgid ""
@@ -160,6 +199,8 @@ msgid ""
 "one. A **new** resource group keeps the production stack easy to manage "
 "and clean up."
 msgstr ""
+"**리소스 그룹:** 기존 리소스 그룹을 선택하거나 새로 만듭니다. **새** 리소스 "
+"그룹을 사용하면 운영 스택을 관리하고 정리하기 쉽습니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:42
 msgid ""
@@ -168,6 +209,9 @@ msgid ""
 "**availability zones** you need if you intend to enable PostgreSQL high "
 "availability."
 msgstr ""
+"**리전:** 배포 리전을 선택합니다. 사용할 PostgreSQL Flexible Server SKU를 "
+"지원하고, PostgreSQL 고가용성을 활성화할 계획이라면 필요한 **가용성 영역**\\ 을 "
+"갖춘 리전을 선택하세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:43
 msgid ""
@@ -175,20 +219,24 @@ msgid ""
 "or hyphens) used to name the Azure resources created by the template (for"
 " example, ``mm-prod``)."
 msgstr ""
+"**리소스 이름 접두사:** 템플릿이 생성하는 Azure 리소스의 이름을 지정하는 데 "
+"사용되는 짧은 접두사(소문자, 숫자, 하이픈 2~12자)입니다(예: ``mm-prod``)."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:45
 msgid "An example of the Azure Native Basics setup screen."
-msgstr ""
+msgstr "Azure Native Basics 설정 화면의 예시입니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:49
 msgid "Step 3: Application"
-msgstr ""
+msgstr "3단계: 애플리케이션"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:51
 msgid ""
 "On the **Application** tab, configure how the Mattermost application is "
 "sized and how administrators access the VMs."
 msgstr ""
+"**Application** 탭에서 OKR.BEST 애플리케이션의 크기를 어떻게 정할지와 관리자가 VM에 "
+"어떻게 접근할지를 구성합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:53
 msgid ""
@@ -201,12 +249,20 @@ msgid ""
 "<administration-guide/scale/scaling-for-enterprise:available reference "
 "architectures>`."
 msgstr ""
+"**확장 등급:** 계획 중인 사용자 규모를 선택합니다. 마법사는 이를 사용하여 **VMSS "
+"인스턴스 수**, **VM 크기**, **PostgreSQL SKU**\\ 에 대한 합리적인 기본값을 "
+"제안하고, 데이터베이스에 **읽기 복제본**\\ 을 생성할지 여부를 결정합니다. 드롭다운"
+"에는 각 등급의 권장 노드 수와 VM SKU가 표시됩니다. 기반이 되는 사이징 근거는 "
+":ref:`사용 가능한 참조 아키텍처 <administration-guide/scale/scaling-for-"
+"enterprise:available reference architectures>`\\ 를 참고하세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:54
 msgid ""
 "**VMSS instance count:** Number of Mattermost application nodes (1–5). "
 "Defaults to the suggested value for your scaling tier; adjust if needed."
 msgstr ""
+"**VMSS 인스턴스 수:** OKR.BEST 애플리케이션 노드 수(1~5)입니다. 확장 등급에 대해 "
+"제안된 값을 기본값으로 하며, 필요하면 조정하세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:55
 msgid ""
@@ -215,6 +271,9 @@ msgid ""
 "Enterprise license file. The license is optional for single-node "
 "deployments."
 msgstr ""
+"**Enterprise 라이선스 파일:** 인스턴스 수가 1보다 클 때(다중 노드 고가용성 "
+"클러스터링) 필요합니다. OKR.BEST Enterprise 라이선스 파일을 업로드하세요. 단일 노드 "
+"배포에서는 라이선스가 선택 사항입니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:56
 msgid ""
@@ -222,12 +281,16 @@ msgid ""
 "Linux sizes first; you can select any supported Linux size available in "
 "your region."
 msgstr ""
+"**VM SKU:** 각 VMSS 인스턴스의 크기입니다. 마법사는 권장 Linux 크기를 먼저 "
+"표시하며, 사용 중인 리전에서 제공되는 지원 Linux 크기를 선택할 수 있습니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:57
 msgid ""
 "**Admin username:** Linux administrator account used to sign in to the VM"
 " instances."
 msgstr ""
+"**관리자 사용자 이름:** VM 인스턴스에 로그인하는 데 사용되는 Linux 관리자 "
+"계정입니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:58
 msgid ""
@@ -235,6 +298,8 @@ msgid ""
 "Linux sign-in. **SSH public key** is recommended for production "
 "deployments."
 msgstr ""
+"**인증 유형:** Linux 로그인용으로 **Password** 또는 **SSH public key**\\ 를 "
+"선택합니다. 운영 배포에는 **SSH public key**\\ 를 권장합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:59
 msgid ""
@@ -242,20 +307,24 @@ msgid ""
 "``11.6.2``). See the :doc:`Mattermost release policy </product-overview"
 "/release-policy>` for supported versions."
 msgstr ""
+"**OKR.BEST 버전:** 설치할 OKR.BEST 버전입니다(예: ``11.6.2``). 지원되는 버전은 "
+":doc:`OKR.BEST 릴리스 정책 </product-overview/release-policy>`\\ 을 "
+"참고하세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:61
 msgid "An example of the Azure Native Application setup screen."
-msgstr ""
+msgstr "Azure Native Application 설정 화면의 예시입니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:65
 msgid "Step 4: Database"
-msgstr ""
+msgstr "4단계: 데이터베이스"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:67
 msgid ""
 "On the **Database** tab, configure the managed PostgreSQL service and the"
 " shared NFS file share."
 msgstr ""
+"**Database** 탭에서 관리형 PostgreSQL 서비스와 공유 NFS 파일 공유를 구성합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:69
 msgid ""
@@ -264,22 +333,26 @@ msgid ""
 " supported in your region. Available choices are ``Standard_E2ds_v5``, "
 "``Standard_E4ds_v5``, and ``Standard_E8ds_v5``."
 msgstr ""
+"**PostgreSQL 컴퓨팅 SKU:** 메모리 최적화 Flexible Server SKU입니다. 확장 등급에 "
+"권장되는 SKU를 기본값으로 하며, 사용 중인 리전에서 지원되는 SKU를 선택하세요. 사용 "
+"가능한 선택지는 ``Standard_E2ds_v5``, ``Standard_E4ds_v5``, "
+"``Standard_E8ds_v5``\\ 입니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:70
 msgid "**PostgreSQL high availability:** Choose how PostgreSQL is made resilient:"
-msgstr ""
+msgstr "**PostgreSQL 고가용성:** PostgreSQL을 어떻게 복원력 있게 만들지 선택합니다:"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:72
 msgid "**Disabled:** Single primary instance. Suitable for small deployments."
-msgstr ""
+msgstr "**비활성화:** 단일 기본 인스턴스. 소규모 배포에 적합합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:73
 msgid "**Same zone:** Primary and standby in the same availability zone."
-msgstr ""
+msgstr "**동일 영역:** 기본과 대기를 동일한 가용성 영역에 배치합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:74
 msgid "**Zone redundant:** Primary and standby in different availability zones."
-msgstr ""
+msgstr "**영역 중복:** 기본과 대기를 서로 다른 가용성 영역에 배치합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:76
 msgid ""
@@ -287,6 +360,9 @@ msgid ""
 "regions for PostgreSQL Flexible Server <https://learn.microsoft.com/en-"
 "us/azure/postgresql/overview#azure-regions>`_."
 msgstr ""
+"Flexible Server SKU 및 HA 모드의 리전 지원은 `PostgreSQL Flexible Server용 "
+"Azure 리전 <https://learn.microsoft.com/en-"
+"us/azure/postgresql/overview#azure-regions>`_\\ 을 참고하세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:78
 msgid ""
@@ -295,6 +371,9 @@ msgid ""
 "must be different. Pick zones supported in your region for the PostgreSQL"
 " SKU you chose."
 msgstr ""
+"**기본 가용성 영역**\\ 과 **대기 가용성 영역:** HA가 활성화되면 표시됩니다. 영역 "
+"중복 HA의 경우 기본과 대기 영역이 서로 달라야 합니다. 선택한 PostgreSQL SKU에 대해 "
+"사용 중인 리전에서 지원되는 영역을 선택하세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:79
 msgid ""
@@ -304,6 +383,11 @@ msgid ""
 "requirements <https://learn.microsoft.com/azure/postgresql/flexible-"
 "server/concepts-security#password>`_."
 msgstr ""
+"**PostgreSQL 관리자 사용자 이름 및 비밀번호:** Flexible Server의 관리자 자격 "
+"증명입니다. ``azure_superuser`` 같은 예약된 이름은 피하세요. 비밀번호는 `Azure "
+"Flexible Server 비밀번호 복잡성 요구 사항 "
+"<https://learn.microsoft.com/azure/postgresql/flexible-server/concepts-"
+"security#password>`_\\ 을 충족해야 합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:80
 msgid ""
@@ -313,6 +397,10 @@ msgid ""
 "This is separate from the PostgreSQL administrator credentials. The "
 "password must meet the same complexity rules as the admin password."
 msgstr ""
+"**OKR.BEST 데이터베이스 사용자 비밀번호:** **OKR.BEST 데이터베이스 연결** 섹션에서, "
+"애플리케이션 노드가 PostgreSQL에 연결하는 데 사용하는 전용 OKR.BEST 데이터베이스 "
+"사용자의 비밀번호를 설정합니다. 이는 PostgreSQL 관리자 자격 증명과 별개입니다. "
+"비밀번호는 관리자 비밀번호와 동일한 복잡성 규칙을 충족해야 합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:81
 msgid ""
@@ -320,12 +408,16 @@ msgid ""
 " region for cross-region disaster recovery. **This setting cannot be "
 "changed after deployment.**"
 msgstr ""
+"**지역 중복 백업:** 리전 간 재해 복구를 위해 PostgreSQL 백업을 Azure의 페어링된 "
+"리전으로 복제합니다. **이 설정은 배포 후 변경할 수 없습니다.**"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:82
 msgid ""
 "**NFS share size (GiB):** Size of the Azure Files (NFS) share used by "
 "Mattermost for shared application data. Minimum 100 GiB."
 msgstr ""
+"**NFS 공유 크기(GiB):** OKR.BEST가 공유 애플리케이션 데이터에 사용하는 Azure "
+"Files(NFS) 공유의 크기입니다. 최소 100 GiB."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:86
 msgid ""
@@ -333,20 +425,24 @@ msgid ""
 " can change retention from the Azure portal after the deployment "
 "completes."
 msgstr ""
+"PostgreSQL의 백업 보존 기간은 배포 시점에 35일로 설정됩니다. 배포가 완료된 후 "
+"Azure 포털에서 보존 기간을 변경할 수 있습니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:88
 msgid "An example of the Azure Native Database setup screen."
-msgstr ""
+msgstr "Azure Native Database 설정 화면의 예시입니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:92
 msgid "Step 5: Networking"
-msgstr ""
+msgstr "5단계: 네트워킹"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:94
 msgid ""
 "On the **Networking** tab, configure the virtual network and how "
 "Mattermost is exposed to users."
 msgstr ""
+"**Networking** 탭에서 가상 네트워크와 OKR.BEST를 사용자에게 어떻게 노출할지를 "
+"구성합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:96
 msgid ""
@@ -354,6 +450,9 @@ msgid ""
 "created by the template. Defaults to ``10.0.0.0/22``. Pick a range that "
 "does not overlap with other VNets you plan to peer with."
 msgstr ""
+"**VNet 주소 공간(CIDR):** 템플릿이 생성하는 가상 네트워크의 주소 공간입니다. "
+"기본값은 ``10.0.0.0/22``\\ 입니다. 피어링할 계획인 다른 VNet과 겹치지 않는 범위를 "
+"선택하세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:97
 msgid ""
@@ -362,6 +461,9 @@ msgid ""
 "and allows public access to your workspace. If the label is already "
 "taken, deployment will fail."
 msgstr ""
+"**공용 IP DNS 레이블:** Azure 퍼블릭 클라우드 전체에서 **전역적으로 고유한** "
+"**DNS 접두사**(레이블)를 설정해야 합니다. 이는 URL의 일부를 구성하며 워크스페이스에 "
+"공개적으로 접근할 수 있게 합니다. 레이블이 이미 사용 중이면 배포가 실패합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:98
 msgid ""
@@ -371,12 +473,18 @@ msgid ""
 " Azure-assigned hostname (suitable for testing, **not recommended for "
 "production**)."
 msgstr ""
+"**Application Gateway에서 HTTPS 활성화:** 활성화하면 Application Gateway가 PFX "
+"인증서를 사용해 TLS를 종료하고 HTTP 트래픽이 HTTPS로 리디렉션됩니다. 비활성화하면 "
+"OKR.BEST가 Azure가 할당한 호스트 이름에서 HTTP를 통해 제공됩니다(테스트에 적합하며 "
+"**운영에는 권장되지 않음**)."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:99
 msgid ""
 "**PFX certificate** and **PFX password:** Shown when HTTPS is enabled. "
 "Upload your PKCS#12 bundle and provide the password used to protect it."
 msgstr ""
+"**PFX 인증서**\\ 와 **PFX 비밀번호:** HTTPS가 활성화되면 표시됩니다. PKCS#12 "
+"번들을 업로드하고 이를 보호하는 데 사용된 비밀번호를 제공하세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:100
 msgid ""
@@ -386,14 +494,18 @@ msgid ""
 "the Application Gateway public IP (typically using a **CNAME** record for"
 " subdomains)."
 msgstr ""
+"**사용자 지정 도메인(FQDN):** HTTPS가 활성화되면 표시됩니다. OKR.BEST가 사용할 공용 "
+"호스트 이름입니다(예: ``mattermost.example.com``). 배포 후 이 호스트 이름을 "
+"Application Gateway 공용 IP의 Azure 할당 DNS 이름으로 연결하세요(서브도메인에는 "
+"일반적으로 **CNAME** 레코드 사용)."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:102
 msgid "An example of the Azure Native Networking setup screen."
-msgstr ""
+msgstr "Azure Native Networking 설정 화면의 예시입니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:106
 msgid "Step 6: Review and create"
-msgstr ""
+msgstr "6단계: 검토 및 생성"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:108
 msgid ""
@@ -403,14 +515,18 @@ msgid ""
 "Azure reports the deployment as Succeeded before the application is "
 "reachable."
 msgstr ""
+"설정을 검토하고, 메시지가 표시되면 **Marketplace** 약관에 동의한 다음 "
+"**Create**\\ 를 선택합니다. 프로비저닝은 PostgreSQL 구성에 따라 보통 20~50분 "
+"정도 걸립니다. Azure가 배포를 성공(Succeeded)으로 보고한 후에도 애플리케이션에 "
+"연결되기까지 몇 분이 더 걸릴 수 있습니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:110
 msgid "**After deployment completes:**"
-msgstr ""
+msgstr "**배포가 완료된 후:**"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:112
 msgid "In the Azure portal, open the **resource group** you used."
-msgstr ""
+msgstr "Azure 포털에서 사용한 **리소스 그룹**\\ 을 엽니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:113
 msgid ""
@@ -418,10 +534,13 @@ msgid ""
 "(often named ``<prefix>-ag-pip``). Under **Essentials**, note the **DNS "
 "name** (Azure-assigned FQDN)."
 msgstr ""
+"**Application Gateway에 연결된 공용 IP 리소스**(보통 ``<prefix>-ag-pip``\\ 로 "
+"명명됨)를 엽니다. **Essentials**\\ 에서 **DNS 이름**(Azure 할당 FQDN)을 "
+"확인합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:114
 msgid "If you deployed **without HTTPS**, your site URL is:"
-msgstr ""
+msgstr "**HTTPS 없이** 배포한 경우 사이트 URL은 다음과 같습니다:"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:116
 msgid "``http://<dns-label>.<region>.cloudapp.azure.com``"
@@ -435,6 +554,10 @@ msgid ""
 "provider's apex-compatible record type if using a root domain). Once DNS "
 "propagates, your site URL is:"
 msgstr ""
+"**HTTPS로** 배포한 경우, **사용자 지정 도메인**\\ 을 Application Gateway 공용 IP의 "
+"Azure 할당 DNS 이름으로 연결하는 DNS 레코드를 생성하세요(서브도메인에는 일반적으로 "
+"**CNAME**; 루트 도메인을 사용하는 경우 공급자의 apex 호환 레코드 유형 사용). DNS가 "
+"전파되면 사이트 URL은 다음과 같습니다:"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:120
 msgid "``https://<your-custom-domain>``"
@@ -445,10 +568,11 @@ msgid ""
 "Congratulations! You've successfully deployed a production-ready "
 "Mattermost stack on Azure."
 msgstr ""
+"축하합니다! Azure에 운영 준비가 된 OKR.BEST 스택을 성공적으로 배포했습니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:125
 msgid "Next steps"
-msgstr ""
+msgstr "다음 단계"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:127
 msgid ""
@@ -457,20 +581,25 @@ msgid ""
 "availability-cluster-based-deployment>` and :doc:`server architecture "
 "</administration-guide/scale/server-architecture>`."
 msgstr ""
+"사이징 안내와 참조 아키텍처는 :doc:`고가용성 클러스터 기반 배포 </administration-"
+"guide/scale/high-availability-cluster-based-deployment>` 및 :doc:`서버 "
+"아키텍처 </administration-guide/scale/server-architecture>`\\ 를 참고하세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:128
 msgid ""
 "For ongoing operations (upgrades, backups, monitoring), follow the "
 "standard Mattermost server administration documentation."
 msgstr ""
+"지속적인 운영(업그레이드, 백업, 모니터링)은 표준 OKR.BEST 서버 관리 문서를 "
+"따르세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:131
 msgid "Runbooks"
-msgstr ""
+msgstr "런북"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:134
 msgid "Upgrade Mattermost server"
-msgstr ""
+msgstr "OKR.BEST 서버 업그레이드"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:136
 msgid ""
@@ -481,10 +610,16 @@ msgid ""
 "**PostgreSQL** and on the **Azure Files** share; the upgrade rolls "
 "application instances to VMs built from the updated image."
 msgstr ""
+"VM 스케일 세트는 3단계에서 선택한 버전과 일치하는 OKR.BEST **Marketplace VM "
+"이미지**\\ 를 실행합니다. OKR.BEST는 지원되는 각 릴리스에 대해 새 이미지 버전을 "
+"게시합니다. 업그레이드하려면 배포 리전에서 VMSS를 더 새로운 이미지 버전으로 "
+"연결하세요. 애플리케이션 데이터는 **PostgreSQL**\\ 과 **Azure Files** 공유에 "
+"남아 있으며, 업그레이드는 애플리케이션 인스턴스를 업데이트된 이미지로 빌드한 VM으로 "
+"롤링합니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:139
 msgid "Before you upgrade"
-msgstr ""
+msgstr "업그레이드하기 전에"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:141
 msgid ""
@@ -493,26 +628,32 @@ msgid ""
 "</administration-guide/upgrade/prepare-to-upgrade-mattermost>` for the "
 "target version."
 msgstr ""
+"대상 버전에 대해 :doc:`중요 업그레이드 참고 사항 </administration-guide/upgrade"
+"/important-upgrade-notes>`\\ 을 검토하고 :doc:`업그레이드를 준비 </administration-"
+"guide/upgrade/prepare-to-upgrade-mattermost>`\\ 하세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:142
 msgid ""
 "Confirm **PostgreSQL** backups are current and that you can restore if "
 "needed."
 msgstr ""
+"**PostgreSQL** 백업이 최신 상태이고 필요 시 복원할 수 있는지 확인하세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:143
 msgid ""
 "Pick a target version from the :doc:`Mattermost release policy </product-"
 "overview/release-policy>`."
 msgstr ""
+":doc:`OKR.BEST 릴리스 정책 </product-overview/release-policy>`\\ 에서 대상 버전을 "
+"선택하세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:146
 msgid "Upgrade steps"
-msgstr ""
+msgstr "업그레이드 단계"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:148
 msgid "**Update the VMSS** to the new image version:"
-msgstr ""
+msgstr "**VMSS를** 새 이미지 버전으로 업데이트합니다:"
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:157
 msgid ""
@@ -520,6 +661,9 @@ msgid ""
 "probe on ``/api/v4/system/ping``, so instances are replaced in batches "
 "while the Application Gateway keeps serving traffic to healthy nodes."
 msgstr ""
+"VMSS는 **롤링** 업그레이드 정책과 ``/api/v4/system/ping``\\ 의 애플리케이션 상태 "
+"프로브를 사용하므로, Application Gateway가 정상 노드로 트래픽을 계속 제공하는 "
+"동안 인스턴스가 배치 단위로 교체됩니다."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:159
 msgid ""
@@ -527,10 +671,15 @@ msgid ""
 "**Instances** (or **Rolling upgrades**) and wait until all instances are "
 "healthy and running the new model."
 msgstr ""
+"Azure 포털에서 **롤아웃을 모니터링**\\ 하세요: VMSS → **Instances**(또는 "
+"**Rolling upgrades**)를 열고 모든 인스턴스가 정상 상태이며 새 모델을 실행할 때까지 "
+"기다리세요."
 
 #: ../../source/deployment-guide/server/linux/deploy-azure-native-vm.rst:161
 msgid ""
 "**Verify Mattermost**: Verify Mattermost uses the new version via "
 "**System Console → About**."
 msgstr ""
+"**OKR.BEST 확인**: **관리자 도구 → About**\\ 을 통해 OKR.BEST가 새 버전을 "
+"사용하는지 확인하세요."
 
