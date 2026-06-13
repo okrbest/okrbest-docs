@@ -140,3 +140,31 @@ pipenv run python scripts/validate-ko-po.py --stats-only source/locales/ko/LC_ME
 ```bash
 make livehtml-ko    # http://127.0.0.1:8000 — .po 저장 시 자동 갱신
 ```
+
+`make livehtml-ko`는 종료(`Ctrl+C`)하기 전까지 계속 떠 있는 서버라, 백그라운드로 띄웠거나
+다른 터미널에서 실행한 경우 상태 확인·종료 방법이 필요합니다.
+
+**실행 중인지 확인**:
+
+```bash
+pgrep -af sphinx-autobuild      # 출력이 있으면 실행 중 (프로세스 PID·명령 표시)
+ss -tlnp 2>/dev/null | grep 8000   # 8000 포트를 LISTEN 중인지
+curl -sI http://127.0.0.1:8000/ | head -1   # 200 OK면 서빙 중 (빌드 중이면 잠시 응답 보류)
+```
+
+**종료**:
+
+```bash
+# ① 직접 띄운 터미널이면 그 창에서 Ctrl+C 한 번
+# ② 백그라운드/다른 터미널이면:
+pkill -f sphinx-autobuild       # 서버(워처) 종료
+pkill -f "python -m sphinx"     # 진행 중이던 빌드 자식 프로세스까지 정리
+```
+
+종료 확인은 위 `pgrep`이 아무것도 출력하지 않고 `ss ... grep 8000`이 비면 됩니다.
+포트가 계속 잡혀 있으면 `pkill -9 -f sphinx-autobuild`로 강제 종료하세요.
+마지막 빌드 결과물(`build/html/ko/`)은 종료 후에도 남아 파일로 직접 열어볼 수 있습니다.
+
+> ⚠️ 저메모리(예: 8GB) 환경에서 전체 빌드가 OOM으로 죽으면 워처 프로세스가 포트를 잡은 채
+> 남을 수 있습니다. 위 `pkill`로 정리한 뒤 `make livehtml-ko SPHINXOPTS="-j 2"`(또는 `-j 1`)로
+> 병렬도를 낮춰 다시 띄우세요.
