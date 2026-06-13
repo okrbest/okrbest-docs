@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:2
 msgid "Deploy for Out-of-Band (OOB) Communications"
-msgstr ""
+msgstr "대역 외(OOB) 통신을 위한 배포"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:4
 msgid ""
@@ -32,6 +32,10 @@ msgid ""
 "environment: isolated, pre-provisioned, and ready to support incident "
 "response and business continuity teams."
 msgstr ""
+"사이버 공격, 클라우드 장애, 내부 장애로 인해 중대한 인시던트가 조직의 기본 "
+"인프라를 중단시킬 때, 안전하고 독립적인 통신 채널은 필수적입니다. OKR.BEST는 "
+"격리되어 사전 프로비저닝되고 인시던트 대응 및 비즈니스 연속성 팀을 지원할 준비가 "
+"된 대역 외(OOB) 환경에서 운영됨으로써 그러한 채널 역할을 할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:6
 msgid ""
@@ -40,24 +44,29 @@ msgid ""
 "<#aws-based-oob-deployment>`__, and `Azure <#azure-based-oob-"
 "deployment>`__ environments."
 msgstr ""
+"이 문서는 `일반 <#generic-oob-architecture>`__, `AWS <#aws-based-oob-"
+"deployment>`__, `Azure <#azure-based-oob-deployment>`__ 환경 전반에 걸쳐 OOB "
+"시나리오에서 OKR.BEST를 배포하기 위한 아키텍처 지침을 설명합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:9
 msgid "Generic OOB architecture"
-msgstr ""
+msgstr "일반 OOB 아키텍처"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:11
 msgid ""
 "This platform-agnostic design establishes a fallback communication "
 "system, decoupled from primary networks and identity providers."
 msgstr ""
+"이 플랫폼 독립적 설계는 기본 네트워크 및 ID 공급자와 분리된 대체 통신 시스템을 "
+"구축합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:13
 msgid "Generic OOB Architecture"
-msgstr ""
+msgstr "일반 OOB 아키텍처"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:18
 msgid "Architecture components"
-msgstr ""
+msgstr "아키텍처 구성 요소"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:20
 msgid ""
@@ -65,6 +74,8 @@ msgid ""
 "access and use the OOB platform during emergencies. Credentials and "
 "access methods should be provisioned in advance."
 msgstr ""
+"**사용자(보안, IR 팀)**: 비상시 OOB 플랫폼에 접근하고 사용하도록 사전 승인되어 "
+"교육받은 인력입니다. 자격 증명과 접근 방법은 사전에 프로비저닝되어야 합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:21
 msgid ""
@@ -72,6 +83,8 @@ msgid ""
 "into the OOB environment. May include network policies, IP allowlists, or"
 " WAFs."
 msgstr ""
+"**보안 접근 계층**: OOB 환경으로의 진입을 보호하는 방화벽 또는 접근 "
+"게이트웨이입니다. 네트워크 정책, IP 허용 목록, WAF를 포함할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:22
 msgid ""
@@ -79,12 +92,17 @@ msgid ""
 "dependent on the organization’s primary SSO or IdP (e.g., a minimal Azure"
 " AD tenant, Okta org, or locally stored credentials with MFA)."
 msgstr ""
+"**보조 IdP / 비상 인증**: 조직의 기본 SSO나 IdP에 의존하지 않는 전용 ID "
+"공급자입니다(예: 최소한의 Azure AD 테넌트, Okta 조직, 또는 MFA가 적용된 로컬 "
+"저장 자격 증명)."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:23
 msgid ""
 "**VPN / Bastion Host**: A hardened jumpbox or independent VPN granting "
 "access to internal OOB components and Kubernetes control plane."
 msgstr ""
+"**VPN / 베스천 호스트**: 내부 OOB 구성 요소와 Kubernetes 제어 플레인에 대한 "
+"접근을 허용하는 강화된 점프박스 또는 독립 VPN입니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:24
 msgid ""
@@ -92,6 +110,9 @@ msgid ""
 "Traffic Manager, or Route 53 to monitor primary system health and reroute"
 " DNS to the OOB ingress."
 msgstr ""
+"**장애 조치 DNS 관리자**: 기본 시스템 상태를 모니터링하고 DNS를 OOB 인그레스로 "
+"다시 라우팅하는 Cloudflare Load Balancer, Azure Traffic Manager, Route 53 같은 "
+"서비스입니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:25
 msgid ""
@@ -99,6 +120,8 @@ msgid ""
 "within the cluster, directing traffic to Mattermost Web, API, and "
 "WebSocket endpoints."
 msgstr ""
+"**인그레스 컨트롤러**: 예를 들어 ingress-nginx로 클러스터 내 HTTP(S) 라우팅을 "
+"처리하여 트래픽을 OKR.BEST Web, API, WebSocket 엔드포인트로 전달합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:26
 msgid ""
@@ -106,6 +129,8 @@ msgid ""
 "instances in Kubernetes; ensures updates, scaling, and configuration "
 "consistency."
 msgstr ""
+"**OKR.BEST Operator 및 앱**: Kubernetes에서 OKR.BEST 인스턴스의 수명 주기를 "
+"자동화하여 업데이트, 확장, 구성 일관성을 보장합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:27
 msgid ""
@@ -113,212 +138,254 @@ msgid ""
 "users, and configurations; can be self-hosted or managed externally with "
 "hardened access."
 msgstr ""
+"**PostgreSQL 데이터베이스**: 채널, 메시지, 사용자, 구성을 위한 영구 "
+"저장소입니다. 셀프 호스팅하거나 강화된 접근으로 외부에서 관리할 수 있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:28
 msgid "**Backups**:"
-msgstr ""
+msgstr "**백업**:"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:30
 msgid ""
 "**Velero**: Backs up Kubernetes resources to external object store (S3, "
 "Blob)."
 msgstr ""
+"**Velero**: Kubernetes 리소스를 외부 오브젝트 저장소(S3, Blob)에 백업합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:31
 msgid ""
 "**pg_dump / Cloud-native backup**: Regular logical exports or managed "
 "backups."
 msgstr ""
+"**pg_dump / 클라우드 네이티브 백업**: 정기적인 논리적 내보내기 또는 관리형 "
+"백업입니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:32
 msgid ""
 "**Object Storage**: Durable, versioned storage (e.g., S3, Azure Blob) for"
 " snapshots and dumps."
 msgstr ""
+"**오브젝트 스토리지**: 스냅샷과 덤프를 위한 내구성 있고 버전 관리되는 "
+"저장소입니다(예: S3, Azure Blob)."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:35
 msgid "AWS-based OOB deployment"
-msgstr ""
+msgstr "AWS 기반 OOB 배포"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:37
 msgid ""
 "Deploying Mattermost in AWS leverages managed services and strong "
 "isolation capabilities."
 msgstr ""
+"AWS에 OKR.BEST를 배포하면 관리형 서비스와 강력한 격리 기능을 활용할 수 "
+"있습니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:39
 msgid "AWS OOB Deployment diagram"
-msgstr ""
+msgstr "AWS OOB 배포 다이어그램"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:44
 msgid "AWS components"
-msgstr ""
+msgstr "AWS 구성 요소"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:46
 msgid ""
 "**Amazon EKS**: Managed Kubernetes for Mattermost Operator and "
 "application, with HA and auto-scaling."
 msgstr ""
+"**Amazon EKS**: OKR.BEST Operator 및 애플리케이션을 위한 관리형 Kubernetes로, HA"
+"와 자동 확장을 제공합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:47
 msgid ""
 "**Route 53**: DNS service for health-checked failover to the OOB "
 "environment."
 msgstr ""
+"**Route 53**: OOB 환경으로의 상태 점검 기반 장애 조치를 위한 DNS "
+"서비스입니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:48
 msgid ""
 "**Amazon Aurora PostgreSQL**: High-performance managed PostgreSQL with "
 "automated failovers."
 msgstr ""
+"**Amazon Aurora PostgreSQL**: 자동 장애 조치를 갖춘 고성능 관리형 "
+"PostgreSQL입니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:49
 msgid ""
 "**Amazon S3**: Object storage for Velero snapshots, configurations, and "
 "database backups (with versioning and cross-region replication)."
 msgstr ""
+"**Amazon S3**: Velero 스냅샷, 구성, 데이터베이스 백업을 위한 오브젝트 "
+"스토리지입니다(버전 관리 및 리전 간 복제 포함)."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:50
 msgid ""
 "**IAM Roles**: Scoped roles for EKS nodes and Velero using IRSA, "
 "enforcing least-privilege."
 msgstr ""
+"**IAM 역할**: IRSA를 사용해 EKS 노드와 Velero에 범위가 지정된 역할로, 최소 권한을 "
+"적용합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:54
 msgid "Use separate AWS accounts or VPCs for full isolation."
-msgstr ""
+msgstr "완전한 격리를 위해 별도의 AWS 계정이나 VPC를 사용하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:55
 msgid "Configure Route 53 health checks against public or synthetic endpoints."
-msgstr ""
+msgstr "공용 또는 합성 엔드포인트에 대해 Route 53 상태 점검을 구성하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:56
 msgid "Encrypt secrets and enforce least-privilege IAM policies."
-msgstr ""
+msgstr "시크릿을 암호화하고 최소 권한 IAM 정책을 적용하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:59
 msgid "Azure-Based OOB deployment"
-msgstr ""
+msgstr "Azure 기반 OOB 배포"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:61
 msgid ""
 "For Azure customers, AKS and related services provide a robust OOB "
 "platform for Mattermost."
 msgstr ""
+"Azure 고객의 경우, AKS와 관련 서비스가 OKR.BEST를 위한 견고한 OOB 플랫폼을 "
+"제공합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:63
 msgid "Azure OOB Deployment diagram"
-msgstr ""
+msgstr "Azure OOB 배포 다이어그램"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:68
 msgid "Azure components"
-msgstr ""
+msgstr "Azure 구성 요소"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:70
 msgid ""
 "**Azure Kubernetes Service (AKS)**: Runs Mattermost workloads with native"
 " autoscaling and Azure AD integration."
 msgstr ""
+"**Azure Kubernetes Service(AKS)**: 네이티브 자동 확장과 Azure AD 통합으로 "
+"OKR.BEST 워크로드를 실행합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:71
 msgid ""
 "**Azure DNS + Traffic Manager**: Global traffic routing and DNS failover "
 "based on endpoint health."
 msgstr ""
+"**Azure DNS + Traffic Manager**: 엔드포인트 상태를 기반으로 한 글로벌 트래픽 "
+"라우팅 및 DNS 장애 조치입니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:72
 msgid ""
 "**Azure Database for PostgreSQL**: Managed DB service with automated "
 "backups and patching."
 msgstr ""
+"**Azure Database for PostgreSQL**: 자동 백업 및 패치를 갖춘 관리형 DB "
+"서비스입니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:73
 msgid ""
 "**Azure Blob Storage**: Destination for Velero snapshots and DB dumps; "
 "supports lifecycle policies and secure access."
 msgstr ""
+"**Azure Blob Storage**: Velero 스냅샷과 DB 덤프의 대상이며, 수명 주기 정책과 "
+"안전한 접근을 지원합니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:74
 msgid ""
 "**Azure AD (Secondary Tenant)**: Acts as the IdP for OOB; deployed in a "
 "separate directory with scoped permissions and MFA."
 msgstr ""
+"**Azure AD(보조 테넌트)**: OOB의 IdP 역할을 하며, 범위가 지정된 권한과 MFA를 "
+"갖춘 별도의 디렉토리에 배포됩니다."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:78
 msgid "Deploy in a dedicated subscription for security and billing separation."
-msgstr ""
+msgstr "보안과 청구 분리를 위해 전용 구독에 배포하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:79
 msgid "Use Azure Monitor for health checks and Traffic Manager probes."
-msgstr ""
+msgstr "상태 점검과 Traffic Manager 프로브에 Azure Monitor를 사용하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:80
 msgid ""
 "Harden AKS node pools and isolate workloads with namespaces and network "
 "policies."
 msgstr ""
+"AKS 노드 풀을 강화하고 네임스페이스와 네트워크 정책으로 워크로드를 "
+"격리하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:83
 msgid "Operational guidelines"
-msgstr ""
+msgstr "운영 지침"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:89
 msgid "**Domain**"
-msgstr ""
+msgstr "**영역**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:90
 msgid "**Recommendation**"
-msgstr ""
+msgstr "**권장 사항**"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:91
 msgid "Access Control"
-msgstr ""
+msgstr "접근 제어"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:92
 msgid ""
 "Isolate authentication from primary infrastructure. Use MFA, secure "
 "vaults, and emergency tokens. Preload user accounts in the secondary IdP."
 msgstr ""
+"인증을 기본 인프라로부터 격리하세요. MFA, 보안 볼트, 비상 토큰을 사용하세요. 보조 "
+"IdP에 사용자 계정을 미리 로드하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:93
 msgid "DNS Failover"
-msgstr ""
+msgstr "DNS 장애 조치"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:94
 msgid ""
 "Employ TTL-aware health checks via Route 53 or Traffic Manager. Monitor "
 "critical HTTP(S) or TCP endpoints."
 msgstr ""
+"Route 53 또는 Traffic Manager를 통해 TTL을 인식하는 상태 점검을 활용하세요. 중요한 "
+"HTTP(S) 또는 TCP 엔드포인트를 모니터링하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:95
 msgid "Backup Strategy"
-msgstr ""
+msgstr "백업 전략"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:96
 msgid ""
 "Schedule frequent Velero and database backups. Store in versioned, "
 "encrypted object storage."
 msgstr ""
+"Velero와 데이터베이스 백업을 자주 예약하세요. 버전 관리되고 암호화된 오브젝트 "
+"스토리지에 저장하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:97
 msgid "Disaster Recovery Drills"
-msgstr ""
+msgstr "재해 복구 훈련"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:98
 msgid ""
 "Conduct quarterly failover exercises: DNS switching, Mattermost access, "
 "and data restores."
 msgstr ""
+"분기별 장애 조치 훈련을 실시하세요: DNS 전환, OKR.BEST 접근, 데이터 복원."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:99
 msgid "Security"
-msgstr ""
+msgstr "보안"
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:100
 msgid ""
 "Treat OOB as Tier 0. Use hardened OS images, audit logging, strict RBAC, "
 "and centralized monitoring. Rotate secrets regularly."
 msgstr ""
+"OOB를 Tier 0으로 취급하세요. 강화된 OS 이미지, 감사 로깅, 엄격한 RBAC, 중앙 "
+"집중식 모니터링을 사용하세요. 시크릿을 정기적으로 교체하세요."
 
 #: ../../source/deployment-guide/reference-architecture/deployment-scenarios/deploy-oob.rst:102
 msgid ""
@@ -328,4 +395,8 @@ msgid ""
 " resilience. Pair these designs with standard IR playbooks and routine "
 "failover testing to build a confident, secure response capability."
 msgstr ""
+"OKR.BEST는 격리, 자동화, 운영 준비를 갖춰 배포하면 효과적인 OOB 통신 플랫폼이 될 "
+"수 있습니다. AWS, Azure, 일반 환경 어디에서든 독립성, 단순성, 복원력을 "
+"우선시하세요. 이러한 설계를 표준 IR 플레이북 및 정기적인 장애 조치 테스트와 "
+"결합하여 확신할 수 있는 안전한 대응 역량을 구축하세요."
 
