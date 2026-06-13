@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/deployment-guide/server/setup-tls.rst:2
 msgid "(Optional) Set up TLS"
-msgstr ""
+msgstr "(선택) TLS 설정"
 
 #: ../../source/deployment-guide/server/setup-tls.rst:4
 msgid "You have two options if you want users to connect with HTTPS:"
-msgstr ""
+msgstr "사용자가 HTTPS로 연결하도록 하려면 두 가지 옵션이 있습니다:"
 
 #: ../../source/deployment-guide/server/setup-tls.rst:6
 msgid ""
@@ -36,6 +36,11 @@ msgid ""
 "other reasons, such as load balancing or caching. A proxy server delivers"
 " better performance and provides standard HTTP request logs."
 msgstr ""
+":doc:`NGINX 같은 프록시를 설치 </deployment-guide/server/setup-nginx-"
+"proxy>`\\ 한 다음 `프록시에 TLS를 설정 <#Use-TLS-on-NGINX-as-a-proxy>`__\\ "
+"합니다. 사용자가 많거나(200명 초과) 로드 밸런싱·캐싱 등 다른 이유로 리버스 "
+"프록시를 사용하려는 경우 권장하는 옵션입니다. 프록시 서버는 더 나은 성능을 "
+"제공하고 표준 HTTP 요청 로그를 제공합니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:8
 msgid ""
@@ -43,58 +48,67 @@ msgid ""
 "Mattermost server. This is the easiest option when you don't need to use "
 "a reverse proxy."
 msgstr ""
+"또는 사용자가 200명 미만이면 OKR.BEST 서버에 TLS를 설정할 수 있습니다. 리버스 "
+"프록시를 사용할 필요가 없을 때 가장 쉬운 옵션입니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:10
 msgid ""
 "You can use `Let's Encrypt <https://letsencrypt.org/>`__ to automatically"
 " install and set up the certificate."
 msgstr ""
+"`Let's Encrypt <https://letsencrypt.org/>`__\\ 를 사용해 인증서를 자동으로 "
+"설치하고 설정할 수 있습니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:11
 msgid "You can also specify your own certificate."
-msgstr ""
+msgstr "직접 인증서를 지정할 수도 있습니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:12
 msgid ""
 "You can use a self-signed certificate, but this is not recommended for "
 "production environments."
 msgstr ""
+"자체 서명 인증서를 사용할 수 있지만, 프로덕션 환경에서는 권장되지 않습니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:15
 msgid "Configure TLS on the Mattermost server"
-msgstr ""
+msgstr "OKR.BEST 서버에 TLS 구성"
 
 #: ../../source/deployment-guide/server/setup-tls.rst:17
 msgid "In **System Console > Environment > Web Server**:"
-msgstr ""
+msgstr "**관리자 도구 > 환경 > 웹서버**\\ 에서:"
 
 #: ../../source/deployment-guide/server/setup-tls.rst:19
 msgid "Change the **Listen Address** setting to ``:443``."
-msgstr ""
+msgstr "**Listen Address** 설정을 ``:443``\\ 으로 변경합니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:20
 msgid "Change the **Connection Security** setting to ``TLS``."
-msgstr ""
+msgstr "**Connection Security** 설정을 ``TLS``\\ 로 변경합니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:21
 msgid "Change the **Forward port 80 to 443** setting to ``true``."
-msgstr ""
+msgstr "**Forward port 80 to 443** 설정을 ``true``\\ 로 변경합니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:23
 msgid ""
 "Activate the ``CAP_NET_BIND_SERVICE`` capability to allow Mattermost to "
 "bind to low ports:"
 msgstr ""
+"OKR.BEST가 낮은 포트에 바인딩할 수 있도록 ``CAP_NET_BIND_SERVICE`` 기능을 "
+"활성화합니다:"
 
 #: ../../source/deployment-guide/server/setup-tls.rst:29
 msgid ""
 "Install the security certificate. Use Let's Encrypt to automatically "
 "install and setup the certificate, or specify your own certificate."
 msgstr ""
+"보안 인증서를 설치합니다. Let's Encrypt를 사용해 인증서를 자동으로 설치·설정"
+"하거나, 직접 인증서를 지정합니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:32
 msgid "Use a Let's Encrypt certificate"
-msgstr ""
+msgstr "Let's Encrypt 인증서 사용"
 
 #: ../../source/deployment-guide/server/setup-tls.rst:34
 msgid ""
@@ -102,15 +116,17 @@ msgid ""
 "connect to the Mattermost server. Certificates are retrieved for any "
 "hostname a client tries to reach the server at."
 msgstr ""
+"인증서는 클라이언트가 OKR.BEST 서버에 처음 연결을 시도할 때 가져옵니다. "
+"인증서는 클라이언트가 서버에 접근하려는 모든 호스트 이름에 대해 가져옵니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:36
 msgid "Change the **Use Let's Encrypt** setting to ``true``."
-msgstr ""
+msgstr "**Use Let's Encrypt** 설정을 ``true``\\ 로 변경합니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:37
 #: ../../source/deployment-guide/server/setup-tls.rst:50
 msgid "Restart the Mattermost server for these changes to take effect."
-msgstr ""
+msgstr "이러한 변경 사항을 적용하려면 OKR.BEST 서버를 다시 시작합니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:41
 msgid ""
@@ -119,6 +135,10 @@ msgid ""
 "configuration-settings:forward port 80 to 443>` ``config.json`` setting "
 "set to ``true`` to complete the Let's Encrypt certification."
 msgstr ""
+"Let's Encrypt가 활성화된 경우, Let's Encrypt 인증을 완료하려면 :ref:`"
+"Forward80To443 <administration-guide/configure/environment-configuration-"
+"settings:forward port 80 to 443>` ``config.json`` 설정을 ``true``\\ 로 "
+"설정한 상태에서 방화벽을 통해 80번 포트를 포워딩하세요."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:42
 msgid ""
@@ -128,34 +148,38 @@ msgid ""
 "to ports 80 and 443. More information can be found `at Let's Encrypt "
 "<https://letsencrypt.org/how-it-works/>`_."
 msgstr ""
+"도메인 이름을 확인하고 인증서를 발급하려면 OKR.BEST 서버가 Let's Encrypt "
+"CA에서 접근 가능해야 합니다. 방화벽을 열고 모든 리버스 프록시가 80번과 443번 "
+"포트로 트래픽을 포워딩하도록 구성하세요. 자세한 내용은 `Let's Encrypt "
+"<https://letsencrypt.org/how-it-works/>`_\\ 에서 확인할 수 있습니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:45
 msgid "Use your own certificate"
-msgstr ""
+msgstr "직접 인증서 사용"
 
 #: ../../source/deployment-guide/server/setup-tls.rst:47
 msgid "Change the **Use Let's Encrypt** setting to ``false``."
-msgstr ""
+msgstr "**Use Let's Encrypt** 설정을 ``false``\\ 로 변경합니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:48
 msgid ""
 "Change the **TLS Certificate File** setting to the location of the "
 "certificate file."
-msgstr ""
+msgstr "**TLS Certificate File** 설정을 인증서 파일의 위치로 변경합니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:49
 msgid ""
 "Change the **TLS Key File** setting to the location of the private key "
 "file."
-msgstr ""
+msgstr "**TLS Key File** 설정을 개인 키 파일의 위치로 변경합니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:54
 msgid "Password-protected certificates aren't supported."
-msgstr ""
+msgstr "비밀번호로 보호된 인증서는 지원되지 않습니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:57
 msgid "Use TLS on NGINX (as a proxy)"
-msgstr ""
+msgstr "NGINX(프록시)에서 TLS 사용"
 
 #: ../../source/deployment-guide/server/setup-tls.rst:61
 msgid ""
@@ -163,6 +187,8 @@ msgid ""
 "connection as the TLS prevents it from successfully communicating with "
 "the Mattermost server."
 msgstr ""
+"NGINX에 TLS를 설정하기 전에 OKR.BEST에 먼저 TLS를 설정하지 마세요. TLS가 "
+"OKR.BEST 서버와의 정상적인 통신을 막아 연결이 끊깁니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:63
 msgid ""
@@ -171,12 +197,16 @@ msgid ""
 "incoming traffic will be handled via NGINX on port 443 exposed to the "
 "internet, proxy to the Mattermost server running on port 80."
 msgstr ""
+"NGINX는 클라이언트와 OKR.BEST 서버 간 트래픽을 암호화하는 포워드 프록시 역할을 "
+"합니다. SSL 인증서를 설치하면 인터넷에 노출된 443번 포트의 NGINX를 통해 "
+"인바운드 트래픽이 처리되어 80번 포트에서 실행 중인 OKR.BEST 서버로 "
+"프록시됩니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:64
 msgid ""
 "(Optional) Upstream encryption between NGINX to Mattermost server is "
 "allowed."
-msgstr ""
+msgstr "(선택) NGINX와 OKR.BEST 서버 간 업스트림 암호화가 허용됩니다."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:65
 msgid ""
@@ -184,18 +214,23 @@ msgid ""
 "Servers <https://docs.nginx.com/nginx/admin-guide/security-controls"
 "/terminating-ssl-tcp/>`__."
 msgstr ""
+"`TCP 업스트림 서버용 SSL 종료 설정에 대한 NGINX 가이드 "
+"<https://docs.nginx.com/nginx/admin-guide/security-controls/terminating-"
+"ssl-tcp/>`__\\ 를 따르세요."
 
 #: ../../source/deployment-guide/server/setup-tls.rst:67
 msgid "More helpful resources:"
-msgstr ""
+msgstr "유용한 추가 리소스:"
 
 #: ../../source/deployment-guide/server/setup-tls.rst:69
 msgid "`NGINX's SSL blog <https://www.f5.com/company/blog/nginx/nginx-ssl/>`_"
-msgstr ""
+msgstr "`NGINX SSL 블로그 <https://www.f5.com/company/blog/nginx/nginx-ssl/>`_"
 
 #: ../../source/deployment-guide/server/setup-tls.rst:70
 msgid ""
 "`NGINX's SSL guide <https://docs.nginx.com/nginx/admin-guide/security-"
 "controls/terminating-ssl-http/>`_"
 msgstr ""
+"`NGINX SSL 가이드 <https://docs.nginx.com/nginx/admin-guide/security-"
+"controls/terminating-ssl-http/>`_"
 

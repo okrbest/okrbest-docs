@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/deployment-guide/encryption-options.rst:2
 msgid "Encryption options"
-msgstr ""
+msgstr "암호화 옵션"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced "
+"플랜 <https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -39,16 +41,20 @@ msgid ""
 "capabilities. This page guides you through setting up appropriate "
 "encryption security."
 msgstr ""
+"OKR.BEST는 전송 중 암호화와 저장 중 암호화 기능을 제공합니다. 이 페이지는 "
+"적절한 암호화 보안을 설정하는 방법을 안내합니다."
 
 #: ../../source/deployment-guide/encryption-options.rst:9
 msgid ""
 "Encryption is not required for GDPR, although it can be used as an "
 "additional safeguard against data breach."
 msgstr ""
+"암호화는 GDPR에 필수는 아니지만, 데이터 유출에 대한 추가 보호 장치로 사용할 "
+"수 있습니다."
 
 #: ../../source/deployment-guide/encryption-options.rst:12
 msgid "Encryption-in-transit"
-msgstr ""
+msgstr "전송 중 암호화"
 
 #: ../../source/deployment-guide/encryption-options.rst:14
 msgid ""
@@ -59,6 +65,11 @@ msgid ""
 ":doc:`configuration guide for more details </deployment-guide/server"
 "/setup-tls>`."
 msgstr ""
+"OKR.BEST는 클라이언트 애플리케이션과 OKR.BEST 서버 간 모든 데이터 전송에 "
+"2048비트 RSA의 AES-256을 포함한 TLS 암호화를 지원합니다. OKR.BEST 서버에 "
+"TLS를 설정하거나 NGINX 같은 프록시를 설치하여 프록시에 TLS를 설정할 수 "
+"있습니다. 자세한 내용은 :doc:`구성 가이드 </deployment-guide/server/setup-"
+"tls>`\\ 를 참고하세요."
 
 #: ../../source/deployment-guide/encryption-options.rst:16
 msgid ""
@@ -66,14 +77,17 @@ msgid ""
 " TLS or stunnel <administration-guide/configure/authentication-"
 "configuration-settings:ad/ldap port>`."
 msgstr ""
+"Active Directory/LDAP 연결은 :ref:`선택적으로 TLS 또는 stunnel로 보호 "
+"<administration-guide/configure/authentication-configuration-"
+"settings:ad/ldap port>`\\ 할 수 있습니다."
 
 #: ../../source/deployment-guide/encryption-options.rst:18
 msgid "Connections to calls are secured with a combination of:"
-msgstr ""
+msgstr "통화 연결은 다음 조합으로 보호됩니다:"
 
 #: ../../source/deployment-guide/encryption-options.rst:20
 msgid "TLS: The existing WebSocket channel is used to secure the signaling path."
-msgstr ""
+msgstr "TLS: 기존 WebSocket 채널을 사용해 시그널링 경로를 보호합니다."
 
 #: ../../source/deployment-guide/encryption-options.rst:21
 msgid ""
@@ -81,6 +95,9 @@ msgid ""
 "``TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256`` and "
 "``TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA`` algorithms."
 msgstr ""
+"DTLS v1.2(필수): 초기 키 교환에 사용됩니다. "
+"``TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256`` 및 "
+"``TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA`` 알고리즘을 지원합니다."
 
 #: ../../source/deployment-guide/encryption-options.rst:22
 msgid ""
@@ -88,10 +105,13 @@ msgid ""
 "containing voice or screen share). Supports ``AEAD_AES_128_GCM`` and "
 "``AES128_CM_HMAC_SHA1_80`` algorithms."
 msgstr ""
+"SRTP(필수): 음성이나 화면 공유가 포함된 모든 미디어 패킷을 암호화하는 데 "
+"사용됩니다. ``AEAD_AES_128_GCM`` 및 ``AES128_CM_HMAC_SHA1_80`` 알고리즘을 "
+"지원합니다."
 
 #: ../../source/deployment-guide/encryption-options.rst:25
 msgid "Gossip encryption"
-msgstr ""
+msgstr "가십(gossip) 암호화"
 
 #: ../../source/deployment-guide/encryption-options.rst:27
 msgid ""
@@ -111,6 +131,18 @@ msgid ""
 "to node failures. However, it can suffer from redundancy and propagation "
 "delays in large networks."
 msgstr ""
+"고가용성 모드에서 OKR.BEST는 가십 프로토콜을 사용할 때 전송 중인 클러스터 "
+"데이터의 암호화를 지원합니다. 가십 프로토콜은 `코넬 대학교 연구진이 개발한 "
+"SWIM 프로토콜 "
+"<https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf>`_\\ "
+"에 정리된 원칙에 기반합니다. 가십 프로토콜은 분산 시스템에서 노드들이 무작위로 "
+"정보를 교환하여 네트워크 전반의 데이터 일관성을 보장하는 통신 메커니즘입니다. "
+"탈중앙화되어 있고 확장 가능하며 장애에 강해 노드가 많은 시스템에 이상적입니다. "
+"정보는 사회적 소문과 유사한 방식으로 퍼지며, 노드들이 주기적으로 무작위 "
+"피어에게 업데이트를 \"가십\"으로 전파하여 네트워크가 일관된 상태로 수렴할 "
+"때까지 이어집니다. 분산 데이터베이스, 블록체인 네트워크, 피어 투 피어 "
+"시스템에서 널리 사용되며, 구현이 간단하고 노드 장애에 회복탄력적입니다. 다만 "
+"대규모 네트워크에서는 중복과 전파 지연 문제가 발생할 수 있습니다."
 
 #: ../../source/deployment-guide/encryption-options.rst:29
 msgid ""
@@ -119,6 +151,9 @@ msgid ""
 "encryption>` is enabled by default for new deployments while existing "
 "deployments maintain their current configuration."
 msgstr ""
+"OKR.BEST v10.11부터 :ref:`가십 암호화 <administration-guide/configure"
+"/environment-configuration-settings:enable gossip encryption>`\\ 는 신규 "
+"배포에서 기본으로 활성화되며, 기존 배포는 현재 구성을 유지합니다."
 
 #: ../../source/deployment-guide/encryption-options.rst:31
 msgid ""
@@ -128,10 +163,14 @@ msgid ""
 "converted to base64. It can be set to a length of 16, 24, or 32 bytes to "
 "select AES-128, AES-192, or AES-256 respectively."
 msgstr ""
+"암호화는 기본적으로 AES-256을 사용하며 구성할 수 없습니다. 다만 ``Systems`` "
+"테이블의 ``ClusterEncryptionKey`` 행에 값을 수동으로 설정할 수는 있습니다. "
+"키는 base64로 변환된 바이트 배열입니다. 길이를 16, 24, 32바이트로 설정하여 각각 "
+"AES-128, AES-192, AES-256을 선택할 수 있습니다."
 
 #: ../../source/deployment-guide/encryption-options.rst:34
 msgid "Encryption-at-rest"
-msgstr ""
+msgstr "저장 중 암호화"
 
 #: ../../source/deployment-guide/encryption-options.rst:36
 msgid ""
@@ -141,6 +180,10 @@ msgid ""
 "search and compliance reporting of message histories, Mattermost does not"
 " offer encryption within the database."
 msgstr ""
+"저장 중 암호화는 인프라 내 자체 서버에 위치한 OKR.BEST 데이터베이스에 적용된 "
+"하드웨어·소프트웨어 디스크 암호화 솔루션을 통해 메시지에 적용할 수 있습니다. "
+"최종 사용자의 검색과 메시지 기록의 컴플라이언스 보고를 지원하기 위해 OKR.BEST는 "
+"데이터베이스 내부 암호화는 제공하지 않습니다."
 
 #: ../../source/deployment-guide/encryption-options.rst:38
 msgid ""
@@ -150,6 +193,10 @@ msgid ""
 "Transparent Data Encryption (TDE) can be employed. Integration with "
 "external encrypted storage systems is supported."
 msgstr ""
+"데이터베이스와 파일 저장소 모두 소프트웨어 또는 하드웨어 디스크 암호화 "
+"솔루션으로 보호할 수 있습니다. LUKS(Linux), BitLocker(Windows) 같은 전체 "
+"디스크 암호화 방식이나 투명 데이터 암호화(TDE) 같은 데이터베이스 전용 솔루션을 "
+"사용할 수 있습니다. 외부 암호화 저장 시스템과의 통합도 지원됩니다."
 
 #: ../../source/deployment-guide/encryption-options.rst:40
 msgid ""
@@ -157,10 +204,13 @@ msgid ""
 "hardware and software disk encryption solutions applied to the server "
 "used for local/network storage or S3-compatible storage."
 msgstr ""
+"또한 저장 중 암호화는 로컬/네트워크 저장소 또는 S3 호환 저장소에 사용되는 "
+"서버에 적용된 하드웨어·소프트웨어 디스크 암호화 솔루션을 통해 저장된 파일에 "
+"적용할 수 있습니다."
 
 #: ../../source/deployment-guide/encryption-options.rst:43
 msgid "Database"
-msgstr ""
+msgstr "데이터베이스"
 
 #: ../../source/deployment-guide/encryption-options.rst:45
 msgid ""
@@ -168,10 +218,13 @@ msgid ""
 "options.html>`__ database documentation for details on encryption options"
 " at the disk level."
 msgstr ""
+"디스크 수준의 암호화 옵션에 대한 자세한 내용은 `PostgreSQL "
+"<https://www.postgresql.org/docs/10/encryption-options.html>`__ 데이터베이스 "
+"문서를 참고하세요."
 
 #: ../../source/deployment-guide/encryption-options.rst:48
 msgid "File storage"
-msgstr ""
+msgstr "파일 저장소"
 
 #: ../../source/deployment-guide/encryption-options.rst:50
 msgid ""
@@ -179,6 +232,9 @@ msgid ""
 "available for files stored via hardware and software disk encryption "
 "solutions applied to the server."
 msgstr ""
+"로컬 저장소, NFS, S3 호환 저장소의 경우, 저장 중 암호화는 서버에 적용된 "
+"하드웨어·소프트웨어 디스크 암호화 솔루션을 통해 저장된 파일에 적용할 수 "
+"있습니다."
 
 #: ../../source/deployment-guide/encryption-options.rst:52
 msgid ""
@@ -187,14 +243,18 @@ msgid ""
 "guide/configure/environment-configuration-settings:enable server-side "
 "encryption for amazon s3>` in Mattermost enterprise-badge."
 msgstr ""
+"Amazon의 독점 S3 시스템의 경우, 저장 중 암호화는 OKR.BEST에서 :ref:`Amazon "
+"S3 관리형 키를 사용한 서버 측 암호화 <administration-guide/configure"
+"/environment-configuration-settings:enable server-side encryption for "
+"amazon s3>`\\ 를 통해 적용할 수 있습니다."
 
 #: ../../source/deployment-guide/encryption-options.rst:55
 msgid "SAML encryption support"
-msgstr ""
+msgstr "SAML 암호화 지원"
 
 #: ../../source/deployment-guide/encryption-options.rst:57
 msgid "Mattermost supports the following encryption methods for SAML:"
-msgstr ""
+msgstr "OKR.BEST는 SAML에 대해 다음 암호화 방식을 지원합니다:"
 
 #: ../../source/deployment-guide/encryption-options.rst:59
 msgid "aes128-gcm"
