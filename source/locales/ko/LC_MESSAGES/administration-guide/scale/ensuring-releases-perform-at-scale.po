@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:2
 msgid "Ensuring Releases Perform at Scale"
-msgstr ""
+msgstr "릴리스의 대규모 성능 보장"
 
 #: ../../source/_static/badges/entry-ent.rst:9
 msgid ""
@@ -29,6 +29,9 @@ msgid ""
 "Advanced plans <https://mattermost.com/pricing/>`__ (not available on "
 "Professional)"
 msgstr ""
+"|plans-img-yellow| `Entry, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다(Professional에서는 "
+"사용할 수 없음)"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -41,10 +44,13 @@ msgid ""
 "load testing, develops features with scale in mind, and follows strict "
 "guidelines for database schema migrations."
 msgstr ""
+"Mattermost의 모든 릴리스가 대규모 성능에 대한 높은 기준을 유지하도록 보장하기 위해, "
+"Mattermost 엔지니어링 팀은 철저한 부하 테스트를 수행하고, 확장성을 염두에 두고 "
+"기능을 개발하며, 데이터베이스 스키마 마이그레이션에 대한 엄격한 지침을 따릅니다."
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:10
 msgid "Monthly release load tests"
-msgstr ""
+msgstr "월간 릴리스 부하 테스트"
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:12
 msgid ""
@@ -53,6 +59,10 @@ msgid ""
 "test tooling <https://github.com/mattermost/mattermost-load-test-ng>`__ "
 "using simulated data that matches real-world, high-scale usage patterns."
 msgstr ""
+"매월 배포 승인 전에 Mattermost 릴리스 후보는 실제 대규모 사용 패턴에 맞는 시뮬레이션 "
+"데이터를 사용하여 포괄적이고 성숙한 `부하 테스트 도구 "
+"<https://github.com/mattermost/mattermost-load-test-ng>`__\\ 모음으로 부하 "
+"테스트를 거칩니다."
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:14
 msgid ""
@@ -62,6 +72,10 @@ msgid ""
 " be dropped when :ref:`MySQL goes out of support with Mattermost v11 "
 "<product-overview/deprecated-features:mattermost server v10.0.0>`."
 msgstr ""
+"수천 명의 사용자와 수백만 개의 글을 포함한 Mattermost 고가용성 배포에 대해 다양한 "
+"구성을 포괄하는 여러 테스트가 실행됩니다. PostgreSQL과 MySQL이 모두 테스트되지만, "
+":ref:`MySQL이 Mattermost v11에서 지원 종료 <product-overview/deprecated-"
+"features:mattermost server v10.0.0>`\\ 되면 MySQL 테스트는 중단됩니다."
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:16
 msgid ""
@@ -72,6 +86,10 @@ msgid ""
 "investigated and remedied before the release candidate is promoted to the"
 " final release."
 msgstr ""
+"부하 테스트는 평균 API 요청 시간, 데이터베이스 I/O, 메모리 사용량, 동시성, 초당 요청 "
+"수 등을 상세히 기술한 보고서를 생성합니다. 그런 다음 릴리스 후보에 대한 이 성능 "
+"보고서를 가장 최근의 이전 안정 버전 보고서와 비교합니다. 편차가 있으면 릴리스 후보가 "
+"최종 릴리스로 승격되기 전에 조사하고 시정합니다."
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:18
 msgid ""
@@ -79,10 +97,13 @@ msgid ""
 "Performance <https://community.mattermost.com/core/channels/developers-"
 "performance>`__ channel."
 msgstr ""
+"각 보고서는 분석과 함께 공개 `Developers: Performance "
+"<https://community.mattermost.com/core/channels/developers-performance>`__ "
+"채널에 게시됩니다."
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:22
 msgid "Developing scalable features and systems"
-msgstr ""
+msgstr "확장 가능한 기능과 시스템 개발"
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:24
 msgid ""
@@ -90,6 +111,8 @@ msgid ""
 " systems, and it's included in technical specifications from the "
 "beginning of the software design process."
 msgstr ""
+"확장성은 새 기능과 시스템을 개발할 때 주요 고려 사항이며, 소프트웨어 설계 프로세스 "
+"초기부터 기술 사양에 포함됩니다."
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:26
 msgid ""
@@ -97,12 +120,16 @@ msgid ""
 "coverage for the feature or system. A load test is then run with results "
 "being compared to baselines."
 msgstr ""
+"구현의 일부로 부하 테스트 에이전트가 해당 기능이나 시스템에 대한 커버리지를 포함하도록 "
+"업데이트됩니다. 그런 다음 부하 테스트를 실행하고 결과를 기준선과 비교합니다."
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:28
 msgid ""
 "The code changes are then reviewed by at least two developers and a "
 "SDET/QA analyst before being merged."
 msgstr ""
+"그런 다음 코드 변경 사항은 병합되기 전에 최소 두 명의 개발자와 SDET/QA 분석가의 "
+"검토를 거칩니다."
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:30
 msgid ""
@@ -111,10 +138,13 @@ msgid ""
 "any impacts on performance are monitored for 3-4 weeks before the changes"
 " are included in a release candidate."
 msgstr ""
+"병합되면 새 빌드가 생성되어 다음 날 `Mattermost 커뮤니티 서버 "
+"<https://community.mattermost.com>`__\\ 에 배포되며, 변경 사항이 릴리스 후보에 "
+"포함되기 전에 3~4주 동안 성능에 미치는 영향을 모니터링합니다."
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:34
 msgid "Database schema changes"
-msgstr ""
+msgstr "데이터베이스 스키마 변경"
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:36
 msgid ""
@@ -125,6 +155,11 @@ msgid ""
 "migration-guide/>`__ that minimize risk and prevents performance impact "
 "during and after migrations."
 msgstr ""
+"데이터베이스 스키마 변경은 업그레이드 위험과 성능 영향을 줄이기 위해 최소한으로 "
+"유지됩니다. 스키마 변경이 필요한 경우 Mattermost는 마이그레이션 중과 이후의 위험을 "
+"최소화하고 성능 영향을 방지하는 `엄격한 마이그레이션 지침 "
+"<https://developers.mattermost.com/contribute/more-info/server/schema-"
+"migration-guide/>`__\\ 을 따릅니다."
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:38
 msgid ""
@@ -133,16 +168,22 @@ msgid ""
 "schema migration "
 "<https://gist.github.com/streamer45/59b3582118913d4fc5e8ff81ea78b055>`__."
 msgstr ""
+"더 복잡한 마이그레이션이 필요한 경우 상세한 분석을 수행하고 지침과 함께 게시합니다. "
+"예시 분석으로는 `Mattermost v6.0 스키마 마이그레이션 "
+"<https://gist.github.com/streamer45/59b3582118913d4fc5e8ff81ea78b055>`__\\ 이 "
+"있습니다."
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:40
 msgid ""
 "Additionally, all database schema changes are load tested as a part of "
 "our monthly release process."
 msgstr ""
+"또한 모든 데이터베이스 스키마 변경은 월간 릴리스 프로세스의 일부로 부하 테스트를 "
+"거칩니다."
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:43
 msgid "Monitoring post-release"
-msgstr ""
+msgstr "릴리스 후 모니터링"
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:45
 msgid ""
@@ -153,6 +194,10 @@ msgid ""
 "reverted and the deviations are investigated with any fixes being "
 "delivered as a part of patch release."
 msgstr ""
+"Mattermost의 새 버전이 출시된 후에는 여러 주에 걸쳐 Mattermost Cloud 고객에게 "
+"롤아웃됩니다. 롤아웃하는 동안 성능과 오류율 지표에 예상치 못한 변화가 있는지 "
+"모니터링합니다. 사용자에게 영향을 주는 변화가 관찰되면 릴리스를 되돌리고 편차를 "
+"조사하며, 수정 사항은 패치 릴리스의 일부로 제공됩니다."
 
 #: ../../source/administration-guide/scale/ensuring-releases-perform-at-scale.rst:47
 msgid ""
@@ -160,4 +205,6 @@ msgid ""
 "closely monitored for reports of any issues. Any reports are investigated"
 " and resolved appropriately."
 msgstr ""
+"또한 Mattermost 채널, 사용자 포럼, 지원 티켓에서 문제 보고가 있는지 면밀히 "
+"모니터링합니다. 모든 보고는 조사하여 적절히 해결합니다."
 
