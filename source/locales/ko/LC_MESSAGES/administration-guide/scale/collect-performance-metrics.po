@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:2
 msgid "Collect performance metrics"
-msgstr ""
+msgstr "성능 지표 수집"
 
 #: ../../source/_static/badges/entry-ent.rst:9
 msgid ""
@@ -29,6 +29,9 @@ msgid ""
 "Advanced plans <https://mattermost.com/pricing/>`__ (not available on "
 "Professional)"
 msgstr ""
+"|plans-img-yellow| `Entry, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다(Professional에서는 "
+"사용할 수 없음)"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -43,6 +46,11 @@ msgid ""
 " synchronized to either a cloud-based or local file store every hour, and"
 " retained for 15 days."
 msgstr ""
+"시스템 관리자는 이러한 서드파티 도구를 배포하지 않고도 Prometheus와 :doc:`동일한 "
+"성능 모니터링 지표 </administration-guide/scale/performance-monitoring-metrics>`\\ 를 "
+"수집하고 저장할 수 있습니다. 데이터는 매 분 수집되어 구성한 경로에 저장됩니다. "
+"데이터는 매시간 클라우드 기반 또는 로컬 파일 저장소에 동기화되며 15일 동안 "
+"보관됩니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:9
 msgid ""
@@ -50,6 +58,8 @@ msgid ""
 "application performance, troubleshoot system stability and performance, "
 "as well as inform route cause analysis."
 msgstr ""
+"수집된 데이터를 다운로드하여 Mattermost와 공유하면 애플리케이션 성능을 파악하고, "
+"시스템 안정성과 성능 문제를 해결하며, 근본 원인 분석에 활용할 수 있습니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:13
 msgid ""
@@ -58,28 +68,37 @@ msgid ""
 "</administration-guide/scale/deploy-prometheus-grafana-for-performance-"
 "monitoring>`."
 msgstr ""
+"이미 Prometheus와 Grafana를 배포했나요? :doc:`이러한 도구를 사용해 OKR.BEST 배포의 "
+"성능을 모니터링 </administration-guide/scale/deploy-prometheus-grafana-for-"
+"performance-monitoring>`\\ 할 수 있습니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:16
 msgid "Mattermost configuration"
-msgstr ""
+msgstr "OKR.BEST 구성"
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:20
 msgid ""
 "For Mattermost Cloud deployments, no setup is required. See the `usage "
 "<#usage>`__ section below for details on collecting performance metrics."
 msgstr ""
+"Mattermost Cloud 배포에서는 별도의 설정이 필요하지 않습니다. 성능 지표 수집에 관한 "
+"자세한 내용은 아래 `사용법 <#usage>`__ 섹션을 참고하세요."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:22
 msgid ""
 "For a self-hosted Mattermost deployment, a Mattermost system admin must "
 "perform the following steps in Mattermost."
 msgstr ""
+"셀프 호스팅 OKR.BEST 배포에서는 OKR.BEST 시스템 관리자가 OKR.BEST에서 다음 단계를 "
+"수행해야 합니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:24
 msgid ""
 "Log in to your Mattermost :doc:`workspace </end-user-guide/end-user-"
 "guide-index>` as a system admin."
 msgstr ""
+"시스템 관리자로 OKR.BEST :doc:`워크스페이스 </end-user-guide/end-user-guide-"
+"index>`\\ 에 로그인합니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:25
 msgid ""
@@ -88,12 +107,16 @@ msgid ""
 "list| icon and selecting **App Marketplace**. Search for **Metrics** and "
 "select **Install**."
 msgstr ""
+"OKR.BEST v10.1부터 **제품** |product-list| 아이콘을 선택하고 **앱 "
+"마켓플레이스**\\ 를 선택하여 제품 내 OKR.BEST 마켓플레이스에서 Metrics 플러그인을 "
+"설치할 수 있습니다. **Metrics**\\ 를 검색하고 **설치**\\ 를 선택합니다."
 
 #: ../../<rst_prolog>:100
 msgid ""
 "Navigate between Channels, collaborative playbooks, and boards using the "
 "product menu icon."
 msgstr ""
+"제품 메뉴 아이콘을 사용해 채널, 공동 플레이북, 보드 사이를 이동합니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:26
 msgid ""
@@ -101,16 +124,21 @@ msgid ""
 "**Installed Plugins** section, scroll to **Mattermost Metrics Plugin**, "
 "and select **Enable Plugin**."
 msgstr ""
+"**관리자 도구 > 플러그인 > 플러그인 관리**\\ 로 이동합니다. **설치된 플러그인** "
+"섹션에서 **Mattermost Metrics Plugin**\\ 까지 스크롤한 뒤 **플러그인 활성화**\\ 를 "
+"선택합니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:27
 msgid "Specify the path of the time-series database, and select **Save**."
-msgstr ""
+msgstr "시계열 데이터베이스의 경로를 지정하고 **저장**\\ 을 선택합니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:28
 msgid ""
 "Go to **System Console > Environment > Performance Monitoring**, and set "
 "**Enable Performance Monitoring** to **true**. Select **Save**."
 msgstr ""
+"**관리자 도구 > 환경 > 성능 모니터링**\\ 으로 이동해 **성능 모니터링 활성화**\\ 를 "
+"**true**\\ 로 설정합니다. **저장**\\ 을 선택합니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:29
 msgid ""
@@ -119,6 +147,9 @@ msgid ""
 "required for the system administrator's performance monitoring product "
 "experience. Select **Save**."
 msgstr ""
+"**관리자 도구 > 환경 > 성능 모니터링**\\ 으로 이동해 **클라이언트 성능 모니터링 "
+"활성화**\\ 를 **true**\\ 로 설정합니다. 이 설정은 시스템 관리자의 성능 모니터링 제품 "
+"경험에 필요합니다. **저장**\\ 을 선택합니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:33
 msgid ""
@@ -128,10 +159,14 @@ msgid ""
 "v8.0.1 and later. Go to **System Console > Plugins > Plugin Management > "
 "Upload Plugin**, and upload the plugin binary you downloaded."
 msgstr ""
+"v10.1 이전 OKR.BEST 배포에서는 OKR.BEST v8.0.1 이상과 호환되는 최신 버전의 `플러그인 "
+"바이너리 릴리스 <https://github.com/mattermost/mattermost-plugin-"
+"metrics/releases>`__\\ 를 다운로드해야 합니다. **관리자 도구 > 플러그인 > 플러그인 "
+"관리 > 플러그인 업로드**\\ 로 이동해 다운로드한 플러그인 바이너리를 업로드합니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:36
 msgid "Upgrade"
-msgstr ""
+msgstr "업그레이드"
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:38
 msgid ""
@@ -141,16 +176,22 @@ msgid ""
 "/mattermost-plugin-metrics/releases>`__ for the latest release, available"
 " releases, and compatibiilty considerations."
 msgstr ""
+"새 버전이 출시되면 이 기능을 업그레이드하는 것을 권장합니다. 일반적으로 업데이트는 "
+"매끄럽게 진행되며 OKR.BEST의 사용자 경험을 방해하지 않습니다. 최신 릴리스, 사용 "
+"가능한 릴리스, 호환성 고려 사항은 `릴리스 페이지 <https://github.com/mattermost"
+"/mattermost-plugin-metrics/releases>`__\\ 를 참고하세요."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:41
 msgid "Usage"
-msgstr ""
+msgstr "사용법"
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:43
 msgid ""
 "You need to be a Mattermost system admin to collect performance metrics. "
 "Select **Create Dump** to generate dump files."
 msgstr ""
+"성능 지표를 수집하려면 OKR.BEST 시스템 관리자여야 합니다. 덤프 파일을 생성하려면 "
+"**덤프 생성**\\ 을 선택합니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:45
 msgid ""
@@ -160,12 +201,18 @@ msgid ""
 " downloaded file is compressed, so to be able to use it, you need to "
 "decompress it first."
 msgstr ""
+"생성된 덤프 파일을 사용하려면 `Dockprom "
+"<https://github.com/stefanprodan/dockprom>`__ 저장소를 복제하기만 하면 됩니다. "
+"Prometheus 데이터 볼륨을 방금 다운로드한 덤프를 가리키도록 변경합니다. 다운로드한 "
+"파일은 압축되어 있으므로 사용하려면 먼저 압축을 풀어야 합니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:47
 msgid ""
 "The volume configuration for Prometheus should look like the code below "
 "in the ``docker-compose.yml`` file:"
 msgstr ""
+"Prometheus의 볼륨 구성은 ``docker-compose.yml`` 파일에서 아래 코드와 같아야 "
+"합니다:"
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:55
 msgid ""
@@ -173,6 +220,9 @@ msgid ""
 "Repository <https://github.com/stefanprodan/dockprom?tab=readme-ov-"
 "file#install>`__."
 msgstr ""
+"이 설정을 완료하면 `Dockprom 저장소 "
+"<https://github.com/stefanprodan/dockprom?tab=readme-ov-file#install>`__\\ 에 "
+"설명된 대로 ``docker-compose``\\ 를 실행합니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:57
 msgid ""
@@ -180,30 +230,37 @@ msgid ""
 "<https://grafana.com/grafana/dashboards/15582-mattermost-performance-"
 "monitoring-v2/>`_ dashboard by simply importing it into Grafana."
 msgstr ""
+"`Mattermost Performance Monitoring v2 "
+"<https://grafana.com/grafana/dashboards/15582-mattermost-performance-"
+"monitoring-v2/>`_ 대시보드를 Grafana에 가져오기만 하면 이를 사용할 수도 있습니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:59
 msgid "Open Grafana (``<localhost>:3000`` by default) and then log into it."
-msgstr ""
+msgstr "Grafana(기본값 ``<localhost>:3000``)를 열고 로그인합니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:60
 msgid ""
 "Once you log in, go to the **Plus** |plus| icon on the left sidebar, and "
 "then select **Import**."
 msgstr ""
+"로그인하면 왼쪽 사이드바의 **더하기** |plus| 아이콘으로 이동한 뒤 **가져오기**\\ 를 "
+"선택합니다."
 
 #: ../../<rst_prolog>:31
 msgid "The Plus icon provides access to channel and direct message functionality."
-msgstr ""
+msgstr "더하기 아이콘으로 채널 및 개인 메시지 기능에 접근할 수 있습니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:61
 msgid ""
 "Enter the dashboard ID (``15582``) in the **Grafana.com Dashboard** "
 "field, and then select **Load** to fetch the dashboard."
 msgstr ""
+"**Grafana.com Dashboard** 필드에 대시보드 ID(``15582``)를 입력한 뒤 **불러오기**\\ 를 "
+"선택해 대시보드를 가져옵니다."
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:64
 msgid "What's collected?"
-msgstr ""
+msgstr "무엇이 수집되나요?"
 
 #: ../../source/administration-guide/scale/collect-performance-metrics.rst:66
 msgid ""
@@ -217,4 +274,13 @@ msgid ""
 "`node exporter <https://github.com/prometheus/node_exporter>`_ targets to"
 " monitor network-related panels for Mattermost Calls."
 msgstr ""
+"OKR.BEST는 시스템 성능을 모니터링하는 데 사용할 수 있는 :ref:`사용자 정의 지표 "
+"<administration-guide/scale/performance-monitoring-metrics:custom Mattermost "
+"metrics>`\\ 와 :ref:`표준 Go 지표 <administration-guide/scale/performance-"
+"monitoring-metrics:standard go metrics>`\\ 를 제공합니다. 또한 Enterprise 고객은 "
+"Metrics 플러그인을 사용해 `node exporter "
+"<https://github.com/prometheus/node_exporter>`_ 대상에서 :ref:`호스트/시스템 지표 "
+"<administration-guide/scale/performance-monitoring-metrics:host/system "
+"metrics>`\\ 를 수집하여 OKR.BEST 통화의 네트워크 관련 패널을 모니터링할 수 "
+"있습니다."
 
