@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:2
 msgid "mmctl command line tool"
-msgstr ""
+msgstr "mmctl 명령줄 도구"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise 및 Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -43,13 +45,17 @@ msgid ""
 "currently be used alongside the Mattermost CLI tool. The Mattermost CLI "
 "tool will be deprecated in a future release."
 msgstr ""
+"mmctl은 로컬에 설치되어 OKR.BEST API를 사용하는 OKR.BEST 서버용 CLI 도구이지만 원격으로도 사용할 수 있습니다. 인증은 로그인 자격 "
+"증명 또는 인증 토큰으로 수행됩니다. 이 mmctl 도구는 포함되어 있으며 :doc:`CLI "
+"</administration-guide/manage/command-line-tools>`\\ 를 대체합니다. 현재 mmctl은 Mattermost CLI "
+"도구와 함께 사용할 수 있습니다. Mattermost CLI 도구는 향후 릴리스에서 더 이상 사용되지 않을 예정입니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:9
 msgid ""
 "Being installed locally enables system admins for both self-hosted and "
 "Cloud Mattermost instances to run CLI commands even in instances where "
 "there's no access to the server (e.g., via SSH)."
-msgstr ""
+msgstr "로컬에 설치되므로 자체 호스팅 및 Cloud OKR.BEST 인스턴스의 시스템 관리자는 서버에 액세스할 수 없는 경우(예: SSH를 통한 액세스가 없는 경우)에도 CLI 명령을 실행할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:11
 #, python-format
@@ -63,10 +69,15 @@ msgid ""
 " in the `Unit testing mmctl commands <https://mattermost.com/blog/unit-"
 "testing-mmctl-commands/>`__ blog post."
 msgstr ""
+"이 기능은 상당 부분 커뮤니티 기여로 개발되었으며, 이 프로젝트에 참여한 기여자에게 감사드립니다. 현재 `mattermost-server "
+"<https://github.com/mattermost/mattermost/issues?q=is%3Aissue+is%3Aopen+label%3A%22Help+Wanted%22+label%3AArea%2Fmmctl>`__ "
+"저장소의 Help Wanted 이슈에 대한 풀 리퀘스트를 받고 있습니다. mmctl의 단위 테스트 커버리지 캠페인에 대한 자세한 내용은 `Unit "
+"testing mmctl commands <https://mattermost.com/blog/unit-testing-mmctl-commands/>`__ 블로그 "
+"글에서 확인할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:14
 msgid "mmctl usage notes"
-msgstr ""
+msgstr "mmctl 사용 참고 사항"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:16
 msgid ""
@@ -78,19 +89,23 @@ msgid ""
 "repository "
 "<https://github.com/mattermost/mattermost/tree/master/server/cmd/mmctl>`__."
 msgstr ""
+"시스템 관리자가 ``mmctl`` 명령을 실행하는 방법은 두 가지입니다. `설치 지침 <#install-mmctl>`__\\ 에서 확인할 수 있는 릴리스 "
+"URL에서 ``mmctl`` 을 다운로드하거나, 아래 `빌드 지침 <#build-mmctl>`__\\ 에 따라 직접 빌드할 수 있습니다. 소스 코드는 "
+"`mattermost 저장소의 server/cmd/mmctl 디렉토리 "
+"<https://github.com/mattermost/mattermost/tree/master/server/cmd/mmctl>`__ 에 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:17
 msgid ""
 "``mmctl`` also comes bundled with the Mattermost distribution, and is "
 "located in the ``bin`` folder of the installation, next to the ``CLI``."
-msgstr ""
+msgstr "``mmctl`` 은 OKR.BEST 배포판에도 함께 포함되며, 설치의 ``bin`` 폴더에서 ``CLI`` 옆에 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:19
 msgid ""
 "We recommend you add the path to the Mattermost ``bin`` folder into your "
 "``$PATH`` environment variable. This ensures that you can run mmctl "
 "commands locally regardless of your current directory location."
-msgstr ""
+msgstr "OKR.BEST ``bin`` 폴더 경로를 ``$PATH`` 환경 변수에 추가하는 것을 권장합니다. 이렇게 하면 현재 디렉토리 위치와 관계없이 로컬에서 mmctl 명령을 실행할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:20
 msgid ""
@@ -100,10 +115,12 @@ msgid ""
 "you're working from a different directory, make sure you specify the full"
 " path to mmctl when running mmctl commands."
 msgstr ""
+"``bin`` 디렉토리가 ``$PATH`` 환경 변수에 추가되지 않은 경우 mmctl을 사용할 때마다 ``bin`` 디렉토리에 있어야 mmctl 명령을 실행할 "
+"수 있으며, 명령 앞에 ``./`` 를 붙여야 합니다. 다른 디렉토리에서 작업 중이라면 mmctl 명령을 실행할 때 mmctl의 전체 경로를 지정해야 합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:21
 msgid "Parameters in mmctl commands are order-specific."
-msgstr ""
+msgstr "mmctl 명령의 매개변수는 순서에 영향을 받습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:22
 msgid ""
@@ -112,6 +129,8 @@ msgid ""
 "socket. See the `local mode <#local-mode>`__ documentation for activation"
 " and usage details."
 msgstr ""
+"``--local`` 플래그를 mmctl 명령과 함께 사용하면 Unix 소켓을 통해 서버와 통신하도록 허용하여 인증 없이 명령을 실행할 수 있습니다. 활성화 "
+"및 사용 세부 정보는 `로컬 모드 <#local-mode>`__\\ 문서를 참조하세요."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:23
 msgid ""
@@ -120,6 +139,8 @@ msgid ""
 "quotes (e.g. ``-password 'mypassword!'``, or the individual characters "
 "need to be escaped out (e.g. ``password mypassword\\!``)."
 msgstr ""
+"특수 문자(``!``, ``|``, ``(``, ``)``, ``\\``, ``'`` 및 ``\"``)를 사용하는 경우 전체 인수를 작은따옴표로 감싸거나(예: "
+"``-password 'mypassword!'``), 개별 문자를 이스케이프해야 합니다(예: ``password mypassword\\!``)."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:24
 msgid ""
@@ -128,160 +149,163 @@ msgid ""
 "square`` team name would be ``core`` and channel name would be ``town-"
 "square``."
 msgstr ""
+"팀 이름과 채널 이름은 표시명이 아니라 핸들을 의미합니다. 따라서 URL "
+"``https://community.mattermost.com/core/channels/town-square`` 에서 팀 이름은 ``core`` 이고 채널 "
+"이름은 ``town-square`` 입니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:27
 msgid "mmctl commands"
-msgstr ""
+msgstr "mmctl 명령"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:29
 msgid "`mmctl auth`_ - Authentication Management"
-msgstr ""
+msgstr "`mmctl auth`_ - 인증 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:30
 msgid "`mmctl bot`_ - Bot Management"
-msgstr ""
+msgstr "`mmctl bot`_ - 봇 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:31
 msgid "`mmctl channel`_ - Channel Management"
-msgstr ""
+msgstr "`mmctl channel`_ - 채널 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:32
 msgid "`mmctl command`_ - Command Management"
-msgstr ""
+msgstr "`mmctl command`_ - 명령 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:33
 msgid "`mmctl cpa`_ - User Attribute Management"
-msgstr ""
+msgstr "`mmctl cpa`_ - 사용자 속성 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:34
 msgid ""
 "`mmctl completion`_ - Generate autocompletion scripts for bash, fish, "
 "powershell, and zsh"
-msgstr ""
+msgstr "`mmctl completion`_ - bash, fish, powershell, zsh용 자동 완성 스크립트 생성"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:35
 msgid "`mmctl compliance-export`_ - Compliance Export Management"
-msgstr ""
+msgstr "`mmctl compliance-export`_ - 컴플라이언스 내보내기 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:36
 msgid "`mmctl config`_ - Configuration Management"
-msgstr ""
+msgstr "`mmctl config`_ - 구성 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:37
 msgid "`mmctl docs`_ - Generate mmctl documentation"
-msgstr ""
+msgstr "`mmctl docs`_ - mmctl 문서 생성"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:38
 msgid "`mmctl export`_ - Exports Management"
-msgstr ""
+msgstr "`mmctl export`_ - 내보내기 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:39
 msgid "`mmctl group`_ - Group Management"
-msgstr ""
+msgstr "`mmctl group`_ - 그룹 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:40
 msgid "`mmctl group channel`_ - Channel Group Management"
-msgstr ""
+msgstr "`mmctl group channel`_ - 채널 그룹 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:41
 msgid "`mmctl group team`_ - Team Group Management"
-msgstr ""
+msgstr "`mmctl group team`_ - 팀 그룹 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:42
 msgid "`mmctl group user`_ - Custom User Group Management"
-msgstr ""
+msgstr "`mmctl group user`_ - 사용자 정의 사용자 그룹 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:43
 msgid "`mmctl import`_ - Import Management"
-msgstr ""
+msgstr "`mmctl import`_ - 가져오기 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:44
 msgid "`mmctl extract`_ - Content Extraction Job Management"
-msgstr ""
+msgstr "`mmctl extract`_ - 콘텐츠 추출 작업 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:45
 msgid "`mmctl integrity`_ - (Deprecated) Database Record Integrity"
-msgstr ""
+msgstr "`mmctl integrity`_ - (사용 중단됨) 데이터베이스 레코드 무결성"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:46
 msgid "`mmctl job`_ - Job Management"
-msgstr ""
+msgstr "`mmctl job`_ - 작업 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:47
 msgid "`mmctl ldap`_ - LDAP Management"
-msgstr ""
+msgstr "`mmctl ldap`_ - LDAP 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:48
 msgid "`mmctl license`_ - License Management"
-msgstr ""
+msgstr "`mmctl license`_ - 라이선스 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:49
 msgid "`mmctl logs`_ - Log Management"
-msgstr ""
+msgstr "`mmctl logs`_ - 로그 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:50
 msgid "`mmctl oauth`_ - OAuth2 application management"
-msgstr ""
+msgstr "`mmctl oauth`_ - OAuth2 애플리케이션 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:51
 msgid "`mmctl permissions`_ - Permissions Management"
-msgstr ""
+msgstr "`mmctl permissions`_ - 권한 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:52
 msgid "`mmctl plugin`_ - Plugin Management"
-msgstr ""
+msgstr "`mmctl plugin`_ - 플러그인 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:53
 msgid "`mmctl post`_ - Post Management"
-msgstr ""
+msgstr "`mmctl post`_ - 글 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:54
 msgid "`mmctl roles`_ - Roles Management"
-msgstr ""
+msgstr "`mmctl roles`_ - 역할 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:55
 msgid "`mmctl saml`_ - SAML Management"
-msgstr ""
+msgstr "`mmctl saml`_ - SAML 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:56
 msgid "`mmctl sampledata`_ - Generate sample data"
-msgstr ""
+msgstr "`mmctl sampledata`_ - 샘플 데이터 생성"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:57
 msgid "`mmctl system`_ - System Management"
-msgstr ""
+msgstr "`mmctl system`_ - 시스템 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:58
 msgid "`mmctl team`_ - Team Management"
-msgstr ""
+msgstr "`mmctl team`_ - 팀 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:59
 msgid "`mmctl team users`_ - Team User Management"
-msgstr ""
+msgstr "`mmctl team users`_ - 팀 사용자 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:60
 msgid "`mmctl token`_ - Token Management"
-msgstr ""
+msgstr "`mmctl token`_ - 토큰 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:61
 msgid "`mmctl user`_ - User Management"
-msgstr ""
+msgstr "`mmctl user`_ - 사용자 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:62
 msgid "`mmctl user preference`_ - Manage User Preferences"
-msgstr ""
+msgstr "`mmctl user preference`_ - 사용자 환경설정 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:63
 msgid "`mmctl version`_ - Version Management"
-msgstr ""
+msgstr "`mmctl version`_ - 버전 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:64
 msgid "`mmctl webhook`_ - Webhook Management"
-msgstr ""
+msgstr "`mmctl webhook`_ - 웹훅 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:65
 msgid "`mmctl websocket`_ - Websocket Management"
-msgstr ""
+msgstr "`mmctl websocket`_ - WebSocket 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:67
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:194
@@ -495,18 +519,18 @@ msgstr ""
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8292
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8325
 msgid "**Options**"
-msgstr ""
+msgstr "**옵션**"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:83
 msgid "Install mmctl"
-msgstr ""
+msgstr "mmctl 설치"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:85
 msgid ""
 "The mmctl tool comes bundled with Mattermost package. For customers that "
 "want to setup it independently from the package, the following methods "
 "are available to install mmctl."
-msgstr ""
+msgstr "mmctl 도구는 OKR.BEST 패키지에 포함되어 있습니다. 패키지와 독립적으로 설정하려는 고객은 다음 방법으로 mmctl을 설치할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:91
 #, python-brace-format
@@ -516,18 +540,21 @@ msgid ""
 "``https://releases.mattermost.com/mmctl/${MATTERMOST_VERSION}/${PLATFORM}_${ARCHITECTURE}.tar``"
 " (for windows, substitute the ``.tar`` suffix with ``.zip``)"
 msgstr ""
+"Linux, macOS 또는 Windows용 릴리스 페이지를 사용하는 경우 릴리스 URL "
+"``https://releases.mattermost.com/mmctl/${MATTERMOST_VERSION}/${PLATFORM}_${ARCHITECTURE}.tar`` "
+"에서 mmctl 빌드를 다운로드하는 것을 권장합니다(Windows의 경우 ``.tar`` 접미사를 ``.zip`` 으로 바꿉니다)."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:93
 msgid ""
 "E.g. to download version ``v10.7.0`` of the mmctl amd64 build for linux, "
 "you can run the following:"
-msgstr ""
+msgstr "예를 들어 Linux용 mmctl amd64 빌드의 ``v10.7.0`` 버전을 다운로드하려면 다음을 실행할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:99
 msgid ""
 "Supported platforms, and corresponding supported architectures include "
 "linux (amd64 and arm64), darwin (amd64 and arm64), windows (amd64 only)."
-msgstr ""
+msgstr "지원되는 플랫폼과 해당 지원 아키텍처에는 linux(amd64 및 arm64), darwin(amd64 및 arm64), windows(amd64만)가 포함됩니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:103
 msgid ""
@@ -536,6 +563,8 @@ msgid ""
 " This workflow is ideal if you need a tailored version of mmctl, want to "
 "fix bugs, or test new updates before they’re officially released."
 msgstr ""
+"로컬 Git 클론에서 mmctl을 빌드하여 소스 코드로 직접 작업하고, 최신 기능을 사용하고, 사용자 지정 변경 사항을 실험할 수 있습니다. 이 워크플로는 "
+"맞춤형 mmctl 버전이 필요하거나, 버그를 수정하거나, 공식 릴리스 전에 새 업데이트를 테스트하려는 경우에 적합합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:113
 msgid ""
@@ -544,20 +573,22 @@ msgid ""
 "`homebrew/homebrew-core repo <https://github.com/Homebrew/homebrew-"
 "core>`__ for reporting issues."
 msgstr ""
+"**Linux 또는 macOS에서 이 방법은 공식 지원 방식이 아닙니다**. 이 설치 채널은 커뮤니티에서 관리합니다. 문제를 보고하려면 "
+"`homebrew/homebrew-core 저장소 <https://github.com/Homebrew/homebrew-core>`__\\ 를 참조하세요."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:115
 msgid "Use this option on Linux and macOS if you have Homebrew installed."
-msgstr ""
+msgstr "Homebrew가 설치된 Linux 및 macOS에서 이 옵션을 사용합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:122
 msgid "Build mmctl"
-msgstr ""
+msgstr "mmctl 빌드"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:126
 msgid ""
 "The ``mmctl`` tool uses ``go`` modules to manage dependencies, so you "
 "need to have installed ``go`` 1.19 or greater on your machine."
-msgstr ""
+msgstr "``mmctl`` 도구는 종속성 관리를 위해 ``go`` 모듈을 사용하므로 머신에 ``go`` 1.19 이상이 설치되어 있어야 합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:128
 msgid ""
@@ -566,14 +597,16 @@ msgid ""
 "from the root directory of the project, you can compile the mmctl binary "
 "by running:"
 msgstr ""
+"`mattermost 저장소 <https://github.com/mattermost/mattermost>`__\\ 를 로컬 머신에 체크아웃한 후 프로젝트 루트 "
+"디렉토리에서 다음을 실행하여 mmctl 바이너리를 컴파일할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:135
 msgid "Local mode"
-msgstr ""
+msgstr "로컬 모드"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:137
 msgid "**Local mode is available for self-hosted deployments only.**"
-msgstr ""
+msgstr "**로컬 모드는 자체 호스팅 배포에서만 사용할 수 있습니다.**"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:139
 msgid ""
@@ -585,6 +618,9 @@ msgid ""
 "authorized, so they can reach the handlers without requiring a user "
 "session."
 msgstr ""
+"로컬 모드를 사용하면 OKR.BEST 서버에 액세스할 수 있는 플랫폼 관리자가 등록된 사용자 없이 API에 대해 mmctl 명령을 실행할 수 있습니다. 이 "
+"API를 안전하게 사용하도록 서버는 서버 파일 시스템에 액세스할 수 있는 사용자만 접근 가능한 로컬 소켓을 노출합니다. 소켓에서 들어오는 요청은 승인된 것으로 "
+"처리되므로 사용자 세션 없이도 핸들러에 도달할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:141
 msgid ""
@@ -595,10 +631,13 @@ msgid ""
 "server, and this flag is taken into account when checking for session "
 "permissions to correctly authorize the sessions."
 msgstr ""
+"소켓이 노출하는 API는 `API 문서 <https://api.mattermost.com>`_\\ 에서 확인할 수 있는 동일한 사양을 따르므로 mmctl은 수정 "
+"없이 상호 작용할 수 있습니다. 소켓을 통해 요청이 들어오면 서버에서 로컬로 플래그가 지정되며, 이 플래그는 세션 권한을 확인할 때 고려되어 세션을 올바르게 "
+"승인합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:144
 msgid "Activating local mode"
-msgstr ""
+msgstr "로컬 모드 활성화"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:146
 msgid ""
@@ -607,6 +646,9 @@ msgid ""
 "settings:enable local mode for mmctl>`. When local mode is enabled, a "
 "socket is created at ``/var/tmp/mattermost_local.socket`` by default."
 msgstr ""
+"로컬 모드를 사용하려면 먼저 OKR.BEST 서버에서 :ref:`로컬 모드가 활성화되어 있어야 합니다 "
+"<administration-guide/configure/experimental-configuration-settings:enable local mode "
+"for mmctl>`. 로컬 모드가 활성화되면 기본적으로 ``/var/tmp/mattermost_local.socket`` 에 소켓이 생성됩니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:150
 msgid ""
@@ -617,10 +659,13 @@ msgid ""
 "the server configuration for local mode``, this can be resolved by "
 "setting this configuration setting to ``true``."
 msgstr ""
+"mmctl에서 로컬 모드를 사용하려는 경우 서버와 mmctl을 실행할 때 같은 사용자를 사용하거나, 새 사용자로 전환하기 전에 소켓 파일을 정리해야 합니다. "
+"``socket file \"/var/tmp/mattermost_local.socket\" doesn't exists, please check the "
+"server configuration for local mode`` 같은 오류가 발생하면 이 구성 설정을 ``true`` 로 설정하여 해결할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:153
 msgid "Using local mode"
-msgstr ""
+msgstr "로컬 모드 사용"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:155
 msgid ""
@@ -630,12 +675,14 @@ msgid ""
 "command you want to use. When valid credentials exist, Mattermost will "
 "continue to validate them as expected."
 msgstr ""
+"OKR.BEST v10.8부터 인증 구성에서 인증 자격 증명을 찾을 수 없는 경우 mmctl은 자동으로 로컬 모드를 가정하므로 사용하려는 명령에 "
+"``--local`` 플래그를 수동으로 추가할 필요가 없습니다. 유효한 자격 증명이 있으면 OKR.BEST가 예상대로 계속 검증합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:157
 msgid ""
 "Prior to Mattermost v10.8, you must append ``--local`` to the command you"
 " want to use, or set the environment variable as ``MMCTL_LOCAL=true``."
-msgstr ""
+msgstr "OKR.BEST v10.8 이전에는 사용하려는 명령에 ``--local`` 을 추가하거나 환경 변수를 ``MMCTL_LOCAL=true`` 로 설정해야 합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:159
 msgid ""
@@ -644,24 +691,27 @@ msgid ""
 " the :ref:`server configuration setting <administration-guide/configure"
 "/experimental-configuration-settings:enable local mode socket location>`."
 msgstr ""
+"기본값이 아닌 소켓 파일을 사용하려면 환경 변수를 ``MMCTL_LOCAL_SOCKET_PATH`` 로 설정해야 합니다. 이 파일은 :ref:`서버 구성 설정 "
+"<administration-guide/configure/experimental-configuration-settings:enable local mode "
+"socket location>` 과 일치해야 합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:162
 msgid "Running mmctl tests"
-msgstr ""
+msgstr "mmctl 테스트 실행"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:164
 msgid "**Available for self-hosted deployments only.**"
-msgstr ""
+msgstr "**자체 호스팅 배포에서만 사용할 수 있습니다.**"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:166
 msgid "mmctl has two types of tests: unit tests and end to end tests."
-msgstr ""
+msgstr "mmctl에는 단위 테스트와 엔드 투 엔드 테스트라는 두 가지 테스트 유형이 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:168
 msgid ""
 "To execute them, you can run the following commands from the mattermost "
 "project root directory:"
-msgstr ""
+msgstr "이를 실행하려면 mattermost 프로젝트 루트 디렉토리에서 다음 명령을 실행할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:179
 msgid "mmctl auth"
@@ -852,13 +902,13 @@ msgstr ""
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8276
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8315
 msgid "**Description**"
-msgstr ""
+msgstr "**설명**"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:183
 msgid ""
 "Manage the credentials and authentication methods of remote Mattermost "
 "instances."
-msgstr ""
+msgstr "원격 OKR.BEST 인스턴스의 자격 증명과 인증 방식을 관리합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:185
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:587
@@ -895,35 +945,35 @@ msgstr ""
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7541
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:7994
 msgid "Child Commands"
-msgstr ""
+msgstr "하위 명령"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:186
 msgid "`mmctl auth clean`_ - Clean credentials"
-msgstr ""
+msgstr "`mmctl auth clean`_ - 자격 증명 정리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:187
 msgid "`mmctl auth current`_ - Display current credentials"
-msgstr ""
+msgstr "`mmctl auth current`_ - 현재 자격 증명 표시"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:188
 msgid "`mmctl auth delete`_ - Delete authentication details"
-msgstr ""
+msgstr "`mmctl auth delete`_ - 인증 세부 정보 삭제"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:189
 msgid "`mmctl auth list`_ - List registered credentials"
-msgstr ""
+msgstr "`mmctl auth list`_ - 등록된 자격 증명 나열"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:190
 msgid "`mmctl auth login`_ - Log into Mattermost instance"
-msgstr ""
+msgstr "`mmctl auth login`_ - OKR.BEST 인스턴스에 로그인"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:191
 msgid "`mmctl auth renew`_ - Renew login credentials"
-msgstr ""
+msgstr "`mmctl auth renew`_ - 로그인 자격 증명 갱신"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:192
 msgid "`mmctl auth set`_ - Set login credentials"
-msgstr ""
+msgstr "`mmctl auth set`_ - 로그인 자격 증명 설정"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:201
 msgid "mmctl auth clean"
@@ -931,7 +981,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:205
 msgid "Clean the credentials associated with a Mattermost instance."
-msgstr ""
+msgstr "OKR.BEST 인스턴스와 연결된 자격 증명을 정리합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:207
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:246
@@ -1108,7 +1158,7 @@ msgstr ""
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8280
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8319
 msgid "**Format**"
-msgstr ""
+msgstr "**형식**"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:213
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:252
@@ -1265,7 +1315,7 @@ msgstr ""
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8239
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8286
 msgid "**Examples**"
-msgstr ""
+msgstr "**예시**"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:225
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:264
@@ -1447,7 +1497,7 @@ msgstr ""
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8298
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8331
 msgid "**Options inherited from parent commands**"
-msgstr ""
+msgstr "**상위 명령에서 상속된 옵션**"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:240
 msgid "mmctl auth current"
@@ -1455,7 +1505,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:244
 msgid "Show the currently stored user credentials."
-msgstr ""
+msgstr "현재 저장된 사용자 자격 증명을 표시합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:279
 msgid "mmctl auth delete"
@@ -1463,7 +1513,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:283
 msgid "Delete a named credential."
-msgstr ""
+msgstr "이름이 지정된 자격 증명을 삭제합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:318
 msgid "mmctl auth list"
@@ -1471,7 +1521,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:322
 msgid "Print a list of registered credentials."
-msgstr ""
+msgstr "등록된 자격 증명 목록을 출력합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:357
 msgid "mmctl auth login"
@@ -1485,76 +1535,79 @@ msgid ""
 "token>`_ instead of using username/password. See `access tokens <#access-"
 "tokens>`__ for details."
 msgstr ""
+"인스턴스에 로그인하고 자격 증명을 저장합니다. 사용자 ID/비밀번호 대신 `개인 액세스 토큰 "
+"<https://developers.mattermost.com/integrate/reference/personal-access-token>`_ 으로 로그인할 "
+"수 있습니다. 자세한 내용은 `액세스 토큰 <#access-tokens>`__\\ 을 참조하세요."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:405
 msgid "Password"
-msgstr ""
+msgstr "비밀번호"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:411
 msgid ""
 "The ``login`` command can also work interactively, so if you leave any "
 "required flag empty, ``mmctl`` will ask you for it interactively:"
-msgstr ""
+msgstr "``login`` 명령은 대화형으로도 작동할 수 있으므로 필요한 플래그를 비워 두면 ``mmctl`` 이 대화형으로 요청합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:421
 msgid "MFA"
-msgstr ""
+msgstr "MFA"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:423
 msgid "To log in with MFA, use the ``--mfa-token`` flag:"
-msgstr ""
+msgstr "MFA로 로그인하려면 ``--mfa-token`` 플래그를 사용합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:430
 msgid "Access tokens"
-msgstr ""
+msgstr "액세스 토큰"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:432
 msgid ""
 "You can generate and use a personal access token to authenticate with a "
 "server, instead of using username and password to log in:"
-msgstr ""
+msgstr "사용자 ID와 비밀번호로 로그인하는 대신 개인 액세스 토큰을 생성하고 사용하여 서버에 인증할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:438
 msgid ""
 "Alternatively, you can log in to your Mattermost server with a username "
 "and password:"
-msgstr ""
+msgstr "또는 사용자 ID와 비밀번호로 OKR.BEST 서버에 로그인할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:445
 msgid "We can check the currently stored credentials with:"
-msgstr ""
+msgstr "현재 저장된 자격 증명은 다음으로 확인할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:455
 msgid "And now we can run commands normally:"
-msgstr ""
+msgstr "이제 명령을 정상적으로 실행할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:471
 msgid "Installing shell completions"
-msgstr ""
+msgstr "셸 자동 완성 설치"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:473
 msgid ""
 "mmctl supports shell completions for bash, fish, powershell, and zsh from"
 " Mattermost v11."
-msgstr ""
+msgstr "mmctl은 OKR.BEST v11부터 bash, fish, powershell, zsh용 셸 자동 완성을 지원합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:475
 msgid ""
 "To install the shell completions for **bash**, add the following line to "
 "your ``~/.bashrc`` or ``~/.profile`` file:"
-msgstr ""
+msgstr "**bash** 용 셸 자동 완성을 설치하려면 다음 줄을 ``~/.bashrc`` 또는 ``~/.profile`` 파일에 추가합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:481
 msgid "For **zsh**, add the following line to your ``~/.zshrc`` file:"
-msgstr ""
+msgstr "**zsh** 의 경우 다음 줄을 ``~/.zshrc`` 파일에 추가합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:487
 msgid "For **fish**, add the following line to your fish configuration:"
-msgstr ""
+msgstr "**fish** 의 경우 fish 구성에 다음 줄을 추가합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:493
 msgid "For **powershell**, add the following line to your PowerShell profile:"
-msgstr ""
+msgstr "**powershell** 의 경우 PowerShell 프로필에 다음 줄을 추가합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:500
 msgid "mmctl auth renew"
@@ -1562,7 +1615,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:504
 msgid "Renew the credentials for a given server."
-msgstr ""
+msgstr "지정된 서버의 자격 증명을 갱신합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:542
 msgid "mmctl auth set"
@@ -1570,7 +1623,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:546
 msgid "Set credentials to use in the following commands."
-msgstr ""
+msgstr "다음 명령에서 사용할 자격 증명을 설정합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:580
 msgid ""
@@ -1578,6 +1631,8 @@ msgid ""
 "``https://test.mattermost.com)``, then enter your username and password "
 "(and MFA token if MFA is enabled on the account)."
 msgstr ""
+"서버에 인증합니다(예: >mmctl auth login ``https://test.mattermost.com)`` 를 실행한 다음 사용자 ID와 비밀번호를 "
+"입력하고, 계정에 MFA가 활성화되어 있으면 MFA 토큰도 입력)."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:583
 msgid "mmctl bot"
@@ -1585,31 +1640,31 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:585
 msgid "Manage bots."
-msgstr ""
+msgstr "봇을 관리합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:588
 msgid "`mmctl bot assign`_ - Assign bot ownership"
-msgstr ""
+msgstr "`mmctl bot assign`_ - 봇 소유권 할당"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:589
 msgid "`mmctl bot create`_ - Create a new bot"
-msgstr ""
+msgstr "`mmctl bot create`_ - 새 봇 생성"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:590
 msgid "`mmctl bot disable`_ - Disable a bot"
-msgstr ""
+msgstr "`mmctl bot disable`_ - 봇 비활성화"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:591
 msgid "`mmctl bot enable`_ - Enable a bot"
-msgstr ""
+msgstr "`mmctl bot enable`_ - 봇 활성화"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:592
 msgid "`mmctl bot list`_ - List all bots"
-msgstr ""
+msgstr "`mmctl bot list`_ - 모든 봇 나열"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:593
 msgid "`mmctl bot update`_ - Update bot configuration"
-msgstr ""
+msgstr "`mmctl bot update`_ - 봇 구성 업데이트"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:602
 msgid "mmctl bot assign"
@@ -1617,7 +1672,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:606
 msgid "Assign the ownership of a bot to another user."
-msgstr ""
+msgstr "봇의 소유권을 다른 사용자에게 할당합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:641
 msgid "mmctl bot create"
@@ -1625,7 +1680,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:645
 msgid "Create a bot."
-msgstr ""
+msgstr "봇을 생성합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:682
 msgid "mmctl bot disable"
@@ -1633,7 +1688,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:686
 msgid "Disable an enabled bot."
-msgstr ""
+msgstr "활성화된 봇을 비활성화합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:721
 msgid "mmctl bot enable"
@@ -1641,7 +1696,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:725
 msgid "Enable a disabled bot."
-msgstr ""
+msgstr "비활성화된 봇을 활성화합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:760
 msgid "mmctl bot list"
@@ -1649,7 +1704,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:764
 msgid "List the bot's users."
-msgstr ""
+msgstr "봇 사용자를 나열합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:801
 msgid "mmctl bot update"
@@ -1657,7 +1712,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:805
 msgid "Update bot information."
-msgstr ""
+msgstr "봇 정보를 업데이트합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:843
 msgid "mmctl channel"
@@ -1665,73 +1720,73 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:845
 msgid "Manage channels."
-msgstr ""
+msgstr "채널을 관리합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:848
 msgid "`mmctl channel add`_ - (Deprecated) Add a user to a channel"
-msgstr ""
+msgstr "`mmctl channel add`_ - (사용 중단됨) 채널에 사용자 추가"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:849
 msgid "`mmctl channel archive`_ - Archive a channel"
-msgstr ""
+msgstr "`mmctl channel archive`_ - 채널 보관"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:850
 msgid "`mmctl channel create`_ - Create a channel"
-msgstr ""
+msgstr "`mmctl channel create`_ - 채널 생성"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:851
 msgid "`mmctl channel delete`_ - Delete a channel"
-msgstr ""
+msgstr "`mmctl channel delete`_ - 채널 삭제"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:852
 msgid "`mmctl channel list`_ - List all channels on specified teams"
-msgstr ""
+msgstr "`mmctl channel list`_ - 지정된 팀의 모든 채널 나열"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:853
 msgid ""
 "`mmctl channel make-private`_ - (Deprecated) Set a channel's type to "
 "\"private\""
-msgstr ""
+msgstr "`mmctl channel make-private`_ - (사용 중단됨) 채널 유형을 \"private\" 으로 설정"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:854
 msgid "`mmctl channel modify`_ - Modify a channel's type (private/public)"
-msgstr ""
+msgstr "`mmctl channel modify`_ - 채널 유형(private/public) 수정"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:855
 msgid "`mmctl channel move`_ - Move channels to the specified team"
-msgstr ""
+msgstr "`mmctl channel move`_ - 채널을 지정된 팀으로 이동"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:856
 msgid "`mmctl channel remove`_ - (Deprecated) Remove a user from a channel"
-msgstr ""
+msgstr "`mmctl channel remove`_ - (사용 중단됨) 채널에서 사용자 제거"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:857
 msgid "`mmctl channel rename`_ - Rename a channel"
-msgstr ""
+msgstr "`mmctl channel rename`_ - 채널 이름 변경"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:858
 msgid "`mmctl channel restore`_ - (Deprecated) Restore a channel from the archive"
-msgstr ""
+msgstr "`mmctl channel restore`_ - (사용 중단됨) 보관함에서 채널 복원"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:859
 msgid "`mmctl channel search`_ - Search a channel by name"
-msgstr ""
+msgstr "`mmctl channel search`_ - 이름으로 채널 검색"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:860
 msgid "`mmctl channel unarchive`_ - Unarchive a channel"
-msgstr ""
+msgstr "`mmctl channel unarchive`_ - 채널 보관 해제"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:861
 msgid "`mmctl channel users`_ - Manage channel users"
-msgstr ""
+msgstr "`mmctl channel users`_ - 채널 사용자 관리"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:862
 msgid "`mmctl channel users add`_ - Add a user to a channel"
-msgstr ""
+msgstr "`mmctl channel users add`_ - 채널에 사용자 추가"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:863
 msgid "`mmctl channel users remove`_ - Remove a user from a channel"
-msgstr ""
+msgstr "`mmctl channel users remove`_ - 채널에서 사용자 제거"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:872
 msgid "mmctl channel archive"
@@ -1742,7 +1797,7 @@ msgid ""
 "Archive channels along with all related information including posts from "
 "the database. Channels can be specified by ``[team]:[channel]`` (i.e., "
 "``myteam:mychannel``), or by channel ID."
-msgstr ""
+msgstr "데이터베이스의 글을 포함하여 모든 관련 정보와 함께 채널을 보관합니다. 채널은 ``[team]:[channel]``(예: ``myteam:mychannel``) 또는 채널 ID로 지정할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:911
 msgid "mmctl channel add"
@@ -1754,10 +1809,13 @@ msgid ""
 "<administration-guide/manage/mmctl-command-line-tool:mmctl channel users "
 "add>`."
 msgstr ""
+"이 명령은 :ref:`mmctl channel users add "
+"<administration-guide/manage/mmctl-command-line-tool:mmctl channel users add>` 로 대체되어 더 "
+"이상 사용되지 않습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:917
 msgid "Add a user to a channel."
-msgstr ""
+msgstr "채널에 사용자를 추가합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:952
 msgid "mmctl channel create"
@@ -1765,7 +1823,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:956
 msgid "Create a channel."
-msgstr ""
+msgstr "채널을 생성합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:998
 msgid "mmctl channel delete"
@@ -1775,7 +1833,7 @@ msgstr ""
 msgid ""
 "Permanently delete channels along with all related information including "
 "posts from the database."
-msgstr ""
+msgstr "데이터베이스의 글을 포함하여 모든 관련 정보와 함께 채널을 영구적으로 삭제합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1005
 msgid ""
@@ -1785,6 +1843,10 @@ msgid ""
 "configuration setting is set to ``false``, attempting to delete the "
 "channel using mmctl fails."
 msgstr ""
+":ref:`Enable API Channel Deletion "
+"<administration-guide/configure/environment-configuration-settings:enable api channel "
+"deletion>` 구성 설정이 ``true`` 로 설정되어 있어야 합니다. 이 구성 설정이 ``false`` 로 설정된 경우 mmctl을 사용한 채널 삭제 "
+"시도가 실패합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1041
 msgid "mmctl channel list"
@@ -1795,7 +1857,7 @@ msgid ""
 "List all Public, Private, and archived channels on specified teams. "
 "Archived channels are appended with ``(archived)``. Private channels the "
 "user is a member of, or has access to, are appended with ``(private)``."
-msgstr ""
+msgstr "지정된 팀의 모든 공개, 비공개, 보관된 채널을 나열합니다. 보관된 채널에는 ``(archived)`` 가 추가됩니다. 사용자가 구성원이거나 액세스할 수 있는 비공개 채널에는 ``(private)`` 이 추가됩니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1080
 msgid "mmctl channel make-private"
@@ -1807,13 +1869,16 @@ msgid ""
 "<administration-guide/manage/mmctl-command-line-tool:mmctl channel "
 "modify>` and the ``--private`` flag."
 msgstr ""
+"이 명령은 :ref:`mmctl channel modify "
+"<administration-guide/manage/mmctl-command-line-tool:mmctl channel modify>` 및 "
+"``--private`` 플래그로 대체되어 더 이상 사용되지 않습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1086
 msgid ""
 "Set the type of a channel from Public to Private. Channel can be "
 "specified by ``[team]:[channel]`` (e.g., ``myteam:mychannel``), or by "
 "channel ID."
-msgstr ""
+msgstr "채널 유형을 공개에서 비공개로 설정합니다. 채널은 ``[team]:[channel]``(예: ``myteam:mychannel``) 또는 채널 ID로 지정할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1121
 msgid "mmctl channel modify"
@@ -1823,7 +1888,7 @@ msgstr ""
 msgid ""
 "Change the Public/Private type of a channel. Channel can be specified by "
 "``[team]:[channel]`` (e.g., ``myteam:mychannel``), or by channel ID."
-msgstr ""
+msgstr "채널의 공개/비공개 유형을 변경합니다. 채널은 ``[team]:[channel]``(예: ``myteam:mychannel``) 또는 채널 ID로 지정할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1163
 msgid "mmctl channel move"
@@ -1836,6 +1901,8 @@ msgid ""
 " moved along with the channel. Channels can be specified by "
 "``[team]:[channel]`` (e.g., ``myteam:mychannel``), or by channel ID."
 msgstr ""
+"제공된 채널을 지정된 팀으로 이동합니다. 채널의 모든 사용자가 대상 팀에 속하는지 검증합니다. 수신/발신 웹훅도 채널과 함께 이동됩니다. 채널은 "
+"``[team]:[channel]``(예: ``myteam:mychannel``) 또는 채널 ID로 지정할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1203
 msgid "mmctl channel rename"
@@ -1843,7 +1910,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1207
 msgid "Rename an existing channel."
-msgstr ""
+msgstr "기존 채널의 이름을 변경합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1246
 msgid "mmctl channel remove"
@@ -1855,10 +1922,13 @@ msgid ""
 "<administration-guide/manage/mmctl-command-line-tool:mmctl channel users "
 "remove>`."
 msgstr ""
+"이 명령은 :ref:`mmctl channel users remove "
+"<administration-guide/manage/mmctl-command-line-tool:mmctl channel users remove>` 로 대체되어 "
+"더 이상 사용되지 않습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1252
 msgid "Remove a user from a channel."
-msgstr ""
+msgstr "채널에서 사용자를 제거합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1287
 msgid "mmctl channel restore"
@@ -1868,13 +1938,13 @@ msgstr ""
 msgid ""
 "This command is deprecated in favor of `mmctl channel unarchive`_. Not "
 "used in Mattermost Server version v5.26 and later."
-msgstr ""
+msgstr "이 명령은 `mmctl channel unarchive`_\\ 로 대체되어 더 이상 사용되지 않습니다. OKR.BEST 서버 v5.26 이상에서는 사용되지 않습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1293
 msgid ""
 "Restore a previously deleted channel. Channels can be specified by "
 "``[team]:[channel]`` (e.g., ``myteam:mychannel``), or by channel ID."
-msgstr ""
+msgstr "이전에 삭제한 채널을 복원합니다. 채널은 ``[team]:[channel]``(예: ``myteam:mychannel``) 또는 채널 ID로 지정할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1323
 msgid "mmctl channel search"
@@ -1885,7 +1955,7 @@ msgid ""
 "Search for channel details by channel name. Channels can be specified by "
 "team (e.g., ``--team myteam mychannel``), or by team ID. Returns channel "
 "name, display name, and channel ID."
-msgstr ""
+msgstr "채널 이름으로 채널 세부 정보를 검색합니다. 채널은 팀(예: ``--team myteam mychannel``) 또는 팀 ID로 지정할 수 있습니다. 채널 이름, 표시명, 채널 ID를 반환합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1365
 msgid "mmctl channel unarchive"
@@ -1895,7 +1965,7 @@ msgstr ""
 msgid ""
 "Unarchive a previously archived channel. Channels can be specified by "
 "``[team]:[channel]`` (e.g., ``myteam:mychannel``), or by channel ID."
-msgstr ""
+msgstr "이전에 보관한 채널을 보관 해제합니다. 채널은 ``[team]:[channel]``(예: ``myteam:mychannel``) 또는 채널 ID로 지정할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1404
 msgid "mmctl channel users"
@@ -1903,7 +1973,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1408
 msgid "Manage channel users."
-msgstr ""
+msgstr "채널 사용자를 관리합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1431
 msgid "mmctl channel users add"
@@ -1911,7 +1981,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1435
 msgid "Add users to a channel."
-msgstr ""
+msgstr "채널에 사용자를 추가합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1470
 msgid "mmctl channel users remove"
@@ -1919,7 +1989,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1474
 msgid "Remove users from a channel."
-msgstr ""
+msgstr "채널에서 사용자를 제거합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1511
 msgid "mmctl command"
@@ -1927,35 +1997,35 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1513
 msgid "Manage slash commands."
-msgstr ""
+msgstr "슬래시 명령어를 관리합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1516
 msgid "`mmctl command archive`_ - Archive a slash command"
-msgstr ""
+msgstr "`mmctl command archive`_ - 슬래시 명령어 보관"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1517
 msgid "`mmctl command create`_ - Create a custom command"
-msgstr ""
+msgstr "`mmctl command create`_ - 사용자 지정 명령 생성"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1518
 msgid "`mmctl command delete`_ - (Deprecated) Delete a specified slash command"
-msgstr ""
+msgstr "`mmctl command delete`_ - (사용 중단됨) 지정된 슬래시 명령어 삭제"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1519
 msgid "`mmctl command list`_ - List slash commands on specified teams"
-msgstr ""
+msgstr "`mmctl command list`_ - 지정된 팀의 슬래시 명령어 나열"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1520
 msgid "`mmctl command modify`_ - Modify a slash command"
-msgstr ""
+msgstr "`mmctl command modify`_ - 슬래시 명령어 수정"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1521
 msgid "`mmctl command move`_ - Move a slash command to a different team"
-msgstr ""
+msgstr "`mmctl command move`_ - 슬래시 명령어를 다른 팀으로 이동"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1522
 msgid "`mmctl command show`_ - Show a custom slash command"
-msgstr ""
+msgstr "`mmctl command show`_ - 사용자 지정 슬래시 명령어 표시"
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1531
 msgid "mmctl command archive"
@@ -1963,7 +2033,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1535
 msgid "Archive a slash command. Commands can be specified by command ID."
-msgstr ""
+msgstr "슬래시 명령어를 보관합니다. 명령은 명령 ID로 지정할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1570
 msgid "mmctl command create"
@@ -1971,7 +2041,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1574
 msgid "Create a custom slash command for the specified team."
-msgstr ""
+msgstr "지정된 팀에 대한 사용자 지정 슬래시 명령어를 생성합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1620
 msgid "mmctl command delete"
@@ -1979,11 +2049,11 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1622
 msgid "This command is deprecated in favor of `mmctl command archive`_."
-msgstr ""
+msgstr "이 명령은 `mmctl command archive`_\\ 로 대체되어 더 이상 사용되지 않습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1626
 msgid "Delete a slash command. Commands can be specified by command ID."
-msgstr ""
+msgstr "슬래시 명령어를 삭제합니다. 명령은 명령 ID로 지정할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1656
 msgid "mmctl command list"
@@ -1991,7 +2061,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1660
 msgid "List all commands on specified teams."
-msgstr ""
+msgstr "지정된 팀의 모든 명령을 나열합니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1695
 msgid "mmctl command modify"
@@ -1999,7 +2069,7 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1699
 msgid "Modify a slash command. Commands can be specified by command ID."
-msgstr ""
+msgstr "슬래시 명령어를 수정합니다. 명령은 명령 ID로 지정할 수 있습니다."
 
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:1745
 msgid "mmctl command move"
@@ -4456,4 +4526,3 @@ msgstr ""
 #: ../../source/administration-guide/manage/mmctl-command-line-tool.rst:8317
 msgid "Display websocket in a human-readable format."
 msgstr ""
-
