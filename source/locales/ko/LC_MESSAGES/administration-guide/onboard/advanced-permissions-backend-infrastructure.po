@@ -21,13 +21,13 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:2
 msgid "Advanced permissions: backend infrastructure"
-msgstr ""
+msgstr "고급 권한: 백엔드 인프라"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced 플랜 <https://mattermost.com/pricing/>`__\ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -38,27 +38,27 @@ msgid ""
 "This document outlines the backend server infrastructure for permissions "
 "in Mattermost and is recommended only for technical Admins or developers "
 "looking to make modifications to their installation."
-msgstr ""
+msgstr "이 문서는 OKR.BEST의 권한에 대한 백엔드 서버 인프라를 설명하며, 설치를 수정하려는 기술 관리자나 개발자에게만 권장됩니다."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:10
 msgid "Entity definitions"
-msgstr ""
+msgstr "엔터티 정의"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:13
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:52
 msgid "Permissions"
-msgstr ""
+msgstr "권한"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:15
 msgid ""
 "A **permission** describes a permitted action which may be carried out on"
 " an object. It describes the action that users may perform in the context"
 " in which they have been assigned the role granting the permission."
-msgstr ""
+msgstr "**권한(permission)**\ 은 객체에 대해 수행할 수 있는 허용된 작업을 설명합니다. 사용자가 권한을 부여하는 역할을 할당받은 컨텍스트에서 수행할 수 있는 작업을 설명합니다."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:18
 msgid "Roles"
-msgstr ""
+msgstr "역할"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:20
 msgid ""
@@ -66,11 +66,11 @@ msgid ""
 "assigned to users in contexts in order to grant them the assigned "
 "permissions in that context. One user may end up with different sets of "
 "permissions granted by different roles in different contexts."
-msgstr ""
+msgstr "**역할(role)**\ 은 권한이 부여되는 대상으로, 해당 컨텍스트에서 할당된 권한을 사용자에게 부여하기 위해 컨텍스트에서 사용자에게 할당됩니다. 한 사용자는 서로 다른 컨텍스트에서 서로 다른 역할이 부여한 서로 다른 권한 집합을 갖게 될 수 있습니다."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:23
 msgid "Scope"
-msgstr ""
+msgstr "범위"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:25
 msgid ""
@@ -80,29 +80,29 @@ msgid ""
 "“Channel” scoped permission is applied to a “Team” context, the "
 "permission applies to any channels within that team. A permission is "
 "considered,"
-msgstr ""
+msgstr "권한은 주어진 범위 내에 존재합니다. OKR.BEST 시스템에는 System, Team, Channel의 세 가지 범위가 있습니다. 권한은 적용된 컨텍스트에서 범위를 따라 아래로 전파됩니다. 예를 들어 “Channel” 범위 권한이 “Team” 컨텍스트에 적용되면, 해당 권한은 그 팀 내의 모든 채널에 적용됩니다. 권한은 다음과 같이 간주됩니다,"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:27
 msgid ""
 "**System scope** if it makes sense only on the system level. For example,"
 " ``manage_oauth``."
-msgstr ""
+msgstr "시스템 수준에서만 의미가 있으면 **System 범위**\ 입니다. 예: ``manage_oauth``."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:28
 msgid ""
 "**Team scope** if it makes sense at the team level and system level. For "
 "example, ``create_public_channel``."
-msgstr ""
+msgstr "팀 수준과 시스템 수준에서 의미가 있으면 **Team 범위**\ 입니다. 예: ``create_public_channel``."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:29
 msgid ""
 "**Channel scope** if it makes sense at channel, team and system level. "
 "For example, ``manage_public_channel_properties``."
-msgstr ""
+msgstr "채널, 팀, 시스템 수준에서 의미가 있으면 **Channel 범위**\ 입니다. 예: ``manage_public_channel_properties``."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:32
 msgid "Context"
-msgstr ""
+msgstr "컨텍스트"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:34
 msgid ""
@@ -111,7 +111,7 @@ msgid ""
 "hierarchical relationships between them that reflect the hierarchical "
 "ordering of scopes. Each context has one parent, and may have multiple "
 "children, with the ultimate parent context being the system context:"
-msgstr ""
+msgstr "**컨텍스트(context)**\ 는 범위의 인스턴스입니다. 예를 들어 \"Developers Hangout\"이라는 채널은 채널 범위의 인스턴스입니다. 컨텍스트는 범위의 계층적 순서를 반영하는 계층적 관계를 서로 가집니다. 각 컨텍스트에는 하나의 부모가 있고 여러 자식이 있을 수 있으며, 최상위 부모 컨텍스트는 시스템 컨텍스트입니다:"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:36
 msgid ""
@@ -119,7 +119,7 @@ msgid ""
 "context. For example, the \"Developers Hangout\" channel is the channel "
 "context, with parent team context \"Contributors Team\", with parent "
 "system context."
-msgstr ""
+msgstr "채널 컨텍스트에는 부모 팀 컨텍스트가 있으며, 그 부모는 시스템 컨텍스트입니다. 예를 들어 \"Developers Hangout\" 채널은 채널 컨텍스트이고, 부모 팀 컨텍스트는 \"Contributors Team\"이며, 그 부모는 시스템 컨텍스트입니다."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:37
 msgid ""
@@ -127,7 +127,7 @@ msgid ""
 "For example, the \"Contributors Team\" is the team context, with parent "
 "system context, and with children channel contexts such as \"Developers "
 "Hangout\", \"Reception\" and \"Marketing\"."
-msgstr ""
+msgstr "팀 컨텍스트에는 부모 시스템 컨텍스트와 자식 채널 컨텍스트가 있습니다. 예를 들어 \"Contributors Team\"은 팀 컨텍스트이고, 부모는 시스템 컨텍스트이며, 자식 채널 컨텍스트로는 \"Developers Hangout\", \"Reception\", \"Marketing\" 등이 있습니다."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:39
 msgid ""
@@ -139,11 +139,11 @@ msgid ""
 "``manage_public_channel_properties`` permission in a role in the system "
 "context, then the user has permissions to manage public channel "
 "properties in all channels, in all teams, of which they are a member."
-msgstr ""
+msgstr "사용자가 주어진 컨텍스트에서 주어진 작업을 수행할 수 있는지 판단할 때, 현재 컨텍스트와 그 부모 컨텍스트에서 해당 사용자에게 할당된 모든 역할의 권한의 합집합이 계산됩니다. 이를 통해 권한이 범위 계층을 따라 아래로 전파될 수 있습니다. 예를 들어 사용자에게 시스템 컨텍스트의 역할에서 ``manage_public_channel_properties`` 권한이 부여되면, 해당 사용자는 자신이 구성원인 모든 팀의 모든 채널에서 공개 채널 속성을 관리할 권한을 가집니다."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:42
 msgid "Schemes"
-msgstr ""
+msgstr "스킴"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:44
 msgid ""
@@ -154,7 +154,7 @@ msgid ""
 "Scheme, which serves the purpose of providing the system-wide defaults. "
 "For example, if Team A does not have a team-scoped scheme defined, the "
 "System Scheme will provide the defaults for all contexts in Team A."
-msgstr ""
+msgstr "스킴은 컨텍스트와 모든 자식 컨텍스트에서 사용자에게 적용되는 기본 역할을 설명합니다. 스킴은 컨텍스트에 대해 구체적으로 정의되거나, 지정되지 않은 경우 부모 컨텍스트 스킴의 관련 부분이 적용되며, 궁극적으로 계층을 올라가 시스템 전체 기본값을 제공하는 역할을 하는 System Scheme에 도달합니다. 예를 들어 Team A에 팀 범위 스킴이 정의되어 있지 않으면, System Scheme이 Team A의 모든 컨텍스트에 대한 기본값을 제공합니다."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:46
 msgid ""
@@ -162,33 +162,33 @@ msgid ""
 "context. For example, if Team B has a team-scoped scheme, that scheme "
 "takes precedence over the System Scheme defaults for all contexts in Team"
 " B."
-msgstr ""
+msgstr "또한 가장 낮은 범위의 스킴이 항상 컨텍스트에서 우선합니다. 예를 들어 Team B에 팀 범위 스킴이 있으면, 해당 스킴이 Team B의 모든 컨텍스트에 대해 System Scheme 기본값보다 우선합니다."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:49
 msgid "Data structure"
-msgstr ""
+msgstr "데이터 구조"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:54
 msgid ""
 "Permissions in Mattermost are a property of the server code base and are "
 "not created or modified dynamically. The current set of permissions are "
 "as described in the table below."
-msgstr ""
+msgstr "OKR.BEST의 권한은 서버 코드 베이스의 속성이며 동적으로 생성되거나 수정되지 않습니다. 현재 권한 집합은 아래 표에 설명되어 있습니다."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:56
 msgid "**Mattermost permissions**"
-msgstr ""
+msgstr "**OKR.BEST 권한**"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:251
 msgid "``Roles`` field"
-msgstr ""
+msgstr "``Roles`` 필드"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:253
 msgid ""
 "Roles are applied to objects that represents that user’s membership in a "
 "context. These are referenced in the ``Roles`` field of the ``User``, "
 "``TeamMember``, ``ChannelMember`` and ``Schemes`` Tables."
-msgstr ""
+msgstr "역할은 컨텍스트에서 해당 사용자의 멤버십을 나타내는 객체에 적용됩니다. 이는 ``User``, ``TeamMember``, ``ChannelMember``, ``Schemes`` 테이블의 ``Roles`` 필드에서 참조됩니다."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:255
 msgid ""
@@ -197,55 +197,55 @@ msgid ""
 "``SchemeUser`` booleans that indicate the member object should inherit "
 "the respective roles from the relevant scheme, either the default or "
 "custom scheme assigned to the relevant team."
-msgstr ""
+msgstr "``TeamMember``\ 와 ``ChannelMember`` 테이블에서, 사용자 정의 역할을 포함하는 것은 ``Roles`` 필드이며, ``SchemeAdmin``\ 과 ``SchemeUser`` boolean은 멤버 객체가 관련 팀에 할당된 기본 또는 사용자 정의 스킴 중 관련 스킴에서 해당 역할을 상속해야 함을 나타냅니다."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:258
 msgid "``Roles`` table"
-msgstr ""
+msgstr "``Roles`` 테이블"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:260
 msgid ""
 "Roles are dynamic and user configurable, necessitating a database table "
 "with the following fields:"
-msgstr ""
+msgstr "역할은 동적이고 사용자가 구성할 수 있으므로 다음 필드를 가진 데이터베이스 테이블이 필요합니다:"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:262
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:693
 msgid "``Id`` (Autoincrement, Primary Key)"
-msgstr ""
+msgstr "``Id`` (자동 증가, 기본 키)"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:263
 msgid "``Name`` (Unique String with Character Constraints, e.g. “team_user”)."
-msgstr ""
+msgstr "``Name`` (문자 제약이 있는 고유 문자열, 예: “team_user”)."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:264
 msgid "``Display Name`` (String)"
-msgstr ""
+msgstr "``Display Name`` (문자열)"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:265
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:696
 msgid "``Description`` (String)"
-msgstr ""
+msgstr "``Description`` (문자열)"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:266
 msgid "``Permissions`` (String): Space-separated permissions names"
-msgstr ""
+msgstr "``Permissions`` (문자열): 공백으로 구분된 권한 이름"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:267
 msgid ""
 "``Scheme Managed`` (bool): Indicates whether this role is managed as part"
 " of a scheme."
-msgstr ""
+msgstr "``Scheme Managed`` (bool): 이 역할이 스킴의 일부로 관리되는지 여부를 나타냅니다."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:268
 msgid ""
 "``BuiltIn`` (bool): Indicates if this role is built-in to the Mattermost "
 "system and not removable by the user."
-msgstr ""
+msgstr "``BuiltIn`` (bool): 이 역할이 OKR.BEST 시스템에 내장되어 있어 사용자가 제거할 수 없는지 여부를 나타냅니다."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:271
 msgid "Built-in roles"
-msgstr ""
+msgstr "내장 역할"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:273
 msgid ""
@@ -253,11 +253,11 @@ msgid ""
 "as ``BuiltIn: true`` in the ``Roles`` table. You can use the Mattermost "
 "API to `retrieve a list of permissions by role name "
 "<https://api.mattermost.com/#tag/roles/paths/~1roles~1names/post>`__."
-msgstr ""
+msgstr "System Scheme은 제품에 내장되어 있으며, 그 역할은 ``Roles`` 테이블에 ``BuiltIn: true``\ 로 정의됩니다. Mattermost API를 사용해 `역할 이름별 권한 목록을 검색 <https://api.mattermost.com/#tag/roles/paths/~1roles~1names/post>`__\ 할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:275
 msgid "The following built-in roles with default permissions are available:"
-msgstr ""
+msgstr "기본 권한이 있는 다음 내장 역할을 사용할 수 있습니다:"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:277
 msgid "*channel_admin*"
@@ -1102,49 +1102,49 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:689
 msgid "``Schemes`` table"
-msgstr ""
+msgstr "``Schemes`` 테이블"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:691
 msgid ""
 "Schemes are dynamic and user configurable, necessitating a database table"
 " with the following fields:"
-msgstr ""
+msgstr "스킴은 동적이고 사용자가 구성할 수 있으므로 다음 필드를 가진 데이터베이스 테이블이 필요합니다:"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:694
 msgid ""
 "``Name`` (Unique String with Character Constraints, e.g. "
 "“corporate_scheme”)"
-msgstr ""
+msgstr "``Name`` (문자 제약이 있는 고유 문자열, 예: “corporate_scheme”)"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:695
 msgid "``Display`` Name"
-msgstr ""
+msgstr "``Display`` Name"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:697
 msgid "``Scope`` (String): Team or Channel"
-msgstr ""
+msgstr "``Scope`` (문자열): Team 또는 Channel"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:698
 msgid "``Team Admin Role`` (String): Empty if Channel Scope"
-msgstr ""
+msgstr "``Team Admin Role`` (문자열): Channel 범위인 경우 비어 있음"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:699
 msgid "``Team User Role`` (String): Empty if Channel Scope"
-msgstr ""
+msgstr "``Team User Role`` (문자열): Channel 범위인 경우 비어 있음"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:700
 msgid "``Team Guest Role`` (String): Empty if Channel Scope"
-msgstr ""
+msgstr "``Team Guest Role`` (문자열): Channel 범위인 경우 비어 있음"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:701
 msgid "``Channel Admin Role`` (String): Always provided"
-msgstr ""
+msgstr "``Channel Admin Role`` (문자열): 항상 제공됨"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:702
 msgid "``Channel User Role`` (String): Always provided"
-msgstr ""
+msgstr "``Channel User Role`` (문자열): 항상 제공됨"
 
 #: ../../source/administration-guide/onboard/advanced-permissions-backend-infrastructure.rst:703
 msgid "``Channel Guest Role`` (String): Always provided"
-msgstr ""
+msgstr "``Channel Guest Role`` (문자열): 항상 제공됨"
 
