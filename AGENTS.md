@@ -1,4 +1,6 @@
-<!-- 이 파일은 CLAUDE.md(Claude Code)의 Codex CLI용 쌍입니다. 한쪽을 고치면 다른 쪽도 동일하게 반영하세요. -->
+<!-- 이 파일이 작업 규칙의 단일 원본입니다. Codex CLI는 이 파일을 자동 로드하고,
+     Claude Code는 CLAUDE.md의 `@AGENTS.md` import로 같은 내용을 읽습니다.
+     규칙은 이 파일만 고치면 양쪽 도구에 반영됩니다 (CLAUDE.md는 수정 불필요). -->
 
 # okrbest-docs
 
@@ -8,8 +10,8 @@ Mattermost 제품 문서(Sphinx 8.2 + Furo, pipenv)의 okrbest 포크.
 - 번역 절차(신규 작업자 진입점): [TRANSLATION_WORKFLOW.md](TRANSLATION_WORKFLOW.md)
 - 번역 규칙·용어집: [TRANSLATION_GUIDE.md](TRANSLATION_GUIDE.md)
 - 담당 현황: [ASSIGNMENTS.md](ASSIGNMENTS.md)
-- 번역 자동화 스킬: Codex CLI에서 `/skills` → `translate` 선택(또는 `$translate <po파일|디렉토리>`).
-  스킬 정의는 [.codex/skills/translate/SKILL.md](.codex/skills/translate/SKILL.md).
+- 번역 자동화: Claude Code `/translate <po파일|디렉토리>` · Codex CLI `/skills` → `translate`(또는 `$translate <po파일|디렉토리>`).
+  스킬 정의 — Claude: [.claude/commands/translate.md](.claude/commands/translate.md), Codex: [.codex/skills/translate/SKILL.md](.codex/skills/translate/SKILL.md).
 
 ## 한국어 번역 작업 시 절대 규칙 (.po 파일을 편집할 때만 적용)
 

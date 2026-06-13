@@ -5,8 +5,8 @@
 번역 규칙·용어집 등 상세 내용은 [TRANSLATION_GUIDE.md](TRANSLATION_GUIDE.md)에 있습니다 — 이 문서는 절차만 다룹니다.
 
 두 도구 모두 같은 번역 스킬을 공유합니다: Claude Code는 [.claude/commands/translate.md](.claude/commands/translate.md),
-Codex는 [.codex/skills/translate/SKILL.md](.codex/skills/translate/SKILL.md). 절대 규칙은 각각 CLAUDE.md·AGENTS.md가
-세션 시작 시 자동 로드합니다(두 파일은 동일 내용의 쌍).
+Codex는 [.codex/skills/translate/SKILL.md](.codex/skills/translate/SKILL.md). 절대 규칙의 단일 원본은
+[AGENTS.md](AGENTS.md)이며, Codex는 이를 자동 로드하고 Claude Code는 CLAUDE.md의 `@AGENTS.md` import로 같은 내용을 읽습니다.
 
 ## 1. 최초 1회 준비
 
