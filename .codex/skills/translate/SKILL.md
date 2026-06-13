@@ -25,11 +25,17 @@ okrbest-docs의 한국어 번역 작업을 수행한다. **번역 대상**은 �
 다음은 **거부하고 이유를 보고한 뒤 중단**한다:
 - `source/locales/ko/LC_MESSAGES/` 외부 경로 또는 .po가 아닌 파일
 - `agents/` 또는 `_generated/` 아래 경로 → "영문 유지가 의도된 설계입니다 (TRANSLATION_GUIDE.md 6절)"
-  **예외 화이트리스트**: `agents/docs/providers.po`, `agents/docs/aws_bedrock_setup.po`, `agents/docs/sovereign_ai.po` 3개는
-  agents-admin-guide toctree에 노출되는 사용자 문서이며 유일한 번역 카탈로그가 이 경로 아래에 있으므로 **번역 대상**이다.
+  **예외 화이트리스트**: `agents/docs/providers.po`, `agents/docs/aws_bedrock_setup.po`, `agents/docs/sovereign_ai.po`, `agents/docs/usage_tips.po` 4개는
+  agents 부모 페이지(`end-user-guide/agents`·`agents-admin-guide`)의 toctree에 등록된 standalone 사용자 문서이며 유일한 번역 카탈로그가 이 경로 아래에 있으므로 **번역 대상**이다.
   (admin_guide·user_guide 본문은 이 트리가 아니라 부모 카탈로그 `end-user-guide/agents.po`·`administration-guide/configure/agents-admin-guide.po`에서 번역한다.)
 - `_static/` 아래 경로 → "msgid가 치환자 이름이라 번역 금지 대상입니다"
 - product-overview의 체인지로그류 파일(`*changelog*`, `*-releases*`, `release-policy*`, `unsupported-legacy-releases*` 등 버전 이력 문서) → "정책상 보류 대상입니다 (가이드 3절)"
+
+참고: `scripts/generate-certificates/gencert.po`는 `source/scripts/`의 렌더링 문서(SAML 인증서 가이드, sso-saml toctree)라 **번역 대상**이다 — `scripts/` 경로라는 이유로 거부하지 말 것. (리포 루트 `/scripts/` 툴링은 locales 밖이라 위 첫 규칙으로 이미 제외된다. 가이드 6-3절.)
+
+참고: `source/samples/`의 XML·JSON·YAML·ZIP 다운로드 샘플 자산은 번역하지 않지만,
+`source/locales/ko/LC_MESSAGES/samples/index.po`는 `samples/index.html`로 렌더링되는 문서라 **번역 대상**이다.
+`samples/` 경로라는 이유로 거부하지 말 것. (가이드 6-4절.)
 
 이어서 `ASSIGNMENTS.md`를 읽어 대상 디렉토리의 담당자를 확인한다.
 다른 사람이 담당 중이거나 미배정 상태면 **번역을 시작하지 말고** 사용자에게 그 사실을 알리고 계속할지 확인받는다.

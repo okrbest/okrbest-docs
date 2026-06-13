@@ -21,13 +21,17 @@ push가 거부되면 `git pull --rebase origin feat/ko` 후 다시 push — 표 
 | get-help/ | 4 / 149 | 메인테이너 | 완료(파일럿) | 2026-06-13 |
 | product-overview/ (체인지로그 제외) | 27 / ~1,000 | 메인테이너 | 완료 | 2026-06-13 |
 | recipes/ | 1 / 38 | ux-builder | 완료 | 2026-06-13 |
+| scripts/generate-certificates/ | 1 / ~20 | ux-builder | 진행 중 | 2026-06-13 |
+| samples/index.po | 1 / 1 | 메인테이너 | 완료 | 2026-06-13 |
 | 루트 index.po + sphinx.po | 2 / 39 | 메인테이너 | 완료 | 2026-06-11 |
 
-번역 제외(담당 불필요): product-overview 체인지로그류, agents/, _generated/, _static/, samples/, scripts/
+번역 제외(담당 불필요): product-overview 체인지로그류, agents/, _generated/, _static/, samples/ 다운로드 자산
 — 사유는 [TRANSLATION_GUIDE.md](TRANSLATION_GUIDE.md) 3·6절 참조.
-**예외**: `agents/docs/providers.po`·`aws_bedrock_setup.po`·`sovereign_ai.po` 3개는 사이트 노출 사용자 문서라
+**예외**: `agents/docs/providers.po`·`aws_bedrock_setup.po`·`sovereign_ai.po`·`usage_tips.po` 4개는 사이트 노출 사용자 문서라
 번역 대상(가이드 6-2절, 담당: ux-builder). admin_guide·user_guide는 부모 카탈로그
 `end-user-guide/agents.po`·`administration-guide/configure/agents-admin-guide.po`에서 번역.
+`scripts/generate-certificates/gencert.po`도 렌더링 문서라 번역 대상(가이드 6-3절).
+`samples/index.po`는 `samples/index.html`로 렌더링되는 orphan 문서라 번역 대상(가이드 6-4절).
 
 ## 메인테이너 메모
 

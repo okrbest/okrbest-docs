@@ -46,7 +46,9 @@ source/locales/ko/LC_MESSAGES/<경로>/<문서>.po  ↔  source/<경로>/<문서
 | **product-overview/ 체인지로그·릴리스류** | ~24 | **16,000** | **보류 — 번역하지 않음** (버전 이력 산문, 영어 폴백 허용) |
 | 루트 index.po / sphinx.po | 2 | 25+14 | 메인테이너 (일부 완료) |
 | recipes/ | 1 | 38 | 잔여분 |
-| agents/, _generated/, _static/, samples/, scripts/ | — | — | **제외** (아래 6절) |
+| scripts/generate-certificates/ | 1 | ~20 | SAML 인증서 가이드 (sso-saml 하위 페이지 — 6-3절) |
+| samples/index.po | 1 | 1 | 렌더링되는 orphan 페이지 (6-4절) |
+| agents/, _generated/, _static/, samples/ 다운로드 자산 | — | — | **제외** (아래 6절. 단 agents/ 일부 예외는 6-2절) |
 
 > ⚠️ **product-overview의 체인지로그류 파일(`*changelog*`, `*-releases*`, `release-policy` 등 버전 이력 문서)은 절대 번역하지 마세요.** 16,000개 문자열을 소모하는 최대 헛수고 함정입니다.
 
@@ -191,6 +193,7 @@ Markdown(.md) 원문의 `[텍스트](URL)`도 동일: 텍스트만 번역, URL �
 | `agents/` 카탈로그 (아래 예외 제외) | 서브모듈(영문 플러그인 문서) — 영어 유지가 설계 |
 | `_generated/` 카탈로그 | 자동 생성 사본 (실제 화면은 부모 카탈로그가 구동 — 아래 6-2절) |
 | `_static/badges/` 카탈로그 | msgid가 치환자 이름 — 번역 금지 (5-3절) |
+| `samples/`의 다운로드 샘플 자산(XML/JSON/YAML/ZIP 등) | 설정 템플릿·샘플 출력 원본 — 번역 시 그대로 적용/비교하는 사용 흐름이 깨질 수 있음 |
 | product-overview 체인지로그류 | 정책상 보류 (3절) |
 | 설정 키(`SiteURL` 등), 환경 변수, CLI 명령, 파일 경로, URL, 버전 번호 | 식별자 — 변경 시 동작 깨짐 |
 | 라이선스명, 법적 고지 원문 | 법적 정확성 |
@@ -230,6 +233,7 @@ Markdown(.md) 원문의 `[텍스트](URL)`도 동일: 텍스트만 번역, URL �
 | 사이트 페이지 | 원문 연결 방식 | **번역할 카탈로그** |
 |---|---|---|
 | 엔드유저 → AI 에이전트 | `end-user-guide/agents.rst`가 `user_guide.md`를 `include` | **`end-user-guide/agents.po`** (제외 아님) |
+| ↳ Agents 사용 팁 | `end-user-guide/agents` toctree의 standalone 페이지 | **`agents/docs/usage_tips.po`** ✅예외 |
 | 관리자 → Agents 관리 가이드 | `agents-admin-guide.rst`가 `admin_guide.md`를 `include` | **`administration-guide/configure/agents-admin-guide.po`** (제외 아님) |
 | ↳ LLM 공급자 설정 | `agents-admin-guide` toctree의 standalone 페이지 | **`agents/docs/providers.po`** ✅예외 |
 | ↳ AWS Bedrock 설정 | 〃 | **`agents/docs/aws_bedrock_setup.po`** ✅예외 |
@@ -238,11 +242,34 @@ Markdown(.md) 원문의 `[텍스트](URL)`도 동일: 텍스트만 번역, URL �
 - `include`되는 문서(admin_guide·user_guide)의 번역 문자열은 **삽입되는 부모 페이지 카탈로그**에 들어 있습니다.
   따라서 `agents/docs/admin_guide.po`·`user_guide.po`와 `_generated/agents/docs/*.po`는 사이트에 안 보이는
   **고아 중복본**이므로 번역하지 마세요(헛수고). 부모 카탈로그 2개를 번역하면 됩니다.
-- toctree의 standalone 페이지 3개(`providers`·`aws_bedrock_setup`·`sovereign_ai`)는 부모가 없으므로
-  유일한 카탈로그가 `agents/docs/` 아래에 있습니다 — 이 3개만 예외로 번역합니다.
-  (이 `.po`들은 서브모듈이 아니라 메인 리포의 `locales/`에 있어 서브모듈 갱신으로 덮어쓰이지 않습니다.)
-- `agents/`의 나머지(`README`·`AGENTS.md`·`CLAUDE.md`·`mcpserver/`·`.claude/`·`skills/`·`usage_tips`·
+- toctree의 standalone 페이지 4개(`providers`·`aws_bedrock_setup`·`sovereign_ai`·`usage_tips`)는 부모가 없으므로
+  유일한 카탈로그가 `agents/docs/` 아래에 있습니다 — 이 4개만 예외로 번역합니다.
+  (`usage_tips`는 `end-user-guide/agents` toctree, 나머지 3개는 `agents-admin-guide` toctree에 등록됨.
+  이 `.po`들은 서브모듈이 아니라 메인 리포의 `locales/`에 있어 서브모듈 갱신으로 덮어쓰이지 않습니다.)
+- `agents/`의 나머지(`README`·`AGENTS.md`·`CLAUDE.md`·`mcpserver/`·`.claude/`·`skills/`·
   `upgrading_to_2.0`·`features/*` 등)는 toctree 참조가 없는 저장소·개발용 파일이므로 계속 제외합니다.
+
+### 6-3. scripts/ 문서 예외 (리포 툴링과 구분)
+
+"scripts/는 제외"라는 인식은 **두 개의 다른 `scripts/`를 혼동**한 것이라 폐기합니다:
+
+| 경로 | 정체 | 카탈로그 | 처리 |
+|---|---|---|---|
+| 리포 루트 `/scripts/` (`validate-ko-po.py`·`convert-links.py` 등) | 빌드/번역 툴링 | **없음** (`source/` 밖이라 추출 안 됨) | 가드의 "locales 외부" 규칙으로 이미 제외 |
+| `source/scripts/generate-certificates/gencert.md` | SAML 자체 서명 인증서 생성 **사용자 가이드** | **`scripts/generate-certificates/gencert.po`** | **번역 대상** ✅ |
+
+`gencert.md`는 [administration-guide/onboard/sso-saml](administration-guide/onboard/sso-saml.rst)의 toctree에 등록되고
+`sso-saml-before-you-begin`에서 `:doc:`로 참조되어 `build/html/ko/scripts/generate-certificates/gencert.html`로 렌더링됩니다.
+`source/locales/ko/LC_MESSAGES/scripts/` 아래 카탈로그는 이 1개뿐이므로, scripts/를 통째로 제외하면 노출 문서가 누락됩니다.
+
+### 6-4. samples/ 예외 (렌더링 문서와 다운로드 자산 구분)
+
+`source/samples/`의 XML·JSON·YAML·ZIP 파일은 가이드에서 `:download:` 링크로 제공되는 샘플 출력·설정 템플릿입니다.
+이 파일들은 사용자가 그대로 다운로드해 적용하거나 원본과 비교하는 자료이므로 번역하지 않습니다.
+
+단, `source/samples/index.rst`는 `:orphan:` 문서지만 Sphinx가 `build/html/ko/samples/index.html`로 렌더링하는
+실제 문서입니다. 따라서 해당 카탈로그인 **`source/locales/ko/LC_MESSAGES/samples/index.po`는 번역 대상**입니다.
+`samples/`를 통째로 제외하지 말고, 다운로드 자산과 `index.po`를 구분하세요.
 
 ## 7. 문체 규칙
 
