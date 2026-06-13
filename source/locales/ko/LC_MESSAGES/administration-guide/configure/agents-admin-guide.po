@@ -21,25 +21,27 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/agents-admin-guide.rst:7
 msgid "LLM provider configuration guide"
-msgstr ""
+msgstr "LLM 공급자 구성 가이드"
 
 #: ../../source/administration-guide/configure/agents-admin-guide.rst:7
 msgid "Configure Agents with AWS Bedrock"
-msgstr ""
+msgstr "AWS Bedrock로 Agents 구성하기"
 
 #: ../../source/administration-guide/configure/agents-admin-guide.rst:7
 msgid "Implementing Sovereign AI"
-msgstr ""
+msgstr "소버린 AI 구현"
 
 #: ../../source/administration-guide/configure/agents-admin-guide.rst:2
 msgid "Mattermost Agents Admin Guide"
-msgstr ""
+msgstr "OKR.BEST Agents 관리 가이드"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise 및 Enterprise Advanced "
+"플랜 <https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -51,54 +53,59 @@ msgid ""
 "Agents plugin. You'll learn how to set up AI capabilities for your "
 "Mattermost instance and configure them for your organization's needs."
 msgstr ""
+"이 가이드는 OKR.BEST Agents 플러그인의 설치, 구성, 관리 방법을 다룹니다. OKR.BEST "
+"인스턴스에 AI 기능을 설정하고 조직의 필요에 맞게 구성하는 방법을 배웁니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:5
 msgid "Installation"
-msgstr ""
+msgstr "설치"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:7
 msgid "Prerequisites"
-msgstr ""
+msgstr "사전 요구사항"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:9
 msgid ""
 "Before installing the Agents plugin, ensure your environment meets these "
 "requirements:"
 msgstr ""
+"Agents 플러그인을 설치하기 전에, 환경이 다음 요구사항을 충족하는지 확인하세요:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:11
 msgid "Mattermost Server v10.0+"
-msgstr ""
+msgstr "OKR.BEST 서버 v10.0+"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:12
 msgid "PostgreSQL database"
-msgstr ""
+msgstr "PostgreSQL 데이터베이스"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:13
 msgid "For semantic search: PostgreSQL with pgvector extension"
-msgstr ""
+msgstr "시맨틱 검색의 경우: pgvector 확장이 적용된 PostgreSQL"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:14
 msgid "Network access to your chosen LLM provider"
-msgstr ""
+msgstr "선택한 LLM 공급자에 대한 네트워크 접근"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:15
 msgid ""
 "If outbound LLM traffic must use an HTTP proxy, set `HTTP_PROXY` and "
 "`HTTPS_PROXY` on the Mattermost server process or container environment."
 msgstr ""
+"아웃바운드 LLM 트래픽이 HTTP 프록시를 사용해야 하는 경우, OKR.BEST 서버 프로세스 "
+"또는 컨테이너 환경에 `HTTP_PROXY`와 `HTTPS_PROXY`를 설정하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:16
 msgid "API keys if using a cloud LLM service"
-msgstr ""
+msgstr "클라우드 LLM 서비스를 사용하는 경우 API 키"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:18
 msgid "Installation Steps"
-msgstr ""
+msgstr "설치 단계"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:20
 msgid "Use pre-installed plugin"
-msgstr ""
+msgstr "사전 설치된 플러그인 사용"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:22
 msgid ""
@@ -106,10 +113,13 @@ msgid ""
 " you to configure a large language model (LLM). When no LLMs are "
 "configured, the Agents panel prompts users to configure one."
 msgstr ""
+"OKR.BEST v10.3부터 Agents는 자동으로 설치되어 대규모 언어 모델(LLM)을 구성할 준비가 "
+"된 상태로 제공됩니다. LLM이 구성되지 않은 경우, Agents 패널은 사용자에게 LLM을 "
+"구성하라는 메시지를 표시합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:24
 msgid "Install latest version"
-msgstr ""
+msgstr "최신 버전 설치"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:26
 msgid ""
@@ -117,6 +127,9 @@ msgid ""
 "install the latest plugin version from the [GitHub releases "
 "page](https://github.com/mattermost/mattermost-plugin-agents/releases)."
 msgstr ""
+"최신 기능과 개선 사항을 사용하려면 [GitHub releases "
+"page](https://github.com/mattermost/mattermost-plugin-agents/releases)에서 "
+"최신 플러그인 버전을 다운로드하여 설치할 수 있습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:28
 msgid ""
@@ -126,16 +139,20 @@ msgid ""
 "plugin after upload completes, then configure plugin settings as detailed"
 " in the Configuration section below."
 msgstr ""
+"관리자 도구를 통해 플러그인을 설치하려면 **관리자 도구 > 플러그인 관리**로 이동하여 "
+"**Upload Plugin**을 클릭하고, 다운로드한 플러그인 파일(.tar.gz)을 선택한 후 "
+"**Upload**를 클릭합니다. 업로드가 완료되면 플러그인을 활성화한 다음, 아래 구성 "
+"섹션에 설명된 대로 플러그인 설정을 구성합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:30
 #: ../../source/_generated/agents/docs/admin_guide.md:210
 #: ../../source/_generated/agents/docs/admin_guide.md:508
 msgid "Configuration"
-msgstr ""
+msgstr "구성"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:32
 msgid "Access plugin settings"
-msgstr ""
+msgstr "플러그인 설정 접근"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:34
 msgid ""
@@ -143,6 +160,8 @@ msgid ""
 "wide settings such as AI services, the default bot, web search, embedding"
 " search, and MCP settings."
 msgstr ""
+"**관리자 도구 > 플러그인 > Agents**로 이동하여 AI 서비스, 기본 봇, 웹 검색, 임베딩 "
+"검색, MCP 설정 등 플러그인 전체 설정을 구성합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:36
 msgid ""
@@ -151,10 +170,13 @@ msgid ""
 "section in the System Console links to the Agents page instead of hosting"
 " the full agent editor."
 msgstr ""
+"최상위 **Agents** 제품 페이지에서 에이전트를 생성하고 관리합니다. **AI Actions > "
+"Manage agents**에서도 열 수 있습니다. 관리자 도구의 **AI Bots** 섹션은 전체 에이전트 "
+"편집기를 직접 제공하는 대신 Agents 페이지로 연결됩니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:38
 msgid "Enable the plugin"
-msgstr ""
+msgstr "플러그인 활성화"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:40
 msgid ""
@@ -163,10 +185,14 @@ msgid ""
 "going to **System Console > Plugins > Agents** and setting **Enable "
 "Plugin** to **True**, then complete configuration in the System Console."
 msgstr ""
+"사전 설치된 버전을 사용하는 경우 Agents는 자동으로 활성화됩니다. 최신 버전을 수동으로 "
+"설치한 경우, **관리자 도구 > 플러그인 > Agents**로 이동하여 **Enable Plugin**을 "
+"**True**로 설정해 활성화해야 할 수 있으며, 그런 다음 관리자 도구에서 구성을 "
+"완료합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:42
 msgid "Basic configuration"
-msgstr ""
+msgstr "기본 구성"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:44
 msgid ""
@@ -175,6 +201,9 @@ msgid ""
 "Mattermost Enterprise Edition, an Entry license will be automatically "
 "applied for you."
 msgstr ""
+"Enterprise 또는 Enterprise Advanced 라이선스가 있는 경우, 업로드하여 추가 기능을 잠금 "
+"해제하세요. 라이선스가 없지만 Mattermost Enterprise Edition을 실행 중인 경우, Entry "
+"라이선스가 자동으로 적용됩니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:46
 msgid ""
@@ -185,28 +214,35 @@ msgid ""
 "traffic respects `HTTP_PROXY` and `HTTPS_PROXY` when they are set on the "
 "Mattermost server process."
 msgstr ""
+"일반 설정에서는 플러그인을 시스템 전체에서 활성화·비활성화하도록 전환하고, 문제 "
+"해결을 위한 디버그 로깅을 활성화하고(필요할 때만 사용), LLM 상호작용 추적을 위한 토큰 "
+"사용 로깅을 활성화하고, API 호출에 대한 호스트 이름 허용 목록을 구성할 수 있습니다. "
+"아웃바운드 LLM 공급자 트래픽은 OKR.BEST 서버 프로세스에 `HTTP_PROXY`와 "
+"`HTTPS_PROXY`가 설정되어 있으면 이를 따릅니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:48
 msgid "AI response link rendering"
-msgstr ""
+msgstr "AI 응답 링크 렌더링"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:50
 msgid ""
 "Mattermost Agents includes a setting that controls whether AI-generated "
 "Markdown links are rendered as clickable links in responses:"
 msgstr ""
+"OKR.BEST Agents에는 AI가 생성한 Markdown 링크를 응답에서 클릭 가능한 링크로 "
+"렌더링할지 제어하는 설정이 포함되어 있습니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:52
 msgid "**System Console label**: **Render AI-generated links**"
-msgstr ""
+msgstr "**관리자 도구 라벨**: **Render AI-generated links**"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:53
 msgid "**Configuration key**: `allowUnsafeLinks`"
-msgstr ""
+msgstr "**구성 키**: `allowUnsafeLinks`"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:54
 msgid "**Default value**: `false`"
-msgstr ""
+msgstr "**기본값**: `false`"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:56
 msgid ""
@@ -214,6 +250,8 @@ msgid ""
 "generated Markdown links are shown as plain text and are not rendered as "
 "clickable links."
 msgstr ""
+"**Render AI-generated links**가 **False**(기본값)로 설정되면, AI가 생성한 Markdown "
+"링크는 일반 텍스트로 표시되며 클릭 가능한 링크로 렌더링되지 않습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:58
 msgid ""
@@ -222,6 +260,9 @@ msgid ""
 "malicious destinations, which can increase phishing and data exfiltration"
 " risk."
 msgstr ""
+"이 설정이 **True**로 설정되면, AI가 생성한 링크가 클릭 가능한 링크로 렌더링될 수 "
+"있습니다. 이는 보안상의 트레이드오프입니다: AI 출력에는 악성 대상이 포함될 수 있어 "
+"피싱 및 데이터 유출 위험이 높아질 수 있습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:60
 msgid ""
@@ -229,10 +270,12 @@ msgid ""
 "such as where users are trained to validate links and your organization "
 "has endpoint protections and URL controls in place."
 msgstr ""
+"사용자가 링크를 검증하도록 교육받았고 조직에 엔드포인트 보호 및 URL 제어가 마련되어 "
+"있는 등 신뢰할 수 있거나 위험이 완화된 환경에서만 이 설정을 활성화하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:62
 msgid "Service configuration"
-msgstr ""
+msgstr "서비스 구성"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:64
 msgid ""
@@ -241,20 +284,24 @@ msgid ""
 "model defaults. You can create multiple services for different providers "
 "or configurations, and share them across multiple agents."
 msgstr ""
+"Agents 통합을 위한 LLM 공급자(서비스)를 구성합니다. 서비스는 인증 및 모델 기본값을 "
+"포함해 LLM 공급자와의 연결을 관리합니다. 서로 다른 공급자나 구성에 대해 여러 서비스를 "
+"생성하고 여러 에이전트에서 공유할 수 있습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:66
 msgid ""
 "Navigate to **System Console > Plugins > Agents** and select **Add a "
 "Service**."
 msgstr ""
+"**관리자 도구 > 플러그인 > Agents**로 이동하여 **Add a Service**를 선택합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Setting"
-msgstr ""
+msgstr "설정"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Description"
-msgstr ""
+msgstr "설명"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Name**"
@@ -262,7 +309,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Internal name for this service configuration"
-msgstr ""
+msgstr "이 서비스 구성의 내부 이름"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Type**"
@@ -273,6 +320,8 @@ msgid ""
 "LLM provider (OpenAI, Anthropic, AWS Bedrock, Cohere, Mistral, Scale AI, "
 "Azure OpenAI, OpenAI-compatible)"
 msgstr ""
+"LLM 공급자(OpenAI, Anthropic, AWS Bedrock, Cohere, Mistral, Scale AI, Azure "
+"OpenAI, OpenAI 호환)"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**API Key**"
@@ -280,7 +329,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Your provider's API key (requirements vary by provider)"
-msgstr ""
+msgstr "공급자의 API 키(요구사항은 공급자에 따라 다름)"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Default Model**"
@@ -288,7 +337,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Default model to use for this service"
-msgstr ""
+msgstr "이 서비스에 사용할 기본 모델"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Input Token Limit**"
@@ -296,7 +345,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Maximum tokens allowed in input"
-msgstr ""
+msgstr "입력에 허용되는 최대 토큰 수"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Output Token Limit**"
@@ -304,7 +353,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Maximum tokens allowed in output"
-msgstr ""
+msgstr "출력에 허용되는 최대 토큰 수"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Streaming Timeout Seconds**"
@@ -312,7 +361,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Timeout in seconds for streaming responses"
-msgstr ""
+msgstr "스트리밍 응답의 제한 시간(초)"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Send User ID**"
@@ -320,7 +369,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Whether to send Mattermost user IDs to the LLM provider"
-msgstr ""
+msgstr "OKR.BEST 사용자 ID를 LLM 공급자에 전송할지 여부"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Use Responses API**"
@@ -333,26 +382,29 @@ msgid ""
 " endpoints. OpenAI (direct) always uses the Responses API, so this "
 "control isn't shown for that service type."
 msgstr ""
+"(OpenAI Compatible 및 Azure OpenAI 전용) 해당 엔드포인트에서 네이티브 공급자 도구, "
+"추론 제어, 구조화된 출력을 위해 OpenAI의 Responses API를 사용합니다. OpenAI(직접)는 "
+"항상 Responses API를 사용하므로 해당 서비스 유형에는 이 컨트롤이 표시되지 않습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:80
 msgid "Provider Specific Settings"
-msgstr ""
+msgstr "공급자별 설정"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:82
 msgid "Each provider has specific configuration requirements:"
-msgstr ""
+msgstr "각 공급자에는 고유한 구성 요구사항이 있습니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Provider"
-msgstr ""
+msgstr "공급자"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Required Settings"
-msgstr ""
+msgstr "필수 설정"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Optional Settings"
-msgstr ""
+msgstr "선택 설정"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**OpenAI**"
@@ -392,7 +444,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "API Key (can use IAM role), Access/Secret Keys"
-msgstr ""
+msgstr "API Key(IAM 역할 사용 가능), Access/Secret Keys"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Cohere**"
@@ -412,7 +464,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Account ID (required for ScaleGov)"
-msgstr ""
+msgstr "Account ID(ScaleGov에 필요)"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "**Azure OpenAI**"
@@ -424,6 +476,8 @@ msgid ""
 "in the API Key/Secret fields, or by using IAM roles when running "
 "Mattermost on AWS infrastructure."
 msgstr ""
+"AWS Bedrock의 경우, API Key/Secret 필드의 AWS 자격 증명을 사용하거나 AWS 인프라에서 "
+"OKR.BEST를 실행할 때 IAM 역할을 사용하여 인증을 구성할 수 있습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:97
 msgid ""
@@ -434,6 +488,11 @@ msgid ""
 "guide](https://docs.mattermost.com/agents/docs/aws_bedrock_setup.html) "
 "for detailed instructions."
 msgstr ""
+"**Anthropic Claude 모델에 중요**: AWS Bedrock을 통해 Claude 모델을 사용하기 전에, "
+"AWS Bedrock Model Catalog에서 일회성 First Time Use(FTU) 양식을 제출하고 OKR.BEST "
+"서버의 IAM 역할에 Bedrock API 권한을 연결해야 합니다. 자세한 지침은 [AWS Bedrock 설정 "
+"가이드](https://docs.mattermost.com/agents/docs/aws_bedrock_setup.html)를 "
+"참고하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:99
 msgid ""
