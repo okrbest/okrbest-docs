@@ -21,15 +21,15 @@ msgstr ""
 
 #: ../../source/deployment-guide/postgres-migration.rst:9
 msgid "Automate PostgreSQL migration"
-msgstr ""
+msgstr "PostgreSQL 마이그레이션 자동화"
 
 #: ../../source/deployment-guide/postgres-migration.rst:9
 msgid "Manually migrate to PostgreSQL"
-msgstr ""
+msgstr "PostgreSQL로 수동 마이그레이션"
 
 #: ../../source/deployment-guide/postgres-migration.rst:2
 msgid "Migration guidelines from MySQL to PostgreSQL"
-msgstr ""
+msgstr "MySQL에서 PostgreSQL로 마이그레이션 지침"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
@@ -50,6 +50,11 @@ msgid ""
 "interested in migrating from a MySQL database, we have taken proactive "
 "measures to provide guidance and best practices."
 msgstr ""
+"OKR.BEST v8.0부터 :ref:`PostgreSQL <deployment-guide/software-hardware-"
+"requirements:database software>`\\ 은 플랫폼의 성능과 기능을 향상하기 위한 "
+"OKR.BEST의 기본 데이터베이스입니다. MySQL 데이터베이스에서 마이그레이션하려는 "
+"커뮤니티 구성원을 지원하는 것의 중요성을 인식하여, 안내와 모범 사례를 제공하기 위한 "
+"선제적 조치를 취했습니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:17
 msgid ""
@@ -58,6 +63,9 @@ msgid ""
 " a ``migration-assist`` tool to streamline the migration process, "
 "alleviate potential challenges, and faciliate a smooth transition."
 msgstr ""
+":doc:`MySQL에서 PostgreSQL로의 자동 마이그레이션 </deployment-guide/postgres-"
+"migration-assist-tool>` - 마이그레이션 과정을 간소화하고, 잠재적 문제를 완화하며, "
+"매끄러운 전환을 돕는 포괄적인 지침과 ``migration-assist`` 도구입니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:18
 msgid ""
@@ -66,14 +74,18 @@ msgid ""
 "database administrators to own the migration process, or if you want to "
 "learn what the ``migration-assist`` tool automates for you."
 msgstr ""
+":doc:`MySQL에서 PostgreSQL로 수동 마이그레이션 </deployment-guide/manual-"
+"postgres-migration>` - 조직에 마이그레이션 과정을 담당할 데이터베이스 관리자가 "
+"있거나, ``migration-assist`` 도구가 자동화하는 내용을 배우고 싶은 경우 좋은 "
+"선택입니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:21
 msgid "Frequently asked questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/deployment-guide/postgres-migration.rst:24
 msgid "Why is Mattermost dropping support for MySQL?"
-msgstr ""
+msgstr "OKR.BEST는 왜 MySQL 지원을 중단하나요?"
 
 #: ../../source/deployment-guide/postgres-migration.rst:26
 msgid ""
@@ -86,20 +98,28 @@ msgid ""
 "robust, and scalable database interactions for all Mattermost "
 "deployments."
 msgstr ""
+"OKR.BEST는 개발을 간소화하고 더 효율적이며 최적화된 기능을 제공하는 데 집중하기 "
+"위해 MySQL 데이터베이스 지원을 중단하기로 결정했습니다. 일반적으로 더 발전되고 "
+"엔터프라이즈 환경에 더 적합하다고 여겨지는 PostgreSQL만 지원함으로써, OKR.BEST는 "
+"복잡성을 줄이고, 성능을 개선하며, 제품을 향상하는 데 리소스를 더 잘 배분할 수 "
+"있습니다. 이 변경은 모든 OKR.BEST 배포에서 더 일관되고 견고하며 확장 가능한 "
+"데이터베이스 상호작용을 보장하는 데 도움이 됩니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:29
 msgid "Is migrating to PostgreSQL before upgrading Mattermost recommended?"
-msgstr ""
+msgstr "OKR.BEST를 업그레이드하기 전에 PostgreSQL로 마이그레이션하는 것이 권장되나요?"
 
 #: ../../source/deployment-guide/postgres-migration.rst:31
 msgid ""
 "Yes. We also recommend upgrading to Mattermost server v8.x or later "
 "before migrating to PostgreSQL."
 msgstr ""
+"예. PostgreSQL로 마이그레이션하기 전에 OKR.BEST 서버 v8.x 이상으로 업그레이드할 "
+"것도 권장합니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:34
 msgid "Can the migration-assist be run on the Mattermost server?"
-msgstr ""
+msgstr "migration-assist를 OKR.BEST 서버에서 실행할 수 있나요?"
 
 #: ../../source/deployment-guide/postgres-migration.rst:36
 msgid ""
@@ -109,10 +129,14 @@ msgid ""
 "migration against a copy of the MySQL database to ensure that the "
 "migration process does not impact the production environment."
 msgstr ""
+"기술적으로는 가능합니다. ``migration-assist`` 도구는 OKR.BEST 서버에서 실행할 수 "
+"있습니다. 다만 성능 문제를 피하기 위해 별도의 서버에서 도구를 실행하는 것이 "
+"권장됩니다. 마이그레이션 과정이 운영 환경에 영향을 주지 않도록 MySQL 데이터베이스의 "
+"사본에 대해 마이그레이션을 실행할 것을 권장합니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:39
 msgid "How large should the PostgreSQL server be?"
-msgstr ""
+msgstr "PostgreSQL 서버는 얼마나 커야 하나요?"
 
 #: ../../source/deployment-guide/postgres-migration.rst:41
 msgid ""
@@ -120,10 +144,12 @@ msgid ""
 "initially. We recommend monitoring the performance of the PostgreSQL "
 "server and adjusting the resources as needed."
 msgstr ""
+"PostgreSQL 서버의 크기는 처음에는 MySQL 서버와 동일해야 합니다. PostgreSQL 서버의 "
+"성능을 모니터링하고 필요에 따라 리소스를 조정할 것을 권장합니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:44
 msgid "How large should the server running ``migration-assist`` server be?"
-msgstr ""
+msgstr "``migration-assist``\\ 를 실행하는 서버는 얼마나 커야 하나요?"
 
 #: ../../source/deployment-guide/postgres-migration.rst:46
 msgid ""
@@ -133,10 +159,13 @@ msgid ""
 "the size of the MySQL database, your downtime limitations, and the "
 "configuration of ``pgloader``."
 msgstr ""
+"도구 자체는 가벼우며 큰 서버가 필요하지 않습니다. 기본 구성에는 CPU 코어 2개와 "
+"RAM 16 GB를 갖춘 서버면 충분합니다. 다만 MySQL 데이터베이스의 크기, 다운타임 제약, "
+"``pgloader`` 구성에 따라 리소스를 조정해야 할 수도 있습니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:49
 msgid "Do we/will Mattermost bundle pgloader or is that a separate install?"
-msgstr ""
+msgstr "OKR.BEST가 pgloader를 번들로 제공하나요, 아니면 별도로 설치해야 하나요?"
 
 #: ../../source/deployment-guide/postgres-migration.rst:51
 msgid ""
@@ -145,22 +174,28 @@ msgid ""
 ":ref:`install pgloader <deployment-guide/manual-postgres-"
 "migration:install pgloader>` documentation."
 msgstr ""
+"OKR.BEST는 OKR.BEST 서버에 pgloader를 번들로 제공하지 않습니다. pgloader를 별도로 "
+"설치해야 합니다. 자세한 내용은 :ref:`pgloader 설치 <deployment-guide/manual-"
+"postgres-migration:install pgloader>` 문서를 참고하세요."
 
 #: ../../source/deployment-guide/postgres-migration.rst:54
 msgid ""
 "Are there any other migrations available for plugins, or just Boards, "
 "Playbooks, and Calls?"
 msgstr ""
+"Boards, Playbooks, Calls 외에 다른 플러그인에 대한 마이그레이션도 있나요?"
 
 #: ../../source/deployment-guide/postgres-migration.rst:56
 msgid ""
 "We're developing migrations for other plugins, such as NPS-plugin. Please"
 " stay tuned for updates."
 msgstr ""
+"NPS-plugin 같은 다른 플러그인에 대한 마이그레이션을 개발하고 있습니다. 업데이트를 "
+"기대해 주세요."
 
 #: ../../source/deployment-guide/postgres-migration.rst:59
 msgid "Do these processes support AWS RDS databases?"
-msgstr ""
+msgstr "이 프로세스는 AWS RDS 데이터베이스를 지원하나요?"
 
 #: ../../source/deployment-guide/postgres-migration.rst:61
 msgid ""
@@ -168,10 +203,12 @@ msgid ""
 "adjust the security group settings to allow the migration process to "
 "access the databases."
 msgstr ""
+"예, 이 프로세스는 AWS RDS 데이터베이스를 지원합니다. 다만 마이그레이션 프로세스가 "
+"데이터베이스에 접근할 수 있도록 보안 그룹 설정을 조정해야 할 수도 있습니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:64
 msgid "Does Mattermost support MariaDB? If not, why not?"
-msgstr ""
+msgstr "OKR.BEST는 MariaDB를 지원하나요? 그렇지 않다면 그 이유는 무엇인가요?"
 
 #: ../../source/deployment-guide/postgres-migration.rst:66
 msgid ""
@@ -183,6 +220,11 @@ msgid ""
 "advanced features, and suitability for enterprise use, making it the "
 "chosen database for Mattermost."
 msgstr ""
+"OKR.BEST는 MariaDB를 지원하지 않습니다. 이 결정의 주된 이유는 단일 데이터베이스 "
+"기술에 집중하여 개발과 유지 관리를 간소화하기 위함입니다. PostgreSQL로 표준화함으로써 "
+"OKR.BEST는 최적화된 기능, 개선된 성능, 더 집중된 엔지니어링 노력을 제공할 수 "
+"있습니다. PostgreSQL은 견고함, 고급 기능, 엔터프라이즈 사용 적합성으로 높이 평가받아 "
+"OKR.BEST의 선택 데이터베이스가 되었습니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:68
 msgid ""
@@ -190,6 +232,9 @@ msgid ""
 "additional complexity and potential inconsistency, which the Mattermost "
 "development team aims to avoid by limiting database support."
 msgstr ""
+"MariaDB는 상당 부분 MySQL과 호환되지만 추가적인 복잡성과 잠재적 불일치를 "
+"가져오며, OKR.BEST 개발 팀은 데이터베이스 지원을 제한함으로써 이를 피하고자 "
+"합니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:70
 msgid ""
@@ -199,14 +244,18 @@ msgid ""
 "migrate-from-mariadb-to-mysql-80) which can be used as a starting point "
 "for the migration to PostgreSQL."
 msgstr ""
+"이러한 이유로 MariaDB에서 PostgreSQL로의 직접 마이그레이션도 지원하지 않습니다. "
+"Oracle은 PostgreSQL로의 마이그레이션 출발점으로 사용할 수 있는 [MariaDB에서 "
+"MySQL로 마이그레이션하는 방법](https://blogs.oracle.com/mysql/post/how-to-"
+"migrate-from-mariadb-to-mysql-80) 문서를 제공합니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:74
 msgid "Troubleshooting"
-msgstr ""
+msgstr "문제 해결"
 
 #: ../../source/deployment-guide/postgres-migration.rst:77
 msgid "Unsupported authentication for MySQL"
-msgstr ""
+msgstr "MySQL에 대한 지원되지 않는 인증"
 
 #: ../../source/deployment-guide/postgres-migration.rst:79
 msgid ""
@@ -219,10 +268,16 @@ msgid ""
 "``mysql.cnf`` file. Also, do not forget to update your user to use this "
 "authentication method."
 msgstr ""
+"MySQL v8 인증으로 인한 오류가 발생한다면 pgloader의 `알려진 이슈 "
+"<https://github.com/dimitri/pgloader/issues/782>`__\\ 와 관련이 있을 수 "
+"있습니다. 해결 방법은 MySQL 구성에서 기본 인증 방법을 "
+"``mysql_native_password``\\ 로 설정하는 것입니다. 이를 위해 ``mysql.cnf`` 파일에 "
+"``default-authentication-plugin=mysql_native_password`` 값을 추가하세요. 또한 "
+"이 인증 방법을 사용하도록 사용자를 업데이트하는 것도 잊지 마세요."
 
 #: ../../source/deployment-guide/postgres-migration.rst:86
 msgid "Errors during the pgloader command execution"
-msgstr ""
+msgstr "pgloader 명령 실행 중 오류"
 
 #: ../../source/deployment-guide/postgres-migration.rst:88
 msgid ""
@@ -232,6 +287,9 @@ msgid ""
 "the migration if there are errors during the execution of the "
 "``pgloader`` command."
 msgstr ""
+"``pgloader`` 명령 실행 중 오류가 발생하면 두 데이터베이스가 모두 접근 가능하고 "
+"사용자가 데이터베이스에 접근하는 데 필요한 권한을 가지고 있는지 확인하세요. "
+"``pgloader`` 명령 실행 중 오류가 있으면 마이그레이션을 계속하지 마세요."
 
 #: ../../source/deployment-guide/postgres-migration.rst:92
 msgid ""
@@ -243,22 +301,29 @@ msgid ""
 "``search_path`` is restored (or remove necessary clauses from the "
 "configuration)."
 msgstr ""
+"숙련된 사용자라면 마이그레이션을 처음부터 다시 시작할 필요 없이 ``pgloader``\\ 를 "
+"실행하여 복구할 수 있습니다. 이 경우 테이블의 문제를 수동으로 해결하고, 해당 "
+"테이블에 특화된 맞춤 구성으로 ``pgloader`` 명령을 실행해야 합니다. 또한 스키마 "
+"이름이 ``public``\\ 으로 되돌려지고 ``search_path``\\ 가 복원되었는지(또는 구성에서 "
+"필요한 절을 제거했는지) 확인하세요."
 
 #: ../../source/deployment-guide/postgres-migration.rst:94
 msgid ""
 "The following sections detail how to resolve some common errors you may "
 "encounter during the execution of the ``pgloader`` command:"
 msgstr ""
+"다음 섹션에서는 ``pgloader`` 명령 실행 중 발생할 수 있는 몇 가지 일반적인 오류를 "
+"해결하는 방법을 자세히 설명합니다:"
 
 #: ../../source/deployment-guide/postgres-migration.rst:97
 msgid "Invalid input syntax for type JSON"
-msgstr ""
+msgstr "JSON 유형에 대한 잘못된 입력 구문"
 
 #: ../../source/deployment-guide/postgres-migration.rst:99
 #: ../../source/deployment-guide/postgres-migration.rst:116
 #: ../../source/deployment-guide/postgres-migration.rst:127
 msgid "If you receive an error message similar to the following:"
-msgstr ""
+msgstr "다음과 유사한 오류 메시지가 표시되는 경우:"
 
 #: ../../source/deployment-guide/postgres-migration.rst:105
 msgid ""
@@ -269,6 +334,11 @@ msgid ""
 "replaced with the actual table and column names indicated in the "
 "``pgloader`` output):"
 msgstr ""
+"MySQL 데이터베이스의 데이터가 유효한 JSON 형식이 아닙니다. MySQL 데이터베이스의 "
+"데이터를 유효한 JSON 형식으로 업데이트하여 이 문제를 해결할 수 있습니다. 어느 행이 "
+"문제를 일으키는지 확인하려면 다음 쿼리를 실행하세요(``<table_name>``\\ 과 "
+"``<column_name>``\\ 은 ``pgloader`` 출력에 표시된 실제 테이블 및 열 이름으로 "
+"바꿔야 합니다):"
 
 #: ../../source/deployment-guide/postgres-migration.rst:111
 msgid ""
@@ -276,10 +346,12 @@ msgid ""
 "JSON format with the query above. After updating the data, you can run "
 "the ``pgloader`` command again."
 msgstr ""
+"위 쿼리로 MySQL 데이터베이스의 데이터를 찾아 유효한 JSON 형식으로 업데이트할 수 "
+"있습니다. 데이터를 업데이트한 후 ``pgloader`` 명령을 다시 실행할 수 있습니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:114
 msgid "Failed to find column or table"
-msgstr ""
+msgstr "열 또는 테이블을 찾지 못함"
 
 #: ../../source/deployment-guide/postgres-migration.rst:122
 msgid ""
@@ -288,10 +360,13 @@ msgid ""
 "Postgres schema. After re-creating the schema, you can run the "
 "``pgloader`` command again."
 msgstr ""
+"PostgreSQL 데이터베이스에 열 또는 테이블이 없습니다. 올바른 버전의 Postgres "
+"스키마를 생성했는지 확인하여 이 문제를 해결할 수 있습니다. 스키마를 다시 생성한 후 "
+"``pgloader`` 명령을 다시 실행할 수 있습니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:125
 msgid "Fell through ECASE expression"
-msgstr ""
+msgstr "ECASE 표현식을 통과함(Fell through ECASE expression)"
 
 #: ../../source/deployment-guide/postgres-migration.rst:133
 msgid ""
@@ -301,6 +376,11 @@ msgid ""
 "image. See: :ref:`install pgloader <deployment-guide/manual-postgres-"
 "migration:install pgloader>` for more information."
 msgstr ""
+"이는 pgloader의 `알려진 이슈 "
+"<https://github.com/dimitri/pgloader/issues/1183>`__\\ 입니다. ``pgloader``\\ 를 "
+"소스에서 컴파일하여 이 문제를 해결하거나, docker 이미지로 ``pgloader``\\ 를 "
+"실행하여 간단히 피할 수 있습니다. 자세한 내용은 :ref:`pgloader 설치 <deployment-"
+"guide/manual-postgres-migration:install pgloader>`\\ 를 참고하세요."
 
 #: ../../source/deployment-guide/postgres-migration.rst:137
 msgid ""
@@ -311,10 +391,15 @@ msgid ""
 "possible to run the ``pgloader`` command with the ``--debug`` flag to get"
 " more information about the errors."
 msgstr ""
+"또한 pgloader가 나머지 테이블을 계속 마이그레이션하면서 마이그레이션 중 하나 이상의 "
+"테이블을 건너뛰는 경우가 있을 수 있습니다. 이러한 경우, 테이블의 문제를 파악하고 "
+"해결한 후 깨끗한 데이터베이스로 ``pgloader`` 명령을 다시 실행할 것을 권장합니다. "
+"오류에 대한 자세한 정보를 얻으려면 ``--debug`` 플래그와 함께 ``pgloader`` 명령을 "
+"실행할 수 있습니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:141
 msgid "Mattermost can't connect to the PostgreSQL database"
-msgstr ""
+msgstr "OKR.BEST가 PostgreSQL 데이터베이스에 연결할 수 없음"
 
 #: ../../source/deployment-guide/postgres-migration.rst:143
 msgid ""
@@ -327,11 +412,16 @@ msgid ""
 "``public`` and restore the ``search_path`` by running the following "
 "commands:"
 msgstr ""
+"OKR.BEST가 PostgreSQL 데이터베이스에 연결할 수 없는 문제가 발생하면, PostgreSQL "
+"서버가 실행 중이고 데이터베이스에 접근 가능한지 확인하세요. ``pgloader`` 명령 "
+"실행 중 오류가 있었다면 스키마 이름을 ``public``\\ 으로 되돌리지 못하거나 "
+"``search_path``\\ 를 복원하지 못할 수 있습니다. 다음 명령을 실행하여 스키마 이름을 "
+"수동으로 ``public``\\ 으로 되돌리고 ``search_path``\\ 를 복원할 수 있습니다:"
 
 #: ../../source/deployment-guide/postgres-migration.rst:145
 #: ../../source/deployment-guide/postgres-migration.rst:189
 msgid "Connect to PostgreSQL using ``sudo -u postgres psql``."
-msgstr ""
+msgstr "``sudo -u postgres psql``\\ 을 사용하여 PostgreSQL에 연결합니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:146
 #: ../../source/deployment-guide/postgres-migration.rst:190
@@ -340,10 +430,13 @@ msgid ""
 "are using the right database by running ``SELECT current_database();``. "
 "The command should output ``mattermost``."
 msgstr ""
+"``\\c mattermost``\\ 를 사용하여 ``mattermost`` 데이터베이스를 선택합니다. "
+"``SELECT current_database();``\\ 를 실행하여 올바른 데이터베이스를 사용하고 있는지 "
+"확인하세요. 이 명령은 ``mattermost``\\ 를 출력해야 합니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:147
 msgid "Revert the schema name change (optional)"
-msgstr ""
+msgstr "스키마 이름 변경 되돌리기(선택 사항)"
 
 #: ../../source/deployment-guide/postgres-migration.rst:153
 msgid ""
@@ -351,52 +444,55 @@ msgid ""
 "default access to the ``public`` schema. You can do this by running the "
 "following commands:"
 msgstr ""
+"또한 데이터베이스 사용자가 ``public`` 스키마에 기본 접근할 수 있는 필요한 설정을 "
+"가지고 있는지 확인하세요. 다음 명령을 실행하여 이를 수행할 수 있습니다:"
 
 #: ../../source/deployment-guide/postgres-migration.rst:155
 msgid "Set the search_path for the mmuser:"
-msgstr ""
+msgstr "mmuser에 대한 search_path를 설정합니다:"
 
 #: ../../source/deployment-guide/postgres-migration.rst:162
 msgid "Terminate the connection and connect again to your psql server."
-msgstr ""
+msgstr "연결을 종료하고 psql 서버에 다시 연결합니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:164
 msgid "Verify the search_path is set correctly:"
-msgstr ""
+msgstr "search_path가 올바르게 설정되었는지 확인합니다:"
 
 #: ../../source/deployment-guide/postgres-migration.rst:170
 msgid "This should return ``\"$user\", public``."
-msgstr ""
+msgstr "이것은 ``\"$user\", public``\\ 을 반환해야 합니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:172
 msgid "If the issue persists, also run:"
-msgstr ""
+msgstr "문제가 계속되면 다음도 실행하세요:"
 
 #: ../../source/deployment-guide/postgres-migration.rst:179
 msgid "Permission issues when accessing the schema in PostgreSQL"
-msgstr ""
+msgstr "PostgreSQL에서 스키마에 접근할 때의 권한 문제"
 
 #: ../../source/deployment-guide/postgres-migration.rst:181
 msgid ""
 "If you run into a permission issue during step 2 where the command "
 "reports a permission issue similar to the following:"
 msgstr ""
+"2단계에서 명령이 다음과 유사한 권한 문제를 보고하는 권한 문제가 발생하는 경우:"
 
 #: ../../source/deployment-guide/postgres-migration.rst:187
 msgid "Ensure that the ``mmuser`` user in PostgreSQL is the owner of the schema."
-msgstr ""
+msgstr "PostgreSQL의 ``mmuser`` 사용자가 스키마의 소유자인지 확인하세요."
 
 #: ../../source/deployment-guide/postgres-migration.rst:191
 msgid "Run the following commands:"
-msgstr ""
+msgstr "다음 명령을 실행합니다:"
 
 #: ../../source/deployment-guide/postgres-migration.rst:198
 msgid "Then, re-run the command from step 2."
-msgstr ""
+msgstr "그런 다음 2단계의 명령을 다시 실행하세요."
 
 #: ../../source/deployment-guide/postgres-migration.rst:201
 msgid "Incoming webhook channel names become case-sensitive after migration"
-msgstr ""
+msgstr "마이그레이션 후 수신 웹훅 채널 이름이 대소문자를 구분하게 됨"
 
 #: ../../source/deployment-guide/postgres-migration.rst:203
 msgid ""
@@ -404,6 +500,8 @@ msgid ""
 "previously worked with mixed-case channel names (e.g., ``\"Tech-Talk\"``)"
 " will fail with the following error:"
 msgstr ""
+"MySQL에서 PostgreSQL로 마이그레이션한 후, 이전에 대소문자가 섞인 채널 이름(예: "
+"``\"Tech-Talk\"``)으로 작동하던 수신 웹훅이 다음 오류와 함께 실패합니다:"
 
 #: ../../source/deployment-guide/postgres-migration.rst:209
 msgid ""
@@ -417,55 +515,72 @@ msgid ""
 "database. These channels are considered invalid and may cause issues when"
 " performing operations like updating channel headers."
 msgstr ""
+"이는 OKR.BEST가 대문자가 포함된 채널 생성을 허용하지 않기 때문에 발생합니다. 모든 "
+"새 채널 이름은 소문자만 포함해야 합니다. 또한 MySQL은 채널 이름을 매칭할 때 "
+"대소문자를 구분하지 않는 반면, PostgreSQL은 대소문자를 구분합니다. 즉, MySQL의 "
+"관대한 대소문자 비구분 매칭으로 작동하던 웹훅 페이로드가 PostgreSQL의 엄격한 "
+"대소문자 구분 매칭에서는 실패하게 됩니다. 드문 경우, 데이터베이스에 대소문자가 "
+"섞인 이름의 이전 채널이 여전히 존재할 수 있습니다. 이러한 채널은 유효하지 않은 "
+"것으로 간주되며 채널 헤더 업데이트 같은 작업을 수행할 때 문제를 일으킬 수 "
+"있습니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:213
 #: ../../source/deployment-guide/postgres-migration.rst:246
 msgid "**Solution:**"
-msgstr ""
+msgstr "**해결책:**"
 
 #: ../../source/deployment-guide/postgres-migration.rst:215
 msgid "Update all webhook payloads to use only lowercase channel names."
-msgstr ""
+msgstr "모든 웹훅 페이로드가 소문자 채널 이름만 사용하도록 업데이트하세요."
 
 #: ../../source/deployment-guide/postgres-migration.rst:217
 msgid "**Prevention:**"
-msgstr ""
+msgstr "**예방:**"
 
 #: ../../source/deployment-guide/postgres-migration.rst:219
 msgid "Before migrating to PostgreSQL:"
-msgstr ""
+msgstr "PostgreSQL로 마이그레이션하기 전에:"
 
 #: ../../source/deployment-guide/postgres-migration.rst:221
 msgid ""
 "Audit your incoming webhooks and update any that use mixed-case channel "
 "names in their payloads."
 msgstr ""
+"수신 웹훅을 점검하고 페이로드에서 대소문자가 섞인 채널 이름을 사용하는 웹훅을 "
+"업데이트하세요."
 
 #: ../../source/deployment-guide/postgres-migration.rst:222
 msgid ""
 "Check for any legacy channels with mixed-case names that may have been "
 "created in earlier versions."
 msgstr ""
+"이전 버전에서 생성되었을 수 있는 대소문자가 섞인 이름의 레거시 채널을 "
+"확인하세요."
 
 #: ../../source/deployment-guide/postgres-migration.rst:223
 msgid "Consider renaming any mixed-case channels to lowercase to prevent issues."
 msgstr ""
+"문제를 방지하기 위해 대소문자가 섞인 채널의 이름을 소문자로 변경하는 것을 "
+"고려하세요."
 
 #: ../../source/deployment-guide/postgres-migration.rst:225
 msgid ""
 "This is expected behavior with PostgreSQL and reflects Mattermost's "
 "channel naming requirements."
 msgstr ""
+"이는 PostgreSQL의 예상된 동작이며 OKR.BEST의 채널 이름 지정 요건을 반영합니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:228
 msgid "Legacy Boards tables causing migration errors"
-msgstr ""
+msgstr "마이그레이션 오류를 일으키는 레거시 Boards 테이블"
 
 #: ../../source/deployment-guide/postgres-migration.rst:230
 msgid ""
 "During database migration from MySQL to PostgreSQL, while using schema "
 "comparison tools (such as dbcmp) you may encounter the following error:"
 msgstr ""
+"MySQL에서 PostgreSQL로 데이터베이스 마이그레이션하는 동안 스키마 비교 도구(예: "
+"dbcmp)를 사용할 때 다음 오류가 발생할 수 있습니다:"
 
 #: ../../source/deployment-guide/postgres-migration.rst:236
 msgid ""
@@ -474,22 +589,25 @@ msgid ""
 " these tables are no longer required and can be ignored in the migration "
 "process."
 msgstr ""
+"이는 일반적으로 더 이상 사용되지 않는 이전 버전 Boards의 레거시 테이블과 "
+"관련됩니다. Boards 8.0.0 버전 이상을 사용 중이라면 이러한 테이블은 더 이상 필요하지 "
+"않으며 마이그레이션 과정에서 무시할 수 있습니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:238
 msgid "**Applies To:**"
-msgstr ""
+msgstr "**적용 대상:**"
 
 #: ../../source/deployment-guide/postgres-migration.rst:240
 msgid "Boards version 8.0.0 and above"
-msgstr ""
+msgstr "Boards 8.0.0 버전 이상"
 
 #: ../../source/deployment-guide/postgres-migration.rst:241
 msgid "All staging, UAT, QA, or production environments"
-msgstr ""
+msgstr "모든 스테이징, UAT, QA, 운영 환경"
 
 #: ../../source/deployment-guide/postgres-migration.rst:244
 msgid "Does not apply to standalone Boards versions prior to v8.0.0"
-msgstr ""
+msgstr "v8.0.0 이전의 독립형 Boards 버전에는 적용되지 않습니다"
 
 #: ../../source/deployment-guide/postgres-migration.rst:248
 msgid ""
@@ -497,6 +615,8 @@ msgid ""
 "tables which were used only in the standalone version and can be safely "
 "ignored:"
 msgstr ""
+"Boards 8.0.0 버전 이상을 사용 중이라면, 독립형 버전에서만 사용되었던 다음 레거시 "
+"테이블은 안전하게 무시할 수 있습니다:"
 
 #: ../../source/deployment-guide/postgres-migration.rst:250
 msgid ""
@@ -504,34 +624,44 @@ msgid ""
 " in plugin and later versions. Stores uploaded files and attachments for "
 "boards."
 msgstr ""
+"``focalboard_file_info`` - 독립형 버전에서 사용됨. 플러그인 및 이후 버전에서는 더 "
+"이상 관련 없음. 보드의 업로드된 파일과 첨부 파일을 저장합니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:251
 msgid ""
 "``focalboard_sessions`` - Used in standalone version. Tracks user login "
 "sessions for boards."
 msgstr ""
+"``focalboard_sessions`` - 독립형 버전에서 사용됨. 보드의 사용자 로그인 세션을 "
+"추적합니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:252
 msgid ""
 "``focalboard_teams`` - Used in standalone version. Legacy team mapping "
 "not used in later versions. Stores team board settings and permissions."
 msgstr ""
+"``focalboard_teams`` - 독립형 버전에서 사용됨. 이후 버전에서는 사용되지 않는 레거시 "
+"팀 매핑. 팀 보드 설정과 권한을 저장합니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:253
 msgid ""
 "``focalboard_users`` - Used in standalone version. Stores user "
 "preferences and settings for boards."
 msgstr ""
+"``focalboard_users`` - 독립형 버전에서 사용됨. 보드의 사용자 환경설정과 설정을 "
+"저장합니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:255
 msgid ""
 "These tables may be empty or unused in your current environment. If so, "
 "they do not need to be migrated to PostgreSQL."
 msgstr ""
+"이러한 테이블은 현재 환경에서 비어 있거나 사용되지 않을 수 있습니다. 그렇다면 "
+"PostgreSQL로 마이그레이션할 필요가 없습니다."
 
 #: ../../source/deployment-guide/postgres-migration.rst:259
 msgid "Contact Support"
-msgstr ""
+msgstr "지원 문의"
 
 #: ../../source/deployment-guide/postgres-migration.rst:261
 msgid ""
@@ -539,4 +669,7 @@ msgid ""
 "deployment can contact a `Mattermost Expert <https://mattermost.com"
 "/contact-sales/>`_ for guidance."
 msgstr ""
+"OKR.BEST 배포에 맞춘 안내를 원하는 고객은 `Mattermost 전문가 "
+"<https://mattermost.com/contact-sales/>`_\\ 에게 문의하여 안내를 받을 수 "
+"있습니다."
 
