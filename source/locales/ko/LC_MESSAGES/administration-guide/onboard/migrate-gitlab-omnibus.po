@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:2
 msgid "Migrating from GitLab Omnibus to Mattermost Standalone"
-msgstr ""
+msgstr "GitLab Omnibus에서 Mattermost Standalone으로 마이그레이션"
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:5
 msgid "Overview"
-msgstr ""
+msgstr "개요"
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:7
 msgid ""
@@ -35,6 +35,10 @@ msgid ""
 "transition, GitLab will continue to support Mattermost **up to version "
 "10.11 ESR** within the Omnibus installation until the final removal date."
 msgstr ""
+"GitLab은 GitLab 19.0에서 `GitLab Omnibus 패키지의 Mattermost 지원 중단 "
+"<https://docs.gitlab.com/update/deprecations/#mattermost-bundled-with-linux-"
+"package>`__\\ 을 발표했습니다. 이 전환의 일환으로 GitLab은 최종 제거일까지 Omnibus 설치 내 Mattermost를 "
+"**버전 10.11 ESR까지** 계속 지원합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:9
 msgid ""
@@ -44,6 +48,9 @@ msgid ""
 "latest Mattermost releases, security updates, and enterprise capabilities"
 " independent of GitLab’s release cycle."
 msgstr ""
+"연속성과 장기 지원을 보장하려면 GitLab Omnibus 내에서 Mattermost를 사용하는 조직은 **독립 실행형 Mattermost "
+"설치**\\ 로 마이그레이션하는 계획을 세워야 합니다. 이 접근 방식은 GitLab 릴리스 주기와 독립적으로 최신 Mattermost "
+"릴리스, 보안 업데이트, 엔터프라이즈 기능에 지속적으로 액세스할 수 있게 합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:11
 msgid ""
@@ -51,46 +58,50 @@ msgid ""
 "managing infrastructure, upgrading PostgreSQL, and scaling Mattermost "
 "independently to meet performance and compliance requirements."
 msgstr ""
+"독립 실행형 배포로 마이그레이션하면 인프라 관리, PostgreSQL 업그레이드, 성능 및 컴플라이언스 요구 사항을 충족하기 위한 "
+"OKR.BEST 독립 확장에서도 더 큰 유연성을 얻을 수 있습니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:14
 msgid "Prerequisites"
-msgstr ""
+msgstr "사전 요구 사항"
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:16
 msgid "Before you begin:"
-msgstr ""
+msgstr "시작하기 전에:"
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:18
 msgid "Administrative (root or sudo) access to the GitLab Omnibus server."
-msgstr ""
+msgstr "GitLab Omnibus 서버에 대한 관리(root 또는 sudo) 액세스 권한."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:19
 msgid "A new standalone **PostgreSQL** server prepared and accessible."
-msgstr ""
+msgstr "준비되어 있고 액세스 가능한 새 독립 실행형 **PostgreSQL** 서버."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:20
 msgid "Sufficient disk space for the Mattermost database dump."
-msgstr ""
+msgstr "Mattermost 데이터베이스 덤프를 위한 충분한 디스크 공간."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:21
 msgid "A planned maintenance window, as Mattermost downtime is required."
-msgstr ""
+msgstr "Mattermost 중단 시간이 필요하므로 계획된 유지 관리 기간."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:22
 msgid ""
 "A current full backup of your Mattermost instance, including database and"
 " file storage."
 msgstr ""
+"데이터베이스와 파일 저장소를 포함한 현재 OKR.BEST 인스턴스의 전체 백업."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:25
 msgid "Migration Steps"
-msgstr ""
+msgstr "마이그레이션 단계"
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:27
 msgid ""
 "Follow the steps below to safely migrate from GitLab Omnibus to a "
 "standalone Mattermost installation."
 msgstr ""
+"GitLab Omnibus에서 독립 실행형 Mattermost 설치로 안전하게 마이그레이션하려면 아래 단계를 따르세요."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:30
 msgid ""
@@ -98,24 +109,29 @@ msgid ""
 "``mattermost_production`` and your PostgreSQL user is ``mmuser``. Adjust "
 "as needed for your environment."
 msgstr ""
+"다음 절차는 Mattermost 데이터베이스 이름이 ``mattermost_production``\\ 이고 PostgreSQL 사용자가 "
+"``mmuser``\\ 라고 가정합니다. 환경에 맞게 조정하세요."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:33
 msgid "Step 1: Create a Database Dump from GitLab Omnibus"
-msgstr ""
+msgstr "1단계: GitLab Omnibus에서 데이터베이스 덤프 생성"
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:35
 msgid ""
 "Use the GitLab Omnibus PostgreSQL tools to create a dump of the "
 "Mattermost database. Run this command on the GitLab server:"
 msgstr ""
+"GitLab Omnibus PostgreSQL 도구를 사용하여 Mattermost 데이터베이스 덤프를 생성합니다. GitLab 서버에서 "
+"이 명령을 실행합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:42
 msgid "This will create a compressed SQL dump file of your Mattermost database."
 msgstr ""
+"그러면 Mattermost 데이터베이스의 압축된 SQL 덤프 파일이 생성됩니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:45
 msgid "Step 2: Prepare the New PostgreSQL Server"
-msgstr ""
+msgstr "2단계: 새 PostgreSQL 서버 준비"
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:47
 msgid ""
@@ -123,36 +139,41 @@ msgid ""
 " database preparation guidelines <deployment-"
 "guide/server/preparations:database preparation>`. This includes:"
 msgstr ""
+"공식 :ref:`Mattermost 데이터베이스 준비 지침 <deployment-guide/server/preparations:database preparation>`"
+"\\ 에 따라 새 PostgreSQL 서버를 설정합니다. 여기에는 다음이 포함됩니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:49
 msgid ""
 "Installing the correct PostgreSQL version supported by your Mattermost "
 "server."
 msgstr ""
+"OKR.BEST 서버에서 지원하는 올바른 PostgreSQL 버전을 설치합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:50
 msgid "Creating a new Mattermost database and user with appropriate permissions."
-msgstr ""
+msgstr "적절한 권한이 있는 새 Mattermost 데이터베이스와 사용자를 생성합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:53
 msgid "Step 3: Transfer and Restore the Database Dump"
-msgstr ""
+msgstr "3단계: 데이터베이스 덤프 전송 및 복원"
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:55
 msgid ""
 "Transfer the database dump file to your new PostgreSQL server, then "
 "restore it:"
 msgstr ""
+"데이터베이스 덤프 파일을 새 PostgreSQL 서버로 전송한 다음 복원합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:61
 msgid ""
 "Verify that the database restoration completes successfully without "
 "errors."
 msgstr ""
+"데이터베이스 복원이 오류 없이 성공적으로 완료되는지 확인합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:64
 msgid "Step 4: Update Mattermost Configuration"
-msgstr ""
+msgstr "4단계: OKR.BEST 구성 업데이트"
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:66
 msgid ""
@@ -160,22 +181,26 @@ msgid ""
 "point to the new PostgreSQL server. Locate the ``SqlSettings.DataSource``"
 " parameter and update it as follows:"
 msgstr ""
+"독립 실행형 OKR.BEST 서버에서 새 PostgreSQL 서버를 가리키도록 ``config.json`` 파일을 업데이트합니다. "
+"``SqlSettings.DataSource`` 매개변수를 찾아 다음과 같이 업데이트합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:76
 msgid ""
 "Ensure that credentials, hostnames, and connection settings match your "
 "new PostgreSQL configuration."
 msgstr ""
+"자격 증명, 호스트 이름, 연결 설정이 새 PostgreSQL 구성과 일치하는지 확인합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:79
 msgid "Step 5: Migrate the Mattermost Application and Data"
-msgstr ""
+msgstr "5단계: OKR.BEST 애플리케이션 및 데이터 마이그레이션"
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:81
 msgid ""
 "To move Mattermost application files from the GitLab server to a new "
 "standalone server:"
 msgstr ""
+"GitLab 서버에서 새 독립 실행형 서버로 OKR.BEST 애플리케이션 파일을 이동하려면:"
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:83
 msgid ""
@@ -183,116 +208,125 @@ msgid ""
 "See the :ref:`Server Deployment Planning <deployment-guide/server/server-"
 "deployment-planning:deployment options>`."
 msgstr ""
+"새 서버에 Mattermost의 **동일하거나 더 최신 버전**\\ 을 설치합니다. :ref:`서버 배포 계획 <deployment-"
+"guide/server/server-deployment-planning:deployment options>`\\ 을 참조하세요."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:84
 msgid ""
 "**Copy your existing configuration and data** from the GitLab Omnibus "
 "instance:"
 msgstr ""
+"GitLab Omnibus 인스턴스에서 **기존 구성과 데이터 복사**:"
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:96
 msgid "Ensure permissions are correctly set on the new server:"
-msgstr ""
+msgstr "새 서버에서 권한이 올바르게 설정되었는지 확인합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:103
 msgid "Step 6: Start Mattermost"
-msgstr ""
+msgstr "6단계: OKR.BEST 시작"
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:105
 msgid "Start the Mattermost service on your new standalone installation:"
-msgstr ""
+msgstr "새 독립 실행형 설치에서 Mattermost 서비스를 시작합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:111
 msgid "Mattermost will now connect to your standalone PostgreSQL database."
-msgstr ""
+msgstr "이제 Mattermost가 독립 실행형 PostgreSQL 데이터베이스에 연결됩니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:114
 msgid "Step 7: Verify the Migration"
-msgstr ""
+msgstr "7단계: 마이그레이션 확인"
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:116
 msgid "After starting Mattermost, perform the following checks:"
-msgstr ""
+msgstr "Mattermost를 시작한 후 다음 사항을 확인합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:118
 msgid ""
 "Confirm that Mattermost starts successfully with no database connection "
 "errors."
 msgstr ""
+"Mattermost가 데이터베이스 연결 오류 없이 성공적으로 시작되는지 확인합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:119
 msgid "Review server logs for any startup or connection issues."
-msgstr ""
+msgstr "시작 또는 연결 문제가 있는지 서버 로그를 검토합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:120
 msgid ""
 "Log into Mattermost and verify that all teams, channels, and users are "
 "present."
 msgstr ""
+"OKR.BEST에 로그인하여 모든 팀, 채널, 사용자가 있는지 확인합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:121
 msgid "Post test messages and upload files to confirm functionality."
-msgstr ""
+msgstr "테스트 메시지를 게시하고 파일을 업로드하여 기능을 확인합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:122
 msgid "Validate user authentication and permissions."
-msgstr ""
+msgstr "사용자 인증과 권한을 검증합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:123
 msgid "Confirm that database queries are directed to the new PostgreSQL server."
-msgstr ""
+msgstr "데이터베이스 쿼리가 새 PostgreSQL 서버로 전달되는지 확인합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:126
 msgid "Important Considerations"
-msgstr ""
+msgstr "중요 고려 사항"
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:128
 msgid ""
 "Always maintain a **full backup** of your Mattermost database before "
 "migration."
 msgstr ""
+"마이그레이션 전에 항상 Mattermost 데이터베이스의 **전체 백업**\\ 을 유지합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:129
 msgid "Schedule a **maintenance window** to minimize user disruption."
-msgstr ""
+msgstr "사용자 중단을 최소화하려면 **유지 관리 기간**\\ 을 예약합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:130
 msgid "Validate performance and monitoring configurations post-migration."
-msgstr ""
+msgstr "마이그레이션 후 성능과 모니터링 구성을 검증합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:131
 msgid ""
 "Ensure that your new PostgreSQL server follows Mattermost’s security and "
 "tuning best practices."
 msgstr ""
+"새 PostgreSQL 서버가 Mattermost의 보안 및 튜닝 모범 사례를 따르는지 확인합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:134
 msgid "Troubleshooting"
-msgstr ""
+msgstr "문제 해결"
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:136
 msgid "If you encounter errors during the migration:"
-msgstr ""
+msgstr "마이그레이션 중 오류가 발생하면:"
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:138
 msgid "Review PostgreSQL logs for permission or connection issues."
-msgstr ""
+msgstr "권한 또는 연결 문제가 있는지 PostgreSQL 로그를 검토합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:139
 msgid ""
 "Verify that the Mattermost PostgreSQL user has full access to the "
 "restored database."
 msgstr ""
+"Mattermost PostgreSQL 사용자가 복원된 데이터베이스에 대한 전체 액세스 권한을 가지고 있는지 확인합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:140
 msgid ""
 "Ensure that the ``config.json`` file contains the correct database "
 "connection string."
 msgstr ""
+"``config.json`` 파일에 올바른 데이터베이스 연결 문자열이 포함되어 있는지 확인합니다."
 
 #: ../../source/administration-guide/onboard/migrate-gitlab-omnibus.rst:141
 msgid ""
 "Restart the Mattermost service and check ``mattermost.log`` for detailed "
 "errors."
 msgstr ""
-
+"Mattermost 서비스를 재시작하고 자세한 오류는 ``mattermost.log``\\ 를 확인합니다."
