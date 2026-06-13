@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/statistics.rst:2
 msgid "Statistics"
-msgstr ""
+msgstr "통계"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -37,7 +39,7 @@ msgstr ""
 msgid ""
 "Statistics on users, posts, and channels are tracked for each system and "
 "team. Enterprise Editions have access to advanced system statistics."
-msgstr ""
+msgstr "사용자, 글, 채널 통계는 각 시스템 및 팀별로 추적됩니다. Enterprise Edition에서는 고급 시스템 통계에 액세스할 수 있습니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:11
 msgid ""
@@ -48,6 +50,11 @@ msgid ""
 "<administration-guide/configure/reporting-configuration-settings:maximum "
 "users for statistics>`."
 msgstr ""
+"대규모 엔터프라이즈 배포의 성능을 극대화하기 위해 전체 메시지, 전체 해시태그 "
+"메시지, 전체 파일 메시지, 일별 메시지, 일별 메시지가 있는 활성화된 사용자 통계는 "
+":ref:`config.json <administration-guide/configure/reporting-configuration-settings:"
+"maximum users for statistics>`\\ 에서 ``MaxUsersForStatistics`` 값을 변경하여 "
+"구성할 수 있습니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:13
 msgid ""
@@ -56,31 +63,34 @@ msgid ""
 "</administration-guide/scale/deploy-prometheus-grafana-for-performance-"
 "monitoring>`."
 msgstr ""
+"Entry, Enterprise, Enterprise 배포의 고급 메트릭은 :doc:`성능 모니터링 문서에서 "
+"자세히 알아보세요 </administration-guide/scale/deploy-prometheus-grafana-for-"
+"performance-monitoring>`."
 
 #: ../../source/administration-guide/manage/statistics.rst:16
 msgid "Site statistics"
-msgstr ""
+msgstr "사이트 통계"
 
 #: ../../source/administration-guide/manage/statistics.rst:18
 msgid ""
 "System statistics are viewable under **System Console > Reporting**. The "
 "data shown here is a cumulative sum across all teams on the system."
-msgstr ""
+msgstr "시스템 통계는 **관리자 도구 > 보고** 아래에서 볼 수 있습니다. 여기에 표시되는 데이터는 시스템의 모든 팀에 대한 누적 합계입니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:20
 #: ../../source/administration-guide/manage/statistics.rst:96
 msgid "Total Users"
-msgstr ""
+msgstr "전체 사용자"
 
 #: ../../source/administration-guide/manage/statistics.rst:21
 msgid ""
 "The total number of active accounts created on your system. Excludes "
 "deactivated accounts and single-channel guests."
-msgstr ""
+msgstr "시스템에 생성된 활성 계정의 총 수입니다. 비활성화된 계정과 단일 채널 게스트는 제외됩니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:23
 msgid "Single-channel Guests"
-msgstr ""
+msgstr "단일 채널 게스트"
 
 #: ../../source/administration-guide/manage/statistics.rst:24
 msgid ""
@@ -91,71 +101,76 @@ msgid ""
 "1:1 ratio with licensed seats. When this count exceeds the allowance, the"
 " statistic is highlighted as a warning for system admins."
 msgstr ""
+"서버에서 정확히 하나의 채널에 속한 활성 게스트 계정 수입니다. 개인 메시지와 그룹 "
+"메시지는 게스트가 단일 채널 게스트로 집계되는지 여부에 영향을 주지 않습니다. 단일 "
+"채널 게스트는 기본 유료 시트 수와 별도로 집계되며, 라이선스가 부여된 시트와 1:1 "
+"비율까지 무료입니다. 이 수가 허용량을 초과하면 시스템 관리자에게 경고로 통계가 "
+"강조 표시됩니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:26
 msgid "Total Teams"
-msgstr ""
+msgstr "전체 팀"
 
 #: ../../source/administration-guide/manage/statistics.rst:27
 msgid "The total number of teams created on your system."
-msgstr ""
+msgstr "시스템에 생성된 팀의 총 수입니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:29
 msgid "Total Channels"
-msgstr ""
+msgstr "전체 채널"
 
 #: ../../source/administration-guide/manage/statistics.rst:30
 msgid ""
 "The total number of public channels and private channels created in all "
 "the teams on your system, including deleted channels. Doesn't include "
 "direct message channels."
-msgstr ""
+msgstr "삭제된 채널을 포함하여 시스템의 모든 팀에 생성된 공개 채널과 비공개 채널의 총 수입니다. 개인 메시지 채널은 포함하지 않습니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:32
 #: ../../source/administration-guide/manage/statistics.rst:105
 msgid "Total Posts"
-msgstr ""
+msgstr "전체 글"
 
 #: ../../source/administration-guide/manage/statistics.rst:33
 msgid ""
 "The total number of posts made in all the teams on your system, including"
 " deleted posts and posts made using automation."
-msgstr ""
+msgstr "삭제된 글과 자동화를 사용해 작성된 글을 포함하여 시스템의 모든 팀에서 작성된 글의 총 수입니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:35
 msgid "Daily Active Users"
-msgstr ""
+msgstr "일일 활성 사용자"
 
 #: ../../source/administration-guide/manage/statistics.rst:36
 msgid ""
 "The total number of users who viewed the Mattermost site in the last 24 "
 "hours. Excludes bot users."
-msgstr ""
+msgstr "지난 24시간 동안 OKR.BEST 사이트를 본 사용자의 총 수입니다. 봇 사용자는 제외됩니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:38
 msgid "Monthly Active Users"
-msgstr ""
+msgstr "월간 활성 사용자"
 
 #: ../../source/administration-guide/manage/statistics.rst:39
 msgid ""
 "The total number of users who viewed the Mattermost site in the last 30 "
 "days. Excludes bot users."
-msgstr ""
+msgstr "지난 30일 동안 OKR.BEST 사이트를 본 사용자의 총 수입니다. 봇 사용자는 제외됩니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:41
 #: ../../source/administration-guide/manage/statistics.rst:108
 msgid "Total Posts (graph)"
-msgstr ""
+msgstr "전체 글(그래프)"
 
 #: ../../source/administration-guide/manage/statistics.rst:42
 msgid ""
 "The total number of posts made on a certain day in all the teams on your "
 "system, including deleted posts and posts made using automation."
-msgstr ""
+msgstr "삭제된 글과 자동화를 사용해 작성된 글을 포함하여 시스템의 모든 팀에서 특정 날짜에 작성된 글의 총 수입니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:44
 msgid "Total Posts from Bots (graph)"
-msgstr ""
+msgstr "봇의 전체 글(그래프)"
 
 #: ../../source/administration-guide/manage/statistics.rst:45
 msgid ""
@@ -164,21 +179,24 @@ msgid ""
 "accounts/>`_ on a certain day in all the teams on your system, including "
 "deleted posts and posts made using automation."
 msgstr ""
+"삭제된 글과 자동화를 사용해 작성된 글을 포함하여 시스템의 모든 팀에서 특정 날짜에 "
+"`봇 계정 <https://developers.mattermost.com/integrate/admin-guide/admin-bot-"
+"accounts/>`_\\ 이 작성한 글의 총 수입니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:47
 #: ../../source/administration-guide/manage/statistics.rst:111
 msgid "Active Users with Posts (graph)"
-msgstr ""
+msgstr "글이 있는 활성 사용자(그래프)"
 
 #: ../../source/administration-guide/manage/statistics.rst:48
 msgid ""
 "Users who made a post on a certain day in all the teams on your system, "
 "including system messages posted from the user's account."
-msgstr ""
+msgstr "사용자 계정에서 게시된 시스템 메시지를 포함하여 시스템의 모든 팀에서 특정 날짜에 글을 작성한 사용자입니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:51
 msgid "Advanced system statistics"
-msgstr ""
+msgstr "고급 시스템 통계"
 
 #: ../../source/_static/badges/entry-ent.rst:9
 msgid ""
@@ -186,73 +204,76 @@ msgid ""
 "Advanced plans <https://mattermost.com/pricing/>`__ (not available on "
 "Professional)"
 msgstr ""
+"|plans-img-yellow| `Entry, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다(Professional에서는 "
+"사용할 수 없음)"
 
 #: ../../source/administration-guide/manage/statistics.rst:56
 msgid "Self-hosted deployments include additional system statistics."
-msgstr ""
+msgstr "셀프 호스팅 배포에는 추가 시스템 통계가 포함됩니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:58
 msgid "Total Sessions"
-msgstr ""
+msgstr "전체 세션"
 
 #: ../../source/administration-guide/manage/statistics.rst:59
 msgid ""
 "The number of active user sessions connected to your system. Expired "
 "sessions are not counted."
-msgstr ""
+msgstr "시스템에 연결된 활성 사용자 세션 수입니다. 만료된 세션은 집계되지 않습니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:61
 msgid "Total Commands"
-msgstr ""
+msgstr "전체 명령어"
 
 #: ../../source/administration-guide/manage/statistics.rst:62
 msgid ""
 "The number of active slash commands currently set up on your system. "
 "Slash commands that are created and then removed in the **Integrations** "
 "menu are not counted."
-msgstr ""
+msgstr "현재 시스템에 설정된 활성 슬래시 명령어 수입니다. **통합** 메뉴에서 생성된 뒤 제거된 슬래시 명령어는 집계되지 않습니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:64
 msgid "Incoming Webhooks"
-msgstr ""
+msgstr "수신 웹훅"
 
 #: ../../source/administration-guide/manage/statistics.rst:65
 msgid ""
 "The number of active incoming webhooks currently setup on your system. "
 "Incoming webhooks that are created and then removed in the "
 "**Integrations** menu are not counted."
-msgstr ""
+msgstr "현재 시스템에 설정된 활성 수신 웹훅 수입니다. **통합** 메뉴에서 생성된 뒤 제거된 수신 웹훅은 집계되지 않습니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:67
 msgid "Outgoing Webhooks"
-msgstr ""
+msgstr "발신 웹훅"
 
 #: ../../source/administration-guide/manage/statistics.rst:68
 msgid ""
 "The number of active outgoing webhooks currently set up on your system. "
 "Outgoing webhooks that are created and then removed in the "
 "**Integrations** menu are not counted."
-msgstr ""
+msgstr "현재 시스템에 설정된 활성 발신 웹훅 수입니다. **통합** 메뉴에서 생성된 뒤 제거된 발신 웹훅은 집계되지 않습니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:70
 msgid "WebSocket Conns"
-msgstr ""
+msgstr "WebSocket 연결"
 
 #: ../../source/administration-guide/manage/statistics.rst:71
 msgid "The number of active WebSocket connections currently on your server."
-msgstr ""
+msgstr "현재 서버의 활성 WebSocket 연결 수입니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:73
 msgid "Master DB Conns"
-msgstr ""
+msgstr "마스터 DB 연결"
 
 #: ../../source/administration-guide/manage/statistics.rst:74
 msgid "The number of active connections currently on your master database."
-msgstr ""
+msgstr "현재 마스터 데이터베이스의 활성 연결 수입니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:76
 msgid "Replica DB Conns"
-msgstr ""
+msgstr "복제본 DB 연결"
 
 #: ../../source/administration-guide/manage/statistics.rst:77
 msgid ""
@@ -260,36 +281,39 @@ msgid ""
 "read replica databases <administration-guide/scale/high-availability-"
 "cluster-based-deployment:database configuration>`."
 msgstr ""
+":ref:`읽기 복제본 데이터베이스 <administration-guide/scale/high-availability-"
+"cluster-based-deployment:database configuration>` 하나 이상에 현재 존재하는 활성 연결 "
+"수입니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:79
 msgid "Total Playbooks"
-msgstr ""
+msgstr "전체 플레이북"
 
 #: ../../source/administration-guide/manage/statistics.rst:80
 msgid "The total number of collaborative playbooks on this server."
-msgstr ""
+msgstr "이 서버의 협업 플레이북 총 수입니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:82
 msgid "Total Playbook Runs"
-msgstr ""
+msgstr "전체 플레이북 실행"
 
 #: ../../source/administration-guide/manage/statistics.rst:83
 msgid "The total number of runs (active and complete) on this server."
-msgstr ""
+msgstr "이 서버의 실행(활성 및 완료) 총 수입니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:85
 msgid "Channel Types"
-msgstr ""
+msgstr "채널 유형"
 
 #: ../../source/administration-guide/manage/statistics.rst:86
 msgid ""
 "This chart displays the number of public channels and private channels in"
 " a visual format, including channels that might have been deleted."
-msgstr ""
+msgstr "이 차트는 삭제되었을 수 있는 채널을 포함하여 공개 채널과 비공개 채널 수를 시각적 형식으로 표시합니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:88
 msgid "Posts, Files and Hashtags"
-msgstr ""
+msgstr "글, 파일 및 해시태그"
 
 #: ../../source/administration-guide/manage/statistics.rst:89
 msgid ""
@@ -297,10 +321,12 @@ msgid ""
 "only text. Posts containing both files and hashtags are counted in both "
 "categories, and deleted posts are included."
 msgstr ""
+"이 차트는 파일, 해시태그 또는 텍스트만 포함하는 글의 수를 표시합니다. 파일과 "
+"해시태그를 모두 포함하는 글은 두 범주에 모두 집계되며, 삭제된 글도 포함됩니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:92
 msgid "Team statistics"
-msgstr ""
+msgstr "팀 통계"
 
 #: ../../source/administration-guide/manage/statistics.rst:94
 msgid ""
@@ -309,77 +335,80 @@ msgid ""
 "excludes posts made in Direct Message channels, which are not tied to a "
 "team."
 msgstr ""
+"팀 통계는 **관리자 도구 > 팀 통계** 아래에서 볼 수 있습니다. 여기에 표시되는 "
+"데이터는 이 팀에 대해서만 누적된 합계이며, 팀에 연결되지 않은 개인 메시지 채널에서 "
+"작성된 글은 제외됩니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:97
 msgid ""
 "The total number of active accounts on this team. Excludes deactivated "
 "accounts."
-msgstr ""
+msgstr "이 팀의 활성 계정 총 수입니다. 비활성화된 계정은 제외됩니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:99
 msgid "Public Channels"
-msgstr ""
+msgstr "공개 채널"
 
 #: ../../source/administration-guide/manage/statistics.rst:100
 msgid ""
 "The number of public channels created in this team. Excludes deleted "
 "channels."
-msgstr ""
+msgstr "이 팀에 생성된 공개 채널 수입니다. 삭제된 채널은 제외됩니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:102
 msgid "Private Channels"
-msgstr ""
+msgstr "비공개 채널"
 
 #: ../../source/administration-guide/manage/statistics.rst:103
 msgid ""
 "The number of private channels created in this team. Excludes deleted "
 "channels."
-msgstr ""
+msgstr "이 팀에 생성된 비공개 채널 수입니다. 삭제된 채널은 제외됩니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:106
 msgid ""
 "The total number of posts made in this team, including deleted posts and "
 "posts made using automation. Excludes posts made in Direct Message "
 "channels, which are not tied to a team."
-msgstr ""
+msgstr "삭제된 글과 자동화를 사용해 작성된 글을 포함하여 이 팀에서 작성된 글의 총 수입니다. 팀에 연결되지 않은 개인 메시지 채널에서 작성된 글은 제외됩니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:109
 msgid ""
 "The total number of posts made on a certain day in this team, including "
 "deleted posts and posts made using automation."
-msgstr ""
+msgstr "삭제된 글과 자동화를 사용해 작성된 글을 포함하여 이 팀에서 특정 날짜에 작성된 글의 총 수입니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:112
 msgid ""
 "Users who made a post on a certain day in this team, including system "
 "messages posted from the user's account."
-msgstr ""
+msgstr "사용자 계정에서 게시된 시스템 메시지를 포함하여 이 팀에서 특정 날짜에 글을 작성한 사용자입니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:114
 msgid "Recent Active Users"
-msgstr ""
+msgstr "최근 활성 사용자"
 
 #: ../../source/administration-guide/manage/statistics.rst:115
 msgid ""
 "Twenty most recent users who have logged in and had recent browser "
 "activity in Mattermost."
-msgstr ""
+msgstr "OKR.BEST에 로그인했고 최근 브라우저 활동이 있는 가장 최근 사용자 20명입니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:117
 msgid "Newly Created Users"
-msgstr ""
+msgstr "새로 생성된 사용자"
 
 #: ../../source/administration-guide/manage/statistics.rst:118
 msgid "Most recent users who have joined the team."
-msgstr ""
+msgstr "팀에 참여한 가장 최근 사용자입니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:121
 msgid "Troubleshooting/FAQ"
-msgstr ""
+msgstr "문제 해결/FAQ"
 
 #: ../../source/administration-guide/manage/statistics.rst:124
 msgid "I see an error: \"Not enough data for a meaningful representation\""
-msgstr ""
+msgstr "\"Not enough data for a meaningful representation\" 오류가 표시됩니다"
 
 #: ../../source/administration-guide/manage/statistics.rst:126
 msgid ""
@@ -389,10 +418,14 @@ msgid ""
 "loading data. To test this, temporarily disable your ad blocker, or view "
 "the page in a browser without an ad blocker installed."
 msgstr ""
+"통계 페이지가 계속 로드 중이고 \"Not enough data for a meaningful representation\"이라는 "
+"오류 메시지가 표시되면 광고 차단기를 사용 중인지 확인하세요. 광고 차단기가 이 "
+"페이지의 데이터 로드를 막을 수 있습니다. 이를 테스트하려면 광고 차단기를 일시적으로 "
+"비활성화하거나 광고 차단기가 설치되지 않은 브라우저에서 페이지를 확인하세요."
 
 #: ../../source/administration-guide/manage/statistics.rst:129
 msgid "Can team admins review their own team's statistics?"
-msgstr ""
+msgstr "팀 관리자가 자신의 팀 통계를 검토할 수 있나요?"
 
 #: ../../source/administration-guide/manage/statistics.rst:134
 msgid ""
@@ -403,16 +436,20 @@ msgid ""
 "administration>` documentation to learn more about these admin roles, "
 "including how to manage privileges and assign roles."
 msgstr ""
+"예. 셀프 호스팅 배포에서는 사용 가능한 위임된 세분화 관리 시스템 역할을 수정하여 "
+"팀 관리자가 자신의 팀 통계를 볼 수 있도록 할 수 있습니다. 권한을 관리하고 역할을 "
+"할당하는 방법을 포함한 이러한 관리자 역할에 대한 자세한 내용은 :doc:`위임된 세분화 "
+"관리 </administration-guide/onboard/delegated-granular-administration>` 문서를 참조하세요."
 
 #: ../../source/administration-guide/manage/statistics.rst:136
 msgid "To enable team admins to access their team's statistics:"
-msgstr ""
+msgstr "팀 관리자가 자신의 팀 통계에 액세스할 수 있도록 하려면:"
 
 #: ../../source/administration-guide/manage/statistics.rst:138
 msgid ""
 "Go to **System Console > User Management > System Roles**, then edit the "
 "**Viewer** system admin role."
-msgstr ""
+msgstr "**관리자 도구 > 사용자 관리 > 시스템 역할**\\ 로 이동한 다음 **뷰어** 시스템 관리자 역할을 편집합니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:140
 msgid ""
@@ -420,6 +457,8 @@ msgid ""
 "Console by going to User Management > System Roles, and making changes to"
 " the Viewer role."
 msgstr ""
+"관리자 도구에서 사용자 관리 > 시스템 역할로 이동하고 뷰어 역할을 변경하여 팀 "
+"관리자가 자신의 팀 통계에 액세스할 수 있도록 합니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:143
 msgid ""
@@ -427,6 +466,9 @@ msgid ""
 "Statistics** to **Read only**, then set **Site Statistics** and **Server "
 "Logs** to **No access**."
 msgstr ""
+"**권한** 아래에서 **보고** 섹션을 펼치고, **팀 통계**\\ 를 **읽기 전용**\\ 으로 "
+"설정한 다음 **사이트 통계** 및 **서버 로그**\\ 를 **액세스 권한 없음**\\ 으로 "
+"설정합니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:145
 msgid ""
@@ -434,6 +476,8 @@ msgid ""
 "**Viewer** role to access only the **Team Statistics** page in the System"
 " Console."
 msgstr ""
+"**뷰어** 역할이 있는 모든 사용자가 관리자 도구의 **팀 통계** 페이지만 액세스하도록 "
+"제한하려면 다른 모든 권한을 **액세스 권한 없음**\\ 으로 설정합니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:147
 msgid ""
@@ -441,22 +485,27 @@ msgid ""
 "expanding the Reporting section, setting Site Statistics and Server Logs "
 "to No Access, and setting all other privileges to No Access."
 msgstr ""
+"뷰어 페이지에서 보고 섹션을 펼치고 사이트 통계와 서버 로그를 액세스 권한 없음으로 "
+"설정하며, 다른 모든 권한을 액세스 권한 없음으로 설정하여 팀 통계 페이지에 대한 "
+"사용자 액세스를 제한합니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:150
 msgid ""
 "Under **Assigned People**, select **Add People** to assign team admins to"
 " the **Viewer** role, and enable them to access their team's statistics."
 msgstr ""
+"**할당된 사람** 아래에서 **사람 추가**\\ 를 선택하여 팀 관리자를 **뷰어** 역할에 "
+"할당하고, 자신의 팀 통계에 액세스할 수 있도록 합니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:152
 msgid ""
 "On the Viewer page, specify which users can access the Team Statistics "
 "page by assigning specific users the Viewer admin role."
-msgstr ""
+msgstr "뷰어 페이지에서 특정 사용자에게 뷰어 관리자 역할을 할당하여 팀 통계 페이지에 액세스할 수 있는 사용자를 지정합니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:155
 msgid "Select **Save**."
-msgstr ""
+msgstr "**저장**\\ 을 선택합니다."
 
 #: ../../source/administration-guide/manage/statistics.rst:159
 msgid ""
@@ -464,4 +513,5 @@ msgid ""
 "**Viewer** system admin role to address team admin changes, such as "
 "promotions or demotions."
 msgstr ""
-
+"시스템 관리자는 승격 또는 강등과 같은 팀 관리자 변경 사항을 처리하기 위해 "
+"**뷰어** 시스템 관리자 역할에 사용자를 수동으로 추가하거나 제거해야 합니다."
