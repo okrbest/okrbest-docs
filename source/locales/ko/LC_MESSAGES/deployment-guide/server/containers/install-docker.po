@@ -32,18 +32,22 @@ msgid ""
 "This guide provides step-by-step instructions for deploying Mattermost "
 "using Docker containers."
 msgstr ""
+"이 가이드는 Docker 컨테이너를 사용하여 OKR.BEST를 배포하는 단계별 안내를 "
+"제공합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:12
 msgid ""
 "Mattermost server deployment using Docker is officially supported on "
 "Linux operating systems only."
 msgstr ""
+"Docker를 사용한 OKR.BEST 서버 배포는 Linux 운영 체제에서만 공식 지원됩니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:13
 msgid ""
 "macOS and Windows Docker deployments are supported for testing and "
 "development purposes only."
 msgstr ""
+"macOS 및 Windows Docker 배포는 테스트 및 개발 목적으로만 지원됩니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:14
 msgid ""
@@ -54,10 +58,15 @@ msgid ""
 "</deployment-guide/server/deploy-kubernetes>` for HA for these features "
 "to ensure reliability."
 msgstr ""
+"Docker는 자동 장애 조치, 공유 저장소, 부하 분산 등 주요 기능이 없기 때문에 "
+"고가용성(HA)에 이상적이지 않습니다. 또한 Docker는 여러 노드를 관리하고 장애에서 "
+"복구하는 데 어려움이 있습니다. 신뢰성을 보장하기 위해 이러한 기능을 갖춘 HA에는 "
+":doc:`Kubernetes에 배포 </deployment-guide/server/deploy-kubernetes>`\\ 하는 "
+"것을 권장합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:17
 msgid "Install Docker"
-msgstr ""
+msgstr "Docker 설치"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:19
 msgid ""
@@ -66,10 +75,13 @@ msgid ""
 "<https://docs.docker.com/engine/install/>`__ and `Docker Compose "
 "<https://docs.docker.com/compose/install/>`_ (release 1.28 or later)."
 msgstr ""
+"Docker가 설치되어 있지 않다면 운영 체제에 따라 아래 안내를 따르세요. `Docker "
+"Engine <https://docs.docker.com/engine/install/>`__\\ 과 `Docker Compose "
+"<https://docs.docker.com/compose/install/>`_(릴리스 1.28 이상)가 필요합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:22
 msgid "Deploy Mattermost on Docker"
-msgstr ""
+msgstr "Docker에 OKR.BEST 배포"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:24
 msgid ""
@@ -77,6 +89,8 @@ msgid ""
 "Docker by leveraging `Docker Compose "
 "<https://docs.docker.com/compose/install/>`_."
 msgstr ""
+"이 섹션은 `Docker Compose <https://docs.docker.com/compose/install/>`_\\ 를 "
+"활용하여 Docker에 OKR.BEST를 배포하는 빠른 시작 가이드를 제공합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:28
 msgid ""
@@ -84,6 +98,9 @@ msgid ""
 "container for the database and a container for the application. An "
 "optional third container results when using NGINX for reverse proxy."
 msgstr ""
+"이 배포 구성은 데이터베이스용 컨테이너와 애플리케이션용 컨테이너의 두 개의 별도 "
+"컨테이너를 생성합니다. 리버스 프록시에 NGINX를 사용하는 경우 선택적으로 세 번째 "
+"컨테이너가 생성됩니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:29
 msgid ""
@@ -91,22 +108,27 @@ msgid ""
 "deployment troubleshooting </deployment-guide/server/docker-"
 "troubleshooting>` documentation for details."
 msgstr ""
+"Docker 배포에 문제가 발생했나요? 자세한 내용은 :doc:`Docker 배포 문제 해결 "
+"</deployment-guide/server/docker-troubleshooting>` 문서를 참고하세요."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:32
 msgid "In a terminal window, clone the repository and enter the directory."
-msgstr ""
+msgstr "터미널 창에서 저장소를 클론하고 디렉토리로 이동합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:39
 msgid ""
 "Create your ``.env`` file by copying and adjusting the ``env.example`` "
 "file."
 msgstr ""
+"``env.example`` 파일을 복사하고 조정하여 ``.env`` 파일을 생성합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:47
 msgid ""
 "At a minimum, you must edit the ``DOMAIN`` value in the ``.env`` file to "
 "correspond to the domain for your Mattermost server."
 msgstr ""
+"최소한 ``.env`` 파일의 ``DOMAIN`` 값을 OKR.BEST 서버의 도메인에 맞게 수정해야 "
+"합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:48
 msgid ""
@@ -115,16 +137,21 @@ msgid ""
 "``MM_SUPPORTSETTINGS_SUPPORTEMAIL``. This is the email address your users"
 " will contact when they need help."
 msgstr ""
+"``MM_SUPPORTSETTINGS_SUPPORTEMAIL``\\ 을 통해 :ref:`지원 이메일 <administration-"
+"guide/configure/site-configuration-settings:support email address>`\\ 을 구성할 "
+"것을 권장합니다. 이는 사용자가 도움이 필요할 때 연락할 이메일 주소입니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:50
 msgid "Create the required directories and set their permissions."
-msgstr ""
+msgstr "필요한 디렉토리를 생성하고 권한을 설정합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:57
 msgid ""
 "*(Optional)* Configure TLS for NGINX. If you're not using the included "
 "NGINX reverse proxy, you can skip this step."
 msgstr ""
+"*(선택 사항)* NGINX용 TLS를 구성합니다. 포함된 NGINX 리버스 프록시를 사용하지 "
+"않는다면 이 단계를 건너뛸 수 있습니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:61
 msgid ""
@@ -135,55 +162,69 @@ msgid ""
 "processes or threads, which may lead to unstable behavior under load. The"
 " current default in ``docker-compose.yml`` is set to ``mem_limit: 4G``."
 msgstr ""
+"**리소스 제한:** `pids_limit`\\ 을 설정하는 사용자 지정 ``docker-compose.yml`` "
+"파일을 사용하는 경우, 정상적인 연결 확장을 허용하면서 리소스를 제한하기 위해 대신 "
+"``mem_limit`` 사용을 권장합니다. ``pids_limit`` 값이 낮으면 컨테이너가 충분한 "
+"프로세스나 스레드를 생성하지 못해 부하 상태에서 불안정한 동작으로 이어질 수 "
+"있습니다. ``docker-compose.yml``\\ 의 현재 기본값은 ``mem_limit: 4G``\\ 로 "
+"설정되어 있습니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:64
 msgid "Create a new certificate and key"
-msgstr ""
+msgstr "새 인증서와 키 생성"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:70
 msgid ""
 "To include the certificate and key, uncomment the following lines in your"
 " ``.env`` file and ensure they point to the appropriate files."
 msgstr ""
+"인증서와 키를 포함하려면 ``.env`` 파일에서 다음 줄의 주석을 해제하고 적절한 "
+"파일을 가리키는지 확인하세요."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:78
 msgid "Use a pre-existing certificate and key"
-msgstr ""
+msgstr "기존 인증서와 키 사용"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:86
 msgid ""
 "To include the certificate and key, ensure the following lines in your "
 "``.env`` file points to the appropriate files."
 msgstr ""
+"인증서와 키를 포함하려면 ``.env`` 파일의 다음 줄이 적절한 파일을 가리키는지 "
+"확인하세요."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:93
 msgid "Deploy Mattermost."
-msgstr ""
+msgstr "OKR.BEST를 배포합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:96
 msgid "Deploy without using the included NGINX"
-msgstr ""
+msgstr "포함된 NGINX를 사용하지 않고 배포"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:102
 msgid ""
 "To access your new Mattermost deployment, navigate to "
 "``http://<YOUR_MM_DOMAIN>:8065/`` in your browser."
 msgstr ""
+"새 OKR.BEST 배포에 접근하려면 브라우저에서 ``http://<YOUR_MM_DOMAIN>:8065/``\\ 로 "
+"이동하세요."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:104
 #: ../../source/deployment-guide/server/containers/install-docker.rst:119
 msgid "To shut down your deployment:"
-msgstr ""
+msgstr "배포를 종료하려면:"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:111
 msgid "Deploy using the included NGINX"
-msgstr ""
+msgstr "포함된 NGINX를 사용하여 배포"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:117
 msgid ""
 "To access your new Mattermost deployment via HTTPS, navigate to "
 "``https://<YOUR_MM_DOMAIN>/`` in your browser."
 msgstr ""
+"HTTPS를 통해 새 OKR.BEST 배포에 접근하려면 브라우저에서 "
+"``https://<YOUR_MM_DOMAIN>/``\\ 로 이동하세요."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:125
 msgid ""
@@ -191,10 +232,13 @@ msgid ""
 "</end-user-guide/collaborate/manage-channel-members>`, and explore the "
 "Mattermost platform."
 msgstr ""
+"첫 번째 OKR.BEST 시스템 관리자 사용자를 만들고, :doc:`더 많은 사용자를 초대 "
+"</end-user-guide/collaborate/manage-channel-members>`\\ 한 다음, OKR.BEST "
+"플랫폼을 살펴보세요."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:128
 msgid "Configure SSO With GitLab (Optional)"
-msgstr ""
+msgstr "GitLab으로 SSO 구성(선택 사항)"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:130
 msgid ""
@@ -202,22 +246,29 @@ msgid ""
 "the PKI chain for your authority. This is required to avoid the ``Token "
 "request failed: certificate signed by unknown authority`` error."
 msgstr ""
+"자체 서명 인증서로 GitLab과 SSO를 사용하려면 해당 기관의 PKI 체인을 추가해야 "
+"합니다. 이는 ``Token request failed: certificate signed by unknown "
+"authority`` 오류를 방지하는 데 필요합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:132
 msgid ""
 "To add the PKI chain, uncomment the following line in your ``.env`` file,"
 " and ensure it points to your ``pki_chain.pem`` file:"
 msgstr ""
+"PKI 체인을 추가하려면 ``.env`` 파일에서 다음 줄의 주석을 해제하고 "
+"``pki_chain.pem`` 파일을 가리키는지 확인하세요:"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:138
 msgid ""
 "Then uncomment the following line in your ``docker-compose.yml`` file, "
 "and ensure it points to the same ``pki_chain.pem`` file:"
 msgstr ""
+"그런 다음 ``docker-compose.yml`` 파일에서 다음 줄의 주석을 해제하고 동일한 "
+"``pki_chain.pem`` 파일을 가리키는지 확인하세요:"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:145
 msgid "Upgrade from mattermost-docker"
-msgstr ""
+msgstr "mattermost-docker에서 업그레이드"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:147
 msgid ""
@@ -226,6 +277,10 @@ msgid ""
 "<https://github.com/mattermost/docker>`_ GitHub repository to access the "
 "official Docker deployment solution for Mattermost."
 msgstr ""
+"`mattermost-docker <https://github.com/mattermost/mattermost-docker>`__ "
+"GitHub 저장소는 지원 중단되었습니다. OKR.BEST의 공식 Docker 배포 솔루션에 "
+"접근하려면 `mattermost/docker <https://github.com/mattermost/docker>`_ GitHub "
+"저장소를 방문하세요."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:149
 msgid ""
@@ -237,26 +292,36 @@ msgid ""
 "community, and you will not lose any features or functionality by moving "
 "to these new images."
 msgstr ""
+"기존 ``mattermost/mattermost-prod-app`` 이미지에서 마이그레이션하려면, "
+"Mattermost가 공식 지원하는 이미지인 ``mattermost/mattermost-enterprise-"
+"edition`` 또는 ``mattermost/mattermost-team-edition`` 이미지로 마이그레이션할 "
+"것을 권장합니다. 이 이미지들은 커뮤니티에서 오랫동안 어려움을 겪어온 PostgreSQL "
+"v11 이상 데이터베이스를 지원하며, 이 새 이미지로 이동하더라도 어떤 기능도 잃지 "
+"않습니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:151
 msgid ""
 "For additional help or questions, please refer to `this issue "
 "<https://github.com/mattermost/mattermost-docker/issues/489>`__."
 msgstr ""
+"추가 도움이나 질문은 `이 이슈 <https://github.com/mattermost/mattermost-"
+"docker/issues/489>`__\\ 를 참고하세요."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:154
 msgid "Install a different version of Mattermost"
-msgstr ""
+msgstr "다른 버전의 OKR.BEST 설치"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:156
 msgid "Shut down your deployment."
-msgstr ""
+msgstr "배포를 종료합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:158
 msgid ""
 "Run ``git pull`` to fetch any recent changes to the repository, paying "
 "attention to any potential ``env.example`` changes."
 msgstr ""
+"``git pull``\\ 을 실행하여 저장소의 최근 변경 사항을 가져오되, 잠재적인 "
+"``env.example`` 변경 사항에 유의하세요."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:160
 msgid ""
@@ -266,6 +331,12 @@ msgid ""
 "<https://hub.docker.com/r/mattermost/mattermost-team-"
 "edition/tags?page=1&ordering=last_updated>`__ image version."
 msgstr ""
+"``.env`` 파일의 ``MATTERMOST_IMAGE_TAG``\\ 를 원하는 `enterprise "
+"<https://hub.docker.com/r/mattermost/mattermost-enterprise-"
+"edition/tags?page=1&ordering=last_updated>`__ 또는 `team "
+"<https://hub.docker.com/r/mattermost/mattermost-team-"
+"edition/tags?page=1&ordering=last_updated>`__ 이미지 버전을 가리키도록 "
+"조정합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:164
 msgid ""
@@ -277,18 +348,23 @@ msgid ""
 "ensures a more reproducible and deterministic environment for your "
 "production deployment."
 msgstr ""
+"**운영 환경의 경우**, ``MATTERMOST_IMAGE_TAG=release-10`` 같은 일반 태그보다 "
+"``MATTERMOST_IMAGE_TAG=release-10.5`` 같은 특정 버전 태그를 사용할 것을 "
+"권장합니다. 일반 ``release-x`` 태그는 개발용으로만 사용하도록 의도되었으며 해당 "
+"메이저 버전 내의 새 패치 릴리스를 자동으로 받지 않습니다. 특정 버전 태그를 "
+"사용하면 운영 배포를 위한 더 재현 가능하고 결정론적인 환경을 보장할 수 있습니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:166
 msgid "Redeploy Mattermost."
-msgstr ""
+msgstr "OKR.BEST를 다시 배포합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:169
 msgid "Troubleshooting"
-msgstr ""
+msgstr "문제 해결"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:172
 msgid "Troubleshooting your Docker deployment"
-msgstr ""
+msgstr "Docker 배포 문제 해결"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:174
 msgid ""
@@ -296,20 +372,25 @@ msgid ""
 "Docker container, `redo the third step <#create-the-required-directores-"
 "and-set-their-permissions>`__ and skip this command:"
 msgstr ""
+"M1 Mac에 배포 중 Docker 컨테이너에서 권한 문제가 발생하면, `세 번째 단계를 다시 "
+"수행 <#create-the-required-directores-and-set-their-permissions>`__\\ 하고 이 "
+"명령을 건너뛰세요:"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:180
 msgid ""
 "If having issues deploying on Docker generally, ensure the docker daemon "
 "is enabled and running:"
 msgstr ""
+"Docker 배포에 전반적으로 문제가 있다면 docker 데몬이 활성화되어 실행 중인지 "
+"확인하세요:"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:186
 msgid "To remove all data and settings for your Mattermost deployment:"
-msgstr ""
+msgstr "OKR.BEST 배포의 모든 데이터와 설정을 제거하려면:"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:193
 msgid "Troubleshooting PostgreSQL"
-msgstr ""
+msgstr "PostgreSQL 문제 해결"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:195
 msgid ""
@@ -318,10 +399,14 @@ msgid ""
 "externally, you'll need to change the password in your database "
 "management tool. Then, update the ``.env`` file with the new credentials."
 msgstr ""
+"빠른 시작 배포의 경우 ``.env`` 파일에서 Postgres 사용자 이름 및/또는 "
+"비밀번호(권장)를 변경할 수 있습니다. 데이터베이스를 외부에서 관리하는 경우 "
+"데이터베이스 관리 도구에서 비밀번호를 변경해야 합니다. 그런 다음 새 자격 증명으로 "
+"``.env`` 파일을 업데이트하세요."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:197
 msgid "Troubleshooting TLS & NGINX"
-msgstr ""
+msgstr "TLS 및 NGINX 문제 해결"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:199
 msgid ""
@@ -330,10 +415,13 @@ msgid ""
 "<https://github.com/mattermost/docker/blob/main/docs/issuing-letsencrypt-"
 "certificate.md>`__."
 msgstr ""
+"Nginx용 TLS 인증서와 키 구성에 대한 자세한 가이드는 `저장소의 이 문서 "
+"<https://github.com/mattermost/docker/blob/main/docs/issuing-letsencrypt-"
+"certificate.md>`__\\ 를 참고하세요."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:202
 msgid "Trial Mattermost using Docker Preview"
-msgstr ""
+msgstr "Docker Preview로 OKR.BEST 체험"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:204
 msgid ""
@@ -342,6 +430,10 @@ msgid ""
 "<https://github.com/mattermost/mattermost-docker-preview>`_ to install "
 "Mattermost in Preview Mode."
 msgstr ""
+"Docker를 사용해 단일 로컬 머신에서 OKR.BEST를 평가할 방법을 찾고 있나요? "
+"OKR.BEST를 프리뷰 모드로 설치하려면 `Mattermost Docker Preview Image "
+"<https://github.com/mattermost/mattermost-docker-preview>`_ 사용을 "
+"권장합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:208
 msgid ""
@@ -351,6 +443,10 @@ msgid ""
 "settings </administration-guide/configure/configuration-settings>` "
 "documentation to learn more about customizing your trial deployment."
 msgstr ""
+"이 로컬 이미지는 자체 완결형입니다(즉, 내부 데이터베이스를 가지고 있으며 바로 "
+"작동합니다). 이 이미지를 사용하는 컨테이너를 삭제하면 예상대로 데이터와 구성이 "
+"제거됩니다. 체험 배포 사용자 지정에 대해 자세히 알아보려면 :doc:`구성 설정 "
+"</administration-guide/configure/configuration-settings>` 문서를 참고하세요."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:209
 msgid ""
@@ -359,6 +455,10 @@ msgid ""
 " settings, has email disabled, keeps no persistent data (all data lives "
 "inside the container), and doesn't support upgrades."
 msgstr ""
+"**프리뷰 모드**\\ 는 알려진 비밀번호 문자열을 사용하고, 운영용이 아닌 다른 구성 "
+"설정을 포함하며, 이메일이 비활성화되어 있고, 영구 데이터를 유지하지 않으며(모든 "
+"데이터가 컨테이너 내부에 존재), 업그레이드를 지원하지 않으므로 운영 환경에서 "
+"사용해서는 안 됩니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:210
 msgid ""
@@ -368,20 +468,26 @@ msgid ""
 "<administration-guide/configure/calls-rtcd-setup:network requirements>` "
 "to run calls are met."
 msgstr ""
+"로컬이 아닌 환경에서 **프리뷰 모드**\\ 의 통화 기능을 사용할 계획이라면, 서버가 "
+"보안(HTTPS) 연결로 실행 중이고 통화 실행을 위한 :ref:`네트워크 요구 사항 "
+"<administration-guide/configure/calls-rtcd-setup:network requirements>`\\ 이 "
+"충족되는지 확인해야 합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:212
 msgid "Install `Docker <https://www.docker.com/get-started/>`__."
-msgstr ""
+msgstr "`Docker <https://www.docker.com/get-started/>`__\\ 를 설치합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:214
 msgid "Once you have Docker, run the following command in a terminal window:"
-msgstr ""
+msgstr "Docker가 준비되면 터미널 창에서 다음 명령을 실행합니다:"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:220
 msgid ""
 "When Docker is done fetching the image, navigate to "
 "``http://localhost:8065/`` in your browser to preview Mattermost."
 msgstr ""
+"Docker가 이미지 가져오기를 마치면 브라우저에서 ``http://localhost:8065/``\\ 로 "
+"이동하여 OKR.BEST를 미리 봅니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:221
 msgid ""
@@ -392,14 +498,19 @@ msgid ""
 "server>` configuration setting is enabled. This setting is disabled for "
 "self-hosted Mattermost deployments by default."
 msgstr ""
+"프리뷰 인스턴스의 계정을 만들려면 화면 오른쪽 상단의 **Don't have an "
+"account**\\ 를 선택하세요. 이 옵션이 보이지 않으면 :ref:`Enable open server "
+"<administration-guide/configure/authentication-configuration-settings:enable "
+"open server>` 구성 설정이 활성화되어 있는지 확인하세요. 이 설정은 셀프 호스팅 "
+"OKR.BEST 배포에서 기본적으로 비활성화되어 있습니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:222
 msgid "Log in to your preview instance with your user credentials."
-msgstr ""
+msgstr "사용자 자격 증명으로 프리뷰 인스턴스에 로그인합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:225
 msgid "Troubleshooting your preview deployment"
-msgstr ""
+msgstr "프리뷰 배포 문제 해결"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:227
 msgid ""
@@ -409,6 +520,10 @@ msgid ""
 "Settings </administration-guide/configure/configuration-settings>` "
 "documentation to customize your deployment."
 msgstr ""
+"OKR.BEST용 **프리뷰 모드** Docker 인스턴스는 제품 평가를 위해 설계되었으며, 이메일을 "
+"활성화하지 않고도 제품이 작동할 수 있도록 ``SendEmailNotifications=false``\\ 를 "
+"설정합니다. 배포를 사용자 지정하려면 :doc:`구성 설정 </administration-guide"
+"/configure/configuration-settings>` 문서를 참고하세요."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:229
 msgid ""
@@ -416,20 +531,24 @@ msgid ""
 "stop and delete your existing **mattermost-preview** container by running"
 " the following commands:"
 msgstr ""
+"OKR.BEST 프리뷰 이미지와 컨테이너를 업데이트하려면, 먼저 다음 명령을 실행하여 기존 "
+"**mattermost-preview** 컨테이너를 중지하고 삭제해야 합니다:"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:237
 msgid ""
 "Once the new image is pulled and the container is stopped and deleted you"
 " need to run the ``docker run`` command from above."
 msgstr ""
+"새 이미지를 가져오고 컨테이너를 중지하고 삭제한 후에는 위의 ``docker run`` 명령을 "
+"실행해야 합니다."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:240
 msgid "On Linux, include ``sudo`` in front of all ``docker`` commands."
-msgstr ""
+msgstr "Linux에서는 모든 ``docker`` 명령 앞에 ``sudo``\\ 를 포함하세요."
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:242
 msgid "To access a shell inside the container, run the following command:"
-msgstr ""
+msgstr "컨테이너 내부의 셸에 접근하려면 다음 명령을 실행합니다:"
 
 #: ../../source/deployment-guide/server/containers/install-docker.rst:250
 msgid ""
@@ -437,4 +556,6 @@ msgid ""
 "troubleshooting>` documentation for resolutions to common deployment "
 "issues."
 msgstr ""
+"일반적인 배포 문제의 해결 방법은 :doc:`배포 문제 해결 </deployment-guide"
+"/deployment-troubleshooting>` 문서를 참고하세요."
 
