@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:2
 msgid "Docker deployment troubleshooting"
-msgstr ""
+msgstr "Docker 배포 문제 해결"
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:5
 msgid "Permission issues on M1 Mac"
-msgstr ""
+msgstr "M1 Mac의 권한 문제"
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:7
 msgid ""
@@ -34,20 +34,25 @@ msgid ""
 "required directories and set their permissions, then skip the following "
 "command because it causes the deploy to stop working."
 msgstr ""
+"M1 Mac에서 Docker로 OKR.BEST 서버를 배포하다가 Docker 컨테이너에서 권한 "
+"문제가 발생하면, 필요한 디렉토리를 다시 생성하고 권한을 설정한 다음, 배포가 "
+"작동을 멈추게 하므로 다음 명령은 건너뛰세요."
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:13
 msgid ""
 "If you're experiencing issues deploying on Docker generally, ensure the "
 "docker daemon is enabled and running:"
 msgstr ""
+"Docker 배포에서 전반적으로 문제가 발생하면 docker 데몬이 활성화되어 실행 "
+"중인지 확인하세요:"
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:19
 msgid "To remove all data and settings for your Mattermost deployment:"
-msgstr ""
+msgstr "OKR.BEST 배포의 모든 데이터와 설정을 제거하려면:"
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:26
 msgid "TLS and NGINX issues"
-msgstr ""
+msgstr "TLS 및 NGINX 문제"
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:28
 msgid ""
@@ -56,20 +61,25 @@ msgid ""
 "<https://github.com/mattermost/docker/blob/main/docs/issuing-letsencrypt-"
 "certificate.md>`__."
 msgstr ""
+"NGINX용 TLS 인증서와 키를 구성하는 자세한 가이드는 `리포지토리의 이 문서 "
+"<https://github.com/mattermost/docker/blob/main/docs/issuing-letsencrypt-"
+"certificate.md>`__\\ 를 참고하세요."
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:31
 msgid "Install a different version of Mattermost"
-msgstr ""
+msgstr "다른 버전의 OKR.BEST 설치"
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:33
 msgid "Shut down your deployment."
-msgstr ""
+msgstr "배포를 종료합니다."
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:35
 msgid ""
 "Run ``git pull`` to fetch any recent changes to the repository, paying "
 "attention to any potential ``env.example`` changes."
 msgstr ""
+"``git pull``\\ 을 실행해 리포지토리의 최근 변경 사항을 가져오되, ``env.example``"
+"\\ 의 변경 가능성에 주의하세요."
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:37
 msgid ""
@@ -79,6 +89,12 @@ msgid ""
 "<https://hub.docker.com/r/mattermost/mattermost-team-"
 "edition/tags?page=1&ordering=last_updated>`__ image version."
 msgstr ""
+"``.env`` 파일의 ``MATTERMOST_IMAGE_TAG``\\ 를 원하는 `enterprise "
+"<https://hub.docker.com/r/mattermost/mattermost-enterprise-"
+"edition/tags?page=1&ordering=last_updated>`__ 또는 `team "
+"<https://hub.docker.com/r/mattermost/mattermost-team-"
+"edition/tags?page=1&ordering=last_updated>`__ 이미지 버전을 가리키도록 "
+"조정합니다."
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:41
 msgid ""
@@ -90,14 +106,20 @@ msgid ""
 "ensures a more reproducible and deterministic environment for your "
 "production deployment."
 msgstr ""
+"**프로덕션 환경에서는** ``MATTERMOST_IMAGE_TAG=release-10`` 같은 일반 태그 "
+"대신 ``MATTERMOST_IMAGE_TAG=release-10.5`` 같은 특정 버전 태그를 사용할 것을 "
+"권장합니다. 일반 ``release-x`` 태그는 개발 용도로만 사용하도록 만들어졌으며, "
+"해당 메이저 버전 내의 새 패치 릴리스를 자동으로 받지 않습니다. 특정 버전 "
+"태그를 사용하면 프로덕션 배포에 더 재현 가능하고 결정적인 환경을 보장할 수 "
+"있습니다."
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:43
 msgid "Redeploy Mattermost."
-msgstr ""
+msgstr "OKR.BEST를 다시 배포합니다."
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:46
 msgid "Unintentional version downgrades"
-msgstr ""
+msgstr "의도하지 않은 버전 다운그레이드"
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:48
 msgid ""
@@ -106,6 +128,9 @@ msgid ""
 "designed for development use and may not point to the latest patch "
 "release within that major version."
 msgstr ""
+"일반 ``MATTERMOST_IMAGE_TAG=release-x`` 태그를 사용할 때 의도하지 않은 "
+"다운그레이드가 발생한다면, 이 태그가 개발 용도로 설계되어 해당 메이저 버전 "
+"내 최신 패치 릴리스를 가리키지 않을 수 있기 때문입니다."
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:50
 msgid ""
@@ -113,6 +138,9 @@ msgid ""
 " as ``MATTERMOST_IMAGE_TAG=release-10.5``, to avoid unexpected version "
 "changes and ensure consistent deployments."
 msgstr ""
+"**해결 방법**: 예상치 못한 버전 변경을 방지하고 일관된 배포를 보장하려면 "
+"``MATTERMOST_IMAGE_TAG=release-10.5`` 같은 더 구체적인 버전 태그를 Docker "
+"이미지에 사용하세요."
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:54
 msgid ""
@@ -122,10 +150,14 @@ msgid ""
 "version from the corresponding release branch. Once this improvement is "
 "implemented, the behavior of these tags will be more predictable."
 msgstr ""
+"일반 ``release-x`` 태그가 해당 릴리스 브랜치의 최신 버전으로 업데이트되도록 "
+"`파이프라인 개선 작업 "
+"<https://github.com/mattermost/mattermost/issues/30656>`__\\ 이 진행 "
+"중입니다. 이 개선이 적용되면 이러한 태그의 동작이 더 예측 가능해집니다."
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:57
 msgid "Upgrading from ``mattermost-docker``"
-msgstr ""
+msgstr "``mattermost-docker``\\ 에서 업그레이드"
 
 #: ../../source/deployment-guide/server/docker-troubleshooting.rst:59
 msgid ""
@@ -136,4 +168,11 @@ msgid ""
 "For additional help, please refer to `this issue "
 "<https://github.com/mattermost/mattermost-docker/issues/489>`__."
 msgstr ""
+"지원 중단된 `mattermost-docker 리포지토리 "
+"<https://github.com/mattermost/mattermost-docker>`__\\ 에서 업그레이드하는 "
+"자세한 가이드는 `이 문서 "
+"<https://github.com/mattermost/docker/blob/main/scripts/UPGRADE.md>`__\\ 를 "
+"참고하세요. 추가 도움이 필요하면 `이 이슈 "
+"<https://github.com/mattermost/mattermost-docker/issues/489>`__\\ 를 "
+"참고하세요."
 

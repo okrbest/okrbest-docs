@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/deployment-guide/server/image-proxy.rst:2
 msgid "(Optional) Use an Image proxy"
-msgstr ""
+msgstr "(선택) 이미지 프록시 사용"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced "
+"플랜 <https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -38,6 +40,8 @@ msgid ""
 "When enabled, the image proxy needs to be publicly accessible to both the"
 " Mattermost client and server."
 msgstr ""
+"이미지 프록시를 활성화하면 OKR.BEST 클라이언트와 서버 양쪽에서 공개적으로 "
+"접근할 수 있어야 합니다."
 
 #: ../../source/deployment-guide/server/image-proxy.rst:9
 msgid ""
@@ -47,16 +51,23 @@ msgid ""
 "`image previews of plaintext URLs "
 "<https://github.com/mattermost/mattermost/issues/11857>`_."
 msgstr ""
+"OKR.BEST 클라이언트는 모든 외부 이미지를 불러올 때 이미지 프록시를 "
+"사용합니다. OKR.BEST 서버는 가능한 경우 이미지 프록시를 사용하지만, `일반 "
+"텍스트 URL의 이미지 미리보기 "
+"<https://github.com/mattermost/mattermost/issues/11857>`_\\ 처럼 이미지가 "
+"아닐 수 있는 콘텐츠를 요청할 때는 사용하지 않습니다."
 
 #: ../../source/deployment-guide/server/image-proxy.rst:11
 msgid ""
 "Configure an image proxy by going to **System Console > Environment > "
 "Image Proxy**."
 msgstr ""
+"**관리자 도구 > 환경 > Image Proxy**\\ 로 이동하여 이미지 프록시를 "
+"구성합니다."
 
 #: ../../source/deployment-guide/server/image-proxy.rst:14
 msgid "Local image proxy"
-msgstr ""
+msgstr "로컬 이미지 프록시"
 
 #: ../../source/deployment-guide/server/image-proxy.rst:16
 msgid ""
@@ -66,6 +77,10 @@ msgid ""
 " on the server, it provides a secure connection. This method does not "
 "offer any caching behavior."
 msgstr ""
+"로컬 이미지 프록시는 OKR.BEST 서버 배포의 일부로 제공됩니다. 로컬 이미지 "
+"프록시를 사용하면 이미지가 서버를 통해 클라이언트에 제공되어 사용자를 익명화하는 "
+"데 도움이 됩니다. 서버에서 SSL이 활성화되어 있으면 보안 연결을 제공합니다. 이 "
+"방식은 캐싱 동작을 제공하지 않습니다."
 
 #: ../../source/deployment-guide/server/image-proxy.rst:20
 msgid ""
@@ -76,10 +91,15 @@ msgid ""
 "untrusted internal connections>` for more information or if you are "
 "seeing unintentionally blocked images."
 msgstr ""
+"로컬 이미지 프록시를 활성화하면 로컬 네트워크에 호스팅된 이미지에 대한 "
+"요청이 ``AllowUntrustedInternalConnections`` 설정의 영향을 받습니다. 자세한 "
+"내용이나 의도치 않게 차단된 이미지가 보이는 경우 :ref:`문서 <administration-"
+"guide/configure/environment-configuration-settings:allow untrusted "
+"internal connections>`\\ 를 참고하세요."
 
 #: ../../source/deployment-guide/server/image-proxy.rst:25
 msgid "atmos/camo image proxy"
-msgstr ""
+msgstr "atmos/camo 이미지 프록시"
 
 #: ../../source/deployment-guide/server/image-proxy.rst:27
 msgid ""
@@ -89,6 +109,10 @@ msgid ""
 "built-in image proxy, and it can also be used if isolation between the "
 "Mattermost server and image proxy is desired."
 msgstr ""
+"`atmos/camo <https://github.com/atmos/camo>`_ 이미지 프록시는 OKR.BEST 서버와 "
+"별도로 배포할 수 있는 독립형 이미지 프록시입니다. 내장 이미지 프록시보다 추가 "
+"구성 옵션을 제공하며, OKR.BEST 서버와 이미지 프록시 간 격리가 필요한 경우에도 "
+"사용할 수 있습니다."
 
 #: ../../source/deployment-guide/server/image-proxy.rst:29
 msgid ""
@@ -98,26 +122,34 @@ msgid ""
 " be set to the image proxy's shared key which is specified with the "
 "``CAMO_KEY`` environment variable used when setting up the image proxy."
 msgstr ""
+"``atmos/camo``(https://github.com/atmos/camo) 인스턴스를 배포한 후에는 "
+"**Remote Image Proxy URL**\\ 과 **Remote Image Proxy Options** 설정을 지정해야 "
+"합니다. **Remote Image Proxy Options**\\ 는 이미지 프록시를 설정할 때 사용한 "
+"``CAMO_KEY`` 환경 변수로 지정되는 이미지 프록시의 공유 키로 설정해야 합니다."
 
 #: ../../source/deployment-guide/server/image-proxy.rst:31
 msgid ""
 "For example, if the image proxy is located at ``https://image-"
 "proxy.mattermost.com``, it would be configured as follows:"
 msgstr ""
+"예를 들어 이미지 프록시가 ``https://image-proxy.mattermost.com``\\ 에 있는 "
+"경우 다음과 같이 구성합니다:"
 
 #: ../../source/deployment-guide/server/image-proxy.rst:33
 msgid "**Image Proxy Type**: ``atmos/camo``"
-msgstr ""
+msgstr "**Image Proxy Type**: ``atmos/camo``"
 
 #: ../../source/deployment-guide/server/image-proxy.rst:34
 msgid "**Remote Image Proxy URL**: ``https://image-proxy.mattermost.com``"
-msgstr ""
+msgstr "**Remote Image Proxy URL**: ``https://image-proxy.mattermost.com``"
 
 #: ../../source/deployment-guide/server/image-proxy.rst:35
 msgid ""
 "**Remote Image Proxy Options**: ``CAMO_KEY``, which is the secret string "
 "used for the sample ``atmos/camo`` deployment."
 msgstr ""
+"**Remote Image Proxy Options**: 샘플 ``atmos/camo`` 배포에 사용되는 비밀 "
+"문자열인 ``CAMO_KEY``."
 
 #: ../../source/deployment-guide/server/image-proxy.rst:37
 msgid ""
@@ -126,4 +158,7 @@ msgid ""
 "type, providing the URL of the remote image proxy server, and by "
 "specifying the CAMO_KEY secret string."
 msgstr ""
+"관리자 도구에서 환경 > Image Proxy로 이동하여 프록시 유형을 atmos/camo로 "
+"지정하고, 원격 이미지 프록시 서버의 URL을 입력하고, CAMO_KEY 비밀 문자열을 "
+"지정하여 atmos/camo 이미지 프록시를 활성화하고 구성합니다."
 
