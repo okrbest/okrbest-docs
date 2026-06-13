@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/agents/docs/providers.md:1
 msgid "LLM Provider Configuration Guide"
-msgstr ""
+msgstr "LLM 공급자 구성 가이드"
 
 #: ../../source/agents/docs/providers.md:3
 msgid ""
@@ -29,18 +29,21 @@ msgid ""
 "providers with the Mattermost Agents plugin. Each provider has specific "
 "configuration requirements and capabilities."
 msgstr ""
+"이 가이드는 OKR.BEST 에이전트 플러그인에서 다양한 대규모 언어 모델(LLM) 공급자를 "
+"구성하는 방법을 다룹니다. 각 공급자는 고유한 구성 요구사항과 기능을 가지고 "
+"있습니다."
 
 #: ../../source/agents/docs/providers.md:5
 msgid "Supported Providers"
-msgstr ""
+msgstr "지원되는 공급자"
 
 #: ../../source/agents/docs/providers.md:7
 msgid "The Mattermost Agents plugin currently supports these LLM providers:"
-msgstr ""
+msgstr "OKR.BEST 에이전트 플러그인은 현재 다음 LLM 공급자를 지원합니다:"
 
 #: ../../source/agents/docs/providers.md:9
 msgid "Local models via OpenAI-compatible APIs (Ollama, vLLM, etc.)"
-msgstr ""
+msgstr "OpenAI 호환 API를 통한 로컬 모델(Ollama, vLLM 등)"
 
 #: ../../source/agents/docs/providers.md:10
 #: ../../source/agents/docs/providers.md:51
@@ -88,7 +91,7 @@ msgstr ""
 
 #: ../../source/agents/docs/providers.md:20
 msgid "General Configuration Concepts"
-msgstr ""
+msgstr "일반 구성 개념"
 
 #: ../../source/agents/docs/providers.md:22
 msgid ""
@@ -97,28 +100,33 @@ msgid ""
 "use cases, parameters like context length and token limits, and ensure "
 "proper connectivity to provider endpoints."
 msgstr ""
+"모든 LLM 공급자에 대해 API 인증(키, 토큰 또는 기타 인증 방식), 다양한 사용 사례에 "
+"맞는 모델 선택, 컨텍스트 길이 및 토큰 제한 같은 매개변수를 구성하고, 공급자 "
+"엔드포인트에 대한 적절한 연결을 보장해야 합니다."
 
 #: ../../source/agents/docs/providers.md:24
 msgid "Local Models (OpenAI Compatible)"
-msgstr ""
+msgstr "로컬 모델(OpenAI 호환)"
 
 #: ../../source/agents/docs/providers.md:26
 msgid ""
 "The OpenAI Compatible option allows integration with any OpenAI-"
 "compatible LLM provider, such as [Ollama](https://ollama.com/):"
 msgstr ""
+"OpenAI 호환 옵션을 사용하면 [Ollama](https://ollama.com/) 같은 모든 OpenAI 호환 "
+"LLM 공급자와 통합할 수 있습니다:"
 
 #: ../../source/agents/docs/providers.md:28
 msgid "Configuration"
-msgstr ""
+msgstr "구성"
 
 #: ../../source/agents/docs/providers.md:30
 msgid "Deploy your model, for example, on [Ollama](https://ollama.com/)"
-msgstr ""
+msgstr "예를 들어 [Ollama](https://ollama.com/)에 모델을 배포합니다"
 
 #: ../../source/agents/docs/providers.md:31
 msgid "Select **OpenAI Compatible** in the **AI Service** dropdown"
-msgstr ""
+msgstr "**AI Service** 드롭다운에서 **OpenAI Compatible**을 선택합니다"
 
 #: ../../source/agents/docs/providers.md:32
 msgid ""
@@ -127,14 +135,17 @@ msgid ""
 "end of the URL if using Ollama. (e.g., `http://localhost:11434/v1` for "
 "Ollama, otherwise `http://localhost:11434/`)"
 msgstr ""
+"**API URL** 필드에 OKR.BEST 배포 환경에서 AI 서비스로 연결되는 URL을 입력합니다. "
+"포트를 반드시 포함하고, Ollama를 사용하는 경우 URL 끝에 `/v1`을 추가합니다. (예: "
+"Ollama는 `http://localhost:11434/v1`, 그 외에는 `http://localhost:11434/`)"
 
 #: ../../source/agents/docs/providers.md:33
 msgid "If using Ollama, leave the **API Key** field blank"
-msgstr ""
+msgstr "Ollama를 사용하는 경우 **API Key** 필드를 비워 둡니다"
 
 #: ../../source/agents/docs/providers.md:34
 msgid "Specify your model name in the **Default Model** field"
-msgstr ""
+msgstr "**Default Model** 필드에 모델 이름을 지정합니다"
 
 #: ../../source/agents/docs/providers.md:36
 #: ../../source/agents/docs/providers.md:59
@@ -147,19 +158,19 @@ msgstr ""
 #: ../../source/agents/docs/providers.md:199
 #: ../../source/agents/docs/providers.md:297
 msgid "Configuration Options"
-msgstr ""
+msgstr "구성 옵션"
 
 #: ../../source/agents/docs/providers.md
 msgid "Setting"
-msgstr ""
+msgstr "설정"
 
 #: ../../source/agents/docs/providers.md
 msgid "Required"
-msgstr ""
+msgstr "필수"
 
 #: ../../source/agents/docs/providers.md
 msgid "Description"
-msgstr ""
+msgstr "설명"
 
 #: ../../source/agents/docs/providers.md
 msgid "**API URL**"
@@ -167,11 +178,11 @@ msgstr ""
 
 #: ../../source/agents/docs/providers.md
 msgid "Yes"
-msgstr ""
+msgstr "예"
 
 #: ../../source/agents/docs/providers.md
 msgid "The endpoint URL for your OpenAI-compatible API"
-msgstr ""
+msgstr "OpenAI 호환 API의 엔드포인트 URL"
 
 #: ../../source/agents/docs/providers.md
 msgid "**API Key**"
@@ -179,11 +190,11 @@ msgstr ""
 
 #: ../../source/agents/docs/providers.md
 msgid "No"
-msgstr ""
+msgstr "아니요"
 
 #: ../../source/agents/docs/providers.md
 msgid "API key if your service requires authentication"
-msgstr ""
+msgstr "서비스에 인증이 필요한 경우 API 키"
 
 #: ../../source/agents/docs/providers.md
 msgid "**Default Model**"
@@ -191,7 +202,7 @@ msgstr ""
 
 #: ../../source/agents/docs/providers.md
 msgid "The model to use by default"
-msgstr ""
+msgstr "기본으로 사용할 모델"
 
 #: ../../source/agents/docs/providers.md
 msgid "**Organization ID**"
@@ -199,7 +210,7 @@ msgstr ""
 
 #: ../../source/agents/docs/providers.md
 msgid "Organization ID if your service supports it"
-msgstr ""
+msgstr "서비스가 지원하는 경우 조직 ID"
 
 #: ../../source/agents/docs/providers.md
 msgid "**Send User ID**"
@@ -207,7 +218,7 @@ msgstr ""
 
 #: ../../source/agents/docs/providers.md
 msgid "Whether to send user IDs to the service"
-msgstr ""
+msgstr "서비스에 사용자 ID를 전송할지 여부"
 
 #: ../../source/agents/docs/providers.md
 msgid "**Use Responses API**"
@@ -219,10 +230,13 @@ msgid ""
 "off for legacy Chat Completions compatibility with endpoints that do not "
 "implement the Responses API."
 msgstr ""
+"기본적으로 활성화됩니다. 지원되는 경우 OpenAI Responses API를 사용합니다. Responses "
+"API를 구현하지 않는 엔드포인트와의 레거시 Chat Completions 호환성을 위해서는 "
+"끄세요."
 
 #: ../../source/agents/docs/providers.md:47
 msgid "Special Considerations"
-msgstr ""
+msgstr "특별 고려사항"
 
 #: ../../source/agents/docs/providers.md:49
 msgid ""
@@ -234,6 +248,11 @@ msgid ""
 "with **Use Responses API** disabled instead of the **OpenAI** service "
 "type."
 msgstr ""
+"셀프 호스팅 솔루션에 충분한 컴퓨팅 리소스가 있는지 확인하고 OKR.BEST 플러그인과의 "
+"호환성을 테스트하세요. 일부 고급 기능은 모든 호환 공급자에서 사용할 수 없을 수 "
+"있으므로, 배포 환경의 성능에 따라 토큰 제한을 조정하세요. Responses API 없이 OpenAI "
+"호환 동작이 필요한 경우, **OpenAI** 서비스 유형 대신 **Use Responses API**를 "
+"비활성화한 **OpenAI Compatible**을 사용하세요."
 
 #: ../../source/agents/docs/providers.md:53
 #: ../../source/agents/docs/providers.md:70
@@ -244,7 +263,7 @@ msgstr ""
 #: ../../source/agents/docs/providers.md:151
 #: ../../source/agents/docs/providers.md:271
 msgid "Authentication"
-msgstr ""
+msgstr "인증"
 
 #: ../../source/agents/docs/providers.md:55
 msgid ""
@@ -254,6 +273,10 @@ msgid ""
 " with the model's label in the API. If your API key belongs to an OpenAI "
 "organization, you can optionally specify your **Organization ID**."
 msgstr ""
+"[OpenAI API key](https://platform.openai.com/account/api-keys)를 발급받은 후, "
+"**Service** 드롭다운에서 **OpenAI**를 선택하고 API 키를 입력합니다. **Default "
+"Model** 필드에 API에서의 모델 라벨과 일치하는 모델 이름을 지정합니다. API 키가 "
+"OpenAI 조직에 속한 경우, 선택적으로 **Organization ID**를 지정할 수 있습니다."
 
 #: ../../source/agents/docs/providers.md:57
 msgid ""
@@ -261,28 +284,32 @@ msgid ""
 " is no System Console setting to disable the Responses API for this "
 "service type."
 msgstr ""
+"직접 **OpenAI** 서비스는 항상 OpenAI **Responses** API를 사용합니다. 이 서비스 "
+"유형에는 Responses API를 비활성화하는 관리자 도구 설정이 없습니다."
 
 #: ../../source/agents/docs/providers.md
 msgid "Your OpenAI API key"
-msgstr ""
+msgstr "OpenAI API 키"
 
 #: ../../source/agents/docs/providers.md
 msgid "Your OpenAI organization ID"
-msgstr ""
+msgstr "OpenAI 조직 ID"
 
 #: ../../source/agents/docs/providers.md
 msgid ""
 "The model to use by default (see [OpenAI's model "
 "documentation](https://platform.openai.com/docs/models))"
 msgstr ""
+"기본으로 사용할 모델([OpenAI의 모델 문서](https://platform.openai.com/docs/models) "
+"참고)"
 
 #: ../../source/agents/docs/providers.md
 msgid "Whether to send user IDs to OpenAI"
-msgstr ""
+msgstr "OpenAI에 사용자 ID를 전송할지 여부"
 
 #: ../../source/agents/docs/providers.md:68
 msgid "Anthropic (Claude)"
-msgstr ""
+msgstr "Anthropic(Claude)"
 
 #: ../../source/agents/docs/providers.md:72
 msgid ""
@@ -292,16 +319,21 @@ msgid ""
 " a model name in the **Default Model** field that corresponds with the "
 "model's label in the API."
 msgstr ""
+"[Anthropic API key](https://console.anthropic.com/settings/keys)를 발급받은 후, "
+"**Service** 드롭다운에서 **Anthropic**을 선택하고 API 키를 입력합니다. **Default "
+"Model** 필드에 API에서의 모델 라벨과 일치하는 모델 이름을 지정합니다."
 
 #: ../../source/agents/docs/providers.md
 msgid "Your Anthropic API key"
-msgstr ""
+msgstr "Anthropic API 키"
 
 #: ../../source/agents/docs/providers.md
 msgid ""
 "The model to use by default (see [Anthropic's model "
 "documentation](https://docs.anthropic.com/claude/docs/models-overview))"
 msgstr ""
+"기본으로 사용할 모델([Anthropic의 모델 "
+"문서](https://docs.anthropic.com/claude/docs/models-overview) 참고)"
 
 #: ../../source/agents/docs/providers.md:83
 msgid ""
@@ -311,6 +343,10 @@ msgid ""
 "specific Claude requirements — see the [AWS Bedrock Setup "
 "Guide](aws_bedrock_setup.md)."
 msgstr ""
+"AWS Bedrock은 통합 API를 통해 Anthropic(Claude), Amazon(Nova, Titan) 및 기타 "
+"공급자의 파운데이션 모델에 대한 접근을 제공합니다. IAM 정책 구성 및 Anthropic 전용 "
+"Claude 요구사항을 포함한 전체 설정 지침은 [AWS Bedrock 설정 "
+"가이드](aws_bedrock_setup.md)를 참고하세요."
 
 #: ../../source/agents/docs/providers.md:87
 msgid ""
@@ -322,6 +358,12 @@ msgid ""
 "enter an `AWS Access Key ID` and `AWS Secret Access Key`, or a short-term"
 " Bedrock console API key."
 msgstr ""
+"이 플러그인은 [AWS SDK 기본 자격 증명 "
+"체인](https://docs.aws.amazon.com/sdkref/latest/guide/standardized-"
+"credentials.html)을 사용합니다. EC2에서 실행되는 OKR.BEST 서버의 경우, 인스턴스에 "
+"IAM 인스턴스 프로필을 연결하고 모든 자격 증명 필드를 비워 두면 SDK가 자격 증명을 "
+"자동으로 검색합니다. 비 EC2 배포의 경우, `AWS Access Key ID`와 `AWS Secret Access "
+"Key`, 또는 단기 Bedrock 콘솔 API 키를 입력합니다."
 
 #: ../../source/agents/docs/providers.md
 msgid "**AWS Region**"
@@ -332,6 +374,7 @@ msgid ""
 "AWS region where Bedrock is available (e.g., `us-east-1`, `us-west-2`, "
 "`eu-central-1`)"
 msgstr ""
+"Bedrock을 사용할 수 있는 AWS 리전(예: `us-east-1`, `us-west-2`, `eu-central-1`)"
 
 #: ../../source/agents/docs/providers.md
 msgid "**Custom Endpoint URL**"
@@ -342,6 +385,8 @@ msgid ""
 "Optional custom endpoint for VPC endpoints or proxies. Leave blank for "
 "standard AWS endpoints."
 msgstr ""
+"VPC 엔드포인트 또는 프록시를 위한 선택적 사용자 정의 엔드포인트. 표준 AWS "
+"엔드포인트의 경우 비워 둡니다."
 
 #: ../../source/agents/docs/providers.md
 msgid "**AWS Access Key ID**"
@@ -352,6 +397,8 @@ msgid ""
 "IAM user access key ID for long-term credentials. Takes precedence over "
 "API Key if both are set."
 msgstr ""
+"장기 자격 증명을 위한 IAM 사용자 액세스 키 ID. 둘 다 설정된 경우 API Key보다 "
+"우선합니다."
 
 #: ../../source/agents/docs/providers.md
 msgid "**AWS Secret Access Key**"
@@ -359,13 +406,15 @@ msgstr ""
 
 #: ../../source/agents/docs/providers.md
 msgid "IAM user secret access key. Required if AWS Access Key ID is provided."
-msgstr ""
+msgstr "IAM 사용자 시크릿 액세스 키. AWS Access Key ID가 제공된 경우 필수입니다."
 
 #: ../../source/agents/docs/providers.md
 msgid ""
 "Bedrock console API key (base64 encoded, format: `ABSKQm...`). If IAM "
 "credentials above are set, they take precedence."
 msgstr ""
+"Bedrock 콘솔 API 키(base64 인코딩, 형식: `ABSKQm...`). 위의 IAM 자격 증명이 설정된 "
+"경우 해당 자격 증명이 우선합니다."
 
 #: ../../source/agents/docs/providers.md
 msgid ""
@@ -375,6 +424,10 @@ msgid ""
 "/models-supported.html) for the full list of available models and their "
 "IDs. Model availability varies by AWS region."
 msgstr ""
+"사용할 Bedrock 모델 ID(예: `us.anthropic.claude-sonnet-4-6`). 사용 가능한 모델 및 "
+"해당 ID의 전체 목록은 [AWS Bedrock 모델 ID "
+"문서](https://docs.aws.amazon.com/bedrock/latest/userguide"
+"/models-supported.html)를 참고하세요. 모델 가용성은 AWS 리전에 따라 다릅니다."
 
 #: ../../source/agents/docs/providers.md:104
 msgid ""
@@ -383,16 +436,21 @@ msgid ""
 "Specify a model name in the **Default Model** field that corresponds with"
 " the model's label in the API."
 msgstr ""
+"[Cohere API key](https://dashboard.cohere.com/api-keys)를 발급받은 후, "
+"**Service** 드롭다운에서 **Cohere**를 선택하고 API 키를 입력합니다. **Default "
+"Model** 필드에 API에서의 모델 라벨과 일치하는 모델 이름을 지정합니다."
 
 #: ../../source/agents/docs/providers.md
 msgid "Your Cohere API key"
-msgstr ""
+msgstr "Cohere API 키"
 
 #: ../../source/agents/docs/providers.md
 msgid ""
 "The model to use by default (see [Cohere's model "
 "documentation](https://docs.cohere.com/docs/models))"
 msgstr ""
+"기본으로 사용할 모델([Cohere의 모델 문서](https://docs.cohere.com/docs/models) "
+"참고)"
 
 #: ../../source/agents/docs/providers.md:117
 msgid ""
@@ -401,20 +459,25 @@ msgid ""
 "Specify a model name in the **Default Model** field that corresponds with"
 " the model's label in the API."
 msgstr ""
+"[Mistral API key](https://console.mistral.ai/api-keys/)를 발급받은 후, "
+"**Service** 드롭다운에서 **Mistral**을 선택하고 API 키를 입력합니다. **Default "
+"Model** 필드에 API에서의 모델 라벨과 일치하는 모델 이름을 지정합니다."
 
 #: ../../source/agents/docs/providers.md
 msgid "Your Mistral API key"
-msgstr ""
+msgstr "Mistral API 키"
 
 #: ../../source/agents/docs/providers.md
 msgid ""
 "The model to use by default (see [Mistral's model "
 "documentation](https://docs.mistral.ai/getting-started/models/))"
 msgstr ""
+"기본으로 사용할 모델([Mistral의 모델 "
+"문서](https://docs.mistral.ai/getting-started/models/) 참고)"
 
 #: ../../source/agents/docs/providers.md:128
 msgid "Overview"
-msgstr ""
+msgstr "개요"
 
 #: ../../source/agents/docs/providers.md:130
 msgid ""
@@ -423,6 +486,9 @@ msgid ""
 "and `x-selected-account-id` headers for authentication instead of the "
 "standard Authorization header."
 msgstr ""
+"Scale AI(ScaleGov 포함)는 사용자 정의 인증을 갖춘 OpenAI 호환 API를 통해 LLM 모델에 "
+"대한 접근을 제공합니다. Scale은 표준 Authorization 헤더 대신 인증을 위해 "
+"`x-api-key`와 `x-selected-account-id` 헤더를 사용합니다."
 
 #: ../../source/agents/docs/providers.md:134
 msgid ""
@@ -432,14 +498,18 @@ msgid ""
 "://sgp-api.scalegov.com/v5`). If using ScaleGov, enter your account ID in"
 " the **Account ID** field."
 msgstr ""
+"Scale AI 또는 ScaleGov 대시보드에서 Scale AI API 키와 계정 ID를 가져온 후, "
+"**Service** 드롭다운에서 **Scale AI**를 선택합니다. API 키와 Scale 엔드포인트의 API "
+"URL(예: `https://sgp-api.scalegov.com/v5`)을 입력합니다. ScaleGov를 사용하는 경우, "
+"**Account ID** 필드에 계정 ID를 입력합니다."
 
 #: ../../source/agents/docs/providers.md
 msgid "Your Scale AI API key (sent as `x-api-key` header)"
-msgstr ""
+msgstr "Scale AI API 키(`x-api-key` 헤더로 전송됨)"
 
 #: ../../source/agents/docs/providers.md
 msgid "Your Scale API endpoint (e.g., `https://sgp-api.scalegov.com/v5`)"
-msgstr ""
+msgstr "Scale API 엔드포인트(예: `https://sgp-api.scalegov.com/v5`)"
 
 #: ../../source/agents/docs/providers.md
 msgid "**Account ID**"
@@ -450,16 +520,18 @@ msgid ""
 "Your Scale account ID (sent as `x-selected-account-id` header, required "
 "for ScaleGov)"
 msgstr ""
+"Scale 계정 ID(`x-selected-account-id` 헤더로 전송됨, ScaleGov에 필요)"
 
 #: ../../source/agents/docs/providers.md
 msgid ""
 "The model to use by default in `vendor/model-name` format (e.g., `openai"
 "/gpt-4o`)"
 msgstr ""
+"`vendor/model-name` 형식으로 기본으로 사용할 모델(예: `openai/gpt-4o`)"
 
 #: ../../source/agents/docs/providers.md:145
 msgid "Models"
-msgstr ""
+msgstr "모델"
 
 #: ../../source/agents/docs/providers.md:147
 msgid ""
@@ -467,6 +539,8 @@ msgid ""
 "the full list of available models, see the [Scale AI "
 "documentation](https://scale.com/docs)."
 msgstr ""
+"모델은 `vendor/model-name` 형식을 사용합니다(예: `openai/gpt-4o`). 사용 가능한 "
+"모델의 전체 목록은 [Scale AI 문서](https://scale.com/docs)를 참고하세요."
 
 #: ../../source/agents/docs/providers.md:153
 msgid ""
@@ -475,6 +549,9 @@ msgid ""
 "documentation](https://learn.microsoft.com/en-us/azure/ai-"
 "services/openai/overview)."
 msgstr ""
+"Microsoft Azure의 OpenAI 서비스와 통합하는 방법에 대한 자세한 내용은 [공식 Azure "
+"OpenAI 문서](https://learn.microsoft.com/en-us/azure/ai-"
+"services/openai/overview)를 참고하세요."
 
 #: ../../source/agents/docs/providers.md:155
 msgid ""
@@ -483,40 +560,46 @@ msgid ""
 "openai) for your organization and access your [Azure "
 "portal](https://portal.azure.com/)"
 msgstr ""
+"조직에 충분한 [Azure OpenAI 접근 권한](https://learn.microsoft.com"
+"/en-us/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-"
+"openai)을 프로비저닝하고 [Azure 포털](https://portal.azure.com/)에 접속합니다"
 
 #: ../../source/agents/docs/providers.md:156
 msgid ""
 "If you do not already have one, deploy an Azure AI Hub resource within "
 "Azure AI Studio"
 msgstr ""
+"아직 없는 경우, Azure AI Studio 내에서 Azure AI Hub 리소스를 배포합니다"
 
 #: ../../source/agents/docs/providers.md:157
 msgid ""
 "Once the deployment is complete, navigate to the resource and select "
 "**Launch Azure AI Studio**"
 msgstr ""
+"배포가 완료되면 리소스로 이동하여 **Launch Azure AI Studio**를 선택합니다"
 
 #: ../../source/agents/docs/providers.md:158
 msgid ""
 "In the side navigation pane, select **Deployments** under **Shared "
 "resources**"
 msgstr ""
+"측면 탐색 창에서 **Shared resources** 아래의 **Deployments**를 선택합니다"
 
 #: ../../source/agents/docs/providers.md:159
 msgid "Select **Deploy model** then **Deploy base model**"
-msgstr ""
+msgstr "**Deploy model**을 선택한 다음 **Deploy base model**을 선택합니다"
 
 #: ../../source/agents/docs/providers.md:160
 msgid "Select your desired model and select **Confirm**"
-msgstr ""
+msgstr "원하는 모델을 선택한 후 **Confirm**을 선택합니다"
 
 #: ../../source/agents/docs/providers.md:161
 msgid "Select **Deploy** to start your model"
-msgstr ""
+msgstr "모델을 시작하려면 **Deploy**를 선택합니다"
 
 #: ../../source/agents/docs/providers.md:162
 msgid "In Mattermost, select **Azure** in the **Service** dropdown"
-msgstr ""
+msgstr "OKR.BEST에서 **Service** 드롭다운의 **Azure**를 선택합니다"
 
 #: ../../source/agents/docs/providers.md:163
 msgid ""
@@ -524,26 +607,32 @@ msgid ""
 "URI of the **Target URI** (everything up to and including `.com`) and "
 "paste it in the **API URL** field in Mattermost"
 msgstr ""
+"새 모델 배포의 **Endpoint** 패널에서 **Target URI**의 기본 URI(`.com`까지 포함한 "
+"전체)를 복사하여 OKR.BEST의 **API URL** 필드에 붙여넣습니다"
 
 #: ../../source/agents/docs/providers.md:164
 msgid ""
 "In the **Endpoint** panel for your new model deployment, copy the **Key**"
 " and paste it in the **API Key** field in Mattermost"
 msgstr ""
+"새 모델 배포의 **Endpoint** 패널에서 **Key**를 복사하여 OKR.BEST의 **API Key** "
+"필드에 붙여넣습니다"
 
 #: ../../source/agents/docs/providers.md:165
 msgid ""
 "In the **Deployment** panel for your new model deployment, copy the "
 "**Model name** and paste it in the **Default Model** field in Mattermost"
 msgstr ""
+"새 모델 배포의 **Deployment** 패널에서 **Model name**을 복사하여 OKR.BEST의 "
+"**Default Model** 필드에 붙여넣습니다"
 
 #: ../../source/agents/docs/providers.md
 msgid "Your Azure OpenAI API key"
-msgstr ""
+msgstr "Azure OpenAI API 키"
 
 #: ../../source/agents/docs/providers.md
 msgid "Your Azure OpenAI endpoint"
-msgstr ""
+msgstr "Azure OpenAI 엔드포인트"
 
 #: ../../source/agents/docs/providers.md
 msgid ""
@@ -551,10 +640,13 @@ msgid ""
 "documentation](https://learn.microsoft.com/en-us/azure/ai-"
 "services/openai/concepts/models))"
 msgstr ""
+"기본으로 사용할 모델([Azure OpenAI의 모델 "
+"문서](https://learn.microsoft.com/en-us/azure/ai-"
+"services/openai/concepts/models) 참고)"
 
 #: ../../source/agents/docs/providers.md
 msgid "Whether to send user IDs to Azure OpenAI"
-msgstr ""
+msgstr "Azure OpenAI에 사용자 ID를 전송할지 여부"
 
 #: ../../source/agents/docs/providers.md
 msgid ""
@@ -563,6 +655,9 @@ msgid ""
 "compatibility if your endpoint or deployment does not support the "
 "Responses API."
 msgstr ""
+"기본적으로 활성화됩니다. Azure 배포가 지원하는 경우 OpenAI Responses API를 "
+"사용합니다. 엔드포인트나 배포가 Responses API를 지원하지 않는 경우 레거시 Chat "
+"Completions 호환성을 위해 끄세요."
 
 #: ../../source/agents/docs/providers.md:179
 msgid ""
@@ -572,55 +667,59 @@ msgid ""
 " GCP authentication, project/region scoping, or VPC-SC, use **Google "
 "Vertex AI** instead."
 msgstr ""
+"Google Gemini은 단일 API 키로 인증하는 Generative Language API(AI Studio)를 "
+"사용합니다. Gemini과 Vertex AI는 모두 플러그인의 통합 LLM 게이트웨이인 Bifrost를 "
+"통해 라우팅됩니다. 엔터프라이즈 GCP 인증, 프로젝트/리전 범위 지정 또는 VPC-SC가 "
+"필요한 경우, 대신 **Google Vertex AI**를 사용하세요."
 
 #: ../../source/agents/docs/providers.md:181
 msgid "When to choose Gemini vs. Vertex AI"
-msgstr ""
+msgstr "Gemini과 Vertex AI 중 선택하는 시점"
 
 #: ../../source/agents/docs/providers.md
 msgid "Use **Google Gemini** when…"
-msgstr ""
+msgstr "**Google Gemini**를 사용하는 경우…"
 
 #: ../../source/agents/docs/providers.md
 msgid "Use **Google Vertex AI** when…"
-msgstr ""
+msgstr "**Google Vertex AI**를 사용하는 경우…"
 
 #: ../../source/agents/docs/providers.md
 msgid "You want the simplest setup — single API key from AI Studio"
-msgstr ""
+msgstr "가장 간단한 설정을 원하는 경우 — AI Studio의 단일 API 키"
 
 #: ../../source/agents/docs/providers.md
 msgid "You need GCP-scoped billing, IAM, or audit logging"
-msgstr ""
+msgstr "GCP 범위의 청구, IAM 또는 감사 로깅이 필요한 경우"
 
 #: ../../source/agents/docs/providers.md
 msgid "You're testing models or running a small team"
-msgstr ""
+msgstr "모델을 테스트하거나 소규모 팀을 운영하는 경우"
 
 #: ../../source/agents/docs/providers.md
 msgid "You need region pinning, VPC-SC, or private connectivity"
-msgstr ""
+msgstr "리전 고정, VPC-SC 또는 프라이빗 연결이 필요한 경우"
 
 #: ../../source/agents/docs/providers.md
 msgid "You don't have a GCP project"
-msgstr ""
+msgstr "GCP 프로젝트가 없는 경우"
 
 #: ../../source/agents/docs/providers.md
 msgid "You already have a GCP project and want to centralize spend"
-msgstr ""
+msgstr "이미 GCP 프로젝트가 있고 지출을 중앙화하려는 경우"
 
 #: ../../source/agents/docs/providers.md
 msgid "Fine to call `generativelanguage.googleapis.com` directly"
-msgstr ""
+msgstr "`generativelanguage.googleapis.com`을 직접 호출해도 괜찮은 경우"
 
 #: ../../source/agents/docs/providers.md
 msgid "You need Anthropic Claude models served through Vertex"
-msgstr ""
+msgstr "Vertex를 통해 제공되는 Anthropic Claude 모델이 필요한 경우"
 
 #: ../../source/agents/docs/providers.md:190
 #: ../../source/agents/docs/providers.md:287
 msgid "Setup"
-msgstr ""
+msgstr "설정"
 
 #: ../../source/agents/docs/providers.md:192
 msgid ""
@@ -628,20 +727,25 @@ msgid ""
 " API key at "
 "[aistudio.google.com/apikey](https://aistudio.google.com/apikey)."
 msgstr ""
+"[Google AI Studio](https://aistudio.google.com/)에 로그인하고 "
+"[aistudio.google.com/apikey](https://aistudio.google.com/apikey)에서 API 키를 "
+"생성합니다."
 
 #: ../../source/agents/docs/providers.md:193
 msgid ""
 "In Mattermost, open **System Console > Agents > LLM Services** and add a "
 "new service (or open an existing Gemini service)."
 msgstr ""
+"OKR.BEST에서 **관리자 도구 > Agents > LLM Services**를 열고 새 서비스를 "
+"추가합니다(또는 기존 Gemini 서비스를 엽니다)."
 
 #: ../../source/agents/docs/providers.md:194
 msgid "Select **Google Gemini** in the **Service** dropdown."
-msgstr ""
+msgstr "**Service** 드롭다운에서 **Google Gemini**를 선택합니다."
 
 #: ../../source/agents/docs/providers.md:195
 msgid "Paste your AI Studio key into the **API Key** field."
-msgstr ""
+msgstr "**API Key** 필드에 AI Studio 키를 붙여넣습니다."
 
 #: ../../source/agents/docs/providers.md:196
 msgid ""
@@ -650,6 +754,9 @@ msgid ""
 "catalog](https://ai.google.dev/gemini-api/docs/models) to confirm the "
 "exact ID."
 msgstr ""
+"**Default Model** 필드에 모델 식별자를 입력합니다(예: `gemini-2.5-pro` 또는 "
+"`gemini-2.5-flash`). 정확한 ID는 [Google의 모델 "
+"카탈로그](https://ai.google.dev/gemini-api/docs/models)에서 확인하세요."
 
 #: ../../source/agents/docs/providers.md:197
 msgid ""
@@ -659,10 +766,14 @@ msgid ""
 "egress-proxy use cases for operators who configure services "
 "programmatically."
 msgstr ""
+"서비스를 저장합니다. Gemini 서비스 유형에는 관리자 도구에 API URL 필드가 없습니다. "
+"기본 `apiURL` 구성 필드는 API에서 허용되며 비어 있지 않은 경우 기본 URL로 Bifrost에 "
+"전달되어, 서비스를 프로그래밍 방식으로 구성하는 운영자를 위한 이그레스 프록시 사용 "
+"사례를 지원합니다."
 
 #: ../../source/agents/docs/providers.md
 msgid "Your Gemini API key from AI Studio. Stored as a secret."
-msgstr ""
+msgstr "AI Studio의 Gemini API 키. 시크릿으로 저장됩니다."
 
 #: ../../source/agents/docs/providers.md
 msgid ""
@@ -670,6 +781,9 @@ msgid ""
 "documentation](https://ai.google.dev/gemini-api/docs/models)). Common "
 "choices: `gemini-2.5-pro`, `gemini-2.5-flash`."
 msgstr ""
+"기본으로 사용할 모델([Gemini 모델 "
+"문서](https://ai.google.dev/gemini-api/docs/models) 참고). 일반적인 선택: "
+"`gemini-2.5-pro`, `gemini-2.5-flash`."
 
 #: ../../source/agents/docs/providers.md
 msgid "**Input Token Limit**"
@@ -680,6 +794,8 @@ msgid ""
 "Optional override for the maximum input context size, in tokens. Leave "
 "blank to use the model's default."
 msgstr ""
+"최대 입력 컨텍스트 크기(토큰 단위)에 대한 선택적 재정의. 모델의 기본값을 사용하려면 "
+"비워 둡니다."
 
 #: ../../source/agents/docs/providers.md
 msgid "**Output Token Limit**"
@@ -690,6 +806,7 @@ msgid ""
 "Optional override for the maximum output (`max_tokens`) the plugin will "
 "request."
 msgstr ""
+"플러그인이 요청할 최대 출력(`max_tokens`)에 대한 선택적 재정의."
 
 #: ../../source/agents/docs/providers.md:208
 msgid ""
@@ -699,11 +816,15 @@ msgid ""
 "agent or feature requires native web search; in all other cases the Chat "
 "path is used."
 msgstr ""
+"**Send User ID** 및 **Use Responses API** 토글은 **Google Gemini** 서비스 유형에 "
+"노출되지 않습니다. 네이티브 Google 도구를 활성화하거나 에이전트 또는 기능이 네이티브 "
+"웹 검색을 요구하는 경우 Bifrost가 자동으로 Responses API 경로로 전환하며, 그 외의 "
+"모든 경우에는 Chat 경로가 사용됩니다."
 
 #: ../../source/agents/docs/providers.md:210
 #: ../../source/agents/docs/providers.md:311
 msgid "Reasoning (thinking) and model-version mapping"
-msgstr ""
+msgstr "추론(thinking) 및 모델 버전 매핑"
 
 #: ../../source/agents/docs/providers.md:212
 msgid ""
@@ -712,26 +833,29 @@ msgid ""
 "agent > **Config** tab) to turn it on. The configuration controls behave "
 "differently across model generations:"
 msgstr ""
+"Gemini은 Bifrost를 통해 공급자 네이티브 추론(\"thinking\")을 지원합니다. 이를 켜려면 "
+"에이전트에서 **Reasoning**을 활성화하세요(관리자 도구 > Agents > 에이전트 선택 > "
+"**Config** 탭). 구성 제어는 모델 세대에 따라 다르게 동작합니다:"
 
 #: ../../source/agents/docs/providers.md
 msgid "Model generation"
-msgstr ""
+msgstr "모델 세대"
 
 #: ../../source/agents/docs/providers.md
 msgid "What **Thinking Budget** does"
-msgstr ""
+msgstr "**Thinking Budget**이 하는 일"
 
 #: ../../source/agents/docs/providers.md
 msgid "What **Reasoning Effort** does"
-msgstr ""
+msgstr "**Reasoning Effort**가 하는 일"
 
 #: ../../source/agents/docs/providers.md
 msgid "Gemini 2.5 (Pro, Flash, …)"
-msgstr ""
+msgstr "Gemini 2.5(Pro, Flash, …)"
 
 #: ../../source/agents/docs/providers.md
 msgid "Sets `thinkingConfig.thinkingBudget` directly (token count)."
-msgstr ""
+msgstr "`thinkingConfig.thinkingBudget`을 직접 설정합니다(토큰 수)."
 
 #: ../../source/agents/docs/providers.md
 msgid ""
@@ -739,6 +863,9 @@ msgid ""
 "(\"minimal\" / \"low\" / \"medium\" / \"high\") is not natively supported"
 " on 2.5, so Bifrost maps it to a budget."
 msgstr ""
+"*추정* `thinkingBudget`으로 변환됩니다 — effort 선택기(\"minimal\" / \"low\" / "
+"\"medium\" / \"high\")는 2.5에서 네이티브로 지원되지 않으므로 Bifrost가 이를 예산으로 "
+"매핑합니다."
 
 #: ../../source/agents/docs/providers.md
 msgid "Gemini 3.0+"
@@ -746,13 +873,15 @@ msgstr ""
 
 #: ../../source/agents/docs/providers.md
 msgid "Sets `thinkingConfig.thinkingBudget` directly."
-msgstr ""
+msgstr "`thinkingConfig.thinkingBudget`을 직접 설정합니다."
 
 #: ../../source/agents/docs/providers.md
 msgid ""
 "Sets `thinkingConfig.thinkingLevel` (the native 3.0+ field) using the "
 "same minimal/low/medium/high values."
 msgstr ""
+"동일한 minimal/low/medium/high 값을 사용해 `thinkingConfig.thinkingLevel`(네이티브 "
+"3.0+ 필드)을 설정합니다."
 
 #: ../../source/agents/docs/providers.md:219
 msgid ""
@@ -760,6 +889,9 @@ msgid ""
 "thinking budget wins for both Chat and Responses API paths. The default "
 "effort when nothing is set is `\"medium\"`."
 msgstr ""
+"Thinking Budget과 Reasoning Effort가 **둘 다** 설정된 경우, Chat 및 Responses API "
+"경로 모두에서 명시적 thinking budget이 우선합니다. 아무것도 설정하지 않았을 때의 기본 "
+"effort는 `\"medium\"`입니다."
 
 #: ../../source/agents/docs/providers.md:221
 msgid ""
@@ -767,6 +899,9 @@ msgid ""
 "the Responses path Bifrost also enables a reasoning summary so the "
 "provider streams reasoning text back as `reasoning_summary` events."
 msgstr ""
+"추론은 Chat Completions 및 Responses API 경로 모두에서 동작합니다. Responses "
+"경로에서는 Bifrost가 추론 요약도 활성화하여 공급자가 추론 텍스트를 "
+"`reasoning_summary` 이벤트로 스트리밍합니다."
 
 #: ../../source/agents/docs/providers.md:223
 msgid ""
@@ -775,17 +910,22 @@ msgid ""
 "2.0 non-thinking models are silently skipped — `thinkingConfig` is not "
 "sent for them."
 msgstr ""
+"Bifrost는 모델 이름으로 thinking 지원을 감지합니다: 'thinking'을 포함하는 모든 모델, "
+"모든 `gemini-2.5-*` 모델, 또는 모든 Gemini 3.0+ 모델. 이전 2.0 비thinking 모델은 "
+"자동으로 건너뜁니다 — 해당 모델에는 `thinkingConfig`가 전송되지 않습니다."
 
 #: ../../source/agents/docs/providers.md:225
 msgid ""
 "Bifrost uses `https://generativelanguage.googleapis.com/v1beta`. Egress "
 "proxies must whitelist paths starting with `/v1beta/models/`."
 msgstr ""
+"Bifrost는 `https://generativelanguage.googleapis.com/v1beta`를 사용합니다. 이그레스 "
+"프록시는 `/v1beta/models/`로 시작하는 경로를 허용 목록에 추가해야 합니다."
 
 #: ../../source/agents/docs/providers.md:227
 #: ../../source/agents/docs/providers.md:317
 msgid "Native Google tools"
-msgstr ""
+msgstr "네이티브 Google 도구"
 
 #: ../../source/agents/docs/providers.md:229
 msgid ""
@@ -793,18 +933,21 @@ msgid ""
 "posture as Cohere, Mistral, and Bedrock. Enable them per agent in the "
 "**Config** tab under **Native Google Tools**."
 msgstr ""
+"네이티브 Google 도구는 Gemini에서 **기본적으로 꺼져 있으며**, Cohere, Mistral, "
+"Bedrock과 동일한 방침입니다. **Config** 탭의 **Native Google Tools**에서 에이전트별로 "
+"활성화하세요."
 
 #: ../../source/agents/docs/providers.md
 msgid "Tool"
-msgstr ""
+msgstr "도구"
 
 #: ../../source/agents/docs/providers.md
 msgid "What it does"
-msgstr ""
+msgstr "기능"
 
 #: ../../source/agents/docs/providers.md
 msgid "Notes"
-msgstr ""
+msgstr "비고"
 
 #: ../../source/agents/docs/providers.md
 msgid "**Web Search**"
@@ -815,6 +958,8 @@ msgid ""
 "Grounds responses in Google Search results (web search + citations) via "
 "Bifrost's Responses API."
 msgstr ""
+"Bifrost의 Responses API를 통해 Google Search 결과(웹 검색 + 인용)에 응답을 "
+"그라운딩합니다."
 
 #: ../../source/agents/docs/providers.md
 msgid ""
@@ -824,6 +969,10 @@ msgid ""
 "format used by OpenAI and Anthropic providers — the webapp renders them "
 "identically."
 msgstr ""
+"활성화하면 Bifrost가 요청을 Responses API 경로로 자동 전환합니다. 에이전트의 다른 "
+"함수 도구와 MCP 도구는 계속 작동합니다. 그라운딩 인용은 OpenAI 및 Anthropic 공급자가 "
+"사용하는 것과 동일한 `url_citation` 주석 형식으로 정규화되며 — 웹앱은 이를 동일하게 "
+"렌더링합니다."
 
 #: ../../source/agents/docs/providers.md:235
 msgid ""
@@ -831,6 +980,8 @@ msgid ""
 "are not available in the System Console for Google providers — only Web "
 "Search is offered."
 msgstr ""
+"OpenAI가 제공하는 다른 네이티브 도구(파일 검색, 코드 인터프리터)는 Google 공급자의 "
+"관리자 도구에서 사용할 수 없으며 — 웹 검색만 제공됩니다."
 
 #: ../../source/agents/docs/providers.md:237
 msgid ""
@@ -841,11 +992,16 @@ msgid ""
 "lets a single feature toggle web search on without forcing every agent to"
 " enable it manually."
 msgstr ""
+"기능 표면이 요청 시점에 **NativeWebSearchAllowed**를 사용하는 경우(예: 제품 내 웹 "
+"검색 단축키), 에이전트가 Native Google Tools에서 **Web Search**를 명시적으로 "
+"체크하지 않았더라도 Bifrost가 Gemini Responses 요청에 웹 검색을 추가합니다. 이를 통해 "
+"플러그인은 모든 에이전트가 수동으로 활성화하도록 강제하지 않고도 단일 기능으로 웹 "
+"검색을 켤 수 있습니다."
 
 #: ../../source/agents/docs/providers.md:239
 #: ../../source/agents/docs/providers.md:327
 msgid "Example service configuration"
-msgstr ""
+msgstr "서비스 구성 예시"
 
 #: ../../source/agents/docs/providers.md:260
 msgid ""
@@ -854,14 +1010,18 @@ msgid ""
 "regional deployment, and IAM-based access control. Like the direct Gemini"
 " integration, Vertex AI is routed through Bifrost."
 msgstr ""
+"Vertex AI는 Google Cloud의 엔터프라이즈 AI 플랫폼을 통해 Gemini 및 기타 Google "
+"모델에 대한 접근을 제공하며, 프로젝트 범위의 청구, 리전별 배포, IAM 기반 접근 제어를 "
+"갖추고 있습니다. 직접 Gemini 통합과 마찬가지로 Vertex AI도 Bifrost를 통해 "
+"라우팅됩니다."
 
 #: ../../source/agents/docs/providers.md:262
 msgid "Prerequisites"
-msgstr ""
+msgstr "사전 요구사항"
 
 #: ../../source/agents/docs/providers.md:264
 msgid "Before configuring the service in Mattermost, complete this in GCP:"
-msgstr ""
+msgstr "OKR.BEST에서 서비스를 구성하기 전에 GCP에서 다음을 완료하세요:"
 
 #: ../../source/agents/docs/providers.md:266
 msgid ""
@@ -869,6 +1029,8 @@ msgid ""
 " e.g., `my-project-123`) and the **Project Number** (numeric, e.g., "
 "`123456789012`)."
 msgstr ""
+"**Google Cloud 프로젝트를 보유하거나 생성합니다.** **Project ID**(슬러그, 예: "
+"`my-project-123`)와 **Project Number**(숫자, 예: `123456789012`)를 기록해 둡니다."
 
 #: ../../source/agents/docs/providers.md:267
 msgid ""
@@ -876,6 +1038,9 @@ msgid ""
 "aiplatform.googleapis.com --project <PROJECT_ID>` or the equivalent in "
 "the GCP Console."
 msgstr ""
+"해당 프로젝트에 대해 **Vertex AI API를 활성화합니다**: `gcloud services enable "
+"aiplatform.googleapis.com --project <PROJECT_ID>` 또는 GCP 콘솔에서 동등한 작업을 "
+"수행합니다."
 
 #: ../../source/agents/docs/providers.md:268
 msgid ""
@@ -884,14 +1049,18 @@ msgid ""
 "region — check [Vertex AI model availability](https://cloud.google.com"
 "/vertex-ai/generative-ai/docs/learn/locations) before committing."
 msgstr ""
+"필요한 Vertex 모델이 있는 **리전을 선택합니다**(예: `us-central1`, `us-east5`, "
+"`europe-west4`). 모델 가용성은 리전에 따라 다르므로 — 확정하기 전에 [Vertex AI 모델 "
+"가용성](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/locations)을 "
+"확인하세요."
 
 #: ../../source/agents/docs/providers.md:269
 msgid "**Decide your authentication mode** — see below."
-msgstr ""
+msgstr "**인증 모드를 결정합니다** — 아래를 참고하세요."
 
 #: ../../source/agents/docs/providers.md:273
 msgid "The plugin supports two authentication modes via Bifrost:"
-msgstr ""
+msgstr "이 플러그인은 Bifrost를 통해 두 가지 인증 모드를 지원합니다:"
 
 #: ../../source/agents/docs/providers.md:275
 msgid ""
@@ -901,6 +1070,10 @@ msgid ""
 "points at a service-account key file. Leave the **Service Account JSON** "
 "field blank to use ADC."
 msgstr ""
+"**Application Default Credentials(ADC)** — 플러그인이 서비스 계정이 연결된 GCP(GKE, "
+"GCE, Cloud Run)에서 실행되거나, 호스트의 `GOOGLE_APPLICATION_CREDENTIALS` 환경 "
+"변수가 서비스 계정 키 파일을 가리키는 경우에 권장됩니다. ADC를 사용하려면 **Service "
+"Account JSON** 필드를 비워 둡니다."
 
 #: ../../source/agents/docs/providers.md:276
 msgid ""
@@ -910,26 +1083,34 @@ msgid ""
 "needs `roles/aiplatform.user` (or a custom role with the "
 "`aiplatform.endpoints.predict` permission) in your project."
 msgstr ""
+"**Service Account JSON** — 서비스 계정 키 JSON의 전체 내용을 **Service Account "
+"JSON** 필드에 붙여넣습니다. 플러그인은 저장하기 전에 해당 필드에 유효한 JSON이 "
+"포함되어 있는지 검증합니다. 서비스 계정에는 프로젝트에서 `roles/aiplatform.user`(또는 "
+"`aiplatform.endpoints.predict` 권한을 가진 사용자 정의 역할)가 필요합니다."
 
 #: ../../source/agents/docs/providers.md:278
 msgid "To create a service-account key for the JSON path:"
-msgstr ""
+msgstr "JSON 경로용 서비스 계정 키를 생성하려면:"
 
 #: ../../source/agents/docs/providers.md:280
 msgid ""
 "In the GCP Console, go to **IAM & Admin > Service Accounts** and create a"
 " service account (or pick an existing one)."
 msgstr ""
+"GCP 콘솔에서 **IAM & Admin > Service Accounts**로 이동하여 서비스 계정을 "
+"생성합니다(또는 기존 계정을 선택합니다)."
 
 #: ../../source/agents/docs/providers.md:281
 msgid "Grant the account `roles/aiplatform.user` on the project."
-msgstr ""
+msgstr "프로젝트에서 해당 계정에 `roles/aiplatform.user`를 부여합니다."
 
 #: ../../source/agents/docs/providers.md:282
 msgid ""
 "Open the service account, go to **Keys > Add Key > Create new key**, "
 "choose **JSON**, and download the file."
 msgstr ""
+"서비스 계정을 열고 **Keys > Add Key > Create new key**로 이동하여 **JSON**을 선택한 "
+"후 파일을 다운로드합니다."
 
 #: ../../source/agents/docs/providers.md:283
 msgid ""
@@ -937,6 +1118,9 @@ msgid ""
 "paste into the **Service Account JSON** field in Mattermost. Treat this "
 "file as a secret — anyone with it can call Vertex against your project."
 msgstr ""
+"다운로드한 파일을 열고 전체 내용(중괄호 포함)을 복사하여 OKR.BEST의 **Service "
+"Account JSON** 필드에 붙여넣습니다. 이 파일은 시크릿으로 취급하세요 — 이 파일을 가진 "
+"사람은 누구나 사용자의 프로젝트에 대해 Vertex를 호출할 수 있습니다."
 
 #: ../../source/agents/docs/providers.md:285
 msgid ""
@@ -944,32 +1128,40 @@ msgid ""
 " empty, Bifrost falls back to ADC at request time — no key material is "
 "held in plugin config."
 msgstr ""
+"Bifrost는 JSON을 자격 증명으로 저장합니다. **Service Account JSON**이 비어 있으면 "
+"Bifrost는 요청 시점에 ADC로 폴백하며 — 플러그인 구성에는 키 자료가 보관되지 "
+"않습니다."
 
 #: ../../source/agents/docs/providers.md:289
 msgid "Complete the prerequisites above."
-msgstr ""
+msgstr "위의 사전 요구사항을 완료합니다."
 
 #: ../../source/agents/docs/providers.md:290
 msgid ""
 "In Mattermost, open **System Console > Agents > LLM Services** and add a "
 "new service."
 msgstr ""
+"OKR.BEST에서 **관리자 도구 > Agents > LLM Services**를 열고 새 서비스를 추가합니다."
 
 #: ../../source/agents/docs/providers.md:291
 msgid "Select **Google Vertex AI** in the **Service** dropdown."
-msgstr ""
+msgstr "**Service** 드롭다운에서 **Google Vertex AI**를 선택합니다."
 
 #: ../../source/agents/docs/providers.md:292
 msgid ""
 "Fill in **GCP Project ID**, **GCP Region**, and (optionally) **GCP "
 "Project Number**."
 msgstr ""
+"**GCP Project ID**, **GCP Region**, (선택적으로) **GCP Project Number**를 "
+"입력합니다."
 
 #: ../../source/agents/docs/providers.md:293
 msgid ""
 "For ADC: leave **Service Account JSON** blank. For key-based auth: paste "
 "the full JSON."
 msgstr ""
+"ADC의 경우: **Service Account JSON**을 비워 둡니다. 키 기반 인증의 경우: 전체 JSON을 "
+"붙여넣습니다."
 
 #: ../../source/agents/docs/providers.md:294
 msgid ""
@@ -979,10 +1171,14 @@ msgid ""
 "ai/docs/learn/models) to confirm the exact Vertex model ID for your "
 "region."
 msgstr ""
+"**Default Model**에 모델 식별자를 입력합니다(예: `gemini-2.5-pro`). 사용자 리전의 "
+"정확한 Vertex 모델 ID는 [Vertex AI 모델 "
+"카탈로그](https://cloud.google.com/vertex-ai/generative-"
+"ai/docs/learn/models)에서 확인하세요."
 
 #: ../../source/agents/docs/providers.md:295
 msgid "Save the service."
-msgstr ""
+msgstr "서비스를 저장합니다."
 
 #: ../../source/agents/docs/providers.md
 msgid "**GCP Project ID**"
@@ -990,7 +1186,7 @@ msgstr ""
 
 #: ../../source/agents/docs/providers.md
 msgid "Your Google Cloud project ID slug (e.g., `my-project-123`)."
-msgstr ""
+msgstr "Google Cloud 프로젝트 ID 슬러그(예: `my-project-123`)."
 
 #: ../../source/agents/docs/providers.md
 msgid "**GCP Project Number**"
@@ -1003,6 +1199,9 @@ msgid ""
 "standard publisher models (Gemini, Claude, Mistral), Project Number is "
 "not consumed and can be left blank."
 msgstr ""
+"숫자 프로젝트 번호(예: `123456789012`). Project Number는 미세 조정된 모델에 숫자 "
+"엔드포인트 ID를 사용하는 경우에만 필요합니다. 모든 표준 게시자 모델(Gemini, Claude, "
+"Mistral)에서는 Project Number가 사용되지 않으며 비워 둘 수 있습니다."
 
 #: ../../source/agents/docs/providers.md
 msgid "**GCP Region**"
@@ -1013,6 +1212,8 @@ msgid ""
 "Vertex AI region (e.g., `us-central1`, `europe-west4`). Model "
 "availability is region-specific."
 msgstr ""
+"Vertex AI 리전(예: `us-central1`, `europe-west4`). 모델 가용성은 리전별로 "
+"다릅니다."
 
 #: ../../source/agents/docs/providers.md
 msgid "**Service Account JSON**"
@@ -1023,6 +1224,8 @@ msgid ""
 "Full service-account key JSON. Validated as JSON on save. Leave blank to "
 "use ADC or an attached IAM role."
 msgstr ""
+"전체 서비스 계정 키 JSON. 저장 시 JSON으로 검증됩니다. ADC 또는 연결된 IAM 역할을 "
+"사용하려면 비워 둡니다."
 
 #: ../../source/agents/docs/providers.md
 msgid ""
@@ -1030,10 +1233,13 @@ msgid ""
 "documentation](https://cloud.google.com/vertex-ai/generative-"
 "ai/docs/learn/models))."
 msgstr ""
+"사용할 Vertex 모델 ID([Vertex AI 모델 "
+"문서](https://cloud.google.com/vertex-ai/generative-"
+"ai/docs/learn/models) 참고)."
 
 #: ../../source/agents/docs/providers.md
 msgid "Optional override for the maximum input context size, in tokens."
-msgstr ""
+msgstr "최대 입력 컨텍스트 크기(토큰 단위)에 대한 선택적 재정의."
 
 #: ../../source/agents/docs/providers.md:309
 msgid ""
@@ -1042,6 +1248,9 @@ msgid ""
 "path is auto-enabled when a native Google tool is in use; otherwise the "
 "Chat path is used."
 msgstr ""
+"**API Key**, **Send User ID**, **Use Responses API** 토글은 **Google Vertex AI** "
+"서비스 유형에 적용되지 않습니다. Responses API 경로는 네이티브 Google 도구를 사용할 "
+"때 자동으로 활성화되며, 그렇지 않으면 Chat 경로가 사용됩니다."
 
 #: ../../source/agents/docs/providers.md:313
 msgid ""
@@ -1051,6 +1260,11 @@ msgid ""
 "**Thinking Budget** (tokens) or **Reasoning Effort** (minimal / low / "
 "medium / high). When both are set, the explicit budget wins."
 msgstr ""
+"Vertex AI에서 실행되는 Gemini 모델의 경우, 추론은 직접 Gemini과 동일한 방식으로 "
+"구성되며 동일한 모델 버전 매핑(Gemini 2.5 대 3.0+)을 따릅니다. 에이전트에서 "
+"**Reasoning**을 활성화하고 **Thinking Budget**(토큰) 또는 **Reasoning "
+"Effort**(minimal / low / medium / high) 중 하나를 설정합니다. 둘 다 설정된 경우 "
+"명시적 예산이 우선합니다."
 
 #: ../../source/agents/docs/providers.md:315
 #, python-brace-format
@@ -1065,6 +1279,14 @@ msgid ""
 "documentation](https://docs.anthropic.com/claude/reference/claude-on-"
 "vertex-ai) for current versions."
 msgstr ""
+"**Vertex의 Anthropic Claude.** Vertex 서비스에서 Anthropic 모델 ID(예: "
+"`claude-sonnet-4-6@20260101`)를 선택하면, 에이전트는 `thinkingConfig` 대신 "
+"Anthropic 방식의 확장 사고(extended thinking)를 사용합니다. **Thinking Budget** "
+"필드는 여전히 적용되며, **Reasoning Effort** 선택기는 무시됩니다. 모델 ID는 "
+"`{claude-model-name}@{YYYYMMDD}` 형식을 따르며 여기서 날짜는 Anthropic 스냅샷 "
+"버전입니다. 현재 버전은 [Vertex AI의 Anthropic "
+"문서](https://docs.anthropic.com/claude/reference/claude-on-"
+"vertex-ai)를 확인하세요."
 
 #: ../../source/agents/docs/providers.md:319
 msgid ""
@@ -1072,10 +1294,12 @@ msgid ""
 "same posture as Cohere, Mistral, and Bedrock. Enable per agent under "
 "**Native Google Tools**."
 msgstr ""
+"네이티브 Google 도구는 Vertex AI에서 **기본적으로 꺼져 있으며**, Cohere, Mistral, "
+"Bedrock과 동일한 방침입니다. **Native Google Tools**에서 에이전트별로 활성화하세요."
 
 #: ../../source/agents/docs/providers.md
 msgid "Grounds responses with Google Search via the Vertex Responses API."
-msgstr ""
+msgstr "Vertex Responses API를 통해 Google Search로 응답을 그라운딩합니다."
 
 #: ../../source/agents/docs/providers.md
 msgid ""
@@ -1085,16 +1309,22 @@ msgid ""
 "grounding, and your Google Cloud project satisfies Vertex AI grounding "
 "prerequisites."
 msgstr ""
+"활성화하면 Bifrost가 Responses API로 전환합니다. 인용은 응답과 함께 반환됩니다. "
+"그라운딩이 활성화된 상태에서 요청이 실패하면, Vertex AI API가 활성화되어 있는지, "
+"선택한 모델이 그라운딩을 지원하는지, Google Cloud 프로젝트가 Vertex AI 그라운딩 사전 "
+"요구사항을 충족하는지 확인하세요."
 
 #: ../../source/agents/docs/providers.md:325
 msgid ""
 "OpenAI-style `file_search` and `code_interpreter` are not available in "
 "the System Console for Google providers — only Web Search is offered."
 msgstr ""
+"OpenAI 방식의 `file_search`와 `code_interpreter`는 Google 공급자의 관리자 도구에서 "
+"사용할 수 없으며 — 웹 검색만 제공됩니다."
 
 #: ../../source/agents/docs/providers.md:349
 msgid "Troubleshooting"
-msgstr ""
+msgstr "문제 해결"
 
 #: ../../source/agents/docs/providers.md:351
 #, python-brace-format
@@ -1105,6 +1335,10 @@ msgid ""
 "surrounding `{ }`, and check there are no truncated or escaped "
 "characters."
 msgstr ""
+"**저장이 \"invalid service account JSON\" 오류로 실패합니다.** 플러그인은 저장하기 "
+"전에 **Service Account JSON** 필드에 유효한 JSON이 포함되어 있는지 검증합니다. 주변 "
+"`{ }`를 포함한 키 파일의 전체 내용을 다시 복사하고, 잘리거나 이스케이프된 문자가 "
+"없는지 확인하세요."
 
 #: ../../source/agents/docs/providers.md:352
 msgid ""
@@ -1113,6 +1347,10 @@ msgid ""
 " enabled. For ADC deployments, confirm the bound principal (workload "
 "identity, instance SA, etc.) has the same role."
 msgstr ""
+"**요청이 `PERMISSION_DENIED`로 실패합니다.** 서비스 계정이 프로젝트에서 "
+"`roles/aiplatform.user`를 보유하고 있는지, Vertex AI API가 활성화되어 있는지 "
+"확인하세요. ADC 배포의 경우, 바인딩된 주체(워크로드 ID, 인스턴스 SA 등)가 동일한 "
+"역할을 가지고 있는지 확인하세요."
 
 #: ../../source/agents/docs/providers.md:353
 msgid ""
@@ -1120,6 +1358,8 @@ msgid ""
 "the model is available in your **GCP Region**, or switch to a region that"
 " has it."
 msgstr ""
+"**리전에서 모델을 찾을 수 없습니다.** Vertex 모델 ID는 리전 범위입니다. 모델이 **GCP "
+"Region**에서 사용 가능한지 확인하거나, 해당 모델이 있는 리전으로 전환하세요."
 
 #: ../../source/agents/docs/providers.md:354
 msgid ""
@@ -1128,4 +1368,8 @@ msgid ""
 "supports grounding, and make sure your Google Cloud project meets the "
 "current Vertex AI grounding prerequisites."
 msgstr ""
+"**웹 검색이 인용을 반환하지 않습니다.** 에이전트의 **Native Google Tools**에서 **Web "
+"Search**가 체크되어 있는지 확인하고, 선택한 모델이 그라운딩을 지원하는지 확인하며, "
+"Google Cloud 프로젝트가 현재 Vertex AI 그라운딩 사전 요구사항을 충족하는지 "
+"확인하세요."
 
