@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/security-guide/hipaa-compliance.rst:2
 msgid "HIPAA Compliance"
-msgstr ""
+msgstr "HIPAA 컴플라이언스"
 
 #: ../../source/security-guide/hipaa-compliance.rst:4
 msgid ""
@@ -30,16 +30,20 @@ msgid ""
 "standards <https://www.hhs.gov/hipaa/for-professionals/security/laws-"
 "regulations/>`_."
 msgstr ""
+"HIPAA를 준수하는 IT 인프라의 일부로 OKR.BEST를 배포하려면 `HIPAA 컴플라이언스 요구사항 및 "
+"표준 <https://www.hhs.gov/hipaa/for-professionals/security/laws-"
+"regulations/>`_ 교육을 받은 배포 팀이 필요합니다."
 
 #: ../../source/security-guide/hipaa-compliance.rst:6
 msgid "HIPAA-compliant deployments commonly consider the following:"
-msgstr ""
+msgstr "HIPAA 준수 배포에서는 일반적으로 다음 사항을 고려합니다."
 
 #: ../../source/security-guide/hipaa-compliance.rst:8
 msgid ""
 "Omitting the contents of messages from mobile push and email "
 "notifications:"
 msgstr ""
+"모바일 푸시 및 이메일 알림에서 메시지 내용을 생략합니다."
 
 #: ../../source/security-guide/hipaa-compliance.rst:10
 msgid ""
@@ -51,6 +55,11 @@ msgid ""
 "generic description with user and channel names`` or ``Send generic "
 "description with only sender name``."
 msgstr ""
+":ref:`푸시 알림 내용 <administration-guide/configure/site-configuration-settings:push "
+"notification contents>` 옵션이 ``Send full message snippet``로 설정되어 있으면 메시지에 포함된 "
+"개인 건강 정보(PHI)가 사용자의 잠금 화면에 알림으로 표시될 수 있습니다. 이를 방지하려면 옵션을 "
+"``Send generic description with user and channel names`` 또는 ``Send generic "
+"description with only sender name``로 설정합니다."
 
 #: ../../source/security-guide/hipaa-compliance.rst:11
 msgid ""
@@ -61,22 +70,26 @@ msgid ""
 "information about channel name or message contents included in email "
 "notifications."
 msgstr ""
+"마찬가지로 :ref:`이메일 알림 내용 <administration-guide/configure/site-configuration-"
+"settings:email notification contents>`을 ``Send generic description with only sender "
+"name``로 설정하면 이메일 알림에는 메시지를 보낸 사람의 이름과 팀 이름만 전송되고, 채널 이름이나 "
+"메시지 내용 정보는 포함되지 않습니다."
 
 #: ../../source/security-guide/hipaa-compliance.rst:13
 msgid "Beyond Technical Safeguards, HIPAA compliance deployments also require:"
-msgstr ""
+msgstr "HIPAA 준수 배포에는 기술적 보호 조치 외에도 다음이 필요합니다."
 
 #: ../../source/security-guide/hipaa-compliance.rst:15
 msgid "Administrative Safeguards"
-msgstr ""
+msgstr "관리적 보호 조치"
 
 #: ../../source/security-guide/hipaa-compliance.rst:16
 msgid "Physical Safeguards"
-msgstr ""
+msgstr "물리적 보호 조치"
 
 #: ../../source/security-guide/hipaa-compliance.rst:17
 msgid "Organizational requirements and other standards."
-msgstr ""
+msgstr "조직 요구사항 및 기타 표준."
 
 #: ../../source/security-guide/hipaa-compliance.rst:19
 msgid ""
@@ -84,4 +97,5 @@ msgid ""
 "of Health and Human Services <https://www.hhs.gov/hipaa/for-"
 "professionals/security/laws-regulations/>`_."
 msgstr ""
-
+"자세한 내용은 `미국 보건복지부의 HIPAA 요구사항 <https://www.hhs.gov/hipaa/for-"
+"professionals/security/laws-regulations/>`_\\ 을 검토하세요."

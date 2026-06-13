@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/security-guide/cmmc-compliance.rst:2
 msgid "CMMC Compliance"
-msgstr ""
+msgstr "CMMC 컴플라이언스"
 
 #: ../../source/security-guide/cmmc-compliance.rst:5
 msgid "Overview"
-msgstr ""
+msgstr "개요"
 
 #: ../../source/security-guide/cmmc-compliance.rst:7
 msgid ""
@@ -37,7 +37,7 @@ msgid ""
 "organization works directly with the DoD or as part of the Defense "
 "Industrial Base (DIB) supply chain, demonstrating compliance is mandatory"
 " to maintain contract eligibility."
-msgstr ""
+msgstr "`Cybersecurity Maturity Model Certification(CMMC) 2.0 <https://dodcio.defense.gov/CMMC/>`_\\ 은 연방 계약 정보(FCI) 또는 통제 비분류 정보(CUI)를 처리하는 모든 계약업체, 하도급업체, 공급업체가 인증을 획득하도록 요구하는 미국 국방부(DoD) 프로그램입니다. 조직이 DoD와 직접 협력하든 방위 산업 기반(DIB) 공급망의 일부로 협력하든, 계약 자격을 유지하려면 컴플라이언스 입증이 필수입니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:9
 msgid ""
@@ -47,18 +47,18 @@ msgid ""
 "features can help U.S. Department of Defense contractors and "
 "subcontractors address specific `Level 2 requirements "
 "<https://dodcio.defense.gov/Portals/0/Documents/CMMC/AssessmentGuideL2v2.pdf>`_."
-msgstr ""
+msgstr "CMMC 컴플라이언스 달성은 적절한 구성, 정책, 소프트웨어 범위를 벗어난 더 넓은 조직 관행에 따라 달라지므로 보장되지 않습니다. 다만 이 문서는 OKR.BEST 기능이 미국 국방부 계약업체와 하도급업체가 특정 `Level 2 requirements <https://dodcio.defense.gov/Portals/0/Documents/CMMC/AssessmentGuideL2v2.pdf>`_\\ 을 충족하는 데 어떻게 도움이 될 수 있는지 설명합니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:12
 msgid "Access Control and Identity Management"
-msgstr ""
+msgstr "접근 제어 및 ID 관리"
 
 #: ../../source/security-guide/cmmc-compliance.rst:14
 msgid ""
 "Mattermost supports robust identity and access management to ensure that "
 "only authorized users access the system and that they only see data "
 "permitted for their role. Key capabilities include:"
-msgstr ""
+msgstr "OKR.BEST는 승인된 사용자만 시스템에 접근하고 자신의 역할에 허용된 데이터만 볼 수 있도록 견고한 ID 및 접근 관리를 지원합니다. 주요 기능은 다음과 같습니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:16
 msgid ""
@@ -72,7 +72,7 @@ msgid ""
 "Mattermost service) can log in. This helps satisfy access control "
 "requirements to “limit system access to authorized users” (AC 3.1.1) "
 "using vetted corporate identities."
-msgstr ""
+msgstr ":doc:`싱글 사인온(SSO) 통합 </administration-guide/onboard/sso-saml>`: OKR.BEST는 :doc:`SAML 2.0 </administration-guide/onboard/sso-saml>`, :doc:`OpenID Connect </administration-guide/onboard/sso-openidconnect>`, :doc:`AD/LDAP </administration-guide/onboard/ad-ldap>`를 통해 엔터프라이즈 ID 공급자와 통합됩니다. 이를 통해 사용자 계정을 중앙에서 관리하고 엔터프라이즈 인증 정책을 적용할 수 있습니다. 디렉토리에 프로비저닝되고 OKR.BEST 서비스에 할당된 사용자만 로그인할 수 있습니다. 이는 검증된 기업 ID를 사용하여 “승인된 사용자로 시스템 접근 제한”(AC 3.1.1) 접근 제어 요구사항을 충족하는 데 도움이 됩니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:18
 msgid ""
@@ -88,7 +88,7 @@ msgid ""
 "control>` so that users only access data and functions needed for their "
 "duties. This supports the principle of least privilege (AC 3.1.5) and "
 "limits users’ actions to authorized functions (AC 3.1.2, AC 3.1.7)."
-msgstr ""
+msgstr ":doc:`역할 기반 접근 제어(RBAC) </administration-guide/onboard/advanced-permissions>`: OKR.BEST의 세분화된 권한은 사용자가 자신의 역할에 허용된 작업만 수행하도록 보장합니다. 예를 들어 일반 사용자는 관리 기능을 수행할 수 없으며, :doc:`게스트 계정 </administration-guide/onboard/guest-accounts>`은 특정 채널에 대한 제한된 접근 권한만 가집니다. 관리자는 사용자가 직무에 필요한 데이터와 기능에만 접근하도록 :ref:`팀 전체 <administration-guide/onboard/advanced-permissions:team override scheme>` 및 :ref:`채널별 역할/권한 <administration-guide/configure/user-management-configuration-settings:advanced access control>`을 구성할 수 있습니다. 이는 최소 권한 원칙(AC 3.1.5)을 지원하고 사용자 작업을 승인된 기능으로 제한합니다(AC 3.1.2, AC 3.1.7)."
 
 #: ../../source/security-guide/cmmc-compliance.rst:20
 msgid ""
@@ -101,7 +101,7 @@ msgid ""
 "leave (addressing account management aspects of AC 3.1.1) and helps "
 "enforce separation of duties (AC 3.1.4) by aligning channel access with "
 "organizational roles."
-msgstr ""
+msgstr ":doc:`그룹 기반 접근 관리 </administration-guide/onboard/ad-ldap-groups-synchronization>`: OKR.BEST :doc:`AD/LDAP 그룹 동기화 </administration-guide/onboard/ad-ldap-groups-synchronization>`는 사용자 프로비저닝 및 프로비저닝 해제를 자동화합니다. 사용자는 디렉토리 그룹 멤버십에 따라 OKR.BEST 팀/채널에 추가되거나 제거될 수 있습니다. 이는 담당자가 역할을 변경하거나 퇴사할 때 접근 권한을 적시에 제거하도록 보장하고(AC 3.1.1의 계정 관리 측면 처리), 채널 접근을 조직 역할과 맞춰 직무 분리(AC 3.1.4)를 적용하는 데 도움이 됩니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:22
 msgid ""
@@ -115,7 +115,7 @@ msgid ""
 "3.1.6 for session lock and IA 3.5.2 for session control). Failed login "
 "attempt thresholds can also be set (e.g. lock out after X failed "
 "attempts) to mitigate brute-force attacks, aligning with AC 3.1.8."
-msgstr ""
+msgstr ":ref:`세션 관리 및 시간 초과 <administration-guide/configure/environment-configuration-settings:session lengths>`: OKR.BEST 관리자는 세션 유휴 시간 초과와 세션 수명을 포함한 세션 보안 설정을 정의할 수 있습니다. 세션은 일정 기간 비활성 상태가 지속되거나 요청 시 자동으로 무효화될 수 있습니다. OKR.BEST는 세션 시간을 제한하고 재인증을 요구하여 방치된 세션을 통한 무단 접근 위험을 줄입니다(세션 잠금의 AC 3.1.6 및 세션 제어의 IA 3.5.2 처리에 도움). 로그인 실패 시도 임계값도 설정하여(예: X회 실패 후 잠금) 무차별 대입 공격을 완화하고 AC 3.1.8에 맞출 수 있습니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:24
 msgid ""
@@ -125,18 +125,18 @@ msgid ""
 "used to remind users of acceptable use policies or consent to monitoring,"
 " indirectly supporting training/awareness requirements and ensuring users"
 " acknowledge security terms before accessing CUI."
-msgstr ""
+msgstr "**사용자 동의 및 접근 승인**: Mattermost Enterprise는 사용자가 최초 로그인 시 수락해야 하는 :doc:`사용자 정의 서비스 약관 </administration-guide/comply/custom-terms-of-service>` 배너를 지원합니다. 이를 통해 허용 가능한 사용 정책이나 모니터링 동의를 사용자에게 상기시킬 수 있으며, 교육/인식 요구사항을 간접적으로 지원하고 사용자가 CUI에 접근하기 전에 보안 약관을 확인하도록 보장할 수 있습니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:27
 msgid "Authentication and Multi-Factor Authentication (MFA)"
-msgstr ""
+msgstr "인증 및 다중 인증(MFA)"
 
 #: ../../source/security-guide/cmmc-compliance.rst:29
 msgid ""
 "Secure authentication is critical for protecting Controlled Unclassified "
 "Information (CUI). Mattermost offers several features to strengthen user "
 "authentication in alignment with CMMC requirements:"
-msgstr ""
+msgstr "안전한 인증은 통제 비분류 정보(CUI)를 보호하는 데 중요합니다. OKR.BEST는 CMMC 요구사항에 맞춰 사용자 인증을 강화하는 여러 기능을 제공합니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:31
 msgid ""
@@ -147,7 +147,7 @@ msgid ""
 " that are found to be generic or shared, and when integrated with "
 "enterprise SSO or LDAP, organizational policies can prevent shared "
 "account use."
-msgstr ""
+msgstr "**고유 사용자 식별**: 각 OKR.BEST 사용자는 고유한 계정(사용자 ID/이메일)을 가지며, 고유 ID 필요성(IA 3.5.1)을 충족합니다. 관리자는 일반 계정 또는 공유 계정으로 확인된 계정을 :ref:`비활성화 <administration-guide/configure/user-management-configuration-settings:deactivate users>`할 수 있으며, 엔터프라이즈 SSO 또는 LDAP와 통합하면 조직 정책으로 공유 계정 사용을 방지할 수 있습니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:33
 msgid ""
@@ -157,7 +157,7 @@ msgid ""
 "settings:password>` (minimum length, complexity). This helps meet IA "
 "3.5.2 by requiring robust passwords and reducing the risk of credential "
 "compromise."
-msgstr ""
+msgstr "**비밀번호 정책 적용**: 기본 제공 인증의 경우 OKR.BEST 관리자는 강력한 :ref:`비밀번호 요구사항 <administration-guide/configure/authentication-configuration-settings:password>`(최소 길이, 복잡성)을 적용할 수 있습니다. 이는 견고한 비밀번호를 요구하고 자격 증명 손상 위험을 줄여 IA 3.5.2를 충족하는 데 도움이 됩니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:35
 msgid ""
@@ -170,7 +170,7 @@ msgid ""
 " two factors for authentication aligns with CMMC practice IA 3.5.3, "
 "adding an extra layer of verification to protect accounts even if "
 "passwords are compromised."
-msgstr ""
+msgstr ":doc:`다중 인증 </administration-guide/onboard/multi-factor-authentication>`: OKR.BEST는 모든 사용자 계정에 대해 MFA를 지원합니다. 자체 호스팅 배포에서 관리자는 TOTP 기반 MFA를 활성화하고 적용할 수 있습니다(예: 로그인 시 Google Authenticator의 일회용 코드 요구). OKR.BEST가 SSO(SAML/OIDC)와 통합된 경우 OKR.BEST 로그인에 IdP의 MFA 정책(예: CAC/PIV 또는 OTP)을 활용할 수 있습니다. 인증에 두 요소를 요구하면 CMMC 관행 IA 3.5.3에 맞춰 비밀번호가 손상되더라도 계정을 보호하는 추가 검증 계층을 더할 수 있습니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:37
 msgid ""
@@ -182,11 +182,11 @@ msgid ""
 "issued password resets <administration-guide/configure/user-management-"
 "configuration-settings:reset user's password>` to support account "
 "recovery while maintaining security controls."
-msgstr ""
+msgstr "**계정 잠금 및 복구**: OKR.BEST는 로그인 실패 시도를 제한하고 지정된 실패 횟수 이후 계정을 잠글 수 있어 무차별 대입 공격을 차단하는 데 도움이 됩니다(IA 3.5.3의 추가 측면). 또한 보안 제어를 유지하면서 계정 복구를 지원하기 위해 :ref:`안전한 비밀번호 재설정 <end-user-guide/access/access-your-workspace:reset your password>` 또는 :ref:`관리자가 발급하는 비밀번호 재설정 <administration-guide/configure/user-management-configuration-settings:reset user's password>` 옵션을 제공합니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:40
 msgid "Audit Logging and Accountability"
-msgstr ""
+msgstr "감사 로깅 및 책임성"
 
 #: ../../source/security-guide/cmmc-compliance.rst:42
 msgid ""
@@ -194,7 +194,7 @@ msgid ""
 "the ability to track and monitor system activity (Audit & Accountability,"
 " AU 3.3.x controls). Mattermost provides built-in logging and monitoring "
 "features that help meet these requirements:"
-msgstr ""
+msgstr "CMMC Level 2(NIST 800-171)는 감사 로깅과 시스템 활동 추적 및 모니터링 기능(감사 및 책임성, AU 3.3.x 통제)을 크게 강조합니다. OKR.BEST는 이러한 요구사항을 충족하는 데 도움이 되는 기본 제공 로깅 및 모니터링 기능을 제공합니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:44
 msgid ""
@@ -208,7 +208,7 @@ msgid ""
 "guide/manage/logging:syslog target configuration options>` in real time. "
 "These logs provide the evidence needed for AU.3.3.1 (“generate audit "
 "records for user/activity”) and support analysis of incidents."
-msgstr ""
+msgstr "**시스템 및 애플리케이션 감사 로그**: OKR.BEST는 서버 및 애플리케이션 이벤트를 :ref:`감사 로그 <administration-guide/manage/logging:audit logging>`(:doc:`JSON 형식 </administration-guide/comply/embedded-json-audit-log-schema>`)에 기록합니다. 여기에는 로그인, 계정 생성, 권한 변경, 서버 구성 변경 등 보안 관련 이벤트가 포함됩니다. Enterprise 에디션은 외부 :ref:`syslog 또는 모니터링 시스템 <administration-guide/manage/logging:syslog target configuration options>`으로 로그를 실시간 전송할 수 있습니다. 이러한 로그는 AU.3.3.1(“사용자/활동에 대한 감사 기록 생성”)에 필요한 증거를 제공하고 사고 분석을 지원합니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:46
 msgid ""
@@ -223,7 +223,7 @@ msgid ""
 "guaranteeing an unalterable record of conversation content for compliance"
 " purposes (useful for investigations and meeting audit retention "
 "requirements)."
-msgstr ""
+msgstr "**메시지 기록 보존**: 기본적으로 OKR.BEST는 모든 메시지(편집 및 삭제 포함)와 파일 업로드의 전체 기록을 데이터베이스에 보존합니다. 사용자가 애플리케이션에서 메시지를 삭제해도 보존 정책이 적용되지 않는 한 데이터는 백엔드에 계속 보존됩니다. 이는 작업을 개인에게 추적할 수 있도록 보장하고(AU 3.3.2), 감사 데이터 보존 및 아카이브 요구사항을 충족합니다. 관리자는 또한 :ref:`사용자의 메시지 편집 또는 삭제 기능을 비활성화 <administration-guide/onboard/advanced-permissions:system scheme>`하여 컴플라이언스 목적의 변경 불가능한 대화 콘텐츠 기록을 보장할 수 있습니다(조사 및 감사 보존 요구사항 충족에 유용)."
 
 #: ../../source/security-guide/cmmc-compliance.rst:48
 msgid ""
@@ -237,7 +237,7 @@ msgid ""
 "and review). Additionally, integration with third-party archiving and "
 "e-discovery tools is supported (e.g. Smarsh/Global Relay), enabling "
 "centralized analysis of communications for compliance."
-msgstr ""
+msgstr ":doc:`컴플라이언스 내보내기 </administration-guide/comply/compliance-export>` 및 :doc:`전자 증거 개시 </administration-guide/comply/electronic-discovery>`: OKR.BEST의 :doc:`컴플라이언스 내보내기 </administration-guide/comply/compliance-export>` 기능은 일정에 따라 메시지 기록과 메타데이터를 자동으로 내보낼 수 있습니다. 이를 통해 조직은 감사, e-discovery 또는 애플리케이션 외부 장기 아카이브용 채팅 기록을 생성할 수 있습니다(감사 기록 보존 및 검토에 대한 AU 3.3.3과 관련). 또한 서드파티 아카이브 및 e-discovery 도구와의 통합도 지원하여 컴플라이언스를 위한 통신 중앙 분석을 가능하게 합니다(예: Smarsh/Global Relay)."
 
 #: ../../source/security-guide/cmmc-compliance.rst:50
 msgid ""
@@ -254,7 +254,7 @@ msgid ""
 "(continuous monitoring and risk assessment). Mattermost’s audit log can "
 "thus feed into your incident monitoring process for rapid detection of "
 "issues."
-msgstr ""
+msgstr "**자동화된 모니터링 및 알림**: 관리자는 OKR.BEST 활동에 대한 일일 컴플라이언스 보고서를 생성하거나 감사 데이터를 이상 탐지에 사용할 수 있습니다. OKR.BEST는 로그를 :ref:`syslog <administration-guide/manage/logging:syslog target configuration options>`로 보내거나 `API <https://developers.mattermost.com/api-documentation/>`_\\ 를 통해 보안 정보 및 이벤트 관리(SIEM) 시스템과 통합할 수 있습니다. 이를 통해 조직은 OKR.BEST 이벤트를 다른 보안 데이터와 상관 분석하고 의심스러운 동작(예: 여러 차례 로그인 실패, 예기치 않은 사용자 계정 변경)에 대한 알림을 받을 수 있어 AU 3.3.4 및 RA 3.11.2(지속적 모니터링 및 위험 평가)를 지원합니다. 따라서 OKR.BEST 감사 로그는 문제를 빠르게 탐지하기 위한 사고 모니터링 프로세스에 입력될 수 있습니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:52
 msgid ""
@@ -265,11 +265,11 @@ msgid ""
 " unauthorized access/modification of audit records). Additionally, if "
 "using Mattermost Cloud or an external log aggregator, you should apply "
 "appropriate controls to those environments to safeguard the logs."
-msgstr ""
+msgstr "**감사 정보 보호**: OKR.BEST 로그 접근은 시스템 관리자로 제한되며, 일반 사용자는 감사 기록을 보거나 변조할 수 없습니다. 서버의 파일에 기록된 로그는 OS 수준 접근 제어로 추가 보호할 수 있습니다. 이는 AU 3.3.5(감사 기록에 대한 무단 접근/수정 방지)에 부합합니다. 또한 Mattermost Cloud 또는 외부 로그 집계기를 사용하는 경우, 로그를 보호하기 위해 해당 환경에 적절한 통제를 적용해야 합니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:55
 msgid "Incident Response and Incident Collaboration"
-msgstr ""
+msgstr "사고 대응 및 사고 협업"
 
 #: ../../source/security-guide/cmmc-compliance.rst:57
 msgid ""
@@ -277,7 +277,7 @@ msgid ""
 "Incident Response (IR) capability (IR 3.6.1–3.6.3). Mattermost is a "
 "valuable tool for incident response planning, execution, and "
 "documentation:"
-msgstr ""
+msgstr "CMMC Level 2에 따라 기업은 효과적인 사고 대응(IR) 역량(IR 3.6.1~3.6.3)을 수립하고 유지해야 합니다. OKR.BEST는 사고 대응 계획, 실행, 문서화를 위한 유용한 도구입니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:59
 msgid ""
@@ -292,7 +292,7 @@ msgid ""
 "requirement to establish an operational incident-handling capability (IR "
 "3.6.1) with defined preparation, detection, containment, and recovery "
 "steps."
-msgstr ""
+msgstr ":doc:`사고 플레이북 </end-user-guide/workflow-automation/learn-about-playbooks>`: OKR.BEST 플레이북을 통해 관리되는 협업 워크플로를 사용하면 팀이 사고 대응 계획과 체크리스트를 플랫폼 안에 직접 체계화할 수 있습니다. 예를 들어 사고가 선언되면 전용 사고 채널을 자동으로 만들고, 대응 담당자에게 작업을 할당하며, 이해관계자에게 알리고, 조사 단계를 추적하는 “사이버 사고 대응” 플레이북을 만들 수 있습니다. 이는 정의된 준비, 탐지, 억제, 복구 단계가 포함된 운영 사고 처리 역량(IR 3.6.1) 수립 요구사항을 충족하면서 표준화된 대응 프로세스를 보장합니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:61
 msgid ""
@@ -308,7 +308,7 @@ msgid ""
 "incidents by preventing adversaries from monitoring or disrupting "
 "incident comms, and supports IR 3.6.1’s requirement for effective "
 "coordination during an incident."
-msgstr ""
+msgstr "**전용 사고 채널**: OKR.BEST는 사고 대응 담당자를 위한 :ref:`비공개 초대 전용 채널 <end-user-guide/collaborate/channel-types:private channels>` 생성을 지원합니다. 사고 중(예: 네트워크 침해 또는 시스템 장애) 팀은 잠재적으로 손상된 시스템과 격리된 안전한 OKR.BEST 채널에서 조율할 수 있습니다. OKR.BEST의 자체 호스팅 또는 에어갭 배포 옵션은 기본 시스템이나 네트워크가 영향을 받은 경우 :doc:`대역 외 통신 </deployment-guide/reference-architecture/deployment-scenarios/deploy-oob>`) 플랫폼 역할을 할 수 있게 합니다. 이 접근 방식은 공격자가 사고 커뮤니케이션을 모니터링하거나 방해하지 못하게 하여 사고 억제에 도움이 되며, 사고 중 효과적인 조율에 대한 IR 3.6.1 요구사항을 지원합니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:63
 msgid ""
@@ -323,7 +323,7 @@ msgid ""
 "real-time alerting and centralization of incident communication assists "
 "with prompt detection and reporting of incidents (IR 3.6.2). Team members"
 " can discuss and analyze the threat in Mattermost, accelerating triage."
-msgstr ""
+msgstr "**실시간 알림 및 통합**: OKR.BEST는 모니터링 도구 및 보안 시스템과 통합되어 탐지와 대응을 간소화할 수 있습니다. 예를 들어 SIEM 또는 IDS는 잠재적 사고를 팀에 알리기 위해 OKR.BEST 채널에 알림을 게시할 수 있습니다(웹훅 또는 통합 사용). OKR.BEST :doc:`플레이북 </end-user-guide/workflow-automation/learn-about-playbooks>`은 특정 조건이 충족될 때 대응 담당자에게 알림을 트리거하는 :doc:`자동화된 사고 알림 </end-user-guide/workflow-automation/notifications-and-updates>`을 지원합니다. 이러한 실시간 알림과 사고 커뮤니케이션 중앙화는 사고의 신속한 탐지와 보고(IR 3.6.2)에 도움이 됩니다. 팀 구성원은 OKR.BEST에서 위협을 논의하고 분석하여 분류 작업을 가속화할 수 있습니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:65
 msgid ""
@@ -344,7 +344,7 @@ msgid ""
 "/workflow-automation/metrics-and-goals:configure retrospectives before a "
 "run>` in the channel or Playbook run after resolution. These records can "
 "be exported as needed for reporting to DoD or other authorities."
-msgstr ""
+msgstr "**작업 추적 및 문서화**: OKR.BEST :doc:`플레이북 </end-user-guide/workflow-automation/learn-about-playbooks>` 및 :doc:`보드 </end-user-guide/project-management/work-with-boards>`를 사용하면 각 사고 대응 실행에 관련 :doc:`작업 체크리스트 </end-user-guide/workflow-automation/work-with-tasks>`(예: 영향받은 시스템 식별, 로그 수집, 맬웨어 제거 등)와 각 작업의 소유자를 둘 수 있습니다. 대응 담당자는 완료된 작업을 체크하고 모든 작업에는 타임스탬프가 기록됩니다. 이는 사고의 감사 가능한 타임라인을 만듭니다. 사고 채널의 모든 논의, 파일 첨부(예: 포렌식 스크린샷), 작업 타임라인이 보존됩니다. 이러한 포괄적 사고 문서화는 적절한 담당자에게 사고를 추적하고 보고해야 하는 IR 3.6.2의 요구사항을 충족하며 사고 후 분석에도 도움이 됩니다. OKR.BEST는 해결 후 채널 또는 플레이북 실행에 :ref:`회고 메모 <end-user-guide/workflow-automation/metrics-and-goals:configure retrospectives before a run>`를 추가할 수 있게 하여 사고 후 검토도 지원합니다. 이러한 기록은 DoD 또는 기타 기관 보고에 필요할 때 내보낼 수 있습니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:67
 msgid ""
@@ -357,7 +357,7 @@ msgid ""
 "perform and document response tests. Over time, playbook analytics and "
 "metrics (e.g. average time to resolution) allow you to gauge improvements"
 " in IR performance."
-msgstr ""
+msgstr "**사고 대응 테스트**: OKR.BEST는 사고 대응 훈련이나 테이블탑 연습을 수행하는 데 사용할 수 있습니다. 팀은 OKR.BEST에서 :doc:`플레이북 실행 </end-user-guide/workflow-automation/work-with-runs>`(예: 계획된 훈련)을 통해 사고를 시뮬레이션하여 모두가 알림을 받고 절차를 따르는지 확인할 수 있습니다. 이는 대응 테스트를 수행하고 문서화할 수 있는 플랫폼을 제공하여 IR 3.6.3(사고 대응 역량 테스트)을 충족하는 데 도움이 됩니다. 시간이 지나면서 플레이북 분석과 메트릭(예: 평균 해결 시간)을 통해 IR 성과 개선을 측정할 수 있습니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:69
 msgid ""
@@ -366,11 +366,11 @@ msgid ""
 "This directly supports CMMC Level 2 requirements to have an established, "
 "tested incident response process and to document and report incidents in "
 "a timely manner."
-msgstr ""
+msgstr "조직은 사고 대응에 OKR.BEST를 활용하여 최초 알림부터 사후 분석까지 사고를 관리하는 중앙 허브를 만들 수 있습니다. 이는 수립되고 테스트된 사고 대응 프로세스를 갖추고 사고를 적시에 문서화 및 보고해야 하는 CMMC Level 2 요구사항을 직접 지원합니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:72
 msgid "Communications Protection and Data Security"
-msgstr ""
+msgstr "통신 보호 및 데이터 보안"
 
 #: ../../source/security-guide/cmmc-compliance.rst:74
 msgid ""
@@ -378,7 +378,7 @@ msgid ""
 "and transmission (System & Communications Protection, SC 3.13.x) and to "
 "limit unauthorized information flows. Mattermost offers multiple features"
 " to protect data and control communications:"
-msgstr ""
+msgstr "CMMC Level 2에는 저장 및 전송 중 정보를 보호하고(시스템 및 통신 보호, SC 3.13.x) 무단 정보 흐름을 제한하기 위한 통제가 포함됩니다. OKR.BEST는 데이터를 보호하고 통신을 제어하는 여러 기능을 제공합니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:76
 msgid ""
@@ -393,7 +393,7 @@ msgid ""
 "ciphers; administrators should configure TLS per DoD guidelines (e.g. "
 "FIPS 140-2 validated cryptographic modules where applicable) to fully "
 "satisfy this control."
-msgstr ""
+msgstr ":doc:`전송 중 암호화 </deployment-guide/transport-encryption>`: 모든 OKR.BEST 클라이언트-서버 통신은 TLS(Transport Layer Security)를 사용하여 :doc:`암호화 </deployment-guide/encryption-options>`할 수 있습니다. HTTPS로 구성하면 OKR.BEST는 서버와 클라이언트(웹, 데스크톱, 모바일) 간 전송 중 데이터를 암호화하여 논의되거나 전송되는 CUI에 대한 도청을 방지합니다. 이는 전송 중 암호화를 통해 네트워크의 CUI를 보호해야 하는 요구사항(SC 3.13.8)을 충족합니다. OKR.BEST는 최신 TLS 프로토콜과 암호군을 지원합니다. 관리자는 이 통제를 완전히 충족하기 위해 DoD 지침에 따라 TLS를 구성해야 합니다(예: 해당되는 경우 FIPS 140-2 검증 암호화 모듈)."
 
 #: ../../source/security-guide/cmmc-compliance.rst:78
 msgid ""
@@ -412,7 +412,7 @@ msgid ""
 "MP 3.8.3 (media sanitization if disks are disposed). Mattermost "
 "documentation encourages regular key rotation and secure key management "
 "for encryption at rest."
-msgstr ""
+msgstr ":ref:`저장 데이터 암호화 <deployment-guide/encryption-options:encryption-at-rest>`: OKR.BEST는 엔터프라이즈 데이터베이스 및 스토리지 구성을 통해 저장 데이터 암호화를 지원합니다. 애플리케이션은 암호화된 파일 시스템에 배포하거나 암호화된 스토리지 백엔드를 사용할 수 있습니다. 예를 들어 파일 저장소로 Amazon S3를 사용하는 경우 Mattermost Enterprise는 :ref:`S3 관리형 키를 사용한 서버 측 암호화 <administration-guide/configure/environment-configuration-settings:enable server-side encryption for amazon s3>`를 활성화할 수 있습니다. 자체 호스팅 데이터베이스를 사용하는 경우 관리자는 데이터베이스 서버에서 디스크 암호화 또는 TDE를 활성화할 수 있습니다. OKR.BEST 데이터베이스와 스토리지 드라이브를 암호화하면 조직은 채팅 메시지와 파일에 저장된 CUI에 대한 보호 계층을 추가하여 SC 3.13.16(저장 CUI 기밀성 보호) 및 MP 3.8.3(디스크 폐기 시 미디어 소거)을 충족하는 데 도움이 됩니다. OKR.BEST 문서는 저장 데이터 암호화를 위해 정기적인 키 교체와 안전한 키 관리를 권장합니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:80
 msgid ""
@@ -433,7 +433,7 @@ msgid ""
 "conversations ensures that sensitive discussions (e.g. about a specific "
 "CUI program) are isolated to authorized individuals, reducing inadvertent"
 " information exposure."
-msgstr ""
+msgstr "**네트워크 접근 제어 및 세분화**: OKR.BEST는 시스템에 대한 네트워크 접근을 제어하는 방식으로 배포할 수 있습니다. 자체 호스팅 배포에서 조직은 일반적으로 OKR.BEST 서버를 방화벽이 인그레스/이그레스를 제어하는 보안 엔클레이브 또는 DMZ에 배치합니다. 클라우드 배포의 경우 Mattermost Cloud는 알려진 IP 범위로 접근을 제한하는 :doc:`IP 허용 목록 </administration-guide/manage/cloud-ip-filtering>`(Enterprise 플랜)을 제공합니다. 이러한 구성은 OKR.BEST가 보호된 네트워크 세그먼트 내에 위치하고 신뢰할 수 있는 네트워크 또는 VPN 사용자만 접근할 수 있도록 하여 SC 3.13.1 및 SC 3.13.2를 처리합니다. 또한 OKR.BEST 내에서 데이터는 :doc:`팀 </end-user-guide/collaborate/organize-using-teams>` 및 :doc:`채널 </end-user-guide/collaborate/channel-types>`별로 세분화됩니다. 서로 다른 프로젝트나 승인 수준에 대해 별도 팀을 만들고, 채널을 비공개로 표시하여 멤버십을 제한할 수 있습니다. 이러한 대화의 “마이크로 세그멘테이션”은 민감한 논의(예: 특정 CUI 프로그램 관련)가 승인된 개인에게만 격리되도록 보장하여 부주의한 정보 노출을 줄입니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:82
 msgid ""
@@ -456,7 +456,7 @@ msgid ""
 "<https://www.fedramp.gov/>`_ or `ITAR "
 "<https://www.pmddtc.state.gov/ddtc_public/ddtc_public?id=ddtc_public_portal_itar_landing>`_"
 " restrictions that may apply in addition to CMMC."
-msgstr ""
+msgstr ":ref:`자체 호스팅 <deployment-guide/server/server-deployment-planning:deployment options>` 및 :doc:`에어갭 배포 </deployment-guide/deployment-guide-index>`: 많은 협업 도구와 달리 OKR.BEST는 온프레미스 또는 소버린 클라우드에 완전히 자체 호스팅할 수 있어 조직이 데이터 위치를 완전히 제어할 수 있습니다. DoD 계약업체는 필요한 경우 외부 인터넷 연결 없이 :doc:`에어갭 환경에 OKR.BEST를 배포 </deployment-guide/reference-architecture/deployment-scenarios/air-gapped-deployment>`할 수 있습니다. 이는 외부 시스템에 노출될 수 없는 CUI를 처리할 때 컴플라이언스를 지원합니다. OKR.BEST를 다른 CUI 시스템과 동일한 보안 IT 경계 내에 유지함으로써 계약업체는 SC 3.13.5(시스템 구성 요소를 외부 접근으로부터 격리) 관련 우려를 처리합니다. OKR.BEST의 배포 유연성(온프레미스, GovCloud 등)은 DoD 요구사항(예: 클라우드 인프라 사용 시 민감한 데이터에 대해 IL4/IL5에서 호스팅)에 맞출 수 있게 합니다. 모든 사용자 데이터는 사용자가 제어하는 인프라에 있으므로 CMMC 외에 적용될 수 있는 `FedRAMP <https://www.fedramp.gov/>`_ 또는 `ITAR <https://www.pmddtc.state.gov/ddtc_public/ddtc_public?id=ddtc_public_portal_itar_landing>`_ 제한에 대한 데이터 주권 및 컴플라이언스에도 도움이 됩니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:84
 msgid ""
@@ -484,7 +484,7 @@ msgid ""
 "keywords or PII). These measures help fulfill AC 3.1.3 / SC 3.13.4 by "
 "controlling the flow of CUI and preventing it from leaving authorized "
 "channels."
-msgstr ""
+msgstr "**데이터 손실 방지 조치**: OKR.BEST는 전체 DLP 제품군을 기본 포함하지는 않지만, 관리자는 데이터의 무단 공유 또는 보존을 방지하기 위해 특정 제한을 적용할 수 있습니다. 예를 들어 파일에 대한 :ref:`공개 링크 공유 <administration-guide/configure/site-configuration-settings:public links>`를 비활성화하거나 제한하여 공유 파일이 신뢰할 수 없는 사용자에게 노출되지 않도록 할 수 있습니다. :ref:`파일 업로드 설정 <administration-guide/configure/site-configuration-settings:file sharing and downloads>` 및 :ref:`플러그인 허용 목록 <administration-guide/configure/plugins-configuration-settings:enable remote marketplace>`을 통해 공유할 수 있는 파일 유형이나 허용되는 통합을 제어할 수 있어 SC 3.13.4(정보 흐름 제어)를 지원합니다. 또한 :ref:`푸시 알림 내용 <administration-guide/configure/site-configuration-settings:push notification contents>`을 메시지 텍스트를 생략하도록 구성하면 모바일 푸시 알림을 사용하더라도 잠금 화면이나 외부 서비스로 민감한 메시지 내용이 유출되지 않습니다. 더 고급 DLP의 경우 OKR.BEST의 공개 `API <https://developers.mattermost.com/api-documentation/>`_ 및 `webhook <https://developers.mattermost.com/integrate/webhooks/>`_\\ 은 외부 DLP 솔루션 또는 콘텐츠 필터링 시스템과의 통합을 가능하게 합니다(예: 특정 키워드 또는 PII가 포함된 메시지를 탐지하고 제거하는 스크립트). 이러한 조치는 CUI 흐름을 제어하고 승인된 채널을 벗어나지 않도록 하여 AC 3.1.3 / SC 3.13.4 충족에 도움이 됩니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:86
 msgid ""
@@ -497,7 +497,7 @@ msgid ""
 "can be used to flag channels containing CUI or incident response data, "
 "reinforce workflow integrity, or restrict data sharing. Supports "
 "AC.L2-3.1.3, MP.L2-3.8.2, AU.L2-3.3.1/3.3.2, and SC.L2-3.13.4."
-msgstr ""
+msgstr "**민감한 정보 제어**: :doc:`시스템 전체 배너 </administration-guide/manage/system-wide-notifications>`는 \"⚠️ This system contains CUI. Use authorized accounts only. All activity is monitored.\" 같은 CUI 처리 고지를 표시할 수 있습니다. AC.L2-3.1.9, AT.L2-3.2.1, IR.L2-3.6.2, MP.L2-3.8.2를 지원합니다. 또한 :doc:`채널별 배너 </end-user-guide/collaborate/display-channel-banners>`를 사용하여 CUI 또는 사고 대응 데이터가 포함된 채널을 표시하고, 워크플로 무결성을 강화하거나 데이터 공유를 제한할 수 있습니다. AC.L2-3.1.3, MP.L2-3.8.2, AU.L2-3.3.1/3.3.2, SC.L2-3.13.4를 지원합니다."
 
 #: ../../source/security-guide/cmmc-compliance.rst:88
 msgid ""
@@ -512,13 +512,13 @@ msgid ""
 "Mattermost server host up-to-date with security patches and monitor for "
 "vulnerabilities (SI 3.14.1/3.14.2), as part of overall system integrity "
 "maintenance."
-msgstr ""
+msgstr "**바이러스 백신 검사**: 시스템 무결성 요구사항(맬웨어 파일 검사를 위한 SI 3.14.5)을 처리하기 위해 OKR.BEST는 바이러스 백신 도구와 통합될 수 있습니다. OKR.BEST에 업로드된 파일에서 바이러스와 맬웨어를 검사하는 `ClamAV 플러그인 <https://mattermost.com/marketplace/antivirus-plugin/>`_\\ 을 사용할 수 있습니다. 활성화하면 악성 파일이 탐지되고 격리되도록 보장하여 사용자를 보호하고 맬웨어 탐지 및 보호 통제의 의도(SI 3.14.4 및 SI 3.14.5)를 충족하는 데 도움이 됩니다. 관리자는 전체 시스템 무결성 유지관리의 일부로 OKR.BEST 서버 호스트를 보안 패치로 최신 상태로 유지하고 취약점을 모니터링해야 합니다(SI 3.14.1/3.14.2)."
 
 #: ../../source/security-guide/cmmc-compliance.rst:90
 msgid ""
 "Register to our `Trust site <https://trust.mattermost.com/>`_ to see a "
 "full listing of all controls mapped to Mattermost features."
-msgstr ""
+msgstr "OKR.BEST 기능에 매핑된 모든 통제 목록을 보려면 `Trust site <https://trust.mattermost.com/>`_\\ 에 등록하세요."
 
 #: ../../source/security-guide/cmmc-compliance.rst:92
 msgid ""
@@ -527,5 +527,5 @@ msgid ""
 "tailored solutions for your organization’s secure collaboration needs. Or"
 " try Mattermost yourself with a `1-hour preview <https://mattermost.com"
 "/sign-up/>`_ for instant access to a live sandbox environment."
-msgstr ""
+msgstr "조직의 안전한 협업 요구사항에 맞춘 솔루션을 살펴보려면 `라이브 데모 예약 <https://mattermost.com/request-demo/>`_ 또는 `Mattermost 전문가와 상담 <https://mattermost.com/contact-sales/>`_\\ 을 이용하세요. 또는 라이브 샌드박스 환경에 즉시 접근할 수 있는 `1시간 미리보기 <https://mattermost.com/sign-up/>`_\\ 로 Mattermost를 직접 체험해 보세요."
 
