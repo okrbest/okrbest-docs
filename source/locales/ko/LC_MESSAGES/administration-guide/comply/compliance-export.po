@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/administration-guide/comply/compliance-export.rst:2
 msgid "Compliance export"
-msgstr ""
+msgstr "컴플라이언스 내보내기"
 
 #: ../../source/_static/badges/ent-plus.rst:9
 msgid ""
 "|plans-img-yellow| Available on `Enterprise and Enterprise Advanced plans"
 " <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Enterprise, Enterprise Advanced 플랜"
+" <https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -41,6 +43,11 @@ msgid ""
 "Vantage <#actiance-xml>`__, `Global Relay <#global-relay-eml>`__, and "
 "`Proofpoint <#proofpoint>`__."
 msgstr ""
+"Mattermost Enterprise 고객은 컴플라이언스 내보내기를 사용해 감사 및 컴플라이언스 "
+"목적으로 기록을 아카이브하거나 메시지 데이터를 서드파티 시스템으로 전송할 수 "
+"있습니다. 지원되는 통합으로는 `Smarsh (Actiance) Vantage <#actiance-xml>`__, "
+"`Global Relay <#global-relay-eml>`__, `Proofpoint <#proofpoint>`__\\ 가 "
+"있습니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:9
 msgid ""
@@ -53,42 +60,51 @@ msgid ""
 "message by its MessageId as it is edited or deleted, and across batches "
 "and exports periods."
 msgstr ""
+"OKR.BEST v10.5부터 컴플라이언스 내보내기는 대용량 일일 데이터 세트에 대한 성능 "
+"개선을 포함하며, 출력 형식, 시스템 성능, 로직에 영향을 주는 변경 사항이 적용되었습니다. "
+"컴플라이언스 내보내기는 컴플라이언스 팀에 채널 상태를 재구성하고, 최초 메시지를 누가 "
+"볼 수 있었는지 또는 메시지가 언제 편집되거나 삭제되었는지 파악하는 데 필요한 완전한 "
+"정보를 제공합니다. 컴플라이언스 팀은 메시지가 편집되거나 삭제될 때, 그리고 여러 배치와 "
+"내보내기 기간에 걸쳐 MessageId로 메시지를 추적할 수 있습니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:12
 msgid "Overview"
-msgstr ""
+msgstr "개요"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:14
 msgid ""
 "Compliance exports are produced from the System Console, and contain all "
 "messages including:"
 msgstr ""
+"컴플라이언스 내보내기는 관리자 도구에서 생성되며 다음을 포함한 모든 메시지를 "
+"담습니다:"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:16
 msgid "Messages sent in direct message channels"
-msgstr ""
+msgstr "개인 메시지 채널에서 보낸 메시지"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:17
 msgid "File uploads"
-msgstr ""
+msgstr "파일 업로드"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:18
 msgid "Posts from plugins"
-msgstr ""
+msgstr "플러그인에서 게시한 글"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:19
 msgid "Posts from bots/webhooks"
-msgstr ""
+msgstr "봇/웹훅에서 게시한 글"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:21
 msgid ""
 "Exports include information on channel member history at the time the "
 "message was posted."
 msgstr ""
+"내보내기에는 메시지가 게시된 시점의 채널 구성원 기록 정보가 포함됩니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:24
 msgid "Set up guide"
-msgstr ""
+msgstr "설정 가이드"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:26
 msgid ""
@@ -96,6 +112,9 @@ msgid ""
 " / Actiance XML <#actiance-xml>`__, `Global Relay EML <#global-relay-"
 "eml>`__, or `Proofpoint <#proofpoint>`__."
 msgstr ""
+"`CSV <#csv>`__, `Smarsh / Actiance XML <#actiance-xml>`__, `Global Relay EML "
+"<#global-relay-eml>`__, `Proofpoint <#proofpoint>`__ 내보내기를 구성하려면 다음 "
+"가이드를 참고하세요."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:30
 msgid ""
@@ -105,6 +124,10 @@ msgid ""
 "<administration-guide/configure/environment-configuration-settings:file "
 "storage>` or the Mattermost S3 bucket if S3 storage is configured."
 msgstr ""
+"셀프 호스팅 배포에서는 컴플라이언스 내보내기가 선택한 형식으로 구성된 파일 저장소의 "
+"``exports`` 하위 디렉토리에 기록됩니다. 이는 :ref:`로컬 저장소 디렉토리 "
+"<administration-guide/configure/environment-configuration-settings:file "
+"storage>` 또는 S3 저장소가 구성된 경우 OKR.BEST S3 버킷에 저장됩니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:31
 msgid ""
@@ -114,6 +137,10 @@ msgid ""
 "configuration-settings:enable dedicated export filestore target>` "
 "configuration settings documentation for details."
 msgstr ""
+"또는 별도의 파일 저장소 대상을 지정하고 컴플라이언스 내보내기용 S3 presigned URL을 "
+"생성할 수 있습니다. 자세한 내용은 :ref:`전용 내보내기 파일 저장소 대상 "
+"<administration-guide/configure/environment-configuration-settings:enable "
+"dedicated export filestore target>` 구성 설정 문서를 참고하세요."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:32
 msgid ""
@@ -121,22 +148,25 @@ msgid ""
 "enabled. For self-hosted deployments, you can export past history via the"
 " ``export`` :doc:`command line tool <../manage/command-line-tools>`."
 msgstr ""
+"컴플라이언스 내보내기에는 기능이 활성화되기 전에 보낸 글이 포함되지 않습니다. 셀프 "
+"호스팅 배포에서는 ``export`` :doc:`명령줄 도구 <../manage/command-line-tools>`\\ 를 "
+"통해 과거 기록을 내보낼 수 있습니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:35
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:37
 #: ../../source/administration-guide/comply/compliance-export.rst:92
 #: ../../source/administration-guide/comply/compliance-export.rst:151
 #: ../../source/administration-guide/comply/compliance-export.rst:170
 msgid "Go to **System Console > Compliance > Compliance Export**."
-msgstr ""
+msgstr "**관리자 도구 > 감사 > 컴플라이언스 내보내기**\\ 로 이동합니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:38
 #: ../../source/administration-guide/comply/compliance-export.rst:93
 msgid "Set **Enable Compliance Exports** to **true**."
-msgstr ""
+msgstr "**컴플라이언스 내보내기 활성화**\\ 를 **true**\\ 로 설정합니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:39
 msgid ""
@@ -144,21 +174,24 @@ msgid ""
 "scheduled compliance export job and must be a 24-hour time stamp in the "
 "form ``HH:MM``. Choose a time when fewer people are using your system."
 msgstr ""
+"**컴플라이언스 내보내기 시간**\\ 을 설정합니다. 이는 매일 예약된 컴플라이언스 내보내기 "
+"작업의 시작 시간이며 ``HH:MM`` 형식의 24시간 타임스탬프여야 합니다. 시스템을 "
+"사용하는 사람이 적은 시간을 선택하세요."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:40
 msgid "Set the export file format to **CSV**."
-msgstr ""
+msgstr "내보내기 파일 형식을 **CSV**\\ 로 설정합니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:41
 #: ../../source/administration-guide/comply/compliance-export.rst:96
 #: ../../source/administration-guide/comply/compliance-export.rst:159
 #: ../../source/administration-guide/comply/compliance-export.rst:176
 msgid "Select **Save**."
-msgstr ""
+msgstr "**저장**\\ 을 선택합니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:46
 msgid "You can review export job status in the System Console."
-msgstr ""
+msgstr "관리자 도구에서 내보내기 작업 상태를 확인할 수 있습니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:48
 #: ../../source/administration-guide/comply/compliance-export.rst:107
@@ -173,20 +206,28 @@ msgid ""
 "e.g, ``batch001-1723105062492-1723106622163.zip``. Each zip file contains"
 " the same information available in previous Mattermost server releases."
 msgstr ""
+"매일 실행되는 컴플라이언스 내보내기 작업이 완료되면 내보내기가 시작된 시점과 "
+"내보내기의 ``startTimestamp`` 및 ``endTimestamp``\\ 를 기준으로 이름이 지정된 상위 "
+"디렉토리가 생성됩니다. 예: ``administration-guide/comply/compliance-"
+"export-2024-08-13-05h08m-1723105062492-1723109100075``. 이 상위 디렉토리에는 배치마다 "
+"1개의 zip 파일이 들어 있으며, 배치 번호와 해당 배치 내 메시지의 시작 및 종료 "
+"타임스탬프를 기준으로 이름이 지정됩니다. 예: "
+"``batch001-1723105062492-1723106622163.zip``. 각 zip 파일에는 이전 OKR.BEST 서버 "
+"릴리스에서 제공되던 것과 동일한 정보가 포함됩니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:50
 #: ../../source/administration-guide/comply/compliance-export.rst:109
 msgid "Working from the same example above, the directory would look like this:"
-msgstr ""
+msgstr "위와 동일한 예를 기준으로 하면 디렉토리는 다음과 같습니다:"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:59
 #: ../../source/administration-guide/comply/compliance-export.rst:118
 msgid "And each batch would look like this:"
-msgstr ""
+msgstr "그리고 각 배치는 다음과 같습니다:"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:69
 msgid "Updated CSV export fields"
-msgstr ""
+msgstr "업데이트된 CSV 내보내기 필드"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:71
 msgid ""
@@ -194,24 +235,31 @@ msgid ""
 "attachments, or ``JoinTime`` and ``LeaveTime`` for participant join and "
 "leave events, respectively."
 msgstr ""
+"**Post Creation Time**\\ 은 메시지와 첨부 파일의 경우 항상 ``CreateAt``\\ 이며, "
+"참가자 참여 및 퇴장 이벤트의 경우 각각 ``JoinTime``\\ 과 ``LeaveTime``\\ 입니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:73
 msgid ""
 "**Update Time** indicates that the message has been updated, and this is "
 "the ``updateAt`` time."
 msgstr ""
+"**Update Time**\\ 은 메시지가 업데이트되었음을 나타내며 ``updateAt`` 시간입니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:74
 msgid ""
 "**Updated Type** helps differentiate what kind of update it was as one of"
 " the following:"
 msgstr ""
+"**Updated Type**\\ 은 어떤 종류의 업데이트였는지 다음 중 하나로 구분하는 데 "
+"도움이 됩니다:"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:76
 msgid ""
 "**EditedNewMsg** indicates that the message has been edited, and this is "
 "the new message (post-edit) content."
 msgstr ""
+"**EditedNewMsg**\\ 는 메시지가 편집되었음을 나타내며 새 메시지(편집 후) "
+"내용입니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:77
 msgid ""
@@ -220,6 +268,9 @@ msgid ""
 "another field ``EditedNewMsgId``, which is the Id of the message which "
 "holds the post-edited message contents."
 msgstr ""
+"**EditedOriginalMsg**\\ 는 메시지가 편집되었음을 나타내며 원본 메시지(편집 전) "
+"내용입니다. 이 메시지에는 편집 후 메시지 내용을 담고 있는 메시지의 Id인 "
+"``EditedNewMsgId`` 필드가 추가로 포함됩니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:78
 msgid ""
@@ -227,16 +278,19 @@ msgid ""
 "but the post was updated for some reason, such as reaction, replied-to, a"
 " reply was edited, or a reply was deleted."
 msgstr ""
+"**UpdatedNoMsgChange**\\ 는 메시지 내용은 변경되지 않았지만 반응, 답글 작성, 답글 "
+"편집, 답글 삭제 등의 이유로 글이 업데이트되었음을 나타냅니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:79
 msgid "**Deleted** indicates that this message was deleted."
-msgstr ""
+msgstr "**Deleted**\\ 는 이 메시지가 삭제되었음을 나타냅니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:80
 msgid ""
 "**FileDeleted** indicates that this message is recording that a file was "
 "deleted."
 msgstr ""
+"**FileDeleted**\\ 는 이 메시지가 파일이 삭제되었음을 기록하고 있음을 나타냅니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:84
 msgid ""
@@ -245,22 +299,30 @@ msgid ""
 "the file to easily transform the default ``.csv`` format into a desired "
 "format for your third-party archive system."
 msgstr ""
+"매일 실행되는 컴플라이언스 내보내기 작업은 지난 24시간 동안 게시된 모든 메시지를 "
+"고유 작업 식별자와 함께 ``.zip`` 파일로 생성합니다. 파일의 압축을 풀어 기본 "
+"``.csv`` 형식을 서드파티 아카이브 시스템에 맞는 원하는 형식으로 손쉽게 변환할 수 "
+"있습니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:86
 msgid ""
 "For a sample CSV output, `download a CSV export file here "
 "<https://github.com/mattermost/docs/blob/master/source/samples/csv_export.zip>`__."
 msgstr ""
+"샘플 CSV 출력은 `여기에서 CSV 내보내기 파일을 다운로드 "
+"<https://github.com/mattermost/docs/blob/master/source/samples/csv_export.zip>`__\\ 하세요."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:89
 msgid "Actiance XML"
-msgstr ""
+msgstr "Actiance XML"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:90
 msgid ""
 "Actiance XML is the supported format for the 'Smarsh Vantage product "
 "<https://central.smarsh.com/s/product/vantage>`_."
 msgstr ""
+"Actiance XML은 'Smarsh Vantage 제품 "
+"<https://central.smarsh.com/s/product/vantage>`_\\ 의 지원 형식입니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:94
 #: ../../source/administration-guide/comply/compliance-export.rst:153
@@ -270,14 +332,17 @@ msgid ""
 "scheduled compliance export job and must be a 24-hour time stamp in the "
 "form HH:MM. Choose a time when fewer people are using your system."
 msgstr ""
+"**컴플라이언스 내보내기 시간**\\ 을 설정합니다. 이는 매일 예약된 컴플라이언스 "
+"내보내기 작업의 시작 시간이며 HH:MM 형식의 24시간 타임스탬프여야 합니다. 시스템을 "
+"사용하는 사람이 적은 시간을 선택하세요."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:95
 msgid "Set the export file format to **Actiance XML**."
-msgstr ""
+msgstr "내보내기 파일 형식을 **Actiance XML**\\ 로 설정합니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:100
 msgid "In Actiance XML exports, channel type is prepended to the channel names."
-msgstr ""
+msgstr "Actiance XML 내보내기에서는 채널 유형이 채널 이름 앞에 추가됩니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:105
 msgid ""
@@ -285,40 +350,50 @@ msgid ""
 "selected Actiance XML as your file format, you can set up an integration "
 "with Actiance Vantage archive system."
 msgstr ""
+"관리자 도구에서 내보내기 작업 상태를 확인할 수 있습니다. 파일 형식으로 Actiance "
+"XML을 선택하면 Actiance Vantage 아카이브 시스템과의 통합을 설정할 수 있습니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:127
 msgid "Updated Actiance XML export fields"
-msgstr ""
+msgstr "업데이트된 Actiance XML 내보내기 필드"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:129
 msgid ""
 "If an XML field is empty, it won't be exported. This is a change from "
 "previous Mattermost releases, where empty XML nodes were exported."
 msgstr ""
+"XML 필드가 비어 있으면 내보내지지 않습니다. 이는 빈 XML 노드를 내보내던 이전 "
+"OKR.BEST 릴리스에서 변경된 사항입니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:131
 msgid "``MessageId`` is the unique ``messageId``."
-msgstr ""
+msgstr "``MessageId``\\ 는 고유한 ``messageId``\\ 입니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:132
 msgid "``DateTimeUTC`` is always the post's ``CreateAt`` time."
-msgstr ""
+msgstr "``DateTimeUTC``\\ 는 항상 글의 ``CreateAt`` 시간입니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:133
 msgid ""
 "``UpdatedDateTimeUTC`` indicates that the message has been updated, and "
 "this is the ``updateAt`` time."
 msgstr ""
+"``UpdatedDateTimeUTC``\\ 는 메시지가 업데이트되었음을 나타내며 ``updateAt`` "
+"시간입니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:134
 msgid "``UpdatedType`` helps differentiate what kind of update it was, including:"
 msgstr ""
+"``UpdatedType``\\ 은 어떤 종류의 업데이트였는지 구분하는 데 도움이 됩니다. "
+"예를 들면 다음과 같습니다:"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:136
 msgid ""
 "``EditedNewMsg`` indicates that this message has been edited, and this is"
 " the new message (post-edit) content."
 msgstr ""
+"``EditedNewMsg``\\ 는 이 메시지가 편집되었음을 나타내며 새 메시지(편집 후) "
+"내용입니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:137
 msgid ""
@@ -327,6 +402,9 @@ msgid ""
 "another field ``EditedNewMsgId``, which is the Id of the message which "
 "holds the post-edited message contents."
 msgstr ""
+"``EditedOriginalMsg``\\ 는 이 메시지가 편집되었음을 나타내며 원본 메시지(편집 전) "
+"내용입니다. 이 메시지에는 편집 후 메시지 내용을 담고 있는 메시지의 Id인 "
+"``EditedNewMsgId`` 필드가 추가로 포함됩니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:138
 msgid ""
@@ -334,16 +412,19 @@ msgid ""
 "changed, but the post was updated for some reason, such as a reaction, "
 "replied-to, a reply was edited, or a reply was deleted."
 msgstr ""
+"``UpdatedNoMsgChange``\\ 는 이 메시지 내용은 변경되지 않았지만 반응, 답글 작성, 답글 "
+"편집, 답글 삭제 등의 이유로 글이 업데이트되었음을 나타냅니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:139
 msgid "``Deleted`` indicates that the message was deleted."
-msgstr ""
+msgstr "``Deleted``\\ 는 메시지가 삭제되었음을 나타냅니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:140
 msgid ""
 "``FileDeleted`` indicates that the message is recording that a file was "
 "deleted."
 msgstr ""
+"``FileDeleted``\\ 는 메시지가 파일이 삭제되었음을 기록하고 있음을 나타냅니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:144
 msgid ""
@@ -354,26 +435,33 @@ msgid ""
 "`download an Actiance XML export file here "
 "<https://github.com/mattermost/docs/blob/master/source/samples/actiance_export.xml>`__."
 msgstr ""
+"매일 실행되는 컴플라이언스 내보내기 작업은 지난 24시간 동안 게시된 모든 메시지를 "
+"고유 작업 식별자와 함께 ``.zip`` 파일로 생성합니다. 파일 형식으로 Actiance XML을 "
+"선택하면 Actiance Vantage 아카이브 시스템과의 통합을 설정할 수 있습니다. 샘플 "
+"Actiance 출력은 `여기에서 Actiance XML 내보내기 파일을 다운로드 "
+"<https://github.com/mattermost/docs/blob/master/source/samples/actiance_export.xml>`__\\ 하세요."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:147
 msgid "Global Relay EML"
-msgstr ""
+msgstr "Global Relay EML"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:149
 msgid ""
 "For more information on Global Relay archive system, visit `their website"
 " <https://www.globalrelay.com/>`_."
 msgstr ""
+"Global Relay 아카이브 시스템에 관한 자세한 내용은 `해당 웹사이트 "
+"<https://www.globalrelay.com/>`_\\ 를 방문하세요."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:152
 #: ../../source/administration-guide/comply/compliance-export.rst:171
 msgid "Set **Enable Compliance Export** to **true**."
-msgstr ""
+msgstr "**컴플라이언스 내보내기 활성화**\\ 를 **true**\\ 로 설정합니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:154
 #: ../../source/administration-guide/comply/compliance-export.rst:173
 msgid "Set the **Export Format** to **GlobalRelay EML**."
-msgstr ""
+msgstr "**내보내기 형식**\\ 을 **GlobalRelay EML**\\ 로 설정합니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:155
 msgid ""
@@ -381,6 +469,9 @@ msgid ""
 "Relay Customer Account**. This is the type of Global Relay customer "
 "account your organization has."
 msgstr ""
+"**Global Relay 고객 계정**\\ 에서 **A9/Type 9**, **A10/Type 10**, 또는 "
+"**Custom**\\ 을 선택합니다. 이는 조직이 보유한 Global Relay 고객 계정의 "
+"유형입니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:157
 msgid ""
@@ -388,6 +479,9 @@ msgid ""
 "username**, **Global Relay SMTP password**, and **Global Relay SMTP email"
 " address**, provided by Global Relay."
 msgstr ""
+"**A9/Type 9** 및 **A10/Type 10** 유형의 경우 Global Relay에서 제공한 **Global "
+"Relay SMTP username**, **Global Relay SMTP password**, **Global Relay SMTP "
+"email address**\\ 를 설정합니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:158
 msgid ""
@@ -396,6 +490,10 @@ msgid ""
 " Name**, and the **SMTP Server Port**, provided by Global Relay. "
 "**Custom** type can be used to integrate with Proofpoint."
 msgstr ""
+"**Custom** 유형의 경우 Global Relay에서 제공한 **Global Relay SMTP username**, "
+"**Global Relay SMTP password**, **Global Relay SMTP email address**, **SMTP "
+"Server Name**, **SMTP Server Port**\\ 를 설정합니다. **Custom** 유형은 "
+"Proofpoint와 통합하는 데 사용할 수 있습니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:163
 msgid ""
@@ -406,6 +504,11 @@ msgid ""
 "IDs. A `ticket is queued to better handle large messages "
 "<https://mattermost.atlassian.net/browse/MM-10038>`__."
 msgstr ""
+"250MB보다 큰 메시지는 Global Relay로 전송하기에 너무 커서 첨부 파일이 제거됩니다. "
+"``global_relay_attachments_removed`` ID와 함께 서버 로그에 오류가 추가됩니다. "
+"여기에는 첨부 파일이 제거된 글 ID와 첨부 파일 ID가 포함됩니다. `대용량 메시지를 더 "
+"잘 처리하기 위한 티켓이 대기 중입니다 "
+"<https://mattermost.atlassian.net/browse/MM-10038>`__."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:165
 msgid ""
@@ -414,16 +517,22 @@ msgid ""
 "see `Global Relay Archive <https://www.globalrelay.com/products/archive-"
 "data-compliance/>`_."
 msgstr ""
+"파일 형식으로 Global Relay EML을 선택하면 Global Relay 아카이브 시스템과의 통합을 "
+"설정할 수 있습니다. 자세한 내용은 `Global Relay Archive "
+"<https://www.globalrelay.com/products/archive-data-compliance/>`_\\ 를 "
+"참고하세요."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:168
 msgid "Proofpoint"
-msgstr ""
+msgstr "Proofpoint"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:174
 msgid ""
 "Select **Custom** for the **Global Relay Customer Account** to integrate "
 "with Proofpoint."
 msgstr ""
+"Proofpoint와 통합하려면 **Global Relay 고객 계정**\\ 에서 **Custom**\\ 을 "
+"선택합니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:175
 msgid ""
@@ -431,6 +540,8 @@ msgid ""
 "**SMTP Server Name**, and the **SMTP Server Port**, provided by "
 "Proofpoint."
 msgstr ""
+"Proofpoint에서 제공한 **SMTP username**, **SMTP password**, **SMTP email "
+"address**, **SMTP Server Name**, **SMTP Server Port**\\ 를 설정합니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:178
 msgid ""
@@ -440,14 +551,19 @@ msgid ""
 "`Proofpoint Archive webiste <https://www.proofpoint.com/us/products"
 "/archiving-and-compliance/archive>`__."
 msgstr ""
+"업데이트된 Global Relay 내보내기 필드에 관한 자세한 내용은 `Global Relay "
+"<#global-relay-eml>`__ 섹션을 참고하세요. 이제 Proofpoint 아카이브 시스템과의 "
+"통합을 설정할 수 있습니다. 자세한 내용은 `Proofpoint Archive 웹사이트 "
+"<https://www.proofpoint.com/us/products/archiving-and-compliance/archive>`__\\ 를 "
+"방문하세요."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:181
 msgid "Frequently Asked Questions (FAQ)"
-msgstr ""
+msgstr "자주 묻는 질문(FAQ)"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:184
 msgid "Are Playbooks and Boards data included in compliance exports?"
-msgstr ""
+msgstr "플레이북과 보드 데이터가 컴플라이언스 내보내기에 포함되나요?"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:186
 msgid ""
@@ -459,10 +575,16 @@ msgid ""
 "requiring compliance archiving of Playbooks and Boards data should "
 "consider separate data retention strategies for these features."
 msgstr ""
+"아니요. 컴플라이언스 내보내기에는 채널 메시지, 개인 메시지, 파일 업로드, "
+"플러그인/봇/웹훅에서 게시한 글만 포함됩니다. OKR.BEST 플레이북 데이터(실행 활동, "
+"상태 업데이트, 회고 포함)와 OKR.BEST 보드 데이터(카드, 댓글, 보드 활동 포함)는 "
+"컴플라이언스 내보내기 기능에 포함되지 않습니다. 플레이북과 보드 데이터의 컴플라이언스 "
+"아카이브가 필요한 조직은 이러한 기능에 대해 별도의 데이터 보존 전략을 고려해야 "
+"합니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:189
 msgid "How do I export past history?"
-msgstr ""
+msgstr "과거 기록은 어떻게 내보내나요?"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:191
 msgid ""
@@ -471,10 +593,13 @@ msgid ""
 "specified timestamp. All posts that were made after this timestamp will "
 "be exported."
 msgstr ""
+"``export`` :doc:`명령줄 도구 <../manage/command-line-tools>`\\ 를 실행합니다. "
+"``exportFrom`` 옵션을 지정해 특정 타임스탬프 이후의 데이터를 내보낼 수 있습니다. 이 "
+"타임스탬프 이후에 작성된 모든 글이 내보내집니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:194
 msgid "How do I download compliance export jobs using mmctl?"
-msgstr ""
+msgstr "mmctl을 사용해 컴플라이언스 내보내기 작업을 어떻게 다운로드하나요?"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:196
 msgid ""
@@ -484,10 +609,15 @@ msgid ""
 "export download>` command. This provides a command-line interface for "
 "retrieving completed compliance export jobs by job ID."
 msgstr ""
+"OKR.BEST 서버 v10.11부터 시스템 관리자는 :ref:`mmctl compliance_export download "
+"<administration-guide/manage/mmctl-command-line-tool:mmctl compliance-export "
+"download>` 명령어를 사용해 컴플라이언스 내보내기 작업을 다운로드할 수 있습니다. 이 "
+"명령어는 작업 ID로 완료된 컴플라이언스 내보내기 작업을 검색하는 명령줄 인터페이스를 "
+"제공합니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:199
 msgid "What happens if I export data manually?"
-msgstr ""
+msgstr "데이터를 수동으로 내보내면 어떻게 되나요?"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:201
 msgid ""
@@ -498,12 +628,18 @@ msgid ""
 "the job has ever run, all posts that were made since the feature was "
 "enabled will be exported."
 msgstr ""
+"컴플라이언스 내보내기 작업이 자동으로 실행되거나, 관리자 도구를 통해 수동으로 "
+"실행되거나, CLI를 통해 수동으로(``--exportFrom`` 옵션 없이) 실행되면, 이전 작업 "
+"실행에서 내보낸 마지막 글 이후에 작성된 모든 글이 내보내집니다. 작업이 처음 "
+"실행되는 경우 기능이 활성화된 이후에 작성된 모든 글이 내보내집니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:203
 msgid ""
 "If the ``--exportFrom`` option is specified with the CLI command, all "
 "posts that have been made since the supplied timestamp will be exported."
 msgstr ""
+"CLI 명령어에 ``--exportFrom`` 옵션을 지정하면 제공된 타임스탬프 이후에 작성된 모든 "
+"글이 내보내집니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:205
 msgid ""
@@ -515,20 +651,27 @@ msgid ""
 "Global Relay EML export format files will be mailed to the configured "
 "email address when run manually."
 msgstr ""
+"관리자 도구를 통해 수동으로 실행하면 ``.csv`` 및 Actiance XML 파일이 구성된 "
+":ref:`로컬 저장소 디렉토리 <administration-guide/configure/environment-"
+"configuration-settings:local storage directory>`\\ 의 ``exports`` 하위 "
+"디렉토리에 기록됩니다. 파일은 에포크 시간 범위를 기준으로 이름이 지정된 폴더에 "
+"기록됩니다. Global Relay EML 내보내기 형식 파일은 수동으로 실행할 경우 구성된 이메일 "
+"주소로 메일로 발송됩니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:208
 msgid "Is there a maximum row limit for CSV files?"
-msgstr ""
+msgstr "CSV 파일에 최대 행 제한이 있나요?"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:210
 msgid ""
 "No. There's no limit to the number of rows within Compliance Monitoring "
 "CSV files."
 msgstr ""
+"아니요. 컴플라이언스 모니터링 CSV 파일의 행 수에는 제한이 없습니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:213
 msgid "How do I know if a compliance export job fails?"
-msgstr ""
+msgstr "컴플라이언스 내보내기 작업이 실패했는지 어떻게 알 수 있나요?"
 
 #: ../../source/administration-guide/comply/compliance-export.rst:215
 msgid ""
@@ -536,6 +679,9 @@ msgid ""
 "Console > Compliance > Compliance Export**. Here, you can see if the job "
 "succeeded or failed, including the number of messages and files exported."
 msgstr ""
+"OKR.BEST는 각 컴플라이언스 내보내기 작업의 상태를 **관리자 도구 > 감사 > 컴플라이언스 "
+"내보내기**\\ 에 제공합니다. 여기에서 내보낸 메시지 및 파일 수를 포함해 작업의 성공 "
+"또는 실패 여부를 확인할 수 있습니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:217
 msgid ""
@@ -546,6 +692,11 @@ msgid ""
 "create a script that programmatically queries for such failures and "
 "notifies the appropriate system."
 msgstr ""
+"또한 셀프 호스팅 배포에서는 모든 실패가 서버 로그에 반환됩니다. 오류 로그는 "
+"``Failed job`` 문자열로 시작하며 ``job_id key/value`` 쌍을 포함합니다. 컴플라이언스 "
+"내보내기 작업 실패는 워커 이름 ``MessageExportWorker``\\ 로 식별됩니다. 이러한 "
+"실패를 프로그래밍 방식으로 조회하고 적절한 시스템에 알리는 스크립트를 선택적으로 "
+"만들 수 있습니다."
 
 #: ../../source/administration-guide/comply/compliance-export.rst:221
 msgid ""
@@ -555,4 +706,8 @@ msgid ""
 " `download a CSV export file here "
 "<https://github.com/mattermost/docs/blob/master/source/samples/csv_export.zip>`__."
 msgstr ""
+"이 컴플라이언스 내보내기 기능은 레거시 컴플라이언스 보고 감독 기능을 대체합니다. "
+"Enterprise 고객은 새 시스템으로 마이그레이션하는 것을 권장합니다. 새 컴플라이언스 "
+"내보내기 시스템의 샘플 CSV 출력은 `여기에서 CSV 내보내기 파일을 다운로드 "
+"<https://github.com/mattermost/docs/blob/master/source/samples/csv_export.zip>`__\\ 하세요."
 
