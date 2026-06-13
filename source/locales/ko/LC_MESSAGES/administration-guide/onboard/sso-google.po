@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/sso-google.rst:2
 msgid "Google Single Sign-On"
-msgstr ""
+msgstr "Google 싱글 사인온"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다."
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -35,13 +37,15 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/sso-google.rst:8
 msgid "Configuring Google Apps as a Single Sign-On (SSO) service"
-msgstr ""
+msgstr "Google Apps를 싱글 사인온(SSO) 서비스로 구성"
 
 #: ../../source/administration-guide/onboard/sso-google.rst:10
 msgid ""
 "Follow these steps to configure Mattermost to use Google as a Single "
 "Sign-on (SSO) service for team creation, account creation, and login."
 msgstr ""
+"팀 생성, 계정 생성, 로그인을 위한 싱글 사인온(SSO) 서비스로 Google을 사용하도록 OKR.BEST를 구성하려면 "
+"다음 단계를 따르세요."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:14
 msgid ""
@@ -50,32 +54,35 @@ msgid ""
 " 2019 `per their notice <https://developers.google.com/+/api-"
 "shutdown>`__."
 msgstr ""
+"`Google People API <https://developers.google.com/people>`__\\ 가 Google+ API를 대체했습니다. Google+ API는 "
+"Google의 `공지 <https://developers.google.com/+/api-shutdown>`__\\ 에 따라 2019년 3월 7일에 지원 중단되었습니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:17
 msgid "Step 1: Create OpenID Connect project in Google API Manager"
-msgstr ""
+msgstr "1단계: Google API Manager에서 OpenID Connect 프로젝트 생성"
 
 #: ../../source/administration-guide/onboard/sso-google.rst:19
 msgid "Go to Google Cloud Platform."
-msgstr ""
+msgstr "Google Cloud Platform으로 이동합니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:21
 msgid "Select **Credentials** in the left-hand sidebar."
-msgstr ""
+msgstr "왼쪽 사이드바에서 **Credentials**\\ 를 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:23
 msgid "Select **Create Credentials**, then select **OAuth client ID**."
-msgstr ""
+msgstr "**Create Credentials**\\ 를 선택한 다음 **OAuth client ID**\\ 를 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:25
 msgid "Select the **Web application** as the application type."
-msgstr ""
+msgstr "애플리케이션 유형으로 **Web application**\\ 을 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:27
 msgid ""
 "Enter ``Mattermost-<your-company-name>`` as the **Name**, replacing "
 "``<your-company-name>`` with the name of your organization."
 msgstr ""
+"**Name**\\ 에 ``Mattermost-<your-company-name>``을 입력하고 ``<your-company-name>``을 조직 이름으로 바꿉니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:29
 #, python-brace-format
@@ -84,10 +91,12 @@ msgid ""
 "``{your-mattermost-url}/signup/google/complete``. For example: "
 "``http://localhost:8065/signup/google/complete``."
 msgstr ""
+"**Authorized redirect URIs** 아래에서 **Add URL**\\ 을 선택한 다음 ``{your-mattermost-url}/signup/google/complete``를 "
+"입력합니다. 예: ``http://localhost:8065/signup/google/complete``."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:31
 msgid "Select **Create**."
-msgstr ""
+msgstr "**Create**\\ 를 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:33
 msgid ""
@@ -95,10 +104,12 @@ msgid ""
 "to a temporary location. You will enter these values in the Mattermost "
 "System Console."
 msgstr ""
+"**Your Client ID** 및 **Your Client Secret** 값을 임시 위치에 복사해 붙여넣습니다. 이 값은 OKR.BEST "
+"관리자 도구에 입력합니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:46
 msgid "Step 2: Enable Google People API"
-msgstr ""
+msgstr "2단계: Google People API 활성화"
 
 #: ../../source/administration-guide/onboard/sso-google.rst:48
 msgid ""
@@ -106,20 +117,23 @@ msgid ""
 "then select **Enable** in the header. This might take a few minutes to "
 "propagate through Google's systems."
 msgstr ""
+"`Google People API <https://developers.google.com/people>`_\\ 로 이동한 다음 헤더에서 **Enable**\\ 을 선택합니다. "
+"Google 시스템 전체에 반영되는 데 몇 분 정도 걸릴 수 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:51
 msgid "Step 3: Configure Mattermost for Google Apps SSO"
-msgstr ""
+msgstr "3단계: Google Apps SSO용 OKR.BEST 구성"
 
 #: ../../source/administration-guide/onboard/sso-google.rst:53
 msgid ""
 "Log in to Mattermost, then go to **System Console > Authentication > "
 "OpenID Connect**."
 msgstr ""
+"OKR.BEST에 로그인한 다음 **관리자 도구 > 인증 > OpenID Connect**\\ 로 이동합니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:55
 msgid "Select **Google Apps** as the service provider."
-msgstr ""
+msgstr "서비스 공급자로 **Google Apps**\\ 를 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:57
 msgid ""
@@ -127,18 +141,20 @@ msgid ""
 "prepopulated with ``https://accounts.google.com/.well-known/openid-"
 "configuration``."
 msgstr ""
+"Google Apps용 OpenID Connect의 **Discovery Endpoint**\\ 는 ``https://accounts.google.com/.well-known/openid-"
+"configuration``으로 미리 채워져 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:59
 msgid "Paste in the **Client ID** from Google in Mattermost."
-msgstr ""
+msgstr "Google의 **Client ID**\\ 를 OKR.BEST에 붙여넣습니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:61
 msgid "Paste in the **Client Secret** from Google in Mattermost."
-msgstr ""
+msgstr "Google의 **Client Secret**\\ 을 OKR.BEST에 붙여넣습니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:63
 msgid "Select **Save**."
-msgstr ""
+msgstr "**저장**\\ 을 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:66
 msgid ""
@@ -148,34 +164,41 @@ msgid ""
 "Connect or OAuth 2.0 must be the authoritative source for these user "
 "attributes."
 msgstr ""
+"OKR.BEST가 사용자 인증에 OpenID Connect 또는 OAuth 2.0을 사용하도록 구성된 경우 Mattermost API를 통해 "
+"다음 사용자 속성 변경을 수행할 수 없습니다: 이름, 성 또는 사용자 ID. OpenID Connect 또는 OAuth 2.0이 "
+"이러한 사용자 속성의 권한 있는 소스여야 합니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:68
 msgid ""
 "Username and email address changes made in Google Workspace are not "
 "automatically synced to Mattermost."
 msgstr ""
+"Google Workspace에서 변경한 사용자 ID와 이메일 주소는 OKR.BEST에 자동으로 동기화되지 않습니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:71
 msgid "Configure Mattermost ``config.json`` for Google Apps SSO"
-msgstr ""
+msgstr "Google Apps SSO용 OKR.BEST ``config.json`` 구성"
 
 #: ../../source/administration-guide/onboard/sso-google.rst:73
 msgid ""
 "Instead of using the System Console, you can add the Google settings "
 "directly to the ``config.json`` file directly on your Mattermost server."
 msgstr ""
+"관리자 도구를 사용하는 대신 OKR.BEST 서버의 ``config.json`` 파일에 Google 설정을 직접 추가할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:75
 msgid ""
 "Open ``config.json`` as *root* in a text editor. It’s usually in "
 "``/opt/mattermost/config``, but it might be elsewhere on your system."
 msgstr ""
+"텍스트 편집기에서 ``config.json``을 *root*\\ 로 엽니다. 일반적으로 ``/opt/mattermost/config``에 있지만 "
+"시스템에 따라 다른 위치에 있을 수 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:76
 msgid ""
 "Locate the ``GoogleSettings`` section, then add or update the following "
 "information:"
-msgstr ""
+msgstr "``GoogleSettings`` 섹션을 찾은 다음 다음 정보를 추가하거나 업데이트합니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:93
 msgid ""
@@ -183,14 +206,16 @@ msgid ""
 "restarts, users must change their login method before they can log in "
 "with Google Apps."
 msgstr ""
+"변경 사항을 저장한 다음 OKR.BEST 서버를 다시 시작합니다. 서버가 다시 시작되면 사용자는 Google Apps로 "
+"로그인하기 전에 로그인 방법을 변경해야 합니다."
 
 #: ../../source/administration-guide/onboard/sso-google.rst:96
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/administration-guide/onboard/sso-google.rst:99
 msgid "How can I use LDAP attributes or Groups with OpenID?"
-msgstr ""
+msgstr "OpenID에서 LDAP 속성 또는 그룹을 어떻게 사용할 수 있나요?"
 
 #: ../../source/administration-guide/onboard/sso-google.rst:101
 msgid ""
@@ -201,4 +226,7 @@ msgid ""
 "suggest using SAML or LDAP as the login provider. Some OpenID providers "
 "can use SAML instead, like Keycloak."
 msgstr ""
-
+"현재 LDAP 데이터는 OpenID와 호환되지 않습니다. 현재 LDAP에 의존해 사용자의 팀, 채널, 그룹 또는 속성을 "
+"관리하고 있다면 OpenID로 로그인한 사용자에게는 이를 자동으로 수행할 수 없습니다. 각 사용자에게 LDAP 동기화가 "
+"필요한 경우 로그인 공급자로 SAML 또는 LDAP를 사용하는 것이 좋습니다. Keycloak처럼 일부 OpenID 공급자는 대신 "
+"SAML을 사용할 수 있습니다."
