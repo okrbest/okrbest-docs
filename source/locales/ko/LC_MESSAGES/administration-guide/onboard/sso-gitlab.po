@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Mattermost package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Mattermost \n"
@@ -21,13 +20,15 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:2
 msgid "GitLab Single Sign-On"
-msgstr ""
+msgstr "GitLab Single Sign-On"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -35,7 +36,7 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:8
 msgid "Configuring GitLab as a Single Sign-On (SSO) service"
-msgstr ""
+msgstr "GitLab을 Single Sign-On(SSO) 서비스로 구성하기"
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:10
 msgid ""
@@ -43,10 +44,12 @@ msgid ""
 "Sign-on (SSO) service for team creation, account creation, and user "
 "login."
 msgstr ""
+"팀 생성, 계정 생성, 사용자 로그인을 위해 GitLab을 Single Sign-on(SSO) 서비스로 사용하도록 "
+"OKR.BEST를 구성하려면 다음 단계를 따르세요."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:13
 msgid "Only the default GitLab SSO is officially supported."
-msgstr ""
+msgstr "기본 GitLab SSO만 공식적으로 지원됩니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:14
 msgid ""
@@ -56,12 +59,17 @@ msgid ""
 "required, they're not officially supported, and they're known not to work"
 " in some cases."
 msgstr ""
+"GitLab SSO가 다른 SSO 솔루션에 연결되는 \"Double SSO\"는 지원되지 않습니다. 경우에 따라 "
+"GitLab SSO를 AD, LDAP, SAML 또는 MFA 애드온과 연결할 수는 있지만, 필요한 특수 로직 때문에 "
+"공식적으로 지원되지 않으며 일부 경우에는 동작하지 않는 것으로 알려져 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:15
 msgid ""
 ":doc:`Mattermost Free (self-hosted only) </product-overview/editions-and-"
 "offerings>` supports the OAuth 2.0 standard."
 msgstr ""
+":doc:`Mattermost Free (self-hosted only) </product-overview/editions-and-"
+"offerings>`\\ 는 OAuth 2.0 표준을 지원합니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:16
 msgid ""
@@ -69,10 +77,13 @@ msgid ""
 " and :doc:`Mattermost Enterprise </product-overview/editions-and-"
 "offerings>` support the OpenID Connect standard."
 msgstr ""
+":doc:`Mattermost Professional </product-overview/editions-and-offerings>`\\ 와 "
+":doc:`Mattermost Enterprise </product-overview/editions-and-offerings>`\\ 는 "
+"OpenID Connect 표준을 지원합니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:19
 msgid "Step 1: Add a Mattermost application to your GitLab account"
-msgstr ""
+msgstr "1단계: GitLab 계정에 Mattermost 애플리케이션 추가"
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:21
 #, python-brace-format
@@ -82,14 +93,17 @@ msgid ""
 "your GitLab instance. If you're using GitLab itself as your service "
 "provider, use ``gitlab.com``."
 msgstr ""
+"GitLab 계정에 로그인한 다음 ``https://{gitlab-site-name}/profile/applications``\\ 로 "
+"이동합니다. *{gitlab-site-name}*\\ 에는 GitLab 인스턴스 이름을 사용하세요. GitLab 자체를 서비스 "
+"제공자로 사용하는 경우 ``gitlab.com``\\ 을 사용하세요."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:23
 msgid "Add a new application:"
-msgstr ""
+msgstr "새 애플리케이션을 추가합니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:25
 msgid "In the **Name** field, enter ``Mattermost``."
-msgstr ""
+msgstr "**Name** 필드에 ``Mattermost``\\ 를 입력합니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:26
 #, python-brace-format
@@ -97,50 +111,59 @@ msgid ""
 "In the **Redirect URI** field, add the following two lines using your own"
 " value for *{mattermost-site-name}*."
 msgstr ""
+"**Redirect URI** 필드에 *{mattermost-site-name}*\\ 에 대한 자체 값을 사용하여 다음 두 줄을 "
+"추가합니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:33
 msgid ""
 "If your GitLab instance is not set up to use SSL, your URIs must begin "
 "with ``http://`` instead of ``https://``."
 msgstr ""
+"GitLab 인스턴스가 SSL을 사용하도록 설정되어 있지 않은 경우 URI는 ``https://`` 대신 "
+"``http://``\\ 로 시작해야 합니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:35
 msgid "Select scopes."
-msgstr ""
+msgstr "범위를 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:37
 msgid "For Mattermost Team Edition, select ``read_user``."
-msgstr ""
+msgstr "Mattermost Team Edition의 경우 ``read_user``\\ 를 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:38
 msgid ""
 "For Mattermost Enterprise, select ``read_user``, ``openid``, ``profile``,"
 " and ``email``."
 msgstr ""
+"Mattermost Enterprise의 경우 ``read_user``, ``openid``, ``profile``, "
+"``email``\\ 을 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:40
 msgid "Select **Save application**."
-msgstr ""
+msgstr "**Save application**\\ 을 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:42
 msgid ""
 "Keep the GitLab window open. You need the *Application Id* and "
 "*Application Secret Key* when you configure Mattermost."
 msgstr ""
+"GitLab 창을 열어 둡니다. OKR.BEST를 구성할 때 *Application Id* 및 *Application Secret "
+"Key*\\ 가 필요합니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:45
 msgid "Step 2: Configure Mattermost for GitLab SSO"
-msgstr ""
+msgstr "2단계: GitLab SSO용 OKR.BEST 구성"
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:47
 msgid ""
 "Log in to Mattermost, then go to **System Console > Authentication > "
 "OpenID Connect**."
 msgstr ""
+"OKR.BEST에 로그인한 다음 **관리자 도구 > 인증 > OpenID Connect**\\ 로 이동합니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:48
 msgid "Select **GitLab** as the service provider."
-msgstr ""
+msgstr "서비스 제공자로 **GitLab**\\ 을 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:49
 msgid ""
@@ -149,24 +172,32 @@ msgid ""
 " of ``https://``. If you are using GitLab itself as your provider, use "
 "``gitlab.com``."
 msgstr ""
+"GitLab 인스턴스의 **GitLab Site URL**\\ 을 입력합니다. GitLab 인스턴스가 SSL을 사용하도록 설정되어 "
+"있지 않은 경우 URL을 ``https://`` 대신 ``http://``\\ 로 시작하세요. GitLab 자체를 제공자로 사용하는 "
+"경우 ``gitlab.com``\\ 을 사용하세요."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:50
 msgid ""
 "The **Discovery Endpoint** for OpenID Connect with GitLab is prepopulated"
 " with ``https://gitlab.com/.well-known/openid-configuration``."
 msgstr ""
+"GitLab을 사용하는 OpenID Connect용 **Discovery Endpoint**\\ 는 "
+"``https://gitlab.com/.well-known/openid-configuration``\\ 으로 미리 채워져 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:51
 msgid ""
 "Paste the **Application ID** from GitLab as the **Client ID** in "
 "Mattermost."
 msgstr ""
+"GitLab의 **Application ID**\\ 를 OKR.BEST의 **Client ID**\\ 로 붙여넣습니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:52
 msgid ""
 "Paste the **Application Secret Key** from GitLab as the **Client Secret**"
 " in Mattermost."
 msgstr ""
+"GitLab의 **Application Secret Key**\\ 를 OKR.BEST의 **Client Secret**\\ 로 "
+"붙여넣습니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:53
 msgid ""
@@ -177,10 +208,14 @@ msgid ""
 " Team Edition does not work with scopes other than ``read_user``. Changes"
 " to this setting require a server restart before taking effect."
 msgstr ""
+"``config.json`` 파일을 업데이트하고 GitLab에서 선택한 범위를 ``GitLabSettings`` 속성 아래에 "
+"지정합니다. 최소한 Mattermost Enterprise 및 Professional에는 ``openid`` 범위가 필요하고, "
+"Mattermost Team Edition에는 ``read_user`` 범위가 필요합니다. Mattermost Team Edition은 "
+"``read_user`` 이외의 범위로는 동작하지 않습니다. 이 설정 변경 사항은 서버를 재시작해야 적용됩니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:54
 msgid "Select **Save**."
-msgstr ""
+msgstr "**Save**\\ 를 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:58
 msgid ""
@@ -190,6 +225,9 @@ msgid ""
 "Connect or OAuth 2.0 must be the authoritative source for these user "
 "attributes."
 msgstr ""
+"OKR.BEST가 사용자 인증에 OpenID Connect 또는 OAuth 2.0을 사용하도록 구성된 경우, 다음 사용자 속성 "
+"변경은 OKR.BEST API를 통해 수행할 수 없습니다: 이름, 성 또는 사용자 이름. OpenID Connect 또는 OAuth "
+"2.0이 이러한 사용자 속성의 권한 있는 소스여야 합니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:59
 msgid ""
@@ -197,10 +235,12 @@ msgid ""
 "configured, you may need to set `X-Forwarded-Proto` header to https at "
 "your load balancer."
 msgstr ""
+"로드 밸런서 뒤에서 OKR.BEST를 사용하고 SSL을 구성한 경우, 로드 밸런서에서 "
+"`X-Forwarded-Proto` 헤더를 https로 설정해야 할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:62
 msgid "(Optional) Step 3: Force users to sign up using SSO only"
-msgstr ""
+msgstr "(선택 사항) 3단계: 사용자가 SSO로만 가입하도록 강제"
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:64
 msgid ""
@@ -209,14 +249,17 @@ msgid ""
 "must change their login method before they can log in to Mattermost with "
 "GitLab."
 msgstr ""
+"모든 사용자가 SSO로만 가입하도록 강제하려면 **관리자 도구 > 인증 > 이메일 > 이메일로 로그인 활성화**\\ 를 "
+"``false``\\ 로 설정합니다. 사용자가 GitLab으로 OKR.BEST에 "
+"로그인하려면 먼저 로그인 방법을 변경해야 합니다."
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:68
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:71
 msgid "How can I use LDAP attributes or Groups with OpenID?"
-msgstr ""
+msgstr "OpenID에서 LDAP 속성 또는 그룹을 어떻게 사용할 수 있나요?"
 
 #: ../../source/administration-guide/onboard/sso-gitlab.rst:73
 msgid ""
@@ -227,4 +270,7 @@ msgid ""
 "suggest using SAML or LDAP as the login provider. Some OpenID providers "
 "can use SAML instead, like Keycloak."
 msgstr ""
-
+"현재 LDAP 데이터는 OpenID와 호환되지 않습니다. 현재 LDAP를 사용해 사용자의 팀, 채널, 그룹 또는 속성을 관리하고 "
+"있다면, OpenID로 로그인한 사용자에게는 이를 자동으로 수행할 수 없습니다. 각 사용자에게 LDAP 동기화가 필요하다면 로그인 "
+"제공자로 SAML 또는 LDAP를 사용하는 것을 권장합니다. Keycloak처럼 일부 OpenID 제공자는 대신 SAML을 사용할 수 "
+"있습니다."

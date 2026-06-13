@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Mattermost package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Mattermost \n"
@@ -21,13 +20,15 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:2
 msgid "Entra ID Single Sign-On"
-msgstr ""
+msgstr "Entra ID Single Sign-On"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -35,7 +36,7 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:8
 msgid "Configuring EntraID as a Single Sign-On (SSO) service"
-msgstr ""
+msgstr "EntraID를 Single Sign-On(SSO) 서비스로 구성하기"
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:12
 msgid ""
@@ -44,12 +45,16 @@ msgid ""
 "authentication instead, see the :doc:`Configure SAML with Microsoft Entra"
 " ID </administration-guide/onboard/sso-saml-entraid>` documentation."
 msgstr ""
+"이 문서는 **OpenID Connect** 인증용 Entra ID 구성 방법을 다룹니다. 대신 **SAML** 인증용 Entra "
+"ID를 구성해야 하는 경우 :doc:`Microsoft Entra ID로 SAML 구성 </administration-"
+"guide/onboard/sso-saml-entraid>` 문서를 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:13
 msgid ""
 "The system must be using SSL as Microsoft only allows OAuth redirect URIs"
 " that are SSL-enabled."
 msgstr ""
+"Microsoft는 SSL이 활성화된 OAuth 리디렉션 URI만 허용하므로, 시스템은 SSL을 사용해야 합니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:15
 msgid ""
@@ -57,10 +62,12 @@ msgid ""
 "credentials and Azure Active Directory account as a Single Sign-on (SSO) "
 "service for team creation, account creation, and sign-in."
 msgstr ""
+"Entra ID 로그인 자격 증명과 Azure Active Directory 계정을 팀 생성, 계정 생성, 로그인용 Single "
+"Sign-on(SSO) 서비스로 사용하도록 OKR.BEST를 구성하려면 다음 단계를 따르세요."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:18
 msgid "Step 1: Register an application in Azure Portal"
-msgstr ""
+msgstr "1단계: Azure Portal에서 애플리케이션 등록"
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:20
 msgid ""
@@ -69,16 +76,20 @@ msgid ""
 "to register the application. You can confirm the tenant in the top right "
 "corner of the portal."
 msgstr ""
+"애플리케이션을 등록하려는 Azure Active Directory 테넌트와 관련된 계정으로 `Azure Portal "
+"<https://portal.azure.com/>`_\\ 에 로그인합니다. 포털 오른쪽 위에서 테넌트를 확인할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:22
 msgid ""
 "In the left-hand navigation pane, select the **Microsoft EntraID**, then "
 "toward the bottom select **Add application registrations**."
 msgstr ""
+"왼쪽 탐색 창에서 **Microsoft EntraID**\\ 를 선택한 다음, 하단 쪽에서 **Add application "
+"registrations**\\ 를 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:24
 msgid "Give your new registration a **Name**."
-msgstr ""
+msgstr "새 등록에 **Name**\\ 을 지정합니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:26
 msgid ""
@@ -86,6 +97,9 @@ msgid ""
 "example, if this is to be only accessed from your enterprise's Azure AD "
 "accounts, then select **Accounts in this organizational directory only**."
 msgstr ""
+"애플리케이션에 액세스할 수 있는 **Supported account types**\\ 를 정의합니다. 예를 들어 조직의 Azure "
+"AD 계정에서만 액세스하도록 하려면 **Accounts in this organizational directory only**\\ 를 "
+"선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:28
 msgid ""
@@ -94,6 +108,9 @@ msgid ""
 "``/signup/office365/complete``. An example below is: "
 "``https://your.mattermost.com/signup/office365/complete``"
 msgstr ""
+"**Redirect URI**\\ 를 웹 클라이언트로 정의한 다음, OKR.BEST 서비스에 특화된 호스트 이름 뒤에 "
+"``/signup/office365/complete``\\ 를 붙인 URL을 입력합니다. 아래 예시는 "
+"``https://your.mattermost.com/signup/office365/complete``\\ 입니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:34
 msgid ""
@@ -102,10 +119,13 @@ msgid ""
 "/en-gb/azure/active-directory/develop/quickstart-register-app>`_ for "
 "reference."
 msgstr ""
+"App Registration이 생성되면 추가로 구성할 수 있습니다. 참고 자료는 표준 `Azure AD documentation "
+"<https://learn.microsoft.com/en-gb/azure/active-directory/develop/quickstart-"
+"register-app>`_\\ 를 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:37
 msgid "Step 2: Generate a new client secret in Azure Portal"
-msgstr ""
+msgstr "2단계: Azure Portal에서 새 클라이언트 시크릿 생성"
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:39
 msgid ""
@@ -113,16 +133,19 @@ msgid ""
 "**Certificates and Secrets** from the menu, then select the button to "
 "generate a **New Client secret**."
 msgstr ""
+"새로 만든 **Registered App** 개요 페이지에서 메뉴의 **Certificates and Secrets**\\ 를 선택한 "
+"다음, **New Client secret**\\ 을 생성하는 버튼을 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:43
 msgid ""
 "Provide a description, define the expiry for the token, then select "
 "**Add**."
 msgstr ""
+"설명을 제공하고 토큰 만료 기간을 정의한 다음 **Add**\\ 를 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:47
 msgid "Store the **value** of the new secret somewhere secure."
-msgstr ""
+msgstr "새 시크릿의 **value**\\ 를 안전한 위치에 저장합니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:49
 msgid ""
@@ -132,32 +155,40 @@ msgid ""
 "and as part of an **Auth Endpoint** and **Token Endpoint** URL in the "
 "Mattermost System Console."
 msgstr ""
+"Azure Portal에서 메뉴의 **Overview**\\ 를 선택한 다음 Application (client) ID와 Directory "
+"(tenant) ID를 모두 임시 위치에 복사해 붙여넣습니다. 이 값들은 OKR.BEST 관리자 도구에서 **Application "
+"ID** 및 **Auth Endpoint** / **Token Endpoint** URL의 일부로 입력하게 됩니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:53
 msgid ""
 "Grant admin concent for the configured permissions under **App "
 "Registrations > <Your App> > Manage > API Permissions**"
 msgstr ""
+"**App Registrations > <Your App> > Manage > API Permissions** 아래에 구성된 권한에 "
+"관리자 동의를 부여합니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:59
 msgid "Step 3: Configure Mattermost for Entra ID SSO"
-msgstr ""
+msgstr "3단계: Entra ID SSO용 OKR.BEST 구성"
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:60
 msgid ""
 "Log in to Mattermost, then go to **System Console > Authentication > "
 "OpenID Connect**."
 msgstr ""
+"OKR.BEST에 로그인한 다음 **관리자 도구 > 인증 > OpenID Connect**\\ 로 이동합니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:62
 msgid "Select **Entra ID** as the service provider."
-msgstr ""
+msgstr "서비스 제공자로 **Entra ID**\\ 를 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:64
 msgid ""
 "Paste the **Directory (tenant) ID** from the Azure Portal as the "
 "**Directory (tenant) ID** in Mattermost."
 msgstr ""
+"Azure Portal의 **Directory (tenant) ID**\\ 를 OKR.BEST의 **Directory (tenant) "
+"ID**\\ 로 붙여넣습니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:66
 msgid ""
@@ -165,22 +196,29 @@ msgid ""
 "prepopulated with ``https://login.microsoftonline.com/common/v2.0/.well-"
 "known/openid-configuration``."
 msgstr ""
+"Entra ID를 사용하는 OpenID Connect용 **Discovery Endpoint**\\ 는 "
+"``https://login.microsoftonline.com/common/v2.0/.well-known/openid-"
+"configuration``\\ 으로 미리 채워져 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:68
 msgid ""
 "Paste the **Application (client) ID** from the Azure Portal as the "
 "**Client ID** in Mattermost."
 msgstr ""
+"Azure Portal의 **Application (client) ID**\\ 를 OKR.BEST의 **Client ID**\\ 로 "
+"붙여넣습니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:70
 msgid ""
 "Paste the **client secret** value from the Azure Portal as the **Client "
 "Secret** in Mattermost."
 msgstr ""
+"Azure Portal의 **client secret** 값을 OKR.BEST의 **Client Secret**\\ 으로 "
+"붙여넣습니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:72
 msgid "Select **Save**."
-msgstr ""
+msgstr "**Save**\\ 를 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:75
 msgid ""
@@ -190,10 +228,13 @@ msgid ""
 "Connect or OAuth 2.0 must be the authoritative source for these user "
 "attributes."
 msgstr ""
+"OKR.BEST가 사용자 인증에 OpenID Connect 또는 OAuth 2.0을 사용하도록 구성된 경우, 다음 사용자 속성 "
+"변경은 OKR.BEST API를 통해 수행할 수 없습니다: 이름, 성 또는 사용자 이름. OpenID Connect 또는 OAuth "
+"2.0이 이러한 사용자 속성의 권한 있는 소스여야 합니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:78
 msgid "Note about Microsoft Active Directory Tenants"
-msgstr ""
+msgstr "Microsoft Active Directory 테넌트에 대한 참고 사항"
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:80
 msgid ""
@@ -206,6 +247,11 @@ msgid ""
 "/identity-platform/quickstart-create-new-tenant>`_ documentation to learn"
 " more about getting an Azure AD tenant."
 msgstr ""
+"Microsoft Active Directory(AD) 테넌트는 사용자가 소유하는 Azure Active Directory(Azure "
+"AD)의 전용 인스턴스이며, Azure 또는 Entra ID와 같은 Microsoft 클라우드 서비스에 가입할 때 받게 됩니다. "
+"테넌트는 조직이 암호, 사용자 프로필 데이터, 권한 같은 사용자 정보를 저장하려는 경우 일반적으로 사용됩니다. Azure AD "
+"테넌트를 얻는 방법에 대한 자세한 내용은 Microsoft Entra ID <https://learn.microsoft.com/en-"
+"us/entra/identity-platform/quickstart-create-new-tenant>`_ 문서를 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:82
 msgid ""
@@ -218,12 +264,20 @@ msgid ""
 " with Azure AD here <https://learn.microsoft.com/en-us/azure/active-"
 "directory/develop/quickstart-create-new-tenant>`_."
 msgstr ""
+"Azure AD 사용자가 Entra ID SSO를 사용해 OKR.BEST에 로그인할 수 있도록 하려면, 사용자 정보가 포함된 "
+"Microsoft Azure AD 테넌트에 OKR.BEST를 등록해야 합니다. 등록은 `Microsoft Azure portal "
+"<https://portal.azure.com>`__\\ 에서 수행할 수 있습니다. 테넌트에 OKR.BEST 계정을 등록하는 단계는 "
+"위에 제공된 단계와 유사하며, 자세한 내용은 `integrating apps with Azure AD here "
+"<https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-"
+"create-new-tenant>`_\\ 에서 확인할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:84
 msgid ""
 "If you don't register Mattermost in the Microsoft Azure AD tenant your "
 "organization uses, Entra ID SSO will likely fail for your users."
 msgstr ""
+"조직에서 사용하는 Microsoft Azure AD 테넌트에 OKR.BEST를 등록하지 않으면 사용자의 Entra ID SSO가 "
+"실패할 가능성이 높습니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:88
 msgid ""
@@ -232,28 +286,35 @@ msgid ""
 "account), then set up Entra ID SSO with Mattermost using the steps "
 "provided above."
 msgstr ""
+"Azure Active Directory를 사용하지 않는 경우 Entra ID 또는 Azure 계정(개인, 직장 또는 학교 계정)에 "
+"OKR.BEST를 등록한 다음, 위에 제공된 단계에 따라 OKR.BEST에서 Entra ID SSO를 설정할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:91
 msgid "Configure Mattermost ``config.json`` for Entra ID SSO"
-msgstr ""
+msgstr "Entra ID SSO용 OKR.BEST ``config.json`` 구성"
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:93
 msgid ""
 "Instead of using the System Console, you can add the Entra ID settings "
 "directly to the ``config.json`` file on your Mattermost server."
 msgstr ""
+"관리자 도구를 사용하는 대신 OKR.BEST 서버의 ``config.json`` 파일에 Entra ID 설정을 직접 추가할 수 "
+"있습니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:95
 msgid ""
 "Open ``config.json`` as *root* in a text editor. It’s usually in "
 "``/opt/mattermost/config`` but it might be elsewhere on your system."
 msgstr ""
+"텍스트 편집기에서 *root*\\ 로 ``config.json``\\ 을 엽니다. 일반적으로 "
+"``/opt/mattermost/config``\\ 에 있지만, 시스템에 따라 다른 위치에 있을 수 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:96
 msgid ""
 "Locate the ``Office365Settings`` section, then add or update the "
 "following information:"
 msgstr ""
+"``Office365Settings`` 섹션을 찾은 다음, 다음 정보를 추가하거나 업데이트합니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:112
 msgid ""
@@ -261,14 +322,16 @@ msgid ""
 "restarts, users must change their login method before they can log in "
 "with Entra ID."
 msgstr ""
+"변경 사항을 저장한 다음 OKR.BEST 서버를 재시작합니다. 서버가 재시작된 후 사용자가 Entra ID로 로그인하려면 먼저 "
+"로그인 방법을 변경해야 합니다."
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:115
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:118
 msgid "How can I use LDAP attributes or Groups with OpenID?"
-msgstr ""
+msgstr "OpenID에서 LDAP 속성 또는 그룹을 어떻게 사용할 수 있나요?"
 
 #: ../../source/administration-guide/onboard/sso-entraid.rst:120
 msgid ""
@@ -279,4 +342,7 @@ msgid ""
 "suggest using SAML or LDAP as the login provider. Some OpenID providers "
 "can use SAML instead, like Keycloak."
 msgstr ""
-
+"현재 LDAP 데이터는 OpenID와 호환되지 않습니다. 현재 LDAP를 사용해 사용자의 팀, 채널, 그룹 또는 속성을 관리하고 "
+"있다면, OpenID로 로그인한 사용자에게는 이를 자동으로 수행할 수 없습니다. 각 사용자에게 LDAP 동기화가 필요하다면 로그인 "
+"제공자로 SAML 또는 LDAP를 사용하는 것을 권장합니다. Keycloak처럼 일부 OpenID 제공자는 대신 SAML을 사용할 수 "
+"있습니다."
