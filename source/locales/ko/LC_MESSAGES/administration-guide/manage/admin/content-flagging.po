@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:2
 msgid "Data Spillage Handling"
-msgstr ""
+msgstr "데이터 유출 처리"
 
 #: ../../source/_static/badges/entry-adv.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry and Enterprise Advanced "
 "<https://mattermost.com/pricing/>`__ plans"
 msgstr ""
+"|plans-img-yellow| `Entry 및 Enterprise Advanced "
+"<https://mattermost.com/pricing/>`__ 플랜에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -43,6 +45,11 @@ msgid ""
 "assess and take appropriate action by removing or dismissing quarantined "
 "messages."
 msgstr ""
+"데이터 유출 처리는 우발적인 데이터 유출을 방지하고 시스템 관리자가 협업을 "
+"방해하지 않으면서 잠재적 유출에 빠르게 대응할 수 있도록 지원합니다. 이 기능을 "
+"활성화하면 OKR.BEST 사용자가 민감하거나 규제 대상이거나 부적절한 정보가 포함될 "
+"수 있는 메시지를 신고할 수 있으며, 지정된 콘텐츠 검토자는 격리된 메시지를 "
+"삭제하거나 해제하여 평가하고 적절한 조치를 취할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:9
 msgid ""
@@ -51,10 +58,13 @@ msgid ""
 "secure deployments and supports compliance with organizational and "
 "regulatory data-handling standards."
 msgstr ""
+"모든 팀 구성원을 민감한 데이터 노출에 대한 1차 방어선으로 삼아, 데이터 유출 "
+"처리는 미션 크리티컬 보안 배포를 강화하고 조직 및 규제 데이터 처리 표준 준수를 "
+"지원합니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:12
 msgid "Before you begin"
-msgstr ""
+msgstr "시작하기 전에"
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:14
 msgid ""
@@ -63,24 +73,26 @@ msgid ""
 "whether quarantined messages should be hidden from users in Mattermost "
 "while under review."
 msgstr ""
+"OKR.BEST에서 시스템 관리자여야 합니다. 격리된 메시지의 콘텐츠 검토자를 식별해야 "
+"하며, 검토 중인 격리 메시지를 OKR.BEST 사용자에게 숨길지 결정해야 합니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:17
 msgid "Enable"
-msgstr ""
+msgstr "활성화"
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:19
 msgid ""
 "Data Spillage Handling isn't enabled by default. To enable Data Spillage "
 "Handling:"
-msgstr ""
+msgstr "데이터 유출 처리는 기본적으로 활성화되어 있지 않습니다. 데이터 유출 처리를 활성화하려면:"
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:21
 msgid "Go to **System Console > Site Configuration > Data Spillage Handling**."
-msgstr ""
+msgstr "**관리자 도구 > 사이트 설정 > 데이터 유출 처리**\\ 로 이동합니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:22
 msgid "Set **Enable Data Spillage Handling** to **True**."
-msgstr ""
+msgstr "**데이터 유출 처리 활성화**\\ 를 **True**\\ 로 설정합니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:24
 msgid ""
@@ -88,14 +100,17 @@ msgid ""
 ":ref:`config.json file or through environment variables <administration-"
 "guide/configure/site-configuration-settings:content flagging>`."
 msgstr ""
+"또는 :ref:`config.json 파일 또는 환경 변수 <administration-guide/configure"
+"/site-configuration-settings:content flagging>`\\ 를 통해 데이터 유출 처리를 "
+"구성할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:27
 msgid "Configure"
-msgstr ""
+msgstr "구성"
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:29
 msgid "Under **Content Reviewers**, define who should review quarantined content:"
-msgstr ""
+msgstr "**콘텐츠 검토자** 아래에서 격리된 콘텐츠를 검토할 사람을 정의합니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:31
 msgid ""
@@ -103,12 +118,14 @@ msgid ""
 "reviewer list across all teams, or **False** to configure reviewers per "
 "team."
 msgstr ""
+"**모든 팀에 동일한 검토자 사용**: 모든 팀에 하나의 전역 검토자 목록을 적용하려면 "
+"**True**\\ 로 설정하고, 팀별로 검토자를 구성하려면 **False**\\ 로 설정합니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:32
 msgid ""
 "**Reviewers**: Start typing to search for users to assign as content "
 "reviewers."
-msgstr ""
+msgstr "**검토자**: 입력을 시작하여 콘텐츠 검토자로 지정할 사용자를 검색합니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:36
 msgid ""
@@ -116,12 +133,16 @@ msgid ""
 "potentially sensitive information and may expose data from private "
 "channels."
 msgstr ""
+"검토자를 신중하게 선택합니다. 검토자 역할을 할당하면 잠재적으로 민감한 정보에 "
+"대한 액세스 권한이 부여되며, 비공개 채널의 데이터가 노출될 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:38
 msgid ""
 "A global reviewer can view quarantined messages from all teams and "
 "channels, including private channels they’re not a member of."
 msgstr ""
+"전역 검토자는 자신이 구성원이 아닌 비공개 채널을 포함하여 모든 팀과 채널의 "
+"격리된 메시지를 볼 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:39
 msgid ""
@@ -129,56 +150,61 @@ msgid ""
 " teams, including private channels within those teams they’re not members"
 " of."
 msgstr ""
+"팀별 검토자는 자신이 구성원이 아닌 해당 팀 내 비공개 채널을 포함하여 할당된 팀의 "
+"격리된 메시지를 볼 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:41
 msgid "**Additional reviewers**: Optionally include:"
-msgstr ""
+msgstr "**추가 검토자**: 선택적으로 다음을 포함할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:43
 msgid ""
 "**System Administrators**: System admins receive quarantined messages for"
 " all teams they are part of."
 msgstr ""
+"**시스템 관리자**: 시스템 관리자는 자신이 속한 모든 팀의 격리된 메시지를 받습니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:44
 msgid ""
 "**Team Administrators**: Team admins receive quarantined messages for "
 "their respective teams."
-msgstr ""
+msgstr "**팀 관리자**: 팀 관리자는 각자의 팀에 대한 격리된 메시지를 받습니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:46
 msgid ""
 "Under **Notification Settings**, specify who receives updates at each "
 "stage of the quarantine workflow when content is quarantined or reviewed:"
 msgstr ""
+"**알림 설정** 아래에서 콘텐츠가 격리되거나 검토될 때 격리 워크플로의 각 단계별 "
+"업데이트를 받을 사람을 지정합니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:48
 msgid "**Notify when content is quarantined**: Reviewer(s), Author."
-msgstr ""
+msgstr "**콘텐츠가 격리될 때 알림**: 검토자, 작성자."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:49
 msgid "**Notify when a reviewer is assigned**: Reviewer(s)."
-msgstr ""
+msgstr "**검토자가 할당될 때 알림**: 검토자."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:50
 msgid "**Notify when content is removed**: Reviewer(s), Author, Reporter."
-msgstr ""
+msgstr "**콘텐츠가 삭제될 때 알림**: 검토자, 작성자, 신고자."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:51
 msgid "**Notify on dismissal**: Reviewer(s), Author, Reporter."
-msgstr ""
+msgstr "**해제 시 알림**: 검토자, 작성자, 신고자."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:53
 msgid ""
 "All notifications are sent via the **Data Spillage Bot** as direct "
 "messages."
-msgstr ""
+msgstr "모든 알림은 **Data Spillage Bot**\\ 을 통해 개인 메시지로 전송됩니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:55
 msgid ""
 "Under **Additional Settings**, configure how the quarantine workflow "
 "behaves:"
-msgstr ""
+msgstr "**추가 설정** 아래에서 격리 워크플로가 작동하는 방식을 구성합니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:57
 msgid ""
@@ -188,18 +214,26 @@ msgid ""
 "information (PII) exposure**, **Operational security (OPSEC) concern**, "
 "**Controlled Unclassified Information (CUI) violation**)."
 msgstr ""
+"**격리 사유**: 사용자에게 표시되는 격리 대화 상자에 나타날 사전 설정 범주를 "
+"정의합니다(예: **Classification mismatch**, **Need-to-know violation**, "
+"**Personally identifiable information (PII) exposure**, **Operational security "
+"(OPSEC) concern**, **Controlled Unclassified Information (CUI) violation**)."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:58
 msgid ""
 "**Require reporters to add comment**: Set to **True** to require users to"
 " add a short explanation when quarantining a message."
 msgstr ""
+"**신고자에게 댓글 추가 요구**: 사용자가 메시지를 격리할 때 짧은 설명을 추가하도록 "
+"하려면 **True**\\ 로 설정합니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:59
 msgid ""
 "**Require reviewers to add comment**: Set to **True** to require "
 "reviewers to add a comment when resolving a quarantine."
 msgstr ""
+"**검토자에게 댓글 추가 요구**: 검토자가 격리를 해결할 때 댓글을 추가하도록 하려면 "
+"**True**\\ 로 설정합니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:60
 msgid ""
@@ -208,6 +242,9 @@ msgid ""
 "reviews are complete. If a root post is quarantined, the entire thread is"
 " hidden."
 msgstr ""
+"**검토 중인 메시지를 채널에서 숨기기**: 검토가 완료될 때까지 격리된 메시지를 "
+"채널에서 자동으로 숨기려면 **True**\\ 로 설정합니다. 루트 게시물이 격리되면 전체 "
+"스레드가 숨겨집니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:63
 msgid ""
@@ -216,10 +253,12 @@ msgid ""
 "maintain transparency, accountability, and an auditable record of "
 "actions."
 msgstr ""
+"투명성, 책임성, 감사 가능한 작업 기록을 유지하려면 **검토 중인 메시지를 채널에서 "
+"숨기기**\\ 를 활성화하고 신고자와 검토자 모두에게 댓글을 요구하는 것이 좋습니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:66
 msgid "Monitor quarantined messages"
-msgstr ""
+msgstr "격리된 메시지 모니터링"
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:68
 msgid ""
@@ -227,6 +266,8 @@ msgid ""
 "/flag-messages>`, the **Data Spillage Bot** sends a direct message to all"
 " content reviewers."
 msgstr ""
+":doc:`사용자가 메시지를 격리하면 </end-user-guide/collaborate/flag-messages>` "
+"**Data Spillage Bot**\\ 이 모든 콘텐츠 검토자에게 개인 메시지를 보냅니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:70
 msgid ""
@@ -236,68 +277,74 @@ msgid ""
 "monitor potential data spills, coordinate response, and maintain an "
 "auditable record of review activity."
 msgstr ""
+"**Data Spillage Bot**\\ 의 개인 메시지는 검토자가 OKR.BEST를 떠나지 않고 격리된 "
+"메시지를 보고, 할당하고, 조치할 수 있는 중앙 집중식 모더레이션 큐입니다. 검토자는 "
+"이를 사용해 잠재적 데이터 유출을 모니터링하고, 대응을 조율하며, 검토 활동의 감사 "
+"가능한 기록을 유지할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:72
 msgid ""
 "Each quarantined message appears as a card-formatted message that "
 "includes:"
-msgstr ""
+msgstr "각 격리 메시지는 다음을 포함하는 카드 형식의 메시지로 표시됩니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:74
 msgid "**Quarantined by**: The user who reported the message."
-msgstr ""
+msgstr "**격리한 사용자**: 메시지를 신고한 사용자입니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:75
 msgid ""
 "**Status**: The current state of the review. All quarantined content "
 "starts in **Pending** status."
-msgstr ""
+msgstr "**상태**: 현재 검토 상태입니다. 모든 격리 콘텐츠는 **Pending** 상태에서 시작됩니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:76
 msgid ""
 "**Reason**: The reason selected by the reporter (for example, "
 "**Classification mismatch**, **Need-to-know violation**)."
 msgstr ""
+"**사유**: 신고자가 선택한 사유입니다(예: **Classification mismatch**, **Need-to-"
+"know violation**)."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:77
 msgid ""
 "**Message preview**: A snippet of the quarantined message, including the "
 "author, timestamp, and original channel."
-msgstr ""
+msgstr "**메시지 미리보기**: 작성자, 타임스탬프, 원래 채널을 포함한 격리된 메시지의 일부입니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:78
 msgid ""
 "**Reviewer**: The user currently assigned to review the message "
 "(initially **Unassigned**)."
-msgstr ""
+msgstr "**검토자**: 현재 메시지 검토를 담당하도록 할당된 사용자입니다(초기값은 **Unassigned**)."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:79
 msgid ""
 "**Channel**: The name of the channel where the message was originally "
 "posted."
-msgstr ""
+msgstr "**채널**: 메시지가 원래 게시된 채널의 이름입니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:80
 msgid "**Team**: The team context for the quarantined message."
-msgstr ""
+msgstr "**팀**: 격리된 메시지의 팀 컨텍스트입니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:81
 msgid "**Comment**: Any reporter-provided context."
-msgstr ""
+msgstr "**댓글**: 신고자가 제공한 컨텍스트입니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:82
 msgid ""
 "**Post ID**: The system identifier for the original message for auditing "
 "purposes."
-msgstr ""
+msgstr "**게시물 ID**: 감사 목적을 위한 원본 메시지의 시스템 식별자입니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:84
 msgid "Reviewers can select **View details** to take action as follows:"
-msgstr ""
+msgstr "검토자는 **세부 정보 보기**\\ 를 선택하여 다음과 같이 조치할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:86
 msgid "Assign a **Reviewer** responsible for reviewing the quarantined message."
-msgstr ""
+msgstr "격리된 메시지를 검토할 책임이 있는 **검토자**\\ 를 할당합니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:87
 msgid ""
@@ -305,6 +352,8 @@ msgid ""
 "original channel for all users. The status of the quarantined message "
 "changes to **Removed**."
 msgstr ""
+"**메시지 삭제**: 모든 사용자에 대해 격리된 메시지를 원래 채널에서 영구적으로 "
+"삭제합니다. 격리된 메시지의 상태가 **Removed**\\ 로 변경됩니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:88
 msgid ""
@@ -312,10 +361,12 @@ msgid ""
 "was hidden. The status of the quarantined message changes to "
 "**Retained**."
 msgstr ""
+"**메시지 유지**: 격리를 해제하고 메시지가 숨겨져 있었다면 복원합니다. 격리된 "
+"메시지의 상태가 **Retained**\\ 로 변경됩니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:89
 msgid "**Add a comment**: Record the reason for the decision when required."
-msgstr ""
+msgstr "**댓글 추가**: 필요한 경우 결정 사유를 기록합니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:91
 msgid ""
@@ -324,10 +375,13 @@ msgid ""
 "author, and other reviewers based on how Data Spillage Handling is "
 "configured."
 msgstr ""
+"조치가 수행되면 **상태** 필드가 자동으로 업데이트됩니다. **Data Spillage "
+"Bot**\\ 은 데이터 유출 처리 구성에 따라 신고자, 작성자, 다른 검토자에게 후속 "
+"알림을 보냅니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:94
 msgid "Deleted messages"
-msgstr ""
+msgstr "삭제된 메시지"
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:96
 msgid ""
@@ -335,50 +389,54 @@ msgid ""
 "and all associated data are deleted from the database and can't be "
 "recovered, including:"
 msgstr ""
+"검토자가 격리된 메시지를 영구적으로 삭제하면 다음을 포함하여 메시지와 연결된 모든 "
+"데이터가 데이터베이스에서 삭제되며 복구할 수 없습니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:98
 msgid ""
 "Message content and properties: The text of the message and any "
 "associated post properties."
-msgstr ""
+msgstr "메시지 콘텐츠 및 속성: 메시지 텍스트와 연결된 게시물 속성입니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:99
 msgid ""
 "File metadata: Information about files attached to the message (e.g., "
 "file names, IDs, and links to storage)."
 msgstr ""
+"파일 메타데이터: 메시지에 첨부된 파일에 대한 정보입니다(예: 파일 이름, ID, "
+"스토리지 링크)."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:100
 msgid ""
 "File metadata from edit history: Information about files attached to "
 "earlier versions of the message."
-msgstr ""
+msgstr "편집 기록의 파일 메타데이터: 이전 버전의 메시지에 첨부된 파일에 대한 정보입니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:101
 msgid "Edit history: All previous versions of the message and their timestamps."
-msgstr ""
+msgstr "편집 기록: 메시지의 모든 이전 버전과 해당 타임스탬프입니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:102
 msgid ""
 "Uploaded files: The actual files stored in Mattermost’s file storage "
 "(local, S3, etc.)."
-msgstr ""
+msgstr "업로드된 파일: OKR.BEST 파일 스토리지(로컬, S3 등)에 저장된 실제 파일입니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:103
 msgid "Priority data: Any message priority or importance settings."
-msgstr ""
+msgstr "우선순위 데이터: 메시지 우선순위 또는 중요도 설정입니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:104
 msgid "Acknowledgements: Records of users who acknowledged the message."
-msgstr ""
+msgstr "확인 기록: 메시지를 확인한 사용자의 기록입니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:105
 msgid "Reminders: Any reminders created for the message."
-msgstr ""
+msgstr "리마인더: 메시지에 대해 생성된 리마인더입니다."
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:108
 msgid "Best practice recommendations"
-msgstr ""
+msgstr "권장 모범 사례"
 
 #: ../../source/administration-guide/manage/admin/content-flagging.rst:110
 msgid ""
@@ -389,4 +447,8 @@ msgid ""
 " data-handling or incident-response playbooks, and require reporter and "
 "reviewer comments to ensure every decision is transparent and auditable."
 msgstr ""
-
+"데이터 유출 처리를 조직 전체에 배포하기 전에, 이 기능이 우발적인 데이터 유출로부터 "
+"사용자와 조직을 모두 보호한다는 점을 안내하는 것이 좋습니다. 파일럿 팀으로 시작해 "
+"검토자 알림과 워크플로를 검증하고, 이 프로세스를 기존 데이터 처리 또는 사고 대응 "
+"플레이북과 통합하며, 모든 결정이 투명하고 감사 가능하도록 신고자와 검토자의 댓글을 "
+"요구하세요."

@@ -21,13 +21,13 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:2
 msgid "User attributes"
-msgstr ""
+msgstr "사용자 속성"
 
 #: ../../source/_static/badges/ent-plus.rst:9
 msgid ""
 "|plans-img-yellow| Available on `Enterprise and Enterprise Advanced plans"
 " <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img-yellow| `Enterprise 및 Enterprise Advanced 플랜 <https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -39,14 +39,14 @@ msgid ""
 "information they need to collaborate effectively by defining and managing"
 " organization-specific user profile attributes as system attributes that "
 "you can synchronize with your AD/LDAP or SAML identity provider."
-msgstr ""
+msgstr "Mattermost v10.8부터 AD/LDAP 또는 SAML ID 공급자와 동기화할 수 있는 조직별 사용자 프로필 속성을 시스템 속성으로 정의하고 관리하여, 팀이 효과적으로 협업하는 데 필요한 핵심 정보를 항상 확보할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:9
 msgid ""
 "System attributes enable you to customize user profile attributes to "
 "match your organization's unique needs and streamline collaboration while"
 " keeping user data centralized and consistent."
-msgstr ""
+msgstr "시스템 속성을 사용하면 사용자 데이터를 중앙 집중식으로 일관되게 유지하면서 조직의 고유한 요구 사항에 맞게 사용자 프로필 속성을 사용자 지정하고 협업을 간소화할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:11
 msgid ""
@@ -56,17 +56,17 @@ msgid ""
 " for specific attributes that don't impact access control or sensitive "
 "organizational data. These user attributes supplement existing user "
 "details visible from the user's profile picture."
-msgstr ""
+msgstr "Mattermost v11부터 관리자 관리 및 사용자 편집 가능 설정을 통해 이러한 사용자 속성을 더 세밀하게 제어할 수 있습니다. 기본적으로 속성은 보안을 위해 관리자 관리로 설정되지만, 액세스 제어나 민감한 조직 데이터에 영향을 주지 않는 특정 속성에 대해 사용자 편집을 명시적으로 허용할 수 있습니다. 이러한 사용자 속성은 사용자의 프로필 사진에서 볼 수 있는 기존 사용자 세부 정보를 보완합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:13
 msgid ""
 "Mobile examples of a user profile with user attributes added as system "
 "attributes."
-msgstr ""
+msgstr "사용자 속성이 시스템 속성으로 추가된 사용자 프로필의 모바일 예시입니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:17
 msgid "Before you begin"
-msgstr ""
+msgstr "시작하기 전에"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:19
 msgid ""
@@ -77,7 +77,7 @@ msgid ""
 ":ref:`SAML 2.0 <administration-guide/configure/authentication-"
 "configuration-settings:saml 2.0>` configuration settings documentation "
 "for details."
-msgstr ""
+msgstr "시스템 속성을 AD/LDAP 또는 SAML ID 공급자와 동기화하려는 경우 AD/LDAP 또는 SAML 동기화가 이미 활성화 및 구성되어 있는지 확인합니다. 자세한 내용은 :doc:`AD/LDAP 그룹 </administration-guide/onboard/ad-ldap-groups-synchronization>` 제품 문서 또는 :ref:`SAML 2.0 <administration-guide/configure/authentication-configuration-settings:saml 2.0>` 구성 설정 문서를 참조하세요."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:23
 msgid ""
@@ -86,7 +86,7 @@ msgid ""
 "providing better security and governance. System administrators can "
 "explicitly enable user editing for specific attributes through the System"
 " Console interface."
-msgstr ""
+msgstr "Mattermost v11부터 사용자 속성에는 보안 우선 접근 방식의 향상된 관리자 제어가 제공됩니다. 모든 속성은 기본적으로 관리자 관리로 설정되어 더 나은 보안과 거버넌스를 제공합니다. 시스템 관리자는 관리자 도구 인터페이스를 통해 특정 속성에 대한 사용자 편집을 명시적으로 활성화할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:25
 msgid ""
@@ -97,7 +97,7 @@ msgid ""
 "reasons. You can enable user-managed attributes for ABAC by setting "
 "``EnableUserManagedAttributes`` in ``config.json``, or via an environment"
 " variable as noted below, but this should be done with caution:"
-msgstr ""
+msgstr "조직에서 Enterprise Edition Advanced 라이선스가 필요한 :doc:`속성 기반 액세스 제어(ABAC) </administration-guide/manage/admin/attribute-based-access-control>`\\ 를 사용하는 경우, 액세스 제어 정책에 사용되는 속성은 보안상의 이유로 관리자 관리 상태를 유지해야 합니다. ``config.json``\\ 에서 ``EnableUserManagedAttributes``\\ 를 설정하거나 아래에 명시된 환경 변수를 통해 ABAC용 사용자 관리 속성을 활성화할 수 있지만, 신중하게 수행해야 합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:27
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:38
@@ -105,14 +105,14 @@ msgid ""
 "``config.json`` setting: "
 "``\".AccessControlSettings.EnableUserManagedAttributes: false\",`` with "
 "options ``true`` and ``false``."
-msgstr ""
+msgstr "``config.json`` 설정: ``\".AccessControlSettings.EnableUserManagedAttributes: false\",``. 옵션은 ``true`` 및 ``false``\\ 입니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:28
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:39
 msgid ""
 "Environment variable: "
 "``MM_ACCESSCONTROLSETTINGS_ENABLEUSERMANAGEDATTRIBUTES``"
-msgstr ""
+msgstr "환경 변수: ``MM_ACCESSCONTROLSETTINGS_ENABLEUSERMANAGEDATTRIBUTES``"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:30
 msgid ""
@@ -121,7 +121,7 @@ msgid ""
 " and can't be circumvented by users modifying their own profile "
 "attributes. Learn more about `admin-managed versus user-editable "
 "attributes <#admin-managed-vs-user-editable-attributes>`__."
-msgstr ""
+msgstr "이 구성 설정은 관리자 도구에서 관리되지 않으며, 액세스 제어 정책이 안전하게 유지되고 사용자가 자신의 프로필 속성을 수정하여 이를 우회할 수 없도록 기본적으로 비활성화되어 있습니다. `관리자 관리 속성과 사용자 편집 가능 속성 <#admin-managed-vs-user-editable-attributes>`__\\ 에 대해 자세히 알아보세요."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:32
 msgid ""
@@ -130,7 +130,7 @@ msgid ""
 "profile attributes (if allowed by admin settings) directly from the "
 "mobile app. Mobile attribute support requires the same server-side "
 "configuration, and no additional mobile-specific setup is required."
-msgstr ""
+msgstr "또한 모바일 앱 v2.31.0부터 사용자 속성이 모바일 장치에서 완전히 지원됩니다. 모바일 사용자는 모바일 앱에서 직접 프로필 속성을 보고, 관리자 설정에서 허용된 경우 관리할 수도 있습니다. 모바일 속성 지원에는 동일한 서버 측 구성이 필요하며, 추가 모바일 전용 설정은 필요하지 않습니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:36
 msgid ""
@@ -143,7 +143,7 @@ msgid ""
 "the System Console, and is disabled by default to ensure that access "
 "control policies remain secure and can't be circumvented by users "
 "modifying their own profile attributes."
-msgstr ""
+msgstr "Mattermost v10.11부터 사용자 관리 속성은 보안상의 이유로 ABAC 규칙에서 제외됩니다. 조직에서 ABAC(Enterprise Edition Advanced 필요)를 사용하는 경우, 시스템 관리자는 ``config.json``\\ 에서 ``EnableUserManagedAttributes``\\ 를 설정하거나 아래에 명시된 환경 변수를 통해 ABAC용 사용자 관리 속성을 명시적으로 활성화할 수 있습니다. 이 구성 설정은 관리자 도구에서 관리되지 않으며, 액세스 제어 정책이 안전하게 유지되고 사용자가 자신의 프로필 속성을 수정하여 이를 우회할 수 없도록 기본적으로 비활성화되어 있습니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:41
 msgid ""
@@ -152,13 +152,13 @@ msgid ""
 "profile attributes directly from the mobile app. Mobile attribute support"
 " requires the same server-side configuration, and no additional mobile-"
 "specific setup is required."
-msgstr ""
+msgstr "또한 모바일 앱 v2.31.0부터 사용자 속성이 모바일 장치에서 완전히 지원됩니다. 모바일 사용자는 모바일 앱에서 직접 프로필 속성을 보고 관리할 수 있습니다. 모바일 속성 지원에는 동일한 서버 측 구성이 필요하며, 추가 모바일 전용 설정은 필요하지 않습니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:45
 msgid ""
 "From Mattermost Enterprise v10.9, the ability to create and manage system"
 " properties as a Mattermost system admin requires no manual setup."
-msgstr ""
+msgstr "Mattermost Enterprise v10.9부터 Mattermost 시스템 관리자가 시스템 속성을 만들고 관리하는 기능에는 수동 설정이 필요하지 않습니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:49
 msgid ""
@@ -173,11 +173,11 @@ msgid ""
 "Account Manager or by `creating a support ticket "
 "<https://support.mattermost.com/hc/en-"
 "us/requests/new?ticket_form_id=11184911962004>`_ request."
-msgstr ""
+msgstr "시스템 속성을 만들고 관리하려면 Mattermost Enterprise v10.8 이상이 필요하며, Mattermost 시스템 관리자여야 시스템 속성 기능 플래그 ``MM_FEATUREFLAGS_CUSTOMPROFILEATTRIBUTES``\\ 를 활성화할 수 있습니다. 셀프 호스팅 배포에서 `기능 플래그를 활성화하는 방법 <https://developers.mattermost.com/contribute/more-info/server/feature-flags/#self-hosted-and-local-development>`_\\ 에 대한 자세한 내용은 Mattermost 개발자 문서를 참조하세요. Mattermost Cloud 고객은 Mattermost Account Manager에게 문의하거나 `지원 티켓을 생성 <https://support.mattermost.com/hc/en-us/requests/new?ticket_form_id=11184911962004>`_\\ 하여 이 기능 플래그 활성화를 요청할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:52
 msgid "Admin-managed vs user-editable attributes"
-msgstr ""
+msgstr "관리자 관리 속성과 사용자 편집 가능 속성"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:54
 msgid ""
@@ -185,98 +185,98 @@ msgid ""
 "user attributes through admin-managed vs user-editable settings. This "
 "distinction provides better security and governance for organizational "
 "profile data."
-msgstr ""
+msgstr "Mattermost v11부터 시스템 관리자는 관리자 관리 및 사용자 편집 가능 설정을 통해 사용자 속성을 더 세밀하게 제어할 수 있습니다. 이 구분은 조직 프로필 데이터에 더 나은 보안과 거버넌스를 제공합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:56
 msgid "**Admin-managed attributes** (default behavior):"
-msgstr ""
+msgstr "**관리자 관리 속성**(기본 동작):"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:58
 msgid "Controlled exclusively by system administrators"
-msgstr ""
+msgstr "시스템 관리자만 제어합니다"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:59
 msgid "Users cannot edit these values in their profiles"
-msgstr ""
+msgstr "사용자는 자신의 프로필에서 이러한 값을 편집할 수 없습니다"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:60
 msgid ""
 "Recommended for security-sensitive information like roles, clearance "
 "levels, or organizational identifiers"
-msgstr ""
+msgstr "역할, 보안 인가 수준, 조직 식별자와 같은 보안에 민감한 정보에 권장됩니다"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:61
 msgid ""
 "Ideal for attributes used in ABAC (Attribute-Based Access Control) "
 "policies"
-msgstr ""
+msgstr "ABAC(속성 기반 액세스 제어) 정책에 사용되는 속성에 적합합니다"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:62
 msgid ""
 "Values can only be updated by admins or through identity provider "
 "synchronization"
-msgstr ""
+msgstr "값은 관리자 또는 ID 공급자 동기화를 통해서만 업데이트할 수 있습니다"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:64
 msgid "**User-editable attributes**:"
-msgstr ""
+msgstr "**사용자 편집 가능 속성**:"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:66
 msgid "Users can update these values in their own profiles"
-msgstr ""
+msgstr "사용자는 자신의 프로필에서 이러한 값을 업데이트할 수 있습니다"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:67
 msgid "System administrators can still modify these attributes"
-msgstr ""
+msgstr "시스템 관리자는 여전히 이러한 속성을 수정할 수 있습니다"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:68
 msgid ""
 "Appropriate for non-sensitive information like personal preferences, "
 "skills, or contact details"
-msgstr ""
+msgstr "개인 선호도, 기술, 연락처 세부 정보와 같은 민감하지 않은 정보에 적합합니다"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:69
 msgid "Should not be used for attributes that impact security access controls"
-msgstr ""
+msgstr "보안 액세스 제어에 영향을 주는 속성에는 사용하지 않아야 합니다"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:72
 msgid ""
 "For security reasons, attributes used in ABAC policies are admin-managed "
 "by default and cannot be edited by users unless explicitly enabled by a "
 "system administrator through the **Allow user editing** option."
-msgstr ""
+msgstr "보안상의 이유로 ABAC 정책에 사용되는 속성은 기본적으로 관리자 관리로 설정되며, 시스템 관리자가 **사용자 편집 허용** 옵션을 통해 명시적으로 활성화하지 않는 한 사용자가 편집할 수 없습니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:74
 msgid "**Best practices:**"
-msgstr ""
+msgstr "**모범 사례:**"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:76
 msgid ""
 "Keep attributes that affect access control or contain sensitive "
 "organizational data as admin-managed"
-msgstr ""
+msgstr "액세스 제어에 영향을 주거나 민감한 조직 데이터를 포함하는 속성은 관리자 관리로 유지합니다"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:77
 msgid ""
 "Only enable user editing for attributes that don't impact security "
 "policies"
-msgstr ""
+msgstr "보안 정책에 영향을 주지 않는 속성에 대해서만 사용자 편집을 활성화합니다"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:78
 msgid ""
 "Regularly review user-editable attributes to ensure they remain "
 "appropriate for user management"
-msgstr ""
+msgstr "사용자 편집 가능 속성이 사용자 관리에 계속 적합한지 정기적으로 검토합니다"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:79
 msgid ""
 "Consider your organization's data governance requirements when "
 "determining attribute editability"
-msgstr ""
+msgstr "속성 편집 가능 여부를 결정할 때 조직의 데이터 거버넌스 요구 사항을 고려합니다"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:82
 msgid "Add attributes"
-msgstr ""
+msgstr "속성 추가"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:84
 msgid ""
@@ -286,53 +286,53 @@ msgid ""
 "Mattermost v11. Once you reach the maximum of 20 attributes, you can't "
 "create new attributes until you `delete attributes <#manage-"
 "attributes>`__ you no longer need."
-msgstr ""
+msgstr "관리자 도구를 사용해 최대 20개의 시스템 속성을 정의하고 관리할 수 있습니다. Mattermost v11부터 제공되는 **사용자가 편집 가능** 옵션을 비활성화하지 않는 한, 각 속성은 사용자가 입력할 수 있는 사용자 프로필 옵션이 됩니다. 최대 20개 속성에 도달하면 더 이상 필요하지 않은 `속성을 삭제 <#manage-attributes>`__\\ 할 때까지 새 속성을 만들 수 없습니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:88
 msgid ""
 "When you disable the **Editable by Users** option for an attribute, only "
 "admins can set its value using :ref:`mmctl cpa <administration-"
 "guide/manage/mmctl-command-line-tool:mmctl cpa>` commands."
-msgstr ""
+msgstr "속성의 **사용자가 편집 가능** 옵션을 비활성화하면 관리자만 :ref:`mmctl cpa <administration-guide/manage/mmctl-command-line-tool:mmctl cpa>` 명령을 사용해 값을 설정할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:90
 msgid ""
 "In the System Console, go to **Site Configuration > System Attributes > "
 "User Attributes** and select **Add Attribute**."
-msgstr ""
+msgstr "관리자 도구에서 **사이트 설정 > 시스템 속성 > 사용자 속성**\\ 으로 이동하고 **속성 추가**\\ 를 선택합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:91
 msgid "Enter the following details:"
-msgstr ""
+msgstr "다음 세부 정보를 입력합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:93
 msgid ""
 "**Attribute name**: Enter a unique name for the attribute. Attribute "
 "names can be up to 40 characters long."
-msgstr ""
+msgstr "**속성 이름**: 속성의 고유한 이름을 입력합니다. 속성 이름은 최대 40자까지 가능합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:94
 msgid "**Type**: Specify the type of attribute as one of the following:"
-msgstr ""
+msgstr "**유형**: 속성 유형을 다음 중 하나로 지정합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:96
 msgid "**Text** for text-based profile attributes."
-msgstr ""
+msgstr "텍스트 기반 프로필 속성에는 **텍스트**\\ 를 사용합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:97
 msgid "**Phone** for phone number-based profile attributes."
-msgstr ""
+msgstr "전화번호 기반 프로필 속성에는 **전화**\\ 를 사용합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:98
 msgid "**URL** for web site address-based profile attributes."
-msgstr ""
+msgstr "웹 사이트 주소 기반 프로필 속성에는 **URL**\\ 을 사용합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:99
 msgid ""
 "**Select** for a list of profile attribute values users can choose from. "
 "Specify each value followed by pressing **TAB** or **ENTER**. Values can "
 "be up to 64 characters long, and users can choose a single value."
-msgstr ""
+msgstr "사용자가 선택할 수 있는 프로필 속성 값 목록에는 **선택**\\ 을 사용합니다. 각 값을 지정한 뒤 **TAB** 또는 **ENTER**\\ 를 누릅니다. 값은 최대 64자까지 가능하며 사용자는 단일 값을 선택할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:100
 msgid ""
@@ -340,25 +340,25 @@ msgid ""
 "from. Specify each value followed by pressing **TAB** or **ENTER**. "
 "Values can be up to 64 characters long, and users can choose multiple "
 "values."
-msgstr ""
+msgstr "사용자가 선택할 수 있는 프로필 속성 값 목록에는 **다중 선택**\\ 을 사용합니다. 각 값을 지정한 뒤 **TAB** 또는 **ENTER**\\ 를 누릅니다. 값은 최대 64자까지 가능하며 사용자는 여러 값을 선택할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:102
 msgid "Specify the attribute's visibility as one of the following:"
-msgstr ""
+msgstr "속성의 표시 여부를 다음 중 하나로 지정합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:104
 msgid "**Always show**: The attribute is always visible in user profiles."
-msgstr ""
+msgstr "**항상 표시**: 속성이 사용자 프로필에 항상 표시됩니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:105
 msgid ""
 "**Hide when empty**: The attribute is only visible in user profiles when "
 "it has a value."
-msgstr ""
+msgstr "**비어 있으면 숨기기**: 속성에 값이 있을 때만 사용자 프로필에 표시됩니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:106
 msgid "**Always hide**: The attribute is never visible in user profiles."
-msgstr ""
+msgstr "**항상 숨기기**: 속성이 사용자 프로필에 표시되지 않습니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:109
 msgid ""
@@ -367,18 +367,18 @@ msgid ""
 "values in responses even if those attributes weren't stored. Visibility "
 "defaults to the server's default visibility, and sort order defaults to "
 "``0``."
-msgstr ""
+msgstr "속성이 명시적인 표시 여부나 정렬 순서 없이 생성 또는 업데이트된 경우(예: API 또는 자동화 사용), Mattermost는 해당 속성이 저장되지 않았더라도 응답에서 기본값을 반환합니다. 표시 여부는 서버의 기본 표시 여부로, 정렬 순서는 ``0``\\ 으로 기본 설정됩니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:111
 msgid ""
 "Configure user editing permissions (Mattermost v11 or later) by enabling "
 "or disabling the **Editable by users** option."
-msgstr ""
+msgstr "**사용자가 편집 가능** 옵션을 활성화하거나 비활성화하여 사용자 편집 권한(Mattermost v11 이상)을 구성합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:113
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:146
 msgid "Save your changes."
-msgstr ""
+msgstr "변경 사항을 저장합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:117
 msgid ""
@@ -386,34 +386,34 @@ msgid ""
 "selecting **Duplicate attribute**. This creates a new attribute with the "
 "same name and type as the original attribute. You can then edit the new "
 "attribute to change its name, type, and visibility as needed."
-msgstr ""
+msgstr "**더 보기** |more-icon|\\ 를 선택한 다음 **속성 복제**\\ 를 선택하여 기존 속성을 복제합니다. 그러면 원래 속성과 동일한 이름 및 유형의 새 속성이 생성됩니다. 그런 다음 필요에 따라 새 속성을 편집하여 이름, 유형, 표시 여부를 변경할 수 있습니다."
 
 #: ../../<rst_prolog>:16
 msgid "Use the More icon to access additional message options."
-msgstr ""
+msgstr "더 보기 아이콘을 사용해 추가 메시지 옵션에 액세스합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:120
 msgid "Manage attributes"
-msgstr ""
+msgstr "속성 관리"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:122
 msgid ""
 "**Modify**: Select the attribute fields to make inline changes to the "
 "attribute's name, type, or values. Select **More** |more-icon| to change "
 "a attribute's visibility."
-msgstr ""
+msgstr "**수정**: 속성 필드를 선택하여 속성의 이름, 유형 또는 값을 인라인으로 변경합니다. 속성의 표시 여부를 변경하려면 **더 보기** |more-icon|\\ 를 선택합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:124
 msgid ""
 "**Order**: Control the order you want attributes to appear in user "
 "profiles by dragging and dropping them in the list."
-msgstr ""
+msgstr "**순서**: 목록에서 끌어서 놓아 사용자 프로필에 속성이 표시될 순서를 제어합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:126
 msgid ""
 "**Delete**: Delete attributes you no longer need or want by selecting "
 "**More** |more-icon| and selecting **Delete property**."
-msgstr ""
+msgstr "**삭제**: **더 보기** |more-icon|\\ 를 선택한 다음 **속성 삭제**\\ 를 선택하여 더 이상 필요하지 않거나 원하지 않는 속성을 삭제합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:129
 msgid ""
@@ -422,7 +422,7 @@ msgid ""
 "only visibility, the sort order resets to ``0`` unless you include "
 "``sort_order`` in the same request. If a patch fails, the API may return "
 "the error string \"Unable to patch User Attribute field\"."
-msgstr ""
+msgstr "API 또는 자동화를 통해 사용자 속성을 업데이트할 때 ``attrs`` 객체는 기존 속성 설정과 병합하지 않고 대체합니다. 표시 여부만 보내면 같은 요청에 ``sort_order``\\ 를 포함하지 않는 한 정렬 순서가 ``0``\\ 으로 재설정됩니다. 패치가 실패하면 API가 오류 문자열 \"Unable to patch User Attribute field\"를 반환할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:131
 msgid ""
@@ -434,7 +434,7 @@ msgid ""
 "organizational policies. Attributes used in ABAC policies should remain "
 "admin-managed unless there's a specific business need and the security "
 "implications are fully understood."
-msgstr ""
+msgstr "**사용자 편집 권한**: Mattermost v11부터 보안 강화를 위해 모든 사용자 속성은 기본적으로 관리자 관리로 설정됩니다. 특정 속성에 대한 사용자 편집을 허용하려면 관리자가 **더 보기** |more-icon| 메뉴에서 **사용자 편집 허용**\\ 을 선택하여 활성화할 수 있습니다. 이 옵션은 보안 액세스 제어나 조직 정책에 영향을 주지 않는 속성에 대해서만 활성화해야 합니다. ABAC 정책에 사용되는 속성은 특정 비즈니스 요구가 있고 보안 영향을 완전히 이해한 경우가 아니라면 관리자 관리 상태를 유지해야 합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:133
 msgid ""
@@ -443,18 +443,18 @@ msgid ""
 "Console. See the :ref:`Manage user attributes <administration-"
 "guide/configure/user-management-configuration-settings:manage user "
 "attributes>` documentation for details."
-msgstr ""
+msgstr "**사용자 속성 값 편집**: Mattermost v11.1부터 관리자 도구를 통해 개별 사용자의 사용자 속성 값을 보고 업데이트할 수 있습니다. 자세한 내용은 :ref:`사용자 속성 관리 <administration-guide/configure/user-management-configuration-settings:manage user attributes>` 문서를 참조하세요."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:135
 msgid ""
 "In cases where multiple system admins manage system attributes, refresh "
 "your web browser instance to see real-time updates to system attributes "
 "made by other admins."
-msgstr ""
+msgstr "여러 시스템 관리자가 시스템 속성을 관리하는 경우, 다른 관리자가 시스템 속성에 적용한 실시간 업데이트를 보려면 웹 브라우저 인스턴스를 새로 고칩니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:138
 msgid "Sync attributes with your identity provider"
-msgstr ""
+msgstr "ID 공급자와 속성 동기화"
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:140
 msgid ""
@@ -463,18 +463,17 @@ msgid ""
 "SAML**. Mattermost takes you directly to the **AD/LDAP** or **SAML 2.0** "
 "configuration settings page in the System Console where you can map the "
 "attributes you want to synchronize."
-msgstr ""
+msgstr "**더 보기** |more-icon|\\ 를 선택한 다음 **속성을 AD/LDAP에 연결** 또는 **속성을 SAML에 연결**\\ 을 선택하여 속성을 AD/LDAP 또는 SAML과 동기화합니다. Mattermost는 동기화하려는 속성을 매핑할 수 있는 관리자 도구의 **AD/LDAP** 또는 **SAML 2.0** 구성 설정 페이지로 바로 이동합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:142
 msgid ""
 "Scroll to the **User attributes sync** section to specify the attribute "
 "used to populate the attribute in user profiles."
-msgstr ""
+msgstr "**사용자 속성 동기화** 섹션으로 스크롤하여 사용자 프로필의 속성을 채우는 데 사용할 속성을 지정합니다."
 
 #: ../../source/administration-guide/manage/admin/user-attributes.rst:144
 msgid ""
 "Specify the attribute mapping for the attribute by entering the attribute"
 " name in the system attribute's **Attribute** field. The attribute name "
 "must match the attribute name in your identity provider."
-msgstr ""
-
+msgstr "시스템 속성의 **속성** 필드에 속성 이름을 입력하여 해당 속성의 속성 매핑을 지정합니다. 속성 이름은 ID 공급자의 속성 이름과 일치해야 합니다."
