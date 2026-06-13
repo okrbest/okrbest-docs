@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:1
 msgid "Configure Mattermost Agents with AWS Bedrock"
-msgstr ""
+msgstr "AWS Bedrock로 OKR.BEST 에이전트 구성하기"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:3
 msgid ""
@@ -30,44 +30,50 @@ msgid ""
 "When running Mattermost on AWS EC2 infrastructure, you can use IAM "
 "instance profiles for seamless, credential-free authentication."
 msgstr ""
+"이 가이드는 [Amazon Bedrock](https://aws.amazon.com/bedrock/)를 LLM 공급자로 "
+"사용하여 OKR.BEST 에이전트 플러그인을 설정하는 과정을 안내합니다. OKR.BEST를 AWS "
+"EC2 인프라에서 실행하는 경우, IAM 인스턴스 프로필을 사용해 자격 증명 없이 원활하게 "
+"인증할 수 있습니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:5
 msgid "Prerequisites"
-msgstr ""
+msgstr "사전 요구사항"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:7
 msgid "Before you begin, ensure you have:"
-msgstr ""
+msgstr "시작하기 전에 다음을 갖추었는지 확인하세요:"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:9
 msgid "A Mattermost server (v10.11 or later) running on an AWS EC2 instance"
-msgstr ""
+msgstr "AWS EC2 인스턴스에서 실행되는 OKR.BEST 서버(v10.11 이상)"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:10
 msgid "An active Mattermost Enterprise license"
-msgstr ""
+msgstr "활성 Mattermost Enterprise 라이선스"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:11
 msgid "AWS CLI configured with permissions to create IAM resources"
-msgstr ""
+msgstr "IAM 리소스를 생성할 권한으로 구성된 AWS CLI"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:12
 msgid "Access to the Mattermost System Console as a system administrator"
-msgstr ""
+msgstr "시스템 관리자로서 OKR.BEST 관리자 도구에 대한 접근 권한"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:14
 msgid "Enabling model access"
-msgstr ""
+msgstr "모델 접근 활성화"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:16
 msgid ""
 "Before creating IAM resources, ensure the models you want to use are "
 "enabled in your AWS account."
 msgstr ""
+"IAM 리소스를 생성하기 전에, 사용하려는 모델이 AWS 계정에서 활성화되어 있는지 "
+"확인하세요."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:18
 msgid "Anthropic Claude models"
-msgstr ""
+msgstr "Anthropic Claude 모델"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:20
 msgid ""
@@ -76,34 +82,41 @@ msgid ""
 "once per AWS account, or once on the organization management account if "
 "using AWS Organizations."
 msgstr ""
+"Anthropic은 Bedrock을 통해 모델을 호출하기 전에 일회성 사용 사례 제출(First Time "
+"Use 또는 FTU 양식)을 요구합니다. 이는 AWS 계정당 한 번, 또는 AWS Organizations를 "
+"사용하는 경우 조직 관리 계정에서 한 번 필요합니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:22
 msgid "**Via AWS Console:**"
-msgstr ""
+msgstr "**AWS 콘솔 사용:**"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:24
 msgid ""
 "Open the [AWS Bedrock Model "
 "Catalog](https://console.aws.amazon.com/bedrock/home#/model-catalog)"
 msgstr ""
+"[AWS Bedrock Model "
+"Catalog](https://console.aws.amazon.com/bedrock/home#/model-catalog)를 "
+"엽니다"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:25
 msgid "Look for the banner prompting you to **Submit use case details**"
-msgstr ""
+msgstr "**Submit use case details**를 요청하는 배너를 찾습니다"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:26
 msgid ""
 "Fill in your company name, website, intended users, industry, and use "
 "case, then submit"
 msgstr ""
+"회사 이름, 웹사이트, 대상 사용자, 산업, 사용 사례를 입력한 후 제출합니다"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:28
 msgid "**Via AWS CLI:**"
-msgstr ""
+msgstr "**AWS CLI 사용:**"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:41
 msgid "Inference profiles for newer Claude models"
-msgstr ""
+msgstr "최신 Claude 모델용 추론 프로필"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:43
 msgid ""
@@ -111,24 +124,28 @@ msgid ""
 "using their base model ID — you must use a Cross-Region Inference Profile"
 " ID instead. If you attempt to use the raw model ID, you will see:"
 msgstr ""
+"최신 Anthropic 모델(예: Claude Sonnet 최신 버전)은 기본 모델 ID로 호출할 수 없으며, "
+"대신 교차 리전 추론 프로필(Cross-Region Inference Profile) ID를 사용해야 합니다. "
+"원시 모델 ID를 사용하려고 하면 다음과 같이 표시됩니다:"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:51
 msgid ""
 "Use the **inference** profile prefix in the **Default Model** field in "
 "Mattermost:"
 msgstr ""
+"OKR.BEST의 **Default Model** 필드에 **inference** 프로필 접두사를 사용하세요:"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "Model"
-msgstr ""
+msgstr "모델"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "Inference Profile ID"
-msgstr ""
+msgstr "추론 프로필 ID"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "Claude Sonnet 4.6 (US routing)"
-msgstr ""
+msgstr "Claude Sonnet 4.6(US 라우팅)"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "`us.anthropic.claude-sonnet-4-6`"
@@ -136,7 +153,7 @@ msgstr ""
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "Claude Sonnet 4.6 (global routing)"
-msgstr ""
+msgstr "Claude Sonnet 4.6(글로벌 라우팅)"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "`global.anthropic.claude-sonnet-4-6`"
@@ -144,51 +161,54 @@ msgstr ""
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:58
 msgid "Other Bedrock models"
-msgstr ""
+msgstr "기타 Bedrock 모델"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:60
 msgid ""
 "For Amazon (Nova, Titan), Meta (Llama), Mistral, and other non-Anthropic "
 "models:"
 msgstr ""
+"Amazon(Nova, Titan), Meta(Llama), Mistral 및 기타 비 Anthropic 모델의 경우:"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:62
 msgid "Go to the Bedrock console → **Model access**"
-msgstr ""
+msgstr "Bedrock 콘솔 → **Model access**로 이동합니다"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:63
 msgid "Select the models you want to enable"
-msgstr ""
+msgstr "활성화하려는 모델을 선택합니다"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:64
 msgid "Select **Request model access**"
-msgstr ""
+msgstr "**Request model access**를 선택합니다"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:66
 msgid "Most non-Anthropic models do not require an FTU form."
-msgstr ""
+msgstr "대부분의 비 Anthropic 모델은 FTU 양식이 필요하지 않습니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:68
 msgid "Step 1: Create IAM resources for Bedrock access"
-msgstr ""
+msgstr "1단계: Bedrock 접근을 위한 IAM 리소스 생성"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:70
 msgid ""
 "Create an IAM policy, role, and instance profile that grants your "
 "Mattermost EC2 instances permission to call Amazon Bedrock."
 msgstr ""
+"OKR.BEST EC2 인스턴스에 Amazon Bedrock 호출 권한을 부여하는 IAM 정책, 역할, "
+"인스턴스 프로필을 생성합니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:72
 msgid "Create the IAM policy"
-msgstr ""
+msgstr "IAM 정책 생성"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:74
 msgid "Create a policy that allows the required Bedrock API actions:"
-msgstr ""
+msgstr "필요한 Bedrock API 작업을 허용하는 정책을 생성합니다:"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:95
 msgid "Replace `<YOUR_ACCOUNT_ID>` with your 12-digit AWS account ID."
-msgstr ""
+msgstr "`<YOUR_ACCOUNT_ID>`를 12자리 AWS 계정 ID로 바꿉니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:97
 msgid ""
@@ -205,30 +225,44 @@ msgid ""
 " and `arn:aws:bedrock:us-east-1:<YOUR_ACCOUNT_ID>:inference-"
 "profile/us.anthropic.claude-sonnet-4-6`."
 msgstr ""
+"**참고:** OKR.BEST 에이전트 플러그인은 내부적으로 Bedrock Converse API를 "
+"사용하지만, 올바른 IAM 작업 이름은 `bedrock:InvokeModel`과 "
+"`bedrock:InvokeModelWithResponseStream`입니다 — `bedrock:Converse`와 "
+"`bedrock:ConverseStream`은 유효한 IAM 정책 작업이 아닙니다. `inference-profile/*` "
+"리소스 ARN은 교차 리전 추론 프로필을 사용하는 Anthropic Claude 모델에 필요합니다. "
+"**팁:** 특정 모델로 접근을 제한하려면 와일드카드 ARN을 모델별 ARN으로 바꾸세요. "
+"Anthropic Claude 모델의 경우 `foundation-model`과 `inference-profile` 리소스 모두에 "
+"항목이 필요합니다. 예: "
+"`arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-sonnet-4-6`와 "
+"`arn:aws:bedrock:us-east-1:<YOUR_ACCOUNT_ID>:inference-"
+"profile/us.anthropic.claude-sonnet-4-6`."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:100
 msgid "Create the IAM role and instance profile"
-msgstr ""
+msgstr "IAM 역할 및 인스턴스 프로필 생성"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:102
 msgid ""
 "Create an IAM role that EC2 instances can assume, then attach the Bedrock"
 " policy:"
 msgstr ""
+"EC2 인스턴스가 수임할 수 있는 IAM 역할을 생성한 후 Bedrock 정책을 연결합니다:"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:131
 msgid "Replace `<YOUR_ACCOUNT_ID>` with your AWS account ID."
-msgstr ""
+msgstr "`<YOUR_ACCOUNT_ID>`를 AWS 계정 ID로 바꿉니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:133
 msgid "Attach the instance profile to your EC2 instances"
-msgstr ""
+msgstr "EC2 인스턴스에 인스턴스 프로필 연결"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:135
 msgid ""
 "If your Mattermost server is already running, attach the instance profile"
 " to the running instance:"
 msgstr ""
+"OKR.BEST 서버가 이미 실행 중인 경우, 실행 중인 인스턴스에 인스턴스 프로필을 "
+"연결합니다:"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:143
 msgid ""
@@ -236,26 +270,32 @@ msgid ""
 "instance or configure it in your infrastructure-as-code (Terraform, "
 "CloudFormation, etc.)."
 msgstr ""
+"새 배포의 경우, EC2 인스턴스를 시작할 때 인스턴스 프로필을 지정하거나 코드형 "
+"인프라(Terraform, CloudFormation 등)에서 구성합니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:145
 msgid ""
 "**Note:** If you have multiple Mattermost app server instances, attach "
 "the instance profile to all of them."
 msgstr ""
+"**참고:** 여러 OKR.BEST 앱 서버 인스턴스가 있는 경우, 모든 인스턴스에 인스턴스 "
+"프로필을 연결하세요."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:147
 msgid "Step 2: Install the Agents plugin"
-msgstr ""
+msgstr "2단계: 에이전트 플러그인 설치"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:149
 msgid ""
 "The Mattermost Agents plugin may be pre-packaged with your Mattermost "
 "installation. Check your current version and upgrade if needed."
 msgstr ""
+"OKR.BEST 에이전트 플러그인은 OKR.BEST 설치에 기본 포함되어 있을 수 있습니다. 현재 "
+"버전을 확인하고 필요한 경우 업그레이드하세요."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:151
 msgid "Go to **System Console > Plugins > Plugin Management**."
-msgstr ""
+msgstr "**관리자 도구 > 플러그인 > 플러그인 관리**로 이동합니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:152
 msgid ""
@@ -263,6 +303,8 @@ msgid ""
 " later** is required for native AWS Bedrock support with IAM instance "
 "profiles."
 msgstr ""
+"**Agents** 플러그인이 목록에 있으면 버전을 확인하세요. IAM 인스턴스 프로필을 사용한 "
+"기본 AWS Bedrock 지원에는 **1.9.0 이상** 버전이 필요합니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:153
 msgid ""
@@ -272,35 +314,39 @@ msgid ""
 "b. Upload the `.tar.gz` file under **Upload Plugin** in Plugin "
 "Management. c. Once uploaded, select **Enable** to activate the plugin."
 msgstr ""
+"플러그인이 설치되어 있지 않거나 업그레이드가 필요한 경우: a. [Mattermost Agents "
+"plugin releases page](https://github.com/mattermost/mattermost-plugin-agents/releases)에서 "
+"최신 릴리스를 다운로드합니다. b. 플러그인 관리의 **Upload Plugin**에서 `.tar.gz` "
+"파일을 업로드합니다. c. 업로드되면 **Enable**을 선택해 플러그인을 활성화합니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:158
 msgid "Alternatively, install via `mmctl` on the server:"
-msgstr ""
+msgstr "또는 서버에서 `mmctl`을 통해 설치합니다:"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:167
 msgid "Step 3: Configure the Bedrock service"
-msgstr ""
+msgstr "3단계: Bedrock 서비스 구성"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:169
 msgid "Go to **System Console > Plugins > Agents**."
-msgstr ""
+msgstr "**관리자 도구 > 플러그인 > Agents**로 이동합니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:170
 msgid "Under **Services**, select **Add a Service**."
-msgstr ""
+msgstr "**Services**에서 **Add a Service**를 선택합니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:171
 #: ../../source/agents/docs/aws_bedrock_setup.md:206
 msgid "Configure the following fields:"
-msgstr ""
+msgstr "다음 필드를 구성합니다:"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "Field"
-msgstr ""
+msgstr "필드"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "Value"
-msgstr ""
+msgstr "값"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "**Service Name**"
@@ -308,7 +354,7 @@ msgstr ""
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "A descriptive name (e.g., `AWS Bedrock`)"
-msgstr ""
+msgstr "설명이 포함된 이름(예: `AWS Bedrock`)"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "**Service Type**"
@@ -316,7 +362,7 @@ msgstr ""
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "Select `AWS Bedrock`"
-msgstr ""
+msgstr "`AWS Bedrock` 선택"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "**AWS Region**"
@@ -324,7 +370,7 @@ msgstr ""
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "The AWS region where Bedrock is available (e.g., `us-east-1`)"
-msgstr ""
+msgstr "Bedrock을 사용할 수 있는 AWS 리전(예: `us-east-1`)"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "**Default Model**"
@@ -332,7 +378,7 @@ msgstr ""
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "The Bedrock model identifier (e.g., `us.anthropic.claude-sonnet-4-6`)"
-msgstr ""
+msgstr "Bedrock 모델 식별자(예: `us.anthropic.claude-sonnet-4-6`)"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "**AWS Access Key ID**"
@@ -340,7 +386,7 @@ msgstr ""
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "Leave empty when using IAM instance profiles"
-msgstr ""
+msgstr "IAM 인스턴스 프로필을 사용할 때는 비워 둡니다"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "**AWS Secret Access Key**"
@@ -357,11 +403,14 @@ msgid ""
 "instance profiles or IAM user credentials, as those methods take "
 "precedence."
 msgstr ""
+"선택 사항. Bedrock 콘솔 API 키(base64 인코딩). 단기 테스트에만 적합합니다—키는 "
+"12시간 후 만료됩니다. IAM 인스턴스 프로필이나 IAM 사용자 자격 증명을 사용할 때는 "
+"해당 방식이 우선하므로 비워 둡니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:183
 #: ../../source/agents/docs/aws_bedrock_setup.md:216
 msgid "Select **Save**."
-msgstr ""
+msgstr "**Save**를 선택합니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:185
 msgid ""
@@ -370,20 +419,25 @@ msgid ""
 "from the instance metadata service. This is the recommended approach for "
 "production deployments on AWS."
 msgstr ""
+"**팁:** IAM 인스턴스 프로필과 함께 EC2에서 실행하는 경우, 자격 증명 필드를 비워 "
+"두세요. AWS SDK가 인스턴스 메타데이터 서비스에서 자격 증명을 자동으로 검색합니다. "
+"이는 AWS의 프로덕션 배포에 권장되는 방식입니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:187
 msgid "Available Bedrock models"
-msgstr ""
+msgstr "사용 가능한 Bedrock 모델"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:189
 msgid ""
 "Amazon Bedrock provides access to models from multiple providers. Common "
 "model identifiers include:"
 msgstr ""
+"Amazon Bedrock은 여러 공급자의 모델에 대한 접근을 제공합니다. 일반적인 모델 "
+"식별자는 다음과 같습니다:"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "Identifier"
-msgstr ""
+msgstr "식별자"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "Anthropic Claude Sonnet 4.6"
@@ -419,6 +473,9 @@ msgid ""
 " `us.` or `global.` prefix) rather than the raw model ID. See [Enabling "
 "model access](#enabling-model-access) above."
 msgstr ""
+"**참고:** Anthropic Claude 모델의 경우, 원시 모델 ID가 아니라 추론 프로필 ID(`us.` "
+"또는 `global.` 접두사 포함)를 사용하세요. 위의 [모델 접근 활성화"
+"](#enabling-model-access)를 참고하세요."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:200
 msgid ""
@@ -427,18 +484,21 @@ msgid ""
 "/models-supported.html) for the full list of supported models and "
 "regional availability."
 msgstr ""
+"지원되는 모델 및 리전별 가용성의 전체 목록은 [Amazon Bedrock model "
+"availability](https://docs.aws.amazon.com/bedrock/latest/userguide"
+"/models-supported.html)를 확인하세요."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:202
 msgid "Step 4: Create an AI agent"
-msgstr ""
+msgstr "4단계: AI 에이전트 생성"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:204
 msgid "Open the top-level **Agents** product page in Mattermost."
-msgstr ""
+msgstr "OKR.BEST에서 최상위 **Agents** 제품 페이지를 엽니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:205
 msgid "Select **Add an Agent**."
-msgstr ""
+msgstr "**Add an Agent**를 선택합니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "**Agent Username**"
@@ -446,7 +506,7 @@ msgstr ""
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "The username for the bot (e.g., `ai`)"
-msgstr ""
+msgstr "봇의 사용자 ID(예: `ai`)"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "**Display Name**"
@@ -454,7 +514,7 @@ msgstr ""
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "The display name shown in conversations (e.g., `AI Assistant`)"
-msgstr ""
+msgstr "대화에 표시되는 표시명(예: `AI Assistant`)"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "**Service**"
@@ -462,7 +522,7 @@ msgstr ""
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "Select the Bedrock service you created in Step 3"
-msgstr ""
+msgstr "3단계에서 생성한 Bedrock 서비스를 선택합니다"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "**Custom Instructions**"
@@ -470,7 +530,7 @@ msgstr ""
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "Optional system prompt for the agent's behavior"
-msgstr ""
+msgstr "에이전트 동작을 위한 선택적 시스템 프롬프트"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "**Enable Vision**"
@@ -478,19 +538,19 @@ msgstr ""
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "Enable to allow the agent to process images"
-msgstr ""
+msgstr "에이전트가 이미지를 처리할 수 있도록 활성화"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:218
 msgid "Step 5: Verify the setup"
-msgstr ""
+msgstr "5단계: 설정 확인"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:220
 msgid "**Verify IAM credentials**: SSH into your Mattermost EC2 instance and run:"
-msgstr ""
+msgstr "**IAM 자격 증명 확인**: OKR.BEST EC2 인스턴스에 SSH로 접속하여 실행합니다:"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:226
 msgid "This should return `MattermostBedrockRole` (or your role name)."
-msgstr ""
+msgstr "이는 `MattermostBedrockRole`(또는 사용자의 역할 이름)을 반환해야 합니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:228
 msgid ""
@@ -498,24 +558,29 @@ msgid ""
 "agent bot (e.g., `@ai`) and send a test message. The agent should respond"
 " using the configured Bedrock model."
 msgstr ""
+"**에이전트 테스트**: OKR.BEST에서 AI 에이전트 봇(예: `@ai`)과 개인 메시지를 "
+"시작하고 테스트 메시지를 보냅니다. 에이전트는 구성된 Bedrock 모델을 사용해 응답해야 "
+"합니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:230
 msgid ""
 "**Check logs**: If the agent doesn't respond, review the Mattermost "
 "server logs for errors:"
 msgstr ""
+"**로그 확인**: 에이전트가 응답하지 않으면 오류에 대해 OKR.BEST 서버 로그를 "
+"검토합니다:"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:236
 msgid "Troubleshooting"
-msgstr ""
+msgstr "문제 해결"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "Issue"
-msgstr ""
+msgstr "문제"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "Resolution"
-msgstr ""
+msgstr "해결"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid ""
@@ -530,6 +595,10 @@ msgid ""
 "not a valid IAM action. Also ensure the `inference-profile/*` ARN is "
 "included if using Anthropic Claude models."
 msgstr ""
+"IAM 정책에 `bedrock:InvokeModel`과 `bedrock:InvokeModelWithResponseStream`이 "
+"포함되어 있는지 확인하세요. `bedrock:Converse`는 유효한 IAM 작업이 아닙니다. 또한 "
+"Anthropic Claude 모델을 사용하는 경우 `inference-profile/*` ARN이 포함되어 있는지 "
+"확인하세요."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid ""
@@ -544,6 +613,9 @@ msgid ""
 "`us.anthropic.claude-sonnet-4-6` instead of `anthropic.claude-"
 "sonnet-4-6`)."
 msgstr ""
+"교차 리전 추론 프로필이 필요한 모델에 원시 모델 ID를 사용하고 있습니다. 대신 추론 "
+"프로필 ID를 사용하세요(예: `anthropic.claude-sonnet-4-6` 대신 "
+"`us.anthropic.claude-sonnet-4-6`)."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "`ThrottlingException: Too many tokens per day`"
@@ -557,6 +629,11 @@ msgid ""
 " in the AWS console for your target region. New accounts may need to open"
 " an AWS Support ticket or try a different region."
 msgstr ""
+"이 모델에 대한 계정의 온디맨드 할당량이 0일 수 있습니다. AWS 콘솔에서 대상 리전의 "
+"[Service "
+"Quotas](https://docs.aws.amazon.com/bedrock/latest/userguide/quotas.html)"
+"를 확인하세요. 신규 계정은 AWS Support 티켓을 열거나 다른 리전을 시도해야 할 수 "
+"있습니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "`failed to load AWS config`"
@@ -568,10 +645,13 @@ msgid ""
 "with `curl http://169.254.169.254/latest/meta-data/iam/security-"
 "credentials/`."
 msgstr ""
+"IAM 인스턴스 프로필이 EC2 인스턴스에 연결되어 있는지 확인하세요. `curl "
+"http://169.254.169.254/latest/meta-data/iam/security-credentials/`로 "
+"확인합니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "Agent responds with \"An error occurred while accessing the LLM\""
-msgstr ""
+msgstr "에이전트가 \"An error occurred while accessing the LLM\"으로 응답함"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid ""
@@ -579,38 +659,48 @@ msgid ""
 "model ID, model not available in the selected region, or insufficient IAM"
 " permissions."
 msgstr ""
+"특정 오류에 대해 서버 로그를 확인하세요. 일반적인 원인: 잘못된 모델 ID, 선택한 "
+"리전에서 사용할 수 없는 모델, 또는 불충분한 IAM 권한."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid "Plugin won't enable"
-msgstr ""
+msgstr "플러그인이 활성화되지 않음"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md
 msgid ""
 "Ensure you have a valid Mattermost Enterprise license and the plugin "
 "version is compatible with your server version."
 msgstr ""
+"유효한 Mattermost Enterprise 라이선스가 있고 플러그인 버전이 서버 버전과 호환되는지 "
+"확인하세요."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:247
 msgid "Authentication options"
-msgstr ""
+msgstr "인증 옵션"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:249
 msgid ""
 "While IAM instance profiles are recommended for EC2 deployments, the "
 "Agents plugin supports three authentication methods for Bedrock:"
 msgstr ""
+"EC2 배포에는 IAM 인스턴스 프로필이 권장되지만, 에이전트 플러그인은 Bedrock에 대해 "
+"세 가지 인증 방식을 지원합니다:"
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:251
 msgid ""
 "**IAM instance profile** (recommended for EC2): No credentials needed. "
 "The AWS SDK uses the EC2 metadata service automatically."
 msgstr ""
+"**IAM 인스턴스 프로필**(EC2 권장): 자격 증명이 필요 없습니다. AWS SDK가 EC2 "
+"메타데이터 서비스를 자동으로 사용합니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:252
 msgid ""
 "**IAM user credentials**: Enter the `AWS Access Key ID` and `AWS Secret "
 "Access Key` in the service configuration. Useful for non-EC2 deployments."
 msgstr ""
+"**IAM 사용자 자격 증명**: 서비스 구성에 `AWS Access Key ID`와 `AWS Secret Access "
+"Key`를 입력합니다. 비 EC2 배포에 유용합니다."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:253
 msgid ""
@@ -618,6 +708,8 @@ msgid ""
 "`API Key` field. Suitable for short-term testing (keys expire after 12 "
 "hours)."
 msgstr ""
+"**Bedrock API 키**: `API Key` 필드에 Bedrock 콘솔에서 생성한 API 키를 입력합니다. "
+"단기 테스트에 적합합니다(키는 12시간 후 만료됨)."
 
 #: ../../source/agents/docs/aws_bedrock_setup.md:255
 msgid ""
@@ -625,4 +717,6 @@ msgid ""
 "fields are populated, they take precedence over the API key and the "
 "default credential chain."
 msgstr ""
+"자격 증명은 위에 나열된 순서로 평가됩니다. IAM 자격 증명 필드가 채워져 있으면, API "
+"키 및 기본 자격 증명 체인보다 우선합니다."
 
