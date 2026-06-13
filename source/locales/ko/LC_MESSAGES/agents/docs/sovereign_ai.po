@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/agents/docs/sovereign_ai.md:1
 msgid "Implementing Sovereign AI"
-msgstr ""
+msgstr "소버린 AI 구현"
 
 #: ../../source/agents/docs/sovereign_ai.md:3
 msgid "Overview"
-msgstr ""
+msgstr "개요"
 
 #: ../../source/agents/docs/sovereign_ai.md:5
 msgid ""
@@ -36,6 +36,10 @@ msgid ""
 "capabilities through LLMs while maintaining complete control of their "
 "sensitive communications and information."
 msgstr ""
+"소버린 AI는 데이터·처리·인프라에 대한 조직의 통제를 우선하는 인공지능 구현 "
+"방식입니다. OKR.BEST 환경에서는 에이전트 플러그인을 통해 이를 실현하며, 조직이 "
+"민감한 커뮤니케이션과 정보를 완전히 통제하면서 LLM으로 고급 AI 기능을 활용할 수 "
+"있도록 합니다."
 
 #: ../../source/agents/docs/sovereign_ai.md:7
 msgid ""
@@ -46,28 +50,34 @@ msgid ""
 "processing methods, and access controls throughout the AI interaction "
 "lifecycle."
 msgstr ""
+"조직이 AI로 향상된 생산성과 엄격한 데이터 주권 요구사항 사이의 균형을 추구하면서 "
+"소버린 AI의 중요성은 점점 더 커지고 있습니다. OKR.BEST는 에이전트 플러그인을 통한 "
+"구현으로, AI 상호작용 수명 주기 전반에 걸쳐 조직이 데이터 위치, 처리 방식, 접근 "
+"제어를 통제할 수 있도록 합니다."
 
 #: ../../source/agents/docs/sovereign_ai.md:9
 msgid "Understanding Sovereign AI in Mattermost"
-msgstr ""
+msgstr "OKR.BEST의 소버린 AI 이해하기"
 
 #: ../../source/agents/docs/sovereign_ai.md:11
 msgid "Sovereign AI in Mattermost encompasses several key principles:"
-msgstr ""
+msgstr "OKR.BEST의 소버린 AI는 다음과 같은 몇 가지 핵심 원칙을 포함합니다:"
 
 #: ../../source/agents/docs/sovereign_ai.md:13
 msgid "Data Sovereignty"
-msgstr ""
+msgstr "데이터 주권"
 
 #: ../../source/agents/docs/sovereign_ai.md:15
 msgid ""
 "Organizations maintain complete control over their data, including where "
 "it resides, how it's processed, and who can access it."
 msgstr ""
+"조직은 데이터가 어디에 저장되는지, 어떻게 처리되는지, 누가 접근할 수 있는지를 "
+"포함해 데이터에 대한 완전한 통제권을 유지합니다."
 
 #: ../../source/agents/docs/sovereign_ai.md:17
 msgid "Infrastructure Control"
-msgstr ""
+msgstr "인프라 통제"
 
 #: ../../source/agents/docs/sovereign_ai.md:19
 msgid ""
@@ -76,10 +86,13 @@ msgid ""
 "AWS Bedrock, and Azure AI, or self-hosted models running on their "
 "infrastructure."
 msgstr ""
+"에이전트 플러그인을 통해 조직은 OpenAI, AWS Bedrock, Azure AI 같은 클라우드 기반 "
+"서비스든, 자체 인프라에서 실행되는 셀프 호스팅 모델이든 원하는 LLM 백엔드 구현을 "
+"선택할 수 있습니다."
 
 #: ../../source/agents/docs/sovereign_ai.md:21
 msgid "Extensible Architecture"
-msgstr ""
+msgstr "확장 가능한 아키텍처"
 
 #: ../../source/agents/docs/sovereign_ai.md:23
 msgid ""
@@ -88,192 +101,198 @@ msgid ""
 "incorporate their existing tools and data repositories into the AI "
 "workflow."
 msgstr ""
+"플러그인 생태계는 MCP(Model Context Protocol)를 통해 다양한 데이터 소스 및 "
+"서비스와의 통합을 지원하므로, 조직은 기존 도구와 데이터 저장소를 AI 워크플로에 "
+"통합할 수 있습니다."
 
 #: ../../source/agents/docs/sovereign_ai.md:25
 msgid "Mattermost Agents Plugin Architecture"
-msgstr ""
+msgstr "OKR.BEST 에이전트 플러그인 아키텍처"
 
 #: ../../source/agents/docs/sovereign_ai.md:27
 msgid "Core Components"
-msgstr ""
+msgstr "핵심 구성 요소"
 
 #: ../../source/agents/docs/sovereign_ai.md:29
 msgid ""
 "The Mattermost Agents plugin serves as the foundation for Sovereign AI "
 "implementation, offering:"
 msgstr ""
+"OKR.BEST 에이전트 플러그인은 소버린 AI 구현의 기반이 되며, 다음을 제공합니다:"
 
 #: ../../source/agents/docs/sovereign_ai.md:31
 msgid "LLM Backend Flexibility"
-msgstr ""
+msgstr "LLM 백엔드 유연성"
 
 #: ../../source/agents/docs/sovereign_ai.md:32
 msgid "Self-hosted LLM deployment options"
-msgstr ""
+msgstr "셀프 호스팅 LLM 배포 옵션"
 
 #: ../../source/agents/docs/sovereign_ai.md:33
 msgid "Integration with managed cloud provider LLMs (AWS Bedrock, Azure AI)"
-msgstr ""
+msgstr "관리형 클라우드 공급자 LLM과의 통합(AWS Bedrock, Azure AI)"
 
 #: ../../source/agents/docs/sovereign_ai.md:34
 msgid "Support for cloud-based API services (OpenAI, Anthropic)"
-msgstr ""
+msgstr "클라우드 기반 API 서비스 지원(OpenAI, Anthropic)"
 
 #: ../../source/agents/docs/sovereign_ai.md:35
 msgid "Custom LLM integration capabilities through OpenAI-compatible APIs"
-msgstr ""
+msgstr "OpenAI 호환 API를 통한 사용자 정의 LLM 통합 기능"
 
 #: ../../source/agents/docs/sovereign_ai.md:37
 msgid "Multi-Bot Architecture"
-msgstr ""
+msgstr "멀티 봇 아키텍처"
 
 #: ../../source/agents/docs/sovereign_ai.md:38
 msgid "Support for multiple concurrent AI bots"
-msgstr ""
+msgstr "여러 AI 봇 동시 실행 지원"
 
 #: ../../source/agents/docs/sovereign_ai.md:39
 msgid ""
 "Different LLM backends per bot (e.g., OpenAI and self-hosted LLM "
 "simultaneously)"
-msgstr ""
+msgstr "봇별로 다른 LLM 백엔드 사용(예: OpenAI와 셀프 호스팅 LLM 동시 사용)"
 
 #: ../../source/agents/docs/sovereign_ai.md:40
 msgid "Customizable bot configurations, instructions, and capabilities"
-msgstr ""
+msgstr "봇 구성, 지침, 기능을 사용자 정의 가능"
 
 #: ../../source/agents/docs/sovereign_ai.md:41
 msgid "Independent access controls per bot"
-msgstr ""
+msgstr "봇별 독립적인 접근 제어"
 
 #: ../../source/agents/docs/sovereign_ai.md:43
 msgid "Vector Search Capabilities"
-msgstr ""
+msgstr "벡터 검색 기능"
 
 #: ../../source/agents/docs/sovereign_ai.md:44
 msgid "Self-hosted vector database options using PostgreSQL with pgvector"
-msgstr ""
+msgstr "pgvector를 적용한 PostgreSQL을 사용하는 셀프 호스팅 벡터 데이터베이스 옵션"
 
 #: ../../source/agents/docs/sovereign_ai.md:45
 msgid "Semantic search across organizational content"
-msgstr ""
+msgstr "조직 콘텐츠 전반에 대한 시맨틱 검색"
 
 #: ../../source/agents/docs/sovereign_ai.md:46
 msgid "Respects existing permission structures"
-msgstr ""
+msgstr "기존 권한 구조를 준수"
 
 #: ../../source/agents/docs/sovereign_ai.md:48
 msgid "Data Integration Framework"
-msgstr ""
+msgstr "데이터 통합 프레임워크"
 
 #: ../../source/agents/docs/sovereign_ai.md:49
 msgid ""
 "Integration with external tools through MCP servers and other configured "
 "integrations"
-msgstr ""
+msgstr "MCP 서버 및 기타 구성된 통합을 통한 외부 도구와의 통합"
 
 #: ../../source/agents/docs/sovereign_ai.md:50
 msgid "MCP server support for custom integrations"
-msgstr ""
+msgstr "사용자 정의 통합을 위한 MCP 서버 지원"
 
 #: ../../source/agents/docs/sovereign_ai.md:51
 msgid "Tool approval system for security"
-msgstr ""
+msgstr "보안을 위한 도구 승인 시스템"
 
 #: ../../source/agents/docs/sovereign_ai.md:53
 msgid "Security and Compliance Features"
-msgstr ""
+msgstr "보안 및 컴플라이언스 기능"
 
 #: ../../source/agents/docs/sovereign_ai.md:55
 msgid "Fine-grained Access Controls"
-msgstr ""
+msgstr "세분화된 접근 제어"
 
 #: ../../source/agents/docs/sovereign_ai.md:56
 msgid "Team-level, channel-level, and user-level permissions for each bot"
-msgstr ""
+msgstr "각 봇에 대한 팀 수준, 채널 수준, 사용자 수준 권한"
 
 #: ../../source/agents/docs/sovereign_ai.md:57
 msgid "Role-based access to specific AI features"
-msgstr ""
+msgstr "특정 AI 기능에 대한 역할 기반 접근"
 
 #: ../../source/agents/docs/sovereign_ai.md:58
 msgid "Granular control over tool usage and integrations"
-msgstr ""
+msgstr "도구 사용 및 통합에 대한 세밀한 통제"
 
 #: ../../source/agents/docs/sovereign_ai.md:60
 msgid "Private Environment Deployment"
-msgstr ""
+msgstr "프라이빗 환경 배포"
 
 #: ../../source/agents/docs/sovereign_ai.md:61
 msgid "Support for air-gapped environments"
-msgstr ""
+msgstr "에어갭 환경 지원"
 
 #: ../../source/agents/docs/sovereign_ai.md:62
 msgid "Government cloud compatibility"
-msgstr ""
+msgstr "정부 클라우드 호환성"
 
 #: ../../source/agents/docs/sovereign_ai.md:63
 msgid "On-premises deployment options"
-msgstr ""
+msgstr "온프레미스 배포 옵션"
 
 #: ../../source/agents/docs/sovereign_ai.md:64
 msgid "Network isolation capabilities"
-msgstr ""
+msgstr "네트워크 격리 기능"
 
 #: ../../source/agents/docs/sovereign_ai.md:66
 msgid "Data Privacy Controls"
-msgstr ""
+msgstr "데이터 프라이버시 제어"
 
 #: ../../source/agents/docs/sovereign_ai.md:67
 msgid "Optional user ID transmission to LLM providers"
-msgstr ""
+msgstr "LLM 공급자로의 선택적 사용자 ID 전송"
 
 #: ../../source/agents/docs/sovereign_ai.md:68
 msgid "Conversation data stays within Mattermost infrastructure"
-msgstr ""
+msgstr "대화 데이터가 OKR.BEST 인프라 내에 유지됨"
 
 #: ../../source/agents/docs/sovereign_ai.md:69
 msgid "Audit trails for AI interactions"
-msgstr ""
+msgstr "AI 상호작용에 대한 감사 추적"
 
 #: ../../source/agents/docs/sovereign_ai.md:70
 msgid "Configurable data retention policies"
-msgstr ""
+msgstr "구성 가능한 데이터 보존 정책"
 
 #: ../../source/agents/docs/sovereign_ai.md:72
 msgid "Deployment Patterns"
-msgstr ""
+msgstr "배포 패턴"
 
 #: ../../source/agents/docs/sovereign_ai.md:74
 msgid "Full Self-Hosted Implementation"
-msgstr ""
+msgstr "완전 셀프 호스팅 구현"
 
 #: ../../source/agents/docs/sovereign_ai.md:76
 msgid ""
 "For organizations requiring complete data sovereignty, the Agents plugin "
 "supports fully self-hosted deployments:"
 msgstr ""
+"완전한 데이터 주권이 필요한 조직을 위해 에이전트 플러그인은 완전 셀프 호스팅 "
+"배포를 지원합니다:"
 
 #: ../../source/agents/docs/sovereign_ai.md:78
 msgid ""
 "Deploy models like Llama, Mistral, or other open-source models on your "
 "infrastructure"
-msgstr ""
+msgstr "Llama, Mistral 또는 기타 오픈소스 모델을 자체 인프라에 배포"
 
 #: ../../source/agents/docs/sovereign_ai.md:79
 msgid "Use PostgreSQL with pgvector extension for semantic search capabilities"
-msgstr ""
+msgstr "시맨틱 검색 기능을 위해 pgvector 확장과 함께 PostgreSQL 사용"
 
 #: ../../source/agents/docs/sovereign_ai.md:80
 msgid "Support for completely disconnected and air-gapped environments"
-msgstr ""
+msgstr "완전히 분리된 에어갭 환경 지원"
 
 #: ../../source/agents/docs/sovereign_ai.md:81
 msgid "MCP servers for connecting to internal systems and custom integrations"
-msgstr ""
+msgstr "내부 시스템 및 사용자 정의 통합에 연결하기 위한 MCP 서버"
 
 #: ../../source/agents/docs/sovereign_ai.md:83
 msgid "Hybrid Cloud Infrastructure Deployment"
-msgstr ""
+msgstr "하이브리드 클라우드 인프라 배포"
 
 #: ../../source/agents/docs/sovereign_ai.md:85
 msgid ""
@@ -284,50 +303,55 @@ msgid ""
 "instances for self-hosted models, and integration with existing cloud "
 "identity and access management systems."
 msgstr ""
+"조직은 AWS Bedrock, Azure OpenAI Service, Oracle Cloud Infrastructure 같은 "
+"플랫폼에 배포하여 통제권을 유지하면서 클라우드 인프라를 활용할 수 있습니다. 이러한 "
+"배포는 프라이빗 네트워크 연결, 셀프 호스팅 모델을 위한 사용자 정의 컴퓨팅 인스턴스, "
+"기존 클라우드 ID 및 접근 관리 시스템과의 통합을 유지하면서 관리형 LLM 서비스를 "
+"사용할 수 있습니다."
 
 #: ../../source/agents/docs/sovereign_ai.md:87
 msgid "Public LLM Integration with Data Controls"
-msgstr ""
+msgstr "데이터 제어를 갖춘 퍼블릭 LLM 통합"
 
 #: ../../source/agents/docs/sovereign_ai.md:89
 msgid ""
 "For organizations comfortable with cloud LLM services but requiring data "
 "controls:"
-msgstr ""
+msgstr "클라우드 LLM 서비스를 사용하되 데이터 제어가 필요한 조직을 위해:"
 
 #: ../../source/agents/docs/sovereign_ai.md:91
 msgid "API-only interactions with no data storage at external providers"
-msgstr ""
+msgstr "외부 공급자에 데이터를 저장하지 않는 API 전용 상호작용"
 
 #: ../../source/agents/docs/sovereign_ai.md:92
 msgid "Configurable data transmission to control what information is sent to LLMs"
-msgstr ""
+msgstr "LLM에 전송되는 정보를 제어하기 위한 구성 가능한 데이터 전송"
 
 #: ../../source/agents/docs/sovereign_ai.md:93
 msgid "Session isolation ensuring each conversation is independent"
-msgstr ""
+msgstr "각 대화의 독립성을 보장하는 세션 격리"
 
 #: ../../source/agents/docs/sovereign_ai.md:94
 msgid "Comprehensive audit logging to track all AI interactions"
-msgstr ""
+msgstr "모든 AI 상호작용을 추적하는 종합 감사 로깅"
 
 #: ../../source/agents/docs/sovereign_ai.md:96
 msgid "Additional Resources"
-msgstr ""
+msgstr "추가 자료"
 
 #: ../../source/agents/docs/sovereign_ai.md:98
 msgid "[Admin Guide](admin_guide.md): Comprehensive setup and configuration guide"
-msgstr ""
+msgstr "[관리자 가이드](admin_guide.md): 종합적인 설정 및 구성 가이드"
 
 #: ../../source/agents/docs/sovereign_ai.md:99
 msgid "[Provider Guide](providers.md): Detailed LLM provider configuration"
-msgstr ""
+msgstr "[공급자 가이드](providers.md): 상세한 LLM 공급자 구성"
 
 #: ../../source/agents/docs/sovereign_ai.md:100
 msgid "[User Guide](user_guide.md): End-user documentation for AI features"
-msgstr ""
+msgstr "[사용자 가이드](user_guide.md): AI 기능에 대한 최종 사용자 문서"
 
 #: ../../source/agents/docs/sovereign_ai.md:101
 msgid "[Usage Tips](usage_tips.md): Best practices for AI interaction"
-msgstr ""
+msgstr "[사용 팁](usage_tips.md): AI 상호작용 모범 사례"
 
