@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:2
 msgid "Agents context management"
-msgstr ""
+msgstr "에이전트 컨텍스트 관리"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced "
+"플랜 <https://mattermost.com/pricing/>`__\\ 에서 사용 가능"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -42,10 +44,15 @@ msgid ""
 "and the time are always passed to the LLM to ensure accurate and "
 "contextually relevant responses."
 msgstr ""
+"OKR.BEST 에이전트는 정확한 응답을 생성하기 위해 필요한 정보만 대규모 언어 "
+"모델(LLM)로 전송되도록 보장하여 컨텍스트를 효율적으로 처리하도록 설계되었습니다. 이 "
+"문서는 에이전트가 관련 컨텍스트를 처리하고 포함하는 방법을 설명합니다. 정확하고 "
+"맥락적으로 관련성 있는 응답을 보장하기 위해 회사 이름, 서버 이름, 시간이 항상 "
+"LLM으로 전달됩니다."
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:10
 msgid "**Ensure data privacy**"
-msgstr ""
+msgstr "**데이터 개인 정보 보호 보장**"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:12
 msgid ""
@@ -55,29 +62,35 @@ msgid ""
 " LLM hosting vendor. This ensures data privacy while enabling Agent "
 "functionality."
 msgstr ""
+"엄격한 개인 정보 보호 요구 사항이 있는 고객은 개인 식별 정보(PII)와 메시지 내용을 "
+"포함한 민감한 데이터가 외부 LLM 호스팅 공급업체와 공유되지 않도록 LLM을 로컬에서 "
+"실행하는 것을 권장합니다. 이를 통해 에이전트 기능을 사용하면서도 데이터 개인 정보 "
+"보호를 보장합니다."
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:15
 msgid "Direct messages to Agent bots"
-msgstr ""
+msgstr "에이전트 봇에 보내는 개인 메시지"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:17
 msgid ""
 "When you send a direct message to an Agent bot, the context sent to the "
 "LLM includes:"
 msgstr ""
+"에이전트 봇에 개인 메시지를 보내면, LLM으로 전송되는 컨텍스트에는 다음이 "
+"포함됩니다:"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:19
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:48
 msgid "The profile information of the user sending the prompt."
-msgstr ""
+msgstr "프롬프트를 보내는 사용자의 프로필 정보."
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:20
 msgid "Chat messages exchanged between the user and the bot."
-msgstr ""
+msgstr "사용자와 봇 간에 교환된 채팅 메시지."
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:22
 msgid "**Additional context in direct messages**"
-msgstr ""
+msgstr "**개인 메시지의 추가 컨텍스트**"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:24
 msgid ""
@@ -85,90 +98,99 @@ msgid ""
 "integrations with JIRA, and additional context may be sent to the LLM, "
 "depending on the prompt that includes:"
 msgstr ""
+"기본적으로 JIRA와의 통합과 같은 기능을 허용하기 위해 일부 도구 사용이 활성화되어 "
+"있으며, 다음을 포함하는 프롬프트에 따라 추가 컨텍스트가 LLM으로 전송될 수 "
+"있습니다:"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:26
 msgid "Jira tickets (public tickets)"
-msgstr ""
+msgstr "Jira 티켓(공개 티켓)"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:28
 msgid "Example: Summarize the Jira ticket: <LINK TO TICKET>"
-msgstr ""
+msgstr "예: Jira 티켓 요약: <LINK TO TICKET>"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:30
 msgid "GitHub issues"
-msgstr ""
+msgstr "GitHub 이슈"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:32
 msgid "Example: Summarize the GitHub issue: <LINK TO ISSUE>"
-msgstr ""
+msgstr "예: GitHub 이슈 요약: <LINK TO ISSUE>"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:34
 msgid "User data"
-msgstr ""
+msgstr "사용자 데이터"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:36
 msgid "Example: What is @Bob's position?"
-msgstr ""
+msgstr "예: @Bob의 직책은 무엇인가요?"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:39
 msgid "@-Mentions in channels"
-msgstr ""
+msgstr "채널의 @멘션"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:41
 msgid ""
 "When you ``@mention`` Agents in a channel, the context sent to the LLM "
 "includes:"
 msgstr ""
+"채널에서 에이전트를 ``@mention``\\ 하면, LLM으로 전송되는 컨텍스트에는 다음이 "
+"포함됩니다:"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:43
 msgid "**Standalone messages (@-mentions in a channel)**"
-msgstr ""
+msgstr "**독립형 메시지(채널의 @멘션)**"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:45
 msgid "The message containing the @-mention, including any attachments."
-msgstr ""
+msgstr "첨부 파일을 포함하여 @멘션을 포함하는 메시지."
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:46
 msgid "The channel name and display name."
-msgstr ""
+msgstr "채널 이름과 표시 이름."
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:47
 msgid "The team name and display name."
-msgstr ""
+msgstr "팀 이름과 표시 이름."
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:50
 msgid "**Threaded messages (@-mentions in a thread)**"
-msgstr ""
+msgstr "**스레드 메시지(스레드의 @멘션)**"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:52
 msgid "Everything sent when used in a standalone message."
-msgstr ""
+msgstr "독립형 메시지에서 사용될 때 전송되는 모든 것."
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:53
 msgid ""
 "Messages within the thread, including the usernames of the users "
 "involved, as well as any attachments and their filenames."
 msgstr ""
+"관련된 사용자의 사용자 이름과 모든 첨부 파일 및 파일 이름을 포함한 스레드 내의 "
+"메시지."
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:55
 msgid "**Context differences between standalone and threaded messages:**"
-msgstr ""
+msgstr "**독립형 메시지와 스레드 메시지 간의 컨텍스트 차이:**"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:57
 msgid ""
 "For @-mentions in standalone messages, the context includes only the "
 "mentioned message."
-msgstr ""
+msgstr "독립형 메시지의 @멘션의 경우, 컨텍스트에는 멘션된 메시지만 포함됩니다."
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:58
 msgid ""
 "For @-mentions in threads, the entire thread's messages are included, "
 "along with usernames of the authors of the messages."
 msgstr ""
+"스레드의 @멘션의 경우, 메시지 작성자의 사용자 이름과 함께 전체 스레드의 메시지가 "
+"포함됩니다."
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:61
 msgid "Built-in ways to trigger Agents"
-msgstr ""
+msgstr "에이전트를 트리거하는 기본 제공 방법"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:63
 msgid ""
@@ -177,26 +199,33 @@ msgid ""
 "specialized context tailored to the task being performed. Below are the "
 "scenarios where extra context is sent to the LLM:"
 msgstr ""
+"일반 채팅 상호 작용 외에도, 에이전트는 추가 컨텍스트가 LLM으로 전송되는 특수 "
+"기능을 제공합니다. 각 기능은 수행 중인 작업에 맞춘 특수 컨텍스트를 제공합니다. "
+"다음은 추가 컨텍스트가 LLM으로 전송되는 시나리오입니다:"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:65
 msgid ""
 "**Thread summarization**: Includes thread messages and the usernames of "
 "the authors"
-msgstr ""
+msgstr "**스레드 요약**: 스레드 메시지와 작성자의 사용자 이름을 포함합니다"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:66
 msgid "**Meeting summary**: Incorporates transcriptions from calls"
-msgstr ""
+msgstr "**회의 요약**: 통화의 전사 내용을 포함합니다"
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:67
 msgid ""
 "**Channel summary since last visit**: Uses channel posts along with their"
 " authors to create summaries."
 msgstr ""
+"**마지막 방문 이후 채널 요약**: 채널 게시물과 작성자를 사용하여 요약을 "
+"생성합니다."
 
 #: ../../source/end-user-guide/collaborate/agents-context-management.rst:68
 msgid ""
 "**Finding action items & open questions**: Analyzes thread and channel "
 "messages to identify action items or open questions."
 msgstr ""
+"**작업 항목 및 미해결 질문 찾기**: 스레드와 채널 메시지를 분석하여 작업 항목이나 "
+"미해결 질문을 식별합니다."
 
