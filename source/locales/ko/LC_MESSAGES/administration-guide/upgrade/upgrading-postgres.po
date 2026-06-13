@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:2
 msgid "Upgrade PostgreSQL"
-msgstr ""
+msgstr "PostgreSQL 업그레이드"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced "
+"플랜 <https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -43,6 +45,11 @@ msgid ""
 "/software-hardware-requirements>` documentation for the currently "
 "supported PostgreSQL versions."
 msgstr ""
+"OKR.BEST는 메이저 버전당 5년의 지원을 제공하는 `PostgreSQL 커뮤니티 버전 정책 "
+"<https://www.postgresql.org/support/versioning/>`_\\ 을 따릅니다. PostgreSQL 버전이 "
+"수명 종료에 도달하면 OKR.BEST는 이후 릴리스에서 해당 버전에 대한 지원을 중단합니다. "
+"현재 지원되는 PostgreSQL 버전은 :doc:`소프트웨어 및 하드웨어 요구 사항 </deployment-"
+"guide/software-hardware-requirements>` 문서를 참고하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:9
 msgid ""
@@ -51,10 +58,13 @@ msgid ""
 "for comprehensive guidance. This page covers the steps specific to "
 "Mattermost deployments."
 msgstr ""
+"PostgreSQL을 업그레이드할 때는 종합적인 안내를 위해 `공식 PostgreSQL 업그레이드 문서 "
+"<https://www.postgresql.org/docs/current/upgrading.html>`_\\ 를 참고하세요. 이 "
+"페이지는 OKR.BEST 배포에 특화된 단계를 다룹니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:12
 msgid "Before you begin"
-msgstr ""
+msgstr "시작하기 전에"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:14
 msgid ""
@@ -62,6 +72,9 @@ msgid ""
 "upgrading. See the :doc:`backup and disaster recovery </deployment-guide"
 "/backup-disaster-recovery>` documentation."
 msgstr ""
+"**데이터베이스를 백업하세요.** 업그레이드 전에 항상 전체 데이터베이스 백업을 "
+"수행하세요. :doc:`백업 및 재해 복구 </deployment-guide/backup-disaster-recovery>` "
+"문서를 참고하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:16
 msgid ""
@@ -69,38 +82,48 @@ msgid ""
 "supported by your Mattermost release. See :doc:`software and hardware "
 "requirements </deployment-guide/software-hardware-requirements>`."
 msgstr ""
+"**지원되는 버전을 확인하세요.** 대상 PostgreSQL 버전이 OKR.BEST 릴리스에서 지원되는지 "
+"확인하세요. :doc:`소프트웨어 및 하드웨어 요구 사항 </deployment-guide/software-"
+"hardware-requirements>`\\ 을 참고하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:18
 msgid ""
 "**Stop Mattermost.** Shut down the Mattermost server before starting the "
 "database upgrade to prevent data writes during the process."
 msgstr ""
+"**OKR.BEST를 중지하세요.** 과정 중 데이터 쓰기를 방지하기 위해 데이터베이스 "
+"업그레이드를 시작하기 전에 OKR.BEST 서버를 종료하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:22
 msgid "Upgrade a bare-metal PostgreSQL server"
-msgstr ""
+msgstr "베어메탈 PostgreSQL 서버 업그레이드"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:24
 msgid ""
 "There are two main approaches for upgrading PostgreSQL on a bare-metal or"
 " virtual machine:"
 msgstr ""
+"베어메탈 또는 가상 머신에서 PostgreSQL을 업그레이드하는 주요 방법은 두 가지입니다:"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:26
 msgid ""
 "**pg_upgrade** (in-place): Faster; upgrades the data directory without a "
 "full dump/restore cycle. Recommended for large databases."
 msgstr ""
+"**pg_upgrade**(인플레이스): 더 빠릅니다. 전체 덤프/복원 주기 없이 데이터 디렉토리를 "
+"업그레이드합니다. 대용량 데이터베이스에 권장됩니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:27
 msgid ""
 "**pg_dump / pg_restore** (logical): Simpler and safer for cross-machine "
 "migrations or when in-place upgrade is not possible."
 msgstr ""
+"**pg_dump / pg_restore**(논리적): 머신 간 마이그레이션이나 인플레이스 업그레이드가 "
+"불가능한 경우 더 간단하고 안전합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:30
 msgid "Using pg_upgrade"
-msgstr ""
+msgstr "pg_upgrade 사용"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:32
 msgid ""
@@ -108,16 +131,20 @@ msgid ""
 "without a full export. Both the old and new PostgreSQL versions must be "
 "installed side-by-side."
 msgstr ""
+"``pg_upgrade``\\ 를 사용하면 전체 내보내기 없이 메이저 PostgreSQL 버전 간에 "
+"업그레이드할 수 있습니다. 이전 및 새 PostgreSQL 버전이 나란히 설치되어 있어야 "
+"합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:34
 msgid ""
 "Install the new PostgreSQL version alongside the existing one using your "
 "package manager."
 msgstr ""
+"패키지 관리자를 사용해 기존 버전과 함께 새 PostgreSQL 버전을 설치합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:36
 msgid "Stop the existing PostgreSQL service:"
-msgstr ""
+msgstr "기존 PostgreSQL 서비스를 중지합니다:"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:42
 msgid ""
@@ -126,22 +153,29 @@ msgid ""
 "``<new_version>`` with the appropriate version numbers (e.g. ``15`` and "
 "``16``):"
 msgstr ""
+"두 버전의 바이너리 및 데이터 디렉토리를 지정하여 ``postgres`` 사용자로 "
+"``pg_upgrade``\\ 를 실행합니다. ``<old_version>``\\ 과 ``<new_version>``\\ 을 적절한 "
+"버전 번호(예: ``15``\\ 와 ``16``)로 바꿉니다:"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:52
 msgid ""
 "Update your system to start the new PostgreSQL version by default, then "
 "start the service:"
 msgstr ""
+"기본적으로 새 PostgreSQL 버전이 시작되도록 시스템을 업데이트한 다음 서비스를 "
+"시작합니다:"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:58
 msgid ""
 "For full ``pg_upgrade`` reference, see the `official pg_upgrade "
 "documentation <https://www.postgresql.org/docs/current/pgupgrade.html>`_."
 msgstr ""
+"``pg_upgrade`` 전체 레퍼런스는 `공식 pg_upgrade 문서 "
+"<https://www.postgresql.org/docs/current/pgupgrade.html>`_\\ 를 참고하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:61
 msgid "Using pg_dump and pg_restore"
-msgstr ""
+msgstr "pg_dump 및 pg_restore 사용"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:63
 msgid ""
@@ -149,26 +183,31 @@ msgid ""
 "version, and restores the data. It is simpler but requires downtime "
 "proportional to database size."
 msgstr ""
+"이 방법은 전체 데이터베이스를 내보내고, 새 PostgreSQL 버전을 설치한 다음, 데이터를 "
+"복원합니다. 더 간단하지만 데이터베이스 크기에 비례하는 다운타임이 필요합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:65
 msgid ""
 "Export the Mattermost database (replace ``mattermost`` with your database"
 " name and ``mmuser`` with your database user):"
 msgstr ""
+"OKR.BEST 데이터베이스를 내보냅니다(``mattermost``\\ 를 데이터베이스 이름으로, "
+"``mmuser``\\ 를 데이터베이스 사용자로 바꿈):"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:71
 msgid ""
 "Install the new PostgreSQL version and create the database user and "
 "database:"
 msgstr ""
+"새 PostgreSQL 버전을 설치하고 데이터베이스 사용자와 데이터베이스를 만듭니다:"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:78
 msgid "Restore the database into the new PostgreSQL instance:"
-msgstr ""
+msgstr "새 PostgreSQL 인스턴스에 데이터베이스를 복원합니다:"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:85
 msgid "Upgrade PostgreSQL in Docker"
-msgstr ""
+msgstr "Docker에서 PostgreSQL 업그레이드"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:89
 msgid ""
@@ -176,6 +215,9 @@ msgid ""
 "deployment <https://github.com/mattermost/docker>`_. If you are using a "
 "custom Docker setup, adapt the container and volume names accordingly."
 msgstr ""
+"아래 단계는 공식 `Mattermost Docker 배포 <https://github.com/mattermost/docker>`_"
+"\\ 를 기준으로 작성되었습니다. 사용자 정의 Docker 설정을 사용하는 경우 컨테이너와 볼륨 "
+"이름을 그에 맞게 조정하세요."
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:91
 msgid ""
@@ -184,10 +226,13 @@ msgid ""
 "containers because it requires both old and new binaries in the same "
 "container."
 msgstr ""
+"Docker에서 PostgreSQL을 실행할 때는 ``pg_dump``/``pg_restore``\\ 가 권장되는 "
+"업그레이드 방법입니다. 인플레이스 ``pg_upgrade``\\ 는 동일한 컨테이너에 이전 및 새 "
+"바이너리가 모두 필요하므로 컨테이너에서는 복잡합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:93
 msgid "Stop the Mattermost container:"
-msgstr ""
+msgstr "OKR.BEST 컨테이너를 중지합니다:"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:99
 msgid ""
@@ -195,22 +240,26 @@ msgid ""
 "``mattermost``, ``mmuser``, and ``db`` with your database name, user, and"
 " container name):"
 msgstr ""
+"실행 중인 PostgreSQL 컨테이너에서 데이터베이스를 덤프합니다(``mattermost``, "
+"``mmuser``, ``db``\\ 를 데이터베이스 이름, 사용자, 컨테이너 이름으로 바꿈):"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:105
 msgid "Stop the existing PostgreSQL container:"
-msgstr ""
+msgstr "기존 PostgreSQL 컨테이너를 중지합니다:"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:111
 msgid ""
 "Update ``POSTGRES_IMAGE_TAG`` in your ``.env`` file to the new version. "
 "For example:"
 msgstr ""
+"``.env`` 파일의 ``POSTGRES_IMAGE_TAG``\\ 를 새 버전으로 업데이트합니다. 예:"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:117
 msgid ""
 "Recreate the PostgreSQL container so the new image tag from ``.env`` is "
 "applied:"
 msgstr ""
+"``.env``\\ 의 새 이미지 태그가 적용되도록 PostgreSQL 컨테이너를 다시 생성합니다:"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:125
 msgid ""
@@ -218,16 +267,20 @@ msgid ""
 "PostgreSQL will refuse to start. In that case, create a new named volume "
 "for the new container, then restore from the dump in the next step."
 msgstr ""
+"볼륨에 이미 이전 메이저 버전의 데이터가 들어 있으면 PostgreSQL이 시작을 거부합니다. "
+"그 경우 새 컨테이너에 대한 새 명명된 볼륨을 만든 다음 다음 단계에서 덤프로부터 "
+"복원합니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:127
 msgid ""
 "Recreate the database user and database in the new container, then "
 "restore:"
 msgstr ""
+"새 컨테이너에 데이터베이스 사용자와 데이터베이스를 다시 생성한 다음 복원합니다:"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:136
 msgid "After the upgrade"
-msgstr ""
+msgstr "업그레이드 후"
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:138
 msgid ""
@@ -236,8 +289,12 @@ msgid ""
 "PostgreSQL to generate optimal query plans. Skipping this step can result"
 " in degraded database performance."
 msgstr ""
+"PostgreSQL을 업그레이드한 후 OKR.BEST 데이터베이스에서 ``ANALYZE VERBOSE``\\ 를 "
+"실행합니다. 이는 PostgreSQL이 최적의 쿼리 계획을 생성하는 데 사용하는 "
+"``pg_statistics`` 테이블을 다시 채웁니다. 이 단계를 건너뛰면 데이터베이스 성능이 "
+"저하될 수 있습니다."
 
 #: ../../source/administration-guide/upgrade/upgrading-postgres.rst:144
 msgid "Once complete, restart Mattermost:"
-msgstr ""
+msgstr "완료되면 OKR.BEST를 재시작합니다:"
 
