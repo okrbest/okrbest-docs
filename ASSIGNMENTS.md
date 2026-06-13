@@ -8,13 +8,13 @@ push가 거부되면 `git pull --rebase origin feat/ko` 후 다시 push — 표 
 |---|---|---|---|---|
 | end-user-guide/ | 97 / ~4,500 | ux-builder | 진행 중 | 2026-06-13 |
 | deployment-guide/ | 61 / ~4,700 | | 미배정 | |
-| administration-guide/comply/ | 8 / ~1,100 | | 미배정 | |
-| administration-guide/configure/ | 34 / ~6,900 | | 미배정 | |
-| administration-guide/manage/ | 37 / ~2,800 | | 미배정 | |
-| administration-guide/onboard/ | 34 / ~2,900 | | 미배정 | |
-| administration-guide/scale/ | 28 / ~1,400 | | 미배정 | |
-| administration-guide/upgrade/ | 13 / ~1,500 | | 미배정 | |
-| administration-guide/ (루트 4파일) | 4 / 소량 | | 미배정 | |
+| administration-guide/comply/ | 8 / ~1,100 | ux-builder | 진행 중 | 2026-06-13 |
+| administration-guide/configure/ | 34 / ~6,900 | ux-builder | 진행 중 | 2026-06-13 |
+| administration-guide/manage/ | 37 / ~2,800 | ux-builder | 진행 중 | 2026-06-13 |
+| administration-guide/onboard/ | 34 / ~2,900 | ux-builder | 진행 중 | 2026-06-13 |
+| administration-guide/scale/ | 28 / ~1,400 | ux-builder | 진행 중 | 2026-06-13 |
+| administration-guide/upgrade/ | 13 / ~1,500 | ux-builder | 진행 중 | 2026-06-13 |
+| administration-guide/ (루트 4파일) | 4 / 소량 | ux-builder | 진행 중 | 2026-06-13 |
 | integrations-guide/ | 21 / ~1,400 | | 미배정 | |
 | security-guide/ | 8 / ~330 | | 미배정 | |
 | use-case-guide/ | 10 / ~320 | ux-builder | 완료 | 2026-06-13 |
