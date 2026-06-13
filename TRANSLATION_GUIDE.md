@@ -5,7 +5,7 @@ Mattermost 제품 문서 포크(okrbest-docs)의 한국어 번역 작업 규칙�
 이 문서는 번역 중 수시로 참조하는 규칙 레퍼런스입니다.
 
 - 브랜치: `feat/ko` · 번역 파일: `source/locales/ko/LC_MESSAGES/**/*.po` · 결과물: `build/html/ko/`
-- 담당 현황: [ASSIGNMENTS.md](ASSIGNMENTS.md) · 자동화: Claude CLI에서 `/translate` (지침 준수가 내장됨)
+- 담당 현황: [ASSIGNMENTS.md](ASSIGNMENTS.md) · 자동화: Claude Code `/translate` 또는 Codex CLI `translate` 스킬 (지침 준수가 내장됨)
 
 ## 1. 핵심 원칙
 

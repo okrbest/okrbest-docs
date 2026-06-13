@@ -1,8 +1,12 @@
-# 병렬 번역 작업 절차 (Claude CLI)
+# 병렬 번역 작업 절차 (Claude Code / Codex CLI)
 
-여러 작업자가 각자 Claude CLI(Claude Code) 세션으로 **동시에** 번역하는 절차입니다.
+여러 작업자가 각자 **Claude Code** 또는 **OpenAI Codex CLI** 세션으로 **동시에** 번역하는 절차입니다.
 처음 합류했다면 이 문서를 위에서부터 순서대로 따라 하세요.
 번역 규칙·용어집 등 상세 내용은 [TRANSLATION_GUIDE.md](TRANSLATION_GUIDE.md)에 있습니다 — 이 문서는 절차만 다룹니다.
+
+두 도구 모두 같은 번역 스킬을 공유합니다: Claude Code는 [.claude/commands/translate.md](.claude/commands/translate.md),
+Codex는 [.codex/skills/translate/SKILL.md](.codex/skills/translate/SKILL.md). 절대 규칙은 각각 CLAUDE.md·AGENTS.md가
+세션 시작 시 자동 로드합니다(두 파일은 동일 내용의 쌍).
 
 ## 1. 최초 1회 준비
 
@@ -12,15 +16,21 @@ cd okrbest-docs
 git switch feat/ko
 ```
 
-Claude CLI 설치·로그인(이미 사용 중이면 생략):
+CLI 설치·로그인(이미 사용 중이면 생략). **둘 중 쓰는 것만** 설치하면 됩니다:
 
 ```bash
+# Claude Code
 npm install -g @anthropic-ai/claude-code
 claude        # 첫 실행 시 로그인 안내를 따름
+
+# 또는 OpenAI Codex CLI
+npm install -g @openai/codex
+codex         # 첫 실행 시 로그인 안내를 따름
 ```
 
-> ⚠️ **반드시 리포 루트(okrbest-docs/)에서 `claude`를 실행하세요.**
-> 다른 디렉토리에서 실행하면 `/translate` 스킬과 번역 규칙(CLAUDE.md)이 로드되지 않습니다.
+> ⚠️ **반드시 리포 루트(okrbest-docs/)에서 `claude` 또는 `codex`를 실행하세요.**
+> 다른 디렉토리에서 실행하면 번역 스킬과 절대 규칙(CLAUDE.md / AGENTS.md)이 로드되지 않습니다.
+> Codex 스킬(`.codex/skills/`)은 비교적 최신 버전에서 지원되니, 스킬이 안 보이면 `npm i -g @openai/codex@latest`로 업데이트하세요.
 
 검증 도구 준비(권장 — `/translate`가 커밋 전 검증에 사용). 둘 중 **하나만** 해당됩니다:
 
@@ -55,16 +65,27 @@ git push || { git pull --rebase origin feat/ko && git push; }
 
 push 충돌로 ASSIGNMENTS.md가 겹치면 양쪽 행을 모두 살려 병합 후 다시 push합니다.
 
-## 3. 번역하기 — /translate 스킬
+## 3. 번역하기 — translate 스킬
 
-리포 루트에서 `claude` 실행 후:
+**Claude Code** — 리포 루트에서 `claude` 실행 후 `/translate`에 대상 경로를 붙여 호출:
 
 ```
 /translate source/locales/ko/LC_MESSAGES/end-user-guide/preferences.po     # 파일 1개
 /translate source/locales/ko/LC_MESSAGES/end-user-guide/collaborate/       # 하위 디렉토리
 ```
 
-**스킬이 자동으로 하는 일**: 대상 검사(제외 대상·타인 담당 거부) → 번역 지침·용어집 로드 →
+**Codex CLI** — 리포 루트에서 `codex` 실행 후, `/skills` 메뉴에서 `translate`를 고르거나 `$translate`로 멘션하고
+대상 경로를 함께 적습니다(Codex는 작업 설명이 스킬 설명과 맞으면 자동으로 호출하기도 합니다):
+
+```
+$translate source/locales/ko/LC_MESSAGES/end-user-guide/preferences.po
+/skills            # 메뉴에서 translate 선택 후 대상 경로 입력
+```
+
+> Codex는 한때 `~/.codex/prompts/`의 커스텀 프롬프트로 `/이름`을 만들 수 있었으나 현재는 **스킬 방식이 권장**되며,
+> 스킬은 위처럼 리포에 체크인되어 모든 작업자가 공유합니다(프롬프트는 개인 홈에만 있어 공유 불가).
+
+**스킬이 자동으로 하는 일**(두 도구 동일): 대상 검사(제외 대상·타인 담당 거부) → 번역 지침·용어집 로드 →
 원문 문서로 문맥 파악 → msgstr 번역 → 검증 스크립트 실행 → **검증 통과 시에만 커밋** → 결과 보고.
 
 **스킬이 하지 않는 일**: `git push`(사람이 직접 — 4절), 다른 디렉토리 번역, 카탈로그 갱신(`make update-po-ko`).
