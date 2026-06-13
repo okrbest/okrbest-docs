@@ -19,7 +19,7 @@ push가 거부되면 `git pull --rebase origin feat/ko` 후 다시 push — 표 
 | security-guide/ | 8 / ~330 | | 미배정 | |
 | use-case-guide/ | 10 / ~320 | ux-builder | 완료 | 2026-06-13 |
 | get-help/ | 4 / 149 | 메인테이너 | 완료(파일럿) | 2026-06-13 |
-| product-overview/ (체인지로그 제외) | 27 / ~1,000 | 메인테이너 | 진행 중 | 2026-06-13 |
+| product-overview/ (체인지로그 제외) | 27 / ~1,000 | 메인테이너 | 완료 | 2026-06-13 |
 | recipes/ | 1 / 38 | | 미배정 | |
 | 루트 index.po + sphinx.po | 2 / 39 | 메인테이너 | 완료 | 2026-06-11 |
 
