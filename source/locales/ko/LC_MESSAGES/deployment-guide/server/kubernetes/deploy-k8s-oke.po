@@ -26,150 +26,167 @@ msgid ""
 " to install Mattermost Enterprise Edition on Oracle Cloud Infrastructure "
 "(OCI) using Oracle Kubernetes Engine (OKE)."
 msgstr ""
+"지원되는 `Oracle Cloud Marketplace 리스팅 "
+"<https://cloudmarketplace.oracle.com/marketplace/en_US/listing/188386963>`_\\ "
+"을 사용하여 Oracle Kubernetes Engine(OKE)으로 Oracle Cloud "
+"Infrastructure(OCI)에 OKR.BEST Enterprise Edition을 설치할 수 있습니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:7
 msgid "Before you begin"
-msgstr ""
+msgstr "시작하기 전에"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:9
 msgid "Before deploying, make sure you have the following:"
-msgstr ""
+msgstr "배포하기 전에 다음을 갖추고 있는지 확인하세요:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:11
 msgid "**Oracle Cloud Account** with appropriate permissions"
-msgstr ""
+msgstr "적절한 권한을 갖춘 **Oracle Cloud 계정**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:12
 msgid ""
 "**Permissions** to create/manage OKE, Compute, Networking, Database, "
 "Resource Manager, and Secrets"
 msgstr ""
+"OKE, Compute, Networking, Database, Resource Manager, Secrets를 생성/관리할 "
+"**권한**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:13
 msgid "**Compartment** for deployment"
-msgstr ""
+msgstr "배포를 위한 **구획(Compartment)**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:14
 msgid "**Domain Name and TLS Certificate** for secure access"
-msgstr ""
+msgstr "안전한 접근을 위한 **도메인 이름과 TLS 인증서**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:15
 msgid "**Mattermost License Key** (Trial or Enterprise)"
-msgstr ""
+msgstr "**OKR.BEST 라이선스 키**(평가판 또는 Enterprise)"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:16
 msgid ""
 "**Node Capacity**: At least 2 OKE nodes for high availability when "
 "deploying for 100 users or more"
 msgstr ""
+"**노드 용량**: 100명 이상을 위해 배포하는 경우 고가용성을 위한 최소 2개의 OKE 노드"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:19
 msgid "Installation steps"
-msgstr ""
+msgstr "설치 단계"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:21
 msgid ""
 "The installation process includes deploying Mattermost and configuring "
 "the necessary components."
 msgstr ""
+"설치 과정은 OKR.BEST를 배포하고 필요한 구성 요소를 구성하는 것을 포함합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:24
 msgid "Step 1: Start from Oracle Cloud Marketplace"
-msgstr ""
+msgstr "1단계: Oracle Cloud Marketplace에서 시작"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:26
 msgid "Go to the Mattermost listing and select **Launch Stack**."
-msgstr ""
+msgstr "OKR.BEST 리스팅으로 이동하여 **Launch Stack**\\ 을 선택합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:28
 msgid "Oracle Cloud Marketplace listing for Mattermost"
-msgstr ""
+msgstr "OKR.BEST용 Oracle Cloud Marketplace 리스팅"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:32
 msgid "Step 2: Stack Information"
-msgstr ""
+msgstr "2단계: Stack 정보"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:34
 msgid ""
 "On the **Create stack** page, review the information, and then set the "
 "name, compartment, and Terraform version."
 msgstr ""
+"**Create stack** 페이지에서 정보를 검토한 다음 이름, 구획, Terraform 버전을 "
+"설정합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:36
 msgid "Stack information page"
-msgstr ""
+msgstr "Stack 정보 페이지"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:40
 msgid "Step 3: Configure Variables"
-msgstr ""
+msgstr "3단계: 변수 구성"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:42
 msgid ""
 "Set all the details for your Mattermost deployment. Each section is "
 "important for a successful and secure installation."
 msgstr ""
+"OKR.BEST 배포의 모든 세부 정보를 설정합니다. 각 섹션은 성공적이고 안전한 설치에 "
+"중요합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:45
 msgid "OKE Cluster Configuration"
-msgstr ""
+msgstr "OKE 클러스터 구성"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:47
 msgid "**Create new OKE Cluster:**"
-msgstr ""
+msgstr "**새 OKE 클러스터 생성:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:49
 msgid "Check this if you want to create a new Kubernetes cluster."
-msgstr ""
+msgstr "새 Kubernetes 클러스터를 생성하려면 이 항목을 선택하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:50
 msgid ""
 "If you already have a cluster, you can uncheck and select your existing "
 "one."
 msgstr ""
+"이미 클러스터가 있다면 선택을 해제하고 기존 클러스터를 선택할 수 있습니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:51
 msgid "**Kubernetes Version:**"
-msgstr ""
+msgstr "**Kubernetes 버전:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:53
 msgid "Choose the latest stable version unless you have a specific requirement."
-msgstr ""
+msgstr "특별한 요구 사항이 없다면 최신 안정 버전을 선택하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:54
 msgid "**Node Pool Shape (Flex/Fixed):**"
-msgstr ""
+msgstr "**노드 풀 셰이프(Flex/Fixed):**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:56
 msgid ""
 "Select a shape that fits your workload. For production, use at least 2 "
 "OCPUs and 16GB RAM per node."
 msgstr ""
+"워크로드에 맞는 셰이프를 선택하세요. 운영 환경에서는 노드당 최소 2개의 OCPU와 "
+"16GB RAM을 사용하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:57
 msgid "**Number of Nodes:**"
-msgstr ""
+msgstr "**노드 수:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:59
 msgid ""
 "Minimum 2 for high availability. For testing, 1 is enough. For production"
 " environments, always use at least 2 nodes and enable high availability."
 msgstr ""
+"고가용성을 위해 최소 2개. 테스트에는 1개로 충분합니다. 운영 환경에서는 항상 최소 "
+"2개의 노드를 사용하고 고가용성을 활성화하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:60
 msgid "**Operating System:**"
-msgstr ""
+msgstr "**운영 체제:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:62
 msgid "Oracle Linux 8 is recommended for best compatibility."
-msgstr ""
+msgstr "최상의 호환성을 위해 Oracle Linux 8을 권장합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:65
 msgid "OKE Network Configuration"
-msgstr ""
+msgstr "OKE 네트워크 구성"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:67
 msgid "**Worker Node Visibility:**"
-msgstr ""
+msgstr "**워커 노드 표시 여부:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:69
 msgid ""
@@ -177,134 +194,144 @@ msgid ""
 "production environments, use private nodes and restrict access to the API"
 " endpoint."
 msgstr ""
+"운영 환경에는 Private이 더 안전합니다. 테스트에는 Public이 더 쉽습니다. 운영 "
+"환경에서는 private 노드를 사용하고 API 엔드포인트에 대한 접근을 제한하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:70
 msgid "**API Endpoint Visibility:**"
-msgstr ""
+msgstr "**API 엔드포인트 표시 여부:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:72
 msgid ""
 "Public allows you to manage the cluster from anywhere. Private is more "
 "secure but requires VPN or bastion."
 msgstr ""
+"Public을 사용하면 어디서나 클러스터를 관리할 수 있습니다. Private은 더 안전하지만 "
+"VPN이나 베스천이 필요합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:73
 msgid "**Create new Virtual Cloud Network (VCN):**"
-msgstr ""
+msgstr "**새 가상 클라우드 네트워크(VCN) 생성:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:75
 msgid "Check this to create a new network, or uncheck to use an existing one."
-msgstr ""
+msgstr "새 네트워크를 생성하려면 이 항목을 선택하고, 기존 네트워크를 사용하려면 선택을 해제하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:76
 msgid "**VCN CIDR Block:**"
-msgstr ""
+msgstr "**VCN CIDR 블록:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:78
 msgid ""
 "Set a unique network range (e.g., ``10.20.0.0/16``). Avoid overlap with "
 "other networks."
 msgstr ""
+"고유한 네트워크 범위(예: ``10.20.0.0/16``)를 설정하세요. 다른 네트워크와 겹치지 "
+"않도록 하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:81
 msgid "OKE Worker Nodes"
-msgstr ""
+msgstr "OKE 워커 노드"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:83
 msgid "**Enable Cluster Autoscaler:**"
-msgstr ""
+msgstr "**클러스터 오토스케일러 활성화:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:85
 msgid "Allows the cluster to automatically add or remove nodes based on usage."
-msgstr ""
+msgstr "클러스터가 사용량에 따라 노드를 자동으로 추가하거나 제거할 수 있도록 합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:86
 msgid "**Initial/Min Number of Worker Nodes:**"
-msgstr ""
+msgstr "**워커 노드의 초기/최소 수:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:88
 msgid ""
 "Set the minimum number of nodes. For high availability, use at least 2. "
 "Autoscaling helps manage costs and performance automatically."
 msgstr ""
+"최소 노드 수를 설정하세요. 고가용성을 위해서는 최소 2개를 사용하세요. 오토스케일링은 "
+"비용과 성능을 자동으로 관리하는 데 도움이 됩니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:89
 msgid "**Node Shape:**"
-msgstr ""
+msgstr "**노드 셰이프:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:91
 msgid "Choose a shape (e.g., ``VM.Standard.E4.Flex``) and set OCPUs and memory."
-msgstr ""
+msgstr "셰이프(예: ``VM.Standard.E4.Flex``)를 선택하고 OCPU와 메모리를 설정하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:92
 msgid "**Auto Generate SSH Key:**"
-msgstr ""
+msgstr "**SSH 키 자동 생성:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:94
 msgid "Enable this if you do not have your own SSH key for node access."
-msgstr ""
+msgstr "노드 접근을 위한 자체 SSH 키가 없다면 이 항목을 활성화하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:95
 msgid "**Image OS and Version:**"
-msgstr ""
+msgstr "**이미지 OS 및 버전:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:97
 msgid "Oracle Linux 8 is recommended."
-msgstr ""
+msgstr "Oracle Linux 8을 권장합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:100
 msgid "PostgreSQL Configuration"
-msgstr ""
+msgstr "PostgreSQL 구성"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:102
 msgid "**Admin Username:**"
-msgstr ""
+msgstr "**관리자 사용자 이름:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:104
 msgid "The main user for your PostgreSQL database (e.g., ``admin1``)."
-msgstr ""
+msgstr "PostgreSQL 데이터베이스의 주 사용자입니다(예: ``admin1``)."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:105
 msgid "**Password Type:**"
-msgstr ""
+msgstr "**비밀번호 유형:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:107
 msgid ""
 "``PLAIN_TEXT`` for testing, ``SECRET`` for production (uses Oracle "
 "Vault). Always use Oracle Vault for production passwords."
 msgstr ""
+"테스트에는 ``PLAIN_TEXT``, 운영에는 ``SECRET``(Oracle Vault 사용). 운영 "
+"비밀번호에는 항상 Oracle Vault를 사용하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:108
 msgid "**Password/Secret Name:**"
-msgstr ""
+msgstr "**비밀번호/시크릿 이름:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:110
 msgid "Enter a strong password or the name of a secret in Oracle Vault."
-msgstr ""
+msgstr "강력한 비밀번호 또는 Oracle Vault에 있는 시크릿의 이름을 입력하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:111
 msgid "**Database Password:**"
-msgstr ""
+msgstr "**데이터베이스 비밀번호:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:113
 msgid "Required if not using a secret."
-msgstr ""
+msgstr "시크릿을 사용하지 않는 경우 필수입니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:116
 msgid "General Configuration"
-msgstr ""
+msgstr "일반 구성"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:118
 msgid "**Cluster Name Prefix:**"
-msgstr ""
+msgstr "**클러스터 이름 접두사:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:120
 msgid "Used to identify all resources (e.g., ``mm-oke``)."
-msgstr ""
+msgstr "모든 리소스를 식별하는 데 사용됩니다(예: ``mm-oke``)."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:121
 msgid "**Show Advanced Options:**"
-msgstr ""
+msgstr "**고급 옵션 표시:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:123
 msgid ""
@@ -312,130 +339,140 @@ msgid ""
 "options if you need custom encryption or want to manage your own SSH "
 "keys."
 msgstr ""
+"더 많은 제어(암호화 키, SSH 키 등)를 위해 활성화하세요. 사용자 지정 암호화가 "
+"필요하거나 자체 SSH 키를 관리하려면 고급 옵션을 사용하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:124
 msgid "**PostgreSQL Deployment Strategy:**"
-msgstr ""
+msgstr "**PostgreSQL 배포 전략:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:126
 msgid "Use \"Database For PostgreSQL\" for managed service."
-msgstr ""
+msgstr "관리형 서비스에는 \"Database For PostgreSQL\"을 사용하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:127
 msgid "**Object Storage for File Storage:**"
-msgstr ""
+msgstr "**파일 저장소용 오브젝트 스토리지:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:129
 msgid "Enable to use OCI Object Storage for Mattermost files."
-msgstr ""
+msgstr "OKR.BEST 파일에 OCI Object Storage를 사용하려면 활성화하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:130
 msgid "**Mattermost Version:**"
-msgstr ""
+msgstr "**OKR.BEST 버전:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:132
 msgid "Use the latest stable version."
-msgstr ""
+msgstr "최신 안정 버전을 사용하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:133
 msgid "**Namespace:**"
-msgstr ""
+msgstr "**네임스페이스:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:135
 msgid "Default is ``mattermost``."
-msgstr ""
+msgstr "기본값은 ``mattermost``\\ 입니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:136
 msgid "**License Key:**"
-msgstr ""
+msgstr "**라이선스 키:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:138
 msgid "Upload or paste your Mattermost license."
-msgstr ""
+msgstr "OKR.BEST 라이선스를 업로드하거나 붙여넣으세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:139
 msgid "**Helm Repository:**"
-msgstr ""
+msgstr "**Helm 저장소:**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:141
 msgid "Default is ``https://helm.mattermost.com``."
-msgstr ""
+msgstr "기본값은 ``https://helm.mattermost.com``\\ 입니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:144
 msgid "Step 4: Review and Apply"
-msgstr ""
+msgstr "4단계: 검토 및 적용"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:146
 msgid ""
 "Check all your settings and select **Create** to start the deployment. "
 "Monitor the Resource Manager job and logs."
 msgstr ""
+"모든 설정을 확인하고 **Create**\\ 를 선택하여 배포를 시작합니다. Resource "
+"Manager 작업과 로그를 모니터링하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:148
 msgid "Resource Manager job monitor"
-msgstr ""
+msgstr "Resource Manager 작업 모니터"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:152
 msgid "Step 5: After Deployment"
-msgstr ""
+msgstr "5단계: 배포 후"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:154
 msgid ""
 "When the job is finished, your OKE cluster, PostgreSQL database, and "
 "Mattermost will be ready. To find the Mattermost web address, run:"
 msgstr ""
+"작업이 완료되면 OKE 클러스터, PostgreSQL 데이터베이스, OKR.BEST가 준비됩니다. "
+"OKR.BEST 웹 주소를 찾으려면 다음을 실행하세요:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:160
 msgid ""
 "Copy the address and create a DNS record for your domain. Open your "
 "browser and go to your Mattermost URL."
 msgstr ""
+"주소를 복사하여 도메인에 대한 DNS 레코드를 생성하세요. 브라우저를 열고 OKR.BEST "
+"URL로 이동하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:163
 msgid "Step 6: Upgrade Mattermost"
-msgstr ""
+msgstr "6단계: OKR.BEST 업그레이드"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:165
 msgid "To upgrade your Mattermost installation:"
-msgstr ""
+msgstr "OKR.BEST 설치를 업그레이드하려면:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:167
 msgid "Access your OKE cluster through the Oracle Cloud Console"
-msgstr ""
+msgstr "Oracle Cloud Console을 통해 OKE 클러스터에 접근합니다"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:168
 msgid "Navigate to the Mattermost operator deployment"
-msgstr ""
+msgstr "OKR.BEST operator 디플로이먼트로 이동합니다"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:169
 msgid "Update the Mattermost version in the configuration"
-msgstr ""
+msgstr "구성에서 OKR.BEST 버전을 업데이트합니다"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:170
 msgid "Apply the changes and wait for the upgrade to complete"
-msgstr ""
+msgstr "변경 사항을 적용하고 업그레이드가 완료될 때까지 기다립니다"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:174
 msgid "**Tips for Success**"
-msgstr ""
+msgstr "**성공을 위한 팁**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:176
 msgid "Make sure you have all the permissions you need before you start."
-msgstr ""
+msgstr "시작하기 전에 필요한 모든 권한을 갖추고 있는지 확인하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:177
 msgid "Use Oracle Vault to store passwords and sensitive data."
-msgstr ""
+msgstr "비밀번호와 민감한 데이터를 저장하는 데 Oracle Vault를 사용하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:178
 msgid "Use private nodes and secure your network for production."
-msgstr ""
+msgstr "운영 환경에서는 private 노드를 사용하고 네트워크를 보호하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:179
 msgid ""
 "Always monitor logs from the Resource Manager and pods using ``kubectl "
 "logs`` for more specific error messages."
 msgstr ""
+"더 구체적인 오류 메시지를 확인하려면 항상 Resource Manager와 ``kubectl logs``\\ "
+"를 사용한 파드의 로그를 모니터링하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:180
 msgid ""
@@ -444,66 +481,78 @@ msgid ""
 "documentation <https://docs.oracle.com/en-"
 "us/iaas/Content/ContEng/Concepts/contengoverview.htm>`_."
 msgstr ""
+"자세한 내용은 공식 `OCI Database with PostgreSQL 문서 "
+"<https://www.oracle.com/cloud/postgresql/>`_\\ 와 `OKE 문서 "
+"<https://docs.oracle.com/en-"
+"us/iaas/Content/ContEng/Concepts/contengoverview.htm>`_\\ 를 참고하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:183
 msgid "Common Errors and How to Avoid Them"
-msgstr ""
+msgstr "일반적인 오류와 방지 방법"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:185
 msgid "**Error: Kubernetes API not reachable**"
-msgstr ""
+msgstr "**오류: Kubernetes API에 연결할 수 없음**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:187
 msgid ""
 "*Cause:* API endpoint is private and you're not connected to the VCN via "
 "VPN or Bastion."
 msgstr ""
+"*원인:* API 엔드포인트가 private이며 VPN이나 베스천을 통해 VCN에 연결되어 있지 "
+"않습니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:188
 msgid ""
 "*Solution:* Ensure you have access to the network or make the endpoint "
 "public for testing."
 msgstr ""
+"*해결책:* 네트워크에 접근할 수 있는지 확인하거나 테스트를 위해 엔드포인트를 "
+"public으로 만드세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:190
 msgid "**Error: Stack creation fails with missing permissions**"
-msgstr ""
+msgstr "**오류: 권한 누락으로 Stack 생성 실패**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:192
 msgid "*Cause:* IAM policies are not set properly for the user or group."
-msgstr ""
+msgstr "*원인:* 사용자나 그룹에 대해 IAM 정책이 올바르게 설정되지 않았습니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:193
 msgid ""
 "*Solution:* Ensure you have permissions for Resource Manager, OKE, "
 "Networking, and Secrets."
 msgstr ""
+"*해결책:* Resource Manager, OKE, Networking, Secrets에 대한 권한이 있는지 "
+"확인하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:195
 msgid "**Error: No ingress returned by kubectl**"
-msgstr ""
+msgstr "**오류: kubectl이 ingress를 반환하지 않음**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:197
 msgid "*Cause:* Mattermost Ingress might not be ready or was misconfigured."
-msgstr ""
+msgstr "*원인:* OKR.BEST Ingress가 준비되지 않았거나 잘못 구성되었을 수 있습니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:198
 msgid ""
 "*Solution:* Check with ``kubectl describe ingress`` and validate DNS, "
 "TLS, and Helm values."
 msgstr ""
+"*해결책:* ``kubectl describe ingress``\\ 로 확인하고 DNS, TLS, Helm 값을 "
+"검증하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:200
 msgid "**Error: PostgreSQL password rejected**"
-msgstr ""
+msgstr "**오류: PostgreSQL 비밀번호 거부됨**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:202
 msgid "*Cause:* Password not set or mismatched with Oracle Vault."
-msgstr ""
+msgstr "*원인:* 비밀번호가 설정되지 않았거나 Oracle Vault와 일치하지 않습니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:203
 msgid "*Solution:* Re-check the password value or Vault secret used during setup."
-msgstr ""
+msgstr "*해결책:* 설정 중에 사용한 비밀번호 값이나 Vault 시크릿을 다시 확인하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:207
 msgid ""
@@ -511,6 +560,8 @@ msgid ""
 "resources you create. Oracle Cloud credits cannot be used to buy a "
 "Mattermost license."
 msgstr ""
+"생성하는 리소스에 대한 Oracle Cloud Infrastructure 비용은 사용자의 책임입니다. "
+"Oracle Cloud 크레딧은 OKR.BEST 라이선스 구매에 사용할 수 없습니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s-oke.rst:209
 msgid ""
@@ -518,4 +569,6 @@ msgid ""
 ":doc:`Administration Guide </administration-guide/administration-guide-"
 "index>`."
 msgstr ""
+":doc:`관리 가이드 </administration-guide/administration-guide-index>`\\ 를 "
+"방문하여 OKR.BEST 서버 관리에 대해 자세히 알아보세요."
 

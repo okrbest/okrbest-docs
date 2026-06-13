@@ -21,50 +21,50 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:5
 msgid "Configure SAML synchronization with AD/LDAP"
-msgstr ""
+msgstr "AD/LDAP와 SAML 동기화 구성"
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:7
 msgid ""
 "In addition to configuring SAML sign-in, you can optionally configure "
 "synchronizing SAML accounts with AD/LDAP. When configured:"
-msgstr ""
+msgstr "SAML 로그인을 구성하는 것 외에도 SAML 계정을 AD/LDAP와 동기화하도록 선택적으로 구성할 수 있습니다. 구성하면 다음과 같이 동작합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:9
 msgid ""
 "Mattermost queries AD/LDAP for relevant account information and updates "
 "SAML accounts based on changes to attributes (first name, last name, and "
 "nickname)"
-msgstr ""
+msgstr "OKR.BEST는 관련 계정 정보를 AD/LDAP에 쿼리하고 속성(이름, 성, 닉네임) 변경 사항을 기준으로 SAML 계정을 업데이트합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:10
 msgid ""
 "Accounts disabled in AD/LDAP are deactivated in Mattermost, and their "
 "active sessions are revoked once Mattermost synchronizes attributes."
-msgstr ""
+msgstr "AD/LDAP에서 비활성화된 계정은 OKR.BEST에서 비활성화되며, OKR.BEST가 속성을 동기화하면 해당 활성 세션이 폐기됩니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:12
 msgid "To configure SAML synchronization with AD/LDAP:"
-msgstr ""
+msgstr "AD/LDAP와 SAML 동기화를 구성하려면:"
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:14
 msgid ""
 "Go to **System Console > Authentication > SAML 2.0**, then set **Enable "
 "Synchronizing SAML Accounts With AD/LDAP** to **true**."
-msgstr ""
+msgstr "**관리자 도구 > 인증 > SAML 2.0**\\ 으로 이동한 다음 **AD/LDAP와 SAML 계정 동기화 활성화**\\ 를 **true**\\ 로 설정합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:15
 msgid ""
 "Go to  **System Console > Authentication > AD/LDAP** to open the AD/LDAP "
 "wizard, navigate to the **Connection Settings** section, then set "
 "**Enable Synchronization with AD/LDAP** to **true**."
-msgstr ""
+msgstr "**관리자 도구 > 인증 > AD/LDAP**\\ 로 이동해 AD/LDAP 마법사를 열고 **연결 설정** 섹션으로 이동한 다음 **AD/LDAP와 동기화 활성화**\\ 를 **true**\\ 로 설정합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:16
 msgid ""
 "To ignore guest users when sychronizing, go to **System Console > "
 "Authentication > SAML 2.0**, then set **Ignore Guest Users when "
 "Synchronizing with AD/LDAP** to **true**."
-msgstr ""
+msgstr "동기화할 때 게스트 사용자를 무시하려면 **관리자 도구 > 인증 > SAML 2.0**\\ 으로 이동한 다음 **AD/LDAP와 동기화할 때 게스트 사용자 무시**\\ 를 **true**\\ 로 설정합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:17
 msgid ""
@@ -72,7 +72,7 @@ msgid ""
 "settings documentation <administration-guide/configure/authentication-"
 "configuration-settings:ad/ldap>` to connect Mattermost with your AD/LDAP "
 "server."
-msgstr ""
+msgstr "OKR.BEST를 AD/LDAP 서버와 연결하려면 :ref:`구성 설정 문서 <administration-guide/configure/authentication-configuration-settings:ad/ldap>`\\ 를 기준으로 나머지 AD/LDAP 설정을 구성합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:19
 msgid ""
@@ -80,7 +80,7 @@ msgid ""
 "Authentication > AD/LDAP** wizard, navigate to the **Connection "
 "Settings** section, then set **Enable sign-in with AD/LDAP** to "
 "**false**."
-msgstr ""
+msgstr "AD/LDAP 로그인을 활성화하지 않으려면 **관리자 도구 > 인증 > AD/LDAP** 마법사로 이동하고 **연결 설정** 섹션으로 이동한 다음 **AD/LDAP로 로그인 활성화**\\ 를 **false**\\ 로 설정합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:21
 msgid ""
@@ -91,7 +91,7 @@ msgid ""
 "minutes. If you want to synchronize immediately after disabling an "
 "account, go to the **Sync History** section and select **AD/LDAP "
 "Synchronize Now**."
-msgstr ""
+msgstr "OKR.BEST가 SAML 사용자 계정을 AD/LDAP와 얼마나 자주 동기화할지 지정하려면 **관리자 도구 > 인증 > AD/LDAP** 마법사로 이동하고 **동기화 성능** 섹션으로 이동한 다음 **동기화 간격**\\ 을 분 단위로 설정합니다. 기본 설정은 60분입니다. 계정을 비활성화한 직후 동기화하려면 **동기화 기록** 섹션으로 이동해 **AD/LDAP 지금 동기화**\\ 를 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:22
 msgid ""
@@ -99,7 +99,7 @@ msgid ""
 "server, go to **System Console > Authentication > AD/LDAP** wizard, "
 "navigate to the **Connection Settings** section, then select **Test "
 "Connection**."
-msgstr ""
+msgstr "OKR.BEST가 AD/LDAP 서버에 성공적으로 연결할 수 있는지 확인하려면 **관리자 도구 > 인증 > AD/LDAP** 마법사로 이동하고 **연결 설정** 섹션으로 이동한 다음 **연결 테스트**\\ 를 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:24
 msgid ""
@@ -107,35 +107,35 @@ msgid ""
 "synchronized with AD/LDAP based on their email address. If a user with a "
 "given email address doesn't have an AD/LDAP account, they will be "
 "deactivated in Mattermost on the next AD/LDAP sync."
-msgstr ""
+msgstr "AD/LDAP와의 동기화가 활성화되면 사용자 속성은 이메일 주소를 기준으로 AD/LDAP와 동기화됩니다. 지정된 이메일 주소를 가진 사용자에게 AD/LDAP 계정이 없으면 다음 AD/LDAP 동기화 시 OKR.BEST에서 비활성화됩니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:26
 msgid "To re-activate the account:"
-msgstr ""
+msgstr "계정을 다시 활성화하려면:"
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:28
 msgid "Add the user to your AD/LDAP server."
-msgstr ""
+msgstr "사용자를 AD/LDAP 서버에 추가합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:29
 msgid ""
 "Purge all caches in Mattermost by going to **System Console > Environment"
 " > Web Server**, then select **Purge All Caches**."
-msgstr ""
+msgstr "**관리자 도구 > 환경 > 웹서버**\\ 로 이동한 다음 **모든 캐시 지우기**\\ 를 선택하여 OKR.BEST의 모든 캐시를 지웁니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:30
 msgid ""
 "Run AD/LDAP synchronization by going to **System Console > Authentication"
 " > AD/LDAP** wizard, navigating to the **Sync History** section, then "
 "select **AD/LDAP Synchronize Now**."
-msgstr ""
+msgstr "**관리자 도구 > 인증 > AD/LDAP** 마법사로 이동하고 **동기화 기록** 섹션으로 이동한 다음 **AD/LDAP 지금 동기화**\\ 를 선택하여 AD/LDAP 동기화를 실행합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:31
 msgid ""
 "Purge all caches again in Mattermost by going to **System Console > "
 "Environment > Web Server**, then select **Purge All Caches** again. This "
 "re-activates the account in Mattermost."
-msgstr ""
+msgstr "**관리자 도구 > 환경 > 웹서버**\\ 로 이동한 다음 **모든 캐시 지우기**\\ 를 다시 선택하여 OKR.BEST의 모든 캐시를 다시 지웁니다. 이렇게 하면 OKR.BEST에서 계정이 다시 활성화됩니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:34
 msgid ""
@@ -143,14 +143,14 @@ msgid ""
 "Mattermost on the next sync. They will be shown as \"Deactivated\" in the"
 " System Console users list, all of their sessions will expire and they "
 "won't be able to log back in to Mattermost."
-msgstr ""
+msgstr "사용자가 AD/LDAP에서 비활성화되면 다음 동기화 시 OKR.BEST에서도 비활성화됩니다. 관리자 도구 사용자 목록에 \"비활성화됨\"으로 표시되고 모든 세션이 만료되며 OKR.BEST에 다시 로그인할 수 없습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:35
 msgid ""
 "If a user is deactivated from SAML, their session won't expire until "
 "they're deactivated from AD/LDAP. However, they won't be able to log back"
 " in to Mattermost."
-msgstr ""
+msgstr "사용자가 SAML에서 비활성화되면 AD/LDAP에서 비활성화될 때까지 세션은 만료되지 않습니다. 하지만 OKR.BEST에 다시 로그인할 수는 없습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:36
 msgid ""
@@ -159,17 +159,17 @@ msgid ""
 "authentication. In particular, the user filter cannot be used to control "
 "who can log in to Mattermost, this should be controlled by your SAML "
 "service provider's group permissions."
-msgstr ""
+msgstr "AD/LDAP와 SAML 동기화는 인증을 제어하기 위한 것이 아니라 AD/LDAP에서 이름과 성 같은 사용자 속성을 가져오도록 설계되었습니다. 특히 사용자 필터는 OKR.BEST에 로그인할 수 있는 사용자를 제어하는 데 사용할 수 없으며, 이는 SAML 서비스 공급자의 그룹 권한으로 제어해야 합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:38
 msgid ""
 "See :ref:`technical description of SAML synchronization with AD/LDAP "
 "<administration-guide/onboard/sso-saml-technical>` for more details."
-msgstr ""
+msgstr "자세한 내용은 :ref:`AD/LDAP와 SAML 동기화 기술 설명 <administration-guide/onboard/sso-saml-technical>`\\ 을 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:41
 msgid "Override SAML data with AD/LDAP data"
-msgstr ""
+msgstr "SAML 데이터를 AD/LDAP 데이터로 재정의"
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:43
 msgid ""
@@ -178,7 +178,7 @@ msgid ""
 "Attribute, please refer to this :ref:`documentation <administration-"
 "guide/onboard/sso-saml-okta:how to bind authentication to id attribute "
 "instead of email>`."
-msgstr ""
+msgstr "또는 SAML 바인딩 데이터를 AD/LDAP 정보로 재정의하도록 선택할 수 있습니다. SAML ID 속성으로 사용자를 바인딩하는 방법에 대한 자세한 내용은 이 :ref:`문서 <administration-guide/onboard/sso-saml-okta:how to bind authentication to id attribute instead of email>`\\ 를 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:45
 msgid ""
@@ -187,7 +187,7 @@ msgid ""
 "recommend using this configuration with the SAML ID Attribute to help "
 "ensure new users are not created when the email address changes for a "
 "user."
-msgstr ""
+msgstr "이 프로세스는 구성된 경우 SAML 이메일 주소를 AD/LDAP 이메일 주소 데이터로 재정의하거나 SAML Id 속성을 AD/LDAP Id 속성으로 재정의합니다. 사용자의 이메일 주소가 변경될 때 새 사용자가 생성되지 않도록 이 구성을 SAML ID 속성과 함께 사용하는 것이 좋습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:47
 msgid ""
@@ -196,30 +196,29 @@ msgid ""
 "systems and comparing the ID data. Mapping ID Attributes for both AD/LDAP"
 " and SAML within Mattermost to fields that hold the same data will ensure"
 " the IDs match as well."
-msgstr ""
+msgstr "이 과정에서 기존 사용자 계정이 비활성화되지 않도록 하려면 두 시스템에서 데이터를 내보내 ID 데이터를 비교하여 SAML ID가 LDAP ID와 일치하는지 확인합니다. OKR.BEST 내에서 AD/LDAP와 SAML의 ID 속성을 동일한 데이터를 보유한 필드에 매핑하면 ID가 일치하도록 보장할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:49
 msgid ""
 "Set the SAML ``Id Attribute`` by going to **System Console > "
 "Authentication > SAML 2.0 > Id Attribute**."
-msgstr ""
+msgstr "**관리자 도구 > 인증 > SAML 2.0 > Id Attribute**\\ 로 이동하여 SAML ``Id Attribute``를 설정합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:50
 msgid ""
 "Set **System Console > Authentication > SAML 2.0 > Override SAML bind "
 "data with AD/LDAP information** to **true**."
-msgstr ""
+msgstr "**관리자 도구 > 인증 > SAML 2.0 > AD/LDAP 정보로 SAML 바인딩 데이터 재정의**\\ 를 **true**\\ 로 설정합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:51
 msgid ""
 "Set **System Console > Authentication > SAML 2.0 > Enable Synchronizing "
 "SAML Accounts With AD/LDAP** to **true**."
-msgstr ""
+msgstr "**관리자 도구 > 인증 > SAML 2.0 > AD/LDAP와 SAML 계정 동기화 활성화**\\ 를 **true**\\ 로 설정합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-ldapsync.rst:52
 msgid ""
 "Run AD/LDAP sync by going to **System Console > Authentication > "
 "AD/LDAP** wizard, navigating to the **Sync History** section, then select"
 " **AD/LDAP Synchronize Now**."
-msgstr ""
-
+msgstr "**관리자 도구 > 인증 > AD/LDAP** 마법사로 이동하고 **동기화 기록** 섹션으로 이동한 다음 **AD/LDAP 지금 동기화**\\ 를 선택하여 AD/LDAP 동기화를 실행합니다."

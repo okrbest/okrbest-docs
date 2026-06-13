@@ -21,29 +21,29 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:7
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:10
 msgid "What encryption options are supported for SAML?"
-msgstr ""
+msgstr "SAML에는 어떤 암호화 옵션이 지원되나요?"
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:12
 msgid ""
 "See the encryption options documentation for details on what "
 ":ref:`encryption methods <deployment-guide/encryption-options:saml "
 "encryption support>` Mattermost supports for SAML."
-msgstr ""
+msgstr "OKR.BEST가 SAML에 대해 지원하는 :ref:`암호화 방법 <deployment-guide/encryption-options:saml encryption support>`\\ 에 대한 자세한 내용은 암호화 옵션 문서를 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:15
 msgid "How to bind authentication to Id attribute instead of email"
-msgstr ""
+msgstr "이메일 대신 Id 속성에 인증을 바인딩하는 방법"
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:17
 msgid ""
 "Alternatively, you can use an ``Id`` attribute instead of email to bind "
 "the user.  We recommend choosing an ID that is unique and will not change"
 " over time."
-msgstr ""
+msgstr "또는 이메일 대신 ``Id`` 속성을 사용하여 사용자를 바인딩할 수 있습니다. 고유하고 시간이 지나도 변경되지 않는 ID를 선택하는 것이 좋습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:19
 msgid ""
@@ -53,61 +53,61 @@ msgid ""
 "once an employee, a new employee named Joe Smith can use the same email. "
 "This configuration is also useful when a user's name changes and their "
 "email needs to be updated."
-msgstr ""
+msgstr "``Id`` 속성으로 구성하면 이전 사용자의 정보가 노출되지 않으면서 새 사용자가 이메일 주소를 재사용할 수 있습니다. 예를 들어 joe.smith@mattermost.com 이메일 주소를 가진 사용자가 과거 직원이었다면, Joe Smith라는 새 직원이 같은 이메일을 사용할 수 있습니다. 이 구성은 사용자 이름이 변경되어 이메일을 업데이트해야 하는 경우에도 유용합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:21
 msgid ""
 "This process was designed with backwards compatibility to email binding. "
 "Here is the process applied to new account creations and to accounts "
 "logging in after the configuration:"
-msgstr ""
+msgstr "이 프로세스는 이메일 바인딩과의 하위 호환성을 고려해 설계되었습니다. 다음은 새 계정 생성과 구성 후 로그인하는 계정에 적용되는 프로세스입니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:23
 msgid ""
 "A user authenticated with SAML is bound to the SAML service user using "
 "the Id Attribute (as long as it has been configured) or bound by email "
 "using the email received from SAML."
-msgstr ""
+msgstr "SAML로 인증된 사용자는 Id 속성(구성된 경우)을 사용해 SAML 서비스 사용자에 바인딩되거나, SAML에서 받은 이메일을 사용해 이메일로 바인딩됩니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:24
 msgid ""
 "When the user tries to login and the SAML server responds with a valid "
 "authentication, then the server uses the \"Id\" field of the SAML "
 "authentication to search the user."
-msgstr ""
+msgstr "사용자가 로그인을 시도하고 SAML 서버가 유효한 인증으로 응답하면, 서버는 SAML 인증의 \"Id\" 필드를 사용해 사용자를 검색합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:25
 msgid "If a user bound to that ID already exists, it logs in as that user."
-msgstr ""
+msgstr "해당 ID에 바인딩된 사용자가 이미 있으면 그 사용자로 로그인합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:26
 msgid ""
 "If a user bound to that ID does not exist, it will search base on the "
 "email."
-msgstr ""
+msgstr "해당 ID에 바인딩된 사용자가 없으면 이메일을 기준으로 검색합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:27
 msgid ""
 "If a user bound to the email exists, it logs in with email and updates "
 "the autentication data to the ID, instead of the email."
-msgstr ""
+msgstr "이메일에 바인딩된 사용자가 있으면 이메일로 로그인하고 인증 데이터를 이메일 대신 ID로 업데이트합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:28
 msgid ""
 "If a user bound to the ID or email does not exist, it will create a new "
 "Mattermost account bound to the SAML account by ID and will allow the "
 "user to log in."
-msgstr ""
+msgstr "ID 또는 이메일에 바인딩된 사용자가 없으면 ID로 SAML 계정에 바인딩된 새 OKR.BEST 계정을 만들고 사용자가 로그인할 수 있게 합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:31
 msgid "Existing accounts won't update until they log in to the server."
-msgstr ""
+msgstr "기존 계정은 서버에 로그인할 때까지 업데이트되지 않습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:34
 msgid ""
 "Why does login fail with \"one of the attributes is incorrect\" / "
 "\"<attribute> attribute is missing\"?"
-msgstr ""
+msgstr "\"one of the attributes is incorrect\" / \"<attribute> attribute is missing\" 오류로 로그인이 실패하는 이유는 무엇인가요?"
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:36
 msgid ""
@@ -118,7 +118,7 @@ msgid ""
 "the assertion from your Identity Provider (IdP) did not contain an "
 "attribute whose name **exactly** matches what you configured in the "
 "Mattermost SAML attribute settings."
-msgstr ""
+msgstr "``SAML login was unsuccessful because one of the attributes is incorrect. Please contact your System Administrator.`` 오류와 함께 서버 로그에 ``email attribute is missing`` 또는 ``name attribute is missing`` 같은 세부 정보가 표시되면, ID 공급자(IdP)의 어설션에 OKR.BEST SAML 속성 설정에서 구성한 이름과 **정확히** 일치하는 속성이 포함되지 않았다는 뜻입니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:38
 msgid ""
@@ -126,7 +126,7 @@ msgid ""
 "``FriendlyName``) as it appears in the assertion, character-for-"
 "character. The named attribute in the error message is the value you "
 "entered in Mattermost that could not be found."
-msgstr ""
+msgstr "OKR.BEST는 어설션에 표시된 전체 ``Name``(또는 ``FriendlyName``)을 문자 단위로 비교해 각 속성을 일치시킵니다. 오류 메시지의 명명된 속성은 OKR.BEST에 입력했지만 찾을 수 없었던 값입니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:40
 msgid ""
@@ -137,11 +137,11 @@ msgid ""
 "UI is actually sent in the assertion as "
 "``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/email``. Entering"
 " only ``email`` in Mattermost will not match."
-msgstr ""
+msgstr "이 문제는 IdP가 네임스페이스 아래에서 속성을 보내기 때문에 가장 자주 발생합니다. 예를 들어 Microsoft Entra ID는 기본적으로 기본 제공 클레임을 ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/`` 아래에 내보내므로, Entra ID 관리자 UI에서 ``email``처럼 보이는 속성은 실제로 어설션에서 ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/email``로 전송됩니다. OKR.BEST에 ``email``만 입력하면 일치하지 않습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:42
 msgid "To resolve this:"
-msgstr ""
+msgstr "이 문제를 해결하려면:"
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:44
 msgid ""
@@ -149,85 +149,84 @@ msgid ""
 "<https://addons.mozilla.org/firefox/addon/saml-tracer/>`__ browser "
 "extension) and read the ``Name`` attribute of each ``<Attribute>`` "
 "element in the ``<AttributeStatement>``."
-msgstr ""
+msgstr "SAML 응답을 캡처하고 디코딩한 다음(예: `SAML-tracer <https://addons.mozilla.org/firefox/addon/saml-tracer/>`__ 브라우저 확장 사용), ``<AttributeStatement>``의 각 ``<Attribute>`` 요소에서 ``Name`` 속성을 읽습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:45
 msgid ""
 "Set each Mattermost attribute field to the **exact** ``Name`` value from "
 "the assertion — including any namespace prefix — or reconfigure the IdP "
 "to emit the claim under the short name you want to use in Mattermost."
-msgstr ""
+msgstr "각 OKR.BEST 속성 필드를 네임스페이스 접두사를 포함해 어설션의 **정확한** ``Name`` 값으로 설정하거나, OKR.BEST에서 사용하려는 짧은 이름으로 클레임을 내보내도록 IdP를 재구성합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:48
 msgid ""
 "Can SAML via Microsoft ADFS be configured with Integrated Windows "
 "Authentication (IWA)?"
-msgstr ""
+msgstr "Microsoft ADFS를 통한 SAML을 통합 Windows 인증(IWA)으로 구성할 수 있나요?"
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:50
 msgid ""
 "Yes. IWA is supported on the browser, with support added to iOS and "
 "Android mobile apps in Q2/2019 (mobile apps v1.18 and later)."
-msgstr ""
+msgstr "예. IWA는 브라우저에서 지원되며, iOS 및 Android 모바일 앱에는 2019년 2분기에 지원이 추가되었습니다(모바일 앱 v1.18 이상)."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:52
 msgid ""
 "However, IWA is not supported on the Mattermost Desktop Apps due to a "
 "limitation in Electron. As a workaround you may create a browser desktop "
 "shortcut for quick access to Mattermost, just like a Desktop App."
-msgstr ""
+msgstr "하지만 Electron 제한으로 인해 Mattermost Desktop Apps에서는 IWA가 지원되지 않습니다. 대안으로 데스크톱 앱처럼 OKR.BEST에 빠르게 접근할 수 있는 브라우저 데스크톱 바로가기를 만들 수 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:55
 msgid "Can I provision and deprovision users who log in via SAML?"
-msgstr ""
+msgstr "SAML로 로그인하는 사용자를 프로비저닝하고 프로비저닝 해제할 수 있나요?"
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:57
 msgid ""
 "Yes, but this relies on AD/LDAP to do so. Currently, we do not support "
 "SCIM. See :ref:`\"How do I deactivate users?\" <administration-"
 "guide/onboard/ad-ldap:how do i deactivate users?>` for more information."
-msgstr ""
+msgstr "예, 하지만 이를 위해 AD/LDAP에 의존합니다. 현재 SCIM은 지원하지 않습니다. 자세한 내용은 :ref:`\"사용자를 어떻게 비활성화하나요?\" <administration-guide/onboard/ad-ldap:how do i deactivate users?>`\\ 를 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:60
 msgid ""
 "How do I migrate users from one authentication method (e.g. email) to "
 "SAML?"
-msgstr ""
+msgstr "사용자를 한 인증 방법(예: 이메일)에서 SAML로 어떻게 마이그레이션하나요?"
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:62
 msgid ""
 "See the :ref:`mmctl user migrate-auth <administration-guide/manage/mmctl-"
 "command-line-tool:mmctl user migrate-auth>` command documentation for "
 "details."
-msgstr ""
+msgstr "자세한 내용은 :ref:`mmctl user migrate-auth <administration-guide/manage/mmctl-command-line-tool:mmctl user migrate-auth>` 명령 문서를 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:65
 msgid "How is SAML different from OAuth 2.0 and OpenId Connect?"
-msgstr ""
+msgstr "SAML은 OAuth 2.0 및 OpenID Connect와 어떻게 다른가요?"
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:67
 msgid ""
 "OAuth 2.0 was primarily intended for delegated authorization, where an "
 "app is authorized to access resources, such as Google contact list. It "
 "doesn’t deal with authentication."
-msgstr ""
+msgstr "OAuth 2.0은 주로 앱이 Google 연락처 목록 같은 리소스에 접근하도록 승인받는 위임 권한 부여를 위해 만들어졌습니다. 인증은 다루지 않습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:69
 msgid ""
 "OpenID Connect is built on top of OAuth 2.0, which supports "
 "authentication and thus direct SSO."
-msgstr ""
+msgstr "OpenID Connect는 OAuth 2.0 위에 구축되어 인증을 지원하므로 직접 SSO를 지원합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:71
 msgid ""
 "SAML is like OpenID Connect, except typically used in enterprise "
 "settings. OpenID Connect is more common in consumer websites and "
 "web/mobile apps."
-msgstr ""
+msgstr "SAML은 OpenID Connect와 비슷하지만 일반적으로 엔터프라이즈 환경에서 사용됩니다. OpenID Connect는 소비자 웹사이트와 웹/모바일 앱에서 더 일반적입니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-faq.rst:73
 msgid ""
 "Learn more at https://hackernoon.com/demystifying-oauth-2-0-and-openid-"
 "connect-and-saml-12aa4cf9fdba."
-msgstr ""
-
+msgstr "자세한 내용은 https://hackernoon.com/demystifying-oauth-2-0-and-openid-connect-and-saml-12aa4cf9fdba 를 참조하세요."
