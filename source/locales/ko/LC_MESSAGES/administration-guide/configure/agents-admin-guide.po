@@ -1429,30 +1429,31 @@ msgid ""
 "Post indexing occurs automatically during initial setup and when changing"
 " embedding providers:"
 msgstr ""
+"글 인덱싱은 초기 설정 중 그리고 임베딩 공급자를 변경할 때 자동으로 수행됩니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:331
 msgid "Navigate to **System Console > Plugins > Agents > Embedding Search**"
-msgstr ""
+msgstr "**관리자 도구 > 플러그인 > Agents > Embedding Search**로 이동합니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:332
 msgid "Use the reindex controls to:"
-msgstr ""
+msgstr "다시 인덱싱 컨트롤을 사용해 다음을 수행합니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:334
 msgid "Monitor indexing progress during initial setup."
-msgstr ""
+msgstr "초기 설정 중 인덱싱 진행 상황을 모니터링합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:335
 msgid "Trigger reindexing when changing embedding providers."
-msgstr ""
+msgstr "임베딩 공급자를 변경할 때 다시 인덱싱을 트리거합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:336
 msgid "Check indexing status."
-msgstr ""
+msgstr "인덱싱 상태를 확인합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:338
 msgid "OpenTelemetry tracing"
-msgstr ""
+msgstr "OpenTelemetry 추적"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:340
 msgid ""
@@ -1461,70 +1462,80 @@ msgid ""
 "request latency, LLM call performance, tool execution, and error "
 "diagnosis."
 msgstr ""
+"이 플러그인은 [OpenTelemetry](https://opentelemetry.io/)를 통한 분산 추적을 지원하여 "
+"요청 지연 시간, LLM 호출 성능, 도구 실행, 오류 진단에 대한 가시성을 제공합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:342
 msgid "What gets traced"
-msgstr ""
+msgstr "추적되는 항목"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:344
 msgid "When enabled, the plugin creates spans for:"
-msgstr ""
+msgstr "활성화하면 플러그인은 다음에 대한 스팬을 생성합니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:346
 msgid ""
 "**HTTP requests**: Every API call to the plugin, with method, route, and "
 "status code (via otelgin middleware)"
 msgstr ""
+"**HTTP 요청**: 플러그인에 대한 모든 API 호출(메서드, 경로, 상태 코드 포함, otelgin "
+"미들웨어를 통해)"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:347
 msgid ""
 "**LLM completions**: Provider, model, operation type, streaming status, "
 "input/output token counts, and errors"
 msgstr ""
+"**LLM 완료**: 공급자, 모델, 작업 유형, 스트리밍 상태, 입력/출력 토큰 수, 오류"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:348
 msgid ""
 "**Tool execution**: Tool name, ID, resolution status, and errors for both"
 " built-in and MCP tools"
 msgstr ""
+"**도구 실행**: 내장 도구와 MCP 도구 모두에 대한 도구 이름, ID, 처리 상태, 오류"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:349
 msgid "**MCP tool calls**: Remote MCP server and tool name"
-msgstr ""
+msgstr "**MCP 도구 호출**: 원격 MCP 서버 및 도구 이름"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:350
 msgid "**Semantic search**: Search queries and result retrieval"
-msgstr ""
+msgstr "**시맨틱 검색**: 검색 쿼리 및 결과 검색"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:351
 msgid "**Web search**: Brave and Google search API calls"
-msgstr ""
+msgstr "**웹 검색**: Brave 및 Google 검색 API 호출"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:352
 msgid ""
 "**Post streaming**: Duration and context for streaming LLM responses to "
 "posts"
-msgstr ""
+msgstr "**글 스트리밍**: 글에 LLM 응답을 스트리밍하는 데 걸린 시간 및 컨텍스트"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:354
 msgid ""
 "Spans are organized in a parent-child hierarchy that follows the request "
 "flow, so a single user message produces a trace like:"
 msgstr ""
+"스팬은 요청 흐름을 따르는 부모-자식 계층 구조로 구성되므로, 단일 사용자 메시지는 "
+"다음과 같은 추적을 생성합니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:364
 msgid "Enabling tracing"
-msgstr ""
+msgstr "추적 활성화"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:366
 msgid ""
 "The plugin offers three trace output modes, configurable via **Trace "
 "Output** in the System Console:"
 msgstr ""
+"이 플러그인은 관리자 도구의 **Trace Output**으로 구성할 수 있는 세 가지 추적 출력 "
+"모드를 제공합니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:368
 msgid "**Off** — tracing disabled, zero overhead."
-msgstr ""
+msgstr "**Off** — 추적이 비활성화되며 오버헤드가 없습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:369
 msgid ""
@@ -1532,6 +1543,9 @@ msgid ""
 " via the standard plugin logger. No collector required; pick this if you "
 "don't run Tempo, Jaeger, or another OTLP backend."
 msgstr ""
+"**Server Logs** — 완료된 스팬이 표준 플러그인 로거를 통해 OKR.BEST 서버 로그에 "
+"기록됩니다. 컬렉터가 필요하지 않으며, Tempo, Jaeger 또는 다른 OTLP 백엔드를 실행하지 "
+"않는 경우 이를 선택하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:370
 msgid ""
@@ -1540,12 +1554,15 @@ msgid ""
 "this for full distributed tracing with a backend like Grafana Tempo or "
 "Jaeger."
 msgstr ""
+"**OTLP Endpoint** — 스팬이 **OpenTelemetry Endpoint**에 구성된 엔드포인트(예: "
+"`localhost:4317`)로 OTLP gRPC를 통해 내보내집니다. Grafana Tempo나 Jaeger 같은 "
+"백엔드로 완전한 분산 추적을 수행하려면 이를 사용하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:372
 msgid ""
 "The setting can also be configured directly in the plugin configuration "
 "JSON:"
-msgstr ""
+msgstr "이 설정은 플러그인 구성 JSON에서 직접 구성할 수도 있습니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:381
 msgid ""
@@ -1554,30 +1571,37 @@ msgid ""
 "overhead. The `openTelemetryEndpoint` field is only consulted when the "
 "mode is `otlp`."
 msgstr ""
+"`telemetryOutput`의 유효한 값은 `off`, `logs`, `otlp`입니다. `off`로 설정하면(또는 "
+"생략하면) 플러그인은 오버헤드가 없는 no-op 추적기를 사용합니다. "
+"`openTelemetryEndpoint` 필드는 모드가 `otlp`일 때만 참조됩니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:383
 msgid "Local development with Grafana Tempo"
-msgstr ""
+msgstr "Grafana Tempo를 사용한 로컬 개발"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:385
 msgid ""
 "For local development and debugging, use the included Docker Compose file"
 " to run [Grafana Tempo](https://grafana.com/oss/tempo/) and Grafana:"
 msgstr ""
+"로컬 개발 및 디버깅을 위해 포함된 Docker Compose 파일을 사용해 [Grafana "
+"Tempo](https://grafana.com/oss/tempo/)와 Grafana를 실행하세요:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:391
 msgid "This starts:"
-msgstr ""
+msgstr "이렇게 하면 다음이 시작됩니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:392
 msgid "**Tempo** with OTLP gRPC on port `4317` and OTLP HTTP on port `4318`"
-msgstr ""
+msgstr "포트 `4317`의 OTLP gRPC와 포트 `4318`의 OTLP HTTP를 사용하는 **Tempo**"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:393
 msgid ""
 "**Grafana** at `http://localhost:3001` with the Tempo datasource "
 "preprovisioned (anonymous Admin, no login required)"
 msgstr ""
+"Tempo 데이터 소스가 사전 프로비저닝된 `http://localhost:3001`의 **Grafana**(익명 "
+"Admin, 로그인 불필요)"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:395
 msgid ""
@@ -1585,6 +1609,9 @@ msgid ""
 "the bot. Open Grafana → **Explore** → **Tempo** and search by service "
 "name `mattermost-ai-agents`, or paste a trace ID directly."
 msgstr ""
+"플러그인을 엔드포인트 `localhost:4317`로 구성한 다음 봇과 상호작용하세요. Grafana → "
+"**Explore** → **Tempo**를 열고 서비스 이름 `mattermost-ai-agents`로 검색하거나, 추적 "
+"ID를 직접 붙여넣으세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:397
 msgid ""
@@ -1592,24 +1619,27 @@ msgid ""
 "collide with Mattermost's webapp dev server or the `mattermost-server` "
 "build/docker-compose stack."
 msgstr ""
+"Grafana는 OKR.BEST의 웹앱 개발 서버나 `mattermost-server` 빌드/docker-compose "
+"스택과 충돌하지 않도록 기본 포트 `3000`이 아닌 포트 `3001`에 매핑됩니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:399
 msgid "To stop the stack:"
-msgstr ""
+msgstr "스택을 중지하려면:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:405
 msgid "Add `-v` to also discard accumulated traces."
-msgstr ""
+msgstr "누적된 추적도 함께 삭제하려면 `-v`를 추가하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:407
 msgid "Production deployment"
-msgstr ""
+msgstr "프로덕션 배포"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:409
 msgid ""
 "For production, send traces to your existing OpenTelemetry Collector or "
 "directly to a backend:"
 msgstr ""
+"프로덕션의 경우, 기존 OpenTelemetry Collector 또는 백엔드로 직접 추적을 전송하세요:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:411
 msgid ""
@@ -1617,34 +1647,41 @@ msgid ""
 "gRPC address. The collector can then export to Jaeger, Zipkin, Datadog, "
 "Grafana Tempo, AWS X-Ray, or any other supported backend."
 msgstr ""
+"**OpenTelemetry Collector**: 엔드포인트를 컬렉터의 OTLP gRPC 주소로 지정합니다. "
+"그러면 컬렉터가 Jaeger, Zipkin, Datadog, Grafana Tempo, AWS X-Ray 또는 기타 "
+"지원되는 백엔드로 내보낼 수 있습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:412
 msgid ""
 "**Direct export**: Point the endpoint directly to a backend that supports"
 " OTLP gRPC (e.g., Grafana Tempo at `tempo:4317`)."
 msgstr ""
+"**직접 내보내기**: 엔드포인트를 OTLP gRPC를 지원하는 백엔드(예: `tempo:4317`의 "
+"Grafana Tempo)로 직접 지정합니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:414
 msgid ""
 "The connection currently uses insecure (non-TLS) gRPC. For TLS-terminated"
 " endpoints, route through an OpenTelemetry Collector with TLS configured."
 msgstr ""
+"현재 연결은 비보안(비TLS) gRPC를 사용합니다. TLS로 종료되는 엔드포인트의 경우, TLS가 "
+"구성된 OpenTelemetry Collector를 통해 라우팅하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:416
 msgid "Custom span attributes"
-msgstr ""
+msgstr "사용자 정의 스팬 속성"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:418
 msgid "Traces include these semantic attributes for filtering and analysis:"
-msgstr ""
+msgstr "추적에는 필터링 및 분석을 위한 다음 시맨틱 속성이 포함됩니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Attribute"
-msgstr ""
+msgstr "속성"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Example"
-msgstr ""
+msgstr "예시"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "`agents.llm.provider`"
@@ -1652,7 +1689,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "LLM provider name"
-msgstr ""
+msgstr "LLM 공급자 이름"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "`openai`, `anthropic`"
@@ -1664,7 +1701,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Model identifier"
-msgstr ""
+msgstr "모델 식별자"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "`gpt-4o`, `claude-3-opus`"
@@ -1676,7 +1713,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Operation type"
-msgstr ""
+msgstr "작업 유형"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "`conversation`, `title_generation`"
@@ -1688,7 +1725,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Input token count"
-msgstr ""
+msgstr "입력 토큰 수"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "`150`"
@@ -1700,7 +1737,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Output token count"
-msgstr ""
+msgstr "출력 토큰 수"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "`42`"
@@ -1712,7 +1749,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Tool being called"
-msgstr ""
+msgstr "호출되는 도구"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "`web_search`, `read_channel`"
@@ -1724,7 +1761,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Tool call identifier"
-msgstr ""
+msgstr "도구 호출 식별자"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "`call_abc123`"
@@ -1736,7 +1773,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "MCP server name"
-msgstr ""
+msgstr "MCP 서버 이름"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "`github-server`"
@@ -1748,7 +1785,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "MCP tool name"
-msgstr ""
+msgstr "MCP 도구 이름"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "`search_issues`"
@@ -1760,7 +1797,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Requesting user ID"
-msgstr ""
+msgstr "요청 사용자 ID"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "`abc123def456`"
@@ -1772,7 +1809,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Channel ID"
-msgstr ""
+msgstr "채널 ID"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "`agents.post.id`"
@@ -1780,7 +1817,7 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Post ID"
-msgstr ""
+msgstr "글 ID"
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "`agents.thread.root_post.id`"
@@ -1788,67 +1825,77 @@ msgstr ""
 
 #: ../../source/_generated/agents/docs/admin_guide.md
 msgid "Root post ID for thread correlation"
-msgstr ""
+msgstr "스레드 상관관계를 위한 루트 글 ID"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:436
 msgid "Backup and restore"
-msgstr ""
+msgstr "백업 및 복원"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:438
 msgid ""
 "The plugin stores agent data across both plugin configuration and plugin "
 "database tables. To backup:"
 msgstr ""
+"이 플러그인은 에이전트 데이터를 플러그인 구성과 플러그인 데이터베이스 테이블 모두에 "
+"저장합니다. 백업하려면:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:440
 msgid "Ensure your regular Mattermost backup includes plugin configuration data."
-msgstr ""
+msgstr "정기 OKR.BEST 백업에 플러그인 구성 데이터가 포함되어 있는지 확인하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:441
 msgid ""
 "Include plugin database tables in your normal backup and restore process."
 " In particular:"
 msgstr ""
+"일반 백업 및 복원 프로세스에 플러그인 데이터베이스 테이블을 포함하세요. 특히:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:442
 msgid "`Agents_UserAgents` for agents created or managed from the **Agents** page"
-msgstr ""
+msgstr "**Agents** 페이지에서 생성하거나 관리하는 에이전트의 경우 `Agents_UserAgents`"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:443
 msgid ""
 "`LLM_CustomPrompts` and `LLM_CustomPromptPins` for custom prompt "
 "templates and prompt pins"
 msgstr ""
+"사용자 정의 프롬프트 템플릿과 프롬프트 고정의 경우 `LLM_CustomPrompts`와 "
+"`LLM_CustomPromptPins`"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:444
 msgid ""
 "For larger deployments, consider backing up indexed vector data "
 "separately."
 msgstr ""
+"대규모 배포의 경우, 인덱싱된 벡터 데이터를 별도로 백업하는 것을 고려하세요."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:446
 msgid ""
 "Restoring only plugin configuration isn't sufficient to restore agents "
 "managed from the **Agents** page."
 msgstr ""
+"플러그인 구성만 복원하는 것으로는 **Agents** 페이지에서 관리하는 에이전트를 복원하기에 "
+"충분하지 않습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:448
 msgid "Configuration format"
-msgstr ""
+msgstr "구성 형식"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:450
 msgid "The plugin uses a service-based architecture:"
-msgstr ""
+msgstr "이 플러그인은 서비스 기반 아키텍처를 사용합니다:"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:452
 msgid ""
 "`PluginSettings.Plugins[\"mattermost-ai\"][\"config\"]` stores plugin-"
 "wide settings and AI service configurations, including `defaultBotName`"
 msgstr ""
+"`PluginSettings.Plugins[\"mattermost-ai\"][\"config\"]`는 `defaultBotName`을 "
+"포함한 플러그인 전체 설정과 AI 서비스 구성을 저장합니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:453
 msgid "Agents are stored separately in the `Agents_UserAgents` table"
-msgstr ""
+msgstr "에이전트는 `Agents_UserAgents` 테이블에 별도로 저장됩니다"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:455
 msgid ""
@@ -1856,10 +1903,12 @@ msgid ""
 "configuration while keeping agent lifecycle and access data out of "
 "`config.bots`."
 msgstr ""
+"이러한 분리를 통해 여러 에이전트가 동일한 LLM 서비스 구성을 공유하면서도 에이전트 수명 "
+"주기 및 접근 데이터를 `config.bots` 외부에 유지할 수 있습니다."
 
 #: ../../source/_generated/agents/docs/admin_guide.md:457
 msgid "**Configuration structure:**"
-msgstr ""
+msgstr "**구성 구조:**"
 
 #: ../../source/_generated/agents/docs/admin_guide.md:475
 msgid ""
