@@ -21,14 +21,14 @@ msgstr ""
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:2
 msgid "Deploy Grafana Loki for centralized logging"
-msgstr ""
+msgstr "중앙 집중식 로깅을 위한 Grafana Loki 배포"
 
 #: ../../source/_static/badges/entry-ent.rst:9
 msgid ""
 "|plans-img-yellow| Available on `Entry, Enterprise, and Enterprise "
 "Advanced plans <https://mattermost.com/pricing/>`__ (not available on "
 "Professional)"
-msgstr ""
+msgstr "|plans-img-yellow| `Entry, Enterprise, Enterprise Advanced 플랜 <https://mattermost.com/pricing/>`__\ 에서 사용할 수 있습니다(Professional에서는 사용할 수 없음)"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -44,31 +44,31 @@ msgid ""
 "counts), Loki collects **logs** — giving your operations team the ability"
 " to search, filter, and correlate Mattermost application logs across all "
 "servers from a single Grafana interface."
-msgstr ""
+msgstr "이 가이드는 중앙 집중식 로그 집계를 위해 `Grafana Loki <https://grafana.com/oss/loki/>`__\ 를 추가하여 기존 `Prometheus 및 Grafana 성능 모니터링 배포 </administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring>`_\ 를 확장합니다. Prometheus가 **지표**(CPU, 요청 지연 시간, goroutine 수)를 수집하는 반면, Loki는 **로그**\ 를 수집합니다. 이를 통해 운영 팀은 단일 Grafana 인터페이스에서 모든 서버의 OKR.BEST 애플리케이션 로그를 검색, 필터링, 연관 지을 수 있습니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:9
 msgid "With Loki in place you can:"
-msgstr ""
+msgstr "Loki를 적용하면 다음을 할 수 있습니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:11
 msgid "Search Mattermost logs across all application servers from Grafana."
-msgstr ""
+msgstr "Grafana에서 모든 애플리케이션 서버의 OKR.BEST 로그를 검색합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:12
 msgid "Filter by log level, HTTP status code, or free-text search."
-msgstr ""
+msgstr "로그 수준, HTTP 상태 코드, 자유 텍스트 검색으로 필터링합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:13
 msgid "Identify the top recurring errors and warnings."
-msgstr ""
+msgstr "가장 자주 반복되는 오류와 경고를 식별합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:14
 msgid "Correlate log events with Prometheus metric spikes on the same timeline."
-msgstr ""
+msgstr "동일한 타임라인에서 로그 이벤트를 Prometheus 지표 급증과 연관 짓습니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:15
 msgid "Optionally collect PostgreSQL database logs alongside application logs."
-msgstr ""
+msgstr "선택적으로 애플리케이션 로그와 함께 PostgreSQL 데이터베이스 로그를 수집합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:19
 msgid ""
@@ -76,112 +76,112 @@ msgid ""
 "following the `performance monitoring guide </administration-guide/scale"
 "/deploy-prometheus-grafana-for-performance-monitoring>`_. Loki and the "
 "OpenTelemetry Collector will be added to that existing infrastructure."
-msgstr ""
+msgstr "이 가이드는 `성능 모니터링 가이드 </administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring>`_\ 를 따라 Prometheus와 Grafana를 이미 배포했다고 가정합니다. Loki와 OpenTelemetry Collector가 기존 인프라에 추가됩니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:22
 msgid "Architecture overview"
-msgstr ""
+msgstr "아키텍처 개요"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:24
 msgid "The deployment adds two components to your monitoring stack:"
-msgstr ""
+msgstr "이 배포는 모니터링 스택에 두 가지 구성 요소를 추가합니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:26
 msgid ""
 "**Loki** — the log aggregation engine, installed on your existing "
 "Grafana/Prometheus monitoring server."
-msgstr ""
+msgstr "**Loki** — 기존 Grafana/Prometheus 모니터링 서버에 설치되는 로그 집계 엔진입니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:27
 msgid ""
 "**OpenTelemetry Collector** — a versatile, industry-standard agent "
 "installed on each Mattermost application server to ship logs."
-msgstr ""
+msgstr "**OpenTelemetry Collector** — 로그를 전송하기 위해 각 OKR.BEST 애플리케이션 서버에 설치되는 다목적 업계 표준 에이전트입니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:56
 msgid "Prerequisites"
-msgstr ""
+msgstr "사전 요구 사항"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:58
 msgid "Before starting, confirm the following:"
-msgstr ""
+msgstr "시작하기 전에 다음을 확인하세요:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:60
 msgid ""
 "Prometheus and Grafana are deployed and collecting Mattermost metrics per"
 " the `performance monitoring guide </administration-guide/scale/deploy-"
 "prometheus-grafana-for-performance-monitoring>`_."
-msgstr ""
+msgstr "`성능 모니터링 가이드 </administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring>`_\ 에 따라 Prometheus와 Grafana가 배포되어 OKR.BEST 지표를 수집하고 있습니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:61
 msgid ""
 "You have **SSH access** with sudo privileges to the monitoring server and"
 " each Mattermost application server."
-msgstr ""
+msgstr "모니터링 서버와 각 OKR.BEST 애플리케이션 서버에 대해 sudo 권한이 있는 **SSH 접근**\ 이 가능합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:62
 msgid ""
 "Mattermost is installed at ``/opt/mattermost`` (the default location). If"
 " your installation path differs, substitute your path wherever "
 "``/opt/mattermost`` appears."
-msgstr ""
+msgstr "OKR.BEST가 ``/opt/mattermost``\ (기본 위치)에 설치되어 있습니다. 설치 경로가 다른 경우 ``/opt/mattermost``\ 가 나타나는 모든 곳을 해당 경로로 바꾸세요."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:63
 msgid ""
 "**Network connectivity**: Each Mattermost server can reach the monitoring"
 " server on **TCP port 3100** (Loki's HTTP API)."
-msgstr ""
+msgstr "**네트워크 연결**: 각 OKR.BEST 서버가 **TCP 포트 3100**(Loki의 HTTP API)에서 모니터링 서버에 연결할 수 있습니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:66
 msgid "Step 1: Verify Mattermost JSON logging"
-msgstr ""
+msgstr "1단계: OKR.BEST JSON 로깅 확인"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:68
 msgid ""
 "Mattermost must be writing JSON-formatted file logs for Loki queries to "
 "work. This is the default on all plans — verify it on each application "
 "server:"
-msgstr ""
+msgstr "Loki 쿼리가 작동하려면 OKR.BEST가 JSON 형식의 파일 로그를 작성하고 있어야 합니다. 이는 모든 플랜에서 기본값입니다. 각 애플리케이션 서버에서 확인하세요:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:74
 msgid "A JSON-formatted line looks like:"
-msgstr ""
+msgstr "JSON 형식의 줄은 다음과 같습니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:80
 msgid ""
 "If you see plain-text output instead, go to **System Console > "
 "Environment > Logging** and set **Output file logs as JSON** to ``true``,"
 " then restart Mattermost:"
-msgstr ""
+msgstr "대신 일반 텍스트 출력이 보이면 **관리자 도구 > 환경 > 로그**\ 로 이동해 **파일 로그를 JSON으로 출력**\ 을 ``true``\ 로 설정한 다음 OKR.BEST를 재시작합니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:87
 msgid "Step 2: Install Loki on the monitoring server"
-msgstr ""
+msgstr "2단계: 모니터링 서버에 Loki 설치"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:89
 msgid ""
 "Install Loki on the same server that runs Grafana and Prometheus. All "
 "commands in this section are run **on the monitoring server**."
-msgstr ""
+msgstr "Grafana와 Prometheus를 실행하는 동일한 서버에 Loki를 설치합니다. 이 섹션의 모든 명령어는 **모니터링 서버에서** 실행합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:93
 msgid ""
 "The commands below use Loki version **3.4.2**. Check the `Loki releases "
 "page <https://github.com/grafana/loki/releases>`_ for the latest version "
 "and substitute the version number as needed."
-msgstr ""
+msgstr "아래 명령어는 Loki 버전 **3.4.2**\ 를 사용합니다. 최신 버전은 `Loki 릴리스 페이지 <https://github.com/grafana/loki/releases>`_\ 에서 확인하고 필요에 따라 버전 번호를 바꾸세요."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:95
 msgid "Create the Loki user, directories, and download the binary:"
-msgstr ""
+msgstr "Loki 사용자와 디렉토리를 만들고 바이너리를 다운로드합니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:113
 msgid "Download and install the production configuration file:"
-msgstr ""
+msgstr "프로덕션 구성 파일을 다운로드해 설치합니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:115
 msgid ":download:`Download loki-config.yaml </samples/loki/loki-config.yaml>`"
-msgstr ""
+msgstr ":download:`loki-config.yaml 다운로드 </samples/loki/loki-config.yaml>`"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:123
 msgid ""
@@ -189,23 +189,23 @@ msgid ""
 "``/opt/loki/loki-config.yaml`` and update the ``retention_period`` value "
 "under ``limits_config``. Loki requires this value in hours — common "
 "values:"
-msgstr ""
+msgstr "**로그 보존**\ 은 기본적으로 **14일**\ 로 설정됩니다. 이를 변경하려면 ``/opt/loki/loki-config.yaml``\ 을 편집하고 ``limits_config`` 아래의 ``retention_period`` 값을 업데이트합니다. Loki는 이 값을 시간 단위로 요구합니다. 일반적인 값은 다음과 같습니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:125
 msgid "``336h`` = 14 days (default)"
-msgstr ""
+msgstr "``336h`` = 14일(기본값)"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:126
 msgid "``720h`` = 30 days"
-msgstr ""
+msgstr "``720h`` = 30일"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:127
 msgid "``2160h`` = 90 days"
-msgstr ""
+msgstr "``2160h`` = 90일"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:128
 msgid "``8760h`` = 365 days"
-msgstr ""
+msgstr "``8760h`` = 365일"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:130
 msgid ""
@@ -214,41 +214,41 @@ msgid ""
 "volume). Monitor ``/opt/loki/data/`` after the first week to project "
 "storage needs. The ``compactor.retention_enabled`` setting must remain "
 "``true`` for retention enforcement to work."
-msgstr ""
+msgstr "보존 기간이 길어지면 디스크 사용량이 증가합니다. 대략적인 기준으로, 적당히 활발한 OKR.BEST 배포에서는 하루에 1~3GB를 예상하세요(로그 볼륨에 따라 달라짐). 저장소 요구량을 예측하려면 첫 주 이후 ``/opt/loki/data/``\ 를 모니터링하세요. 보존 적용이 작동하려면 ``compactor.retention_enabled`` 설정이 ``true``\ 로 유지되어야 합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:132
 msgid "Set ownership:"
-msgstr ""
+msgstr "소유권을 설정합니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:138
 msgid "Create a systemd service file:"
-msgstr ""
+msgstr "systemd 서비스 파일을 만듭니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:164
 msgid "Start Loki:"
-msgstr ""
+msgstr "Loki를 시작합니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:171
 msgid "Verify Loki is running:"
-msgstr ""
+msgstr "Loki가 실행 중인지 확인합니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:178
 msgid ""
 "The ``/ready`` endpoint should return ``ready``. Loki may take 15–20 "
 "seconds after startup before it reports ready — this warmup delay is "
 "normal."
-msgstr ""
+msgstr "``/ready`` 엔드포인트는 ``ready``\ 를 반환해야 합니다. Loki는 시작 후 ready를 보고하기까지 15~20초가 걸릴 수 있으며, 이 워밍업 지연은 정상입니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:181
 msgid "Step 3: Install OpenTelemetry Collector on each Mattermost server"
-msgstr ""
+msgstr "3단계: 각 OKR.BEST 서버에 OpenTelemetry Collector 설치"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:183
 msgid ""
 "The OpenTelemetry (OTel) Collector runs on each Mattermost application "
 "server and pushes logs to Loki. Repeat these steps on **every Mattermost "
 "application server**."
-msgstr ""
+msgstr "OpenTelemetry(OTel) Collector는 각 OKR.BEST 애플리케이션 서버에서 실행되어 로그를 Loki로 푸시합니다. **모든 OKR.BEST 애플리케이션 서버**\ 에서 이 단계를 반복하세요."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:187
 msgid ""
@@ -256,231 +256,231 @@ msgid ""
 "monitoring server, ``<HOSTNAME>`` with this server's hostname (e.g., "
 "``mm-app-01``), and ``<SERVICE_NAME>`` with the service type (e.g., "
 "``mattermost`` or ``postgres``)."
-msgstr ""
+msgstr "``<LOKI_HOST>``\ 를 모니터링 서버의 IP 주소 또는 호스트 이름으로, ``<HOSTNAME>``\ 을 이 서버의 호스트 이름(예: ``mm-app-01``)으로, ``<SERVICE_NAME>``\ 을 서비스 유형(예: ``mattermost`` 또는 ``postgres``)으로 바꿉니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:189
 msgid "Install the OTel Collector Contrib distribution:"
-msgstr ""
+msgstr "OTel Collector Contrib 배포판을 설치합니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:200
 msgid ""
 "The installation process automatically creates a system user and group "
 "named ``otelcol-contrib``."
-msgstr ""
+msgstr "설치 과정에서 ``otelcol-contrib``\ 라는 이름의 시스템 사용자와 그룹이 자동으로 생성됩니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:202
 msgid "Download and edit the OpenTelemetry Collector configuration:"
-msgstr ""
+msgstr "OpenTelemetry Collector 구성을 다운로드해 편집합니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:204
 msgid ""
 ":download:`Download otel-collector-config-mattermost.yaml </samples/loki"
 "/otel-collector-config-mattermost.yaml>`"
-msgstr ""
+msgstr ":download:`otel-collector-config-mattermost.yaml 다운로드 </samples/loki/otel-collector-config-mattermost.yaml>`"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:210
 msgid "Edit ``/etc/otelcol-contrib/config.yaml`` and replace the placeholders:"
-msgstr ""
+msgstr "``/etc/otelcol-contrib/config.yaml``\ 을 편집하고 자리 표시자를 바꿉니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:212
 msgid "Replace ``<LOKI_HOST>`` with your monitoring server's address."
-msgstr ""
+msgstr "``<LOKI_HOST>``\ 를 모니터링 서버 주소로 바꿉니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:213
 msgid "Replace ``<HOSTNAME>`` with this server's hostname."
-msgstr ""
+msgstr "``<HOSTNAME>``\ 을 이 서버의 호스트 이름으로 바꿉니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:214
 msgid "Replace ``<SERVICE_NAME>`` with the service type (e.g., ``mattermost``)."
-msgstr ""
+msgstr "``<SERVICE_NAME>``\ 을 서비스 유형(예: ``mattermost``)으로 바꿉니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:220
 msgid "Grant the collector read access to the Mattermost log directory:"
-msgstr ""
+msgstr "컬렉터에 OKR.BEST 로그 디렉토리에 대한 읽기 접근 권한을 부여합니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:232
 msgid "Restart the service:"
-msgstr ""
+msgstr "서비스를 재시작합니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:239
 msgid "Verify the collector is running and shipping logs:"
-msgstr ""
+msgstr "컬렉터가 실행 중이며 로그를 전송하고 있는지 확인합니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:247
 msgid "Step 4: Add Loki as a data source in Grafana"
-msgstr ""
+msgstr "4단계: Grafana에서 Loki를 데이터 소스로 추가"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:249
 msgid "Log in to Grafana (default: ``http://<monitoring-server>:3000``)."
-msgstr ""
+msgstr "Grafana에 로그인합니다(기본값: ``http://<monitoring-server>:3000``)."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:250
 msgid "Navigate to **Administration > Data Sources > Add data source**."
-msgstr ""
+msgstr "**Administration > Data Sources > Add data source**\ 로 이동합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:251
 msgid "Select **Loki** from the list."
-msgstr ""
+msgstr "목록에서 **Loki**\ 를 선택합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:252
 msgid "Configure the connection:"
-msgstr ""
+msgstr "연결을 구성합니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:254
 msgid "**Name**: ``Loki``"
-msgstr ""
+msgstr "**Name**: ``Loki``"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:255
 msgid "**URL**: ``http://localhost:3100`` (since Loki is colocated with Grafana)"
-msgstr ""
+msgstr "**URL**: ``http://localhost:3100``(Loki가 Grafana와 같은 위치에 있으므로)"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:256
 msgid "Select **Save & test**. Grafana should confirm the data source is working."
-msgstr ""
+msgstr "**Save & test**\ 를 선택합니다. Grafana가 데이터 소스가 작동하는지 확인해야 합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:259
 msgid "Step 5: Import the Mattermost Loki dashboard"
-msgstr ""
+msgstr "5단계: Mattermost Loki 대시보드 가져오기"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:261
 msgid ""
 "A pre-built Grafana dashboard is recommended for monitoring your logs. "
 "This dashboard is provided as a basic example:"
-msgstr ""
+msgstr "로그를 모니터링하려면 사전 구축된 Grafana 대시보드를 권장합니다. 이 대시보드는 기본 예제로 제공됩니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:263
 msgid ""
 ":download:`Download the Mattermost Loki Logs dashboard JSON </samples"
 "/grafana-dashboards/mattermost-loki-logs.json>`"
-msgstr ""
+msgstr ":download:`Mattermost Loki Logs 대시보드 JSON 다운로드 </samples/grafana-dashboards/mattermost-loki-logs.json>`"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:267
 msgid ""
 "While the dashboard provides a useful starting point, users can gain full"
 " query flexibility using the **Explore** tab in Grafana to build custom "
 "LogQL queries on the fly."
-msgstr ""
+msgstr "대시보드는 유용한 시작점을 제공하지만, 사용자는 Grafana의 **Explore** 탭을 사용해 사용자 정의 LogQL 쿼리를 즉석에서 구성하여 완전한 쿼리 유연성을 얻을 수 있습니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:269
 msgid "The dashboard provides:"
-msgstr ""
+msgstr "대시보드는 다음을 제공합니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:271
 msgid "**Log Volume by Level** — stacked bar chart showing log rates by severity."
-msgstr ""
+msgstr "**Log Volume by Level** — 심각도별 로그 비율을 보여주는 누적 막대 차트입니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:272
 msgid ""
 "**Error / Warning / Total counters** — stat panels for the selected time "
 "range."
-msgstr ""
+msgstr "**Error / Warning / Total counters** — 선택한 시간 범위에 대한 통계 패널입니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:273
 msgid ""
 "**HTTP 4xx/5xx count** — quick visibility into application-level HTTP "
 "errors."
-msgstr ""
+msgstr "**HTTP 4xx/5xx count** — 애플리케이션 수준의 HTTP 오류를 빠르게 확인할 수 있습니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:274
 msgid ""
 "**Error Rate Over Time** — time series per instance for spotting error "
 "spikes."
-msgstr ""
+msgstr "**Error Rate Over Time** — 오류 급증을 포착하기 위한 인스턴스별 시계열입니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:275
 msgid "**Top Error Messages** — table ranking the most frequent errors."
-msgstr ""
+msgstr "**Top Error Messages** — 가장 빈번한 오류의 순위를 매기는 표입니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:276
 msgid ""
 "**Log Browser** — searchable, filterable log panel with level and free-"
 "text variables."
-msgstr ""
+msgstr "**Log Browser** — 수준 및 자유 텍스트 변수로 검색·필터링할 수 있는 로그 패널입니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:278
 msgid "To import the dashboard:"
-msgstr ""
+msgstr "대시보드를 가져오려면:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:280
 msgid "In Grafana, go to **Dashboards > New > Import**."
-msgstr ""
+msgstr "Grafana에서 **Dashboards > New > Import**\ 로 이동합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:281
 msgid ""
 "Select **Upload JSON file** and choose the downloaded ``mattermost-loki-"
 "logs.json`` file."
-msgstr ""
+msgstr "**Upload JSON file**\ 을 선택하고 다운로드한 ``mattermost-loki-logs.json`` 파일을 선택합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:282
 msgid "On the import screen, select your **Loki** data source from the dropdown."
-msgstr ""
+msgstr "가져오기 화면에서 드롭다운에서 **Loki** 데이터 소스를 선택합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:283
 msgid "Select **Import**."
-msgstr ""
+msgstr "**Import**\ 를 선택합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:286
 msgid "Step 6: Useful LogQL queries"
-msgstr ""
+msgstr "6단계: 유용한 LogQL 쿼리"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:288
 msgid ""
 "You can run these queries directly in **Grafana Explore** (select the "
 "Loki data source) or use them to build additional dashboard panels."
-msgstr ""
+msgstr "이 쿼리를 **Grafana Explore**\ 에서 직접 실행하거나(Loki 데이터 소스 선택) 추가 대시보드 패널을 구성하는 데 사용할 수 있습니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:290
 msgid "**Search all Mattermost logs:**"
-msgstr ""
+msgstr "**모든 OKR.BEST 로그 검색:**"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:296
 msgid "**Filter by log level:**"
-msgstr ""
+msgstr "**로그 수준으로 필터링:**"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:302
 msgid "**Search for all HTTP 4xx responses:**"
-msgstr ""
+msgstr "**모든 HTTP 4xx 응답 검색:**"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:308
 msgid "**Search for all HTTP 5xx responses:**"
-msgstr ""
+msgstr "**모든 HTTP 5xx 응답 검색:**"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:314
 msgid "**Top 5 error messages over 5-minute windows:**"
-msgstr ""
+msgstr "**5분 단위 상위 5개 오류 메시지:**"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:320
 msgid "**Count errors by message over 5-minute windows:**"
-msgstr ""
+msgstr "**5분 단위로 메시지별 오류 수 집계:**"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:326
 msgid "**Free-text search (e.g., plugin errors):**"
-msgstr ""
+msgstr "**자유 텍스트 검색(예: 플러그인 오류):**"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:332
 msgid "**Authentication-related log lines:**"
-msgstr ""
+msgstr "**인증 관련 로그 줄:**"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:338
 msgid "**Logs from a specific server instance:**"
-msgstr ""
+msgstr "**특정 서버 인스턴스의 로그:**"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:346
 msgid ""
 "For a full LogQL reference, see the `Grafana Loki LogQL documentation "
 "<https://grafana.com/docs/loki/latest/query/>`_."
-msgstr ""
+msgstr "전체 LogQL 레퍼런스는 `Grafana Loki LogQL 문서 <https://grafana.com/docs/loki/latest/query/>`_\ 를 참고하세요."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:349
 msgid "Optional: Add PostgreSQL log collection"
-msgstr ""
+msgstr "선택 사항: PostgreSQL 로그 수집 추가"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:351
 msgid ""
 "If your PostgreSQL database runs on a dedicated server (not RDS), you can"
 " ship its logs to Loki as well. This is useful for correlating slow "
 "queries or database errors with Mattermost application events."
-msgstr ""
+msgstr "PostgreSQL 데이터베이스가 (RDS가 아닌) 전용 서버에서 실행되는 경우 해당 로그도 Loki로 전송할 수 있습니다. 이는 느린 쿼리나 데이터베이스 오류를 OKR.BEST 애플리케이션 이벤트와 연관 짓는 데 유용합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:355
 msgid ""
@@ -488,13 +488,13 @@ msgid ""
 "Install the OpenTelemetry Collector on the PostgreSQL server using the "
 "same steps from **Step 3**, then use this configuration file instead of "
 "the Mattermost one:"
-msgstr ""
+msgstr "PostgreSQL 로그 수집을 위한 별도의 구성 파일이 제공됩니다. **3단계**\ 와 동일한 단계를 사용해 PostgreSQL 서버에 OpenTelemetry Collector를 설치한 다음, OKR.BEST용 대신 이 구성 파일을 사용합니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:357
 msgid ""
 ":download:`Download otel-collector-config-postgres.yaml </samples/loki"
 "/otel-collector-config-postgres.yaml>`"
-msgstr ""
+msgstr ":download:`otel-collector-config-postgres.yaml 다운로드 </samples/loki/otel-collector-config-postgres.yaml>`"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:359
 msgid ""
@@ -502,30 +502,30 @@ msgid ""
 "(``/var/log/postgresql/*.json``). Replace the same ``<LOKI_HOST>``, "
 "``<HOSTNAME>``, and ``<SERVICE_NAME>`` placeholders as described in Step "
 "3."
-msgstr ""
+msgstr "PostgreSQL 구성은 일반적인 Ubuntu/Debian JSON 로그 경로(``/var/log/postgresql/*.json``)를 처리합니다. 3단계에서 설명한 것과 동일한 ``<LOKI_HOST>``, ``<HOSTNAME>``, ``<SERVICE_NAME>`` 자리 표시자를 바꿉니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:361
 #, python-brace-format
 msgid ""
 "Once running, PostgreSQL logs appear in Grafana under the label "
 "``{service_name=\"postgres\"}``:"
-msgstr ""
+msgstr "실행되면 PostgreSQL 로그가 Grafana에 ``{service_name=\"postgres\"}`` 레이블 아래에 표시됩니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:368
 msgid "Verification and troubleshooting"
-msgstr ""
+msgstr "확인 및 문제 해결"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:370
 msgid "**End-to-end verification checklist:**"
-msgstr ""
+msgstr "**엔드 투 엔드 확인 체크리스트:**"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:372
 msgid "Loki is healthy:"
-msgstr ""
+msgstr "Loki가 정상입니다:"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:379
 msgid "OpenTelemetry Collector is shipping logs (run on each Mattermost server):"
-msgstr ""
+msgstr "OpenTelemetry Collector가 로그를 전송하고 있습니다(각 OKR.BEST 서버에서 실행):"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:386
 #, python-brace-format
@@ -533,74 +533,74 @@ msgid ""
 "Logs are visible in Grafana: Go to **Explore**, select the **Loki** data "
 "source, and run ``{service_name=\"mattermost\"}``. You should see recent "
 "log lines."
-msgstr ""
+msgstr "Grafana에서 로그가 보입니다: **Explore**\ 로 이동해 **Loki** 데이터 소스를 선택하고 ``{service_name=\"mattermost\"}``\ 를 실행합니다. 최근 로그 줄이 보여야 합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:388
 msgid ""
 "The dashboard loads: Open the **Mattermost Log Aggregation** dashboard "
 "and confirm panels are populated. (Note: You may need to update dashboard"
 " queries to use `service_name` and `service_instance_id`)."
-msgstr ""
+msgstr "대시보드가 로드됩니다: **Mattermost Log Aggregation** 대시보드를 열고 패널이 채워졌는지 확인합니다. (참고: `service_name`\ 과 `service_instance_id`\ 를 사용하도록 대시보드 쿼리를 업데이트해야 할 수 있습니다.)"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:390
 msgid "**Common issues:**"
-msgstr ""
+msgstr "**일반적인 문제:**"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:396
 msgid "Symptom"
-msgstr ""
+msgstr "증상"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:397
 msgid "Resolution"
-msgstr ""
+msgstr "해결 방법"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:398
 msgid "OTel Col target shows errors"
-msgstr ""
+msgstr "OTel Col 대상에 오류가 표시됨"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:399
 msgid ""
 "Verify the file paths in the config match the actual log file location. "
 "Check file permissions (``otelcol-contrib`` user must be able to read the"
 " file)."
-msgstr ""
+msgstr "구성의 파일 경로가 실제 로그 파일 위치와 일치하는지 확인합니다. 파일 권한을 확인합니다(``otelcol-contrib`` 사용자가 파일을 읽을 수 있어야 함)."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:400
 msgid "``connection refused`` on port 3100"
-msgstr ""
+msgstr "포트 3100에서 ``connection refused``"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:401
 msgid ""
 "Ensure Loki is running (``systemctl status loki``). Check firewall rules:"
 " ``sudo iptables -L -n | grep 3100`` or check your AWS security group "
 "allows TCP 3100 from the Mattermost servers."
-msgstr ""
+msgstr "Loki가 실행 중인지 확인합니다(``systemctl status loki``). 방화벽 규칙을 확인합니다: ``sudo iptables -L -n | grep 3100`` 또는 AWS 보안 그룹이 OKR.BEST 서버에서 TCP 3100을 허용하는지 확인합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:402
 msgid "Logs appear in Loki but fields aren't parsed"
-msgstr ""
+msgstr "로그가 Loki에 표시되지만 필드가 파싱되지 않음"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:403
 msgid ""
 "Confirm Mattermost is writing JSON-formatted logs (see Step 1). Check "
 "that the ``json_parser`` operator (for Postgres) or OTel processors are "
 "correctly configured."
-msgstr ""
+msgstr "OKR.BEST가 JSON 형식 로그를 작성하고 있는지 확인합니다(1단계 참고). ``json_parser`` 연산자(Postgres용) 또는 OTel 프로세서가 올바르게 구성되어 있는지 확인합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:404
 msgid "``/ready`` returns an error"
-msgstr ""
+msgstr "``/ready``\\ 가 오류를 반환함"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:405
 msgid ""
 "Check Loki logs: ``sudo journalctl -u loki -f``. Common cause: "
 "permissions on ``/opt/loki/data/`` — ensure the ``loki`` user owns the "
 "directory."
-msgstr ""
+msgstr "Loki 로그를 확인합니다: ``sudo journalctl -u loki -f``. 일반적인 원인: ``/opt/loki/data/``\ 에 대한 권한 — ``loki`` 사용자가 디렉토리를 소유하고 있는지 확인합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:406
 msgid "Old logs are not being deleted"
-msgstr ""
+msgstr "오래된 로그가 삭제되지 않음"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:407
 msgid ""
@@ -609,15 +609,15 @@ msgid ""
 "compactor runs on the ``compaction_interval`` (default: 10 minutes) and "
 "applies a ``retention_delete_delay`` (default: 2 hours) before actually "
 "removing data."
-msgstr ""
+msgstr "Loki 구성에 ``compactor.retention_enabled: true``\ 와 ``limits_config.retention_period``\ 가 모두 설정되어 있는지 확인합니다. 컴팩터는 ``compaction_interval``(기본값: 10분)에 따라 실행되며 실제로 데이터를 제거하기 전에 ``retention_delete_delay``(기본값: 2시간)를 적용합니다."
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:408
 msgid "High disk usage on the monitoring server"
-msgstr ""
+msgstr "모니터링 서버의 높은 디스크 사용량"
 
 #: ../../source/administration-guide/scale/deploy-grafana-loki-for-centralized-logging.rst:409
 msgid ""
 "Review the retention period in the configuration. Consider reducing it or"
 " adding more disk. Check ``du -sh /opt/loki/data/`` to see current usage."
-msgstr ""
+msgstr "구성의 보존 기간을 검토합니다. 보존 기간을 줄이거나 디스크를 추가하는 것을 고려하세요. 현재 사용량을 보려면 ``du -sh /opt/loki/data/``\ 를 확인합니다."
 
