@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/scripts/generate-certificates/gencert.md:1
 msgid "gencert.sh for Mattermost"
-msgstr ""
+msgstr "OKR.BEST용 gencert.sh"
 
 #: ../../source/_static/badges/all-commercial.md:6
 msgid ""
@@ -29,6 +29,9 @@ msgid ""
 "Available on [Entry, Professional, Enterprise, and Enterprise "
 "Advanced](https://mattermost.com/pricing/) plans"
 msgstr ""
+"![plans-img-yellow](/_static/images/badges/flag_icon_yellow.svg) "
+"[Entry, Professional, Enterprise, Enterprise "
+"Advanced](https://mattermost.com/pricing/) 플랜에서 사용 가능"
 
 #: ../../source/_static/badges/all-commercial.md:6
 msgid "plans-img-yellow"
@@ -42,104 +45,113 @@ msgid ""
 "saml-okta.html#before-you-begin) documentation for details on generating "
 "encryption certificates for encrypting the SAML connection."
 msgstr ""
+"여러 URL/IP에 사용할 자체 서명 x509v3 인증서를 생성합니다. SAML 연결 암호화를 위한 "
+"암호화 인증서 생성에 대한 자세한 내용은 [Okta로 Mattermost SAML 2.0 "
+"구성](https://docs.mattermost.com/administration-guide/onboard/sso-"
+"saml-okta.html#before-you-begin) 문서를 참고하세요."
 
 #: ../../source/scripts/generate-certificates/gencert.md:8
 msgid "Generate Certificates"
-msgstr ""
+msgstr "인증서 생성"
 
 #: ../../source/scripts/generate-certificates/gencert.md:10
 msgid "Default values"
-msgstr ""
+msgstr "기본값"
 
 #: ../../source/scripts/generate-certificates/gencert.md:16
 msgid "Custom values"
-msgstr ""
+msgstr "사용자 지정 값"
 
 #: ../../source/scripts/generate-certificates/gencert.md:18
 msgid ""
 "You may change the `CRT_CN` and `CRT_SAN` values of the above command "
 "based on your needs."
 msgstr ""
+"필요에 따라 위 명령의 `CRT_CN`과 `CRT_SAN` 값을 변경할 수 있습니다."
 
 #: ../../source/scripts/generate-certificates/gencert.md:20
 msgid "Additionally you may use any of the following environment variables :"
-msgstr ""
+msgstr "추가로 다음 환경 변수를 사용할 수 있습니다:"
 
 #: ../../source/scripts/generate-certificates/gencert.md:21
 msgid ""
 "`CRT_FILENAME`: the name of the cert and key files i.e. "
 "`<CRT_FILENAME>.key` and `<CRT_FILENAME>.crt`"
 msgstr ""
+"`CRT_FILENAME`: 인증서·키 파일의 이름. 즉 `<CRT_FILENAME>.key`와 "
+"`<CRT_FILENAME>.crt`"
 
 #: ../../source/scripts/generate-certificates/gencert.md:22
 msgid "`CRT_C` : Country value"
-msgstr ""
+msgstr "`CRT_C` : 국가(Country) 값"
 
 #: ../../source/scripts/generate-certificates/gencert.md:23
 msgid "`CRT_L` : Locality value"
-msgstr ""
+msgstr "`CRT_L` : 지역(Locality) 값"
 
 #: ../../source/scripts/generate-certificates/gencert.md:24
 msgid "`CRT_O` : Organization value"
-msgstr ""
+msgstr "`CRT_O` : 조직(Organization) 값"
 
 #: ../../source/scripts/generate-certificates/gencert.md:25
 msgid "`CRT_OU` : Organizational Unit value"
-msgstr ""
+msgstr "`CRT_OU` : 조직 단위(Organizational Unit) 값"
 
 #: ../../source/scripts/generate-certificates/gencert.md:26
 msgid "`CRT_CN` : Common Name value"
-msgstr ""
+msgstr "`CRT_CN` : 일반 이름(Common Name) 값"
 
 #: ../../source/scripts/generate-certificates/gencert.md:27
 msgid "`CRT_SAN` : SubjectAltName value"
-msgstr ""
+msgstr "`CRT_SAN` : SubjectAltName 값"
 
 #: ../../source/scripts/generate-certificates/gencert.md:29
 msgid "Result"
-msgstr ""
+msgstr "결과"
 
 #: ../../source/scripts/generate-certificates/gencert.md:31
 msgid "The command will generate two files:"
-msgstr ""
+msgstr "이 명령은 두 개의 파일을 생성합니다:"
 
 #: ../../source/scripts/generate-certificates/gencert.md:32
 msgid "pkcs#8 private key : `mattermost-x509.key` (unless you set `CRT_FILENAME`)"
-msgstr ""
+msgstr "pkcs#8 개인 키 : `mattermost-x509.key` (`CRT_FILENAME`을 설정하지 않은 경우)"
 
 #: ../../source/scripts/generate-certificates/gencert.md:33
 msgid "x509v3 certificate : `mattermost-x509.crt` (unless you set `CRT_FILENAME`)"
-msgstr ""
+msgstr "x509v3 인증서 : `mattermost-x509.crt` (`CRT_FILENAME`을 설정하지 않은 경우)"
 
 #: ../../source/scripts/generate-certificates/gencert.md:35
 msgid ""
 "You can confirm the certificate content by using the following standard "
 "`x509` command:"
 msgstr ""
+"다음 표준 `x509` 명령으로 인증서 내용을 확인할 수 있습니다:"
 
 #: ../../source/scripts/generate-certificates/gencert.md:41
 msgid "Secure/Unsecure Certificates"
-msgstr ""
+msgstr "인증서 보안 설정/해제"
 
 #: ../../source/scripts/generate-certificates/gencert.md:43
 msgid "The generated private key is passwordless by default."
-msgstr ""
+msgstr "생성된 개인 키는 기본적으로 비밀번호가 없습니다."
 
 #: ../../source/scripts/generate-certificates/gencert.md:45
 msgid "You can secure/unsecure the certificates using standard `pkcs8` commands:"
-msgstr ""
+msgstr "표준 `pkcs8` 명령으로 인증서의 보안을 설정하거나 해제할 수 있습니다:"
 
 #: ../../source/scripts/generate-certificates/gencert.md:55
 msgid "Additional Reading"
-msgstr ""
+msgstr "추가 읽을거리"
 
 #: ../../source/scripts/generate-certificates/gencert.md:57
 msgid "Below are additional guides and documentation for optional reading:"
-msgstr ""
+msgstr "아래는 선택적으로 읽어 볼 추가 가이드와 문서입니다:"
 
 #: ../../source/scripts/generate-certificates/gencert.md:58
 msgid ""
 "[SubjectAltName page on "
 "wikipedia](https://en.wikipedia.org/wiki/SubjectAltName)"
 msgstr ""
+"[위키백과의 SubjectAltName 문서](https://en.wikipedia.org/wiki/SubjectAltName)"
 
