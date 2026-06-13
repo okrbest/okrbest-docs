@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the Mattermost package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Mattermost \n"
@@ -21,41 +20,43 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:32
 msgid "Okta SAML Configuration"
-msgstr ""
+msgstr "Okta SAML 구성"
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:32
 msgid "Generate self-signed certificates"
-msgstr ""
+msgstr "자체 서명 인증서 생성"
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:32
 msgid "OneLogin SAML Configuration"
-msgstr ""
+msgstr "OneLogin SAML 구성"
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:32
 msgid "Microsoft ADFS SAML Configuration for Windows Server 2012"
-msgstr ""
+msgstr "Windows Server 2012용 Microsoft ADFS SAML 구성"
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:32
 msgid "Microsoft ADFS SAML Configuration for Windows Server 2016"
-msgstr ""
+msgstr "Windows Server 2016용 Microsoft ADFS SAML 구성"
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:32
 msgid "Microsoft Entra ID SAML Configuration"
-msgstr ""
+msgstr "Microsoft Entra ID SAML 구성"
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:32
 msgid "Keycloak SAML Configuration"
-msgstr ""
+msgstr "Keycloak SAML 구성"
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:2
 msgid "SAML Single Sign-On"
-msgstr ""
+msgstr "SAML Single Sign-On"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -69,6 +70,9 @@ msgid ""
 "credentials to service providers. Mattermost can be configured to act as "
 "a SAML 2.0 Service Provider."
 msgstr ""
+"Single sign-on(SSO)은 사용자가 자격 증명을 다시 입력하지 않고 단일 사용자 ID와 암호로 여러 애플리케이션에 "
+"로그인할 수 있게 하는 방식입니다. SAML 표준은 ID 공급자가 서비스 공급자에게 자격 증명을 전달할 수 있게 합니다. "
+"OKR.BEST는 SAML 2.0 서비스 공급자로 동작하도록 구성할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:9
 msgid ""
@@ -77,6 +81,9 @@ msgid ""
 "identity providers (IDPs), please see links below for more details on how"
 " to configure SAML with these providers."
 msgstr ""
+"OKR.BEST는 SAML 2.0 서비스 공급자로 동작하도록 구성할 수 있으며, OKR.BEST는 Okta, OneLogin, "
+"Microsoft ADFS를 ID 공급자(IDP)로 공식 지원합니다. 이러한 공급자로 SAML을 구성하는 방법에 대한 자세한 내용은 "
+"아래 링크를 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:11
 msgid ""
@@ -89,16 +96,21 @@ msgid ""
 "identity provider. You can also set up MFA on top of your SAML provider "
 "for additional security."
 msgstr ""
+"공식적으로 지원되는 ID 공급자 외에도 사용자 지정 IdP용 SAML을 구성할 수 있습니다. 예를 들어 고객들은 miniOrange, "
+"Azure AD, DUO, PingFederate, Keycloak, SimpleSAMLphp를 사용자 지정 IdP로 성공적으로 설정한 "
+"바 있습니다. 이러한 ID 공급자에 대해서는 테스트하지 않으므로, 새 버전의 OKR.BEST가 사용 중인 ID 공급자와 동작하는지 "
+"스테이징 환경에서 확인하는 것이 중요합니다. 추가 보안을 위해 SAML 공급자 위에 MFA를 설정할 수도 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:13
 msgid "The SAML Single sign-on integration offers the following benefits:"
-msgstr ""
+msgstr "SAML Single sign-on 통합은 다음과 같은 이점을 제공합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:15
 msgid ""
 "**Single sign-on.** Users can log in to Mattermost with their SAML "
 "credentials."
 msgstr ""
+"**Single sign-on.** 사용자는 SAML 자격 증명으로 OKR.BEST에 로그인할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:16
 msgid ""
@@ -106,6 +118,8 @@ msgid ""
 "pull user attributes from SAML upon login, such as full name, email, and "
 "username."
 msgstr ""
+"**중앙 집중식 ID 관리.** OKR.BEST 계정은 로그인 시 전체 이름, 이메일, 사용자 이름 같은 사용자 속성을 SAML에서 "
+"자동으로 가져옵니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:17
 msgid ""
@@ -113,12 +127,15 @@ msgid ""
 "automatically created the first time a user signs in with their SAML "
 "credentials on the Mattermost server."
 msgstr ""
+"**자동 계정 프로비저닝.** 사용자가 OKR.BEST 서버에서 SAML 자격 증명으로 처음 로그인할 때 OKR.BEST 사용자 "
+"계정이 자동으로 생성됩니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:18
 msgid ""
 "**Sync groups to predefined roles in Mattermost.** Assign team and "
 "channel roles to groups via LDAP Group Sync."
 msgstr ""
+"**OKR.BEST의 사전 정의된 역할에 그룹 동기화.** LDAP 그룹 동기화를 통해 팀 및 채널 역할을 그룹에 할당합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:19
 msgid ""
@@ -126,6 +143,7 @@ msgid ""
 "Administrator access to Mattermost in the System Console using SAML "
 "attributes."
 msgstr ""
+"**관리자 관리와 규정 준수 정렬.** SAML 속성을 사용해 관리자 도구에서 OKR.BEST에 대한 관리자 액세스를 관리합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:22
 msgid ""
@@ -133,12 +151,15 @@ msgid ""
 "attributes nor automatic deprovisioning. However, SAML with AD/LDAP sync "
 "can be configured to support these use cases."
 msgstr ""
+"SAML Single sign-on 자체는 사용자 속성의 주기적 업데이트나 자동 프로비저닝 해제를 지원하지 않습니다. 하지만 "
+"AD/LDAP 동기화와 함께 SAML을 구성하면 이러한 사용 사례를 지원할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:23
 msgid ""
 "Account creation and updates is influenced by the attributes configured "
 "for identification."
 msgstr ""
+"계정 생성과 업데이트는 식별을 위해 구성된 속성의 영향을 받습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:25
 msgid ""
@@ -147,6 +168,8 @@ msgid ""
 "set, or if it's set to use the email address, a new account may be "
 "created in Mattermost when the email address changes."
 msgstr ""
+"이메일 주소를 고유 식별자로 사용하고 이메일 주소가 변경되면 OKR.BEST는 이를 새 사용자로 해석할 수 있습니다. ID 속성이 "
+"설정되지 않았거나 이메일 주소를 사용하도록 설정된 경우, 이메일 주소가 변경될 때 OKR.BEST에 새 계정이 생성될 수 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:26
 msgid ""
@@ -157,6 +180,9 @@ msgid ""
 "based on the non-changing ID attribute, ensuring continuity and correct "
 "user identification without duplicate accounts."
 msgstr ""
+"employeeID처럼 변경되지 않는 ID 속성이 구성된 경우 OKR.BEST는 이 일관된 ID를 사용해 사용자 계정을 인식하고 "
+"일치시킬 수 있습니다. 이를 통해 새 계정을 만들지 않고도 이메일 같은 다른 속성을 업데이트할 수 있습니다. 사용자 세부 정보는 "
+"변경되지 않는 ID 속성을 기준으로 업데이트되어 중복 계정 없이 연속성과 올바른 사용자 식별을 보장합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:28
 msgid ""
@@ -164,6 +190,8 @@ msgid ""
 "please be aware that their `issuerURI` field is what Mattermost calls "
 "\"Service Provider Identifier\"."
 msgstr ""
+"인증에 EU-Login 시스템을 사용하도록 OKR.BEST를 구성하는 경우, 해당 `issuerURI` 필드가 OKR.BEST에서 "
+"\"Service Provider Identifier\"라고 부르는 값이라는 점에 유의하세요."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:29
 msgid ""
@@ -172,6 +200,8 @@ msgid ""
 "example from DUO <https://duo.com/blog/the-beer-drinkers-guide-to-"
 "saml>`_."
 msgstr ""
+"SAML에 대한 자세한 내용은 `this article from Varonis <https://www.varonis.com/blog/what-is-saml/>`_\\ 와 "
+"`this conceptual example from DUO <https://duo.com/blog/the-beer-drinkers-guide-to-saml>`_\\ 를 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:30
 msgid ""
@@ -179,10 +209,12 @@ msgid ""
 ":ref:`encryption methods <deployment-guide/encryption-options:saml "
 "encryption support>` Mattermost supports for SAML."
 msgstr ""
+"OKR.BEST가 SAML에 대해 지원하는 :ref:`암호화 방법 <deployment-guide/encryption-options:saml "
+"encryption support>`\\ 에 대한 자세한 내용은 암호화 옵션 문서를 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:45
 msgid "Using SAML attributes to apply roles"
-msgstr ""
+msgstr "SAML 속성을 사용해 역할 적용"
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:47
 msgid ""
@@ -190,40 +222,45 @@ msgid ""
 "access the SAML attribute settings navigate to **System Console > SAML "
 "2.0**."
 msgstr ""
+"속성을 사용해 로그인 시 지정된 사용자에게 역할을 할당할 수 있습니다. SAML 속성 설정에 액세스하려면 **관리자 도구 > SAML "
+"2.0**\\ 으로 이동합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:50
 msgid "Username attribute"
-msgstr ""
+msgstr "사용자 이름 속성"
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:52
 msgid "(Optional) Enter a SAML assertion filter to use when searching for users."
-msgstr ""
+msgstr "(선택 사항) 사용자를 검색할 때 사용할 SAML 어설션 필터를 입력합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:54
 msgid ""
 "Navigate to **System Console > Authentication > SAML 2.0** (or **System "
 "Console > SAML** in versions prior to 5.12)."
 msgstr ""
+"**관리자 도구 > 인증 > SAML 2.0**\\ 으로 이동합니다(또는 5.12 이전 버전에서는 **관리자 도구 > "
+"SAML**)."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:55
 msgid "Complete the **Username Attribute** field."
-msgstr ""
+msgstr "**Username Attribute** 필드를 작성합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:56
 #: ../../source/administration-guide/onboard/sso-saml.rst:70
 #: ../../source/administration-guide/onboard/sso-saml.rst:86
 msgid "Choose **Save**."
-msgstr ""
+msgstr "**Save**\\ 를 선택합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:58
 msgid ""
 "When the user accesses the Mattermost URL, they log in with same username"
 " and password that they use for organizational logins."
 msgstr ""
+"사용자가 OKR.BEST URL에 액세스하면 조직 로그인에 사용하는 것과 동일한 사용자 이름과 암호로 로그인합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:61
 msgid "Guest attribute"
-msgstr ""
+msgstr "게스트 속성"
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:63
 msgid ""
@@ -233,6 +270,9 @@ msgid ""
 "immediately upon first login instead of the default member user role. "
 "This eliminates having to manually assign the role in the System Console."
 msgstr ""
+"활성화하면 OKR.BEST의 ``guest`` 속성은 SAML 어설션이 게스트이고 OKR.BEST 서버에 참여하도록 초대된 외부 "
+"사용자를 식별합니다. 이러한 사용자는 처음 로그인할 때 기본 멤버 사용자 역할 대신 게스트 역할이 즉시 적용됩니다. 따라서 관리자 "
+"도구에서 역할을 수동으로 할당할 필요가 없습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:65
 msgid ""
@@ -243,35 +283,41 @@ msgid ""
 "synchronization processes will automatically demote the member user to "
 "the guest role."
 msgstr ""
+"OKR.BEST 게스트 사용자의 게스트 역할이 SAML 시스템에서 제거되면 동기화 프로세스가 해당 사용자를 멤버 사용자 역할로 "
+"자동 승격하지 않습니다. 이는 **관리자 도구 > 사용자 관리**\\ 에서 수동으로 수행합니다. 멤버 사용자에게 ``guest`` "
+"속성이 추가되면 동기화 프로세스가 멤버 사용자를 게스트 역할로 자동 강등합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:67
 msgid "Enable Guest Access via **System Console > SAML 2.0**."
-msgstr ""
+msgstr "**관리자 도구 > SAML 2.0**\\ 에서 게스트 액세스를 활성화합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:68
 #: ../../source/administration-guide/onboard/sso-saml.rst:83
 msgid "Navigate to **System Console > Authentication > SAML 2.0**."
-msgstr ""
+msgstr "**관리자 도구 > 인증 > SAML 2.0**\\ 으로 이동합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:69
 msgid "Complete the Guest Attribute field."
-msgstr ""
+msgstr "Guest Attribute 필드를 작성합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:72
 msgid ""
 "When a guest logs in for the first time they are presented with a default"
 " landing page until they are added to channels."
 msgstr ""
+"게스트가 처음 로그인하면 채널에 추가될 때까지 기본 랜딩 페이지가 표시됩니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:74
 msgid ""
 "See the :doc:`Guest accounts documentation </administration-guide/onboard"
 "/guest-accounts>` for more information about this feature."
 msgstr ""
+"이 기능에 대한 자세한 내용은 :doc:`게스트 계정 문서 </administration-guide/onboard/guest-"
+"accounts>`\\ 를 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:77
 msgid "Admin attribute"
-msgstr ""
+msgstr "관리자 속성"
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:79
 msgid ""
@@ -280,6 +326,9 @@ msgid ""
 "Mattermost server as system admins. By default, system admins have "
 "complete access to the Mattermost System Console."
 msgstr ""
+"(선택 사항) 시스템 관리자를 지정하기 위한 SAML Assertion의 속성입니다. 쿼리에서 선택된 사용자는 시스템 관리자로 "
+"OKR.BEST 서버에 액세스할 수 있습니다. 기본적으로 시스템 관리자는 OKR.BEST 관리자 도구에 대한 전체 액세스 권한을 "
+"가집니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:81
 msgid ""
@@ -289,14 +338,17 @@ msgid ""
 "recommended that users are manually demoted to members in **System "
 "Console > User Management** to ensure access is restricted immediately."
 msgstr ""
+"이 속성으로 식별된 기존 멤버는 다음 로그인 시 멤버에서 시스템 관리자로 승격됩니다. 다음 로그인은 **관리자 도구 > 세션 길이**"
+"에 설정된 세션 길이를 기준으로 합니다. 액세스가 즉시 제한되도록 하려면 **관리자 도구 > 사용자 관리**\\ 에서 사용자를 "
+"수동으로 멤버로 강등하는 것이 좋습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:84
 msgid "Set **Enable Admin Attribute** to ``true``."
-msgstr ""
+msgstr "**Enable Admin Attribute**\\ 를 ``true``\\ 로 설정합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:85
 msgid "Complete the **Admin Attribute** field."
-msgstr ""
+msgstr "**Admin Attribute** 필드를 작성합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:89
 msgid ""
@@ -307,10 +359,13 @@ msgid ""
 "attribute is not in use, system admins can be manually promoted/demoted "
 "in **System Console > User Management**."
 msgstr ""
+"``admin`` 속성이 ``false``\\ 로 설정되면 멤버의 시스템 관리자 역할은 유지됩니다. 하지만 속성이 제거되거나 변경되면 "
+"해당 속성을 통해 승격된 시스템 관리자는 멤버로 강등되고 관리자 도구 액세스를 유지하지 못합니다. 이 속성을 사용하지 않을 때는 "
+"**관리자 도구 > 사용자 관리**\\ 에서 시스템 관리자를 수동으로 승격하거나 강등할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:92
 msgid "Configuration assistance"
-msgstr ""
+msgstr "구성 지원"
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:94
 msgid ""
@@ -320,10 +375,13 @@ msgid ""
 "Mattermost SAML configuration settings. However, we cannot guarantee your"
 " connection will work with Mattermost."
 msgstr ""
+"사용자 지정 IdP를 구성할 때 OKR.BEST 기술 구성 질문에 답하고, OKR.BEST SAML 구성 설정과 관련된 문제 해결을 "
+"지원하기 위해 IdP 공급자와 협력하는 방식으로 도움을 제공할 수 있습니다. 하지만 OKR.BEST와의 연결이 동작한다고 보장할 수는 "
+"없습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:96
 msgid "For technical documentation on SAML, see :doc:`sso-saml-technical`."
-msgstr ""
+msgstr "SAML 기술 문서는 :doc:`sso-saml-technical`\\ 을 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:98
 msgid ""
@@ -331,6 +389,8 @@ msgid ""
 "see this `documentation "
 "<https://github.com/icelander/mattermost_generate_user_file>`_."
 msgstr ""
+"사용자 지정 IdP용 사용자 파일을 얻는 과정을 지원하려면 이 `documentation "
+"<https://github.com/icelander/mattermost_generate_user_file>`_\\ 을 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-saml.rst:100
 msgid ""
@@ -341,4 +401,6 @@ msgid ""
 "official support of a particular provider on our `feature idea portal "
 "<https://portal.productboard.com/mattermost/33-what-matters-to-you>`_."
 msgstr ""
-
+"OKR.BEST와의 연결이 동작한다고 보장하지 못할 수도 있지만, 가능한 범위에서 기능 개선을 검토하겠습니다. 지원을 받는 방법에 "
+"대한 자세한 내용은 `here <https://mattermost.com/support/>`_\\ 에서 확인할 수 있으며, 특정 "
+"공급자에 대한 공식 지원 요청은 `feature idea portal <https://portal.productboard.com/mattermost/33-what-matters-to-you>`_\\ 에 제출할 수 있습니다."
