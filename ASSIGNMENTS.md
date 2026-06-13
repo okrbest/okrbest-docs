@@ -16,7 +16,7 @@ push가 거부되면 `git pull --rebase origin feat/ko` 후 다시 push — 표 
 | administration-guide/upgrade/ | 13 / ~1,500 | ux-builder | 진행 중 | 2026-06-13 |
 | administration-guide/ (루트 4파일) | 4 / 소량 | ux-builder | 진행 중 | 2026-06-13 |
 | integrations-guide/ | 21 / ~1,400 | ux-builder | 진행 중 | 2026-06-13 |
-| security-guide/ | 8 / ~330 | | 미배정 | |
+| security-guide/ | 8 / ~330 | ux-builder | 완료 | 2026-06-13 |
 | use-case-guide/ | 10 / ~320 | ux-builder | 완료 | 2026-06-13 |
 | get-help/ | 4 / 149 | 메인테이너 | 완료(파일럿) | 2026-06-13 |
 | product-overview/ (체인지로그 제외) | 27 / ~1,000 | 메인테이너 | 완료 | 2026-06-13 |
