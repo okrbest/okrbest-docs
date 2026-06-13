@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:2
 msgid "Desktop App Deployment"
-msgstr ""
+msgstr "데스크톱 앱 배포"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
@@ -40,6 +40,9 @@ msgid ""
 "guide/preferences/customize-desktop-app-experience>` beyond the web-based"
 " experience."
 msgstr ""
+"OKR.BEST 데스크톱 앱은 Windows, macOS, Linux 운영 체제에서 사용할 수 있으며, "
+"웹 기반 환경을 넘어서는 :doc:`추가 기능 </end-user-guide/preferences/customize-"
+"desktop-app-experience>`\\ 을 제공합니다."
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:9
 msgid ""
@@ -49,10 +52,14 @@ msgid ""
 "well as the :doc:`what's changed across releases </product-overview"
 "/desktop-app-changelog>`."
 msgstr ""
+"데스크톱 앱 :ref:`소프트웨어 요구 사항 <deployment-guide/software-hardware-"
+"requirements:desktop apps>`, :doc:`릴리스 및 서버 호환성 </product-overview"
+"/mattermost-desktop-releases>`, :doc:`릴리스별 변경 사항 </product-overview"
+"/desktop-app-changelog>`\\ 에 대해 자세히 알아보세요."
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:12
 msgid "Download"
-msgstr ""
+msgstr "다운로드"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:14
 msgid ""
@@ -63,6 +70,12 @@ msgid ""
 "install>`. We strongly recommend installing the desktop app on a local "
 "drive. Network shares aren't supported."
 msgstr ""
+"`App Store(macOS) <https://www.apple.com/app-store/>`_, `Microsoft "
+"Store(Windows) <https://apps.microsoft.com/home?hl=en-US&gl=US>`_\\ 에서 "
+"OKR.BEST 데스크톱 앱을 다운로드하여 설치하거나 :doc:`패키지 관리자(Linux)를 "
+"사용 </deployment-guide/desktop/linux-desktop-install>`\\ 하세요. 데스크톱 앱은 "
+"로컬 드라이브에 설치할 것을 강력히 권장합니다. 네트워크 공유는 지원되지 "
+"않습니다."
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:16
 msgid ""
@@ -73,22 +86,31 @@ msgid ""
 "**Mattermost > Settings** on Mac and clearing the **Automatically check "
 "for updates** option."
 msgstr ""
+"OKR.BEST에서는 새 데스크톱 앱 릴리스가 제공되면 **Downloads**\\ 에 사용자에게 "
+"알림이 표시됩니다. 사용자를 대신해 데스크톱 앱 배포를 관리하는 경우, "
+"사용자에게 Windows에서는 **… > File > Settings**, Mac에서는 **Mattermost > "
+"Settings**\\ 로 이동해 **Automatically check for updates** 옵션을 해제하여 "
+"데스크톱 업데이트 알림을 비활성화하도록 권장할 수 있습니다."
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:18
 msgid ""
 "See additional deployment options below to manage distribution of the "
 "desktop app to your users."
 msgstr ""
+"사용자에게 데스크톱 앱을 배포하는 것을 관리하려면 아래의 추가 배포 옵션을 "
+"참고하세요."
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:21
 msgid "Windows distribution channels"
-msgstr ""
+msgstr "Windows 배포 채널"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:23
 msgid ""
 "From desktop v6.1, organizations deploying on Windows have 2 primary "
 "distribution options:"
 msgstr ""
+"데스크톱 v6.1부터 Windows에 배포하는 조직에는 두 가지 주요 배포 옵션이 "
+"있습니다:"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:25
 msgid ""
@@ -96,6 +118,9 @@ msgid ""
 "Microsoft Store infrastructure. This is the recommended option for most "
 "organizations seeking streamlined update management."
 msgstr ""
+"**Windows Store**(권장): Microsoft Store 인프라를 통해 자동 업데이트를 "
+"제공합니다. 간소화된 업데이트 관리를 원하는 대부분의 조직에 권장되는 "
+"옵션입니다."
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:26
 msgid ""
@@ -104,6 +129,9 @@ msgid ""
 "</deployment-guide/desktop/desktop-msi-installer-and-group-policy-"
 "install>` documentation for details."
 msgstr ""
+"**MSI 패키지**: 설치 시점을 완전히 제어할 수 있는 전통적인 배포 방식입니다. "
+"자세한 내용은 :doc:`MSI 설치 관리자 및 그룹 정책 가이드 </deployment-guide"
+"/desktop/desktop-msi-installer-and-group-policy-install>` 문서를 참고하세요."
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:28
 msgid ""
@@ -112,110 +140,128 @@ msgid ""
 "APT/RPM) release simultaneously to prevent notification and availability "
 "mismatches across deployment methods."
 msgstr ""
+"데스크톱 v6.1 앱에는 앱 내 업데이트 알림이 포함됩니다. 모든 배포 채널(Windows "
+"Store, MSI, Mac App Store, Flathub, APT/RPM)이 동시에 릴리스되어 배포 방식 간 "
+"알림 및 가용성 불일치를 방지합니다."
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:31
 msgid "Deployment options"
-msgstr ""
+msgstr "배포 옵션"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:33
 msgid ""
 "Learn about installation, configuration, and management options for "
 "deploying the desktop app in your environment."
 msgstr ""
+"환경에 데스크톱 앱을 배포하기 위한 설치, 구성, 관리 옵션에 대해 알아보세요."
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:48
 msgid ""
 ":doc:`Distribute a custom desktop app </deployment-"
 "guide/desktop/distribute-a-custom-desktop-app>`"
 msgstr ""
+":doc:`사용자 지정 데스크톱 앱 배포 </deployment-guide/desktop/distribute-a-"
+"custom-desktop-app>`"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:49
 msgid ""
 ":doc:`Silent Windows desktop distribution </deployment-guide/desktop"
 "/silent-windows-desktop-distribution>`"
 msgstr ""
+":doc:`Windows 데스크톱 자동(silent) 배포 </deployment-guide/desktop/silent-"
+"windows-desktop-distribution>`"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:50
 msgid ""
 ":doc:`MSI installer and group policy guide </deployment-guide/desktop"
 "/desktop-msi-installer-and-group-policy-install>`"
 msgstr ""
+":doc:`MSI 설치 관리자 및 그룹 정책 가이드 </deployment-guide/desktop/desktop-"
+"msi-installer-and-group-policy-install>`"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:51
 msgid ""
 ":doc:`Custom dictionaries for Windows and Linux </deployment-"
 "guide/desktop/desktop-custom-dictionaries>`"
 msgstr ""
+":doc:`Windows 및 Linux용 사용자 지정 사전 </deployment-guide/desktop/desktop-"
+"custom-dictionaries>`"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:52
 msgid ""
 ":doc:`Managed resources for the desktop app </deployment-guide/desktop"
 "/desktop-app-managed-resources>`"
 msgstr ""
+":doc:`데스크톱 앱용 관리 리소스 </deployment-guide/desktop/desktop-app-"
+"managed-resources>`"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:53
 msgid ""
 ":doc:`Desktop app troubleshooting </deployment-guide/desktop/desktop-"
 "troubleshooting>`"
 msgstr ""
+":doc:`데스크톱 앱 문제 해결 </deployment-guide/desktop/desktop-"
+"troubleshooting>`"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:56
 msgid "Privacy and data handling"
-msgstr ""
+msgstr "개인정보 보호 및 데이터 처리"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:59
 msgid "Error reporting"
-msgstr ""
+msgstr "오류 보고"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:61
 msgid ""
 "From Mattermost Desktop v6.1, the desktop app includes automatic error "
 "reporting to help identify and fix crashes and stability issues."
 msgstr ""
+"OKR.BEST 데스크톱 v6.1부터 데스크톱 앱에는 크래시와 안정성 문제를 식별하고 "
+"해결하는 데 도움이 되는 자동 오류 보고 기능이 포함됩니다."
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:63
 msgid "**What information is sent**"
-msgstr ""
+msgstr "**전송되는 정보**"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:65
 msgid "Error reports include:"
-msgstr ""
+msgstr "오류 보고에는 다음이 포함됩니다:"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:67
 msgid "Crash information and stack traces"
-msgstr ""
+msgstr "크래시 정보 및 스택 추적"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:68
 msgid "App version and platform details (OS type, architecture)"
-msgstr ""
+msgstr "앱 버전 및 플랫폼 세부 정보(OS 유형, 아키텍처)"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:69
 msgid "Error messages and context"
-msgstr ""
+msgstr "오류 메시지 및 컨텍스트"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:71
 msgid "**What is NOT sent**"
-msgstr ""
+msgstr "**전송되지 않는 정보**"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:73
 msgid "Message content or user communications"
-msgstr ""
+msgstr "메시지 내용 또는 사용자 간 통신"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:74
 msgid "User credentials, passwords, or authentication tokens"
-msgstr ""
+msgstr "사용자 자격 증명, 비밀번호, 인증 토큰"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:75
 msgid "Personally identifiable information (PII)"
-msgstr ""
+msgstr "개인 식별 정보(PII)"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:76
 msgid "Server URLs or team names"
-msgstr ""
+msgstr "서버 URL 또는 팀 이름"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:78
 msgid "**Privacy and user control**"
-msgstr ""
+msgstr "**개인정보 보호 및 사용자 제어**"
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:80
 msgid ""
@@ -223,6 +269,9 @@ msgid ""
 "time by going to **Settings > Advanced > Send error reports to help "
 "improve the app**. Restart the app to apply the change."
 msgstr ""
+"오류 보고는 **기본적으로 활성화**\\ 되어 있습니다. 사용자는 **Settings > "
+"Advanced > Send error reports to help improve the app**\\ 로 이동하여 언제든지 "
+"비활성화할 수 있습니다. 변경 사항을 적용하려면 앱을 다시 시작하세요."
 
 #: ../../source/deployment-guide/desktop/desktop-app-deployment.rst:82
 msgid ""
@@ -232,4 +281,8 @@ msgid ""
 "build time by omitting the ``MM_DESKTOP_BUILD_SENTRYDSN`` environment "
 "variable."
 msgstr ""
+"데이터 처리 정책이 있는 조직은 사용자에게 이 기능에 대해 알리고 비활성화 여부에 "
+"대한 안내를 제공해야 합니다. 데스크톱 앱을 소스에서 빌드하는 조직의 경우, "
+"``MM_DESKTOP_BUILD_SENTRYDSN`` 환경 변수를 생략하여 빌드 시점에 오류 보고를 "
+"비활성화할 수 있습니다."
 
