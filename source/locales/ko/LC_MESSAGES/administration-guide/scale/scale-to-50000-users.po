@@ -21,13 +21,13 @@ msgstr ""
 
 #: ../../source/administration-guide/scale/scale-to-50000-users.rst:2
 msgid "Scale Mattermost up to 50000 users"
-msgstr ""
+msgstr "OKR.BEST를 50000명 사용자까지 확장"
 
 #: ../../source/_static/badges/ent-plus.rst:9
 msgid ""
 "|plans-img-yellow| Available on `Enterprise and Enterprise Advanced plans"
 " <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img-yellow| `Enterprise, Enterprise Advanced 플랜 <https://mattermost.com/pricing/>`__\ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -40,15 +40,15 @@ msgid ""
 "architecture to use? See the :doc:`scaling for enterprise "
 "</administration-guide/scale/scaling-for-enterprise>` documentation for "
 "details."
-msgstr ""
+msgstr "이 페이지에서는 최대 50000명의 동시 사용자 부하에 맞게 설계된 OKR.BEST 참조 아키텍처를 설명합니다. 어떤 참조 아키텍처를 사용해야 할지 모르시겠나요? 자세한 내용은 :doc:`엔터프라이즈를 위한 확장 </administration-guide/scale/scaling-for-enterprise>` 문서를 참고하세요."
 
 #: ../../source/administration-guide/scale/scale-to-50000-users.rst:9
 msgid "**High Availability**: Required"
-msgstr ""
+msgstr "**고가용성**: 필요"
 
 #: ../../source/administration-guide/scale/scale-to-50000-users.rst:10
 msgid "**Database Configuration**: writer, multiple readers"
-msgstr ""
+msgstr "**데이터베이스 구성**: 쓰기 1, 읽기 다수"
 
 #: ../../source/administration-guide/scale/scale-to-50000-users.rst:14
 msgid ""
@@ -56,7 +56,7 @@ msgid ""
 " behavior. These hardware recommendations are based on traditional "
 "deployments and may grow or shrink depending on how active your users "
 "are."
-msgstr ""
+msgstr "CPU, RAM, 저장 공간의 사용량은 사용자 행동에 따라 크게 달라질 수 있습니다. 이러한 하드웨어 권장 사항은 일반적인 배포를 기준으로 하며 사용자의 활동량에 따라 늘어나거나 줄어들 수 있습니다."
 
 #: ../../source/administration-guide/scale/scale-to-50000-users.rst:15
 msgid ""
@@ -68,50 +68,50 @@ msgid ""
 "specifications to ensure system stability and performance. Keep in mind "
 "that under-provisioning can lead to degraded user experience and "
 "additional troubleshooting effort."
-msgstr ""
+msgstr "다음 Elasticsearch 사양은 일부 사용 사례에는 충분하고도 남을 수 있지만, 이 사용자 규모에서 자원 할당을 더 낮춘 구성은 광범위하게 테스트하지 않았습니다. 비용 최적화가 우선이라면 관리자가 더 작은 구성을 시험해 볼 수 있으나, 시스템 안정성과 성능을 보장하기 위해 테스트된 사양으로 시작하는 것을 권장합니다. 자원을 부족하게 프로비저닝하면 사용자 경험 저하와 추가적인 문제 해결 노력으로 이어질 수 있다는 점에 유의하세요."
 
 #: ../../source/administration-guide/scale/scale-to-50000-users.rst:18
 msgid "Requirements"
-msgstr ""
+msgstr "요구 사항"
 
 #: ../../source/administration-guide/scale/scale-to-50000-users.rst:107
 msgid "Lifetime storage"
-msgstr ""
+msgstr "수명 주기 저장소"
 
 #: ../../source/administration-guide/scale/lifetime-storage.rst:5
 msgid ""
 "To forecast your own storage usage, begin with a Mattermost server "
 "approximately 600 MB to 800 MB in size including operating system and "
 "database, then add the multiplied product of:"
-msgstr ""
+msgstr "자체 저장소 사용량을 예측하려면 운영 체제와 데이터베이스를 포함해 약 600MB~800MB 크기의 OKR.BEST 서버에서 시작한 다음, 아래 값들을 곱한 결과를 더합니다:"
 
 #: ../../source/administration-guide/scale/lifetime-storage.rst:7
 msgid ""
 "Estimated storage per user per month (see below), multiplied by 12 months"
 " in a year"
-msgstr ""
+msgstr "사용자당 월간 예상 저장소(아래 참고)에 연간 12개월을 곱한 값"
 
 #: ../../source/administration-guide/scale/lifetime-storage.rst:8
 msgid "Estimated mean average number of users in a year"
-msgstr ""
+msgstr "연간 예상 평균 사용자 수"
 
 #: ../../source/administration-guide/scale/lifetime-storage.rst:9
 msgid "A 1-2x safety factor"
-msgstr ""
+msgstr "1~2배의 안전 계수"
 
 #: ../../source/administration-guide/scale/scale-to-50000-users.rst:113
 msgid "Estimated storage per user, per month"
-msgstr ""
+msgstr "사용자당 월간 예상 저장소"
 
 #: ../../source/administration-guide/scale/estimated-storage-per-user-per-month.rst:5
 msgid ""
 "File usage per user varies significantly across industries. The below "
 "benchmarks are recommended:"
-msgstr ""
+msgstr "사용자당 파일 사용량은 업종에 따라 크게 달라집니다. 아래 벤치마크를 권장합니다:"
 
 #: ../../source/administration-guide/scale/estimated-storage-per-user-per-month.rst:7
 msgid "**Low usage teams** (1-5 MB/user/month)"
-msgstr ""
+msgstr "**사용량이 적은 팀** (1~5MB/사용자/월)"
 
 #: ../../source/administration-guide/scale/estimated-storage-per-user-per-month.rst:9
 msgid ""
@@ -119,11 +119,11 @@ msgid ""
 "include software development teams that heavily use web-based document "
 "creation and management tools, and therefore rarely upload files to the "
 "server."
-msgstr ""
+msgstr "주로 텍스트 메시지와 링크로 소통합니다. 웹 기반 문서 생성·관리 도구를 많이 사용하여 파일을 서버에 거의 업로드하지 않는 소프트웨어 개발 팀이 그 예입니다."
 
 #: ../../source/administration-guide/scale/estimated-storage-per-user-per-month.rst:11
 msgid "**Medium usage teams** (5-25 MB/user/month)"
-msgstr ""
+msgstr "**사용량이 중간인 팀** (5~25MB/사용자/월)"
 
 #: ../../source/administration-guide/scale/estimated-storage-per-user-per-month.rst:13
 msgid ""
@@ -131,11 +131,11 @@ msgid ""
 "communicate. Examples might include business teams that may commonly drag"
 " and drop screenshots, PDFs and Microsoft Office documents into "
 "Mattermost for sharing and review."
-msgstr ""
+msgstr "텍스트 메시지와 함께 공유 문서·이미지를 섞어 소통합니다. 스크린샷, PDF, Microsoft Office 문서를 공유 및 검토를 위해 OKR.BEST에 자주 끌어다 놓는 비즈니스 팀이 그 예입니다."
 
 #: ../../source/administration-guide/scale/estimated-storage-per-user-per-month.rst:15
 msgid "**High usage teams** (25-100 MB/user/month)"
-msgstr ""
+msgstr "**사용량이 많은 팀** (25~100MB/사용자/월)"
 
 #: ../../source/administration-guide/scale/estimated-storage-per-user-per-month.rst:17
 msgid ""
@@ -143,35 +143,35 @@ msgid ""
 "files into Mattermost on a regular basis. Examples include creative teams"
 " who share and store artwork and media with tags and commentary in a "
 "pipeline production process."
-msgstr ""
+msgstr "가장 많은 사용량은 대용량 파일을 정기적으로 OKR.BEST에 다수 업로드하는 팀에서 발생합니다. 파이프라인 제작 프로세스에서 태그와 설명을 붙여 아트워크와 미디어를 공유하고 저장하는 크리에이티브 팀이 그 예입니다."
 
 #: ../../source/administration-guide/scale/scale-to-50000-users.rst:119
 msgid "Example"
-msgstr ""
+msgstr "예시"
 
 #: ../../source/administration-guide/scale/scale-to-50000-users.rst:121
 msgid ""
 "A 50000-person team with medium usage (with a safety factor of 2x) would "
 "require between 6TB :sup:`1` and 30TB :sup:`2` of free space per annum."
-msgstr ""
+msgstr "사용량이 중간인 50000명 규모의 팀은 (안전 계수 2배 적용 시) 연간 6TB :sup:`1`\ 에서 30TB :sup:`2` 사이의 여유 공간이 필요합니다."
 
 #: ../../source/administration-guide/scale/scale-to-50000-users.rst:123
 msgid ":sup:`1` 50000 users * 5 MB * 12 months * 2x safety factor"
-msgstr ""
+msgstr ":sup:`1` 사용자 50000명 × 5MB × 12개월 × 안전 계수 2배"
 
 #: ../../source/administration-guide/scale/scale-to-50000-users.rst:125
 msgid ":sup:`2` 50000 users * 25 MB * 12 months * 2x safety factor"
-msgstr ""
+msgstr ":sup:`2` 사용자 50000명 × 25MB × 12개월 × 안전 계수 2배"
 
 #: ../../source/administration-guide/scale/scale-to-50000-users.rst:127
 msgid ""
 "We strongly recommend that you review storage utilization at least "
 "quarterly to ensure adequate free space is available."
-msgstr ""
+msgstr "충분한 여유 공간을 확보하기 위해 최소 분기마다 저장소 사용량을 검토하는 것을 적극 권장합니다."
 
 #: ../../source/administration-guide/scale/scale-to-50000-users.rst:130
 msgid "Additional considerations"
-msgstr ""
+msgstr "추가 고려 사항"
 
 #: ../../source/administration-guide/scale/additional-ha-considerations.rst:5
 msgid ""
@@ -186,7 +186,7 @@ msgid ""
 "deployment>`. Visit the :doc:`Mattermost Elasticsearch product "
 "documentation </administration-guide/scale/elasticsearch-setup>` for "
 "deployment and configuration details."
-msgstr ""
+msgstr "`Elasticsearch <https://www.elastic.co>`__\ 는 엔터프라이즈 규모 배포에 최적화된 검색 성능을 제공하고 성능 저하와 시간 초과를 방지합니다. Elasticsearch는 글 데이터의 인덱스를 생성하고 관리하여 대용량 데이터를 거의 실시간으로 빠르게 검색할 수 있게 합니다. OKR.BEST의 구현은 `Elasticsearch <https://www.elastic.co>`_\ 를 분산형 RESTful 검색 엔진으로 사용하여 :doc:`클러스터 환경 </administration-guide/scale/high-availability-cluster-based-deployment>`\ 에서 매우 효율적인 데이터베이스 검색을 지원합니다. 배포 및 구성 세부 정보는 :doc:`OKR.BEST Elasticsearch 제품 문서 </administration-guide/scale/elasticsearch-setup>`\ 를 참고하세요."
 
 #: ../../source/administration-guide/scale/additional-ha-considerations.rst:7
 msgid ""
@@ -202,5 +202,5 @@ msgid ""
 "dashboard. Visit the :doc:`Mattermost Performance Monitoring product "
 "documentation </administration-guide/scale/deploy-prometheus-grafana-for-"
 "performance-monitoring>` for installation details."
-msgstr ""
+msgstr "성능 모니터링 지원을 통해 OKR.BEST 서버는 `Prometheus <https://prometheus.io/>`__ 및 `Grafana <https://grafana.com/>`__\ 와의 통합으로 대규모 엔터프라이즈 배포의 시스템 상태를 추적할 수 있습니다. 이러한 통합은 여러 OKR.BEST 서버에서 데이터를 수집할 수 있게 하며, OKR.BEST를 :doc:`고가용성 모드 </administration-guide/scale/high-availability-cluster-based-deployment>`\ 로 실행하는 경우 특히 유용합니다. 시스템 상태를 추적하기 시작하면 Grafana 대시보드에서 :doc:`성능 알림을 설정 </administration-guide/scale/performance-alerting>`\ 할 수 있습니다. 설치 세부 정보는 :doc:`OKR.BEST 성능 모니터링 제품 문서 </administration-guide/scale/deploy-prometheus-grafana-for-performance-monitoring>`\ 를 참고하세요."
 
