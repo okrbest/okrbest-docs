@@ -21,13 +21,13 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:2
 msgid "AD/LDAP setup"
-msgstr ""
+msgstr "AD/LDAP 설정"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
-msgstr ""
+msgstr "|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced 플랜 <https://mattermost.com/pricing/>`__\ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:8
 msgid "Overview"
-msgstr ""
+msgstr "개요"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:10
 msgid ""
@@ -44,7 +44,7 @@ msgid ""
 "AD/LDAP deployments to be reused in Mattermost, with optional :doc"
 ":`multi-factor authentication </administration-guide/onboard/multi-"
 "factor-authentication>`."
-msgstr ""
+msgstr "OKR.BEST는 Microsoft AD/LDAP(이전 명칭 Active Directory/LDAP)와의 “Same Sign-On”을 제공합니다. 온프레미스 AD/LDAP 배포에서 사용하는 동일한 자격 증명을 OKR.BEST에서 재사용할 수 있게 하며, 선택적으로 :doc:`다단계 인증 </administration-guide/onboard/multi-factor-authentication>`\ 을 사용할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:12
 msgid ""
@@ -53,7 +53,7 @@ msgid ""
 " system with Mattermost, users can log into Mattermost without having to "
 "create new credentials. User accounts are managed in AD/LDAP, and changes"
 " are synchronized with Mattermost."
-msgstr ""
+msgstr "AD/LDAP는 조직 네트워크의 사용자에 대한 인증 및 권한 부여 세부 정보를 저장하는 서비스입니다. AD/LDAP 시스템을 OKR.BEST와 통합하면 사용자는 새 자격 증명을 만들 필요 없이 OKR.BEST에 로그인할 수 있습니다. 사용자 계정은 AD/LDAP에서 관리되며 변경 사항은 OKR.BEST와 동기화됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:14
 msgid ""
@@ -61,139 +61,139 @@ msgid ""
 "Console that guides you through the configuration process with sections "
 "and incremental testing to ensure each part of your setup works correctly"
 " before proceeding to the next step."
-msgstr ""
+msgstr "OKR.BEST는 관리자 도구에서 단계별 AD/LDAP 설정 마법사를 제공하며, 섹션과 점진적 테스트를 통해 다음 단계로 진행하기 전에 설정의 각 부분이 올바르게 작동하는지 확인하면서 구성 프로세스를 안내합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:16
 msgid "Benefits of integrating AD/LDAP with Mattermost include:"
-msgstr ""
+msgstr "AD/LDAP를 OKR.BEST와 통합하면 다음과 같은 이점이 있습니다:"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:18
 msgid ""
 "**Single sign-on.** Users can log in to Mattermost with their AD/LDAP "
 "credentials."
-msgstr ""
+msgstr "**Single sign-on.** 사용자는 AD/LDAP 자격 증명으로 OKR.BEST에 로그인할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:19
 msgid ""
 "**Centralized identity management.** Mattermost accounts can display user"
 " information from AD/LDAP, such as first and last name, email, and "
 "username."
-msgstr ""
+msgstr "**중앙 집중식 ID 관리.** OKR.BEST 계정은 이름, 성, 이메일, 사용자 이름과 같은 AD/LDAP의 사용자 정보를 표시할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:20
 msgid ""
 "**Automatic account provisioning.** A Mattermost user account is "
 "automatically created the first time a user signs in with their AD/LDAP "
 "credentials."
-msgstr ""
+msgstr "**자동 계정 프로비저닝.** 사용자가 AD/LDAP 자격 증명으로 처음 로그인할 때 OKR.BEST 사용자 계정이 자동으로 생성됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:21
 msgid ""
 "**Sync groups to predefined roles in Mattermost.** Assign team and "
 "channel roles to groups via AD/LDAP Group Sync."
-msgstr ""
+msgstr "**그룹을 OKR.BEST의 사전 정의된 역할에 동기화.** AD/LDAP 그룹 동기화를 통해 그룹에 팀 및 채널 역할을 할당합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:22
 msgid ""
 "**Compliance alignment with administrator management.** Manage "
 "Administrator access to Mattermost in the System Console using AD/LDAP "
 "filters."
-msgstr ""
+msgstr "**관리자 관리와의 컴플라이언스 정렬.** AD/LDAP 필터를 사용해 관리자 도구에서 OKR.BEST에 대한 관리자 접근을 관리합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:25
 msgid "Pre-installation notes"
-msgstr ""
+msgstr "설치 전 참고 사항"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:27
 msgid ""
 "If you're using AD/LDAP with **nested security groups** you need to write"
 " a PowerShell script, or similar, to flatten and aggregate the tree into "
 "a single security group to map into Mattermost."
-msgstr ""
+msgstr "**중첩된 보안 그룹**\ 과 함께 AD/LDAP를 사용하는 경우, 트리를 평탄화하고 단일 보안 그룹으로 집계하여 OKR.BEST에 매핑하기 위해 PowerShell 스크립트 또는 이와 유사한 것을 작성해야 합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:29
 msgid "We strongly recommend the following as you prepare to set up AD/LDAP:"
-msgstr ""
+msgstr "AD/LDAP 설정을 준비할 때 다음을 강력히 권장합니다:"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:31
 msgid "Attribute Naming and Case Sensitivity:"
-msgstr ""
+msgstr "속성 이름 지정 및 대소문자 구분:"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:33
 msgid ""
 "Attribute names in both AD/LDAP and Mattermost configurations are **case-"
 "sensitive**."
-msgstr ""
+msgstr "AD/LDAP와 OKR.BEST 구성 모두에서 속성 이름은 **대소문자를 구분**\ 합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:34
 msgid ""
 "Ensure that the attribute names in the AD/LDAP claim rules **exactly "
 "match** the expected attribute names in Mattermost. Case deviations will "
 "result in issues."
-msgstr ""
+msgstr "AD/LDAP 클레임 규칙의 속성 이름이 OKR.BEST에서 예상하는 속성 이름과 **정확히 일치**\ 하는지 확인하세요. 대소문자가 다르면 문제가 발생합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:36
 msgid "Essential attributes:"
-msgstr ""
+msgstr "필수 속성:"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:38
 msgid ""
 "The ``NameID`` element is required for user identification in SAML "
 "assertions."
-msgstr ""
+msgstr "``NameID`` 요소는 SAML 어설션에서 사용자 식별에 필요합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:39
 msgid ""
 "All required attributes (e.g., ``Email``, ``Username``, ``FirstName``, "
 "and ``LastName``) must be included and correctly mapped."
-msgstr ""
+msgstr "모든 필수 속성(예: ``Email``, ``Username``, ``FirstName``, ``LastName``)이 포함되고 올바르게 매핑되어야 합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:41
 msgid "How to choose a stable unique identifier for ``NameID``:"
-msgstr ""
+msgstr "``NameID``\ 에 대한 안정적인 고유 식별자를 선택하는 방법:"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:43
 msgid ""
 "Using a stable and unique identifier (``EmployeeID`` or ``ObjectGUID``) "
 "for the ``NameID`` helps prevent issues in cases where user details could"
 " change over time (e.g., ``LastName`` or ``Email``)."
-msgstr ""
+msgstr "``NameID``\ 에 안정적이고 고유한 식별자(``EmployeeID`` 또는 ``ObjectGUID``)를 사용하면 사용자 세부 정보가 시간이 지나면서 변경될 수 있는 경우(예: ``LastName`` 또는 ``Email``)에 문제를 방지하는 데 도움이 됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:44
 msgid ""
 "If stable, unique attributes aren't available in AD, using attributes "
 "that might change over time can result in future issues."
-msgstr ""
+msgstr "AD에 안정적이고 고유한 속성을 사용할 수 없는 경우, 시간이 지나면서 변경될 수 있는 속성을 사용하면 향후 문제가 발생할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:47
 msgid "Getting started"
-msgstr ""
+msgstr "시작하기"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:49
 msgid "There are two ways to set up AD/LDAP:"
-msgstr ""
+msgstr "AD/LDAP를 설정하는 방법은 두 가지입니다:"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:51
 msgid "**Configure AD/LDAP using the System Console setup wizard**"
-msgstr ""
+msgstr "**관리자 도구 설정 마법사를 사용해 AD/LDAP 구성**"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:53
 msgid ""
 "Log in to your workspace and create a new account using email and "
 "password. This is assigned the system admin role as the first user "
 "created."
-msgstr ""
+msgstr "작업 공간에 로그인하고 이메일과 비밀번호를 사용해 새 계정을 생성하세요. 이 계정은 처음 생성된 사용자로서 시스템 관리자 역할이 할당됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:54
 msgid ""
 "Next, use the AD/LDAP setup wizard to configure AD/LDAP step-by-step, "
 "testing each section as you go, and then convert your system admin "
 "account to use the AD/LDAP login method."
-msgstr ""
+msgstr "다음으로, AD/LDAP 설정 마법사를 사용해 각 섹션을 진행하면서 테스트하며 AD/LDAP를 단계별로 구성한 다음, 시스템 관리자 계정을 AD/LDAP 로그인 방법을 사용하도록 변환하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:56
 msgid "**Configure AD/LDAP by editing ``config.json``**"
-msgstr ""
+msgstr "**``config.json``\ 을 편집하여 AD/LDAP 구성**"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:58
 msgid ""
@@ -202,119 +202,119 @@ msgid ""
 "configuration-settings:ad/ldap>`. When you log in to Mattermost the first"
 " user to log in with valid AD/LDAP credentials will be assigned the "
 "system admin role."
-msgstr ""
+msgstr ":ref:`AD/LDAP 설정 문서 <administration-guide/configure/authentication-configuration-settings:ad/ldap>`\ 를 기반으로 AD/LDAP를 활성화하려면 ``config.json``\ 을 편집하세요. OKR.BEST에 로그인할 때 유효한 AD/LDAP 자격 증명으로 처음 로그인하는 사용자에게 시스템 관리자 역할이 할당됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:61
 msgid "Configure AD/LDAP login"
-msgstr ""
+msgstr "AD/LDAP 로그인 구성"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:63
 msgid "**Create a system admin account using email authentication.**"
-msgstr ""
+msgstr "**이메일 인증을 사용해 시스템 관리자 계정을 생성하세요.**"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:65
 msgid ""
 "Create a new workspace and create an account using email and password, "
 "which is automatically assigned the **system admin** role since it is the"
 " first account created. You may also assign the role to another account."
-msgstr ""
+msgstr "새 작업 공간을 만들고 이메일과 비밀번호를 사용해 계정을 생성하세요. 이 계정은 처음 생성된 계정이므로 자동으로 **system admin** 역할이 할당됩니다. 다른 계정에 역할을 할당할 수도 있습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:67
 msgid "**Configure AD/LDAP using the setup wizard.**"
-msgstr ""
+msgstr "**설정 마법사를 사용해 AD/LDAP를 구성하세요.**"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:69
 msgid ""
 "Go to **System Console > Authentication > AD/LDAP** to open the AD/LDAP "
 "setup wizard. The wizard is organized into sections that you can navigate"
 " through using the sidebar:"
-msgstr ""
+msgstr "AD/LDAP 설정 마법사를 열려면 **System Console > Authentication > AD/LDAP**\ 로 이동하세요. 마법사는 사이드바를 사용해 탐색할 수 있는 섹션으로 구성되어 있습니다:"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:71
 msgid "**Connection Settings**: Configure server connection details"
-msgstr ""
+msgstr "**Connection Settings**: 서버 연결 세부 정보를 구성합니다"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:72
 msgid "**User Filters**: Set up user identification and filtering"
-msgstr ""
+msgstr "**User Filters**: 사용자 식별 및 필터링을 설정합니다"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:73
 msgid "**Account sync**: Map AD/LDAP attributes to Mattermost user fields"
-msgstr ""
+msgstr "**Account sync**: AD/LDAP 속성을 OKR.BEST 사용자 필드에 매핑합니다"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:74
 msgid ""
 "**Group Synchronization**: Configure group settings and group attributes "
 "(if using LDAP groups)"
-msgstr ""
+msgstr "**Group Synchronization**: 그룹 설정과 그룹 속성을 구성합니다(LDAP 그룹을 사용하는 경우)"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:75
 msgid ""
 "**Sync Performance**: Adjust synchronization timing and performance "
 "settings"
-msgstr ""
+msgstr "**Sync Performance**: 동기화 타이밍과 성능 설정을 조정합니다"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:76
 msgid "**Sync History**: View synchronization status and manually trigger syncs"
-msgstr ""
+msgstr "**Sync History**: 동기화 상태를 보고 수동으로 동기화를 트리거합니다"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:78
 msgid ""
 "Each section includes a test button that allows you to verify your "
 "configuration before proceeding to the next step. This incremental "
 "testing helps identify and resolve issues early in the setup process."
-msgstr ""
+msgstr "각 섹션에는 다음 단계로 진행하기 전에 구성을 확인할 수 있는 테스트 버튼이 포함되어 있습니다. 이 점진적 테스트는 설정 프로세스 초기에 문제를 식별하고 해결하는 데 도움이 됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:80
 msgid "**Confirm that AD/LDAP sign-on is enabled.**"
-msgstr ""
+msgstr "**AD/LDAP 로그인이 활성화되어 있는지 확인하세요.**"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:82
 msgid ""
 "After configuring AD/LDAP through the wizard, confirm that users can log "
 "in using AD/LDAP credentials."
-msgstr ""
+msgstr "마법사를 통해 AD/LDAP를 구성한 후, 사용자가 AD/LDAP 자격 증명으로 로그인할 수 있는지 확인하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:84
 msgid "**Switch your system admin account from email to AD/LDAP authentication.**"
-msgstr ""
+msgstr "**시스템 관리자 계정을 이메일에서 AD/LDAP 인증으로 전환하세요.**"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:86
 msgid ""
 "Navigate to your profile, and select **Security > Sign-in Method > Switch"
 " to AD/LDAP** and log in with your AD/LDAP credentials to complete the "
 "switch."
-msgstr ""
+msgstr "프로필로 이동하여 **Security > Sign-in Method > Switch to AD/LDAP**\ 를 선택하고 AD/LDAP 자격 증명으로 로그인하여 전환을 완료하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:88
 msgid "**(Optional) Restrict authentication to AD/LDAP.**"
-msgstr ""
+msgstr "**(선택) 인증을 AD/LDAP로 제한하세요.**"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:90
 msgid ""
 "Go to **System Console > Authentication > Email** and set **Enable sign-"
 "in with email** to **false** and **Enable sign-in with username** to "
 "**false**."
-msgstr ""
+msgstr "**System Console > Authentication > Email**\ 로 이동하여 **Enable sign-in with email**\ 을 **false**\ 로, **Enable sign-in with username**\ 을 **false**\ 로 설정하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:91
 msgid ""
 "Then choose **Save** to save the changes. This should leave AD/LDAP as "
 "the only login option."
-msgstr ""
+msgstr "그런 다음 **Save**\ 를 선택해 변경 사항을 저장하세요. 이렇게 하면 AD/LDAP가 유일한 로그인 옵션으로 남습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:93
 msgid ""
 "**(Optional) If you configured `First Name Attribute` and `Last Name "
 "Attribute` in the System Console.**"
-msgstr ""
+msgstr "**(선택) 관리자 도구에서 `First Name Attribute`\ 와 `Last Name Attribute`\ 를 구성한 경우.**"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:95
 msgid ""
 "Navigate to **System Console > Site Configuration > Users and Teams** and"
 " set **Teammate Name Display** to **Show first and last name**. This is "
 "recommended for a better user experience."
-msgstr ""
+msgstr "**System Console > Site Configuration > Users and Teams**\ 로 이동하여 **Teammate Name Display**\ 를 **Show first and last name**\ 으로 설정하세요. 더 나은 사용자 경험을 위해 권장됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:99
 msgid ""
@@ -322,18 +322,18 @@ msgid ""
 " can set an existing account to system admin using the :ref:`mmctl roles "
 "<administration-guide/manage/mmctl-command-line-tool:mmctl roles>` "
 "command."
-msgstr ""
+msgstr "실수로 어떤 이유로든 시스템에서 잠긴 경우, :ref:`mmctl roles <administration-guide/manage/mmctl-command-line-tool:mmctl roles>` 명령어를 사용해 기존 계정을 시스템 관리자로 설정할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:102
 msgid "Configure AD/LDAP synchronization"
-msgstr ""
+msgstr "AD/LDAP 동기화 구성"
 
 #: ../../source/_static/badges/entry-ent.rst:9
 msgid ""
 "|plans-img-yellow| Available on `Entry, Enterprise, and Enterprise "
 "Advanced plans <https://mattermost.com/pricing/>`__ (not available on "
 "Professional)"
-msgstr ""
+msgstr "|plans-img-yellow| `Entry, Enterprise, Enterprise Advanced 플랜 <https://mattermost.com/pricing/>`__\ 에서 사용할 수 있습니다(Professional에서는 사용 불가)"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:107
 msgid ""
@@ -344,14 +344,14 @@ msgid ""
 "accounts are disabled in AD/LDAP users are deactivated in Mattermost, and"
 " their active sessions are revoked once Mattermost synchronizes the "
 "updated attributes."
-msgstr ""
+msgstr "AD/LDAP 로그인 구성 외에도 AD/LDAP 동기화를 구성할 수 있습니다. 동기화할 때 OKR.BEST는 관련 계정 정보를 AD/LDAP에 쿼리하고 속성(이름, 성, 닉네임) 변경 사항을 기반으로 OKR.BEST 계정을 업데이트합니다. AD/LDAP에서 계정이 비활성화되면 OKR.BEST에서 사용자가 비활성화되며, OKR.BEST가 업데이트된 속성을 동기화하면 활성 세션이 취소됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:109
 msgid ""
 "The AD/LDAP synchronization depends on email. Make sure all users on your"
 " AD/LDAP server have an email address, or ensure their account is "
 "deactivated in Mattermost."
-msgstr ""
+msgstr "AD/LDAP 동기화는 이메일에 의존합니다. AD/LDAP 서버의 모든 사용자가 이메일 주소를 가지고 있는지 확인하거나, OKR.BEST에서 계정이 비활성화되어 있는지 확인하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:111
 msgid ""
@@ -359,18 +359,18 @@ msgid ""
 " following user attribute changes can't be made through the API: first "
 "name, last name, position, nickname, email, profile picture, or username."
 " LDAP must be the authoritative source for these user attributes."
-msgstr ""
+msgstr "OKR.BEST가 사용자 인증에 AD/LDAP를 사용하도록 구성된 경우, 다음 사용자 속성 변경은 API를 통해 수행할 수 없습니다: 이름, 성, 직책, 닉네임, 이메일, 프로필 사진, 사용자 이름. LDAP가 이러한 사용자 속성의 권위 있는 소스여야 합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:113
 msgid "To configure AD/LDAP synchronization with AD/LDAP sign-in:"
-msgstr ""
+msgstr "AD/LDAP 로그인과 함께 AD/LDAP 동기화를 구성하려면:"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:115
 msgid ""
 "Go to **System Console > Authentication > AD/LDAP** to open the AD/LDAP "
 "wizard and navigate to the **Connection Settings** section. Set **Enable "
 "Synchronization with AD/LDAP** to **true**."
-msgstr ""
+msgstr "AD/LDAP 마법사를 열려면 **System Console > Authentication > AD/LDAP**\ 로 이동하여 **Connection Settings** 섹션으로 이동하세요. **Enable Synchronization with AD/LDAP**\ 를 **true**\ 로 설정하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:117
 msgid ""
@@ -378,44 +378,44 @@ msgid ""
 "**Synchronization Interval (minutes)** to specify how often Mattermost "
 "accounts synchronize attributes with AD/LDAP. The default setting is 60 "
 "minutes."
-msgstr ""
+msgstr "**Sync Performance** 섹션으로 이동하여 OKR.BEST 계정이 AD/LDAP와 속성을 얼마나 자주 동기화할지 지정하도록 **Synchronization Interval (minutes)**\ 를 구성하세요. 기본 설정은 60분입니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:121
 msgid "The profile picture attribute is only synchronized when the user logs in."
-msgstr ""
+msgstr "프로필 사진 속성은 사용자가 로그인할 때만 동기화됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:122
 msgid ""
 "From Mattermost v11, if a profile picture in AD/LDAP is removed, the next"
 " time the user logs in, their Mattermost profile picture is also removed "
 "and returns to the default image."
-msgstr ""
+msgstr "OKR.BEST v11부터, AD/LDAP의 프로필 사진이 제거되면 다음에 사용자가 로그인할 때 OKR.BEST 프로필 사진도 제거되고 기본 이미지로 돌아갑니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:123
 msgid ""
 "Additionally, after configuring profile pictures in AD/LDAP "
 "configuration, all AD/LDAP user accounts in Mattermost will synchronize "
 "to use the profile picture from AD/LDAP on their next login."
-msgstr ""
+msgstr "또한 AD/LDAP 구성에서 프로필 사진을 구성한 후, OKR.BEST의 모든 AD/LDAP 사용자 계정은 다음 로그인 시 AD/LDAP의 프로필 사진을 사용하도록 동기화됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:125
 msgid ""
 "If you want to synchronize immediately after disabling an account, use "
 "the **AD/LDAP Synchronize Now** button in the **Sync History** section of"
 " the wizard."
-msgstr ""
+msgstr "계정을 비활성화한 후 즉시 동기화하려면 마법사의 **Sync History** 섹션에 있는 **AD/LDAP Synchronize Now** 버튼을 사용하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:126
 msgid ""
 "To configure AD/LDAP synchronization with SAML sign-in, see the "
 ":doc:`SAML documentation </administration-guide/onboard/sso-saml>`."
-msgstr ""
+msgstr "SAML 로그인과 함께 AD/LDAP 동기화를 구성하려면 :doc:`SAML 문서 </administration-guide/onboard/sso-saml>`\ 를 참고하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:130
 msgid ""
 "Ensure at least one AD/LDAP user is in Mattermost or the sync won't "
 "complete."
-msgstr ""
+msgstr "OKR.BEST에 AD/LDAP 사용자가 최소 한 명 있는지 확인하세요. 그렇지 않으면 동기화가 완료되지 않습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:131
 msgid ""
@@ -426,7 +426,7 @@ msgid ""
 "administration <administration-guide/onboard/delegated-granular-"
 "administration:edit privileges of admin roles (advanced)>` documentation "
 "for details."
-msgstr ""
+msgstr "관리자 도구의 AD/LDAP 동기화 설정은 임의 호스트의 연결성과 가용성을 확인하는 데 사용될 수 있습니다. 이를 우려하는 시스템 관리자는 사용자 정의 관리자 역할을 사용해 이러한 설정 수정에 대한 접근을 제한할 수 있습니다. 자세한 내용은 :ref:`위임된 세분화 관리 <administration-guide/onboard/delegated-granular-administration:edit privileges of admin roles (advanced)>` 문서를 참고하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:133
 msgid ""
@@ -439,7 +439,7 @@ msgid ""
 "needs, ensuring users who were unintentionally removed due to changes in "
 "LDAP group membership, synchronization errors, or exceptions to the "
 "standard group sync rules can be seamlessly restored."
-msgstr ""
+msgstr "OKR.BEST v10.9부터, 이전에 제거된 구성원이라도 LDAP 동기화 중에 :ref:`LDAP 그룹의 구성원을 그룹 동기화된 팀 또는 채널에 자동으로 다시 추가 <administration-guide/configure/authentication-configuration-settings:re-add removed members on sync>`\ 하도록 OKR.BEST를 구성할 수 있습니다. 이 옵션을 사용하면 중단 없는 협업을 유지하고 특정 조직 요구 사항을 해결할 수 있으며, LDAP 그룹 멤버십 변경, 동기화 오류, 표준 그룹 동기화 규칙의 예외로 인해 의도치 않게 제거된 사용자를 원활하게 복원할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:137
 msgid ""
@@ -448,11 +448,11 @@ msgid ""
 "configuration setting. If you have this setting disabled, and run the "
 "mmctl command with the ``--include-removed-members`` flag, removed "
 "members will be re-added during LDAP synchronization."
-msgstr ""
+msgstr ":ref:`mmctl ldap sync <administration-guide/manage/mmctl-command-line-tool:mmctl ldap sync>` 명령어는 이 서버 구성 설정보다 우선합니다. 이 설정을 비활성화한 상태에서 ``--include-removed-members`` 플래그로 mmctl 명령어를 실행하면, 제거된 구성원이 LDAP 동기화 중에 다시 추가됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:140
 msgid "Configure AD/LDAP sign-in using filters"
-msgstr ""
+msgstr "필터를 사용한 AD/LDAP 로그인 구성"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:142
 msgid ""
@@ -460,11 +460,11 @@ msgid ""
 "AD/LDAP filter settings, navigate to **System Console > Authentication > "
 "AD/LDAP** to open the AD/LDAP wizard and go to the **User Filters** "
 "section."
-msgstr ""
+msgstr "필터를 사용하면 로그인 시 지정된 사용자에게 역할이 할당됩니다. AD/LDAP 필터 설정에 접근하려면 AD/LDAP 마법사를 열기 위해 **System Console > Authentication > AD/LDAP**\ 로 이동하여 **User Filters** 섹션으로 이동하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:145
 msgid "User filter"
-msgstr ""
+msgstr "사용자 필터"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:147
 msgid ""
@@ -472,7 +472,7 @@ msgid ""
 "objects. Only the users selected by the query will be able to access "
 "Mattermost. For AD/LDAP, the query to filter out disabled users is "
 "``(&(objectCategory=Person)(!(UserAccountControl:1.2.840.113556.1.4.803:=2)))``."
-msgstr ""
+msgstr "(선택) 사용자 객체를 검색할 때 사용할 AD/LDAP 필터를 입력하세요. 쿼리로 선택된 사용자만 OKR.BEST에 접근할 수 있습니다. AD/LDAP의 경우 비활성화된 사용자를 필터링하는 쿼리는 ``(&(objectCategory=Person)(!(UserAccountControl:1.2.840.113556.1.4.803:=2)))``\ 입니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:149
 #: ../../source/administration-guide/onboard/ad-ldap.rst:166
@@ -480,40 +480,40 @@ msgstr ""
 msgid ""
 "Navigate to **System Console > Authentication > AD/LDAP** to open the "
 "AD/LDAP wizard."
-msgstr ""
+msgstr "AD/LDAP 마법사를 열려면 **System Console > Authentication > AD/LDAP**\ 로 이동하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:150
 msgid "Go to the **User Filters** section and complete the **User Filter** field."
-msgstr ""
+msgstr "**User Filters** 섹션으로 이동하여 **User Filter** 필드를 작성하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:151
 #: ../../source/administration-guide/onboard/ad-ldap.rst:169
 #: ../../source/administration-guide/onboard/ad-ldap.rst:187
 msgid "Use the **Test Filters** button to verify your filter works correctly."
-msgstr ""
+msgstr "**Test Filters** 버튼을 사용해 필터가 올바르게 작동하는지 확인하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:152
 #: ../../source/administration-guide/onboard/ad-ldap.rst:170
 #: ../../source/administration-guide/onboard/ad-ldap.rst:188
 msgid "Choose **Save**."
-msgstr ""
+msgstr "**Save**\ 를 선택하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:154
 msgid ""
 "When the user accesses Mattermost, they log in with same username and "
 "password that they use for organizational logins."
-msgstr ""
+msgstr "사용자가 OKR.BEST에 접근할 때, 조직 로그인에 사용하는 것과 동일한 사용자 이름과 비밀번호로 로그인합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:156
 msgid ""
 "Filters can also be used for excluding users who belong to certain "
 "groups. For AD/LDAP, the query to filter out groups is "
 "``(&(memberof=cn=ACME_ALL,ou=Users,dc=sademo,dc=com)(!(memberof=cn=DEV_OPS,ou=Users,dc=sademo,dc=com)))``."
-msgstr ""
+msgstr "필터는 특정 그룹에 속한 사용자를 제외하는 데에도 사용할 수 있습니다. AD/LDAP의 경우 그룹을 필터링하는 쿼리는 ``(&(memberof=cn=ACME_ALL,ou=Users,dc=sademo,dc=com)(!(memberof=cn=DEV_OPS,ou=Users,dc=sademo,dc=com)))``\ 입니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:159
 msgid "Guest filter"
-msgstr ""
+msgstr "게스트 필터"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:161
 msgid ""
@@ -522,47 +522,47 @@ msgid ""
 "your Mattermost workspace. These users will have the Guest role applied "
 "immediately upon first login instead of the default member user role. "
 "This eliminates having to manually assign the role in the System Console."
-msgstr ""
+msgstr "(선택) 활성화되면 OKR.BEST의 게스트 필터는 AD/LDAP 역할이 게스트이고 OKR.BEST 작업 공간에 가입하도록 초대된 외부 사용자를 식별합니다. 이러한 사용자는 첫 로그인 시 기본 멤버 사용자 역할 대신 게스트 역할이 즉시 적용됩니다. 이를 통해 관리자 도구에서 수동으로 역할을 할당할 필요가 없어집니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:163
 msgid ""
 "If this filter is removed/changed, active guests will not be promoted to "
 "a member and will retain their Guest role. Guests can be promoted in "
 "**System Console > User Management**."
-msgstr ""
+msgstr "이 필터가 제거/변경되면 활성 게스트는 멤버로 승격되지 않고 게스트 역할을 유지합니다. 게스트는 **System Console > User Management**\ 에서 승격할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:165
 msgid ""
 "Navigate to **System Console > Authentication > Guest Access** and set "
 "Guest Access to ``true``."
-msgstr ""
+msgstr "**System Console > Authentication > Guest Access**\ 로 이동하여 Guest Access를 ``true``\ 로 설정하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:167
 #: ../../source/administration-guide/onboard/ad-ldap.rst:184
 msgid ""
 "Go to the **User Filters** section and expand **Configure additional "
 "filters**."
-msgstr ""
+msgstr "**User Filters** 섹션으로 이동하여 **Configure additional filters**\ 를 펼치세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:168
 msgid "Complete the **Guest Filter** field."
-msgstr ""
+msgstr "**Guest Filter** 필드를 작성하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:172
 msgid ""
 "When a guest logs in for the first time they are presented with a default"
 " landing page until they are added to channels."
-msgstr ""
+msgstr "게스트가 처음 로그인하면 채널에 추가될 때까지 기본 랜딩 페이지가 표시됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:174
 msgid ""
 "See the :doc:`Guest Accounts documentation </administration-guide/onboard"
 "/guest-accounts>` for more information about this feature."
-msgstr ""
+msgstr "이 기능에 대한 자세한 내용은 :doc:`게스트 계정 문서 </administration-guide/onboard/guest-accounts>`\ 를 참고하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:177
 msgid "Admin filter"
-msgstr ""
+msgstr "관리자 필터"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:179
 msgid ""
@@ -572,7 +572,7 @@ msgid ""
 "access to the Mattermost System Console. Existing members that are "
 "identified by this attribute will be promoted from member to system admin"
 " upon next login."
-msgstr ""
+msgstr "(선택) 시스템 관리자를 지정하는 데 사용할 AD/LDAP 필터를 입력하세요. 쿼리로 선택된 사용자는 시스템 관리자로서 OKR.BEST 작업 공간에 접근할 수 있습니다. 기본적으로 시스템 관리자는 OKR.BEST 관리자 도구에 대한 완전한 접근 권한을 가집니다. 이 속성으로 식별된 기존 멤버는 다음 로그인 시 멤버에서 시스템 관리자로 승격됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:181
 msgid ""
@@ -580,15 +580,15 @@ msgid ""
 "Session Lengths**. It is recommended that users are demoted to members "
 "manually in **System Console > User Management** to ensure access is "
 "restricted immediately."
-msgstr ""
+msgstr "다음 로그인은 **System Console > Session Lengths**\ 에 설정된 세션 길이를 기반으로 합니다. 접근이 즉시 제한되도록 **System Console > User Management**\ 에서 사용자를 수동으로 멤버로 강등할 것을 권장합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:185
 msgid "Set **Enable Admin Filter** to **true**."
-msgstr ""
+msgstr "**Enable Admin Filter**\ 를 **true**\ 로 설정하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:186
 msgid "Complete the **Admin Filter** field."
-msgstr ""
+msgstr "**Admin Filter** 필드를 작성하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:192
 msgid ""
@@ -596,17 +596,17 @@ msgid ""
 "admin is retained. However if this filter is removed/changed, system "
 "admins that were promoted via this filter will be demoted to members and "
 "won't retain access to the System Console."
-msgstr ""
+msgstr "Admin Filter가 ``false``\ 로 설정되면 멤버의 시스템 관리자 역할이 유지됩니다. 그러나 이 필터가 제거/변경되면 이 필터를 통해 승격된 시스템 관리자는 멤버로 강등되며 관리자 도구에 대한 접근 권한을 유지하지 못합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:194
 msgid ""
 "When this filter isn't in use, members can be manually promoted/demoted "
 "via **System Console > User Management**."
-msgstr ""
+msgstr "이 필터를 사용하지 않을 때는 **System Console > User Management**\ 를 통해 멤버를 수동으로 승격/강등할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:197
 msgid "Configure AD/LDAP deployments with multiple domains"
-msgstr ""
+msgstr "여러 도메인이 있는 AD/LDAP 배포 구성"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:199
 msgid ""
@@ -616,22 +616,22 @@ msgid ""
 "<https://learn.microsoft.com/en-us/previous-versions/windows/it-pro"
 "/windows-server-2003/cc759073(v=ws.10)?redirectedfrom=MSDN>`_ for more "
 "information."
-msgstr ""
+msgstr "여러 도메인을 사용하는 조직은 여러 도메인을 통합하기 위해 \"Forest\" 구성을 사용해 OKR.BEST와 통합할 수 있습니다. 자세한 내용은 `서로 신뢰하는 도메인 컨트롤러의 모음으로서의 포리스트 <https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc759073(v=ws.10)?redirectedfrom=MSDN>`_\ 를 참고하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:201
 msgid ""
 "For forest configurations that contain multiple domains which do NOT "
 "share a common root, you can search across all of the domains using the "
 "Global Catalog. To do so, update your ``config.json`` as follows:"
-msgstr ""
+msgstr "공통 루트를 공유하지 않는 여러 도메인을 포함하는 포리스트 구성의 경우, 전역 카탈로그(Global Catalog)를 사용해 모든 도메인에서 검색할 수 있습니다. 그렇게 하려면 ``config.json``\ 을 다음과 같이 업데이트하세요:"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:203
 msgid "Set the LdapPort to 3268 (instead of 389)"
-msgstr ""
+msgstr "LdapPort를 3268로 설정하세요(389 대신)"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:204
 msgid "Set the BaseDN to \" \" (A single space character)"
-msgstr ""
+msgstr "BaseDN을 \" \"(공백 문자 하나)로 설정하세요"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:206
 msgid ""
@@ -639,11 +639,11 @@ msgid ""
 "/previous-versions/windows/it-"
 "pro/windows-2000-server/cc978012(v=technet.10)?redirectedfrom=MSDN>`_ for"
 " additional details."
-msgstr ""
+msgstr "자세한 내용은 `전역 카탈로그 및 LDAP 검색 <https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc978012(v=technet.10)?redirectedfrom=MSDN>`_\ 을 참고하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:209
 msgid "Troubleshooting/FAQ"
-msgstr ""
+msgstr "문제 해결/FAQ"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:211
 msgid ""
@@ -651,13 +651,13 @@ msgid ""
 "suggestions on common error messages and issues. It is recommended that "
 "you check your logs for errors as they can provide an idea of what the "
 "issue is."
-msgstr ""
+msgstr "다음은 일반적인 오류 메시지와 문제에 대한 자주 묻는 질문과 문제 해결 제안입니다. 오류는 문제가 무엇인지에 대한 단서를 제공할 수 있으므로 로그에서 오류를 확인할 것을 권장합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:214
 msgid ""
 "If the **Test Connection** button fails, how can I troubleshoot the "
 "connection?"
-msgstr ""
+msgstr "**Test Connection** 버튼이 실패하면 연결 문제를 어떻게 해결할 수 있나요?"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:216
 msgid ""
@@ -665,11 +665,11 @@ msgid ""
 "AD/LDAP user query in an external system. See `LDAP Connection Test "
 "Example <https://ldaptool.sourceforge.net/>`__. If the AD/LDAP connection"
 " is verified to be working outside of Mattermost, try the following:"
-msgstr ""
+msgstr "외부 시스템에서 AD/LDAP 사용자 쿼리를 실행하여 AD/LDAP 연결 설정이 올바른지 확인하세요. `LDAP 연결 테스트 예시 <https://ldaptool.sourceforge.net/>`__\ 를 참고하세요. OKR.BEST 외부에서 AD/LDAP 연결이 작동하는 것으로 확인되면 다음을 시도하세요:"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:218
 msgid "Check your AD/LDAP system to verify your ``Bind Username`` format."
-msgstr ""
+msgstr "AD/LDAP 시스템을 확인하여 ``Bind Username`` 형식을 검증하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:219
 msgid ""
@@ -677,36 +677,36 @@ msgid ""
 "System Console. (**AD/LDAP Port** set to 389 typically uses **Connection "
 "Security** set to ``None``. **AD/LDAP Port** set to 636 typically ties to"
 " **Connection Security** set to **TLS**)."
-msgstr ""
+msgstr "관리자 도구에서 **AD/LDAP Port**\ 와 **Connection Security** 설정을 확인하세요. (**AD/LDAP Port**\ 가 389로 설정된 경우 일반적으로 **Connection Security**\ 가 ``None``\ 으로 설정됩니다. **AD/LDAP Port**\ 가 636으로 설정된 경우 일반적으로 **Connection Security**\ 가 **TLS**\ 로 설정됩니다.)"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:220
 msgid ""
 "If you're seeing ``x509: certificate signed by unknown authority`` in "
 "your logs, try installing an intermediate SSL certificate or have your "
 "LDAP server send the complete certificate chain."
-msgstr ""
+msgstr "로그에 ``x509: certificate signed by unknown authority``\ 가 표시되면, 중간 SSL 인증서를 설치하거나 LDAP 서버가 전체 인증서 체인을 보내도록 하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:222
 msgid ""
 "If these options don't work, please `contact our support team "
 "<https://mattermost.com/support/>`_."
-msgstr ""
+msgstr "이러한 옵션이 작동하지 않으면 `지원팀에 문의 <https://mattermost.com/support/>`_\ 하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:225
 msgid ""
 "When I first set up and synchronize AD/LDAP, are the users automatically "
 "created in Mattermost?"
-msgstr ""
+msgstr "AD/LDAP를 처음 설정하고 동기화할 때 사용자가 OKR.BEST에 자동으로 생성되나요?"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:227
 msgid "No, each user is created on their first login."
-msgstr ""
+msgstr "아니요, 각 사용자는 첫 로그인 시 생성됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:230
 msgid ""
 "When I try to synchronize AD/LDAP, why does the status show as "
 "``Pending`` and not complete?"
-msgstr ""
+msgstr "AD/LDAP를 동기화하려고 할 때 상태가 완료되지 않고 ``Pending``\ 으로 표시되는 이유는 무엇인가요?"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:232
 msgid ""
@@ -714,7 +714,7 @@ msgid ""
 "wizard, navigate to the **Connection Settings** section, and make sure "
 "that the **Enable Synchronization with AD/LDAP** setting is set to "
 "**true**."
-msgstr ""
+msgstr "AD/LDAP 마법사를 열려면 **System Console > Authentication > AD/LDAP**\ 로 이동하여 **Connection Settings** 섹션으로 이동한 다음, **Enable Synchronization with AD/LDAP** 설정이 **true**\ 로 설정되어 있는지 확인하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:234
 msgid ""
@@ -722,25 +722,25 @@ msgid ""
 "that the User Filter is correctly formatted. Refer to this :ref:`document"
 " <administration-guide/configure/authentication-configuration-"
 "settings:user filter>` for guidance on setting a correct syntax format."
-msgstr ""
+msgstr "문제가 지속되면 **Test Filters** 버튼을 선택해 사용자 필터의 형식이 올바른지 테스트해 보세요. 올바른 구문 형식 설정에 대한 안내는 이 :ref:`문서 <administration-guide/configure/authentication-configuration-settings:user filter>`\ 를 참고하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:236
 msgid ""
 "Make sure that you also have at least one AD/LDAP user in Mattermost or "
 "the synchronization will not complete."
-msgstr ""
+msgstr "OKR.BEST에 AD/LDAP 사용자가 최소 한 명 있는지도 확인하세요. 그렇지 않으면 동기화가 완료되지 않습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:239
 msgid ""
 "What's the difference between the Username Attribute, ID Attribute, and "
 "Login ID Attribute?"
-msgstr ""
+msgstr "Username Attribute, ID Attribute, Login ID Attribute의 차이점은 무엇인가요?"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:241
 msgid ""
 "There are three AD/LDAP attributes that apear to be similar but serve a "
 "different purpose:"
-msgstr ""
+msgstr "비슷해 보이지만 다른 목적을 가진 세 가지 AD/LDAP 속성이 있습니다:"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:243
 msgid ""
@@ -749,7 +749,7 @@ msgid ""
 " to ``john.smith``, a user typing ``@john`` will see ``@john.smith`` in "
 "their autocomplete options and posting a message with ``@john.smith`` "
 "will send a notification to that user that they’ve been mentioned."
-msgstr ""
+msgstr "**Username Attribute:** OKR.BEST 사용자 인터페이스 내에서 사용자를 식별하고 멘션하는 데 사용됩니다. 예를 들어 **Username Attribute**\ 가 ``john.smith``\ 로 설정된 경우, ``@john``\ 을 입력하는 사용자는 자동 완성 옵션에서 ``@john.smith``\ 를 보게 되며, ``@john.smith``\ 로 메시지를 게시하면 해당 사용자에게 멘션되었다는 알림이 전송됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:244
 msgid ""
@@ -760,35 +760,35 @@ msgid ""
 " this field after users have already logged in, use the :ref:`mattermost "
 "ldap idmigrate mmctl tool <administration-guide/manage/mmctl-command-"
 "line-tool:mmctl ldap idmigrate>`."
-msgstr ""
+msgstr "**ID Attribute:** OKR.BEST에서 고유 식별자로 사용됩니다. ``ObjectGUID``\ 와 같이 값이 변경되지 않는 AD/LDAP 속성이어야 합니다. 사용자의 ID 속성이 변경되면 이전 계정과 연결되지 않은 새 OKR.BEST 계정이 생성됩니다. 사용자가 이미 로그인한 후 이 필드를 변경해야 하는 경우 :ref:`mattermost ldap idmigrate mmctl 도구 <administration-guide/manage/mmctl-command-line-tool:mmctl ldap idmigrate>`\ 를 사용하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:245
 msgid ""
 "**Login ID Attribute:** The attribute in the AD/LDAP server used to log "
 "in to Mattermost. Normally this attribute is the same as the **Username "
 "Attribute** field above, or another field that users can easily remember."
-msgstr ""
+msgstr "**Login ID Attribute:** OKR.BEST에 로그인하는 데 사용되는 AD/LDAP 서버의 속성입니다. 일반적으로 이 속성은 위의 **Username Attribute** 필드와 동일하거나, 사용자가 쉽게 기억할 수 있는 다른 필드입니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:248
 msgid "How do I deactivate users?"
-msgstr ""
+msgstr "사용자를 어떻게 비활성화하나요?"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:250
 msgid ""
 "If a user has logged into Mattermost through AD/LDAP or SAML, you can "
 "choose how they are deactivated, whether manually or automatically."
-msgstr ""
+msgstr "사용자가 AD/LDAP 또는 SAML을 통해 OKR.BEST에 로그인한 경우, 수동 또는 자동으로 비활성화하는 방법을 선택할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:252
 msgid "There are three main ways to do this:"
-msgstr ""
+msgstr "이를 수행하는 주요 방법은 세 가지입니다:"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:254
 msgid ""
 "**User deletion:** If the user is completely removed from the AD/LDAP "
 "server, they will be deactivated in Mattermost on the next "
 "synchronization."
-msgstr ""
+msgstr "**사용자 삭제:** 사용자가 AD/LDAP 서버에서 완전히 제거되면 다음 동기화 시 OKR.BEST에서 비활성화됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:255
 msgid ""
@@ -797,7 +797,7 @@ msgid ""
 "only select the subset of AD/LDAP users you want to have access to "
 "Mattermost. When someone is removed from the selected group, they will be"
 " deactivated in Mattermost on the next synchronization."
-msgstr ""
+msgstr "**사용자 필터:** OKR.BEST에 접근하기를 원하는 AD/LDAP 사용자의 하위 집합만 선택하도록 :ref:`사용자 필터 <administration-guide/configure/authentication-configuration-settings:user filter>`\ 를 설정하세요. 누군가가 선택된 그룹에서 제거되면 다음 동기화 시 OKR.BEST에서 비활성화됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:256
 msgid ""
@@ -805,13 +805,13 @@ msgid ""
 "Users**, select a user's role, and select **Deactivate**. When you "
 "manually deactivate a user, they can reactivate themselves by logging "
 "back in."
-msgstr ""
+msgstr "**수동 비활성화**: **System Console > User Management > Users**\ 로 이동하여 사용자의 역할을 선택하고 **Deactivate**\ 를 선택하세요. 사용자를 수동으로 비활성화하면 다시 로그인하여 스스로 재활성화할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:258
 msgid ""
 "For AD/LDAP, to filter out deactivated users you must set the user filter"
 " to:"
-msgstr ""
+msgstr "AD/LDAP의 경우 비활성화된 사용자를 필터링하려면 사용자 필터를 다음으로 설정해야 합니다:"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:260
 msgid "``(&(objectCategory=Person)(!(UserAccountControl:1.2.840.113556.1.4.803:=2)))``"
@@ -821,7 +821,7 @@ msgstr ""
 msgid ""
 "Filters can also be used for excluding users who belong to certain "
 "groups. For AD/LDAP, the query to filter out groups is:"
-msgstr ""
+msgstr "필터는 특정 그룹에 속한 사용자를 제외하는 데에도 사용할 수 있습니다. AD/LDAP의 경우 그룹을 필터링하는 쿼리는 다음과 같습니다:"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:264
 msgid "``(&(memberof=cn=ACME_ALL,ou=Users,dc=sademo,dc=com)``"
@@ -836,11 +836,11 @@ msgid ""
 "When a user is deactivated in Mattermost via options one or two above, "
 "all the user's current sessions are revoked and they will be unable to "
 "log in or access Mattermost."
-msgstr ""
+msgstr "위의 옵션 1 또는 2를 통해 OKR.BEST에서 사용자가 비활성화되면, 해당 사용자의 모든 현재 세션이 취소되며 로그인하거나 OKR.BEST에 접근할 수 없게 됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:271
 msgid "Can I connect to multiple AD/LDAP servers?"
-msgstr ""
+msgstr "여러 AD/LDAP 서버에 연결할 수 있나요?"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:273
 msgid ""
@@ -849,63 +849,63 @@ msgid ""
 "connecting to Mattermost. Consider upvoting the `feature request "
 "<https://portal.productboard.com/mattermost/33-what-matters-to-you>`_ on "
 "our forum."
-msgstr ""
+msgstr "현재 여러 AD/LDAP 서버에 연결하는 기본 제공 방법은 없습니다. OKR.BEST에 연결하기 전에 인스턴스를 포리스트로 연결해야 합니다. 포럼에서 `기능 요청 <https://portal.productboard.com/mattermost/33-what-matters-to-you>`_\ 에 추천을 추가하는 것을 고려해 보세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:276
 msgid ""
 "When trying to log in, I see the error ``AD/LDAP not available on this "
 "server``"
-msgstr ""
+msgstr "로그인을 시도할 때 ``AD/LDAP not available on this server`` 오류가 표시됩니다"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:278
 msgid ""
 "This indicates that there is a problem somewhere with your configuration."
 " We recommend that you check your Mattermost configuration settings to "
 "ensure that AD/LDAP is enabled, and the settings are correct."
-msgstr ""
+msgstr "이는 구성 어딘가에 문제가 있음을 나타냅니다. AD/LDAP가 활성화되어 있고 설정이 올바른지 확인하기 위해 OKR.BEST 구성 설정을 확인할 것을 권장합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:280
 msgid ""
 "If you're still having issues, you can `contact support "
 "<https://mattermost.com/support/>`__ for additional troubleshooting."
-msgstr ""
+msgstr "여전히 문제가 있으면 추가 문제 해결을 위해 `지원팀에 문의 <https://mattermost.com/support/>`__\ 할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:283
 msgid "I see the error ``User not registered on AD/LDAP server``"
-msgstr ""
+msgstr "``User not registered on AD/LDAP server`` 오류가 표시됩니다"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:285
 msgid ""
 "This means the query sent back to the AD/LDAP server returned no results."
 " We recommend that you:"
-msgstr ""
+msgstr "이는 AD/LDAP 서버로 보낸 쿼리가 결과를 반환하지 않았음을 의미합니다. 다음을 권장합니다:"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:287
 msgid ""
 "Check that the user credentials were entered properly - you should log in"
 " with the field set as the :ref:`*ID Attribute* <administration-"
 "guide/configure/authentication-configuration-settings:id attribute>`."
-msgstr ""
+msgstr "사용자 자격 증명이 올바르게 입력되었는지 확인하세요 - :ref:`*ID Attribute* <administration-guide/configure/authentication-configuration-settings:id attribute>`\ 로 설정된 필드로 로그인해야 합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:288
 msgid "Check that the user account exists in the AD/LDAP server."
-msgstr ""
+msgstr "AD/LDAP 서버에 사용자 계정이 존재하는지 확인하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:289
 msgid "Check the AD/LDAP configuration settings are correct."
-msgstr ""
+msgstr "AD/LDAP 구성 설정이 올바른지 확인하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:291
 msgid ""
 "If you're still having issues, you can `contact Mattermost Support "
 "<https://mattermost.com/support/>`__ for additional troubleshooting."
-msgstr ""
+msgstr "여전히 문제가 있으면 추가 문제 해결을 위해 `Mattermost 지원팀에 문의 <https://mattermost.com/support/>`__\ 할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:294
 msgid ""
 "I updated a user account in AD/LDAP, and they can no longer log in to "
 "Mattermost"
-msgstr ""
+msgstr "AD/LDAP에서 사용자 계정을 업데이트했는데 더 이상 OKR.BEST에 로그인할 수 없습니다"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:296
 msgid ""
@@ -914,7 +914,7 @@ msgid ""
 "that email already exists``, or a new Mattermost account is created when "
 "they try to log in - this means the **ID Attribute** for their account "
 "has changed."
-msgstr ""
+msgstr "사용자가 AD/LDAP 자격 증명으로 더 이상 OKR.BEST에 로그인할 수 없는 경우 - 예를 들어 ``An account with that email already exists`` 오류 메시지가 표시되거나 로그인을 시도할 때 새 OKR.BEST 계정이 생성되는 경우 - 이는 해당 계정의 **ID Attribute**\ 가 변경되었음을 의미합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:298
 msgid ""
@@ -923,32 +923,32 @@ msgid ""
 " that sometimes changes for an **ID Attribute** (e.g. username, email "
 "that changes when someone gets married), we recommend you switch to using"
 " a non-changing field such as a GUID."
-msgstr ""
+msgstr "이 문제는 **ID Attribute**\ 에 사용된 필드의 값을 이전 값으로 다시 변경하여 해결할 수 있습니다. 현재 **ID Attribute**\ 에 때때로 변경되는 필드(예: 사용자 이름, 결혼 시 변경되는 이메일)를 사용하고 있다면 GUID와 같이 변경되지 않는 필드를 사용하도록 전환할 것을 권장합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:300
 msgid ""
 "To do this, you can set the :ref:`Login ID Attribute <administration-"
 "guide/configure/authentication-configuration-settings:id attribute>` to "
 "whatever you would like users to log in with (e.g. username or email)."
-msgstr ""
+msgstr "그렇게 하려면 :ref:`Login ID Attribute <administration-guide/configure/authentication-configuration-settings:id attribute>`\ 를 사용자가 로그인하기를 원하는 것(예: 사용자 이름 또는 이메일)으로 설정할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:303
 msgid ""
 "Currently the value is case sensitive. If the **ID Attribute** is set to "
 "the username and the username changes from ``John.Smith`` to "
 "``john.smith``, the user will experience problems logging in."
-msgstr ""
+msgstr "현재 값은 대소문자를 구분합니다. **ID Attribute**\ 가 사용자 이름으로 설정되어 있고 사용자 이름이 ``John.Smith``\ 에서 ``john.smith``\ 로 변경되면 사용자는 로그인에 문제를 겪게 됩니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:306
 msgid "I see the log error ``LDAP Result Code 4 \"Size Limit Exceeded\"``"
-msgstr ""
+msgstr "``LDAP Result Code 4 \"Size Limit Exceeded\"`` 로그 오류가 표시됩니다"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:308
 msgid ""
 "This indicates that your AD/LDAP server configuration has a maximum page "
 "size set and the query coming from Mattermost is returning a result set "
 "in excess of that limit."
-msgstr ""
+msgstr "이는 AD/LDAP 서버 구성에 최대 페이지 크기가 설정되어 있고 OKR.BEST에서 오는 쿼리가 해당 제한을 초과하는 결과 집합을 반환하고 있음을 나타냅니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:310
 msgid ""
@@ -959,7 +959,7 @@ msgid ""
 "sets that do not exceed the max page size, rather than returning all "
 "results in a single query. A max page size setting of 1500 is "
 "recommended."
-msgstr ""
+msgstr "이 문제를 해결하려면 OKR.BEST 구성에서 :ref:`최대 페이지 크기 <administration-guide/configure/authentication-configuration-settings:maximum page size>`\ 를 AD/LDAP 서버의 제한과 일치하도록 설정할 수 있습니다. 이렇게 하면 단일 쿼리로 모든 결과를 반환하는 대신 최대 페이지 크기를 초과하지 않는 일련의 결과 집합을 반환합니다. 최대 페이지 크기 설정은 1500을 권장합니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:312
 msgid ""
@@ -967,11 +967,11 @@ msgid ""
 "logged into Mattermost yet. Ensure that at least one AD/LDAP user has "
 "logged into Mattermost and re-run the synchronization. The error should "
 "disappear at that point."
-msgstr ""
+msgstr "오류가 여전히 발생하면 아직 AD/LDAP 사용자가 OKR.BEST에 로그인하지 않았을 가능성이 높습니다. AD/LDAP 사용자가 최소 한 명 OKR.BEST에 로그인했는지 확인하고 동기화를 다시 실행하세요. 그 시점에서 오류가 사라질 것입니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:315
 msgid "I see the log error ``Missing NameID Element``"
-msgstr ""
+msgstr "``Missing NameID Element`` 로그 오류가 표시됩니다"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:317
 msgid ""
@@ -981,11 +981,11 @@ msgid ""
 "``NameID`` is mapped to a unique user identifier, such as the user's "
 "email address or another stable attribute that isn't subject to change "
 "over time."
-msgstr ""
+msgstr "이는 AD/LDAP 서버 구성이 SAML 어설션에 ``NameID`` 요소를 포함하지 않음을 나타냅니다. ``NameID`` 요소는 SAML 어설션에서 사용자 식별에 필요합니다. ``NameID``\ 가 사용자의 이메일 주소나 시간이 지나도 변경되지 않는 다른 안정적인 속성과 같은 고유 사용자 식별자에 매핑되어 있는지 확인하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:320
 msgid "I see the log error ``Username Attribute is Missing``"
-msgstr ""
+msgstr "``Username Attribute is Missing`` 로그 오류가 표시됩니다"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:322
 msgid ""
@@ -995,27 +995,27 @@ msgid ""
 "exactly what Mattermost expects. Update the claim rules in AD/LDAP to "
 "correctly map LDAP attributes to the expected outgoing claim types, "
 "ensuring proper casing (e.g., ``Username`` instead of ``UserName``)."
-msgstr ""
+msgstr "SAML 어설션의 ``Username`` 속성이 누락되었거나 이름이 잘못 지정되었습니다. 모든 필수 속성이 SAML 어설션에 포함되어 있는지 확인하세요. 속성 이름은 대소문자를 구분하며 OKR.BEST가 예상하는 것과 정확히 일치해야 합니다. LDAP 속성을 예상되는 발신 클레임 유형에 올바르게 매핑하도록 AD/LDAP의 클레임 규칙을 업데이트하고, 올바른 대소문자(예: ``UserName``\ 이 아닌 ``Username``)를 사용하세요."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:325
 msgid "Can the Enter ID User Filter read security groups?"
-msgstr ""
+msgstr "Entra ID 사용자 필터가 보안 그룹을 읽을 수 있나요?"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:327
 msgid "Yes it can, but make sure that:"
-msgstr ""
+msgstr "네, 가능합니다. 단 다음을 확인하세요:"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:329
 msgid "Permissions are correctly configured on the service account you are using."
-msgstr ""
+msgstr "사용 중인 서비스 계정에 권한이 올바르게 구성되어 있습니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:330
 msgid "Each user object is a direct member of the security group."
-msgstr ""
+msgstr "각 사용자 객체가 보안 그룹의 직접 구성원입니다."
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:333
 msgid "How do I know if an AD/LDAP sync job fails?"
-msgstr ""
+msgstr "AD/LDAP 동기화 작업이 실패했는지 어떻게 알 수 있나요?"
 
 #: ../../source/administration-guide/onboard/ad-ldap.rst:335
 msgid ""
@@ -1023,5 +1023,5 @@ msgid ""
 "History** section of the AD/LDAP wizard (**System Console > "
 "Authentication > AD/LDAP**). Here you can see the number of users updated"
 " and if the job succeeded or failed."
-msgstr ""
+msgstr "OKR.BEST는 AD/LDAP 마법사(**System Console > Authentication > AD/LDAP**)의 **Sync History** 섹션에서 각 AD/LDAP 동기화 작업의 상태를 제공합니다. 여기에서 업데이트된 사용자 수와 작업의 성공 또는 실패 여부를 확인할 수 있습니다."
 
