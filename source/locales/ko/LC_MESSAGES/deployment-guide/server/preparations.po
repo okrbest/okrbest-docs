@@ -21,23 +21,23 @@ msgstr ""
 
 #: ../../source/deployment-guide/server/preparations.rst:6
 msgid "Review software and hardware requirements"
-msgstr ""
+msgstr "소프트웨어 및 하드웨어 요구 사항 검토"
 
 #: ../../source/deployment-guide/server/preparations.rst:6
 msgid "Set up an NGINX proxy"
-msgstr ""
+msgstr "NGINX 프록시 설정"
 
 #: ../../source/deployment-guide/server/preparations.rst:6
 msgid "Set up TLS"
-msgstr ""
+msgstr "TLS 설정"
 
 #: ../../source/deployment-guide/server/preparations.rst:6
 msgid "Use an image proxy"
-msgstr ""
+msgstr "이미지 프록시 사용"
 
 #: ../../source/deployment-guide/server/preparations.rst:2
 msgid "Prepare your Mattermost Server environment"
-msgstr ""
+msgstr "OKR.BEST 서버 환경 준비"
 
 #: ../../source/deployment-guide/server/preparations.rst:4
 msgid ""
@@ -45,12 +45,14 @@ msgid ""
 "the Mattermost Server, focusing on setting up the database and file "
 "storage systems."
 msgstr ""
+"이 가이드는 OKR.BEST 서버를 설치하기 전에 필요한 주요 준비 단계를 설명하며, "
+"데이터베이스와 파일 저장 시스템 설정에 중점을 둡니다."
 
 #: ../../source/deployment-guide/server/preparations.rst:16
 msgid ""
 "Before installing Mattermost Server, review the following preparation "
 "requirements:"
-msgstr ""
+msgstr "OKR.BEST 서버를 설치하기 전에 다음 준비 요구 사항을 검토하세요:"
 
 #: ../../source/deployment-guide/server/preparations.rst:18
 msgid ""
@@ -58,6 +60,9 @@ msgid ""
 "/software-hardware-requirements>` - Ensure your system meets the minimum "
 "requirements for Mattermost deployment."
 msgstr ""
+":doc:`소프트웨어 및 하드웨어 요구 사항 검토 </deployment-guide/software-hardware-"
+"requirements>` - 시스템이 OKR.BEST 배포의 최소 요구 사항을 충족하는지 "
+"확인하세요."
 
 #: ../../source/deployment-guide/server/preparations.rst:19
 msgid ""
@@ -65,22 +70,28 @@ msgid ""
 " - Configure NGINX as a reverse proxy for enhanced security and "
 "performance."
 msgstr ""
+":doc:`NGINX 프록시 설정 </deployment-guide/server/setup-nginx-proxy>` - 향상된 "
+"보안과 성능을 위해 NGINX를 리버스 프록시로 구성하세요."
 
 #: ../../source/deployment-guide/server/preparations.rst:20
 msgid ""
 ":doc:`Set up TLS </deployment-guide/server/setup-tls>` - Enable secure "
 "communication with SSL/TLS encryption."
 msgstr ""
+":doc:`TLS 설정 </deployment-guide/server/setup-tls>` - SSL/TLS 암호화로 안전한 "
+"통신을 활성화하세요."
 
 #: ../../source/deployment-guide/server/preparations.rst:21
 msgid ""
 ":doc:`Use an image proxy </deployment-guide/server/image-proxy>` - "
 "Configure image proxy for enhanced privacy and security."
 msgstr ""
+":doc:`이미지 프록시 사용 </deployment-guide/server/image-proxy>` - 향상된 "
+"개인정보 보호와 보안을 위해 이미지 프록시를 구성하세요."
 
 #: ../../source/deployment-guide/server/preparations.rst:24
 msgid "Database preparation"
-msgstr ""
+msgstr "데이터베이스 준비"
 
 #: ../../source/deployment-guide/server/preparations.rst:26
 msgid ""
@@ -91,6 +102,11 @@ msgid ""
 "migration>` documentation for guidance on migrating from MySQL to "
 "PostgreSQL."
 msgstr ""
+"OKR.BEST 서버 설치에는 PostgreSQL v14 이상이 필요합니다. :doc:`MySQL 데이터베이스 "
+"지원 </deployment-guide/server/prepare-mattermost-mysql-database>`\\ 은 OKR.BEST "
+"v11부터 지원 중단됩니다. MySQL에서 PostgreSQL로 마이그레이션하는 안내는 "
+":doc:`PostgreSQL 마이그레이션 </deployment-guide/postgres-migration>` 문서를 "
+"참고하세요."
 
 #: ../../source/deployment-guide/server/preparations.rst:28
 msgid ""
@@ -99,18 +115,21 @@ msgid ""
 "installation is complete, the PostgreSQL server is running, and a Linux "
 "user account called postgres has been created."
 msgstr ""
+"PostgreSQL 서버 인스턴스를 생성하세요. 자세한 내용은 `PostgreSQL 문서 "
+"<https://www.postgresql.org/download/>`_\\ 를 참고하세요. 설치가 완료되면 "
+"PostgreSQL 서버가 실행 중이며, postgres라는 Linux 사용자 계정이 생성됩니다."
 
 #: ../../source/deployment-guide/server/preparations.rst:30
 msgid "Create the Mattermost database and user:"
-msgstr ""
+msgstr "OKR.BEST 데이터베이스와 사용자를 생성합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:32
 msgid "Access PostgreSQL by running:"
-msgstr ""
+msgstr "다음을 실행하여 PostgreSQL에 접근합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:38
 msgid "Create the database:"
-msgstr ""
+msgstr "데이터베이스를 생성합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:44
 msgid ""
@@ -118,51 +137,55 @@ msgid ""
 "locale name: \"en_US.UTF-8\"``, you need to generate the locale first "
 "using ``locale-gen en_US.UTF-8``."
 msgstr ""
+"이 단계가 ``invalid LC_COLLATE locale name: \"en_US.UTF-8\"`` 같은 오류 "
+"메시지와 함께 실패하면, 먼저 ``locale-gen en_US.UTF-8``\\ 을 사용해 로캘을 "
+"생성해야 합니다."
 
 #: ../../source/deployment-guide/server/preparations.rst:46
 msgid "Create the Mattermost user with a secure password:"
-msgstr ""
+msgstr "안전한 비밀번호로 OKR.BEST 사용자를 생성합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:52
 msgid "Grant database access to the user:"
-msgstr ""
+msgstr "사용자에게 데이터베이스 접근 권한을 부여합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:58
 msgid "If using PostgreSQL v15.x or later, additional grants are required:"
-msgstr ""
+msgstr "PostgreSQL v15.x 이상을 사용하는 경우 추가 권한 부여가 필요합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:68
 msgid ""
 "Configure PostgreSQL for remote connections (if database is on a separate"
 " server):"
 msgstr ""
+"원격 연결을 위해 PostgreSQL을 구성합니다(데이터베이스가 별도의 서버에 있는 경우):"
 
 #: ../../source/deployment-guide/server/preparations.rst:70
 msgid "Edit ``postgresql.conf`` to allow remote connections:"
-msgstr ""
+msgstr "원격 연결을 허용하도록 ``postgresql.conf``\\ 를 편집합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:74
 #, python-brace-format
 msgid "Edit ``/etc/postgresql/{version}/main/postgresql.conf``:"
-msgstr ""
+msgstr "``/etc/postgresql/{version}/main/postgresql.conf``\\ 을 편집합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:82
 #, python-brace-format
 msgid "Edit ``/var/lib/pgsql/{version}/data/postgresql.conf``:"
-msgstr ""
+msgstr "``/var/lib/pgsql/{version}/data/postgresql.conf``\\ 을 편집합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:88
 msgid "Configure client authentication by editing ``pg_hba.conf``:"
-msgstr ""
+msgstr "``pg_hba.conf``\\ 를 편집하여 클라이언트 인증을 구성합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:90
 #, python-brace-format
 msgid "Add the following line, replacing ``{mattermost-server-IP}``:"
-msgstr ""
+msgstr "``{mattermost-server-IP}``\\ 를 바꿔 다음 줄을 추가합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:96
 msgid "Restart the PostgreSQL service to apply the configuration changes:"
-msgstr ""
+msgstr "구성 변경 사항을 적용하기 위해 PostgreSQL 서비스를 다시 시작합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:112
 msgid ""
@@ -170,6 +193,9 @@ msgid ""
 "PostgreSQL </administration-guide/upgrade/upgrading-postgres>` for the "
 "full upgrade procedure and post-upgrade steps."
 msgstr ""
+"PostgreSQL의 메이저 버전을 업그레이드하는 경우, 전체 업그레이드 절차와 업그레이드 "
+"후 단계는 :doc:`PostgreSQL 업그레이드 </administration-guide/upgrade/upgrading-"
+"postgres>`\\ 를 참고하세요."
 
 #: ../../source/deployment-guide/server/preparations.rst:114
 msgid ""
@@ -177,92 +203,97 @@ msgid ""
 " deployment </deployment-guide/server/deploy-linux>` documentation to "
 "continue with your Mattermost server installation."
 msgstr ""
+"데이터베이스 준비를 완료했으면 :doc:`Linux 배포 </deployment-guide/server"
+"/deploy-linux>` 문서로 돌아가 OKR.BEST 서버 설치를 계속하세요."
 
 #: ../../source/deployment-guide/server/preparations.rst:117
 msgid "File storage preparation"
-msgstr ""
+msgstr "파일 저장소 준비"
 
 #: ../../source/deployment-guide/server/preparations.rst:119
 msgid ""
 "Mattermost requires a file storage system for storing user files, images,"
 " and attachments. You have several options, including:"
 msgstr ""
+"OKR.BEST는 사용자 파일, 이미지, 첨부 파일을 저장하기 위한 파일 저장 시스템이 "
+"필요합니다. 다음을 포함한 여러 옵션이 있습니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:121
 msgid "S3-compatibile object storage (recommended)"
-msgstr ""
+msgstr "S3 호환 오브젝트 스토리지(권장)"
 
 #: ../../source/deployment-guide/server/preparations.rst:122
 #: ../../source/deployment-guide/server/preparations.rst:148
 msgid "Network file storage"
-msgstr ""
+msgstr "네트워크 파일 저장소"
 
 #: ../../source/deployment-guide/server/preparations.rst:123
 #: ../../source/deployment-guide/server/preparations.rst:156
 msgid "Local file storage"
-msgstr ""
+msgstr "로컬 파일 저장소"
 
 #: ../../source/deployment-guide/server/preparations.rst:126
 msgid "S3-compatible object storage (Recommended)"
-msgstr ""
+msgstr "S3 호환 오브젝트 스토리지(권장)"
 
 #: ../../source/deployment-guide/server/preparations.rst:128
 msgid ""
 "For production environments, we recommend using S3-compatible object "
 "storage such as:"
 msgstr ""
+"운영 환경에서는 다음과 같은 S3 호환 오브젝트 스토리지 사용을 권장합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:130
 msgid "Amazon S3"
-msgstr ""
+msgstr "Amazon S3"
 
 #: ../../source/deployment-guide/server/preparations.rst:131
 msgid "Digital Ocean Spaces"
-msgstr ""
+msgstr "Digital Ocean Spaces"
 
 #: ../../source/deployment-guide/server/preparations.rst:132
 msgid "Other S3-compatible services"
-msgstr ""
+msgstr "기타 S3 호환 서비스"
 
 #: ../../source/deployment-guide/server/preparations.rst:134
 msgid "When using S3 storage, you'll need:"
-msgstr ""
+msgstr "S3 스토리지를 사용할 때는 다음이 필요합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:136
 msgid "A bucket created specifically for Mattermost"
-msgstr ""
+msgstr "OKR.BEST 전용으로 생성된 버킷"
 
 #: ../../source/deployment-guide/server/preparations.rst:137
 msgid "Access credentials (Access Key and Secret Key)"
-msgstr ""
+msgstr "접근 자격 증명(Access Key 및 Secret Key)"
 
 #: ../../source/deployment-guide/server/preparations.rst:138
 msgid "Appropriate bucket policies configured"
-msgstr ""
+msgstr "적절하게 구성된 버킷 정책"
 
 #: ../../source/deployment-guide/server/preparations.rst:139
 msgid "The following information for configuration:"
-msgstr ""
+msgstr "구성을 위한 다음 정보:"
 
 #: ../../source/deployment-guide/server/preparations.rst:141
 msgid "Bucket name"
-msgstr ""
+msgstr "버킷 이름"
 
 #: ../../source/deployment-guide/server/preparations.rst:142
 msgid "Region (if applicable)"
-msgstr ""
+msgstr "리전(해당하는 경우)"
 
 #: ../../source/deployment-guide/server/preparations.rst:143
 msgid "Access Key"
-msgstr ""
+msgstr "Access Key"
 
 #: ../../source/deployment-guide/server/preparations.rst:144
 msgid "Secret Key"
-msgstr ""
+msgstr "Secret Key"
 
 #: ../../source/deployment-guide/server/preparations.rst:145
 msgid "Endpoint URL (for non-AWS S3 services)"
-msgstr ""
+msgstr "엔드포인트 URL(AWS가 아닌 S3 서비스의 경우)"
 
 #: ../../source/deployment-guide/server/preparations.rst:150
 msgid ""
@@ -270,6 +301,8 @@ msgid ""
 " we recommend using a Network Addressable Storage (NAS) solution with "
 "Network File System (NFS)."
 msgstr ""
+"S3 호환 오브젝트 스토리지를 사용할 수 없는 운영 환경에서는 NFS(Network File "
+"System)를 갖춘 NAS(Network Addressable Storage) 솔루션 사용을 권장합니다."
 
 #: ../../source/deployment-guide/server/preparations.rst:152
 msgid ""
@@ -277,24 +310,28 @@ msgid ""
 "Mattermost (e.g. `/mnt/mattermost_data`) and mount it on all servers that"
 " will be running Mattermost."
 msgstr ""
+"OKR.BEST 전용 공유(예: `/mnt/mattermost_data`)를 갖춘 NFS 서버를 준비하고, "
+"OKR.BEST를 실행할 모든 서버에 마운트해야 합니다."
 
 #: ../../source/deployment-guide/server/preparations.rst:158
 msgid ""
 "For simple deployments, you can use local file storage. However, we don't"
 " recommend this for production environments or multi-node deployments."
 msgstr ""
+"간단한 배포에는 로컬 파일 저장소를 사용할 수 있습니다. 다만 운영 환경이나 다중 "
+"노드 배포에는 권장하지 않습니다."
 
 #: ../../source/deployment-guide/server/preparations.rst:160
 msgid "Create a directory for file storage:"
-msgstr ""
+msgstr "파일 저장소용 디렉토리를 생성합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:166
 msgid "Set appropriate permissions:"
-msgstr ""
+msgstr "적절한 권한을 설정합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:173
 msgid "(Optional) Use an image proxy"
-msgstr ""
+msgstr "(선택 사항) 이미지 프록시 사용"
 
 #: ../../source/deployment-guide/server/preparations.rst:175
 msgid ""
@@ -305,6 +342,12 @@ msgid ""
 "views an image. This also prevents the use of tracking pixels (invisible "
 "images that do the same thing without the user even seeing an image)."
 msgstr ""
+":doc:`이미지 프록시 </deployment-guide/server/image-proxy>`\\ 를 사용하면 "
+"OKR.BEST 클라이언트가 보내는 모든 이미지 요청이 서드파티 서버에 직접 연결하는 대신 "
+"프록시를 거치게 됩니다. 이는 서드파티 서버가 누가 이미지를 보는지 추적하는 것을 "
+"방지하여 사용자 개인정보를 보호하는 데 도움이 됩니다. 또한 추적 픽셀(사용자가 "
+"이미지를 보지 않아도 동일한 작업을 수행하는 보이지 않는 이미지)의 사용도 "
+"방지합니다."
 
 #: ../../source/deployment-guide/server/preparations.rst:177
 msgid ""
@@ -312,40 +355,44 @@ msgid ""
 "loading images faster and more reliable. This caching also helps preserve"
 " posts by protecting them from dead images."
 msgstr ""
+"일부 프록시 서버는 이미지 로딩을 더 빠르고 안정적으로 만드는 캐싱 계층도 "
+"제공합니다. 이 캐싱은 게시물을 깨진 이미지로부터 보호하여 게시물을 보존하는 데도 "
+"도움이 됩니다."
 
 #: ../../source/deployment-guide/server/preparations.rst:180
 msgid "Network preparation"
-msgstr ""
+msgstr "네트워크 준비"
 
 #: ../../source/deployment-guide/server/preparations.rst:182
 msgid ""
 "The following table outlines the network ports and protocols required for"
 " Mattermost server:"
 msgstr ""
+"다음 표는 OKR.BEST 서버에 필요한 네트워크 포트와 프로토콜을 설명합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:185
 msgid "Service Name"
-msgstr ""
+msgstr "서비스 이름"
 
 #: ../../source/deployment-guide/server/preparations.rst:185
 msgid "Config Setting"
-msgstr ""
+msgstr "구성 설정"
 
 #: ../../source/deployment-guide/server/preparations.rst:185
 msgid "Port (default)"
-msgstr ""
+msgstr "포트(기본값)"
 
 #: ../../source/deployment-guide/server/preparations.rst:185
 msgid "Protocol"
-msgstr ""
+msgstr "프로토콜"
 
 #: ../../source/deployment-guide/server/preparations.rst:185
 msgid "Direction"
-msgstr ""
+msgstr "방향"
 
 #: ../../source/deployment-guide/server/preparations.rst:185
 msgid "Info"
-msgstr ""
+msgstr "정보"
 
 #: ../../source/deployment-guide/server/preparations.rst:187
 msgid "HTTP/Websocket"
@@ -371,17 +418,19 @@ msgstr ""
 #: ../../source/deployment-guide/server/preparations.rst:191
 #: ../../source/deployment-guide/server/preparations.rst:193
 msgid "Inbound"
-msgstr ""
+msgstr "인바운드"
 
 #: ../../source/deployment-guide/server/preparations.rst:187
 msgid ""
 "External (no proxy) / Internal (with proxy) Usually this requires port 80"
 " and 443 when running HTTPS."
 msgstr ""
+"외부(프록시 없음) / 내부(프록시 있음) 일반적으로 HTTPS 실행 시 포트 80과 443이 "
+"필요합니다."
 
 #: ../../source/deployment-guide/server/preparations.rst:191
 msgid "Cluster"
-msgstr ""
+msgstr "클러스터"
 
 #: ../../source/deployment-guide/server/preparations.rst:191
 msgid "ClusterSettings.GossipPort"
@@ -399,11 +448,11 @@ msgstr ""
 
 #: ../../source/deployment-guide/server/preparations.rst:191
 msgid "Internal"
-msgstr ""
+msgstr "내부"
 
 #: ../../source/deployment-guide/server/preparations.rst:193
 msgid "Metrics"
-msgstr ""
+msgstr "메트릭"
 
 #: ../../source/deployment-guide/server/preparations.rst:193
 msgid "MetricsSettings.ListenAddress"
@@ -415,11 +464,11 @@ msgstr ""
 
 #: ../../source/deployment-guide/server/preparations.rst:193
 msgid "External (no proxy) / Internal (with proxy)"
-msgstr ""
+msgstr "외부(프록시 없음) / 내부(프록시 있음)"
 
 #: ../../source/deployment-guide/server/preparations.rst:195
 msgid "Database"
-msgstr ""
+msgstr "데이터베이스"
 
 #: ../../source/deployment-guide/server/preparations.rst:195
 msgid "SqlSettings.DataSource"
@@ -435,11 +484,11 @@ msgstr ""
 #: ../../source/deployment-guide/server/preparations.rst:201
 #: ../../source/deployment-guide/server/preparations.rst:203
 msgid "Outbound"
-msgstr ""
+msgstr "아웃바운드"
 
 #: ../../source/deployment-guide/server/preparations.rst:195
 msgid "Usually internal (recommended)"
-msgstr ""
+msgstr "일반적으로 내부(권장)"
 
 #: ../../source/deployment-guide/server/preparations.rst:197
 msgid "LDAP"
@@ -455,7 +504,7 @@ msgstr ""
 
 #: ../../source/deployment-guide/server/preparations.rst:199
 msgid "S3 Storage"
-msgstr ""
+msgstr "S3 스토리지"
 
 #: ../../source/deployment-guide/server/preparations.rst:199
 msgid "FileSettings.AmazonS3Endpoint"
@@ -480,7 +529,7 @@ msgstr ""
 
 #: ../../source/deployment-guide/server/preparations.rst:203
 msgid "Push Notifications"
-msgstr ""
+msgstr "푸시 알림"
 
 #: ../../source/deployment-guide/server/preparations.rst:203
 msgid "EmailSettings.PushNotificationServer"
@@ -488,35 +537,39 @@ msgstr ""
 
 #: ../../source/deployment-guide/server/preparations.rst:208
 msgid "All outbound ports may vary based on your specific configuration"
-msgstr ""
+msgstr "모든 아웃바운드 포트는 특정 구성에 따라 달라질 수 있습니다"
 
 #: ../../source/deployment-guide/server/preparations.rst:209
 msgid ""
 "Mattermost can be configured to use an outbound proxy for any HTTP/HTTPS "
 "traffic (see below)"
 msgstr ""
+"OKR.BEST는 모든 HTTP/HTTPS 트래픽에 대해 아웃바운드 프록시를 사용하도록 구성할 수 "
+"있습니다(아래 참고)"
 
 #: ../../source/deployment-guide/server/preparations.rst:210
 msgid "Calls service may require additional ports"
-msgstr ""
+msgstr "Calls 서비스는 추가 포트가 필요할 수 있습니다"
 
 #: ../../source/deployment-guide/server/preparations.rst:213
 msgid "Outbound proxy configuration"
-msgstr ""
+msgstr "아웃바운드 프록시 구성"
 
 #: ../../source/deployment-guide/server/preparations.rst:215
 msgid ""
 "If your deployment requires using an outbound proxy, you can configure "
 "Mattermost using environment variables:"
 msgstr ""
+"배포에 아웃바운드 프록시 사용이 필요하다면 환경 변수를 사용하여 OKR.BEST를 구성할 "
+"수 있습니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:217
 msgid "Configure the proxy settings in your service configuration:"
-msgstr ""
+msgstr "서비스 구성에서 프록시 설정을 구성합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:225
 msgid "For authenticated proxies, include credentials in the URL:"
-msgstr ""
+msgstr "인증이 필요한 프록시의 경우 URL에 자격 증명을 포함합니다:"
 
 #: ../../source/deployment-guide/server/preparations.rst:232
 msgid ""
@@ -524,44 +577,49 @@ msgid ""
 " - CIDR ranges (e.g., ``1.2.3.4/8``) - Domain names (e.g., "
 "``example.com``) - Subdomains (e.g., ``.example.com``)"
 msgstr ""
+"``NO_PROXY`` 변수에는 다음을 포함할 수 있습니다: - IP 주소(예: ``1.2.3.4``) - "
+"CIDR 범위(예: ``1.2.3.4/8``) - 도메인 이름(예: ``example.com``) - "
+"서브도메인(예: ``.example.com``)"
 
 #: ../../source/deployment-guide/server/preparations.rst:240
 msgid ""
 "When using an HTTPS proxy, ensure your Mattermost server has the proxy's "
 "root certificate configured to avoid connection issues."
 msgstr ""
+"HTTPS 프록시를 사용할 때는 연결 문제를 방지하기 위해 OKR.BEST 서버에 프록시의 루트 "
+"인증서가 구성되어 있는지 확인하세요."
 
 #: ../../source/deployment-guide/server/preparations.rst:242
 msgid "Example systemd Service Configuration"
-msgstr ""
+msgstr "systemd 서비스 구성 예시"
 
 #: ../../source/deployment-guide/server/preparations.rst:278
 msgid "System requirements"
-msgstr ""
+msgstr "시스템 요구 사항"
 
 #: ../../source/deployment-guide/server/preparations.rst:280
 msgid "Ensure your system meets these minimum requirements:"
-msgstr ""
+msgstr "시스템이 다음 최소 요구 사항을 충족하는지 확인하세요:"
 
 #: ../../source/deployment-guide/server/preparations.rst:282
 msgid "Operating System: 64-bit Linux distribution"
-msgstr ""
+msgstr "운영 체제: 64비트 Linux 배포판"
 
 #: ../../source/deployment-guide/server/preparations.rst:283
 msgid "Hardware: 1 vCPU/core with 2GB RAM (supports up to 1,000 users)"
-msgstr ""
+msgstr "하드웨어: vCPU/코어 1개와 RAM 2GB(최대 1,000명 지원)"
 
 #: ../../source/deployment-guide/server/preparations.rst:284
 msgid "Storage: Minimum 10GB available space"
-msgstr ""
+msgstr "저장소: 최소 10GB의 사용 가능한 공간"
 
 #: ../../source/deployment-guide/server/preparations.rst:285
 msgid "Database: PostgreSQL v14+"
-msgstr ""
+msgstr "데이터베이스: PostgreSQL v14 이상"
 
 #: ../../source/deployment-guide/server/preparations.rst:286
 msgid "Network: Reliable internet connection with sufficient bandwidth"
-msgstr ""
+msgstr "네트워크: 충분한 대역폭을 갖춘 안정적인 인터넷 연결"
 
 #: ../../source/deployment-guide/server/preparations.rst:288
 msgid ""
@@ -569,10 +627,12 @@ msgid ""
 "/software-hardware-requirements>` documentation for additional "
 "requirements."
 msgstr ""
+"추가 요구 사항은 :doc:`소프트웨어 및 하드웨어 요구 사항 </deployment-guide"
+"/software-hardware-requirements>` 문서를 참고하세요."
 
 #: ../../source/deployment-guide/server/preparations.rst:291
 msgid "Next steps"
-msgstr ""
+msgstr "다음 단계"
 
 #: ../../source/deployment-guide/server/preparations.rst:293
 msgid ""
@@ -580,16 +640,18 @@ msgid ""
 "installing the Mattermost server. Choose your preferred installation "
 "method:"
 msgstr ""
+"이러한 준비 단계를 완료하면 OKR.BEST 서버 설치를 진행할 수 있습니다. 원하는 설치 "
+"방법을 선택하세요:"
 
 #: ../../source/deployment-guide/server/preparations.rst:295
 msgid ":doc:`Deploy with Kubernetes </deployment-guide/server/deploy-kubernetes>`"
-msgstr ""
+msgstr ":doc:`Kubernetes로 배포 </deployment-guide/server/deploy-kubernetes>`"
 
 #: ../../source/deployment-guide/server/preparations.rst:296
 msgid ":doc:`Deploy on Linux </deployment-guide/server/deploy-linux>`"
-msgstr ""
+msgstr ":doc:`Linux에 배포 </deployment-guide/server/deploy-linux>`"
 
 #: ../../source/deployment-guide/server/preparations.rst:297
 msgid ":doc:`Deploy with Containers </deployment-guide/server/deploy-containers>`"
-msgstr ""
+msgstr ":doc:`컨테이너로 배포 </deployment-guide/server/deploy-containers>`"
 
