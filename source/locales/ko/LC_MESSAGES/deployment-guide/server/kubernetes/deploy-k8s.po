@@ -26,14 +26,18 @@ msgid ""
 "While the operator supports a range of configurations, we strongly "
 "recommend using a cloud-native approach for production environments."
 msgstr ""
+"OKR.BEST Kubernetes Operator를 사용하면 S3 호환 저장소와 관리형 데이터베이스 "
+"서비스를 사용하여 Kubernetes에 OKR.BEST를 배포할 수 있습니다. operator는 다양한 "
+"구성을 지원하지만, 운영 환경에서는 클라우드 네이티브 방식을 사용할 것을 강력히 "
+"권장합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:7
 msgid "Prerequisites"
-msgstr ""
+msgstr "사전 요구 사항"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:9
 msgid "Before you begin, ensure you have the following:"
-msgstr ""
+msgstr "시작하기 전에 다음을 갖추고 있는지 확인하세요:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:11
 msgid ""
@@ -41,6 +45,9 @@ msgid ""
 "<https://kubernetes.io/docs/setup/>`__). Your cluster should be running a"
 " `supported Kubernetes version <https://kubernetes.io/releases/>`__."
 msgstr ""
+"작동하는 Kubernetes 클러스터(`Kubernetes 설정 가이드 "
+"<https://kubernetes.io/docs/setup/>`__ 참고). 클러스터는 `지원되는 Kubernetes "
+"버전 <https://kubernetes.io/releases/>`__\\ 을 실행하고 있어야 합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:12
 msgid ""
@@ -48,12 +55,15 @@ msgid ""
 "`kubectl installation guide "
 "<https://kubernetes.io/docs/reference/kubectl/>`__)."
 msgstr ""
+"로컬 머신에 설치된 `kubectl` 명령줄 도구(`kubectl 설치 가이드 "
+"<https://kubernetes.io/docs/reference/kubectl/>`__ 참고)."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:13
 msgid ""
 "A fundamental understanding of Kubernetes concepts, such as deployments, "
 "pods, and applying manifests."
 msgstr ""
+"디플로이먼트, 파드, 매니페스트 적용 같은 Kubernetes 개념에 대한 기본적인 이해."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:14
 msgid ""
@@ -62,20 +72,25 @@ msgid ""
 "guide/scale/scaling-for-enterprise:available reference architectures>` "
 "documentation for resource requirements at different scales."
 msgstr ""
+"예상 사용자 부하를 기준으로 할당된 충분한 Kubernetes 리소스. 다양한 규모에서의 "
+"리소스 요구 사항은 :ref:`엔터프라이즈 확장 <administration-guide/scale/scaling-"
+"for-enterprise:available reference architectures>` 문서를 참고하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:17
 msgid "Installation steps"
-msgstr ""
+msgstr "설치 단계"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:19
 msgid ""
 "The installation process involves setting up necessary operators and then"
 " deploying Mattermost itself."
 msgstr ""
+"설치 과정은 필요한 operator를 설정한 다음 OKR.BEST 자체를 배포하는 것을 "
+"포함합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:22
 msgid "Step 1: Install the NGINX Ingress Controller"
-msgstr ""
+msgstr "1단계: NGINX Ingress Controller 설치"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:24
 msgid ""
@@ -85,14 +100,18 @@ msgid ""
 "recommends installing the Nginx Operator via helm, regardless of platform"
 " you are installing to."
 msgstr ""
+"`Kubernetes 배포 문서 <https://kubernetes.github.io/ingress-nginx/deploy/>`_\\ "
+"의 안내에 따라 Kubernetes 클러스터에 NGINX ingress controller를 설치하세요. "
+"OKR.BEST는 설치하는 플랫폼에 관계없이 helm을 통해 Nginx Operator를 설치할 것을 "
+"권장합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:27
 msgid "Step 2: Install the Mattermost Operator"
-msgstr ""
+msgstr "2단계: OKR.BEST Operator 설치"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:29
 msgid "The Mattermost Kubernetes Operator can be installed using Helm."
-msgstr ""
+msgstr "OKR.BEST Kubernetes Operator는 Helm을 사용하여 설치할 수 있습니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:31
 msgid ""
@@ -100,10 +119,12 @@ msgid ""
 "documentation <https://helm.sh/docs/using_helm/>`_ for installation "
 "instructions."
 msgstr ""
+"Helm(버전 3.13.0 이상)을 설치합니다. 설치 안내는 `Helm 빠른 시작 문서 "
+"<https://helm.sh/docs/using_helm/>`_\\ 를 참고하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:33
 msgid "Add the Mattermost Helm repository:"
-msgstr ""
+msgstr "Mattermost Helm 저장소를 추가합니다:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:39
 msgid ""
@@ -112,10 +133,14 @@ msgid ""
 "/mattermost-helm/blob/master/charts/mattermost-operator/values.yaml>`_. "
 "This file allows for customization of the operator."
 msgstr ""
+"``config.yaml``\\ 이라는 파일을 만들고 `Mattermost operator values 파일 "
+"<https://github.com/mattermost/mattermost-helm/blob/master/charts/mattermost-"
+"operator/values.yaml>`_\\ 의 내용으로 채웁니다. 이 파일을 통해 operator를 사용자 "
+"지정할 수 있습니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:41
 msgid "Create a namespace for the Mattermost Operator:"
-msgstr ""
+msgstr "OKR.BEST Operator용 네임스페이스를 생성합니다:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:47
 msgid ""
@@ -123,22 +148,24 @@ msgid ""
 "latest version of the Mattermost Operator will be installed. We recommend"
 " using the latest version of the Mattermost Operator."
 msgstr ""
+"OKR.BEST Operator를 설치합니다. 버전을 지정하지 않으면 최신 버전의 OKR.BEST "
+"Operator가 설치됩니다. 최신 버전의 OKR.BEST Operator를 사용할 것을 권장합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:53
 msgid "For example:"
-msgstr ""
+msgstr "예:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:59
 msgid "To use your custom ``config.yaml`` file:"
-msgstr ""
+msgstr "사용자 지정 ``config.yaml`` 파일을 사용하려면:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:66
 msgid "Step 3: Deploy Mattermost"
-msgstr ""
+msgstr "3단계: OKR.BEST 배포"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:70
 msgid "A Mattermost Enterprise license is required for multi-server deployments."
-msgstr ""
+msgstr "다중 서버 배포에는 OKR.BEST Enterprise 라이선스가 필요합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:71
 msgid ""
@@ -148,6 +175,10 @@ msgid ""
 "availability-cluster-based-deployment>` for more on highly-available "
 "deployments."
 msgstr ""
+"Enterprise 라이선스가 없는 단일 서버 배포의 경우, 아래 2단계의 ``spec`` 섹션에 "
+"``Replicas: 1``\\ 을 추가하세요. 고가용성 배포에 대한 자세한 내용은 :doc:`고가용성 "
+"문서 </administration-guide/scale/high-availability-cluster-based-"
+"deployment>`\\ 를 참고하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:73
 msgid ""
@@ -155,6 +186,9 @@ msgid ""
 "Create a file named ``mattermost-license-secret.yaml`` with the following"
 " content, replacing ``[LICENSE_FILE_CONTENTS]`` with your actual license:"
 msgstr ""
+"**(OKR.BEST Enterprise 전용)** OKR.BEST 라이선스 시크릿을 생성합니다. ``[LICENSE_"
+"FILE_CONTENTS]``\\ 를 실제 라이선스로 바꿔, 다음 내용으로 ``mattermost-license-"
+"secret.yaml``\\ 이라는 파일을 만듭니다:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:85
 msgid ""
@@ -163,24 +197,28 @@ msgid ""
 "use different names. Use the following template, adjusting the values as "
 "needed:"
 msgstr ""
+"``mattermost-installation.yaml``\\ 이라는 OKR.BEST 설치 매니페스트 파일을 "
+"만듭니다. 이 가이드의 파일 이름은 제안일 뿐이며 다른 이름을 사용할 수 있습니다. "
+"다음 템플릿을 사용하되 필요에 따라 값을 조정하세요:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:103
 msgid "Key fields in the manifest include:"
-msgstr ""
+msgstr "매니페스트의 주요 필드는 다음과 같습니다:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:105
 msgid "``metadata.name``: The name of your Mattermost deployment in Kubernetes."
-msgstr ""
+msgstr "``metadata.name``: Kubernetes에서 OKR.BEST 배포의 이름입니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:106
 msgid ""
 "``spec.size``: The size of your installation (e.g., \"100users\", "
 "\"1000users\", etc.)."
 msgstr ""
+"``spec.size``: 설치 규모입니다(예: \"100users\", \"1000users\" 등)."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:107
 msgid "``spec.ingress.host``: The DNS name for your Mattermost installation."
-msgstr ""
+msgstr "``spec.ingress.host``: OKR.BEST 설치의 DNS 이름입니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:108
 msgid ""
@@ -190,12 +228,18 @@ msgid ""
 "of Mattermost in conjunction with the latest version of the Mattermost "
 "Operator."
 msgstr ""
+"``spec.version``: OKR.BEST 버전입니다. 사용 가능한 버전은 :doc:`서버 버전 아카이브 "
+"</product-overview/version-archive>`\\ 를 참고하세요. 최신 버전의 OKR.BEST "
+"Operator와 함께 :doc:`지원되는 버전 </product-overview/release-policy>`\\ 의 "
+"OKR.BEST를 사용해야 합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:109
 msgid ""
 "``spec.licenseSecret``: The name of the Kubernetes secret containing your"
 " license (required for Enterprise)."
 msgstr ""
+"``spec.licenseSecret``: 라이선스를 담고 있는 Kubernetes 시크릿의 "
+"이름입니다(Enterprise에 필요)."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:111
 msgid ""
@@ -205,6 +249,13 @@ msgid ""
 "`Custom Resource Definition <https://github.com/mattermost/mattermost-"
 "operator/blob/master/config/crd/bases/installation.mattermost.com_mattermosts.yaml>`_."
 msgstr ""
+"구성 가능한 필드의 전체 목록은 `예시 매니페스트 "
+"<https://github.com/mattermost/mattermost-"
+"operator/blob/master/docs/examples/mattermost_full.yaml>`_\\ 과 `사용자 지정 "
+"리소스 정의(Custom Resource Definition) <https://github.com/mattermost"
+"/mattermost-"
+"operator/blob/master/config/crd/bases/installation.mattermost.com_mattermosts.yaml>`_"
+"\\ 을 참고하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:113
 msgid ""
@@ -212,14 +263,16 @@ msgid ""
 "credentials. This secret must be in the same namespace as the Mattermost "
 "installation."
 msgstr ""
+"데이터베이스 자격 증명을 위해 ``mattermost-database-secret.yaml``\\ 이라는 파일을 "
+"만듭니다. 이 시크릿은 OKR.BEST 설치와 동일한 네임스페이스에 있어야 합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:127
 msgid "Example for AWS Aurora with PostgreSQL:"
-msgstr ""
+msgstr "PostgreSQL이 적용된 AWS Aurora의 예:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:142
 msgid "Step 4: Create the Filestore Secret"
-msgstr ""
+msgstr "4단계: 파일 저장소 시크릿 생성"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:144
 msgid ""
@@ -229,18 +282,22 @@ msgid ""
 " where you intend to install Mattermost. The file should contain the "
 "following YAML structure:"
 msgstr ""
+"오브젝트 스토리지 서비스(예: AWS S3 또는 S3 호환 서비스)의 자격 증명을 저장하기 "
+"위해 ``mattermost-filestore-secret.yaml``\\ 이라는 파일을 만듭니다. 이 시크릿은 "
+"OKR.BEST를 설치하려는 네임스페이스와 동일한 네임스페이스에 생성되어야 합니다. "
+"파일에는 다음 YAML 구조가 포함되어야 합니다:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
 msgid "Key"
-msgstr ""
+msgstr "키"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
 msgid "Description"
-msgstr ""
+msgstr "설명"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
 msgid "Required"
-msgstr ""
+msgstr "필수"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
 msgid "accesskey"
@@ -248,11 +305,11 @@ msgstr ""
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
 msgid "Base64-encoded access key for your storage service."
-msgstr ""
+msgstr "저장소 서비스의 Base64로 인코딩된 액세스 키입니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
 msgid "Yes"
-msgstr ""
+msgstr "예"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
 msgid "secretkey"
@@ -260,7 +317,7 @@ msgstr ""
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
 msgid "Base64-encoded secret key for your storage service."
-msgstr ""
+msgstr "저장소 서비스의 Base64로 인코딩된 시크릿 키입니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
 msgid "metadata.name"
@@ -268,7 +325,7 @@ msgstr ""
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:1
 msgid "The name of the Kubernetes secret."
-msgstr ""
+msgstr "Kubernetes 시크릿의 이름입니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:166
 msgid ""
@@ -276,14 +333,17 @@ msgid ""
 " not enter the raw keys directly. Use a command-line tool or online "
 "encoder to generate the base64 strings."
 msgstr ""
+"``accesskey``\\ 와 ``secretkey`` 값은 반드시 **base64로 인코딩**\\ 되어야 "
+"합니다. 원시 키를 직접 입력하지 마세요. 명령줄 도구나 온라인 인코더를 사용하여 "
+"base64 문자열을 생성하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:168
 msgid "**Example (AWS S3):**"
-msgstr ""
+msgstr "**예시(AWS S3):**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:182
 msgid "Step 5: Configure the Mattermost Installation Manifest"
-msgstr ""
+msgstr "5단계: OKR.BEST 설치 매니페스트 구성"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:184
 msgid ""
@@ -292,19 +352,22 @@ msgid ""
 " the supported fields for guidance on where to add these configurations "
 "within the YAML structure."
 msgstr ""
+"OKR.BEST를 외부 데이터베이스 및 오브젝트 스토리지에 연결하기 위해 (2단계에서 "
+"생성한) ``mattermost-installation.yaml`` 파일을 수정합니다. 이 구성을 YAML 구조 "
+"내 어디에 추가해야 하는지는 지원되는 필드를 참고하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:186
 msgid "Connect to the database:"
-msgstr ""
+msgstr "데이터베이스에 연결:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:188
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:199
 msgid "Add the following to the ``spec`` section of your manifest:"
-msgstr ""
+msgstr "매니페스트의 ``spec`` 섹션에 다음을 추가합니다:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:197
 msgid "Connect to Object Storage:"
-msgstr ""
+msgstr "오브젝트 스토리지에 연결:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:210
 msgid ""
@@ -312,30 +375,35 @@ msgid ""
 "encryption (SSE) and SSL. Add the following environment variables to the "
 "``mattermostEnv`` section:"
 msgstr ""
+"Amazon S3를 사용하는 경우 서버 측 암호화(SSE)와 SSL을 활성화하는 것이 좋습니다. "
+"``mattermostEnv`` 섹션에 다음 환경 변수를 추가하세요:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:221
 msgid "Review Mattermost Resource Status"
-msgstr ""
+msgstr "OKR.BEST 리소스 상태 검토"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:223
 msgid ""
 "After a Mattermost installation has been created with the Operator, you "
 "can review its status with the following:"
 msgstr ""
+"Operator로 OKR.BEST 설치를 생성한 후, 다음으로 상태를 검토할 수 있습니다:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:229
 msgid ""
 "The ``kubectl describe`` command can be used to obtain more information "
 "about the Mattermost server pods:"
 msgstr ""
+"``kubectl describe`` 명령을 사용하여 OKR.BEST 서버 파드에 대한 자세한 정보를 얻을 "
+"수 있습니다:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:235
 msgid "**Follow logs**"
-msgstr ""
+msgstr "**로그 추적**"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:237
 msgid "The following command can be used to follow logs on any kubernetes pod:"
-msgstr ""
+msgstr "다음 명령을 사용하여 모든 kubernetes 파드의 로그를 추적할 수 있습니다:"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:243
 msgid ""
@@ -343,12 +411,16 @@ msgid ""
 "current context is used. We recommend specifying the namespace based on "
 "your deployment."
 msgstr ""
+"``-n [namespace]``\\ 를 생략하면 현재 컨텍스트의 기본 네임스페이스가 사용됩니다. "
+"배포에 맞게 네임스페이스를 지정할 것을 권장합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:245
 msgid ""
 "This command can be used to review the Mattermost Operator or Mattermost "
 "server logs as needed."
 msgstr ""
+"이 명령을 사용하여 필요에 따라 OKR.BEST Operator 또는 OKR.BEST 서버 로그를 검토할 "
+"수 있습니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:249
 msgid ""
@@ -365,6 +437,16 @@ msgid ""
 "CloudNative PG operator (or externally however you wish), or use any "
 "self-hosted S3-compatible storage service."
 msgstr ""
+"Kubernetes를 처음 사용하거나 관리형 솔루션을 선호한다면 `Amazon EKS "
+"<https://aws.amazon.com/eks/>`_, `Azure Kubernetes Service "
+"<https://azure.microsoft.com/en-ca/products/kubernetes-service/>`_, `Google "
+"Kubernetes Engine <https://cloud.google.com/kubernetes-engine/>`_, "
+"`DigitalOcean Kubernetes <https://www.digitalocean.com/products/kubernetes/>`_ "
+"같은 서비스를 사용하는 것을 고려하세요. 이 안내는 데이터베이스와 파일 저장소에 "
+"외부 관리형 서비스를 사용하는 데 중점을 두지만, OKR.BEST Operator는 다른 솔루션을 "
+"사용할 수 있는 유연성도 *제공합니다*. 예를 들어 CloudNative PG operator를 사용하여 "
+"Kubernetes 클러스터 내에 PostgreSQL 데이터베이스를 배포하거나(또는 원하는 방식으로 "
+"외부에 배포), 셀프 호스팅 S3 호환 스토리지 서비스를 사용할 수도 있습니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:250
 msgid ""
@@ -373,12 +455,17 @@ msgid ""
 "S3-compatible storage services and CloudNative PG for PostgreSQL are also"
 " valid options if you have the expertise to manage them."
 msgstr ""
+"관리형 클라우드 서비스를 사용하는 것이 일반적으로 유지 관리가 더 간단하고 운영 "
+"배포에 권장하는 방식이지만, 관리할 전문성이 있다면 자체 관리형 S3 호환 스토리지 "
+"서비스와 PostgreSQL용 CloudNative PG를 사용하는 것도 유효한 옵션입니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:251
 msgid ""
 "If you choose to use self-managed components, you'll need to adapt the "
 "instructions accordingly, pointing to your internal services instead."
 msgstr ""
+"자체 관리형 구성 요소를 사용하기로 선택했다면, 그에 맞게 안내를 조정하여 대신 내부 "
+"서비스를 가리키도록 해야 합니다."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:252
 msgid ""
@@ -386,20 +473,24 @@ msgid ""
 " settings documentation </administration-guide/configure/configuration-"
 "settings>`."
 msgstr ""
+"운영 배포를 사용자 지정하려면 :doc:`구성 설정 문서 </administration-guide"
+"/configure/configuration-settings>`\\ 를 참고하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:253
 msgid ""
 "If you encounter issues during deployment, consult the :doc:`deployment "
 "troubleshooting guide </deployment-guide/deployment-troubleshooting>`."
 msgstr ""
+"배포 중 문제가 발생하면 :doc:`배포 문제 해결 가이드 </deployment-guide"
+"/deployment-troubleshooting>`\\ 를 참고하세요."
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:256
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:259
 msgid "What is the Operator's version compatibility with Mattermost Server?"
-msgstr ""
+msgstr "Operator의 OKR.BEST 서버 버전 호환성은 어떻게 되나요?"
 
 #: ../../source/deployment-guide/server/kubernetes/deploy-k8s.rst:261
 msgid ""
@@ -408,4 +499,7 @@ msgid ""
 "version of the Operator in conjunction with a :doc:`supported version "
 "</product-overview/release-policy>` of Mattermost Server."
 msgstr ""
+"일반적으로 Operator는 대부분 또는 모든 버전의 OKR.BEST 서버와 호환되지만, 항상 "
+"최신 버전의 Operator를 :doc:`지원되는 버전 </product-overview/release-policy>`\\ "
+"의 OKR.BEST 서버와 함께 사용할 것을 권장합니다."
 
