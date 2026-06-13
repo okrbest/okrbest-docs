@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:2
 msgid "Communicate scheduled maintenance best practices"
-msgstr ""
+msgstr "예정된 유지 관리 공지 모범 사례"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced "
+"플랜 <https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -39,6 +41,9 @@ msgid ""
 "more users requires advanced planning and a clear communication strategy "
 "to ensure minimal disruption and maximum transparency."
 msgstr ""
+"사용자가 1,000명 이상인 OKR.BEST 서버에서 예정된 유지 관리를 수행하려면 중단을 "
+"최소화하고 투명성을 극대화하기 위해 사전 계획과 명확한 커뮤니케이션 전략이 "
+"필요합니다."
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:9
 msgid ""
@@ -47,10 +52,13 @@ msgid ""
 "configuring a dismissable banner to inform users of the upcoming "
 "maintenance."
 msgstr ""
+"이 가이드는 이메일과 OKR.BEST 채널을 통해 사용자에게 알리고, 로드 밸런서의 오류 "
+"메시지를 업데이트하며, 다가오는 유지 관리를 사용자에게 알리기 위해 해제 가능한 배너를 "
+"구성하는 모범 사례를 제공합니다."
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:12
 msgid "Communication strategy"
-msgstr ""
+msgstr "커뮤니케이션 전략"
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:14
 msgid ""
@@ -58,12 +66,15 @@ msgid ""
 "before, during, and after maintenance. The key components of this "
 "strategy are:"
 msgstr ""
+"잘 정의된 커뮤니케이션 전략은 유지 관리 전, 중, 후에 사용자에게 알리는 데 "
+"필수적입니다. 이 전략의 핵심 구성 요소는 다음과 같습니다:"
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:16
 msgid ""
 "Define a clear maintenance window in which the self-hosted Mattermost "
 "server will be unavailable."
 msgstr ""
+"셀프 호스팅 OKR.BEST 서버를 사용할 수 없는 명확한 유지 관리 시간을 정의합니다."
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:18
 msgid ""
@@ -71,6 +82,8 @@ msgid ""
 "from 8:00-10:00 UTC on Saturdays only (when applicable) unless an "
 "exception has been made and communicated to impacted customers."
 msgstr ""
+"Mattermost Cloud 배포는 영향을 받는 고객에게 예외가 정해져 전달되지 않는 한, 토요일 "
+"08:00-10:00 UTC(해당하는 경우)에만 예약된 사전 정의된 서비스 시간을 가집니다."
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:19
 msgid ""
@@ -78,6 +91,8 @@ msgid ""
 "consistent emails to users at intervals of 7 days, 3 days, and 1 day "
 "before the scheduled maintenance window."
 msgstr ""
+"`이메일 알림 <#email-templates>`__: 예정된 유지 관리 시간 7일 전, 3일 전, 1일 전 "
+"간격으로 사용자에게 체계적이고 일관된 이메일을 보냅니다."
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:20
 msgid ""
@@ -86,6 +101,9 @@ msgid ""
 "emails in relevant Mattermost channels at the same intervals as the email"
 " notifications."
 msgstr ""
+"`채널 기반 리마인더 <#channel-reminder-templates>`__: 이메일 알림과 동일한 간격으로 "
+"관련 OKR.BEST 채널에서 이메일과 유사한 :doc:`메시지를 보냅니다 </end-user-"
+"guide/collaborate/send-messages>`."
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:21
 msgid ""
@@ -94,6 +112,9 @@ msgid ""
 "notifications>` to display at the top of the Mattermost instance ahead of"
 " the maintenance window and outage."
 msgstr ""
+"`OKR.BEST 배너 알림 <#banner-notification>`__: 유지 관리 시간과 중단에 앞서 OKR.BEST "
+"인스턴스 상단에 표시되도록 :doc:`시스템 전체 알림 </administration-guide/manage/system-"
+"wide-notifications>`\\ 을 설정합니다."
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:22
 msgid ""
@@ -101,98 +122,105 @@ msgid ""
 "Update the load balancer to show a maintenance message during the "
 "scheduled maintenance window of downtime."
 msgstr ""
+"`로드 밸런서 메시지 표시 <#display-load-balancer-message>`__: 예정된 다운타임 유지 "
+"관리 시간 동안 유지 관리 메시지를 표시하도록 로드 밸런서를 업데이트합니다."
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:25
 msgid "Notification templates"
-msgstr ""
+msgstr "알림 템플릿"
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:28
 msgid "Email Templates"
-msgstr ""
+msgstr "이메일 템플릿"
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:31
 msgid "7-Day notice email"
-msgstr ""
+msgstr "7일 전 공지 이메일"
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:33
 msgid "**Email subject**: Scheduled Maintenance Notification: [Date and Time]"
-msgstr ""
+msgstr "**이메일 제목**: 예정된 유지 관리 알림: [날짜 및 시간]"
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:56
 msgid "3-Day notice email"
-msgstr ""
+msgstr "3일 전 공지 이메일"
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:58
 msgid "**Email subject**: Reminder: Scheduled Maintenance on [Date and Time]"
-msgstr ""
+msgstr "**이메일 제목**: 리마인더: [날짜 및 시간] 예정된 유지 관리"
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:78
 msgid "1-Day notice email"
-msgstr ""
+msgstr "1일 전 공지 이메일"
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:80
 msgid ""
 "**Email subject**: Final Reminder: Scheduled Maintenance Tomorrow on "
 "[Date and Time]"
 msgstr ""
+"**이메일 제목**: 최종 리마인더: 내일 [날짜 및 시간] 예정된 유지 관리"
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:100
 msgid "Channel reminder templates"
-msgstr ""
+msgstr "채널 리마인더 템플릿"
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:103
 msgid "7-Day channel reminder"
-msgstr ""
+msgstr "7일 전 채널 리마인더"
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:113
 msgid "3-Day channel reminder"
-msgstr ""
+msgstr "3일 전 채널 리마인더"
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:123
 msgid "1-Day channel reminder"
-msgstr ""
+msgstr "1일 전 채널 리마인더"
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:133
 msgid "Banner notification"
-msgstr ""
+msgstr "배너 알림"
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:135
 msgid "Sample message:"
-msgstr ""
+msgstr "샘플 메시지:"
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:143
 msgid ""
 "Users can dismiss the banner until they log in again, or until you update"
 " the banner."
 msgstr ""
+"사용자는 다시 로그인하거나 배너를 업데이트하기 전까지 배너를 해제할 수 있습니다."
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:146
 msgid "Display load balancer message"
-msgstr ""
+msgstr "로드 밸런서 메시지 표시"
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:148
 msgid ""
 "Configure the load balancer to display a notification message during the "
 "scheduled maintenance window of downtime."
 msgstr ""
+"예정된 다운타임 유지 관리 시간 동안 알림 메시지를 표시하도록 로드 밸런서를 "
+"구성합니다."
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:150
 msgid "Identify the load balancer you are using (e.g., AWS, HAProxy)."
-msgstr ""
+msgstr "사용 중인 로드 밸런서를 확인합니다(예: AWS, HAProxy)."
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:151
 msgid ""
 "Edit configuration. Adjust paths and configurations according to your "
 "specific environment."
 msgstr ""
+"구성을 편집합니다. 구체적인 환경에 맞게 경로와 구성을 조정합니다."
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:153
 msgid "For AWS, navigate to the Load Balancer configurations in the EC2 console."
-msgstr ""
+msgstr "AWS의 경우 EC2 콘솔에서 로드 밸런서 구성으로 이동합니다."
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:154
 msgid "For HAProxy, edit the ``haproxy.cfg`` file."
-msgstr ""
+msgstr "HAProxy의 경우 ``haproxy.cfg`` 파일을 편집합니다."
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:158
 msgid ""
@@ -200,8 +228,10 @@ msgid ""
 "infrastructure, to avoid outdated information being communicated to your "
 "users during and following server maintenance."
 msgstr ""
+"서버 유지 관리 중과 이후에 오래된 정보가 사용자에게 전달되는 것을 방지하기 위해 "
+"인프라에서 필요한 곳에 헤더를 추가하는 것을 적극 권장합니다."
 
 #: ../../source/administration-guide/upgrade/communicate-scheduled-maintenance.rst:160
 msgid "See the sample message HTML below to use as a starting point:"
-msgstr ""
+msgstr "시작점으로 사용할 수 있는 아래 샘플 메시지 HTML을 참고하세요:"
 
