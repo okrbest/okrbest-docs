@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:62
 msgid "Active/passive DR on AWS"
-msgstr ""
+msgstr "AWS의 액티브/패시브 DR"
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:2
 msgid "Backup and disaster recovery"
-msgstr ""
+msgstr "백업 및 재해 복구"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
@@ -43,10 +43,12 @@ msgid ""
 "failures range from simple backups to sophisticated disaster recovery "
 "deployments and automation."
 msgstr ""
+"OKR.BEST 서버를 다양한 유형의 장애로부터 보호하는 옵션은 단순한 백업부터 "
+"정교한 재해 복구 배포 및 자동화까지 다양합니다."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:10
 msgid "Backup"
-msgstr ""
+msgstr "백업"
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:12
 msgid ""
@@ -54,10 +56,12 @@ msgid ""
 "that need to be backed up and restored separately to fully recover your "
 "system from failure."
 msgstr ""
+"OKR.BEST 서버의 상태는 여러 데이터 저장소에 담겨 있으며, 장애로부터 시스템을 "
+"완전히 복구하려면 이들을 각각 별도로 백업하고 복원해야 합니다."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:14
 msgid "To back up your Mattermost server:"
-msgstr ""
+msgstr "OKR.BEST 서버를 백업하려면:"
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:16
 msgid ""
@@ -67,6 +71,11 @@ msgid ""
 "online. Use the navigation at the top of the page to select your "
 "PostgreSQL version."
 msgstr ""
+"데이터베이스 버전에 맞는 표준 절차에 따라 OKR.BEST 데이터베이스를 백업하세요. "
+"`PostgreSQL SQL 덤프 백업 문서 "
+"<https://www.postgresql.org/docs/10/backup-dump.html>`__\\ 가 온라인으로 "
+"제공됩니다. 페이지 상단의 탐색 메뉴에서 사용 중인 PostgreSQL 버전을 "
+"선택하세요."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:18
 msgid ""
@@ -75,34 +84,45 @@ msgid ""
 "will be saved in the ``config`` directory. Therefore, we recommend "
 "backing up the entire directory."
 msgstr ""
+"``config/config.json``\\ 에 저장된 서버 설정을 백업하세요. OKR.BEST에 SAML "
+"구성을 사용하는 경우 SAML 인증서 파일이 ``config`` 디렉토리에 저장됩니다. "
+"따라서 디렉토리 전체를 백업할 것을 권장합니다."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:20
 msgid "Back up files stored by your users with one of the following options:"
-msgstr ""
+msgstr "다음 옵션 중 하나로 사용자가 저장한 파일을 백업하세요:"
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:22
 msgid ""
 "If you use local storage using the default ``./data`` directory, back up "
 "this directory."
 msgstr ""
+"기본 ``./data`` 디렉토리를 사용하는 로컬 저장소를 쓰는 경우, 이 디렉토리를 "
+"백업하세요."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:23
 msgid ""
 "If you use local storage using a non-default directory specified in the "
 "``Directory`` setting in ``config.json``, back up files in that location."
 msgstr ""
+"``config.json``\\ 의 ``Directory`` 설정에 지정된 기본값이 아닌 디렉토리를 "
+"사용하는 로컬 저장소를 쓰는 경우, 해당 위치의 파일을 백업하세요."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:24
 msgid ""
 "If you store your files in S3, you can typically keep the files where "
 "they are located without backup."
 msgstr ""
+"파일을 S3에 저장하는 경우, 일반적으로 별도의 백업 없이 파일을 현재 위치에 그대로 "
+"둘 수 있습니다."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:28
 msgid ""
 "To make a clean backup, you must stop Mattermost during the duration of "
 "the backup, otherwise the database and files may become out of sync."
 msgstr ""
+"깔끔한 백업을 만들려면 백업이 진행되는 동안 OKR.BEST를 중지해야 합니다. 그렇지 "
+"않으면 데이터베이스와 파일의 동기화가 어긋날 수 있습니다."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:30
 msgid ""
@@ -110,10 +130,12 @@ msgid ""
 "``config.json`` file, and optionally the locally stored user files into "
 "the locations from which they were backed up."
 msgstr ""
+"백업에서 OKR.BEST 인스턴스를 복원하려면 데이터베이스, ``config.json`` 파일, "
+"그리고 선택적으로 로컬에 저장된 사용자 파일을 백업했던 위치로 복원하세요."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:33
 msgid "Disaster recovery"
-msgstr ""
+msgstr "재해 복구"
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:35
 msgid ""
@@ -121,10 +143,12 @@ msgid ""
 "specific risks against the cost and complexity of setting up disaster "
 "recovery infrastructure and automation."
 msgstr ""
+"적절한 재해 복구 계획은 특정 위험을 완화하는 이점을, 재해 복구 인프라와 "
+"자동화를 구축하는 비용 및 복잡성과 비교하여 따져봅니다."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:39
 msgid "**High availability (HA) vs. disaster recovery (DR)**"
-msgstr ""
+msgstr "**고가용성(HA) 대 재해 복구(DR)**"
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:41
 msgid ""
@@ -136,6 +160,11 @@ msgid ""
 "typically requires a secondary deployment in a separate data center or "
 "cloud region."
 msgstr ""
+"HA와 DR은 서로 다른 개념이지만 종종 혼동됩니다. HA는 단일 사이트 내의 클러스터 "
+"배포를 가리키며, 단일 장애 지점을 제거하고 개별 구성 요소 장애(예: 앱 노드나 "
+"데이터베이스 복제본 장애)가 발생해도 OKR.BEST가 계속 작동하도록 합니다. DR은 "
+"사이트나 리전 전체를 사용할 수 없게 되는 더 광범위한 시나리오를 다루며, "
+"일반적으로 별도의 데이터 센터나 클라우드 리전에 보조 배포가 필요합니다."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:43
 msgid ""
@@ -144,10 +173,13 @@ msgid ""
 "active/active deployments, where both sites serve live traffic "
 "simultaneously."
 msgstr ""
+"OKR.BEST는 보조 사이트를 동기화 상태로 유지하되 장애 조치 시에만 활성화하는 "
+"액티브/패시브 DR을 지원합니다. OKR.BEST는 두 사이트가 동시에 실시간 트래픽을 "
+"처리하는 액티브/액티브 배포는 지원하지 않습니다."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:46
 msgid "Automated backup"
-msgstr ""
+msgstr "자동 백업"
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:48
 msgid ""
@@ -155,6 +187,8 @@ msgid ""
 "server's state at a particular point in time, which can be restored if a "
 "failure in the future leads to loss of data. Options include:"
 msgstr ""
+"OKR.BEST 서버의 백업을 자동화하면 특정 시점의 서버 상태 사본을 확보할 수 있어, "
+"향후 장애로 데이터가 손실되더라도 복원할 수 있습니다. 옵션은 다음과 같습니다:"
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:50
 msgid ""
@@ -162,24 +196,29 @@ msgid ""
 "include all the components listed above or a subset depending on what you"
 " choose to protect."
 msgstr ""
+"OKR.BEST 서버를 주기적으로 백업하는 자동화로, 보호 대상으로 선택한 항목에 따라 "
+"위에 나열된 모든 구성 요소 또는 일부를 포함할 수 있습니다."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:51
 msgid ""
 "Automation to restore a server from backup, or deploy a new server, to "
 "reduce recovery time."
 msgstr ""
+"복구 시간을 줄이기 위해 백업에서 서버를 복원하거나 새 서버를 배포하는 자동화."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:52
 msgid ""
 "Automation to verify a backup has been successfully produced to protect "
 "against backup automation failures."
 msgstr ""
+"백업 자동화 실패에 대비하기 위해 백업이 성공적으로 생성되었는지 확인하는 자동화."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:53
 msgid ""
 "Storing backups off-site, to protect against physical loss of onsite "
 "systems."
 msgstr ""
+"현장 시스템의 물리적 손실에 대비하기 위해 백업을 외부에 보관."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:55
 msgid ""
@@ -187,10 +226,12 @@ msgid ""
 "and will incur downtime. The alternative is to automate recovery using a "
 "high availability deployment."
 msgstr ""
+"백업을 사용해 장애에서 복구하는 것은 일반적으로 수동 프로세스이며 다운타임이 "
+"발생합니다. 대안은 고가용성 배포를 사용해 복구를 자동화하는 것입니다."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:58
 msgid "Active/passive DR deployment"
-msgstr ""
+msgstr "액티브/패시브 DR 배포"
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:60
 msgid ""
@@ -199,10 +240,13 @@ msgid ""
 " replicate the database, file storage, and search indices, and how to "
 "perform a failover, see the platform-specific guide:"
 msgstr ""
+"두 데이터 센터에 걸쳐 OKR.BEST를 액티브/패시브 DR 구성으로 설정하는 단계별 "
+"안내(데이터베이스, 파일 저장소, 검색 인덱스를 복제하는 방법과 장애 조치를 "
+"수행하는 방법 포함)는 플랫폼별 가이드를 참고하세요:"
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:68
 msgid "Failover from Single Sign-On outage"
-msgstr ""
+msgstr "Single Sign-On 장애로부터의 장애 조치"
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:70
 msgid ""
@@ -210,10 +254,12 @@ msgid ""
 "to your SSO provider can cause a partial outage on your Mattermost "
 "instance."
 msgstr ""
+"Mattermost Enterprise Edition에서 Single Sign-On을 사용하는 경우, SSO 공급자의 "
+"장애가 OKR.BEST 인스턴스의 부분적 장애를 유발할 수 있습니다."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:72
 msgid "**What happens during an SSO outage?**"
-msgstr ""
+msgstr "**SSO 장애 중에는 어떤 일이 발생하나요?**"
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:74
 msgid ""
@@ -222,30 +268,38 @@ msgid ""
 " be configured in the System Console). During an SSO outage, users with "
 "valid session tokens can continue using Mattermost uninterrupted."
 msgstr ""
+"**대부분의 사람은 여전히 로그인할 수 있습니다.** 기본적으로 사용자가 "
+"OKR.BEST에 로그인하면 30일간 유효한 세션 토큰을 받습니다(이 기간은 관리자 "
+"도구에서 구성할 수 있습니다). SSO 장애 중에도 유효한 세션 토큰을 가진 사용자는 "
+"중단 없이 OKR.BEST를 계속 사용할 수 있습니다."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:75
 msgid ""
 "**Some people can't log in.** During an SSO outage, there are two "
 "situations under which a user cannot log in:"
 msgstr ""
+"**일부 사람은 로그인할 수 없습니다.** SSO 장애 중에 사용자가 로그인할 수 없는 "
+"두 가지 상황이 있습니다:"
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:77
 msgid "Users whose session token expires during the outage."
-msgstr ""
+msgstr "장애 중에 세션 토큰이 만료되는 사용자."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:78
 msgid "Users trying to log in to new devices."
-msgstr ""
+msgstr "새 기기에서 로그인을 시도하는 사용자."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:80
 msgid ""
 "In each case, the user cannot reach the SSO provider, and cannot log in. "
 "In either case, several mitigations are available:"
 msgstr ""
+"두 경우 모두 사용자는 SSO 공급자에 접근할 수 없어 로그인하지 못합니다. 어느 "
+"경우든 다음과 같은 여러 완화책을 사용할 수 있습니다:"
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:83
 msgid "Configure your SSO provider for High Availability"
-msgstr ""
+msgstr "SSO 공급자를 고가용성으로 구성"
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:85
 msgid ""
@@ -255,6 +309,11 @@ msgid ""
 "/microsoft-identity-manager/pam/high-availability-disaster-recovery-"
 "considerations-bastion-environment>`_."
 msgstr ""
+"셀프 호스팅 Single Sign-On 공급자를 사용하는 경우, 계획되지 않은 장애로부터 "
+"시스템을 보호하는 `고가용성 구성 <https://learn.microsoft.com/en-us"
+"/microsoft-identity-manager/pam/high-availability-disaster-recovery-"
+"considerations-bastion-environment>`_\\ 을 위한 여러 옵션을 사용할 수 "
+"있습니다."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:87
 msgid ""
@@ -264,10 +323,14 @@ msgid ""
 "based authentication service, you can set up High Availability LDAP "
 "connectivity to further reduce the chances of an outage."
 msgstr ""
+"SaaS 기반 인증 공급자의 경우, 여전히 서비스 가동 시간에 의존하긴 하지만 "
+"데이터를 가져오는 원본 시스템에 이중화를 구성할 수 있습니다. 예를 들어 OneLogin "
+"SaaS 기반 인증 서비스에서는 고가용성 LDAP 연결을 설정하여 장애 가능성을 더욱 "
+"줄일 수 있습니다."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:90
 msgid "Set up your own IDP to provide an automated or manual SSO failover option"
-msgstr ""
+msgstr "자체 IDP를 구축하여 자동 또는 수동 SSO 장애 조치 옵션 제공"
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:92
 msgid ""
@@ -275,16 +338,20 @@ msgid ""
 "to both an active and a standby authentication option, that can be "
 "manually or automatically switched in case of an outage."
 msgstr ""
+"활성 인증 옵션과 대기 인증 옵션에 모두 연결되는 SAML 인증용 사용자 지정 ID "
+"공급자를 만들어, 장애 시 수동 또는 자동으로 전환할 수 있도록 하세요."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:94
 msgid ""
 "In this configuration, security should be carefully reviewed to prevent "
 "the standby SSO option from weakening your authentication protocols."
 msgstr ""
+"이 구성에서는 대기 SSO 옵션이 인증 프로토콜을 약화시키지 않도록 보안을 신중하게 "
+"검토해야 합니다."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:97
 msgid "Set up a manual failover plan for SSO outages"
-msgstr ""
+msgstr "SSO 장애에 대비한 수동 장애 조치 계획 수립"
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:99
 msgid ""
@@ -292,6 +359,8 @@ msgid ""
 " outage, an error message directing them to contact your support link "
 "(defined in your System Console settings) is displayed."
 msgstr ""
+"장애 중에 사용자가 조직의 SSO 공급자에 접근할 수 없으면, 지원 링크(관리자 도구 "
+"설정에 정의됨)로 문의하도록 안내하는 오류 메시지가 표시됩니다."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:101
 msgid ""
@@ -300,10 +369,16 @@ msgid ""
 "the end user can use their email and password to claim the account until "
 "the SSO outage is over and the account can be converted back to SSO."
 msgstr ""
+"SSO 장애에 대해 IT 부서에 연락이 닿으면, IT 부서는 관리자 도구를 사용해 "
+"사용자 계정을 SSO에서 이메일-비밀번호 방식으로 임시 변경할 수 있으며, 최종 "
+"사용자는 SSO 장애가 끝나 계정을 다시 SSO로 전환할 수 있을 때까지 이메일과 "
+"비밀번호로 계정을 사용할 수 있습니다."
 
 #: ../../source/deployment-guide/backup-disaster-recovery.rst:103
 msgid ""
 "When the outage is over, it's critical to switch everyone back to SSO "
 "from email-password to maintain consistency and security."
 msgstr ""
+"장애가 끝나면 일관성과 보안을 유지하기 위해 모든 사용자를 이메일-비밀번호에서 "
+"다시 SSO로 전환하는 것이 매우 중요합니다."
 
