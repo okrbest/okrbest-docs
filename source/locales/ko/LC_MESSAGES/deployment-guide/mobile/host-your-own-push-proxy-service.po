@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:2
 msgid "Host your own push proxy service"
-msgstr ""
+msgstr "자체 푸시 프록시 서비스 호스팅"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced "
+"플랜 <https://mattermost.com/pricing/>`__\\ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -38,18 +40,25 @@ msgid ""
 "Customers building their own custom mobile apps must host their own push "
 "proxy service using one of the following methods:"
 msgstr ""
+"자체 사용자 정의 모바일 앱을 빌드하는 고객은 다음 방법 중 하나로 자체 푸시 "
+"프록시 서비스를 호스팅해야 합니다:"
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:9
 msgid ""
 "Compile your own MPNS from the `open source repository "
 "<https://github.com/mattermost/mattermost-push-proxy>`__."
 msgstr ""
+"`오픈소스 리포지토리 <https://github.com/mattermost/mattermost-push-"
+"proxy>`__\\ 에서 자체 MPNS를 컴파일합니다."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:10
 msgid ""
 "Use the `pre-compiled version of MPNS available on GitHub "
 "<https://github.com/mattermost/mattermost-push-proxy/releases>`__."
 msgstr ""
+"`GitHub에서 제공되는 사전 컴파일된 MPNS 버전 "
+"<https://github.com/mattermost/mattermost-push-proxy/releases>`__\\ 을 "
+"사용합니다."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:12
 msgid ""
@@ -58,42 +67,53 @@ msgid ""
 "notifications/service/>`__ on working with the Mattermost Push "
 "Notification Service."
 msgstr ""
+"Mattermost 푸시 알림 서비스 작업에 대한 자세한 내용은 `개발자 문서 "
+"<https://developers.mattermost.com/contribute/mobile/push-"
+"notifications/service/>`__\\ 를 참고하세요."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:15
 msgid "Enable MPNS"
-msgstr ""
+msgstr "MPNS 활성화"
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:17
 msgid "Go to **System Console > Environment > Push Notification Server**."
-msgstr ""
+msgstr "**관리자 도구 > 환경 > 푸시 알림 서버**\\ 로 이동합니다."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:18
 msgid ""
 "Under **Enable Push Notifications**, select **Manually enter Push "
 "Notification Service location**."
 msgstr ""
+"**Enable Push Notifications**\\ 에서 **Manually enter Push Notification "
+"Service location**\\ 을 선택합니다."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:19
 msgid ""
 "Enter the location of your MPNS in the **Push Notification Server** "
 "field, then select **Save**."
 msgstr ""
+"**Push Notification Server** 필드에 MPNS의 위치를 입력한 다음 **Save**\\ 를 "
+"선택합니다."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:21
 msgid "**Deployment recommendations:**"
-msgstr ""
+msgstr "**배포 권장 사항:**"
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:23
 msgid ""
 "Deploy the MPNS on your own infrastructure - whether on-premises behind "
 "your firewall or in your public cloud."
 msgstr ""
+"방화벽 뒤의 온프레미스든 퍼블릭 클라우드든, MPNS를 자체 인프라에 "
+"배포합니다."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:24
 msgid ""
 "Ensure the Mattermost server has network access to the MPNS instance. "
 "Mattermost clients don't need any inbound connectivity."
 msgstr ""
+"OKR.BEST 서버가 MPNS 인스턴스에 네트워크로 접근할 수 있는지 확인하세요. "
+"OKR.BEST 클라이언트는 인바운드 연결이 필요하지 않습니다."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:25
 msgid ""
@@ -102,6 +122,9 @@ msgid ""
 "Apple Push Notification Service (APNS) or the Firebase Cloud Messaging "
 "(FCM)."
 msgstr ""
+"MPNS는 OKR.BEST 모바일 앱과 직접 연결되지 않습니다. MPNS는 OKR.BEST 서버의 "
+"푸시 알림을 파싱하여 Apple Push Notification Service(APNS) 또는 Firebase "
+"Cloud Messaging(FCM)으로 전달합니다."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:26
 msgid ""
@@ -109,10 +132,13 @@ msgid ""
 "Service over HTTP/2. If an outbound proxy appliance is deployed between "
 "the MPNS and APNS, ensure it supports HTTP/2."
 msgstr ""
+"MPNS는 HTTP/2를 통해 Apple Push Notification Service와 통신할 수 있어야 "
+"합니다. MPNS와 APNS 사이에 아웃바운드 프록시 어플라이언스가 배포되어 있다면 "
+"HTTP/2를 지원하는지 확인하세요."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:27
 msgid "Configure TLS encryption between your MPNS and your Mattermost server."
-msgstr ""
+msgstr "MPNS와 OKR.BEST 서버 간 TLS 암호화를 구성합니다."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:28
 msgid ""
@@ -121,6 +147,9 @@ msgid ""
 " certificates, the apps will be unable to send or receive notifications "
 "via your MPNS instance."
 msgstr ""
+"빌드 과정에서 모바일 애플리케이션에 서명하고, Android와 iOS 모두에 대한 유효한 "
+"푸시 인증서를 발급받아 구성하세요. 이러한 인증서가 없으면 앱이 MPNS "
+"인스턴스를 통해 알림을 보내거나 받을 수 없습니다."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:29
 msgid ""
@@ -128,10 +157,12 @@ msgid ""
 "/security-updates/#sign-up>`__ to receive and promptly apply MPNS-related"
 " security updates."
 msgstr ""
+"`Mattermost 보안 게시판 <https://mattermost.com/security-updates/#sign-"
+"up>`__\\ 을 구독하여 MPNS 관련 보안 업데이트를 받고 신속하게 적용하세요."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:32
 msgid "Configure ID-only push notification contents (Enterprise)"
-msgstr ""
+msgstr "ID 전용 푸시 알림 내용 구성(Enterprise)"
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:33
 msgid ""
@@ -140,6 +171,10 @@ msgid ""
 "before it reaches a device. This potentially presents a problem for "
 "organizations with ultra-strict security and compliance requirements."
 msgstr ""
+"기본적으로 푸시 알림 메시지 내용은 기기에 도달하기 전에 Apple Push "
+"Notification Service(APNS) 또는 Google Firebase Cloud Messaging(FCM)을 "
+"거칩니다. 이는 매우 엄격한 보안·컴플라이언스 요건이 있는 조직에 문제가 될 수 "
+"있습니다."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:35
 msgid ""
@@ -150,20 +185,27 @@ msgid ""
 "longer to send, this feature helps organizations meet advanced compliance"
 " requirements."
 msgstr ""
+"ID 전용 옵션을 사용하면 푸시 알림이 기기에 전달된 후 메시지 내용을 서버에서 "
+"직접 가져올 수 있습니다. 각 알림 페이로드에는 고유한 메시지 ID만 전송되므로 "
+"APNS와 FCM은 푸시 알림을 읽을 수 없습니다. 메시지 내용 전송에는 약간 더 오랜 "
+"시간이 걸리지만, 이 기능은 조직이 고급 컴플라이언스 요건을 충족하는 데 "
+"도움이 됩니다."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:37
 msgid "To set mobile push notification contents to ID-only:"
-msgstr ""
+msgstr "모바일 푸시 알림 내용을 ID 전용으로 설정하려면:"
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:39
 msgid "Go to **System Console > Site Configuration > Notifications**."
-msgstr ""
+msgstr "**관리자 도구 > 사이트 설정 > 알림**\\ 으로 이동합니다."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:40
 msgid ""
 "Under **Push Notification Contents**, select **Full message content "
 "fetched from the server on receipt**, then select **Save**."
 msgstr ""
+"**Push Notification Contents**\\ 에서 **Full message content fetched from "
+"the server on receipt**\\ 를 선택한 다음 **Save**\\ 를 선택합니다."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:44
 msgid ""
@@ -173,6 +215,10 @@ msgid ""
 "to interact with your instance of the MPNS. Once this is complete, you "
 "can proceed with the deployment of your MPNS instance."
 msgstr ""
+"애플리케이션을 빌드하는 과정의 일부로 애플리케이션에 서명해야 합니다. 또한 "
+"Android와 iOS 모두에 대한 적절한 인증서를 발급받아야 합니다. 이를 하지 않으면 "
+"애플리케이션이 MPNS 인스턴스와 상호 작용할 수 없습니다. 이 작업이 완료되면 "
+"MPNS 인스턴스 배포를 진행할 수 있습니다."
 
 #: ../../source/deployment-guide/mobile/host-your-own-push-proxy-service.rst:45
 msgid ""
@@ -180,4 +226,7 @@ msgid ""
 "Bulletins <https://mattermost.com/security-updates/#sign-up>`__. When "
 "you're notified of security updates for the MPNS, apply them promptly."
 msgstr ""
+"`Mattermost 보안 게시판 <https://mattermost.com/security-updates/#sign-"
+"up>`__\\ 을 구독할 것을 강력히 권장합니다. MPNS에 대한 보안 업데이트 알림을 "
+"받으면 신속하게 적용하세요."
 
