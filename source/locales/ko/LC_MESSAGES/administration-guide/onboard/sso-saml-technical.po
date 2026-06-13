@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:4
 msgid "SAML Single Sign-On: technical documentation"
-msgstr ""
+msgstr "SAML Single Sign-On: 기술 문서"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry, Professional, Enterprise, and "
 "Enterprise Advanced plans <https://mattermost.com/pricing/>`__"
 msgstr ""
+"|plans-img-yellow| `Entry, Professional, Enterprise, Enterprise Advanced 플랜 "
+"<https://mattermost.com/pricing/>`__ 에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -39,6 +41,8 @@ msgid ""
 " identity providers (IdP), like OneLogin, to pass authorization "
 "credentials to service providers (SP), like Mattermost."
 msgstr ""
+"Security Assertion Markup Language(SAML)는 OneLogin 같은 ID 공급자(IdP)가 OKR.BEST "
+"같은 서비스 공급자(SP)에 권한 부여 자격 증명을 전달할 수 있게 하는 공개 표준입니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:11
 msgid ""
@@ -46,6 +50,8 @@ msgid ""
 "to many different sites. With a SAML identity provider account, you can "
 "log in to Mattermost and other sites securely with the same account."
 msgstr ""
+"간단히 말해, 하나의 자격 증명 세트로 여러 사이트에 로그인할 수 있다는 뜻입니다. SAML ID 공급자 계정이 있으면 동일한 "
+"계정으로 OKR.BEST와 다른 사이트에 안전하게 로그인할 수 있습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:13
 msgid ""
@@ -53,6 +59,8 @@ msgid ""
 "management by controlling which sites users have access to with their "
 "SAML identity provider credentials."
 msgstr ""
+"주요 이점은 관리자가 SAML ID 공급자 자격 증명으로 사용자가 액세스할 수 있는 사이트를 제어하여 사용자 관리를 중앙화할 수 "
+"있다는 점입니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:15
 msgid ""
@@ -61,6 +69,9 @@ msgid ""
 "generate an IdP metadata URL. The IdP metadata XML file contains the IdP "
 "certificate, the entity ID, the redirect URL, and the logout URL."
 msgstr ""
+"OKR.BEST는 Single Sign-On URL을 사용해 IdP 메타데이터 URL을 생성하고, 단일 메타데이터 URL로 ID "
+"공급자의 구성 정보를 검색하는 방식을 지원합니다. IdP 메타데이터 XML 파일에는 IdP 인증서, 엔터티 ID, 리디렉션 URL, "
+"로그아웃 URL이 포함됩니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:17
 msgid ""
@@ -69,12 +80,15 @@ msgid ""
 "Identity Provider Public Certificate is also downloaded from the server "
 "and set locally."
 msgstr ""
+"이 URL을 사용하면 구성 과정에서 SAML SSO URL 및 Identity Provider Issuer URL 필드가 자동으로 "
+"채워지고, Identity Provider Public Certificate도 서버에서 다운로드되어 로컬에 설정됩니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:19
 msgid ""
 "This is currently supported for Okta and Microsoft ADFS server 2012 and "
 "2016."
 msgstr ""
+"현재 Okta 및 Microsoft ADFS server 2012와 2016에서 지원됩니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:21
 msgid ""
@@ -87,10 +101,16 @@ msgid ""
 "encryption support>` Mattermost supports for SAML, including AES-192-GCM "
 "and AES-256-GCM encryption support introduced in v10.9."
 msgstr ""
+"자세한 단계는 :doc:`Okta로 SAML 구성 <sso-saml-okta>`, :doc:`Windows Server 2012용 "
+"Microsoft ADFS로 SAML 구성 <sso-saml-adfs>`, :doc:`Microsoft Windows Server "
+"2016을 사용해 Microsoft ADFS로 SAML 구성 <sso-saml-adfs-msws2016>` 문서를 참조하세요. "
+"OKR.BEST가 SAML에 대해 지원하는 :ref:`암호화 방법 <deployment-guide/encryption-options:saml "
+"encryption support>`\\ 에 대한 자세한 내용은 암호화 옵션 문서를 참조하세요. 여기에는 v10.9에서 도입된 "
+"AES-192-GCM 및 AES-256-GCM 암호화 지원이 포함됩니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:24
 msgid "SAML providers"
-msgstr ""
+msgstr "SAML 공급자"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:26
 msgid ""
@@ -99,10 +119,12 @@ msgid ""
 "confirms who the user is, and sends data to the service provider with the"
 " proper authorization to access the site."
 msgstr ""
+"**ID 공급자(IdP)**: ID 공급자는 인증을 수행합니다. 사용자가 로그인하기 위해 클릭하면 ID 공급자가 사용자가 누구인지 "
+"확인하고, 사이트에 액세스할 적절한 권한 부여와 함께 데이터를 서비스 공급자에게 전송합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:28
 msgid "*Examples*: OneLogin, Okta, Microsoft Active Directory (ADFS) or Azure."
-msgstr ""
+msgstr "*예*: OneLogin, Okta, Microsoft Active Directory(ADFS) 또는 Azure."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:30
 msgid ""
@@ -110,14 +132,16 @@ msgid ""
 "authorization information from an IdP. Once received, it gives the user "
 "access to the system and logs the user in."
 msgstr ""
+"**서비스 공급자(SP)**: 서비스 공급자는 IdP에서 인증 및 권한 부여 정보를 가져옵니다. 정보를 받으면 사용자에게 시스템 "
+"액세스를 제공하고 사용자를 로그인시킵니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:32
 msgid "*Examples*: Mattermost, Zendesk, Zoom, Salesforce."
-msgstr ""
+msgstr "*예*: Mattermost, Zendesk, Zoom, Salesforce."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:35
 msgid "SAML request (AuthNRequest)"
-msgstr ""
+msgstr "SAML 요청(AuthNRequest)"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:37
 msgid ""
@@ -125,12 +149,15 @@ msgid ""
 " a **HTTP-Redirect** binding request to the IdP that contains an XML "
 "payload as a base64 string"
 msgstr ""
+"OKR.BEST가 SP 시작 SAML 요청 흐름을 시작하면, XML 페이로드를 base64 문자열로 포함하는 **HTTP-"
+"Redirect** 바인딩 요청을 IdP에 생성합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:43
 msgid ""
 "AuthNRequests can also be signed by Mattermost, in which case the XML "
 "payload is similar to:"
 msgstr ""
+"AuthNRequest는 OKR.BEST가 서명할 수도 있으며, 이 경우 XML 페이로드는 다음과 유사합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:46
 msgid ""
@@ -138,10 +165,12 @@ msgid ""
 "from SHA-1 to SHA-256 for improved security. The example below reflects "
 "the new default SHA-256 algorithm."
 msgstr ""
+"OKR.BEST v11부터 보안 강화를 위해 기본 서명 알고리즘이 SHA-1에서 SHA-256으로 업데이트되었습니다. 아래 예시는 "
+"새 기본 SHA-256 알고리즘을 반영합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:74
 msgid "SAML responses"
-msgstr ""
+msgstr "SAML 응답"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:76
 msgid ""
@@ -149,6 +178,8 @@ msgid ""
 "The response contains the Assertion with the NameID and attributes of a "
 "user."
 msgstr ""
+"IdP가 SP로 보내는 SAML 응답에는 여러 유형이 있습니다. 응답에는 사용자의 NameID와 속성이 포함된 Assertion이 "
+"포함됩니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:78
 msgid ""
@@ -156,48 +187,52 @@ msgid ""
 "is fully supported except when the SAML assertion is signed while the "
 "SAML response itself is not:"
 msgstr ""
+"아래는 다양한 응답 유형의 표입니다. SAML assertion은 서명되었지만 SAML response 자체는 서명되지 않은 경우를 "
+"제외하고 각 응답 유형이 완전히 지원됩니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:1
 msgid "Signed SAML Response"
-msgstr ""
+msgstr "서명된 SAML Response"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:1
 msgid "Signed SAML Assertion"
-msgstr ""
+msgstr "서명된 SAML Assertion"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:1
 msgid "Encrypted SAML Assertion"
-msgstr ""
+msgstr "암호화된 SAML Assertion"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:1
 msgid "Supported by Mattermost"
-msgstr ""
+msgstr "OKR.BEST 지원 여부"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:1
 msgid "Yes"
-msgstr ""
+msgstr "예"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:1
 msgid "No"
-msgstr ""
+msgstr "아니요"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:1
 msgid "Partially, validation of assertion signature not supported"
-msgstr ""
+msgstr "부분 지원, assertion 서명 검증은 지원되지 않음"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:92
 msgid ""
 "For example XML responses for each type, see the `OneLogin SAML response "
 "examples <https://www.samltool.com/generic_sso_res.php>`_."
 msgstr ""
+"각 유형에 대한 XML 응답 예시는 `OneLogin SAML response examples "
+"<https://www.samltool.com/generic_sso_res.php>`_\\ 를 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:95
 msgid "Technical description of SAML synchronization with AD/LDAP"
-msgstr ""
+msgstr "AD/LDAP와 SAML 동기화 기술 설명"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:97
 msgid "When enabled, SAML synchronization with AD/LDAP occurs in phases:"
-msgstr ""
+msgstr "활성화하면 AD/LDAP와 SAML 동기화가 다음 단계로 진행됩니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:99
 msgid ""
@@ -206,6 +241,9 @@ msgid ""
 " the Mattermost database: ``SELECT * FROM Users WHERE AuthService = "
 "'ldap'``."
 msgstr ""
+"``Users.AuthService``\\ 가 ``ldap``\\ 로 설정된 현재 LDAP 사용자를 OKR.BEST 데이터베이스에서 모두 "
+"가져옵니다. 이는 OKR.BEST 데이터베이스에 대해 실행되는 SQL 쿼리입니다: ``SELECT * FROM Users WHERE "
+"AuthService = 'ldap'``."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:100
 msgid ""
@@ -214,6 +252,9 @@ msgid ""
 " the Mattermost database: ``SELECT * FROM Users WHERE AuthService = "
 "'saml'``."
 msgstr ""
+"``Users.AuthService``\\ 가 ``saml``\\ 로 설정된 현재 SAML 사용자를 OKR.BEST 데이터베이스에서 모두 "
+"가져옵니다. 이는 OKR.BEST 데이터베이스에 대해 실행되는 SQL 쿼리입니다: ``SELECT * FROM Users WHERE "
+"AuthService = 'saml'``."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:101
 msgid ""
@@ -223,6 +264,10 @@ msgid ""
 "/ldap-check.sh>`__ issued against the LDAP server. Users are retrieved in"
 " batches as defined by ``LdapSettings.MaxPageSize``."
 msgstr ""
+"``LdapSettings.UserFilter``\\ 로 정의된 현재 LDAP 사용자를 LDAP 서버에서 모두 가져옵니다. 이는 LDAP "
+"서버에 대해 실행되는 `LDAP query <https://github.com/mattermost/mattermost/blob/master/server/scripts"
+"/ldap-check.sh>`__\\ 입니다. 사용자는 ``LdapSettings.MaxPageSize``\\ 로 정의된 배치 단위로 "
+"검색됩니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:102
 msgid ""
@@ -231,6 +276,9 @@ msgid ""
 "3. To find matches, ``Users.AuthData`` field of the Mattermost user is "
 "compared against the ``LdapSettings.IdAttribute`` LDAP setting."
 msgstr ""
+"LDAP 속성을 업데이트합니다. 1단계에서 검색한 기존 OKR.BEST 사용자마다 3단계의 LDAP 사용자 목록에서 일치 항목을 "
+"찾으려고 시도합니다. 일치 항목을 찾기 위해 OKR.BEST 사용자의 ``Users.AuthData`` 필드를 "
+"``LdapSettings.IdAttribute`` LDAP 설정과 비교합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:104
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:109
@@ -238,6 +286,7 @@ msgid ""
 "If any attribute of the user has changed, that attribute is copied from "
 "the LDAP server and the user is marked as updated."
 msgstr ""
+"사용자의 속성이 변경된 경우 해당 속성이 LDAP 서버에서 복사되고 사용자는 업데이트된 것으로 표시됩니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:105
 msgid ""
@@ -245,6 +294,8 @@ msgid ""
 "is assumed to be deleted from the LDAP server, and deactivated from "
 "Mattermost by setting the ``Users.DeleteAt`` field to a valid timestamp."
 msgstr ""
+"해당 ``LdapSettings.IdAttribute``\\ 를 찾을 수 없으면 사용자가 LDAP 서버에서 삭제된 것으로 간주하고, "
+"``Users.DeleteAt`` 필드를 유효한 타임스탬프로 설정하여 OKR.BEST에서 비활성화합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:107
 msgid ""
@@ -253,6 +304,9 @@ msgid ""
 "3. To find matches, ``SamlSettings.Email`` is compared against the "
 "``LdapSettings.EmailAttribute`` LDAP setting."
 msgstr ""
+"SAML 속성을 업데이트합니다. 2단계에서 검색한 기존 OKR.BEST 사용자마다 3단계의 LDAP 사용자 목록에서 일치 항목을 "
+"찾으려고 시도합니다. 일치 항목을 찾기 위해 ``SamlSettings.Email``\\ 을 ``LdapSettings.EmailAttribute`` "
+"LDAP 설정과 비교합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:110
 msgid ""
@@ -260,30 +314,36 @@ msgid ""
 "user is assumed to be deleted from the LDAP server, and deactivated from "
 "Mattermost by setting the ``Users.DeleteAt`` field to a valid timestamp."
 msgstr ""
+"해당 ``LdapSettings.EmailAttribute``\\ 를 찾을 수 없으면 사용자가 LDAP 서버에서 삭제된 것으로 간주하고, "
+"``Users.DeleteAt`` 필드를 유효한 타임스탬프로 설정하여 OKR.BEST에서 비활성화합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:113
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "자주 묻는 질문"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:116
 msgid "How can I obtain a SAML metadata XML file consumed by Mattermost?"
-msgstr ""
+msgstr "OKR.BEST에서 사용하는 SAML 메타데이터 XML 파일을 어떻게 얻을 수 있나요?"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:118
 msgid ""
 "You can obtain the XML file by calling the Mattermost RESTful API "
 "endpoint at ``/api/v4/saml/metadata``."
 msgstr ""
+"``/api/v4/saml/metadata``\\ 의 OKR.BEST RESTful API 엔드포인트를 호출하여 XML 파일을 얻을 수 "
+"있습니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:120
 msgid ""
 "For other useful SAML API calls, see the `API reference "
 "<https://api.mattermost.com/#tag/SAML>`_."
 msgstr ""
+"기타 유용한 SAML API 호출은 `API reference <https://api.mattermost.com/#tag/SAML>`_\\ 를 "
+"참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:123
 msgid "Can I update user attributes using the API?"
-msgstr ""
+msgstr "API를 사용해 사용자 속성을 업데이트할 수 있나요?"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:125
 msgid ""
@@ -293,12 +353,15 @@ msgid ""
 "username. SAML must be the authoritative source for these user "
 "attributes."
 msgstr ""
+"아니요. OKR.BEST가 사용자 인증에 SAML을 사용하도록 구성된 경우, 이름, 성, 직책, 닉네임, 이메일, 프로필 이미지, "
+"사용자 ID 같은 사용자 속성 변경은 API를 통해 수행할 수 없습니다. SAML이 이러한 사용자 속성의 권한 있는 소스여야 합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:128
 msgid ""
 "Why does the ObjectGUID of a user in Mattermost differ from what I'm "
 "seeing in ADFS?"
 msgstr ""
+"OKR.BEST에서 사용자의 ObjectGUID가 ADFS에서 보는 값과 다른 이유는 무엇인가요?"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:130
 msgid ""
@@ -308,12 +371,17 @@ msgid ""
 " the others keep it the same except for the different base (octal, "
 "decimal, hex), as follows:"
 msgstr ""
+"Active Directory Object-Guid 속성(LDAP 표시 이름 ``objectGUID``)은 다양한 방식으로 표시될 수 "
+"있는 16바이트 배열입니다. 하지만 ObjectGUID의 인코딩을 변경하는 것은 Microsoft뿐입니다. 나머지는 다음과 같이 서로 "
+"다른 기수(8진수, 10진수, 16진수)를 제외하고 동일하게 유지합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:132
 msgid ""
 "The ``ldapsearch`` linux command displays it as base 64: "
 "``Hrz/HqNKnU+lCNTYHx9Ycw==``. This is also the format used in LDIF files."
 msgstr ""
+"``ldapsearch`` linux 명령은 이를 base 64로 표시합니다: ``Hrz/HqNKnU+lCNTYHx9Ycw==``. 이는 "
+"LDIF 파일에서 사용되는 형식이기도 합니다."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:134
 msgid ""
@@ -322,6 +390,9 @@ msgid ""
 "byte separated by a backslash: "
 "``\\1e\\bc\\ff\\1e\\a3\\4a\\9d\\4f\\a5\\08\\d4\\d8\\1f\\1f\\58\\73``"
 msgstr ""
+"`OKR.BEST가 사용하는 LDAP Golang package <https://github.com/go-ldap/ldap>`_\\ 는 "
+"값을 각 바이트가 백슬래시로 구분된 16진수(base 16) 배열로 내보냅니다: "
+"``\\1e\\bc\\ff\\1e\\a3\\4a\\9d\\4f\\a5\\08\\d4\\d8\\1f\\1f\\58\\73``"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:136
 msgid ""
@@ -330,18 +401,23 @@ msgid ""
 "The snippets prints the base 10 representation of each value: ``[30 188 "
 "255 30 163 74 157 79 165 8 212 216 31 31 88 115]``"
 msgstr ""
+"백슬래시(``1ebcff1ea34a9d4fa508d4d81f1f5873``)를 제거하고 `Golang like this "
+"<https://go.dev/play/p/9b8iDPuz0Nm>`_\\ 로 파싱할 수 있습니다. 이 스니펫은 각 값의 base 10 "
+"표현을 출력합니다: ``[30 188 255 30 163 74 157 79 165 8 212 216 31 31 88 115]``"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:138
 msgid ""
 "Windows Powershell displays the value like this: ``1effbc1e-"
 "4aa3-4f9d-a508-d4d81f1f5873``"
 msgstr ""
+"Windows Powershell은 값을 다음과 같이 표시합니다: ``1effbc1e-4aa3-4f9d-a508-d4d81f1f5873``"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:141
 msgid ""
 "Does ``relaystate`` need to be passed back to the client from the "
 "identity provider?"
 msgstr ""
+"ID 공급자에서 클라이언트로 ``relaystate``\\ 를 다시 전달해야 하나요?"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:143
 #, python-format
@@ -353,10 +429,15 @@ msgid ""
 "PingFederate#:~:text=RelayState%20is%20an%20optional%20parameter,the%20SAML%202.0%20bindings%20specification>`_"
 " documentation for details."
 msgstr ""
+"예. 기본적으로 이를 이미 수행하지 않는 공급자와 OKR.BEST를 통합하는 경우 ``relaystate``\\ 가 활성화되어 있는지 "
+"확인하세요. 자세한 내용은 PingIdentity `SAML RelayState <https://support.pingidentity.com/s/article"
+"/SAML-RelayState-and-"
+"PingFederate#:~:text=RelayState%20is%20an%20optional%20parameter,the%20SAML%202.0%20bindings%20specification>`_ "
+"문서를 참조하세요."
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:146
 msgid "How can I troubleshoot the SAML logon process?"
-msgstr ""
+msgstr "SAML 로그온 프로세스 문제를 어떻게 해결할 수 있나요?"
 
 #: ../../source/administration-guide/onboard/sso-saml-technical.rst:148
 msgid ""
@@ -366,4 +447,7 @@ msgid ""
 "=item-share-cp>`_ Chrome extension. We're not aware of similar tools for "
 "other browsers, but this tool justifies installing Chrome!"
 msgstr ""
-
+"SAML 연결 문제를 해결하는 데 가장 유용하다고 확인한 도구는 `SAML Chrome Panel "
+"<https://chromewebstore.google.com/detail/paijfdbeoenhembfhkhllainmocckace?utm_source"
+"=item-share-cp>`_ Chrome 확장 프로그램입니다. 다른 브라우저에 유사한 도구가 있는지는 알지 못하지만, 이 도구는 "
+"Chrome을 설치할 만한 가치가 있습니다."
