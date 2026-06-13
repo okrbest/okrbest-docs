@@ -21,13 +21,13 @@ msgstr ""
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:2
 msgid "System-wide attribute-based access policies"
-msgstr ""
+msgstr "시스템 전체 속성 기반 액세스 정책"
 
 #: ../../source/_static/badges/entry-adv.rst:7
 msgid ""
 "|plans-img-yellow| Available on `Entry and Enterprise Advanced "
 "<https://mattermost.com/pricing/>`__ plans"
-msgstr ""
+msgstr "|plans-img-yellow| `Entry 및 Enterprise Advanced <https://mattermost.com/pricing/>`__ 플랜에서 사용할 수 있습니다"
 
 #: ../../<rst_prolog>:6
 msgid "plans-img-yellow"
@@ -39,11 +39,11 @@ msgid ""
 "access policies in the System Console. For channel-level rules managed by"
 " Channel Admins, see :doc:`Channel-specific access rules "
 "</administration-guide/manage/admin/abac-channel-access-rules>`."
-msgstr ""
+msgstr "이 가이드를 사용해 관리자 도구에서 조직 전체 속성 기반 액세스 정책을 만들고 관리합니다. 채널 관리자가 관리하는 채널 수준 규칙은 :doc:`채널별 액세스 규칙 </administration-guide/manage/admin/abac-channel-access-rules>`\\ 을 참조하세요."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:10
 msgid "Prerequisites"
-msgstr ""
+msgstr "사전 요구 사항"
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:12
 msgid ""
@@ -51,7 +51,7 @@ msgid ""
 "guide/manage/admin/attribute-based-access-control>` require defined user "
 "attributes. First :doc:`configure user attributes </administration-"
 "guide/manage/admin/user-attributes>` in the System Console."
-msgstr ""
+msgstr ":doc:`속성 기반 액세스 제어(ABAC) </administration-guide/manage/admin/attribute-based-access-control>`\\ 에는 정의된 사용자 속성이 필요합니다. 먼저 관리자 도구에서 :doc:`사용자 속성 구성 </administration-guide/manage/admin/user-attributes>`\\ 을 완료하세요."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:13
 msgid ""
@@ -59,7 +59,7 @@ msgid ""
 "Access** to enable attribute-based access controls for your Mattermost "
 "instance. This functionality requires a Mattermost Enterprise Advanced "
 "license."
-msgstr ""
+msgstr "그런 다음 **관리자 도구 > 시스템 속성 > 속성 기반 액세스**\\ 로 이동하여 OKR.BEST 인스턴스의 속성 기반 액세스 제어를 활성화합니다. 이 기능에는 Mattermost Enterprise Advanced 라이선스가 필요합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:15
 msgid ""
@@ -73,23 +73,23 @@ msgid ""
 "begin>` documentation for details on enabling this feature. This "
 "configuration setting is available only in Enterprise Edition Advanced "
 "and is disabled by default."
-msgstr ""
+msgstr "Mattermost v10.11부터 사용자 관리 속성은 보안상의 이유로 속성 기반 액세스 제어(ABAC) 규칙에서 기본적으로 제외됩니다. 이를 통해 사용자가 자신의 프로필 속성을 편집하여 액세스 제어 정책을 우회하는 것을 방지합니다. ABAC 규칙에 사용자 관리 속성을 포함하려면 시스템 관리자가 ``EnableUserManagedAttributes`` 구성 설정을 명시적으로 활성화해야 합니다. 이 기능을 활성화하는 자세한 내용은 :ref:`사용자 속성 <administration-guide/manage/admin/user-attributes:before you begin>` 문서를 참조하세요. 이 구성 설정은 Enterprise Edition Advanced에서만 사용할 수 있으며 기본적으로 비활성화되어 있습니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:18
 msgid "Define access control policies"
-msgstr ""
+msgstr "액세스 제어 정책 정의"
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:20
 msgid ""
 "You can add multiple rules to a single policy, and each rule can include "
 "multiple attribute values."
-msgstr ""
+msgstr "단일 정책에 여러 규칙을 추가할 수 있으며 각 규칙에는 여러 속성 값을 포함할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:22
 msgid ""
 "In the System Console, go to **System Attributes > Attribute-Based "
 "Access** and select **Add Policy**."
-msgstr ""
+msgstr "관리자 도구에서 **시스템 속성 > 속성 기반 액세스**\\ 로 이동하고 **정책 추가**\\ 를 선택합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:23
 msgid ""
@@ -97,38 +97,38 @@ msgid ""
 "unique; if you enter a name that's already in use, Mattermost displays a "
 "user-friendly error message and prevents the policy from being saved "
 "until you choose a different name."
-msgstr ""
+msgstr "고유한 정책 이름을 입력합니다. 상위 액세스 제어 정책 이름은 고유해야 합니다. 이미 사용 중인 이름을 입력하면 OKR.BEST가 사용자 친화적인 오류 메시지를 표시하고 다른 이름을 선택할 때까지 정책 저장을 차단합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:24
 msgid ""
 "Choose whether to automatically add users who match your configured "
 "attribute values as new members. Automatic synchronization is disabled by"
 " default."
-msgstr ""
+msgstr "구성된 속성 값과 일치하는 사용자를 새 구성원으로 자동 추가할지 선택합니다. 자동 동기화는 기본적으로 비활성화되어 있습니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:26
 msgid ""
 "**True**: Automatically maintains channel membership according to the "
 "defined rules as user attributes change."
-msgstr ""
+msgstr "**True**: 사용자 속성이 변경될 때 정의된 규칙에 따라 채널 멤버십을 자동으로 유지합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:27
 msgid ""
 "**False** (**Default**): Only removes members and restricts adding them "
 "to the channel if they don’t match defined rules. Users are not "
 "automatically added."
-msgstr ""
+msgstr "**False**(**기본값**): 정의된 규칙과 일치하지 않는 경우 구성원만 제거하고 채널 추가를 제한합니다. 사용자는 자동으로 추가되지 않습니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:29
 msgid ""
 "Regardless of whether this configuration setting, users who no longer "
 "match the configured attribute values in the future will be removed from "
 "the channel after the next channel synchronization."
-msgstr ""
+msgstr "이 구성 설정과 관계없이 향후 구성된 속성 값과 더 이상 일치하지 않는 사용자는 다음 채널 동기화 후 채널에서 제거됩니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:31
 msgid "Define the attribute-based access rules to restrict channel membership."
-msgstr ""
+msgstr "채널 멤버십을 제한할 속성 기반 액세스 규칙을 정의합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:35
 msgid ""
@@ -137,51 +137,51 @@ msgid ""
 "comply with the policy. Simple Mode only supports simple conditions "
 "without nested logic or mixed logical operators. All rules are combined "
 "with a logical AND operator ``&&``."
-msgstr ""
+msgstr "단순 모드는 간단하고 직관적인 액세스 제어 시나리오에 적합합니다. 각 행은 사용자가 정책을 준수하기 위해 충족해야 하는 단일 조건입니다. 단순 모드는 중첩 논리나 혼합 논리 연산자 없이 단순 조건만 지원합니다. 모든 규칙은 논리 AND 연산자 ``&&``\\ 로 결합됩니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:37
 msgid ""
 "Select **Add attribute** and select the attribute you want to use for "
 "access control."
-msgstr ""
+msgstr "**속성 추가**\\ 를 선택하고 액세스 제어에 사용할 속성을 선택합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:38
 msgid ""
 "Specify how you want the attribute to match the user profile. You can "
 "choose from the following options:"
-msgstr ""
+msgstr "속성이 사용자 프로필과 일치하는 방식을 지정합니다. 다음 옵션 중에서 선택할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:40
 msgid "**Is**: The attribute must be an exact match of the value."
-msgstr ""
+msgstr "**Is**: 속성이 값과 정확히 일치해야 합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:41
 msgid "**Is not**: The attribute must not contain specified value."
-msgstr ""
+msgstr "**Is not**: 속성에 지정된 값이 포함되지 않아야 합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:42
 msgid "**In**: The attribute must match at least one value."
-msgstr ""
+msgstr "**In**: 속성이 하나 이상의 값과 일치해야 합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:43
 msgid "**Starts with**: The attribute value must start with the specified value."
-msgstr ""
+msgstr "**Starts with**: 속성 값이 지정된 값으로 시작해야 합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:44
 msgid "**Ends with**: The attribute value must end with the specified value."
-msgstr ""
+msgstr "**Ends with**: 속성 값이 지정된 값으로 끝나야 합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:45
 msgid ""
 "**Contains**: The attribute value must exist somewhere with the specified"
 " value."
-msgstr ""
+msgstr "**Contains**: 속성 값의 어딘가에 지정된 값이 있어야 합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:47
 msgid ""
 "Specify the attribute values that users must have to be granted access to"
 " the channel."
-msgstr ""
+msgstr "채널에 액세스 권한을 부여받기 위해 사용자에게 필요한 속성 값을 지정합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:51
 msgid ""
@@ -192,7 +192,7 @@ msgid ""
 "CEL Expression Editor provides real-time syntax validation and feedback, "
 "as well as context-aware autocomplete for attributes, operators, and "
 "attribute values."
-msgstr ""
+msgstr "고급 모드는 ``user.<attribute> == <value>`` 같은 규칙을 지원하는 논리 연산자로 여러 조건을 결합하기 위해 CEL 구문이 필요한 복잡한 액세스 제어 시나리오에 적합합니다. 여러 조건에는 ``&&`` / ``||``(and/or)를 사용하고 조건 그룹화에는 ``()``\\ 를 사용합니다. CEL 표현식 편집기는 실시간 구문 검증과 피드백은 물론 속성, 연산자, 속성 값에 대한 컨텍스트 인식 자동 완성을 제공합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:53
 msgid ""
@@ -200,23 +200,23 @@ msgid ""
 "Advanced Mode to refine the rules further as needed. However, you'll be "
 "blocked from switching from Advanced back to Simple Mode if one of the "
 "following are true:"
-msgstr ""
+msgstr "단순 모드에서 규칙 정의를 시작한 다음 필요에 따라 고급 모드로 전환하여 규칙을 더 세분화할 수도 있습니다. 그러나 다음 중 하나에 해당하면 고급 모드에서 단순 모드로 다시 전환할 수 없습니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:55
 msgid "Mixed logical operators are used between conditions."
-msgstr ""
+msgstr "조건 사이에 혼합 논리 연산자가 사용되었습니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:56
 msgid "Nested logic/grouping (parentheses) are present."
-msgstr ""
+msgstr "중첩 논리/그룹화(괄호)가 있습니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:57
 msgid "Unsupported operators or expressions are detected."
-msgstr ""
+msgstr "지원되지 않는 연산자 또는 표현식이 감지되었습니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:59
 msgid "The syntax structure is ``user.<attribute> <operator> <value>``."
-msgstr ""
+msgstr "구문 구조는 ``user.<attribute> <operator> <value>``\\ 입니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:61
 msgid ""
@@ -226,7 +226,7 @@ msgid ""
 "autocomplete suggests values to choose from. Mattermost will explicitly "
 "indicate issues such as missing operators, incorrect syntax, or "
 "incomplete conditions."
-msgstr ""
+msgstr "입력하면 자동 완성이 사용 가능한 속성을 표시합니다. 속성을 선택하면 자동 완성이 적절한 CEL 연산자를 제안합니다. 연산자를 선택한 후 속성 값이 사전 정의되어 있으면 자동 완성이 선택할 값을 제안합니다. OKR.BEST는 누락된 연산자, 잘못된 구문 또는 불완전한 조건 같은 문제를 명확하게 표시합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:63
 msgid ""
@@ -234,11 +234,11 @@ msgid ""
 "the syntax is valid, the bar will turn green and display a message "
 "indicating that the syntax is valid. If there are any issues, the bar "
 "will turn red and display an error message."
-msgstr ""
+msgstr "규칙의 구문을 확인하려면 **구문 검증** 막대를 선택합니다. 구문이 유효하면 막대가 녹색으로 바뀌고 구문이 유효함을 나타내는 메시지가 표시됩니다. 문제가 있으면 막대가 빨간색으로 바뀌고 오류 메시지가 표시됩니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:66
 msgid "Test rules"
-msgstr ""
+msgstr "규칙 테스트"
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:68
 msgid ""
@@ -246,22 +246,22 @@ msgid ""
 "return how many users would be granted access to the channel based on the"
 " current rule. Test your rules to ensure the intended scope and avoid "
 "unexpected access changes."
-msgstr ""
+msgstr "현재 규칙을 기준으로 채널 액세스 권한을 부여받을 사용자 수를 반환하도록 사용자 기반에 대해 규칙을 테스트하려면 **액세스 규칙 테스트**\\ 를 선택합니다. 의도한 범위를 확인하고 예상치 못한 액세스 변경을 방지하려면 규칙을 테스트하세요."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:71
 msgid "Manage rules"
-msgstr ""
+msgstr "규칙 관리"
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:73
 msgid ""
 "You can apply changes to existing rules or remove rules at any time using"
 " either Simple Mode or Advanced Mode. Select **Save** to save your "
 "changes."
-msgstr ""
+msgstr "단순 모드 또는 고급 모드를 사용해 언제든지 기존 규칙에 변경 사항을 적용하거나 규칙을 제거할 수 있습니다. 변경 사항을 저장하려면 **저장**\\ 을 선택합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:76
 msgid "Assign policies to private channels"
-msgstr ""
+msgstr "비공개 채널에 정책 할당"
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:78
 msgid ""
@@ -270,7 +270,7 @@ msgid ""
 "want. You can assign the policy to multiple channels at once, or you can "
 "`assign it to individual channels <#define-access-controls-per-"
 "channel>`__ later. Select **Save** to save your changes."
-msgstr ""
+msgstr "**채널 추가**\\ 를 선택해 원하는 채널을 검색하고 선택하여 액세스 제어 정책을 적용할 비공개 채널을 지정합니다. 정책을 여러 채널에 한 번에 할당하거나 나중에 `개별 채널에 할당 <#define-access-controls-per-channel>`__\\ 할 수 있습니다. 변경 사항을 저장하려면 **저장**\\ 을 선택합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:82
 msgid ""
@@ -278,11 +278,11 @@ msgid ""
 "guest users invited to them. Only users who match the defined attribute "
 "criteria can be added to ABAC-controlled channels, ensuring strict "
 "adherence to access control policies."
-msgstr ""
+msgstr "속성 기반 액세스 제어 정책이 있는 비공개 채널에는 게스트 사용자를 초대할 수 없습니다. 정의된 속성 기준과 일치하는 사용자만 ABAC로 제어되는 채널에 추가될 수 있으므로 액세스 제어 정책을 엄격하게 준수할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:85
 msgid "Delete policies"
-msgstr ""
+msgstr "정책 삭제"
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:87
 msgid ""
@@ -290,36 +290,36 @@ msgid ""
 "want to remove. You can only delete policies that are not currently "
 "assigned to any channels. If a policy is assigned to channels, you must "
 "first remove it from those channels before you can delete it."
-msgstr ""
+msgstr "정책을 삭제하려면 제거하려는 정책 옆의 **삭제** 버튼을 선택합니다. 현재 어떤 채널에도 할당되지 않은 정책만 삭제할 수 있습니다. 정책이 채널에 할당되어 있으면 삭제하기 전에 먼저 해당 채널에서 제거해야 합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:90
 msgid "Define access controls per channel"
-msgstr ""
+msgstr "채널별 액세스 제어 정의"
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:92
 msgid ""
 "You can assign an existing access control policy to a private channels "
 "for more granular control over channel membership. This is useful when "
 "you need to apply different rules for different channels."
-msgstr ""
+msgstr "채널 멤버십을 더 세밀하게 제어하기 위해 기존 액세스 제어 정책을 비공개 채널에 할당할 수 있습니다. 채널별로 다른 규칙을 적용해야 할 때 유용합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:94
 msgid ""
 "In the System Console, go to **User Management > Channels** to select the"
 " private channel you want to configure, and select **Edit**."
-msgstr ""
+msgstr "관리자 도구에서 **사용자 관리 > 채널**\\ 로 이동하여 구성하려는 비공개 채널을 선택하고 **편집**\\ 을 선택합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:95
 msgid ""
 "In the **Channel Management** section, enable the **Enable attribute-"
 "based channel access** option."
-msgstr ""
+msgstr "**채널 관리** 섹션에서 **속성 기반 채널 액세스 활성화** 옵션을 활성화합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:96
 msgid ""
 "Under **Access policy**, select **Link to a policy** to select an "
 "existing policy."
-msgstr ""
+msgstr "**액세스 정책** 아래에서 기존 정책을 선택하려면 **정책에 연결**\\ 을 선택합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:100
 msgid ""
@@ -328,21 +328,21 @@ msgid ""
 "enabling the **Enable attribute-based channel access** option. Under "
 "**Access policy**, select **Link to a policy** to select an existing "
 "policy."
-msgstr ""
+msgstr "관리자 도구의 채널 세부 정보 페이지에서 **채널 관리** 아래의 **속성 기반 채널 액세스 활성화** 옵션을 활성화하여 채널에 ABAC 규칙을 직접 할당할 수도 있습니다. **액세스 정책** 아래에서 기존 정책을 선택하려면 **정책에 연결**\\ 을 선택합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:103
 msgid "Remove channel policies"
-msgstr ""
+msgstr "채널 정책 제거"
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:105
 msgid ""
 "Disable the policy for the channel by selecting **Remove Policy**. You "
 "can then link the channel to a different policy if preferred."
-msgstr ""
+msgstr "**정책 제거**\\ 를 선택하여 채널의 정책을 비활성화합니다. 그런 다음 원하는 경우 채널을 다른 정책에 연결할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:108
 msgid "Permission policies"
-msgstr ""
+msgstr "권한 정책"
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:110
 msgid ""
@@ -351,25 +351,25 @@ msgid ""
 "to channel membership. Permission policies use the same attribute-based "
 "rules as access policies, but they apply to user actions rather than "
 "channel access."
-msgstr ""
+msgstr "Mattermost v11.7부터 시스템 관리자는 채널 멤버십 외에도 특정 사용자 작업을 제한하는 속성 기반 **권한 정책**\\ 을 정의할 수 있습니다. 권한 정책은 액세스 정책과 동일한 속성 기반 규칙을 사용하지만, 채널 액세스가 아니라 사용자 작업에 적용됩니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:112
 msgid ""
 "Permission policies can be used to restrict the following actions based "
 "on user attributes:"
-msgstr ""
+msgstr "권한 정책은 사용자 속성을 기준으로 다음 작업을 제한하는 데 사용할 수 있습니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:114
 msgid ""
 "**File upload**: Prevent users who don't match the defined attribute "
 "rules from uploading file attachments."
-msgstr ""
+msgstr "**파일 업로드**: 정의된 속성 규칙과 일치하지 않는 사용자가 파일 첨부를 업로드하지 못하도록 합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:115
 msgid ""
 "**File download**: Prevent users who don't match the defined attribute "
 "rules from downloading file attachments."
-msgstr ""
+msgstr "**파일 다운로드**: 정의된 속성 규칙과 일치하지 않는 사용자가 파일 첨부를 다운로드하지 못하도록 합니다."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:117
 msgid ""
@@ -379,12 +379,11 @@ msgid ""
 "have access to. See :ref:`Restricted file attachments <end-user-"
 "guide/collaborate/share-files-in-messages:restricted file attachments>` "
 "for the end-user-facing behavior."
-msgstr ""
+msgstr "권한 정책이 적용되면 구성된 속성 값과 일치하지 않는 사용자는 제한된 작업을 수행할 수 없습니다. 사용자는 원래 액세스할 수 있었던 메시지에서 파일 첨부가 사용할 수 없거나 수정된 것으로 표시되는 것을 볼 수 있습니다. 최종 사용자에게 표시되는 동작은 :ref:`제한된 파일 첨부 <end-user-guide/collaborate/share-files-in-messages:restricted file attachments>`\\ 를 참조하세요."
 
 #: ../../source/administration-guide/manage/admin/abac-system-wide-policies.rst:119
 msgid ""
 "Permission policies follow the same unique-name requirement as access "
 "policies: each parent permission policy must have a unique name, and "
 "Mattermost surfaces a user-friendly error if a duplicate name is entered."
-msgstr ""
-
+msgstr "권한 정책은 액세스 정책과 동일한 고유 이름 요구 사항을 따릅니다. 각 상위 권한 정책에는 고유한 이름이 있어야 하며, 중복 이름을 입력하면 OKR.BEST가 사용자 친화적인 오류를 표시합니다."
