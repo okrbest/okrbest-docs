@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/environment-variables.rst:2
 msgid "Environment variables"
-msgstr ""
+msgstr "환경 변수"
 
 #: ../../source/_static/badges/all-commercial.rst:7
 msgid ""
@@ -40,32 +40,32 @@ msgid ""
 "to a setting in ``config.json`` requires a restart for it to take effect,"
 " then changes to the corresponding environment variable also require a "
 "server restart."
-msgstr ""
+msgstr "환경 변수를 사용하여 구성을 관리할 수 있습니다. 환경 변수는 ``config.json``의 설정을 재정의합니다. ``config.json``의 설정 변경이 적용되려면 재시작이 필요한 경우, 해당 환경 변수의 변경에도 서버 재시작이 필요합니다."
 
 #: ../../source/administration-guide/configure/environment-variables.rst:9
 msgid ""
 "The name of the environment variable for any setting can be derived from "
 "the name of that setting in ``config.json``. For example, to derive the "
 "name of the Site URL setting:"
-msgstr ""
+msgstr "모든 설정의 환경 변수 이름은 ``config.json``의 해당 설정 이름에서 파생될 수 있습니다. 예를 들어, Site URL 설정의 이름을 파생하려면:"
 
 #: ../../source/administration-guide/configure/environment-variables.rst:11
 msgid ""
 "Find the setting in ``config.json``. In this case, "
 "*ServiceSettings.SiteURL*."
-msgstr ""
+msgstr "``config.json``에서 설정을 찾습니다. 이 경우 *ServiceSettings.SiteURL*입니다."
 
 #: ../../source/administration-guide/configure/environment-variables.rst:12
 msgid ""
 "Add ``MM_`` to the beginning and convert all characters to uppercase and "
 "replace the ``.`` with ``_``. For example, *MM_SERVICESETTINGS_SITEURL*."
-msgstr ""
+msgstr "시작 부분에 ``MM_``를 추가하고 모든 문자를 대문자로 변환한 다음 ``.``를 ``_``로 바꿉니다. 예를 들어 *MM_SERVICESETTINGS_SITEURL*입니다."
 
 #: ../../source/administration-guide/configure/environment-variables.rst:13
 msgid ""
 "The setting becomes ``export "
 "MM_SERVICESETTINGS_SITEURL=\"http://example.com\"``."
-msgstr ""
+msgstr "설정은 ``export MM_SERVICESETTINGS_SITEURL=\"http://example.com\"``가 됩니다."
 
 #: ../../source/administration-guide/configure/environment-variables.rst:17
 msgid ""
@@ -73,7 +73,7 @@ msgid ""
 "can be set via ``Environment=<>``, or ``EnvironmentFile=<path/to/file>``."
 " In the second case, the file specified contains the list of environment "
 "variables to set."
-msgstr ""
+msgstr "OKR.BEST를 초기화 파일에서 실행하는 경우, 환경 변수는 ``Environment=<>`` 또는 ``EnvironmentFile=<path/to/file>``를 통해 설정할 수 있습니다. 두 번째 경우, 지정된 파일에는 설정할 환경 변수 목록이 포함됩니다."
 
 #: ../../source/administration-guide/configure/environment-variables.rst:18
 #, python-brace-format
@@ -83,7 +83,7 @@ msgid ""
 "This is especially helpful for Helm configuration files, provided all "
 "plugins are configured at the same time. For example, "
 "``MM_PLUGINSETTINGS_PLUGINSTATES=\"{\\\"com.mattermost.calls\\\":{\\\"Enable\\\":true},\\\"com.mattermost.nps\\\":{\\\"Enable\\\":true}}\"``."
-msgstr ""
+msgstr "OKR.BEST v7.5부터, 환경 구성 파싱은 ``MM_PLUGINSETTINGS_PLUGINS`` 및 ``MM_PLUGINSETTINGS_PLUGINSTATES``에 대해 JSON을 지원합니다. 이는 모든 플러그인이 동시에 구성되는 경우 Helm 구성 파일에 특히 유용합니다. 예를 들어 ``MM_PLUGINSETTINGS_PLUGINSTATES=\"{\\\"com.mattermost.calls\\\":{\\\"Enable\\\":true},\\\"com.mattermost.nps\\\":{\\\"Enable\\\":true}}\"``입니다."
 
 #: ../../source/administration-guide/configure/environment-variables.rst:19
 msgid ""
@@ -92,14 +92,14 @@ msgid ""
 "configured through an environment variable, and any other changes are "
 "made in the System Console, the value stored of the environment variable "
 "will be written back to the ``config.json`` as that setting's value."
-msgstr ""
+msgstr "설정이 환경 변수를 통해 구성된 경우, 시스템 관리자는 관리자 도구에서 해당 설정을 수정할 수 없습니다. 설정이 환경 변수를 통해 구성되어 있고 관리자 도구에서 다른 변경 사항이 적용되면, 환경 변수에 저장된 값이 해당 설정의 값으로 ``config.json``에 다시 기록됩니다."
 
 #: ../../source/administration-guide/configure/environment-variables.rst:20
 msgid ""
 "For any setting that's not set in ``config.json`` or in environment "
 "variables, the Mattermost server uses the setting's default value as "
 "documented in the sections below on this page."
-msgstr ""
+msgstr "``config.json`` 또는 환경 변수에 설정되지 않은 모든 설정의 경우, OKR.BEST 서버는 이 페이지의 아래 섹션에 문서화된 설정의 기본값을 사용합니다."
 
 #: ../../source/administration-guide/configure/environment-variables.rst:24
 msgid ""
@@ -107,7 +107,7 @@ msgid ""
 "active shell will take effect when migrating configuration. For more "
 "information, see the :doc:`configuration in a database </administration-"
 "guide/configure/configuration-in-your-database>` documentation."
-msgstr ""
+msgstr "활성 셸 내에서 설정된 OKR.BEST 설정의 환경 변수는 구성을 마이그레이션할 때 적용됩니다. 자세한 내용은 :doc:`데이터베이스의 구성 </administration-guide/configure/configuration-in-your-database>` 문서를 참조하세요."
 
 #: ../../source/administration-guide/configure/environment-variables.rst:25
 msgid ""
@@ -116,11 +116,11 @@ msgid ""
 "<https://www.w3schools.com/tags/ref_urlencode.asp>`__. Incorrectly "
 "formatted strings may cause some characters to terminate the string "
 "early, resulting in issues when the connection string is parsed."
-msgstr ""
+msgstr "데이터베이스 읽기 및 검색 복제본의 데이터베이스 연결 문자열은 `URL 인코딩 <https://www.w3schools.com/tags/ref_urlencode.asp>`__ 방식으로 형식을 지정해야 합니다. 잘못된 형식의 문자열은 일부 문자가 문자열을 조기에 종료시켜, 연결 문자열을 파싱할 때 문제를 일으킬 수 있습니다."
 
 #: ../../source/administration-guide/configure/environment-variables.rst:28
 msgid "Override Mattermost license file"
-msgstr ""
+msgstr "OKR.BEST 라이선스 파일 재정의"
 
 #: ../../source/administration-guide/configure/environment-variables.rst:30
 msgid ""
@@ -128,40 +128,40 @@ msgid ""
 "database or file configuration without replacing those licenses. When "
 "starting the server, specify the license key as ``MM_LICENSE`` with the "
 "contents of a license file."
-msgstr ""
+msgstr "환경 변수를 사용하여 데이터베이스 또는 파일 구성의 라이선스를 교체하지 않고 재정의할 수 있습니다. 서버를 시작할 때, 라이선스 파일의 내용과 함께 라이선스 키를 ``MM_LICENSE``로 지정합니다."
 
 #: ../../source/administration-guide/configure/environment-variables.rst:33
 msgid ""
 "If ``MM_LICENSE`` is set to a non-empty string, but the license specified"
 " is not valid, the Mattermost server will be started without a license."
-msgstr ""
+msgstr "``MM_LICENSE``가 비어 있지 않은 문자열로 설정되었지만 지정된 라이선스가 유효하지 않은 경우, OKR.BEST 서버는 라이선스 없이 시작됩니다."
 
 #: ../../source/administration-guide/configure/environment-variables.rst:35
 msgid ""
 "In a High Availability deployment, using an environment variable to "
 "override a server license only affects the individual app server and "
 "doesn't propagate to other servers in the cluster."
-msgstr ""
+msgstr "고가용성 배포에서, 환경 변수를 사용하여 서버 라이선스를 재정의하면 개별 앱 서버에만 영향을 미치며 클러스터의 다른 서버로 전파되지 않습니다."
 
 #: ../../source/administration-guide/configure/environment-variables.rst:38
 msgid "Load custom configuration defaults"
-msgstr ""
+msgstr "사용자 지정 구성 기본값 로드"
 
 #: ../../source/administration-guide/configure/environment-variables.rst:40
 msgid ""
 "This custom configuration applies only if the values are not already "
 "present in the current server configuration."
-msgstr ""
+msgstr "이 사용자 지정 구성은 값이 현재 서버 구성에 아직 존재하지 않는 경우에만 적용됩니다."
 
 #: ../../source/administration-guide/configure/environment-variables.rst:42
 msgid ""
 "Create a JSON file that contains the custom configuration defaults. For "
 "example, ``custom.json``."
-msgstr ""
+msgstr "사용자 지정 구성 기본값이 포함된 JSON 파일을 생성합니다. 예를 들어 ``custom.json``입니다."
 
 #: ../../source/administration-guide/configure/environment-variables.rst:43
 msgid ""
 "When starting the server, point the custom defaults environment variable "
 "to the defaults file: ``MM_CUSTOM_DEFAULTS_PATH=custom.json``."
-msgstr ""
+msgstr "서버를 시작할 때, 사용자 지정 기본값 환경 변수가 기본값 파일을 가리키도록 설정합니다: ``MM_CUSTOM_DEFAULTS_PATH=custom.json``."
 
