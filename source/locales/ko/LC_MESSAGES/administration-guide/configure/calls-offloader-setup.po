@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:1
 msgid "Calls Offloader Setup and Configuration"
-msgstr ""
+msgstr "통화 오프로더 설정 및 구성"
 
 #: ../../source/_static/badges/ent-plus.md:6
 msgid ""
@@ -39,104 +39,104 @@ msgid ""
 "This guide provides detailed instructions for setting up, configuring, "
 "and validating the Mattermost calls-offloader service used for call "
 "recording and transcription features."
-msgstr ""
+msgstr "이 가이드는 통화 녹화 및 전사 기능에 사용되는 OKR.BEST calls-offloader 서비스를 설정, 구성 및 검증하는 방법에 대한 자세한 지침을 제공합니다."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:9
 msgid "[Overview](#overview)"
-msgstr ""
+msgstr "[개요](#overview)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:10
 msgid "[Prerequisites](#prerequisites)"
-msgstr ""
+msgstr "[사전 요구 사항](#prerequisites)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:11
 msgid "[Installation and deployment](#installation-and-deployment)"
-msgstr ""
+msgstr "[설치 및 배포](#installation-and-deployment)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:12
 msgid "[Configuration](#configuration)"
-msgstr ""
+msgstr "[구성](#configuration)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:13
 msgid "[Validation and testing](#validation-and-testing)"
-msgstr ""
+msgstr "[검증 및 테스트](#validation-and-testing)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:14
 msgid "[Integration with Mattermost](#integration-with-mattermost)"
-msgstr ""
+msgstr "[OKR.BEST와의 통합](#integration-with-mattermost)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:15
 msgid "[Troubleshooting](#troubleshooting)"
-msgstr ""
+msgstr "[문제 해결](#troubleshooting)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:16
 msgid "[Air-Gapped Deployments](#air-gapped-deployments)"
-msgstr ""
+msgstr "[에어갭 배포](#air-gapped-deployments)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:18
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:377
 msgid "Overview"
-msgstr ""
+msgstr "개요"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:20
 msgid ""
 "The calls-offloader service is a dedicated microservice that handles "
 "resource-intensive tasks for Mattermost Calls, including:"
-msgstr ""
+msgstr "calls-offloader 서비스는 OKR.BEST 통화(Calls)의 리소스 집약적인 작업을 처리하는 전용 마이크로서비스이며, 다음을 포함합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:22
 msgid "**Call recording**: Captures audio and screen sharing content from calls"
-msgstr ""
+msgstr "**통화 녹화**: 통화에서 오디오 및 화면 공유 콘텐츠를 캡처합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:23
 msgid "**Call transcription**: Provides automated transcription of recorded calls"
-msgstr ""
+msgstr "**통화 전사**: 녹화된 통화의 자동 전사를 제공합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:24
 msgid ""
 "**Live captions** (Experimental): Real-time transcription during active "
 "calls"
-msgstr ""
+msgstr "**라이브 캡션**(실험적): 활성 통화 중 실시간 전사"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:26
 msgid ""
 "By offloading these tasks to a dedicated service, the main Mattermost "
 "server and RTCD service can focus on core functionality while maintaining"
 " optimal performance."
-msgstr ""
+msgstr "이러한 작업을 전용 서비스로 오프로드함으로써, 기본 OKR.BEST 서버와 RTCD 서비스는 최적의 성능을 유지하면서 핵심 기능에 집중할 수 있습니다."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:28
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:386
 msgid "Prerequisites"
-msgstr ""
+msgstr "사전 요구 사항"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:30
 msgid "Before deploying calls-offloader, ensure you have:"
-msgstr ""
+msgstr "calls-offloader를 배포하기 전에, 다음을 갖추었는지 확인하세요:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:32
 msgid "A Mattermost Enterprise license"
-msgstr ""
+msgstr "Mattermost Enterprise 라이선스"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:33
 msgid ""
 "A properly configured Mattermost Calls deployment (either integrated or "
 "with RTCD)"
-msgstr ""
+msgstr "올바르게 구성된 OKR.BEST 통화(Calls) 배포(통합 또는 RTCD 사용)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:34
 msgid "A moderately powerful server with Docker installed and running"
-msgstr ""
+msgstr "Docker가 설치되어 실행 중인 적당히 강력한 서버"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:35
 msgid ""
 "Sufficient storage space for recordings (see [Storage Requirements"
 "](#storage-requirements))"
-msgstr ""
+msgstr "녹화를 위한 충분한 저장 공간(참조 [저장소 요구 사항](#storage-requirements))"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:37
 msgid "System Requirements"
-msgstr ""
+msgstr "시스템 요구 사항"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:39
 msgid ""
@@ -144,44 +144,44 @@ msgid ""
 "to the [calls-offloader performance "
 "documentation](https://github.com/mattermost/calls-"
 "offloader/blob/master/docs/performance.md)."
-msgstr ""
+msgstr "자세한 시스템 요구 사항 및 성능 권장 사항은 [calls-offloader 성능 문서](https://github.com/mattermost/calls-offloader/blob/master/docs/performance.md)를 참조하세요."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:41
 msgid "Storage Requirements"
-msgstr ""
+msgstr "저장소 요구 사항"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:43
 msgid ""
 "Call recordings can consume significant storage space. Based on average "
 "recording sizes with screen sharing on (including one audio track), "
 "storage usage by quality chosen is approximately:"
-msgstr ""
+msgstr "통화 녹화는 상당한 저장 공간을 소비할 수 있습니다. 화면 공유가 켜진 상태(오디오 트랙 1개 포함)의 평균 녹화 크기를 기준으로, 선택한 품질별 저장소 사용량은 대략 다음과 같습니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:45
 msgid "**Low**: ~0.5GB/hour (or ~8MB/minute)"
-msgstr ""
+msgstr "**낮음**: 시간당 ~0.5GB(또는 분당 ~8MB)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:46
 msgid "**Medium**: ~0.7GB/hour (or ~12MB/minute)"
-msgstr ""
+msgstr "**중간**: 시간당 ~0.7GB(또는 분당 ~12MB)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:47
 msgid "**High**: ~1.2GB/hour (or ~20MB/minute)"
-msgstr ""
+msgstr "**높음**: 시간당 ~1.2GB(또는 분당 ~20MB)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:49
 msgid ""
 "*Note: Audio-only recordings consume approximately 1MB per minute per "
 "participant.*"
-msgstr ""
+msgstr "*참고: 오디오 전용 녹화는 참가자당 분당 약 1MB를 소비합니다.*"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:51
 msgid "Installation and Deployment"
-msgstr ""
+msgstr "설치 및 배포"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:53
 msgid "Bare Metal or VM Deployment"
-msgstr ""
+msgstr "베어메탈 또는 VM 배포"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:56
 msgid ""
@@ -189,347 +189,347 @@ msgid ""
 "[Calls Installation Scripts](https://github.com/bgardner8008/calls-"
 "install-scripts) for quick provisioning of the Calls Offloader service on"
 " Ubuntu/Debian systems."
-msgstr ""
+msgstr "자동화된 설정을 찾고 계신가요? Ubuntu/Debian 시스템에서 통화 오프로더 서비스를 빠르게 프로비저닝하려면 커뮤니티에서 관리하는 [통화 설치 스크립트](https://github.com/bgardner8008/calls-install-scripts)를 확인하세요."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:59
 msgid ""
 "Download the latest release from the [calls-offloader GitHub "
 "repository](https://github.com/mattermost/calls-offloader/releases)"
-msgstr ""
+msgstr "[calls-offloader GitHub 저장소](https://github.com/mattermost/calls-offloader/releases)에서 최신 릴리스를 다운로드합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:61
 msgid "Create the necessary directories:"
-msgstr ""
+msgstr "필요한 디렉토리를 생성합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:69
 msgid "Create a configuration file (`/opt/calls-offloader/config.toml`):"
-msgstr ""
+msgstr "구성 파일(`/opt/calls-offloader/config.toml`)을 생성합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:102
 msgid ""
 "Create a systemd service file (`/etc/systemd/system/calls-"
 "offloader.service`):"
-msgstr ""
+msgstr "systemd 서비스 파일(`/etc/systemd/system/calls-offloader.service`)을 생성합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:123
 msgid "Enable and start the service:"
-msgstr ""
+msgstr "서비스를 활성화하고 시작합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:131
 msgid "Check the service status:"
-msgstr ""
+msgstr "서비스 상태를 확인합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:137
 msgid "Verify the service is responding:"
-msgstr ""
+msgstr "서비스가 응답하는지 확인합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:145
 msgid "Configuration"
-msgstr ""
+msgstr "구성"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:147
 msgid "API Configuration"
-msgstr ""
+msgstr "API 구성"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:149
 msgid "The API section controls how the service accepts requests:"
-msgstr ""
+msgstr "API 섹션은 서비스가 요청을 수락하는 방식을 제어합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:151
 msgid ""
 "**http.listen_address**: The address and port where the service listens "
 "(default: `:4545`)"
-msgstr ""
+msgstr "**http.listen_address**: 서비스가 수신 대기하는 주소와 포트(기본값: `:4545`)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:152
 msgid "**http.tls.enable**: Whether to use TLS encryption for the API"
-msgstr ""
+msgstr "**http.tls.enable**: API에 TLS 암호화를 사용할지 여부"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:153
 msgid ""
 "**security.allow_self_registration**: Allow clients to self-register for "
 "job management"
-msgstr ""
+msgstr "**security.allow_self_registration**: 클라이언트가 작업 관리를 위해 자체 등록하도록 허용"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:154
 msgid "**security.enable_admin**: Enable admin functionality"
-msgstr ""
+msgstr "**security.enable_admin**: 관리자 기능 활성화"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:155
 msgid ""
 "**security.admin_secret_key**: Secret key for admin authentication "
 "(change from default!)"
-msgstr ""
+msgstr "**security.admin_secret_key**: 관리자 인증을 위한 비밀 키(기본값에서 변경하세요!)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:157
 msgid "Store Configuration"
-msgstr ""
+msgstr "스토어 구성"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:159
 msgid "Controls persistent data storage:"
-msgstr ""
+msgstr "영구 데이터 저장을 제어합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:161
 msgid ""
 "**data_source**: Path to directory for storing client (i.e., connecting "
 "Mattermost nodes) IDs and credentials"
-msgstr ""
+msgstr "**data_source**: 클라이언트(즉, 연결하는 OKR.BEST 노드) ID 및 자격 증명을 저장하기 위한 디렉토리 경로"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:163
 msgid "Jobs Configuration"
-msgstr ""
+msgstr "작업 구성"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:165
 msgid "Controls job processing behavior:"
-msgstr ""
+msgstr "작업 처리 동작을 제어합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:167
 msgid "**api_type**: Job execution backend (`docker` or `kubernetes`)"
-msgstr ""
+msgstr "**api_type**: 작업 실행 백엔드(`docker` 또는 `kubernetes`)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:168
 msgid ""
 "**max_concurrent_jobs**: Maximum number of simultaneous "
 "recording/transcription jobs"
-msgstr ""
+msgstr "**max_concurrent_jobs**: 동시 녹화/전사 작업의 최대 수"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:169
 msgid ""
 "**failed_jobs_retention_time**: How long to keep failed job data before "
 "cleanup"
-msgstr ""
+msgstr "**failed_jobs_retention_time**: 정리 전에 실패한 작업 데이터를 보관하는 기간"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:170
 msgid ""
 "**image_registry**: Docker registry for job runner images (typically "
 "`mattermost`)"
-msgstr ""
+msgstr "**image_registry**: 작업 실행기 이미지를 위한 Docker 레지스트리(일반적으로 `mattermost`)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:172
 msgid "Logger Configuration"
-msgstr ""
+msgstr "로거 구성"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:174
 msgid "Controls logging output:"
-msgstr ""
+msgstr "로깅 출력을 제어합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:176
 msgid "**enable_console**: Log to console output"
-msgstr ""
+msgstr "**enable_console**: 콘솔 출력에 로그 기록"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:177
 msgid "**console_json**: Use JSON format for console logs"
-msgstr ""
+msgstr "**console_json**: 콘솔 로그에 JSON 형식 사용"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:178
 msgid "**console_level**: Log level for console (DEBUG, INFO, WARN, ERROR)"
-msgstr ""
+msgstr "**console_level**: 콘솔의 로그 수준(DEBUG, INFO, WARN, ERROR)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:179
 msgid "**enable_file**: Log to file"
-msgstr ""
+msgstr "**enable_file**: 파일에 로그 기록"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:180
 msgid "**file_location**: Path to log file"
-msgstr ""
+msgstr "**file_location**: 로그 파일 경로"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:181
 msgid "**enable_color**: Use colored output for console logs"
-msgstr ""
+msgstr "**enable_color**: 콘솔 로그에 컬러 출력 사용"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:183
 msgid "Private Network Configuration"
-msgstr ""
+msgstr "프라이빗 네트워크 구성"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:185
 msgid ""
 "When the Mattermost deployment is running in a private network, "
 "additional configuration may be necessary for the jobs spawned by the "
 "calls-offloader service to reach the Mattermost server."
-msgstr ""
+msgstr "OKR.BEST 배포가 프라이빗 네트워크에서 실행 중인 경우, calls-offloader 서비스에서 생성된 작업이 OKR.BEST 서버에 도달하기 위해 추가 구성이 필요할 수 있습니다."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:187
 msgid ""
 "In such cases, you can override the site URL used by recorder jobs or "
 "transcriber jobs to connect to Mattermost by setting the following "
 "environment variables on the Mattermost server:"
-msgstr ""
+msgstr "이러한 경우, OKR.BEST 서버에서 다음 환경 변수를 설정하여 녹화 작업 또는 전사 작업이 OKR.BEST에 연결하는 데 사용하는 사이트 URL을 재정의할 수 있습니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:189
 msgid ""
 "**MM_CALLS_RECORDER_SITE_URL**: Override the site URL used by recording "
 "jobs"
-msgstr ""
+msgstr "**MM_CALLS_RECORDER_SITE_URL**: 녹화 작업이 사용하는 사이트 URL 재정의"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:190
 msgid ""
 "**MM_CALLS_TRANSCRIBER_SITE_URL**: Override the site URL used by "
 "transcription jobs"
-msgstr ""
+msgstr "**MM_CALLS_TRANSCRIBER_SITE_URL**: 전사 작업이 사용하는 사이트 URL 재정의"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:193
 msgid ""
 "When these Site URL overrides are used, the "
 "`ServiceSettings.AllowCorsFrom` setting on your Mattermost server may "
 "need to be adjusted accordingly to ensure CORS does not block requests."
-msgstr ""
+msgstr "이러한 사이트 URL 재정의를 사용하는 경우, CORS가 요청을 차단하지 않도록 OKR.BEST 서버의 `ServiceSettings.AllowCorsFrom` 설정을 그에 맞게 조정해야 할 수 있습니다."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:195
 msgid ""
 "This override configuration lets the recorder and transcriber jobs "
 "connect to mattermost server using HTTP instead of HTTPS, which should "
 "only be used in a private network."
-msgstr ""
+msgstr "이 재정의 구성을 사용하면 녹화 및 전사 작업이 HTTPS 대신 HTTP를 사용하여 OKR.BEST 서버에 연결할 수 있으며, 이는 프라이빗 네트워크에서만 사용해야 합니다."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:198
 msgid "Example configuration:"
-msgstr ""
+msgstr "예제 구성:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:200
 msgid ""
 "Create or edit the Mattermost environment file "
 "(`/opt/mattermost/config/mattermost.environment`):"
-msgstr ""
+msgstr "OKR.BEST 환경 파일(`/opt/mattermost/config/mattermost.environment`)을 생성하거나 편집합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:207
 msgid ""
 "Then ensure your Mattermost systemd service references this environment "
 "file:"
-msgstr ""
+msgstr "그런 다음 OKR.BEST systemd 서비스가 이 환경 파일을 참조하는지 확인합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:230
 msgid "This is particularly useful when:"
-msgstr ""
+msgstr "이는 다음과 같은 경우에 특히 유용합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:232
 msgid ""
 "The calls-offloader service runs in a different network segment than "
 "clients"
-msgstr ""
+msgstr "calls-offloader 서비스가 클라이언트와 다른 네트워크 세그먼트에서 실행되는 경우"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:233
 msgid "Internal DNS resolution differs from external URLs"
-msgstr ""
+msgstr "내부 DNS 확인이 외부 URL과 다른 경우"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:234
 msgid "You need to use internal load balancer endpoints for job communication"
-msgstr ""
+msgstr "작업 통신에 내부 로드 밸런서 엔드포인트를 사용해야 하는 경우"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:236
 msgid "Validation and Testing"
-msgstr ""
+msgstr "검증 및 테스트"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:238
 msgid "After deploying calls-offloader, validate the installation:"
-msgstr ""
+msgstr "calls-offloader를 배포한 후, 설치를 검증합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:240
 msgid "**Check service status**:"
-msgstr ""
+msgstr "**서비스 상태 확인**:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:247
 msgid "**Test API connectivity**:"
-msgstr ""
+msgstr "**API 연결 테스트**:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:249
 msgid "**From the calls-offloader server (localhost test)**:"
-msgstr ""
+msgstr "**calls-offloader 서버에서(localhost 테스트)**:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:257
 msgid "**From the Mattermost server**:"
-msgstr ""
+msgstr "**OKR.BEST 서버에서**:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:265
 msgid "If the localhost test works but the Mattermost server test fails, check:"
-msgstr ""
+msgstr "localhost 테스트는 작동하지만 OKR.BEST 서버 테스트가 실패하는 경우, 다음을 확인하세요:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:267
 msgid ""
 "Firewall rules or SELinux policies on the calls-offloader server (port "
 "4545 must be accessible)"
-msgstr ""
+msgstr "calls-offloader 서버의 방화벽 규칙 또는 SELinux 정책(포트 4545에 접근 가능해야 함)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:268
 msgid "Network connectivity between Mattermost and calls-offloader servers"
-msgstr ""
+msgstr "OKR.BEST와 calls-offloader 서버 간의 네트워크 연결"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:270
 msgid "**Verify Docker service** (if using docker api_type):"
-msgstr ""
+msgstr "**Docker 서비스 확인**(docker api_type을 사용하는 경우):"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:277
 msgid "Integration with Mattermost"
-msgstr ""
+msgstr "OKR.BEST와의 통합"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:279
 msgid ""
 "Once calls-offloader is properly set up and validated, configure "
 "Mattermost to use it:"
-msgstr ""
+msgstr "calls-offloader가 올바르게 설정되고 검증되면, 이를 사용하도록 OKR.BEST를 구성합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:281
 msgid "Go to **System Console > Plugins > Calls**"
-msgstr ""
+msgstr "**관리자 도구 > 플러그인 > Calls**로 이동합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:283
 msgid "In the **Job Service** section:"
-msgstr ""
+msgstr "**Job Service** 섹션에서:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:285
 msgid ""
 "Set **Job Service URL** to your calls-offloader service (e.g., `http"
 "://calls-offloader-server:4545`)"
-msgstr ""
+msgstr "**Job Service URL**을 calls-offloader 서비스(예: `http://calls-offloader-server:4545`)로 설정합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:287
 msgid "Enable recording and transcription features as needed:"
-msgstr ""
+msgstr "필요에 따라 녹화 및 전사 기능을 활성화합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:289
 msgid "**Enable Call Recordings**: Toggle to allow call recordings"
-msgstr ""
+msgstr "**Enable Call Recordings**: 통화 녹화를 허용하도록 토글합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:290
 msgid "**Enable Call Transcriptions**: Toggle to allow call transcriptions"
-msgstr ""
+msgstr "**Enable Call Transcriptions**: 통화 전사를 허용하도록 토글합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:291
 msgid ""
 "**Enable Live Captions** (Experimental): Toggle to allow real-time "
 "transcription"
-msgstr ""
+msgstr "**Enable Live Captions**(실험적): 실시간 전사를 허용하도록 토글합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:293
 msgid "Save the configuration"
-msgstr ""
+msgstr "구성을 저장합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:295
 msgid "Restart the Calls plugin to re-establish state:"
-msgstr ""
+msgstr "상태를 다시 설정하려면 통화 플러그인을 다시 시작합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:297
 msgid "Go to **System Console > Plugins > Plugin Management**"
-msgstr ""
+msgstr "**관리자 도구 > 플러그인 > 플러그인 관리**로 이동합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:298
 msgid "Find the **Calls** plugin and click **Disable**"
-msgstr ""
+msgstr "**Calls** 플러그인을 찾아 **Disable**을 클릭합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:299
 msgid "Wait a few seconds, then click **Enable**"
-msgstr ""
+msgstr "몇 초 기다린 다음, **Enable**을 클릭합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:301
 msgid "Test by starting a call and starting a recording"
-msgstr ""
+msgstr "통화를 시작하고 녹화를 시작하여 테스트합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:303
 msgid "Troubleshooting"
-msgstr ""
+msgstr "문제 해결"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:305
 msgid "Common Issues"
-msgstr ""
+msgstr "일반적인 문제"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:307
 msgid "**\"failed to create recording job: max concurrent jobs reached\"**"
@@ -540,94 +540,94 @@ msgid ""
 "This error occurs when the calls-offloader service has reached its "
 "configured job limit, and it will usually result in a failure message on "
 "the Mattermost Calls plugin side (such as a timeout)."
-msgstr ""
+msgstr "이 오류는 calls-offloader 서비스가 구성된 작업 한도에 도달했을 때 발생하며, 일반적으로 OKR.BEST 통화(Calls) 플러그인 측에서 실패 메시지(예: 시간 초과)가 표시됩니다."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:311
 msgid "Solutions:"
-msgstr ""
+msgstr "해결 방법:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:313
 msgid "Increase `max_concurrent_jobs` in the configuration"
-msgstr ""
+msgstr "구성에서 `max_concurrent_jobs`를 늘립니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:314
 msgid "Check if jobs are hanging and restart the service"
-msgstr ""
+msgstr "작업이 멈춰 있는지 확인하고 서비스를 다시 시작합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:315
 msgid "Monitor system resources and scale up if needed"
-msgstr ""
+msgstr "시스템 리소스를 모니터링하고 필요한 경우 확장합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:317
 msgid "**Jobs not processing**"
-msgstr ""
+msgstr "**작업이 처리되지 않음**"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:319
 msgid "Check the following:"
-msgstr ""
+msgstr "다음을 확인하세요:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:321
 msgid ""
 "Verify the calls-offloader service is running: `sudo systemctl status "
 "calls-offloader`"
-msgstr ""
+msgstr "calls-offloader 서비스가 실행 중인지 확인합니다: `sudo systemctl status calls-offloader`"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:322
 msgid "Ensure network connectivity between Mattermost and calls-offloader"
-msgstr ""
+msgstr "OKR.BEST와 calls-offloader 간의 네트워크 연결을 확인합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:323
 msgid ""
 "Check Docker daemon is running and accessible by the user running the "
 "Calls Offloader service (E.g., user: ``calls-offloader``)"
-msgstr ""
+msgstr "Docker 데몬이 실행 중이고 통화 오프로더 서비스를 실행하는 사용자가 접근할 수 있는지 확인합니다(예: 사용자: ``calls-offloader``)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:324
 msgid "Verify authentication configuration matches between services"
-msgstr ""
+msgstr "서비스 간 인증 구성이 일치하는지 확인합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:325
 msgid "Review service logs for specific error messages"
-msgstr ""
+msgstr "특정 오류 메시지에 대해 서비스 로그를 검토합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:327
 msgid "**Docker permission issues**"
-msgstr ""
+msgstr "**Docker 권한 문제**"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:329
 msgid "If using Docker API and seeing permission errors:"
-msgstr ""
+msgstr "Docker API를 사용 중이고 권한 오류가 표시되는 경우:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:337
 msgid "Debugging Commands"
-msgstr ""
+msgstr "디버깅 명령"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:339
 msgid "Monitor calls-offloader job containers:"
-msgstr ""
+msgstr "calls-offloader 작업 컨테이너를 모니터링합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:352
 msgid "Monitor service health:"
-msgstr ""
+msgstr "서비스 상태를 모니터링합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:359
 msgid "Check service logs:"
-msgstr ""
+msgstr "서비스 로그를 확인합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:369
 msgid "Performance Monitoring"
-msgstr ""
+msgstr "성능 모니터링"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:371
 msgid ""
 "Monitor calls-offloader performance and resource usage to ensure optimal "
 "operation. See [Calls Metrics and Monitoring](calls-metrics-"
 "monitoring.md) for details on setting up metrics and observability."
-msgstr ""
+msgstr "최적의 작동을 보장하기 위해 calls-offloader 성능과 리소스 사용량을 모니터링하세요. 메트릭 및 관찰 가능성 설정에 대한 자세한 내용은 [통화 메트릭 및 모니터링](calls-metrics-monitoring.md)을 참조하세요."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:373
 msgid "Air-Gapped Installation of `calls-offloader`"
-msgstr ""
+msgstr "`calls-offloader`의 에어갭 설치"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:375
 msgid ""
@@ -637,7 +637,7 @@ msgid ""
 "repository and follows a two-phase workflow: preparing a transfer bundle "
 "on an internet-connected machine, then deploying it on the isolated "
 "target machine."
-msgstr ""
+msgstr "이 가이드는 인터넷에 접근할 수 없는 환경에서 `calls-offloader`를 배포하는 방법을 다룹니다. 이 프로세스는 [calls-install-scripts](https://github.com/bgardner8008/calls-install-scripts) 저장소의 스크립트를 사용하며, 인터넷에 연결된 시스템에서 전송 번들을 준비한 다음 격리된 대상 시스템에 배포하는 2단계 워크플로를 따릅니다."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:379
 msgid ""
@@ -645,11 +645,11 @@ msgid ""
 "transcriber jobs, an air-gapped deployment requires that those images be "
 "pre-pulled and packaged alongside the `calls-offloader` binary before "
 "being transferred to the target environment."
-msgstr ""
+msgstr "`calls-offloader`는 녹화 및 전사 작업에 Docker 이미지를 사용하므로, 에어갭 배포에서는 대상 환경으로 전송하기 전에 해당 이미지를 미리 풀하여 `calls-offloader` 바이너리와 함께 패키징해야 합니다."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:381
 msgid "The install scripts handle this in two stages:"
-msgstr ""
+msgstr "설치 스크립트는 이를 두 단계로 처리합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:383
 msgid ""
@@ -657,24 +657,24 @@ msgid ""
 "pulls the required Docker images and downloads the `calls-offloader` "
 "binary, then packages everything into a transfer bundle and generates a "
 "ready-to-run deployment script."
-msgstr ""
+msgstr "**준비**(인터넷 연결 시스템) — `setup-airgap-offloader.sh`가 필요한 Docker 이미지를 풀하고 `calls-offloader` 바이너리를 다운로드한 다음, 모든 것을 전송 번들로 패키징하고 즉시 실행 가능한 배포 스크립트를 생성합니다."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:384
 msgid ""
 "**Deploy** (air-gapped machine) — Transfer the bundle and run the "
 "generated `deploy-airgap-offloader.sh` script, which loads the Docker "
 "images into a local registry and installs the service."
-msgstr ""
+msgstr "**배포**(에어갭 시스템) — 번들을 전송하고 생성된 `deploy-airgap-offloader.sh` 스크립트를 실행하면, Docker 이미지를 로컬 레지스트리에 로드하고 서비스를 설치합니다."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:388
 msgid ""
 "An internet-connected Linux machine with Docker installed (for the "
 "preparation phase)"
-msgstr ""
+msgstr "Docker가 설치된 인터넷 연결 Linux 시스템(준비 단계용)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:389
 msgid "A target air-gapped Linux machine with:"
-msgstr ""
+msgstr "다음을 갖춘 대상 에어갭 Linux 시스템:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:390
 msgid "systemd"
@@ -682,39 +682,39 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:391
 msgid "Docker installed"
-msgstr ""
+msgstr "Docker 설치됨"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:392
 msgid "Root or sudo access"
-msgstr ""
+msgstr "루트 또는 sudo 접근 권한"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:393
 msgid ""
 "The [calls-install-scripts](https://github.com/bgardner8008/calls-"
 "install-scripts) repository cloned on the internet-connected machine"
-msgstr ""
+msgstr "인터넷에 연결된 시스템에 복제된 [calls-install-scripts](https://github.com/bgardner8008/calls-install-scripts) 저장소"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:395
 msgid "Phase 1: Prepare the Transfer Bundle"
-msgstr ""
+msgstr "1단계: 전송 번들 준비"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:397
 msgid ""
 "On the **internet-connected machine**, run `setup-airgap-offloader.sh` "
 "specifying the versions of each component to package:"
-msgstr ""
+msgstr "**인터넷 연결 시스템**에서, 패키징할 각 구성 요소의 버전을 지정하여 `setup-airgap-offloader.sh`를 실행합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:192
 msgid "Flag"
-msgstr ""
+msgstr "플래그"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:192
 msgid "Description"
-msgstr ""
+msgstr "설명"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:192
 msgid "Default"
-msgstr ""
+msgstr "기본값"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:192
 msgid "`--offloader VERSION`"
@@ -722,11 +722,11 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:192
 msgid "`calls-offloader` binary version (e.g. `v0.9.5`)"
-msgstr ""
+msgstr "`calls-offloader` 바이너리 버전(예: `v0.9.5`)"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:192
 msgid "required"
-msgstr ""
+msgstr "필수"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:192
 msgid "`--recorder VERSION`"
@@ -734,7 +734,7 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:192
 msgid "`calls-recorder` Docker image version"
-msgstr ""
+msgstr "`calls-recorder` Docker 이미지 버전"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:192
 msgid "`--transcriber VERSION`"
@@ -742,7 +742,7 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:192
 msgid "`calls-transcriber` Docker image version"
-msgstr ""
+msgstr "`calls-transcriber` Docker 이미지 버전"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:192
 msgid "`--arch amd64|arm64`"
@@ -750,7 +750,7 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:192
 msgid "Target CPU architecture"
-msgstr ""
+msgstr "대상 CPU 아키텍처"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:192
 msgid "`amd64`"
@@ -758,97 +758,97 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:414
 msgid "The script will:"
-msgstr ""
+msgstr "스크립트는 다음을 수행합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:416
 msgid ""
 "Pull the `calls-recorder` and `calls-transcriber` Docker images from "
 "Docker Hub"
-msgstr ""
+msgstr "Docker Hub에서 `calls-recorder` 및 `calls-transcriber` Docker 이미지를 풀합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:417
 msgid "Download the `calls-offloader` binary from GitHub releases"
-msgstr ""
+msgstr "GitHub 릴리스에서 `calls-offloader` 바이너리를 다운로드합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:418
 msgid "Save the Docker images as `.tar` archives"
-msgstr ""
+msgstr "Docker 이미지를 `.tar` 아카이브로 저장합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:419
 msgid ""
 "Generate a `deploy-airgap-offloader.sh` deployment script configured for "
 "the selected versions"
-msgstr ""
+msgstr "선택한 버전에 맞게 구성된 `deploy-airgap-offloader.sh` 배포 스크립트를 생성합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:420
 msgid "Produce a transfer bundle containing all of the above"
-msgstr ""
+msgstr "위의 모든 것을 포함하는 전송 번들을 생성합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:422
 msgid "Phase 2: Transfer to the Air-Gapped Machine"
-msgstr ""
+msgstr "2단계: 에어갭 시스템으로 전송"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:424
 msgid ""
 "Copy the generated bundle to the target machine using whatever transfer "
 "mechanism is available in your environment (USB drive, secure file "
 "transfer, etc.):"
-msgstr ""
+msgstr "환경에서 사용 가능한 전송 메커니즘(USB 드라이브, 보안 파일 전송 등)을 사용하여 생성된 번들을 대상 시스템에 복사합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:430
 msgid "On the air-gapped machine, extract the bundle:"
-msgstr ""
+msgstr "에어갭 시스템에서, 번들의 압축을 풉니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:437
 msgid "Phase 3: Deploy on the Air-Gapped Machine"
-msgstr ""
+msgstr "3단계: 에어갭 시스템에 배포"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:439
 msgid "Run the generated deployment script with root or sudo privileges:"
-msgstr ""
+msgstr "루트 또는 sudo 권한으로 생성된 배포 스크립트를 실행합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:445
 msgid "This script will:"
-msgstr ""
+msgstr "이 스크립트는 다음을 수행합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:447
 msgid "Configure the local Docker daemon to use a local image registry"
-msgstr ""
+msgstr "로컬 Docker 데몬이 로컬 이미지 레지스트리를 사용하도록 구성합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:448
 msgid "Load the packaged Docker images into that registry"
-msgstr ""
+msgstr "패키징된 Docker 이미지를 해당 레지스트리에 로드합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:449
 msgid "Install the `calls-offloader` binary to `/usr/local/bin/`"
-msgstr ""
+msgstr "`calls-offloader` 바이너리를 `/usr/local/bin/`에 설치합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:450
 msgid "Create the `mattermost` system user and add it to the `docker` group"
-msgstr ""
+msgstr "`mattermost` 시스템 사용자를 생성하고 `docker` 그룹에 추가합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:451
 msgid "Generate and enable a systemd service unit"
-msgstr ""
+msgstr "systemd 서비스 유닛을 생성하고 활성화합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:452
 msgid "Start the service and verify it is running"
-msgstr ""
+msgstr "서비스를 시작하고 실행 중인지 확인합니다"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:454
 msgid "Once complete, verify the service is up:"
-msgstr ""
+msgstr "완료되면, 서비스가 작동 중인지 확인합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:460
 msgid "Connecting to Mattermost"
-msgstr ""
+msgstr "OKR.BEST에 연결"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:462
 msgid ""
 "Configure the Mattermost Calls plugin to use the offloader service via "
 "**System Console > Plugins > Calls > Job service URL**, setting it to "
 "`http://<offloader-host>:4545`."
-msgstr ""
+msgstr "**관리자 도구 > 플러그인 > Calls > Job service URL**을 통해 OKR.BEST 통화(Calls) 플러그인이 오프로더 서비스를 사용하도록 구성하고, `http://<offloader-host>:4545`로 설정합니다."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:464
 msgid ""
@@ -856,11 +856,11 @@ msgid ""
 "register and store its authentication key in the database, provided "
 "`API_SECURITY_ALLOWSELFREGISTRATION=true` is set (the default in the "
 "deployment script)."
-msgstr ""
+msgstr "[!NOTE] OKR.BEST가 오프로더에 처음 연결할 때, `API_SECURITY_ALLOWSELFREGISTRATION=true`가 설정된 경우(배포 스크립트의 기본값) 자체 등록하고 인증 키를 데이터베이스에 저장합니다."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:467
 msgid "Private Network Considerations"
-msgstr ""
+msgstr "프라이빗 네트워크 고려 사항"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:469
 msgid ""
@@ -868,7 +868,7 @@ msgid ""
 "typically need to reach the Mattermost server via an internal URL. Set "
 "the following environment variables on the **Mattermost server** to "
 "override the site URL used by spawned jobs:"
-msgstr ""
+msgstr "에어갭 환경에서는 녹화 및 전사 컨테이너가 일반적으로 내부 URL을 통해 OKR.BEST 서버에 도달해야 합니다. **OKR.BEST 서버**에서 다음 환경 변수를 설정하여 생성된 작업이 사용하는 사이트 URL을 재정의합니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:476
 msgid ""
@@ -876,7 +876,7 @@ msgid ""
 "[`ServiceSettings.AllowCorsFrom`](https://docs.mattermost.com/configure"
 "/integrations-configuration-settings.html#enable-cross-origin-requests-"
 "from) in the Mattermost server configuration."
-msgstr ""
+msgstr "OKR.BEST 서버 구성에서 [`ServiceSettings.AllowCorsFrom`](https://docs.mattermost.com/configure/integrations-configuration-settings.html#enable-cross-origin-requests-from)에 내부 URL을 추가해야 할 수도 있습니다."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:478
 msgid ""
@@ -884,63 +884,63 @@ msgid ""
 "network isolation), set `DOCKER_NETWORK=host` in the `calls-offloader` "
 "service environment so that job containers can reach the Mattermost "
 "server via its local address."
-msgstr ""
+msgstr "[!NOTE] 특히 제한적인 환경(예: 엄격한 네트워크 격리가 있는 VM)에서는, 작업 컨테이너가 로컬 주소를 통해 OKR.BEST 서버에 도달할 수 있도록 `calls-offloader` 서비스 환경에서 `DOCKER_NETWORK=host`를 설정합니다."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:481
 msgid "Custom Docker Registry"
-msgstr ""
+msgstr "사용자 지정 Docker 레지스트리"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:483
 msgid ""
 "If your air-gapped environment already has an internal Docker registry, "
 "you can point `install-offloader.sh` at it directly instead of using the "
 "local registry set up by the deployment script:"
-msgstr ""
+msgstr "에어갭 환경에 이미 내부 Docker 레지스트리가 있는 경우, 배포 스크립트가 설정한 로컬 레지스트리를 사용하는 대신 `install-offloader.sh`를 직접 해당 레지스트리로 지정할 수 있습니다:"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:492
 msgid ""
 "The `--image-registry` flag sets the registry prefix used when the "
 "offloader pulls recorder and transcriber images for each job."
-msgstr ""
+msgstr "`--image-registry` 플래그는 오프로더가 각 작업에 대해 녹화 및 전사 이미지를 풀할 때 사용하는 레지스트리 접두사를 설정합니다."
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:494
 msgid "Other Calls Documentation"
-msgstr ""
+msgstr "기타 통화 문서"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:496
 msgid ""
 "[Calls Deployment Guide](calls-deployment-guide.md): Overview of "
 "deployment options and architecture"
-msgstr ""
+msgstr "[통화 배포 가이드](calls-deployment-guide.md): 배포 옵션 및 아키텍처 개요"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:497
 msgid ""
 "[RTCD Setup and Configuration](calls-rtcd-setup.md): Comprehensive guide "
 "for setting up the dedicated RTCD service"
-msgstr ""
+msgstr "[RTCD 설정 및 구성](calls-rtcd-setup.md): 전용 RTCD 서비스 설정을 위한 종합 가이드"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:498
 msgid ""
 "[Calls Metrics and Monitoring](calls-metrics-monitoring.md): Guide to "
 "monitoring Calls performance using metrics and observability"
-msgstr ""
+msgstr "[통화 메트릭 및 모니터링](calls-metrics-monitoring.md): 메트릭 및 관찰 가능성을 사용하여 통화 성능을 모니터링하는 가이드"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:499
 msgid ""
 "[Calls Deployment on Kubernetes](calls-kubernetes.md): Detailed guide for"
 " deploying Calls in Kubernetes environments"
-msgstr ""
+msgstr "[Kubernetes에서의 통화 배포](calls-kubernetes.md): Kubernetes 환경에서 통화를 배포하기 위한 자세한 가이드"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:500
 msgid ""
 "[Calls Logging](calls-logging.md): Detailed guidance for collecting Calls"
 " logs and client diagnostics"
-msgstr ""
+msgstr "[통화 로깅](calls-logging.md): 통화 로그 및 클라이언트 진단 수집에 대한 자세한 지침"
 
 #: ../../source/administration-guide/configure/calls-offloader-setup.md:501
 msgid ""
 "[calls-offloader performance documentation](https://github.com/mattermost"
 "/calls-offloader/blob/master/docs/performance.md): Detailed performance "
 "tuning and monitoring recommendations"
-msgstr ""
+msgstr "[calls-offloader 성능 문서](https://github.com/mattermost/calls-offloader/blob/master/docs/performance.md): 자세한 성능 튜닝 및 모니터링 권장 사항"
 
