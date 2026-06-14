@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:2
 msgid "Compliance configuration settings"
-msgstr ""
+msgstr "컴플라이언스 구성 설정"
 
 #: ../../source/_static/badges/ent-plus.rst:9
 msgid ""
@@ -38,29 +38,29 @@ msgid ""
 "Review and manage the following compliance configuration options in the "
 "System Console by selecting the **Product** |product-list| menu, "
 "selecting **System Console**, and then selecting **Compliance**:"
-msgstr ""
+msgstr "**제품** |product-list| 메뉴를 선택하고 **관리자 도구**를 선택한 다음 **Compliance**를 선택하여, 관리자 도구에서 다음 컴플라이언스 구성 옵션을 검토하고 관리할 수 있습니다:"
 
 #: ../../<rst_prolog>:100
 msgid ""
 "Navigate between Channels, collaborative playbooks, and boards using the "
 "product menu icon."
-msgstr ""
+msgstr "제품 메뉴 아이콘을 사용해 채널, 공동 플레이북, 보드 사이를 이동합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:9
 msgid "`Data Retention Policies <#data-retention-policies>`__"
-msgstr ""
+msgstr "`데이터 보존 정책 <#data-retention-policies>`__"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:10
 msgid "`Compliance Export <#administration-guide/comply/compliance-export>`__"
-msgstr ""
+msgstr "`컴플라이언스 내보내기 <#administration-guide/comply/compliance-export>`__"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:11
 msgid "`Compliance Monitoring <#compliance-monitoring>`__"
-msgstr ""
+msgstr "`컴플라이언스 모니터링 <#compliance-monitoring>`__"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:12
 msgid "`Custom Terms of Service <#custom-terms-of-service>`__"
-msgstr ""
+msgstr "`사용자 지정 서비스 약관 <#custom-terms-of-service>`__"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:16
 msgid ""
@@ -70,53 +70,53 @@ msgid ""
 "programmatically in the ``config.json`` file using a JSON-aware tool. For"
 " example, the ``MessageRetentionHours`` value is under "
 "``DataRetentionSettings``."
-msgstr ""
+msgstr "셀프 호스팅 OKR.BEST 배포를 관리하는 시스템 관리자는 다음 표에 설명된 대로 ``config.json`` 파일을 편집할 수 있습니다. 아래의 각 구성 값에는 JSON 인식 도구를 사용하여 ``config.json`` 파일에서 프로그래밍 방식으로 값에 접근하기 위한 JSON 경로가 포함되어 있습니다. 예를 들어, ``MessageRetentionHours`` 값은 ``DataRetentionSettings`` 아래에 있습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:18
 msgid ""
 "If using a tool such as `jq <https://stedolan.github.io/jq/>`__, you'd "
 "enter: ``cat config/config.json | jq "
 "'.DataRetentionSettings.MessageRetentionHours'``"
-msgstr ""
+msgstr "`jq <https://stedolan.github.io/jq/>`__와 같은 도구를 사용하는 경우, 다음을 입력합니다: ``cat config/config.json | jq '.DataRetentionSettings.MessageRetentionHours'``"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:19
 msgid ""
 "When working with the ``config.json`` file manually, look for an object "
 "such as ``DataRetentionSettings``, then within that object, find the key "
 "``MessageRetentionHours``."
-msgstr ""
+msgstr "``config.json`` 파일을 수동으로 작업할 때는, ``DataRetentionSettings``와 같은 객체를 찾은 다음, 해당 객체 내에서 ``MessageRetentionHours`` 키를 찾습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:24
 msgid "Data retention policies"
-msgstr ""
+msgstr "데이터 보존 정책"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:26
 msgid ""
 "Changes to properties in this section require a server restart before "
 "taking effect."
-msgstr ""
+msgstr "이 섹션의 속성 변경 사항은 적용되기 전에 서버 재시작이 필요합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:30
 msgid ""
 "Once a message or a file is deleted, the action is irreversible. Please "
 "be careful when setting up a custom data retention policy."
-msgstr ""
+msgstr "메시지나 파일이 삭제되면, 이 작업은 되돌릴 수 없습니다. 사용자 지정 데이터 보존 정책을 설정할 때 주의하세요."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:31
 msgid ""
 "From Mattermost v9.5, data retention removes Elasticsearch indexes based "
 "on the day of the retention cut-off time."
-msgstr ""
+msgstr "OKR.BEST v9.5부터, 데이터 보존은 보존 마감 시간의 날짜를 기준으로 Elasticsearch 인덱스를 제거합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:33
 msgid ""
 "Access the following configuration settings in the System Console by "
 "going to **Compliance > Data Retention Policies**."
-msgstr ""
+msgstr "**Compliance > Data Retention Policies**로 이동하여 관리자 도구에서 다음 구성 설정에 접근합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:43
 msgid "Global retention policy for messages"
-msgstr ""
+msgstr "메시지에 대한 전역 보존 정책"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:45
 msgid ""
@@ -126,7 +126,7 @@ msgid ""
 " messages <administration-guide/configure/compliance-configuration-"
 "settings:global retention policy for messages>` configuration setting to "
 "be set to ``true``."
-msgstr ""
+msgstr "OKR.BEST가 모든 팀과 채널에서 메시지를 보관하는 기간을 설정합니다. 이 값은 사용자 지정 보존 정책이 적용된 팀과 채널에는 사용되지 않습니다. :ref:`메시지에 대한 전역 보존 정책 <administration-guide/configure/compliance-configuration-settings:global retention policy for messages>` 구성 설정을 ``true``로 설정해야 합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:47
 msgid ""
@@ -134,7 +134,7 @@ msgid ""
 "**Years** is chosen, set how many hours, days, or years messages are kept"
 " in Mattermost. Messages older than the duration you set will be deleted "
 "nightly. The minimum message retention time is one hour."
-msgstr ""
+msgstr "기본적으로, 메시지는 영구적으로 보관됩니다. **Hours**, **Days** 또는 **Years**를 선택하면, OKR.BEST에서 메시지를 보관하는 시간, 일 또는 연 수를 설정합니다. 설정한 기간보다 오래된 메시지는 매일 밤 삭제됩니다. 최소 메시지 보존 시간은 1시간입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:49
 msgid ""
@@ -142,13 +142,13 @@ msgid ""
 "channel level by creating custom policies with unique post retention "
 "times See the `Custom retention policy <#custom-retention-policy>`__ "
 "section below for details."
-msgstr ""
+msgstr "메시지에 대한 전역 보존 시간은 고유한 게시물 보존 시간으로 사용자 지정 정책을 생성하여 팀 또는 채널 수준에서 대체할 수 있습니다. 자세한 내용은 아래의 `사용자 지정 보존 정책 <#custom-retention-policy>`__ 섹션을 참조하세요."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:52
 msgid ""
 "This feature's ``config.json`` setting is ``\"MessageRetentionHours\": "
 "1`` with numerical input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"MessageRetentionHours\": 1``이며 숫자 입력입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:57
 msgid ""
@@ -156,11 +156,11 @@ msgid ""
 "favor of ``MessageRetentionHours``. See :doc:`deprecated configuration "
 "settings </administration-guide/configure/deprecated-configuration-"
 "settings>` for details."
-msgstr ""
+msgstr "OKR.BEST v9.5부터, ``MessageRetentionDays``는 더 이상 사용되지 않으며 ``MessageRetentionHours``로 대체되었습니다. 자세한 내용은 :doc:`더 이상 사용되지 않는 구성 설정 </administration-guide/configure/deprecated-configuration-settings>`을 참조하세요."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:67
 msgid "Global retention policy for files"
-msgstr ""
+msgstr "파일에 대한 전역 보존 정책"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:69
 msgid ""
@@ -171,7 +171,7 @@ msgid ""
 "files <administration-guide/configure/compliance-configuration-"
 "settings:global retention policy for files>` configuration setting to be "
 "set to ``true``."
-msgstr ""
+msgstr "OKR.BEST가 모든 팀과 채널에서 파일을 보관하는 기간을 설정합니다. 팀 및 채널 수준의 사용자 지정 정책은 파일 첨부에 적용되지 않습니다. 파일에 대한 전역 보존 시간은 메시지에 대한 사용자 지정 정책이 있더라도 사용됩니다. :ref:`파일에 대한 전역 보존 정책 <administration-guide/configure/compliance-configuration-settings:global retention policy for files>` 구성 설정을 ``true``로 설정해야 합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:71
 msgid ""
@@ -179,13 +179,13 @@ msgid ""
 "is chosen, set how many hours, days, or years files are kept in "
 "Mattermost. Files older than the duration you set will be deleted "
 "nightly. The minimum file retention time is one hour."
-msgstr ""
+msgstr "기본적으로, 파일은 영구적으로 보관됩니다. **Hours**, **Days** 또는 **Years**를 선택하면, OKR.BEST에서 파일을 보관하는 시간, 일 또는 연 수를 설정합니다. 설정한 기간보다 오래된 파일은 매일 밤 삭제됩니다. 최소 파일 보존 시간은 1시간입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:74
 msgid ""
 "This feature's ``config.json`` setting is ``\"FileRetentionHours\": 1`` "
 "with numerical input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"FileRetentionHours\": 1``이며 숫자 입력입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:79
 msgid ""
@@ -193,11 +193,11 @@ msgid ""
 "of ``FileRetentionHours``. See :doc:`deprecated configuration settings "
 "</administration-guide/configure/deprecated-configuration-settings>` for "
 "details."
-msgstr ""
+msgstr "OKR.BEST v9.5부터, ``FileRetentionDays``는 더 이상 사용되지 않으며 ``FileRetentionHours``로 대체되었습니다. 자세한 내용은 :doc:`더 이상 사용되지 않는 구성 설정 </administration-guide/configure/deprecated-configuration-settings>`을 참조하세요."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:89
 msgid "Preserve pinned posts"
-msgstr ""
+msgstr "고정된 게시물 보존"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:91
 msgid ""
@@ -205,55 +205,55 @@ msgid ""
 "data retention policies delete messages. When enabled, pinned posts won't"
 " be deleted by data retention policies, even if they exceed the "
 "configured retention period."
-msgstr ""
+msgstr "OKR.BEST v10.10부터, 데이터 보존 정책이 메시지를 삭제할 때 고정된 게시물을 보존할지 여부를 제어합니다. 활성화하면, 고정된 게시물은 구성된 보존 기간을 초과하더라도 데이터 보존 정책에 의해 삭제되지 않습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:93
 msgid ""
 "**True**: Pinned posts are preserved and won't be deleted by data "
 "retention policies."
-msgstr ""
+msgstr "**True**: 고정된 게시물이 보존되며 데이터 보존 정책에 의해 삭제되지 않습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:95
 msgid ""
 "**False**: **(Default)** Pinned posts are deleted according to the "
 "configured data retention policy."
-msgstr ""
+msgstr "**False**: **(기본값)** 고정된 게시물이 구성된 데이터 보존 정책에 따라 삭제됩니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:98
 msgid ""
 "This feature's ``config.json`` setting is "
 "``\"DataRetentionSettings.PreservePinnedPosts\": false`` with options "
 "``true`` and ``false``."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"DataRetentionSettings.PreservePinnedPosts\": false``이며 옵션은 ``true`` 및 ``false``입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:103
 msgid ""
 "This global configuration setting must be enabled with mmctl using the "
 ":ref:`mmctl config set <administration-guide/manage/mmctl-command-line-"
 "tool:mmctl config set>` command."
-msgstr ""
+msgstr "이 전역 구성 설정은 :ref:`mmctl config set <administration-guide/manage/mmctl-command-line-tool:mmctl config set>` 명령을 사용하여 mmctl로 활성화해야 합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:104
 msgid ""
 "This configuration setting applies to team and channel policies as well "
 "as data retention, and can't be overridden in those more granular team or"
 " channel policies."
-msgstr ""
+msgstr "이 구성 설정은 데이터 보존뿐만 아니라 팀 및 채널 정책에도 적용되며, 더 세분화된 팀 또는 채널 정책에서 재정의할 수 없습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:105
 msgid "Files attached to the pinned message aren't preserved."
-msgstr ""
+msgstr "고정된 메시지에 첨부된 파일은 보존되지 않습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:106
 msgid ""
 "Only the pinned post is preserved. If it's attached to a thread or if "
 "it's the root post of a thread, the other threaded messages aren't "
 "preserved."
-msgstr ""
+msgstr "고정된 게시물만 보존됩니다. 스레드에 첨부되어 있거나 스레드의 루트 게시물인 경우, 다른 스레드 메시지는 보존되지 않습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:116
 msgid "Custom retention policy"
-msgstr ""
+msgstr "사용자 지정 보존 정책"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:118
 msgid ""
@@ -263,88 +263,88 @@ msgid ""
 "follow this policy. The attachment retention time cannot be set on custom"
 " policy levels and the global retention time for attachments is always "
 "applied."
-msgstr ""
+msgstr "사용자 지정 보존 정책의 이름을 지정하고, 일 또는 연 단위로 기간 값을 설정하고, 이 정책을 따를 팀과 채널을 지정하여 OKR.BEST가 특정 팀과 채널에서 메시지를 보관하는 기간을 설정합니다. 첨부 파일 보존 시간은 사용자 지정 정책 수준에서 설정할 수 없으며 첨부 파일에 대한 전역 보존 시간이 항상 적용됩니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:128
 msgid "Data deletion time"
-msgstr ""
+msgstr "데이터 삭제 시간"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:130
 msgid ""
 "Set the start time of the daily scheduled data retention job. Choose a "
 "time when fewer people are using your system. Must be a 24-hour time "
 "stamp in the form ``HH:MM``."
-msgstr ""
+msgstr "매일 예약된 데이터 보존 작업의 시작 시간을 설정합니다. 시스템을 사용하는 사람이 적은 시간을 선택하세요. ``HH:MM`` 형식의 24시간 타임스탬프여야 합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:132
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:326
 msgid "This setting is based on the local time of the server."
-msgstr ""
+msgstr "이 설정은 서버의 로컬 시간을 기준으로 합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:135
 msgid ""
 "This feature's ``config.json`` setting is ``\"DeletionJobStartTime\": "
 "\"02:00\"`` with 24-hour timestamp input in the form ``\"HH:MM\"``."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"DeletionJobStartTime\": \"02:00\"``이며 ``\"HH:MM\"`` 형식의 24시간 타임스탬프 입력입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:139
 msgid "Run deletion job now"
-msgstr ""
+msgstr "지금 삭제 작업 실행"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:141
 msgid ""
 "Start a Data Retention deletion job immediately. You can monitor the "
 "status of the job in the data deletion job table within the Policy Log "
 "section."
-msgstr ""
+msgstr "데이터 보존 삭제 작업을 즉시 시작합니다. Policy Log 섹션 내의 데이터 삭제 작업 표에서 작업 상태를 모니터링할 수 있습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:151
 msgid "Time between batches"
-msgstr ""
+msgstr "배치 간 시간"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:153
 msgid ""
 "The time in milliseconds between batches processed during data retention "
 "job execution. This setting helps control the rate at which data is "
 "deleted to reduce database load during retention operations."
-msgstr ""
+msgstr "데이터 보존 작업 실행 중에 처리되는 배치 간의 시간(밀리초)입니다. 이 설정은 보존 작업 중 데이터베이스 부하를 줄이기 위해 데이터가 삭제되는 속도를 제어하는 데 도움이 됩니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:155
 msgid ""
 "Default is 100 milliseconds. Possible values are any non-negative integer"
 " (≥ 0)."
-msgstr ""
+msgstr "기본값은 100밀리초입니다. 가능한 값은 음이 아닌 정수(≥ 0)입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:158
 msgid ""
 "This feature's ``config.json`` setting is "
 "``\"TimeBetweenBatchesMilliseconds\": 100`` with numerical input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"TimeBetweenBatchesMilliseconds\": 100``이며 숫자 입력입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:169
 msgid "Retention IDs batch size"
-msgstr ""
+msgstr "보존 ID 배치 크기"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:171
 msgid ""
 "The number of retention IDs to process in a single batch during data "
 "retention job execution. This setting controls how many items are "
 "processed together for optimal performance."
-msgstr ""
+msgstr "데이터 보존 작업 실행 중에 단일 배치에서 처리할 보존 ID 수입니다. 이 설정은 최적의 성능을 위해 함께 처리되는 항목 수를 제어합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:173
 msgid "Default is 100. Possible values are any non-negative integer (≥ 0)."
-msgstr ""
+msgstr "기본값은 100입니다. 가능한 값은 음이 아닌 정수(≥ 0)입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:176
 msgid ""
 "This feature's ``config.json`` setting is ``\"RetentionIdsBatchSize\": "
 "100`` with numerical input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"RetentionIdsBatchSize\": 100``이며 숫자 입력입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:187
 msgid "Boards retention days"
-msgstr ""
+msgstr "보드 보존 일수"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:189
 msgid ""
@@ -352,125 +352,125 @@ msgid ""
 "than 0, boards data older than the specified number of days will be "
 "deleted during retention job execution only when boards deletion is "
 "enabled via ``EnableBoardsDeletion``."
-msgstr ""
+msgstr "OKR.BEST가 보드 데이터를 보관하는 기간을 설정합니다. 0보다 큰 값으로 설정하면, ``EnableBoardsDeletion``을 통해 보드 삭제가 활성화된 경우에만 지정된 일수보다 오래된 보드 데이터가 보존 작업 실행 중에 삭제됩니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:191
 msgid "Default is 365 days. Possible values are any non-negative integer (≥ 0)."
-msgstr ""
+msgstr "기본값은 365일입니다. 가능한 값은 음이 아닌 정수(≥ 0)입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:194
 msgid ""
 "This feature's ``config.json`` setting is ``\"BoardsRetentionDays\": "
 "365`` with numerical input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"BoardsRetentionDays\": 365``이며 숫자 입력입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:207
 msgid "Enable message deletion"
-msgstr ""
+msgstr "메시지 삭제 활성화"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:209
 msgid "**True**: Message deletion is enabled during data retention job execution."
-msgstr ""
+msgstr "**True**: 데이터 보존 작업 실행 중에 메시지 삭제가 활성화됩니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:211
 msgid "**False**: Messages are not deleted during data retention job execution."
-msgstr ""
+msgstr "**False**: 데이터 보존 작업 실행 중에 메시지가 삭제되지 않습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:214
 msgid ""
 "This feature's ``config.json`` setting is ``\"EnableMessageDeletion\": "
 "false`` with options ``true`` and ``false``."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"EnableMessageDeletion\": false``이며 옵션은 ``true`` 및 ``false``입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:219
 msgid ""
 "When ``EnableMessageDeletion`` is set to ``false``, messages will not be "
 "deleted regardless of other retention policy settings."
-msgstr ""
+msgstr "``EnableMessageDeletion``이 ``false``로 설정되면, 다른 보존 정책 설정에 관계없이 메시지가 삭제되지 않습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:231
 msgid "Enable file deletion"
-msgstr ""
+msgstr "파일 삭제 활성화"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:233
 msgid "**True**: File deletion is enabled during data retention job execution."
-msgstr ""
+msgstr "**True**: 데이터 보존 작업 실행 중에 파일 삭제가 활성화됩니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:235
 msgid "**False**: Files are not deleted during data retention job execution."
-msgstr ""
+msgstr "**False**: 데이터 보존 작업 실행 중에 파일이 삭제되지 않습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:238
 msgid ""
 "This feature's ``config.json`` setting is ``\"EnableFileDeletion\": "
 "false`` with options ``true`` and ``false``."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"EnableFileDeletion\": false``이며 옵션은 ``true`` 및 ``false``입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:243
 msgid ""
 "When ``EnableFileDeletion`` is set to ``false``, files will not be "
 "deleted regardless of other retention policy settings."
-msgstr ""
+msgstr "``EnableFileDeletion``이 ``false``로 설정되면, 다른 보존 정책 설정에 관계없이 파일이 삭제되지 않습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:255
 msgid "Enable boards deletion"
-msgstr ""
+msgstr "보드 삭제 활성화"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:257
 msgid "**True**: Boards deletion is enabled during data retention job execution."
-msgstr ""
+msgstr "**True**: 데이터 보존 작업 실행 중에 보드 삭제가 활성화됩니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:259
 msgid "**False**: Boards data is not deleted during data retention job execution."
-msgstr ""
+msgstr "**False**: 데이터 보존 작업 실행 중에 보드 데이터가 삭제되지 않습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:262
 msgid ""
 "This feature's ``config.json`` setting is ``\"EnableBoardsDeletion\": "
 "false`` with options ``true`` and ``false``."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"EnableBoardsDeletion\": false``이며 옵션은 ``true`` 및 ``false``입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:267
 msgid ""
 "When ``EnableBoardsDeletion`` is set to ``false``, boards data will not "
 "be deleted regardless of other retention policy settings."
-msgstr ""
+msgstr "``EnableBoardsDeletion``이 ``false``로 설정되면, 다른 보존 정책 설정에 관계없이 보드 데이터가 삭제되지 않습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:277
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:540
 msgid "Batch size"
-msgstr ""
+msgstr "배치 크기"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:279
 msgid ""
 "The number of records to process in a single batch during data retention "
 "job execution. This setting controls how many records are processed "
 "together for optimal performance."
-msgstr ""
+msgstr "데이터 보존 작업 실행 중에 단일 배치에서 처리할 레코드 수입니다. 이 설정은 최적의 성능을 위해 함께 처리되는 레코드 수를 제어합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:281
 msgid "Default is 3000. Possible values are any non-negative integer (≥ 0)."
-msgstr ""
+msgstr "기본값은 3000입니다. 가능한 값은 음이 아닌 정수(≥ 0)입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:284
 msgid ""
 "This feature's ``config.json`` setting is ``\"BatchSize\": 3000`` with "
 "numerical input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"BatchSize\": 3000``이며 숫자 입력입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:290
 msgid "Compliance export"
-msgstr ""
+msgstr "컴플라이언스 내보내기"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:292
 msgid ""
 "Access the following configuration settings in the System Console by "
 "going to **Compliance > Compliance Export**."
-msgstr ""
+msgstr "**Compliance > Compliance Export**로 이동하여 관리자 도구에서 다음 구성 설정에 접근합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:304
 msgid "Enable compliance export"
-msgstr ""
+msgstr "컴플라이언스 내보내기 활성화"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:306
 msgid ""
@@ -478,277 +478,277 @@ msgid ""
 " all messages that were posted in the last 24 hours. The export task is "
 "scheduled to run once per day. See the :doc:`documentation to learn more "
 "</administration-guide/comply/compliance-export>`."
-msgstr ""
+msgstr "**True**: OKR.BEST가 지난 24시간 동안 게시된 모든 메시지를 포함하는 컴플라이언스 내보내기 파일을 생성합니다. 내보내기 작업은 하루에 한 번 실행되도록 예약됩니다. 자세한 내용은 :doc:`문서 </administration-guide/comply/compliance-export>`를 참조하세요."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:308
 msgid "**False**: Mattermost doesn't generate a compliance export file."
-msgstr ""
+msgstr "**False**: OKR.BEST가 컴플라이언스 내보내기 파일을 생성하지 않습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:311
 msgid ""
 "This feature's ``config.json`` setting is ``\"EnableExport\": false`` "
 "with options ``true`` and ``false``."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"EnableExport\": false``이며 옵션은 ``true`` 및 ``false``입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:322
 msgid "Compliance export time"
-msgstr ""
+msgstr "컴플라이언스 내보내기 시간"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:324
 msgid ""
 "Set the start time of the daily scheduled compliance export job. Choose a"
 " time when fewer people are using your system. Must be a 24-hour time "
 "stamp in the form ``HH:MM``."
-msgstr ""
+msgstr "매일 예약된 컴플라이언스 내보내기 작업의 시작 시간을 설정합니다. 시스템을 사용하는 사람이 적은 시간을 선택하세요. ``HH:MM`` 형식의 24시간 타임스탬프여야 합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:329
 msgid ""
 "This feature's ``config.json`` setting is ``\"DailyRunTime\": 01:00`` "
 "with 24-hour timestamp input in the form ``\"HH:MM\"``."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"DailyRunTime\": 01:00``이며 ``\"HH:MM\"`` 형식의 24시간 타임스탬프 입력입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:340
 msgid "Export file format"
-msgstr ""
+msgstr "내보내기 파일 형식"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:342
 msgid ""
 "File format of the compliance export. Corresponds to the system that you "
 "want to import the data into."
-msgstr ""
+msgstr "컴플라이언스 내보내기의 파일 형식입니다. 데이터를 가져올 시스템에 해당합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:344
 msgid "Currently supported formats are CSV, Actiance XML, and Global Relay EML."
-msgstr ""
+msgstr "현재 지원되는 형식은 CSV, Actiance XML 및 Global Relay EML입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:346
 msgid "If Global Relay is chosen, the following options will be presented:"
-msgstr ""
+msgstr "Global Relay를 선택하면, 다음 옵션이 표시됩니다:"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:356
 msgid "Global Relay customer account"
-msgstr ""
+msgstr "Global Relay 고객 계정"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:358
 msgid ""
 "Type of Global Relay customer account your organization has. Can be one "
 "of: ``A9/Type 9``, ``A10/Type 10``, or ``Custom``."
-msgstr ""
+msgstr "조직이 보유한 Global Relay 고객 계정 유형입니다. ``A9/Type 9``, ``A10/Type 10`` 또는 ``Custom`` 중 하나일 수 있습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:361
 msgid ""
 "This feature's ``config.json`` setting is ``\"CustomerType\": \"A9\"`` "
 "with options ``\"A9``, ``\"A10\"``, and ``CUSTOM``."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"CustomerType\": \"A9\"``이며 옵션은 ``\"A9``, ``\"A10\"`` 및 ``CUSTOM``입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:372
 msgid "Global Relay SMTP username"
-msgstr ""
+msgstr "Global Relay SMTP 사용자 이름"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:374
 msgid "The username for authenticating to the Global Relay SMTP server."
-msgstr ""
+msgstr "Global Relay SMTP 서버에 인증하기 위한 사용자 이름입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:377
 msgid ""
 "This feature's ``config.json`` setting is ``\"SmtpUsername\": \"\"`` with"
 " string input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"SmtpUsername\": \"\"``이며 문자열 입력입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:388
 msgid "Global Relay SMTP password"
-msgstr ""
+msgstr "Global Relay SMTP 비밀번호"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:390
 msgid "The password associated with the Global Relay SMTP username."
-msgstr ""
+msgstr "Global Relay SMTP 사용자 이름과 연결된 비밀번호입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:393
 msgid ""
 "This feature's ``config.json`` setting is ``\"SmtpPassword\": \"\"`` with"
 " string input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"SmtpPassword\": \"\"``이며 문자열 입력입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:404
 msgid "Global Relay email address"
-msgstr ""
+msgstr "Global Relay 이메일 주소"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:406
 msgid ""
 "The email address your Global Relay server monitors for incoming "
 "compliance exports."
-msgstr ""
+msgstr "Global Relay 서버가 수신 컴플라이언스 내보내기를 모니터링하는 이메일 주소입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:409
 msgid ""
 "This feature's ``config.json`` setting is ``\"EmailAddress\": \"\"`` with"
 " string input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"EmailAddress\": \"\"``이며 문자열 입력입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:420
 msgid "SMTP server name"
-msgstr ""
+msgstr "SMTP 서버 이름"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:422
 msgid ""
 "The SMTP server name URL that will receive your Global Relay EML file "
 "when a `custom customer account type <#global-relay-customer-account>`__ "
 "is configured."
-msgstr ""
+msgstr "`사용자 지정 고객 계정 유형 <#global-relay-customer-account>`__이 구성된 경우 Global Relay EML 파일을 수신할 SMTP 서버 이름 URL입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:425
 msgid ""
 "This feature's ``config.json`` setting is "
 "``\".MessageExportSettings.GlobalRelaySettings.CustomSMTPServerName\": "
 "\"\"`` with string input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\".MessageExportSettings.GlobalRelaySettings.CustomSMTPServerName\": \"\"``이며 문자열 입력입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:436
 msgid "SMTP server port"
-msgstr ""
+msgstr "SMTP 서버 포트"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:438
 msgid ""
 "The SMTP server port that will receive your Global Relay EML file when a "
 "`custom customer account type <#global-relay-customer-account>`__ is "
 "configured. Default is ``\"25\"``."
-msgstr ""
+msgstr "`사용자 지정 고객 계정 유형 <#global-relay-customer-account>`__이 구성된 경우 Global Relay EML 파일을 수신할 SMTP 서버 포트입니다. 기본값은 ``\"25\"``입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:441
 msgid ""
 "This feature's ``config.json`` setting is "
 "``\".MessageExportSettings.GlobalRelaySettings.CustomSMTPPort\": \"25\"``"
 " with string input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\".MessageExportSettings.GlobalRelaySettings.CustomSMTPPort\": \"25\"``이며 문자열 입력입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:452
 msgid "Message export batch size"
-msgstr ""
+msgstr "메시지 내보내기 배치 크기"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:454
 msgid ""
 "This setting isn't available in the System Console and can only be set in"
 " ``config.json``."
-msgstr ""
+msgstr "이 설정은 관리자 도구에서 사용할 수 없으며 ``config.json``에서만 설정할 수 있습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:456
 msgid ""
 "Determines how many new posts are batched together to a compliance export"
 " file."
-msgstr ""
+msgstr "컴플라이언스 내보내기 파일에 함께 배치되는 새 게시물 수를 결정합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:459
 msgid ""
 "This feature's ``config.json`` setting is ``\"BatchSize\": 10000`` with "
 "numerical input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"BatchSize\": 10000``이며 숫자 입력입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:463
 msgid "Run compliance export job now"
-msgstr ""
+msgstr "지금 컴플라이언스 내보내기 작업 실행"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:465
 msgid ""
 "This button initiates a compliance export job immediately. You can "
 "monitor the status of the job in the compliance export job table."
-msgstr ""
+msgstr "이 버튼은 컴플라이언스 내보내기 작업을 즉시 시작합니다. 컴플라이언스 내보내기 작업 표에서 작업 상태를 모니터링할 수 있습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:470
 msgid "Compliance monitoring"
-msgstr ""
+msgstr "컴플라이언스 모니터링"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:472
 msgid "Settings used to enable and configure Mattermost compliance reports."
-msgstr ""
+msgstr "OKR.BEST 컴플라이언스 보고서를 활성화하고 구성하는 데 사용되는 설정입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:474
 msgid ""
 "Access the following configuration settings in the System Console by "
 "going to **Compliance > Compliance Monitoring**."
-msgstr ""
+msgstr "**Compliance > Compliance Monitoring**으로 이동하여 관리자 도구에서 다음 구성 설정에 접근합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:486
 msgid "Enable compliance reporting"
-msgstr ""
+msgstr "컴플라이언스 보고 활성화"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:488
 msgid "**True**: Compliance reporting is enabled in Mattermost."
-msgstr ""
+msgstr "**True**: OKR.BEST에서 컴플라이언스 보고가 활성화됩니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:490
 msgid "**False**: Compliance reporting is disabled."
-msgstr ""
+msgstr "**False**: 컴플라이언스 보고가 비활성화됩니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:493
 msgid ""
 "This feature's ``config.json`` setting is ``\"Enable\": false`` with "
 "options ``true`` and ``false``."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"Enable\": false``이며 옵션은 ``true`` 및 ``false``입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:504
 msgid "Compliance report directory"
-msgstr ""
+msgstr "컴플라이언스 보고서 디렉토리"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:506
 msgid "Sets the directory where compliance reports are written."
-msgstr ""
+msgstr "컴플라이언스 보고서가 기록되는 디렉토리를 설정합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:509
 msgid ""
 "This feature's ``config.json`` setting is ``\"Directory\": \"./data/\"`` "
 "with string input."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"Directory\": \"./data/\"``이며 문자열 입력입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:522
 msgid "Enable daily report"
-msgstr ""
+msgstr "일일 보고서 활성화"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:524
 msgid "**True**: Mattermost generates a daily compliance report."
-msgstr ""
+msgstr "**True**: OKR.BEST가 일일 컴플라이언스 보고서를 생성합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:526
 msgid "**False**: Daily reports are not generated."
-msgstr ""
+msgstr "**False**: 일일 보고서가 생성되지 않습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:529
 msgid ""
 "This feature's ``config.json`` setting is ``\"EnableDaily\": false`` with"
 " options ``true`` and ``false``."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"EnableDaily\": false``이며 옵션은 ``true`` 및 ``false``입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:542
 msgid ""
 "Set the size of the batches in which posts will be read from the database"
 " to generate the compliance report. This setting is currently not "
 "available in the System Console and can only be set in ``config.json``."
-msgstr ""
+msgstr "컴플라이언스 보고서를 생성하기 위해 데이터베이스에서 게시물을 읽을 배치의 크기를 설정합니다. 이 설정은 현재 관리자 도구에서 사용할 수 없으며 ``config.json``에서만 설정할 수 있습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:545
 msgid ""
 "This feature's ``config.json`` setting is ``\"BatchSize\": 30000`` with "
 "default value ``30000``."
-msgstr ""
+msgstr "이 기능의 ``config.json`` 설정은 ``\"BatchSize\": 30000``이며 기본값은 ``30000``입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:551
 msgid "Custom terms of service"
-msgstr ""
+msgstr "사용자 지정 서비스 약관"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:553
 msgid ""
 "Access the following configuration settings in the System Console by "
 "going to **Compliance > Custom Terms of Service**."
-msgstr ""
+msgstr "**Compliance > Custom Terms of Service**로 이동하여 관리자 도구에서 다음 구성 설정에 접근합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:565
 msgid "Enable custom terms of service"
-msgstr ""
+msgstr "사용자 지정 서비스 약관 활성화"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:568
 msgid ""
 "This configuration setting can only be modified using the System Console "
 "user interface."
-msgstr ""
+msgstr "이 구성 설정은 관리자 도구 사용자 인터페이스를 사용해서만 수정할 수 있습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:570
 msgid ""
@@ -757,36 +757,36 @@ msgid ""
 "them after login or a page refresh. To update the Terms of Service link "
 "displayed in account creation and login pages, go to **System Console > "
 "Legal and Support > Terms of Service Link**."
-msgstr ""
+msgstr "**True**: 신규 사용자는 데스크톱, 웹 또는 모바일에서 OKR.BEST 팀에 접근하기 전에 서비스 약관에 동의해야 합니다. 기존 사용자는 로그인 또는 페이지 새로 고침 후에 동의해야 합니다. 계정 생성 및 로그인 페이지에 표시되는 서비스 약관 링크를 업데이트하려면, **관리자 도구 > Legal and Support > Terms of Service Link**로 이동합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:572
 msgid ""
 "**False**: During account creation or login, users can review Terms of "
 "Service by accessing the link configured via **System Console > Legal and"
 " Support > Terms of Service link**."
-msgstr ""
+msgstr "**False**: 계정 생성 또는 로그인 중에, 사용자는 **관리자 도구 > Legal and Support > Terms of Service link**를 통해 구성된 링크에 접근하여 서비스 약관을 검토할 수 있습니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:582
 msgid "Custom terms of service text"
-msgstr ""
+msgstr "사용자 지정 서비스 약관 텍스트"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:584
 msgid ""
 "Text that will appear in your custom Terms of Service. Supports Markdown-"
 "formatted text."
-msgstr ""
+msgstr "사용자 지정 서비스 약관에 표시될 텍스트입니다. Markdown 형식의 텍스트를 지원합니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:594
 msgid "Re-acceptance period"
-msgstr ""
+msgstr "재동의 기간"
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:596
 msgid ""
 "The number of days before Terms of Service acceptance expires, and the "
 "terms must be re-accepted."
-msgstr ""
+msgstr "서비스 약관 동의가 만료되어 약관에 다시 동의해야 하기 전까지의 일수입니다."
 
 #: ../../source/administration-guide/configure/compliance-configuration-settings.rst:598
 msgid "Defaults to 365 days. 0 indicates the terms do not expire."
-msgstr ""
+msgstr "기본값은 365일입니다. 0은 약관이 만료되지 않음을 나타냅니다."
 
