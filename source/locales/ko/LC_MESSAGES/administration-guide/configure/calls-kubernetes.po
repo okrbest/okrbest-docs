@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:1
 msgid "Calls Deployment on Kubernetes"
-msgstr ""
+msgstr "Kubernetes에서의 통화 배포"
 
 #: ../../source/_static/badges/all-commercial.md:6
 msgid ""
@@ -38,147 +38,147 @@ msgstr ""
 msgid ""
 "This guide provides detailed information for deploying Mattermost Calls "
 "on Kubernetes environments."
-msgstr ""
+msgstr "이 가이드는 Kubernetes 환경에서 OKR.BEST 통화(Calls)를 배포하는 방법에 대한 자세한 정보를 제공합니다."
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:8
 msgid "Overview"
-msgstr ""
+msgstr "개요"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:10
 msgid ""
 "Mattermost Calls has been designed to integrate with Kubernetes for "
 "improved scalability and control over the deployment. Using the RTCD "
 "service is the only supported deployment model."
-msgstr ""
+msgstr "OKR.BEST 통화(Calls)는 향상된 확장성과 배포 제어를 위해 Kubernetes와 통합되도록 설계되었습니다. RTCD 서비스를 사용하는 것이 유일하게 지원되는 배포 모델입니다."
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:12
 msgid "Architecture"
-msgstr ""
+msgstr "아키텍처"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:14
 msgid ""
 "![Calls deployed in a Kubernetes cluster](../../images/calls-deployment-"
 "kubernetes.png)"
-msgstr ""
+msgstr "![Kubernetes 클러스터에 배포된 통화](../../images/calls-deployment-kubernetes.png)"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:14
 msgid "Calls deployed in a Kubernetes cluster"
-msgstr ""
+msgstr "Kubernetes 클러스터에 배포된 통화"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:16
 msgid ""
 "This diagram shows how the RTCD standalone service can be deployed in a "
 "Kubernetes cluster. In this architecture:"
-msgstr ""
+msgstr "이 다이어그램은 RTCD 독립형 서비스를 Kubernetes 클러스터에 배포하는 방법을 보여줍니다. 이 아키텍처에서:"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:18
 msgid "Calls traffic is handled by dedicated RTCD pods"
-msgstr ""
+msgstr "통화 트래픽은 전용 RTCD 파드에서 처리됩니다"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:19
 msgid "Scaling is managed through Kubernetes deployment configurations"
-msgstr ""
+msgstr "확장은 Kubernetes 배포 구성을 통해 관리됩니다"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:20
 msgid ""
 "Call recording and transcription is handled by the calls-offloader "
 "service (see [Calls Offloader Setup and Configuration](calls-offloader-"
 "setup.md))"
-msgstr ""
+msgstr "통화 녹화 및 전사는 calls-offloader 서비스에서 처리됩니다([통화 오프로더 설정 및 구성](calls-offloader-setup.md) 참조)"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:22
 msgid ""
 "If Mattermost isn't already deployed in your Kubernetes cluster and you "
 "want to use this deployment type, visit the [Kubernetes operator "
 "guide](/install/mattermost-kubernetes-operator.md)."
-msgstr ""
+msgstr "Kubernetes 클러스터에 OKR.BEST가 아직 배포되지 않았고 이 배포 유형을 사용하려면, [Kubernetes 오퍼레이터 가이드](/install/mattermost-kubernetes-operator.md)를 참조하세요."
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:24
 msgid "Helm Chart Deployment"
-msgstr ""
+msgstr "Helm 차트 배포"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:26
 msgid ""
 "The recommended way to deploy Calls-related components in a Kubernetes "
 "environment is to use the officially provided Helm charts:"
-msgstr ""
+msgstr "Kubernetes 환경에서 통화 관련 구성 요소를 배포하는 권장 방법은 공식적으로 제공되는 Helm 차트를 사용하는 것입니다:"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:28
 msgid "RTCD Helm Chart"
-msgstr ""
+msgstr "RTCD Helm 차트"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:30
 msgid ""
 "The RTCD Helm chart deploys the RTCD service needed for call media "
 "handling:"
-msgstr ""
+msgstr "RTCD Helm 차트는 통화 미디어 처리에 필요한 RTCD 서비스를 배포합니다:"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:40
 msgid ""
 "For complete configuration options, see the [RTCD Helm chart "
 "documentation](https://github.com/mattermost/mattermost-"
 "helm/tree/master/charts/mattermost-rtcd)."
-msgstr ""
+msgstr "전체 구성 옵션은 [RTCD Helm 차트 문서](https://github.com/mattermost/mattermost-helm/tree/master/charts/mattermost-rtcd)를 참조하세요."
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:42
 msgid "Calls-Offloader Helm Chart"
-msgstr ""
+msgstr "Calls-Offloader Helm 차트"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:44
 msgid ""
 "If you need call recording and transcription capabilities, deploy the "
 "calls-offloader service:"
-msgstr ""
+msgstr "통화 녹화 및 전사 기능이 필요한 경우, calls-offloader 서비스를 배포합니다:"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:52
 msgid ""
 "For complete configuration options, see the [Calls-Offloader Helm chart "
 "documentation](https://github.com/mattermost/mattermost-"
 "helm/tree/master/charts/mattermost-calls-offloader)."
-msgstr ""
+msgstr "전체 구성 옵션은 [Calls-Offloader Helm 차트 문서](https://github.com/mattermost/mattermost-helm/tree/master/charts/mattermost-calls-offloader)를 참조하세요."
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:54
 msgid "Kubernetes-Specific Configuration"
-msgstr ""
+msgstr "Kubernetes 전용 구성"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:56
 msgid "Network Configuration"
-msgstr ""
+msgstr "네트워크 구성"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:58
 msgid ""
 "For Kubernetes deployments, you need to ensure specific connectivity "
 "paths:"
-msgstr ""
+msgstr "Kubernetes 배포의 경우, 특정 연결 경로를 확인해야 합니다:"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:60
 msgid ""
 "**Client to RTCD connectivity**: UDP and TCP traffic on port 8443 is "
 "properly routed from clients to RTCD pods (for media, with TCP acting as "
 "a fallback)."
-msgstr ""
+msgstr "**클라이언트-RTCD 연결**: 포트 8443의 UDP 및 TCP 트래픽이 클라이언트에서 RTCD 파드로 올바르게 라우팅됩니다(미디어용, TCP는 폴백 역할)."
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:61
 msgid ""
 "**Mattermost to RTCD API connectivity**: There needs to be a clear "
 "connectivity path between Mattermost and RTCD on the API port (TCP 8045)"
-msgstr ""
+msgstr "**OKR.BEST-RTCD API 연결**: API 포트(TCP 8045)에서 OKR.BEST와 RTCD 간에 명확한 연결 경로가 있어야 합니다"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:62
 msgid ""
 "**Network policies**: Network policies must allow the required "
 "communications between Mattermost and RTCD services"
-msgstr ""
+msgstr "**네트워크 정책**: 네트워크 정책은 OKR.BEST와 RTCD 서비스 간에 필요한 통신을 허용해야 합니다"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:64
 msgid "Resource Requirements"
-msgstr ""
+msgstr "리소스 요구 사항"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:66
 msgid ""
 "Resource requirements for RTCD pods depend heavily on the expected call "
 "volume, participant count, and whether screen sharing is used."
-msgstr ""
+msgstr "RTCD 파드의 리소스 요구 사항은 예상 통화량, 참가자 수 및 화면 공유 사용 여부에 따라 크게 달라집니다."
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:68
 msgid ""
@@ -186,43 +186,43 @@ msgid ""
 "metrics-monitoring.md#performance-baselines) to determine the appropriate"
 " CPU, memory, and network requests and limits for your specific "
 "deployment needs rather than relying on generic defaults."
-msgstr ""
+msgstr "일반적인 기본값에 의존하기보다는 [성능 기준선](calls-metrics-monitoring.md#performance-baselines)을 검토하여 특정 배포 요구 사항에 적합한 CPU, 메모리 및 네트워크 요청과 제한을 결정할 것을 강력히 권장합니다."
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:70
 msgid "Scaling Considerations"
-msgstr ""
+msgstr "확장 고려 사항"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:72
 msgid "Horizontal scaling of RTCD pods is possible, but remember:"
-msgstr ""
+msgstr "RTCD 파드의 수평 확장이 가능하지만, 다음을 기억하세요:"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:74
 msgid "Each call is hosted entirely on a single RTCD pod"
-msgstr ""
+msgstr "각 통화는 전적으로 단일 RTCD 파드에서 호스팅됩니다"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:75
 msgid ""
 "DNS A records should be set up for all RTCD pods so server can discover "
 "RTCD servers."
-msgstr ""
+msgstr "서버가 RTCD 서버를 검색할 수 있도록 모든 RTCD 파드에 대해 DNS A 레코드를 설정해야 합니다."
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:76
 msgid "Health checks should ensure that only healthy pods are reported via DNS"
-msgstr ""
+msgstr "상태 확인은 정상 파드만 DNS를 통해 보고되도록 보장해야 합니다"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:77
 msgid "Calls remain on their assigned pod for their entire duration"
-msgstr ""
+msgstr "통화는 전체 지속 시간 동안 할당된 파드에 유지됩니다"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:79
 msgid "Limitations"
-msgstr ""
+msgstr "제한 사항"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:81
 msgid ""
 "Due to the inherent complexities of hosting a WebRTC service, some "
 "limitations apply when deploying Calls in a Kubernetes environment."
-msgstr ""
+msgstr "WebRTC 서비스 호스팅의 본질적인 복잡성으로 인해, Kubernetes 환경에서 통화를 배포할 때 일부 제한 사항이 적용됩니다."
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:83
 msgid ""
@@ -231,7 +231,7 @@ msgid ""
 "allowing for horizontal scaling. Data should generally direct directly to"
 " the pod running the `rtcd` process, as routing this traffic through a "
 "standard ingress is not recommended for RTCD deployments."
-msgstr ""
+msgstr "한 가지 핵심 요구 사항은 각 `rtcd` 프로세스가 전용 Kubernetes 노드에 있어야 한다는 것입니다. 이는 수평 확장을 허용하면서 데이터를 올바르게 전달하는 데 필요합니다. 표준 인그레스를 통해 이 트래픽을 라우팅하는 것은 RTCD 배포에 권장되지 않으므로, 데이터는 일반적으로 `rtcd` 프로세스를 실행하는 파드로 직접 전달되어야 합니다."
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:85
 msgid ""
@@ -240,81 +240,81 @@ msgid ""
 "application is able to detect its own external address (through STUN) and"
 " advertise it to clients to achieve connectivity with minimal "
 "configuration."
-msgstr ""
+msgstr "일반적인 권장 사항은 `rtcd` 인스턴스(Kubernetes 노드)당 하나의 외부 IP 주소를 노출하는 것입니다. 이렇게 하면 애플리케이션이 (STUN을 통해) 자체 외부 주소를 감지하고 이를 클라이언트에 알려 최소한의 구성으로 연결을 달성할 수 있으므로 확장이 더 간단해집니다."
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:89
 msgid "Monitoring and Metrics"
-msgstr ""
+msgstr "모니터링 및 메트릭"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:91
 msgid ""
 "For detailed information on metrics collection and monitoring, see the "
 "[Calls Metrics and Monitoring](calls-metrics-monitoring.md) guide."
-msgstr ""
+msgstr "메트릭 수집 및 모니터링에 대한 자세한 내용은 [통화 메트릭 및 모니터링](calls-metrics-monitoring.md) 가이드를 참조하세요."
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:93
 msgid "Troubleshooting"
-msgstr ""
+msgstr "문제 해결"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:95
 msgid "For Kubernetes-specific troubleshooting:"
-msgstr ""
+msgstr "Kubernetes 전용 문제 해결:"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:97
 msgid "Check pod logs: `kubectl logs -f deployment/mattermost-rtcd`"
-msgstr ""
+msgstr "파드 로그 확인: `kubectl logs -f deployment/mattermost-rtcd`"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:98
 msgid ""
 "Verify service connectivity: `kubectl port-forward service/mattermost-"
 "rtcd 8045:8045`"
-msgstr ""
+msgstr "서비스 연결 확인: `kubectl port-forward service/mattermost-rtcd 8045:8045`"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:99
 msgid "Ensure UDP and TCP traffic is properly routed through your load balancer"
-msgstr ""
+msgstr "UDP 및 TCP 트래픽이 로드 밸런서를 통해 올바르게 라우팅되는지 확인합니다"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:100
 msgid "Verify network policies allow required communication paths"
-msgstr ""
+msgstr "네트워크 정책이 필요한 통신 경로를 허용하는지 확인합니다"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:102
 msgid ""
 "For detailed logging guidance, see the [Calls Logging](calls-logging.md) "
 "guide."
-msgstr ""
+msgstr "자세한 로깅 지침은 [통화 로깅](calls-logging.md) 가이드를 참조하세요."
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:104
 msgid "Other Calls Documentation"
-msgstr ""
+msgstr "기타 통화 문서"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:106
 msgid ""
 "[Calls Deployment Guide](calls-deployment-guide.md): Overview of "
 "deployment options and architecture"
-msgstr ""
+msgstr "[통화 배포 가이드](calls-deployment-guide.md): 배포 옵션 및 아키텍처 개요"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:107
 msgid ""
 "[RTCD Setup and Configuration](calls-rtcd-setup.md): Comprehensive guide "
 "for setting up the dedicated RTCD service"
-msgstr ""
+msgstr "[RTCD 설정 및 구성](calls-rtcd-setup.md): 전용 RTCD 서비스 설정을 위한 종합 가이드"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:108
 msgid ""
 "[Calls Offloader Setup and Configuration](calls-offloader-setup.md): "
 "Setup guide for call recording and transcription"
-msgstr ""
+msgstr "[통화 오프로더 설정 및 구성](calls-offloader-setup.md): 통화 녹화 및 전사 설정 가이드"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:109
 msgid ""
 "[Calls Metrics and Monitoring](calls-metrics-monitoring.md): Guide to "
 "monitoring Calls performance using metrics and observability"
-msgstr ""
+msgstr "[통화 메트릭 및 모니터링](calls-metrics-monitoring.md): 메트릭 및 관찰 가능성을 사용하여 통화 성능을 모니터링하는 가이드"
 
 #: ../../source/administration-guide/configure/calls-kubernetes.md:110
 msgid ""
 "[Calls Logging](calls-logging.md): Detailed guidance for collecting Calls"
 " logs and client diagnostics"
-msgstr ""
+msgstr "[통화 로깅](calls-logging.md): 통화 로그 및 클라이언트 진단 수집에 대한 자세한 지침"
 
