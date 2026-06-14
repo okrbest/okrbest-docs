@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:1
 msgid "RTCD Setup and Configuration"
-msgstr ""
+msgstr "RTCD 설정 및 구성"
 
 #: ../../source/_static/badges/ent-plus.md:6
 msgid ""
@@ -39,49 +39,49 @@ msgid ""
 "This guide provides detailed instructions for setting up, configuring, "
 "and validating a Mattermost Calls deployment using the dedicated RTCD "
 "service."
-msgstr ""
+msgstr "이 가이드는 전용 RTCD 서비스를 사용하여 OKR.BEST 통화(Calls) 배포를 설정, 구성 및 검증하는 방법에 대한 자세한 지침을 제공합니다."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:8
 msgid "Prerequisites"
-msgstr ""
+msgstr "사전 요구 사항"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:10
 msgid "Before deploying RTCD, ensure you have:"
-msgstr ""
+msgstr "RTCD를 배포하기 전에, 다음을 갖추었는지 확인하세요:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:12
 msgid "A Mattermost Enterprise license"
-msgstr ""
+msgstr "Mattermost Enterprise 라이선스"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:13
 msgid ""
 "A server or VM with sufficient CPU and network capacity (see the "
 "[Performance baselines](calls-metrics-monitoring.md#performance-"
 "baselines) section for sizing guidance)"
-msgstr ""
+msgstr "충분한 CPU 및 네트워크 용량을 갖춘 서버 또는 VM(크기 조정 지침은 [성능 기준선](calls-metrics-monitoring.md#performance-baselines) 섹션 참조)"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:15
 msgid "Network Requirements"
-msgstr ""
+msgstr "네트워크 요구 사항"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:17
 msgid "The following network connectivity is required:"
-msgstr ""
+msgstr "다음 네트워크 연결이 필요합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:102
 msgid "Installation and Deployment"
-msgstr ""
+msgstr "설치 및 배포"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:104
 msgid ""
 "There are multiple ways to deploy RTCD, depending on your environment. We"
 " recommend the following order based on production readiness and "
 "operational control:"
-msgstr ""
+msgstr "환경에 따라 RTCD를 배포하는 여러 방법이 있습니다. 프로덕션 준비도와 운영 제어를 기준으로 다음 순서를 권장합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:106
 msgid "Bare Metal or VM Deployment (Recommended)"
-msgstr ""
+msgstr "베어메탈 또는 VM 배포(권장)"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:108
 msgid ""
@@ -89,7 +89,7 @@ msgid ""
 "environments, as it provides the best performance and operational "
 "control. For Kubernetes deployments, see the [Calls Deployment on "
 "Kubernetes](calls-kubernetes.md) guide."
-msgstr ""
+msgstr "이는 최상의 성능과 운영 제어를 제공하므로 비Kubernetes 프로덕션 환경에 권장되는 배포 방법입니다. Kubernetes 배포의 경우, [Kubernetes에서의 통화 배포](calls-kubernetes.md) 가이드를 참조하세요."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:111
 msgid ""
@@ -97,17 +97,17 @@ msgid ""
 "[Calls Installation Scripts](https://github.com/bgardner8008/calls-"
 "install-scripts) for quick provisioning of the RTCD service on "
 "Ubuntu/Debian systems."
-msgstr ""
+msgstr "자동화된 설정을 찾고 계신가요? Ubuntu/Debian 시스템에서 RTCD 서비스를 빠르게 프로비저닝하려면 커뮤니티에서 관리하는 [통화 설치 스크립트](https://github.com/bgardner8008/calls-install-scripts)를 확인하세요."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:114
 msgid "**Download and install the RTCD binary**:"
-msgstr ""
+msgstr "**RTCD 바이너리 다운로드 및 설치**:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:116
 msgid ""
 "Download the latest release from the [RTCD GitHub "
 "repository](https://github.com/mattermost/rtcd/releases):"
-msgstr ""
+msgstr "[RTCD GitHub 저장소](https://github.com/mattermost/rtcd/releases)에서 최신 릴리스를 다운로드합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:132
 msgid ""
@@ -115,11 +115,11 @@ msgid ""
 "architecture (e.g., `rtcd-linux-arm64` for ARM64 systems). The binary "
 "should be placed at `/opt/rtcd/rtcd` as this is the expected location "
 "referenced in systemd service files and other documentation."
-msgstr ""
+msgstr "`rtcd-linux-amd64`를 시스템 아키텍처에 적합한 바이너리(예: ARM64 시스템의 경우 `rtcd-linux-arm64`)로 바꿉니다. 바이너리는 systemd 서비스 파일 및 기타 문서에서 참조하는 예상 위치이므로 `/opt/rtcd/rtcd`에 배치해야 합니다."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:135
 msgid "**Create a configuration file** (`/opt/rtcd/rtcd.toml`):"
-msgstr ""
+msgstr "**구성 파일 생성**(`/opt/rtcd/rtcd.toml`):"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:137
 msgid ""
@@ -127,41 +127,41 @@ msgid ""
 "[config.sample.toml](https://github.com/mattermost/rtcd/blob/master/config/config.sample.toml)"
 " as a starting point. Download this file and use it as your base "
 "configuration."
-msgstr ""
+msgstr "OKR.BEST는 시작점으로 공식 [config.sample.toml](https://github.com/mattermost/rtcd/blob/master/config/config.sample.toml)을 사용할 것을 권장합니다. 이 파일을 다운로드하여 기본 구성으로 사용하세요."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:139
 msgid "Create a dedicated user for the RTCD service:"
-msgstr ""
+msgstr "RTCD 서비스를 위한 전용 사용자를 생성합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:145
 msgid "Create the data directory and set ownership:"
-msgstr ""
+msgstr "데이터 디렉토리를 생성하고 소유권을 설정합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:152
 msgid "Create a systemd service file (`/etc/systemd/system/rtcd.service`):"
-msgstr ""
+msgstr "systemd 서비스 파일(`/etc/systemd/system/rtcd.service`)을 생성합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:172
 msgid "Enable and start the service:"
-msgstr ""
+msgstr "서비스를 활성화하고 시작합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:180
 msgid "Check the service status:"
-msgstr ""
+msgstr "서비스 상태를 확인합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:186
 msgid "Docker Deployment"
-msgstr ""
+msgstr "Docker 배포"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:188
 msgid ""
 "Docker deployment is suitable for development, testing, or containerized "
 "production environments:"
-msgstr ""
+msgstr "Docker 배포는 개발, 테스트 또는 컨테이너화된 프로덕션 환경에 적합합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:190
 msgid "Run the RTCD container with basic configuration:"
-msgstr ""
+msgstr "기본 구성으로 RTCD 컨테이너를 실행합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:202
 msgid ""
@@ -170,32 +170,32 @@ msgid ""
 "anyone who can connect to the service on the API port (8045) to "
 "successfully initiate calls. Understand the security implications of this"
 " setting before enabling it."
-msgstr ""
+msgstr "선택적으로 `RTCD_API_SECURITY_ALLOWSELFREGISTRATION` 설정을 사용하는 경우, 기본값이 `false`임에 유의하세요. 활성화하면, API 포트(8045)에서 서비스에 연결할 수 있는 모든 사람이 성공적으로 통화를 시작할 수 있습니다. 활성화하기 전에 이 설정의 보안 영향을 이해하세요."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:205
 msgid "For debugging purposes, you can enable more detailed logging:"
-msgstr ""
+msgstr "디버깅 목적으로, 더 자세한 로깅을 활성화할 수 있습니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:217
 msgid "To view the logs:"
-msgstr ""
+msgstr "로그를 보려면:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:223
 msgid ""
 "You can also use a mounted configuration file instead of environment "
 "variables:"
-msgstr ""
+msgstr "환경 변수 대신 마운트된 구성 파일을 사용할 수도 있습니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:234
 msgid ""
 "For a complete sample configuration file, see the [RTCD "
 "config.sample.toml](https://github.com/mattermost/rtcd/blob/master/config/config.sample.toml)"
 " in the official repository."
-msgstr ""
+msgstr "전체 샘플 구성 파일은 공식 저장소의 [RTCD config.sample.toml](https://github.com/mattermost/rtcd/blob/master/config/config.sample.toml)을 참조하세요."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:236
 msgid "Kubernetes Deployment"
-msgstr ""
+msgstr "Kubernetes 배포"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:238
 msgid ""
@@ -203,15 +203,15 @@ msgid ""
 "including Helm chart configurations, resource requirements, and scaling "
 "considerations, see the [Calls Deployment on Kubernetes](calls-"
 "kubernetes.md) guide."
-msgstr ""
+msgstr "Helm 차트 구성, 리소스 요구 사항 및 확장 고려 사항을 포함하여 Kubernetes 환경에서 RTCD를 배포하는 방법에 대한 자세한 내용은 [Kubernetes에서의 통화 배포](calls-kubernetes.md) 가이드를 참조하세요."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:240
 msgid "Configuration"
-msgstr ""
+msgstr "구성"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:242
 msgid "RTCD Configuration File"
-msgstr ""
+msgstr "RTCD 구성 파일"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:244
 msgid ""
@@ -219,7 +219,7 @@ msgid ""
 "using the official "
 "[config.sample.toml](https://github.com/mattermost/rtcd/blob/master/config/config.sample.toml)"
 " as your base configuration file."
-msgstr ""
+msgstr "RTCD 서비스는 TOML 구성 파일을 사용합니다. OKR.BEST는 기본 구성 파일로 공식 [config.sample.toml](https://github.com/mattermost/rtcd/blob/master/config/config.sample.toml)을 사용할 것을 권장합니다."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:247
 msgid ""
@@ -229,70 +229,70 @@ msgid ""
 " automatic address discovery via STUN is unreliable. Setting "
 "`ice_host_override` directly to your server's public IP address or "
 "hostname is the preferred approach."
-msgstr ""
+msgstr "알아두어야 할 주목할 만한 설정은 `[rtc]` 섹션 아래의 `ice_host_override`입니다. 특히 RTCD가 NAT 뒤에 배포되거나, 복잡한 네트워크 토폴로지에서, 또는 STUN을 통한 자동 주소 검색이 신뢰할 수 없는 경우 이 설정을 명시적으로 구성해야 할 수 있습니다. `ice_host_override`를 서버의 공용 IP 주소 또는 호스트 이름으로 직접 설정하는 것이 선호되는 방식입니다."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:250
 msgid "TURN Configuration"
-msgstr ""
+msgstr "TURN 구성"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:252
 msgid ""
 "For clients behind strict firewalls, you may need to configure TURN "
 "servers. In the RTCD configuration file, reference your TURN servers as "
 "follows:"
-msgstr ""
+msgstr "엄격한 방화벽 뒤에 있는 클라이언트의 경우, TURN 서버를 구성해야 할 수 있습니다. RTCD 구성 파일에서, 다음과 같이 TURN 서버를 참조합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:263
 msgid ""
 "We recommend using [coturn](https://github.com/coturn/coturn) for your "
 "TURN server implementation."
-msgstr ""
+msgstr "TURN 서버 구현에는 [coturn](https://github.com/coturn/coturn)을 사용하는 것을 권장합니다."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:265
 msgid "System Tuning"
-msgstr ""
+msgstr "시스템 튜닝"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:267
 msgid "For high-volume deployments, tune your Linux system:"
-msgstr ""
+msgstr "대용량 배포의 경우, Linux 시스템을 튜닝합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:269
 msgid "Add the following to `/etc/sysctl.conf`:"
-msgstr ""
+msgstr "`/etc/sysctl.conf`에 다음을 추가합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:278
 msgid "Apply the settings:"
-msgstr ""
+msgstr "설정을 적용합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:284
 msgid "Validation and Testing"
-msgstr ""
+msgstr "검증 및 테스트"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:286
 msgid "After deploying RTCD, validate the installation:"
-msgstr ""
+msgstr "RTCD를 배포한 후, 설치를 검증합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:288
 msgid "**Check service status and version**:"
-msgstr ""
+msgstr "**서비스 상태 및 버전 확인**:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:296
 msgid "**Test UDP connectivity**:"
-msgstr ""
+msgstr "**UDP 연결 테스트**:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:298
 msgid ""
 "Before testing, ensure the RTCD service is stopped, as it binds to the "
 "same port."
-msgstr ""
+msgstr "테스트하기 전에, RTCD 서비스가 동일한 포트에 바인딩되므로 중지되었는지 확인하세요."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:304
 msgid "On the RTCD server:"
-msgstr ""
+msgstr "RTCD 서버에서:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:310
 msgid "On a client machine:"
-msgstr ""
+msgstr "클라이언트 시스템에서:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:313
 msgid "sudo nmap -sU -p 8443 RTCD_SERVER_IP"
@@ -300,69 +300,69 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:324
 msgid "**Test TCP connectivity** (if enabled):"
-msgstr ""
+msgstr "**TCP 연결 테스트**(활성화된 경우):"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:326
 msgid "Run this check from a client machine:"
-msgstr ""
+msgstr "클라이언트 시스템에서 이 검사를 실행합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:332
 msgid "If TCP fallback is enabled and reachable, `nmap` reports as `open`."
-msgstr ""
+msgstr "TCP 폴백이 활성화되어 연결 가능한 경우, `nmap`은 `open`으로 보고합니다."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:334
 msgid "**Monitor metrics**:"
-msgstr ""
+msgstr "**메트릭 모니터링**:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:336
 msgid ""
 "Refer to [Calls Metrics and Monitoring](calls-metrics-monitoring.md) for "
 "setting up Calls metrics and monitoring."
-msgstr ""
+msgstr "통화 메트릭 및 모니터링 설정은 [통화 메트릭 및 모니터링](calls-metrics-monitoring.md)을 참조하세요."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:338
 msgid "Horizontal Scaling"
-msgstr ""
+msgstr "수평 확장"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:340
 msgid "To scale RTCD horizontally:"
-msgstr ""
+msgstr "RTCD를 수평으로 확장하려면:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:342
 msgid "**Deploy multiple RTCD instances**:"
-msgstr ""
+msgstr "**여러 RTCD 인스턴스 배포**:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:344
 msgid "Deploy multiple RTCD servers, each with their own unique IP address."
-msgstr ""
+msgstr "각각 고유한 IP 주소를 가진 여러 RTCD 서버를 배포합니다."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:346
 msgid "**Configure DNS record**:"
-msgstr ""
+msgstr "**DNS 레코드 구성**:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:348
 msgid "Set up a DNS record that points to multiple RTCD IP addresses:"
-msgstr ""
+msgstr "여러 RTCD IP 주소를 가리키는 DNS 레코드를 설정합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:356
 msgid "**Configure health checks**:"
-msgstr ""
+msgstr "**상태 확인 구성**:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:358
 msgid ""
 "Set up health checks to automatically remove unhealthy RTCD instances "
 "from DNS."
-msgstr ""
+msgstr "비정상 RTCD 인스턴스를 DNS에서 자동으로 제거하도록 상태 확인을 설정합니다."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:360
 msgid "**Configure Mattermost**:"
-msgstr ""
+msgstr "**OKR.BEST 구성**:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:362
 msgid ""
 "In the Mattermost System Console, set the **RTCD Service URL** to your "
 "DNS name (e.g., `rtcd.example.com`)."
-msgstr ""
+msgstr "OKR.BEST 관리자 도구에서, **RTCD Service URL**을 DNS 이름(예: `rtcd.example.com`)으로 설정합니다."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:364
 msgid ""
@@ -371,21 +371,21 @@ msgid ""
 "server with the lowest CPU usage. All participants in the call will "
 "connect to that RTCD server; a single call cannot be shared across "
 "multiple servers."
-msgstr ""
+msgstr "통화가 시작되면, OKR.BEST 서버는 (구성된 DNS 레코드를 통해) 사용 가능한 RTCD 서버를 검사하고 CPU 사용량이 가장 낮은 RTCD 서버에서 통화를 시작합니다. 통화의 모든 참가자는 해당 RTCD 서버에 연결되며, 단일 통화는 여러 서버에서 공유될 수 없습니다."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:366
 msgid "Integration with Mattermost"
-msgstr ""
+msgstr "OKR.BEST와의 통합"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:368
 msgid ""
 "Once RTCD is properly set up and validated, configure Mattermost to use "
 "it:"
-msgstr ""
+msgstr "RTCD가 올바르게 설정되고 검증되면, 이를 사용하도록 OKR.BEST를 구성합니다:"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:370
 msgid "Go to **System Console > Plugins > Calls**"
-msgstr ""
+msgstr "**관리자 도구 > 플러그인 > Calls**로 이동합니다"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:372
 msgid ""
@@ -393,60 +393,60 @@ msgid ""
 "single server or DNS load-balanced hostname). Ensure you provide any "
 "generated credentials formulated in the URI (e.g., "
 "`http://clientID:authKey@rtcd.local`)."
-msgstr ""
+msgstr "**RTCD Service URL**을 RTCD 서비스 주소(단일 서버 또는 DNS 로드 밸런싱된 호스트 이름)로 설정합니다. URI에 구성된 생성된 자격 증명(예: `http://clientID:authKey@rtcd.local`)을 제공하는지 확인하세요."
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:374
 msgid "Save the configuration"
-msgstr ""
+msgstr "구성을 저장합니다"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:376
 msgid "Test by creating a new call in any Mattermost channel"
-msgstr ""
+msgstr "OKR.BEST 채널에서 새 통화를 생성하여 테스트합니다"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:378
 msgid ""
 "Verify that the call is being routed through RTCD by checking the RTCD "
 "logs and metrics"
-msgstr ""
+msgstr "RTCD 로그와 메트릭을 확인하여 통화가 RTCD를 통해 라우팅되고 있는지 검증합니다"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:380
 msgid "Other Calls Documentation"
-msgstr ""
+msgstr "기타 통화 문서"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:382
 msgid ""
 "[Calls Deployment Guide](calls-deployment-guide.md): Overview of "
 "deployment options and architecture"
-msgstr ""
+msgstr "[통화 배포 가이드](calls-deployment-guide.md): 배포 옵션 및 아키텍처 개요"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:383
 msgid ""
 "[Calls Offloader Setup and Configuration](calls-offloader-setup.md): "
 "Setup guide for call recording and transcription"
-msgstr ""
+msgstr "[통화 오프로더 설정 및 구성](calls-offloader-setup.md): 통화 녹화 및 전사 설정 가이드"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:384
 msgid ""
 "[Calls Metrics and Monitoring](calls-metrics-monitoring.md): Guide to "
 "monitoring Calls performance using metrics and observability"
-msgstr ""
+msgstr "[통화 메트릭 및 모니터링](calls-metrics-monitoring.md): 메트릭 및 관찰 가능성을 사용하여 통화 성능을 모니터링하는 가이드"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:385
 msgid ""
 "[Calls Deployment on Kubernetes](calls-kubernetes.md): Detailed guide for"
 " deploying Calls in Kubernetes environments"
-msgstr ""
+msgstr "[Kubernetes에서의 통화 배포](calls-kubernetes.md): Kubernetes 환경에서 통화를 배포하기 위한 자세한 가이드"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:386
 msgid ""
 "[Calls Logging](calls-logging.md): Detailed guidance for collecting Calls"
 " logs and client diagnostics"
-msgstr ""
+msgstr "[통화 로깅](calls-logging.md): 통화 로그 및 클라이언트 진단 수집에 대한 자세한 지침"
 
 #: ../../source/administration-guide/configure/calls-rtcd-setup.md:388
 msgid ""
 "For detailed Mattermost Calls configuration options, see the [Calls "
 "Plugin Configuration Settings](plugins-configuration-settings.rst#calls) "
 "documentation."
-msgstr ""
+msgstr "자세한 OKR.BEST 통화(Calls) 구성 옵션은 [통화 플러그인 구성 설정](plugins-configuration-settings.rst#calls) 문서를 참조하세요."
 
