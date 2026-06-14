@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:1
 msgid "Calls Metrics and Monitoring"
-msgstr ""
+msgstr "통화 메트릭 및 모니터링"
 
 #: ../../source/_static/badges/ent-plus.md:6
 msgid ""
@@ -40,76 +40,76 @@ msgid ""
 "performance and health through metrics and observability tools. Effective"
 " monitoring is essential for maintaining optimal call quality and quickly"
 " addressing any issues that arise."
-msgstr ""
+msgstr "이 가이드는 메트릭 및 관찰 가능성 도구를 통해 OKR.BEST 통화(Calls) 성능과 상태를 모니터링하는 방법에 대한 자세한 정보를 제공합니다. 효과적인 모니터링은 최적의 통화 품질을 유지하고 발생하는 모든 문제를 신속하게 해결하는 데 필수적입니다."
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:8
 msgid "[Metrics overview](#metrics-overview)"
-msgstr ""
+msgstr "[메트릭 개요](#metrics-overview)"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:9
 msgid "[Setting up monitoring](#setting-up-monitoring)"
-msgstr ""
+msgstr "[모니터링 설정](#setting-up-monitoring)"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:10
 msgid "[Key metrics to monitor](#key-metrics-to-monitor)"
-msgstr ""
+msgstr "[모니터링할 주요 메트릭](#key-metrics-to-monitor)"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:11
 msgid "[Performance baselines](#performance-baselines)"
-msgstr ""
+msgstr "[성능 기준선](#performance-baselines)"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:12
 msgid "[Troubleshooting metrics collection](#troubleshooting-metrics-collection)"
-msgstr ""
+msgstr "[메트릭 수집 문제 해결](#troubleshooting-metrics-collection)"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:14
 msgid "Metrics Overview"
-msgstr ""
+msgstr "메트릭 개요"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:16
 msgid ""
 "Mattermost Calls provides metrics through Prometheus for both the Calls "
 "plugin and the RTCD service. These metrics help track:"
-msgstr ""
+msgstr "OKR.BEST 통화(Calls)는 통화 플러그인과 RTCD 서비스 모두에 대해 Prometheus를 통해 메트릭을 제공합니다. 이러한 메트릭은 다음을 추적하는 데 도움이 됩니다:"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:18
 msgid "Active call sessions and participants"
-msgstr ""
+msgstr "활성 통화 세션 및 참가자"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:19
 msgid "Media track statistics"
-msgstr ""
+msgstr "미디어 트랙 통계"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:20
 msgid "Connection states and errors"
-msgstr ""
+msgstr "연결 상태 및 오류"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:21
 msgid "Resource utilization (CPU, memory, network)"
-msgstr ""
+msgstr "리소스 사용률(CPU, 메모리, 네트워크)"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:22
 msgid "WebSocket connections and events"
-msgstr ""
+msgstr "WebSocket 연결 및 이벤트"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:24
 msgid "The metrics are exposed through HTTP endpoints:"
-msgstr ""
+msgstr "메트릭은 HTTP 엔드포인트를 통해 노출됩니다:"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:26
 msgid "**Calls Plugin**: `/plugins/com.mattermost.calls/metrics`"
-msgstr ""
+msgstr "**통화 플러그인**: `/plugins/com.mattermost.calls/metrics`"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:27
 msgid "**RTCD Service**: `/metrics` (default) or a configured endpoint"
-msgstr ""
+msgstr "**RTCD 서비스**: `/metrics`(기본값) 또는 구성된 엔드포인트"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:29
 msgid ""
 "Resource utilization metrics (CPU, memory, network) are mainly provided "
 "by an external service ([`node-"
 "exporter`](https://prometheus.io/docs/guides/node-exporter/))."
-msgstr ""
+msgstr "리소스 사용률 메트릭(CPU, 메모리, 네트워크)은 주로 외부 서비스([`node-exporter`](https://prometheus.io/docs/guides/node-exporter/))에서 제공됩니다."
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:31
 msgid ""
@@ -122,11 +122,11 @@ msgid ""
 "`http://localhost:8067/plugins/com.mattermost.calls/metrics` The RTCD "
 "Service `/metrics` endpoint is exposed on the HTTP API (e.g. "
 "`http://localhost:8045/metrics`)."
-msgstr ""
+msgstr "통화 플러그인의 메트릭은 기존 OKR.BEST 서버 메트릭 엔드포인트 아래의 `/plugins/com.mattermost.calls/metrics` 하위 경로를 통해 노출됩니다. 이는 [성능 수신 주소](https://docs.mattermost.com/configure/environment-configuration-settings.html#listen-address-for-performance) 구성 설정으로 제어됩니다. 기본값은 포트 8067입니다. 예: `http://localhost:8067/plugins/com.mattermost.calls/metrics` RTCD 서비스 `/metrics` 엔드포인트는 HTTP API에 노출됩니다(예: `http://localhost:8045/metrics`)."
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:34
 msgid "Setting Up Monitoring"
-msgstr ""
+msgstr "모니터링 설정"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:36
 msgid ""
@@ -134,46 +134,46 @@ msgid ""
 "please refer to the [Deploy Prometheus and Grafana for Performance "
 "Monitoring](https://docs.mattermost.com/scale/deploy-prometheus-grafana-"
 "for-performance-monitoring.html) guide."
-msgstr ""
+msgstr "OKR.BEST용 Prometheus 및 Grafana 배포에 대한 지침은 [성능 모니터링을 위한 Prometheus 및 Grafana 배포](https://docs.mattermost.com/scale/deploy-prometheus-grafana-for-performance-monitoring.html) 가이드를 참조하세요."
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:38
 msgid ""
 "Once Prometheus and Grafana are set up, you will need to configure "
 "Prometheus to scrape metrics from the Calls-related services."
-msgstr ""
+msgstr "Prometheus 및 Grafana가 설정되면, 통화 관련 서비스에서 메트릭을 스크래핑하도록 Prometheus를 구성해야 합니다."
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:40
 msgid "Prometheus Scrape Configuration"
-msgstr ""
+msgstr "Prometheus 스크래핑 구성"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:42
 msgid "Add the following jobs to your `prometheus.yml` configuration:"
-msgstr ""
+msgstr "`prometheus.yml` 구성에 다음 작업을 추가합니다:"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:75
 msgid "Replace the placeholder IP addresses with your actual server addresses:"
-msgstr ""
+msgstr "자리 표시자 IP 주소를 실제 서버 주소로 바꿉니다:"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:77
 msgid "`MATTERMOST_SERVER_IP`: IP address of your Mattermost server"
-msgstr ""
+msgstr "`MATTERMOST_SERVER_IP`: OKR.BEST 서버의 IP 주소"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:78
 msgid "`RTCD_SERVER_IP`: IP address of your RTCD server"
-msgstr ""
+msgstr "`RTCD_SERVER_IP`: RTCD 서버의 IP 주소"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:79
 msgid ""
 "`CALLS_OFFLOADER_SERVER_IP`: IP address of your calls-offloader server "
 "(if deployed)"
-msgstr ""
+msgstr "`CALLS_OFFLOADER_SERVER_IP`: calls-offloader 서버의 IP 주소(배포된 경우)"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:82
 msgid ""
 "**Metrics Configuration Notice**: Use the `service_name` labels as shown "
 "in the configuration above. These labels help organize metrics in "
 "dashboards and enable proper service identification."
-msgstr ""
+msgstr "**메트릭 구성 알림**: 위 구성에 표시된 대로 `service_name` 레이블을 사용하세요. 이러한 레이블은 대시보드에서 메트릭을 정리하고 적절한 서비스 식별을 가능하게 합니다."
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:86
 msgid ""
@@ -181,28 +181,28 @@ msgid ""
 "(CPU, memory, disk, network). See [node_exporter setup "
 "guide](https://prometheus.io/docs/guides/node-exporter/) for installation"
 " instructions."
-msgstr ""
+msgstr "**node_exporter**: 선택 사항이지만 시스템 수준 메트릭(CPU, 메모리, 디스크, 네트워크)에 권장됩니다. 설치 지침은 [node_exporter 설정 가이드](https://prometheus.io/docs/guides/node-exporter/)를 참조하세요."
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:87
 msgid ""
 "**calls-offloader**: Only needed if you have call recording/transcription"
 " enabled."
-msgstr ""
+msgstr "**calls-offloader**: 통화 녹화/전사가 활성화된 경우에만 필요합니다."
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:90
 msgid "Mattermost Calls Grafana Dashboard"
-msgstr ""
+msgstr "OKR.BEST 통화(Calls) Grafana 대시보드"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:92
 msgid ""
 "You can use the official [Mattermost Calls Performance "
 "Monitoring](https://grafana.com/grafana/dashboards/23225-mattermost-"
 "calls-performance-monitoring/) dashboard to visualize these metrics."
-msgstr ""
+msgstr "공식 [Mattermost Calls Performance Monitoring](https://grafana.com/grafana/dashboards/23225-mattermost-calls-performance-monitoring/) 대시보드를 사용하여 이러한 메트릭을 시각화할 수 있습니다."
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:94
 msgid "To import it directly into Grafana, use dashboard ID: `23225`."
-msgstr ""
+msgstr "Grafana로 직접 가져오려면, 대시보드 ID `23225`를 사용하세요."
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:95
 msgid ""
@@ -210,170 +210,170 @@ msgid ""
 "performance assets repository](https://github.com/mattermost/mattermost-"
 "performance-assets/blob/master/grafana/mattermost-calls-performance-"
 "monitoring.json) for manual import or customization."
-msgstr ""
+msgstr "대시보드는 수동 가져오기 또는 사용자 지정을 위해 [Mattermost 성능 자산 저장소](https://github.com/mattermost/mattermost-performance-assets/blob/master/grafana/mattermost-calls-performance-monitoring.json)에서 JSON 소스로도 제공됩니다."
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:97
 msgid "Key Metrics to Monitor"
-msgstr ""
+msgstr "모니터링할 주요 메트릭"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:99
 msgid "RTCD Metrics"
-msgstr ""
+msgstr "RTCD 메트릭"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:101
 msgid "Process Metrics"
-msgstr ""
+msgstr "프로세스 메트릭"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:103
 msgid ""
 "These metrics help monitor the health and resource usage of the RTCD "
 "process:"
-msgstr ""
+msgstr "이러한 메트릭은 RTCD 프로세스의 상태와 리소스 사용량을 모니터링하는 데 도움이 됩니다:"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:105
 msgid "`rtcd_process_cpu_seconds_total`: Total CPU time spent"
-msgstr ""
+msgstr "`rtcd_process_cpu_seconds_total`: 소비된 총 CPU 시간"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:106
 msgid "`rtcd_process_open_fds`: Number of open file descriptors"
-msgstr ""
+msgstr "`rtcd_process_open_fds`: 열린 파일 디스크립터 수"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:107
 msgid "`rtcd_process_max_fds`: Maximum number of file descriptors"
-msgstr ""
+msgstr "`rtcd_process_max_fds`: 최대 파일 디스크립터 수"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:108
 msgid "`rtcd_process_resident_memory_bytes`: Memory usage in bytes"
-msgstr ""
+msgstr "`rtcd_process_resident_memory_bytes`: 메모리 사용량(바이트)"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:109
 msgid "`rtcd_process_virtual_memory_bytes`: Virtual memory used"
-msgstr ""
+msgstr "`rtcd_process_virtual_memory_bytes`: 사용된 가상 메모리"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:113
 msgid "WebRTC Connection Metrics"
-msgstr ""
+msgstr "WebRTC 연결 메트릭"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:115
 msgid "These metrics track the WebRTC connections and media flow:"
-msgstr ""
+msgstr "이러한 메트릭은 WebRTC 연결과 미디어 흐름을 추적합니다:"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:117
 #, python-brace-format
 msgid ""
 "`rtcd_rtc_conn_states_total{state=\"X\"}`: Count of connections in "
 "different states"
-msgstr ""
+msgstr "`rtcd_rtc_conn_states_total{state=\"X\"}`: 다양한 상태의 연결 수"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:118
 #, python-brace-format
 msgid "`rtcd_rtc_errors_total{type=\"X\"}`: Count of RTC errors by type"
-msgstr ""
+msgstr "`rtcd_rtc_errors_total{type=\"X\"}`: 유형별 RTC 오류 수"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:119
 #, python-brace-format
 msgid ""
 "`rtcd_rtc_rtp_tracks_total{direction=\"X\"}`: Count of RTP tracks "
 "(incoming/outgoing)"
-msgstr ""
+msgstr "`rtcd_rtc_rtp_tracks_total{direction=\"X\"}`: RTP 트랙 수(수신/송신)"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:120
 msgid "`rtcd_rtc_sessions_total`: Total number of active RTC sessions"
-msgstr ""
+msgstr "`rtcd_rtc_sessions_total`: 활성 RTC 세션의 총 수"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:124
 msgid "WebSocket Metrics"
-msgstr ""
+msgstr "WebSocket 메트릭"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:126
 msgid "These metrics track the signaling channel:"
-msgstr ""
+msgstr "이러한 메트릭은 시그널링 채널을 추적합니다:"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:128
 msgid ""
 "`rtcd_ws_connections_total`: Total number of active WebSocket "
 "connections. This is about RTCD <-> MM, so the connection count should "
 "match the number of MM nodes."
-msgstr ""
+msgstr "`rtcd_ws_connections_total`: 활성 WebSocket 연결의 총 수. 이는 RTCD <-> MM에 관한 것이므로, 연결 수는 MM 노드 수와 일치해야 합니다."
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:129
 #, python-brace-format
 msgid ""
 "`rtcd_ws_messages_total{direction=\"X\"}`: Count of WebSocket messages "
 "(sent/received)"
-msgstr ""
+msgstr "`rtcd_ws_messages_total{direction=\"X\"}`: WebSocket 메시지 수(송신/수신)"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:133
 msgid "Calls Plugin Metrics"
-msgstr ""
+msgstr "통화 플러그인 메트릭"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:135
 msgid ""
 "Similar metrics are available for the Calls plugin with the following "
 "prefixes:"
-msgstr ""
+msgstr "통화 플러그인에 대해 다음 접두사로 유사한 메트릭을 사용할 수 있습니다:"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:137
 msgid "Process metrics: `mattermost_plugin_calls_process_*`"
-msgstr ""
+msgstr "프로세스 메트릭: `mattermost_plugin_calls_process_*`"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:138
 msgid "WebRTC connection metrics: `mattermost_plugin_calls_rtc_*`"
-msgstr ""
+msgstr "WebRTC 연결 메트릭: `mattermost_plugin_calls_rtc_*`"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:139
 msgid "WebSocket metrics: `mattermost_plugin_calls_websocket_*`"
-msgstr ""
+msgstr "WebSocket 메트릭: `mattermost_plugin_calls_websocket_*`"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:140
 msgid "Store metrics: `mattermost_plugin_calls_store_ops_total`"
-msgstr ""
+msgstr "스토어 메트릭: `mattermost_plugin_calls_store_ops_total`"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:142
 msgid "Performance Baselines"
-msgstr ""
+msgstr "성능 기준선"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:144
 msgid ""
 "The following performance benchmarks provide baseline metrics for RTCD "
 "deployments under various load conditions and configurations."
-msgstr ""
+msgstr "다음 성능 벤치마크는 다양한 부하 조건과 구성에서 RTCD 배포에 대한 기준 메트릭을 제공합니다."
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:146
 msgid "**Deployment specifications**"
-msgstr ""
+msgstr "**배포 사양**"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:148
 msgid "1x r6i.large nginx proxy"
-msgstr ""
+msgstr "r6i.large nginx 프록시 1개"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:149
 msgid "3x c5.large MM app nodes (HA)"
-msgstr ""
+msgstr "c5.large MM 앱 노드 3개(HA)"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:150
 msgid "2x db.x2g.xlarge RDS Aurora MySQL v8 (one writer, one reader)"
-msgstr ""
+msgstr "db.x2g.xlarge RDS Aurora MySQL v8 2개(쓰기 1개, 읽기 1개)"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:151
 msgid "1x (c7i.xlarge, c7i.2xlarge, c7i.4xlarge) RTCD"
-msgstr ""
+msgstr "(c7i.xlarge, c7i.2xlarge, c7i.4xlarge) RTCD 1개"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:152
 msgid "2x c7i.2xlarge load-test agents"
-msgstr ""
+msgstr "c7i.2xlarge 부하 테스트 에이전트 2개"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:154
 msgid "**App specifications**"
-msgstr ""
+msgstr "**앱 사양**"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:156
 msgid "Mattermost v9.6"
-msgstr ""
+msgstr "OKR.BEST v9.6"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:157
 msgid "Mattermost Calls v0.28.0"
-msgstr ""
+msgstr "OKR.BEST 통화 v0.28.0"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:158
 msgid "RTCD v0.16.0"
@@ -381,143 +381,143 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:159
 msgid "load-test agent v0.28.0"
-msgstr ""
+msgstr "부하 테스트 에이전트 v0.28.0"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:161
 msgid "**Media specifications**"
-msgstr ""
+msgstr "**미디어 사양**"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:163
 msgid "Speech sample bitrate: 80Kbps"
-msgstr ""
+msgstr "음성 샘플 비트레이트: 80Kbps"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:164
 msgid "Screen sharing sample bitrate: 1.6Mbps"
-msgstr ""
+msgstr "화면 공유 샘플 비트레이트: 1.6Mbps"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:166
 msgid "**Results**"
-msgstr ""
+msgstr "**결과**"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:168
 msgid "Below are the detailed benchmarks based on internal performance testing:"
-msgstr ""
+msgstr "다음은 내부 성능 테스트를 기반으로 한 자세한 벤치마크입니다:"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:377
 msgid "Troubleshooting Metrics Collection"
-msgstr ""
+msgstr "메트릭 수집 문제 해결"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:379
 msgid "Verify RTCD Metrics are Being Collected"
-msgstr ""
+msgstr "RTCD 메트릭이 수집되고 있는지 확인"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:381
 msgid ""
 "To verify that Prometheus is successfully collecting RTCD metrics, use "
 "this command:"
-msgstr ""
+msgstr "Prometheus가 RTCD 메트릭을 성공적으로 수집하고 있는지 확인하려면, 이 명령을 사용하세요:"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:387
 msgid ""
 "This command queries Prometheus for all available metric names and "
 "filters for RTCD-related metrics."
-msgstr ""
+msgstr "이 명령은 사용 가능한 모든 메트릭 이름에 대해 Prometheus를 쿼리하고 RTCD 관련 메트릭을 필터링합니다."
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:389
 msgid "If no RTCD metrics appear, check:"
-msgstr ""
+msgstr "RTCD 메트릭이 나타나지 않으면, 다음을 확인하세요:"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:390
 msgid "RTCD is running"
-msgstr ""
+msgstr "RTCD가 실행 중입니다"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:391
 msgid "Prometheus is configured to scrape the RTCD metrics endpoint"
-msgstr ""
+msgstr "Prometheus가 RTCD 메트릭 엔드포인트를 스크래핑하도록 구성되어 있습니다"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:392
 msgid "RTCD metrics port is accessible from Prometheus (default: 8045)"
-msgstr ""
+msgstr "RTCD 메트릭 포트가 Prometheus에서 접근 가능합니다(기본값: 8045)"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:394
 msgid "Check Prometheus Scrape Targets"
-msgstr ""
+msgstr "Prometheus 스크래핑 대상 확인"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:396
 msgid "To verify all Calls-related services are being scraped successfully:"
-msgstr ""
+msgstr "모든 통화 관련 서비스가 성공적으로 스크래핑되고 있는지 확인하려면:"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:398
 msgid "Open the Prometheus web interface (typically `http://PROMETHEUS_IP:9090`)"
-msgstr ""
+msgstr "Prometheus 웹 인터페이스를 엽니다(일반적으로 `http://PROMETHEUS_IP:9090`)"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:399
 msgid "Navigate to **Status > Targets**"
-msgstr ""
+msgstr "**Status > Targets**로 이동합니다"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:400
 msgid "Look for your configured Calls services:"
-msgstr ""
+msgstr "구성된 통화 서비스를 찾습니다:"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:401
 msgid "Mattermost server (for Calls plugin metrics)"
-msgstr ""
+msgstr "OKR.BEST 서버(통화 플러그인 메트릭용)"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:402
 msgid "RTCD service"
-msgstr ""
+msgstr "RTCD 서비스"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:404
 msgid ""
 "Each target should show status \"UP\" in green. If a target shows "
 "\"DOWN\" or errors:"
-msgstr ""
+msgstr "각 대상은 녹색으로 \"UP\" 상태를 표시해야 합니다. 대상이 \"DOWN\" 또는 오류를 표시하는 경우:"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:405
 msgid "Verify the service is running"
-msgstr ""
+msgstr "서비스가 실행 중인지 확인합니다"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:406
 msgid "Check network connectivity between Prometheus and the target"
-msgstr ""
+msgstr "Prometheus와 대상 간의 네트워크 연결을 확인합니다"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:407
 msgid "Verify the metrics endpoint is accessible"
-msgstr ""
+msgstr "메트릭 엔드포인트에 접근할 수 있는지 확인합니다"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:409
 msgid "Other Calls Documentation"
-msgstr ""
+msgstr "기타 통화 문서"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:411
 msgid ""
 "[Calls Deployment Guide](calls-deployment-guide.md): Overview of "
 "deployment options and architecture"
-msgstr ""
+msgstr "[통화 배포 가이드](calls-deployment-guide.md): 배포 옵션 및 아키텍처 개요"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:412
 msgid ""
 "[RTCD Setup and Configuration](calls-rtcd-setup.md): Comprehensive guide "
 "for setting up the dedicated RTCD service"
-msgstr ""
+msgstr "[RTCD 설정 및 구성](calls-rtcd-setup.md): 전용 RTCD 서비스 설정을 위한 종합 가이드"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:413
 msgid ""
 "[Calls Offloader Setup and Configuration](calls-offloader-setup.md): "
 "Setup guide for call recording and transcription"
-msgstr ""
+msgstr "[통화 오프로더 설정 및 구성](calls-offloader-setup.md): 통화 녹화 및 전사 설정 가이드"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:414
 msgid ""
 "[Calls Deployment on Kubernetes](calls-kubernetes.md): Detailed guide for"
 " deploying Calls in Kubernetes environments"
-msgstr ""
+msgstr "[Kubernetes에서의 통화 배포](calls-kubernetes.md): Kubernetes 환경에서 통화를 배포하기 위한 자세한 가이드"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:415
 msgid ""
 "[Calls Logging](calls-logging.md): Detailed guidance for collecting Calls"
 " logs and client diagnostics"
-msgstr ""
+msgstr "[통화 로깅](calls-logging.md): 통화 로그 및 클라이언트 진단 수집에 대한 자세한 지침"
 
 #: ../../source/administration-guide/configure/calls-metrics-monitoring.md:417
 msgid ""
@@ -525,5 +525,5 @@ msgid ""
 "with retention needs. If you need to be tight on storage, you can use a "
 "short retention period. If you have lots of storage you can keep the "
 "retention length longer."
-msgstr ""
+msgstr "**참고:** 디스크 사용량과 보존 요구 사항의 균형을 맞추도록 Prometheus 스토리지를 적절히 구성하세요. 스토리지가 빠듯한 경우, 짧은 보존 기간을 사용할 수 있습니다. 스토리지가 많은 경우 보존 기간을 더 길게 유지할 수 있습니다."
 
