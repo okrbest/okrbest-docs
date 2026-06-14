@@ -25,7 +25,7 @@ msgid ""
 "server from being overloaded with too many requests, and decreases the "
 "risk and impact of third-party applications or malicious attacks on your "
 "server."
-msgstr ""
+msgstr "셀프 호스팅 배포에서, 속도 제한은 OKR.BEST 서버가 너무 많은 요청으로 과부하되는 것을 방지하고, 서버에 대한 타사 애플리케이션 또는 악의적인 공격의 위험과 영향을 줄입니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:6
 msgid ""
@@ -33,35 +33,35 @@ msgid ""
 "Environment > Rate Limiting**, or by editing the ``config.json`` file as "
 "described in the following tables. Changes to configuration settings in "
 "this section require a server restart before taking effect."
-msgstr ""
+msgstr "**관리자 도구 > Environment > Rate Limiting**으로 이동하거나 다음 표에 설명된 대로 ``config.json`` 파일을 편집하여 속도 제한 설정을 구성합니다. 이 섹션의 구성 설정 변경 사항은 적용되기 전에 서버 재시작이 필요합니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:10
 msgid ""
 "Mattermost rate limiting configuration settings are intended for small "
 "deployments of Mattermost up to a few hundred users, and is not intended "
 "for larger, Enterprise-scale deployments."
-msgstr ""
+msgstr "OKR.BEST 속도 제한 구성 설정은 최대 수백 명의 사용자를 가진 소규모 OKR.BEST 배포를 위한 것이며, 대규모 Enterprise 규모 배포를 위한 것이 아닙니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:22
 msgid "Enable rate limiting"
-msgstr ""
+msgstr "속도 제한 활성화"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:25
 msgid ""
 "Enable or disable rate limiting to throttle APIs to a specified number of"
 " requests per second."
-msgstr ""
+msgstr "API를 초당 지정된 요청 수로 제한하도록 속도 제한을 활성화 또는 비활성화합니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:28
 msgid ""
 "**true**: APIs are throttled at the rate specified by the `Maximum "
 "queries per second <#maximum-queries-per-second>`__ configuration "
 "setting."
-msgstr ""
+msgstr "**true**: API는 `초당 최대 쿼리 <#maximum-queries-per-second>`__ 구성 설정으로 지정된 속도로 제한됩니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:31
 msgid "**false**: **(Default)** API access isn’t throttled."
-msgstr ""
+msgstr "**false**: **(기본값)** API 접근이 제한되지 않습니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:25
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:45
@@ -71,193 +71,193 @@ msgstr ""
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:135
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:156
 msgid "System Config path: **Environment > Rate Limiting**"
-msgstr ""
+msgstr "관리자 도구 경로: **Environment > Rate Limiting**"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:26
 msgid "``config.json`` setting: ``RateLimitSettings`` > ``Enable`` > ``false``"
-msgstr ""
+msgstr "``config.json`` 설정: ``RateLimitSettings`` > ``Enable`` > ``false``"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:27
 msgid "Environment variable: ``MM_RATELIMITSETTINGS_ENABLE``"
-msgstr ""
+msgstr "환경 변수: ``MM_RATELIMITSETTINGS_ENABLE``"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:42
 msgid "Maximum queries per second"
-msgstr ""
+msgstr "초당 최대 쿼리"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:45
 msgid ""
 "Throttle the API at this number of requests per second when `rate "
 "limiting <#enable-rate-limiting>`__ is enabled."
-msgstr ""
+msgstr "`속도 제한 <#enable-rate-limiting>`__이 활성화된 경우 API를 초당 이 요청 수로 제한합니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:48
 msgid "Numerical input. Default is **10**."
-msgstr ""
+msgstr "숫자 입력. 기본값은 **10**입니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:50
 msgid ""
 "Increase this value to accept more requests each second, and decrease "
 "this value to allow fewer requests."
-msgstr ""
+msgstr "매초 더 많은 요청을 수락하려면 이 값을 늘리고, 더 적은 요청을 허용하려면 이 값을 줄입니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:46
 msgid "``config.json`` setting: ``RateLimitSettings`` > ``PerSec`` > ``10``"
-msgstr ""
+msgstr "``config.json`` 설정: ``RateLimitSettings`` > ``PerSec`` > ``10``"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:47
 msgid "Environment variable: ``MM_RATELIMITSETTINGS_PERSEC``"
-msgstr ""
+msgstr "환경 변수: ``MM_RATELIMITSETTINGS_PERSEC``"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:63
 msgid "Maximum burst size"
-msgstr ""
+msgstr "최대 버스트 크기"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:66
 msgid ""
 "The maximum number of requests allowed beyond the per second query limit "
 "when `rate limiting <#enable-rate-limiting>`__ is enabled."
-msgstr ""
+msgstr "`속도 제한 <#enable-rate-limiting>`__이 활성화된 경우 초당 쿼리 한도를 초과하여 허용되는 최대 요청 수입니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:70
 msgid "Numerical input. Default is **100**."
-msgstr ""
+msgstr "숫자 입력. 기본값은 **100**입니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:72
 msgid ""
 "Increase this value to allow for more concurrent requests to be handled, "
 "and decrease this value to limit this capacity."
-msgstr ""
+msgstr "더 많은 동시 요청을 처리할 수 있도록 이 값을 늘리고, 이 용량을 제한하려면 이 값을 줄입니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:67
 msgid "``config.json`` setting: ``RateLimitSettings`` > ``MaxBurst`` > ``100``"
-msgstr ""
+msgstr "``config.json`` 설정: ``RateLimitSettings`` > ``MaxBurst`` > ``100``"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:68
 msgid "Environment variable: ``MM_RATELIMITSETTINGS_MAXBURST``"
-msgstr ""
+msgstr "환경 변수: ``MM_RATELIMITSETTINGS_MAXBURST``"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:84
 msgid "Memory store size"
-msgstr ""
+msgstr "메모리 저장소 크기"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:87
 msgid ""
 "The maximum number of user sessions connected to the system as determined"
 " by vary rate limit settings when `rate limiting <#enable-rate-"
 "limiting>`__ is enabled."
-msgstr ""
+msgstr "`속도 제한 <#enable-rate-limiting>`__이 활성화된 경우 속도 제한 변경 설정에 의해 결정되는, 시스템에 연결된 최대 사용자 세션 수입니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:91
 msgid ""
 "Numerical input. Default is **10000**. Typically set to the number of "
 "users in the system."
-msgstr ""
+msgstr "숫자 입력. 기본값은 **10000**입니다. 일반적으로 시스템의 사용자 수로 설정됩니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:94
 msgid ""
 "We recommend setting this value to the expected number of users. A higher"
 " value may result in underutilized resources, and a lower value may "
 "result in user sessions/tokens expiring too frequently."
-msgstr ""
+msgstr "이 값을 예상 사용자 수로 설정하는 것을 권장합니다. 더 높은 값은 리소스가 충분히 활용되지 않게 할 수 있으며, 더 낮은 값은 사용자 세션/토큰이 너무 자주 만료되게 할 수 있습니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:88
 msgid ""
 "``config.json`` setting: ``RateLimitSettings`` > ``MemoryStoreSize`` > "
 "``10000``"
-msgstr ""
+msgstr "``config.json`` 설정: ``RateLimitSettings`` > ``MemoryStoreSize`` > ``10000``"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:89
 msgid "Environment variable: ``MM_RATELIMITSETTINGS_MEMORYSTORESIZE``"
-msgstr ""
+msgstr "환경 변수: ``MM_RATELIMITSETTINGS_MEMORYSTORESIZE``"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:111
 msgid "Vary rate limit by remote address"
-msgstr ""
+msgstr "원격 주소별 속도 제한 변경"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:114
 msgid ""
 "Configure Mattermost to rate limit API access by IP address when `rate "
 "limiting <#enable-rate-limiting>`__ is enabled."
-msgstr ""
+msgstr "`속도 제한 <#enable-rate-limiting>`__이 활성화된 경우 IP 주소별로 API 접근을 속도 제한하도록 OKR.BEST를 구성합니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:117
 msgid ""
 "**true**: **(Default)** Rate limit API access by IP address. Recommended "
 "when using a proxy."
-msgstr ""
+msgstr "**true**: **(기본값)** IP 주소별로 API 접근을 속도 제한합니다. 프록시를 사용할 때 권장됩니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:119
 msgid "**false**: Rate limiting does not vary by IP address."
-msgstr ""
+msgstr "**false**: 속도 제한이 IP 주소별로 달라지지 않습니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:115
 msgid ""
 "``config.json`` setting: ``RateLimitSettings`` > ``VaryByRemoteAddr`` > "
 "``true``"
-msgstr ""
+msgstr "``config.json`` 설정: ``RateLimitSettings`` > ``VaryByRemoteAddr`` > ``true``"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:116
 msgid "Environment variable: ``MM_RATELIMITSETTINGS_VARYBYREMOTEADDR``"
-msgstr ""
+msgstr "환경 변수: ``MM_RATELIMITSETTINGS_VARYBYREMOTEADDR``"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:132
 msgid "Vary rate limit by user"
-msgstr ""
+msgstr "사용자별 속도 제한 변경"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:135
 msgid ""
 "Configure Mattermost to rate limit API access by authentication token or "
 "not when `rate limiting <#enable-rate-limiting>`__ is enabled."
-msgstr ""
+msgstr "`속도 제한 <#enable-rate-limiting>`__이 활성화된 경우 인증 토큰별로 API 접근을 속도 제한할지 여부를 OKR.BEST에서 구성합니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:139
 msgid ""
 "**true**: Rate limit API access by user authentication token. Recommended"
 " when using a proxy."
-msgstr ""
+msgstr "**true**: 사용자 인증 토큰별로 API 접근을 속도 제한합니다. 프록시를 사용할 때 권장됩니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:141
 msgid ""
 "**false**: **(Default)** Rate limiting does not vary by user "
 "authentication token."
-msgstr ""
+msgstr "**false**: **(기본값)** 속도 제한이 사용자 인증 토큰별로 달라지지 않습니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:136
 msgid ""
 "``config.json`` setting: ``RateLimitSettings`` > ``VaryByUser`` > "
 "``false``"
-msgstr ""
+msgstr "``config.json`` 설정: ``RateLimitSettings`` > ``VaryByUser`` > ``false``"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:137
 msgid "Environment variable: ``MM_RATELIMITSETTINGS_VARYBYUSER``"
-msgstr ""
+msgstr "환경 변수: ``MM_RATELIMITSETTINGS_VARYBYUSER``"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:153
 msgid "Vary rate limit by HTTP header"
-msgstr ""
+msgstr "HTTP 헤더별 속도 제한 변경"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:156
 msgid ""
 "Configure Mattermost to vary rate limiting API access by the HTTP header "
 "field specified. Recommended when you’re using a proxy."
-msgstr ""
+msgstr "지정된 HTTP 헤더 필드별로 API 접근의 속도 제한을 변경하도록 OKR.BEST를 구성합니다. 프록시를 사용할 때 권장됩니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:160
 msgid "When configuring NGINX, set this to **X-Real-IP**."
-msgstr ""
+msgstr "NGINX를 구성할 때, 이를 **X-Real-IP**로 설정합니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:161
 msgid "When configuring AmazonELB, set this to **X-Forwarded-For**."
-msgstr ""
+msgstr "AmazonELB를 구성할 때, 이를 **X-Forwarded-For**로 설정합니다."
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:157
 msgid ""
 "``config.json`` setting: ``RateLimitSettings`` > ``VaryByHeader`` > "
 "``\"\"``"
-msgstr ""
+msgstr "``config.json`` 설정: ``RateLimitSettings`` > ``VaryByHeader`` > ``\"\"``"
 
 #: ../../source/administration-guide/configure/rate-limiting-configuration-settings.rst:158
 msgid "Environment variable: ``MM_RATELIMITSETTINGS_VARYBYHEADER``"
-msgstr ""
+msgstr "환경 변수: ``MM_RATELIMITSETTINGS_VARYBYHEADER``"
 
