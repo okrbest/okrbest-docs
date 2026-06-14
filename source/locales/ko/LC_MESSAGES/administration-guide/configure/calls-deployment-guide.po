@@ -21,27 +21,27 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:6
 msgid "RTCD Setup and Configuration"
-msgstr ""
+msgstr "RTCD 설정 및 구성"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:6
 msgid "Calls Offloader Setup and Configuration"
-msgstr ""
+msgstr "Calls Offloader 설정 및 구성"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:6
 msgid "Calls Metrics and Monitoring"
-msgstr ""
+msgstr "통화 메트릭 및 모니터링"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:6
 msgid "Deploy Calls on Kubernetes"
-msgstr ""
+msgstr "Kubernetes에서 통화 배포"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:6
 msgid "Calls Logging"
-msgstr ""
+msgstr "통화 로깅"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:1
 msgid "Mattermost Calls Deployment Guide"
-msgstr ""
+msgstr "OKR.BEST 통화(Calls) 배포 가이드"
 
 #: ../../source/_static/badges/all-commercial.md:6
 msgid ""
@@ -49,6 +49,9 @@ msgid ""
 "Available on [Entry, Professional, Enterprise, and Enterprise "
 "Advanced](https://mattermost.com/pricing/) plans"
 msgstr ""
+"![plans-img-yellow](/_static/images/badges/flag_icon_yellow.svg) "
+"[Entry, Professional, Enterprise, and Enterprise "
+"Advanced](https://mattermost.com/pricing/) 플랜에서 사용 가능"
 
 #: ../../source/_static/badges/all-commercial.md:6
 msgid "plans-img-yellow"
@@ -62,6 +65,10 @@ msgid ""
 "verification checks, and troubleshooting tips to help you confirm each "
 "phase of the deployment is working before you move on."
 msgstr ""
+"이 가이드는 시스템 관리자가 준비 및 네트워크 점검 단계부터 파일럿 테스트와 프로덕션 "
+"롤아웃까지 OKR.BEST 통화(Calls)를 배포하는 과정을 단계별로 안내합니다. 다음 단계로 "
+"넘어가기 전에 배포의 각 단계가 정상적으로 작동하는지 확인할 수 있도록 명확한 결정 "
+"지점, 검증 점검, 문제 해결 팁을 제공합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:19
 msgid ""
@@ -69,10 +76,12 @@ msgid ""
 "assumes you're starting fresh and will introduce essential concepts and "
 "best practices."
 msgstr ""
+"OKR.BEST 통화(Calls)에 대한 사전 경험은 필요하지 않습니다. 이 가이드는 처음부터 "
+"시작한다고 가정하며 필수 개념과 모범 사례를 소개합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:21
 msgid "Calls Overview"
-msgstr ""
+msgstr "통화 개요"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:23
 msgid ""
@@ -81,6 +90,9 @@ msgid ""
 "infrastructure. This means no call media or metadata traverses third-"
 "party systems."
 msgstr ""
+"OKR.BEST 통화(Calls)는 셀프 호스팅 음성 통화와 화면 공유를 제공하여 인프라 내에 "
+"완전히 격리된 주권형 실시간 협업을 지원합니다. 이는 통화 미디어나 메타데이터가 "
+"제3자 시스템을 거치지 않음을 의미합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:25
 msgid ""
@@ -90,38 +102,48 @@ msgid ""
 "to function in isolated networks without internet access, supporting "
 "deployments that demand full airgap compliance."
 msgstr ""
+"통화는 데이터 주권, 제어, 규정 준수가 필수적인 국방, 정보, 보안 및 핵심 인프라 전반의 "
+"미션 크리티컬 운영에 특히 적합합니다. 인터넷 접속이 없는 격리된 네트워크에서도 작동하도록 "
+"설계되어 완전한 에어갭 준수를 요구하는 배포를 지원합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:27
 msgid "Functionality includes:"
-msgstr ""
+msgstr "다음과 같은 기능을 포함합니다:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:28
 msgid ""
 "**1:1 and Group Calling**: Initiate real-time voice communication between"
 " two or more participants."
 msgstr ""
+"**1:1 및 그룹 통화**: 둘 이상의 참가자 간에 실시간 음성 통신을 시작합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:29
 msgid ""
 "**Screen Sharing**: Share your screen during calls to collaborate "
 "visually on tasks, review documents, or troubleshoot live issues."
 msgstr ""
+"**화면 공유**: 통화 중에 화면을 공유하여 작업에 대해 시각적으로 협업하고, 문서를 "
+"검토하거나, 실시간으로 문제를 해결합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:30
 msgid ""
 "**Call Recording and Transcription**: Record voice sessions for "
 "asynchronous review. *(Enterprise, Enterprise Advanced)*"
 msgstr ""
+"**통화 녹화 및 전사**: 비동기 검토를 위해 음성 세션을 녹화합니다. "
+"*(Enterprise, Enterprise Advanced)*"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:31
 msgid ""
 "**Live Captioning**: Generate real-time subtitles for accessibility. "
 "*(Enterprise, Enterprise Advanced)*"
 msgstr ""
+"**실시간 자막**: 접근성을 위해 실시간 자막을 생성합니다. "
+"*(Enterprise, Enterprise Advanced)*"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:33
 msgid "Deployment Overview"
-msgstr ""
+msgstr "배포 개요"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:35
 msgid ""
@@ -132,14 +154,19 @@ msgid ""
 "are passing. This structure helps you catch and fix issues early, when "
 "they are easiest to isolate."
 msgstr ""
+"이 가이드는 번호가 매겨진 단계와 함께 순차적인 배포 단계로 구성되어 있습니다. 각 단계는 "
+"사전 요구 사항으로 시작하여 검증 점검으로 끝납니다. 어느 단계든 시작하기 전에 나열된 사전 "
+"요구 사항이 충족되었는지 확인한 다음, 검증 점검을 통과한 후에만 다음 단계로 넘어가십시오. "
+"이 구조는 문제를 가장 쉽게 분리할 수 있는 초기 단계에서 문제를 발견하고 해결하는 데 "
+"도움이 됩니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:37
 msgid "**Deployment Phases:**"
-msgstr ""
+msgstr "**배포 단계:**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:39
 msgid "[**Preparation and Networking**](#phase-1-preparation-and-networking)"
-msgstr ""
+msgstr "[**준비 및 네트워킹**](#phase-1-preparation-and-networking)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:41
 msgid ""
@@ -147,34 +174,43 @@ msgid ""
 " required servers, and confirm the required network ports and paths are "
 "open before deployment."
 msgstr ""
+"배포 아키텍처를 선택하고, 네트워킹 결정을 내리고, 필요한 서버를 프로비저닝하며, 배포 전에 "
+"필요한 네트워크 포트와 경로가 열려 있는지 확인합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:43
 msgid "[**Install and Configure Calls**](#phase-2-install-and-configure-calls)"
-msgstr ""
+msgstr "[**통화 설치 및 구성**](#phase-2-install-and-configure-calls)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:45
 msgid ""
 "Complete the installation and configuration for the deployment "
 "architecture you selected in Phase 1. You will only follow one path:"
 msgstr ""
+"Phase 1에서 선택한 배포 아키텍처에 대한 설치 및 구성을 완료합니다. 하나의 경로만 "
+"따르면 됩니다:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:47
 msgid ""
 "[**Path A: Configure Integrated Calls**](#path-a-configure-integrated-"
 "calls)"
 msgstr ""
+"[**경로 A: 통합 통화 구성**](#path-a-configure-integrated-"
+"calls)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:49
 msgid ""
 "Use the built-in Calls service on the Mattermost server for simpler "
 "deployment at small scale."
 msgstr ""
+"소규모에서 더 간단한 배포를 위해 OKR.BEST 서버의 내장 통화 서비스를 사용합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:51
 msgid ""
 "[**Path B: Install and Configure RTCD**](#path-b-install-and-configure-"
 "rtcd) (Optional)"
 msgstr ""
+"[**경로 B: RTCD 설치 및 구성**](#path-b-install-and-configure-"
+"rtcd) (선택 사항)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:53
 msgid ""
@@ -182,42 +218,51 @@ msgid ""
 "production deployments. RTCD offloads media processing tasks from the "
 "Mattermost server for optimized performance and scalability."
 msgstr ""
+"대규모 프로덕션 배포에는 RTCD(Real-Time Communication Daemon) 서비스를 사용합니다. "
+"RTCD는 최적화된 성능과 확장성을 위해 OKR.BEST 서버에서 미디어 처리 작업을 오프로드합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:55
 msgid ""
 "[**Install and Configure Recording**](#phase-3-install-and-configure-"
 "recording) (Optional)"
 msgstr ""
+"[**녹화 설치 및 구성**](#phase-3-install-and-configure-"
+"recording) (선택 사항)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:57
 msgid ""
 "Calls Offloader is a service required to deliver recording, transcription"
 " and live captions."
 msgstr ""
+"Calls Offloader는 녹화, 전사 및 실시간 자막을 제공하는 데 필요한 서비스입니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:59
 msgid "[**Pilot Rollout**](#phase-4-pilot-rollout)"
-msgstr ""
+msgstr "[**파일럿 롤아웃**](#phase-4-pilot-rollout)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:61
 msgid ""
 "Expand testing to a small group of pilot users to watch for client, "
 "network, and environment-specific issues under real usage."
 msgstr ""
+"테스트를 소규모 파일럿 사용자 그룹으로 확장하여 실제 사용 환경에서 클라이언트, 네트워크 "
+"및 환경별 문제를 관찰합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:63
 msgid "[**Production Rollout**](#phase-5-production-rollout)"
-msgstr ""
+msgstr "[**프로덕션 롤아웃**](#phase-5-production-rollout)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:65
 msgid ""
 "Rollout to all users in controlled waves with appropriate communication "
 "and monitoring, and be ready to pause or roll back if needed."
 msgstr ""
+"적절한 커뮤니케이션과 모니터링을 통해 통제된 단계로 모든 사용자에게 롤아웃하며, 필요한 "
+"경우 일시 중지하거나 롤백할 준비를 합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:68
 msgid "Deployment Prerequisites"
-msgstr ""
+msgstr "배포 사전 요구 사항"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:70
 msgid ""
@@ -226,14 +271,17 @@ msgid ""
 "prerequisites now helps prevent delays caused by missing dependencies "
 "later in the deployment process."
 msgstr ""
+"통화 배포를 시작하기 전에 필요한 인프라, 기술 및 액세스 권한을 갖추고 있는지 이 "
+"체크리스트로 확인하십시오. 지금 이러한 사전 요구 사항을 완료하면 배포 과정 후반부에 "
+"누락된 종속성으로 인한 지연을 방지하는 데 도움이 됩니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:72
 msgid "Deployment Infrastructure Requirements"
-msgstr ""
+msgstr "배포 인프라 요구 사항"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:74
 msgid "You have a running Mattermost server on v10.0+."
-msgstr ""
+msgstr "v10.0 이상에서 실행 중인 OKR.BEST 서버가 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:76
 #, python-brace-format
@@ -241,10 +289,12 @@ msgid ""
 "_See {doc}`System Information <../../end-user-guide/collaborate/view-"
 "system-information>` to check your Mattermost edition and version._"
 msgstr ""
+"_OKR.BEST 에디션과 버전을 확인하려면 {doc}`시스템 정보 <../../end-user-guide/collaborate/view-"
+"system-information>`를 참조하십시오._"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:78
 msgid "Your Mattermost server is configured to use HTTPS."
-msgstr ""
+msgstr "OKR.BEST 서버가 HTTPS를 사용하도록 구성되어 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:80
 #, python-brace-format
@@ -252,12 +302,15 @@ msgid ""
 "_See {doc}`Configure TLS <../../deployment-guide/server/setup-tls>` if "
 "you need to set up HTTPS._"
 msgstr ""
+"_HTTPS를 설정해야 하는 경우 {doc}`TLS 구성 <../../deployment-guide/server/setup-tls>`을 "
+"참조하십시오._"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:82
 msgid ""
 "You know how many active users you have in your current Mattermost "
 "deployment"
 msgstr ""
+"현재 OKR.BEST 배포에 활성 사용자가 몇 명인지 알고 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:84
 #, python-brace-format
@@ -265,18 +318,24 @@ msgid ""
 "_See {doc}`Site Statistics <../../administration-"
 "guide/manage/statistics>` to access usage metrics._"
 msgstr ""
+"_사용량 메트릭에 액세스하려면 {doc}`사이트 통계 <../../administration-"
+"guide/manage/statistics>`를 참조하십시오._"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:86
 msgid ""
 "You can provision at least one dedicated Linux server or VM if you plan "
 "to use the RTCD service."
 msgstr ""
+"RTCD 서비스를 사용할 계획이라면 전용 Linux 서버 또는 VM을 최소 하나 이상 프로비저닝할 "
+"수 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:88
 msgid ""
 "_See [Infrastructure Decisions](#infrastructure-decisions) (Step 1.2) if "
 "you're unsure if you need RTCD._"
 msgstr ""
+"_RTCD가 필요한지 확실하지 않은 경우 [인프라 결정](#infrastructure-decisions)(1.2단계)을 "
+"참조하십시오._"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:90
 msgid ""
@@ -284,18 +343,24 @@ msgid ""
 "offloader` service if you need recording, transcription, or live "
 "captions."
 msgstr ""
+"녹화, 전사 또는 실시간 자막이 필요한 경우 `calls-offloader` 서비스용 전용 Linux 서버 "
+"또는 VM을 프로비저닝할 수 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:91
 msgid ""
 "You are prepared to deploy a TURN server if your users cannot reliably "
 "reach the media service on UDP or TCP `8443`."
 msgstr ""
+"사용자가 UDP 또는 TCP `8443`에서 미디어 서비스에 안정적으로 도달할 수 없는 경우 TURN "
+"서버를 배포할 준비가 되어 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:93
 msgid ""
 "_See [Networking Decisions](#networking-decisions) (Step 1.3) if you're "
 "unsure if you need a TURN server._"
 msgstr ""
+"_TURN 서버가 필요한지 확실하지 않은 경우 [네트워킹 결정](#networking-decisions)(1.3단계)을 "
+"참조하십시오._"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:95
 #, python-brace-format
@@ -304,34 +369,38 @@ msgid ""
 "<../../product-overview/editions-and-offerings>` for the features you "
 "need:"
 msgstr ""
+"필요한 기능에 적합한 {doc}`OKR.BEST 에디션 및 라이선스 "
+"<../../product-overview/editions-and-offerings>`를 보유하고 있습니다:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:96
 msgid ""
 "**Mattermost Entry or Team Edition**: 1-1 calling and screen sharing (Up "
 "to 40 minutes)"
 msgstr ""
+"**Mattermost Entry 또는 Team Edition**: 1:1 통화 및 화면 공유(최대 40분)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:97
 msgid ""
 "**Mattermost Professional**: Group calling and screen sharing (No time "
 "limit)"
 msgstr ""
+"**Mattermost Professional**: 그룹 통화 및 화면 공유(시간 제한 없음)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:98
 msgid "**Mattermost Enterprise or Enterprise Advanced**: Required for:"
-msgstr ""
+msgstr "**Mattermost Enterprise 또는 Enterprise Advanced**: 다음에 필요:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:99
 msgid "RTCD service for scale (50+ users) and production reliability."
-msgstr ""
+msgstr "확장(50명 이상 사용자) 및 프로덕션 안정성을 위한 RTCD 서비스."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:100
 msgid "Recording, transcription, or live captions."
-msgstr ""
+msgstr "녹화, 전사 또는 실시간 자막."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:102
 msgid "Skills and Access Requirements"
-msgstr ""
+msgstr "기술 및 액세스 요구 사항"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:104
 msgid ""
@@ -340,10 +409,13 @@ msgid ""
 "configuration files, manage systemd services, inspect logs, and run shell"
 " commands."
 msgstr ""
+"기본적인 Linux 관리에 익숙하거나, 익숙한 사람이 있습니다. SSH를 통해 서버에 연결하고, "
+"구성 파일을 편집하고, systemd 서비스를 관리하고, 로그를 검사하고, 셸 명령을 실행해야 "
+"합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:105
 msgid "You have System Admin access to your Mattermost server."
-msgstr ""
+msgstr "OKR.BEST 서버에 대한 시스템 관리자 액세스 권한이 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:107
 #, python-brace-format
@@ -351,54 +423,66 @@ msgid ""
 "_See {doc}`Mattermost roles <../../end-user-guide/collaborate/learn-"
 "about-roles>` to learn about roles and permissions._"
 msgstr ""
+"_역할 및 권한에 대해 알아보려면 {doc}`OKR.BEST 역할 <../../end-user-guide/collaborate/learn-"
+"about-roles>`을 참조하십시오._"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:109
 msgid "Networking Requirements"
-msgstr ""
+msgstr "네트워킹 요구 사항"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:111
 msgid ""
 "You know how end users will connect to Calls (From private networks, VPN,"
 " or from the public internet)"
 msgstr ""
+"최종 사용자가 통화에 연결하는 방법(사설 네트워크, VPN 또는 공용 인터넷에서)을 알고 "
+"있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:113
 msgid ""
 "_This impacts your [networking decisions](#networking-decisions) (Step "
 "1.3)_"
 msgstr ""
+"_이는 [네트워킹 결정](#networking-decisions)(1.3단계)에 영향을 미칩니다_"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:115
 msgid ""
 "You can open the required inbound and outbound firewall rules, or you can"
 " engage the network or security team that manages them."
 msgstr ""
+"필요한 인바운드 및 아웃바운드 방화벽 규칙을 열 수 있거나, 이를 관리하는 네트워크 또는 "
+"보안 팀과 협력할 수 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:117
 msgid "Validation Resources"
-msgstr ""
+msgstr "검증 리소스"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:119
 msgid ""
 "You have two test accounts available for smoke testing during Calls "
 "installation and configuration."
 msgstr ""
+"통화 설치 및 구성 중 스모크 테스트에 사용할 수 있는 테스트 계정 두 개가 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:120
 msgid ""
 "You have a small pilot group (5-10 users) available for validation across"
 " the client types and networks you care about."
 msgstr ""
+"중요하게 여기는 클라이언트 유형과 네트워크 전반에 걸쳐 검증할 수 있는 소규모 파일럿 "
+"그룹(5~10명)이 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:122
 msgid "Contacting Support"
-msgstr ""
+msgstr "지원팀 문의"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:124
 msgid ""
 "You know how to open a [request](https://support.mattermost.com) with "
 "Mattermost support if you encounter issues."
 msgstr ""
+"문제가 발생할 경우 Mattermost 지원팀에 [요청](https://support.mattermost.com)을 "
+"여는 방법을 알고 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:126
 #, python-brace-format
@@ -408,6 +492,9 @@ msgid ""
 "guide/manage/admin/generating-support-packet>` and [Calls logs](calls-"
 "logging.md)._"
 msgstr ""
+"_실패한 정확한 **단계 번호**(예: 2A.2.1)와 함께 {doc}`OKR.BEST 지원 패킷 <../../administration-"
+"guide/manage/admin/generating-support-packet>` 및 [통화 로그](calls-"
+"logging.md)를 포함해 주십시오._"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:129
 msgid ""
@@ -415,52 +502,61 @@ msgid ""
 "[talk to a Mattermost expert](https://mattermost.com/contact-sales/) to "
 "learn about professional service offerings."
 msgstr ""
+"통화 배포에 전문가의 도움이 필요한 경우 계정 관리자에게 문의하거나 [Mattermost 전문가와 "
+"상담](https://mattermost.com/contact-sales/)하여 전문 서비스 제공에 대해 알아보십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:134
 msgid "Phase 1: Preparation and Networking"
-msgstr ""
+msgstr "Phase 1: 준비 및 네트워킹"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:136
 msgid "1.1 Prerequisites"
-msgstr ""
+msgstr "1.1 사전 요구 사항"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:138
 msgid "Before you start, confirm the following:"
-msgstr ""
+msgstr "시작하기 전에 다음을 확인하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:140
 msgid ""
 "You know how many active users you have in your current Mattermost "
 "deployment."
 msgstr ""
+"현재 OKR.BEST 배포에 활성 사용자가 몇 명인지 알고 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:141
 msgid ""
 "You know whether recording, transcription, or live captions are required "
 "for your deployment."
 msgstr ""
+"배포에 녹화, 전사 또는 실시간 자막이 필요한지 여부를 알고 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:142
 msgid ""
 "You can provision additional servers if your chosen architecture requires"
 " RTCD or Recording services."
 msgstr ""
+"선택한 아키텍처에 RTCD 또는 녹화 서비스가 필요한 경우 추가 서버를 프로비저닝할 수 "
+"있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:143
 msgid ""
 "You can open inbound and outbound network ports on the servers involved "
 "in your deployment."
 msgstr ""
+"배포에 관련된 서버에서 인바운드 및 아웃바운드 네트워크 포트를 열 수 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:145
 msgid ""
 "_If a network or security team manages your firewalls, you'll need to "
 "involve them before continuing._"
 msgstr ""
+"_네트워크 또는 보안 팀이 방화벽을 관리하는 경우 계속하기 전에 해당 팀을 참여시켜야 "
+"합니다._"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:147
 msgid "1.2 Infrastructure Decisions"
-msgstr ""
+msgstr "1.2 인프라 결정"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:149
 msgid ""
@@ -468,15 +564,17 @@ msgid ""
 "choose your media processing architecture, then decide whether you need "
 "recording. Reference topology for each architecture is provided."
 msgstr ""
+"여기에서 두 가지 중요한 인프라 결정을 내립니다. 먼저 미디어 처리 아키텍처를 선택한 "
+"다음, 녹화가 필요한지 결정합니다. 각 아키텍처에 대한 참조 토폴로지가 제공됩니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:151
 msgid "Media Service: RTCD or Integrated"
-msgstr ""
+msgstr "미디어 서비스: RTCD 또는 통합"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:153
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:319
 msgid "**Integrated**"
-msgstr ""
+msgstr "**통합**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:155
 msgid ""
@@ -485,11 +583,14 @@ msgid ""
 "Calls plugin runs its built-in media service directly on the Mattermost "
 "server."
 msgstr ""
+"미디어 처리를 담당하는 별도의 서비스를 프로비저닝할 필요가 없으므로 가장 간단한 배포 "
+"모델입니다. 통합 모드에서는 통화 플러그인이 내장 미디어 서비스를 OKR.BEST 서버에서 "
+"직접 실행합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:157
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:323
 msgid "**RTCD**"
-msgstr ""
+msgstr "**RTCD**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:159
 msgid ""
@@ -499,16 +600,21 @@ msgid ""
 "because it improves performance, scalability, and stability by isolating "
 "call traffic and reducing load on the Mattermost server."
 msgstr ""
+"RTCD는 OKR.BEST 통화(Calls)를 위한 전용 실시간 통신 서비스로, 기본 OKR.BEST 서버 "
+"외부에서 통화 미디어를 처리합니다. 대부분의 프로덕션 배포에서 **RTCD가 권장 배포 "
+"모델**인데, 이는 통화 트래픽을 격리하고 OKR.BEST 서버의 부하를 줄여 성능, 확장성 및 "
+"안정성을 향상시키기 때문입니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:161
 msgid ""
 "To determine if you'll need RTCD, start by answering the following "
 "questions about your deployment:"
 msgstr ""
+"RTCD가 필요한지 판단하려면 먼저 배포에 대한 다음 질문에 답하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:163
 msgid "**Are you deploying Calls on Kubernetes?**"
-msgstr ""
+msgstr "**Kubernetes에서 통화를 배포하고 있습니까?**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:164
 #, python-brace-format
@@ -517,10 +623,13 @@ msgid ""
 " Calls. See the {doc}`Kubernetes <../../administration-guide/configure"
 "/calls-kubernetes>` Calls deployment guide for details."
 msgstr ""
+"**예:** 통화를 실행하는 유일하게 지원되는 방법이므로 RTCD를 배포해야 합니다. 자세한 "
+"내용은 {doc}`Kubernetes <../../administration-guide/configure"
+"/calls-kubernetes>` 통화 배포 가이드를 참조하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:165
 msgid "**No:** Continue to the next question."
-msgstr ""
+msgstr "**아니요:** 다음 질문으로 계속 진행하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:166
 #, python-brace-format
@@ -529,83 +638,93 @@ msgid ""
 "deployment?** _(Check {doc}`Site Statistics <../../administration-"
 "guide/manage/statistics>`)_"
 msgstr ""
+"**기존 OKR.BEST 배포의 *총 사용자* 수는 몇 명입니까?** _({doc}`사이트 통계 <../../administration-"
+"guide/manage/statistics>` 확인)_"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:167
 msgid "**Up to 50:** You can use the **Integrated** deployment model."
-msgstr ""
+msgstr "**50명 이하:** **통합** 배포 모델을 사용할 수 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:168
 msgid ""
 "**More than 50:** You'll need to deploy RTCD to avoid impacting messaging"
 " performance of the Mattermost server."
 msgstr ""
+"**50명 초과:** OKR.BEST 서버의 메시징 성능에 영향을 주지 않도록 RTCD를 배포해야 "
+"합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:170
 msgid ""
 "Use the tabs below to view the reference architecture for each deployment"
 " model:"
 msgstr ""
+"각 배포 모델의 참조 아키텍처를 보려면 아래 탭을 사용하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:174
 msgid ""
 "An **Integrated** deployment does not require any additional "
 "infrastructure:"
 msgstr ""
+"**통합** 배포는 추가 인프라가 필요하지 않습니다:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:176
 msgid "Integrated Calls deployment"
-msgstr ""
+msgstr "통합 통화 배포"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:181
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:229
 msgid "**When to use it**"
-msgstr ""
+msgstr "**사용 시기**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:183
 msgid "You are evaluating Calls for the first time."
-msgstr ""
+msgstr "통화를 처음 평가하는 경우."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:184
 msgid "You expect fewer than 50 people to use Calls."
-msgstr ""
+msgstr "50명 미만이 통화를 사용할 것으로 예상되는 경우."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:185
 msgid "You want the simplest possible deployment."
-msgstr ""
+msgstr "가능한 가장 간단한 배포를 원하는 경우."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:187
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:207
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:238
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:258
 msgid "**Components**"
-msgstr ""
+msgstr "**구성 요소**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:189
 msgid ""
 "**Mattermost server**: Calls plugin is pre-installed, and no additional "
 "infrastructure is needed."
 msgstr ""
+"**OKR.BEST 서버**: 통화 플러그인이 사전 설치되어 있으며, 추가 인프라가 필요하지 "
+"않습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:191
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:212
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:243
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:264
 msgid "**License**"
-msgstr ""
+msgstr "**라이선스**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:193
 msgid "**Mattermost Entry**: 1:1 Calls + Screen Sharing (Up to 40 minutes)"
-msgstr ""
+msgstr "**Mattermost Entry**: 1:1 통화 + 화면 공유(최대 40분)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:194
 msgid ""
 "**Mattermost Professional, Enterprise, or Enterprise Advanced**: Group "
 "Calls + Screen Sharing (No time limit)"
 msgstr ""
+"**Mattermost Professional, Enterprise 또는 Enterprise Advanced**: 그룹 통화 + 화면 "
+"공유(시간 제한 없음)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:196
 msgid "Recording"
-msgstr ""
+msgstr "녹화"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:198
 msgid ""
@@ -613,22 +732,25 @@ msgid ""
 "an **Integrated** Calls deployment if you need to enable recording, "
 "transcription, and live captions."
 msgstr ""
+"녹화, 전사 및 실시간 자막을 활성화해야 하는 경우 **녹화** 서비스(`calls-offloader`)를 "
+"**통합** 통화 배포에 선택적으로 추가할 수 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:200
 msgid ""
 "Reference architecture when using the Recording service with Integrated "
 "Calls:"
 msgstr ""
+"통합 통화와 함께 녹화 서비스를 사용할 때의 참조 아키텍처:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:202
 msgid "Calls deployment with Integrated Calls and recording"
-msgstr ""
+msgstr "통합 통화 및 녹화를 사용한 통화 배포"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:209
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:240
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:260
 msgid "**Mattermost server**: Calls plugin is pre-installed."
-msgstr ""
+msgstr "**OKR.BEST 서버**: 통화 플러그인이 사전 설치되어 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:210
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:262
@@ -636,22 +758,25 @@ msgid ""
 "**Calls Offloader**: Job service that manages recording, transcription "
 "and live captions."
 msgstr ""
+"**Calls Offloader**: 녹화, 전사 및 실시간 자막을 관리하는 작업 서비스."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:214
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:245
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:266
 msgid "**Mattermost Enterprise** or **Enterprise Advanced**"
-msgstr ""
+msgstr "**Mattermost Enterprise** 또는 **Enterprise Advanced**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:220
 msgid ""
 "An **RTCD Server** is added as a dedicated media service that processes "
 "all call audio and screen sharing media."
 msgstr ""
+"**RTCD 서버**가 모든 통화 오디오 및 화면 공유 미디어를 처리하는 전용 미디어 서비스로 "
+"추가됩니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:222
 msgid "Calls deployment with RTCD"
-msgstr ""
+msgstr "RTCD를 사용한 통화 배포"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:227
 msgid ""
@@ -661,34 +786,44 @@ msgid ""
 " directly between clients and the RTCD server, completely bypassing the "
 "Mattermost server."
 msgstr ""
+"OKR.BEST 서버는 여전히 시그널링(통화 설정, 관리 및 종료)과 채널 상태(누가 참가하거나 "
+"나가는지, 누가 음소거했는지, 전체 통화 상태)를 담당하지만, 통화 미디어 자체는 OKR.BEST "
+"서버를 완전히 우회하여 클라이언트와 RTCD 서버 간에 직접 흐릅니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:231
 msgid ""
 "Use RTCD if you need optimized performance, scalability, and the best "
 "possible user experience for Mattermost Calls. Specifically:"
 msgstr ""
+"OKR.BEST 통화(Calls)에 최적화된 성능, 확장성 및 최상의 사용자 경험이 필요한 경우 "
+"RTCD를 사용하십시오. 구체적으로:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:233
 msgid ""
 "You want to keep call media traffic off your main Mattermost server to "
 "improve overall server performance and reduce CPU usage spikes."
 msgstr ""
+"전반적인 서버 성능을 개선하고 CPU 사용량 급증을 줄이기 위해 통화 미디어 트래픽을 기본 "
+"OKR.BEST 서버에서 분리하려는 경우."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:234
 msgid ""
 "You need your deployment to easily scale as call volume increases; "
 "additional RTCD servers can be added for load balancing."
 msgstr ""
+"통화량이 증가함에 따라 배포가 쉽게 확장되어야 하는 경우. 로드 밸런싱을 위해 추가 RTCD "
+"서버를 추가할 수 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:235
 msgid ""
 "You want the lowest possible media latency and highest reliability for "
 "Calls."
 msgstr ""
+"통화에 가능한 가장 낮은 미디어 지연 시간과 가장 높은 안정성을 원하는 경우."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:236
 msgid "You are deploying Mattermost on Kubernetes, where RTCD is required."
-msgstr ""
+msgstr "RTCD가 필요한 Kubernetes에 OKR.BEST를 배포하는 경우."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:241
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:261
@@ -696,6 +831,8 @@ msgid ""
 "**RTCD Server**: Dedicated media service. Clients connect to it directly "
 "for media traffic."
 msgstr ""
+"**RTCD 서버**: 전용 미디어 서비스. 클라이언트는 미디어 트래픽을 위해 여기에 직접 "
+"연결합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:247
 msgid ""
@@ -703,6 +840,9 @@ msgid ""
 "guide/configure/calls-deployment-guide.md:247: (INFO/1) Duplicate "
 "implicit target name: \"recording\"."
 msgstr ""
+"녹화/home/sdh/okrbest/okrbest-docs/source/administration-"
+"guide/configure/calls-deployment-guide.md:247: (INFO/1) Duplicate "
+"implicit target name: \"recording\"."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:249
 msgid ""
@@ -710,14 +850,16 @@ msgid ""
 "an **RTCD** Calls deployment if you need to enable recording, "
 "transcription, and live captions."
 msgstr ""
+"녹화, 전사 및 실시간 자막을 활성화해야 하는 경우 **녹화** 서비스(`calls-offloader`)를 "
+"**RTCD** 통화 배포에 선택적으로 추가할 수 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:251
 msgid "Reference architecture when using the Recording service with RTCD:"
-msgstr ""
+msgstr "RTCD와 함께 녹화 서비스를 사용할 때의 참조 아키텍처:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:253
 msgid "Calls deployment with RTCD and recording"
-msgstr ""
+msgstr "RTCD 및 녹화를 사용한 통화 배포"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:269
 msgid ""
@@ -725,20 +867,24 @@ msgid ""
 "offloader` is the recommended combination because it keeps call media off"
 " the Mattermost server and scales more predictably."
 msgstr ""
+"녹화가 필요한 대부분의 프로덕션 배포에서는 통화 미디어를 OKR.BEST 서버에서 분리하고 "
+"더 예측 가능하게 확장되므로 RTCD에 `calls-offloader`를 더한 조합이 권장됩니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:274
 msgid "1.3 Networking Decisions"
-msgstr ""
+msgstr "1.3 네트워킹 결정"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:276
 msgid "1.3.1 STUN for Public IP Discovery"
-msgstr ""
+msgstr "1.3.1 공용 IP 검색을 위한 STUN"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:278
 msgid ""
 "STUN is a protocol that helps the media server discover its public IP "
 "address automatically so remote clients can connect to Calls."
 msgstr ""
+"STUN은 원격 클라이언트가 통화에 연결할 수 있도록 미디어 서버가 공용 IP 주소를 자동으로 "
+"검색하도록 돕는 프로토콜입니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:280
 msgid ""
@@ -749,6 +895,10 @@ msgid ""
 " media server to the Mattermost global STUN service for public IP "
 "discovery."
 msgstr ""
+"OKR.BEST는 기본 STUN 서버(`stun.global.calls.mattermost.com`)를 제공합니다. 이 "
+"서비스를 통해 통화 미디어나 시그널링 트래픽은 전송되지 않으며, STUN 조회에만 "
+"사용됩니다. 공용 IP 검색을 위해 미디어 서버에서 Mattermost 글로벌 STUN 서비스로의 "
+"아웃바운드 액세스를 허용해야 하는지 판단하려면 이 결정 트리를 사용하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:283
 msgid ""
@@ -756,54 +906,68 @@ msgid ""
 "**Integrated** Calls deployment, or it's the **RTCD server** in the case "
 "of an RTCD Calls deployment."
 msgstr ""
+"미디어 서버는 **통합** 통화 배포의 경우 OKR.BEST 서버이고, RTCD 통화 배포의 경우 "
+"**RTCD 서버**입니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:286
 msgid "**STUN Decision Tree**"
-msgstr ""
+msgstr "**STUN 결정 트리**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:288
 msgid ""
 "**Are all users and your media server in the same private network, VPN, "
 "or air-gapped environment, with no outside clients?**"
 msgstr ""
+"**모든 사용자와 미디어 서버가 외부 클라이언트 없이 동일한 사설 네트워크, VPN 또는 "
+"에어갭 환경에 있습니까?**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:289
 msgid ""
 "**Yes**: You do not need STUN for public IP discovery. You will use the "
 "private address of your media server for configuration in Phase 2."
 msgstr ""
+"**예**: 공용 IP 검색을 위한 STUN이 필요하지 않습니다. Phase 2의 구성에서 미디어 서버의 "
+"사설 주소를 사용하게 됩니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:290
 msgid "**No**: Continue to the next question."
-msgstr ""
+msgstr "**아니요**: 다음 질문으로 계속 진행하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:292
 msgid ""
 "**Does your media server have a stable public IP address or DNS name that"
 " clients on the public internet can reach?**"
 msgstr ""
+"**미디어 서버에 공용 인터넷의 클라이언트가 도달할 수 있는 안정적인 공용 IP 주소 또는 "
+"DNS 이름이 있습니까?**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:293
 msgid ""
 "**Yes**: You do not need STUN for public IP discovery. You will use the "
 "stable public address of your media server for configuration in Phase 2."
 msgstr ""
+"**예**: 공용 IP 검색을 위한 STUN이 필요하지 않습니다. Phase 2의 구성에서 미디어 서버의 "
+"안정적인 공용 주소를 사용하게 됩니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:294
 msgid ""
 "**No**: You will need STUN. You must open outbound UDP 3478 from your "
 "media server to `stun.global.calls.mattermost.com`."
 msgstr ""
+"**아니요**: STUN이 필요합니다. 미디어 서버에서 `stun.global.calls.mattermost.com`으로의 "
+"아웃바운드 UDP 3478을 열어야 합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:296
 msgid ""
 "If your deployment requires STUN for public IP discovery, note that now "
 "so you can include it when opening ports in Step 1.5."
 msgstr ""
+"배포에 공용 IP 검색을 위한 STUN이 필요한 경우, 1.5단계에서 포트를 열 때 포함할 수 "
+"있도록 지금 기록해 두십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:298
 msgid "1.3.2 TURN Server"
-msgstr ""
+msgstr "1.3.2 TURN 서버"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:300
 msgid ""
@@ -811,24 +975,32 @@ msgid ""
 "media service directly. If STUN helps clients discover where to connect, "
 "TURN acts as a backup route when direct connectivity is not possible."
 msgstr ""
+"TURN은 클라이언트가 통화 미디어 서비스에 직접 도달할 수 없는 경우에만 사용되는 릴레이 "
+"서비스입니다. STUN이 클라이언트가 연결할 위치를 검색하도록 돕는다면, TURN은 직접 연결이 "
+"불가능할 때 백업 경로 역할을 합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:302
 msgid ""
 "Provisioning a TURN server is necessary if both of these conditions are "
 "true:"
 msgstr ""
+"다음 두 조건이 모두 참인 경우 TURN 서버를 프로비저닝해야 합니다:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:304
 msgid ""
 "Clients are on networks that cannot directly reach the RTCD Server or "
 "Calls plugin over UDP (preferred) on port `8443` for media traffic."
 msgstr ""
+"클라이언트가 미디어 트래픽을 위해 포트 `8443`의 UDP(권장)를 통해 RTCD 서버 또는 통화 "
+"플러그인에 직접 도달할 수 없는 네트워크에 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:305
 msgid ""
 "Clients are on networks that cannot directly reach the RTCD Server or "
 "Calls plugin over TCP (fallback) on port `8443` for media traffic."
 msgstr ""
+"클라이언트가 미디어 트래픽을 위해 포트 `8443`의 TCP(폴백)를 통해 RTCD 서버 또는 통화 "
+"플러그인에 직접 도달할 수 없는 네트워크에 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:307
 msgid ""
@@ -836,6 +1008,9 @@ msgid ""
 "complexity. Only plan to deploy TURN if your answers indicate that you "
 "cannot rely on UDP or TCP for media, and users need an alternative route."
 msgstr ""
+"TURN은 지연 시간과 인프라 복잡성을 추가하므로 일반적으로 최후의 수단입니다. 답변이 "
+"미디어에 UDP 또는 TCP를 사용할 수 없고 사용자에게 대체 경로가 필요함을 나타내는 경우에만 "
+"TURN 배포를 계획하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:310
 msgid ""
@@ -845,10 +1020,14 @@ msgid ""
 "transports you actually use, and scope client access according to your "
 "organization's network policy."
 msgstr ""
+"TURN은 기본 요구 사항이 아니라 폴백 서비스입니다. 클라이언트가 UDP 또는 TCP `8443`을 "
+"통해 미디어 서비스에 안정적으로 도달할 수 있다면 TURN을 배포하지 마십시오. TURN을 "
+"배포하는 경우 실제로 사용하는 TURN 리스너 포트와 전송만 열고, 조직의 네트워크 정책에 "
+"따라 클라이언트 액세스 범위를 지정하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:313
 msgid "1.4 Provision Infrastructure"
-msgstr ""
+msgstr "1.4 인프라 프로비저닝"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:315
 msgid ""
@@ -858,6 +1037,10 @@ msgid ""
 "matters because you need the IP addresses or DNS names of these servers "
 "before you can finish the networking configurations in the next step."
 msgstr ""
+"이제 통화 배포를 지원하는 데 필요한 서버 또는 VM을 프로비저닝합니다. 여기서는 인프라만 "
+"준비합니다. 소프트웨어 설치 및 서비스 구성은 이후 단계에서 진행됩니다. 다음 단계에서 "
+"네트워킹 구성을 완료하려면 이러한 서버의 IP 주소 또는 DNS 이름이 필요하므로 이 단계가 "
+"중요합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:317
 msgid ""
@@ -865,12 +1048,17 @@ msgid ""
 "selected in Step 1.2. If you provision additional hardware, write down "
 "the IP addresses or DNS names now because you will use them in Step 1.5:"
 msgstr ""
+"인프라 요구 사항은 1.2단계에서 선택한 배포 인프라에 따라 다릅니다. 추가 하드웨어를 "
+"프로비저닝하는 경우 1.5단계에서 사용하게 되므로 지금 IP 주소 또는 DNS 이름을 적어 "
+"두십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:321
 msgid ""
 "Since the Mattermost server is handling all media processing, you can "
 "skip this step and proceed to network configuration in Step 1.5."
 msgstr ""
+"OKR.BEST 서버가 모든 미디어 처리를 담당하므로, 이 단계를 건너뛰고 1.5단계의 네트워크 "
+"구성으로 진행할 수 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:325
 msgid ""
@@ -881,10 +1069,14 @@ msgid ""
 "recommend starting with one server and then scaling out if your expected "
 "workload requires it."
 msgstr ""
+"RTCD용 새 서버를 프로비저닝해야 합니다. 하드웨어 사이징의 벤치마크 예시는 [성능 "
+"기준선](calls-metrics-monitoring.md#performance-baselines)을 사용하십시오. RTCD "
+"서비스는 [수평 확장](calls-rtcd-setup.md#horizontal-scaling)을 지원하지만, 하나의 "
+"서버로 시작한 다음 예상 워크로드에 따라 필요한 경우 확장하는 것을 권장합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:327
 msgid "**Recording**"
-msgstr ""
+msgstr "**녹화**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:329
 msgid ""
@@ -894,10 +1086,14 @@ msgid ""
 "/calls-offloader/blob/master/docs/performance.md) to estimate recording "
 "capacity and transcription load."
 msgstr ""
+"`calls-offloader` 서비스용 새 서버를 프로비저닝해야 합니다. 권장 시작 사양은 "
+"**8 vCPU / 16 GB RAM**이며, 또는 이러한 [성능 벤치마크](https://github.com/mattermost"
+"/calls-offloader/blob/master/docs/performance.md)를 사용하여 녹화 용량과 전사 부하를 "
+"추정할 수 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:331
 msgid "**TURN Server**"
-msgstr ""
+msgstr "**TURN 서버**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:333
 msgid ""
@@ -905,36 +1101,42 @@ msgid ""
 "the media server over UDP or TCP `8443`, you will need to provision your "
 "TURN server now."
 msgstr ""
+"1.3.2단계에서 사용자가 UDP 또는 TCP `8443`을 통해 미디어 서버에 안정적으로 도달할 수 "
+"없다고 판단한 경우, 지금 TURN 서버를 프로비저닝해야 합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:335
 msgid ""
 "Mattermost recommends installing "
 "[coturn](https://github.com/coturn/coturn)."
 msgstr ""
+"OKR.BEST는 [coturn](https://github.com/coturn/coturn) 설치를 권장합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:337
 msgid "Before moving to Step 1.5, confirm the following:"
-msgstr ""
+msgstr "1.5단계로 넘어가기 전에 다음을 확인하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:339
 msgid "Every required server or VM has been created."
-msgstr ""
+msgstr "필요한 모든 서버 또는 VM이 생성되었습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:340
 msgid ""
 "Every required server has the IP address or DNS name you plan to use "
 "later in configuration."
 msgstr ""
+"필요한 모든 서버에 나중에 구성에서 사용할 IP 주소 또는 DNS 이름이 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:341
 msgid ""
 "You have administrative access to every required server. (validate with "
 "`ssh <user>@<SERVER_IP>`)"
 msgstr ""
+"필요한 모든 서버에 대한 관리자 액세스 권한이 있습니다. (`ssh <user>@<SERVER_IP>`로 "
+"검증)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:343
 msgid "1.5 Network Configuration"
-msgstr ""
+msgstr "1.5 네트워크 구성"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:345
 msgid ""
@@ -943,10 +1145,13 @@ msgid ""
 " you can configure these rules, which is why provisioning in Step 1.4 "
 "comes first."
 msgstr ""
+"이 섹션에는 통화 배포에 관련된 각 서버에 대해 열어야 하는 네트워크 포트가 나열되어 "
+"있습니다. 이러한 규칙을 구성하기 전에 서버 인스턴스가 존재해야 하므로 1.4단계의 "
+"프로비저닝이 먼저 진행됩니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:347
 msgid "**How you open ports depends on your environment:**"
-msgstr ""
+msgstr "**포트를 여는 방법은 환경에 따라 다릅니다:**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:349
 msgid ""
@@ -954,76 +1159,84 @@ msgid ""
 "rules in your cloud console security group or network ACL for each "
 "instance."
 msgstr ""
+"**클라우드 배포(AWS, Azure, GCP):** 각 인스턴스에 대해 클라우드 콘솔 보안 그룹 또는 "
+"네트워크 ACL에서 인바운드 및 아웃바운드 규칙을 구성합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:350
 msgid ""
 "**On-premises or self-managed VMs:** Use `firewalld` (RHEL, Rocky Linux, "
 "AlmaLinux) or `ufw` (Ubuntu/Debian) commands directly on each server."
 msgstr ""
+"**온프레미스 또는 자체 관리 VM:** 각 서버에서 `firewalld`(RHEL, Rocky Linux, "
+"AlmaLinux) 또는 `ufw`(Ubuntu/Debian) 명령을 직접 사용합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:351
 msgid ""
 "**Centrally managed firewall:** If a network team manages your firewall, "
 "share the tables below with them and request the rules before proceeding."
 msgstr ""
+"**중앙 관리형 방화벽:** 네트워크 팀이 방화벽을 관리하는 경우, 진행하기 전에 아래 표를 "
+"공유하고 규칙을 요청하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:353
 msgid ""
 "Work through one server at a time so you can verify nothing is missed "
 "before moving on."
 msgstr ""
+"한 번에 한 서버씩 진행하여 다음으로 넘어가기 전에 누락된 것이 없는지 확인하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:355
 msgid ""
 "**Only open the ports relevant for your chosen deployment architecture "
 "(Integrated or RTCD):**"
 msgstr ""
+"**선택한 배포 아키텍처(통합 또는 RTCD)에 관련된 포트만 여십시오:**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:360
 msgid "Mattermost server ports"
-msgstr ""
+msgstr "OKR.BEST 서버 포트"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:358
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
 msgid "Port"
-msgstr ""
+msgstr "포트"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:358
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
 msgid "Protocol"
-msgstr ""
+msgstr "프로토콜"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:358
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
 msgid "Direction"
-msgstr ""
+msgstr "방향"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:358
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
 msgid "Source"
-msgstr ""
+msgstr "소스"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:358
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
 msgid "Destination"
-msgstr ""
+msgstr "대상"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:358
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
 msgid "Notes"
-msgstr ""
+msgstr "비고"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:358
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
@@ -1044,26 +1257,26 @@ msgstr ""
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
 msgid "Inbound"
-msgstr ""
+msgstr "인바운드"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:358
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
 msgid "Mattermost clients"
-msgstr ""
+msgstr "OKR.BEST 클라이언트"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:358
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
 msgid "Mattermost server"
-msgstr ""
+msgstr "OKR.BEST 서버"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:358
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
 msgid "HTTPS and WebSocket signaling."
-msgstr ""
+msgstr "HTTPS 및 WebSocket 시그널링."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:358
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
@@ -1081,11 +1294,11 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:358
 msgid "Media traffic (Integrated mode)."
-msgstr ""
+msgstr "미디어 트래픽(통합 모드)."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:358
 msgid "Media traffic fallback (Integrated mode)."
-msgstr ""
+msgstr "미디어 트래픽 폴백(통합 모드)."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:358
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
@@ -1099,7 +1312,7 @@ msgstr ""
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
 msgid "Outbound"
-msgstr ""
+msgstr "아웃바운드"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:358
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
@@ -1109,7 +1322,7 @@ msgstr ""
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:358
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
 msgid "(Optional - Step 1.3.1) Public IP discovery using STUN."
-msgstr ""
+msgstr "(선택 사항 - 1.3.1단계) STUN을 사용한 공용 IP 검색."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:371
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:416
@@ -1119,15 +1332,19 @@ msgid ""
 " server running the media service (RTCD or Integrated) - not on NGINX. "
 "Port 443 is the only port NGINX needs to handle for Calls."
 msgstr ""
+"OKR.BEST 앞단에 리버스 프록시로 NGINX를 사용하는 경우, UDP 트래픽을 전달하는 데 "
+"사용해서는 안 됩니다. 포트 8443은 NGINX가 아니라 미디어 서비스(RTCD 또는 통합)를 "
+"실행하는 서버에서 직접 열어야 합니다. 포트 443은 통화에 대해 NGINX가 처리해야 하는 "
+"유일한 포트입니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:374
 msgid "Recording server ports"
-msgstr ""
+msgstr "녹화 서버 포트"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:376
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:421
 msgid "If you deployed a calls-offloader server in Step 1.4, open these ports:"
-msgstr ""
+msgstr "1.4단계에서 calls-offloader 서버를 배포한 경우 이러한 포트를 여십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
@@ -1137,7 +1354,7 @@ msgstr ""
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
 msgid "calls-offloader server"
-msgstr ""
+msgstr "calls-offloader 서버"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
@@ -1145,6 +1362,8 @@ msgid ""
 "Job service API (Internal only. Restrict this rule to the Mattermost "
 "server or approved application subnet only.)"
 msgstr ""
+"작업 서비스 API(내부 전용. 이 규칙을 OKR.BEST 서버 또는 승인된 애플리케이션 서브넷으로만 "
+"제한하십시오.)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
@@ -1152,21 +1371,22 @@ msgid ""
 "Recorder and transcriber jobs connect to the media service as call "
 "participants."
 msgstr ""
+"녹화기 및 전사기 작업이 통화 참가자로서 미디어 서비스에 연결합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
 msgid "Media traffic fallback."
-msgstr ""
+msgstr "미디어 트래픽 폴백."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
 msgid "Recorder and transcriber jobs post results back to Mattermost."
-msgstr ""
+msgstr "녹화기 및 전사기 작업이 결과를 OKR.BEST에 다시 게시합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:385
 msgid "TURN server ports"
-msgstr ""
+msgstr "TURN 서버 포트"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:387
 msgid ""
@@ -1174,6 +1394,8 @@ msgid ""
 "by the transports you actually configure. If you are using `coturn`, "
 "these are common defaults:"
 msgstr ""
+"1.4단계에서 TURN 서버를 배포한 경우, 실제로 구성하는 전송에 필요한 포트만 여십시오. "
+"`coturn`을 사용하는 경우 일반적인 기본값은 다음과 같습니다:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
@@ -1183,12 +1405,12 @@ msgstr ""
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
 msgid "TURN server"
-msgstr ""
+msgstr "TURN 서버"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
 msgid "TURN relay."
-msgstr ""
+msgstr "TURN 릴레이."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
@@ -1201,6 +1423,8 @@ msgid ""
 "(Optional) If you configure TURN over TLS. Do not open this port unless "
 "you are explicitly using it."
 msgstr ""
+"(선택 사항) TLS를 통한 TURN을 구성하는 경우. 명시적으로 사용하지 않는 한 이 포트를 열지 "
+"마십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
@@ -1210,7 +1434,7 @@ msgstr ""
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:370
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
 msgid "TURN relay port range required to relay media."
-msgstr ""
+msgstr "미디어를 릴레이하는 데 필요한 TURN 릴레이 포트 범위."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:400
 msgid ""
@@ -1218,23 +1442,26 @@ msgid ""
 "/administration-guide/configure/calls-deployment-guide.md:400: (INFO/1) "
 "Duplicate implicit target name: \"mattermost server ports\"."
 msgstr ""
+"OKR.BEST 서버 포트/home/sdh/okrbest/okrbest-docs/source"
+"/administration-guide/configure/calls-deployment-guide.md:400: (INFO/1) "
+"Duplicate implicit target name: \"mattermost server ports\"."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:406
 msgid "RTCD server ports"
-msgstr ""
+msgstr "RTCD 서버 포트"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
 msgid "Mattermost clients and calls-offloader server"
-msgstr ""
+msgstr "OKR.BEST 클라이언트 및 calls-offloader 서버"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:415
 msgid "RTCD server"
-msgstr ""
+msgstr "RTCD 서버"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
 msgid "Media traffic."
-msgstr ""
+msgstr "미디어 트래픽."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:398
 msgid "8045"
@@ -1245,6 +1472,8 @@ msgid ""
 "RTCD API (Internal only. Restrict this rule to the Mattermost server or "
 "approved application subnet only.)"
 msgstr ""
+"RTCD API(내부 전용. 이 규칙을 OKR.BEST 서버 또는 승인된 애플리케이션 서브넷으로만 "
+"제한하십시오.)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:419
 msgid ""
@@ -1252,6 +1481,9 @@ msgid ""
 "/administration-guide/configure/calls-deployment-guide.md:419: (INFO/1) "
 "Duplicate implicit target name: \"recording server ports\"."
 msgstr ""
+"녹화 서버 포트/home/sdh/okrbest/okrbest-docs/source"
+"/administration-guide/configure/calls-deployment-guide.md:419: (INFO/1) "
+"Duplicate implicit target name: \"recording server ports\"."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:430
 msgid ""
@@ -1259,16 +1491,21 @@ msgid ""
 "guide/configure/calls-deployment-guide.md:430: (INFO/1) Duplicate "
 "implicit target name: \"turn server ports\"."
 msgstr ""
+"TURN 서버 포트/home/sdh/okrbest/okrbest-docs/source/administration-"
+"guide/configure/calls-deployment-guide.md:430: (INFO/1) Duplicate "
+"implicit target name: \"turn server ports\"."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:432
 msgid ""
 "If you deployed a TURN server in Step 1.4, open these ports. If you are "
 "using `coturn`, these are the common defaults:"
 msgstr ""
+"1.4단계에서 TURN 서버를 배포한 경우 이러한 포트를 여십시오. `coturn`을 사용하는 경우 "
+"일반적인 기본값은 다음과 같습니다:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:442
 msgid "1.6 Networking Checks"
-msgstr ""
+msgstr "1.6 네트워킹 점검"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:444
 msgid ""
@@ -1279,6 +1516,11 @@ msgid ""
 " below. This is especially important for UDP checks, where a blocked port"
 " and an allowed-but-idle port can otherwise look the same."
 msgstr ""
+"이러한 점검은 방화벽 규칙과 네트워크 도달 가능성을 검증합니다. 아직 프로덕션 통화, RTCD "
+"또는 `calls-offloader` 서비스가 설치되어 있을 필요는 없습니다. 이러한 서비스가 존재하기 "
+"전에 신뢰할 수 있는 결과를 얻으려면, 아래의 각 해당 스캔 전에 대상 호스트에서 임시 "
+"리스너를 시작하십시오. 이는 특히 UDP 점검에서 중요한데, 차단된 포트와 허용되었지만 "
+"유휴 상태인 포트가 동일하게 보일 수 있기 때문입니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:446
 msgid ""
@@ -1286,34 +1528,39 @@ msgid ""
 "checks from, and install `ncat` on each target host where you will start "
 "a temporary listener. For example:"
 msgstr ""
+"먼저, 점검을 실행할 각 소스 머신 또는 클라이언트에 `nmap`을 설치하고, 임시 리스너를 "
+"시작할 각 대상 호스트에 `ncat`을 설치하십시오. 예:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:448
 msgid "Ubuntu or Debian: `sudo apt install nmap ncat`"
-msgstr ""
+msgstr "Ubuntu 또는 Debian: `sudo apt install nmap ncat`"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:449
 msgid "RHEL, Rocky Linux, or AlmaLinux: `sudo dnf install nmap nmap-ncat`"
-msgstr ""
+msgstr "RHEL, Rocky Linux 또는 AlmaLinux: `sudo dnf install nmap nmap-ncat`"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:451
 msgid ""
 "When you execute each check below, `nmap` returns `open`, `closed`, or "
 "`filtered`."
 msgstr ""
+"아래의 각 점검을 실행하면 `nmap`은 `open`, `closed` 또는 `filtered`를 반환합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:453
 msgid "**Pass**:"
-msgstr ""
+msgstr "**통과**:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:454
 msgid ""
 "`open`: Port is reachable, and the target host was able to bind a "
 "temporary listener on that port."
 msgstr ""
+"`open`: 포트에 도달할 수 있으며, 대상 호스트가 해당 포트에 임시 리스너를 바인딩할 수 "
+"있었습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:456
 msgid "**Fail**:"
-msgstr ""
+msgstr "**실패**:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:457
 msgid ""
@@ -1321,12 +1568,17 @@ msgid ""
 "that port. Confirm the temporary listener is still running, the port is "
 "correct, and the port was not already in use by another process."
 msgstr ""
+"`closed`: 트래픽이 대상 호스트에 도달했지만 해당 포트에서 수신 대기 중인 것이 "
+"없습니다. 임시 리스너가 여전히 실행 중인지, 포트가 올바른지, 포트가 다른 프로세스에 의해 "
+"이미 사용되고 있지 않은지 확인하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:458
 msgid ""
 "`filtered`: Firewall is blocking the port. Revisit your networking "
 "configuration in Step 1.5 before continuing."
 msgstr ""
+"`filtered`: 방화벽이 포트를 차단하고 있습니다. 계속하기 전에 1.5단계의 네트워킹 "
+"구성을 다시 확인하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:461
 msgid ""
@@ -1336,16 +1588,21 @@ msgid ""
 "source machine. Stop the temporary listener with `Ctrl+C` after the check"
 " completes."
 msgstr ""
+"아래 명령에서 `TARGET_IP`를 테스트하는 서버의 실제 IP 주소로 바꾸십시오. 먼저 대상 "
+"호스트에서 서버 측 `ncat` 리스너를 시작한 다음, 소스 머신에서 클라이언트 측 `nmap` "
+"명령을 실행하십시오. 점검이 완료되면 `Ctrl+C`로 임시 리스너를 중지하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:464
 msgid "**Integrated deployments**"
-msgstr ""
+msgstr "**통합 배포**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:466
 msgid ""
 "Start the temporary listeners on the Mattermost Server, then run `nmap` "
 "from any client machine on the same network as your users:"
 msgstr ""
+"OKR.BEST 서버에서 임시 리스너를 시작한 다음, 사용자와 동일한 네트워크의 클라이언트 "
+"머신에서 `nmap`을 실행하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:544
@@ -1353,13 +1610,13 @@ msgstr ""
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "Check"
-msgstr ""
+msgstr "점검"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:642
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 msgid "Command"
-msgstr ""
+msgstr "명령"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "`TARGET_IP`"
@@ -1367,7 +1624,7 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "Description"
-msgstr ""
+msgstr "설명"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "1.6.1"
@@ -1377,15 +1634,15 @@ msgstr ""
 msgid ""
 "Mattermost Server: `sudo ncat -u -l -k -p 8443 -c '/bin/cat'`<br>Client: "
 "`sudo nmap -sU -p 8443 TARGET_IP`"
-msgstr ""
+msgstr "OKR.BEST 서버: `sudo ncat -u -l -k -p 8443 -c '/bin/cat'`<br>클라이언트: `sudo nmap -sU -p 8443 TARGET_IP`"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "Mattermost server IP"
-msgstr ""
+msgstr "OKR.BEST 서버 IP"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "Clients can send UDP media to the Mattermost server"
-msgstr ""
+msgstr "클라이언트가 OKR.BEST 서버로 UDP 미디어를 보낼 수 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "1.6.2"
@@ -1395,21 +1652,23 @@ msgstr ""
 msgid ""
 "Mattermost Server: `sudo ncat -l -k -p 8443`<br>Client: `nmap -p 8443 "
 "TARGET_IP`"
-msgstr ""
+msgstr "OKR.BEST 서버: `sudo ncat -l -k -p 8443`<br>클라이언트: `nmap -p 8443 TARGET_IP`"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "Clients can reach the Mattermost server for TCP media fallback"
-msgstr ""
+msgstr "클라이언트가 TCP 미디어 폴백을 위해 OKR.BEST 서버에 도달할 수 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:473
 msgid "**RTCD deployments**"
-msgstr ""
+msgstr "**RTCD 배포**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:475
 msgid ""
 "Start the temporary listeners on the RTCD Server, then run `nmap` from "
 "any client machine on the same network as your users:"
 msgstr ""
+"RTCD 서버에서 임시 리스너를 시작한 다음, 사용자와 동일한 네트워크의 클라이언트 "
+"머신에서 `nmap`을 실행하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "1.6.3"
@@ -1419,15 +1678,15 @@ msgstr ""
 msgid ""
 "RTCD Server: `sudo ncat -u -l -k -p 8443 -c '/bin/cat'`<br>Client: `sudo "
 "nmap -sU -p 8443 TARGET_IP`"
-msgstr ""
+msgstr "RTCD 서버: `sudo ncat -u -l -k -p 8443 -c '/bin/cat'`<br>클라이언트: `sudo nmap -sU -p 8443 TARGET_IP`"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "RTCD server IP"
-msgstr ""
+msgstr "RTCD 서버 IP"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "Clients can send UDP media to the RTCD server"
-msgstr ""
+msgstr "클라이언트가 RTCD 서버로 UDP 미디어를 보낼 수 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "1.6.4"
@@ -1435,17 +1694,18 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "RTCD Server: `sudo ncat -l -k -p 8443`<br>Client: `nmap -p 8443 TARGET_IP`"
-msgstr ""
+msgstr "RTCD 서버: `sudo ncat -l -k -p 8443`<br>클라이언트: `nmap -p 8443 TARGET_IP`"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "Clients can reach the RTCD server for TCP media fallback"
-msgstr ""
+msgstr "클라이언트가 TCP 미디어 폴백을 위해 RTCD 서버에 도달할 수 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:482
 msgid ""
 "Start the temporary listener on the RTCD Server, then run `nmap` from the"
 " Mattermost server:"
 msgstr ""
+"RTCD 서버에서 임시 리스너를 시작한 다음, OKR.BEST 서버에서 `nmap`을 실행하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "1.6.5"
@@ -1455,21 +1715,23 @@ msgstr ""
 msgid ""
 "RTCD Server: `sudo ncat -l -k -p 8045`<br>Mattermost Server: `nmap -p "
 "8045 TARGET_IP`"
-msgstr ""
+msgstr "RTCD 서버: `sudo ncat -l -k -p 8045`<br>OKR.BEST 서버: `nmap -p 8045 TARGET_IP`"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "Mattermost can reach the RTCD API"
-msgstr ""
+msgstr "OKR.BEST가 RTCD API에 도달할 수 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:488
 msgid "**Recording deployments**"
-msgstr ""
+msgstr "**녹화 배포**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:490
 msgid ""
 "Start the temporary listener on the Recording Server (`calls-offloader`),"
 " then run `nmap` from the Mattermost server:"
 msgstr ""
+"녹화 서버(`calls-offloader`)에서 임시 리스너를 시작한 다음, OKR.BEST 서버에서 "
+"`nmap`을 실행하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "1.6.6"
@@ -1479,15 +1741,15 @@ msgstr ""
 msgid ""
 "Recording Server: `sudo ncat -l -k -p 4545`<br>Mattermost Server: `nmap "
 "-p 4545 TARGET_IP`"
-msgstr ""
+msgstr "녹화 서버: `sudo ncat -l -k -p 4545`<br>OKR.BEST 서버: `nmap -p 4545 TARGET_IP`"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "calls-offloader server IP"
-msgstr ""
+msgstr "calls-offloader 서버 IP"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "Mattermost can reach the calls-offloader API"
-msgstr ""
+msgstr "OKR.BEST가 calls-offloader API에 도달할 수 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:496
 msgid ""
@@ -1495,6 +1757,8 @@ msgid ""
 "server if using Integrated mode), then run `nmap` from the Recording "
 "server (`calls-offloader`):"
 msgstr ""
+"미디어 서버(RTCD 또는 통합 모드를 사용하는 경우 OKR.BEST 서버)에서 임시 리스너를 "
+"시작한 다음, 녹화 서버(`calls-offloader`)에서 `nmap`을 실행하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "1.6.7"
@@ -1504,17 +1768,19 @@ msgstr ""
 msgid ""
 "RTCD or Mattermost Server: `sudo ncat -u -l -k -p 8443 -c "
 "'/bin/cat'`<br>Recording Server: `sudo nmap -sU -p 8443 TARGET_IP`"
-msgstr ""
+msgstr "RTCD 또는 OKR.BEST 서버: `sudo ncat -u -l -k -p 8443 -c '/bin/cat'`<br>녹화 서버: `sudo nmap -sU -p 8443 TARGET_IP`"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "RTCD server IP (or Mattermost server IP if using Integrated mode)"
-msgstr ""
+msgstr "RTCD 서버 IP(또는 통합 모드를 사용하는 경우 OKR.BEST 서버 IP)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid ""
 "Calls Offloader can send UDP media to the media service to join calls for"
 " recording"
 msgstr ""
+"Calls Offloader가 녹화를 위해 통화에 참여하도록 미디어 서비스로 UDP 미디어를 보낼 수 "
+"있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "1.6.8"
@@ -1524,17 +1790,19 @@ msgstr ""
 msgid ""
 "RTCD or Mattermost Server: `sudo ncat -l -k -p 8443`<br>Recording Server:"
 " `nmap -p 8443 TARGET_IP`"
-msgstr ""
+msgstr "RTCD 또는 OKR.BEST 서버: `sudo ncat -l -k -p 8443`<br>녹화 서버: `nmap -p 8443 TARGET_IP`"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "Calls Offloader can reach the media service for TCP media fallback"
-msgstr ""
+msgstr "Calls Offloader가 TCP 미디어 폴백을 위해 미디어 서비스에 도달할 수 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:503
 msgid ""
 "For the next check, use the existing HTTPS listener on your running "
 "Mattermost server instead of starting a temporary `ncat` listener:"
 msgstr ""
+"다음 점검에서는 임시 `ncat` 리스너를 시작하는 대신 실행 중인 OKR.BEST 서버의 기존 "
+"HTTPS 리스너를 사용하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "1.6.9"
@@ -1542,21 +1810,23 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "Recording Server: `nmap -p 443 TARGET_IP`"
-msgstr ""
+msgstr "녹화 서버: `nmap -p 443 TARGET_IP`"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "Calls Offloader can post recordings back to Mattermost"
-msgstr ""
+msgstr "Calls Offloader가 녹화본을 OKR.BEST에 다시 게시할 수 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:509
 msgid "**TURN deployments**"
-msgstr ""
+msgstr "**TURN 배포**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:511
 msgid ""
 "Start the temporary listeners on the TURN Server, then run `nmap` from "
 "any client machine on the same network as your users:"
 msgstr ""
+"TURN 서버에서 임시 리스너를 시작한 다음, 사용자와 동일한 네트워크의 클라이언트 "
+"머신에서 `nmap`을 실행하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "1.6.10"
@@ -1566,15 +1836,15 @@ msgstr ""
 msgid ""
 "TURN Server: `sudo ncat -u -l -k -p 3478 -c '/bin/cat'`<br>Client: `sudo "
 "nmap -sU -p 3478 TARGET_IP`"
-msgstr ""
+msgstr "TURN 서버: `sudo ncat -u -l -k -p 3478 -c '/bin/cat'`<br>클라이언트: `sudo nmap -sU -p 3478 TARGET_IP`"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "TURN server IP"
-msgstr ""
+msgstr "TURN 서버 IP"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "Clients can reach the TURN server on UDP 3478"
-msgstr ""
+msgstr "클라이언트가 UDP 3478에서 TURN 서버에 도달할 수 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "1.6.11"
@@ -1582,11 +1852,11 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "TURN Server: `sudo ncat -l -k -p 3478`<br>Client: `nmap -p 3478 TARGET_IP`"
-msgstr ""
+msgstr "TURN 서버: `sudo ncat -l -k -p 3478`<br>클라이언트: `nmap -p 3478 TARGET_IP`"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "Clients can reach the TURN server on TCP 3478"
-msgstr ""
+msgstr "클라이언트가 TCP 3478에서 TURN 서버에 도달할 수 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "1.6.12"
@@ -1596,49 +1866,56 @@ msgstr ""
 msgid ""
 "TURN Server: `sudo ncat -u -l -k -p 49152 -c '/bin/cat'`<br>Client: `sudo"
 " nmap -sU -p 49152 TARGET_IP`"
-msgstr ""
+msgstr "TURN 서버: `sudo ncat -u -l -k -p 49152 -c '/bin/cat'`<br>클라이언트: `sudo nmap -sU -p 49152 TARGET_IP`"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:460
 msgid "Spot check of the TURN relay port range"
-msgstr ""
+msgstr "TURN 릴레이 포트 범위 표본 점검"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:519
 msgid "1.7 Verification Checks"
-msgstr ""
+msgstr "1.7 검증 점검"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:521
 msgid "Before proceeding to Phase 2, confirm all of the following:"
-msgstr ""
+msgstr "Phase 2로 진행하기 전에 다음을 모두 확인하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:523
 msgid ""
 "You have chosen your deployment architecture and provisioned the required"
 " servers."
 msgstr ""
+"배포 아키텍처를 선택하고 필요한 서버를 프로비저닝했습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:524
 msgid ""
 "You have confirmed your Mattermost license supports the architecture and "
 "features you plan to deploy."
 msgstr ""
+"OKR.BEST 라이선스가 배포하려는 아키텍처 및 기능을 지원하는지 확인했습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:525
 msgid ""
 "Every required firewall rule and network path for your chosen "
 "architecture has been opened."
 msgstr ""
+"선택한 아키텍처에 필요한 모든 방화벽 규칙과 네트워크 경로가 열렸습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:526
 msgid ""
 "Every relevant network check in Step 1.6 returned the expected result "
 "(`open`, but not `closed` or `filtered`)."
 msgstr ""
+"1.6단계의 모든 관련 네트워크 점검이 예상 결과(`closed`나 `filtered`가 아닌 `open`)를 "
+"반환했습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:527
 msgid ""
 "If you need STUN, outbound UDP `3478` is allowed to "
 "`stun.global.calls.mattermost.com`."
 msgstr ""
+"STUN이 필요한 경우, `stun.global.calls.mattermost.com`으로의 아웃바운드 UDP "
+"`3478`이 허용됩니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:530
 msgid ""
@@ -1646,10 +1923,13 @@ msgid ""
 "your deployment architecture are passing. If any check fails, go to "
 "[Appendix A: Troubleshooting](#appendix-a-troubleshooting).**"
 msgstr ""
+"**배포 아키텍처에 관련된 이 섹션의 모든 점검이 통과될 때까지 Phase 2로 진행하지 "
+"마십시오. 점검이 실패하는 경우 [부록 A: 문제 해결](#appendix-a-troubleshooting)로 "
+"이동하십시오.**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:535
 msgid "Phase 2: Install and Configure Calls"
-msgstr ""
+msgstr "Phase 2: 통화 설치 및 구성"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:537
 msgid ""
@@ -1657,53 +1937,56 @@ msgid ""
 "deployment architecture. Do not complete both paths for the same "
 "deployment."
 msgstr ""
+"이제 배포 아키텍처에 해당하는 경로를 따라 통화를 구성합니다. 동일한 배포에 대해 두 경로를 "
+"모두 완료하지 마십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:539
 msgid "**Path A** if you are using the **Integrated** Calls deployment model."
-msgstr ""
+msgstr "**통합** 통화 배포 모델을 사용하는 경우 **경로 A**."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:540
 msgid "**Path B** if you are using the **RTCD** Calls deployment model."
-msgstr ""
+msgstr "**RTCD** 통화 배포 모델을 사용하는 경우 **경로 B**."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:542
 msgid ""
 "Select your path in the tab below to follow the appropriate installation "
 "and configuration instructions:"
 msgstr ""
+"적절한 설치 및 구성 지침을 따르려면 아래 탭에서 경로를 선택하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:546
 msgid "Path A: Configure Integrated Calls"
-msgstr ""
+msgstr "경로 A: 통합 통화 구성"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:548
 msgid "2A.1 Prerequisites"
-msgstr ""
+msgstr "2A.1 사전 요구 사항"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:550
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:626
 msgid "Phase 1 verification checks passed"
-msgstr ""
+msgstr "Phase 1 검증 점검 통과"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:551
 msgid "Integrated is the base architecture you selected in Step 1.2"
-msgstr ""
+msgstr "1.2단계에서 선택한 기본 아키텍처가 통합입니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:552
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:630
 msgid "Two test accounts on your Mattermost server"
-msgstr ""
+msgstr "OKR.BEST 서버의 테스트 계정 두 개"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:553
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:631
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:727
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:879
 msgid "System Admin permissions on your Mattermost server"
-msgstr ""
+msgstr "OKR.BEST 서버의 시스템 관리자 권한"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:555
 msgid "2A.2 Configure the Calls plugin"
-msgstr ""
+msgstr "2A.2 통화 플러그인 구성"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:557
 msgid ""
@@ -1711,20 +1994,24 @@ msgid ""
 "Go to **System Console > Plugins > Calls > Settings** and complete the "
 "following steps:"
 msgstr ""
+"통화 플러그인은 OKR.BEST 셀프 호스팅 배포에 사전 패키징되어 있습니다. **관리자 도구 > "
+"플러그인 > Calls > 설정**으로 이동하여 다음 단계를 완료하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:559
 msgid "**2A.2.1: Enable the plugin**"
-msgstr ""
+msgstr "**2A.2.1: 플러그인 활성화**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:561
 msgid ""
 "Set **Enable Plugin** to `true`. This enables editing for the rest of the"
 " configuration settings on the page."
 msgstr ""
+"**Enable Plugin**을 `true`로 설정합니다. 이렇게 하면 페이지의 나머지 구성 설정을 편집할 "
+"수 있게 됩니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:563
 msgid "**2A.2.2: Enable test mode**"
-msgstr ""
+msgstr "**2A.2.2: 테스트 모드 활성화**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:565
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:659
@@ -1733,10 +2020,13 @@ msgid ""
 "validation. In this mode, System Admins control where Calls is available "
 "and can enable it in specific channels for testing."
 msgstr ""
+"**Test mode**를 `on`으로 설정하여 초기 검증 중에 통화가 제한된 상태를 유지하도록 "
+"합니다. 이 모드에서는 시스템 관리자가 통화를 사용할 수 있는 위치를 제어하며 테스트를 "
+"위해 특정 채널에서 활성화할 수 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:567
 msgid "**2A.2.3: Configure the host media address**"
-msgstr ""
+msgstr "**2A.2.3: 호스트 미디어 주소 구성**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:569
 msgid ""
@@ -1746,98 +2036,112 @@ msgid ""
 "server. The ICE Host Override tells Calls which address to advertise to "
 "them. Base this value on the STUN decision tree from Step 1.3.1."
 msgstr ""
+"**ICE Host Override**를 클라이언트가 미디어 서비스에 도달하는 데 사용할 IP 주소 또는 "
+"DNS 이름으로 설정합니다. ICE(Interactive Connectivity Establishment)는 사용자의 "
+"디바이스가 미디어 서버로의 경로를 찾는 데 사용하는 프로토콜입니다. ICE Host Override는 "
+"통화에 어떤 주소를 알릴지 지정합니다. 이 값은 1.3.1단계의 STUN 결정 트리를 기준으로 "
+"설정하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:571
 msgid ""
 "If your users are in a private network, VPN, or air-gapped environment, "
 "set it to the private address of the Mattermost server they can reach."
 msgstr ""
+"사용자가 사설 네트워크, VPN 또는 에어갭 환경에 있는 경우, 사용자가 도달할 수 있는 "
+"OKR.BEST 서버의 사설 주소로 설정하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:572
 msgid "If your Mattermost server has a stable public IP, set it to that IP."
-msgstr ""
+msgstr "OKR.BEST 서버에 안정적인 공용 IP가 있는 경우, 해당 IP로 설정하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:573
 msgid ""
 "Otherwise, leave it empty for automatic public address discovery using "
 "STUN."
 msgstr ""
+"그렇지 않으면 STUN을 사용한 자동 공용 주소 검색을 위해 비워 두십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:575
 msgid "**2A.2.4: Configure TURN Servers**"
-msgstr ""
+msgstr "**2A.2.4: TURN 서버 구성**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:577
 msgid ""
 "If TURN is being used, replace or extend the **ICE server "
 "configurations** array with your TURN server details:"
 msgstr ""
+"TURN을 사용하는 경우, **ICE server configurations** 배열을 TURN 서버 세부 정보로 "
+"교체하거나 확장하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:589
 msgid ""
 "If your TURN deployment uses short-lived generated credentials, also set "
 "**TURN Static Auth Secret** and **TURN Credentials Expiration**."
 msgstr ""
+"TURN 배포가 단기 생성 자격 증명을 사용하는 경우, **TURN Static Auth Secret**과 "
+"**TURN Credentials Expiration**도 설정하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:591
 msgid "**2A.2.5: Save configuration**"
-msgstr ""
+msgstr "**2A.2.5: 구성 저장**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:593
 msgid ""
 "Click **Save** on the Calls settings page. It is also recommended that "
 "you restart the plugin after changing media server settings:"
 msgstr ""
+"Calls 설정 페이지에서 **저장**을 클릭합니다. 또한 미디어 서버 설정을 변경한 후에는 "
+"플러그인을 다시 시작하는 것이 권장됩니다:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:595
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:904
 msgid "Go to **System Console > Plugins > Plugin Management**."
-msgstr ""
+msgstr "**관리자 도구 > 플러그인 > 플러그인 관리**로 이동합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:596
 msgid "Disable **Calls** and wait a few seconds."
-msgstr ""
+msgstr "**Calls**를 비활성화하고 몇 초 동안 기다립니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:597
 msgid "Enable **Calls** again."
-msgstr ""
+msgstr "**Calls**를 다시 활성화합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:599
 msgid "2A.3 Verification Checks"
-msgstr ""
+msgstr "2A.3 검증 점검"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:601
 msgid "Now smoke test your Calls deployment with your test accounts:"
-msgstr ""
+msgstr "이제 테스트 계정으로 통화 배포를 스모크 테스트하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:603
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:688
 msgid "Create a test channel such as `calls-test`."
-msgstr ""
+msgstr "`calls-test`와 같은 테스트 채널을 만듭니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:604
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:689
 msgid "Open the **Channel menu**, then select **Enable calls**."
-msgstr ""
+msgstr "**채널 메뉴**를 연 다음 **통화 활성화**를 선택합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:605
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:690
 msgid "Invite your test users into the channel so you can validate a real call."
-msgstr ""
+msgstr "실제 통화를 검증할 수 있도록 테스트 사용자를 채널에 초대합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:544
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:642
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "Action"
-msgstr ""
+msgstr "동작"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:544
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:642
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "Pass criteria"
-msgstr ""
+msgstr "통과 기준"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:544
 msgid "2A.3.1"
@@ -1846,12 +2150,12 @@ msgstr ""
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:544
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:642
 msgid "Start a call from the test channel with a second user"
-msgstr ""
+msgstr "두 번째 사용자와 함께 테스트 채널에서 통화를 시작합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:544
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:642
 msgid "Both users are in the call"
-msgstr ""
+msgstr "두 사용자가 모두 통화에 참여합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:544
 msgid "2A.3.2"
@@ -1860,12 +2164,12 @@ msgstr ""
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:544
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:642
 msgid "Speak during the call"
-msgstr ""
+msgstr "통화 중에 말합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:544
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:642
 msgid "Both users can hear each other clearly"
-msgstr ""
+msgstr "두 사용자가 서로의 소리를 명확하게 들을 수 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:544
 msgid "2A.3.3"
@@ -1874,12 +2178,12 @@ msgstr ""
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:544
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:642
 msgid "Share your screen from a desktop app or supported browser"
-msgstr ""
+msgstr "데스크톱 앱 또는 지원되는 브라우저에서 화면을 공유합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:544
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:642
 msgid "Screen sharing is visible to the other user"
-msgstr ""
+msgstr "다른 사용자에게 화면 공유가 표시됩니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:544
 msgid "2A.3.4"
@@ -1888,12 +2192,12 @@ msgstr ""
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:544
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:642
 msgid "End the call"
-msgstr ""
+msgstr "통화를 종료합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:544
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:642
 msgid "The call indicator disappears from the channel"
-msgstr ""
+msgstr "채널에서 통화 표시기가 사라집니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:615
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:706
@@ -1902,24 +2206,27 @@ msgid ""
 "**Do not continue until all of the checks pass. If any check fails, go to"
 " [Appendix A: Troubleshooting](#appendix-a-troubleshooting).**"
 msgstr ""
+"**모든 점검이 통과될 때까지 계속하지 마십시오. 점검이 실패하는 경우 [부록 A: 문제 "
+"해결](#appendix-a-troubleshooting)로 이동하십시오.**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:622
 msgid "Path B: Install and Configure RTCD"
-msgstr ""
+msgstr "경로 B: RTCD 설치 및 구성"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:624
 msgid "2B.1 Prerequisites"
-msgstr ""
+msgstr "2B.1 사전 요구 사항"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:627
 msgid "RTCD is the base architecture you selected in Step 1.2"
-msgstr ""
+msgstr "1.2단계에서 선택한 기본 아키텍처가 RTCD입니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:628
 msgid ""
 "RTCD server is provisioned (1.4) and RTCD networking checks passed "
 "(1.6.3-1.6.5)"
 msgstr ""
+"RTCD 서버가 프로비저닝되었고(1.4) RTCD 네트워킹 점검이 통과되었습니다(1.6.3-1.6.5)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:629
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:726
@@ -1927,33 +2234,36 @@ msgid ""
 "Mattermost Enterprise or Enterprise Advanced license is active on your "
 "server"
 msgstr ""
+"서버에 Mattermost Enterprise 또는 Enterprise Advanced 라이선스가 활성화되어 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:633
 msgid "2B.2 Install RTCD"
-msgstr ""
+msgstr "2B.2 RTCD 설치"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:635
 msgid ""
 "Follow the [RTCD Setup and Configuration](calls-rtcd-setup.md) guide for "
 "the actual installation. The guide covers:"
 msgstr ""
+"실제 설치는 [RTCD 설정 및 구성](calls-rtcd-setup.md) 가이드를 따르십시오. 이 "
+"가이드는 다음을 다룹니다:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:637
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:733
 msgid "Binary installation"
-msgstr ""
+msgstr "바이너리 설치"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:638
 msgid "`rtcd.toml` configuration"
-msgstr ""
+msgstr "`rtcd.toml` 구성"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:639
 msgid "Service setup"
-msgstr ""
+msgstr "서비스 설정"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:640
 msgid "TURN configuration (if applicable)"
-msgstr ""
+msgstr "TURN 구성(해당하는 경우)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:643
 msgid ""
@@ -1961,12 +2271,16 @@ msgid ""
 "Kubernetes](calls-kubernetes.md) guide for cluster-specific installation "
 "and Helm-based configuration."
 msgstr ""
+"Kubernetes에 배포하는 경우, 클러스터별 설치 및 Helm 기반 구성에 대해서는 "
+"[Kubernetes에서 통화 배포](calls-kubernetes.md) 가이드도 함께 사용하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:646
 msgid ""
 "Before proceeding, run these checks from the Mattermost server to confirm"
 " RTCD is running and reachable:"
 msgstr ""
+"진행하기 전에 OKR.BEST 서버에서 이러한 점검을 실행하여 RTCD가 실행 중이고 도달 가능한지 "
+"확인하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:642
 msgid "2B.2.1"
@@ -1978,7 +2292,7 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:642
 msgid "`open` - RTCD is running and accepting connections."
-msgstr ""
+msgstr "`open` - RTCD가 실행 중이며 연결을 수락하고 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:642
 msgid "2B.2.2"
@@ -1991,35 +2305,40 @@ msgstr ""
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:642
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 msgid "Returns a JSON version string"
-msgstr ""
+msgstr "JSON 버전 문자열을 반환합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:653
 msgid "2B.3 Connect Mattermost to RTCD"
-msgstr ""
+msgstr "2B.3 OKR.BEST를 RTCD에 연결"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:655
 msgid ""
 "Once RTCD is installed, configured, and reachable, update the Calls "
 "plugin to use it:"
 msgstr ""
+"RTCD가 설치, 구성되고 도달 가능해지면, 통화 플러그인이 이를 사용하도록 업데이트합니다:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:657
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:749
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:897
 msgid "Go to **System Console > Plugins > Calls > Settings**."
-msgstr ""
+msgstr "**관리자 도구 > 플러그인 > Calls > 설정**으로 이동합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:658
 msgid ""
 "Set **Enable Plugin** to `true`. This enables editing for the rest of the"
 " Calls settings on the page."
 msgstr ""
+"**Enable Plugin**을 `true`로 설정합니다. 이렇게 하면 페이지의 나머지 통화 설정을 "
+"편집할 수 있게 됩니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:660
 msgid ""
 "Set **RTCD Service URL** to your RTCD address. If RTCD credentials were "
 "generated during setup, embed them directly in the URL:"
 msgstr ""
+"**RTCD Service URL**을 RTCD 주소로 설정합니다. 설정 중에 RTCD 자격 증명이 생성된 "
+"경우, URL에 직접 포함하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:666
 msgid ""
@@ -2027,6 +2346,8 @@ msgid ""
 "setup. The first connection to RTCD self-registers the client and stores "
 "the authentication key in the database."
 msgstr ""
+"`clientID`와 `authKey`를 RTCD 설정 중에 생성된 값으로 바꾸십시오. RTCD에 대한 첫 "
+"연결 시 클라이언트가 자체 등록되고 인증 키가 데이터베이스에 저장됩니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:668
 msgid ""
@@ -2034,21 +2355,25 @@ msgid ""
 "Mattermost server: `MM_CALLS_RTCD_CLIENT_ID` and "
 "`MM_CALLS_RTCD_AUTH_KEY`."
 msgstr ""
+"또는 OKR.BEST 서버의 환경 변수를 통해 자격 증명을 설정할 수 있습니다: "
+"`MM_CALLS_RTCD_CLIENT_ID` 및 `MM_CALLS_RTCD_AUTH_KEY`."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:670
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:754
 msgid "Click **Save** and restart the Calls plugin so the change takes effect."
-msgstr ""
+msgstr "변경 사항이 적용되도록 **저장**을 클릭하고 통화 플러그인을 다시 시작합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:672
 msgid "2B.4 Configure Calls Monitoring"
-msgstr ""
+msgstr "2B.4 통화 모니터링 구성"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:674
 msgid ""
 "Before your pilot, set up Calls monitoring so you can see sessions, "
 "errors, CPU, and memory while real users are testing."
 msgstr ""
+"파일럿 전에 통화 모니터링을 설정하여 실제 사용자가 테스트하는 동안 세션, 오류, CPU 및 "
+"메모리를 볼 수 있도록 하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:676
 msgid ""
@@ -2060,34 +2385,44 @@ msgid ""
 "Prometheus and Grafana running, add the following scrape targets and "
 "import the dashboard:"
 msgstr ""
+"통화 모니터링은 Prometheus(서버에서 메트릭을 수집하는 도구)와 Grafana(해당 메트릭을 "
+"시각화하는 대시보드)를 사용합니다. 아직 이를 설정하지 않은 경우, 계속하기 전에 "
+"[OKR.BEST 모니터링 설정"
+"](../../administration-guide/scale/deploy-prometheus-grafana-for-"
+"performance-monitoring.md)을 참조하십시오. 이미 Prometheus와 Grafana가 실행 중인 "
+"경우, 다음 스크레이프 대상을 추가하고 대시보드를 가져오십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:678
 msgid "**RTCD metrics**: `http://YOUR_RTCD_SERVER:8045/metrics`"
-msgstr ""
+msgstr "**RTCD 메트릭**: `http://YOUR_RTCD_SERVER:8045/metrics`"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:679
 msgid ""
 "**Calls plugin metrics**: "
 "`http://YOUR_MATTERMOST_SERVER:8067/plugins/com.mattermost.calls/metrics`"
 msgstr ""
+"**통화 플러그인 메트릭**: "
+"`http://YOUR_MATTERMOST_SERVER:8067/plugins/com.mattermost.calls/metrics`"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:680
 msgid "**Grafana dashboard**: Import dashboard ID `23225`"
-msgstr ""
+msgstr "**Grafana 대시보드**: 대시보드 ID `23225` 가져오기"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:682
 msgid ""
 "See [Calls Metrics and Monitoring](calls-metrics-monitoring.md) for full "
 "configuration details."
 msgstr ""
+"전체 구성 세부 정보는 [통화 메트릭 및 모니터링](calls-metrics-monitoring.md)을 "
+"참조하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:684
 msgid "2B.5 Verification Checks"
-msgstr ""
+msgstr "2B.5 검증 점검"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:686
 msgid "Now smoke test your RTCD deployment with your test accounts:"
-msgstr ""
+msgstr "이제 테스트 계정으로 RTCD 배포를 스모크 테스트하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:642
 msgid "2B.5.1"
@@ -2107,99 +2442,116 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:699
 msgid "If these checks fail, try these troubleshooting techniques first:"
-msgstr ""
+msgstr "이러한 점검이 실패하는 경우, 먼저 다음 문제 해결 기법을 시도하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:701
 msgid ""
 "Re-run checks `2B.2.1` and `2B.2.2` to confirm RTCD is listening and "
 "responding."
 msgstr ""
+"`2B.2.1` 및 `2B.2.2` 점검을 다시 실행하여 RTCD가 수신 대기 중이고 응답하는지 "
+"확인하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:702
 msgid ""
 "Confirm **RTCD Service URL** is correct and includes credentials if your "
 "RTCD setup requires them."
 msgstr ""
+"**RTCD Service URL**이 올바른지, RTCD 설정에서 자격 증명이 필요한 경우 이를 포함하는지 "
+"확인하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:703
 msgid ""
 "Check that the Mattermost server can reach RTCD on port `8045`, and "
 "review RTCD logs before changing other settings."
 msgstr ""
+"OKR.BEST 서버가 포트 `8045`에서 RTCD에 도달할 수 있는지 확인하고, 다른 설정을 변경하기 "
+"전에 RTCD 로그를 검토하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:714
 msgid "Phase 3: Install and Configure Recording"
-msgstr ""
+msgstr "Phase 3: 녹화 설치 및 구성"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:717
 msgid ""
 "Now we will install and configure the `calls-offloader` job service that "
 "handles call recording, transcription, and live captions."
 msgstr ""
+"이제 통화 녹화, 전사 및 실시간 자막을 처리하는 `calls-offloader` 작업 서비스를 설치하고 "
+"구성합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:719
 msgid ""
 "**You can skip this phase if you do not need recording, transcription, or"
 " live captions.**"
 msgstr ""
+"**녹화, 전사 또는 실시간 자막이 필요하지 않은 경우 이 단계를 건너뛸 수 있습니다.**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:721
 msgid "3.1 Prerequisites"
-msgstr ""
+msgstr "3.1 사전 요구 사항"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:723
 msgid ""
 "`calls-offloader` server is provisioned (1.4) and relevant networking "
 "checks passed (1.6.6-1.6.9)"
 msgstr ""
+"`calls-offloader` 서버가 프로비저닝되었고(1.4) 관련 네트워킹 점검이 "
+"통과되었습니다(1.6.6-1.6.9)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:724
 msgid ""
 "If you are using Integrated mode: Phase 2A verification checks passed "
 "(2A.3.1-2A.3.4)."
 msgstr ""
+"통합 모드를 사용하는 경우: Phase 2A 검증 점검 통과(2A.3.1-2A.3.4)."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:725
 msgid ""
 "If you are using RTCD: Phase 2B verification checks passed "
 "(2B.5.1-2B.5.4)."
 msgstr ""
+"RTCD를 사용하는 경우: Phase 2B 검증 점검 통과(2B.5.1-2B.5.4)."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:729
 msgid "3.2 Install calls-offloader"
-msgstr ""
+msgstr "3.2 calls-offloader 설치"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:731
 msgid ""
 "Follow the [Calls Offloader Setup and Configuration](calls-offloader-"
 "setup.md) guide for installation. The guide covers:"
 msgstr ""
+"설치는 [Calls Offloader 설정 및 구성](calls-offloader-"
+"setup.md) 가이드를 따르십시오. 이 가이드는 다음을 다룹니다:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:734
 msgid "`config.toml` configuration"
-msgstr ""
+msgstr "`config.toml` 구성"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:735
 msgid "Systemd service setup"
-msgstr ""
+msgstr "Systemd 서비스 설정"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:736
 msgid "Docker-backed jobs"
-msgstr ""
+msgstr "Docker 기반 작업"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:737
 msgid "Private network overrides"
-msgstr ""
+msgstr "사설 네트워크 재정의"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:738
 msgid "Air-gapped installation"
-msgstr ""
+msgstr "에어갭 설치"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:740
 msgid ""
 "Before proceeding, run these checks from the Mattermost server to confirm"
 " `calls-offloader` is running and reachable:"
 msgstr ""
+"진행하기 전에 OKR.BEST 서버에서 이러한 점검을 실행하여 `calls-offloader`가 실행 "
+"중이고 도달 가능한지 확인하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 msgid "3.2.1"
@@ -2211,7 +2563,7 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 msgid "`open` - calls-offloader is running and accepting connections."
-msgstr ""
+msgstr "`open` - calls-offloader가 실행 중이며 연결을 수락하고 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 msgid "3.2.2"
@@ -2223,37 +2575,43 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:747
 msgid "3.3 Connect calls-offloader to Mattermost"
-msgstr ""
+msgstr "3.3 calls-offloader를 OKR.BEST에 연결"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:750
 msgid ""
 "Set **Job Service URL** to the calls-offloader address, for example `http"
 "://calls-offloader.internal:4545` on a trusted internal network."
 msgstr ""
+"**Job Service URL**을 calls-offloader 주소로 설정합니다. 예를 들어 신뢰할 수 있는 내부 "
+"네트워크에서는 `http://calls-offloader.internal:4545`입니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:751
 msgid "Enable **Call Recordings** if needed."
-msgstr ""
+msgstr "필요한 경우 **Call Recordings**를 활성화합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:752
 msgid ""
 "Enable **Call Transcriptions** if needed. Transcriptions require "
 "recordings to be enabled."
 msgstr ""
+"필요한 경우 **Call Transcriptions**를 활성화합니다. 전사를 사용하려면 녹화가 활성화되어 "
+"있어야 합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:753
 msgid ""
 "Enable **Live Captions** if needed. Live captions require both recordings"
 " and transcriptions to be enabled."
 msgstr ""
+"필요한 경우 **Live Captions**를 활성화합니다. 실시간 자막을 사용하려면 녹화와 전사가 "
+"모두 활성화되어 있어야 합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:756
 msgid "3.4 Verification Checks"
-msgstr ""
+msgstr "3.4 검증 점검"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:758
 msgid "Now smoke test recording-related features with your test accounts:"
-msgstr ""
+msgstr "이제 테스트 계정으로 녹화 관련 기능을 스모크 테스트하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 msgid "3.4.1"
@@ -2261,11 +2619,11 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 msgid "Start recording as a call host"
-msgstr ""
+msgstr "통화 호스트로서 녹화를 시작합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 msgid "Recording starts without error."
-msgstr ""
+msgstr "녹화가 오류 없이 시작됩니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 msgid "3.4.2"
@@ -2273,11 +2631,11 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 msgid "End the call or stop the recording"
-msgstr ""
+msgstr "통화를 종료하거나 녹화를 중지합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 msgid "An MP4 file appears in the call thread after processing completes."
-msgstr ""
+msgstr "처리가 완료된 후 통화 스레드에 MP4 파일이 나타납니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 msgid "3.4.3"
@@ -2285,13 +2643,14 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 msgid "With transcription enabled, end a recorded call"
-msgstr ""
+msgstr "전사가 활성화된 상태에서 녹화된 통화를 종료합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 msgid ""
 "An MP4 file and transcript file appear in the call thread after "
 "processing completes."
 msgstr ""
+"처리가 완료된 후 통화 스레드에 MP4 파일과 전사 파일이 나타납니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 msgid "3.4.4"
@@ -2299,17 +2658,18 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 msgid "With live captions enabled, start a recorded call"
-msgstr ""
+msgstr "실시간 자막이 활성화된 상태에서 녹화된 통화를 시작합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:705
 msgid ""
 "Captions appear during the call within 1-3 seconds after participants "
 "speak."
 msgstr ""
+"참가자가 말한 후 1~3초 이내에 통화 중에 자막이 나타납니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:767
 msgid "If a recording-related check fails, isolate the problem before retrying:"
-msgstr ""
+msgstr "녹화 관련 점검이 실패하는 경우, 다시 시도하기 전에 문제를 분리하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:769
 msgid ""
@@ -2317,22 +2677,28 @@ msgid ""
 " `calls-offloader` service is running, and the Mattermost server can "
 "reach port `4545`."
 msgstr ""
+"**3.4.1 또는 3.4.2 실패**: **Job Service URL**이 올바른지, `calls-offloader` 서비스가 "
+"실행 중인지, OKR.BEST 서버가 포트 `4545`에 도달할 수 있는지 확인하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:770
 msgid ""
 "**3.4.3 fails**: Confirm recordings are enabled first, then confirm "
 "transcription is enabled."
 msgstr ""
+"**3.4.3 실패**: 먼저 녹화가 활성화되어 있는지 확인한 다음, 전사가 활성화되어 있는지 "
+"확인하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:771
 msgid ""
 "**3.4.4 fails**: Confirm both recordings and transcriptions are enabled "
 "before testing live captions."
 msgstr ""
+"**3.4.4 실패**: 실시간 자막을 테스트하기 전에 녹화와 전사가 모두 활성화되어 있는지 "
+"확인하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:779
 msgid "Phase 4: Pilot Rollout"
-msgstr ""
+msgstr "Phase 4: 파일럿 롤아웃"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:781
 msgid ""
@@ -2341,49 +2707,58 @@ msgid ""
 "Calls works reliably across the clients and locations your organization "
 "uses, and that your servers stay healthy under normal usage."
 msgstr ""
+"이제 기술 구성이 완료되고 검증되었으므로, 광범위한 롤아웃 전에 실제 사용자와 함께 "
+"소규모 파일럿을 실행하십시오. 목표는 조직이 사용하는 클라이언트와 위치 전반에서 통화가 "
+"안정적으로 작동하는지, 그리고 정상적인 사용 환경에서 서버가 정상 상태를 유지하는지 "
+"확인하는 것입니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:783
 msgid "4.1 Prerequisites"
-msgstr ""
+msgstr "4.1 사전 요구 사항"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:785
 msgid ""
 "If using Integrated mode: Phase 2A verification checks passed "
 "(2A.3.1-2A.3.4)"
 msgstr ""
+"통합 모드를 사용하는 경우: Phase 2A 검증 점검 통과(2A.3.1-2A.3.4)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:786
 msgid "If using RTCD: Phase 2B verification checks passed (2B.5.1-2B.5.4)"
-msgstr ""
+msgstr "RTCD를 사용하는 경우: Phase 2B 검증 점검 통과(2B.5.1-2B.5.4)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:787
 msgid "If using Recording: Phase 3 verification checks passed (3.4.1-3.4.4)"
-msgstr ""
+msgstr "녹화를 사용하는 경우: Phase 3 검증 점검 통과(3.4.1-3.4.4)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:788
 msgid "5 to 10 volunteer pilot users from different locations"
-msgstr ""
+msgstr "다양한 위치의 자원 파일럿 사용자 5~10명"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:789
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:880
 msgid "Access to the metrics dashboard and logs on your Calls infrastructure"
-msgstr ""
+msgstr "통화 인프라의 메트릭 대시보드 및 로그에 대한 액세스 권한"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:790
 msgid ""
 "Pilot users have current [Mattermost desktop and mobile "
 "apps](https://mattermost.com/apps/)"
 msgstr ""
+"파일럿 사용자가 최신 [Mattermost 데스크톱 및 모바일 "
+"앱](https://mattermost.com/apps/)을 사용하고 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:792
 msgid "4.2 Preparation and Communication"
-msgstr ""
+msgstr "4.2 준비 및 커뮤니케이션"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:794
 msgid ""
 "For a successful pilot, make sure pilot users know what to test, how to "
 "start a call, and how to report problems."
 msgstr ""
+"성공적인 파일럿을 위해 파일럿 사용자가 무엇을 테스트해야 하는지, 통화를 시작하는 방법, "
+"문제를 보고하는 방법을 알고 있는지 확인하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:796
 msgid ""
@@ -2391,14 +2766,16 @@ msgid ""
 "short message there so everyone is testing the same things. A template is"
 " provided below:"
 msgstr ""
+"파일럿 사용자를 `calls-test` 채널에 초대한 후, 모두가 동일한 항목을 테스트하도록 그곳에 "
+"짧은 메시지를 게시하십시오. 아래에 템플릿이 제공됩니다:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:836
 msgid "4.3 Verification Checks"
-msgstr ""
+msgstr "4.3 검증 점검"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:838
 msgid "**Monitoring**"
-msgstr ""
+msgstr "**모니터링**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "4.3.1"
@@ -2406,11 +2783,11 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "Check your metrics dashboard during a pilot call"
-msgstr ""
+msgstr "파일럿 통화 중에 메트릭 대시보드를 확인합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "Active sessions and participants are visible and counted correctly"
-msgstr ""
+msgstr "활성 세션과 참가자가 표시되고 올바르게 집계됩니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "4.3.2"
@@ -2421,10 +2798,12 @@ msgid ""
 "If using RTCD, check RTCD error metrics after pilot calls "
 "(`rtcd_rtc_errors_total`)"
 msgstr ""
+"RTCD를 사용하는 경우, 파일럿 통화 후 RTCD 오류 메트릭을 확인합니다"
+"(`rtcd_rtc_errors_total`)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "No elevated error counts"
-msgstr ""
+msgstr "오류 횟수가 증가하지 않습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "4.3.3"
@@ -2435,10 +2814,12 @@ msgid ""
 "If using RTCD, check CPU and memory metrics during a pilot call "
 "(`rtcd_process_cpu_seconds_total`, `rtcd_process_resident_memory_bytes`)"
 msgstr ""
+"RTCD를 사용하는 경우, 파일럿 통화 중에 CPU 및 메모리 메트릭을 확인합니다"
+"(`rtcd_process_cpu_seconds_total`, `rtcd_process_resident_memory_bytes`)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "No CPU or memory spikes observed"
-msgstr ""
+msgstr "CPU 또는 메모리 급증이 관찰되지 않습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "4.3.4"
@@ -2449,24 +2830,27 @@ msgid ""
 "Review Mattermost logs, plus RTCD and calls-offloader logs if those "
 "services are deployed"
 msgstr ""
+"OKR.BEST 로그와, 해당 서비스가 배포된 경우 RTCD 및 calls-offloader 로그를 검토합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "No recurring `ERROR` lines, and no unexpected `WARN` patterns"
-msgstr ""
+msgstr "반복되는 `ERROR` 줄이 없고, 예상치 못한 `WARN` 패턴이 없습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:847
 msgid "**Production readiness**"
-msgstr ""
+msgstr "**프로덕션 준비 상태**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:849
 msgid ""
 "Collect feedback from your pilot users after 3-5 business days and use it"
 " to evaluate production readiness:"
 msgstr ""
+"영업일 기준 3~5일 후 파일럿 사용자로부터 피드백을 수집하고 이를 사용하여 프로덕션 준비 "
+"상태를 평가하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "Requirement"
-msgstr ""
+msgstr "요구 사항"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "4.3.5"
@@ -2474,7 +2858,7 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "Audio quality rated acceptable by 80%+ of pilot users"
-msgstr ""
+msgstr "파일럿 사용자의 80% 이상이 오디오 품질을 양호하다고 평가합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "4.3.6"
@@ -2482,7 +2866,7 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "No blocking issues found in the pilot test cases"
-msgstr ""
+msgstr "파일럿 테스트 사례에서 차단 문제가 발견되지 않습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "4.3.7"
@@ -2490,29 +2874,31 @@ msgstr ""
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:773
 msgid "All pilot users confirm readiness for production rollout"
-msgstr ""
+msgstr "모든 파일럿 사용자가 프로덕션 롤아웃 준비 완료를 확인합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:857
 msgid "If the pilot users find issues, do not expand the rollout yet:"
-msgstr ""
+msgstr "파일럿 사용자가 문제를 발견하면, 아직 롤아웃을 확장하지 마십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:859
 msgid "Fix the issue in the smallest possible scope."
-msgstr ""
+msgstr "가능한 가장 작은 범위에서 문제를 해결하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:860
 msgid "Repeat the affected pilot test case."
-msgstr ""
+msgstr "영향을 받은 파일럿 테스트 사례를 반복하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:861
 msgid "Stay in pilot until the failing scenario is consistently passing."
-msgstr ""
+msgstr "실패하는 시나리오가 일관되게 통과될 때까지 파일럿 단계를 유지하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:863
 msgid ""
 "You can also run `/call stats` in the Mattermost message area after a "
 "failed test for additional diagnostic clues."
 msgstr ""
+"추가 진단 단서를 얻으려면 실패한 테스트 후 OKR.BEST 메시지 영역에서 `/call stats`를 "
+"실행할 수도 있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:866
 msgid ""
@@ -2520,30 +2906,32 @@ msgid ""
 "passing. If any check fails, go to [Appendix A: "
 "Troubleshooting](#appendix-a-troubleshooting).**"
 msgstr ""
+"**모든 관련 점검이 통과될 때까지 프로덕션 롤아웃을 계속하지 마십시오. 점검이 실패하는 "
+"경우 [부록 A: 문제 해결](#appendix-a-troubleshooting)로 이동하십시오.**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:871
 msgid "Phase 5: Production Rollout"
-msgstr ""
+msgstr "Phase 5: 프로덕션 롤아웃"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:873
 msgid "Now you will execute a broader rollout to all users in production."
-msgstr ""
+msgstr "이제 프로덕션에서 모든 사용자에게 더 광범위한 롤아웃을 실행합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:875
 msgid "5.1 Prerequisites"
-msgstr ""
+msgstr "5.1 사전 요구 사항"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:877
 msgid "Phase 4 production readiness checks passed (4.3.1-4.3.7)"
-msgstr ""
+msgstr "Phase 4 프로덕션 준비 상태 점검 통과(4.3.1-4.3.7)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:878
 msgid "Rollback plan documented and understood"
-msgstr ""
+msgstr "롤백 계획이 문서화되고 이해됨"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:882
 msgid "5.2 Rollback plan"
-msgstr ""
+msgstr "5.2 롤백 계획"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:884
 msgid ""
@@ -2551,56 +2939,60 @@ msgid ""
 "staged production rollout. If something goes wrong, choose the smallest "
 "rollback that solves the problem:"
 msgstr ""
+"단계적 프로덕션 롤아웃을 시작하기 전에 롤백 옵션을 숙지해야 합니다. 문제가 발생하면 "
+"문제를 해결하는 가장 작은 롤백을 선택하십시오:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:886
 msgid "**Per-channel rollback**"
-msgstr ""
+msgstr "**채널별 롤백**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:888
 msgid "Disables Calls in specific channels."
-msgstr ""
+msgstr "특정 채널에서 통화를 비활성화합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:890
 msgid "Navigate to the impacted channel."
-msgstr ""
+msgstr "영향을 받은 채널로 이동합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:891
 msgid "Select the **Channel menu**, then select **Disable calls**."
-msgstr ""
+msgstr "**채널 메뉴**를 선택한 다음 **통화 비활성화**를 선택합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:893
 msgid "**Test mode rollback**"
-msgstr ""
+msgstr "**테스트 모드 롤백**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:895
 msgid "Restricts Calls to channels where it has been enabled by a System Admin."
-msgstr ""
+msgstr "통화를 시스템 관리자가 활성화한 채널로 제한합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:898
 msgid "Set **Test Mode** to `on`."
-msgstr ""
+msgstr "**Test Mode**를 `on`으로 설정합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:900
 msgid "**Full rollback**"
-msgstr ""
+msgstr "**전체 롤백**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:902
 msgid "Disables Calls completely for everyone."
-msgstr ""
+msgstr "모든 사용자에 대해 통화를 완전히 비활성화합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:905
 msgid "**Disable** the Calls plugin."
-msgstr ""
+msgstr "통화 플러그인을 **비활성화**합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:907
 msgid ""
 "If you have an existing conferencing tool, keep it available until Calls "
 "is stable in production."
 msgstr ""
+"기존 회의 도구가 있는 경우, 통화가 프로덕션에서 안정화될 때까지 해당 도구를 사용할 수 "
+"있도록 유지하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:909
 msgid "5.3 Preparation and Communication"
-msgstr ""
+msgstr "5.3 준비 및 커뮤니케이션"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:911
 msgid ""
@@ -2608,16 +3000,21 @@ msgid ""
 "channel. This gives users a clear place to report issues and gives your "
 "admins a single place to track rollout problems."
 msgstr ""
+"사용자에게 통화를 알리기 전에 `calls-support` 공개 채널을 만드십시오. 이렇게 하면 "
+"사용자가 문제를 보고할 명확한 장소가 생기고 관리자가 롤아웃 문제를 추적할 단일 장소가 "
+"생깁니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:913
 msgid ""
 "Also prepare a short announcement to share in an all-hands channel or "
 "similar high-visibility location. A template is provided below:"
 msgstr ""
+"또한 전체 회의 채널 또는 유사한 가시성이 높은 위치에서 공유할 짧은 공지를 준비하십시오. "
+"아래에 템플릿이 제공됩니다:"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:950
 msgid "5.4 Rollout Stages"
-msgstr ""
+msgstr "5.4 롤아웃 단계"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:952
 msgid ""
@@ -2625,66 +3022,69 @@ msgid ""
 "at once. This way you can watch real usage, catch problems early, and "
 "rollback cleanly if needed."
 msgstr ""
+"통화를 한 번에 모든 곳에서 활성화하는 대신 단계적으로 활성화하는 것을 권장합니다. 이렇게 "
+"하면 실제 사용을 관찰하고, 문제를 조기에 발견하며, 필요한 경우 깔끔하게 롤백할 수 "
+"있습니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Stage"
-msgstr ""
+msgstr "단계"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Channels / departments"
-msgstr ""
+msgstr "채널 / 부서"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Suggested timeline"
-msgstr ""
+msgstr "권장 일정"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Rollback approach"
-msgstr ""
+msgstr "롤백 접근 방식"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Stage 1"
-msgstr ""
+msgstr "1단계"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "IT and Admin channels"
-msgstr ""
+msgstr "IT 및 관리자 채널"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Days 1-3"
-msgstr ""
+msgstr "1~3일차"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Per-channel rollback"
-msgstr ""
+msgstr "채널별 롤백"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Stage 2"
-msgstr ""
+msgstr "2단계"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Engineering or power user channels"
-msgstr ""
+msgstr "엔지니어링 또는 파워 유저 채널"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Days 4-7"
-msgstr ""
+msgstr "4~7일차"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Stage 3"
-msgstr ""
+msgstr "3단계"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Full organization"
-msgstr ""
+msgstr "전체 조직"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Day 8+"
-msgstr ""
+msgstr "8일차 이상"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Test mode (if issues are isolated) or full rollback"
-msgstr ""
+msgstr "테스트 모드(문제가 격리된 경우) 또는 전체 롤백"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:960
 msgid ""
@@ -2692,20 +3092,24 @@ msgid ""
 "rollback option listed for that stage, fix the issue, and repeat the same"
 " stage before moving to the next one."
 msgstr ""
+"롤아웃 단계에서 문제가 발생하면 롤아웃을 일시 중지하고, 해당 단계에 나열된 롤백 옵션을 "
+"사용하고, 문제를 해결한 다음, 다음 단계로 넘어가기 전에 동일한 단계를 반복하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:962
 msgid "5.5 Monitor and optimize"
-msgstr ""
+msgstr "5.5 모니터링 및 최적화"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:964
 msgid ""
 "Once Calls is live, monitor it actively for the first two weeks and tune "
 "based on what you see."
 msgstr ""
+"통화가 가동되면 처음 2주 동안 적극적으로 모니터링하고 관찰한 내용을 기반으로 "
+"조정하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:966
 msgid "**5.5.1: Watch server health during peak call hours**"
-msgstr ""
+msgstr "**5.5.1: 통화 피크 시간대에 서버 상태 모니터링**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:968
 msgid ""
@@ -2714,10 +3118,13 @@ msgid ""
 "consider increasing hardware specs, or adding RTCD nodes before the next "
 "rollout stage."
 msgstr ""
+"피크 사용량 동안 매일 미디어 서버(RTCD 또는 OKR.BEST 서버)의 CPU와 메모리를 "
+"모니터링하십시오. CPU 사용률이 지속적으로 70%를 초과하는 경우, 다음 롤아웃 단계 전에 "
+"하드웨어 사양을 늘리거나 RTCD 노드를 추가하는 것을 고려하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:970
 msgid "**5.5.2: Review logs daily**"
-msgstr ""
+msgstr "**5.5.2: 매일 로그 검토**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:972
 msgid ""
@@ -2725,10 +3132,12 @@ msgid ""
 "`ERROR` or `WARN` lines. Address any patterns before they become user-"
 "facing problems."
 msgstr ""
+"매일 OKR.BEST, RTCD 및 calls-offloader 로그에서 반복되는 `ERROR` 또는 `WARN` 줄을 "
+"확인하십시오. 어떤 패턴이든 사용자에게 영향을 미치는 문제가 되기 전에 해결하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:974
 msgid "**5.5.3: Tune Max Call Participants**"
-msgstr ""
+msgstr "**5.5.3: Max Call Participants 조정**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:976
 msgid ""
@@ -2737,48 +3146,54 @@ msgid ""
 " is no participant limit (configured as `0`, which means unlimited). A "
 "practical ceiling for most deployments is `50`."
 msgstr ""
+"대규모 통화 중에 리소스 부담이 보이는 경우, **관리자 도구 > 플러그인 > Calls**에서 "
+"**Max Call Participants**를 낮추십시오. 기본적으로 참가자 제한이 없습니다(`0`으로 "
+"구성되어 있으며, 이는 무제한을 의미합니다). 대부분의 배포에서 실용적인 상한선은 "
+"`50`입니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:978
 msgid "**5.5.4: Track user-reported issues**"
-msgstr ""
+msgstr "**5.5.4: 사용자가 보고한 문제 추적**"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:980
 msgid "Monitor `~calls-support` for recurring complaints."
-msgstr ""
+msgstr "반복되는 불만 사항이 있는지 `~calls-support`를 모니터링합니다."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:982
 msgid ""
 "Check [Appendix A: Troubleshooting](#appendix-a-troubleshooting) for "
 "common issues and fixes."
 msgstr ""
+"일반적인 문제와 해결 방법은 [부록 A: 문제 해결](#appendix-a-troubleshooting)을 "
+"확인하십시오."
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:986
 msgid "Appendix A: Troubleshooting"
-msgstr ""
+msgstr "부록 A: 문제 해결"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:988
 msgid "A.1 The call button is missing"
-msgstr ""
+msgstr "A.1 통화 버튼이 없음"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Cause"
-msgstr ""
+msgstr "원인"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Fix"
-msgstr ""
+msgstr "해결 방법"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "The Calls plugin is disabled"
-msgstr ""
+msgstr "통화 플러그인이 비활성화되어 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Go to **System Console > Plugins > Plugin Management** and enable Calls"
-msgstr ""
+msgstr "**관리자 도구 > 플러그인 > 플러그인 관리**로 이동하여 Calls를 활성화합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "The deployment is in test mode"
-msgstr ""
+msgstr "배포가 테스트 모드 상태입니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid ""
@@ -2786,52 +3201,59 @@ msgid ""
 "deployment state - Calls must be enabled in specific channels by System "
 "Admins in test mode"
 msgstr ""
+"**관리자 도구 > 플러그인 > Calls > 설정**으로 이동하여 배포 상태를 확인합니다. 테스트 "
+"모드에서는 시스템 관리자가 특정 채널에서 통화를 활성화해야 합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Calls is not enabled for the channel"
-msgstr ""
+msgstr "채널에 통화가 활성화되어 있지 않습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid ""
 "When test mode is enabled, open the **channel menu** and select **Enable "
 "calls**"
 msgstr ""
+"테스트 모드가 활성화된 경우, **채널 메뉴**를 열고 **통화 활성화**를 선택합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "The user is on an older client"
-msgstr ""
+msgstr "사용자가 이전 버전의 클라이언트를 사용하고 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Ask the user to update to the current Mattermost desktop or mobile app"
-msgstr ""
+msgstr "사용자에게 최신 Mattermost 데스크톱 또는 모바일 앱으로 업데이트하도록 요청합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:997
 msgid "A.2 Calls start but audio does not work"
-msgstr ""
+msgstr "A.2 통화는 시작되지만 오디오가 작동하지 않음"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "UDP `8443` is blocked"
-msgstr ""
+msgstr "UDP `8443`이 차단되어 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid ""
 "Repeat the UDP connectivity check from Phase 1 (check 1.6.1 or 1.6.3) and"
 " confirm the firewall rule is applied"
 msgstr ""
+"Phase 1의 UDP 연결 점검(1.6.1 또는 1.6.3 점검)을 반복하고 방화벽 규칙이 적용되었는지 "
+"확인합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "TCP `8443` is also blocked and fallback is failing"
-msgstr ""
+msgstr "TCP `8443`도 차단되어 있고 폴백이 실패하고 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid ""
 "Repeat the TCP check (1.6.2 or 1.6.4) - clients need at least one path to"
 " the media service"
 msgstr ""
+"TCP 점검(1.6.2 또는 1.6.4)을 반복합니다. 클라이언트에는 미디어 서비스로의 경로가 최소 "
+"하나 필요합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "The wrong media address is being advertised"
-msgstr ""
+msgstr "잘못된 미디어 주소가 알려지고 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid ""
@@ -2839,24 +3261,28 @@ msgid ""
 "`ice_host_override` in `rtcd.toml` in Phase 2B (RTCD) - the address must "
 "be reachable by clients"
 msgstr ""
+"Phase 2A(통합)의 `ICE Host Override` 또는 Phase 2B(RTCD)의 `rtcd.toml`에 있는 "
+"`ice_host_override`를 다시 확인합니다. 클라이언트가 해당 주소에 도달할 수 있어야 "
+"합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Browser or desktop microphone permissions were denied"
-msgstr ""
+msgstr "브라우저 또는 데스크톱 마이크 권한이 거부되었습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid ""
 "Ask the user to check browser or OS microphone permissions and reload the"
 " app"
 msgstr ""
+"사용자에게 브라우저 또는 OS 마이크 권한을 확인하고 앱을 다시 로드하도록 요청합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:1006
 msgid "A.3 Remote users cannot join from outside the network"
-msgstr ""
+msgstr "A.3 원격 사용자가 네트워크 외부에서 참여할 수 없음"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "External firewall rules are blocking UDP `8443`"
-msgstr ""
+msgstr "외부 방화벽 규칙이 UDP `8443`을 차단하고 있습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid ""
@@ -2864,32 +3290,36 @@ msgid ""
 "security groups and on-prem firewalls both need to allow inbound traffic "
 "from the internet"
 msgstr ""
+"미디어 서버의 UDP `8443`에 대한 외부 도달 가능성을 확인합니다. 클라우드 보안 그룹과 "
+"온프레미스 방화벽 모두 인터넷에서의 인바운드 트래픽을 허용해야 합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "The advertised media address is a private IP"
-msgstr ""
+msgstr "알려진 미디어 주소가 사설 IP입니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid ""
 "Set `ICE Host Override` (Integrated) or `ice_host_override` in "
 "`rtcd.toml` to the correct public IP or use STUN (1.3.1)"
 msgstr ""
+"`ICE Host Override`(통합) 또는 `rtcd.toml`의 `ice_host_override`를 올바른 공용 IP로 "
+"설정하거나 STUN을 사용합니다(1.3.1)"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Client networks are too restrictive for direct UDP or TCP"
-msgstr ""
+msgstr "클라이언트 네트워크가 직접 UDP 또는 TCP에 너무 제한적입니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Deploy a TURN server and add it to **ICE server configurations**"
-msgstr ""
+msgstr "TURN 서버를 배포하고 **ICE server configurations**에 추가합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:1014
 msgid "A.4 Recording, transcription, or captions are failing"
-msgstr ""
+msgstr "A.4 녹화, 전사 또는 자막이 실패함"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "calls-offloader is not running"
-msgstr ""
+msgstr "calls-offloader가 실행되고 있지 않습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid ""
@@ -2897,24 +3327,29 @@ msgid ""
 "the result is `closed`, the service is not running; check the systemd "
 "service logs"
 msgstr ""
+"OKR.BEST 서버에서 `nmap -p 4545 YOUR_OFFLOADER_SERVER`를 실행합니다. 결과가 "
+"`closed`이면 서비스가 실행되고 있지 않은 것이므로 systemd 서비스 로그를 확인합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "Mattermost cannot reach the Job Service URL"
-msgstr ""
+msgstr "OKR.BEST가 Job Service URL에 도달할 수 없습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid ""
 "Run `curl http://YOUR_OFFLOADER_SERVER:4545/version` from the Mattermost "
 "server and confirm it returns a version string"
 msgstr ""
+"OKR.BEST 서버에서 `curl http://YOUR_OFFLOADER_SERVER:4545/version`을 실행하고 버전 "
+"문자열을 반환하는지 확인합니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid "The offloader service account cannot use Docker"
-msgstr ""
+msgstr "offloader 서비스 계정이 Docker를 사용할 수 없습니다"
 
 #: ../../source/administration-guide/configure/calls-deployment-guide.md:865
 msgid ""
 "Confirm the service account is in the `docker` group on the calls-"
 "offloader server"
 msgstr ""
+"calls-offloader 서버에서 서비스 계정이 `docker` 그룹에 속해 있는지 확인합니다"
 
