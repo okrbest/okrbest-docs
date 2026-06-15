@@ -2475,6 +2475,8 @@ msgid ""
 "Check the affected values by: ``SELECT COUNT(*) FROM <table> WHERE "
 "<column> LIKE '%\\u0000%';``"
 msgstr ""
+"다음 명령으로 영향받는 값을 확인하세요: ``SELECT COUNT(*) FROM <table> WHERE "
+"<column> LIKE '%\\u0000%';``"
 
 #: ../../source/administration-guide/upgrade/important-upgrade-notes.rst:1582
 msgid ""
@@ -2487,6 +2489,8 @@ msgid ""
 "Remove them by ``UPDATE <table> SET <column> = regexp_replace(<column>, "
 "'\\\\u0000', '', 'g') where <column> like '%\\u0000%';``"
 msgstr ""
+"다음 명령으로 제거하세요: ``UPDATE <table> SET <column> = regexp_replace(<column>, "
+"'\\\\u0000', '', 'g') where <column> like '%\\u0000%';``"
 
 #: ../../source/administration-guide/upgrade/important-upgrade-notes.rst:1585
 msgid "Then try to start Mattermost again."
